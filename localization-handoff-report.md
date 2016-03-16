@@ -1,19 +1,45 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/60552fdd4c9f668bf65d87233e33a56c08c95e7a/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#b7d68785591b771f89b77adb03e63a097114ff503420)
+ [windows-apps-src\accessibility\accessibility.md](https://github.com/Microsoft/windows-apps/blob/fdae910c94b29f7aa9f02d436836cada8ad2474b/windows-apps-src/accessibility/accessibility.md) | HandedOffSuccess | [Details](#4aac60e92317fab8f6fd6646ea21bada37fd4b809)
+ [windows-apps-src\accessibility\designing-inclusive-software.md](https://github.com/Microsoft/windows-apps/blob/fdae910c94b29f7aa9f02d436836cada8ad2474b/windows-apps-src/accessibility/designing-inclusive-software.md) | HandedOffSuccess | [Details](#4f472617f767a2e5a69d16825dc26ad8c13cbc4214)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/fdae910c94b29f7aa9f02d436836cada8ad2474b/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#536f4affb27226fb3614872cea88079e15b3259a3420)
 
 ## Item Details
-##### <a name='b7d68785591b771f89b77adb03e63a097114ff503420'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/60552fdd4c9f668bf65d87233e33a56c08c95e7a/windows-apps-src/TOC.md)
+##### <a name='4aac60e92317fab8f6fd6646ea21bada37fd4b809'></a> Source: [windows-apps-src\accessibility\accessibility.md](https://github.com/Microsoft/windows-apps/blob/fdae910c94b29f7aa9f02d436836cada8ad2474b/windows-apps-src/accessibility/accessibility.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/a4d35dccf21404bec8343cfa80d39490de841c57/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
-* Handoff Datetime: 2016-03-16 21:52:50
+* Handoff File: [accessibility.c5af33aaf4b5c1afcbdc516d45cbba0978a332da.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8b9767cde8bd969c4c9a156a599dae9f6ada958d/ol-handoff/Microsoft/windows-apps.de-de/master/accessibility.c5af33aaf4b5c1afcbdc516d45cbba0978a332da.de-de.xlf)
+* Handoff Datetime: 2016-03-16 22:51:46
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='4f472617f767a2e5a69d16825dc26ad8c13cbc4214'></a> Source: [windows-apps-src\accessibility\designing-inclusive-software.md](https://github.com/Microsoft/windows-apps/blob/fdae910c94b29f7aa9f02d436836cada8ad2474b/windows-apps-src/accessibility/designing-inclusive-software.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [designing-inclusive-software.cace2c94cd90e8f06f4407c372de9ef7748f95e7.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8b9767cde8bd969c4c9a156a599dae9f6ada958d/ol-handoff/Microsoft/windows-apps.de-de/master/designing-inclusive-software.cace2c94cd90e8f06f4407c372de9ef7748f95e7.de-de.xlf)
+* Handoff Datetime: 2016-03-16 22:51:46
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='536f4affb27226fb3614872cea88079e15b3259a3420'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/fdae910c94b29f7aa9f02d436836cada8ad2474b/windows-apps-src/TOC.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8b9767cde8bd969c4c9a156a599dae9f6ada958d/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Handoff Datetime: 2016-03-16 22:51:46
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
