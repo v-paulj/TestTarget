@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "ae3f2d6c6acfc75ad1d8372bb3c63f316564e297",
+  "LastProcessedCommit": "ab2ee048f4f65fcbe4f52d5138d2554747d29c73",
   "LastTranslatedCommit": null,
   "Items": {
     "e5a3ba81407e65db2addcb6fb7b6485ee12b97de": {
@@ -47242,6 +47242,34 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\submit-your-app-and-configure-ad-mediation.990983e488fec0db24f094bf655441d5d0454731.de-de.xlf",
       "HandoffFileCommit": "cc0ff0cffff3b9191af1bd234d2fadfe39a5473a",
       "HandoffDateTime": "2016-03-17T17:53:56.2021866Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "c6ca7078ece05329f3786f2fbfa8e0f157420a8b": {
+      "FileHash": "c6ca7078ece05329f3786f2fbfa8e0f157420a8b",
+      "SourceFileCommit": "ab2ee048f4f65fcbe4f52d5138d2554747d29c73",
+      "SourceFilePath": "windows-apps-src\\porting\\w8x-to-uwp-case-study-quizgame.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "FilePathList": [
+        "windows-apps-src\\porting\\w8x-to-uwp-case-study-quizgame.md"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\w8x-to-uwp-case-study-quizgame.ee7bf79e60457837f1f1ef8bbdc006cd97a0f8fd.de-de.xlf",
+      "HandoffFileCommit": "9b3a65baa6245aa8eb44d4f25fcb22b44d4da542",
+      "HandoffDateTime": "2016-03-17T21:22:54.8073446Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
