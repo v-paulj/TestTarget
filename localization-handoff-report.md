@@ -1,20 +1,22 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 4
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\style\color.md](https://github.com/Microsoft/windows-apps/blob/c1afb75234783c9892da609ec6c1c9b99eaf5d3b/windows-apps-src/style/color.md) | HandedOffSuccess | [Details](#4959b5d380d820ea2a28f13d7cdf13caa50e14183412)
- [windows-apps-src\style\images\accentcolorswatch.png](https://github.com/Microsoft/windows-apps/blob/c1afb75234783c9892da609ec6c1c9b99eaf5d3b/windows-apps-src/style/images/accentcolorswatch.png) | HandedOffSuccess | [Details](#89ebd15f0da89013e867d8ad9d54325f8b49c4fc3414)
+ [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md) | HandedOffSuccess | [Details](#10985dec69a38e1ec7452de069768b572e2f5aca1939)
+ [windows-apps-src\devices-sensors\generate-3mf.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/generate-3mf.md) | HandedOffSuccess | [Details](#6ac30be914c46cf953a3f1c344fa0441bed2f8d91975)
+ [windows-apps-src\devices-sensors\index.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/index.md) | HandedOffSuccess | [Details](#2e5857327dd1f218fa66552d81a31dc6088cebaa2001)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#5e75c56b6156675aecb14928fd2226068ec1a7623474)
 
 ## Item Details
-##### <a name='4959b5d380d820ea2a28f13d7cdf13caa50e14183412'></a> Source: [windows-apps-src\style\color.md](https://github.com/Microsoft/windows-apps/blob/c1afb75234783c9892da609ec6c1c9b99eaf5d3b/windows-apps-src/style/color.md)
+##### <a name='10985dec69a38e1ec7452de069768b572e2f5aca1939'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/3d-printing.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [color.0395eb0e5ede1939b9b46492efe596c9853dcace.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/74fb727816ab052468b889439ecfe3c8c212193c/ol-handoff/Microsoft/windows-apps.de-de/master/color.0395eb0e5ede1939b9b46492efe596c9853dcace.de-de.xlf)
-* Handoff Datetime: 2016-03-19 02:24:19
+* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/64ff9efde3e26e5178a362abf3876adf2eb416ed/ol-handoff/Microsoft/windows-apps.de-de/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.de-de.xlf)
+* Handoff Datetime: 2016-03-21 19:54:56
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -22,17 +24,40 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='89ebd15f0da89013e867d8ad9d54325f8b49c4fc3414'></a> Source: [windows-apps-src\style\images\accentcolorswatch.png](https://github.com/Microsoft/windows-apps/blob/c1afb75234783c9892da609ec6c1c9b99eaf5d3b/windows-apps-src/style/images/accentcolorswatch.png)
+##### <a name='6ac30be914c46cf953a3f1c344fa0441bed2f8d91975'></a> Source: [windows-apps-src\devices-sensors\generate-3mf.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/generate-3mf.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [89ebd15f0da89013e867d8ad9d54325f8b49c4fc.png](https://github.com/Microsoft/WDG.handoff/blob/74fb727816ab052468b889439ecfe3c8c212193c/ol-handoff/Microsoft/windows-apps.de-de/master/89ebd15f0da89013e867d8ad9d54325f8b49c4fc.png)
-* Handoff Datetime: 2016-03-19 02:24:19
-* Handoff Reason: IsDependency
+* Handoff File: [generate-3mf.ee80cfeb81494e7843cb5a102ffb0c17b6f3e40f.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/64ff9efde3e26e5178a362abf3876adf2eb416ed/ol-handoff/Microsoft/windows-apps.de-de/master/generate-3mf.ee80cfeb81494e7843cb5a102ffb0c17b6f3e40f.de-de.xlf)
+* Handoff Datetime: 2016-03-21 19:54:56
+* Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Dependency From: windows-apps-src\style\color.md
+* [Back to Top](#report-top)
+
+##### <a name='2e5857327dd1f218fa66552d81a31dc6088cebaa2001'></a> Source: [windows-apps-src\devices-sensors\index.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/devices-sensors/index.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [index.fc3d81ed1a3f85413621f4e68363314faff3fb09.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/64ff9efde3e26e5178a362abf3876adf2eb416ed/ol-handoff/Microsoft/windows-apps.de-de/master/index.fc3d81ed1a3f85413621f4e68363314faff3fb09.de-de.xlf)
+* Handoff Datetime: 2016-03-21 19:54:56
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='5e75c56b6156675aecb14928fd2226068ec1a7623474'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/5d115a7944efa26c1bb733aecfbfeb0b9a407ccd/windows-apps-src/TOC.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/64ff9efde3e26e5178a362abf3876adf2eb416ed/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Handoff Datetime: 2016-03-21 19:54:56
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 
