@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/fa28f3dc396e47dbdc6ac97efb0dbdfcc10a2e92/windows-apps-src/porting/desktop-to-uwp-root.md) | HandedOffSuccess | [Details](#24edb831f1a5639ef861c196d6c8c74ebaf6e3753272)
+ [windows-apps-src\publish\mobile-operator-billing.md](https://github.com/Microsoft/windows-apps/blob/1848f0dc5813ad060fdd8dec0b9a98c01032a34d/windows-apps-src/publish/mobile-operator-billing.md) | HandedOffSuccess | [Details](#c3e2ff6efd2a944ec550f9421c0ed1629709a6ca3414)
 
 ## Item Details
-##### <a name='24edb831f1a5639ef861c196d6c8c74ebaf6e3753272'></a> Source: [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/fa28f3dc396e47dbdc6ac97efb0dbdfcc10a2e92/windows-apps-src/porting/desktop-to-uwp-root.md)
+##### <a name='c3e2ff6efd2a944ec550f9421c0ed1629709a6ca3414'></a> Source: [windows-apps-src\publish\mobile-operator-billing.md](https://github.com/Microsoft/windows-apps/blob/1848f0dc5813ad060fdd8dec0b9a98c01032a34d/windows-apps-src/publish/mobile-operator-billing.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/e1e805e9657bd1231c3af9e5836b097e9649bbb5/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf)
-* Handoff Datetime: 2016-04-07 23:37:05
+* Handoff File: [mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/0fb69904f6023eea14a4afdf821e83dbafd39a66/ol-handoff/Microsoft/windows-apps.de-de/master/mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.de-de.xlf)
+* Handoff Datetime: 2016-04-08 20:11:25
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
