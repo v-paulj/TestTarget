@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/08d8644dd31c0d93884d4c24891fe86cfd9156a2/windows-apps-src/get-started/universal-application-platform-guide.md) | HandedOffSuccess | [Details](#08f62d3a4ec9bda97cd485bf0f3f5c80d2f4b5e22532)
+ [windows-apps-src\porting\ios-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/ea0dd7891441fa82025655460565f464af44958f/windows-apps-src/porting/ios-to-uwp-root.md) | HandedOffSuccess | [Details](#a46f8c17bf494a54bbfcb1d4f0a06ebcf2b3b3c23340)
 
 ## Item Details
-##### <a name='08f62d3a4ec9bda97cd485bf0f3f5c80d2f4b5e22532'></a> Source: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/08d8644dd31c0d93884d4c24891fe86cfd9156a2/windows-apps-src/get-started/universal-application-platform-guide.md)
+##### <a name='a46f8c17bf494a54bbfcb1d4f0a06ebcf2b3b3c23340'></a> Source: [windows-apps-src\porting\ios-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/ea0dd7891441fa82025655460565f464af44958f/windows-apps-src/porting/ios-to-uwp-root.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/1d331b2f9787d9a5cd0126e0742100211dce8a07/ol-handoff/Microsoft/windows-apps.de-de/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf)
-* Handoff Datetime: 2016-04-11 23:04:10
+* Handoff File: [ios-to-uwp-root.87a35694c4f6e0feb66756c0d37df4fcf851e01d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/f6ce60216daca13a7104a0e4d352f150afcf5f52/ol-handoff/Microsoft/windows-apps.de-de/master/ios-to-uwp-root.87a35694c4f6e0feb66756c0d37df4fcf851e01d.de-de.xlf)
+* Handoff Datetime: 2016-04-12 18:09:40
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
