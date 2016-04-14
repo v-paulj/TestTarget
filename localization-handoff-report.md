@@ -1,32 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps/blob/ab1bdbcf58d7950e0e0f84ee9e9ceb1d3994c8c1/windows-apps-src/publish/about-affiliate-ads.md) | HandedOffSuccess | [Details](#b78d9669d9f1f86e94e383e63de9a813cc87cba63357)
- [windows-apps-src\publish\affiliates-performance-report.md](https://github.com/Microsoft/windows-apps/blob/ab1bdbcf58d7950e0e0f84ee9e9ceb1d3994c8c1/windows-apps-src/publish/affiliates-performance-report.md) | HandedOffSuccess | [Details](#3fb62d220b6f93c74a3c91dbc9d40beddd4e31003364)
+ [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps/blob/7450ae1fd5090c5e106d441d541780778665fa0f/windows-apps-src/security/companion-device-unlock.md) | HandedOffSuccess | [Details](#a72d95ba19719441c003eec5f2872443947c68823444)
 
 ## Item Details
-##### <a name='b78d9669d9f1f86e94e383e63de9a813cc87cba63357'></a> Source: [windows-apps-src\publish\about-affiliate-ads.md](https://github.com/Microsoft/windows-apps/blob/ab1bdbcf58d7950e0e0f84ee9e9ceb1d3994c8c1/windows-apps-src/publish/about-affiliate-ads.md)
+##### <a name='a72d95ba19719441c003eec5f2872443947c68823444'></a> Source: [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps/blob/7450ae1fd5090c5e106d441d541780778665fa0f/windows-apps-src/security/companion-device-unlock.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/310308043c6eaccea8baf71110c40e96de146c6a/ol-handoff/Microsoft/windows-apps.de-de/master/about-affiliate-ads.57fb89f5b0908c2b6f71032b0dd30a68037727f0.de-de.xlf)
-* Handoff Datetime: 2016-04-13 22:07:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='3fb62d220b6f93c74a3c91dbc9d40beddd4e31003364'></a> Source: [windows-apps-src\publish\affiliates-performance-report.md](https://github.com/Microsoft/windows-apps/blob/ab1bdbcf58d7950e0e0f84ee9e9ceb1d3994c8c1/windows-apps-src/publish/affiliates-performance-report.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [affiliates-performance-report.7f08304ede76a2f8a487483ad6c187b58448153f.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/310308043c6eaccea8baf71110c40e96de146c6a/ol-handoff/Microsoft/windows-apps.de-de/master/affiliates-performance-report.7f08304ede76a2f8a487483ad6c187b58448153f.de-de.xlf)
-* Handoff Datetime: 2016-04-13 22:07:26
+* Handoff File: [companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/fbacfc59530d268fcfe2dc19983fb15091a23e43/ol-handoff/Microsoft/windows-apps.de-de/master/companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.de-de.xlf)
+* Handoff Datetime: 2016-04-14 18:12:46
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
