@@ -5,13 +5,13 @@
  -------- | ----- 
  Total Files | 3733
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 1913
+[ Handoff Success Files ](#handoff-success-list)| 1908
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
 [ In Sync Handback Files ](#insync-handback-success-list)| 0
-[ Ignored Files ](#ignored-list)| 1820
+[ Ignored Files ](#ignored-list)| 1825
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -644,16 +644,13 @@
  [windows-apps-src\controls-and-patterns\lists.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/lists.md) | HandedOffSuccess | [Details](#82035d86cf5ad8763fbd58c87d936c48253c1bf11821)
  [windows-apps-src\controls-and-patterns\master-details.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/master-details.md) | HandedOffSuccess | [Details](#f62671bc5622846618a2e661472ffa7ccc4bebb61822)
  [windows-apps-src\controls-and-patterns\media-playback.md](https://github.com/Microsoft/windows-apps/blob/5726d0be9de8efcee29077284a8976dcb8c72c2d/windows-apps-src/controls-and-patterns/media-playback.md) | HandedOffSuccess | [Details](#8dcaf9b6ef396a551e2f84faeccc95f008e1340f1823)
- [windows-apps-src\controls-and-patterns\nav-pane.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/nav-pane.md) | HandedOffSuccess | [Details](#f2f8dfb9583cde0a798ede8fb96f65d0bc79091f1824)
  [windows-apps-src\controls-and-patterns\password-box.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/password-box.md) | HandedOffSuccess | [Details](#6ef4932cb897d609254c3f5b8f51f08f36715c411825)
  [windows-apps-src\controls-and-patterns\progress-controls.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/progress-controls.md) | HandedOffSuccess | [Details](#6a35cdab751e14a1c708163ec763cd771ac95e881826)
  [windows-apps-src\controls-and-patterns\radio-button.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/radio-button.md) | HandedOffSuccess | [Details](#0fe16da98530cb2adc5f8fc6ec35e3daf198d6871827)
  [windows-apps-src\controls-and-patterns\resourcedictionary-and-xaml-resource-references.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/resourcedictionary-and-xaml-resource-references.md) | HandedOffSuccess | [Details](#4e247146f8a5e96b792878e63ca170fff00eaf381828)
  [windows-apps-src\controls-and-patterns\rich-edit-box.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/rich-edit-box.md) | HandedOffSuccess | [Details](#ce9a932f96b638f3547f84b54f35b30fe52bc4ed1829)
  [windows-apps-src\controls-and-patterns\rich-text-block.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/rich-text-block.md) | HandedOffSuccess | [Details](#d69930b68e50574299a3f805a98d9b182142ee7d1830)
- [windows-apps-src\controls-and-patterns\scroll-controls.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/scroll-controls.md) | HandedOffSuccess | [Details](#7e2cd8a085a1f0b7d523268efcda27364539cfee1831)
  [windows-apps-src\controls-and-patterns\search.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/search.md) | HandedOffSuccess | [Details](#2ca65f6948b79551909d8516ee42a1a56a511ebd1832)
- [windows-apps-src\controls-and-patterns\segoe-ui-symbol-font.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/segoe-ui-symbol-font.md) | HandedOffSuccess | [Details](#f7642a27d431aade8a018210b61b09748092674e1833)
  [windows-apps-src\controls-and-patterns\semantic-zoom.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/semantic-zoom.md) | HandedOffSuccess | [Details](#9012d6127d35e0bf5f65b13b3b13499909392d6b1834)
  [windows-apps-src\controls-and-patterns\slider.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/slider.md) | HandedOffSuccess | [Details](#1054a93b4937bea3af91d855a69ff50cfe04bb6b1835)
  [windows-apps-src\controls-and-patterns\spell-checking-and-prediction.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/spell-checking-and-prediction.md) | HandedOffSuccess | [Details](#046874a97796d5ab734e229f867dbee233a685691836)
@@ -962,8 +959,6 @@
  [windows-apps-src\gaming\working-with-2d-graphics-in-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/gaming/working-with-2d-graphics-in-your-directx-game.md) | HandedOffSuccess | [Details](#50782c5923f9c811f5d8e91aa9aee897876e6c242168)
  [windows-apps-src\gaming\working-with-audio-in-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/gaming/working-with-audio-in-your-directx-game.md) | HandedOffSuccess | [Details](#98896d4966ee2adb3bf494dcba22656fc8bb64142169)
  [windows-apps-src\gaming\work-with-networking-in-your-directx-game.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/gaming/work-with-networking-in-your-directx-game.md) | HandedOffSuccess | [Details](#63a40f5853740d1053449e1b1839f5b0232ce28e2167)
- [windows-apps-src\get-started\create-a-basic-windows-10-app-in-cpp.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/create-a-basic-windows-10-app-in-cpp.md) | HandedOffSuccess | [Details](#2c8fb17628f685ba529ef75712fffdc6915ba2dc2170)
- [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md) | HandedOffSuccess | [Details](#526befbbb8b6a7e0f2b6a4bc91e3870b0e4831c82171)
  [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md) | HandedOffSuccess | [Details](#7def631c69d25e383af0c4d1064f70ebf03c5dfc2172)
  [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/enable-your-device-for-development.md) | HandedOffSuccess | [Details](#4c890d6202a3151e8fc0cf03b3ff33b98cd6a8632173)
  [windows-apps-src\get-started\get-set-up.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/get-set-up.md) | HandedOffSuccess | [Details](#8c5dfb692d647a25eea13036cd320366f3c5a09c2174)
@@ -3143,6 +3138,9 @@
  [windows-apps-src\controls-and-patterns\images\zoom.png](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/images/zoom.png) | Ignored | [Details](#bbf8fb980b617de95ddb9a8ef7995e2023ed82541817)
  [windows-apps-src\controls-and-patterns\images\zoomin.png](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/images/zoomin.png) | Ignored | [Details](#1f51b418666450fb832bdfd52bb79153e7f1b6b41818)
  [windows-apps-src\controls-and-patterns\images\zoomout.png](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/images/zoomout.png) | Ignored | [Details](#10964baff2bb53bf96ce2b220239d2322ac7a5941819)
+ [windows-apps-src\controls-and-patterns\nav-pane.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/nav-pane.md) | Ignored | [Details](#60a1b6c52418dbfca0a7194228f193a631c6d88a1824)
+ [windows-apps-src\controls-and-patterns\scroll-controls.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/scroll-controls.md) | Ignored | [Details](#ae2db47ce144fd4f4d0d8ea22544e6f7e2e9abbe1831)
+ [windows-apps-src\controls-and-patterns\segoe-ui-symbol-font.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/segoe-ui-symbol-font.md) | Ignored | [Details](#662eacde916be166c9bbab5baec9f990325e78f91833)
  [windows-apps-src\devices-sensors\code\.vs\3DPrintHowTo\v14\.suo](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/devices-sensors/code/.vs/3DPrintHowTo/v14/.suo) | Ignored | [Details](#11db3734297eb69b8104de98fa131ee5ac8447e71964)
  [windows-apps-src\devices-sensors\code\3DPrintHowTo.sln](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/devices-sensors/code/3DPrintHowTo.sln) | Ignored | [Details](#3de61ed0f356e89cc1da5a9f4ee4f41f0d54bb8d1965)
  [windows-apps-src\devices-sensors\code\3dprinthowto\cs\3DPrintHowTo.csproj](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/devices-sensors/code/3dprinthowto/cs/3DPrintHowTo.csproj) | Ignored | [Details](#e91c0b71f49e00d1c193291492bb469b70a041831966)
@@ -3171,6 +3169,8 @@
  [windows-apps-src\enterprise\images\enterprise-hello-flow.png](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/enterprise/images/enterprise-hello-flow.png) | Ignored | [Details](#14f601a0e209b87272ecad8c6ae96c17c244af8b2039)
  [windows-apps-src\enterprise\images\enterprise-sfa-flow.png](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/enterprise/images/enterprise-sfa-flow.png) | Ignored | [Details](#8812cf0d88006d1b37cd7ab6c3199a491aa2e3ac2040)
  [windows-apps-src\enterprise\images\enterprise-wab-flow.png](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/enterprise/images/enterprise-wab-flow.png) | Ignored | [Details](#9f73680d73d55324df0b0fb3ea19c6891aaf4b5f2042)
+ [windows-apps-src\get-started\create-a-basic-windows-10-app-in-cpp.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/create-a-basic-windows-10-app-in-cpp.md) | Ignored | [Details](#e39752f9f13eaf93d23412252483093e704b16682170)
+ [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md) | Ignored | [Details](#8f8ac6d931183c80c37d0f3578702127852408f12171)
  [windows-apps-src\get-started\images\01-start-screen-beta-sm.png](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/images/01-start-screen-beta-sm.png) | Ignored | [Details](#251ad5ab705bfd86fc94b587ea3e75524537471d2175)
  [windows-apps-src\get-started\images\12-store.png](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/images/12-store.png) | Ignored | [Details](#07f407b32d7abf09ce75564e8fff34492527fd822177)
  [windows-apps-src\get-started\images\12-store-sm.png](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/images/12-store-sm.png) | Ignored | [Details](#04879ab49c148dc29e9d0eb5eb98a915b0ac885f2176)
@@ -26195,12 +26195,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f2f8dfb9583cde0a798ede8fb96f65d0bc79091f1824'></a> Source: [windows-apps-src\controls-and-patterns\nav-pane.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/nav-pane.md)
-* Status: HandedOffSuccess
+##### <a name='60a1b6c52418dbfca0a7194228f193a631c6d88a1824'></a> Source: [windows-apps-src\controls-and-patterns\nav-pane.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/nav-pane.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [nav-pane.d6c3b77138be76c3243ad01a275a61809f6018b6.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/787048b092ce8f8feaf1c1a5bb1e6e48386e9f73/ol-handoff/Microsoft/windows-apps.de-de/master/nav-pane.d6c3b77138be76c3243ad01a275a61809f6018b6.de-de.xlf)
-* Handoff Datetime: 2016-04-14 20:53:55
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -26279,12 +26279,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='7e2cd8a085a1f0b7d523268efcda27364539cfee1831'></a> Source: [windows-apps-src\controls-and-patterns\scroll-controls.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/scroll-controls.md)
-* Status: HandedOffSuccess
+##### <a name='ae2db47ce144fd4f4d0d8ea22544e6f7e2e9abbe1831'></a> Source: [windows-apps-src\controls-and-patterns\scroll-controls.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/scroll-controls.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [scroll-controls.5447580fc2eb2862fe428709f3952b704cddcf0d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/787048b092ce8f8feaf1c1a5bb1e6e48386e9f73/ol-handoff/Microsoft/windows-apps.de-de/master/scroll-controls.5447580fc2eb2862fe428709f3952b704cddcf0d.de-de.xlf)
-* Handoff Datetime: 2016-04-14 20:53:55
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -26303,12 +26303,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f7642a27d431aade8a018210b61b09748092674e1833'></a> Source: [windows-apps-src\controls-and-patterns\segoe-ui-symbol-font.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/segoe-ui-symbol-font.md)
-* Status: HandedOffSuccess
+##### <a name='662eacde916be166c9bbab5baec9f990325e78f91833'></a> Source: [windows-apps-src\controls-and-patterns\segoe-ui-symbol-font.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/controls-and-patterns/segoe-ui-symbol-font.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [segoe-ui-symbol-font.725e04d7ce5390567e99c30a1ff910ac1a06bff3.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/787048b092ce8f8feaf1c1a5bb1e6e48386e9f73/ol-handoff/Microsoft/windows-apps.de-de/master/segoe-ui-symbol-font.725e04d7ce5390567e99c30a1ff910ac1a06bff3.de-de.xlf)
-* Handoff Datetime: 2016-04-14 20:53:55
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -30459,24 +30459,24 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='2c8fb17628f685ba529ef75712fffdc6915ba2dc2170'></a> Source: [windows-apps-src\get-started\create-a-basic-windows-10-app-in-cpp.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/create-a-basic-windows-10-app-in-cpp.md)
-* Status: HandedOffSuccess
+##### <a name='e39752f9f13eaf93d23412252483093e704b16682170'></a> Source: [windows-apps-src\get-started\create-a-basic-windows-10-app-in-cpp.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/create-a-basic-windows-10-app-in-cpp.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [create-a-basic-windows-10-app-in-cpp.d466310b61c18b0f5f397440292f7327c0926725.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/787048b092ce8f8feaf1c1a5bb1e6e48386e9f73/ol-handoff/Microsoft/windows-apps.de-de/master/create-a-basic-windows-10-app-in-cpp.d466310b61c18b0f5f397440292f7327c0926725.de-de.xlf)
-* Handoff Datetime: 2016-04-14 20:53:55
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='526befbbb8b6a7e0f2b6a4bc91e3870b0e4831c82171'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md)
-* Status: HandedOffSuccess
+##### <a name='8f8ac6d931183c80c37d0f3578702127852408f12171'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/75dccb2073a0c633d51016c3d2cbf12d49dd8738/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/787048b092ce8f8feaf1c1a5bb1e6e48386e9f73/ol-handoff/Microsoft/windows-apps.de-de/master/create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.de-de.xlf)
-* Handoff Datetime: 2016-04-14 20:53:55
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
