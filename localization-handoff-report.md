@@ -1,45 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 3
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/8775750f75f8b6f7d72e0d03b30081d245af2879/windows-apps-src/devices-sensors/3d-print-from-app.md) | HandedOffSuccess | [Details](#e68a9c681974152bc0d4dfa58e824f80e77dc51f1957)
- [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/8775750f75f8b6f7d72e0d03b30081d245af2879/windows-apps-src/devices-sensors/3d-printing.md) | HandedOffSuccess | [Details](#a56adc5c7bc3f2d5ec4976e4e5394ff26ea983dc1958)
- [windows-apps-src\devices-sensors\generate-3mf.md](https://github.com/Microsoft/windows-apps/blob/8775750f75f8b6f7d72e0d03b30081d245af2879/windows-apps-src/devices-sensors/generate-3mf.md) | HandedOffSuccess | [Details](#99b00c855cc723dfca0aa8c4a70e31379bca88381995)
+ [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/f4ab3610a3ad3df90e06fd2f23e8244ce8449916/windows-apps-src/packaging/app-capability-declarations.md) | HandedOffSuccess | [Details](#c1819ddc1e6335b225fcc0e38a40dcb4c9eaf7203255)
 
 ## Item Details
-##### <a name='e68a9c681974152bc0d4dfa58e824f80e77dc51f1957'></a> Source: [windows-apps-src\devices-sensors\3d-print-from-app.md](https://github.com/Microsoft/windows-apps/blob/8775750f75f8b6f7d72e0d03b30081d245af2879/windows-apps-src/devices-sensors/3d-print-from-app.md)
+##### <a name='c1819ddc1e6335b225fcc0e38a40dcb4c9eaf7203255'></a> Source: [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/f4ab3610a3ad3df90e06fd2f23e8244ce8449916/windows-apps-src/packaging/app-capability-declarations.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/752699667dc81d3ad496b6ed16c9d9effdc0be92/ol-handoff/Microsoft/windows-apps.de-de/master/3d-print-from-app.3c68c96e21ffee31044cc9de50bec735320b7269.de-de.xlf)
-* Handoff Datetime: 2016-04-15 17:45:07
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='a56adc5c7bc3f2d5ec4976e4e5394ff26ea983dc1958'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/8775750f75f8b6f7d72e0d03b30081d245af2879/windows-apps-src/devices-sensors/3d-printing.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/752699667dc81d3ad496b6ed16c9d9effdc0be92/ol-handoff/Microsoft/windows-apps.de-de/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.de-de.xlf)
-* Handoff Datetime: 2016-04-15 17:45:07
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='99b00c855cc723dfca0aa8c4a70e31379bca88381995'></a> Source: [windows-apps-src\devices-sensors\generate-3mf.md](https://github.com/Microsoft/windows-apps/blob/8775750f75f8b6f7d72e0d03b30081d245af2879/windows-apps-src/devices-sensors/generate-3mf.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [generate-3mf.ee80cfeb81494e7843cb5a102ffb0c17b6f3e40f.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/752699667dc81d3ad496b6ed16c9d9effdc0be92/ol-handoff/Microsoft/windows-apps.de-de/master/generate-3mf.ee80cfeb81494e7843cb5a102ffb0c17b6f3e40f.de-de.xlf)
-* Handoff Datetime: 2016-04-15 17:45:07
+* Handoff File: [app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/77a838c5dcf3c3e78c8b5bbda638f43a0218c6e4/ol-handoff/Microsoft/windows-apps.de-de/master/app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf)
+* Handoff Datetime: 2016-04-15 18:11:28
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
