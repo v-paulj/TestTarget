@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "747d681c3c8140e2ab7b72bd53538a361be943ac",
-  "LastTranslatedCommit": "6300e869a150a7908635da418824c8f56208ffd5",
+  "LastTranslatedCommit": "41d61b8392e65431e76f7eb0b74698f1196e38dd",
   "Items": {
     "e5a3ba81407e65db2addcb6fb7b6485ee12b97de": {
       "FileHash": "e5a3ba81407e65db2addcb6fb7b6485ee12b97de",
@@ -1521,7 +1521,7 @@
       "TargetFilePath": "windows-apps-src\\audio-video-camera\\media-playback-with-mediasource.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\windows-apps.de-de\\master\\media-playback-with-mediasource.94662fa9799ba564cb9365c51437eed265fb9453.de-de.xlf",
       "HandbackFileCommit": "f66758c0e4a625f9be529dd679ab0bb9b61495fc",
-      "HandbackDateTime": "2016-04-18T15:54:02.5417676Z",
+      "HandbackDateTime": "2016-04-18T16:23:12.8076499Z",
       "HandbackException": {
         "internal_error_code": "handback_validate_file_name_invalide",
         "internal_error_message": "Handback file name: launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.de-de is different with handoff file name: media-playback-with-mediasource.94662fa9799ba564cb9365c51437eed265fb9453.de-de.",
@@ -1531,7 +1531,7 @@
         "stack_trace": null,
         "extended_information": null
       },
-      "HandbackFailureTimes": 4,
+      "HandbackFailureTimes": 5,
       "UpdatedDateTime": "2016-04-18T14:03:31.2813164Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
