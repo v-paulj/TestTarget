@@ -1,74 +1,42 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 4
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\security\authentication-and-user-identity.md](https://github.com/Microsoft/windows-apps/blob/03bc1011632801f031d031cd969190b3a370f805/windows-apps-src/security/authentication-and-user-identity.md) | OutofSyncHandedBackSuccess | [Details](#9b32f768e9a5d6f3c2261ccf24c6fadb798140a73442)
- [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps/blob/03bc1011632801f031d031cd969190b3a370f805/windows-apps-src/security/companion-device-unlock.md) | OutofSyncHandedBackSuccess | [Details](#38684f7a816807ebc81945ef91ead8e06a8ae1c03445)
- [windows-apps-src\security\index.md](https://github.com/Microsoft/windows-apps/blob/03bc1011632801f031d031cd969190b3a370f805/windows-apps-src/security/index.md) | OutofSyncHandedBackSuccess | [Details](#75f8ebf555d03b3a5def28eb1da8af30d5b037b13492)
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/a8c83355be7cb96dfd2ea18e8ae01410de5b534a/windows-apps-src/TOC.md) | OutofSyncHandedBackSuccess | [Details](#57124398c8972777792eb97748bbaa270f7a983f3632)
+ [windows-apps-src\publish\feedback-report.md](https://github.com/Microsoft/windows-apps/blob/715e90f62277a042d30d3e818a6fb1b8b451628e/windows-apps-src/publish/feedback-report.md) | OutofSyncHandedBackSuccess | [Details](#38ede2808f662400f77e01ec802815cb25c2a22d3393)
+ [windows-apps-src\publish\mobile-operator-billing.md](https://github.com/Microsoft/windows-apps/blob/9836775732280f58b3e914f5173438d32a6874e9/windows-apps-src/publish/mobile-operator-billing.md) | OutofSyncHandedBackSuccess | [Details](#8c990588efb117a2f67a6e752edb94017a0ee5843411)
 
 ## Item Details
-##### <a name='9b32f768e9a5d6f3c2261ccf24c6fadb798140a73442'></a> Source: [windows-apps-src\security\authentication-and-user-identity.md](https://github.com/Microsoft/windows-apps/blob/03bc1011632801f031d031cd969190b3a370f805/windows-apps-src/security/authentication-and-user-identity.md)
+##### <a name='38ede2808f662400f77e01ec802815cb25c2a22d3393'></a> Source: [windows-apps-src\publish\feedback-report.md](https://github.com/Microsoft/windows-apps/blob/715e90f62277a042d30d3e818a6fb1b8b451628e/windows-apps-src/publish/feedback-report.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [authentication-and-user-identity.894a02c993d2340deb31b4fbcae4c980ddb23fdb.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ede68661a8f61160d44cc2c1a82a2011b1f1fcfc/ol-handoff/Microsoft/windows-apps.de-de/master/authentication-and-user-identity.894a02c993d2340deb31b4fbcae4c980ddb23fdb.de-de.xlf)
-* Handoff Datetime: 2016-04-18 21:50:00
+* Handoff File: [feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/723ca8867235a993fabc55fb10ee56677df5245f/ol-handoff/Microsoft/windows-apps.de-de/master/feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.de-de.xlf)
+* Handoff Datetime: 2016-04-18 23:21:28
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\security\authentication-and-user-identity.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/security/authentication-and-user-identity.md)
-* Current Handback File: [authentication-and-user-identity.894a02c993d2340deb31b4fbcae4c980ddb23fdb.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/authentication-and-user-identity.894a02c993d2340deb31b4fbcae4c980ddb23fdb.de-de.xlf)
+* Current Target File: [windows-apps-src\publish\feedback-report.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/publish/feedback-report.md)
+* Current Handback File: [feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/feedback-report.5499a4a1ccb82642d7b4f42d639f318bb8c5a6ce.de-de.xlf)
 * Current Handback Datetime: 2016-04-18 14:03:31
 * [Back to Top](#report-top)
 
-##### <a name='38684f7a816807ebc81945ef91ead8e06a8ae1c03445'></a> Source: [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps/blob/03bc1011632801f031d031cd969190b3a370f805/windows-apps-src/security/companion-device-unlock.md)
+##### <a name='8c990588efb117a2f67a6e752edb94017a0ee5843411'></a> Source: [windows-apps-src\publish\mobile-operator-billing.md](https://github.com/Microsoft/windows-apps/blob/9836775732280f58b3e914f5173438d32a6874e9/windows-apps-src/publish/mobile-operator-billing.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ede68661a8f61160d44cc2c1a82a2011b1f1fcfc/ol-handoff/Microsoft/windows-apps.de-de/master/companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.de-de.xlf)
-* Handoff Datetime: 2016-04-18 21:50:00
+* Handoff File: [mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/723ca8867235a993fabc55fb10ee56677df5245f/ol-handoff/Microsoft/windows-apps.de-de/master/mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.de-de.xlf)
+* Handoff Datetime: 2016-04-18 23:21:28
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\security\companion-device-unlock.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/security/companion-device-unlock.md)
-* Current Handback File: [companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/companion-device-unlock.01334c661f175cfd14017b7b4662584b9b11224d.de-de.xlf)
-* Current Handback Datetime: 2016-04-18 14:03:31
-* [Back to Top](#report-top)
-
-##### <a name='75f8ebf555d03b3a5def28eb1da8af30d5b037b13492'></a> Source: [windows-apps-src\security\index.md](https://github.com/Microsoft/windows-apps/blob/03bc1011632801f031d031cd969190b3a370f805/windows-apps-src/security/index.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [index.36c19658e673067b86aba619b12635d8359c4091.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ede68661a8f61160d44cc2c1a82a2011b1f1fcfc/ol-handoff/Microsoft/windows-apps.de-de/master/index.36c19658e673067b86aba619b12635d8359c4091.de-de.xlf)
-* Handoff Datetime: 2016-04-18 21:50:00
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\security\index.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/security/index.md)
-* Current Handback File: [index.36c19658e673067b86aba619b12635d8359c4091.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/index.36c19658e673067b86aba619b12635d8359c4091.de-de.xlf)
-* Current Handback Datetime: 2016-04-18 14:03:31
-* [Back to Top](#report-top)
-
-##### <a name='57124398c8972777792eb97748bbaa270f7a983f3632'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/a8c83355be7cb96dfd2ea18e8ae01410de5b534a/windows-apps-src/TOC.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ede68661a8f61160d44cc2c1a82a2011b1f1fcfc/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
-* Handoff Datetime: 2016-04-18 21:50:00
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/TOC.md)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Current Target File: [windows-apps-src\publish\mobile-operator-billing.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/publish/mobile-operator-billing.md)
+* Current Handback File: [mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/mobile-operator-billing.96a8e95eb21d2af1a509785b0af929f9738e7604.de-de.xlf)
 * Current Handback Datetime: 2016-04-18 14:03:31
 * [Back to Top](#report-top)
 
