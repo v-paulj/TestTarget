@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "9132b203b266d5384197cf3c8e3ca0d56d64f65c",
+  "LastProcessedCommit": "a2f1a10660ee8b9615cbca6d45f36fdbb2624d43",
   "LastTranslatedCommit": "1b10e001a07650e8ae4d91208809e6ebab47b2e9",
   "Items": {
     "e5a3ba81407e65db2addcb6fb7b6485ee12b97de": {
@@ -83118,6 +83118,190 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\practices-to-avoid.8ed8037e895cde1a19d30fd6ae1ecbf8ae679566.de-de.xlf",
       "HandoffFileCommit": "477795b4c2e77d2e51e386a5d973f8f0c7d29ec0",
       "HandoffDateTime": "2016-04-20T22:42:50.5530997Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "3065ab0a7b2ac407dbf03b478629d63e67db7e45": {
+      "FileHash": "3065ab0a7b2ac407dbf03b478629d63e67db7e45",
+      "SourceFileCommit": "a69386f976f4bb8ddc1051b51a67776c58c13dba",
+      "SourceFilePath": "windows-apps-src\\input-and-devices\\cortana-design-guidelines.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\input-and-devices\\cortana-design-guidelines.md"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\cortana-design-guidelines.3693f2e8faf3bbe006ccc6cc8626991846447184.de-de.xlf",
+      "HandoffFileCommit": "8fb456857f0b404eee416d97c40f1552ec2d2ab8",
+      "HandoffDateTime": "2016-04-20T23:14:23.2977329Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "02f9a27f5b6bd58cbf406b2cf8bd5a0524ca7f77": {
+      "FileHash": "02f9a27f5b6bd58cbf406b2cf8bd5a0524ca7f77",
+      "SourceFileCommit": "a69386f976f4bb8ddc1051b51a67776c58c13dba",
+      "SourceFilePath": "windows-apps-src\\input-and-devices\\images\\cortana\\voicecommandcontenttiletype_titleonly_small.png",
+      "HandoffReason": 2,
+      "DependencyFrom": [
+        "windows-apps-src\\input-and-devices\\cortana-design-guidelines.md"
+      ],
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\input-and-devices\\images\\cortana\\voicecommandcontenttiletype_titleonly_small.png"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\02f9a27f5b6bd58cbf406b2cf8bd5a0524ca7f77.png",
+      "HandoffFileCommit": "8fb456857f0b404eee416d97c40f1552ec2d2ab8",
+      "HandoffDateTime": "2016-04-20T23:14:23.2977329Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "7df96da299be9b0a95dee92ca30a7d0f2c6c4137": {
+      "FileHash": "7df96da299be9b0a95dee92ca30a7d0f2c6c4137",
+      "SourceFileCommit": "a69386f976f4bb8ddc1051b51a67776c58c13dba",
+      "SourceFilePath": "windows-apps-src\\input-and-devices\\images\\cortana\\voicecommandcontenttiletype_titlewith280x140iconandtext_small.png",
+      "HandoffReason": 2,
+      "DependencyFrom": [
+        "windows-apps-src\\input-and-devices\\cortana-design-guidelines.md"
+      ],
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\input-and-devices\\images\\cortana\\voicecommandcontenttiletype_titlewith280x140iconandtext_small.png"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\7df96da299be9b0a95dee92ca30a7d0f2c6c4137.png",
+      "HandoffFileCommit": "8fb456857f0b404eee416d97c40f1552ec2d2ab8",
+      "HandoffDateTime": "2016-04-20T23:14:23.2977329Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "047588d900195dfeedc53f0786d1b2415949191f": {
+      "FileHash": "047588d900195dfeedc53f0786d1b2415949191f",
+      "SourceFileCommit": "a69386f976f4bb8ddc1051b51a67776c58c13dba",
+      "SourceFilePath": "windows-apps-src\\input-and-devices\\images\\cortana\\voicecommandcontenttiletype_titlewith68x68iconandtext_small.png",
+      "HandoffReason": 2,
+      "DependencyFrom": [
+        "windows-apps-src\\input-and-devices\\cortana-design-guidelines.md"
+      ],
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\input-and-devices\\images\\cortana\\voicecommandcontenttiletype_titlewith68x68iconandtext_small.png"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\047588d900195dfeedc53f0786d1b2415949191f.png",
+      "HandoffFileCommit": "8fb456857f0b404eee416d97c40f1552ec2d2ab8",
+      "HandoffDateTime": "2016-04-20T23:14:23.2977329Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "618bdecf30caf0ac7f2cd6181de2220500e19581": {
+      "FileHash": "618bdecf30caf0ac7f2cd6181de2220500e19581",
+      "SourceFileCommit": "a69386f976f4bb8ddc1051b51a67776c58c13dba",
+      "SourceFilePath": "windows-apps-src\\input-and-devices\\images\\cortana\\voicecommandcontenttiletype_titlewith68x92iconandtext_small.png",
+      "HandoffReason": 2,
+      "DependencyFrom": [
+        "windows-apps-src\\input-and-devices\\cortana-design-guidelines.md"
+      ],
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\input-and-devices\\images\\cortana\\voicecommandcontenttiletype_titlewith68x92iconandtext_small.png"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\618bdecf30caf0ac7f2cd6181de2220500e19581.png",
+      "HandoffFileCommit": "8fb456857f0b404eee416d97c40f1552ec2d2ab8",
+      "HandoffDateTime": "2016-04-20T23:14:23.2977329Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "326bdde5caaf3f610d434537f548563a7adc5a98": {
+      "FileHash": "326bdde5caaf3f610d434537f548563a7adc5a98",
+      "SourceFileCommit": "a69386f976f4bb8ddc1051b51a67776c58c13dba",
+      "SourceFilePath": "windows-apps-src\\input-and-devices\\images\\cortana\\voicecommandcontenttiletype_titlewithtext_small.png",
+      "HandoffReason": 2,
+      "DependencyFrom": [
+        "windows-apps-src\\input-and-devices\\cortana-design-guidelines.md"
+      ],
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\input-and-devices\\images\\cortana\\voicecommandcontenttiletype_titlewithtext_small.png"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\326bdde5caaf3f610d434537f548563a7adc5a98.png",
+      "HandoffFileCommit": "8fb456857f0b404eee416d97c40f1552ec2d2ab8",
+      "HandoffDateTime": "2016-04-20T23:14:23.2977329Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
