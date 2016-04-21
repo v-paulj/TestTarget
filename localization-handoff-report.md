@@ -1,38 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\automate-launching-uwp-apps.md](https://github.com/Microsoft/windows-apps/blob/0ace60f363543fb42c355c9846cf38c2dd9189e2/windows-apps-src/xbox-apps/automate-launching-uwp-apps.md) | HandedOffSuccess | [Details](#7af8f0683700992f2771e5b000a8cbf5ef76c48c3745)
- [windows-apps-src\xbox-apps\images\automate-uwp-apps-1.png](https://github.com/Microsoft/windows-apps/blob/ecd64eb4483452de500ad3d2c0775a99753dce3a/windows-apps-src/xbox-apps/images/automate-uwp-apps-1.png) | HandedOffSuccess | [Details](#b6ea33a4d2d47f051e882e9b083926cca59514dd3760)
+ [windows-apps-src\porting\android-ios-uwp-map.md](https://github.com/Microsoft/windows-apps/blob/cb96da2be6023d5b4737a3fe2d0550630fdcf057/windows-apps-src/porting/android-ios-uwp-map.md) | OutofSyncHandedBackSuccess | [Details](#d3cf4126b6a98cd922ef9a7c9cd127ad26eed35b3332)
 
 ## Item Details
-##### <a name='7af8f0683700992f2771e5b000a8cbf5ef76c48c3745'></a> Source: [windows-apps-src\xbox-apps\automate-launching-uwp-apps.md](https://github.com/Microsoft/windows-apps/blob/0ace60f363543fb42c355c9846cf38c2dd9189e2/windows-apps-src/xbox-apps/automate-launching-uwp-apps.md)
-* Status: HandedOffSuccess
+##### <a name='d3cf4126b6a98cd922ef9a7c9cd127ad26eed35b3332'></a> Source: [windows-apps-src\porting\android-ios-uwp-map.md](https://github.com/Microsoft/windows-apps/blob/cb96da2be6023d5b4737a3fe2d0550630fdcf057/windows-apps-src/porting/android-ios-uwp-map.md)
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [automate-launching-uwp-apps.d3a8973266c7d7241b819fad336d4645f47c154b.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/5309dfb0d61fbc143365456e71a2749280aa0200/ol-handoff/Microsoft/windows-apps.de-de/master/automate-launching-uwp-apps.d3a8973266c7d7241b819fad336d4645f47c154b.de-de.xlf)
-* Handoff Datetime: 2016-04-21 19:13:21
+* Handoff File: [android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/b5bbbdd1ff16e34b6248ec6e3505ee7413d52193/ol-handoff/Microsoft/windows-apps.de-de/master/android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.de-de.xlf)
+* Handoff Datetime: 2016-04-21 20:12:35
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='b6ea33a4d2d47f051e882e9b083926cca59514dd3760'></a> Source: [windows-apps-src\xbox-apps\images\automate-uwp-apps-1.png](https://github.com/Microsoft/windows-apps/blob/ecd64eb4483452de500ad3d2c0775a99753dce3a/windows-apps-src/xbox-apps/images/automate-uwp-apps-1.png)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [b6ea33a4d2d47f051e882e9b083926cca59514dd.png](https://github.com/Microsoft/WDG.handoff/blob/5309dfb0d61fbc143365456e71a2749280aa0200/ol-handoff/Microsoft/windows-apps.de-de/master/b6ea33a4d2d47f051e882e9b083926cca59514dd.png)
-* Handoff Datetime: 2016-04-21 19:13:21
-* Handoff Reason: IsDependency
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Dependency From: windows-apps-src\xbox-apps\automate-launching-uwp-apps.md
+* Current Target File: [windows-apps-src\porting\android-ios-uwp-map.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/porting/android-ios-uwp-map.md)
+* Current Handback File: [android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/android-ios-uwp-map.6676821c86614bdd62f0f709cefaaa98367a24a7.de-de.xlf)
+* Current Handback Datetime: 2016-04-18 14:03:31
 * [Back to Top](#report-top)
 
 
