@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\link-to-your-app.md](https://github.com/Microsoft/windows-apps/blob/d36f14604bd8c2ce0d5778a67f5b5b9460d9fbf3/windows-apps-src/publish/link-to-your-app.md) | OutofSyncHandedBackSuccess | [Details](#891b99b52f7e3b347c0e2f9d298f144313cc7b2d3470)
+ [windows-apps-src\launch-resume\launch-store-app.md](https://github.com/Microsoft/windows-apps/blob/d84ace56ee8631d43b771e25b6081163f238b975/windows-apps-src/launch-resume/launch-store-app.md) | OutofSyncHandedBackSuccess | [Details](#df4f518e9c2dec62ac39fe7e468b9c380e3120432911)
 
 ## Item Details
-##### <a name='891b99b52f7e3b347c0e2f9d298f144313cc7b2d3470'></a> Source: [windows-apps-src\publish\link-to-your-app.md](https://github.com/Microsoft/windows-apps/blob/d36f14604bd8c2ce0d5778a67f5b5b9460d9fbf3/windows-apps-src/publish/link-to-your-app.md)
+##### <a name='df4f518e9c2dec62ac39fe7e468b9c380e3120432911'></a> Source: [windows-apps-src\launch-resume\launch-store-app.md](https://github.com/Microsoft/windows-apps/blob/d84ace56ee8631d43b771e25b6081163f238b975/windows-apps-src/launch-resume/launch-store-app.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/c3ae03e896ecbe20dc9ec723a69700fb6142b3a6/ol-handoff/Microsoft/windows-apps.de-de/master/link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.de-de.xlf)
-* Handoff Datetime: 2016-04-21 23:45:09
+* Handoff File: [launch-store-app.417766db8abedfa85976f7d8e73dbfef74f7ad97.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/6547a86eb199d2a146c55f56b8f95936b3861a16/ol-handoff/Microsoft/windows-apps.de-de/master/launch-store-app.417766db8abedfa85976f7d8e73dbfef74f7ad97.de-de.xlf)
+* Handoff Datetime: 2016-04-22 00:12:21
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\link-to-your-app.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/publish/link-to-your-app.md)
-* Current Handback File: [link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/link-to-your-app.258affb37b4b82fa419eab4e1167dcb730638941.de-de.xlf)
+* Current Target File: [windows-apps-src\launch-resume\launch-store-app.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/launch-resume/launch-store-app.md)
+* Current Handback File: [launch-store-app.417766db8abedfa85976f7d8e73dbfef74f7ad97.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/launch-store-app.417766db8abedfa85976f7d8e73dbfef74f7ad97.de-de.xlf)
 * Current Handback Datetime: 2016-04-18 14:03:31
 * [Back to Top](#report-top)
 
