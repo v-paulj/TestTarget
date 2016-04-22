@@ -1,85 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 5
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\display-ads-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/display-ads-in-your-app.md) | OutofSyncHandedBackSuccess | [Details](#c79ba96908cc7b52afefbe44c3f56ce009c87f163228)
- [windows-apps-src\monetize\display-ads-using-the-microsoft-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/display-ads-using-the-microsoft-advertising-libraries.md) | HandedOffSuccess | [Details](#892bad0f9f9e6ad719336c551b21ddd471b3d22a3229)
- [windows-apps-src\monetize\index.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/index.md) | OutofSyncHandedBackSuccess | [Details](#ac5b1f06ef6b57044c0561f0ccfa40c6db42ac273272)
- [windows-apps-src\monetize\monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md) | OutofSyncHandedBackSuccess | [Details](#2b260df9d10b6cab9f4ded939ccd8213e696ce4d3282)
- [windows-apps-src\monetize\what-is-the-difference-admediatorcontrol-or-adcontrol.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/what-is-the-difference-admediatorcontrol-or-adcontrol.md) | HandedOffSuccess | [Details](#291e1c4d707e8987d29ae5840248918543d7d12a3303)
+ [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/c11ad0419594196f0466d262cd11c7642d35b5f3/windows-apps-src/xbox-apps/known-issues.md) | OutofSyncHandedBackSuccess | [Details](#e097e9f902f712aeb3e7b5ff6d5bea708c40493e3796)
 
 ## Item Details
-##### <a name='c79ba96908cc7b52afefbe44c3f56ce009c87f163228'></a> Source: [windows-apps-src\monetize\display-ads-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/display-ads-in-your-app.md)
+##### <a name='e097e9f902f712aeb3e7b5ff6d5bea708c40493e3796'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/c11ad0419594196f0466d262cd11c7642d35b5f3/windows-apps-src/xbox-apps/known-issues.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/4b39e6f8ab4d12666bf395264625a5771b596ced/ol-handoff/Microsoft/windows-apps.de-de/master/display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.de-de.xlf)
-* Handoff Datetime: 2016-04-22 17:16:04
+* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/e4d2b8e174b88fc89502f7d597c9cda2bc6dc412/ol-handoff/Microsoft/windows-apps.de-de/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf)
+* Handoff Datetime: 2016-04-22 18:15:03
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\display-ads-in-your-app.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/monetize/display-ads-in-your-app.md)
-* Current Handback File: [display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/display-ads-in-your-app.7a65d6ad9fcc9b8be3d959f4d47f1d74ae47975c.de-de.xlf)
+* Current Target File: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/xbox-apps/known-issues.md)
+* Current Handback File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf)
 * Current Handback Datetime: 2016-04-18 14:03:31
-* [Back to Top](#report-top)
-
-##### <a name='892bad0f9f9e6ad719336c551b21ddd471b3d22a3229'></a> Source: [windows-apps-src\monetize\display-ads-using-the-microsoft-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/display-ads-using-the-microsoft-advertising-libraries.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [display-ads-using-the-microsoft-advertising-libraries.941760fc8c292c01a73d4b137c62b879c70cd373.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/4b39e6f8ab4d12666bf395264625a5771b596ced/ol-handoff/Microsoft/windows-apps.de-de/master/display-ads-using-the-microsoft-advertising-libraries.941760fc8c292c01a73d4b137c62b879c70cd373.de-de.xlf)
-* Handoff Datetime: 2016-04-22 17:16:04
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='ac5b1f06ef6b57044c0561f0ccfa40c6db42ac273272'></a> Source: [windows-apps-src\monetize\index.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/index.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [index.c1fc2f38380d9502f131cb5ecba670a6a30949ea.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/4b39e6f8ab4d12666bf395264625a5771b596ced/ol-handoff/Microsoft/windows-apps.de-de/master/index.c1fc2f38380d9502f131cb5ecba670a6a30949ea.de-de.xlf)
-* Handoff Datetime: 2016-04-22 17:16:04
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\index.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/monetize/index.md)
-* Current Handback File: [index.c1fc2f38380d9502f131cb5ecba670a6a30949ea.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/index.c1fc2f38380d9502f131cb5ecba670a6a30949ea.de-de.xlf)
-* Current Handback Datetime: 2016-04-18 14:03:31
-* [Back to Top](#report-top)
-
-##### <a name='2b260df9d10b6cab9f4ded939ccd8213e696ce4d3282'></a> Source: [windows-apps-src\monetize\monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.2e54bdb9ba46bf08c636e3eb29a79a2507edbaa7.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/4b39e6f8ab4d12666bf395264625a5771b596ced/ol-handoff/Microsoft/windows-apps.de-de/master/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.2e54bdb9ba46bf08c636e3eb29a79a2507edbaa7.de-de.xlf)
-* Handoff Datetime: 2016-04-22 17:16:04
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/monetize/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md)
-* Current Handback File: [monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.2e54bdb9ba46bf08c636e3eb29a79a2507edbaa7.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.2e54bdb9ba46bf08c636e3eb29a79a2507edbaa7.de-de.xlf)
-* Current Handback Datetime: 2016-04-18 14:03:31
-* [Back to Top](#report-top)
-
-##### <a name='291e1c4d707e8987d29ae5840248918543d7d12a3303'></a> Source: [windows-apps-src\monetize\what-is-the-difference-admediatorcontrol-or-adcontrol.md](https://github.com/Microsoft/windows-apps/blob/8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707/windows-apps-src/monetize/what-is-the-difference-admediatorcontrol-or-adcontrol.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [what-is-the-difference-admediatorcontrol-or-adcontrol.15723f876b4b2e469800049102cc729ac7bee54d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/4b39e6f8ab4d12666bf395264625a5771b596ced/ol-handoff/Microsoft/windows-apps.de-de/master/what-is-the-difference-admediatorcontrol-or-adcontrol.15723f876b4b2e469800049102cc729ac7bee54d.de-de.xlf)
-* Handoff Datetime: 2016-04-22 17:16:04
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 
