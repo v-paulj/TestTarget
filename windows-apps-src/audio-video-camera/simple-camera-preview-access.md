@@ -33,7 +33,7 @@ Verwenden Sie ein [**CaptureElement**](https://msdn.microsoft.com/library/window
 
 Das [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124)-Objekt ist die Schnittstelle Ihrer App mit der Kamera des Geräts. Diese Klasse ist ein Mitglied des Namespace „Windows.Media.Capture“. Im Beispiel in diesem Artikel werden neben den in der Standard-Projektvorlage enthaltenen APIs auch APIs aus den Namespaces [**Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691) und [System.Threading.Tasks](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.aspx) verwendet.
 
-[!code-cs[CaptureElement](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml#SnippetCaptureElement)]
+[!code-xml[CaptureElement](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml#SnippetCaptureElement)]
 
 Fügen Sie eine "using"-Direktive hinzu, um die folgenden Namespaces in die cs-Datei Ihrer Seite einzubeziehen.
 
