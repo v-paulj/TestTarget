@@ -61,7 +61,7 @@ Wofür Sie die aufgenommene Videodatei verwenden, ist von dem Szenario für Ihre
 
 Fügen Sie zunächst der XAML-Seite ein [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)-Steuerelement hinzu, in dem die Videokomposition angezeigt werden soll.
 
-[!code-cs[MediaElement](./code/CameraCaptureUIWin10/cs/MainPage.xaml#SnippetMediaElement)]
+[!code-xml[MediaElement](./code/CameraCaptureUIWin10/cs/MainPage.xaml#SnippetMediaElement)]
 
 Fügen Sie dem Projekt die Namespaces [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565) und [**Windows.Media.Core**](https://msdn.microsoft.com/library/windows/apps/dn278962) hinzu.
 
