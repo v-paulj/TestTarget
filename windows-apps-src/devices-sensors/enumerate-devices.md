@@ -1,7 +1,7 @@
 ---
 ms.assetid: 4311D293-94F0-4BBD-A22D-F007382B4DB8
-Titel: Auflisten von Geräten
-Beschreibung: Der Enumeration-Namespace ermöglicht die Suche nach Geräten, die intern mit dem System verbunden, extern verbunden oder über Drahtlos- oder Netzwerkprotokolle entdeckt werden können.
+title: Auflisten von Geräten
+description: Der Enumeration-Namespace ermöglicht die Suche nach Geräten, die intern mit dem System verbunden, extern verbunden oder über Drahtlos- oder Netzwerkprotokolle entdeckt werden können.
 ---
 # Auflisten von Geräten
 

@@ -1,6 +1,6 @@
 ---
 ms.assetid: 16ad97eb-23f1-0264-23a9-a1791b4a5b95
-title: Systemeigene DirectX- und Direct2D-Interoperabilität mit „BeginDraw“ und „EndDraw“
+title: Native DirectX-/Direct2D-Interoperabilität mit BeginDraw und EndDraw
 description: Die Windows.UI.Composition-API bietet systemeigene Interoperabilitätsschnittstellen, mit deren Hilfe Inhalte direkt in den Kompositor verschoben werden können.
 ---
 # Systemeigene DirectX- und Direct2D-Interoperabilität mit „BeginDraw“ und „EndDraw“

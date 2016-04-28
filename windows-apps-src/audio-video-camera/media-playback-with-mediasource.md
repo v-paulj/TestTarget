@@ -1,6 +1,6 @@
 ---
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
-description: Die MediaSource-Klasse wird allgemein zum Verweisen auf Medien aus verschiedenen Quellen (etwa lokale Dateien oder Remotedateien) sowie zum Wiedergeben dieser Medien verwendet und macht ein gemeinsames Modell für den Mediendatenzugriff verfügbar – unabhängig vom zugrunde liegenden Medienformat.
+description: MediaSource-Klasse Verweisen Medien verschieden Quellen Wiedergabe Medien gemeinsam Modell Mediendatenzugriff verfügbar unabhängig zugrunde liegend Medienformat
 title: Medienwiedergabe mit „MediaSource“
 ---
 

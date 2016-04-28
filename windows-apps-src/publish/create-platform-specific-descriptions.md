@@ -1,5 +1,5 @@
 ---
-description: Wenn die von Ihnen bereitgestellten Pakete auf unterschiedliche Betriebssysteme ausgerichtet sind, können Sie Teile Ihrer Beschreibung für verschiedene Zielbetriebssysteme anpassen.
+description: Wenn die bereitgestellten Pakete auf unterschiedliche Betriebssysteme ausgerichtet sind, Teile der Beschreibung für verschiedene Zielbetriebssysteme anpassen.
 title: Erstellen plattformspezifischer Beschreibungen
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
 ---

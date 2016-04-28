@@ -1,5 +1,5 @@
 ---
-description: Wir empfehlen dringend, dieses Handbuch für das Portieren vollständig zu lesen. Wir wissen aber auch, dass Sie möglichst schnell die Phase erreichen möchten, in der Ihr Projekt erstellt und ausgeführt wird.
+description: Lesen Sie dieses Handbuch für das Portieren vollständig. Wir wissen aber auch, dass Sie Ihr Projekt möglichst schnell erstellen und ausführen möchten.
 title: Behandeln von Problemen beim Portieren von Windows-Runtime 8.x zu UWP
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
 ---

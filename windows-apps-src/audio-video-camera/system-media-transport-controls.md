@@ -1,6 +1,6 @@
 ---
 ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
-description: Mit der SystemMediaTransportControls-Klasse kann Ihre App die Steuerelemente für den Systemmedientransport verwenden, die in Windows integriert sind, und die Metadaten aktualisieren, die die Steuerelemente zu den von der App aktuell wiedergegebenen Medien anzeigen.
+description: SystemMediaTransportControls-Klasse Steuerelemente für Systemmedientransport verwenden Metadaten aktualisieren Steuerelemente wiedergegebene Medien anzeigen
 title: Steuerelemente für den Systemmedientransport
 ---
 

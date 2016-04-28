@@ -1,6 +1,6 @@
 ---
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
-description: In diesem Thema wird eine Fallstudie für das Portieren einer sehr einfachen Windows Phone Silverlight-App auf eine UWP (Universelle Windows-Plattform)-App für Windows 10 vorgestellt.
+description: Hier wird eine Fallstudie für das Portieren einer sehr einfachen Windows Phone Silverlight-App auf eine UWP -App für Windows 10 vorgestellt.
 title: Windows Phone Silverlight zu UWP – Fallstudie: Bookstore1
 ---
 

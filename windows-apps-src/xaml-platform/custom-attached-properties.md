@@ -1,5 +1,5 @@
 ---
-description: Erläutert, wie eine angefügte XAML-Eigenschaft als Abhängigkeitseigenschaft implementiert und die Accessorkonvention definiert wird, die erforderlich ist, damit die angefügte Eigenschaft in XAML verwendet werden kann.
+description: So wird eine angefügte XAML-Eigenschaft als Abhängigkeitseigenschaft implementiert und die Accessorkonvention definiert, damit sie in XAML verwendet werden kann
 title: Benutzerdefinierte angefügte Eigenschaften
 ms.assetid: E9C0C57E-6098-4875-AA3E-9D7B36E160E0
 ---

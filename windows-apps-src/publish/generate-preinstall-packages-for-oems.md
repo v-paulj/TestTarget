@@ -1,6 +1,6 @@
 ---
-Beschreibung: Wenn Ihrem Entwicklerkonto die entsprechenden Berechtigungen gewährt wurden, können Sie Vorinstallationspakete generieren und herunterladen, die von einem OEM verwendet werden können, um Ihre App in ein Image einzuschließen.
-Titel: Generieren von Vorinstallationspaketen für OEMs
+description: Wenn Ihrem Entwicklerkonto die entsprechenden Berechtigungen gewährt wurden, können Sie Vorinstallationspakete generieren und herunterladen, die von einem OEM verwendet werden können, um Ihre App in ein Image einzuschließen.
+title: Generieren von Vorinstallationspaketen für OEMs
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
 ---
 

@@ -1,5 +1,5 @@
 ---
-Description: description: Mit den Core-Text-APIs im Windows.UI.Text.Core-Namespace kann eine universelle Windows-Platform (UWP)-App Texteingaben von beliebigen Textdiensten empfangen, die auf Windows-Geräten unterstützt werden.
+Description: description: Mit den Core-Text-APIs im Windows.UI.Text.Core-Namespace kann eine UWP-App Texteingaben von beliebigen Windows-Geräten unterstützten Diensten erhalten werden.
 title: title: Übersicht über die benutzerdefinierte Texteingabe
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input

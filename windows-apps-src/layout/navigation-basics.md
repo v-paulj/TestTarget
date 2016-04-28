@@ -1,6 +1,6 @@
 ---
-Description: Die Navigation in UWP-Apps (Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene.
-title: Navigationsdesigngrundlagen für UWP-Apps (Universelle Windows-Plattform)
+description: Navigation in UWP-Apps (Universelle Windows-Plattform) basiert auf flexiblem Modell aus Navigationsstrukturen, Navigationselementen, Funktionen auf Systemebene
+title: Navigationsdesigngrundlagen für UWP-Apps (Univ. Windows-Plattform)
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigationsdesigngrundlagen
 template: detail.hbs

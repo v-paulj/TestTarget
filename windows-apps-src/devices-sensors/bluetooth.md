@@ -1,7 +1,7 @@
 ---
 ms.assetid: 404783BA-8859-4BFB-86E3-3DD2042E66F5
 title: Bluetooth
-description: Dieser Abschnitt enthält Artikel zur Bluetooth-Integration in UWP-Apps (Universelle Windows-Plattform). Dies umfasst u. a. die Verwendung von RFCOMM-, GATT- und LE (Low Energy)-Ankündigungen.
+description:  Abschnitt enthält Artikel Bluetooth-Integration in UWP-Apps (Universelle Windows-Plattform). Verwendung von RFCOMM-, GATT- und LE (Low Energy)-Ankündigungen
 ---
 # Bluetooth
 

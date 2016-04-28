@@ -1,6 +1,6 @@
 ---
-Titel: Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten
-Beschreibung: Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten mittels der Klasse MapControl In diesem Thema werden auch 3D-Luftbilder und Streetside-Ansichten behandelt.
+title: Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten
+description: Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten mittels der Klasse MapControl In diesem Thema werden auch 3D-Luftbilder und Streetside-Ansichten behandelt.
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
 ---
 

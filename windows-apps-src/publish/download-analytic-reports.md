@@ -1,6 +1,6 @@
 ---
-Beschreibung: Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Informationen offline anzuzeigen.
-Titel: Herunterladen von Analyseberichten
+description: Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Informationen offline anzuzeigen.
+title: Herunterladen von Analyseberichten
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt und referenziert werden und innerhalb eines ResourceDictionary-Elements vorhanden sind.
+description: dient zum Identifizieren von Elementen, die als Ressourcen erstellt und referenziert werden und innerhalb eines ResourceDictionary-Elements vorhanden sind.
 title: xKey-Attribut
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
 ---

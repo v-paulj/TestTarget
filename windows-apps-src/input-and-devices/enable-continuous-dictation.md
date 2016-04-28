@@ -1,6 +1,6 @@
 ---
-Description: Beschreibung: Erfahren Sie, wie Sie die Erfassung und Erkennung langer Spracheingaben für kontinuierliches Diktieren ermöglichen.
-title: Titel: Aktivieren des kontinuierlichen Diktierens
+Description: description: Erfahren Sie, wie Sie die Erfassung und Erkennung langer Spracheingaben für kontinuierliches Diktieren ermöglichen.
+title: title: Aktivieren des kontinuierlichen Diktierens
 ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 label: Continuous dictation
 template: detail.hbs
@@ -9,7 +9,7 @@ template: detail.hbs
 # ms.assetid: 383B3E23-1678-4FBB-B36E-6DE2DA9CA9DC
 
 
-Bezeichnung: Kontinuierliches Diktieren Vorlage: detail.hbs
+label: Kontinuierliches Diktieren Vorlage: detail.hbs
 
 Kontinuierliches Diktieren
 

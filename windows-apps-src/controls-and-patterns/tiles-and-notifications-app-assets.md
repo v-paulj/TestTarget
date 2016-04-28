@@ -26,7 +26,7 @@ Die Auswahl der aus dem Store herunterzuladenden Ressourcen erfolgt zum Teil auf
 ## <span id="Tile_elements"></span><span id="tile_elements"></span><span id="TILE_ELEMENTS"></span>Kachelelemente
 
 
-Die grundlegenden Komponenten einer Startkachel sind eine Rückwand, ein Symbol, eine Brandingleiste, Ränder und ein App-Titel:
+Die grundlegenden Komponenten einer Startkachel sind eine Rückwand, ein Symbol, eine Brandingleiste, Ränder und ein App-title:
 
 ![Aufschlüsselung der Kachelelemente](images/assetguidance02.png)
 

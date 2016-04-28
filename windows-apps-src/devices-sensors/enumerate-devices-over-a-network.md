@@ -1,7 +1,7 @@
 ---
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
-Titel: Enumerieren von Geräten über ein Netzwerk
-Beschreibung: Zusätzlich zum Ermitteln von lokal verbundenen Geräten können Sie mithilfe der Windows.Devices.Enumeration-APIs Geräte über Drahtlos- und Netzwerkprotokolle enumerieren.
+title: Enumerieren von Geräten über ein Netzwerk
+description: Zusätzlich zum Ermitteln von lokal verbundenen Geräten können Sie mithilfe der Windows.Devices.Enumeration-APIs Geräte über Drahtlos- und Netzwerkprotokolle enumerieren.
 ---
 # Enumerieren von Geräten über ein Netzwerk
 

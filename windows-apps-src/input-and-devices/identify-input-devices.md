@@ -1,5 +1,5 @@
 ---
-Description: description: Identifizieren Sie die Eingabegeräte, die mit einem Gerät für die universelle Windows-Plattform (UWP) verbunden sind, und identifizieren Sie ihre Funktionen und Attribute.
+Description: description: Identifizieren Sie die Eingabegeräte, die mit einem Gerät für die UWP verbunden sind, und identifizieren Sie ihre Funktionen und Attribute.
 title: title: Identifizieren von Eingabegeräten
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices

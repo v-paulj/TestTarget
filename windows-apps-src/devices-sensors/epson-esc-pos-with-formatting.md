@@ -1,7 +1,7 @@
 ---
 ms.assetid: 70667353-152B-4B18-92C1-0178298052D4
-Titel: Epson ESC/POS mit Formatierung
-Beschreibung: Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z. B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden.
+title: Epson ESC/POS mit Formatierung
+description: Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z. B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden.
 ---
 # Epson ESC/POS mit Formatierung
 

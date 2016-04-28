@@ -1,6 +1,6 @@
 ---
 Description: Wenn Sie zuvor ein pubCenter-Auszahlungskonto für Ihre Microsoft Advertising-Einnahmen eingerichtet hatten, wird dieses Konto ab dem 1. April 2016 nicht mehr für Zahlungen verwendet. Sie erhalten Ihre Zahlungen jetzt auf Ihr Dev Center-Auszahlungskonto.
-title: Konsolidierung des pubCenter- und DevCenter-Auszahlungskontos und -Steuerprofils
+title: pubCenter-/DevCenter-Auszahlungskonto- und -Steuerprofilkonsolidierung
 ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
 ---
 

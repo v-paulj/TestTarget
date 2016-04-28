@@ -1,5 +1,5 @@
 ---
-Description: Auf der Seite „Altersfreigabe“ des App-Übermittlungsprozesses können Sie Informationen zu Ihrer App bereitstellen, damit sie die entsprechenden Altersfreigaben von der International Age Ratings Coalition (IARC) erhalten kann.
+Description: Seite „Altersfreigabe“ des App-Übermittlungsprozesses Informationen bereitstellen, Altersfreigaben von der International Age Ratings Coalition (IARC) erhalten
 title: Altersfreigaben
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 ---

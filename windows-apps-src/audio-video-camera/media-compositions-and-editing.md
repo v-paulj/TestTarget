@@ -1,6 +1,6 @@
 ---
 ms.assetid: C4DB495D-1F91-40EF-A55C-5CABBF3269A2
-description: Mithilfe der APIs im Windows.Media.Editing-Namespace können Sie schnell Apps entwickeln, die Benutzern das Erstellen von Medienkompositionen aus Audio- und Videoquelldateien ermöglichen.
+description: Mit der APIs im Windows.Media.Editing-Namespace schnell Apps entwickeln, Erstellen von Medienkompositionen aus Audio- und Videoquelldateien ermöglichen
 title: Medienkompositionen und -bearbeitung
 ---
 

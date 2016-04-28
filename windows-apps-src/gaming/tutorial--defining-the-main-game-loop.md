@@ -1,6 +1,6 @@
 ---
 title: Definieren des Hauptobjekts für das Spiel
-description: In diesem Abschnitt widmen wir uns den Details des Hauptobjekts des Beispielspiels. Außerdem erfahren Sie, wie die implementierten Regeln in Interaktionen mit der Spielwelt übersetzt werden.
+description: Hier sind Details zum Hauptobjekt des Spiels beschrieben und wie die implementierten Regeln in Interaktionen mit der Spielwelt übersetzt werden.
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
 ---
 

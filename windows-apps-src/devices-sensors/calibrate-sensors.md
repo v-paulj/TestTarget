@@ -1,7 +1,7 @@
 ---
 ms.assetid: ECE848C2-33DE-46B0-BAE7-647DB62779BB
 title: Kalibrieren von Sensoren
-description: Für Sensoren in einem auf dem Magnetometer – Kompass, Neigungsmesser und Ausrichtungssensor – basierenden Gerät kann aufgrund von Umweltfaktoren eine Kalibrierung erforderlich sein.
+description: Für Sensoren in einem auf dem Magnetometer – Kompass, Neigungsmesser und Ausrichtungssensor – basierenden Gerät Kalibrierung erforderlich Umweltfaktoren
 ---
 # Kalibrieren von Sensoren
 

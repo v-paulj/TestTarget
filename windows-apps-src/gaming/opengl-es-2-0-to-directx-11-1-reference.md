@@ -1,6 +1,6 @@
 ---
 title: OpenGL ES 2.0 zu Direct3D 11 – Referenz
-description: Verwenden Sie diese Referenzthemen zum Suchen nach der API-Zuordnung und kurzen Codebeispielen, wenn Sie die Portierung von OpenGL ES 2.0 zu Direct3D 11 durchführen.
+description: Verwenden Sie diese Referenzthemen zum Suchen nach der API-Zuordnung und kurzen Codebeispielen bei der Portierung von OpenGL ES 2.0 zu Direct3D 11
 ms.assetid: fe18c8a9-b113-8f5d-9c31-c294dede8560
 ---
 

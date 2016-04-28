@@ -1,6 +1,6 @@
 ---
 title: Einrichten des Spieleprojekts
-description: Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben.
+description: Im ersten Schritt für die Spielerstellung richten Sie ein Projekt in Microsoft Visual Studio so ein, dass die Bearbeitung der Codeinfrastruktur einfach ist.
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: In diesem Thema werden die XAML-Syntaxregeln und die Terminologie erläutert, mit der die in der XAML-Syntax geltenden Einschränkungen bzw. die verfügbaren Optionen beschrieben werden.
+description: Hier werden die XAML-Syntaxregeln und die Terminologie erläutert, mit der die in der XAML-Syntax geltenden Einschränkungen bzw. die Optionen beschrieben werden.
 title: Anleitung zur XAML-Syntax
 ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
 ---

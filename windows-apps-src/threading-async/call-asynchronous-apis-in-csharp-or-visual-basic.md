@@ -1,7 +1,7 @@
 ---
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
 title: Aufrufen asynchroner APIs in C# oder Visual Basic
-description: Die Universelle Windows-Plattform (UWP) enthält viele asynchrone APIs. Diese sorgen dafür, dass Ihre App reaktionsfähig bleibt, wenn sie über einen längeren Zeitraum mit einer Aufgabe beschäftigt ist.
+description: Die UWP enthält viele asynchrone APIs. Dadurch bleibt Ihre App reaktionsfähig, wenn sie über einen längeren Zeitraum mit einer Aufgabe beschäftigt ist.
 ---
 # Aufrufen asynchroner APIs in C# oder Visual Basic
 

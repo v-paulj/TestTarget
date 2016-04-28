@@ -1,6 +1,6 @@
 ---
-Titel: Spieletechnologien für Universelle Windows-Plattform (UWP)-Apps
-Beschreibung: Dieses Handbuch enthält Informationen über verfügbare Technologien für die Entwicklung von Spielen für die Universelle Windows-Plattform (UWP).
+title: Spieletechnologien für Universelle Windows-Plattform (UWP)-Apps
+description: Dieses Handbuch enthält Informationen über verfügbare Technologien für die Entwicklung von Spielen für die Universelle Windows-Plattform (UWP).
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
 ---
 

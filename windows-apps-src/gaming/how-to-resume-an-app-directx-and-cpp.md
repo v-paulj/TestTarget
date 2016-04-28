@@ -1,6 +1,6 @@
 ---
 title: So wird's gemacht: Reaktivieren einer App (DirectX und C++)
-description: In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) fortsetzt.
+description: In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die UWP fortsetzt.
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
 ---
 

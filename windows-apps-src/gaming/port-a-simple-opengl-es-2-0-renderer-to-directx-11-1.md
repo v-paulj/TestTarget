@@ -1,6 +1,6 @@
 ---
 title: Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
-description: Bei der ersten Portierungsübung beginnen wir mit den Grundlagen: Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGL ES 2.0 auf Direct3D, damit er der Vorlage „DirectX 11-App (Universelle Windows-App)“ aus Visual Studio 2015 entspricht.
+description: Portierungsübung Umstellen Renderer drehenden Würfel Vertexschattierungen von OpenGL ES 2.0 auf Direct3D, Vorlage DirectX 11-App Visual Studio 2015 entspricht
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
 ---
 

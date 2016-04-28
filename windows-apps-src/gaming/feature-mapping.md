@@ -1,6 +1,6 @@
 ---
-Titel: Zuordnen von DirectX 9-Features zu DirectX 11-APIs
-Beschreibung: Erfahren Sie, wie die Features Ihres Direct3D 9-Spiels zu Direct3D 11 und zur Universellen Windows-Plattform (UWP) zugeordnet werden.
+title: Zuordnen von DirectX 9-Features zu DirectX 11-APIs
+description: Erfahren Sie, wie die Features Ihres Direct3D 9-Spiels zu Direct3D 11 und zur Universellen Windows-Plattform (UWP) zugeordnet werden.
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
 ---
 

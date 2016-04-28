@@ -1,6 +1,6 @@
 ---
 ms.assetid: 7DBEE5E2-C3EC-4305-823D-9095C761A1CD
-description: In diesem Artikel wird erläutert, wie Sie eine variable Fotosequenz aufnehmen, um mehrere Frames von Bildern in schneller Folge aufzunehmen und jeden Frame so zu konfigurieren, dass unterschiedliche Einstellungen für Fokus, Blitz, ISO, Belichtung und Belichtungskorrektur verwendet werden.
+description: variable Fotosequenz Frames schnelle Folge aufnehmen Frame konfigurieren, unterschiedliche Einstellungen für Fokus, Blitz, ISO, Belichtung, Belichtungskorrektur
 title: Variable Fotosequenz
 ---
 

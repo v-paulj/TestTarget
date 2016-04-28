@@ -1,5 +1,5 @@
 ---
-Description: Mit adaptiven und interaktiven Popupbenachrichtigungen können Sie flexible Popupbenachrichtigungen mit mehr Inhalt, optionalen Inlinebildern und optionaler Benutzerinteraktion erstellen.
+desription: Mit adaptiven und interaktiven Popups können Sie flexible Popups mit mehr Inhalt, optionalen Inlinebildern und optionaler Benutzerinteraktion erstellen.
 title: Adaptive und interaktive Popupbenachrichtigungen
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive und interaktive Popupbenachrichtigungen

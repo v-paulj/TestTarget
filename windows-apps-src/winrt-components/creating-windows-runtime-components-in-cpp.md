@@ -1,6 +1,6 @@
 ---
 title: Erstellen von Komponenten für Windows-Runtime in C++
-description: In diesem Artikel wird beschrieben, wie Sie eine Komponente für Windows-Runtime mit C++ erstellen. Dabei handelt es sich um eine DLL, die aus einer universellen Windows-App aufgerufen werden kann, die mit JavaScript (oder C#, Visual Basic oder C++) entwickelt wurde.
+description: Artikel beschreibt Komponente Windows-Runtime C++ erstellen, DLL, aus universeller Windows-App aufgerufen, mit JavaScript, C#, Visual Basic oder C++ entwickelt
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ---
 

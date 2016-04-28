@@ -1,5 +1,5 @@
 ---
-Description: Regelmäßige Benachrichtigungen – auch bezeichnet als abgerufene Benachrichtigungen – aktualisieren Kacheln und Signale in festgelegten Intervallen, indem sie Inhalte aus einem Cloud-Dienst herunterladen.
+description: Regelmäßige abgerufene Benachrichtigungen aktualisieren Kacheln/Signale in festgelegten Intervallen durch Herunterladen von Inhalten aus einem Cloud-Dienst
 title: Übersicht über regelmäßige Benachrichtigungen
 ms.assetid: 1EB79BF6-4B94-451F-9FAB-0A1B45B4D01C
 label: TBD

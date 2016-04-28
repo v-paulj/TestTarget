@@ -1,7 +1,7 @@
 ---
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
 Beschreibung; In diesem Thema wird das Abrufen eines Vorschauframes aus dem Vorschaustream der Medienaufnahme beschrieben.
-Titel: Abrufen eines Vorschauframes
+title: Abrufen eines Vorschauframes
 ---
 
 # Abrufen eines Vorschauframes

@@ -1,5 +1,5 @@
 ---
-Description: Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen auf Auszahlungen sowie zu Steuerpflichten finden Sie in der folgenden Tabelle unter dem Land bzw. der Region der Verteilung.
+description: Informationen zu steuerlichen Aspekten der Preisfestlegung, zu Auszahlungen und zu Steuerpflichten in der Tabelle unter Land Region der Verteilung
 title: Steuerinformationen zu kostenpflichtigen Apps
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
 ---

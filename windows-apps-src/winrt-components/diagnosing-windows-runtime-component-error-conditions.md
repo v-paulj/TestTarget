@@ -1,5 +1,5 @@
 ---
-title: Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime
+title: Diagnostizieren von Fehlerbedingungen für Windows-Runtime-Komponenten
 description: Dieser Artikel enthält zusätzliche Informationen zu Einschränkungen bei Komponenten für Windows-Runtime, die mit verwaltetem Code geschrieben wurden.
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
 ---

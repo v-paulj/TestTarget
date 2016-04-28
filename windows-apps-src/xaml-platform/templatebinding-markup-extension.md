@@ -1,5 +1,5 @@
 ---
-description: Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage mit dem Wert einer anderen Eigenschaft, die im Steuerelement mit Vorlagen verfügbar gemacht wird. TemplateBinding kann nur in einer ControlTemplate-Definition in XAML verwendet werden.
+description: Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage mit dem Wert einer anderen Eigenschaft, die im Steuerelement durch Vorlagen verfügbar ist. TemplateBinding kann nur in einer ControlTemplate-Definition in XAML verwendet werden.
 title: TemplateBinding-Markuperweiterung
 ms.assetid: FDE71086-9D42-4287-89ED-8FBFCDF169DC
 ---

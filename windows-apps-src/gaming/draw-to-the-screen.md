@@ -1,6 +1,6 @@
 ---
-Titel: Zeichnen auf den Bildschirm
-Beschreibung: Schließlich wird der Code portiert, der den sich drehenden Würfel auf den Bildschirm zeichnet.
+title: Zeichnen auf den Bildschirm
+description: Schließlich wird der Code portiert, der den sich drehenden Würfel auf den Bildschirm zeichnet.
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
 ---
 

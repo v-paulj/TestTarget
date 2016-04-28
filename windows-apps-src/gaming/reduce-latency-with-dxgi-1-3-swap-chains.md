@@ -1,6 +1,6 @@
 ---
 title: Reduzieren der Latenz mit DXGI 1.3-Swapchains
-description: Verwenden Sie DXGI 1.3 zum Reduzieren der geltenden Framelatenz, indem Sie warten, bis die Swapchain den geeigneten Zeitpunkt zum Beginnen mit dem Rendern eines neuen Frames signalisiert.
+description: Verwenden Sie DXGI 1.3 zum Reduzieren der geltenden Framelatenz. Warten Sie, bis die Swapchain den Zeitpunkt für das Rendern eines neuen Frames signalisiert.
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
 ---
 

@@ -1,6 +1,6 @@
 ---
 ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
-description: In diesem Artikel wird beschrieben, wie Sie MIDI-Geräte (Musical Instrument Digital Interface) aufzählen und MIDI-Nachrichten in einer universellen Windows-App senden und empfangen.
+description: Artikel beschreibt, MIDI-Geräte (Musical Instrument Digital Interface) aufzählen und MIDI-Nachrichten in einer universellen Windows-App senden und empfangen.
 title: MIDI
 ---
 

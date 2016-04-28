@@ -1,6 +1,6 @@
 ---
-description: Wir empfehlen dringend, dieses Handbuch für das Portieren vollständig zu lesen. Wir wissen aber auch, dass Sie möglichst schnell die Phase erreichen möchten, in der Ihr Projekt erstellt und ausgeführt wird.
-title: Behandeln von Problemen beim Portieren von Windows Phone Silverlight zu UWP
+description: Lesen Sie dieses Handbuch für das Portieren vollständig. Wir wissen aber auch, dass Sie Ihr Projekt möglichst schnell erstellen und ausführen möchten.
+title: Problembehandlung beim Portieren von Windows Phone Silverlight zu UWP
 ms.assetid: d9a9a2a7-9401-4990-a992-4b13887f2661
 ---
 

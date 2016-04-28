@@ -1,6 +1,6 @@
 ---
-Titel: Verteilen einer verwalteten Windows-Runtime-Komponente
-Beschreibung: Sie können Ihre Windows-Runtime-Komponente durch Kopieren der Dateien verteilen.
+title: Verteilen einer verwalteten Windows-Runtime-Komponente
+description: Sie können Ihre Windows-Runtime-Komponente durch Kopieren der Dateien verteilen.
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
 ---
 

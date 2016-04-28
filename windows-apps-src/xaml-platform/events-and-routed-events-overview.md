@@ -1,6 +1,6 @@
 ---
-Beschreibung: Das Programmierkonzept von Ereignissen in einer Windows-Runtime-App bei Verwendung von C#-, Visual Basic- oder Visual C++-Komponentenerweiterungen (C++/CX) als Programmiersprache und XAML für die UI-Definition wird beschrieben.
-Titel: Übersicht über Ereignisse und Routingereignisse
+description: Das Programmierkonzept von Ereignissen in einer Windows-Runtime-App bei Verwendung von C#-, Visual Basic- oder Visual C++-Komponentenerweiterungen (C++/CX) als Programmiersprache und XAML für die UI-Definition wird beschrieben.
+title: Übersicht über Ereignisse und Routingereignisse
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ---
 

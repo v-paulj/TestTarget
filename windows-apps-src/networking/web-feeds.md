@@ -1,5 +1,5 @@
 ---
-description: Mithilfe von Fremdanbieterfeeds, die entsprechend den RSS- und Atom-Standards mit Features im Windows.Web.Syndication-Namespace generiert werden, können Sie aktuelle und beliebte Webinhalte abrufen oder erstellen.
+description: Mit Fremdanbieterfeeds, die nach RSS-/Atom-Standards mit Features im Windows.Web.Syndication-Namespace generiert werden, können Sie Webinhalte abrufen.
 title: RSS/Atom-Feeds
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
 ---

@@ -1,6 +1,6 @@
 ---
 title: Swapchainskalierung und Überlagerungen
-description: Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern.
+description: skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen Überlagerungsswapchains (falls verfügbar) verwenden, um visuelle Qualität zu steigern
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
 ---
 

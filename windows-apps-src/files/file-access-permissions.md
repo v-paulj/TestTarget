@@ -1,7 +1,7 @@
 ---
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
-Titel: Berechtigungen für den Dateizugriff
-Beschreibung: Hier erfahren Sie, wie Apps standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen können. Apps können darüber hinaus mithilfe der Dateiauswahl oder über die Deklaration von Funktionen auf weitere Speicherorte zugreifen.
+title: Berechtigungen für den Dateizugriff
+description: Hier erfahren Sie, wie Apps standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen können. Apps können darüber hinaus mithilfe der Dateiauswahl oder über die Deklaration von Funktionen auf weitere Speicherorte zugreifen.
 ---
 # Berechtigungen für den Dateizugriff
 

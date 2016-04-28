@@ -1,6 +1,6 @@
 ---
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
-description: In diesem Artikel wird das Laden und Speichern von Bilddateien mit „BitmapDecoder“ und „BitmapEncoder“ sowie das Verwenden des SoftwareBitmap-Objekts zum Darstellen von Bitmapbildern erläutert.
+description: Artikel beschreibt Laden und Speichern von Bilddateien mit „BitmapDecoder“ und „BitmapEncoder“, SoftwareBitmap-Objekt zum Darstellen von Bitmapbildern
 title: Bildverarbeitung
 ---
 

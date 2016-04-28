@@ -1,7 +1,7 @@
 ---
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: Kompositionsanimationen
-description: Viele Eigenschaften von Kompositionsobjekten und Effekten können mit Keyframeanimationen und Ausdrucksanimationen animiert werden. Dadurch können sich Eigenschaften eines UI-Elements im Lauf der Zeit auf der Grundlage einer Berechnung verändern.
+description: Eigenschaften Kompositionsobjekte Effekte mit Keyframeanimationen Ausdrucksanimationen animiert Eigenschaften mit der Zeit auf Grundlage Berechnung verändern
 ---
 # Kompositionsanimationen
 

@@ -1,6 +1,6 @@
 ---
 title: Grundlagen am Beispiel von Marble Maze
-description: In diesem Dokument werden die fundamentalen Eigenschaften des Marble Maze-Projekts beschrieben, beispielsweise wie Visual C++ in der Windows Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist.
+description: fundamentale Eigenschaften Marble Maze-Projekts wie Visual C++ in der Windows Runtime-Umgebung verwenden erstellen strukturieren wie es aufgebaut ist.
 MS.AssetId: 73329b29-62e3-1b36-01db-b7744ee5b4c3
 ---
 

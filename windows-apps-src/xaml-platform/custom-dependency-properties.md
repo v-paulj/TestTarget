@@ -1,5 +1,5 @@
 ---
-description: Hier wird erläutert, wie Sie benutzerdefinierte Abhängigkeitseigenschaften für eine Windows-Runtime-App mit C++, C# oder Visual Basic definieren und implementieren können.
+description: So können Sie benutzerdefinierte Abhängigkeitseigenschaften für eine Windows-Runtime-App mit C++, C# oder Visual Basic definieren und implementieren.
 title: Benutzerdefinierte Abhängigkeitseigenschaften
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
 ---

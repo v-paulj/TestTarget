@@ -1,6 +1,6 @@
 ---
-title: Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime in C++ und Aufruf der Komponente über JavaScript oder C#
-description: In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie eine einfache Komponenten-DLL-Datei für Windows-Runtime erstellen, die von JavaScript, C# oder Visual Basic aufgerufen werden kann.
+title: Windows-Runtime-Komponenten in C++ erstellen, Aufruf über JavaScript/C#
+description: exemplarische Vorgehensweise, wie Sie eine einfache Komponenten-DLL-Datei für Windows-Runtime erstellen, von JavaScript, C#, Visual Basic aufgerufen
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
 ---
 

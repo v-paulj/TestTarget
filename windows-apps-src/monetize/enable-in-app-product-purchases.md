@@ -1,13 +1,13 @@
 ---
-Beschreibung: Sie können unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, Inhalte, andere Apps oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen. Hier zeigen wir Ihnen, wie Sie diese Produkte in Ihrer App aktivieren können.
-Titel: Aktivieren von In-App-Produktkäufen
+Description: Sie können unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, Inhalte, andere Apps oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen. Hier zeigen wir Ihnen, wie Sie diese Produkte in Ihrer App aktivieren können.
+title: Aktivieren von In-App-Produktkäufen
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
-Schlüsselwörter: In-App-Angebot
-Schlüsselwörter: In-App-Einkauf
-Schlüsselwörter: In-App-Produkt
-Schlüsselwörter: Unterstützen von In-App-Einkäufen
-Schlüsselwörter: In-App-Einkauf, Codebeispiel
-Schlüsselwörter: In-App-Angebot, Codebeispiel
+keywords: In-App-Angebot
+keywords: In-App-Einkauf
+keywords: In-App-Produkt
+keywords: Unterstützen von In-App-Einkäufen
+keywords: In-App-Einkauf, Codebeispiel
+keywords: In-App-Angebot, Codebeispiel
 ---
 
 # Unterstützen von In-App-Produktkäufen

@@ -1,6 +1,6 @@
 ---
 ms.assetid: AE98C22B-A071-4206-ABBB-C0F0FB7EF33C
-description: In diesem Artikel wird beschrieben, wie Sie die Wiedergabe von Multimediainhalten für adaptives Streaming zu Apps für die universelle Windows-Plattform (UWP) hinzufügen können. Dieses Feature unterstützt derzeit die Wiedergabe von HTTP Live Streaming (HLS)- und Dynamic Streaming over HTTP (DASH)-Inhalten.
+description: Hier wird beschrieben, wie Sie die Wiedergabe von Multimediainhalten für adaptives Streaming zu Apps für die UWP hinzufügen können. Dieses Feature unterstützt derzeit die Wiedergabe von HTTP Live Streaming (HLS)- und Dynamic Streaming over HTTP (DASH)-Inhalten.
 title: Adaptives Streaming
 ---
 

@@ -1,6 +1,6 @@
 ---
 ms.assetid: CB924E17-C726-48E7-A445-364781F4CCA1
-description: In diesem Artikel wird gezeigt, wie die APIs im Windows.Media.Audio-Namespace zum Erstellen von Audiodiagrammen für Audiorouting sowie Misch- und Verarbeitungsszenarien verwendet werden.
+description: Artikel zeigt APIs im Windows.Media.Audio-Namespace zum Erstellen von Audiodiagrammen für Audiorouting sowie Misch- und Verarbeitungsszenarien verwenden
 title: Audiodiagramme
 ---
 

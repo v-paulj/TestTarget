@@ -1,7 +1,7 @@
 ---
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
-Beschreibung: In diesem Thema werden die Effekte für Videoaufnahmeszenarien beschrieben. Dazu zählt auch der Videostabilisierungseffekt.
-Titel: Effekte für die Videoaufnahme
+description: In diesem Thema werden die Effekte für Videoaufnahmeszenarien beschrieben. Dazu zählt auch der Videostabilisierungseffekt.
+title: Effekte für die Videoaufnahme
 ---
 
 # Effekte für die Videoaufnahme

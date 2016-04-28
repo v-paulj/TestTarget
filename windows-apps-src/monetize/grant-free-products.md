@@ -1,6 +1,6 @@
 ---
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
-description: Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem bestimmten Benutzer eine kostenlose App oder ein kostenloses In-App-Produkt (IAP) zu gewähren.
+description: Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem Benutzer eine kostenlose App oder ein kostenloses In-App-Produkt (IAP) zu gewähren.
 title: Gewähren kostenloser Produkte
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen von Steuerelementen
-description: In diesem Thema befassen wir uns damit, wie das Beispielspiel die Bewegungs-/Blicksteuerung in einem 3D-Spiel implementiert und wie einfache Steuerungen für Toucheingabe, Maus und Gamecontroller entwickelt werden.
+description: So wird im Beispiel die Bewegungs-/Blicksteuerung in einem 3D-Spiel implementiert und einfache Steuerungen für Toucheingabe, Maus und Gamecontroller entwickelt.
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
 ---
 

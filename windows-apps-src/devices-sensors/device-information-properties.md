@@ -1,7 +1,7 @@
 ---
 ms.assetid: 4A4C2802-E674-4C04-8A6D-D7C1BBF1BD20
 title: Geräteinformationseigenschaften
-description: Jedem Gerät sind DeviceInformation-Eigenschaften zugeordnet, die Sie verwenden können, wenn Sie bestimmte Informationen benötigen oder eine Geräteauswahl erstellen.
+description: Jedem Gerät sind DeviceInformation-Eigenschaften zugeordnet, die Sie verwenden können, wenn Sie Informationen benötigen oder eine Geräteauswahl erstellen.
 ---
 # Geräteinformationseigenschaften
 

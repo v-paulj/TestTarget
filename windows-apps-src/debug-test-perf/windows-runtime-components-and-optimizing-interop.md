@@ -1,7 +1,7 @@
 ---
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
 title: Universelle Windows-Plattform-Komponenten und Interop-Optimierung
-description: Erstellen Sie universelle Windows-Plattform-Apps (UWP), die UWP-Komponenten verwenden, mit systemeigenen und verwalteten Typen zusammenarbeiten und gleichzeitig Probleme mit der Interopleistung vermeiden.
+description: Erstellen Sie UWP-Apps, die UWP-Komponenten verwenden, mit systemeigenen und verwalteten Typen zusammenarbeiten und Probleme mit der Interopleistung vermeiden.
 ---
 # Universelle Windows-Plattform-Komponenten und Interop-Optimierung
 

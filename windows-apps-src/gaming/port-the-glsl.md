@@ -1,6 +1,6 @@
 ---
 title: Portieren des GLSL-Codes
-description: Nachdem Sie sich um den Code gekümmert haben, mit dem die Puffer und Shaderobjekte erstellt und konfiguriert werden, muss der in diesen Shadern enthaltene Code von der GL Shader Language (GLSL) von OpenGL ES 2.0 in die High-Level Shader Language (HLSL) von Direct3D 11 portiert werden.
+description: Code Puffer und Shaderobjekte erstellt konfiguriert in Shadern enthaltene Code von GLSL von OpenGL ES 2.0 in HLSL von Direct3D 11 muss portiert werden
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
 ---
 

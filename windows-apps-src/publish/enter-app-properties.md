@@ -1,6 +1,6 @@
 ---
-Beschreibung: Auf der Seite App-Eigenschaften des App-Übermittlungsprozesses können Sie die Kategorie Ihrer App festlegen sowie Hardwareeinstellungen und weitere Deklarationen angeben.
-Titel: Eingeben von App-Eigenschaften
+description: Auf der Seite App-Eigenschaften des App-Übermittlungsprozesses können Sie die Kategorie Ihrer App festlegen sowie Hardwareeinstellungen und weitere Deklarationen angeben.
+title: Eingeben von App-Eigenschaften
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
 ---
 

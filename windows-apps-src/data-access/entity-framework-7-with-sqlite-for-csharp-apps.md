@@ -1,7 +1,7 @@
 ---
 ms.assetid: BC7E8130-A28A-443C-8D7E-353E7DA33AE3
-Beschreibung: Entity Framework (EF) ist eine objektrelationale Zuordnung, die Ihnen über domänenspezifische Objekte die Verwendung relationaler Daten ermöglicht.
-Titel: Entity Framework 7 mit SQLite für C#-Apps
+description: Entity Framework (EF) ist eine objektrelationale Zuordnung, die Ihnen über domänenspezifische Objekte die Verwendung relationaler Daten ermöglicht.
+title: Entity Framework 7 mit SQLite für C#-Apps
 ---
 
 # Entity Framework 7 mit SQLite für C#-Apps

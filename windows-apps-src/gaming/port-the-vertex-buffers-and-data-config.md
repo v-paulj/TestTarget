@@ -1,6 +1,6 @@
 ---
 title: Portieren der Vertexpuffer und -daten
-description: In diesem Schritt definieren Sie die Vertexpuffer für die Gitter und die Indexpuffer, mit deren Hilfe die Shader die Scheitelpunkte (Vertices) in einer angegebenen Reihenfolge durchlaufen können.
+description: Definieren Sie die Vertexpuffer für die Gitter/Indexpuffer, um die Shader die Scheitelpunkte (Vertices) in einer angegebenen Reihenfolge zu durchlaufen.
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
 ---
 

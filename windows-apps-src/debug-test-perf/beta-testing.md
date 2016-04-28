@@ -1,7 +1,7 @@
 ---
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: Betatests
-description: Betatests bieten Ihnen die Möglichkeit, Ihre App anhand des Feedbacks von Personen außerhalb Ihres App-Entwicklungsteams zu verbessern, die die noch nicht freigegebene App auf ihren eigenen Geräten testen.
+description: Betatests Möglichkeit, App verbessern Feedback von Personen außerhalb App-Entwicklungsteams, die die noch nicht freigegebene App auf eigenen Geräten testen.
 ---
 # Betatests
 

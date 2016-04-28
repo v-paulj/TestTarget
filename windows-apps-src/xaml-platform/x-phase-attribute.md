@@ -1,6 +1,6 @@
 ---
 title: xPhase-Attribut
-description: Verwenden Sie xPhase mit der x:Bind-Markuperweiterung zum inkrementellen Rendern von ListView- und GridView-Elementen und zur Verbesserung des Verschiebungserlebnisses.
+description: Verwenden Sie xPhase mit der xBind-Markuperweiterung zum inkrementellen Rendern von ListView- und GridView-Elementen und zur Verbesserung des Verschiebens.
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
 ---
 

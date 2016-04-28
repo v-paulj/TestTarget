@@ -1,6 +1,6 @@
 ---
 ms.assetid: 9FCBAF2E-5419-4169-A17C-9C4058DCF909
-description: Der Windows Store macht mehrere Dienste verfügbar, die Sie über REST-APIs aufrufen können, um programmgesteuert auf bestimmte Datentypen für Apps zugreifen können, die für Ihr Windows Dev Center-Konto oder das Ihrer Organisation registriert sind.
+description: Windows Store Dienste verfügbar, über REST-APIs aufrufen, programmgesteuert auf Datentypen zugreifen für Windows Dev Center-Konto oder Organisation registriert
 title: Verwenden von Windows Store-Diensten
 ---
 

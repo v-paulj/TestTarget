@@ -1,6 +1,6 @@
 ---
 title: Laden von Ressourcen im DirectX-Spiel
-description: In den meisten Spielen werden Ressourcen und Objekte (wie Shader, Texturen, vordefinierte Gitter oder andere Grafikdaten) an bestimmten Stellen aus dem lokalen Speicher oder über einen anderen Datenstrom geladen.
+description: meisten Spiele Ressourcen Objekte (Shader, Texturen, vordefinierte Gitter, andere Grafikdaten) aus lokalem Speicher oder über anderen Datenstrom geladen
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
 ---
 

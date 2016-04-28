@@ -1,6 +1,6 @@
 ---
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
-description: Verwenden Sie diese Methode in der Windows Store-Sammlungs-API, um alle Produkte, die sich im Besitz eines Kunden befinden, für Apps abzurufen, die Ihrer Azure AD-Client-ID zugeordnet sind. Sie können die Abfrage auf ein bestimmtes Produkt beschränken oder weitere Filter verwenden.
+description: Verwenden Sie diese Methode in der Windows Store-Sammlungs-API, um alle Produkte eines Kunden für Apps abzurufen, die Ihrer Azure AD-Client-ID zugeordnet sind. Sie können die Abfrage auf ein bestimmtes Produkt beschränken oder weitere Filter verwenden.
 title: Produktabfrage
 ---
 

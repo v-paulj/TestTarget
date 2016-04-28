@@ -1,11 +1,11 @@
 ---
-Beschreibung: Wenn Sie Kunden die kostenlose Nutzung Ihrer App während eines Testzeitraums ermöglichen möchten, können Sie Ihre Kunden dazu bringen, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features während des Testzeitraums beschränken oder ausschließen.
-Titel: Ausschließen oder Beschränken von Features in einer Testversion
+description: Wenn Sie Kunden die kostenlose Nutzung Ihrer App während eines Testzeitraums ermöglichen möchten, können Sie Ihre Kunden dazu bringen, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features während des Testzeitraums beschränken oder ausschließen.
+title: Ausschließen oder Beschränken von Features in einer Testversion
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-Schlüsselwörter: kostenlose Testversion
-Schlüsselwörter: kostenloser Testzeitraum
-Schlüsselwörter: kostenlose Testversion, Codebeispiel
-Schlüsselwörter: kostenlose Testversion, Codebeispiel
+keywords: kostenlose Testversion
+keywords: kostenloser Testzeitraum
+keywords: kostenlose Testversion, Codebeispiel
+keywords: kostenlose Testversion, Codebeispiel
 ---
 
 # Ausschließen oder Beschränken von Features in einer Testversion

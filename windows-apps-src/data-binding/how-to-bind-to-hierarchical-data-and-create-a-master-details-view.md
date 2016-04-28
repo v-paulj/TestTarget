@@ -1,7 +1,7 @@
 ---
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
-title: Binden von hierarchischen Daten und Erstellen einer Master/Details-Ansicht
-description: Sie können eine Master/Details-Ansicht mit mehreren Ebenen (auch bekannt als Listen-Details-Ansicht) von hierarchischen Daten erstellen, indem Sie Elementsteuerelemente an CollectionViewSource-Instanzen binden, die in einer Kette verbunden sind.
+title: Binden hierarchischer Daten und Erstellen einer Master/Details-Ansicht
+description: Master/Details-Ansicht mehrere Ebenen (Listen-Details-Ansicht) hierarchische Daten Elementsteuerelemente an CollectionViewSource-Instanzen binden, in Kette
 ---
 # Binden von hierarchischen Daten und Erstellen einer Master/Details-Ansicht
 

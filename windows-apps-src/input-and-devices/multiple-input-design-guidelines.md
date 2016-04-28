@@ -1,5 +1,5 @@
 ---
-Description: Description: Ebenso wie Menschen untereinander mit einer Mischung aus Sprache und Gesten kommunizieren, kann sich auch bei der Interaktion mit einer App die Verwendung mehrerer Eingabearten und -modi als hilfreich erweisen.
+Description: description: Menschen Mischung aus Sprache und Gesten kommunizieren, Interaktion mit einer App die Verwendung mehrerer Eingabearten und -modi hilfreich
 title: title: Entwurfsrichtlinien für mehrere Eingabeformen
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
@@ -17,7 +17,7 @@ Mehrere Eingabeformen
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Description: Ebenso wie Menschen untereinander mit einer Mischung aus Sprache und Gesten kommunizieren, kann sich auch bei der Interaktion mit einer App die Verwendung mehrerer Eingabearten und -modi als hilfreich erweisen. Durch die Berücksichtigung einer möglichst großen Anzahl von Benutzern, Geräten und Eingabearten (Gesten, Spracherkennung, Toucheingabe, Touchpad, Maus und Tastatur) maximieren Sie die Flexibilität, Benutzerfreundlichkeit und Barrierefreiheit Ihrer Apps.
+description: Menschen Mischung aus Sprache und Gesten kommunizieren, Interaktion mit einer App die Verwendung mehrerer Eingabearten und -modi hilfreich Durch die Berücksichtigung einer möglichst großen Anzahl von Benutzern, Geräten und Eingabearten (Gesten, Spracherkennung, Toucheingabe, Touchpad, Maus und Tastatur) maximieren Sie die Flexibilität, Benutzerfreundlichkeit und Barrierefreiheit Ihrer Apps.
 
 -   Dadurch wird die Flexibilität, Benutzerfreundlichkeit und Barrierefreiheit optimiert.
 -   Um zu beginnen, sollten Sie die verschiedenen Szenarien berücksichtigen, in denen Ihre App Eingaben verarbeitet. Versuchen Sie, in der gesamten App konsistent zu sein, und denken Sie daran, dass die Steuerelemente der Plattform integrierte Unterstützung für mehrere Eingabetypen bereitstellen. Können Benutzer über mehrere Eingabegeräte mit der Anwendung interagieren?

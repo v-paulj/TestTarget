@@ -1,5 +1,5 @@
 ---
-description: Die Vorgehensweise zum Definieren einer Benutzeroberfläche in Form von deklarativem XAML-Markup lässt sich sehr gut von universellen 8.1-Apps auf Apps für die universelle Windows-Plattform (UWP) übertragen.
+description: Das Definieren einer Benutzeroberfläche in Form von deklarativem XAML-Markup lässt sich sehr gut von universellen 8.1-Apps auf Apps für UWP übertragen.
 title: Portieren von Windows-Runtime 8.x-XAML und UI auf UWP
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
 ---

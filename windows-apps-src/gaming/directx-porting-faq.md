@@ -1,6 +1,6 @@
 ---
-Titel: Portierung von DirectX 11 – häufig gestellte Fragen
-Beschreibung: Antworten auf häufig gestellte Fragen zur Portierung von Spielen zur Universellen Windows-Plattform (UWP)
+title: Portierung von DirectX 11 – häufig gestellte Fragen
+description: Antworten auf häufig gestellte Fragen zur Portierung von Spielen zur Universellen Windows-Plattform (UWP)
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
 ---
 

@@ -1,5 +1,5 @@
 ---
-Description: Spezielle Kachelvorlagen sind individuelle Vorlagen, die animiert sind oder mit denen Sie Vorgänge durchführen können, die mit adaptiven Kacheln nicht möglich sind.
+description: Spezielle Kachelvorlagen sind individuelle Vorlagen, die animiert sind mit denen Sie Vorgänge durchführen können, die mit adaptiven Kacheln nicht möglich sind.
 title: Spezielle Kachelvorlagen
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD

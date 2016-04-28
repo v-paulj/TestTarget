@@ -1,6 +1,6 @@
 ---
 Description: Mit der Zeitauswahl verfügen Sie über eine standardmäßige Methode, mit der Benutzer einen Zeitwert per Touch-, Maus- oder Tastatureingabe auswählen können.
-tite: Zeitauswahl
+title: Zeitauswahl
 ms.assetid: 5124ecda-09e6-449e-9d4a-d969dca46aa3
 label: Zeitauswahl
 template: detail.hbs

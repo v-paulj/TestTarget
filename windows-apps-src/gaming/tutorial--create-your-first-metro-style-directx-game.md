@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines einfachen Spiels für die universelle Windows-Plattform (UWP) mit DirectX
+title: Erstellen eines einfachen Spiels für die UWP mit DirectX
 description: In diesen Tutorials lernen Sie, wie Sie ein einfaches Spiel für die universelle Windows-Plattform (UWP) mit DirectX und C++ erstellen.
 ms.assetid: 9edc5868-38cf-58cc-1fb3-8fb85a7ab2c9
 keywords: ["DirectX-Spielbeispiel", "Spielbeispiel, universelle Windows-Plattform (UWP)", "Direct3D 11-Spiel"]

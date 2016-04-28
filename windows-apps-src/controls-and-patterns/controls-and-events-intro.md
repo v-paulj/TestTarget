@@ -1,5 +1,5 @@
 ---
-Description: Sie erstellen die Benutzeroberfläche für Ihre App mit Steuerelementen wie Schaltflächen, Textfeldern und Kombinationsfeldern, um Daten anzuzeigen und Benutzereingaben zu erhalten. Hier zeigen wir Ihnen, wie Sie Ihrer App Steuerelemente hinzufügen.
+description: erstellen Benutzeroberfläche App mit Elementen wie Schaltflächen, Textfeldern und Kombinationsfeldern, um Daten anzuzeigen und Benutzereingaben zu erhalten. Hier zeigen wir Ihnen, wie Sie Ihrer App Steuerelemente hinzufügen.
 title: Hinzufügen von Steuerelementen und Verarbeiten von Ereignissen
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Einführung in Steuerelemente und Ereignisse

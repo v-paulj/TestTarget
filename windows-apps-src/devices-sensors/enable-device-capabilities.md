@@ -1,7 +1,7 @@
 ---
 ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
-Titel: Aktivieren von Gerätefunktionen
-Beschreibung: In diesem Lernprogramm wird beschrieben, wie Gerätefunktionen in Microsoft Visual Studio deklariert werden. Diese Funktionen bieten Ihnen die Möglichkeit, in Ihrer App Kameras, Mikrofone, Positionssensoren und andere Geräte zu verwenden.
+title: Aktivieren von Gerätefunktionen
+description: In diesem Lernprogramm wird beschrieben, wie Gerätefunktionen in Microsoft Visual Studio deklariert werden. Diese Funktionen bieten Ihnen die Möglichkeit, in Ihrer App Kameras, Mikrofone, Positionssensoren und andere Geräte zu verwenden.
 ---
 # Aktivieren von Gerätefunktionen
 

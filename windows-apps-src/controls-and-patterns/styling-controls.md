@@ -1,5 +1,5 @@
 ---
-Description: Sie können mit Stilen die Steuerelementeigenschaften festlegen und diese Einstellungen dann für andere Steuerelemente übernehmen, um so für ein einheitliches Erscheinungsbild zu sorgen.
+description: Sie können mit Stilen die Steuerelementeigenschaften festlegen und dies für andere Elemente übernehmen, um so für ein einheitliches Erscheinungsbild zu sorgen.
 MS-HAID: 'dev\_ctrl\_layout\_txt.styling\_controls'
 MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh

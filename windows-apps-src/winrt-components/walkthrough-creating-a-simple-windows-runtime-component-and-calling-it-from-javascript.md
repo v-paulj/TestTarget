@@ -1,6 +1,6 @@
 ---
-title: Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime und Aufrufen der Komponente über JavaScript
-description: In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie .NET Framework mit Visual Basic oder C# verwenden können, um eigene Windows-Runtime-Typen zu erstellen, die in einer Komponente für Windows-Runtime verpackt sind, und wie Sie die Komponente von Ihrer universellen Windows-App aus aufrufen, die für Windows mit JavaScript erstellt wurde.
+title: Einf. Komponente für Windows-Runtime erstellen, Aufruf über JavaScript
+description: .NET Framework verwenden Windows-Runtime-Typen erstellen, in Komponente für Windows-Runtime verpackt, Komponente von universeller Windows-App aufrufen
 ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
 ---
 

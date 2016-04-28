@@ -1,6 +1,6 @@
 ---
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
-description: In diesem Artikel wird beschrieben, wie Sie einer App für die universelle Windows-Plattform (UWP) adaptives Streaming von Multimediainhalten mit Microsoft PlayReady-Inhaltsschutz hinzufügen.
+description: Hier wird beschrieben, wie Sie einer App für die UWP adaptives Streaming von Multimediainhalten mit Microsoft PlayReady-Inhaltsschutz hinzufügen.
 title: Adaptives Streaming mit PlayReady
 ---
 

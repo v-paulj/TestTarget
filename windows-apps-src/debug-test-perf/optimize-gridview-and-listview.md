@@ -1,7 +1,7 @@
 ---
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: Optimieren der ListView- und GridView-Benutzeroberfläche
-description: Verbessern Sie die Leistung und Startzeit von ListView und GridView durch UI-Virtualisierung, Elementreduzierung und die progressive Aktualisierung von Elementen.
+description: Verbessern Sie die Leistung und Startzeit von ListView und GridView durch UI-Virtualisierung, Elementreduzierung und progressive Aktualisierung von Elementen.
 ---
 # Optimieren der ListView- und GridView-Benutzeroberfläche
 

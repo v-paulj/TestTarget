@@ -1,6 +1,6 @@
 ---
 ms.assetid: 09BA9250-A476-4803-910E-52F0A51704B1
-description: In diesem Artikel erfahren Sie, wie Sie die IMediaEncodingProperties-Schnittstelle verwenden, um die Auflösung und Framerate des Kameravorschau-Datenstroms sowie von aufgenommenen Fotos und Videos festzulegen.
+description: verwenden IMediaEncodingProperties-Schnittstelle zum Festlegen der Auflösung Framerate des Kameravorschau-Datenstroms und von aufgenommenen Fotos und Videos
 title: Festlegen von Mediencodierungseigenschaften
 ---
 

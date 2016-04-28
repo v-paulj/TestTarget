@@ -1,6 +1,6 @@
 ---
 title: Debuggen einer Hintergrundaufgabe
-description: Hier erfahren Sie, wie Sie eine Hintergrundaufgabe einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung im Windows-Ereignisprotokoll debuggen.
+description: So debuggen Sie eine Hintergrundaufgabe einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung im Windows-Ereignisprotokoll.
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
 ---
 

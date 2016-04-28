@@ -1,6 +1,6 @@
 ---
 title: x:DeferLoadStrategy-Attribut
-description: xDeferLoadStrategy verzögert die Erstellung eines Elements und seiner untergeordneten Elemente, verkürzt die Startzeit, erhöht aber leicht die Arbeitsspeicherauslastung. Jedes betroffene Element erhöht die Arbeitsspeicherauslastung um ca. 600 Bytes.
+description: xDeferLoadStrategy verzögert die Erstellung eines Elements und seiner untergeordneten Elemente, verkürzt Startzeit, erhöht leicht die Arbeitsspeicherauslastung Jedes betroffene Element erhöht die Arbeitsspeicherauslastung um ca. 600 Bytes.
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 ---
 

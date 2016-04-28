@@ -1,5 +1,5 @@
 ---
-Description: Description: Mit einer Verschiebung oder einem Bildlauf können Benutzer innerhalb einer einzelnen Ansicht navigieren, um den Inhalt der Ansicht anzuzeigen, der nicht in den Viewport passt. Beispiele für Ansichten sind die Ordnerstruktur eines Computers, eine Dokumentbibliothek oder ein Fotoalbum.
+Description: description: Mit einer Verschiebung oder einem Bildlauf können Benutzer innerhalb einer Ansicht navigieren, um den Inhalt anzuzeigen, der nicht in den Viewport passt. Beispiele für Ansichten sind die Ordnerstruktur eines Computers, eine Dokumentbibliothek oder ein Fotoalbum.
 title: title: Verschiebung
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning

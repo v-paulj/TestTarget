@@ -1,6 +1,6 @@
 ---
 title: Anwenden von Texturen auf Grundtypen
-description: Wir laden an dieser Stelle unformatierte Texturdaten und wenden diese auf einen 3D-Grundtyp an. Dazu verwenden wir den Würfel, den wir unter Verwenden von Tiefe und Effekten auf Grundtypen erstellt haben.
+description: Unformatierte Texturdaten landen und auf 3D-Grundtyp anwenden. Verwenden Würfel, unter Verwendung von Tiefe und Effekten auf Grundtypen erstellt
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
 ---
 

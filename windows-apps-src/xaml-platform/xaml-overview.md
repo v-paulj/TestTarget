@@ -1,5 +1,5 @@
 ---
-description: Sie lernen die XAML-Sprache und XAML-Konzepte für die Entwicklergruppe von Windows-Runtime-Apps kennen. Darüber hinaus werden die verschiedenen Methoden zum Deklarieren von Objekten und Festlegen von Attributen in XAML beim Erstellen einer Windows-Runtime-App erläutert.
+description: XAML-Sprache XAML-Konzepte für Entwickler Windows-Runtime-Apps Methoden zum Deklarieren Objekten Festlegen von Attributen in XAML Erstellen Windows-Runtime-App
 title: Übersicht über XAML
 ms.assetid: 48041B37-F1A8-44A4-BB8E-1D4DE30E7823
 ---

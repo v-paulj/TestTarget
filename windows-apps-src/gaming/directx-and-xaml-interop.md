@@ -1,6 +1,6 @@
 ---
-Titel: Interoperabilität von DirectX und XAML
-Beschreibung: In Ihrem Spiel für die universelle Windows-Plattform (UWP) können Sie eine Kombination aus Extensible Application Markup Language (XAML) und Microsoft DirectX verwenden.
+title: Interoperabilität von DirectX und XAML
+description: In Ihrem Spiel für die universelle Windows-Plattform (UWP) können Sie eine Kombination aus Extensible Application Markup Language (XAML) und Microsoft DirectX verwenden.
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
 ---
 

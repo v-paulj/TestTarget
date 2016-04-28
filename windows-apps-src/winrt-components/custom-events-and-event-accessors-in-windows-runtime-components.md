@@ -1,6 +1,6 @@
 ---
-title: Benutzerdefinierte Ereignisse und Ereignisaccessoren in Komponenten für Windows-Runtime
-description: Die .NET Framework-Unterstützung für Komponenten für Windows-Runtime vereinfacht das Deklarieren von Ereigniskomponenten, indem die Unterschiede zwischen dem Ereignismuster der universellen Windows-Plattform (UWP) und dem Ereignismuster von .NET Framework verborgen werden.
+title: Benutzerdef. Ereignisse und -accessoren in Windows-Runtime-Komponenten
+description: .NET Framework-Unterstützung Windows-Runtime vereinfacht Deklarieren Ereigniskomponenten, Unterschiede zwischen Ereignismuster UWP .NET Framework verborgen
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
 ---
 

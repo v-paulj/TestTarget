@@ -1,6 +1,6 @@
 ---
-Beschreibung: Beim Einreichen eines IAP tragen die Optionen auf der Seite Eigenschaften dazu bei, das Verhalten des IAP zu bestimmen, wenn es Kunden zum Kauf angeboten wird.
-Titel: Eingeben von IAP-Eigenschaften
+description: Beim Einreichen eines IAP tragen die Optionen auf der Seite Eigenschaften dazu bei, das Verhalten des IAP zu bestimmen, wenn es Kunden zum Kauf angeboten wird.
+title: Eingeben von IAP-Eigenschaften
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ---
 

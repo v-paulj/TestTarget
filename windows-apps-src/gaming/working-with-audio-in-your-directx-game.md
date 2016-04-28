@@ -1,6 +1,6 @@
 ---
 title: Audio für Spiele
-description: Hier erfahren Sie, wie Sie Musik und Sound entwickeln und in Ihr DirectX-Spiel integrieren. Außerdem erfahren Sie, wie Sie Audiosignale verarbeiten, um dynamischen und positionsbezogenen Sound zu erzeugen.
+description: So entwickeln Sie Musik und Sound und integrieren es in Ihr DirectX-Spiel und verarbeiten Audiosignale, um dynamischen und positionsbezogenen Sound zu erzeugen
 ms.assetid: ab29297a-9588-c79b-24c5-3b94b85e74a8
 ---
 

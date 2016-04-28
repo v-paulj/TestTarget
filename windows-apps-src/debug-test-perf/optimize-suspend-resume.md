@@ -1,7 +1,7 @@
 ---
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
 title: Optimieren von Anhalten/Fortsetzen
-description: Erstellen Sie Apps für die Universelle Windows-Plattform (UWP), die die Verwendung des Prozesslebensdauer-Systems optimieren und nach dem Anhalten oder Beenden effizient fortgesetzt werden.
+description: Erstellen Sie UWP-Apps, die die Verwendung des Prozesslebensdauer-Systems optimieren und nach dem Anhalten oder Beenden effizient fortgesetzt werden.
 ---
 # Optimieren von Anhalten/Fortsetzen
 

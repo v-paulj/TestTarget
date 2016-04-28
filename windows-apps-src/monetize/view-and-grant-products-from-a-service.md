@@ -1,7 +1,7 @@
 ---
 ms.assetid: B071F6BC-49D3-4E74-98EA-0461A1A55EFB
-description: Wenn Sie über einen Katalog mit Apps und In-App-Produkten (IAPs) verfügen, können Sie mithilfe der Windows Store-Sammlungs-API und der Windows Store-Einkaufs-API Besitzerinformationen zu diesen Produkten aus Ihren Diensten abrufen.
-title: Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst
+description: Wenn Sie einen Katalog mit Apps und IAPs haben, können Sie mit der Windows Store-Sammlungs-API und der Windows Store-Einkaufs-API Besitzerinformationen abrufen.
+title: Anzeigen von Produkten und Gewähren von Ansprüchen aus einem Dienst
 ---
 
 # Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst

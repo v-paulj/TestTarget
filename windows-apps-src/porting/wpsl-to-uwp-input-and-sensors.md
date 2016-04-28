@@ -1,6 +1,6 @@
 ---
 description: Code, der in das Gerät selbst integriert und auf dessen Sensoren abgestimmt ist, umfasst auch Eingaben vom und Ausgaben an den Benutzer.
-title: Portieren von Windows Phone Silverlight zu UWP: E/A, Gerät und App-Modell
+title: Portieren von Windows Phone Silverlight zu UWP: E/A, Gerät, App-Modell
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
 ---
 

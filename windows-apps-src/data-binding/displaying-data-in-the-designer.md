@@ -1,7 +1,7 @@
 ---
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
-Titel Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
-Beschreibung: Möglicherweise ist es nicht möglich oder nicht erwünscht (z. B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt.
+title: für die Entwurfsoberfläche und Prototyperstellung
+description: Möglicherweise ist es nicht möglich oder nicht erwünscht (z. B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt.
 ---
 Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
 =============================================================================================

@@ -1,6 +1,6 @@
 ---
 Description: Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive Kacheln erstellen können.
-title: Vorlagen für adaptive Kacheln: Schema und Vorlagen
+title: Adaptive Kacheln – Schema und Vorlagen
 ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
 label: Adaptive Kacheln – Schema und Vorlagen
 template: detail.hbs

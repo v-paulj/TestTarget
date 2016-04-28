@@ -1,6 +1,6 @@
 ---
-title: Definieren des UWP-App-Frameworks (Universelle Windows-Plattform) für das Spiel
-description: Wenn Sie Code für ein UWP-Spiel mit DirectX erstellen, müssen Sie zunächst das Framework erstellen, das die Interaktion der Spielobjekte mit Windows ermöglicht.
+title: Definieren des UWP-App-Frameworks für das Spiel
+description: Hier sind Details zum Hauptobjekt des Spiels beschrieben und wie die implementierten Regeln in Interaktionen mit der Spielwelt übersetzt werden.
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
 ---
 

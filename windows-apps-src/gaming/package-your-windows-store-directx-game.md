@@ -1,6 +1,6 @@
 ---
 title: Packen Ihres UWP-DirectX-Spiels (Universelle Windows-Plattform)
-description: Umfangreichere UWP-Spiele (Universelle Windows-Plattform) können leicht relativ groß werden. Dies gilt besonders für Spiele, bei denen mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt werden oder die über optionale HD-Ressourcen verfügen.
+description: Umfangreiche UWP-Spiele relativ groß besonders mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt oder über optionale HD-Ressourcen verfügen
 ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
 ---
 

@@ -1,5 +1,5 @@
 ---
-Description: Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zertifizierung von Apps verhindern oder nach der Veröffentlichung der App bei einer Stichprobenkontrolle auftreten können.
+description: Lese Liste, vermeiden dadurch Probleme, die Zertifizierung von Apps verhindern oder nach Veröffentlichung der App bei Stichprobenkontrolle auftreten können
 title: Vermeiden allgemeiner Zertifizierungsfehler
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
 ---

@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen von visuellen Inhalten zum Marble Maze-Beispiel
-description: In diesem Dokument wird beschrieben, wie das Spiel Marble Maze Direct3D und Direct2D in der UWP-App-Umgebung (Universelle Windows-Plattform) verwendet, sodass Sie die Muster erlernen und anpassen können, wenn Sie mit Ihrem eigenen Spielinhalt arbeiten.
+description: So verwendet das Spiel Marble Maze Direct3D/Direct2D in der UWP-App-Umgebung, sodass Sie die Muster anpassen können, wenn Sie mit Ihrem Spielinhalt arbeiten.
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
 ---
 

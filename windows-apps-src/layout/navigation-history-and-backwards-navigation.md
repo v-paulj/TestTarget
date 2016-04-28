@@ -1,6 +1,6 @@
 ---
-Description: Die Navigation in UWP-Apps (Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene.
-title: Navigationsdesigngrundlagen für UWP-Apps (Universelle Windows-Plattform)
+description: Navigation in UWP-Apps (Universelle Windows-Plattform) basiert auf flexiblem Modell aus Navigationsstrukturen, Navigationselementen, Funktionen auf Systemebene
+title: Navigationsdesigngrundlagen für UWP-Apps (Univ. Windows-Plattform)
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
 label: Verlauf und Rückwärtsnavigation
@@ -286,7 +286,7 @@ Wenn Sie Ihre eigene Zurück-Stapelnavigation bereitstellen möchten, sollte die
 <tr class="odd">
 <td align="left"><strong>Aufzählen von Elementen</strong>
           <p>Die App zeigt die Inhalte für ein Bildschirmelement an, z. B. die Details für das ausgewählte Element in der Master/Details-Liste.</p></td>
-<td align="left"><strong>Nein.</strong>
+<td align="left"><strong>Nein</strong>
           <p>Das Aufzählen von Elementen ist mit der Navigation innerhalb einer Peer-Gruppe vergleichbar. Wenn der Benutzer die Zurück-Schaltfläche drückt, sollte zu der Seite navigiert werden, die vor der aktuellen Seite angezeigt wurde, die die Elementenaufzählung enthält.</p>
 <img src="images/nav/nav-enumerate.png" alt="Iterm enumeration" /></td>
 </tr>

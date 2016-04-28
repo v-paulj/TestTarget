@@ -1,6 +1,6 @@
 ---
 title: Behandeln einer abgebrochenen Hintergrundaufgabe
-description: Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet.
+description: Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet.
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
 ---
 

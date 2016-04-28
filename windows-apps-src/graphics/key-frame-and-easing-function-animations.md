@@ -1,7 +1,7 @@
 ---
 title: Keyframe-Animationen und Animationen für Beschleunigungsfunktionen
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
-description: Lineare Keyframe-Animationen, Keyframe-Animationen mit einem „KeySpline “-Wert oder Beschleunigungsfunktionen sind drei verschiedene Techniken für ungefähr dasselbe Szenario.
+description: Lineare Keyframe-Animationen, Keyframe-Animationen mit einem „KeySpline “-Wert Beschleunigungsfunktionen verschiedene Techniken ungefähr dasselbe Szenario
 ---
 # Keyframe-Animationen und Animationen für Beschleunigungsfunktionen
 

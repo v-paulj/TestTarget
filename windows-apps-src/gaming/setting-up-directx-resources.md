@@ -1,6 +1,6 @@
 ---
 title: Einrichten von DirectX-Ressourcen und Darstellen eines Bilds
-description: Hier zeigen wir Ihnen das Erstellen eines Direct3D-Geräts, einer Swapchain und einer Renderziel-Ansicht sowie die Darstellung des gerenderten Bilds auf dem Bildschirm.
+description: Hier zeigen wir Ihnen das Erstellen Direct3D-Geräts, Swapchain und Renderziel-Ansicht sowie die Darstellung des gerenderten Bilds auf dem Bildschirm.
 ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
 ---
 

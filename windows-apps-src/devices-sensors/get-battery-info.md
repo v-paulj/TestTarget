@@ -1,7 +1,7 @@
 ---
 ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
-Titel: Abrufen von Akkuinformationen
-Beschreibung: Erfahren Sie, wie Sie mithilfe von APIs im Windows.Devices.Power-Namespace ausführliche Akkuinformationen erhalten.
+title: Abrufen von Akkuinformationen
+description: Erfahren Sie, wie Sie mithilfe von APIs im Windows.Devices.Power-Namespace ausführliche Akkuinformationen erhalten.
 ---
 # Abrufen von Akkuinformationen
 

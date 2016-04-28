@@ -1,6 +1,6 @@
 ---
 ms.assetid: 2CC2E526-DACB-4008-9539-DA3D0C190290
-description: Eine kurze Übersicht über die Netzwerktechnologien, die für UWP-Entwickler zur Verfügung stehen, mit Vorschlägen zum Auswählen der Technologien, die für Ihre App geeignet sind.
+description: Eine kurze Übersicht über die Netzwerktechnologien für UWP-Entwickler mit Vorschlägen zum Auswählen der Technologien, die für Ihre App geeignet sind.
 title: Welche Netzwerktechnologie?
 
 ---

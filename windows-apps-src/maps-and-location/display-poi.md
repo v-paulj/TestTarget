@@ -1,6 +1,6 @@
 ---
-Titel: Anzeigen von interessanten Orten (POI) auf einer Karte
-Beschreibung: Hinzufügen interessanter Orte (POI) mit Ortsmarken, Bildern, Formen und XAML-UI-Elementen auf einer Karte.
+title: Anzeigen von interessanten Orten (POI) auf einer Karte
+description: Hinzufügen interessanter Orte (POI) mit Ortsmarken, Bildern, Formen und XAML-UI-Elementen auf einer Karte.
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
 ---
 

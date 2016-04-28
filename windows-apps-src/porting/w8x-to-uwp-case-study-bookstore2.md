@@ -1,6 +1,6 @@
 ---
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: Diese Fallstudie baut auf den Informationen in Bookstore1 auf und beginnt mit einer universellen 8.1-App, die gruppierte Daten in einem SemanticZoom-Steuerelement anzeigt.
+description: Fallstudie Informationen in Bookstore1, beginnt mit einer universellen 8.1-App, die gruppierte Daten in einem SemanticZoom-Steuerelement anzeigt.
 title: Windows Runtime 8.x zu UWP – Fallstudie, Bookstore2
 ---
 

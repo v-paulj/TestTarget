@@ -1,6 +1,6 @@
 ---
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
-description: Dieser Abschnitt enthält Informationen zum Erstellen von universellen Windows-Apps, mit denen Fotos, Videos oder Audiodateien aufgenommen, wiedergegeben oder bearbeitet werden können.
+description: Informationen zum Erstellen von universellen Windows-Apps, mit denen Fotos, Videos oder Audiodateien aufgenommen, wiedergegeben oder bearbeitet werden können.
 title: Audio, Video und Kamera
 ---
 

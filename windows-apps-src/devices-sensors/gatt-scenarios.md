@@ -1,7 +1,7 @@
 ---
 ms.assetid: 28B30708-FE08-4BE9-AE11-5429F963C330
-Titel: Bluetooth GATT
-Beschreibung: Dieser Artikel enthält eine Übersicht über Bluetooth Generic Attribute Profile (GATT) für Universelle Windows-Plattform (UWP)-Apps zusammen mit Beispielcode für drei häufige GATT-Szenarien.
+title: Bluetooth GATT
+description: Dieser Artikel enthält eine Übersicht über Bluetooth Generic Attribute Profile (GATT) für Universelle Windows-Plattform (UWP)-Apps zusammen mit Beispielcode für drei häufige GATT-Szenarien.
 ---
 # Bluetooth GATT
 

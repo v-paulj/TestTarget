@@ -1,5 +1,5 @@
 ---
-titel: Multisampling in UWP-Apps (Universelle Windows-Plattform)
+title: Multisampling in UWP-Apps (Universelle Windows-Plattform)
 description: Hier erfahren Sie, wie Sie Multisampling in Windows-Runtime-Apps verwenden, die mit Direct3D erstellt wurden.
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
 ---

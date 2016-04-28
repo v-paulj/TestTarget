@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen von Audiodaten zum Marble Maze-Beispiel
-description: In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücksichtigen sollten, wenn Sie mit Audio arbeiten. Außerdem erfahren Sie, wie diese Methoden in Marble Maze angewendet werden.
+description: Hier werden Methoden beschrieben, die Sie bei der Arbeit mit Audio berücksichtigen sollten, und wie diese Methoden in Marble Maze angewendet werden.
 ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
 ---
 

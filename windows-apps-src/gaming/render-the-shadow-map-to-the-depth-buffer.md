@@ -1,6 +1,6 @@
 ---
 title: Rendern der Schattenmap zum Tiefenpuffer
-description: Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine zweidimensionale Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird.
+description: Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine 2-D-Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird.
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
 ---
 

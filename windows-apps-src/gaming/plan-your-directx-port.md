@@ -1,6 +1,6 @@
 ---
 title: Planen der DirectX-Portierung
-description: Planen Sie das Portieren des Spiels von DirectX 9 zu DirectX 11 und zur Universellen Windows-Plattform (UWP): Führen Sie ein Upgrade des Grafikcodes durch, und fügen Sie das Spiel in die Windows-Runtime-Umgebung ein.
+description: Planen Portieren des Spiels von DirectX 9 zu DirectX 11 und zur UWP. Upgrade des Grafikcodes, und fügen Sie das Spiel in die Windows-Runtime-Umgebung ein
 ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 ---
 

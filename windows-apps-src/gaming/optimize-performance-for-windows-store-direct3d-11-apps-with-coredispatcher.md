@@ -1,5 +1,5 @@
 ---
-title: Optimieren der Eingabelatenz für UWP-DirectX-Spiele (Universelle Windows-Plattform)
+title: Optimieren der Eingabelatenz für UWP-DirectX-Spiele
 description: Die Eingabelatenz kann das Spielerlebnis erheblich beeinträchtigen. Spiele wirken professioneller, wenn in diesem Bereich eine Optimierung vorgenommen wird.
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
 ---

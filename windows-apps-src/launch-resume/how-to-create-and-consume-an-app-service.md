@@ -1,6 +1,6 @@
 ---
 title: Erstellen und Verwenden eines App-Diensts
-description: Hier erfahren Sie, wie Sie eine App für die universelle Windows-Plattform (UWP) erstellen, die Dienste für andere UWP-Apps bereitstellen kann, und wie Sie diese Dienste nutzen.
+description: App für die universelle Windows-Plattform (UWP) erstellen, die Dienste für andere UWP-Apps bereitstellen kann, und wie Sie diese Dienste nutzen.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
 ---
 

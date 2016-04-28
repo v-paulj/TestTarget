@@ -1,5 +1,5 @@
 ---
-description: listet Unterstützung auf Sprachebene in XAML für die Windows-Runtime für bestimmte Datentypen in der Common Language Runtime (CLR) und in anderen Programmiersprachen wie C++ auf.
+description: listet Unterstützung auf Sprachebene in XAML für die Windows-Runtime für bestimmte Datentypen in der CLR und in anderen Programmiersprachen wie C++ auf.
 title: Systeminterne XAML-Datentypen
 ms.assetid: D50E6127-395D-4E27-BAA2-2FE627F4B711
 ---

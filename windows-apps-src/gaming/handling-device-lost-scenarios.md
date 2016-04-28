@@ -1,6 +1,6 @@
 ---
 title: Behandeln von Szenarien mit entfernten Geräten in Direct3D 11
-description: In diesem Thema wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird.
+description: Hier wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird.
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
 ---
 

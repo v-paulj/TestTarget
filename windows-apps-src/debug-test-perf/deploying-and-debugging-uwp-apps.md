@@ -1,7 +1,7 @@
 ---
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
 description: Dieser Artikel führt Sie Schritt für Schritt durch die Ausrichtung Ihrer Apps auf verschiedene Bereitstellungs- und Debugziele.
-title: Bereitstellen und Debuggen von UWP (Universelle Windows-Plattform)-Apps
+title: Bereitstellen/Debuggen von UWP (Universelle Windows-Plattform)-Apps
 ---
 
 # Bereitstellen und Debuggen von UWP (Universelle Windows-Plattform)-Apps

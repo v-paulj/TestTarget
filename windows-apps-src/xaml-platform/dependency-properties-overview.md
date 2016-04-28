@@ -1,5 +1,5 @@
 ---
-description: In diesem Thema wird das Abhängigkeitseigenschaftensystem erläutert, das Ihnen beim Entwickeln einer Windows-Runtime-App mit C++, C# oder Visual Basic und XAML-Definitionen für die UI zur Verfügung steht.
+description: Abhängigkeitseigenschaftensystem steht beim Entwickeln einer Windows-Runtime-App mit C++, C# oder Visual Basic und XAML-Definitionen für UI zur Verfügung
 title: Übersicht über Abhängigkeitseigenschaften
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
 ---

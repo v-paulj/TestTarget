@@ -1,6 +1,6 @@
 ---
-Titel: Ausführen der Geocodierung und umgekehrten Geocodierung
-Beschreibung: Konvertieren Sie Adressen in geografische Standorte (Geocodierung) und geografische Standorte in Adressen (umgekehrte Geocodierung), indem Sie die Methoden der MapLocationFinder-Klasse im Windows.Services.Maps-Namespace aufrufen.
+title: Ausführen der Geocodierung und umgekehrten Geocodierung
+description: Konvertieren Sie Adressen in geografische Standorte (Geocodierung) und geografische Standorte in Adressen (umgekehrte Geocodierung), indem Sie die Methoden der MapLocationFinder-Klasse im Windows.Services.Maps-Namespace aufrufen.
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
 ---
 

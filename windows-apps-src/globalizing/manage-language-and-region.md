@@ -1,5 +1,5 @@
 ---
-Description: Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App steuern.
+description: Mit den verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App steuern
 title: Verwalten von Sprache und Region
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 label: Verwalten von Sprache und Region

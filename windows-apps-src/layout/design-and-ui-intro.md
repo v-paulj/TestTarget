@@ -2,7 +2,7 @@
 description: Dieser Artikel beschreibt die Features, Vorteile und Anforderungen der Plattform für UWP-Apps (Universelle Windows-Plattform) aus Entwurfsperspektive. Hier erfahren Sie, welche Komponenten die Plattform kostenlos zur Verfügung stellt und welche Tools verfügbar sind.
 title: Einführung in das Universal Windows Platform (UWP)-App-Design
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
-Beschriftung: Einführung in das UWP-App-Design
+label: Einführung in das UWP-App-Design
 template: detail.hbs
 ---
 

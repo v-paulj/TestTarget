@@ -1,5 +1,5 @@
 ---
-description: Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource ausgewertet wird. Dabei wird zusätzliche Systemlogik genutzt, mit der unterschiedliche Ressourcen je nach derzeit aktivem Design abgerufen werden.
+description: Stellt durch Auswertung eines Ressourcenverweises einen XAML-Attributwert bereit und nutzt Systemlogik, mit der Ressourcen nach aktivem Design abgerufen werden.
 title: ThemeResource-Markuperweiterung
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
 ---

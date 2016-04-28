@@ -1,7 +1,7 @@
 ---
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Tests im Zertifizierungskit für Windows-Apps
-description: Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, mit denen Sie sicherstellen können, dass eine App für die Veröffentlichung im Windows Store bereit ist.
+description: Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, um sicherzustellen, dass eine App für die Veröffentlichung im Windows Store bereit ist.
 ---
 ## Tests im Zertifizierungskit für Windows-Apps
 

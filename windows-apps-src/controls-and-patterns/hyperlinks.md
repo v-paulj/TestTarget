@@ -1,5 +1,5 @@
 ---
-description: Durch Links können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten.
+description: Durch Links können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI starten
 title: Links
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Links

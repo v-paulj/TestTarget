@@ -1,6 +1,6 @@
 ---
 title: Unterstützen Ihrer App mit Hintergrundaufgaben
-Beschreibung: In den Themen in diesem Abschnitt erfahren Sie, wie Sie einfachen Code im Hintergrund ausführen, indem Sie mit Hintergrundaufgaben auf Trigger reagieren.
+description: In den Themen in diesem Abschnitt erfahren Sie, wie Sie einfachen Code im Hintergrund ausführen, indem Sie mit Hintergrundaufgaben auf Trigger reagieren.
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: Im Bericht „IAP-Käufe“ im Windows Dev Center-Dashboard können Sie sehen, wie viele IAPs Sie verkauft haben. Außerdem können Sie demografische und plattformspezifische Details einsehen.
+description: Im Bericht „IAP-Käufe“ im Windows Dev Center-Dashboard sehen Sie, wie viele IAPs Sie verkauft haben und demografische und plattformspezifische Details einsehen
 title: Bericht „IAP-Käufe“
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ---

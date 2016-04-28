@@ -1,11 +1,11 @@
 ---
 ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
-Titel: Aktivieren Ihres Geräts für die Entwicklung
-Beschreibung: Bei Windows 10-Geräten wird ein anderer Entwicklungsansatz verfolgt.
-Schlüsselwörter: Erste Schritte
-Schlüsselwörter: Entwicklerlizenz
-Schlüsselwörter: Visual Studio, Entwicklerlizenz
-Schlüsselwörter: Gerät aktivieren
+title: Aktivieren Ihres Geräts für die Entwicklung
+description: Bei Windows 10-Geräten wird ein anderer Entwicklungsansatz verfolgt.
+keywords: Erste Schritte
+keywords: Entwicklerlizenz
+keywords: Visual Studio, Entwicklerlizenz
+keywords: Gerät aktivieren
 ---
 # Aktivieren Ihres Geräts für die Entwicklung
 

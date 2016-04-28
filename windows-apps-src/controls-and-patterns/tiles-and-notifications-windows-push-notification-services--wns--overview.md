@@ -1,6 +1,6 @@
 ---
-Description: Mithilfe des Windows-Pushbenachrichtigungsdiensts (WNS) können Drittanbieterentwickler Popup-, Kachel-, Signalupdates und unformatierte Updates von ihren eigenen Clouddiensten aus senden. Dadurch steht ein Mechanismus zur Verfügung, mit dem Sie Ihren Benutzern auf energieeffiziente und verlässliche Weise neue Updates bereitstellen können.
-title: Übersicht über die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)
+description: Mithilfe von WNS können Drittanbieterentwickler Popup-, Kachel-, Signalupdates und unformatierte Updates von eigenen Clouddiensten aus senden. Dadurch steht ein Mechanismus zur Verfügung, mit dem Sie Ihren Benutzern auf energieeffiziente und verlässliche Weise neue Updates bereitstellen können.
+title: Übersicht über die Windows-Pushbenachrichtigungsdienste (WNS)
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 label: TBD
 template: detail.hbs

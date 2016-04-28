@@ -1,6 +1,6 @@
 ---
 title: Portieren der Spielschleife
-description: In diesem Thema wird veranschaulicht, wie Sie ein Fenster für ein UWP-Spiel (Universelle Windows-Plattform) implementieren und die Spielschleife übertragen. Außerdem wird die Erstellung eines IFrameworkView-Elements zum Steuern eines CoreWindow-Vollbilds erläutert.
+description: So implementieren Sie ein Fenster für ein UWP-Spiel, übertragen die Spielschleife und erstellen ein IFrameworkView-Element zur CoreWindow-Vollbildsteuerung.
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
 ---
 

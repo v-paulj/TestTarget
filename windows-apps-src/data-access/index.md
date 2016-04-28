@@ -1,7 +1,7 @@
 ---
 ms.assetid: 76776b0f-3163-48c9-835b-3f4213968079
 title: Datenzugriff
-description: In diesem Abschnitt wird das Speichern von Daten auf dem Gerät in einer privaten Datenbank und die Verwendung der objektrelationalen Zuordnung in UWP-Apps (Universelle Windows-Plattform) erläutert.
+description: Abschnitt beschreibt Speichern von Daten auf dem Gerät in einer privaten Datenbank und die Verwendung der objektrelationalen Zuordnung in UWP-Apps
 ---
 # Datenzugriff
 

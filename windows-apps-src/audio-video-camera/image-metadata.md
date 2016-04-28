@@ -1,6 +1,6 @@
 ---
 ms.assetid: D5D98044-7221-4C2A-9724-56E59F341AB0
-description: In diesem Artikel werden das Lesen und Schreiben von Eigenschaften von Bildmetadaten und das Hinzufügen von Geomarkierungen zu Dateien mithilfe der GeotagHelper-Hilfsklasse erläutert.
+description: Artikel beschreibt Lesen und Schreiben von Eigenschaften von Bildmetadaten und das Hinzufügen von Geomarkierungen zu Dateien mit der GeotagHelper-Hilfsklasse
 title: Bildmetadaten
 ---
 

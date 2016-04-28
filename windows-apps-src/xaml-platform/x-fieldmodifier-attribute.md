@@ -1,5 +1,5 @@
 ---
-description: ändert das XAML-Kompilierungsverhalten, sodass Felder für Verweise auf benannte Objekte mit öffentlichem Zugriff definiert werden und nicht das private Standardverhalten aufweisen.
+description: ändert XAML-Kompilierungsverhalten, Felder für Verweise auf benannte Objekte mit öffentlichem Zugriff definiert, nicht das private Standardverhalten
 title: xFieldModifier-Attribut
 ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
 ---

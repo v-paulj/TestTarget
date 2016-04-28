@@ -1,5 +1,5 @@
 ---
-Descripton: Hier erfahren Sie, wie Sie in einer einfachen Peer-zu-Peer-UWP-App (Universelle Windows-Plattform) mit zwei Seiten navigieren.
+description: Hier erfahren Sie, wie Sie in einer einfachen Peer-zu-Peer-UWP-App (Universelle Windows-Plattform) mit zwei Seiten navigieren.
 title: Peer-zu-Peer-Navigation zwischen zwei Seiten
 ms.assetid: 0A364C8B-715F-4407-9426-92267E8FB525
 label: Peer-zu-Peer-Navigation zwischen zwei Seiten

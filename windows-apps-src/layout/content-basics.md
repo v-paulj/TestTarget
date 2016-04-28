@@ -1,6 +1,6 @@
 ---
 Description: Der Hauptzweck einer App besteht darin, den Zugriff auf Inhalte zu gewähren. In einer Fotobearbeitungs-App sind Fotos der Content, in einer Reise-App Karten und Informationen über die Reiseziele usw.
-title: Grundlagen des Content-Design für Apps für die Universelle Windows-Plattform (UWP)
+title: Content-Design-Grundlagen für UWP-Apps (Universelle Windows-Plattform)
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content-Design-Grundlagen
 template: detail.hbs

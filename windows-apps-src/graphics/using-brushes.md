@@ -1,7 +1,7 @@
 ---
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: Verwenden von Pinseln
-description: Mit Brush-Objekten werden Innenbereiche oder Konturen von Formen, Text und Teilen von Steuerelementen gezeichnet, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist.
+description: Mit Brush-Objekten werden Innenbereiche oder Konturen von Formen, Text, Teilen von Steuerelementen gezeichnet, Objekt auf Benutzeroberfläche sichtbar
 ---
 # Verwenden von Pinseln
 

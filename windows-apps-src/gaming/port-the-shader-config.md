@@ -1,6 +1,6 @@
 ---
 title: Portieren der Shaderobjekte
-description: Beim Portieren des einfachen Renderers aus OpenGL ES 2.0 ist der erste Schritt das Einrichten der äquivalenten Vertex- und Fragmentshaderobjekte in Direct3D 11. Stellen Sie außerdem sicher, dass das Hauptprogramm mit den Shaderobjekten kommunizieren kann, nachdem diese kompiliert wurden.
+description: Portieren Renderer OpenGL ES 2.0 Einrichten äquivalente Vertex- Fragmentshaderobjekte in Direct3D 11 Hauptprogramm mit Shaderobjekten kommunizieren, kompiliert
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
 ---
 

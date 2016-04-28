@@ -1,5 +1,5 @@
 ---
-Description: Mithilfe eines Assistenten in Visual Studio können Sie Pushbenachrichtigungen über einen mobilen Dienst generieren, der unter Verwendung von Azure Mobile Services erstellt wurde.
+description: Mithilfe des Assistenten in Visual Studio können Sie Pushbenachrichtigungen über einen mobilen Dienst generieren, der mit Azure Mobile Services erstellt wurde.
 title: Vom Assistenten für Pushbenachrichtigungen generierter Code
 ms.assetid: 340F55C1-0DDF-4233-A8E4-C15EF9030785
 label: TBD

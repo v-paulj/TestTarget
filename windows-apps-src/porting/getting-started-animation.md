@@ -1,7 +1,7 @@
 ---
 title: Erste Schritte mit Animationen
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
-Beschreibung: In diesem Projekt verschieben wir ein Rechteck, wenden einen Ausblendeeffekt an und blenden es wieder ein.
+description: In diesem Projekt verschieben wir ein Rechteck, wenden einen Ausblendeeffekt an und blenden es wieder ein.
 ---
 
 # Erste Schritte: Animationen

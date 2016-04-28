@@ -1,6 +1,6 @@
 ---
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
-description: In diesem Artikel erfahren Sie, wie Sie Steuerelemente eines Videoaufnahmegeräts verwenden, um verbesserte Videoaufnahmeszenarien, einschließlich HDR-Video und Belichtungspriorität, zu ermöglichen.
+description: So verwenden Sie Steuerelemente eines Videoaufnahmegeräts, um bessere Videoaufnahmeszenarien, einschließlich HDR-Video und Belichtungspriorität, zu ermöglichen.
 title: Steuerelemente des Aufnahmegeräts für Videoaufnahmen
 ---
 
