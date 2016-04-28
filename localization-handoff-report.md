@@ -1,42 +1,11 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\monetize\known-issues-for-the-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/5b6d3e034b73e6ae693fbeab3ecd3b2b81f38bb1/windows-apps-src/monetize/known-issues-for-the-advertising-libraries.md) | HandedOffSuccess | [Details](#cfaa108cc93b6bae903e86ad141656bf613f185d3305)
- [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/bf0acf2e16b6260fafc34f4159653da1d34c2b59/windows-apps-src/packaging/app-capability-declarations.md) | OutofSyncHandedBackSuccess | [Details](#9d0749aac4cdcad282b2082b351962d3cd0b0ec83348)
 
 ## Item Details
-##### <a name='cfaa108cc93b6bae903e86ad141656bf613f185d3305'></a> Source: [windows-apps-src\monetize\known-issues-for-the-advertising-libraries.md](https://github.com/Microsoft/windows-apps/blob/5b6d3e034b73e6ae693fbeab3ecd3b2b81f38bb1/windows-apps-src/monetize/known-issues-for-the-advertising-libraries.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [known-issues-for-the-advertising-libraries.95fb3aae98a2ed5a87fc9750b5095965fabf5cb8.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/809b5f6d82c2b2f23127aff2ddf9aabf93485d8e/ol-handoff/Microsoft/windows-apps.de-de/master/known-issues-for-the-advertising-libraries.95fb3aae98a2ed5a87fc9750b5095965fabf5cb8.de-de.xlf)
-* Handoff Datetime: 2016-04-28 17:41:25
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='9d0749aac4cdcad282b2082b351962d3cd0b0ec83348'></a> Source: [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/bf0acf2e16b6260fafc34f4159653da1d34c2b59/windows-apps-src/packaging/app-capability-declarations.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/809b5f6d82c2b2f23127aff2ddf9aabf93485d8e/ol-handoff/Microsoft/windows-apps.de-de/master/app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf)
-* Handoff Datetime: 2016-04-28 17:41:25
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/packaging/app-capability-declarations.md)
-* Current Handback File: [app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf)
-* Current Handback Datetime: 2016-04-18 14:03:31
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
