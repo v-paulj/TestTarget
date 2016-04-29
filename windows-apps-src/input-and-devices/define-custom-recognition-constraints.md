@@ -1,6 +1,6 @@
 ---
-Description: Description: Erfahren Sie, wie Sie benutzerdefinierte Einschränkungen für die Spracherkennung definieren und verwenden.
-title: title: Definieren von benutzerdefinierten Erkennungseinschränkungen
+Description: Erfahren Sie, wie Sie benutzerdefinierte Einschränkungen für die Spracherkennung definieren und verwenden.
+title: Definieren von benutzerdefinierten Erkennungseinschränkungen
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
