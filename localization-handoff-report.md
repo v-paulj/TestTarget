@@ -1,26 +1,42 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\accessibility\accessible-text-requirements.md](https://github.com/Microsoft/windows-apps/blob/cbff6c039b612a55e8ca8df909d251c302ccb7fa/windows-apps-src/accessibility/accessible-text-requirements.md) | OutofSyncHandedBackSuccess | [Details](#f251f32272605d0cd723fa044eea586181bebb9410)
+ [windows-apps-src\data-binding\data-binding-in-depth.md](https://github.com/Microsoft/windows-apps/blob/a82771a46e55020e371fd05ef3263e4b9cc1673b/windows-apps-src/data-binding/data-binding-in-depth.md) | OutofSyncHandedBackSuccess | [Details](#790f998bd1f6dc5861711dd285e82c18c0bdec5e1889)
+ [windows-apps-src\debug-test-perf\improve-garbage-collection-performance.md](https://github.com/Microsoft/windows-apps/blob/436373db47c41aef5f2c145619850528f9d7dbfd/windows-apps-src/debug-test-perf/improve-garbage-collection-performance.md) | OutofSyncHandedBackSuccess | [Details](#4e849fa9e5c00cec592cadefb995e0d2aa7f9fba1960)
 
 ## Item Details
-##### <a name='f251f32272605d0cd723fa044eea586181bebb9410'></a> Source: [windows-apps-src\accessibility\accessible-text-requirements.md](https://github.com/Microsoft/windows-apps/blob/cbff6c039b612a55e8ca8df909d251c302ccb7fa/windows-apps-src/accessibility/accessible-text-requirements.md)
+##### <a name='790f998bd1f6dc5861711dd285e82c18c0bdec5e1889'></a> Source: [windows-apps-src\data-binding\data-binding-in-depth.md](https://github.com/Microsoft/windows-apps/blob/a82771a46e55020e371fd05ef3263e4b9cc1673b/windows-apps-src/data-binding/data-binding-in-depth.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [accessible-text-requirements.4720051c601dc4cbe4b174b10579635db48aee4d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7b929b1f9ba54b44af946f48e9971c0be2351c30/ol-handoff/Microsoft/windows-apps.de-de/master/accessible-text-requirements.4720051c601dc4cbe4b174b10579635db48aee4d.de-de.xlf)
-* Handoff Datetime: 2016-04-29 22:40:43
+* Handoff File: [data-binding-in-depth.3b92e12492dfc9e544aad2db2ce4b7efc65e4516.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/2210f0ca7576346761c453457ef42e935e7be3f2/ol-handoff/Microsoft/windows-apps.de-de/master/data-binding-in-depth.3b92e12492dfc9e544aad2db2ce4b7efc65e4516.de-de.xlf)
+* Handoff Datetime: 2016-05-02 17:49:29
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\accessibility\accessible-text-requirements.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/accessibility/accessible-text-requirements.md)
-* Current Handback File: [accessible-text-requirements.4720051c601dc4cbe4b174b10579635db48aee4d.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/accessible-text-requirements.4720051c601dc4cbe4b174b10579635db48aee4d.de-de.xlf)
+* Current Target File: [windows-apps-src\data-binding\data-binding-in-depth.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/data-binding/data-binding-in-depth.md)
+* Current Handback File: [data-binding-in-depth.3b92e12492dfc9e544aad2db2ce4b7efc65e4516.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/data-binding-in-depth.3b92e12492dfc9e544aad2db2ce4b7efc65e4516.de-de.xlf)
+* Current Handback Datetime: 2016-04-18 14:03:31
+* [Back to Top](#report-top)
+
+##### <a name='4e849fa9e5c00cec592cadefb995e0d2aa7f9fba1960'></a> Source: [windows-apps-src\debug-test-perf\improve-garbage-collection-performance.md](https://github.com/Microsoft/windows-apps/blob/436373db47c41aef5f2c145619850528f9d7dbfd/windows-apps-src/debug-test-perf/improve-garbage-collection-performance.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [improve-garbage-collection-performance.fdd828e59372c7f49d2851254f234d8efe2fc7b4.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/2210f0ca7576346761c453457ef42e935e7be3f2/ol-handoff/Microsoft/windows-apps.de-de/master/improve-garbage-collection-performance.fdd828e59372c7f49d2851254f234d8efe2fc7b4.de-de.xlf)
+* Handoff Datetime: 2016-05-02 17:49:29
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\debug-test-perf\improve-garbage-collection-performance.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/debug-test-perf/improve-garbage-collection-performance.md)
+* Current Handback File: [improve-garbage-collection-performance.fdd828e59372c7f49d2851254f234d8efe2fc7b4.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/improve-garbage-collection-performance.fdd828e59372c7f49d2851254f234d8efe2fc7b4.de-de.xlf)
 * Current Handback Datetime: 2016-04-18 14:03:31
 * [Back to Top](#report-top)
 
