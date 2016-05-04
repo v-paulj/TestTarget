@@ -1,139 +1,43 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 8
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\debug-test-perf\keep-the-ui-thread-responsive.md](https://github.com/Microsoft/windows-apps/blob/c394d422dab8132105c914b139f7bcb627773039/windows-apps-src/debug-test-perf/keep-the-ui-thread-responsive.md) | OutofSyncHandedBackSuccess | [Details](#03f7212856c677e76e65f7f0d921712de043a04b1963)
- [windows-apps-src\debug-test-perf\optimize-file-access.md](https://github.com/Microsoft/windows-apps/blob/97a09024d2be8333c36fe4c2ecd49b0242b8d15b/windows-apps-src/debug-test-perf/optimize-file-access.md) | OutofSyncHandedBackSuccess | [Details](#2d24daf2bad75f5eb9adc92a49f4ff4912afd1a61967)
- [windows-apps-src\debug-test-perf\optimize-suspend-resume.md](https://github.com/Microsoft/windows-apps/blob/e0f04c4242891b25db460d4852ab8cc070d82260/windows-apps-src/debug-test-perf/optimize-suspend-resume.md) | OutofSyncHandedBackSuccess | [Details](#9fee4ab9c55c1243c04c2ed5f0074127515280371969)
- [windows-apps-src\debug-test-perf\planning-and-measuring-performance.md](https://github.com/Microsoft/windows-apps/blob/8daddd2fc13fa9cf69058e3b3bb7d63e6fa99d0e/windows-apps-src/debug-test-perf/planning-and-measuring-performance.md) | OutofSyncHandedBackSuccess | [Details](#dea1e37ca0403e858d3c40c966cd9ef9720bb00f1973)
- [windows-apps-src\debug-test-perf\test-with-the-emulator.md](https://github.com/Microsoft/windows-apps/blob/9a33710315486c23a204a528d3d87421c6990b85/windows-apps-src/debug-test-perf/test-with-the-emulator.md) | OutofSyncHandedBackSuccess | [Details](#c53bda2329cd984e3a03d4a166e7353097e62cef1975)
- [windows-apps-src\gaming\complete-code-for-basicloader.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-basicloader.md) | OutofSyncHandedBackSuccess | [Details](#355e5a65a16e5e2df9bb039383f68dda16ff23a22100)
- [windows-apps-src\gaming\complete-code-for-basicreaderwriter.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-basicreaderwriter.md) | OutofSyncHandedBackSuccess | [Details](#46762d7b7234be9ff7b4c288a09162d4f942a7072101)
- [windows-apps-src\gaming\complete-code-for-ddstextureloader.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-ddstextureloader.md) | OutofSyncHandedBackSuccess | [Details](#9a842c773ce16e1093a158426b89caf239858f052102)
+ [windows-apps-src\debug-test-perf\tools-for-profiling-and-performance.md](https://github.com/Microsoft/windows-apps/blob/5bbd14fb53cae67bbb827f94e695b2703e07fc34/windows-apps-src/debug-test-perf/tools-for-profiling-and-performance.md) | OutofSyncHandedBackSuccess | [Details](#f7f9821be7d1423b2f89367bd20c09981eca24eb1976)
+ [windows-apps-src\debug-test-perf\windows-runtime-components-and-optimizing-interop.md](https://github.com/Microsoft/windows-apps/blob/5c7a49558ed11f82b7afea1ea96271c45c2f9139/windows-apps-src/debug-test-perf/windows-runtime-components-and-optimizing-interop.md) | OutofSyncHandedBackSuccess | [Details](#b9300b3feb1e5229951f3e1ebe454b61ba8065ae1979)
 
 ## Item Details
-##### <a name='03f7212856c677e76e65f7f0d921712de043a04b1963'></a> Source: [windows-apps-src\debug-test-perf\keep-the-ui-thread-responsive.md](https://github.com/Microsoft/windows-apps/blob/c394d422dab8132105c914b139f7bcb627773039/windows-apps-src/debug-test-perf/keep-the-ui-thread-responsive.md)
+##### <a name='f7f9821be7d1423b2f89367bd20c09981eca24eb1976'></a> Source: [windows-apps-src\debug-test-perf\tools-for-profiling-and-performance.md](https://github.com/Microsoft/windows-apps/blob/5bbd14fb53cae67bbb827f94e695b2703e07fc34/windows-apps-src/debug-test-perf/tools-for-profiling-and-performance.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [keep-the-ui-thread-responsive.dc0033c895cca11c6539cb418552a2ad9fbe92d3.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7a05cd5ab7ef28e59d32b1467a15e1632e910093/ol-handoff/Microsoft/windows-apps.de-de/master/keep-the-ui-thread-responsive.dc0033c895cca11c6539cb418552a2ad9fbe92d3.de-de.xlf)
-* Handoff Datetime: 2016-05-04 19:20:52
+* Handoff File: [tools-for-profiling-and-performance.bcfd5494bc17ab2ac8612e5434cdc737f2a45781.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/0dbb8d30c408c96504b8656de1623507713cf796/ol-handoff/Microsoft/windows-apps.de-de/master/tools-for-profiling-and-performance.bcfd5494bc17ab2ac8612e5434cdc737f2a45781.de-de.xlf)
+* Handoff Datetime: 2016-05-04 19:47:21
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\debug-test-perf\keep-the-ui-thread-responsive.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/debug-test-perf/keep-the-ui-thread-responsive.md)
-* Current Handback File: [keep-the-ui-thread-responsive.dc0033c895cca11c6539cb418552a2ad9fbe92d3.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/keep-the-ui-thread-responsive.dc0033c895cca11c6539cb418552a2ad9fbe92d3.de-de.xlf)
+* Current Target File: [windows-apps-src\debug-test-perf\tools-for-profiling-and-performance.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/debug-test-perf/tools-for-profiling-and-performance.md)
+* Current Handback File: [tools-for-profiling-and-performance.bcfd5494bc17ab2ac8612e5434cdc737f2a45781.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/tools-for-profiling-and-performance.bcfd5494bc17ab2ac8612e5434cdc737f2a45781.de-de.xlf)
 * Current Handback Datetime: 2016-04-18 14:03:31
 * [Back to Top](#report-top)
 
-##### <a name='2d24daf2bad75f5eb9adc92a49f4ff4912afd1a61967'></a> Source: [windows-apps-src\debug-test-perf\optimize-file-access.md](https://github.com/Microsoft/windows-apps/blob/97a09024d2be8333c36fe4c2ecd49b0242b8d15b/windows-apps-src/debug-test-perf/optimize-file-access.md)
+##### <a name='b9300b3feb1e5229951f3e1ebe454b61ba8065ae1979'></a> Source: [windows-apps-src\debug-test-perf\windows-runtime-components-and-optimizing-interop.md](https://github.com/Microsoft/windows-apps/blob/5c7a49558ed11f82b7afea1ea96271c45c2f9139/windows-apps-src/debug-test-perf/windows-runtime-components-and-optimizing-interop.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [optimize-file-access.f33d0a1b722c07af1622282a7f77c0d4c4c176ee.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7a05cd5ab7ef28e59d32b1467a15e1632e910093/ol-handoff/Microsoft/windows-apps.de-de/master/optimize-file-access.f33d0a1b722c07af1622282a7f77c0d4c4c176ee.de-de.xlf)
-* Handoff Datetime: 2016-05-04 19:20:52
+* Handoff File: [windows-runtime-components-and-optimizing-interop.163b9b5eb45f5d53051455cc368ccf16da8de7d0.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/0dbb8d30c408c96504b8656de1623507713cf796/ol-handoff/Microsoft/windows-apps.de-de/master/windows-runtime-components-and-optimizing-interop.163b9b5eb45f5d53051455cc368ccf16da8de7d0.de-de.xlf)
+* Handoff Datetime: 2016-05-04 19:47:21
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\debug-test-perf\optimize-file-access.md](https://github.com/Microsoft/windows-apps.de-de/blob/39a43306f3baf4218e9103f55bbafc443e19cbed/windows-apps-src/debug-test-perf/optimize-file-access.md)
-* Current Handback File: [optimize-file-access.f33d0a1b722c07af1622282a7f77c0d4c4c176ee.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/ae798758d1a5718ad58a674aba8432473fa98a27/ol-handback/Microsoft/windows-apps.de-de/master/optimize-file-access.f33d0a1b722c07af1622282a7f77c0d4c4c176ee.de-de.xlf)
+* Current Target File: [windows-apps-src\debug-test-perf\windows-runtime-components-and-optimizing-interop.md](https://github.com/Microsoft/windows-apps.de-de/blob/39a43306f3baf4218e9103f55bbafc443e19cbed/windows-apps-src/debug-test-perf/windows-runtime-components-and-optimizing-interop.md)
+* Current Handback File: [windows-runtime-components-and-optimizing-interop.163b9b5eb45f5d53051455cc368ccf16da8de7d0.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/ae798758d1a5718ad58a674aba8432473fa98a27/ol-handback/Microsoft/windows-apps.de-de/master/windows-runtime-components-and-optimizing-interop.163b9b5eb45f5d53051455cc368ccf16da8de7d0.de-de.xlf)
 * Current Handback Datetime: 2016-04-28 16:12:01
-* [Back to Top](#report-top)
-
-##### <a name='9fee4ab9c55c1243c04c2ed5f0074127515280371969'></a> Source: [windows-apps-src\debug-test-perf\optimize-suspend-resume.md](https://github.com/Microsoft/windows-apps/blob/e0f04c4242891b25db460d4852ab8cc070d82260/windows-apps-src/debug-test-perf/optimize-suspend-resume.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [optimize-suspend-resume.fbcfff66322f69eff9226338d387f94a550c6add.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7a05cd5ab7ef28e59d32b1467a15e1632e910093/ol-handoff/Microsoft/windows-apps.de-de/master/optimize-suspend-resume.fbcfff66322f69eff9226338d387f94a550c6add.de-de.xlf)
-* Handoff Datetime: 2016-05-04 19:20:52
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\debug-test-perf\optimize-suspend-resume.md](https://github.com/Microsoft/windows-apps.de-de/blob/39a43306f3baf4218e9103f55bbafc443e19cbed/windows-apps-src/debug-test-perf/optimize-suspend-resume.md)
-* Current Handback File: [optimize-suspend-resume.fbcfff66322f69eff9226338d387f94a550c6add.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/ae798758d1a5718ad58a674aba8432473fa98a27/ol-handback/Microsoft/windows-apps.de-de/master/optimize-suspend-resume.fbcfff66322f69eff9226338d387f94a550c6add.de-de.xlf)
-* Current Handback Datetime: 2016-04-28 16:12:01
-* [Back to Top](#report-top)
-
-##### <a name='dea1e37ca0403e858d3c40c966cd9ef9720bb00f1973'></a> Source: [windows-apps-src\debug-test-perf\planning-and-measuring-performance.md](https://github.com/Microsoft/windows-apps/blob/8daddd2fc13fa9cf69058e3b3bb7d63e6fa99d0e/windows-apps-src/debug-test-perf/planning-and-measuring-performance.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [planning-and-measuring-performance.46f773d9165bef76483e23f19791627d2b48f8c9.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7a05cd5ab7ef28e59d32b1467a15e1632e910093/ol-handoff/Microsoft/windows-apps.de-de/master/planning-and-measuring-performance.46f773d9165bef76483e23f19791627d2b48f8c9.de-de.xlf)
-* Handoff Datetime: 2016-05-04 19:20:52
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\debug-test-perf\planning-and-measuring-performance.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/debug-test-perf/planning-and-measuring-performance.md)
-* Current Handback File: [planning-and-measuring-performance.46f773d9165bef76483e23f19791627d2b48f8c9.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/planning-and-measuring-performance.46f773d9165bef76483e23f19791627d2b48f8c9.de-de.xlf)
-* Current Handback Datetime: 2016-04-18 14:03:31
-* [Back to Top](#report-top)
-
-##### <a name='c53bda2329cd984e3a03d4a166e7353097e62cef1975'></a> Source: [windows-apps-src\debug-test-perf\test-with-the-emulator.md](https://github.com/Microsoft/windows-apps/blob/9a33710315486c23a204a528d3d87421c6990b85/windows-apps-src/debug-test-perf/test-with-the-emulator.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7a05cd5ab7ef28e59d32b1467a15e1632e910093/ol-handoff/Microsoft/windows-apps.de-de/master/test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.de-de.xlf)
-* Handoff Datetime: 2016-05-04 19:20:52
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\debug-test-perf\test-with-the-emulator.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/debug-test-perf/test-with-the-emulator.md)
-* Current Handback File: [test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/test-with-the-emulator.4b51b8e4f7e15661b30d8f267fb7a8330b45ae3b.de-de.xlf)
-* Current Handback Datetime: 2016-04-18 14:03:31
-* [Back to Top](#report-top)
-
-##### <a name='355e5a65a16e5e2df9bb039383f68dda16ff23a22100'></a> Source: [windows-apps-src\gaming\complete-code-for-basicloader.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-basicloader.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [complete-code-for-basicloader.b431c17461caa01eb7fa3a393f16bb2b82ba7b5d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7a05cd5ab7ef28e59d32b1467a15e1632e910093/ol-handoff/Microsoft/windows-apps.de-de/master/complete-code-for-basicloader.b431c17461caa01eb7fa3a393f16bb2b82ba7b5d.de-de.xlf)
-* Handoff Datetime: 2016-05-04 19:20:52
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\gaming\complete-code-for-basicloader.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/gaming/complete-code-for-basicloader.md)
-* Current Handback File: [complete-code-for-basicloader.b431c17461caa01eb7fa3a393f16bb2b82ba7b5d.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/complete-code-for-basicloader.b431c17461caa01eb7fa3a393f16bb2b82ba7b5d.de-de.xlf)
-* Current Handback Datetime: 2016-04-18 14:03:31
-* [Back to Top](#report-top)
-
-##### <a name='46762d7b7234be9ff7b4c288a09162d4f942a7072101'></a> Source: [windows-apps-src\gaming\complete-code-for-basicreaderwriter.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-basicreaderwriter.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [complete-code-for-basicreaderwriter.c122f005d5d3802e3fee448b9be5d4e7822f0345.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7a05cd5ab7ef28e59d32b1467a15e1632e910093/ol-handoff/Microsoft/windows-apps.de-de/master/complete-code-for-basicreaderwriter.c122f005d5d3802e3fee448b9be5d4e7822f0345.de-de.xlf)
-* Handoff Datetime: 2016-05-04 19:20:52
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\gaming\complete-code-for-basicreaderwriter.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/gaming/complete-code-for-basicreaderwriter.md)
-* Current Handback File: [complete-code-for-basicreaderwriter.c122f005d5d3802e3fee448b9be5d4e7822f0345.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/complete-code-for-basicreaderwriter.c122f005d5d3802e3fee448b9be5d4e7822f0345.de-de.xlf)
-* Current Handback Datetime: 2016-04-18 14:03:31
-* [Back to Top](#report-top)
-
-##### <a name='9a842c773ce16e1093a158426b89caf239858f052102'></a> Source: [windows-apps-src\gaming\complete-code-for-ddstextureloader.md](https://github.com/Microsoft/windows-apps/blob/8a7202f2b860a4b7aa52f44ebd630d73889544a2/windows-apps-src/gaming/complete-code-for-ddstextureloader.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [complete-code-for-ddstextureloader.2f4f1fa5687e89862d92c4a50f87c16b63d6fd6a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7a05cd5ab7ef28e59d32b1467a15e1632e910093/ol-handoff/Microsoft/windows-apps.de-de/master/complete-code-for-ddstextureloader.2f4f1fa5687e89862d92c4a50f87c16b63d6fd6a.de-de.xlf)
-* Handoff Datetime: 2016-05-04 19:20:52
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\gaming\complete-code-for-ddstextureloader.md](https://github.com/Microsoft/windows-apps.de-de/blob/9cd74b5db042a750f17f0215af04616666b94b70/windows-apps-src/gaming/complete-code-for-ddstextureloader.md)
-* Current Handback File: [complete-code-for-ddstextureloader.2f4f1fa5687e89862d92c4a50f87c16b63d6fd6a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f66758c0e4a625f9be529dd679ab0bb9b61495fc/ol-handback/Microsoft/windows-apps.de-de/master/complete-code-for-ddstextureloader.2f4f1fa5687e89862d92c4a50f87c16b63d6fd6a.de-de.xlf)
-* Current Handback Datetime: 2016-04-18 14:03:31
 * [Back to Top](#report-top)
 
 
