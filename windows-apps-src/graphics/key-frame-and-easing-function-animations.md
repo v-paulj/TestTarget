@@ -1,45 +1,46 @@
 ---
-title: Keyframe-Animationen und Animationen für Beschleunigungsfunktionen
+author: Jwmsft
+title: Key-frame animations and easing function animations
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
-description: Lineare Keyframe-Animationen, Keyframe-Animationen mit einem „KeySpline “-Wert Beschleunigungsfunktionen verschiedene Techniken ungefähr dasselbe Szenario
+description: Linear key-frame animations, key-frame animations with a KeySpline value, or easing functions are three different techniques for approximately the same scenario.
 ---
-# Keyframe-Animationen und Animationen für Beschleunigungsfunktionen
+# Key-frame animations and easing function animations
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Lineare Keyframe-Animationen, Keyframe-Animationen mit einem **KeySpline**-Wert oder Beschleunigungsfunktionen sind drei verschiedene Techniken für ungefähr dasselbe Szenario: Erstellen einer komplexeren Storyboard-Animation, die ein nichtlineares Animationsverhalten ab einem bestimmten Startzustand bis zu einem Endzustand verwendet.
+Linear key-frame animations, key-frame animations with a **KeySpline** value, or easing functions are three different techniques for approximately the same scenario: creating a storyboarded animation that's a bit more complex, and that uses a nonlinear animation behavior from a starting state to an end state.
 
-## Voraussetzungen
+## Prerequisites
 
-Lesen Sie vorher unbedingt das Thema [Storyboardanimationen](storyboarded-animations.md). Dieses Thema basiert auf den Animationskonzepten, die in [Storyboardanimationen](storyboarded-animations.md) erläutert wurden, und behandelt diese nicht erneut. In [Storyboard-Animationen](storyboarded-animations.md) wird beispielsweise das Anwenden von Animationen auf Ziele, das Verwenden von Storyboards als Ressourcen, die [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517)-Eigenschaftswerte wie z. B. [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration), [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior) usw. erläutert.
+Make sure you've read the [Storyboarded animations](storyboarded-animations.md) topic. This topic builds on the animation concepts that were explained in [Storyboarded animations](storyboarded-animations.md) and won't go over them again. For example, [Storyboarded animations](storyboarded-animations.md) describes how to target animations, storyboards as resources, the [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) property values such as [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration), [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior), and so on.
 
-## Animieren mit Keyframe-Animationen
+## Animating using key-frame animations
 
-Keyframe-Animationen lassen mehr als einen Zielwert zu, der an einem gewissen Punkt auf der Animationszeitachse erreicht wird. Anders ausgedrückt kann jeder Keyframe einen anderen Zwischenwert angeben, und der letzte erreichte Keyframe ist der endgültige Animationswert. Durch Angabe mehrerer Animationswerte können Sie komplexere Animationen erstellen. Keyframe-Animationen ermöglichen auch verschiedene Interpolationslogiken, die pro Animationstyp als unterschiedliche **KeyFrame**-Unterklassen implementiert werden. Insbesondere hat jeder Keyframe-Animationstyp eine **Discrete**-, **Linear**-, **Spline**- und **Easing**-Variation seiner **KeyFrame**-Klasse für die Angabe der Keyframes. Zum Festlegen einer Animation mit Keyframes für [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) können Sie z. B. Keyframes mit [**DiscreteDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243130), [**LinearDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210316), [**SplineDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210446) und [**EasingDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210269) deklarieren. Sie können all diese Typen beliebig in einer einzelnen **KeyFrames**-Sammlung verwenden, um die Interpolation bei jedem Erreichen eines neuen Keyframes zu ändern.
+Key-frame animations permit more than one target value that is reached at a point along the animation timeline. In other words each key frame can specify a different intermediate value, and the last key frame reached is the final animation value. By specifying multiple values to animate, you can make more complex animations. Key-frame animations also enable different interpolation logic, which are each implemented as a different **KeyFrame** subclass per animation type. Specifically, each key-frame animation type has a **Discrete**, **Linear**, **Spline** and **Easing** variation of its **KeyFrame** class for specifying its key frames. For example, to specify an animation that targets a [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) and uses key frames, you could declare key frames with [**DiscreteDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243130), [**LinearDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210316), [**SplineDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210446), and [**EasingDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210269). You can use any and all of these types within a single **KeyFrames** collection, to change the interpolation each time a new key frame is reached.
 
-Für das Interpolationsverhalten steuert jeder Keyframe die Interpolation, bis die **KeyTime**-Zeit erreicht ist. **Value** wird zum selben Zeitpunkt erreicht. Folgen weitere Keyframes, wird der Wert anschließend zum Startwert für den nächsten Keyframe in einer Sequenz.
+For interpolation behavior, each key frame controls the interpolation until its **KeyTime** time is reached. Its **Value** is reached at that time also. If there are more key frames beyond, the value then becomes the starting value for the next key frame in a sequence.
 
-Wenn beim Start der Animation kein Keyframe mit der **KeyTime** 0:0:0 vorhanden ist, ist der nicht animierte Wert der Eigenschaft der Startwert. Dies ist mit dem Verhalten einer **From**/**To**/**By**-Animation vergleichbar, wenn kein **From** vorhanden ist.
+At the start of the animation, if no key frame with **KeyTime** of "0:0:0" exists, the starting value is whatever the non-animated value of the property is. This is similar to how a **From**/**To**/**By** animation acts if there is no **From**.
 
-Die Dauer einer Keyframe-Animation entspricht implizit der Dauer des höchsten **KeyTime**-Werts, der in einem ihrer Keyframes festgelegt ist. Sie können eine explizite [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) festlegen. Achten Sie dabei jedoch darauf, dass sie nicht kürzer als eine **KeyTime** in ihren eigenen Keyframes ist, andernfalls wird ein Teil der Animation abgeschnitten.
+The duration of a key-frame animation is implicitly the duration equal to the highest **KeyTime** value set in any of its key frames. You can set an explicit [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) if you want, but be careful it's not shorter than a **KeyTime** in your own key frames or you'll cut off part of the animation.
 
-Neben der [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) können Sie alle [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517)-basierten Eigenschaften in einer Keyframe-Animation festlegen (genau wie bei einer **From**/**To**/**By**-Animation) da die Keyframe-Animationsklassen ebenfalls von der **Timeline** abgeleitet werden. Dies sind:
+In addition to [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration), you can set all the [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517) based properties on a key-frame animation, like you can with a **From**/**To**/**By** animation, because the key-frame animation classes also derive from **Timeline**. These are:
 
--   [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): Sobald der letzte Keyframe erreicht ist, werden die Frames vom anderen Ende ausgehend in umgekehrter Reihenfolge wiederholt. So wird die scheinbare Dauer der Animation verdoppelt.
--   [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): verzögert den Start der Animation. Die Zeitachse für die **KeyTime**-Werte in den Frames beginnt erst nach Erreichen der **BeginTime** mit der Zählung, damit kein Risiko besteht, dass Frames abgeschnitten werden.
--   [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): steuert, was nach Erreichen des letzten Keyframes geschieht. **FillBehavior** hat keine Auswirkungen auf Zwischenkeyframes.
+-   [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): once the last key frame is reached, the frames are repeated in reverse order from the end. This doubles the apparent duration of the animation.
+-   [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): delays the start of the animation. The timeline for the **KeyTime** values in the frames doesn't start counting until **BeginTime** is reached, so there's no risk of cutting off frames
+-   [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): controls what happens when the last key frame is reached. **FillBehavior** has no effect on any intermediate key frames.
 -   [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
-    -   Bei Festlegung auf **Forever** werden die Keyframes und die dazugehörige Zeitachse unendlich wiederholt.
-    -   Bei Festlegung auf eine bestimmte Iterationsanzahl wird die Zeitachse entsprechend oft wiederholt.
-    -   Bei Festlegung auf eine [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) wird die Zeitachse bis zum Erreichen dieser Zeit wiederholt. Dadurch wird die Animation u. U. mitten in der Keyframe-Sequenz abgeschnitten, wenn sie keinen ganzzahligen Teiler der impliziten Dauer der Zeitachse darstellt.
--   [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (selten verwendet)
+    -   If set to **Forever**, then the key frames and their timeline repeat infinitely.
+    -   If set to an iteration count, the timeline repeats that many times.
+    -   If set to a [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377), the timeline repeats until that time is reached. This might truncate the animation part way through the key frame sequence, if it's not an integer factor of the timeline's implicit duration.
+-   [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (not commonly used)
 
-### Lineare Keyframes
+### Linear key frames
 
-Lineare Keyframes führen zu einer einfachen linearen Interpolation des Werts, bis die **KeyTime** des Frames erreicht ist. Dieses Interpolationsverhalten gleicht am ehesten den einfacheren **From**/**To**/**By**-Animationen, die im Thema [Storyboard-Animationen](storyboarded-animations.md) beschrieben werden.
+Linear key frames result in a simple linear interpolation of the value until the frame's **KeyTime** is reached. This interpolation behavior is the most similar to the simpler **From**/**To**/**By** animations described in the [Storyboarded animations](storyboarded-animations.md) topic.
 
-Im Folgenden erfahren Sie, wie die Renderhöhe eines Rechtecks mithilfe von linearen Keyframes skaliert wird. In diesem Beispiel wird eine Animation ausgeführt, bei der die Höhe des Rechtecks in den ersten vier Sekunden leicht und linear ansteigt und in der letzten Sekunde schnell skaliert wird, bis das Rechteck im Vergleich zum Start die doppelte Höhe erreicht hat.
+Here's how to use a key-frame animation to scale the render height of a rectangle, using linear key frames. This example runs an animation where the height of the rectangle increases slightly and linearly for the first 4 seconds, then scales rapidly for the last second until the rectangle is double the starting height.
 
 ```xml
 <StackPanel>
@@ -57,19 +58,19 @@ Im Folgenden erfahren Sie, wie die Renderhöhe eines Rechtecks mithilfe von line
 </StackPanel>
 ```
 
-### Diskrete Keyframes
+### Discrete key frames
 
-Diskrete Keyframes verwenden überhaupt keine Interpolation. Beim Erreichen einer **KeyTime** wird einfach der neue **Value** angewendet. Je nach der animierten UI-Eigenschaft führt dies häufig dazu, dass die Animation zu „springen“ scheint. Stellen Sie sicher, dass dieses ästhetische Verhalten gewünscht ist. Sie können die scheinbaren Sprünge reduzieren, indem Sie die Anzahl der deklarierten Keyframes erhöhen. Möchten Sie jedoch eine flüssige Animation erzielen, sollten Sie stattdessen lineare Keyframes oder Spline-Keyframes verwenden.
+Discrete key frames don't use any interpolation at all. When a **KeyTime** is reached, the new **Value** is simply applied. Depending on which UI property is being animated, this often produces an animation that appears to "jump". Be certain that this is the aesthetic behavior that you really want. You can minimize the apparent jumps by increasing the number of key frames you declare, but if a smooth animation is your goal, you might be better off using linear or spline key frames instead.
 
-**Hinweis** Diskrete Keyframes stellen die einzige Möglichkeit dar, einen Wert mit [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) zu animieren, der nicht den Typ [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) und [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) hat. Dies wird später in diesem Thema ausführlich erläutert.
+**Note**  Discrete key frames are the only way to animate a value that isn't of type [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870), and [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723), with a [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132). We'll discuss this in more detail later in this topic.
 
- 
+ 
 
-### Spline-Keyframes
+### Spline key frames
 
-Ein Spline-Keyframe erstellt einen nicht linearen Übergang zwischen Werten entsprechend dem Wert für die Eigenschaft **KeySpline**. Diese Eigenschaft gibt den ersten und zweiten Kontrollpunkt einer Bézierkurve an, mit der die Beschleunigung einer Animation beschrieben wird. Grundsätzlich definiert eine [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) eine Beziehung der Funktion zur Zeit, wobei der Funktion-Zeit-Graph die Form dieser Bézierkurve hat. In der Regel geben Sie einen **KeySpline**-Wert in einer XAML-Kompaktattribut-Zeichenfolge an, der vier durch Leerzeichen oder Kommata getrennte [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)-Werte umfasst. Diese Werte sind „X,Y“-Paare für zwei Kontrollpunkte der Bézierkurve. „X“ ist die Zeit, und „Y“ ist der Funktionsmodifizierer für den Wert. Jeder Wert sollte sich immer zwischen 0 und einschließlich 1 bewegen. Ohne Kontrollpunktänderung an einer **KeySpline** stellt die gerade Linie von 0,0 bis 1,1 eine Funktion der Zeit für eine lineare Interpolation dar. Ihre Kontrollpunkte ändern die Form der Kurve und somit das Verhalten der Funktion der Zeit für die Spline-Animation. Dies wird am besten visuell als Graph dargestellt. Sie können das Beispiel für die [Silverlight Keyspline-Schnellansicht](http://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) in einem Browser ausführen, um zu sehen, wie die Kontrollpunkte die Kurve ändern, und wie eine Beispielanimation ausgeführt wird, wenn sie als **KeySpline**-Wert verwendet wird.
+A spline key frame create a variable transition between values according to the value of the **KeySpline** property. This property specifies the first and second control points of a Bezier curve, which describes the acceleration of the animation. Basically a [**KeySpline**](https://msdn.microsoft.com/library/windows/apps/BR210307) defines a function over time relationship where the function-time graph is the shape of that Bezier curve. Typically you specify a **KeySpline** value in a XAML shorthand attribute string that has four [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) values separated by spaces or commas. These values are "X,Y" pairs for two control points of the Bezier curve. "X" is time and "Y" is the function modifier to the value. Each value should always be between 0 and 1 inclusive. Without control point modification to a **KeySpline**, the straight line from 0,0 to 1,1 is the representation of a function over time for a linear interpolation. Your control points change the shape of that curve and thus the behavior of the function over time for the spline animation. It's probably best to see this visually as a graph. You can run the [Silverlight key-spline visualizer sample](http://samples.msdn.microsoft.com/Silverlight/SampleBrowser/index.htm#/?sref=KeySplineExample) in a browser to see how the control points modify the curve and how a sample animation runs when using it as a **KeySpline** value.
 
-Im nächsten Beispiel wird die Anwendung von drei verschiedenen Keyframes auf eine Animation gezeigt, wobei der letzte eine Keyspline-Animation für einen [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx)-Wert ([**SplineDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210446)) ist. Beachten Sie die Anwendung der Zeichenfolge „0.6,0.0 0.9,0.00“ für **KeySpline**. Dadurch entsteht eine Kurve, bei der die Animation zuerst scheinbar langsam ausgeführt wird, dann jedoch schnell den Wert erreicht, bevor die **KeyTime** erreicht ist.
+This next example shows three different key frames applied to an animation, with the last one being a key spline animation for a [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) value ([**SplineDoubleKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR210446)). Note the string "0.6,0.0 0.9,0.00" applied for **KeySpline**. This produces a curve where the animation appears to run slowly at first but then rapidly reaches the value just before the **KeyTime** is reached.
 
 ```xml
 <Storyboard x:Name="myStoryboard">
@@ -135,40 +136,39 @@ This example applies a [**CubicEase**](https://msdn.microsoft.com/library/window
         </Storyboard>
 ```
 
-Dies ist jedoch nur ein Beispiel für Beschleunigungsfunktionen. Weitere Beispiele werden im nächsten Abschnitt behandelt.
+This is just one easing function example. We'll cover more in the next section.
 
-## Beschleunigungsfunktionen
+## Easing functions
 
-Mithilfe von Beschleunigungsfunktionen können Sie benutzerdefinierte mathematische Formeln auf Animationen anwenden. Mathematische Vorgänge eignen sich oft zum Erstellen von Animationen, die ein reales physikalisches Modell in einem 2 D-Koordinatensystem simulieren. Beispielsweise soll ein Objekt mit einer natürlich wirkenden Bewegung springen oder federn. Diese Effekte können Sie näherungsweise mit Keyframes oder sogar **From**/**To**/**By**-Animationen erzielen, aber dieses Verfahren ist sehr aufwendig, und die Animationen sind dann trotzdem weniger präzise als bei Verwendung einer mathematischen Formel.
+Easing functions allow you to apply custom mathematical formulas to your animations. Mathematical operations are often useful to produce animations that simulate real-world physics in a 2-D coordinate system. For example, you may want an object to realistically bounce or behave as though it were on a spring. You could use key frame or even **From**/**To**/**By** animations to approximate these effects but it would take a significant amount of work and the animation would be less accurate than using a mathematical formula.
 
-Beschleunigungsfunktionen können auf drei verschiedene Arten auf Animationen angewendet werden:
+Easing functions can be applied to animations in three ways:
 
--   Verwendung eines Beschleunigungskeyframes in einer Keyframe-Animation, wie im vorhergehenden Abschnitt beschrieben. Verwenden Sie [**EasingColorKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210267), [**EasingDoubleKeyFrame.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.easingdoublekeyframe.easingfunction.aspx) oder [**EasingPointKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210279).
--   Durch Festlegen der Eigenschaft **EasingFunction** auf einen der **From**/**To**/**By**-Animationstypen. Verwenden Sie [**ColorAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR243075), [**DoubleAnimation.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) oder [**PointAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210354).
--   Durch Festlegen von [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) als Teil einer [**VisualTransition**](https://msdn.microsoft.com/library/windows/apps/BR209034). Diese Methode wird nur zum Definieren von visuellen Zuständen für Steuerelemente verwendet. Weitere Informationen dazu finden Sie unter [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) oder [Storyboards für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
+-   By using an easing keyframe in a keyframe animation, as described in the previous section. Use [**EasingColorKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210267), [**EasingDoubleKeyFrame.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.easingdoublekeyframe.easingfunction.aspx), or [**EasingPointKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210279).
+-   By setting the **EasingFunction** property on one of the **From**/**To**/**By** animation types. Use [**ColorAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR243075), [**DoubleAnimation.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) or [**PointAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210354).
+-   By setting [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) as part of a [**VisualTransition**](https://msdn.microsoft.com/library/windows/apps/BR209034). This is specific to defining visual states for controls; for more info, see [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) or [Storyboards for visual states](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
 
-Nachfolgend finden Sie eine Liste der Beschleunigungsfunktionen:
+Here is a list of the easing functions:
 
--   [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049): zieht die Bewegung einer Animation vor ihrer Ausführung in dem angegebenen Pfad etwas zurück.
--   [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057): erstellt einen Sprungeffekt.
--   [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063): erstellt eine Animation, die anhand einer Winkelfunktion beschleunigt oder verzögert wird.
--   [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126): erstellt eine Animation, die anhand der Formel f(t) = t3 beschleunigt oder verzögert wird.
--   [**ElasticEase**](https://msdn.microsoft.com/library/windows/apps/BR210282): erstellt eine Animation ähnlich einer Sprungfeder, die auf und ab federt und schließlich zur Ruhe kommt.
--   [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294): erstellt eine Animation, die anhand einer Exponentialfunktion beschleunigt oder verzögert wird.
--   [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399): erstellt eine Animation, die anhand der Formel f(t) = tp beschleunigt oder verzögert wird, wobei p der Eigenschaft [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power) entspricht.
--   [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403): erstellt eine Animation, die anhand der Formel f(t) = t2 beschleunigt oder verzögert wird.
--   [**QuarticEase**](https://msdn.microsoft.com/library/windows/apps/BR210405): erstellt eine Animation, die anhand der Formel f(t) = t4 beschleunigt oder verzögert wird.
--   [**QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): erstellt eine Animation, die anhand der Formel f(t) = t5 beschleunigt oder verzögert wird.
--   [**SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): erstellt eine Animation, die anhand einer Sinusfunktion beschleunigt oder verzögert wird.
+-   [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049): Retracts the motion of an animation slightly before it begins to animate in the path indicated.
+-   [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057): Creates a bouncing effect.
+-   [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063): Creates an animation that accelerates or decelerates using a circular function.
+-   [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126): Creates an animation that accelerates or decelerates using the formula f(t) = t3.
+-   [**ElasticEase**](https://msdn.microsoft.com/library/windows/apps/BR210282): Creates an animation that resembles a spring oscillating back and forth until it comes to rest.
+-   [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294): Creates an animation that accelerates or decelerates using an exponential formula.
+-   [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399): Creates an animation that accelerates or decelerates using the formula f(t) = tp where p is equal to the [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power) property.
+-   [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403): Creates an animation that accelerates or decelerates using the formula f(t) = t2.
+-   [**QuarticEase**](https://msdn.microsoft.com/library/windows/apps/BR210405): Creates an animation that accelerates or decelerates using the formula f(t) = t4.
+-   [**QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): Create an animation that accelerates or decelerates using the formula f(t) = t5.
+-   [**SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): Creates an animation that accelerates or decelerates using a sine formula.
 
-Einige der Beschleunigungsfunktionen verfügen über eigene Eigenschaften. Beispielsweise verfügt [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) über die beiden Eigenschaften [**Bounces**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) und [**Bounciness**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx), die das Funktion-über-Zeit-Verhalten dieser bestimmten **BounceEase** ändern. Andere Beschleunigungsfunktionen wie z. B. [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126) haben keine weiteren Eigenschaften außer der Eigenschaft [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275), die von allen Beschleunigungsfunktionen gemeinsam verwendet wird, und erzeugen immer dasselbe Funktion-über-Zeit-Verhalten.
+Some of the easing functions have their own properties. For example, [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) has two properties [**Bounces**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) and [**Bounciness**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx) that modify the function-over-time behavior of that particular **BounceEase**. Other easing functions such as [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126) don't have properties other than the [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275) property that all easing functions share, and always produce the same function-over-time behavior.
 
-Einige dieser Beschleunigungsfunktionen überschneiden sich geringfügig, je nach Einstellung der Einstellung der Eigenschaften für die Beschleunigungsfunktionen, die über Eigenschaften verfügen. [
-            **QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403) ist z. B. identisch mit einer [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399), wobei [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power) 2 entspricht. Und [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063) ist im Grunde eine [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294) mit Standardwert.
+Some of these easing functions have a bit of overlap, depending on how you set properties on the easing functions that have properties. For example, [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403) is exactly the same as a [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399) with [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power) equal to 2. And [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063) is basically a default-value [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294).
 
-Die Beschleunigungsfunktion [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049) ist einzigartig, da sie den Wert außerhalb des normalen Bereichs ändern kann, der durch **From**/**To** oder durch Keyframe-Werte festgelegt wurde. Die Animation wird gestartet, indem der Wert in der umgekehrten Richtung geändert wird, als von einem normalen **From**/**To**-Verhalten erwartet wird. Anschließend beginnt die Funktion wieder bei **From** oder dem Startwert und führt die Animation normal aus.
+The [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049) easing function is unique because it can change the value outside of the normal range as set by **From**/**To** or values of key frames. It starts the animation by changing the value in the opposite direction as would be expected from a normal **From**/**To** behavior, goes back to the **From** or starting value again, and then runs the animation as normal.
 
-Das Deklarieren einer Beschleunigungsfunktion für eine Keyframe-Animation wurde in einem vorhergehenden Beispiel gezeigt. Im nächsten Beispiel wird eine Beschleunigungsfunktion auf eine **From**/**To**/**By**-Animation angewendet.
+In an earlier example, we showed how to declare an easing function for a key-frame animation. This next sample applies an easing function to a **From**/**To**/**By** animation.
 
 ```xml
 <StackPanel x:Name="LayoutRoot" Background="White">
@@ -188,15 +188,15 @@ Das Deklarieren einer Beschleunigungsfunktion für eine Keyframe-Animation wurde
 </StackPanel>
 ```
 
-Wenn eine Beschleunigungsfunktion auf eine **From**/**To**/**By**-Animation angewendet wird, ändern sie die Funktion-über-Zeit-Merkmale der Interpolation des Werts zwischen den Werten **From** und **To** im Lauf der [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) der Animation. Ohne Beschleunigungsfunktion läge eine lineare Interpolation vor.
+When an easing function is applied to a **From**/**To**/**By** animation, it's changing the function- over-time characteristics of how the value interpolates between the **From** and **To** values over the [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) of the animation. Without an easing function, that would be a linear interpolation.
 
-## <span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>Animationen mit diskreten Objektwerten
+## <span id="Discrete_object_value_animations"></span><span id="discrete_object_value_animations"></span><span id="DISCRETE_OBJECT_VALUE_ANIMATIONS"></span>Discrete object value animations
 
-Ein Animationstyp sollte besonders hervorgehoben werden, da er die einzige Methode darstellt, einen animierten Wert auf Eigenschaften von einem anderen Typ als [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) oder [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) anzuwenden. Hierbei handelt es sich um die Keyframe-Animation [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320). Es besteht ein Unterschied zum Animieren mithilfe von [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx)-Werten, da es keine Möglichkeit zur Interpolation der Werte zwischen den Frames gibt. Beim Erreichen der [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342) des Frames wird der animierte Wert sofort auf den Wert festgelegt, der im **Value** des Keyframes angegeben ist. Da keine Interpolation vorhanden ist, wird nur ein Keyframe in der Keyframe Collection **ObjectAnimationUsingKeyFrames** verwendet: [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132).
+One type of animation deserves special mention because it's the only way you can apply an animated value to properties that aren't of type [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870), or [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723). This is the key-frame animation [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320). Animating using [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx) values is different because there's no possibility of interpolating the values between the frames. When the frame's [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342) is reached, the animated value is immediately set to the value specified in the key frame's **Value**. Because there's no interpolation, there's only one key frame you use in the **ObjectAnimationUsingKeyFrames** key frames collection: [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132).
 
-Der [**Value**](https://msdn.microsoft.com/library/windows/apps/BR210344) eines [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) wird oft mithilfe der Eigenschaftselementsyntax festgelegt, da der festzulegende Objektwert häufig nicht als Zeichenfolge zum Ausfüllen des **Value** in einer Attributsyntax ausgedrückt werden kann. Wenn Sie einen Verweis wie z. B. [StaticResource](https://msdn.microsoft.com/library/windows/apps/Mt185588) verwenden, können Sie die Attributsyntax dennoch verwenden.
+The [**Value**](https://msdn.microsoft.com/library/windows/apps/BR210344) of a [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) is often set using property element syntax, because the object value you are trying to set often is not expressible as a string to fill **Value** in attribute syntax. You can still use attribute syntax if you use a reference such as [StaticResource](https://msdn.microsoft.com/library/windows/apps/Mt185588).
 
-Die Verwendung von [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) in den Standardvorlagen erfolgt bei einem Verweis auf eine [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)-Ressource durch eine Vorlageneigenschaft. Bei diesen Ressourcen handelt es sich um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)-Objekte, nicht nur um einen [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)-Wert. Außerdem werden Ressourcen verwendet, die als Systemthemen ([**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/BR208807)) definiert sind. Sie können direkt einem Wert mit **Brush**-Typ wie [**TextBlock.Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665) zugeordnet werden; eine indirekte Zielauswahl ist nicht erforderlich. Da **SolidColorBrush** jedoch nicht [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) oder **Color** ist, müssen Sie **ObjectAnimationUsingKeyFrames** verwenden, um die Ressource zu nutzen.
+One place you'll see an [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) used in the default templates is when a template property references a [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) resource. These resources are [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) objects, not just a [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) value, and they use resources that are defined as system themes ([**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/BR208807)). They can be assigned directly to a **Brush**-type value such as [**TextBlock.Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665) and don't need to use indirect targeting. But because a **SolidColorBrush** is not [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870), or **Color**, you have to use a **ObjectAnimationUsingKeyFrames** to use the resource.
 
 ```xml
 <Style x:Key="TextButtonStyle" TargetType="Button">
@@ -261,23 +261,18 @@ You also might use [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.co
 </Style>
 ```
 
-Sie können mehrere [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132)-Elemente für einen [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)-Framesatz verwenden. Dies ist eine interessante Erstellungsmethode für eine Diashow-Animation durch Animieren des Werts von [**Image.Source**](https://msdn.microsoft.com/library/windows/apps/BR242760) und ein Beispiel für ein Szenario, in dem mehrere Objektwerte hilfreich sind.
+You can use more than one [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) for an [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) frame set. This might be an interesting way to create a "slide show" animation by animating the value of [**Image.Source**](https://msdn.microsoft.com/library/windows/apps/BR242760), as an example scenario for where multiple object values might be useful.
 
- ## Verwandte Themen
+ ## Related topics
 
-* [Eigenschaftspfadsyntax](https://msdn.microsoft.com/library/windows/apps/Mt185586)
-* [Übersicht über Abhängigkeitseigenschaften](https://msdn.microsoft.com/library/windows/apps/Mt185583)
+* [Property-path syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586)
+* [Dependency properties overview](https://msdn.microsoft.com/library/windows/apps/Mt185583)
 * [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)
 * [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.targetpropertyproperty)
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

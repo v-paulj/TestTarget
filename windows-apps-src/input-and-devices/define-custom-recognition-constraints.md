@@ -1,52 +1,50 @@
 ---
-Description: Erfahren Sie, wie Sie benutzerdefinierte Einschränkungen für die Spracherkennung definieren und verwenden.
-title: Definieren von benutzerdefinierten Erkennungseinschränkungen
+author: Karl-Bridge-Microsoft
+Description: Learn how to define and use custom constraints for speech recognition.
+title: Define custom recognition constraints
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
 ---
 
-# ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
+# Define custom recognition constraints
+
+Learn how to define and use custom constraints for speech recognition.
+
+**Important APIs**
+
+-   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)
+-   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)
+-   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)
 
 
-label: Definieren von benutzerdefinierten Erkennungseinschränkungen template: detail.hbs
-
-Definieren von benutzerdefinierten Erkennungseinschränkungen
-
-**\[ Aktualisiert für UWP-Apps unter Windows 10.**
-
--   [**Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]**](https://msdn.microsoft.com/library/windows/apps/dn631446)
--   [**Erfahren Sie, wie Sie benutzerdefinierte Einschränkungen für die Spracherkennung definieren und verwenden können.**](https://msdn.microsoft.com/library/windows/apps/dn631421)
--   [**Wichtige APIs**](https://msdn.microsoft.com/library/windows/apps/dn631412)
+Speech recognition requires at least one constraint to define a recognizable vocabulary. If no constraint is specified, the predefined dictation grammar of Universal Windows apps is used. See [Speech recognition](speech-recognition.md).
 
 
-SpeechRecognitionTopicConstraint SpeechRecognitionListConstraint SpeechRecognitionGrammarFileConstraint
+## <span id="Add_constraints"></span><span id="add_constraints"></span><span id="ADD_CONSTRAINTS"></span>Add constraints
 
 
-## Die Spracherkennung benötigt mindestens eine Einschränkung, um erkennbares Vokabular zu definieren.
+Use the [**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241) property to add constraints to a speech recognizer.
+
+Here, we cover the three kinds of speech recognition constraints used from within an app. (For voice command constraints, see [Launch a foreground app with voice commands in Cortana](launch-a-foreground-app-with-voice-commands-in-cortana.md).)
+
+-   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)—A constraint based on a predefined grammar (dictation or web search).
+-   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421)—A constraint based on a list of words or phrases.
+-   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412)—A constraint defined in a Speech Recognition Grammar Specification (SRGS) file.
+
+Each speech recognizer can have one constraint collection. Only these combinations of constraints are valid:
+
+-   A single-topic constraint, or predefined grammar (dictation or web search). No other constraints are allowed.
+-   A combination of list constraints and/or grammar-file constraints.
+
+**Remember:  **Call the [**SpeechRecognizer.CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240) method to compile the constraints before starting the recognition process.
+
+## <span id="Specify_a_web-search_grammar__SpeechRecognitionTopicConstraint_"></span><span id="specify_a_web-search_grammar__speechrecognitiontopicconstraint_"></span><span id="SPECIFY_A_WEB-SEARCH_GRAMMAR__SPEECHRECOGNITIONTOPICCONSTRAINT_"></span>Specify a web-search grammar (SpeechRecognitionTopicConstraint)
 
 
-Wenn Sie keine Einschränkung angeben, wird die vordefinierte Diktiergrammatik der universellen Windows-Apps verwendet.
+Topic constraints (dictation or web-search grammar) must be added to the constraints collection of a speech recognizer.
 
-Siehe [Spracherkennung](speech-recognition.md). <span id="Add_constraints"></span><span id="add_constraints"></span><span id="ADD_CONSTRAINTS"></span>Hinzufügen von Einschränkungen
-
--   Verwenden Sie die [**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/library/windows/apps/dn653241)-Eigenschaft, um Einschränkungen für die Spracherkennung hinzuzufügen.
--   Im Folgenden behandeln wir die drei Arten der Spracherkennungseinschränkungen, die in einer App verwendet werden.
--   (Informationen zu Einschränkungen bei Sprachbefehlen finden Sie unter [Starten einer Vordergrund-App mit Sprachbefehlen in Cortana](launch-a-foreground-app-with-voice-commands-in-cortana.md).)
-
-[**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446) – Eine Einschränkung auf der Grundlage einer vordefinierten Grammatik (Diktat oder Websuche) [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421) – Eine Einschränkung auf der Grundlage einer Liste von Wörtern oder Ausdrücken.
-
--   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412) – Eine Einschränkung, die in einer Speech Recognition Grammar Specification (SRGS)-Datei definiert ist. Jedes Spracherkennungsmodul kann über eine Einschränkungssammlung verfügen.
--   Nur die folgenden Einschränkungskombinationen sind gültig:
-
-Eine Einschränkung zu einem Thema oder vordefinierte Grammatik (Diktat oder Websuche).
-
-## Es sind keine anderen Einschränkungen zulässig.
-
-
-Eine Kombination aus Listeneinschränkungen und/oder Grammatikdatei-Einschränkungen.
-
-**Denken Sie daran: **Rufen Sie die [**SpeechRecognizer.CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)-Methode auf, um die Einschränkungen zu kompilieren, bevor Sie den Erkennungsprozess starten.
+Here, we add a web-search grammar to the constraints collection.
 
 ```CSharp
 private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
@@ -78,17 +76,17 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <span id="Specify_a_web-search_grammar__SpeechRecognitionTopicConstraint_"></span><span id="specify_a_web-search_grammar__speechrecognitiontopicconstraint_"></span><span id="SPECIFY_A_WEB-SEARCH_GRAMMAR__SPEECHRECOGNITIONTOPICCONSTRAINT_"></span>Angeben einer Grammatik für die Websuche (SpeechRecognitionTopicConstraint)
+## <span id="Specify_a_programmatic_list_constraint__SpeechRecognitionListConstraint_"></span><span id="specify_a_programmatic_list_constraint__speechrecognitionlistconstraint_"></span><span id="SPECIFY_A_PROGRAMMATIC_LIST_CONSTRAINT__SPEECHRECOGNITIONLISTCONSTRAINT_"></span>Specify a programmatic list constraint (SpeechRecognitionListConstraint)
 
 
-Themeneinschränkungen (Diktier- oder Websuchengrammatik) müssen der Einschränkungssammlung einer Spracherkennung hinzugefügt werden.
+List constraints must be added to the constraints collection of a speech recognizer.
 
-Hier fügen wir der Einschränkungssammlung eine Grammatik für die Websuche hinzu.
+Keep the following points in mind:
 
--   <span id="Specify_a_programmatic_list_constraint__SpeechRecognitionListConstraint_"></span><span id="specify_a_programmatic_list_constraint__speechrecognitionlistconstraint_"></span><span id="SPECIFY_A_PROGRAMMATIC_LIST_CONSTRAINT__SPEECHRECOGNITIONLISTCONSTRAINT_"></span>Angeben einer programmgesteuerten Listeneinschränkung (SpeechRecognitionListConstraint)
--   Listeneinschränkungen müssen der Einschränkungssammlung einer Spracherkennung hinzugefügt werden.
+-   You can add multiple list constraints to a constraints collection.
+-   You can use any collection that implements **IIterable&lt;String&gt;** for the string values.
 
-Beachten Sie folgende Punkte:
+Here, we programmatically specify an array of words as a list constraint and add it to the constraints collection of a speech recognizer.
 
 ```CSharp
 private async void YesOrNo_Click(object sender, RoutedEventArgs e)
@@ -118,32 +116,32 @@ private async void YesOrNo_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Sie können der Einschränkungssammlung mehrere Listeneinschränkungen hinzufügen.
+## <span id="Specify_an_SRGS_grammar_constraint__SpeechRecognitionGrammarFileConstraint_"></span><span id="specify_an_srgs_grammar_constraint__speechrecognitiongrammarfileconstraint_"></span><span id="SPECIFY_AN_SRGS_GRAMMAR_CONSTRAINT__SPEECHRECOGNITIONGRAMMARFILECONSTRAINT_"></span>Specify an SRGS grammar constraint (SpeechRecognitionGrammarFileConstraint)
 
 
-Sie können eine beliebige Sammlung verwenden, die **IIterable&lt;String&gt;** für die Zeichenfolgenwerte implementiert.
+SRGS grammar files must be added to the constraints collection of a speech recognizer.
 
-Hier geben wir programmgesteuert ein Array von Wörtern als Listeneinschränkung an und fügen es der Einschränkungssammlung einer Spracherkennung hinzu. <span id="Specify_an_SRGS_grammar_constraint__SpeechRecognitionGrammarFileConstraint_"></span><span id="specify_an_srgs_grammar_constraint__speechrecognitiongrammarfileconstraint_"></span><span id="SPECIFY_AN_SRGS_GRAMMAR_CONSTRAINT__SPEECHRECOGNITIONGRAMMARFILECONSTRAINT_"></span>Angeben einer SRGS-Grammatikeinschränkung (SpeechRecognitionGrammarFileConstraint)
+The SRGS Version 1.0 is the industry-standard markup language for creating XML-format grammars for speech recognition. Although Universal Windows apps provide alternatives to using SRGS for creating speech-recognition grammars, you might find that using SRGS to create grammars produces the best results, particularly for more involved speech recognition scenarios.
 
-SRGS-Grammatikdateien müssen der Einschränkungssammlung eines Spracherkennungsmoduls hinzugefügt werden. SRGS, Version 1.0, ist die branchenübliche Markupsprache zum Erstellen von Grammatik für die Spracherkennung im XML-Format.
+SRGS grammars provide a full set of features to help you architect complex voice interaction for your apps. For example, with SRGS grammars you can:
 
--   Universelle Windows-Apps bieten über SRGS hinaus auch Alternativen zur Erstellung von Grammatik für die Spracherkennung. Sie stellen aber möglicherweise fest, dass Sie beim Erstellen von Grammatik mit SRGS die besten Ergebnisse erzielen. Dies gilt besonders für komplexere Spracherkennungsszenarien.
--   SRGS-Grammatik bietet einen umfassenden Featuresatz, den Sie zum Erstellen komplexer Sprachinteraktionen für Ihre Apps nutzen können.
--   Mit SRGS haben Sie beispielsweise folgende Möglichkeiten:
--   Geben Sie die Reihenfolge an, in der Wörter und Wortgruppen gesprochen werden müssen, um erkannt zu werden.
--   Kombinieren Sie Wörter mehrerer Listen und Wortgruppen für die Erkennung.
--   Verlinken Sie zu anderen Grammatiken.
--   Weisen Sie einem alternativen Wort oder einer Wortgruppe eine Gewichtung zu, um die Wahrscheinlichkeit der Verwendung zu erhöhen oder zu verringern und für die Spracheingabe so bessere Übereinstimmungen zu erzielen.
--   Binden Sie optionale Wörter oder Wortgruppen ein.
+-   Specify the order in which words and phrases must be spoken to be recognized.
+-   Combine words from multiple lists and phrases to be recognized.
+-   Link to other grammars.
+-   Assign a weight to an alternative word or phrase to increase or decrease the likelihood that it will be used to match speech input.
+-   Include optional words or phrases.
+-   Use special rules that help filter out unspecified or unanticipated input, such as random speech that doesn't match the grammar, or background noise.
+-   Use semantics to define what speech recognition means to your app.
+-   Specify pronunciations, either inline in a grammar or via a link to a lexicon.
 
-Verwenden Sie spezielle Regeln zum Herausfiltern nicht angegebener oder unerwarteter Eingaben, z. B. ungewollte Spracheingaben, die keine Übereinstimmung mit der Grammatik ergeben, oder Hintergrundgeräusche. Verwenden Sie Semantik, um zu definieren, was Spracherkennung für Ihre App bedeutet.
+For more info about SRGS elements and attributes, see the [SRGS Grammar XML Reference](http://go.microsoft.com/fwlink/p/?LinkID=269886) . To get started creating an SRGS grammar, see [How to Create a Basic XML Grammar](http://go.microsoft.com/fwlink/p/?LinkID=269887).
 
-Geben Sie verschiedene Aussprachen an, entweder direkt in einer Grammatik oder über einen Link zu einem Lexikon.
+Keep the following points in mind:
 
--   Weitere Informationen zu SRGS-Elementen und -Attributen finden Sie unter [SRGS-Grammatik – XML-Referenz](http://go.microsoft.com/fwlink/p/?LinkID=269886).
--   Informationen zu den ersten Schritten zur Erstellung einer SRGS-Grammatik finden Sie unter [So wird's gemacht: Erstellen einer einfachen XML-Grammatik](http://go.microsoft.com/fwlink/p/?LinkID=269887).
+-   You can add multiple grammar-file constraints to a constraints collection.
+-   Use the .grxml file extension for XML-based grammar documents that conform to SRGS rules.
 
-Beachten Sie folgende Punkte: Sie können der Einschränkungssammlung mehrere Grammatikdatei-Einschränkungen hinzufügen.
+This example uses an SRGS grammar defined in a file named srgs.grxml (described later). In the file properties, the **Package Action** is set to **Content** with **Copy to Output Directory** set to **Copy always**:
 
 ```CSharp
 private async void Colors_Click(object sender, RoutedEventArgs e)
@@ -170,9 +168,9 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Sie können die GRXML-Dateierweiterung für XML-basierte Grammatikdokumente verwenden, die den SRGS-Regeln entsprechen. In diesem Beispiel wird eine SRGS-Grammatik verwendet, die in einer Datei namens „srgs.grxml“ (später beschrieben) definiert ist. In den Dateieigenschaften ist die **Paketaktion** auf **Inhalt** und **In Ausgabeverzeichnis kopieren** auf **Immer kopieren** gesetzt:
+This SRGS file (srgs.grxml) includes semantic interpretation tags. These tags provide a mechanism for returning grammar match data to your app. Grammars must conform to the World Wide Web Consortium (W3C) [Semantic Interpretation for Speech Recognition (SISR) 1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765) specification.
 
-Diese SRGS-Datei (srgs.grxml) enthält Tags für die semantische Interpretation.
+Here, we listen for variants of "yes" and "no".
 
 ```CSharp
 <grammar xml:lang="en-US" 
@@ -209,35 +207,30 @@ Diese SRGS-Datei (srgs.grxml) enthält Tags für die semantische Interpretation.
 </grammar>
 ```
 
-## Diese Tags liefern einen Mechanismus, mit dem übereinstimmende Grammatikdaten an Ihre App zurückgegeben werden.
+## <span id="Manage_constraints"></span><span id="manage_constraints"></span><span id="MANAGE_CONSTRAINTS"></span>Manage constraints
 
 
-Die Grammatik muss der [Semantic Interpretation for Speech Recognition (SISR) 1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765)-Spezifikation des World Wide Web Consortium (W3C) entsprechen. Hier horchen wir auf Varianten von „Ja“ und „Nein“.
+After a constraint collection is loaded for recognition, your app can manage which constraints are enabled for recognition operations by setting the [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402) property of a constraint to **true** or **false**. The default setting is **true**.
 
-<span id="Manage_constraints"></span><span id="manage_constraints"></span><span id="MANAGE_CONSTRAINTS"></span>Verwalten von Einschränkungen Nachdem eine Einschränkungssammlung für die Erkennung geladen wurde, kann Ihre App verwalten, welche Einschränkungen für Erkennungsvorgänge aktiviert sind. Dazu wird für die [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402)-Eigenschaft einer Einschränkung **true** oder **false** festgelegt.
+It's usually more efficient to load constraints once, enabling and disabling them as needed, rather than to load, unload, and compile constraints for each recognition operation. Use the [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402) property, as required.
 
-Die Standardeinstellung lautet **true**. Meist ist es effizienter, Einschränkungen einmal zu laden und dann bei Bedarf zu aktivieren bzw. zu deaktivieren, als Einschränkungen für jeden Erkennungsvorgang zu laden, zu entladen und zu kompilieren.
+Restricting the number of constraints serves to limit the amount of data that the speech recognizer needs to search and match against the speech input. This can improve both the performance and the accuracy of speech recognition.
 
-Verwenden Sie die [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn631402)-Eigenschaft nach Bedarf. Durch Begrenzung der Anzahl der Einschränkungen wird die Datenmenge beschränkt, die die Spracherkennung zum Suchen und Abgleichen mit der Spracheingabe benötigt.
+Decide which constraints are enabled based on the phrases that your app can expect in the context of the current recognition operation. For example, if the current app context is to display a color, you probably don't need to enable a constraint that recognizes the names of animals.
 
-So können die Leistung und die Genauigkeit der Spracherkennung verbessert werden. Entscheiden Sie, welche Einschränkungen aktiviert sind. Dies richtet sich nach den Wörtern, die für die App im Kontext des jeweiligen Erkennungsvorgangs zu erwarten sind.
+To prompt the user for what can be spoken, use the [**SpeechRecognizerUIOptions.AudiblePrompt**](https://msdn.microsoft.com/library/windows/apps/dn653235) and [**SpeechRecognizerUIOptions.ExampleText**](https://msdn.microsoft.com/library/windows/apps/dn653236) properties, which are set by means of the [**SpeechRecognizer.UIOptions**](https://msdn.microsoft.com/library/windows/apps/dn653254) property. Preparing users for what they can say during the recognition operation increases the likelihood that they will speak a phrase that can be matched to an active constraint.
 
-## Wenn es in der App beispielsweise gerade darum geht, eine Farbe anzuzeigen, müssen Sie wahrscheinlich keine Einschränkung aktivieren, bei der die Bezeichnungen von Tieren erkannt werden.
-
-
-* [Mit den Eigenschaften [**SpeechRecognizerUIOptions.AudiblePrompt**](https://msdn.microsoft.com/library/windows/apps/dn653235) und [**SpeechRecognizerUIOptions.ExampleText**](https://msdn.microsoft.com/library/windows/apps/dn653236) können Sie Benutzern mitteilen, was gesagt werden kann. Diese Eigenschaften werden mithilfe der [**SpeechRecognizer.UIOptions**](https://msdn.microsoft.com/library/windows/apps/dn653254)-Eigenschaft festgelegt.](speech-interactions.md)
-
-**Wenn Sie Benutzer im Voraus darüber informieren, was sie bei einem Erkennungsvorgang sagen können, erhöht sich die Wahrscheinlichkeit, dass die Benutzer etwas sagen, was einer aktiven Einschränkung zugeordnet werden kann.**
-* [<span id="related_topics"></span>Verwandte Artikel](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
-
- 
+## <span id="related_topics"></span>Related articles
 
 
+* [Speech interactions](speech-interactions.md)
+
+**Samples**
+* [Speech recognition and speech synthesis sample](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+ 
+
+ 
 
 
-
-
-<!--HONumber=Apr16_HO3-->
 
 

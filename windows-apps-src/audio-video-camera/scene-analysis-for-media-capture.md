@@ -1,123 +1,118 @@
 ---
+author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
-description: Dieser Artikel beschreibt, wie Sie mit SceneAnalysisEffect und FaceDetectionEffect den Inhalt des Vorschaudatenstroms der Medienaufnahme analysieren.
-title: Szenenanalyse für die Medienaufnahme
+description: This article describes how to use the SceneAnalysisEffect and the FaceDetectionEffect to analyze the content of the media capture preview stream.
+title: Scene analysis for media capture
 ---
 
-# Szenenanalyse für die Medienaufnahme
+# Scene analysis for media capture
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Dieser Artikel beschreibt, wie Sie mit [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) und [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) den Inhalt des Vorschaudatenstroms der Medienaufnahme analysieren.
+This article describes how to use the [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) and the [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) to analyze the content of the media capture preview stream.
 
-## Effekt der Szenenanalyse
+## Scene analysis effect
 
-Die [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902)-Klasse analysiert die Videoframes im Vorschaudatenstrom der Medienaufnahme und empfiehlt Verarbeitungsoptionen zur Verbesserung des Aufnahmeergebnisses. Der Effekt ermittelt derzeit, ob die Verwendung der HDR-Verarbeitung (High Dynamic Range) die Aufnahme verbessern würde.
+The [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) analyzes the video frames in the media capture preview stream and recommends processing options to improve the capture result. Currently, the effect supports detecting whether the capture would be improved by using High Dynamic Range (HDR) processing.
 
-Wenn der Effekt die Verwendung von HDR empfiehlt, können Sie dies auf folgende Weise tun:
+If the effect recommends using HDR, you can do this in the following ways:
 
--   Verwenden Sie die [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386)-Klasse für Videoaufnahmen mit dem integrierten Windows-HDR-Verarbeitungsalgorithmus. Weitere Informationen finden Sie unter [High Dynamic Range-Fotoaufnahme (HDR)](high-dynamic-range-hdr-photo-capture.md).
+-   Use the [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) class to capture photos using the Windows built-in HDR processing algorithm. For more information, see [High Dynamic Range (HDR) photo capture](high-dynamic-range-hdr-photo-capture.md).
 
--   Verwenden Sie das [**HdrVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926680) für Videoaufnahmen mit dem integrierten Windows-HDR-Verarbeitungsalgorithmus. Weitere Informationen finden Sie unter [Steuerelemente des Aufnahmegeräts für Videoaufnahmen](capture-device-controls-for-video-capture.md).
+-   Use the [**HdrVideoControl**](https://msdn.microsoft.com/library/windows/apps/dn926680) to capture video using the Windows built-in HDR processing algorithm. For more information, see [Capture device controls for video capture](capture-device-controls-for-video-capture.md).
 
--   Verwenden Sie die [**VariablePhotoSequenceControl**](https://msdn.microsoft.com/library/windows/apps/dn640573)-Klasse für die Aufnahme einer Framesequenz, die Sie anschließend mithilfe einer benutzerdefinierten HDR-Implementierung zusammensetzen können. Weitere Informationen finden Sie unter [Variable Fotosequenz](variable-photo-sequence.md).
+-   Use the [**VariablePhotoSequenceControl**](https://msdn.microsoft.com/library/windows/apps/dn640573) to capture a sequence of frames that you can then composite using a custom HDR implementation. For more information, see [Variable photo sequence](variable-photo-sequence.md).
 
-### Namespaces der Szenenanalyse
+### Scene analysis namespaces
 
-Um die Szenenanalyse verwenden zu können, muss Ihre App die folgenden Namespaces zusätzlich zu den für die grundlegende Medienaufnahme erforderlichen Namespaces enthalten.
+To use scene analysis, your app must include the following namespaces in addition to the namespaces required for basic media capture.
 
 [!code-cs[SceneAnalysisUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSceneAnalysisUsing)]
 
-### Initialisieren des Szenenanalyseneffekts und Hinzufügen von diesem zum Vorschaudatenstrom
+### Initialize the scene analysis effect and add it to the preview stream
 
-Videoeffekte werden mit zwei APIs, einer Effektdefinition, die die für das Aufnahmegerät benötigten Einstellungen zum Initialisieren des Effekts bereitstellt, und einer Effektinstanz implementiert, die zum Steuern des Effekts verwendet werden kann. Da Sie ggf. von mehreren Stellen innerhalb des Codes aus auf die Effektinstanz zugreifen müssen, sollten Sie in der Regel eine Membervariable als Container für das Objekt deklarieren.
+Video effects are implemented using two APIs, an effect definition, which provides settings that the capture device needs to initialize the effect, and an effect instance, which can be used to control the effect. Since you may want to access the effect instance from multiple places within your code, you should typically declare a member variable to hold the object.
 
 [!code-cs[DeclareSceneAnalysisEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareSceneAnalysisEffect)]
 
-Erstellen Sie nach dem Initialisieren des **MediaCapture**-Objekts in Ihrer App eine neue Instanz der [**SceneAnalysisEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn948903)-Klasse.
+In your app, after you have initialized the **MediaCapture** object, create a new instance of [**SceneAnalysisEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn948903).
 
-Registrieren Sie den Effekt mit dem Aufnahmegerät durch Aufrufen der [**AddVideoEffectAsync**](https://msdn.microsoft.com/library/windows/apps/dn878035)-Methode für Ihr **MediaCapture**-Objekt, stellen Sie **SceneAnalysisEffectDefinition** bereit, und geben Sie [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640) an, damit der Effekt im Gegensatz zum Aufnahmedatenstrom auf den Videovorschaudatenstrom angewendet wird. **AddVideoEffectAsync** gibt eine Instanz des hinzugefügten Effekts zurück. Da diese Methode mit verschiedenen Effekttypen verwendet werden kann, müssen Sie die zurückgegebene Instanz in ein [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902)-Objekt umwandeln.
+Register the effect with the capture device by calling [**AddVideoEffectAsync**](https://msdn.microsoft.com/library/windows/apps/dn878035) on your **MediaCapture** object, providing the **SceneAnalysisEffectDefinition** and specifying [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640) to indicate that the effect should be applied to the video preview stream, as opposed to the capture stream. **AddVideoEffectAsync** returns an instance of the added effect. Because this method can be used with multiple effect types, you must cast the returned instance to a [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) object.
 
-Um die Ergebnisse der Szenenanalyse zu erhalten, müssen Sie einen Handler für das [**SceneAnalyzed**](https://msdn.microsoft.com/library/windows/apps/dn948920)-Ereignis registrieren.
+To receive the results of the scene analysis, you must register a handler for the [**SceneAnalyzed**](https://msdn.microsoft.com/library/windows/apps/dn948920) event.
 
-Derzeit umfasst der Szenenanalyseeffekt nur die HDR-Analyzer. Aktivieren Sie die HDR-Analyse, indem Sie die [**HighDynamicRangeControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948827)-Eigenschaft des Effekts auf „true“ festlegen.
+Currently, the scene analysis effect only includes the high dynamic range analyzer. Enable HDR analysis by setting the effect's [**HighDynamicRangeControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948827) to true.
 
 [!code-cs[CreateSceneAnalysisEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateSceneAnalysisEffectAsync)]
 
-### Implementieren des SceneAnalyzed-Ereignishandlers
+### Implement the SceneAnalyzed event handler
 
-Die Ergebnisse der Szenenanalyse werden im **SceneAnalyzed**-Ereignishandler zurückgegeben. Das an den Handler übergebene [**SceneAnalyzedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948922)-Objekt verfügt über ein [**SceneAnalysisEffectFrame**](https://msdn.microsoft.com/library/windows/apps/dn948907)-Objekt mit einem [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830)-Objekt. Die [**Certainty**](https://msdn.microsoft.com/library/windows/apps/dn948833)-Eigenschaft der HDR-Ausgabe liefert einen Wert zwischen 0 und 1,0, wobei 0 angibt, dass die HDR-Verarbeitung das Aufnahmeergebnis nicht verbessern und 1,0, dass die HDR-Verarbeitung dieses verbessern würde. Sie können den Schwellenwert festlegen, an dem Sie HDR verwenden möchten, oder die Ergebnisse für den Benutzer anzeigen und diesen darüber entscheiden lassen.
+The results of the scene analysis are returned in the **SceneAnalyzed** event handler. The [**SceneAnalyzedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948922) object passed into the handler has a [**SceneAnalysisEffectFrame**](https://msdn.microsoft.com/library/windows/apps/dn948907) object which has a [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830) object. The [**Certainty**](https://msdn.microsoft.com/library/windows/apps/dn948833) property of the high dynamic range output provides a value between 0 and 1.0 where 0 indicates that HDR processing would not help improve the capture result and 1.0 indicates that HDR processing would help. Your can decide the threshold point at which you want to use HDR or show the results to the user and let the user decide.
 
 [!code-cs[SceneAnalyzed](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSceneAnalyzed)]
 
-Das an den Handler übergebene [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830)-Objekt verfügt auch über eine [**FrameControllers**](https://msdn.microsoft.com/library/windows/apps/dn948834)-Eigenschaft, die die vorgeschlagenen Framecontroller für die Aufnahme einer variablen Fotosequenz für HDR-Verarbeitung enthält. Weitere Informationen finden Sie unter [Variable Fotosequenz](variable-photo-sequence.md).
+The [**HighDynamicRangeOutput**](https://msdn.microsoft.com/library/windows/apps/dn948830) object passed into the handler also has a [**FrameControllers**](https://msdn.microsoft.com/library/windows/apps/dn948834) property which contains suggested frame controllers for capturing a variable photo sequence for HDR processing. For more information, see [Variable photo sequence](variable-photo-sequence.md).
 
-### Bereinigen des Szenenanalyseeffekts
+### Clean up the scene analysis effect
 
-Wenn Ihre App die Aufnahme abgeschlossen hat, deaktivieren Sie vor dem Löschen des **MediaCapture**-Objekts den Szenenanalyseeffekt, indem Sie die [**HighDynamicRangeAnalyzer.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948827)-Eigenschaft des Effekts auf „false“ festlegen und die Registrierung Ihres [**SceneAnalyzed**](https://msdn.microsoft.com/library/windows/apps/dn948920)-Ereignishandlers aufheben. Rufen Sie die [**MediaCapture.ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592)-Methode auf, und geben Sie den Videovorschaudatenstrom an, da der Effekt zu diesem Datenstrom hinzugefügt wurde. Legen Sie schließlich die Membervariable auf NULL fest.
+When your app is done capturing, before disposing of the **MediaCapture** object, you should disable the scene analysis effect by setting the effect's [**HighDynamicRangeAnalyzer.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948827) property to false and unregister your [**SceneAnalyzed**](https://msdn.microsoft.com/library/windows/apps/dn948920) event handler. Call [**MediaCapture.ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592), specifying the video preview stream since that was the stream to which the effect was added. Finally, set your member variable to null.
 
 [!code-cs[CleanUpSceneAnalysisEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpSceneAnalysisEffectAsync)]
 
-## Gesichtserkennungseffekt
+## Face detection effect
 
-[
-            **FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) identifiziert die Position von Gesichtern innerhalb des Vorschaudatenstroms der Medienaufnahme. Mit dem Effekt erhalten Sie eine Benachrichtigung, wenn ein Gesicht im Vorschaudatenstrom erkannt wird, und es wird der Begrenzungsrahmen für jedes erkannte Gesicht im Vorschauframe bereitgestellt. Auf unterstützten Geräten stellt die Gesichtserkennung auch erweiterte Belichtung und Fokus auf das wichtigste Gesicht in der Szene bereit.
+The [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) identifies the location of faces within the media capture preview stream. The effect allows you to receive a notification whenever a face is detected in the preview stream and provides the bounding box for each detected face within the preview frame. On supported devices, the face detection effect also provides enhanced exposure and focus on the most important face in the scene.
 
-### Namespaces der Gesichtserkennung
+### Face detection namespaces
 
-Um die Gesichtserkennung verwenden zu können, muss Ihre App die folgenden Namespaces zusätzlich zu den für die grundlegende Medienaufnahme erforderlichen Namespaces enthalten.
+To use face detection, your app must include the following namespaces in addition to the namespaces required for basic media capture.
 
 [!code-cs[FaceDetectionUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetectionUsing)]
 
-### Initialisieren des Gesichterkennungseffekts und Hinzufügen von diesem zum Vorschaudatenstrom
+### Initialize the face detection effect and add it to the preview stream
 
-Videoeffekte werden mit zwei APIs, einer Effektdefinition, die die für das Aufnahmegerät benötigten Einstellungen zum Initialisieren des Effekts bereitstellt, und einer Effektinstanz implementiert, die zum Steuern des Effekts verwendet werden kann. Da Sie ggf. von mehreren Stellen innerhalb des Codes aus auf die Effektinstanz zugreifen müssen, sollten Sie in der Regel eine Membervariable als Container für das Objekt deklarieren.
+Video effects are implemented using two APIs, an effect definition, which provides settings that the capture device needs to initialize the effect, and an effect instance, which can be used to control the effect. Since you may want to access the effect instance from multiple places within your code, you should typically declare a member variable to hold the object.
 
 [!code-cs[DeclareFaceDetectionEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareFaceDetectionEffect)]
 
-Erstellen Sie nach dem Initialisieren des **MediaCapture**-Objekts in Ihrer App eine neue Instanz der [**FaceDetectionEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn948778)-Klasse. Legen Sie die [**DetectionMode**](https://msdn.microsoft.com/library/windows/apps/dn948781)-Eigenschaft fest, um eine schnellere oder genauere Gesichtserkennung zu bevorzugen. Legen Sie die [**SynchronousDetectionEnabled**](https://msdn.microsoft.com/library/windows/apps/dn948786)-Eigenschaft fest, um anzugeben, dass eingehende Frames nicht durch eine andauernde Gesichtserkennung verzögert werden, da dies zu einer stockenden Vorschau führen kann.
+In your app, after you have initialized the **MediaCapture** object, create a new instance of [**FaceDetectionEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn948778). Set the [**DetectionMode**](https://msdn.microsoft.com/library/windows/apps/dn948781) property to prioritize faster face detection or more accurate face detection. Set [**SynchronousDetectionEnabled**](https://msdn.microsoft.com/library/windows/apps/dn948786) to specify that incoming frames are not delayed waiting for face detection to complete as this can result in a choppy preview experience.
 
-Registrieren Sie den Effekt mit dem Aufnahmegerät durch Aufrufen der [**AddVideoEffectAsync**](https://msdn.microsoft.com/library/windows/apps/dn878035)-Methode für Ihr **MediaCapture**-Objekt, stellen Sie **FaceDetectionEffectDefinition** bereit, und geben Sie [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640) an, damit der Effekt im Gegensatz zum Aufnahmedatenstrom auf den Videovorschaudatenstrom angewendet wird. **AddVideoEffectAsync** gibt eine Instanz des hinzugefügten Effekts zurück. Da diese Methode mit verschiedenen Effekttypen verwendet werden kann, müssen Sie die zurückgegebene Instanz in ein [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776)-Objekt umwandeln.
+Register the effect with the capture device by calling [**AddVideoEffectAsync**](https://msdn.microsoft.com/library/windows/apps/dn878035) on your **MediaCapture** object, providing the **FaceDetectionEffectDefinition** and specifying [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640) to indicate that the effect should be applied to the video preview stream, as opposed to the capture stream. **AddVideoEffectAsync** returns an instance of the added effect. Because this method can be used with multiple effect types, you must cast the returned instance to a [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) object.
 
-Aktivieren bzw. deaktivieren Sie den Effekt, indem Sie die [**FaceDetectionEffect.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948818)-Eigenschaft festlegen. Geben Sie an, wie oft der Effekt Frames analysieren soll, indem Sie die [**FaceDetectionEffect.DesiredDetectionInterval**](https://msdn.microsoft.com/library/windows/apps/dn948814)-Eigenschaft festlegen. Beide Eigenschaften können angepasst werden, während der Medienaufnahme ausgeführt wird.
+Enable or disable the effect by setting the [**FaceDetectionEffect.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948818) property. Adjust how often the effect analyzes frames by setting the [**FaceDetectionEffect.DesiredDetectionInterval**](https://msdn.microsoft.com/library/windows/apps/dn948814) property. Both of these properties can be adjusted while media capture is ongoing.
 
 [!code-cs[CreateFaceDetectionEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateFaceDetectionEffectAsync)]
 
-### Empfangen von Benachrichtigungen, wenn Gesichter erkannt werden
+### Receive notifications when faces are detected
 
-Wenn Sie während der Gesichtserkennung Aktionen ausführen möchten, z. B. Zeichnen eines Felds um die erkannten Gesichter in der Videovorschau, können Sie eine Registrierung für das [**FaceDetected**](https://msdn.microsoft.com/library/windows/apps/dn948820)-Ereignis durchführen.
+If you want to perform some action when faces are detected, such as drawing a box around detected faces in the video preview, you can register for the [**FaceDetected**](https://msdn.microsoft.com/library/windows/apps/dn948820) event.
 
 [!code-cs[RegisterFaceDetectionHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterFaceDetectionHandler)]
 
-Im Handler für das Ereignis erhalten Sie eine Liste mit allen in einem Frame erkannten Gesichtern, indem Sie auf die [**FaceDetectionEffectFrame.DetectedFaces**](https://msdn.microsoft.com/library/windows/apps/dn948792)-Eigenschaft der [**FaceDetectedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948774)-Klasse zugreifen. Die [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126)-Eigenschaft ist eine [**BitmapBounds**](https://msdn.microsoft.com/library/windows/apps/br226169)-Struktur, die das Rechteck mit dem erkannten Gesicht relativ zu den Abmessungen des Vorschaudatenstroms beschreibt. Einen Beispielcode, der die Koordinaten des Vorschaudatenstroms in Bildschirmkoordinaten umwandelt, finden Sie unter [Gesichtserkennungsbeispiel für UWP](http://go.microsoft.com/fwlink/?LinkId=619486).
+In the handler for the event, you can get a list of all faces detected in a frame by accessing the [**FaceDetectionEffectFrame.DetectedFaces**](https://msdn.microsoft.com/library/windows/apps/dn948792) property of the [**FaceDetectedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948774). The [**FaceBox**](https://msdn.microsoft.com/library/windows/apps/dn974126) property is a [**BitmapBounds**](https://msdn.microsoft.com/library/windows/apps/br226169) structure that describes the rectangle containing the detected face in units relative to the preview stream dimensions. To view sample code that transforms the preview stream coordinates into screen coordinates, see the [face detection UWP sample](http://go.microsoft.com/fwlink/?LinkId=619486).
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 
-### Bereinigen des Gesichtserkennungseffekts
+### Clean up the face detection effect
 
-Wenn Ihre App die Aufnahme abgeschlossen hat, deaktivieren Sie vor dem Löschen des **MediaCapture**-Objekts den Gesichtserkennungseffekt mit [**FaceDetectionEffect.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948818), und heben Sie die Registrierung Ihres [**FaceDetected**](https://msdn.microsoft.com/library/windows/apps/dn948820)-Ereignishandlers auf, wenn Sie einen registriert haben. Rufen Sie die [**MediaCapture.ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592)-Methode auf, und geben Sie den Videovorschaudatenstrom an, da der Effekt zu diesem Datenstrom hinzugefügt wurde. Legen Sie schließlich die Membervariable auf NULL fest.
+When your app is done capturing, before disposing of the **MediaCapture** object, you should disable the face detection effect with [**FaceDetectionEffect.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn948818) and unregister your [**FaceDetected**](https://msdn.microsoft.com/library/windows/apps/dn948820) event handler if you previously registered one. Call [**MediaCapture.ClearEffectsAsync**](https://msdn.microsoft.com/library/windows/apps/br226592), specifying the video preview stream since that was the stream to which the effect was added. Finally, set your member variable to null.
 
 [!code-cs[CleanUpFaceDetectionEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpFaceDetectionEffectAsync)]
 
-### Überprüfen der Fokus- und Belichtungsunterstützung für erkannte Gesichter
+### Check for focus and exposure support for detected faces
 
-Nicht alle Geräte verfügen über ein Aufnahmegerät, das den Fokus und die Belichtung auf Grundlage der erkannten Gesichter anpassen kann. Da Gesichtserkennung Geräteressourcen in Anspruch nimmt, sollten Sie die Gesichtserkennung nur auf Geräten aktivieren, die das Feature zur Verbesserung der Aufnahme verwenden können. Rufen Sie zum Festzustellen, ob die gesichtsbasierte Aufnahmeoptimierung verfügbar ist, die [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825)-Klasse für Ihre initialisierte [MediaCapture](capture-photos-and-video-with-mediacapture.md) ab, und rufen Sie dann die [**RegionsOfInterestControl**](https://msdn.microsoft.com/library/windows/apps/dn279064)-Klasse des Videogerätecontrollers ab. Überprüfen Sie, ob die [**MaxRegions**](https://msdn.microsoft.com/library/windows/apps/dn279069)-Eigenschaft mindestens eine Region unterstützt. Überprüfen Sie dann, ob die [**AutoExposureSupported**](https://msdn.microsoft.com/library/windows/apps/dn279065)-Eigenschaft oder die [**AutoFocusSupported**](https://msdn.microsoft.com/library/windows/apps/dn279066)-Eigenschaft den Wert „true“ aufweist. Wenn diese Bedingungen erfüllt sind, kann das Gerät die Vorteile der Gesichtserkennung für eine verbesserte Aufnahme nutzen.
+Not all devices have a capture device that can adjust its focus and exposure based on detected faces. Because face detection consumes device resources, you may only want to enable face detection on devices that can use the feature to enhance capture. To see if face-based capture optimization is available, get the [**VideoDeviceController**](https://msdn.microsoft.com/library/windows/apps/br226825) for your initialized [MediaCapture](capture-photos-and-video-with-mediacapture.md) and then get the video device controller's [**RegionsOfInterestControl**](https://msdn.microsoft.com/library/windows/apps/dn279064). Check to see if the [**MaxRegions**](https://msdn.microsoft.com/library/windows/apps/dn279069) supports at least one region. Then check to see if either [**AutoExposureSupported**](https://msdn.microsoft.com/library/windows/apps/dn279065) or [**AutoFocusSupported**](https://msdn.microsoft.com/library/windows/apps/dn279066) are true. If these conditions are met, then the device can take advantage of face detection to enhance capture.
 
 [!code-cs[AreFaceFocusAndExposureSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetAreFaceFocusAndExposureSupported)]
 
-## Verwandte Themen
+## Related topics
 
-* [Aufnehmen von Fotos und Videos mit „MediaCapture“](capture-photos-and-video-with-mediacapture.md)
- 
+* [Capture photos and video with MediaCapture](capture-photos-and-video-with-mediacapture.md)
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

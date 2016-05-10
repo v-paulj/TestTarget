@@ -1,58 +1,51 @@
 ---
-Description: Erstellen Sie UWP-Apps (Universelle Windows-Plattform), die benutzerdefinierte Interaktionen von Zeichen- und Eingabestiften unterstützen, einschließlich Freihandeingabe für das Schreiben und Zeichnen wie auf Papier.
-title: Zeichen- und Eingabestiftinteraktionen
+author: Karl-Bridge-Microsoft
+Description: Build Universal Windows Platform (UWP) apps that support custom interactions from pen and stylus devices, including digital ink for natural writing and drawing experiences.
+title: Pen and stylus interactions in UWP apps
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
-label: Stifteingabe
+label: Pen and stylus interactions in UWP apps
 template: detail.hbs
+keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
 ---
 
-# Zeichen- und Eingabestiftinteraktionen
+# Pen and stylus interactions in UWP apps
 
+Optimize your Universal Windows Platform (UWP) app for pen input to provide both standard [**pointer device**](https://msdn.microsoft.com/library/windows/apps/br225633) functionality and the best Windows Ink experience for your users.
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+> Note: This topic focuses on the Windows Ink platform. See [Handle pointer input](handle-pointer-input.md) for general pointer input handling (similar to mouse, touch, and touchpad).
 
-Optimieren Sie das Design Ihrer UWP-Apps (Universelle Windows-Plattform) für die Toucheingabe, und profitieren Sie von der standardmäßigen allgemeinen Unterstützung von Zeichenstiften.
+![touchpad](images/input-patterns/input-pen.jpg)
 
-Zusammen mit einem Zeichenstift bietet die Freihandplattform für UWP-Apps eine Möglichkeit, Notizen, Zeichnungen und Anmerkungen wie vom Papier her gewohnt zu erstellen. Sie können auf der Plattform Freihanddaten aus einem Eingabedigitalisierungsgerät erfassen, Freihanddaten generieren, Daten ausgeben, Freihandstriche auf dem Ausgabegerät rendern, Daten verwalten und eine Schrifterkennung durchführen.
-
-![Touchpad](images/input-patterns/input-pen.jpg)
-
-
-**Wichtige APIs**
+**Important APIs**
 
 -   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
 -   [**Windows.UI.Input.Inking**](https://msdn.microsoft.com/library/windows/apps/br208524)
 -   [**Windows.UI.Input.Inking.Core**](https://msdn.microsoft.com/library/windows/apps/dn958452)
 
+The Windows Ink platform, together with a pen device, provides a natural way to create digital handwritten notes, drawings, and annotations. The platform supports capturing digitizer input as ink data, generating ink data, managing ink data, rendering ink data as ink strokes on the output device, and converting ink to text through handwriting recognition.
 
-Ein Zeichen-/Eingabestift dient nicht nur als [**Zeigergerät**](https://msdn.microsoft.com/library/windows/apps/br225633) (wie Maus und Fingereingabe), sondern auch zum direkten Schreiben oder Zeichnen auf einem Bildschirm per Freihandeingabe.
+In addition to capturing the basic position and movement of the pen as the user writes or draws, your app can also track and collect the varying amounts of pressure used throughout a stroke. This information, along with settings for pen tip shape, size, and rotation, ink color, and purpose (plain ink, erasing, highlighting, and selecting), enables you to provide user experiences that closely resemble writing or drawing on paper with a pen, pencil, or brush.
 
-Zusammen mit einem Zeichen- und/oder Eingabestift bietet die Freihandplattform der Universellen Windows-Plattform (UWP) eine Möglichkeit, digitale Notizen, Zeichnungen und Anmerkungen wie auf Papier zu erstellen. Sie können auf der Plattform Freihanddaten aus einem Eingabedigitalisierungsgerät erfassen, Freihanddaten generieren, verwalten und als Striche rendern sowie über die Schrifterkennung in Text umwandeln.
+**Note**  Your app can also support ink input from other pointer-based devices, including touch digitizers and mouse devices. 
 
-Ihre App kann nicht nur die grundlegende Position und Bewegung des Stifts aufzeichnen, während der Benutzer schreibt oder zeichnet, sondern auch den variierenden Druck während des gesamten Strichs nachverfolgen und erfassen. Mit diesen Informationen, zusammen mit Einstellungen für Form und Größe der Stiftspitze, Drehung, Freihandfarbe und Zweck (einfache Freihandeingabe, Löschen, Hervorheben und Auswählen), können Sie dem Benutzer ermöglichen, auf ähnliche Wiese wie mit einem Stift, Bleistift oder Pinsel auf Papier zu arbeiten.
+The ink platform is very flexible. It is designed to support various levels of functionality, depending on your requirements.
 
-**Hinweis**  Ihre App kann auch Freihandeingaben von anderen zeigerbasierten Geräten wie Touchdigitalisierungs- und Mausgeräten unterstützen.
+There are three components to the ink platform:
 
- 
+-   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) - A XAML UI platform control that, by default, receives and displays all input from a pen as either an ink stroke or an erase stroke.
 
-Die Freihandplattform ist sehr flexibel. Sie unterstützt verschiedene Funktionalitätsgrade, abhängig von Ihren Anforderungen.
+-   [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) - A code-behind object, instantiated along with an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control (exposed through the [**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) property). This object provides all default inking functionality exposed by the **InkCanvas**, along with a comprehensive set of APIs for additional customization and personalization.
 
-Die Freihandplattform enthält drei Komponenten:
+-   [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) - Enables the rendering of ink strokes onto the designated Direct2D device context of a Universal Windows app, instead of the default [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control. This enables full customization of the inking experience.
 
--   [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535): Ein XAML-UI-Plattformsteuerelement, das standardmäßig alle Eingaben von einem Stift als Freihandstriche oder Löschen von Freihandstrichen empfängt und anzeigt.
-
--   [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011): Ein CodeBehind-Objekt, das zusammen mit einem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement instanziiert wird (über die [**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft verfügbar gemacht). Dieses Objekt stellt alle Standardfreihandfunktionen bereit, die vom **InkCanvas**-Steuerelement zur Verfügung gestellt werden, sowie einen umfassenden Satz von APIs für zusätzliche Anpassung und Personalisierung.
-
--   [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) : Ermöglicht das Rendern von Freihandstrichen im angegebenen Direct2D-Gerätekontext einer Universellen Windows-App statt im standardmäßigen [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement. Dies ermöglicht die umfassende Anpassung der Freihandfunktionen.
-
-## <span id="inkcanvas"></span><span id="INKCANVAS"></span>Einfaches Freihandzeichnen mit „InkCanvas“
+## <span id="inkcanvas"></span><span id="INKCANVAS"></span>Basic inking with InkCanvas
 
 
-Platzieren Sie für einfaches Freihandzeichen einfach an einer beliebigen Stelle auf einer Seite ein [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement.
+For basic inking functionality, just place an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) anywhere on a page.
 
-Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement unterstützt nur Freihandeingaben mit einem Stift. Die Eingabe wird entweder als Freihandstrich mit den Standardeinstellungen für Farbe und Stärke gerendert oder als Strichradierer behandelt (wenn die Eingabe von einer mit einer Löschschaltfläche geänderten Radiergummi- oder Stiftspitze stammt).
+The [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) supports ink input only from a pen. The input is either rendered as an ink stroke using default settings for color and thickness, or treated as a stroke eraser (when input is from an eraser tip or the pen tip modified with an erase button).
 
-In diesem Beispiel überlagert ein [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement ein Hintergrundbild.
+In this example, an [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) overlays a background image.
 
 ```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -73,48 +66,29 @@ In diesem Beispiel überlagert ein [**InkCanvas**](https://msdn.microsoft.com/li
 </Grid>
 ```
 
-Diese Serie von Bildern zeigt, wie die Stifteingabe von diesem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement gerendert wird.
+This series of images shows how pen input is rendered by this [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control.
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><img src="images/ink_basic_1_small.png" alt="The blank InkCanvas with a background image" /></td>
-<td align="left"><img src="images/ink_basic_2_small.png" alt="The InkCanvas with ink strokes" /></td>
-<td align="left"><img src="images/ink_basic_3_small.png" alt="The InkCanvas with one stroke erased" /></td>
-</tr>
-<tr class="even">
-<td align="left">Das leere [<strong>InkCanvas</strong>](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement mit einem Hintergrundbild.</td>
-<td align="left">Das [<strong>InkCanvas</strong>](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement mit Freihandstrichen.</td>
-<td align="left">Das [<strong>InkCanvas</strong>](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement mit einem gelöschten Strich.
-<p>Beachten Sie, dass jeweils der gesamte Strich und nicht nur auf einen Teil davon gelöscht wird.</p></td>
-</tr>
-</tbody>
-</table>
+| ![The blank InkCanvas with a background image](images/ink_basic_1_small.png) | ![The InkCanvas with ink strokes](images/ink_basic_2_small.png) | ![The InkCanvas with one stroke erased](images/ink_basic_3_small.png) |
+| --- | --- | ---|
+| The blank [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) with a background image. | The [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) with ink strokes. | The [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) with one stroke erased (note how erase operates on an entire stroke, not a portion). |
 
- 
+The inking functionality supported by the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control is provided by a code-behind object called the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
 
-Die vom [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement unterstützte Freihandfunktion wird von einem CodeBehind-Objekt mit dem Namen [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) bereitgestellt.
+For basic inking, you don't have to concern yourself with the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011). However, to customize and configure inking behavior on the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535), you must access its corresponding **InkPresenter** object.
 
-Für die einfache Freihandeingabe müssen Sie sich nicht mit dem [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt befassen. Wenn Sie jedoch das Freihandverhalten des [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements anpassen und konfigurieren möchten, müssen Sie auf das entsprechende **InkPresenter**-Objekt zugreifen.
-
-## <span id="inkpresenter"></span><span id="INKPRESENTER"></span>Einfache Anpassung mit „InkPresenter“
+## <span id="inkpresenter"></span><span id="INKPRESENTER"></span>Basic customization with InkPresenter
 
 
-Für jedes [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement wird ein [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt instanziiert.
+An [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) object is instantiated with each [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control.
 
-Das [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt stellt nicht nur das gesamte Standard-Freihandeingabeverhalten des entsprechenden [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements bereit, sondern bietet auch einen umfassenden Satz von APIs für die zusätzliche Strichanpassung. Hierzu zählen Stricheigenschaften, unterstützte Eingabegerätetypen und die Möglichkeit festzulegen, ob die Eingabe vom Objekt verarbeitet oder an die App übergeben wird.
+Along with providing all default inking behaviors of its corresponding [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control, the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) provides a comprehensive set of APIs for additional stroke customization. This includes stroke properties, supported input device types, and whether input is processed by the object or passed to the app.
 
-**Hinweis**  
-Das [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt kann nicht direkt instanziiert werden. Stattdessen erfolgt der Zugriff darauf über die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft des [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements.
+**Note**  
+The [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) cannot be instantiated directly. Instead, it is accessed through the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) property of the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
- 
+ 
 
-Hier konfigurieren wir das [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt, damit es Eingabedaten von Stift und Maus als Freihandstriche interpretiert. Außerdem legen wir einige anfängliche Freihandstrichattribute fest, die zum Rendern von Strichen mit dem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement verwendet werden.
+Here, we configure the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) to interpret input data from both pen and mouse as ink strokes. We also set some initial ink stroke attributes used for rendering strokes to the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
 ```CSharp
 public MainPage()
@@ -135,9 +109,9 @@ public MainPage()
 }
 ```
 
-Freihandstrichattribute können dynamisch entsprechend den Benutzereinstellungen oder App-Anforderungen festgelegt werden.
+Ink stroke attributes can be set dynamically to accommodate user preferences or app requirements.
 
-Hier kann der Benutzer aus einer Liste von Freihandfarben auswählen.
+Here, we let a user choose from a list of ink colors.
 
 ```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -170,7 +144,7 @@ Hier kann der Benutzer aus einer Liste von Freihandfarben auswählen.
 </Grid>
 ```
 
-Anschließend behandeln wir Änderungen an der ausgewählten Farbe und aktualisieren die Freihandstrichattribute entsprechend.
+We then handle changes to the selected color and update the ink stroke attributes accordingly.
 
 ```CSharp
 // Update ink stroke color for new strokes.
@@ -201,38 +175,36 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 }
 ```
 
-Diese Bilder zeigen, wie die Stifteingabe vom [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt verarbeitet und angepasst wird.
+These images shows how pen input is processed and customized by the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081).
 
-|                                                                                      |                                                                                          |
-|--------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| ![InkCanvas mit standardmäßigen schwarzen Freihandstrichen](images/ink-basic-custom-1-small.png) | ![InkCanvas mit vom Benutzer ausgewählten roten Freihandstrichen](images/ink-basic-custom-2-small.png) |
-| Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement mit standardmäßigen schwarzen Freihandstrichen        | Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement mit vom Benutzer ausgewählten roten Freihandstrichen        |
+| ![the inkcanvas with default black ink strokes](images/ink-basic-custom-1-small.png) | ![the inkcanvas with user selected red ink strokes](images/ink-basic-custom-2-small.png) |
+| --- | -- |
+| The [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) with default black ink strokes. | The [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) with user selected red ink strokes. |
 
- 
+ 
 
-Um zusätzlich zur Freihandeingabe und zum Löschen weitere Funktionen wie etwa die Strichauswahl bereitzustellen, muss die App bestimmte Eingaben identifizieren, die vom [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt ohne Verarbeitung zur Behandlung an die App weitergegeben werden.
+To provide functionality beyond inking and erasing, such as stroke selection, your app must identify specific input for the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) to pass through unprocessed for handling by your app.
 
-## <span id="passthrough"></span><span id="PASSTHROUGH"></span>Weitergabe der Eingabe für die erweiterte Verarbeitung
+## <span id="passthrough"></span><span id="PASSTHROUGH"></span>Pass-through input for advanced processing
 
 
-Standardmäßig verarbeitet das [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt sämtliche Eingaben als Freihandstrich oder Löschen eines Freihandstrichs. Hierzu zählen auch Eingaben, die durch ein sekundäres Hardwareangebot wie etwa eine Zeichenstift-Drucktaste, eine rechte Maustaste oder ein ähnliches Element geändert werden.
+By default, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) processes all input as either an ink stroke or an erase stroke. This includes input modified by a secondary hardware affordance such as a pen barrel button, a right mouse button, or similar.
 
-Wenn Benutzer diese sekundären Angebote verwenden, erwarten sie in der Regel zusätzliche Funktionalität oder ein geändertes Verhalten.
+When using these secondary affordances, users typically expect some additional functionality or a modified behavior.
 
-In einigen Fällen müssen Sie eventuell basierend auf der Benutzerauswahl auf der App-UI grundlegende Freihandfunktionen für Stifte ohne sekundäre Angebote (Funktionalität, die in der Regel nicht der Stiftspitze zugeordnet ist), andere Eingabegerätetypen, zusätzliche Funktionalität oder geändertes Verhalten verfügbar machen.
+In some cases, you might need to expose basic ink functionality for pens without secondary affordances (functionality not usually associated with the pen tip), other input device types, or additional functionality, or modified behavior, based on a user selection in your app's UI.
 
-Das [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt kann zu diesem Zweck so konfiguriert werden, dass bestimmte Eingaben unverarbeitet bleiben. Diese unverarbeiteten Eingaben werden dann zur Verarbeitung an die App weitergegeben.
+To support this, [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) can be configured to leave specific input unprocessed. This unprocessed input is then passed through to your app for processing.
 
-Im folgenden Codebeispiel werden die Schritte zum Aktivieren der Strichauswahl gezeigt, wenn die Eingabe mit einer Zeichenstift-Drucktaste (oder rechten Maustaste) geändert wird.
+The following code example steps through how to enable stroke selection when input is modified with a pen barrel button (or right mouse button).
 
-In diesem Beispiel verwenden wir die Dateien „MainPage.xaml“ und „MainPage.Xaml.cs“, um den gesamten Code zu hosten.
+For this example, we use the MainPage.xaml and MainPage.xaml.cs files to host all code.
 
-1.  Zunächst richten wir in „MainPage.xaml“ die Benutzeroberfläche ein.
+1.  First, we set up the UI in MainPage.xaml.
 
-    Hier fügen wir einen Zeichenbereich (unterhalb des [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements) zum Zeichnen der Strichauswahl hinzu. Durch die Verwendung einer eigenen Ebene zum Zeichnen der Strichauswahl bleiben das **InkCanvas**-Steuerelement und dessen Inhalt unverändert.
+    Here, we add a canvas (below the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)) to draw the selection stroke. Using a separate layer to draw the selection stroke leaves the **InkCanvas** and its content untouched.
 
-    ![Das leere InkCanvas-Steuerelement mit einem darunterliegenden Auswahlzeichenbereich](images/ink-unprocessed-1-small.png)
-
+    ![the blank inkcanvas with an underlying selection canvas](images/ink-unprocessed-1-small.png)
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -255,8 +227,7 @@ In diesem Beispiel verwenden wir die Dateien „MainPage.xaml“ und „MainPage
     </Grid>
 ```
 
-2.  In „MainPage.xaml.cs“ deklarieren wir eine Reihe von globalen Variablen zum Speichern von Verweisen auf Aspekte der Auswahl-UI. Dies gilt insbesondere für den Auswahllassostrich und das umgebende Rechteck, das die ausgewählten Striche hervorhebt.
-
+2.  In MainPage.xaml.cs, we declare a couple of global variables for keeping references to aspects of the selection UI. Specifically, the selection lasso stroke and the bounding rectangle that highlights the selected strokes.
 ```    CSharp
 // Stroke selection tool.
     private Polyline lasso;
@@ -264,16 +235,15 @@ In diesem Beispiel verwenden wir die Dateien „MainPage.xaml“ und „MainPage
     private Rect boundingRect;
 ```
 
-3.  Anschließend konfigurieren wir das [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt so, dass es Eingabedaten von Stift und Maus als Freihandstriche interpretiert. Zudem legen wir anfängliche Freihandstrichattribute zum Rendern von Freihandstrichen mit dem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement fest.
+3.  Next, we configure the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) to interpret input data from both pen and mouse as ink strokes, and set some initial ink stroke attributes used for rendering strokes to the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
 
-    Vor allem geben wir mithilfe der [**InputProcessingConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn948764)-Eigenschaft des [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekts an, dass alle geänderten Eingaben von der App verarbeitet werden sollen. Geänderte Eingaben geben wir an, indem wir **InputProcessingConfiguration.RightDragAction** den Wert [**InkInputRightDragAction.LeaveUnprocessed**](https://msdn.microsoft.com/library/windows/apps/dn948760) zuweisen.
+    Most importantly, we use the [**InputProcessingConfiguration**](https://msdn.microsoft.com/library/windows/apps/dn948764) property of the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) to indicate that any modified input should be processed by the app. Modified input is specified by assigning **InputProcessingConfiguration.RightDragAction** a value of [**InkInputRightDragAction.LeaveUnprocessed**](https://msdn.microsoft.com/library/windows/apps/dn948760).
 
-    Anschließend weisen wir Listener für die nicht verarbeiteten Ereignisse [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) und [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) zu, die vom [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt weitergegeben werden. Sämtliche Auswahlfunktionalität wird in den Handlern für diese Ereignisse implementiert.
+    We then assign listeners for the unprocessed [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711), and [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) events passed through by the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081). All selection functionality is implemented in the handlers for these events.
 
-    Schließlich weisen wir Listener für die Ereignisse [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) und [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767) des [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekts zu. Wir verwenden die Handler für diese Ereignisse, um die Auswahl-UI zu bereinigen, wenn ein neuer Strich begonnen oder ein vorhandener Strich gelöscht wird.
+    Finally, we assign listeners for the [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) and [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767) events of the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081). We use the handlers for these events to clean up the selection UI if a new stroke is started or an existing stroke is erased.
 
-    ![InkCanvas mit standardmäßigen schwarzen Freihandstrichen](images/ink-unprocessed-2-small.png)
-
+    ![the inkcanvas with default black ink strokes](images/ink-unprocessed-2-small.png)
 ```    CSharp
 public MainPage()
     {
@@ -317,12 +287,11 @@ public MainPage()
     }
 ```
 
-4.  Anschließend definieren wir Handler für die nicht verarbeiteten Ereignisse [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) und [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713), die vom [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt weitergegeben werden.
+4.  We then define handlers for the unprocessed [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711), and [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713) events passed through by the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081).
 
-    Sämtliche Auswahlfunktionalität, einschließlich des Lassostrichs und des umgebenden Rechtecks, wird in diesen Handlern implementiert.
+    All selection functionality is implemented in these handlers, including the lasso stroke and the bounding rectangle.
 
-    ![Auswahllasso](images/ink-unprocessed-3-small.png)
-
+    ![the selection lasso](images/ink-unprocessed-3-small.png)
 ```    CSharp
 // Handle unprocessed pointer events from modifed input.
     // The input is used to provide selection functionality.
@@ -367,10 +336,9 @@ public MainPage()
     }
 ```
 
-5.  Um den PointerReleased-Ereignishandler abzuschließen, löschen wir sämtlichen Inhalt (den Lassostrich) aus der Auswahlebene und zeichnen dann ein einzelnes umgebendes Rechteck um die Freihandstriche, die sich im Lassobereich befinden.
+5.  To conclude the PointerReleased event handler, we clear the selection layer of all content (the lasso stroke) and then draw a single bounding rectangle around the ink strokes encompassed by the lasso area.
 
-    ![Das umgebende Auswahlrechteck](images/ink-unprocessed-4-small.png)
-
+    ![the selection bounding rect](images/ink-unprocessed-4-small.png)
 ```    CSharp
 // Draw a bounding rectangle, on the selection canvas, encompassing 
     // all ink strokes within the lasso area.
@@ -402,10 +370,9 @@ public MainPage()
     }
 ```
 
-6.  Schließlich definieren wir Handler für die InkPresenter-Ereignisse [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) und [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767).
+6.  Finally, we define handlers for the [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) and [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767) InkPresenter events.
 
-    Diese beiden rufen einfach die gleiche Bereinigungsfunktion auf, um bei jeder Erkennung eines neuen Strichs die aktuelle Auswahl zu löschen.
-
+    These both just call the same cleanup function to clear the current selection whenever a new stroke is detected.
 ```    CSharp
 // Handle new ink or erase strokes to clean up selection UI.
     private void StrokeInput_StrokeStarted(
@@ -421,8 +388,7 @@ public MainPage()
     }
 ```
 
-7.  Dies ist die Funktion zum Entfernen der gesamten Auswahl-UI aus dem Auswahlzeichenbereich, wenn ein neuer Strich begonnen oder ein vorhandener Strich gelöscht wird.
-
+7.  Here's the function to remove all selection UI from the selection canvas when a new stroke is started or an existing stroke is erased.
 ```    CSharp
 // Clean up selection UI.
     private void ClearSelection()
@@ -445,21 +411,21 @@ public MainPage()
     }
 ```
 
-## <span id="iinkd2drenderer"></span><span id="IINKD2DRENDERER"></span>Benutzerdefiniertes Rendern von Freihandeingaben
+## <span id="iinkd2drenderer"></span><span id="IINKD2DRENDERER"></span>Custom ink rendering
 
 
-Standardmäßig werden Freihandeingaben in einem Hintergrundthread mit geringer Wartezeit verarbeitet und während des Zeichnens „nass“ gerendert. Wenn der Strich abgeschlossen ist (der Stift oder Finger wurde angehoben oder die Maustaste losgelassen), wird er im UI-Thread verarbeitet und auf der [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Ebene „trocken“ gerendert (über dem Anwendungsinhalt, wo er die nasse Freihandeingabe ersetzt).
+By default, ink input is processed on a low-latency background thread and rendered "wet" as it is drawn. When the stroke is completed (pen or finger lifted, or mouse button released), the stroke is processed on the UI thread and rendered "dry" to the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) layer (above the application content and replacing the wet ink).
 
-Die Freihandplattform ermöglicht es Ihnen, dieses Verhalten zu überschreiben und die Freihandfunktionen durch benutzerdefiniertes Trocknen der Freihandeingabe umfassend anzupassen.
+The ink platform enables you to override this behavior and completely customize the inking experience by custom drying the ink input.
 
-Benutzerdefiniertes Trocknen erfordert anstelle des standardmäßigen [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements ein [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263)-Objekt, um die Freihandeingabe zu verwalten und im Direct2D-Gerätekontext der universellen Windows-App zu rendern.
+Custom drying requires an [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) object to manage the ink input and render it to the Direct2D device context of your Universal Windows app, instead of the default [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) control.
 
-Eine App erstellt durch Aufruf von [**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012) (vor dem Laden des [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements) ein [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979)-Objekt, um zu definieren, wie ein Freihandstrich trocken in einer [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)- oder [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)-Klasse gerendert wird. Beispielsweise kann ein Freihandstrich gerastert und in den Anwendungsinhalt integriert werden, statt auf einer separaten **InkCanvas**-Ebene gerendert zu werden.
+By calling [**ActivateCustomDrying**](https://msdn.microsoft.com/library/windows/apps/dn922012) (before the [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) is loaded), an app creates an [**InkSynchronizer**](https://msdn.microsoft.com/library/windows/apps/dn903979) object to customize how an ink stroke is rendered dry to a [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) or [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). For example, an ink stroke could be rasterized and integrated into application content instead of as a separate **InkCanvas** layer.
 
-Ein vollständiges Beispiel für diese Funktionalität finden Sie unter [Komplexes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314).
+For a full example of this functionality, see the [Complex ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620314) .
 
 
-## Andere Artikel in diesem Abschnitt 
+## Other articles in this section 
 <table>
 <colgroup>
 <col width="50%" />
@@ -467,52 +433,49 @@ Ein vollständiges Beispiel für diese Funktionalität finden Sie unter [Komplex
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Thema</th>
-<th align="left">Beschreibung</th>
+<th align="left">Topic</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Recognize ink strokes](convert-ink-to-text.md)</p></td>
-<td align="left"><p>Konvertieren Sie Freihandstriche mit der Schrifterkennung in Text oder mit der benutzerdefinierten Erkennung in Formen.</p></td>
+<td align="left"><p>Convert ink strokes to text using handwriting recognition, or to shapes using custom recognition.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Store and retrieve ink strokes](save-and-load-ink.md)</p></td>
-<td align="left"><p>Speichern Sie Freihandstrichdaten mithilfe eingebetteter serialisierter Freihandformat-Metadaten (Ink Serialized Format, ISF) in einer GIF-Datei (Graphics Interchange Format).</p></td>
+<td align="left"><p>Store ink stroke data in a Graphics Interchange Format (GIF) file using embedded Ink Serialized Format (ISF) metadata.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 
-## <span id="related_topics"></span>Verwandte Artikel
+## <span id="related_topics"></span>Related articles
 
 
-* [Behandeln von Zeigereingaben](handle-pointer-input.md)
-* [Identifizieren von Eingabegeräten](identify-input-devices.md)
-**Beispiele**
-* [Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [Einfaches Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Komplexes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [Beispiel für grundlegende Eingabe](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Archivbeispiele**
-* [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Eingabe: Gesten und Manipulationen mit GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
+* [Handle pointer input](handle-pointer-input.md)
+* [Identify input devices](identify-input-devices.md)
 
- 
+**Samples**
+* [Ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Simple ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Complex ink sample](http://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Basic input sample](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Low latency input sample](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [User interaction mode sample](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Focus visuals sample](http://go.microsoft.com/fwlink/p/?LinkID=619895)
 
+**Archive Samples**
+* [Input: Device capabilities sample](http://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Input: XAML user input events sample](http://go.microsoft.com/fwlink/p/?linkid=226855)
+* [XAML scrolling, panning, and zooming sample](http://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Input: Gestures and manipulations with GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+ 
 
-
-
+ 
 
 
-<!--HONumber=Mar16_HO1-->
 
 

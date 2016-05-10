@@ -1,48 +1,49 @@
 ---
-title: Starten der Standard-App für eine Datei
-description: Erfahren Sie, wie Sie die Standard-App für eine Datei starten.
+author: mcleblanc
+title: Launch the default app for a file
+description: Learn how to launch the default app for a file.
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
 ---
 
-# Starten der Standard-App für eine Datei
+# Launch the default app for a file
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**Wichtige APIs**
+**Important APIs**
 
 -   [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)
 
-Hier erfahren Sie, wie Sie die Standard-App für eine Datei starten. Viele Apps müssen mit Dateien arbeiten, die sie nicht selbst behandeln können. E-Mail-Apps erhalten beispielsweise eine Vielzahl von Dateitypen und müssen über eine Möglichkeit verfügen, diese Dateien mit ihren Standardhandlern zu starten. In den folgenden Schritten erfahren Sie, wie Sie den Standardhandler für eine Datei, die Ihre App nicht selbst behandeln kann, mithilfe der [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801)-API starten.
+Learn how to launch the default app for a file. Many apps need to work with files that they can't handle themselves. For example, e-mail apps receive a variety of file types and need a way to launch these files in their default handlers. These steps show how to use the [**Windows.System.Launcher**](https://msdn.microsoft.com/library/windows/apps/br241801) API to launch the default handler for a file that your app can't handle itself.
 
-## Abrufen des Dateiobjekts
-
-
-Rufen Sie zunächst ein [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt für die Datei ab.
-
-Wenn die Datei im Paket für die App enthalten ist, können Sie die [**Package.InstalledLocation**](https://msdn.microsoft.com/library/windows/apps/br224681)-Eigenschaft verwenden, um ein [**Windows.Storage.StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Objekt abzurufen, und die [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)-Methode, um das [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt abzurufen.
-
-Falls sich die Datei in einem bekannten Ordner befindet, können Sie die Eigenschaften der [**Windows.Storage.KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151)-Klasse verwenden, um ein [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Objekt abzurufen, und die [**GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)-Methode, um das [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt abzurufen.
-
-## Starten der Datei
+## Get the file object
 
 
-Windows stellt mehrere verschiedene Optionen zum Starten des Standardhandlers für eine Datei bereit. Diese Optionen werden in diesem Diagramm und den anschließenden Abschnitten ausführlich beschrieben.
+First, get a [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object for the file.
 
-| Option | Methode | Beschreibung |
+If the file is included in the package for your app, you can use the [**Package.InstalledLocation**](https://msdn.microsoft.com/library/windows/apps/br224681) property to get a [**Windows.Storage.StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) object and the [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) method to get the [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object.
+
+If the file is in a known folder, you can use the properties of the [**Windows.Storage.KnownFolders**](https://msdn.microsoft.com/library/windows/apps/br227151) class to get a [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) and the [**GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) method to get the [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) object.
+
+## Launch the file
+
+
+Windows provides several different options for launching the default handler for a file. These options are described in this chart and in the sections that follow.
+
+| Option | Method | Description |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Standardstart | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | Starten Sie die angegebene Datei mit dem Standardhandler. |
-| Starten über „Öffnen mit“ | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Starten Sie die angegebene Datei und lassen Sie den Benutzer den Handler über das Dialogfeld „Öffnen mit“ auswählen. |
-| Start mit einem empfohlenen App-Fallback | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Starten Sie die angegebene Datei mit dem Standardhandler. Wenn kein Handler im System installiert ist, empfehlen Sie dem Benutzer eine App im Store. |
-| Starten mit einer gewünschten verbleibenden Ansicht | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) (nur Windows) | Starten Sie die angegebene Datei mit dem Standardhandler. Geben Sie an, wie lange die App nach dem Start auf dem Bildschirm verbleiben soll. Fordern Sie zudem eine bestimmte Fenstergröße an. |
+| Default launch | [**LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) | Launch the specified file with the default handler. |
+| Open With launch | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Launch the specified file letting the user pick the handler through the Open With dialog. |
+| Launch with a recommended app fallback | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) | Launch the specified file with the default handler. If no handler is installed on the system, recommend an app in the store to the user. |
+| Launch with a desired remaining view | [**LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) (Windows-only) | Launch the specified file with the default handler. Specify a preference to stay on screen after the launch and request a specific window size. |
 |  |  |  |
-|  |  | **Mobilgerätfamilie: **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) wird für die Mobilgerätefamilie nicht unterstützt. |
+|  |  | **Mobile device family:  **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) isn't supported on the mobile device family. |
 
- 
-### Standardstart
+ 
+### Default launch
 
-Rufen Sie die [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471)-Methode auf, um die Standard-App zu starten. In diesem Beispiel wird die [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272)-Methode verwendet, um eine im App-Paket enthaltene Bilddatei zu starten.
+Call the [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https://msdn.microsoft.com/library/windows/apps/hh701471) method to launch the default app. This example uses the [**Windows.Storage.StorageFolder.GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) method to launch an image file, test.png, that is included in the app package.
 
 
 > [!div class="tabbedCodeSnippets"]
@@ -126,13 +127,13 @@ Rufen Sie die [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)**](https:
 > }
 > ```
 
-### Starten über „Öffnen mit“
+### Open With launch
 
-Rufen Sie die [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465)-Methode mit dem [**LauncherOptions.DisplayApplicationPicker**](https://msdn.microsoft.com/library/windows/apps/hh701438)-Wert **true** auf, um die App zu starten, die der Benutzer im Dialogfeld **Öffnen mit** auswählt.
+Call the [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) method with [**LauncherOptions.DisplayApplicationPicker**](https://msdn.microsoft.com/library/windows/apps/hh701438) set to **true** to launch the app that the user selects from the **Open With** dialog box.
 
-Mit dem Dialogfeld **Öffnen mit** können Sie dem Benutzer das Auswählen einer anderen App als der Standard-App für einen bestimmten Dateityp ermöglichen. Angenommen, Ihre App ermöglicht dem Benutzer das Aufrufen einer Bilddatei. In diesem Fall ist der Standardhandler wahrscheinlich eine Anzeige-App. Nun kann es jedoch sein, dass der Benutzer die Datei nicht nur anzeigen, sondern auch bearbeiten möchte. Mit der Option **Öffnen mit** und einem alternativen Befehl in der **AppBar** oder in einem Kontextmenü können Sie dem Benutzer das Aufrufen des Dialogfelds **Öffnen mit** und das Auswählen einer entsprechenden Editor-App ermöglichen.
+We recommend that you use the **Open With** dialog box when the user may want to select an app other than the default for a particular file. For example, if your app allows the user to launch an image file, the default handler will likely be a viewer app. In some cases, the user may want to edit the image instead of viewing it. Use the **Open With** option along with an alternative command in the **AppBar** or in a context menu to let the user bring up the **Open With** dialog and select the editor app in these types of scenarios.
 
-![Das Dialogfeld „Öffnen mit“ für den Start einer PNG-Datei. Das Dialogfeld enthält ein Kontrollkästchen, in dem angegeben wird, ob die Benutzerauswahl für alle PNG-Dateien oder nur für diese PNG-Datei verwendet werden soll. Das Dialogfeld enthält vier App-Optionen für den Start der Datei und einen Link „Weitere Optionen“.](images/checkboxopenwithdialog.png)
+![the open with dialog for a .png file launch. the dialog contains a checkbox which specifies if the user’s choice should be used for all .png files or just this one .png file. the dialog contains four app options for launching the file and a ‘more options’ link.](images/checkboxopenwithdialog.png)
 
 > [!div class="tabbedCodeSnippets"]
 > ```vb
@@ -228,13 +229,13 @@ Mit dem Dialogfeld **Öffnen mit** können Sie dem Benutzer das Auswählen einer
 > }
 > ```
 
-**Start mit einem empfohlenen App-Fallback**
+**Launch with a recommended app fallback**
 
-Es kann jedoch sein, dass der Benutzer nicht über die erforderliche App zum Bearbeiten des aufgerufenen Dateityps verfügt. In diesen Fällen bietet Windows standardmäßig einen Link an, mit dessen Hilfe Benutzer im Store nach einer geeigneten App suchen können. Wenn Sie dem Benutzer eine bestimmte App für dieses spezifische Szenario empfehlen möchten, können Sie die Empfehlung zusammen mit der Datei weitergeben, die gestartet wird. Rufen Sie dazu die [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465)-Methode mit [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482) (festgelegt auf den Paketfamiliennamen der empfohlenen App im Store) auf. Legen Sie anschließend [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481) auf den Namen dieser App fest. Diese Informationen werden von Windows verwendet, um die allgemeine Option zum Suchen einer App im Store durch die spezifische Option zum Verwenden der empfohlenen App im Store zu ersetzen.
+In some cases the user may not have an app installed to handle the file that you are launching. By default, Windows will handle these cases by providing the user with a link to search for an appropriate app on the store. If you would like to give the user a specific recommendation for which app to acquire in this scenario, you may do so by passing that recommendation along with the file that you are launching. To do this, call the [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)**](https://msdn.microsoft.com/library/windows/apps/hh701465) method with [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/hh965482) set to the package family name of the app in the Store that you want to recommend. Then, set the [**LauncherOptions.PreferredApplicationDisplayName**](https://msdn.microsoft.com/library/windows/apps/hh965481) to the name of that app. Windows will use this information to replace the general option to search for an app in the store with a specific option to acquire the recommended app from the Store.
 
-> **Hinweis**  Wenn Sie eine App empfehlen möchten, müssen Sie beide Optionen festlegen. Eine Festlegung der einen ohne die andere führt zu einem Fehler.
+> **Note**  You must set both of these options to recommend an app. Setting one without the other will result in a failure.
 
-![Das Dialogfeld „Öffnen mit“ für den Start einer „.contoso“-Datei. Da auf dem Computer kein Handler für „.contoso“ installiert ist, enthält das Dialogfeld eine Option mit dem Store-Symbol und Text, der den Benutzer auf den richtigen Handler im Store verweist. Das Dialogfeld enthält auch einen Link „Weitere Optionen“.](images/howdoyouwanttoopen.png)
+![the open with dialog for a .contoso file launch. since .contoso does not have a handler installed on the machine the dialog contains an option with the store icon and text which points the user to the correct handler on the store. the dialog also contains a ‘more options’ link'.](images/howdoyouwanttoopen.png)
 
 
 > [!div class="tabbedCodeSnippets"]
@@ -340,13 +341,13 @@ Es kann jedoch sein, dass der Benutzer nicht über die erforderliche App zum Bea
 > }
 > ```
 
-### Starten mit einer gewünschten verbleibenden Ansicht (nur Windows)
+### Launch with a Desired Remaining View (Windows-only)
 
-Quell-Apps, die [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) aufrufen, können anfordern, nach dem Start einer Datei auf dem Bildschirm zu verbleiben. Standardmäßig wird von Windows versucht, den gesamten verfügbaren Speicher gleichmäßig zwischen der Quell- und der Ziel-App aufzuteilen, die die Datei verarbeitet. Quell-Apps können die Eigenschaft [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) verwenden. Hiermit geben sie dem Betriebssystem an, mehr oder weniger des verfügbaren Speicherplatzes für ihr App-Fenster zu verwenden. **DesiredRemainingView** kann auch verwendet werden, um anzugeben, dass die Quell-App nach dem Start der Datei nicht auf dem Bildschirm verbleiben muss und vollständig durch die Ziel-App ersetzt werden kann. Mit dieser Eigenschaft wird nur die bevorzugte Fenstergröße der aufrufenden App angegeben. Es wird nicht das Verhalten anderer Apps angegeben, die ggf. zur gleichen Zeit auf dem Bildschirm angezeigt werden.
+Source apps that call [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461) can request that they remain on screen after a file launch. By default, Windows attempts to share all available space equally between the source app and the target app that handles the file. Source apps can use the [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) property to indicate to the operating system that they prefer their app window to take up more or less of the available space. **DesiredRemainingView** can also be used to indicate that the source app does not need to remain on screen after the file launch and can be completely replaced by the target app. This property only specifies the preferred window size of the calling app. It doesn't specify the behavior of other apps that may happen to also be on screen at the same time.
 
-> **Hinweis**  Windows bestimmt die endgültige Fenstergröße einer Quell-App anhand zahlreicher Faktoren (z. B. Einstellung der Quell-App, Anzahl der Apps auf dem Bildschirm, Bildschirmausrichtung usw.). Das Festlegen von [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) garantiert kein bestimmtes Fensterverhalten für die Quell-App.
+> **Note**  Windows takes into account multiple different factors when it determines the source app's final window size, for example, the preference of the source app, the number of apps on screen, the screen orientation, and so on. By setting [**DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314), you aren't guaranteed a specific windowing behavior for the source app.
 
-**Mobilgerätfamilie: **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) wird für die Mobilgerätefamilie nicht unterstützt.
+**Mobile device family:  **[**LauncherOptions.DesiredRemainingView**](https://msdn.microsoft.com/library/windows/apps/dn298314) isn't supported on the mobile device family.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cpp
@@ -416,44 +417,39 @@ Quell-Apps, die [**LaunchFileAsync**](https://msdn.microsoft.com/library/windows
 > }
 > ```
 
-## Hinweise
+## Remarks
 
-Die gestartete App kann nicht von Ihrer App ausgewählt werden. Der Benutzer entscheidet, welche App gestartet wird. Der Benutzer kann eine UWP-App oder eine CWP-App auswählen.
+Your app can't select the app that is launched. The user determines which app is launched. The user can select either a Universal Windows Platform (UWP) app or a Classic Windows Platform (CWP) app.
 
-Beim Starten einer Datei muss Ihre App im Vordergrund ausgeführt werden, d. h. sie muss für den Benutzer sichtbar sein. Durch diese Anforderung wird sichergestellt, dass der Benutzer zu jedem Zeitpunkt die Kontrolle behält. Verknüpfen Sie alle Dateistartvorgänge direkt mit der Benutzeroberfläche Ihrer App, um sicherzustellen, dass diese Anforderung erfüllt wird. Benutzer müssen wahrscheinlich immer eine Aktion ausführen, bevor eine Datei gestartet werden kann.
+When launching a file, your app must be the foreground app, that is, it must be visible to the user. This requirement helps ensure that the user remains in control. To meet this requirement, make sure that you tie all file launches directly to the UI of your app. Most likely, the user must always take some action to initiate a file launch.
 
-Dateitypen mit Code oder Skripts, die automatisch vom Betriebssystem ausgeführt werden (z. B. EXE-, MSI- oder JS-Dateien), können nicht gestartet werden. Diese Einschränkung schützt Benutzer vor der Ausführung von schädlichen Dateien, durch die das Betriebssystem verändert werden könnte. Mit dieser Methode können Sie Dateitypen mit Skripts starten, wenn das Skript dabei von der ausgeführten App isoliert wird, z. B. DOCX-Dateien. Apps wie Microsoft Word verhindern, dass das Betriebssystem durch DOCX-Dateien modifiziert wird.
+You can't launch file types that contain code or script if they are executed automatically by the operating system, such as, .exe, .msi, and .js files. This restriction protects users from potentially malicious files that could modify the operating system. You can use this method to launch file types that can contain script if they are executed by an app that isolates the script, such as, .docx files. Apps like Microsoft Word keep the script in .docx files from modifying the operating system.
 
-Wenn Sie versuchen, einen eingeschränkten Dateityp zu starten, schlägt der Start fehl, und Ihr Fehlerrückruf wird aufgerufen. Wenn Ihre App viele verschiedene Dateitypen behandelt und Sie erwarten, dass dieser Fehler auftritt, sollten Sie Benutzern eine Fallbackoption zur Verfügung stellen. Bieten Sie Benutzern z. B. die Möglichkeit, die Datei auf dem Desktop zu speichern und zu öffnen.
+If you try to launch a restricted file type, the launch will fail and your error callback will be invoked. If your app handles many different types of files and you expect that you will hit this error, we recommend that you provide a fallback experience to your user. For example, you could give the user an option to save the file to the desktop, and they could open it there.
 
-> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, hilft Ihnen die [archivierte Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.
+> **Note**  This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
-## Verwandte Themen
+ 
+## Related topics
 
 
-**Aufgaben**
+**Tasks**
 
-* [Starten der Standard-App für einen URI](launch-default-app.md)
-* [Behandeln der Dateiaktivierung](handle-file-activation.md)
+* [Launch the default app for a URI](launch-default-app.md)
+* [Handle file activation](handle-file-activation.md)
 
-**Richtlinien**
+**Guidelines**
 
-* [Richtlinien für Dateitypen und URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
+* [Guidelines for file types and URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
-**Referenz**
+**Reference**
 
 * [**Windows.Storage.StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)
 * [**Windows.System.Launcher.LaunchFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh701461)
 
- 
+ 
 
- 
+ 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
 
 

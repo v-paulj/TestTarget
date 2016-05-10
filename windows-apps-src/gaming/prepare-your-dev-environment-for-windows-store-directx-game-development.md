@@ -1,23 +1,24 @@
 ---
-title: Projektvorlagen und Tools für Spiele
-description: Hier erfahren Sie, was erforderlich ist, um mit dem Programmieren von DirectX-Spielen für die Universelle Windows-Plattform (UWP) beginnen zu können.
+author: mtoepke
+title: Project templates and tools for games
+description: Shows you what you need to start programming DirectX games for the Universal Windows Platform (UWP).
 ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
 ---
 
-# Projektvorlagen und Tools für Spiele
+# Project templates and tools for games
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Hier erfahren Sie, was erforderlich ist, um mit dem Programmieren von DirectX-Spielen für die Universelle Windows-Plattform (UWP) beginnen zu können.
+This topic shows you what you need to start programming DirectX games for the Universal Windows Platform (UWP).
 
-Zunächst benötigen Sie Visual Studio.
+First, you need Visual Studio.
 
-## Herunterladen von Visual Studio
+## Get Visual Studio
 
 
-[Laden Sie Microsoft Visual Studio 2015 herunter, und installieren Sie die Anwendung](https://www.visualstudio.com/vs-2015-product-editions).
+[Download and install Microsoft Visual Studio 2015](https://www.visualstudio.com/vs-2015-product-editions).
 
 <table>
 <colgroup>
@@ -26,55 +27,50 @@ Zunächst benötigen Sie Visual Studio.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Thema</th>
-<th align="left">Beschreibung</th>
+<th align="left">Topic</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><p>[DirectX game project templates](user-interface.md)</p></td>
-<td align="left"><p>Hier erhalten Sie Informationen zu den Vorlagen zum Erstellen eines UWP- und DirectX-Spiels.</p></td>
+<td align="left"><p>Learn about the templates for creating a UWP and DirectX game.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Visual Studio tools for game programming](set-up-visual-studio-for-game-development.md)</p></td>
-<td align="left"><p>Sie erhalten eine Übersicht über spezielle DirectX-Tools, die unter Visual Studio verfügbar sind.</p></td>
+<td align="left"><p>An overview of DirectX specific tools available in Visual Studio.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Graphics diagnostics tools](use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md)</p></td>
-<td align="left"><p>Hier erfahren Sie, wie Sie in Visual Studio die Grafikdiagnosefeatures, einschließlich Grafikdebugging, Analyse von Grafikframes und GPU-Verwendung, abrufen und verwenden.</p></td>
+<td align="left"><p>Learn how to get and use the graphics diagnostics features including Graphics Debugging, Graphics Frame Analysis, and GPU Usage in Visual Studio.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
-## Nächste Schritte
-
-
-Wenn Sie ein vorhandenes Spiel portieren, sind die folgenden Themen hilfreich:
-
--   [Portieren von OpenGL ES 2.0 zu DirectX 11](port-from-opengl-es-2-0-to-directx-11-1.md)
--   [Portieren von DirectX 9 zu UWP](porting-your-directx-9-game-to-windows-store.md)
-
-Wenn Sie ein neues DirectX-Spiel erstellen, sind die folgenden Themen hilfreich.
-
--   [Erstellen eines einfachen UWP-Spiels mit DirectX](tutorial--create-your-first-metro-style-directx-game.md)
--   [Entwickeln von Marble Maze, einem UWP-Spiel in C++ und DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
-
-> **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
- 
-
- 
+## Next steps
 
 
+If you are porting an existing game, see the following topics.
+
+-   [Port from OpenGL ES 2.0 to DirectX 11](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [Port from DirectX 9 to UWP](porting-your-directx-9-game-to-windows-store.md)
+
+If you are creating a new DirectX game, see the following topics.
+
+-   [Create a simple UWP game with DirectX](tutorial--create-your-first-metro-style-directx-game.md)
+-   [Developing Marble Maze, a Universal Windows Platform game in C++ and DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+
+> **Note**  
+This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps. If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+ 
+
+ 
+
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

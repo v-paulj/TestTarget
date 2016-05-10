@@ -1,15 +1,16 @@
 ---
-title: Exemplarische Vorgehensweise: Implementieren von Schattenvolumen mit Tiefenpuffern in Direct3D 11
-description: In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie Schattenvolumen mit Tiefenkarten unter Verwendung von Direct3D 11 auf Geräten aller Direct3D-Funktionsebenen rendern.
+author: mtoepke
+title: Walkthrough-- Implement shadow volumes using depth buffers in Direct3D 11
+description: This walkthrough demonstrates how to render shadow volumes using depth maps, using Direct3D 11 on devices of all Direct3D feature levels.
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
 ---
 
-# Exemplarische Vorgehensweise: Implementieren von Schattenvolumen mit Tiefenpuffern in Direct3D 11
+# Walkthrough: Implement shadow volumes using depth buffers in Direct3D 11
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie Schattenvolumen mit Tiefenkarten unter Verwendung von Direct3D 11 auf Geräten aller Direct3D-Funktionsebenen rendern.
+This walkthrough demonstrates how to render shadow volumes using depth maps, using Direct3D 11 on devices of all Direct3D feature levels.
 ## 
 <table>
 <colgroup>
@@ -18,72 +19,67 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie Schattenvolumen mi
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Thema</th>
-<th align="left">Beschreibung</th>
+<th align="left">Topic</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Create depth buffer device resources](create-depth-buffer-resource--view--and-sampler-state.md)</p></td>
-<td align="left"><p>Hier erfahren Sie, wie Sie die zum Unterstützen von Tiefentests für Schattenvolumen erforderlichen Direct3D-Geräteressourcen erstellen.</p></td>
+<td align="left"><p>Learn how to create the Direct3D device resources necessary to support depth testing for shadow volumes.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Render the shadow map to the depth buffer](render-the-shadow-map-to-the-depth-buffer.md)</p></td>
-<td align="left"><p>Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine zweidimensionale Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird.</p></td>
+<td align="left"><p>Render from the point of view of the light to create a two-dimensional depth map representing the shadow volume.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Render the scene with depth testing](render-the-scene-with-depth-testing.md)</p></td>
-<td align="left"><p>Erstellen Sie einen Schatteneffekt, indem Sie dem Vertex-Shader (bzw. Geometry-Shader) und dem Pixelshader einen Tiefentest hinzufügen.</p></td>
+<td align="left"><p>Create a shadow effect by adding depth testing to your vertex (or geometry) shader and your pixel shader.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Support shadow maps on a range of hardware](target-a-range-of-hardware.md)</p></td>
-<td align="left"><p>Rendern Sie Schatten in noch besserer Qualität auf schnelleren Geräten und schnellere Schatten auf weniger leistungsfähigen Geräten.</p></td>
+<td align="left"><p>Render higher-fidelity shadows on faster devices and faster shadows on less powerful devices.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
-## Schattenabbildung – Portieren von Direct3D 9-Desktop-Apps
-
-
-In Windows 8 wurden Featureebene 9\_1 und 9\_3 Funktionen für den Tiefenvergleich hinzugefügt. Jetzt können Sie Renderingcode mit Schattenvolumen zu DirectX 11 migrieren. Der Direct3D 11-Renderer ist abwärtskompatibel mit Geräten der Featureebene 9. In dieser exemplarischen Vorgehensweise zeigen wir, wie herkömmliche Schattenvolumen mit Tiefentests in Direct3D 11-Apps oder -Spielen implementiert werden können. Der Code umfasst die folgenden Prozesse:
-
-1.  Erstellen von Direct3D-Geräteressourcen für die Schattenabbildung
-2.  Hinzufügen eines Renderingdurchgangs zum Erstellen der Tiefenkarte
-3.  Hinzufügen von Tiefentests zum Hauptrenderingdurchgang
-4.  Implementieren des erforderlichen Shadercodes
-5.  Optionen für schnelles Rendering auf kompatibler Hardware
-
-Nach Abschluss dieser exemplarischen Vorgehensweise wissen Sie, wie Sie eine einfache kompatible Schattenvolumentechnik in Direct3D 11 implementieren, die mit Funktionsebene 9\_1 und höher kompatibel ist.
-
-## Voraussetzungen
+## Shadow mapping application to Direct3D 9 desktop porting
 
 
-Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die Entwicklung von Spielen für die universelle Windows-Plattform (UWP) und DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md) aus. Sie benötigen noch keine Vorlage, aber Microsoft Visual Studio 2015, um das Codebeispiel für diese exemplarische Vorgehensweise erstellen zu können.
+Windows 8 adde d depth comparison functionality to feature level 9\_1 and 9\_3. Now you can migrate rendering code with shadow volumes to DirectX 11, and the Direct3D 11 renderer will be downlevel compatible with feature level 9 devices. This walkthrough shows how any Direct3D 11 app or game can implement traditional shadow volumes using depth testing. The code covers the following process:
 
-## Verwandte Themen
+1.  Creating Direct3D device resources for shadow mapping.
+2.  Adding a rendering pass to create the depth map.
+3.  Adding depth testing to the main rendering pass.
+4.  Implementing the necessary shader code.
+5.  Options for fast rendering on downlevel hardware.
+
+Upon completing this walkthrough, you should be familiar with how to implement a basic compatible shadow volume technique in Direct3D 11 that's compatible with feature level 9\_1 and above.
+
+## Prerequisites
+
+
+You should [Prepare your dev environment for Universal Windows Platform (UWP) DirectX game development](prepare-your-dev-environment-for-windows-store-directx-game-development.md). You don't need a template yet, but you'll need Microsoft Visual Studio 2015 to build the code sample for this walkthrough.
+
+## Related topics
 
 
 **Direct3D**
 
-* [Schreiben von HLSL-Shadern in Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
-* [Erstellen eines neuen DirectX 11-Projekts für die UWP](user-interface.md)
+* [Writing HLSL Shaders in Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+* [Create a new DirectX 11 project for UWP](user-interface.md)
 
-**Technische Artikel zur Schattenabbildung**
+**Shadow mapping technical articles**
 
-* [Allgemeine Artikel zum Verbessern von Tiefenkarten für Schatten](https://msdn.microsoft.com/library/windows/desktop/ee416324)
-* [Überlappende Schattenkarten](https://msdn.microsoft.com/library/windows/desktop/ee416307)
+* [Common Techniques to Improve Shadow Depth Maps](https://msdn.microsoft.com/library/windows/desktop/ee416324)
+* [Cascaded Shadow Maps](https://msdn.microsoft.com/library/windows/desktop/ee416307)
 
- 
+ 
 
- 
-
-
+ 
 
 
-
-
-<!--HONumber=Mar16_HO1-->
 
 

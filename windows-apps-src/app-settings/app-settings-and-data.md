@@ -1,22 +1,23 @@
 ---
-Description: Dieser Abschnitt enthält Richtlinien für die Benutzeroberfläche für die Darstellung von App-Einstellungen und das Speichern dieser Einstellungen als App-Daten.
-title: App-Einstellungen und Daten
+author: mijacobs
+Description: This section contains user experience guidelines for presenting app settings and storing those settings as app data.
+title: App settings and data
 ms.assetid: E7F312F7-54D8-411F-8D92-92FBB95C2463
-label: App-Einstellungen und Daten
+label: App settings and data
 template: detail.hbs
 ---
 
-# App-Einstellungen und Daten
+# App settings and data
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Dieser Abschnitt enthält Richtlinien für die Benutzeroberfläche für die Darstellung von App-Einstellungen und das Speichern dieser Einstellungen als App-Daten.
 
-App-Einstellungen sind die vom Benutzer anpassbaren Teile Ihrer UWP-App (Universelle Windows-Plattform). Beispielsweise kann ein Benutzer in einer Newsreader-App angeben, welche neuen Quellen oder wie viele Spalten auf dem Bildschirm angezeigt werden sollen.
+This section contains user experience guidelines for presenting app settings and storing those settings as app data.
 
-App-Daten werden von der App selbst erstellt und verwaltet. Sie beinhalten den Laufzeitstatus, App-Einstellungen, Referenzinhalte (beispielsweise die Wörterbuchdefinitionen in einer Wörterbuch-App) und andere Einstellungen. App-Daten sind an die Existenz der App gebunden und nur für die jeweilige App von Bedeutung.
-## Inhalt dieses Abschnitts
+App settings are the user-customizable portions of your Universal Windows Platform (UWP) app. For example, a news reader app might let the user specify which news sources to display or how many columns to display on the screen.
+
+App data is data that the app itself creates and manages. It includes runtime state, app settings, reference content (such as the dictionary definitions in a dictionary app), and other settings. App data is tied to the existence of the app and is only meaningful to that app.
+## In this section
 <table>
 <colgroup>
 <col width="50%" />
@@ -24,26 +25,21 @@ App-Daten werden von der App selbst erstellt und verwaltet. Sie beinhalten den L
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Artikel</th>
-<th align="left">Beschreibung</th>
+<th align="left">Article</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Guidelines](guidelines-for-app-settings.md)</p></td>
-<td align="left"><p>Bewährte Methoden für das Erstellen und Anzeigen von App-Einstellungen.</p></td>
+<td align="left"><p>Best practices for creating and displaying app settings.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Store and retrieve app data](store-and-retrieve-app-data.md)</p></td>
-<td align="left"><p>Hier erfahren Sie, wie Sie lokale, Roaming- und temporäre App-Daten speichern und abrufen können.</p></td>
+<td align="left"><p>How to store and retrieve local, roaming, and temporary app data.</p></td>
 </tr>
 </tbody>
 </table>
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
 
 

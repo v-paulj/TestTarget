@@ -1,115 +1,115 @@
 ---
-title: Anleitung für Apps für die universelle Windows-Plattform (UWP)
-description: In dieser Anleitung erfahren Sie mehr über Apps für die universelle Windows-Plattform (UWP), die auf einer Vielzahl von Geräten ausgeführt werden können.
+author: martinekuan
+title: Guide to Universal Windows Platform (UWP) apps
+description: In this guide, learn about Universal Windows Platform (UWP) apps that can run across a wide variety of devices.
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 ---
 
-# Anleitung für Apps für die universelle Windows-Plattform (UWP)
+# Guide to Universal Windows Platform (UWP) apps
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-In dieser Anleitung wird Folgendes behandelt:
+In this guide, you'll learn about:
 
--   Informationen zu *Gerätefamilien* und dazu, wie Sie sich für eine Gerätefamilie entscheiden
--   Neue UI-Steuerelemente und Bereiche, mit denen Sie Ihre Benutzeroberfläche für verschiedenene Geräte-Formfaktoren anpassen können.
--   Informationen zum Verständnis und zur Steuerung der API-Oberfläche, die für Ihre App verfügbar ist.
+-   What a *device family* is, and how to decide which one to target.
+-   New UI controls and panels that allow you to adapt your UI to different device form factors.
+-   How to understand and control the API surface that is available to your app.
 
-Mit Windows 8 wurde die Windows-Runtime (WinRT) eingeführt – eine Weiterentwicklung des Windows-App-Modells. Sie war als allgemeine Anwendungsarchitektur vorgesehen.
+Windows 8 introduced the Windows Runtime (WinRT), which was an evolution of the Windows app model. It was intended to be a common application architecture.
 
-Als Windows Phone 8.1 verfügbar wurde, wurde die Windows-Runtime zwischen Windows Phone 8.1 und Windows ausgerichtet. Dadurch konnten Entwickler *universelle Windows 8-Apps* erstellen, die dank einer gemeinsamen Codebasis sowohl für Windows als auch Windows Phone geeignet sind.
+When Windows Phone 8.1 became available, the Windows Runtime was aligned between Windows Phone 8.1 and Windows. This enabled developers to create *Universal Windows 8 apps* that target both Windows and Windows Phone using a shared codebase.
 
-Die mit Windows 10 eingeführte universelle Windows-Plattform (UWP) führt die Weiterentwicklung des Windows-Runtime-Modells fort und integriert es in den einheitlichen Windows 10-Kern. Als Teil des Kerns bietet die UWP nun eine gemeinsame App-Plattform, die auf jedem Gerät mit Windows 10 verfügbar ist. Mit dieser Entwicklung können für die UWP bestimmte Apps nicht nur die WinRT-APIs aufrufen, die auf allen Geräten verfügbar sind, sondern auch APIs (einschließlich Win32- und .NET-APIs), die für die jeweilige Gerätefamilie spezifisch sind, auf der die App ausgeführt wird. Die UWP bietet eine garantierte Kern-API-Ebene auf allen Geräten. Dies bedeutet, dass Sie ein einzelnes App-Paket erstellen können, das auf einer Vielzahl von Geräten installiert werden kann. Und mit diesem einzelnen App-Paket bietet der Windows Store einen einheitlichen Vertriebskanal, um alle Gerätetypen zu erreichen, auf denen Ihre App ausgeführt werden kann.
+Windows 10 introduces the Universal Windows Platform (UWP), which further evolves the Windows Runtime model and brings it into the Windows 10 unified core. As part of the core, the UWP now provides a common app platform available on every device that runs Windows 10. With this evolution, apps that target the UWP can call not only the WinRT APIs that are common to all devices, but also APIs (including Win32 and .NET APIs) that are specific to the device family the app is running on. The UWP provides a guaranteed core API layer across devices. This means you can create a single app package that can be installed onto a wide range of devices. And, with that single app package, the Windows Store provides a unified distribution channel to reach all the device types your app can run on.
 
-![Universelle Windows-Apps können auf einer Vielzahl von Geräten ausgeführt werden, unterstützen die adaptive Benutzeroberfläche, natürliche Benutzereingaben, einen Store, ein Dev Center und Clouddienste. ](images/universalapps-overview.png)
+![Universal Windows Platform apps run on a variety of devices, support adaptive user interface, natural user input, one store, one dev center, and cloud services](images/universalapps-overview.png)
 
-Da Ihre UWP-App auf einer Vielzahl von Geräten mit verschiedenen Formfaktoren und Eingabemodalitäten ausgeführt werden kann, soll sie für alle Geräte geeignet sein und in der Lage sein, die einzigartigen Funktionen auf jedem Gerät zu entsperren. Geräte fügen ihren eigenen eindeutigen APIs zur garantierten API-Ebene hinzu. Sie können Code schreiben, um auf diese eindeutigen APIs bedingt zuzugreifen, damit Ihre App Features hervorhebt, die speziell für einen Gerätetyp bestimmt sind, und auf anderen Geräten anders dargestellt werden. Adaptive UI-Steuerelemente und neue Layoutbereiche unterstützen Sie bei der Gestaltung Ihrer UI für eine breite Palette von Bildschirmauflösungen.
+Because your UWP app runs on a wide variety of devices with different form factors and input modalities, you want it to be tailored to each device and be able to unlock the unique capabilities of each device. Devices add their own unique APIs to the guaranteed API layer. You can write code to access those unique APIs conditionally so that your app lights up features specific to one type of device while presenting a different experience on other devices. Adaptive UI controls and new layout panels help you to tailor your UI across a broad range of screen resolutions.
 
-## Gerätefamilien
-
-
-Windows 8.1- und Windows Phone 8.1-Apps sind auf ein bestimmtes Betriebssystem (Windows oder Windows Phone) ausgerichtet. Mit Windows 10 entwickeln Sie eine App nicht mehr für ein Betriebssystem. Stattdessen ist Ihre App für einzelne oder mehrere Gerätefamilien bestimmt. Eine Gerätefamilie identifiziert die APIs, Systemmerkmale und Verhaltensweisen, die Sie auf allen Geräten innerhalb der Gerätefamilie erwarten können. Sie bestimmt außerdem die Gerätegruppe, auf der Ihre App aus dem Store installiert werden kann. Hier finden Sie die Gerätefamilienhierarchie.
-
-![Gerätefamilien](images/devicefamilytree.png)
-
-Eine Gerätefamilie ist eine mit Name und Versionsnummer versehene API-Sammlung. Eine Gerätefamilie ist die Grundlage eines Betriebssystems. PCs führen das Desktop-Betriebssystem aus, es basiert auf der Desktopgerätefamilie. Smartphones, Tablets usw. führen das mobile Betriebssystem aus, das auf der Mobilgerätefamilie basiert. Und so weiter.
-
-Die universelle Gerätefamilie ist ein Sonderfall. Es ist nicht direkt die Grundlage für ein Betriebssystem. Stattdessen wird der Satz von APIs in der universellen Gerätefamilie von den untergeordneten Gerätefamilien geerbt. Die APIs der universellen Gerätefamilie sind daher garantiert in jedem Betriebssystem vorhanden und somit auf jedem Gerät.
-
-Jede untergeordnete Gerätefamilie fügt den geerbten APIs seine eigenen hinzu. Die resultierende Gesamtmenge der APIs in einer untergeordneten Gerätefamilie ist basierend auf der Gerätefamilie garantiert im Betriebssystem vorhanden und daher auf jedem Gerät, auf dem das Betriebssystem ausgeführt wird.
-
-Ein Vorteil des Gerätefamilien ist, dass Ihre App auf einzelnne oder auch allen einer Vielzahl von Geräten aus Smartphones, Tablets und Desktopcomputern bis hin zu Surface-Hubs und Xbox-Konsolen ausgeführt werden kann. Ihre App kann auch adaptiven Code nutzen, um Features eines Geräts dynamisch zu erkennen und zu verwenden, das außerhalb der universellen Gerätefamilie liegt.
-
-Die Entscheidung darüber, für welche Gerätefamilie (oder Familien) Ihrer App bestimmt ist, liegt bei Ihnen. Und diese Entscheidung wirkt sich folgendermaßen auf Ihre App aus. Sie bestimmt:
-
--   Den Satz von APIs, bei dem Ihre App davon ausgehen kann, dass sie bei ihrer Ausführung vorhanden sind (und deshalb frei aufgerufen werden können).
--   Den Satz von API-Aufrufen, die nur innerhalb der bedingten Anweisungen sicher sind.
--   Den Satz von Geräten, auf denen Ihre App aus dem Store installiert werden kann (und daher die Formfaktoren, die Sie berücksichtigen müssen).
-
-Es gibt zwei zentrale Konsequenzen einer Entscheidung für eine Gerätefamilie: die API-Oberfläche, die jederzeit von der App aufgerufen werden kann und die Anzahl der Geräte, die von der App erreicht werden können. Diese beiden Faktoren umfassen Nachteile und sind umgekehrt miteinander verknüpft. Eine UWP-App ist beispielsweise eine App, die speziell auf die universelle Gerätefamilie ausgerichtet ist und daher auf allen Geräten verfügbar ist. Eine App für die universelle Gerätefamilie kann das Vorhandensein von nur den APIs in der universellen Gerätefamilie vorausgesetzt werden (da sie darauf ausgerichtet ist). Andere APIs müssen bedingt aufgerufen werden. Außerdem muss eine entsprechende App eine hochgradig adaptive UI und umfassende Funktionen zur Eingabe enthalten, da sie auf einer Vielzahl von Geräten ausgeführt werden kann. Eine mobile Windows-App ist eine App, die speziell auf die Mobilgerätefamilie ausgerichtet ist, und für Geräte verfügbar ist, deren Betriebssystem auf der Mobilgerätefamilie basiert (einschließlich Smartphones, Tablets und ähnlichen Geräten). Eine App für die Mobilgerätefamilie kann von dem Vorhandensein aller APIS in der Mobilgerätefamilie ausgehen und die UI muss angemessen adaptiv sein. Eine App, die auf die IoT-Gerätefamilie ausgerichtet ist, kann nur auf IoT-Geräten installiert werden und es kann vom Vorhandensein aller APIs in der IoT-Gerätefamilie ausgegangen werden. Diese App kann hinsichtlich der Benutzeroberfläche und den Eingabefunktionen sehr speziell sein, da Sie wissen, dass Sie nur auf einem bestimmten Gerätetyp ausgeführt werden kann.
-
-Hier sind einige Überlegungen, die Sie bei der Entscheidung hinsichtlich der Ausrichtung der Gerätefamilie unterstützen:
-
-**Maximieren der Reichweite Ihrer App**
-
-Um die maximale Reichweite von Geräten mit Ihrer App zu erzielen, und damit sie auf so vielen Geräten wie möglich ausgeführt werden kann, wird Ihre App auf die universelle Gerätefamilie ausgerichtet. Auf diese Weise ist die App automatisch auf jede Gerätefamilie ausgerichtet, die auf universell basiert (im Diagramm alle untergeordneten Elemente der universellen). Das bedeutet, dass die App auf Grundlage der Gerätefamilien auf jedem Betriebssystem ausgeführt werden kann, und auf allen Geräten, auf denen diese Betriebssysteme ausgeführt werden. Die einzigen APIs, die garantiert auf all diesen Geräten verfügbar sind, ist die von der bestimmten Version der universellen Gerätefamilie definierte Gruppe, auf die Ihre App ausgerichtet ist. (In dieser Version ist das immer die Version 10.0.x.0.) Weitere Informationen dazu, wie eine App APIs außerhalb der Gerätefamilien-Zielversion aufrufen kann, finden Sie weiter unten in diesem Thema unter „Schreiben von Code“.
-
-**Begrenzen der App auf einen Gerätetyp**
-
-Möglicherweise möchten Sie nicht, dass Ihre App auf einer Vielzahl von Geräten ausgeführt werden kann; möglicherweise ist sie speziel auf einen Desktop-PC oder eine Xbox-Konsole ausgerichtet. In diesem Fall können Sie auswählen, dass Ihre App auf eine der untergeordneten Gerätefamilien ausgerichtet ist. Wenn Sie die App beispielsweise auf die Desktop-Gerätefamilie ausrichten, gehören zu den garantiert verfügbaren APIs für Ihre App die APIs, die von der universellen Gerätefamilie vererbt werden und zusätzlich die APIs, die speziell auf die Desktopgerätefamilie ausgerichtet sind.
-
-**Begrenzen der App auf eine Teilmenge aller möglichen Geräte**
-
-Statt die App auf die universelle Gerätefamilie oder auf eine der untergeordneten Gerätefamilie auszurichten, können Sie sie auf zwei (oder mehr) untergeordnete Gerätefamilien ausrichten. Die Ausrichtung auf Desktop- und Mobilgeräte ist für Ihre App möglicherweise sinnvoll. Oder Desktop und Xbox. Oder Desktop, Xbox und Surface-Hub.
-
-**Ausschließen der Unterstützung für eine bestimmte Version einer Gerätefamilie**
-
-In seltenen Fällen möchten Sie vielleicht, dass Ihre App auf allen Geräten außer auf Geräten mit einer bestimmten Version einer bestimmten Gerätefamilie ausgeführt werden kann. Nehmen wir beispielsweise an, Ihre App ist auf Version 10.0.x.0 der universellen Gerätefamilie ausgerichtet. Wenn sich die Betriebssystemversion in Zukunft ändert, z. B. zu 10.0.x.2, können Sie zu diesem Zeitpunkt angeben, dass Ihre App auf allen Versionen bis auf 10.0.x.1 der Xbox ausgeführt werden soll, indem Sie Ihre App bei universell auf Version 10.0.x.0 und bei Xbox auf 10.0.x.1 ausrichten. Ihre App ist dann für die Gruppe von Gerätefamilienversionen innerhalb von Xbox 10.0.x.1 (einschließlich) und älteren Versionen nicht mehr verfügbar.
-
-Microsoft Visual Studio gibt in der Manifestdatei des App-Pakets standardmäßig **Windows.Universal** als Zielgerätefamilie an. Um im Store die Gerätefamilie(n) anzugeben, für die Ihre App angeboten wird, konfigurieren Sie das [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903)-Element in der Datei „Package.appxmanifest“ manuell.
-
-## UI und universelle Eingabe
+## Device families
 
 
-Eine UWP-App kann auf vielen verschiedenen Gerätetypen ausgeführt werden, die verschiedene Arten von Eingaben, Auflösungen, DPI-Dichte und andere eindeutige Merkmale aufweisen. Windows 10 bietet neue universelle Steuerelemente, Layoutbereiche und Tools, mit denen Sie die Benutzeroberfläche für die Geräte anpassen können, auf denen Ihre App wahrscheinlich ausgeführt wird. Sie können beispielsweise die UI so anpassen, dass sie den Vorteil durch den Unterschied bei der Bildschirmauflösung nutzt, wenn Ihre App im Vergleich zu einem mobilen Gerät auf einem Desktopcomputer ausgeführt wird.
+Windows 8.1 and Windows Phone 8.1 apps target an operating system (OS): either Windows, or Windows Phone. With Windows 10 you no longer target an operating system but you instead target your app to one or more device families. A device family identifies the APIs, system characteristics, and behaviors that you can expect across devices within the device family. It also determines the set of devices on which your app can be installed from the Store. Here is the device family hierarchy.
 
-Einige Aspekte der App-UI Ihrer App werden automatisch auf allen Geräten angepasst. Steuerelemente wie Schaltflächen und Schieberegler passen sich automatisch bei allen Gerätefamilien und Eingabemethoden an. Das Design der Benutzererfahrung Ihrer App muss jedoch möglicherweise angepasst werden, je nachdem, auf welchem Gerät die App ausgeführt wird. Eine Foto-App sollte die UI beispielsweise anpassen, wenn sie auf einem kleinen, tragbaren Gerät ausgeführt wird, um sicherzustellen, dass sie optimal mit einer Hand bedient werden kann. Wenn die Foto-App auf einem Desktopcomputer ausgeführt wird, sollte sich die Benutzeroberfläche anpassen, um die zusätzliche Bildschirmfläche zu nutzen.
+![device families](images/devicefamilytree.png)
 
-Windows unterstützt Sie mit folgenden Features, Ihre UI auf mehrere Geräte auszurichten:
+A device family is a set of APIs collected together and given a name and a version number. A device family is the foundation of an OS. PCs run the desktop OS, which is based on the desktop device family. Phones and tablets, etc., run the mobile OS, which is based on the mobile device family. And so on.
 
--   Universelle Steuerelemente und Layoutbereiche können Sie bei der Optimierung Ihrer UI für die Bildschirmauflösung des Geräts unterstützen
--   Mit der allgemeinen Eingabebehandlung können Sie Benutzereingaben per Toucheingabe, Stift, Maus, Tastatur oder Controller (Microsoft Xbox-Controller oder Ähnliches) erhalten.
--   Tools können Sie bei dem Entwerfen der UI unterstützen, sodass sie sich an verschiedene Bildschirmauflösungen anpasst
--   Die adaptive Skalierung passt die Auflösung und DPI-Unterschiede auf allen Geräten an
+The universal device family is special. It is not, directly, the foundation of any OS. Instead, the set of APIs in the universal device family is inherited by child device families. The universal device family APIs are thus guaranteed to be present in every OS and consequently on every device.
 
-### Universelle Steuerelemente und Layoutbereiche
+Each child device family adds its own APIs to the ones it inherits. The resulting union of APIs in a child device family is guaranteed to be present in the OS based on that device family, and consequently on every device running that OS.
 
-Windows 10 umfasst neue Steuerelemente – beispielsweise den Kalender und die geteilte Ansicht. Das Pivot-Steuerelement, das zuvor nur für Windows Phone verfügbar war, ist jetzt auch für die universelle Gerätefamilie verfügbar.
+One benefit of device families is that your app can run on any, or even all, of a variety of devices from phones, tablets, and desktop computers up to Surface Hubs and Xbox consoles. Your app can also use adaptive code to dynamically detect and use features of a device that are outside of the universal device family.
 
-Steuerelemente wurden aktualisiert, damit sie auf größeren Bildschirmen gut funktionieren, sich auf Grundlage der verfügbaren Bildschirmpixel auf dem Gerät selbst anpassen und gut mit mehreren Arten von Eingaben, wie z. B. Tastatur, Maus, Toucheingabe, Stift und Controller, z. B. Xbox-Controller gut funktionieren.
+The decision about which device family (or families) your app will target is yours to make. And that decision impacts your app in these important ways. It determines:
 
-Möglicherweise stellen Sie fest, dass Sie Ihr gesamtes UI-Layout auf Grundlage der Bildschirmauflösung des Geräts anpassen müssen, auf dem Ihre App ausgeführt wird. Eine auf einem Desktopcomputer ausgeführte Kommunikations-App kann beispielsweise eine Bild-im-Bild-Ansicht des Anrufers sowie Steuerelemente enthalten, die ideal für die Mauseingabe geeignet sind:
+-   The set of APIs that your app can assume to be present when it runs (and can therefore call freely).
+-   The set of API calls that are safe only inside conditional statements.
+-   The set of devices on which your app can be installed from the Store (and consequently the form factors that you need to consider).
 
-![Desktopbenutzeroberfläche einer Kommunikations-App](images/adaptiveux-desktop.png)
+There are two main consequences of making a device family choice: the API surface that can be called unconditionally by the app, and the number of devices the app can reach. These two factors involve tradeoffs and are inversely related. For example, a UWP app is an app that specifically targets the universal device family, and consequently is available to all devices. An app that targets the universal device family can assume the presence of only the APIs in the universal device family (because that's what it targets). Other APIs must be called conditionally. Also, such an app must have a highly adaptive UI and comprehensive input capabilities because it can run on a wide variety of devices. A Windows mobile app is an app that specifically targets the mobile device family, and is available to devices whose OS is based on the mobile device family (which includes phones, tablets, and similar devices). A mobile device family app can assume the presence of all APIs in the mobile device family, and its UI has to be moderately adaptive. An app that targets the IoT device family can be installed only on IoT devices and can assume the presence of all APIs in the IoT device family. That app can be very specialized in its UI and input capabilities because you know that it will run only on a specific type of device.
 
-Wenn die App jedoch auf einem Smartphone ausgeführt wird, wird die Bild-im-Bild-Ansicht möglicherweise entfernt, da weniger Bildschirmfläche verfügbar ist. Dafür wird die Anrufschaltfläche vergrößert, um die Bedienung mit einer Hand zu erleichtern:
+Here are some considerations to help you decide which device family to target:
 
-![Smartphone-Benutzeroberfläche einer Kommunikations-App](images/adaptiveux-phone.png)
+**Maximizing your app's reach**
 
-Damit Sie das Layout der gesamten Benutzeroberfläche abhängig vom verfügbaren Platz auf dem Bildschirm leichter anpassen können, führt Windows 10 adaptive Bereiche und Entwurfszustände ein.
+To reach the maximum range of devices with your app, and to have it run on as many kinds of devices as possible, your app will target the universal device family. By doing so, the app automatically targets every device family that's based on universal (in the diagram, all the children of universal). That means that the app runs on every OS based on those device families, and on all the devices that run those operating systems. The only APIs that are guaranteed to be available on all those devices is the set defined by the particular version of the universal device family that you target. (With this release, that version is always 10.0.x.0.) To find out how an app can call APIs outside of its target device family version, see Writing code later in this topic.
 
-### Entwerfen einer adaptiver UI mit adaptiven Bereichen
+**Limiting your app to one kind of device**
 
-Layoutbereiche steuern Größe und Position untergeordneter Elemente abhängig vom verfügbaren Platz. [
-            **StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) ordnet seine untergeordneten Elemente beispielsweise nacheinander an (horizontal oder vertikal). [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) ist mit einem CSS-Raster vergleichbar, das untergeordnete Elemente in Zellen platziert.
+You may not want your app to run on a wide range of devices; perhaps it's specialized for, say, a desktop PC or for an Xbox console. In that case you can choose to target your app at one of the child device families. For example, if you target the desktop device family, the APIs guaranteed to be available to your app include the APIs inherited from the universal device family plus the APIs that are particular to the desktop device family.
 
-Das neue [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/dn879546)-Element implementiert einen Layoutstil, der durch die Beziehungen zwischen den untergeordneten Elementen definiert ist. Er dient zum Erstellen von App-Layouts, die sich andere Bildschirmauflösungen anpassen können. Das **RelativePanel**-Element vereinfacht den Prozess der Neuanordnung von Elementen, indem es die Beziehungen zwischen Elementen definiert, sodass Sie eine dynamischere Benutzeroberfläche ohne geschachtelte Layouts entwickeln können.
+**Limiting your app to a subset of all possible devices**
 
-Im folgenden Beispiel wird **blueButton** unabhängig von Änderungen bei Ausrichtung oder Layout rechts von **textBox1** angezeigt. **orangeButton** erscheint direkt darunter und wird an **blueButton** ausgerichtet. Dies ist selbst dann der Fall, wenn sich bei der Eingabe von Text die Breite von **textBox1** ändert. Zuvor waren dafür Zeilen und Spalten in einem **Grid**-Element erforderlich. Nun kann dies mit deutlich geringerem Aufwand erreicht werden.
+Instead of targeting the universal device family, or targeting one of the child device families, you can instead target two (or more) child device families. Targeting desktop and mobile might make sense for your app. Or desktop and Xbox. Or desktop, Xbox and Surface Hub.
 
-![Beispiel für „RelativePanel“](images/relativepane-standalone.png)
+**Excluding support for a particular version of a device family**
 
-```XAML
+In rare cases you may want your app to run everywhere except on devices with a particular version of a particular device family. For example, let's say your app targets version 10.0.x.0 of the universal device family. When the operating system version changes in the future, say to 10.0.x.2, at that point you can specify that your app runs everywhere except version 10.0.x.1 of Xbox by targeting your app to 10.0.x.0 of universal and 10.0.x.1 of Xbox. Your app will then be unavailable to the set of device family versions within Xbox 10.0.x.1 (inclusive) and earlier.
+
+By default, Microsoft Visual Studio specifies **Windows.Universal** as the target device family in the app package manifest file. To specify the device family or device families that your app is offered to from within the Store, manually configure the [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903) element in your Package.appxmanifest file.
+
+## UI and universal input
+
+
+A UWP app can run on many different kinds of devices that have different forms of input, screen resolutions, DPI density, and other unique characteristics. Windows 10 provides new universal controls, layout panels, and tooling to help you adapt your UI to the devices your app may run on. For example, you can tailor the UI to take advantage of the difference in screen resolution when your app is running on a desktop computer versus on a mobile device.
+
+Some aspects of your app's UI will automatically adapt across devices. Controls such as buttons and sliders automatically adapt across device families and input modes. Your app's user-experience design, however, may need to adapt depending on the device the app is running on. For example, a photos app should adapt the UI when running on a small, hand-held device to ensure that usage is ideal for single-hand use. When the photos app is running on a desktop computer, the UI should adapt to take advantage of the additional screen space.
+
+Windows helps you target your UI to multiple devices with the following features:
+
+-   Universal controls and layout panels help you to optimize your UI for the screen resolution of the device
+-   Common input handling allows you to receive input through touch, a pen, a mouse, or a keyboard, or a controller such as a Microsoft Xbox controller
+-   Tooling helps you to design UI that can adapt to different screen resolutions
+-   Adaptive scaling adjusts to resolution and DPI differences across devices
+
+### Universal controls and layout panels
+
+Windows 10 includes new controls such as the calendar and split view. The pivot control, which was previously available only for Windows Phone, is also now available for the universal device family.
+
+Controls have been updated to work well on larger screens, adapt themselves based on the number of screen pixels available on the device, and work well with multiple types of input such as keyboard, mouse, touch, pen, and controllers such as the Xbox controller.
+
+You may find that you need to adapt your overall UI layout based on the screen resolution of the device your app will be running on. For example, a communication app running on the desktop may include a picture-in-picture of the caller and controls well suited to mouse input:
+
+![desktop communication app ui](images/adaptiveux-desktop.png)
+
+However, when the app runs on a phone, because there is less screen real-estate to work with, your app may eliminate the picture-in-picture view and make the call button larger to facilitate one-handed operation:
+
+![phone communication app ui](images/adaptiveux-phone.png)
+
+To help you adapt your overall UI layout based on the amount of available screen space,Windows 10 introduces adaptive panels and design states.
+
+### Design adaptive UI with adaptive panels
+
+Layout panels give sizes and positions to their children, depending on available space. For example, [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) orders its children sequentially (horizontally or vertically). [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) is like a CSS grid that places its children into cells.
+
+The new [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/dn879546) implements a style of layout that is defined by the relationships between its child elements. It's intended for use in creating app layouts that can adapt to changes in screen resolution. The **RelativePanel** eases the process of rearranging elements by defining relationships between elements, which allows you to build more dynamic UI without using nested layouts.
+
+In the following example, **blueButton** will appear to the right of **textBox1** regardless of changes in orientation or layout, and **orangeButton** will appear immediately below, and aligned with, **blueButton**—even as the width of **textBox1** changes as text is typed into it. It would previously have required rows and columns in a **Grid** to achieve this effect, but now it can be done using far less markup.
+
+![relativepanel example](images/relativepane-standalone.png)
+
+```XML
 <RelativePanel>
     <TextBox x:Name="textBox1" Text="textbox" Margin="5"/>
     <Button x:Name="blueButton" Margin="5" Background="LightBlue" Content="ButtonRight" RelativePanel.RightOf="textBox1"/>
@@ -117,23 +117,23 @@ Im folgenden Beispiel wird **blueButton** unabhängig von Änderungen bei Ausric
 </RelativePanel>
 ```
 
-### Verwenden visueller Zustandsauslöser für eine UI, die sich an die verfügbare Bildschirmfläche anpasst
+### Use visual state triggers to build UI that can adapt to available screen space
 
-Die Benutzeroberfläche muss ggf. an Änderungen der Fenstergröße angepasst werden. Mit adaptiven visuellen Zuständen können Sie den visuellen Zustand als Reaktion auf Größenänderungen des Fensters ändern.
+Your UI may need to adapt to changes in window size. Adaptive visual states allows you to change the visual state in response to changes in the size of the window.
 
-Zustandsauslöser definieren einen Schwellenwert, ab dem ein visueller Zustand aktiviert wird. Anschließend werden die passenden Layouteigenschaften für die Fenstergröße festgelegt, die die Zustandsänderung ausgelöst hat.
+StateTriggers define a threshold at which a visual state is activated, which then sets layout properties as appropriate for the window size that triggered the state change.
 
-Wenn die Breite des Fensters wie im folgenden Beispiel 720 Pixel oder mehr beträgt, wird der visuelle Zustand **wideView** ausgelöst. Dadurch wird der Bereich **Best-rated games** rechts neben dem Bereich **Top free games** angezeigt und am oberen Rand ausgerichtet.
+In the following example, when the window size is 720 pixels or more in width, the visual state named **wideView** is triggered, which then arranges the **Best-rated games** panel to appear to the right of, and aligned with the top of, the **Top free games** panel.
 
-![Beispiel für visuellen Zustandsauslöser. Breite Ansicht](images/relativepanel-wideview.png)
+![visual state trigger example. wide view](images/relativepanel-wideview.png)
 
-Wenn das Fenster kleiner als 720 Pixel ist, wird der visuelle Zustand **narrowView** ausgelöst, da die Voraussetzung für den **wideView**-Auslöser nicht mehr gegeben und er daher nicht mehr aktiv ist. Der visuelle Zustand **narrowView** positioniert den Bereich **Best-rated games** unten und richtet ihn linksbündig am Bereich **Top paid games** aus:
+When the window is less than 720 pixels, the **narrowView** visual state is triggered because the **wideView** trigger is no longer satisfied and so no longer in effect. The **narrowView** visual state positions the **Best-rated games** panel below, and aligned with the left of, the **Top paid games** panel:
 
-![Beispiel für visuellen Zustandsauslöser. Schmale Ansicht](images/relativepanel-narrowview.png)
+![visual state trigger example. narrow view](images/relativepanel-narrowview.png)
 
-Im Anschluss sehen Sie den XAML-Code für die oben beschriebenen visuellen Zustandsauslöser. Die Definition des Bereichs, auf den durch „`...`“ weiter unten verwiesen wird, wurde aus Platzgründen entfernt.
+Here is the XAML for the visual state triggers described above. The definition of the panels, alluded to by "`...`" below, has been removed for brevity.
 
-```XAML
+```XML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroup>
@@ -161,59 +161,59 @@ Im Anschluss sehen Sie den XAML-Code für die oben beschriebenen visuellen Zusta
 </Grid>
 ```
 
-### Tools
+### Tooling
 
-Standardmäßig möchten Sie die App wahrscheinlich auf die größtmögliche Gerätefamilie ausrichten. Wenn Sie bereit sind festzustellen, wie Ihre App und das Layout auf einem bestimmten Gerät aussieht, verwenden Sie die Geräte-Vorschauleiste in Visual Studio, um die UI auf einem kleinen oder mittleren Mobilgerät, einem PC oder einem großen Fernsehbildschirm in der Vorschau anzuzeigen. Auf diese Weise können Sie die adaptiven visuellen Zustände anpassen und testen:
+By default, you'll probably want to target the broadest possible device family. When you're ready to see how your app looks and lays out on a particular device, use the device preview toolbar in Visual Studio to preview your UI on a small or medium mobile device, on a PC, or on a large TV screen. That way you can tailor and test your adaptive visual states:
 
-![Geräte-Vorschauleiste in Visual Studio 2015](images/vs2015-device-preview-toolbar.png)
+![visual studio 2015 device preview toolbar](images/vs2015-device-preview-toolbar.png)
 
-Sie müssen nicht schon im Vorfeld im Detail entscheiden, welche Gerätetypen Sie unterstützen möchten. Sie können Ihrem Projekt auch später noch eine zusätzliche Gerätegröße hinzufügen.
+You don’t have to make a decision up front about every device type that you'll support. You can add an additional device size to your project later.
 
-### Adaptive Skalierung
+### Adaptive scaling
 
-Mit Windows 10 wird eine Weiterentwicklung des vorhandenen Skalierungsmodells eingeführt. Neben der Skalierung von Vektorinhalten gibt es einen einheitlichen Satz von Skalierungsfaktoren, der eine einheitliche Größe für UI-Elemente für eine Vielzahl von Bildschirmgrößen und -auflösungen bietet. Die Skalierungsfaktoren sind auch mit den Skalierungsfaktoren anderer Betriebssysteme, wie iOS und Android, kompatibel. Dies erleichtert die gemeinsame Nutzung von Ressourcen zwischen diesen Plattformen.
+Windows 10 introduces an evolution of the existing scaling model. In addition to scaling vector content, there is a unified set of scale factors that provides a consistent size for UI elements across a variety of screen sizes and display resolutions. The scale factors are also compatible with the scale factors of other operating systems such as iOS and Android. This makes it easier to share assets between these platforms.
 
-Die Auswahl der aus dem Store herunterzuladenden Ressourcen erfolgt zum Teil auf Grundlage des DPI-Werts eines Geräts. Nur die Ressourcen, die dem Gerät am besten entsprechen, werden heruntergeladen.
+The Store picks the assets to download based in part of the DPI of the device. Only the assets that best match the device are downloaded.
 
-### Allgemeine Eingabebehandlung
+### Common input handling
 
-Sie können eine universelle Windows-App mit universellen Steuerelementen erstellen, die verschiedenen Eingaben verarbeiten können, wie z. B. über die Maus, die Tastatur, Fingereingaben, über einen Stift und einen Controller (wie z. B. dem Xbox-Controller). Mit Freihandeingabe war bislang in der Regel die Eingabe mit einem Stift gemeint. Unter Windows 10 sind Freihandeingaben auf einigen Geräten per Toucheingabe oder mit anderen Zeigegeräten möglich. Die Freihandeingabe wird auf vielen Geräten unterstützt (einschließlich mobilen Geräten), und sie kann ganz einfach mit einigen wenigen Codezeilen eingebunden werden.
+You can build a Universal Windows app using universal controls that handle various inputs such as mouse, keyboard, touch, pen, and controller (such as the Xbox controller). Traditionally, inking has been associated only with pen input, but with Windows 10, you can ink with touch on some devices, and with any pointer input. Inking is supported on many devices (including mobile devices) and can easily be incorporated with a just few lines of code.
 
-Die folgenden APIs bieten Zugriff auf Eingaben:
+The following APIs provide access to input:
 
--   [**CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) ist eine neue API, mit der Sie Rohdateneingaben im Hauptthread oder in einem Hintergrundthread nutzen können.
--   [**PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) fasst unformatierte Touch-, Maus- und Stifteingaben zu einem einzelnen einheitlichen Satz von Schnittstellen und Ereignissen zusammen, die mit **CoreInput** im Hauptthread oder in einem Hintergrundthread genutzt werden können.
--   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) ist eine Geräte-API, die die Abfrage von Gerätefunktionen unterstützt, sodass Sie ermitteln können, welche Eingabemodalitäten auf dem Gerät verfügbar sind.
--   Das neue [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-XAML-Steuerelement und die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Windows-Runtime-APIs ermöglichen Ihnen den Zugriff auf Strichdaten.
+-   [**CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) is a new API that allows you to consume raw input on the main thread or a background thread.
+-   [**PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) unifies raw touch, mouse, and pen data into a single, consistent set of interfaces and events that can be consumed on the main thread or background thread by using **CoreInput.**
+-   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) is a device API that supports querying device capabilities so that you can determine what input modalities are available on the device.
+-   The new [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) XAML control and [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) Windows Runtime APIs allow you to access ink stroke data.
 
-## Schreiben von Code
+## Writing code
 
 
-Als Programmiersprachen für Ihr [Windows 10-Projekt in Visual Studio](https://msdn.microsoft.com/en-us/library/windows/apps/dn609832.aspx#target_win10) können Sie Visual C++, C#, Visual Basic und JavaScript verwenden. Bei Verwendung von Visual C++, C# und Visual Basic können Sie XAML für eine qualitativ hochwertige, systemeigene Benutzeroberfläche verwenden. Bei Verwendung von Visual C++ können Sie statt XAML, oder auch zusätzlich dazu, das Zeichnen mit DirectX wählen. Bei der Verwendung von JavaScript ist die Darstellungsschicht HTML, wobei es sich um einen plattformübergreifenden Webstandard handelt. Ein Großteil Ihres Codes und der Benutzeroberfläche ist universell und kann überall auf die gleiche Weise ausgeführt werden. Wenn Code jedoch speziell auf bestimmte Gerätefamilien und die Benutzeroberfläche auf bestimmte Formfaktoren zugeschnitten ist, können Sie adaptiven Code und adaptive UI verwenden. Betrachten wir nun diese verschiedenen Fälle.
+Your programming language options for your [Windows 10 project in Visual Studio](https://msdn.microsoft.com/en-us/library/windows/apps/dn609832.aspx#target_win10) include Visual C++, C#, Visual Basic, and JavaScript. For Visual C++, C#, and Visual Basic, you can use XAML for a full-fidelity, native UI experience. For Visual C++ you can choose to draw with DirectX either instead of or as well as using XAML. For JavaScript, your presentation layer will be HTML, and HTML is of course a cross-platform web standard. Much of your code and UI will be universal and it will run the same way everywhere. But for code tailored to particular device families, and for UI tailored to particular form factors, you'll have the option to use adaptive code and adaptive UI. Let's look at these different cases.
 
-**Aufrufen einer API, die von Ihrer Zielgerätefamilie implementiert wird**
+**Calling an API that's implemented by your target device family**
 
-Wenn Sie eine API aufrufen möchten, müssen Sie wissen, ob diese API auch von der Gerätefamilie implementiert wird, auf die sie ausgerichtet ist. Im Zweifelsfall können Sie dies in der API-Referenzdokumentation nachschlagen. Wenn Sie das entsprechende Thema öffnen und sich den Abschnitt mit den Anforderungen ansehen, können Sie ermitteln, welche Gerätefamilie die implementierende Gerätefamilie ist. Nehmen wir einmal an, dass die App auf Version 10.0.x.0 der universellen Gerätefamilie ausgelegt ist und Sie Member der [**Windows.UI.Core.SystemNavigationManager**](https://msdn.microsoft.com/library/windows/apps/dn893595)-Klasse aufrufen möchten. In diesem Beispiel ist die Gerätefamilie „Universal“. Es wird empfohlen, sich auch zu vergewissern, dass die Klassenmember, die Sie aufrufen möchten, ebenfalls innerhalb des Zielbereichs liegen. Dies ist hier der Fall. Daher wissen Sie in diesem Beispiel nun, dass die APIs garantiert auf jedem Gerät vorhanden sind, auf dem Ihre App installiert werden kann. Sie können die APIs daher in Ihrem Code wie gewohnt aufrufen.
+Whenever you want to call an API, you'll need to know whether the API is implemented by the device family that your app is targeting. If in doubt, you can look it up in the API reference documentation. If you open the relevant topic and look at the Requirements section, you'll see what the implementing device family is. Let's say that your app is targeting version 10.0.x.0 of the universal device family and you want to call members of the [**Windows.UI.Core.SystemNavigationManager**](https://msdn.microsoft.com/library/windows/apps/dn893595) class. In this example, the device family is "Universal". It's a good idea to further confirm that the class members that you want to call are also within your target, and in this case they are. So in this example, you now know that the APIs are guaranteed to be present on every device that your app can be installed on, and you can call the APIs in your code just like you normally would.
 
 ```csharp
     Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += TestView_BackRequested;
 ```
 
-Stellen Sie sich als ein weiteres Beispiel vor, dass die App auf die Version 10.0.x.0 der Xbox-Gerätefamilie ausgerichtet ist, und das Referenzthema für eine API, die Sie anrufen möchten, besagt, dass die API in Version 10.0.x.0 der Xbox-Gerätefamilie eingeführt wurde. In diesem Fall ist ebenfalls garantiert, dass die API auf jedem Gerät vorhanden ist, auf dem Ihre App installiert werden kann. Daher können Sie API in Ihrem Code auf die übliche Weise aufrufen.
+As another example, imagine that your app is targeting version 10.0.x.0 of the Xbox device family, and the reference topic for an API that you want to call says that the API was introduced in version 10.0.x.0 of the Xbox device family. In that case, again, the API is guaranteed to be present on every device that your app can be installed on. So you would be able to call that API in your code in the normal way.
 
-Beachten Sie, dass die IntelliSense-Funktion von Visual Studio APIs nur dann erkennen kann, wenn sie von der Gerätefamilie, auf die Ihre App ausgerichtet ist, oder von Erweiterungs-SDKs, auf die Sie verweisen, implementiert werden. Wenn Sie nicht auf Erweiterungs-SDKs verweisen, können Sie daher sicher sein, dass die in IntelliSense aufgeführten APIs in der Zielgerätefamilie vorhanden sein müssen, und dass Sie sie uneingeschränkt aufrufen können.
+Note that Visual Studio's IntelliSense will not recognize APIs unless they are implemented by your app's target device family or any extension SDKs that you have referenced. Consequently, if you haven't referenced any extension SDKs, you can be sure that any APIs that appear in IntelliSense must therefore be in your target device family and you can call them freely.
 
-**Aufrufen einer API, die von Ihrer Zielgerätefamilie NICHT implementiert wird**
+**Calling an API that's NOT implemented by your target device family**
 
-Es werden Fälle auftreten, in denen Sie eine API aufrufen möchten, die nicht in der Dokumentation zu Ihrer Zielgerätefamilie aufgeführt ist. In diesem Fall können Sie optional adaptiven Code schreiben, um die API aufzurufen.
+There will be cases when you want to call an API, but your target device family is not listed in the documentation. In that case you can opt to write adaptive code in order to call that API.
 
-**Schreiben von adaptivem Code mit der ApiInformation-Klasse**
+**Writing adaptive code with the ApiInformation class**
 
-Das Schreiben von adaptivem Code umfasst zwei Schritte. Als ersten Schritt müssen Sie die APIs, auf die Sie zugreifen möchten, für Ihr Projekt verfügbar machen. Fügen Sie hierzu einen Verweis auf das Erweiterungs-SDK hinzu, das die Gerätefamilie mit den APIs darstellt, die Sie bedingt aufrufen möchten. Weitere Informationen finden Sie unter [Erweiterungs-SDKs](../porting/w8x-to-uwp-porting-to-a-uwp-project.md#extension-sdks).
+There are two steps to write adaptive code. The first step is to make the APIs that you want to access available to your project. To do that, add a reference to the extension SDK that represents the device family that owns the APIs that you want to conditionally call. See [Extension SDKs](../porting/w8x-to-uwp-porting-to-a-uwp-project.md#extension-sdks).
 
-Anschließend müssen Sie die [**Windows.Foundation.Metadata.ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001)-Klasse in einer Bedingung in Ihrem Code verwenden, um zu testen, ob die aufzurufende API vorhanden ist. Diese Bedingung wird immer dort ausgewertet, wo Ihre App ausgeführt wird. Das Ergebnis ist aber nur dann „True“, wenn sie auf Geräten ausgeführt wird, auf denen die API vorhanden ist und aufgerufen werden kann.
+The second step is to use the [**Windows.Foundation.Metadata.ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001) class in a condition in your code to test for the presence of the API you want to call. This condition is evaluated wherever your app runs, but it evaluates to true only on devices where the API is present and therefore available to call.
 
-Wenn Sie nur einige wenige APIs aufrufen möchten, können Sie die [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/dn949016)-Methode auf diese Weise verwenden.
+If you want to call just a small number of APIs, you could use the [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/dn949016) method like this.
 
 ```csharp
     // Note: Cache the value instead of querying it more than once.
@@ -227,7 +227,7 @@ Wenn Sie nur einige wenige APIs aufrufen möchten, können Sie die [**ApiInforma
     }
 ```
 
-In diesem Fall können wir davon ausgehen, dass das Vorhandensein der [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557)-Klasse das Vorhandensein des [**CameraPressed**](https://msdn.microsoft.com/library/windows/apps/dn653805)-Ereignisses impliziert, da die Klasse und der Member über die gleichen Anforderungsinformationen verfügen. Mit der Zeit werden jedoch neue Member zu den bereits eingeführten Klassen hinzugefügt, und diese Member haben dann Versionsnummern mit dem Zusatz „eingeführt in“. In diesen Fällen können Sie mithilfe von Methoden wie **IsEventPresent**, **IsMethodPresent**, **IsPropertyPresent** und ähnlichen Methoden testen, ob die einzelnen Member vorhanden sind, anstatt **IsTypePresent** zu verwenden. Im Folgenden finden Sie ein Beispiel hierfür.
+In this case we can be confident that the presence of the [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557) class implies the presence of the [**CameraPressed**](https://msdn.microsoft.com/library/windows/apps/dn653805) event, because the class and the member have the same requirements info. But in time, new members will be added to already-introduced classes, and those members will have later "introduced in" version numbers. In such cases, instead of using **IsTypePresent**, you can test for the presence of individual members by using **IsEventPresent**, **IsMethodPresent**, **IsPropertyPresent**, and similar methods. Here's an example.
 
 ```csharp
     bool isHardwareButtons_CameraPressedAPIPresent =
@@ -235,7 +235,7 @@ In diesem Fall können wir davon ausgehen, dass das Vorhandensein der [**Hardwar
             ("Windows.Phone.UI.Input.HardwareButtons", "CameraPressed");
 ```
 
-Der Satz von APIs in einer Gerätefamilie wird in weitere Untereinheiten aufgeschlüsselt, die als „API-Verträge“ bezeichnet werden. Sie können die **ApiInformation.IsApiContractPresent**-Methode verwenden, um zu testen, ob ein API-Vertrag vorhanden ist. Dies ist hilfreich, wenn Sie das Vorhandensein einer großen Anzahl von APIs testen möchten, die alle in der gleichen Version eines API-Vertrags vorhanden sind.
+The set of APIs within a device family is further broken down into subdivisions known as API contracts. You can use the **ApiInformation.IsApiContractPresent** method to test for the presence of an API contract. This is useful if you want to test for the presence of a large number of APIs that all exist in the same version of an API contract.
 
 ```csharp
     bool isWindows_Devices_Scanners_ScannerDeviceContract_1_0Present =
@@ -243,51 +243,42 @@ Der Satz von APIs in einer Gerätefamilie wird in weitere Untereinheiten aufgesc
             ("Windows.Devices.Scanners.ScannerDeviceContract", 1, 0);
 ```
 
-**Win32-APIs auf der UWP**
+**Win32 APIs in the UWP**
 
-Eine UWP-App oder Komponente für Windows-Runtime, die in C++/CX geschrieben wurde, hat Zugriff auf die Win32 APIs, die Teil der universellen Windows-Plattform (UWP) sind. Diese Win32-APIs werden von allen Windows 10-Gerätefamilien implementiert. Verknüpfen Sie Ihre App mit „Windowsapp.lib“. „Windowsapp.lib“ ist eine übergeordnete Bibliothek, die Exporte für die UWP-APIs bereitstellt. Die Verknüpfung mit „Windowsapp.lib“ fügt Ihrer App DLL-Abhängigkeiten hinzu, die für alle Windows 10-Gerätefamilien vorhanden sind.
+A UWP app or Windows Runtime Component written in C++/CX has access to the Win32 APIs that are part of the UWP. These Win32 APIs are implemented by all Windows 10 device families. Link your app with Windowsapp.lib. Windowsapp.lib is an "umbrella" lib that provides the exports for the UWP APIs. Linking to Windowsapp.lib will add to your app dependencies on dlls that are present on all Windows 10 device families.
 
-Eine vollständige Liste von Win32-APIs für UWP-Apps finden Sie unter [API-Sätze für UWP-Apps](https://msdn.microsoft.com/library/windows/desktop/mt186421) und [DLLs für UWP-Apps](https://msdn.microsoft.com/library/windows/desktop/mt186422).
+For the full list of Win32 APIs available to UWP apps, see [API Sets for UWP apps](https://msdn.microsoft.com/library/windows/desktop/mt186421) and [Dlls for UWP apps](https://msdn.microsoft.com/library/windows/desktop/mt186422).
 
-## Benutzerfreundlichkeit
-
-
-Eine universelle Windows-App ermöglicht Ihnen, die einzigartigen Funktionen des Geräts, auf dem die App ausgeführt wird, zu nutzen. Ihre App kann die Möglichkeiten eines Desktopgeräts optimal ausschöpfen und die natürliche Interaktion anhand der direkten Manipulation auf einem Tablet-PC (einschließlich Touch- und Stifteingabe), die Mobilität und Benutzerfreundlichkeit von mobilen Geräten sowie die Funktionen zur Zusammenarbeit auf [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365) nutzen.
-
-Zu einem guten [Design](http://go.microsoft.com/fwlink/?LinkId=258848) gehören nicht nur das gute Aussehen und die Funktionen einer App, sondern auch die Entscheidung darüber, wie Benutzer mit der App interagieren. Die Benutzerfreundlichkeit spielt eine große Rolle bei der Beurteilung, wie gerne Benutzer Ihre App verwenden. Sparen Sie daher nicht an diesem Schritt. In den [Designgrundlagen](https://dev.windows.com/en-us/design) erhalten Sie eine Einführung in das Entwerfen einer universellen Windows-App. Unter [Einführung in universelle Windows-Plattform-Apps (UWP) für Designer](https://msdn.microsoft.com/library/windows/apps/dn958439) finden Sie Informationen zum Entwerfen von UWP-Apps, die Benutzer begeistern. Bevor Sie mit dem Schreiben von Code beginnen, lesen Sie die Informationen unter [Einführung der Geräte](../input-and-devices/device-primer.md). Diese helfen Ihnen dabei, die Interaktionsmöglichkeiten Ihrer App für alle in Frage kommenden Formfaktoren zu durchdenken.
-
-![Windows-Geräte](images/1894834-hig-device-primer-01-500.png)
-
-Zusätzlich zur Interaktion auf verschiedenen Geräten sollten Sie [Ihre App planen](https://msdn.microsoft.com/library/windows/apps/hh465427), um die Vorteile verschiedener Geräte optimal zu nutzen. Beispiel:
-
--   Verwenden Sie [Clouddienste](http://go.microsoft.com/fwlink/?LinkId=526377) für die Synchronisierung auf allen Geräten. Erfahren Sie, wie Sie eine [Verbindung mit Webdiensten](https://msdn.microsoft.com/library/windows/apps/xaml/hh761504) zur Unterstützung der App-Benutzerumgebung herstellen.
-
--   Überlegen Sie, wie Sie Benutzer unterstützen können, die von einem Gerät auf ein anderes wechseln, sodass sie nahtlos mit ihrer Arbeit fortfahren können. Beziehen Sie [Benachrichtigungen](https://msdn.microsoft.com/library/windows/apps/mt187203) und [In-App-Einkäufe](https://msdn.microsoft.com/library/windows/apps/mt219684) in Ihre Planung mit ein. Diese Features sollten auf allen Geräten funktionieren.
-
--   Entwerfen Sie Ihren Workflow anhand von [Navigationsdesigngrundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958438), damit die App auf dem Bildschirm eines mobilen Geräts genauso gut funktioniert wie auf Geräten mit mittelgroßem und großem Bildschirm. [Erstellen Sie das Layout der Benutzeroberfläche](https://msdn.microsoft.com/library/windows/apps/dn958435), um unterschiedliche Bildschirmgrößen und Auflösungen zu berücksichtigen.
-
--   Überlegen Sie, ob Ihre App über Features verfügt, die für einen kleinen Bildschirm nicht sinnvoll sind. So kann es im Gegensatz dazu auch Bereiche geben, die auf einem Desktopcomputer nicht sinnvoll sind und ihr volles Potenzial erst auf einem mobilen Gerät entfalten. Hierzu zählen zum Beispiel Szenarien, bei denen es um den [Standort](https://msdn.microsoft.com/library/windows/apps/mt219698) geht, und die ein mobiles Gerät voraussetzen.
-
--   Achten Sie darauf, wie Sie verschiedene Eingabemodalitäten umsetzen können. In den [Richtlinien für Interaktionen](https://msdn.microsoft.com/library/windows/apps/dn611861) finden Sie Informationen darüber, wie Benutzer anhand von Features wie [Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233), [Sprache](https://msdn.microsoft.com/library/windows/apps/dn596121), [Toucheingaben](https://msdn.microsoft.com/library/windows/apps/hh465370), der [Touch-Bildschirmtastatur](https://msdn.microsoft.com/library/windows/apps/hh972345) und vielem mehr mit Ihrer App interagieren.
-
-    In den [Richtlinien für Text und Texteingabe](https://msdn.microsoft.com/library/windows/apps/dn611864) finden Sie Informationen für eine herkömmlichere Benutzerumgebung.
-
-## Übermitteln einer universellen Windows-App über das Dashboard
+## User experience
 
 
-Im neuen einheitlichen Windows Dev Center-Dashboard können Sie all Ihre Apps für Windows-Geräte zentral verwalten und einreichen. Neue Features vereinfachen Prozesse und geben Ihnen mehr Kontrolle. Sie finden dort auch detaillierte [Analyseberichte](https://msdn.microsoft.com/library/windows/apps/mt148522) in Kombination mit [Auszahlungsdetails](https://msdn.microsoft.com/library/windows/apps/dn986925), Möglichkeiten, [Ihre App zu bewerben und Kunden zu erreichen](https://msdn.microsoft.com/library/windows/apps/mt148526) und vieles mehr.
+A Universal Windows app allows you to take advantage of the unique capabilities of the device on which it is running. Your app can make use of all of the power of a desktop device, the natural interaction of direct manipulation on a tablet (including touch and pen input), the portability and convenience of mobile devices, and the collaborative power of [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365).
 
-Unter [Verwenden des einheitlichen Windows Dev Center-Dashboards](../publish/using-the-windows-dev-center-dashboard.md) erfahren Sie, wie Sie Ihre Apps zur Veröffentlichung im Windows Store übermitteln.
+Good [design](http://go.microsoft.com/fwlink/?LinkId=258848) is the process of deciding how users will interact with your app, as well as how it will look and function. User experience plays a huge part in determining how happy people will be with your app, so don't skimp on this step. [Design basics](https://dev.windows.com/en-us/design) introduce you to designing a Universal Windows app. See the [Introduction to Universal Windows Platform (UWP) apps for designers](https://msdn.microsoft.com/library/windows/apps/dn958439) for information on designing UWP apps that delight your users. Before you start coding, see the [device primer](../input-and-devices/device-primer.md) to help you think through the interaction experience of using your app on all the different form factors you want to target.
 
- 
+![windows-powered devices](images/1894834-hig-device-primer-01-500.png)
 
- 
+In addition to interaction on different devices, [plan your app](https://msdn.microsoft.com/library/windows/apps/hh465427) to embrace the benefits of working across multiple devices. For example:
+
+-   Use [cloud services](http://go.microsoft.com/fwlink/?LinkId=526377) to sync across devices. Learn how to [connect to web services](https://msdn.microsoft.com/library/windows/apps/xaml/hh761504) in support of your app experience.
+
+-   Consider how you can support users moving from one device to another, picking up where they left off. Include [notifications](https://msdn.microsoft.com/library/windows/apps/mt187203) and [in-app purchases](https://msdn.microsoft.com/library/windows/apps/mt219684) in your planning. These features should work across devices.
+
+-   Design your workflow using [Navigation design basics for UWP apps](https://msdn.microsoft.com/library/windows/apps/dn958438) to accommodate mobile, small-screen, and large-screen devices. [Lay out your user interface](https://msdn.microsoft.com/library/windows/apps/dn958435) to respond to different screen sizes and resolutions.
+
+-   Consider whether there are features of your app that don’t make sense on a small mobile screen. There may also be areas that don’t make sense on a stationary desktop machine and require a mobile device to light up. For example, most scenarios around [location](https://msdn.microsoft.com/library/windows/apps/mt219698) imply a mobile device.
+
+-   Consider how you'll accommodate multiple input modalities. See the [Guidelines for interactions](https://msdn.microsoft.com/library/windows/apps/dn611861) to learn how users can interact with your app by using [Cortana](https://msdn.microsoft.com/library/windows/apps/dn974233), [Speech](https://msdn.microsoft.com/library/windows/apps/dn596121), [Touch interactions](https://msdn.microsoft.com/library/windows/apps/hh465370), the [Touch keyboard](https://msdn.microsoft.com/library/windows/apps/hh972345) and more.
+
+    See the [Guidelines for text and text input](https://msdn.microsoft.com/library/windows/apps/dn611864) for more tradition interaction experiences.
+
+## Submit a Universal Windows app through your Dashboard
 
 
+The new unified Windows Dev Center dashboard lets you manage and submit all of your apps for Windows devices in one place. New features simplify processes while giving you more control. You'll also find detailed [analytic reports](https://msdn.microsoft.com/library/windows/apps/mt148522) combined [payout details](https://msdn.microsoft.com/library/windows/apps/dn986925), ways to [promote your app and engage with your customers](https://msdn.microsoft.com/library/windows/apps/mt148526), and much more.
 
+See [Using the unified Windows Dev Center dashboard](../publish/using-the-windows-dev-center-dashboard.md) to learn how to submit your apps for publication in the Windows Store.
 
+ 
 
-
-<!--HONumber=Mar16_HO1-->
-
-
+ 
