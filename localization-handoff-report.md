@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\payout-summary.md](https://github.com/Microsoft/windows-apps/blob/ea5611de066d5f8f4f6be19ca5d8b1b1ab9328be/windows-apps-src/publish/payout-summary.md) | HandedOffSuccess | [Details](#78a52fb9ed86538161544b0c5b3bcd19e741c8fa3524)
+ [windows-apps-src\publish\distribute-lob-apps-to-enterprises.md](https://github.com/Microsoft/windows-apps/blob/980b48243ecae468ffdba4a92bc62e39706c8a2d/windows-apps-src/publish/distribute-lob-apps-to-enterprises.md) | HandedOffSuccess | [Details](#281c544f4c432ea36cad0f31d2d3567e4bee9da63495)
 
 ## Item Details
-##### <a name='78a52fb9ed86538161544b0c5b3bcd19e741c8fa3524'></a> Source: [windows-apps-src\publish\payout-summary.md](https://github.com/Microsoft/windows-apps/blob/ea5611de066d5f8f4f6be19ca5d8b1b1ab9328be/windows-apps-src/publish/payout-summary.md)
+##### <a name='281c544f4c432ea36cad0f31d2d3567e4bee9da63495'></a> Source: [windows-apps-src\publish\distribute-lob-apps-to-enterprises.md](https://github.com/Microsoft/windows-apps/blob/980b48243ecae468ffdba4a92bc62e39706c8a2d/windows-apps-src/publish/distribute-lob-apps-to-enterprises.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8768775ab2b64a7a7d4738fc9d768c4363923f1a/ol-handoff/Microsoft/windows-apps.de-de/master/payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.de-de.xlf)
-* Handoff Datetime: 2016-05-10 22:23:49
+* Handoff File: [distribute-lob-apps-to-enterprises.0b587ccf3d72dde21acfcdb2eded5841e0f9ffea.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/87f52e6ff9a55c6d37efb294be971786a92142aa/ol-handoff/Microsoft/windows-apps.de-de/master/distribute-lob-apps-to-enterprises.0b587ccf3d72dde21acfcdb2eded5841e0f9ffea.de-de.xlf)
+* Handoff Datetime: 2016-05-11 16:48:30
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
