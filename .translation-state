@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "3e66cad67a2bf9b3c0f8894a1e6f1a70ab1c1ef9",
+  "LastProcessedCommit": "ae4727974af632a275c102a6328734597cee3e9b",
   "LastTranslatedCommit": null,
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
@@ -62897,6 +62897,35 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\playready-client-sdk.02c7a03e7a4fdbef5841fe4bca523065a993408e.de-de.xlf",
       "HandoffFileCommit": "19fb43dce5e1451a20803d4f4dedf0084c3fc11f",
       "HandoffDateTime": "2016-05-12T21:49:19.4215199Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "9faee009cd907cd8ccdeded019e23713cbc058f0": {
+      "FileHash": "9faee009cd907cd8ccdeded019e23713cbc058f0",
+      "SourceFileCommit": "ae4727974af632a275c102a6328734597cee3e9b",
+      "SourceFilePath": "windows-apps-src\\publish\\set-your-iap-product-id.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\publish\\set-your-iap-product-id.md"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\set-your-iap-product-id.bba35dbe88a01f5c55fab26d4a35e1ed570a5e11.de-de.xlf",
+      "HandoffFileCommit": "9c98c0445962edfbdfe3302f08b9f45bba75e6ec",
+      "HandoffDateTime": "2016-05-12T22:20:40.8879098Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
