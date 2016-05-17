@@ -5,12 +5,12 @@
  -------- | ----- 
  Total Files | 3871
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 2290
+[ Handoff Success Files ](#handoff-success-list)| 2289
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
-[ In Sync Handback Files ](#insync-handback-success-list)| 0
+[ In Sync Handback Files ](#insync-handback-success-list)| 1
 [ Ignored Files ](#ignored-list)| 1581
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -1277,7 +1277,6 @@
  [windows-apps-src\globalizing\put-ui-strings-into-resources.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/put-ui-strings-into-resources.md) | HandedOffSuccess | [Details](#b44d9235e34b8d4c75f663029d1dde3f87bd0eb72572)
  [windows-apps-src\globalizing\use-global-ready-formats.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/use-global-ready-formats.md) | HandedOffSuccess | [Details](#77b5e7bd412936dd5d8c4bc252771631d6b884cf2573)
  [windows-apps-src\globalizing\use-patterns-to-format-dates-and-times.md](https://github.com/Microsoft/windows-apps/blob/59e02840c72d8bccda7e318197e4bf45ed667fa4/windows-apps-src/globalizing/use-patterns-to-format-dates-and-times.md) | HandedOffSuccess | [Details](#17cd1619a13adced643b4c8983dbf874bebaa7402574)
- [windows-apps-src\graphics\3-d-perspective-effects.md](https://github.com/Microsoft/windows-apps/blob/54bcd19419f31563f910b705fce8128bca33825b/windows-apps-src/graphics/3-d-perspective-effects.md) | HandedOffSuccess | [Details](#4141d23c5102df4970ef7c4fb3659bf3ba561ccf2575)
  [windows-apps-src\graphics\animations-overview.md](https://github.com/Microsoft/windows-apps/blob/f2f91ae7e55f4ee02abf0139784cfae69b1bbd10/windows-apps-src/graphics/animations-overview.md) | HandedOffSuccess | [Details](#c2b77b2c9f6d3cc06bb05d4a79387196fa3586f42576)
  [windows-apps-src\graphics\composition-animation.md](https://github.com/Microsoft/windows-apps/blob/b3d198af0c46ec7a2041a7417bccd56c05af760e/windows-apps-src/graphics/composition-animation.md) | HandedOffSuccess | [Details](#fa2ec8e05d92e1f667dec947348f29ff883968b12577)
  [windows-apps-src\graphics\composition-brushes.md](https://github.com/Microsoft/windows-apps/blob/b3d198af0c46ec7a2041a7417bccd56c05af760e/windows-apps-src/graphics/composition-brushes.md) | HandedOffSuccess | [Details](#7f466607e48bb0d553892e09c6616f0dd0539d8e2578)
@@ -2318,6 +2317,9 @@
 ## <a name='outofsync-handback-success-list'></a> Out Of Sync Handback Success File List
 
 ## <a name='insync-handback-success-list'></a> In Sync Handback File Success List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\graphics\3-d-perspective-effects.md](https://github.com/Microsoft/windows-apps/blob/54bcd19419f31563f910b705fce8128bca33825b/windows-apps-src/graphics/3-d-perspective-effects.md) | InSyncHandedBackSuccess | [Details](#4141d23c5102df4970ef7c4fb3659bf3ba561ccf2575)
 
 ## <a name='ignored-list'></a> Ignored File List
  Source File | Status | Details 
@@ -35748,15 +35750,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='4141d23c5102df4970ef7c4fb3659bf3ba561ccf2575'></a> Source: [windows-apps-src\graphics\3-d-perspective-effects.md](https://github.com/Microsoft/windows-apps/blob/54bcd19419f31563f910b705fce8128bca33825b/windows-apps-src/graphics/3-d-perspective-effects.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\graphics\3-d-perspective-effects.md](https://github.com/Microsoft/windows-apps.de-de/blob/90a63fa1ec5852c72620cbefd4911a3e5e888c54/windows-apps-src/graphics/3-d-perspective-effects.md)
 * Handoff File: [3-d-perspective-effects.ad577c08ad36c377dfcc5d116e94ac1f9b0fc395.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/1e07dcb4307ffb52631a43975f3f6d5173661aae/ol-handoff/Microsoft/windows-apps.de-de/master/3-d-perspective-effects.ad577c08ad36c377dfcc5d116e94ac1f9b0fc395.de-de.xlf)
 * Handoff Datetime: 2016-05-12 14:56:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [3-d-perspective-effects.ad577c08ad36c377dfcc5d116e94ac1f9b0fc395.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/a642d04359c0e96b42d62920f3de101f1adb3965/ol-handback/Microsoft/windows-apps.de-de/master/3-d-perspective-effects.ad577c08ad36c377dfcc5d116e94ac1f9b0fc395.de-de.xlf)
+* Handback Datetime: 2016-05-17 02:30:17
 * [Back to Top](#report-top)
 
 ##### <a name='c2b77b2c9f6d3cc06bb05d4a79387196fa3586f42576'></a> Source: [windows-apps-src\graphics\animations-overview.md](https://github.com/Microsoft/windows-apps/blob/f2f91ae7e55f4ee02abf0139784cfae69b1bbd10/windows-apps-src/graphics/animations-overview.md)

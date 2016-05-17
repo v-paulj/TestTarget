@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\graphics\3-d-perspective-effects.md](https://github.com/Microsoft/windows-apps/blob/54bcd19419f31563f910b705fce8128bca33825b/windows-apps-src/graphics/3-d-perspective-effects.md) | InSyncHandedBackSuccess | [Details](#4141d23c5102df4970ef7c4fb3659bf3ba561ccf2575)
 
 ## Item Details
+##### <a name='4141d23c5102df4970ef7c4fb3659bf3ba561ccf2575'></a> Source: [windows-apps-src\graphics\3-d-perspective-effects.md](https://github.com/Microsoft/windows-apps/blob/54bcd19419f31563f910b705fce8128bca33825b/windows-apps-src/graphics/3-d-perspective-effects.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\graphics\3-d-perspective-effects.md](https://github.com/Microsoft/windows-apps.de-de/blob/90a63fa1ec5852c72620cbefd4911a3e5e888c54/windows-apps-src/graphics/3-d-perspective-effects.md)
+* Handoff File: [3-d-perspective-effects.ad577c08ad36c377dfcc5d116e94ac1f9b0fc395.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/1e07dcb4307ffb52631a43975f3f6d5173661aae/ol-handoff/Microsoft/windows-apps.de-de/master/3-d-perspective-effects.ad577c08ad36c377dfcc5d116e94ac1f9b0fc395.de-de.xlf)
+* Handoff Datetime: 2016-05-12 14:56:48
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [3-d-perspective-effects.ad577c08ad36c377dfcc5d116e94ac1f9b0fc395.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/a642d04359c0e96b42d62920f3de101f1adb3965/ol-handback/Microsoft/windows-apps.de-de/master/3-d-perspective-effects.ad577c08ad36c377dfcc5d116e94ac1f9b0fc395.de-de.xlf)
+* Handback Datetime: 2016-05-17 02:30:17
+* [Back to Top](#report-top)
+
 
 ## Error Details
 

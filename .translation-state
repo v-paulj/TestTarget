@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "fcc0198409513b7f272d4fd37d0856ca2139ec3c",
-  "LastTranslatedCommit": null,
+  "LastTranslatedCommit": "90a63fa1ec5852c72620cbefd4911a3e5e888c54",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
       "FileHash": "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3",
@@ -34331,14 +34331,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "90a63fa1ec5852c72620cbefd4911a3e5e888c54",
+      "TargetFilePath": "windows-apps-src\\graphics\\3-d-perspective-effects.md",
+      "HandbackFilePath": "ol-handback\\Microsoft\\windows-apps.de-de\\master\\3-d-perspective-effects.ad577c08ad36c377dfcc5d116e94ac1f9b0fc395.de-de.xlf",
+      "HandbackFileCommit": "a642d04359c0e96b42d62920f3de101f1adb3965",
+      "HandbackDateTime": "2016-05-17T02:30:17.1075377Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-05-17T02:30:17.1075377Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
