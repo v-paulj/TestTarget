@@ -1,167 +1,172 @@
 ---
 author: PatrickFarley
-Description: This topic describes performance guidelines for apps that require access to a user's location.
-title: Guidelines for location-aware apps
+Description: In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der Zugriff auf den Standort eines Benutzers erforderlich ist.
+title: Richtlinien für Apps mit Standortbestimmung
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
 ---
 
-# Guidelines for location-aware apps
+# Richtlinien für Apps mit Standortbestimmung
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-**Important APIs**
+**Wichtige APIs**
 
 -   [**Geolocation**](https://msdn.microsoft.com/library/windows/apps/br225603)
 -   [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)
 
-This topic describes performance guidelines for apps that require access to a user's location.
+In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der Zugriff auf den Standort eines Benutzers erforderlich ist.
 
-## Recommendations
-
-
--   Start using the location object only when the app requires location data.
-
-    Call the [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) before accessing the user’s location. At that time, your app must be in the foreground and **RequestAccessAsync** must be called from the UI thread. Until the user grants your app permission to their location, your app can't access location data.
-
--   If location isn't essential to your app, don't access it until the user tries to complete a task that requires it. For example, if a social networking app has a button for "Check in with my location," the app shouldn't access location until the user clicks the button. It's okay to immediately access location if it is required for your app's main function.
-
--   The first use of the [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) object must be made on the main UI thread of the foreground app, to trigger the consent prompt to the user. The first use of the **Geolocator** can be either the first call to [**getGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) or the first registration of a handler for the [**positionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) event.
-
--   Tell the user how location data will be used.
--   Provide UI to enable users to manually refresh their location.
--   Display a progress bar or ring while waiting to get location data. <!--For info on the available progress controls and how to use them, see [**Guidelines for progress controls**](guidelines-and-checklist-for-progress-controls.md).-->
--   Show appropriate error messages or dialogs when location services are disabled or not available.
-
-    If the location settings don't allow your app to access the user's location, we recommend providing a convenient link to the **location privacy settings** in the **Settings** app. For example, you could use a Hyperlink control or call the [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) method to launch the **Settings** app from code using the `ms-settings:privacy-location` URI. For more info, see [Launch the Windows Settings app](https://msdn.microsoft.com/library/windows/apps/mt228342).
-
--   Clear cached location data and release the [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) when the user disables access to location info.
-
-    Release the [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) object if the user turns off access to location info through Settings. The app will then receive **ACCESS\_DENIED** results for any location API calls. If your app saves or caches location data, clear any cached data when the user revokes access to location info. Provide an alternate way to manually enter location info when location data is not available via location services.
-
--   Provide UI for reenabling location services. For example, provie a refresh button that reinstantiates the [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) object and tries to get location info again.
-
-    Have your app provide UI for reenabling location services—
-
-    -   If the user reenables location access after disabling it, there is no notification to the app. The [**status**](https://msdn.microsoft.com/library/windows/apps/br225601) property does not change and there is no [**statusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) event. Your app should create a new [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) object and call [**getGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) to try to get updated location data, or subscribe again to [**positionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) events. If the status then indicates that location has been reenabled, clear any UI by which your app previously notified the user that location services were disabled, and respond appropriately to the new status.
-    -   Your app should also try again to get location data upon activation, or when the user explicitly tries to use functionality that requires location info, or at any other scenario-appropriate time.
-
-**Performance**
-
--   Use one-time location requests if your app doesn't need to receive location updates. For example, an app that adds a location tag to a photo doesn't need to receive location update events. Instead, it should request location using [**getGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536), as described in [Get current location](https://msdn.microsoft.com/library/windows/apps/mt219698).
-
-    When you make a one-time location request, you should set the following values.
-
-    -   Specify the accuracy requested by your app by setting the [**DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) or the [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271). See below for recommendations on using these parameters
-    -   Set the max age parameter of [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) to specify how long ago a location can have been obtained to be useful for your app. If your app can use a position that is a few seconds or minutes old, your app can receive a position almost immediately and contribute to saving device power.
-    -   Set the timeout parameter of [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536). This is how long your app can wait for a position or an error to be returned. You will need to figure out the trade-offs between responsiveness to the user and accuracy your app needs.
--   Use continuous location session when frequent position updates are required. Use [**positionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) and [**statusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) events for detecting movement past a specific threshold or for continuous location updates as they occur.
-
-    When requesting location updates, you may want to specify the accuracy requested by your app by setting the [**DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) or the [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271). You should also set the frequency at which the location updates are needed, by using the [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539) or the [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541).
-
-    -   Specify the movement threshold. Some apps need location updates only when the user has moved a large distance. For example, an app that provides local news or weather updates may not need location updates unless the user's location has changed to a different city. In this case, you adjust the minimum required movement for a location update event by setting the [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539) property. This has the effect of filtering out [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) events. These events are raised only when the change in position exceeds the movement threshold.
-
-    -   Use [**reportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) that aligns with your app experience and that minimizes the use of system resources. For example, a weather app may require a data update only every 15 minutes. Most apps, other than real-time navigation apps, don't require a highly accurate, constant stream of location updates. If your app doesn't require the most accurate stream of data possible, or requires updates infrequently, set the **ReportInterval** property to indicate the minimum frequency of location updates that your app needs. The location source can then conserve power by calculating location only when needed.
-
-        Apps that do require real-time data should set [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) to 0, to indicate that no minimum interval is specified. The default report interval is 1 second or as frequent as the hardware can support – whichever is shorter.
-
-        Devices that provide location data may track the report interval requested by different apps, and provide data reports at the smallest requested interval. The app with the greatest need for accuracy thus receives the data it needs. Therefore, it's possible that the location provider will generate updates at a higher frequency than your app requested, if another app has requested more frequent updates.
-
-        **Note**  It isn't guaranteed that the location source will honor the request for the given report interval. Not all location provider devices track the report interval, but you should still provide it for those that do.
-
-    -   To help conserve power, set the [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) property to indicate to the location platform whether your app needs high-accuracy data. If no apps require high-accuracy data, the system can save power by not turning on GPS providers.
-
-        -   Set [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) to **HIGH** to enable the GPS to acquire data.
-        -   Set [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) to **Default** and use only a single-shot call pattern to minimize power consumption if your app uses location info solely for ad targeting.
-
-        If your app has specific needs around accuracy, you may want to use the [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271) property instead of using [**DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535). This is particularly useful on Windows Phone, where position can usually be obtained based on cellular beacons, Wi-Fi beacons and satellites. Picking a more specific accuracy value will help the system identify the right technologies to use with the lowest power cost when providing a position.
-
-        For example:
-
-        -   If your app is obtaining location for ads tuning, weather, news, etc, an accuracy of 5000 meter is generally enough.
-        -   If you app is displaying nearby deals in the neighborhood, an accuracy of 300 meter is generally good to provide results.
-        -   If the user is looking for recommendations to nearby restaurants, we likely want to get a position within a block, so an accuracy of 100 meters is sufficient.
-        -   If the user is trying to share his position, the app should request an accuracy of about 10 meters.
-    -   Use the [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) property if your app has specific accuracy requirements. For example, navigation apps should use the **Geocoordinate.accuracy** property to determine whether the available location data meets the app's requirements.
-
--   Consider start-up delay. The first time an app requests location data, there might be a short delay (1-2 seconds) while the location provider starts up. Consider this in the design of your app's UI. For instance, you may want to avoid blocking other tasks pending the completion of the call to [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536).
-
--   Consider background behavior. If your app doesn't have focus, it won't receive location update events while it's suspended in the background. If your app tracks location updates by logging them, be aware of this. When the app regains focus, it receives only new events. It does not get any updates that occurred when it was inactive.
-
--   Use raw and fusion sensors efficiently. There are two types of sensors: *raw* and *fusion*.
-
-    -   Raw sensors include the accelerometer, gyrometer, and magnetometer.
-    -   Fusion sensors include orientation, inclinometer, and compass. Fusion sensors get their data from combinations of the raw sensors.
-
-    The Windows Runtime APIs can access all of these sensors except for the magnetometer. Fusion sensors are more accurate and stable than raw sensors, but they use more power. You should use the right sensors for the right purpose. For more info, see [Sensors](https://msdn.microsoft.com/library/windows/apps/mt187358).
-
-**Connected standby:  **When the PC is in connected standby state, [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) objects can always be instantiated. However, the **Geolocator** object will not find any sensors to aggregate and therefore calls to [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) will time out after 7 seconds, [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) event listeners will never be called, and [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) event listeners will be called once with the **NoData** status.
-
-## Additional usage guidance
+## Empfehlungen
 
 
-### Detecting changes in location settings
+-   Starten Sie mithilfe des Standortobjekts nur dann, wenn die App Standortdaten erfordert.
 
-The user can turn off location functionality by using the **location privacy settings** in the **Settings** app.
+    Rufen Sie [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152) auf, bevor Sie auf die Position des Benutzers zugreifen. Zu diesem Zeitpunkt muss sich Ihre App im Vordergrund befinden, und **RequestAccessAsync** muss vom UI-Thread aufgerufen werden. Solange der Benutzer Ihrer App keinen Zugriff auf seine Position gewährt hat, kann Ihre App nicht auf Positionsdaten zugreifen.
 
--   To detect when the user disables or reenables location services:
-    -   Handle the [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) event. The [**Status**](https://msdn.microsoft.com/library/windows/apps/br225601) property of the argument to the **StatusChanged** event has the value **Disabled** if the user turns off location services.
-    -   Check the error codes returned from [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536). If the user has disabled location services, calls to **GetGeopositionAsync** fail with an **ACCESS\_DENIED** error and the [**LocationStatus**](https://msdn.microsoft.com/library/windows/apps/br225538) property has the value **Disabled**.
--   If you have an app for which location data is essential—for example, a mapping app—, be sure to do the following:
-    -   Handle the [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540) event to get updates if the user’s location changes.
-    -   Handle the [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542) event as described previously, to detect changes in location settings.
+-   Wenn die Verwendung des Standorts für Ihre App nicht zwingend erforderlich ist, greifen Sie erst dann auf das Gerät zu, wenn dies vom Benutzer angefordert wird. Besitzt eine App für ein soziales Netzwerk beispielsweise eine Schaltfläche, um sich mit dem eigenen Standort anzumelden, sollte die App nicht auf den Standort zugreifen, bis der Benutzer auf die Schaltfläche klickt. Es geht in Ordnung, sofort auf den Standort zuzugreifen, wenn es für die Hauptfunktion Ihrer App erforderlich ist.
 
-Note that the location service will return data as it becomes available. It may first return a location with a larger error radius and then update the location with more accurate information as it becomes available. Apps displaying the user's location would normally want to update the location as more accurate information becomes available.
+-   Die erste Verwendung des [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekts muss im Hauptthread der Benutzeroberfläche der Vordergrund-App erfolgen, um eine Zustimmungsaufforderung für den Benutzer auszulösen. Bei der ersten Verwendung des **Geolocator**-Objekts kann es sich um den ersten Aufruf von [**getGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) handeln oder um die erste Registrierung eines Handlers für das [**positionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540)-Ereignis.
 
-### Graphical representations of location
+-   Informieren Sie den Benutzer über die Verwendung von Standortdaten.
+-   Stellen Sie eine Benutzeroberfläche bereit, um Benutzern zu ermöglichen, ihren Standort manuell zu aktualisieren.
+-   Zeigen Sie eine Statusleiste bzw. einen Statusring an, während auf das Abrufen der Geolocation-Daten gewartet wird. <!--For info on the available progress controls and how to use them, see [**Guidelines for progress controls**](guidelines-and-checklist-for-progress-controls.md).-->
+-   Zeigen Sie passende Fehlermeldungen oder Dialogfelder an, wenn Positionsdienste deaktiviert oder nicht verfügbar sind.
 
-Have your app use [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526) to denote the user’s current location on the map clearly. There are three main bands for accuracy—an error radius of approximately 10 meters, an error radius of approximately 100 meters, and an error radius of greater than 1 kilometer. By using the accuracy information, you can ensure that your app displays location accurately in the context of the data available. For general information about using the map control, see [Display maps with 2D, 3D, and Streetside views](https://msdn.microsoft.com/library/windows/apps/mt219695).
+    Wenn Ihre App gemäß den Positionseinstellungen nicht auf die Position des Benutzers zugreifen darf, wird empfohlen, einen praktischen Link zu den **Datenschutzeinstellungen für den Standort** in der **Einstellungs**-App bereitzustellen. Beispielsweise können Sie ein Hyperlinksteuerelement verwenden oder die [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)-Methode aufrufen, um die **Einstellungs**-App über Code mithilfe des `ms-settings:privacy-location`-URIs zu starten. Weitere Informationen finden Sie unter [Starten der Einstellungs-App von Windows](https://msdn.microsoft.com/library/windows/apps/mt228342).
 
--   For accuracy approximately equal to 10 meters (GPS resolution), location can be denoted by a dot or pin on the map. With this accuracy, latitude-longitude coordinates and street address can be shown as well.
+-   Löschen Sie zwischengespeicherte Standortinformationen, und geben Sie das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt frei, wenn der Zugriff auf die Standortinformationen vom Benutzer deaktiviert wird.
 
-    ![example of map displayed at gps accuracy of approximately 10 meters.](images/10metererrorradius.png)
+    Geben Sie das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt frei, wenn der Benutzer den Zugriff auf Standortinformationen unter „Einstellungen“ deaktiviert. Die App empfängt **ACCESS\_DENIED**-Ergebnisse für alle standortbezogenen API-Aufrufe. Wenn Ihre App Standortdaten (zwischen)speichert, löschen Sie zwischengespeicherte Daten, wenn der Benutzer den Zugriff auf seinen Standort zurücknimmt. Stellen Sie eine Alternativmöglichkeit zur Angabe des Standorts bereit, wenn keine diesbezüglichen Informationen für Positionsdienste verfügbar sind.
 
--   For accuracy between 10 and 500 meters (approximately 100 meters), location is generally received through Wi-Fi resolution. Location obtained from cellular has an accuracy of around 300 meters. In such a case, we recommend that your app show an error radius. For apps that show directions where a centering dot is required, such a dot can be shown with an error radius surrounding it.
+-   Stellen Sie eine Benutzeroberfläche für das erneute Aktivieren der Positionsdienste bereit. Möglich wäre z. B. eine Aktualisierungsschaltfläche, die das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt neu instanziiert und erneut versucht, Standortinformationen abzurufen.
 
-    ![example of map displayed at wi-fi accuracy of approximately 100 meters.](images/100metererrorradius.png)
+    Stellen Sie in Ihrer App eine Benutzeroberfläche zum Aktivieren der Positionsdienste bereit.
 
--   If the accuracy returned is greater than 1 kilometer, you are probably receiving location info at IP-level resolution. This level of accuracy is often too low to pinpoint a particular spot on a map. Your app should zoom in to the city level on the map, or to the appropriate area based on the error radius (for example, region level).
+    -   Wenn der Benutzer den Standortzugriff nach dem Deaktivieren erneut aktiviert, wird die App nicht benachrichtigt. Die [**status**](https://msdn.microsoft.com/library/windows/apps/br225601)-Eigenschaft ändert sich nicht, und es findet kein [**statusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542)-Ereignis statt. Ihre App sollte ein neues [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt erstellen und [**getGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) aufrufen, um zu versuchen, aktualisierte Standortdaten zu erhalten, oder [**positionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540)-Ereignisse erneut abonnieren. Wenn aus dem Status hervorgeht, dass die Standortbestimmung erneut aktiviert wurde, müssen Sie alle UI-Elemente entfernen, die die App zuvor angezeigt hat, um den Benutzer auf die deaktivierte Standortbestimmung hinzuweisen. Reagieren Sie entsprechend auf den neuen Status.
+    -   Ihre App sollte außerdem erneut versuchen, Standortdaten abzurufen, wenn die Aktivierung erfolgt, wenn der Benutzer explizit versucht, eine Funktion mit erforderlichem Standortzugriff zu verwenden, oder zu jedem anderen dem Szenario angemessenen Zeitpunkt.
 
-    ![example of map displayed at wi-fi accuracy of approximately 1 kilometer.](images/1000metererrorradius.png)
+**Leistung**
 
-When location accuracy switches from one band of accuracy to another, provide a graceful transition between the different graphical representations. This can be done by:
+-   Verwenden Sie einmalige Standortanforderungen, wenn Ihre App keine Positionsupdates empfangen muss. Beispielsweise muss eine App, die einem Foto ein Tag zum Standort hinzufügt, keine Positionsupdateereignisse empfangen. Sie sollte den Standort stattdessen wie unter [Abrufen der aktuellen Position](https://msdn.microsoft.com/library/windows/apps/mt219698) beschrieben mit der [**getGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536)-Methode anfordern.
 
--   Making the transition animation smooth and keeping the transition fast and fluid.
--   Waiting for a few consecutive reports to confirm the change in accuracy, to help prevent unwanted and too-frequent zooms.
+    Bei einer einmaligen Standortanforderung sollten Sie die folgenden Werte festlegen.
 
-### Textual representations of location
+    -   Geben Sie die von Ihrer App angeforderte Genauigkeit durch Festlegen von [**DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) oder [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271) an. Empfehlungen zur Verwendung dieser Parameter finden Sie weiter unten.
+    -   Legen Sie mit dem Parameter „max age“ von [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) fest, wie lange das Abrufen eines Standorts bei Ihrer App zurückliegen kann. Kann Ihre App eine Position nutzen, die einige Sekunden oder Minuten alt ist, kann sie eine Position fast sofort empfangen und dadurch den Stromverbrauch des Geräts reduzieren.
+    -   Legen Sie den Parameter „timeout“ von [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) fest. Diese Einstellung bestimmt, wie lange Ihre App auf eine Position warten kann, bevor ein Fehler zurückgegeben wird. Versuchen Sie, einen Kompromiss zwischen der vom Benutzer wahrgenommenen Reaktionsfähigkeit und der für Ihre App erforderlichen Genauigkeit zu finden.
+-   Verwenden Sie eine fortlaufende Standortsitzung, wenn häufige Aktualisierungen der Position erforderlich sind. Verwenden Sie [**positionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540)- und [**statusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542)-Ereignisse, um Bewegungen zu erkennen, die über eine bestimmte Grenze hinausgehen, oder für fortlaufende Positionsupdates.
 
-Some types of apps—for example, a weather app or a local information app—need ways to represent location textually at the different bands of accuracy. Be sure to display the location clearly and only down to the level of accuracy provided in the data.
+    Beim Anfordern von Positionsupdates können Sie die von Ihrer App angeforderte Genauigkeit mit [**DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) oder [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271) angeben. Sie sollten auch die erforderliche Häufigkeit von Positionsupdates angeben (mit [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539) oder [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541).
 
--   For accuracy approximately equal to 10 meters (GPS resolution), the location data received is fairly accurate and so can be communicated to the level of the neighborhood name. City name, state or province name, and country/region name can also be used.
--   For accuracy approximately equal to 100 meters (Wi-Fi resolution), the location data received is moderately accurate and so we recommend that you display information down to the city name. Avoid using the neighborhood name.
--   For accuracy greater than 1 kilometer (IP resolution), display only the state or province, or country/region name.
+    -   Geben Sie die Bewegungsgrenze an. Bei einigen Apps sind Positionsupdates nur erforderlich, wenn der Benutzer eine große Entfernung zurückgelegt hat. Eine App, die lokale Nachrichten oder aktuelle Wetterinformationen zur Verfügung stellt, benötigt beispielsweise keine Positionsupdates, es sei denn, der derzeitige Standort des Benutzers liegt in einer anderen Stadt. In diesem Fall sollten Sie die für ein Positionsupdateereignis mindestens erforderliche Entfernung anpassen, indem Sie die [**MovementThreshold**](https://msdn.microsoft.com/library/windows/apps/br225539)-Eigenschaft festlegen. Dadurch werden [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540)-Ereignisse herausgefiltert. Diese Ereignisse werden dann nur ausgelöst, wenn die Änderung der Position die Bewegungsgrenze überschreitet.
 
-### Privacy considerations
+    -   Verwenden Sie einen [**reportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541)-Wert, der Ihrer App-Funktion entspricht und die Nutzung von Systemressourcen minimiert. Beispielsweise kann bei einer Wetter-App eine Aktualisierung der Daten alle 15 Minuten ausreichen. Für die meisten Apps ist im Gegensatz zu Apps für die Echtzeitnavigation kein präziser, konstanter Datenstrom mit Positionsupdates erforderlich. Wenn für Ihre App kein möglichst präziser Datenstrom oder nur seltene Aktualisierungen erforderlich sind, legen Sie die **ReportInterval**-Eigenschaft fest, um die Mindesthäufigkeit der für die App erforderlichen Positionsupdates anzugeben. Die Standortquelle kann dann Energie sparen, indem der Standort nur bei Bedarf berechnet wird.
 
-A user's geographic location is personally identifiable information (PII). The following website provides guidance for protecting user privacy.
+        Bei Apps, für die Echtzeitdaten erforderlich sind, sollte [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) auf „0“ festgelegt werden. Damit geben Sie an, dass kein Mindestintervall festgelegt ist. Das standardmäßige Berichtsintervall lautet 1 Sekunde oder entspricht der durch die Hardware unterstützten Häufigkeit, je nachdem, was davon kürzer ist.
 
--   [Microsoft Privacy]( http://go.microsoft.com/fwlink/p/?LinkId=259692)
+        Geräte, die Standortdaten bereitstellen, können das von verschiedenen Apps angeforderte Berichtsintervall nachverfolgen und Datenberichte im kürzesten angeforderten Intervall bereitstellen. Dann empfängt die App, die den höchsten Bedarf an Präzision hat, die benötigten Daten. Es ist deshalb möglich, dass die Positionssuche häufiger als von der App angefordert Updates generiert, falls eine andere App häufigere Updates angefordert hat.
+
+        **Hinweis**  Es ist nicht gewährleistet, dass die Standortquelle die Anforderung für das angegebene Berichtintervall berücksichtigt. Nicht alle Geräte für die Positionssuche berücksichtigen das Berichtintervall, Sie sollten es jedoch dennoch angeben.
+
+    -   Um Energie zu sparen, sollte die [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535)-Eigenschaft festgelegt werden. Damit wird angegeben, ob für die App präzise Daten erforderlich sind. Falls keine Apps präzise Daten benötigen, wird vom System Energie gespart, indem keine GPS-Anbieter aktiviert werden.
+
+        -   Legen Sie [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) auf **HIGH** fest, damit das GPS Daten empfangen kann.
+        -   Legen Sie [**desiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) auf **Default** fest, und verwenden Sie ein einmaliges Aufrufmuster, um den Energieverbrauch zu minimieren, wenn Ihre App die Standortinformationen ausschließlich für gezielte Werbung verwendet.
+
+        Falls für Ihre App besondere Anforderungen an die Genauigkeit gelten, können Sie ggf. die [**DesiredAccuracyInMeters**](https://msdn.microsoft.com/library/windows/apps/jj635271)-Eigenschaft anstelle von [**DesiredAccuracy**](https://msdn.microsoft.com/library/windows/apps/br225535) verwenden. Dies eignet sich besonders für Windows Phone, da die Position dort normalerweise anhand von Mobiltelefonbeacons, WiFi-Beacons und Satelliten abgerufen werden kann. Wenn Sie einen spezifischeren Genauigkeitswert auswählen, kann das System die geeigneten Technologien ermitteln, mit denen die Position zu den niedrigsten Energiekosten bereitgestellt werden kann.
+
+        Beispiel:
+
+        -   Wenn Ihre App den Standort zum Abstimmen von Werbung, für Wettermeldungen, Nachrichten usw. abruft, ist eine Genauigkeit von 5000 m in der Regel ausreichend.
+        -   Zeigt Ihre App Angebote aus der näheren Umgebung an, erhalten Sie im Allgemeinen mit einer Genauigkeit von 300 m gute Ergebnisse.
+        -   Sucht der Besucher nach Restaurantempfehlungen in der Nähe, ist wahrscheinlich eine Position innerhalb eines Straßenblocks gewünscht, sodass eine Genauigkeit von 100 m genügt.
+        -   Möchte der Benutzer seine Position teilen, sollte die App eine Genauigkeit von ungefähr 10 m anfordern.
+    -   Verwenden Sie die [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526)-Eigenschaft, wenn für Ihre App bestimmte Genauigkeitsanforderungen gelten. Navigations-Apps sollten z. B. mit der **Geocoordinate.accuracy**-Eigenschaft ermitteln, ob die verfügbaren Standortdaten die Anforderungen der App erfüllen.
+
+-   Berücksichtigen Sie die Startverzögerung. Wenn die App zum ersten Mal Standortdaten anfordert, kann während des Startens des Anbieters eine kurze Verzögerung (1 – 2 Sekunden) auftreten. Berücksichtigen Sie dies beim Design der App-Benutzeroberfläche. Beispielsweise können Sie verhindern, dass andere Aufgaben bis zum Abschluss des Aufrufs von [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) blockiert werden.
+
+-   Berücksichtigen Sie das Hintergrundverhalten. Falls die App inaktiv und im Hintergrund angehalten ist, empfängt sie keine Positionsupdateereignisse. Beachten Sie dies, wenn Ihre App Positionsupdates durch Protokollierung nachverfolgt. Wenn die App wieder aktiv ist, empfängt sie nur neue Ereignisse. Es werden keine Aktualisierungen abgerufen, die während ihrer Inaktivität stattfanden.
+
+-   Verwenden Sie Rohdaten- und Fusionssensoren auf effiziente Art und Weise. Es gibt zwei Sensortypen: *Rohdatensensoren* und *Fusionssensoren*.
+
+    -   Zu den Rohdatensensoren zählen Beschleunigungsmesser, Gyrometer und Magnetfeldmesser.
+    -   Zu Fusionssensoren zählen Orientierungssensoren, Neigungsmesser und Kompasse. Fusionssensoren erhalten ihre Daten aus einer Kombination aus Rohdatensensoren.
+
+    Mit Ausnahme des Magnetometers können die Windows-Runtime-APIs auf all diese Sensoren zugreifen. Fusionssensoren sind genauer und stabiler als Rohdatensensoren, sie benötigen jedoch auch mehr Energie. Verwenden Sie die richtigen Sensoren für den richtigen Zweck. Weitere Informationen finden Sie unter [Sensoren](https://msdn.microsoft.com/library/windows/apps/mt187358).
+
+**Verbindungsstandby:** Wenn sich der PC im Verbindungsstandby befindet, können [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekte immer instanziiert werden. Das **Geolocator**-Objekt findet jedoch keine zu aggregierenden Sensoren, sodass für Aufrufe von [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) nach 7 Sekunden ein Timeout auftritt. [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540)-Ereignislistener werden niemals aufgerufen, und [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542)-Ereignislistener werden einmal mit dem **NoData**-Status aufgerufen.
+
+## Weitere Hinweise zur Verwendung
+
+
+### Erkennen von Änderungen an den Standorteinstellungen
+
+Der Benutzer kann die Standortbestimmung mit **Datenschutzeinstellungen für den Standort** in der **Einstellungs**-App deaktivieren.
+
+-   Gehen Sie wie folgt vor, um das Aktivieren bzw. Deaktivieren der Standortbestimmung durch den Benutzer zu erkennen:
+    -   Behandeln Sie das [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542)-Ereignis. Die [**Status**](https://msdn.microsoft.com/library/windows/apps/br225601)-Eigenschaft des Arguments für das **StatusChanged**-Ereignis weist den Wert **Disabled** auf, wenn der Benutzer die Standortdienste deaktiviert.
+    -   Überprüfen Sie die von [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) zurückgegebenen Fehlercodes. Wenn die Positionsdienste vom Benutzer deaktiviert wurden, tritt bei Aufrufen von **GetGeopositionAsync** der Fehler **ACCESS\_DENIED** auf, und die [**LocationStatus**](https://msdn.microsoft.com/library/windows/apps/br225538)-Eigenschaft weist den Wert **Disabled** auf.
+-   Wenn Standortdaten für Ihre App unbedingt notwendig sind, beispielsweise in einer Karten-App, sollten Sie Folgendes sicherstellen:
+    -   Behandeln Sie das [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540)-Ereignis, um Updates abzurufen, falls sich der Standort des Benutzers ändert.
+    -   Behandeln Sie das [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542)-Ereignis wie oben beschrieben, um Änderungen an den Standorteinstellungen zu erkennen.
+
+Beachten Sie, dass der Standortdienst Daten zurückgibt, sobald diese verfügbar sind. Zunächst wird unter Umständen ein Standort mit einem größeren Fehlerradius zurückgegeben. Dieser wird dann nach und nach mit exakteren Informationen aktualisiert, wenn diese zur Verfügung stehen. Apps, die den Standort des Benutzers anzeigen, aktualisieren den Standort in der Regel, wenn exaktere Informationen verfügbar werden.
+
+### Grafische Standortdarstellungen
+
+Ermöglichen Sie Ihrer App die Verwendung von [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526), um den aktuellen Standort des Benutzers klar auf der Karte anzuzeigen. Es gibt drei Hauptbereiche für die Genauigkeit: einen Fehlerradius von ungefähr 10 Metern, einen Fehlerradius von ungefähr 100 Metern und einen Fehlerradius von mehr als einem Kilometer. Durch die Verwendung der Genauigkeitsinformationen können Sie sicherstellen, dass die App Standorte im Kontext der verfügbaren Daten präzise anzeigt. Allgemeine Informationen zur Verwendung des Kartensteuerelements finden Sie unter [Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten](https://msdn.microsoft.com/library/windows/apps/mt219695).
+
+-   Bei einer Genauigkeit von ungefähr 10 Metern (GPS-Auflösung) kann der Standort durch einen Punkt oder eine Stecknadel auf der Karte angegeben werden. Bei dieser Genauigkeit können auch die Breiten- und Längengradkoordinaten und die Straße angezeigt werden.
+
+    ![Beispiel für eine Karte mit einer GPS-Genauigkeit von ungefähr 10 Metern](images/10metererrorradius.png)
+
+-   Bei einer Genauigkeit zwischen 10 und 500 Metern (ungefähr 100 Meter) wird der Standort üblicherweise durch WiFi-Auflösung empfangen. Der von einem Mobiltelefon abgerufene Standort hat eine Genauigkeit von ca. 300 m. In diesem Fall empfiehlt es sich, einen Fehlerradius in der App anzuzeigen. Bei Apps, die Wegbeschreibungen anzeigen, für die ein Zentrierpunkt erforderlich ist, kann ein solcher Punkt mit einem ihn umgebenden Fehlerradius angezeigt werden.
+
+    ![Beispiel für eine Karte mit einer WiFi-Genauigkeit von ungefähr 100 Metern](images/100metererrorradius.png)
+
+-   Wenn die zurückgegebene Genauigkeit einen Kilometer übersteigt, werden Standortinformationen vermutlich durch die Auflösung auf IP-Ebene empfangen. Dieser Grad an Genauigkeit ist häufig zu niedrig, um einen bestimmten Punkt auf einer Karte präzise anzuzeigen. Die App sollte auf die Stadtebene auf der Karte zoomen oder zum entsprechenden Bereich auf Grundlage des Fehlerradius (beispielsweise Regionsebene).
+
+    ![Beispiel für eine Karte mit einer WiFi-Genauigkeit von ungefähr einem Kilometer](images/1000metererrorradius.png)
+
+Wenn die Standortgenauigkeit von einem Genauigkeitsbereich zu einem anderen wechselt, sollte der Übergang zwischen den verschiedenen grafischen Darstellungen ansprechend sein. Dies kann folgendermaßen erfolgen:
+
+-   Gestalten Sie die Übergangsanimation gleichmäßig. Der Übergang sollte schnell und flüssig erfolgen.
+-   Warten Sie auf mehrere aufeinander folgende Meldungen, um die Änderung der Genauigkeit zu bestätigen und auf diese Weise unerwünschtes und zu häufiges Zoomen zu vermeiden.
+
+### Textliche Standortdarstellungen
+
+Bei einigen Arten von Apps, beispielsweise Wetter-Apps oder Apps, die lokale Informationen bereitstellen, ist es nötig, den Standort für die verschiedenen Genauigkeitsbereiche in Textform darzustellen. Sorgen Sie dafür, dass der Standort deutlich und nur mit dem Grad an Genauigkeit angezeigt wird, der durch die Daten gestützt wird.
+
+-   Bei einer Genauigkeit von ungefähr 10 Metern (GPS-Auflösung) sind die empfangenen Standortdaten ziemlich genau und können daher bis zur Ebene des Stadtteilnamens angegeben werden. Die Namen von Städten, Bundesländern und Ländern/Regionen können ebenfalls verwendet werden.
+-   Bei einer Genauigkeit von ungefähr 100 Metern (WiFi-Auflösung) sind die empfangenen Standortdaten halbwegs genau, und es wird empfohlen, Informationen bis hin zur Ebene des Städtenamens anzugeben. Vermeiden Sie es, Stadtteilnamen anzugeben.
+-   Zeigen Sie bei einer Genauigkeit von mehr als einem Kilometer (IP-Auflösung) nur das Bundesland oder den Namen des Landes/der Region an.
+
+### Überlegungen zum Datenschutz
+
+Der geografische Standort eines Benutzers gehört zu den personenbezogenen Informationen (Personally Identifiable Information, PII). Die folgende Website enthält Richtlinien zum Datenschutz.
+
+-   [Microsoft-Datenschutz]( http://go.microsoft.com/fwlink/p/?LinkId=259692)
 
 <!--For more info, see [Guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md).-->
 
-## Related topics
+## Verwandte Themen
 
-* [Set up a geofence](https://msdn.microsoft.com/library/windows/apps/mt219702)
-* [Get current location](https://msdn.microsoft.com/library/windows/apps/mt219698)
-* [Display maps with 2D, 3D, and Streetside views](https://msdn.microsoft.com/library/windows/apps/mt219695)
+* [Einrichten von Geofence-Bereichen](https://msdn.microsoft.com/library/windows/apps/mt219702)
+* [Abrufen der aktuellen Position](https://msdn.microsoft.com/library/windows/apps/mt219698)
+* [Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten](https://msdn.microsoft.com/library/windows/apps/mt219695)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
-* [UWP location sample (geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
- 
+* [UWP – Positionsbeispiel (Geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
+ 
 
- 
+ 
 
 
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

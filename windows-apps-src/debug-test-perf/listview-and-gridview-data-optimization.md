@@ -1,78 +1,89 @@
 ---
 author: mcleblanc
 ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
-title: ListView and GridView data virtualization
-description: Improve ListView and GridView performance and startup time through data virtualization.
+title: Virtualisierung von ListView- und GridView-Daten
+description: Verbessern Sie die Leistung und Startzeit von ListView und GridView durch Datenvirtualisierung.
 ---
-# ListView and GridView data virtualization
+# Virtualisierung von „ListView“- und „GridView“-Daten
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Note**  For more details, see the //build/ session [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
+**Hinweis**  Weitere Informationen finden Sie unter der Sitzung „//build/“ [Erhebliches Erhöhen der Leistung bei der Interaktion von Benutzern mit großen Mengen von Daten in GridView und ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
-Improve [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) and [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) performance and startup time through data virtualization. For UI virtualization, element reduction, and progressive updating of items, see [ListView and GridView UI optimization](optimize-gridview-and-listview.md).
+Verbessern Sie die Leistung und Startzeit von [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) durch Datenvirtualisierung. Informationen zu UI-Virtualisierung, Elementreduzierung und das progressive Aktualisieren von Elementen finden Sie unter [Optimieren der ListView- und GridView-Benutzeroberfläche](optimize-gridview-and-listview.md).
 
-A method of data virtualization is needed for a data set that is so large that it cannot or should not all be stored in memory at one time. You load an initial portion into memory (from local disk, network, or cloud) and apply UI virtualization to this partial data set. You can later load data incrementally, or from arbitrary points in the master data set (random access), on demand. Whether data virtualization is appropriate for you depends on many factors.
+Eine Methode zur Datenvirtualisierung ist für einen Datensatz erforderlich, der so groß ist, dass er zu einem bestimmten Zeitpunkt nicht komplett im Arbeitsspeicher gespeichert werden kann oder soll. Sie laden einen ersten Teil (vom lokalen Datenträger, aus dem Netzwerk oder der Cloud) in den Arbeitsspeicher und wenden die UI-Virtualisierung auf dieses Teildataset an. Sie können die Daten später inkrementell oder bei Bedarf von beliebigen Punkten im Master-Dataset (wahlfreier Zugriff) laden. Ob die Datenvirtualisierung für Sie geeignet ist, hängt von vielen Faktoren ab.
 
--   The size of your data set
--   The size of each item
--   The source of the data set (local disk, network, or cloud)
--   The overall memory consumption of your app
+-   Die Größe Ihres Datasets
+-   Die Größe der einzelnen Elemente
+-   Die Quelle des Datasets (lokaler Datenträger, Netzwerk oder Cloud)
+-   Die gesamte Arbeitsspeichernutzung Ihrer App
 
-**Note**  Be aware that a feature is enabled by default for ListView and GridView that displays temporary placeholder visuals while the user is panning/scrolling quickly. As data is loaded, these placeholder visuals are replaced with your item template. You can turn the feature off by setting [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) to false, but if you do so then we recommend that you use the x:Phase attribute to progressively render the elements in your item template. See [Update ListView and GridView items progressively](optimize-gridview-and-listview.md#update-items-incrementally).
+**Hinweis**  Beachten Sie, dass für „ListView“ und „GridView“ standardmäßig ein Feature aktiviert ist, das temporäre Platzhalter für visuelle Elemente anzeigt, während der Benutzer eine schnelle Verschiebung/einen schnellen Bildlauf durchführt. Beim Laden von Daten werden diese Platzhalter für visuelle Elemente durch die Elementvorlage ersetzt. Sie können das Feature deaktivieren, indem Sie [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) auf „false“ festlegen. In diesem Fall wird jedoch empfohlen, das „x: Phase“-Attribut zu verwenden, um die Elemente in der Elementvorlage progressiv zu rendern. Siehe [Progressives Aktualisieren von ListView- und GridView-Elementen](optimize-gridview-and-listview.md#update-items-incrementally).
 
-Here are more details about the incremental and random-access data virtualization techniques.
+Hier erhalten Sie weitere Informationen über die Verfahren der inkrementellen Datenvirtualisierung und der Datenvirtualisierung mit wahlfreiem Zugriff.
 
-## Incremental data virtualization
+## Inkrementelle Datenvirtualisierung
 
-Incremental data virtualization loads data sequentially. A [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) that uses incremental data virtualization may be used to view a collection of a million items, but only 50 items are loaded initially. As the user pans/scrolls, the next 50 are loaded. As items are loaded, the scroll bar's thumb decreases in size. For this type of data virtualization you write a data source class that implements these interfaces.
+Bei der inkrementellen Datenvirtualisierung werden Daten sequenziell geladen. Ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), das die inkrementelle Datenvirtualisierung verwendet, kann zum Anzeigen einer Sammlung von einer Million Elementen verwendet werden, wobei aber anfänglich nur 50 Elemente geladen werden. Beim Schwenken/Bildlauf werden die nächsten 50 Elemente geladen. Der Ziehpunkt der Bildlaufleiste wird beim Laden der Elemente kleiner. Für diese Art der Datenvirtualisierung schreiben Sie eine Datenquellenklasse, die diese Schnittstellen implementiert.
 
 -   [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx)
--   [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) (C#/VB) or [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) (C++/CX)
+-   [
+              **INotifyCollectionChanged**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) (C#/VB) oder [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) (C++/CX)
 -   [**ISupportIncrementalLoading**](https://msdn.microsoft.com/library/windows/apps/Hh701916)
 
-A data source like this is an in-memory list that can be continually extended. The items control will ask for items using the standard [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) indexer and count properties. The count should represent the number of items locally, not the true size of the dataset.
+Eine derartige Datenquelle ist eine speicherinterne Liste, die ständig erweitert werden kann. Das Elementsteuerelement fordert die Elemente mithilfe der standardmäßigen „Indexer“- und „Count“-Eigenschaften von [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) an. Die Anzahl sollte die Anzahl der lokalen Elemente darstellen, nicht die tatsächliche Größe des Datasets.
 
-When the items control gets close to the end of the existing data, it will call [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems). If you return **true**, then it will call [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) passing an advised number of items to load. Depending on where you're loading data from (local disk, network, or cloud), you may choose to load a different number of items than that advised. For example, if your service supports batches of 50 items but the items control only asks for 10 then you can load 50. Load the data from your back end, add it to your list, and raise a change notification via [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) or [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) so that the items control knows about the new items. Also return a count of the items you actually loaded. If you load fewer items than advised, or the items control has been panned/scrolled even further in the interim, then your data source will be called again for more items and the cycle will continue. You can learn more by downloading the [XAML data binding sample](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) for Windows 8.1 and re-using its source code in your Windows 10 app.
+Wenn sich das Elementsteuerelement dem Ende der vorhandenen Daten nähert, ruft es [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems) auf. Wenn **true** zurückgegeben wird, ruft es [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) auf und übergibt eine empfohlene Anzahl von zu ladenden Elementen. Je nachdem, von wo die Daten (lokaler Datenträger, Netzwerk oder Cloud) geladen werden, können Sie eine andere als die empfohlene Anzahl von Elementen laden. Wenn Ihr Dienst z. B. Stapel von 50 Elementen unterstützt, aber das Elementsteuerelement nur 10 anfordert, dann können Sie 50 Elemente laden. Laden Sie die Daten vom Back-End, fügen Sie sie zur Liste hinzu, und lösen Sie über [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) oder [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) eine Änderungsbenachrichtigung aus, damit das Elementsteuerelement über die neuen Elemente informiert wird. Geben Sie außerdem die Anzahl der tatsächlich geladenen Elemente zurück. Wenn Sie weniger Artikel als empfohlen laden oder das Elementsteuerelement in der Zwischenzeit noch weiter verschoben/durchlaufen wurde, dann wird die Datenquelle erneut aufgerufen, um weitere Elemente zu laden, und der Zyklus wird anschließend fortgesetzt. Weitere Informationen finden Sie durch Herunterladen des [XAML-Datenbindungsbeispiel](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) für Windows 8.1 und der Wiederverwendung des Quellcodes in Ihrer App für Windows 10.
 
-## Random access data virtualization
+## Datenvirtualisierung mit wahlfreiem Zugriff
 
-Random access data virtualization allows loading from an arbitrary point in the data set. A [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) that uses random access data virtualization, used to view a collection of a million items, can load the items 100,000 – 100,050. If the user then moves to the beginning of the list, the control loads items 1 – 50. At all times, the scroll bar's thumb indicates that the **ListView** contains a million items. The position of the scroll bar's thumb is relative to where the visible items are located in the collection's entire data set. This type of data virtualization can significantly reduce the memory requirements and load times for the collection. To enable it you need to write a data source class that fetches data on demand and manages a local cache and implements these interfaces.
+Die Datenvirtualisierung mit wahlfreiem Zugriff ermöglicht das Laden von Daten, die sich an einem beliebigen Punkt des Datasets befinden. Ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878), das die Datenvirtualisierung mit wahlfreiem Zugriff verwendet und zum Anzeigen einer Sammlung von einer Million Elementen verwendet wird, kann die Elemente 100.000 bis 100.050 laden. Wechselt der Benutzer anschließend zum Listenanfang, lädt das Steuerelement die Elemente von 1 bis 50. Der Ziehpunkt der Bildlaufleiste gibt jederzeit an, dass **ListView** eine Million Elemente enthält. Die Position des Ziehpunkts der Bildlaufleiste gibt Aufschluss über die relative Position der sichtbaren Elemente innerhalb des gesamten Datasets der Sammlung. Diese Art der Datenvirtualisierung kann den Speicherbedarf und die Ladezeiten für die Sammlung erheblich reduzieren. Zur Aktivierung müssen Sie eine Datenquellenklasse erstellen, die Daten bei Bedarf abruft, einen lokalen Cache verwaltet und diese Schnittstellen implementiert.
 
 -   [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx)
--   [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) (C#/VB) or [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) (C++/CX)
--   (Optionally) [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)
--   (Optionally) [**ISelectionInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877074)
+-   [
+              **INotifyCollectionChanged**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) (C#/VB) oder [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) (C++/CX)
+-   (Optional) [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)
+-   (Optional) [**ISelectionInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877074)
 
-[**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070) provides information on which items the control is actively using. The items control will call this method whenever its view is changing, and will include these two sets of ranges.
+[
+              **IItemsRangeInfo**
+            ](https://msdn.microsoft.com/library/windows/apps/Dn877070) stellt Informationen dazu bereit, welche Elemente das Steuerelement aktiv verwendet. Das Steuerelement ruft diese Methode bei jeder Änderung der Ansicht auf und bezieht diese beiden Sätze von Bereichen ein.
 
--   The set of items that are in the viewport.
--   A set of non-virtualized items that the control is using that may not be in the viewport.
-    -   A buffer of items around the viewport that the items control keeps so that touch panning is smooth.
-    -   The focused item.
-    -   The first item.
+-   Der Satz von Elementen, die sich im Viewport befinden.
+-   Eine Reihe von nicht virtualisierten Elemente, die das Steuerelement verwendet und möglicherweise nicht im Viewport enthalten sind.
+    -   Ein um den Viewport angeordneter Puffer von Elementen, der von den Elementen gesteuert wird, damit die Verschiebung per Toucheingabe reibungslos verläuft.
+    -   Das Element, das den Fokus hat.
+    -   Das erste Element.
 
-By implementing [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070) your data source knows what items need to be fetched and cached, and when to prune from the cache data that is no longer needed. **IItemsRangeInfo** uses [**ItemIndexRange**](https://msdn.microsoft.com/library/windows/apps/Dn877081) objects to describe a set of items based on their index in the collection. This is so that it doesn't use item pointers, which may not be correct or stable. **IItemsRangeInfo** is designed to be used by only a single instance of an items control because it relies on state information for that items control. If multiple items controls need access to the same data then you will need a separate instance of the data source for each. They can share a common cache, but the logic to purge from the cache will be more complicated.
+Durch die Implementierung von [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070) weiß Ihre Datenquelle, welche Elemente abgerufen und zwischengespeichert werden müssen. Zudem ist ihr bekannt, wann nicht länger im Cache erforderliche Daten gelöscht werden müssen. **IItemsRangeInfo** verwendet [**ItemIndexRange**](https://msdn.microsoft.com/library/windows/apps/Dn877081)-Objekte, um eine Reihe von Elementen auf Basis ihres Indexes in der Sammlung zu beschreiben. Auf diese Weise werden keine Elementzeiger verwendet, die möglicherweise nicht korrekt oder zuverlässig sind. **IItemsRangeInfo** ist dafür vorgesehen, nur von einer einzelnen Instanz eines Elementsteuerelements verwendet zu werden, da es auf Zustandsinformationen für dieses Elementsteuerelement beruht. Wenn mehrere Elementsteuerelemente Zugriff auf dieselben Daten benötigen, ist jeweils eine separate Instanz der Datenquelle erforderlich. Sie können einen gemeinsamen Cache teilen, aber die Logik zum Löschen aus dem Cache ist dann komplizierter.
 
-Here's the basic strategy for your random access data virtualization data source.
+Hier folgt die grundlegende Strategie für die Datenvirtualisierung mit wahlfreiem Zugriff auf die Datenquelle.
 
--   When asked for an item
-    -   If you have it available in memory, then return it.
-    -   If you don’t have it, then return either null or a placeholder item.
-    -   Use the request for an item (or the range information from [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)) to know which items are needed, and to fetch data for items from your back end asynchronously. After retrieving the data, raise a change notification via [**INotifyCollectionChanged**]((https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) or [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) so that the items control knows about the new item.
--   (Optionally) as the items control's viewport changes, identify what items are needed from your data source via your implementation of [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070).
+-   Bei der Anforderung eines Elements
+    -   Wenn es im Arbeitsspeicher verfügbar ist, geben Sie es zurück.
+    -   Wenn es nicht vorhanden ist, geben Sie Null oder ein Platzhalterelement zurück.
+    -   Verwenden Sie die Anforderung für ein Element (oder die Bereichsinformationen aus [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070)), um zu wissen, welche Elemente erforderlich sind, und um Daten für Elemente asynchron vom Back-End abzurufen. Lösen Sie nach dem Abrufen der Daten über [**INotifyCollectionChanged**]((https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) oder [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) eine Änderungsbenachrichtigung aus, damit das Elementsteuerelement über das neue Element informiert ist.
+-   (Optional) Wenn sich der Viewport des Elementsteuerelements ändert, identifizieren Sie über Ihre Implementierung von [**IItemsRangeInfo**](https://msdn.microsoft.com/library/windows/apps/Dn877070), welche Elemente aus der Datenquelle erforderlich sind.
 
-Beyond that, the strategy for when to load data items, how many to load, and which items to keep in memory is up to your application. Some general considerations to keep in mind:
+Die Strategie, wann die Datenelemente geladen werden, wie viele Datenelemente geladen werden und welche Elemente im Arbeitsspeicher verbleiben, hängt darüber hinaus von Ihrer Anwendung ab. Einige allgemeine, zu berücksichtigende Überlegungen:
 
--   Make asynchronous requests for data; don't block the UI thread.
--   Find the sweet spot in the size of the batches you fetch items in. Prefer chunky to chatty. Not so small that you make too many small requests; not too large that they take too long to retrieve.
--   Consider how many requests you want to have pending at the same time. Performing one at a time is easier, but it may be too slow if turnaround time is high.
--   Can you cancel requests for data?
--   If using a hosted service, is there a cost per transaction?
--   What kind of notifications are provided by the service when the results of a query are changed? Will you know if an item is inserted at index 33? If your service supports queries based on a key-plus-offset, that may be better than just using an index.
--   How smart do you want to be in pre-fetching items? Are you going to try and track the direction and velocity of scrolling to predict which items are needed?
--   How aggressive do you want to be in purging the cache? This is a tradeoff of memory versus experience.
+-   Stellen Sie asynchrone Anforderungen für die Daten. Blockieren Sie nicht den UI-Thread.
+-   Finden Sie den optimalen Bereich für die Größe der Stapel, in denen Sie Elemente abrufen. Bevorzugen Sie eine kompakte Vorgehensweise. Nicht zu klein, dass zu viele kleine Anforderungen erforderlich sind, aber auch nicht zu groß, dass das Abrufen zu lange dauert.
+-   Berücksichtigen Sie, wie viele Anforderungen gleichzeitig ausstehen sollen. Die sequenzielle Ausführung ist einfacher, aber möglicherweise zu langsam, wenn die Verarbeitungszeit hoch ist.
+-   Können Sie die Datenanforderungen abbrechen?
+-   Ergeben sich Kosten für die einzelnen Transaktionen, wenn Sie einen gehosteten Dienst verwenden?
+-   Welche Art von Benachrichtigungen werden vom Dienst bereitgestellt, wenn sich die Ergebnisse einer Abfrage ändern? Können Sie erfahren, ob ein Element bei Index 33 eingefügt wird? Wenn Ihr Dienst Abfragen auf Basis von Schlüssel-plus-Versatz unterstützt, ist dies möglicherweise besser geeignet, anstatt nur einen Index zu verwenden.
+-   Wie intelligent soll das Vorabrufen der Elemente verlaufen? Möchten Sie die Richtung und Geschwindigkeit des Bildlaufs testen und nachverfolgen, um vorherzusagen, welche Elemente erforderlich sind?
+-   Wie offensiv möchten Sie beim Leeren des Caches vorgehen? Hierbei müssen Arbeitsspeicher und Erfahrung gegeneinander abgewogen werden.
 
 
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

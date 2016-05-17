@@ -1,38 +1,38 @@
 ---
 author: DelfCo
-Description: Globalization is the process of designing and developing your app to act appropriately for different global markets without any changes or customization.
+Description: Globalisierung beschreibt den Entwurf und die Entwicklung der App für verschiedene globale Märkte, ohne dass Änderungen oder Anpassungen erforderlich sind.
 Search.SourceType: Video
-title: Globalization and localization
+title: Globalisierung und Lokalisierung
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
 ---
 
-# Globalization and localization
+# Globalisierung und Lokalisierung
 
 
 
 
-Windows is used worldwide, by audiences that vary in culture, region, and language. A user may speak any language, or even multiple languages. A user may be located anywhere in the world, and may speak any language in any location. You can increase the potential market for your app by designing it to be readily adaptable using *globalization* and *localization*.
+Windows wird auf der ganzen Welt in verschiedenen Märkten und von Anwendern unterschiedlicher Kulturen, Herkunft und Sprachen verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können die Marktchancen Ihrer App erweitern, indem Sie mithilfe der *Globalisierung* und *Lokalisierung* eine variable App entwickeln.
 
-**Globalization** is the process of designing and developing your app to act appropriately for different global markets without any changes or customization.
+**Globalisierung** beschreibt den Entwurf und die Entwicklung der App für verschiedene globale Märkte, ohne dass Änderungen oder Anpassungen erforderlich sind.
 
-For example, you can:
+Sie haben u. a. folgende Möglichkeiten:
 
--   Design the layout of your app to accommodate the different text lengths and font sizes of other languages in labels and text strings.
--   Retrieve text and culture-dependent images from resources that can be adapted to different local markets, instead of hard-coding them into your app's code or markup.
--   Use globalization APIs to display data that are formatted differently in different regions, such as numeric values, dates, times, and currencies.
+-   Entwerfen des App-Layouts in Anpassung an die verschiedenen Textlängen und Schriftgrade anderer Sprachen in Beschriftungen und Textzeichenfolgen
+-   Verwenden von Text und kulturspezifischen Bildern aus Ressourcen, die an verschiedene lokale Märkte angepasst werden können, anstatt hartcodierte Elemente im Code oder Markup der App zu programmieren
+-   Verwenden von Globalisierungs-APIs zum Anzeigen von Daten, die in verschiedenen Regionen unterschiedlich formatiert sind, z. B. numerische Werte, Datumsangaben, Uhrzeiten und Währungen
 
-**Localization** is the process of adapting your app to meet the language, cultural, and political requirements of a specific local market.
+**Lokalisierung** beschreibt die Anpassung der App an die sprachlichen, kulturellen und politischen Anforderungen bestimmter lokaler Märkte.
 
-For example:
+Beispiel:
 
--   Translate the text and labels of the app for the new market, and create separate resources for its language.
--   Modify any culture-dependent images as necessary, and place in separate resources.
+-   Übersetzen von Text und Beschriftungen der App für den neuen Markt und Erstellen separater Ressourcen für die jeweilige Sprache
+-   Ändern kulturspezifischer Bilder nach Bedarf und Platzieren der Bilder in separaten Ressourcen
 
-Watch this video for a brief introduction on how to prepare your app for the world: [Introduction to globalization and localization](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization).
+Das folgende Video enthält eine kurze Einführung dazu, wie Sie Ihre App für die weltweite Verbreitung vorbereiten: [Einführung in die Globalisierung und Lokalisierung](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization)
 
-## Articles
+## Artikel
 <table>
 <colgroup>
 <col width="50%" />
@@ -40,55 +40,60 @@ Watch this video for a brief introduction on how to prepare your app for the wor
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Article</th>
-<th align="left">Description</th>
+<th align="left">Artikel</th>
+<th align="left">Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Do's and don'ts](guidelines-and-checklist-for-globalizing-your-app.md)</p></td>
-<td align="left"><p>Follow these best practices when globalizing your apps for a wider audience and when localizing your apps for a specific market.</p></td>
+<td align="left"><p>[Empfohlene und nicht empfohlene Vorgehensweisen](guidelines-and-checklist-for-globalizing-your-app.md)</p></td>
+<td align="left"><p>Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und wenn Sie Ihre Apps für einen bestimmten Markt lokalisieren.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Use global-ready formats](use-global-ready-formats.md)</p></td>
-<td align="left"><p>Develop a global-ready app by appropriately formatting dates, times, numbers, and currencies.</p></td>
+<td align="left"><p>[Verwenden weltweit einsetzbarer Formate](use-global-ready-formats.md)</p></td>
+<td align="left"><p>Entwickeln Sie eine für den globalen Markt geeignete App mit geeigneter Formatierung für Datumsangaben, Uhrzeiten, Zahlen und Währungen.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Manage language and region](manage-language-and-region.md)</p></td>
-<td align="left"><p>Control how Windows selects UI resources and formats the UI elements of the app, by using the various language and region settings provided by Windows.</p></td>
+<td align="left"><p>[Verwalten von Sprache und Region](manage-language-and-region.md)</p></td>
+<td align="left"><p>Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App steuern.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Use patterns to format dates and times](use-patterns-to-format-dates-and-times.md)</p></td>
-<td align="left"><p>Use the [<strong>Windows.Globalization.DateTimeFormatting</strong>](https://msdn.microsoft.com/library/windows/apps/br206859) API with custom patterns to display dates and times in exactly the format you wish.</p></td>
+<td align="left"><p>[Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten](use-patterns-to-format-dates-and-times.md)</p></td>
+<td align="left"><p>Verwenden Sie die [<strong>Windows.Globalization.DateTimeFormatting</strong>](https://msdn.microsoft.com/library/windows/apps/br206859)-API mit benutzerdefinierten Mustern, um Datums- und Uhrzeitwerte im gewünschten Format anzuzeigen.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Adjust layout and fonts, and support RTL](adjust-layout-and-fonts--and-support-rtl.md)</p></td>
-<td align="left"><p>Develop your app to support the layouts and fonts of multiple languages, including RTL (right-to-left) flow direction.</p></td>
+<td align="left"><p>[Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“](adjust-layout-and-fonts--and-support-rtl.md)</p></td>
+<td align="left"><p>Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden – also beispielsweise auch die Flussrichtung von rechts nach links (right-to-left, RTL).</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Prepare your app for localization](prepare-your-app-for-localization.md)</p></td>
-<td align="left"><p>Prepare your app for localization to other markets, languages, or regions.</p></td>
+<td align="left"><p>[Vorbereiten Ihrer App für die Lokalisierung](prepare-your-app-for-localization.md)</p></td>
+<td align="left"><p>Bereiten Sie Ihre App für die Lokalisierung vor, um sie an andere Märkte, Sprachen oder Regionen anzupassen.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Put UI strings into resources](put-ui-strings-into-resources.md)</p></td>
-<td align="left"><p>Put string resources for your UI into resource files. You can then reference those strings from your code or markup.</p></td>
+<td align="left"><p>[Aufnehmen von UI-Zeichenfolgen in Ressourcen](put-ui-strings-into-resources.md)</p></td>
+<td align="left"><p>Nehmen Sie Zeichenfolgenressourcen für Ihre Benutzeroberfläche in Ressourcendateien auf. Sie können dann in Ihrem Code oder Markup auf diese Zeichenfolgen verweisen.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
-See also the documentation originally created for Windows 8.x, which still applies to Universal Windows Platform (UWP) apps and Windows 10.
+Weitere Informationen finden Sie in der ursprünglich für Windows 8.x erstellten Dokumentation, die weiterhin für universelle Windows-Plattform-Apps (UWP) und Windows 10 gilt.
 
--   [Globalizing your app](https://msdn.microsoft.com/library/windows/apps/xaml/hh965328)
--   [Language matching](https://msdn.microsoft.com/library/windows/apps/xaml/jj673578.aspx)
--   [NumeralSystem values](https://msdn.microsoft.com/library/windows/apps/xaml/jj236471.aspx)
--   [International fonts](https://msdn.microsoft.com/library/windows/apps/xaml/dn263115.aspx)
--   [App resources and localization](https://msdn.microsoft.com/library/windows/apps/xaml/hh710212.aspx)
+-   [Globalisierung Ihrer App](https://msdn.microsoft.com/library/windows/apps/xaml/hh965328)
+-   [Sprachabgleich](https://msdn.microsoft.com/library/windows/apps/xaml/jj673578.aspx)
+-   [NumeralSystem-Werte](https://msdn.microsoft.com/library/windows/apps/xaml/jj236471.aspx)
+-   [Internationale Schriftarten](https://msdn.microsoft.com/library/windows/apps/xaml/dn263115.aspx)
+-   [App-Ressourcen und Lokalisierung](https://msdn.microsoft.com/library/windows/apps/xaml/hh710212.aspx)
 
- 
+ 
 
- 
+ 
 
+
+
+
+
+<!--HONumber=May16_HO2-->
 
 

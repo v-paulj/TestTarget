@@ -1,23 +1,23 @@
 ---
 author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
-title: Sample data on the design surface, and for prototyping
-description: It may be impossible or undesirable (perhaps for reasons of privacy or performance) for your app to display live data on the design surface in Microsoft Visual Studio or Blend for Visual Studio.
+title: Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
+description: Möglicherweise ist es nicht möglich oder nicht erwünscht (z. B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt.
 ---
-Sample data on the design surface, and for prototyping
+Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
 =============================================================================================
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
-**Note**  The degree to which you need sample data—and how much it will help you—depends on whether your bindings use the [{Binding} markup extension](https://msdn.microsoft.com/library/windows/apps/Mt204782) or the [{x:Bind} markup extension](https://msdn.microsoft.com/library/windows/apps/Mt204783). The techniques described in this topic are based on the use of a [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713), so they're only appropriate for **{Binding}**. But if you're using **{x:Bind}** then your bindings at least show placeholder values on the design surface (even for items controls), so you don't have quite the same need for sample data.
+**Hinweis**  Der Bedarf an Beispieldaten und deren Nutzen für Sie hängen davon ab, ob für die Bindungen die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) oder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) verwendet wird. Die in diesem Thema beschriebenen Verfahren basieren auf der Verwendung eines [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) und eignen sich deshalb nur für **{Binding}**. Wenn Sie jedoch **{x:Bind}** verwenden, zeigen die Bindungen zumindest Platzhalterwerte auf der Entwurfsoberfläche an (selbst für Elementsteuerelemente). Deshalb besteht ein geringerer Bedarf an Beispieldaten.
 
-It may be impossible or undesirable (perhaps for reasons of privacy or performance) for your app to display live data on the design surface in Microsoft Visual Studio or Blend for Visual Studio. In order to have your controls populated with data (so that you can work on your app's layout, templates, and other visual properties), there are various ways in which you can use design-time sample data. Sample data can also be really useful and time-saving if you're building a sketch (or prototype) app. You can use sample data in your sketch or prototype at run-time to illustrate your ideas without going as far as connecting to real, live data.
+Möglicherweise ist es nicht möglich oder nicht erwünscht (z. B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt. Es gibt mehrere Möglichkeiten, Entwurfszeit-Beispieldaten zu verwenden, damit die Steuerelemente mit Daten aufgefüllt werden (sodass Sie das Layout, die Vorlagen und andere visuelle Eigenschaften der App bearbeiten können). Beispieldaten können auch hilfreich sein und Zeit sparen, wenn Sie eine App als Skizze (oder Prototyp) erstellen. Sie können zur Laufzeit Beispieldaten in der Skizze oder im Prototyp verwenden, um Ihre Ideen zu veranschaulichen, ohne echte Livedaten nutzen zu müssen.
 
-Setting DataContext in markup
+Festlegen des DataContext im Markup
 -----------------------------
 
-It's a fairly common developer practice to use imperative code (in code-behind) to set a page or user control's [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) to a view model instance.
+Entwickler verwenden häufig imperativen Code (in CodeBehind), um den [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) einer Seite oder eines Benutzersteuerelements auf eine Ansichtsmodellinstanz festzulegen.
 
 ``` csharp
 public MainPage()
@@ -27,15 +27,15 @@ public MainPage()
 }
 ```
 
-But if you do that then your page isn't as "designable" as it could be. The reason is that when your XAML page is opened in Visual Studio or Blend for Visual Studio, the imperative code that assigns the **DataContext** value is never run (in fact, none of your code-behind is executed). The XAML tools do of course parse your markup and instantiate any objects declared in it, but they don't actually instantiate your page's type itself. The result is that you won't see any data in your controls or in the **Create Data Binding** dialog, and your page will be more challenging to style and to lay out.
+Jedoch stehen Ihnen bei Verwendung dieses Verfahrens weniger Designmöglichkeiten für die Seite zur Verfügung. Der Grund dafür ist, dass beim Öffnen der XAML-Seite in Visual Studio oder Blend für Visual Studio der imperative Code, der den **DataContext**-Wert zuweist, nie ausgeführt wird (es wird nicht einmal der CodeBehind ausgeführt). Selbstverständlich wird von den XAML-Tools das Markup analysiert, und sie instanziieren alle in ihm deklarierten Objekte, sie instanziieren jedoch nicht den Typ der Seite. Deshalb werden in den Steuerelementen und im Dialogfeld **Datenbindung erstellen** keine Daten angezeigt, und es ist schwieriger, das Format und Layout der Seite zu erstellen.
 
-![Sparse design UI.](images/displaying-data-in-the-designer-01.png)
+![Benutzeroberfläche mit geringen Entwurfsmöglichkeiten](images/displaying-data-in-the-designer-01.png)
 
-The first remedy to try is to comment out that **DataContext** assignment and set the **DataContext** in your page markup instead. That way, your live data shows up at design-time as well as at run-time. To do this, first open your XAML page. Then, in the **Document Outline** window, click the root designable element (usually with the label **\[Page\]**) to select it. In the **Properties** window, find the **DataContext** property (inside the Common category), and then click **New**. Click your view model type from the **Select Object** dialog box, and then click **OK**.
+Als Abhilfe können Sie die **DataContext**-Zuweisung auskommentieren und den **DataContext** stattdessen im Seitenmarkup festlegen. Dies bewirkt, dass die Livedaten zur Entwurfszeit und zur Laufzeit angezeigt werden. Öffnen Sie hierzu zunächst die XAML-Seite. Klicken Sie dann im Fenster **Dokumentgliederung** auf das Stammentwurfselement (in der Regel mit der Bezeichnung **\[Page\]**), um es auszuwählen. Suchen Sie im **Eigenschaftenfenster** die **DataContext**-Eigenschaft (in der Kategorie „Allgemein“), und klicken Sie dann auf **Neu**. Klicken Sie im Dialogfeld **Objekt auswählen** auf den Ansichtsmodelltyp, und klicken Sie dann auf **OK**.
 
-![UI for setting DataContext.](images/displaying-data-in-the-designer-02.png)
+![Benutzeroberfläche zum Festlegen des „DataContext“](images/displaying-data-in-the-designer-02.png)
 
-Here's what the resulting markup looks like.
+Das resultierende Markup sieht folgendermaßen aus.
 
 ``` xaml
 <Page ... >
@@ -44,11 +44,11 @@ Here's what the resulting markup looks like.
     </Page.DataContext>
 ```
 
-And here’s what the design surface looks like now that your bindings can resolve. Notice that the **Path** picker in the **Create Data Binding** dialog is now populated, based on the **DataContext** type and the properties that you can bind to.
+Und so sieht die Benutzeroberfläche aus, wenn die Bindungen aufgelöst werden können. Beachten Sie, dass das Auswahlfeld **Pfad** im Dialogfeld **Datenbindung erstellen** jetzt aufgefüllt ist, basierend auf dem **DataContext**-Typ und den Eigenschaften, an die gebunden werden kann.
 
-![Designable UI.](images/displaying-data-in-the-designer-03.png)
+![Designfähige Benutzeroberfläche](images/displaying-data-in-the-designer-03.png)
 
-The **Create Data Binding** dialog only needs a type to work from, but the bindings need the properties to be initialized with values. If you don't want to reach out to your cloud service at design-time (due to performance, paying for data transfer, privacy issues, that kind of thing) then your initialization code can check to see whether your app is running in a design tool (such as Visual Studio or Blend for Visual Studio) and in that case load sample data for use at design-time only.
+Im Dialogfeld **Datenbindung erstellen** ist nur ein Typ als Grundlage erforderlich, die Bindungen erfordern jedoch, dass die Eigenschaften mit Werten initialisiert werden. Wenn Sie zur Entwurfszeit nicht den Clouddienst in Anspruch nehmen möchten (aus Gründen der Leistung, der Kosten der Datenübertragung, des Datenschutzes usw.), kann der Initialisierungscode überprüfen, ob die App in einem Entwicklungstool (z. B. Visual Studio oder Blend für Visual Studio) ausgeführt wird. Wenn dies der Fall ist, laden Sie Beispieldaten, die nur zur Entwurfszeit verwendet werden.
 
 ``` csharp
 if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
@@ -61,14 +61,14 @@ else
 }
 ```
 
-You could use a view model locator if you need to pass parameters to your initialization code. A view model locator is a class that you can put into app resources. It has a property that exposes the view model, and your page's **DataContext** binds to that property. Another pattern that the locator or the view model can use is dependency injection, which can construct a design-time or a run-time data provider (each of which implements a common interface), as applicable.
+Sie können einen Ansichtsmodelllocator verwenden, wenn Sie Parameter an den Initialisierungscode übergeben müssen. Ein Ansichtsmodelllocator ist eine Klasse, die Sie in App-Ressourcen einfügen können. Er verfügt über eine Eigenschaft, die das Ansichtsmodell verfügbar macht, und der **DataContext** der Seite wird an diese Eigenschaft gebunden. Ein weiteres Muster, das der Locator oder das Ansichtsmodell verwenden können, ist das Einfügen von Abhängigkeiten. Damit kann ein Entwurfszeit- bzw. Laufzeitdatenanbieter (der jeweils eine gemeinsame Schnittstelle implementiert) erstellt werden.
 
-"Sample data from class", and design-time attributes
+„Beispieldaten aus Klasse erstellen“ und Entwurfszeitattribute
 ---------------------------------------------------------------------------------------
 
-If for whatever reason none of the options in the previous section work for you then you still have plenty of design-time data options available via XAML tools features and design-time attributes. One good option is the **Create Sample Data from Class** feature in Blend for Visual Studio. You can find that command on one of the buttons at the top of the **Data** panel.
+Wenn aus irgendeinem Grund keine der Optionen im vorherigen Abschnitt für Sie geeignet ist, stehen Ihnen immer noch über die Features der XAML-Tools und die Entwurfszeitattribute viele Optionen für Entwurfszeitdaten zur Verfügung. Eine gute Möglichkeit ist das Feature **Beispieldaten aus Klasse erstellen** in Blend für Visual Studio. Sie finden diesen Befehl auf einer der Schaltflächen am oberen Rand des Bereichs **Daten**.
 
-All you need to do is to specify a class for the command to use. The command then does two important things for you. First, it generates a XAML file that contains sample data suitable for hydrating an instance of your chosen class and all of its members, recursively (in fact, the tooling works equally well with XAML or JSON files). Second, it populates the **Data** panel with the schema of your chosen class. You can then drag members from the **Data** panel onto the design surface to perform various tasks. Depending on what you drag and where you drop it, you can add bindings to existing controls (using **{Binding}**), or create new controls and bind them at the same time. In either case, the operation also sets a design-time data context (**d:DataContext**) for you (if one is not already set) on the layout root of your page. That design-time data context uses the **d:DesignData** attribute to get its sample data from the XAML file that was generated (which, by the way, you are free to find in your project and edit so that it contains the sample data you want).
+Sie müssen lediglich eine Klasse für den zu verwendenden Befehl angeben. Der Befehl führt dann zwei wichtige Dinge für Sie aus. Erstens – er generiert eine XAML-Datei, die geeignete Beispieldaten zur rekursiven Hydration einer Instanz der ausgewählten Klasse und aller ihrer Member enthält (das Tool eignet sich für XAML-Dateien und JSON-Dateien gleichermaßen). Zweitens füllt er den Bereich **Daten** mit dem Schema der ausgewählten Klasse auf. Sie können dann Mitglieder aus dem Bereich **Daten** auf die Entwurfsoberfläche ziehen, um verschiedene Aufgaben auszuführen. Je nachdem, was Sie ziehen und wo Sie es ablegen, können Sie vorhandenen Steuerelementen Bindungen hinzufügen (mit **{Binding}**) oder neue Steuerelemente erstellen und gleichzeitig binden. In beiden Fällen wird außerdem automatisch im Layoutstamm der Seite ein Entwurfszeit-Datenkontext (**d:DataContext**) für Sie festgelegt (wenn dieser nicht bereits festgelegt ist). Der Entwurfszeit-Datenkontext verwendet das **d:DesignData**-Attribut zum Abrufen der Beispieldaten aus der generierten XAML-Datei (die Sie übrigens im Projekt suchen und bearbeiten können, damit sie die gewünschten Beispieldaten enthält).
 
 ``` xaml
 <Page ...
@@ -82,11 +82,13 @@ All you need to do is to specify a class for the command to use. The command the
 </Page>
 ```
 
-The various xmlns declarations mean that attributes with the **d:** prefix are interpreted only at design-time and are ignored at run-time. So the **d:DataContext** attribute only affects the value of the [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) property at design-time; it has no effect at run-time. You can even set both **d:DataContext** and **DataContext** in markup if you like. **d:DataContext** will override at design-time, and **DataContext** will override at run-time. These same override rules apply to all design-time and run-time attributes.
+Die verschiedenen xmlns-Deklarationen bedeuten, dass Attribute mit dem **d:**-Präfix nur zur Entwurfszeit interpretiert und während der Laufzeit ignoriert werden. Somit wirkt sich das **d:DataContext**-Attribut nur zur Entwurfszeit auf den Wert der Eigenschaft [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) aus und hat zur Laufzeit keine Auswirkungen. Sie können im Markup sogar sowohl **d:DataContext** als auch **DataContext** festlegen, wenn Sie dies wünschen. **d:DataContext** überschreibt zur Entwurfszeit, und **DataContext** überschreibt zur Laufzeit. Diese Überschreibungsregeln werden auf alle Entwurfszeit- und Laufzeitattribute angewendet.
 
-The **d:DataContext** attribute, and all other design-time attributes, are documented in the [Design-Time Attributes](http://go.microsoft.com/fwlink/p/?LinkId=272504) topic, which is still valid for Universal Windows Platform (UWP) apps.
+Das **d:DataContext**-Attribut und alle anderen Entwurfszeitattribute sind im Thema [Designzeitattribute](http://go.microsoft.com/fwlink/p/?LinkId=272504) dokumentiert, das für Universelle Windows-Plattform (UWP)-Apps) weiterhin Gültigkeit hat.
 
-[**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) doesn't have a **DataContext** property, but it does have a **Source** property. Consequently, there's a **d:Source** property that you can use to set design-time-only sample data on a **CollectionViewSource**.
+[
+              **CollectionViewSource**
+            ](https://msdn.microsoft.com/library/windows/apps/BR209833) besitzt nicht die Eigenschaft **DataContext**, jedoch die Eigenschaft **Source**. Daher gibt es eine Eigenschaft **d:Source**, mit der Sie auf die Entwurfszeit beschränkte Beispieldaten in einer **CollectionViewSource** festlegen können.
 
 ``` xaml
     <Page.Resources>
@@ -100,7 +102,7 @@ The **d:DataContext** attribute, and all other design-time attributes, are docum
     ...
 ```
 
-For this to work, you would have a class named `Recordings : ObservableCollection<Recording>`, and you would edit the sample data XAML file so that it contains only a **Recordings** object (with **Recording** objects inside that), as shown here.
+Damit dies funktioniert, verwenden Sie eine Klasse mit dem Namen `Recordings : ObservableCollection<Recording>` und bearbeiten die XAML-Beispieldatendatei, damit sie nur ein **Recordings**-Objekt enthält (in dem sich **Recording**-Objekte befinden), wie hier dargestellt.
 
 ``` xml
 <Quickstart:Recordings xmlns:Quickstart="using:Quickstart">
@@ -113,28 +115,33 @@ For this to work, you would have a class named `Recordings : ObservableCollectio
 </Quickstart:Recordings>
 ```
 
-If you use a JSON sample data file instead of XAML, you must set the **Type** property.
+Wenn Sie eine JSON-Beispieldatendatei anstelle einer XAML-Beispieldatendatei verwenden, müssen Sie die **Type**-Eigenschaft festlegen.
 
 ``` xaml
     d:Source="{d:DesignData /SampleData/RecordingsSampleData.json, Type=local:Recordings}"
 ```
 
-So far, we've been using **d:DesignData** to load design-time sample data from a XAML or JSON file. An alternative to that is the **d:DesignInstance** markup extension, which indicates that the design-time source is based on the class specified by the **Type** property. Here's an example.
+Bisher haben wir zum Laden von Entwurfszeit-Beispieldaten aus einer XAML- oder JSON-Datei **d:DesignData** verwendet. Alternativ kann die Markuperweiterung **d:DesignInstance** verwendet werden. Diese gibt an, dass die Entwurfszeitquelle auf der von der **Type**-Eigenschaft angegebenen Klasse basiert. Hier sehen Sie ein Beispiel.
 
 ``` xaml
     <CollectionViewSource x:Name="RecordingsCollection" Source="{Binding Recordings}"
         d:Source="{d:DesignInstance Type=local:Recordings, IsDesignTimeCreatable=True}"/>
 ```
 
-The **IsDesignTimeCreatable** property indicates that the design tool should actually create an instance of the class, which implies that the class has a public default constructor, and that it populates itself with data (either real or sample). If you don't set **IsDesignTimeCreatable** (or if you set it to **False**) then you won't get sample data displayed on the design surface. All the design tool does in that case is to parse the class for its bindable properties and display these in the the **Data** panel and in the **Create Data Binding** dialog.
+Die **IsDesignTimeCreatable**-Eigenschaft gibt an, dass das Entwicklungstool eigentlich eine Instanz der Klasse erstellen soll. Dies bedeutet, dass die Klasse über einen öffentlichen Standardkonstruktor verfügt und sich selbst mit Daten (echte oder Beispieldaten) auffüllt. Wenn Sie **IsDesignTimeCreatable** nicht festlegen (oder wenn Sie es auf **False** festlegen), werden auf der Entwurfsoberfläche keine Beispieldaten angezeigt. In diesem Fall analysiert das Entwicklungstool lediglich die Klasse im Hinblick auf ihre bindbaren Eigenschaften und zeigt diese im Bereich **Daten** sowie im Dialogfeld **Datenbindung erstellen** an.
 
-Sample data for prototyping
+Beispieldaten für die Prototyperstellung
 --------------------------------------------------------
 
-For prototyping, you want sample data at both design-time and at run-time. For that use case, Blend for Visual Studio has the **New Sample Data** feature. You can find that command on one of the buttons at the top of the **Data** panel.
+Für die Prototyperstellung benötigen Sie Beispieldaten zur Entwurfszeit und zur Laufzeit. Für diesen Anwendungsfall verfügt Blend für Visual Studio über das Feature **Neue Beispieldaten**. Sie finden diesen Befehl auf einer der Schaltflächen am oberen Rand des Bereichs **Daten**.
 
-Instead of specifying a class, you can actually design the schema of your sample data source right in the **Data** panel. You can also edit sample data values in the **Data** panel: there's no need to open and edit a file (although, you can still do that if you prefer).
+Statt eine Klasse anzugeben, können Sie direkt im Bereich **Daten** das Schema der Beispieldatenquelle entwerfen. Sie können im Bereich **Daten** auch Beispieldatenwerte bearbeiten. Es ist nicht erforderlich, eine Datei zu öffnen und zu bearbeiten (obwohl Sie bei Bedarf die Möglichkeit dazu haben).
 
-The **New Sample Data** feature uses [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713), and not **d:DataContext**, so that the sample data is available when you run your sketch or prototype as well as while you're designing it. And the **Data** panel really speeds up your designing and binding tasks. For example, simply dragging a collection property from the **Data** panel onto the design surface generates a data-bound items control and the necessary templates, all ready to build and run.
+Das Feature **Neue Beispieldaten** verwendet [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) und nicht **d:DataContext**. Daher sind die Beispieldaten sowohl beim Ausführen als auch beim Entwerfen der Skizze oder des Prototyps verfügbar. Und der Bereich **Daten** beschleunigt Ihre Entwurfs- und Bindungsaufgaben. Beispielsweise werden durch Ziehen einer Sammlungseigenschaft aus dem Bereich **Daten** auf die Entwurfsoberfläche ein datengebundenes Elementsteuerelement und die erforderlichen Vorlagen generiert, die sofort erstellt und ausgeführt werden können.
 
-![Sample data for prototyping.](images/displaying-data-in-the-designer-04.png)
+![Beispieldaten für die Prototyperstellung](images/displaying-data-in-the-designer-04.png)
+
+
+<!--HONumber=May16_HO2-->
+
+

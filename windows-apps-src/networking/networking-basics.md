@@ -1,92 +1,102 @@
 ---
 author: DelfCo
-description: Things you must do for any network-enabled app.
-title: Networking basics
+description: Aktionen, die Sie für eine netzwerkfähige App ausführen müssen.
+title: Netzwerkgrundlagen
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 ---
 
-# Networking basics
+# Netzwerkgrundlagen
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Things you must do for any network-enabled app.
+Aktionen, die Sie für eine netzwerkfähige App ausführen müssen.
 
-## Capabilities
+## Funktionen
 
-In order to use networking, you must add appropriate capability elements to your app manifest. If no network capability is specified in your app's manifest, your app will have no networking capability, and any attempt to connect to the network will fail.
+Um das Netzwerk verwenden zu können, müssen Sie die entsprechenden Funktionselemente zum App-Manifest hinzufügen. Wenn in Ihrem App-Manifest keine Netzwerkfunktion angegeben ist, besitzt Ihre App keine Netzwerkfunktion, und jeder Versuch, eine Verbindung mit dem Netzwerk herzustellen, führt zu einem Fehler.
 
-The following are the most-used networking capabilities.
+Im Folgenden finden Sie die am häufigsten verwendeten Netzwerkfunktionen:
 
-| Capability | Description |
+| Funktion | Beschreibung |
 |------------|-------------|
-| **internetClient** | Provides outbound access to the Internet and networks in public places, like airports and coffee shop. Most apps that require Internet access should use this capability. |
-| **internetClientServer** | Gives the app inbound and outbound network access from the Internet and networks in public places like airports and coffee shops. |
-| **privateNetworkClientServer** | Gives the app inbound and outbound network access at the user's trusted places, like home and work. |
+| **internetClient** | Bietet ausgehenden Zugriff auf das Internet und Netzwerke an öffentlichen Orten wie Flughäfen und Cafés. Diese Funktion sollte von den meisten Apps verwendet werden, die einen Internetzugriff benötigen. |
+| **internetClientServer** | Bietet der App ein- und ausgehenden Netzwerkzugriff aus dem Internet und aus Netzwerken an öffentlichen Orten wie Flughäfen und Cafés. |
+| **privateNetworkClientServer** | Bietet der App eingehenden und ausgehenden Netzwerkzugriff an vertrauenswürdigen Orten des Benutzers (z. B. zu Hause und am Arbeitsplatz). |
 
-There are other capabilities that might be necessary for your app, in certain circumstances.
+In bestimmten Situationen sind möglicherweise noch andere Funktionen für Ihre App erforderlich.
 
-| Capability | Description |
+| Funktion | Beschreibung |
 |------------|-------------|
-| **pushNotifications** | If your app uses socket activity triggers, you must specify this capability in the app manifest. |
-| **enterpriseAuthentication** | Allows an app to connect to network resources that require domain credentials. This capability will require a domain administrator to enable the functionality for all apps. An example would be an app that retrieves data from SharePoint servers on a private Intranet. <br/> With this capability your credentials can be used to access network resources on a network that requires credentials. An app with this capability can impersonate you on the network. <br/> This capability is not required to allow an app to access the Internet via an authenticating proxy. |
-| **proximity** | Required for near-field proximity communication with devices in close proximity to the computer. Near-field proximity may be used to send or connect with an application on a nearby device. <br/> This capability allows an app to access the network to connect to a device in close proximity, with user consent to send an invite or accept an invite. |
-| **sharedUserCertificates** | This capability allows an app to access software and hardware certificates, such as smart card certificates. When this capability is invoked at runtime, the user must take action, such as inserting a card or selecting a certificate. <br/> With this capability, your software and hardware certificates or a smart card are used for identification in the app. This capability may be used by your employer, bank, or government services for identification. |
+| **pushNotifications** | Wenn Ihre App Socket-Aktivitätsauslöser verwendet, müssen Sie diese Funktion im App-Manifest angeben. |
+| **enterpriseAuthentication** | Ermöglicht einer App, eine Verbindung mit Netzwerkressourcen herzustellen, für die Domänenanmeldeinformationen nötig sind. Bei dieser Funktion muss ein Domänenadministrator die Funktionalität für alle Apps aktivieren. Beispielsweise kann es sich um eine App handeln, die Daten von SharePoint-Servern in einem privaten Intranet abruft. <br/> Mit dieser Funktion können Ihre Anmeldeinformationen für den Zugriff auf Netzwerkressourcen in einem Netzwerk verwendet werden, für das Anmeldeinformationen erforderlich sind. Eine App mit dieser Funktion kann Ihre Identität im Netzwerk annehmen. <br/> Für den Internetzugriff einer App mithilfe eines Authentifizierungsproxys ist diese Funktion nicht erforderlich. |
+| **proximity** | Sie ist für die Nahfeldnäherungskommunikation mit Geräten in geringem Abstand zum Computer erforderlich. Die Nahfeldnäherung kann zum Senden an eine Anwendung oder Verbinden mit einer Anwendung auf einem in der Nähe befindlichen Gerät verwendet werden. <br/> Mit dieser Funktion kann eine App auf das Netzwerk zugreifen, um eine Verbindung mit einem Gerät in geringem Abstand herzustellen und mit der Zustimmen des Benutzers eine Einladung zu senden oder anzunehmen. |
+| **sharedUserCertificates** | Ermöglicht einer App den Zugriff auf Software- und Hardwarezertifikate wie etwa Smartcardzertifikate. Wenn diese Funktion zur Laufzeit aufgerufen wird, muss der Benutzer eine Aktion ausführen (z. B. eine Karte einsetzen oder ein Zertifikat auswählen). <br/> Bei dieser Funktion werden Ihre Software- und Hardwarezertifikate oder eine Smartcard zur Identifikation in der Anwendung verwendet. Diese Funktion kann von Ihrem Arbeitgeber, Ihrer Bank oder Regierungsbehörden zur Identifikation verwendet werden. |
 
-## Communicating when your app is not in the foreground
+## Kommunikation, wenn Ihre App nicht im Vordergrund ausgeführt wird
 
-[Support your app with background tasks](https://msdn.microsoft.com/library/windows/apps/mt299103) contains general information about using background tasks to do work when your app is not in the foreground. More specifically, your code must take special steps to be notified when it is not the current foreground app and data arrives over the network for it. You used Control Channel Triggers for this purpose in Windows 8, and they are still supported in Windows 10. Full information about using Control Channel Triggers is available [**here**](https://msdn.microsoft.com/library/windows/apps/hh701032). A new technology in Windows 10 provides better functionality with lower overhead for some scenarios, such as push-enabled stream sockets: the socket broker and socket activity triggers.
+[Unterstützen Ihrer App mit Hintergrundaufgaben](https://msdn.microsoft.com/library/windows/apps/mt299103) enthält allgemeine Informationen zur Verwendung von Hintergrundaufgaben, um Aufgaben auszuführen, während sich Ihre App nicht im Vordergrund befindet. Genauer gesagt muss Ihr Code besondere Schritte vornehmen, damit eine Benachrichtigung erfolgt, wenn es sich dabei nicht um die aktuelle App im Vordergrund handelt und diese Daten über das Netzwerk empfängt. Sie haben in Windows 8 zu diesem Zweck Steuerkanalauslöser verwendet. Diese werden in Windows 10 weiterhin unterstützt. Vollständige Informationen zur Verwendung der Steuerkanalauslöser finden Sie [**hier**](https://msdn.microsoft.com/library/windows/apps/hh701032). Eine neue Technologie in Windows 10 bietet für einige Szenarien eine bessere Funktionalität mit weniger Aufwand wie etwa pushfähige Datenstromsockets: die Socketbroker und Socket-Aktivitätsauslöser.
 
-If your app uses [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882), or [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906), then your app can transfer ownership of an open socket to a socket broker provided by the system, and then leave the foreground, or even terminate. When a connection is made on the transferred socket, or traffic arrives on that socket, then your app or its designated background task are activated. If your app is not running, it is started. The socket broker then notifies your app using a [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) that new traffic has arrived. Your app reclaims the socket from the socket broker and process the traffic on the socket. This means that your app consumes far less system resources when it is not actively processing network traffic.
+Wenn die App [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) verwendet, kann sie die Beteiligung eines offenen Sockets an einen vom System bereitgestellten Socketbroker übertragen und sie dann im Vordergrund belassen oder sogar beenden. Wenn eine Verbindung zum übertragenen Socket hergestellt oder Datenverkehr auf diesem Socket empfangen wird, wird Ihre App oder die festgelegten Hintergrundaufgabe aktiviert. Wenn Ihre App nicht ausgeführt wird, wird sie gestartet. Der Socketbroker benachrichtigt Ihre App mittels [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) darüber, dass neuer Datenverkehr eingegangen ist. Ihre App gibt den Socket aus dem Socketbroker frei und verarbeitet den Datenverkehr auf dem Socket. Das heißt, Ihre App beansprucht deutlich weniger Systemressourcen, wenn es aktiv keinen Netzwerkdatenverkehr verarbeitet.
 
-The socket broker is intended to replace Control Channel Triggers where it is applicable, because it provides the same functionality, but with fewer restrictions and a smaller memory footprint. Socket broker can be used by apps that are not lock screen apps, and it is used the same way on phones as on other devices. Apps need not be running when traffic arrives in order to be activated by the socket broker. And the socket broker supports listening on TCP sockets, which Control Channel Triggers do not support.
+Der Socketbroker soll den Steuerkanal-Auslöser ersetzen, in dem er anwendbar ist, da er die gleiche Funktionalität bietet, jedoch weniger Einschränkungen besitzt und weniger Speicherbedarf benötigt. Der Socketbroker kann von Sperrbildschirm-Apps verwendet werden und wird auf Telefonen und anderen Geräten auf die gleiche Weise verwendet. Apps müssen nicht ausgeführt werden, wenn Datenverkehr eingeht, damit sie vom Socketbroker aktiviert werden. Und der Socketbroker unterstützt die Erkennung auf TCP-Sockets, das ist bei Steuerkanal-Auslösern nicht der Fall.
 
-If your app uses socket activity triggers, you must specify the **pushNotifications** capability in the app manifest.
+Wenn die App Socket-Aktivitätsauslöser verwendet, müssen Sie die **pushNotifications**-Funktion im App-Manifest angeben.
 
-### Choosing a network trigger
+### Auswahl eines Netzwerk-Auslösers
 
-There are some scenarios where either kind of trigger would be suitable. When you are choosing which kind of trigger to use in your app, consider the following advice.
+Es gibt einige Szenarien, in denen beide Auslöserarten geeignet wären. Beachten Sie bei der Auswahl der Auslöserart der App Folgendes:
 
--   If you are using [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) or [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638), you must use [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
--   If you are using push-enabled **StreamSockets**, you can use control channel triggers, but should prefer [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). The latter choice allows the system to free up memory and reduce power requirements when the connection is not being actively used.
--   If you want to minimize the memory footprint of your app when it is not actively servicing network requests, prefer [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) when possible.
--   If you want your app to be able to receive data while the system is in Connected Standby mode, use [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009).
+-   Bei Verwendung von [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) oder [System.Net.Http.HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638) müssen Sie [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) verwenden.
+-   Bei Verwendung pushfähiger **StreamSockets** können Sie Steuerkanaltrigger verwenden, [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) sind jedoch vorzuziehen. In letzterem Fall kann das System Arbeitsspeicher freigeben und den Stromverbrauch verringern, wenn die Verbindung nicht aktiv verwendet wird.
+-   Wenn Sie den Speicherbedarf Ihrer App während der aktiven Verarbeitung von Netzwerkanforderungen minimieren möchten, sollten Sie nach Möglichkeit [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) verwenden.
+-   Wenn Sie möchten, dass Ihre App Daten empfängt, während sich das System im verbundenen Standbymodus befindet, verwenden Sie [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009).
 
-For details and examples of how to use the socket broker, see [Network communications in the background](network-communications-in-the-background.md).
+Ausführliche Informationen und Beispiele zur Verwendung des Socketbrokers finden Sie unter [Netzwerkkommunikation im Hintergrund](network-communications-in-the-background.md).
 
-## Secured connections
+## Sichere Verbindungen
 
-Secure Sockets Layer (SSL) and the more recent Transport Layer Security (TLS) are cryptographic protocols designed to provide authentication and encryption for network communication. These protocols are designed to prevent eavesdropping and tampering when sending and receiving network data. These protocols use a client-server model for the protocol exchanges. These protocols also use digital certificates and certificate authorities to verify that the server is who it claims to be.
+Secure Sockets Layer (SSL) und das aktuellere Transport Layer Security (TLS) sind Verschlüsselungsprotokolle für die Authentifizierung und Verschlüsselung der Kommunikation in Netzwerken. Diese Protokolle dienen dazu, das Mitverfolgen und Manipulieren von Daten zu verhindern, die im Netzwerk gesendet und empfangen werden. Für den Protokollaustausch wird dabei ein Client-Server-Modell verwendet. Diese Protokolle verwenden zudem digitale Zertifikate und Zertifizierungsstellen, um den jeweiligen Server zu identifizieren.
 
-### Creating secure socket connections
+### Erstellen von sicheren Socketverbindungen
 
-A [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) object can be configured to use SSL/TLS for communications between the client and the server. This support for SSL/TLS is limited to using the **StreamSocket** object as the client in the SSL/TLS negotiation. You cannot use SSL/TLS with the **StreamSocket** created by a [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) when incoming communications are received, because SSL/TLS negotiation as a server is not implemented by the **StreamSocket** class.
+Ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt kann für die Verwendung von SSL/TLS für die Kommunikation zwischen dem Client und dem Server konfiguriert werden. Diese Unterstützung für SSL/TLS beschränkt sich auf die Verwendung des **StreamSocket**-Objekts als Client in der SSL/TLS-Aushandlung. Sie können SSL/TLS nicht mit dem von einer [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Klasse erstellten **StreamSocket**-Objekt verwenden, wenn eingehende Kommunikation empfangen wird, da SSL/TLS-Aushandlung als Server nicht von der **StreamSocket**-Klasse implementiert wird.
 
-There are two ways to secure a [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) connection with SSL/TLS:
+Es gibt zwei Möglichkeiten, eine [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Verbindung mit SSL/TLS zu sichern:
 
--   [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) - Make the initial connection to a network service and negotiate immediately to use SSL/TLS for all communications.
--   [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) - Connect initially to a network service without encryption. The app may send or receive data. Then, upgrade the connection to use SSL/TLS for all further communications.
+-   [
+              **ConnectAsync**
+            ](https://msdn.microsoft.com/library/windows/apps/hh701504): Stellt die erste Verbindung mit einem Netzwerkdienst her und handelt sofort die Verwendung von SSL/TLS für jede Kommunikation aus.
+-   [
+              **UpgradeToSslAsync**
+            ](https://msdn.microsoft.com/library/windows/apps/br226922): Stellt die erste Verbindung mit einem Netzwerkdienst ohne Verschlüsselung her. Die App kann Daten senden oder empfangen. Dann wird die Verbindung für die Verwendung von SSL/TLS für jede weitere Verbindung hochgestuft.
 
-The SocketProtectionLevel value that you provide sets the minimum protection level you are willing to allow. However, the eventual protection level of the established connection is determined in a negotiation process between both endpoints of the connection. The result can be a more-secure protection level than the one you specified, if the other endpoint requires a higher level. The SSL strength actually negotiated using [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) or [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) can be determined by getting the [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) property after the async operation has completed successfully.
+Durch den angegebenen SocketProtectionLevel-Wert wird die minimale Schutzebene festgelegt, die Sie zulassen möchten. Die letztendliche Schutzebene der hergestellten Verbindung wird jedoch im Aushandlungsprozess zwischen beiden Endpunkten der Verbindung festgelegt. Dies kann zu einer Schutzebene führen, die sichererer als die von Ihnen angegebene Ebene ist, wenn der andere Endpunkt eine höhere Ebene erfordert. Die tatsächlich mithilfe von [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) oder [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) ausgehandelte SSL-Schlüsselstärke kann durch Abruf der [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868)-Eigenschaft bestimmt werden, nachdem der asynchrone Vorgang erfolgreich abgeschlossen wurde.
 
-> **Note**  Your code should never implicitly depend on using a particular protection level, or on the assumption that a given security level is used by default. The security landscape changes constantly, and protocols and default protection levels will be changed over time in order to avoid the use of protocols with known weaknesses. Defaults can vary depending on individual machine configuration, or on which software is installed and which patches have been applied. If your app depends on the use of a particular security level, you must explicitly specify that level and then check to be sure that it is actually in use on the established connection.
+> **Hinweis**  Der Code sollte nie implizit von der Verwendung einer bestimmten Schutzebene oder der Annahme abhängig sein, dass standardmäßig eine bestimmte Sicherheitsstufe verwendet wird. Die Sicherheitslandschaft befindet sich in einem steten Wandel, und Protokolle und Standardschutzebenen werden sich mit der Zeit ändern, um die Verwendung von Protokollen mit bekannten Schwachstellen zu vermeiden. Die Standardwerte können je nach Konfiguration einzelner Computer oder abhängig von der installierten Software oder angewendeten Patches variieren. Wenn Ihre App von der Verwendung einer bestimmten Sicherheitsstufe abhängt, müssen Sie die Stufe explizit angeben und dann durch eine Überprüfung sicherstellen, dass sie tatsächlich für die hergestellte Verbindung verwendet wird.
 
-### Use ConnectAsync
+### Verwenden von ConnectAsync
 
-[**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) can be used to establish the initial connection with a network service and then negotiate immediately to use SSL/TLS for all communications. There are two **ConnectAsync** methods that support passing a *protectionLevel* parameter:
+[
+              **ConnectAsync**
+            ](https://msdn.microsoft.com/library/windows/apps/hh701504) kann verwendet werden, um die erste Verbindung mit einem Netzwerkdienst herzustellen und dann sofort die Verwendung von SSL/TLS für jede Kommunikation auszuhandeln. Es gibt zwei **ConnectAsync**-Methoden, die das Übergeben eines *protectionLevel*-Parameters unterstützen:
 
--   [**ConnectAsync(EndpointPair, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/hh701511) - Starts an asynchronous operation on a [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) object to connect to a remote network destination specified as an [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953) object and a [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
--   [**ConnectAsync(HostName, String, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/br226916) - Starts an asynchronous operation on a [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) object to connect to a remote destination specified by a remote hostname, a remote service name, and a [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880).
+-   [
+              **ConnectAsync(EndpointPair, SocketProtectionLevel)**
+            ](https://msdn.microsoft.com/library/windows/apps/hh701511): Startet einen asynchronen Vorgang für ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt, um eine Verbindung mit einem Remotenetzwerkziel herzustellen, das durch ein [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953)-Objekt und eine [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880) angegeben wird.
+-   [
+              **ConnectAsync(HostName, String, SocketProtectionLevel)**
+            ](https://msdn.microsoft.com/library/windows/apps/br226916): Startet einen asynchronen Vorgang für ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt, um eine Verbindung mit einem Remoteziel herzustellen, das durch einen Remotehostnamen, einen Remotedienstnamen und eine [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880) angeben wird.
 
-If the *protectionLevel* parameter is set to **Windows.Networking.Sockets.SocketProtectionLevel.Ssl** when calling either of the above [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) methods, the [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) must will be established to use SSL/TLS for encryption. This value requires encryption and never allows a NULL cipher to be used.
+Wenn der *protectionLevel*-Parameter beim Aufruf einer der obigen [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504)-Methoden auf **Windows.Networking.Sockets.SocketProtectionLevel.Ssl** festgelegt ist, muss mit [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) die Verwendung von SSL/TLS für die Verschlüsselung sichergestellt werden. Dieser Wert erfordert eine Verschlüsselung, wobei keine NULL-Verschlüsselung zulässig ist.
 
-The normal sequence to use with one of these [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) methods is the same.
+Der übliche Ablauf ist bei beiden [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504)-Methoden gleich.
 
--   Create a [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882).
--   If an advanced option on the socket is needed, use the [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) property to get the [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893) instance associated with a [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) object. Set a property on the **StreamSocketControl**.
--   Call one of the above [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) methods to start an operation to connect to a remote destination and immediately negotiate the use of SSL/TLS.
--   The SSL strength actually negotiated using [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) can be determined by getting the [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) property after the async operation has completed successfully.
+-   Erstellen Sie ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt.
+-   Wenn eine erweiterte Option für den Socket erforderlich ist, rufen Sie mit der [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917)-Eigenschaft die [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893)-Instanz ab, die einem [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt zugeordnet ist. Legen Sie eine Eigenschaft für **StreamSocketControl** fest.
+-   Rufen Sie eine der obigen [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504)-Methoden auf, um einen Vorgang zu starten, bei dem eine Verbindung mit einem Remoteziel hergestellt und sofort mit der Aushandlung von SSL/TLS begonnen wird.
+-   Die tatsächlich mithilfe von [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) ausgehandelte SSL-Schlüsselstärke kann durch Abruf der [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868)-Eigenschaft bestimmt werden, nachdem der asynchrone Vorgang erfolgreich abgeschlossen wurde.
 
-The following example creates a [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) and tries to establish a connection to the network service and negotiate immediately to use SSL/TLS. If the negotiation is successful, all network communication using the **StreamSocket** between the client the network server will be encrypted.
+Das folgende Beispiel erstellt ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt und versucht, eine Verbindung mit dem Netzwerkdienst herzustellen und sofort die Verwendung von SSL/TLS auszuhandeln. Bei einer erfolgreichen Aushandlung wird jede Netzwerkkommunikation zwischen dem Client und dem Netzwerkserver verschlüsselt, bei der das **StreamSocket**-Objekt verwendet wird.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -160,21 +170,21 @@ using Windows::Networking::Sockets;
     // Then close the clientSocket when done
 ```
 
-### Use UpgradeToSslAsync
+### Verwenden von UpgradeToSslAsync
 
-When your code uses [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922), it first establishes a connection to a network service without encryption. The app may send or receive some data, then upgrade the connection to use SSL/TLS for all further communications.
+Wenn der Code [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) verwendet, stellt er zuerst eine Verbindung mit einem Netzwerkdienst ohne Verschlüsselung her. Die App kann ein gewisse Datenmenge senden oder empfangen, bevor sie die Verbindung für jegliche weitere Kommunikation auf die Verwendung von SSL/TLS heraufgestuft.
 
-The [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) method takes two parameters. The *protectionLevel* parameter indicates the protection level desired. The *validationHostName* parameter is the hostname of the remote network destination that is used for validation when upgrading to SSL. Normally the *validationHostName* would be the same hostname that the app used to initially establish the connection. If the *protectionLevel* parameter is set to **Windows.System.Socket.SocketProtectionLevel.Ssl** when calling **UpgradeToSslAsync**, the [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) must use the SSL/TLS for encryption on further communications over the socket. This value requires encryption and never allows a NULL cipher to be used.
+Die [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922)-Methode besitzt zwei Parameter. Der *protectionLevel*-Parameter gibt den gewünschten Schutzgrad an. Der *validationHostName*-Parameter ist der Hostname des Remotenetzwerkziels, der bei der Höherstufung auf SSL für die Validierung verwendet wird. In der Regel entspricht *validationHostName* dem Hostnamen, mit dem die App die erste Verbindung hergestellt hat. Wenn der *protectionLevel*-Parameter beim Aufrufen von **UpgradeToSslAsync** auf **Windows.System.Socket.SocketProtectionLevel.Ssl** festgelegt ist, muss [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) für die weitere Kommunikation über den Socket die SSL/TLS-Verschlüsselung verwenden. Dieser Wert erfordert eine Verschlüsselung, wobei keine NULL-Verschlüsselung zulässig ist.
 
-The normal sequence to use with the [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) method is as follows:
+Der übliche Ablauf bei dieser [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922)-Methode lautet wie folgt:
 
--   Create a [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882).
--   If an advanced option on the socket is needed, use the [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917) property to get the [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893) instance associated with a [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) object. Set a property on the **StreamSocketControl**.
--   If any data needs to be sent and received unencrypted, send it now.
--   Call the [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) method to start an operation to upgrade the connection to use SSL/TLS.
--   The SSL strength actually negotiated using [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) can be determined by getting the [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868) property after the async operation completes successfully.
+-   Erstellen Sie ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt.
+-   Wenn eine erweiterte Option für den Socket erforderlich ist, rufen Sie mit der [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226917)-Eigenschaft die [**StreamSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226893)-Instanz ab, die einem [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt zugeordnet ist. Legen Sie eine Eigenschaft für **StreamSocketControl** fest.
+-   Senden Sie jetzt alle Daten, die ggf. unverschlüsselt gesendet oder empfangen werden müssen.
+-   Rufen Sie die [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922)-Methode auf, um einen Vorgang zum Höherstufen der Verbindung auf SSL/TLS zu starten.
+-   Die tatsächlich mithilfe von [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) ausgehandelte SSL-Schlüsselstärke kann durch Abruf der [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868)-Eigenschaft bestimmt werden, nachdem der asynchrone Vorgang erfolgreich abgeschlossen wurde.
 
-The following example creates a [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882), tries to establish a connection to the network service, sends some initial data, and then negotiates to use SSL/TLS. If the negotiation is successful, all network communication using the **StreamSocket** between the client and the network server will be encrypted.
+Das folgende Beispiel erstellt ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt, versucht, eine Verbindung mit dem Netzwerkdienst herzustellen, sendet einige erste Daten und handelt dann die Verwendung von SSL/TLS aus. Bei einer erfolgreichen Aushandlung wird jede Netzwerkkommunikation zwischen dem Client und dem Netzwerkserver verschlüsselt, bei der **StreamSocket** verwendet wird.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -349,25 +359,25 @@ using Windows::Storage::Streams;
     });
 ```
 
-### Creating secure WebSocket connections
+### Erstellen von sicheren WebSocket-Verbindungen
 
-Like traditional socket connections, WebSocket connections can also be encrypted with Transport Layer Security (TLS)/Secure Sockets Layer (SSL) when using the [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) and [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) features in Windows 8 for a Windows Store app. In most cases you'll want to use a secure WebSocket connection. This will increase the chances that your connection will succeed, as many proxies will reject unencrypted WebSocket connections.
+WebSocket-Verbindungen können wie herkömmliche Socketverbindungen mit TLS (Transport Layer Security)/SSL (Secure Sockets Layer) verschlüsselt werden, wenn Sie für eine Windows Store-App die Features [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) und [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) in Windows 8 verwenden. In den meisten Fällen empfiehlt sich die Verwendung einer sicheren WebSocket-Verbindung. Dadurch ist es wahrscheinlicher, dass die Verbindung funktioniert, da andernfalls viele Proxys unverschlüsselte WebSocket-Verbindungen ablehnen.
 
-For examples of how to create, or upgrade to, a secure socket connection to a network service, see [How to secure WebSocket connections with TLS/SSL](https://msdn.microsoft.com/library/windows/apps/xaml/hh994399).
+Beispiele für das Erstellen oder Aktualisieren auf eine sichere Socketverbindung mit einem Netzwerkdienst finden Sie unter [So wird’s gemacht: Schützen von WebSocket-Verbindungen mit TLS/SSL](https://msdn.microsoft.com/library/windows/apps/xaml/hh994399).
 
-In addition to TLS/SSL encryption, a server may require a **Sec-WebSocket-Protocol** header value to complete the initial handshake. This value, represented by the [**StreamWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701514) and [**MessageWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701358) properties, indicate the protocol version of the connection and enables the server to correctly interpret the opening handshake and the data being exchanged afterwards. Using this protocol information, if at any point if the server cannot interpret the incoming data in a safe manner the connection can be closed.
+Ein Server benötigt möglicherweise zusätzlich zur TLS/SSL-Verschlüsselung einen **Sec-WebSocket-Protocol**-Headerwert, um den ersten Handshake auszuführen. Dieser Wert, der von der [**StreamWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701514)-Eigenschaft und der [**MessageWebSocketInformation.Protocol**](https://msdn.microsoft.com/library/windows/apps/hh701358)-Eigenschaft dargestellt wird, gibt die Protokollversion der Verbindung an und ermöglicht es dem Server, den Handshake zum Öffnen der Verbindung und die anschließend ausgetauschten Daten korrekt zu interpretieren. Anhand dieser Protokollinformationen kann die Verbindung jederzeit geschlossen werden, wenn der Server die eingehenden Daten nicht auf sichere Weise interpretieren kann.
 
-If the initial request from the client either does not contain this value, or provides a value that doesn't match what the server expects, the expected value is sent from the server to the client on WebSocket handshake error.
+Wenn die erste Anforderung vom Client nicht diesen Wert enthält oder einen Wert bereitstellt, der vom Server nicht erwartet wird, tritt ein WebSocket-Handshakefehler auf, und der Server sendet den erwarteten Wert an den Client.
 
-## Authentication
+## Authentifizierung
 
-How to provide authentication credentials when connecting over the network.
+So werden beim Herstellen einer Verbindung über das Netzwerk die Authentifizierungsanmeldeinformationen bereitgestellt.
 
-### Providing a client certificate with the StreamSocket class
+### Bereitstellen eines Clientzertifikats mit der StreamSocket-Klasse
 
-The [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) class supports using SSL/TLS to authenticate the server the app is talking to. In certain cases, the app also needs to authenticate itself to the server using a TLS client certificate. In Windows 10, you can provide a client certificate on the [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) object (this must be set before the TLS handshake is started). If the server requests the client certificate, Windows will respond with the certificate provided.
+Die [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Klasse unterstützt die Verwendung von SSL/TLS zum Authentifizieren des Servers, mit dem die App kommuniziert. In bestimmten Fällen muss auch die App selbst mit einem TLS-Clientzertifikat am Server authentifiziert werden. In Windows 10 können Sie ein Clientzertifikat zu dem [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893)-Objekt bereitstellen (dies muss festgelegt werden, bevor der TLS-Handshake gestartet wird). Wenn der Server das Clientzertifikat anfordert, reagiert Windows mit dem bereitgestellten Zertifikat.
 
-Here is a code snippet showing how to implement this:
+Hier ist ein Codeausschnitt, in dem die Implementierung dazu dargestellt wird:
 
 ```csharp
 var socket = new StreamSocket();
@@ -376,9 +386,9 @@ socket.Control.ClientCertificate = certificate;
 await socket.ConnectAsync(destination, SocketProtectionLevel.Tls12);
 ```
 
-### Providing authentication credentials to a web service
+### Bereitstellen von Anmeldeinformationen zum Authentifizieren für einen Webdienst
 
-The networking APIs that enable apps to interact with secure web services each provide their own methods to either initialize a client or set a request header with server and proxy authentication credentials. Each method is set with a [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061) object that indicates a user name, password, and the resource for which these credentials are used. The following table provides a mapping of these APIs:
+Die Netzwerk-APIs, die Apps die Interaktion mit sicheren Webdiensten ermöglichen, stellen jeweils eigene Methoden zum Initialisieren eines Clients oder Festlegen eines Anforderungsheaders mit Anmeldeinformationen für die Server- und Proxyauthentifizierung bereit. Jede Methode wird mit einem [**PasswordCredential**](https://msdn.microsoft.com/library/windows/apps/br227061)-Objekt festgelegt, das einen Benutzernamen, ein Kennwort und die Ressource angibt, für die die Anmeldeinformationen verwendet werden. In der folgenden Tabelle werden diese APIs zugeordnet:
 
 | **WebSockets** | [**MessageWebSocketControl.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br226848) |
 |-------------------------|----------------------------------------------------------------------------------------------------------|
@@ -386,34 +396,39 @@ The networking APIs that enable apps to interact with secure web services each p
 |  | [**StreamWebSocketControl.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br226928) |
 |  | [**StreamWebSocketControl.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br226927) |
 |  |  |
-| **Background Transfer** | [**BackgroundDownloader.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/hh701076) |
+| **Hintergrundübertragung** | [**BackgroundDownloader.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/hh701076) |
 |  | [**BackgroundDownloader.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/hh701068) |
 |  | [**BackgroundUploader.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/hh701184) |
 |  | [**BackgroundUploader.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/hh701178) |
 |  |  |
-| **Syndication** | [**SyndicationClient(PasswordCredential)**](https://msdn.microsoft.com/library/windows/apps/hh702355) |
+| **Veröffentlichung** | [**SyndicationClient(PasswordCredential)**](https://msdn.microsoft.com/library/windows/apps/hh702355) |
 |  | [**SyndicationClient.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243461) |
 |  | [**SyndicationClient.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243459) |
 |  |  |
 | **AtomPub** | [**AtomPubClient(PasswordCredential)**](https://msdn.microsoft.com/library/windows/apps/hh702262) |
 |  | [**AtomPubClient.ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243428) |
 |  | [**AtomPubClient.ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243423) |
- 
-## Handling network exceptions
+ 
+## Behandeln von Netzwerkausnahmen
 
-In most areas of programming, an exception indicates a significant problem or failure, caused by some flaw in the program. In network programming, there is an additional source for exceptions: the network itself, and the nature of network communications. Network communications are inherently unreliable and prone to unexpected failure. For each of the ways your app uses networking, you must maintain some state information; and your app code must handle network exceptions by updating that state information and initiating appropriate logic for your app to re-establish or retry communication failures.
+In den meisten Bereichen der Programmierung ist eine Ausnahme auf ein erhebliches Problem oder einen Fehler zurückzuführen, dass durch einige Fehler im Programm verursacht wurde. In der Netzwerkprogrammierung gibt es eine zusätzliche Quelle für Ausnahmen: das Netzwerk selbst und der Art der Netzwerkkommunikation. Die Netzwerkkommunikation sind grundsätzlich nicht zuverlässig und anfällig für unerwartete Fehler. Für jede der Möglichkeiten, mit der Ihre App das Netzwerke verwendet, müssen Sie einige Statusinformationen verwalten; und der App-Code muss Netzwerkausnahmen behandeln, indem er diese Statusinformationen aktualisiert und die entsprechende Logik für Ihre App erneut initialisiert, um Kommunikationsfehler wiederherzustellen oder zu wiederholen.
 
-When Universal Windows apps throw an exception, your exception handler can retrieve more detailed information on the cause of the exception to better understand the failure and make appropriate decisions.
+Wenn Universelle Windows-Apps eine Ausnahme auslösen, kann Ihr Ausnahmehandler detailliertere Informationen zur Ursache der Ausnahme abrufen, um die Ausnahme besser verstehen und entsprechende Entscheidungen treffen zu können.
 
-Each language projection supports a method to access this more detailed information. An exception projects as an **HRESULT** value in Universal Windows apps. The *Winerror.h* include file contains a very large list of possible **HRESULT** values that includes network errors.
+Jede Programmiersprache unterstützt eine Methode, mit der auf diese detaillierteren Informationen zugegriffen werden kann. Eine Ausnahme wird als **HRESULT**-Wert in Universellen Windows-Apps projiziert. Die *Winerror.h*-Includedatei enthält eine sehr umfangreiche Liste möglicher **HRESULT**-Werte, die Netzwerkfehler beinhaltet.
 
-The networking APIs support different methods for retrieving this detailed information on the cause of an exception.
+Die Netzwerk-APIs unterstützen verschiedene Methoden zum Abrufen der detaillierten Informationen zur Ursache der Ausnahme.
 
--   Some APIs provide a helper method that converts the **HRESULT** value from the exception to an enumeration value.
--   Other APIs provide a method to retrieve the actual **HRESULT** value.
+-   Einige APIs bieten eine Hilfsmethode, die den **HRESULT**-Wert der Ausnahme in einen Enumerationswert konvertiert.
+-   Andere APIs bieten eine Methode zum Abrufen des tatsächlichen **HRESULT**-Werts.
 
-## Related topics
+## Verwandte Themen
 
-* [Networking API Improvements in Windows 10](http://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)
- 
+* [Verbesserungen bei der Netzwerk-API unter Windows 10](http://blogs.windows.com/buildingapps/2015/07/02/networking-api-improvements-in-windows-10/)
+ 
+
+
+
+<!--HONumber=May16_HO2-->
+
 

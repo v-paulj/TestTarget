@@ -1,39 +1,43 @@
 ---
 author: Xansky
-Description: Introduces accessibility concepts that relate to Universal Windows Platform (UWP) apps.
+Description: Es werden Barrierefreiheitskonzepte für UWP-Apps (Universelle Windows-Plattform) vorgestellt.
 ms.assetid: C89D79C2-B830-493D-B020-F3FF8EB5FFDD
-title: Accessibility
+title: Barrierefreiheit
 label: Accessibility
 template: detail.hbs
 ---
 
-# Accessibility  
+# Barrierefreiheit  
 
 
 
-Introduces accessibility concepts that relate to Universal Windows Platform (UWP) apps.
+Es werden Barrierefreiheitskonzepte für UWP-Apps (Universelle Windows-Plattform) vorgestellt.
 
-Accessibility is about building experiences that make your application available to people who use technology in a wide range of environments and approach your user interface with a range of needs and experiences. For some situations, accessibility requirements are imposed by law. However, it's a good idea to address accessibility issues regardless of legal requirements so that your apps have the largest possible audience. There's also a Windows Store declaration regarding accessibility for your app.
+Bei der Barrierefreiheit geht es darum, eine Anwendung so zu gestalten, dass sie auch von Menschen verwendet werden kann, bei denen bestimmte Beeinträchtigungen die Nutzung herkömmlicher Benutzeroberflächen verhindern oder erschweren. Für bestimmte Situationen gelten gesetzlich vorgeschriebene Vorgaben im Hinblick auf Barrierefreiheit. Es empfiehlt sich aber, dieses Thema auch unabhängig von den gesetzlichen Vorschriften zu berücksichtigen, um sicherzustellen, dass die Apps die größtmögliche Benutzergruppe erreichen. Es ist auch eine Windows Store-Deklaration zur Barrierefreiheit der App vorhanden.
 
-> [!NOTE]
-> Declaring the app as accessible is only relevant to the Windows Store.
+> Das Ausweisen der App als barrierefrei ist nur für den Windows Store relevant.
 
-| Article | Description |
+| Artikel | Beschreibung |
 |---------|-------------|
-| [Accessibility overview](accessibility-overview.md) | This article is an overview of the concepts and technologies related to accessibility scenarios for UWP apps. |
-| [Designing inclusive software](designing-inclusive-software.md) | Learn about evolving inclusive design with Universal Windows Platform (UWP) apps for Windows 10.  Design and build inclusive software with accessibility in mind. |
-| [Developing inclusive Windows apps](developing-inclusive-windows-apps.md) | This article is a roadmap for developing accessible UWP apps. |
-| [Accessibility testing](accessibility-testing.md) | Testing procedures to follow to ensure that your UWP app is accessible. |
-| [Accessibility in the Store](accessibility-in-the-store.md) | Describes the requirements for declaring your UWP app as accessible in the Windows Store. |
-| [Accessibility checklist](accessibility-checklist.md) | Provides a checklist to help you ensure that your UWP app is accessible. |
-| [Expose basic accessibility information](basic-accessibility-information.md) | Basic accessibility info is often categorized into name, role, and value. This topic describes code to help your app expose the basic information that assistive technologies need. |
-| [Keyboard accessibility](keyboard-accessibility.md) | If your app does not provide good keyboard access, users who are blind or have mobility issues can have difficulty using your app or may not be able to use it at all. |
-| [High-contrast themes](high-contrast-themes.md) | Describes the steps needed to ensure your UWP app is usable when a high-contrast theme is active. |
-| [Accessible text requirements](accessible-text-requirements.md) | This topic describes best practices for accessibility of text in an app, by assuring that colors and backgrounds satisfy the necessary contrast ratio. This topic also discusses the Microsoft UI Automation roles that text elements in a UWP app can have, and best practices for text in graphics. |
-| [Accessibility practices to avoid](practices-to-avoid.md) | Lists the practices to avoid if you want to create an accessible UWP app. |
-| [Custom automation peers](custom-automation-peers.md) | Describes the concept of automation peers for UI Automation, and how you can provide automation support for your own custom UI class. |
-| [Control patterns and interfaces](control-patterns-and-interfaces.md) | Lists the Microsoft UI Automation control patterns, the classes that clients use to access them, and the interfaces providers use to implement them. |
+| [Übersicht über die Barrierefreiheit](accessibility-overview.md) | Dieser Artikel bietet eine Übersicht über die Konzepte und Technologien in Barrierefreiheitsszenarien für UWP-Apps. |
+| [Entwerfen von inklusiver Software](designing-inclusive-software.md) | Erfahren Sie mehr über das Entwerfen inklusiver Apps für die Universelle Windows-Plattform (UWP) für Windows 10.  Entwerfen und erstellen Sie inklusive Software unter Berücksichtigung der Barrierefreiheit. |
+| [Entwickeln von inklusiven Windows-Apps](developing-inclusive-windows-apps.md) | Dieser Artikel dient als Orientierungshilfe bei der Entwicklung barrierefreier UWP-Apps. |
+| [Barrierefreiheitstests](accessibility-testing.md) | Testverfahren, mit denen Sie sicherstellen können, dass Ihre UWP-App barrierefrei ist. |
+| [Barrierefreiheit im Store](accessibility-in-the-store.md) | Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre UWP-App im Windows Store als barrierefrei deklarieren möchten. |
+| [Prüfliste für die Barrierefreiheit](accessibility-checklist.md) | Enthält eine Prüfliste, mit der Sie sicherstellen können, dass Ihre UWP-App barrierefrei ist. |
+| [Verfügbarmachen von grundlegenden Informationen zur Barrierefreiheit](basic-accessibility-information.md) | Grundlegende Informationen zur Barrierefreiheit werden häufig in die Kategorien Name, Rolle und Wert unterteilt. In diesem Thema wird der Code beschrieben, mit dem Ihre App die grundlegenden Informationen verfügbar machen kann, die für Hilfstechnologien erforderlich sind. |
+| [Barrierefreiheit der Tastaturnavigation](keyboard-accessibility.md) | Wenn Ihre App keine barrierefreie Bedienung mit der Tastatur ermöglicht, können Benutzer, die blind oder in ihrer Beweglichkeit eingeschränkt sind, Schwierigkeiten bei der Verwendung Ihrer App haben oder Ihre App möglicherweise überhaupt nicht nutzen. |
+| [Designs mit hohem Kontrast](high-contrast-themes.md) | Beschreibt die Schritte, mit denen Sie die Bedienbarkeit Ihrer UWP-App sicherstellen können, wenn ein Design mit hohem Kontrast aktiviert ist. |
+| [Anforderungen für barrierefreien Text](accessible-text-requirements.md) | In diesem Thema werden die bewährten Methoden für barrierefreien Text in Apps beschrieben. Damit stellen Sie sicher, dass der Kontrast zwischen Farben und Hintergründen ausreichend hoch ist. Außerdem werden in diesem Thema die Rollen der Microsoft-Benutzeroberflächenautomatisierung, die für Textelemente in einer UWP-App verwendet werden können, sowie bewährte Methoden für Text in Grafiken erläutert. |
+| [Nicht empfehlenswerte Praktiken für die Barrierefreiheit](practices-to-avoid.md) | Es werden die Praktiken aufgeführt, die Sie vermeiden sollten, wenn Sie eine barrierefreie UWP-App erstellen möchten. |
+| [Benutzerdefinierte Automatisierungspeers](custom-automation-peers.md) | Beschreibt das Konzept von Automatisierungspeers für die Benutzeroberflächenautomatisierung und erläutert, wie Sie Unterstützung zur Benutzeroberflächenautomatisierung für eigene benutzerdefinierte UI-Klassen bereitstellen können. |
+| [Steuerelementmuster und Schnittstellen](control-patterns-and-interfaces.md) | Enthält eine Liste der Steuerelementmuster für die Microsoft-Benutzeroberflächenautomatisierung samt der Klassen, die Clients für den Zugriff verwenden, und der Schnittstellen, die Anbieter zur Implementierung verwenden. |
 
 <span id="related_topics"/>
-## Related topics  
+## Verwandte Themen  
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
+
+
+<!--HONumber=May16_HO2-->
+
+
