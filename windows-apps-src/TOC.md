@@ -685,8 +685,3 @@
 ### [Windows Store-Richtlinien](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx)
 #### [Änderungsverlauf](https://msdn.microsoft.com/en-us/library/windows/apps/dn764945.aspx)
 ### [Verhaltensregeln für Entwickler](https://msdn.microsoft.com/en-us/library/windows/apps/dn764941.aspx)
-
-
-<!--HONumber=Mar16_HO5-->
-
-
