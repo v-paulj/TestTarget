@@ -1,58 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 4
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\launch-resume\activate-an-app.md](https://github.com/Microsoft/windows-apps/blob/fb83213a4ce58285dae94da97fa20d397468bdc9/windows-apps-src/launch-resume/activate-an-app.md) | HandedOffSuccess | [Details](#f47a3b7fcb4bec4138e11a079c3d10e918c1eb952905)
- [windows-apps-src\launch-resume\handle-uri-activation.md](https://github.com/Microsoft/windows-apps/blob/fb83213a4ce58285dae94da97fa20d397468bdc9/windows-apps-src/launch-resume/handle-uri-activation.md) | HandedOffSuccess | [Details](#ac65b46ea06e64b3b431326db365ce23505c10962917)
- [windows-apps-src\launch-resume\resume-an-app.md](https://github.com/Microsoft/windows-apps/blob/fb83213a4ce58285dae94da97fa20d397468bdc9/windows-apps-src/launch-resume/resume-an-app.md) | HandedOffSuccess | [Details](#bb9d4394acad11d12b21cdce16b0d59ceafd1a2a2946)
- [windows-apps-src\launch-resume\suspend-an-app.md](https://github.com/Microsoft/windows-apps/blob/fb83213a4ce58285dae94da97fa20d397468bdc9/windows-apps-src/launch-resume/suspend-an-app.md) | HandedOffSuccess | [Details](#3ad58dc20a660d89622d215c46d263adf27a05422950)
+ [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps/blob/0e36b2adbd0805d9c738de00959581417d2c1ee8/windows-apps-src/debug-test-perf/device-portal-api-core.md) | HandedOffSuccess | [Details](#364e19c723c6cf48a25104b5719735a533ae54a71911)
 
 ## Item Details
-##### <a name='f47a3b7fcb4bec4138e11a079c3d10e918c1eb952905'></a> Source: [windows-apps-src\launch-resume\activate-an-app.md](https://github.com/Microsoft/windows-apps/blob/fb83213a4ce58285dae94da97fa20d397468bdc9/windows-apps-src/launch-resume/activate-an-app.md)
+##### <a name='364e19c723c6cf48a25104b5719735a533ae54a71911'></a> Source: [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps/blob/0e36b2adbd0805d9c738de00959581417d2c1ee8/windows-apps-src/debug-test-perf/device-portal-api-core.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [activate-an-app.784fd90768a0c5a2493e6f978771b70856757c89.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/836a855cee99fe68c5bfc6d537ce3935ddb46591/ol-handoff/Microsoft/windows-apps.de-de/master/activate-an-app.784fd90768a0c5a2493e6f978771b70856757c89.de-de.xlf)
-* Handoff Datetime: 2016-05-24 22:50:48
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='ac65b46ea06e64b3b431326db365ce23505c10962917'></a> Source: [windows-apps-src\launch-resume\handle-uri-activation.md](https://github.com/Microsoft/windows-apps/blob/fb83213a4ce58285dae94da97fa20d397468bdc9/windows-apps-src/launch-resume/handle-uri-activation.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [handle-uri-activation.73a75f29981ac7ed8d8845c4a9fafd1bbe8ac000.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/836a855cee99fe68c5bfc6d537ce3935ddb46591/ol-handoff/Microsoft/windows-apps.de-de/master/handle-uri-activation.73a75f29981ac7ed8d8845c4a9fafd1bbe8ac000.de-de.xlf)
-* Handoff Datetime: 2016-05-24 22:50:48
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='bb9d4394acad11d12b21cdce16b0d59ceafd1a2a2946'></a> Source: [windows-apps-src\launch-resume\resume-an-app.md](https://github.com/Microsoft/windows-apps/blob/fb83213a4ce58285dae94da97fa20d397468bdc9/windows-apps-src/launch-resume/resume-an-app.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [resume-an-app.b4795e859b2c817532e01822469bea780ed1b545.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/836a855cee99fe68c5bfc6d537ce3935ddb46591/ol-handoff/Microsoft/windows-apps.de-de/master/resume-an-app.b4795e859b2c817532e01822469bea780ed1b545.de-de.xlf)
-* Handoff Datetime: 2016-05-24 22:50:48
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='3ad58dc20a660d89622d215c46d263adf27a05422950'></a> Source: [windows-apps-src\launch-resume\suspend-an-app.md](https://github.com/Microsoft/windows-apps/blob/fb83213a4ce58285dae94da97fa20d397468bdc9/windows-apps-src/launch-resume/suspend-an-app.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [suspend-an-app.fb16a1af00bd5da899bd531d9c8cbfeee7674963.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/836a855cee99fe68c5bfc6d537ce3935ddb46591/ol-handoff/Microsoft/windows-apps.de-de/master/suspend-an-app.fb16a1af00bd5da899bd531d9c8cbfeee7674963.de-de.xlf)
-* Handoff Datetime: 2016-05-24 22:50:48
+* Handoff File: [device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/686f0cfcfef4026ede9ffaef3e25bfe0a355723d/ol-handoff/Microsoft/windows-apps.de-de/master/device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.de-de.xlf)
+* Handoff Datetime: 2016-05-24 23:20:09
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00

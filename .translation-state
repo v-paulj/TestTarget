@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "b4cc6edcb4bfdb845ba74b58d8f8096825201749",
+  "LastProcessedCommit": "0e36b2adbd0805d9c738de00959581417d2c1ee8",
   "LastTranslatedCommit": "1e58058fbbd8620b4c788b8fd9e42ed70a84e061",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
@@ -67295,6 +67295,36 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\suspend-an-app.fb16a1af00bd5da899bd531d9c8cbfeee7674963.de-de.xlf",
       "HandoffFileCommit": "836a855cee99fe68c5bfc6d537ce3935ddb46591",
       "HandoffDateTime": "2016-05-24T22:50:48.2784176Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "364e19c723c6cf48a25104b5719735a533ae54a7": {
+      "FileHash": "364e19c723c6cf48a25104b5719735a533ae54a7",
+      "SourceFileCommit": "0e36b2adbd0805d9c738de00959581417d2c1ee8",
+      "SourceFilePath": "windows-apps-src\\debug-test-perf\\device-portal-api-core.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\debug-test-perf\\device-portal-api-core.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.de-de.xlf",
+      "HandoffFileCommit": "686f0cfcfef4026ede9ffaef3e25bfe0a355723d",
+      "HandoffDateTime": "2016-05-24T23:20:09.4954319Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
