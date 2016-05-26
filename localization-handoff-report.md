@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\launch-resume\launch-maps-app.md](https://github.com/Microsoft/windows-apps/blob/dda8ca956dd3a01958a0270966f0e116a0d0ca7f/windows-apps-src/launch-resume/launch-maps-app.md) | HandedOffSuccess | [Details](#8bc7b2e448bbbab4cf1e56f117db2fc11d8da88c2941)
+ [windows-apps-src\porting\desktop-to-uwp-deploy-and-debug.md](https://github.com/Microsoft/windows-apps/blob/9f820294490cb53a528b876861996db173b0871d/windows-apps-src/porting/desktop-to-uwp-deploy-and-debug.md) | HandedOffSuccess | [Details](#d0699fcc2f55dc071fe7d36fce1595b73f0f5b7d3370)
 
 ## Item Details
-##### <a name='8bc7b2e448bbbab4cf1e56f117db2fc11d8da88c2941'></a> Source: [windows-apps-src\launch-resume\launch-maps-app.md](https://github.com/Microsoft/windows-apps/blob/dda8ca956dd3a01958a0270966f0e116a0d0ca7f/windows-apps-src/launch-resume/launch-maps-app.md)
+##### <a name='d0699fcc2f55dc071fe7d36fce1595b73f0f5b7d3370'></a> Source: [windows-apps-src\porting\desktop-to-uwp-deploy-and-debug.md](https://github.com/Microsoft/windows-apps/blob/9f820294490cb53a528b876861996db173b0871d/windows-apps-src/porting/desktop-to-uwp-deploy-and-debug.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [launch-maps-app.4c53ae19a43a4989c42d509c2657de322f2161fe.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7a8cbaaa014f8f524e44f7514149acb5650dd035/ol-handoff/Microsoft/windows-apps.de-de/master/launch-maps-app.4c53ae19a43a4989c42d509c2657de322f2161fe.de-de.xlf)
-* Handoff Datetime: 2016-05-26 21:54:44
+* Handoff File: [desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/f8b0680d1832f37511ba3d690b5d22b1606967c7/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.de-de.xlf)
+* Handoff Datetime: 2016-05-26 22:52:23
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
