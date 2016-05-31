@@ -1,40 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\debug-test-perf\device-portal.md](https://github.com/Microsoft/windows-apps/blob/207013a86926f66189297236c1393873f7a9a222/windows-apps-src/debug-test-perf/device-portal.md) | HandedOffSuccess | [Details](#6fe6205b21835f29216c159c83aa4c9a48bee4f11917)
- [windows-apps-src\graphics\transforms-overview.md](https://github.com/Microsoft/windows-apps/blob/a429fa659caf6c8032ad615f1b850092545d4439/windows-apps-src/graphics/transforms-overview.md) | OutofSyncHandedBackSuccess | [Details](#fa5e8964ab35cb33a1ff59a8a52aa384b9d115b42614)
+ [windows-apps-src\publish\tax-details-for-paid-apps.md](https://github.com/Microsoft/windows-apps/blob/a59d999ac36e04fbfa53d5b8992b235bff2d3818/windows-apps-src/publish/tax-details-for-paid-apps.md) | OutofSyncHandedBackSuccess | [Details](#364608e1452ddff7aae261bb0f29ec14ee4fb0a33544)
 
 ## Item Details
-##### <a name='6fe6205b21835f29216c159c83aa4c9a48bee4f11917'></a> Source: [windows-apps-src\debug-test-perf\device-portal.md](https://github.com/Microsoft/windows-apps/blob/207013a86926f66189297236c1393873f7a9a222/windows-apps-src/debug-test-perf/device-portal.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/1a3eca9b4690f821049488d57f95093b0f5d4921/ol-handoff/Microsoft/windows-apps.de-de/master/device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.de-de.xlf)
-* Handoff Datetime: 2016-05-27 21:24:55
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='fa5e8964ab35cb33a1ff59a8a52aa384b9d115b42614'></a> Source: [windows-apps-src\graphics\transforms-overview.md](https://github.com/Microsoft/windows-apps/blob/a429fa659caf6c8032ad615f1b850092545d4439/windows-apps-src/graphics/transforms-overview.md)
+##### <a name='364608e1452ddff7aae261bb0f29ec14ee4fb0a33544'></a> Source: [windows-apps-src\publish\tax-details-for-paid-apps.md](https://github.com/Microsoft/windows-apps/blob/a59d999ac36e04fbfa53d5b8992b235bff2d3818/windows-apps-src/publish/tax-details-for-paid-apps.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [transforms-overview.c67ed92e5a7de6cb07da53c96f53aa002e3bf481.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/1a3eca9b4690f821049488d57f95093b0f5d4921/ol-handoff/Microsoft/windows-apps.de-de/master/transforms-overview.c67ed92e5a7de6cb07da53c96f53aa002e3bf481.de-de.xlf)
-* Handoff Datetime: 2016-05-27 21:24:55
+* Handoff File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/31bc23f5a827ee39b16072f77e4a3329eaf6c7b1/ol-handoff/Microsoft/windows-apps.de-de/master/tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf)
+* Handoff Datetime: 2016-05-31 18:42:25
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\graphics\transforms-overview.md](https://github.com/Microsoft/windows-apps.de-de/blob/d2e2954e5cab037d815bb5a1fceba693cc95246c/windows-apps-src/graphics/transforms-overview.md)
-* Current Handback File: [transforms-overview.c67ed92e5a7de6cb07da53c96f53aa002e3bf481.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/732ed383522bc6db84e26c7286871d03a87942c2/ol-handback/Microsoft/windows-apps.de-de/master/transforms-overview.c67ed92e5a7de6cb07da53c96f53aa002e3bf481.de-de.xlf)
-* Current Handback Datetime: 2016-05-17 13:04:34
+* Current Target File: [windows-apps-src\publish\tax-details-for-paid-apps.md](https://github.com/Microsoft/windows-apps.de-de/blob/bc116d2542b0e55dbcea8b0066b22f4fe390f61b/windows-apps-src/publish/tax-details-for-paid-apps.md)
+* Current Handback File: [tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/tax-details-for-paid-apps.dabd93b4ae33f057b5755bdbfd54af1f2c7ebbad.de-de.xlf)
+* Current Handback Datetime: 2016-05-31 12:25:12
 * [Back to Top](#report-top)
 
 
