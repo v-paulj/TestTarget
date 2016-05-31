@@ -1,10 +1,11 @@
 ---
+author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
-description: Verwenden Sie diese Methode in der Windows Store-Sammlungs-API, um ein Verbrauchsprodukt für einen bestimmten Kunden als erfüllt zu melden. Damit ein Benutzer ein Verbrauchsprodukt erneut erwerben kann, muss Ihre App oder Ihr Dienst das Verbrauchsprodukt für den betreffenden Benutzer als erfüllt melden.
-title: Melden von Verbrauchsprodukten als erfüllt
+description: Verwenden Sie diese Methode aus der Windows Store Collection-API, um den Kauf eines Verbrauchsprodukt für einen bestimmten Kunden als abgewickelt zu melden. Damit ein Benutzer ein Verbrauchsprodukt erneut erwerben kann, muss Ihre App oder Ihr Dienst das Verbrauchsprodukt für den betreffenden Benutzer als abgewickelt melden.
+title: Melden von Verbrauchsprodukten als abgewickelt
 ---
 
-# Melden von Verbrauchsprodukten als erfüllt
+# Melden von Verbrauchsprodukten als abgewickelt
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -41,8 +42,8 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.                           |
-| Host           | string | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
+| Authorization  | Zeichenfolge | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
+| Host           | Zeichenfolge | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
 | Content-Type   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
@@ -77,7 +78,7 @@ Das UserIdentity-Objekt enthält die folgenden Parameter.
 
 Im folgenden Beispiel werden *itemId* und *trackingId* verwendet.
 
-```
+```syntax
 POST https://collections.mp.microsoft.com/v6.0/collections/consume HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1…..
 Host: collections.mp.microsoft.com
@@ -97,7 +98,7 @@ Content-Type: application/json
 
 Im folgenden Beispiel werden *productId* und *transactionId* verwendet.
 
-```
+```syntax
 POST https://collections.mp.microsoft.com/v6.0/collections/consume HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1……
 Content-Length: 1880
@@ -122,7 +123,7 @@ Bei erfolgreicher Nutzung wird kein Inhalt zurückgegeben.
 
 ### Antwortbeispiel
 
-```
+```syntax
 HTTP/1.1 204 No Content
 Content-Length: 0
 MS-CorrelationId: 386f733d-bc66-4bf9-9b6f-a1ad417f97f0
@@ -157,6 +158,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Stellt eine nach Funktionen geordnete Liste einiger Steuerelemente bereit, die Sie in Ihren Apps verwenden können.
 title: Steuerelemente nach Funktion
 ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
-label: Steuerelemente nach Funktion
+label: Controls by function
 template: detail.hbs
 ---
 # Steuerelemente nach Funktion
@@ -843,6 +844,6 @@ Referenz: [ToggleSwitch](https://msdn.microsoft.com/library/windows/apps/xaml/wi
 Design und Vorgehensweise: [Richtlinien für Umschaltsteuerelemente](toggles.md) 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Starten einer App für Ergebnisse
 description: Hier erfahren Sie, wie Sie eine App aus einer anderen App heraus starten und Daten zwischen den beiden Apps austauschen. Dieser Vorgang wird als Starten einer App für Ergebnisse bezeichnet.
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
@@ -34,7 +35,7 @@ Das **ReturnResults**-Attribut in der Protokollerweiterung akzeptiert einen der 
 
 Im folgenden Beispiel für eine Protokollerweiterung kann die App nur für Ergebnisse gestartet werden. Dadurch wird die im Folgenden erläuterte Logik innerhalb der **OnActivated**-Methode vereinfacht, da wir nur das „Starten für Ergebnisse“ behandeln müssen und nicht die anderen Möglichkeiten zum Aktivieren der App.
 
-```xaml
+```xml
 <Applications>
    <Application ...>
 
@@ -94,7 +95,7 @@ Sie verwenden das [**ProtocolForResultsOperation**](https://msdn.microsoft.com/l
 ## Schritt 4: Außerkraftsetzen von „Override OnNavigatedTo()“ in der App, die Sie für Ergebnisse starten
 
 
-Überschreiben Sie die [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508)-Methode auf der Seite, die Sie anzeigen, wenn die App für Ergebnisse gestartet wird. Wenn diese Methode in der App noch nicht vorhanden ist, erstellen Sie sie innerhalb der in „&lt;Seitenname&gt;.xaml.cs“ definierten Klasse. Stellen Sie sicher, dass die folgende **using**-Anweisung oben in der Datei vorhanden ist:
+Überschreiben Sie die [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508)-Methode auf der Seite, die Sie anzeigen, wenn die App für Ergebnisse gestartet wird. Wenn diese Methode in der App noch nicht vorhanden ist, erstellen Sie sie innerhalb der in &lt;Seitenname&gt;.xaml.cs“ definierten Klasse. Stellen Sie sicher, dass die folgende **using**-Anweisung oben in der Datei vorhanden ist:
 
 ```cs
 using Windows.ApplicationModel.Activation
@@ -154,8 +155,8 @@ async Task<string> LaunchAppForResults()
 
     string theResult = "";
     LaunchUriResult result = await Windows.System.Launcher.LaunchUriForResultsAsync(testAppUri, options, inputData);
-    if (result.Status == LaunchUriStatus.Success &amp;&amp;
-        result.Result != null &amp;&amp;
+    if (result.Status == LaunchUriStatus.Success &&
+        result.Result != null &&
         result.Result.ContainsKey("ReturnedData"))
     {
         ValueSet theValues = result.Result;
@@ -201,6 +202,6 @@ Anschließend übergeben Sie sie über **LaunchUriForResultsAsync** an die gesta
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

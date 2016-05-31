@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Beim Einreichen der App haben Sie die Möglichkeit, auf der Seite Hinweise für Zertifizierung zusätzliche Informationen für Zertifizierungstester bereitzustellen. Mit diesen Informationen kann sichergestellt werden, dass die App richtig getestet wird.
 title: Hinweise für Zertifizierung
 ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
@@ -42,6 +43,6 @@ Berücksichtigen Sie beim Zusammenstellen der Informationen Folgendes:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

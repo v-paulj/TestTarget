@@ -1,6 +1,7 @@
 ---
+author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
-description: Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem Benutzer eine kostenlose App oder ein kostenloses In-App-Produkt (IAP) zu gewähren.
+description: Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem bestimmten Benutzer eine kostenlose App oder ein kostenloses In-App-Produkt (IAP) zu gewähren.
 title: Gewähren kostenloser Produkte
 ---
 
@@ -36,8 +37,8 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.                           |
-| Host           | string | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
+| Authorization  | Zeichenkette | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
+| Host           | Zeichenkette | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
 | Content-Type   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
@@ -53,7 +54,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | language       | string | Die Sprache des Benutzers.                                                                                                                                                                                                                                                                                              | Ja      |
 | market         | string | Der Markt des Benutzers.                                                                                                                                                                                                                                                                                                | Ja      |
 | orderId        | guid   | Eine für den Auftrag generierte GUID. Dieser Wert muss für den Benutzer eindeutig sein, auftragsübergreifend jedoch nicht.                                                                                                                                                                                              | Ja      |
-| productId      | string | Die Produkt-ID aus dem Windows Store-Katalog. Wenn Sie Ihre Produkt-ID ermitteln möchten, navigieren Sie im Windows Dev Center-Dashboard zu Ihrer App, wechseln zur Seite **App-Verwaltung** &gt; **App-Identität** und rufen das Suffix der im Feld **URL für Windows 10** dargestellten Zeichenfolge ab. Beispiel für eine Produkt-ID: 9WZDNCRFJ3Q8. | Ja      |
+| productId      | string | Die Produkt-ID aus dem Windows Store-Katalog. Wenn Sie die Produkt-ID Ihres Produkts ermitteln möchten, navigieren Sie im Windows Dev Center-Dashboard zu Ihrer App, wechseln zur Seite **App-Verwaltung**&gt;**App-Identität** und rufen das Suffix der im Feld **URL für Windows 10** angezeigten Zeichenfolge ab. Beispiel für eine Produkt-ID: 9WZDNCRFJ3Q8. | Ja      |
 | quantity       | int    | Die Kaufmenge. Derzeit wird als einziger Wert 1 unterstützt. Ohne Angabe wird standardmäßig der Wert 1 verwendet.                                                                                                                                                                                                                | Nein       |
 | skuId          | string | Die SKU-ID aus dem Windows Store-Katalog. Beispiel für eine SKU-ID: 0010.                                                                                                                                                                                                                                                | Ja      |
 
@@ -61,7 +62,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 ### Anforderungsbeispiel
 
-```
+```syntax
 POST https://purchase.mp.microsoft.com/v6.0/purchases/grant HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJK……
 Content-Length: 1863
@@ -93,7 +94,7 @@ Content-Type: application/json
 | language                  | string                      | Die Sprach-ID für den Auftrag (z. B. „de“).                                                                                                       | Ja      |
 | market                    | string                      | Die Markt-ID für den Auftrag (z. B. „DEU“).                                                                                                         | Ja      |
 | orderId                   | string                      | Eine ID, die den Auftrag für einen bestimmten Benutzer identifiziert.                                                                                                   | Ja      |
-| orderLineItems            | list&lt;OrderLineItemV6&gt; | Die Liste mit den Auftragspositionen. In der Regel gibt es eine Position pro Auftrag.                                                                          | Ja      |
+| orderLineItems            | list&lt;OrderLineItemV6&gt; | Die Liste mit den Auftragspositionen. In der Regel gibt es 1 Position pro Auftrag.                                                                          | Ja      |
 | orderState                | string                      | Der Zustand des Auftrags. Gültige Zustände sind **Editing**, **CheckingOut**, **Pending**, **Purchased**, **Refunded**, **ChargedBack** und **Cancelled**. | Ja      |
 | orderValidityEndTime      | string                      | Der Zeitpunkt, bis zu dem der Preis des Auftrags vor der Übermittlung gültig ist. Für kostenlose Apps nicht relevant.                                                                      | Ja      |
 | orderValidityStartTime    | string                      | Der Zeitpunkt, ab dem der Preis des Auftrags vor der Übermittlung gültig ist. Für kostenlose Apps nicht relevant.                                                                     | Ja      |
@@ -156,7 +157,7 @@ Das IdentityV6-Objekt enthält die folgenden Parameter.
 
 ### Antwortbeispiel
 
-```
+```syntax
 Content-Length: 1203
 Content-Type: application/json
 MS-CorrelationId: fb2e69bc-f26a-4aab-a823-7586c19f5762
@@ -242,6 +243,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

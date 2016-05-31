@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Geräteportal für mobile Geräte
 description: Hier erfahren Sie, wie Sie mit dem Windows Device Portal Ihr mobiles Gerät per Fernzugriff konfigurieren und verwalten können.
@@ -9,13 +10,13 @@ Ab Windows 10, Version 1511, sind weitere Entwicklerfeatures für Mobilgeräte v
 
 Informationen zum Aktivieren des Entwicklermodus finden Sie unter [Aktivieren Ihres Geräts für die Entwicklung](../get-started/enable-your-device-for-development.md).
 
-![Einstellungen im Geräteportal](images/device-portal/mob-dev-mode-options.png)
+![Einstellungen im Device Portal](images/device-portal/mob-dev-mode-options.png)
 
-## Einrichten des Geräteportals unter Windows Phone
+## Einrichten des Device Portal unter Windows Phone
 
 ### Aktivieren der Geräteermittlung und -kopplung
 
-Damit Sie eine Verbindung mit dem Geräteportal herstellen können, müssen Sie die Geräteermittlung aktivieren. Auf diese Weise können Sie Ihr Smartphone mit einem PC oder einem anderen Windows 10-Gerät koppeln. Beide Geräte müssen über eine kabelgebundene oder drahtlose Verbindung mit dem gleichen Subnetz des Netzwerks verbunden sein oder über USB verbunden werden.
+Damit Sie eine Verbindung mit dem Device Portal herstellen können, müssen Sie die Geräteermittlung aktivieren. Auf diese Weise können Sie Ihr Smartphone mit einem PC oder einem anderen Windows 10-Gerät koppeln. Beide Geräte müssen über eine kabelgebundene oder drahtlose Verbindung mit dem gleichen Subnetz des Netzwerks verbunden sein oder über USB verbunden werden.
 
 Wenn Sie das erste Mal eine Verbindung mit dem Geräteportal herstellen, werden Sie aufgefordert, einen sechsstelligen Sicherheitscode einzugeben (mit Beachtung der Groß- und Kleinschreibung). Dadurch wird sichergestellt, dass Sie Zugriff auf das Smartphone haben, und Sie werden vor Angriffen geschützt. Tippen Sie auf Ihrem Smartphone auf die Schaltfläche „Koppeln“, um den Code zu generieren und anzuzeigen. Geben Sie dann die sechs Zeichen in das Textfeld im Browser ein.
 
@@ -71,6 +72,6 @@ Das Geräteportal für mobile Geräte enthält den Standardsatz der Seiten. Ausf
 - Netzwerke
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

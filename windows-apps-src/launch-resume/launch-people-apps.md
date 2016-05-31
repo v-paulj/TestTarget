@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Starten der Kontakte-App
 description: In diesem Thema wird das ms-people-URI-Schema beschrieben. Ihre App kann dieses URI-Schema verwenden, um die Kontakte-App für bestimmte Aktionen zu starten.
 ms.assetid: 1E604599-26EF-421C-932F-E9935CDB248E
@@ -38,8 +39,8 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 <tr class="odd">
 <td align="left">Damit können andere Apps einen Suchbegriff bereitstellen, der in der Kontakte-App mit der Ergebnisseite der Suche gestartet wird.
 <div class="alert">
-**Hinweis**
-          <p>Bei den Parametern wird die Groß-/Kleinschreibung beachtet.</p>
+**Hinweis**  
+<p>Bei den Parametern wird die Groß-/Kleinschreibung beachtet.</p>
 <p>Wenn Sie die Syntax nicht ordnungsgemäß eingeben oder den Wert der Suchzeichenfolge vergessen, wird standardmäßig eine vollständige Liste der Kontakte ohne Filterung zurückgegeben.</p>
 </div>
 <div>
@@ -50,8 +51,8 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 <tr class="even">
 <td align="left">Startet mit einer vorhandenen Kontaktkarte, wenn der Kontakt gefunden wurde. Oder startet mit einer temporären Kontaktkarte, wenn kein Kontakt gefunden wird. Wenn kein Eingabeparameter angegeben wird, wird die Kontakte-App mit einer Kontaktliste gestartet.
 <div class="alert">
-**Hinweis**
-          <p>Bei den Parametern wird die Groß-/Kleinschreibung beachtet.</p>
+**Hinweis**  
+<p>Bei den Parametern wird die Groß-/Kleinschreibung beachtet.</p>
 <p>Die Reihenfolge der Parameter spielt keine Rolle.</p>
 <p>Wenn mehr als eine Übereinstimmung vorliegt, wird die erste Übereinstimmung des Kontakts zurückgegeben.</p>
 </div>
@@ -63,8 +64,8 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 <tr class="odd">
 <td align="left">Startet mit einer „Kontakt speichern“-Seite innerhalb der Kontakte-App, um den angegeben Kontakt mit der angegebenen Telefonnummer oder E-Mail-Adresse zu speichern.
 <div class="alert">
-**Hinweis**
-          <p>Bei den Parametern wird die Groß-/Kleinschreibung beachtet.</p>
+**Hinweis**  
+<p>Bei den Parametern wird die Groß-/Kleinschreibung beachtet.</p>
 <p>Die Reihenfolge der Parameter spielt keine Rolle.</p>
 </div>
 <div>
@@ -95,7 +96,7 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">**SearchString**</td>
+<td align="left">**Suchzeichenfolge**</td>
 <td align="left"><p>Optional.</p>
 <p>Die Suchzeichenfolge für die Informationen zur Kontaktsuche.</p>
 <p>Die Telefonnummer oder den Namen des Kontakts.</p></td>
@@ -136,7 +137,7 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 <td align="left"><p>ms-people:viewcontact?PhoneNumber=%2014257069326</p></td>
 </tr>
 <tr class="odd">
-<td align="left">**E-Mail**</td>
+<td align="left">**Email**</td>
 <td align="left"><p>Optional.</p>
 <p>Die E-Mail-Adresse des Kontakts.</p></td>
 <td align="left"><p>ms-people:viewcontact?Email=johnsmith@contsco.com</p></td>
@@ -148,7 +149,7 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 <td align="left"><p>ms-people:viewcontact?ContactName=John%20%Smith</p></td>
 </tr>
 <tr class="odd">
-<td align="left">**Kontakt**</td>
+<td align="left">**Contact**</td>
 <td align="left"><p>Optional.</p>
 <p>Das Kontaktobjekt.</p></td>
 <td align="left"><p>ms-people:viewcontact?Contact={Serialized Contact}</p></td>
@@ -182,7 +183,7 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 <td align="left"><p>ms-people:savetocontact?PhoneNumber=%2014257069326</p></td>
 </tr>
 <tr class="even">
-<td align="left">**E-Mail**</td>
+<td align="left">**Email**</td>
 <td align="left"><p>Optional.</p>
 <p>Die E-Mail-Adresse des Kontakts.</p></td>
 <td align="left"><p>ms-people:savetocontact?Email=johnsmith@contsco.com</p></td>
@@ -206,6 +207,6 @@ In diesem Thema wird das **ms-people:**-URI-Schema beschrieben. Ihre App kann di
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

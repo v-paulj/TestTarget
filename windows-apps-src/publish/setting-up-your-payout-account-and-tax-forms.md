@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Damit Sie Geld aus den App-Verkäufen im Windows Store erhalten, müssen Sie ein Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen.
 title: Einrichten von Auszahlungskonten und Steuerformularen
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
@@ -9,11 +10,12 @@ ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
 
 Damit Sie Geld aus den App-Verkäufen im Windows Store erhalten, müssen Sie ein Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen.
 
-> **Hinweis**  Seit dem 1. April 2016 werden Ihre Microsoft Advertising-Einnahmen auf das Auszahlungskonto gezahlt, das Sie in Dev Center eingerichtet haben. Weitere Informationen finden Sie unter [Konsolidierung des pubCenter- und DevCenter-Auszahlungskontos und -Steuerprofils](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
+> **Hinweis**  Seit dem 1. April 2016 werden Ihre Microsoft Advertising-Einnahmen auf das Auszahlungskonto gezahlt, das Sie im Dev Center eingerichtet haben. Weitere Informationen finden Sie unter [Konsolidierung des pubCenter- und DevCenter-Auszahlungskontos und -Steuerprofils](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 
 Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Einkäufe bereitstellen oder Microsoft Advertising verwenden möchten), brauchen Sie kein Auszahlungskonto einzurichten oder Steuerformulare auszufüllen. Falls Sie zu einem späteren Zeitpunkt beschließen, Apps (oder In-App-Produkte) zu verkaufen, können Sie Ihr Auszahlungskonto dann noch einrichten und die Steuerformulare ausfüllen. Sie können erst kostenpflichtige Apps oder IAPs übermitteln, nachdem Sie Ihr Auszahlungskonto eingerichtet und Steuerprofil ausgefüllt haben.
 
-> **Hinweis**  In [bestimmten Märkten](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) dürfen nur kostenlose Apps gelistet werden. Wenn Ihr Konto in einem dieser Märkte registriert ist, steht die Option, ein Auszahlungskonto einzurichten, nicht zur Verfügung.
+> **Hinweis**
+            [In bestimmten Märkten](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) dürfen nur kostenlose Apps gelistet werden. Wenn Ihr Konto in einem dieser Märkte registriert ist, steht die Option, ein Auszahlungskonto einzurichten, nicht zur Verfügung.
 
 
 Nach dem [Einrichten des Entwicklerkontos](opening-a-developer-account.md) müssen Sie zwei Dinge tun, bevor Sie Apps (oder IAPs) im Windows Store verkaufen können:
@@ -61,9 +63,9 @@ In ausgewählten Ländern und Regionen können Sie ein Zahlungskonto erstellen, 
 
 Allgemeine Fragen über PayPal als Zahlungsmethode:
 
--   **Welche PayPal-Einstellungen muss ich vornehmen, um Zahlungen zu erhalten?** Sie müssen sicherstellen, dass Ihr PayPal-Konto keine Zahlungen per elektronischem Scheck blockiert. Diese Einstellung wird über die PayPal-Seite für die bevorzugte Überweisungsmethode verwaltet. Weitere Informationen finden Sie auf der [PayPal-Seite zum Einrichten des Kontos](http://go.microsoft.com/fwlink/p/?linkid=513139).
--   **Wird mein Land/meine Region unterstützt?** Informieren Sie sich unter [Kontotypen, Standorte und Gebühren](account-types-locations-and-fees.md) darüber, in welchen Gebieten PayPal als Zahlungsmethode unterstützt wird.
--   **Ist die Höhe des Zahlungsbetrags in PayPal beschränkt?** Ja. PayPal beschränkt den Betrag, den Benutzer im Rahmen einer einzelnen Transaktion erhalten können. Je nach Währung gelten unterschiedliche Grenzwerte. Detaillierte Informationen finden Sie auf der [PayPal-Seite zur Beschränkung des Transaktionsvolumens](http://go.microsoft.com/fwlink/p/?linkid=513108). Wenn Sie eine Zahlung erwarten, die über dem zulässigen Transaktionsvolumen von PayPal liegt, ändern Sie die Zahlungsmethode, und verwenden Sie stattdessen eine Bankverbindung.
+-   **Welche PayPal-Einstellungen ist erforderlich, um Zahlungen zu erhalten?** Sie müssen sicherstellen, dass Ihr PayPal-Konto keine Zahlungen per eCheck blockiert. Diese Einstellung wird über die PayPal-Seite für die bevorzugte Überweisungsmethode verwaltet. Weitere Informationen finden Sie auf der [PayPal-Seite zum Einrichten des Kontos](http://go.microsoft.com/fwlink/p/?linkid=513139).
+-   **Wird mein Land bzw. meine Region unterstützt?** Informieren Sie sich unter [Kontotypen, Standorte und Gebühren](account-types-locations-and-fees.md) darüber, in welchen Gebieten PayPal als Zahlungsmethode unterstützt wird.
+-   **Gibt es eine Beschränkung für die Höhe der Zahlungen, die ich über PayPal erhalten kann?** Ja. PayPal beschränkt den Betrag, den Benutzer im Rahmen einer einzelnen Transaktion erhalten können. Je nach Währung gelten unterschiedliche Grenzwerte. Detaillierte Informationen finden Sie auf der [PayPal-Seite zur Beschränkung des Transaktionsvolumens](http://go.microsoft.com/fwlink/p/?linkid=513108). Wenn Sie eine Zahlung erwarten, die über dem zulässigen Transaktionsvolumen von PayPal liegt, ändern Sie die Zahlungsmethode, und verwenden Sie stattdessen eine Bankverbindung.
 -   **Muss mein PayPal-Konto im selben Land bzw. in derselben Region wie mein Dev Center-Konto registriert sein?** Nein. Beim Einrichten eines PayPal-Kontos können Sie die Standardkonfiguration akzeptieren. Normalerweise treten keine Probleme mit anderen Ländern/Regionen und Währungen auf, sofern die Zahlung in einigen Währungen nicht blockiert ist. Diese Einstellung wird über die PayPal-Seite für die bevorzugte Überweisungsmethode verwaltet.
 -   **Muss ich PayPal-Zahlungen manuell akzeptieren?** Nein. PayPal-Konten sind dafür ausgelegt, dass Benutzer Zahlungen manuell akzeptieren müssen. Wenn Sie die Zahlung binnen 30 Tagen nicht akzeptieren, wird sie storniert. Sie können diese Einstellung ändern, indem Sie auf der PayPal-Seite mit weiteren Einstellungen die Bestätigungsaufforderung deaktivieren.
 
@@ -154,6 +156,6 @@ Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den V
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

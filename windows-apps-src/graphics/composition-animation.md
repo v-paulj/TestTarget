@@ -1,7 +1,8 @@
 ---
+author: scottmill
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: Kompositionsanimationen
-description: Eigenschaften Kompositionsobjekte Effekte mit Keyframeanimationen Ausdrucksanimationen animiert Eigenschaften mit der Zeit auf Grundlage Berechnung verändern
+description: Viele Eigenschaften von Kompositionsobjekten und Effekten können mit Keyframeanimationen und Ausdrucksanimationen animiert werden. Dadurch können sich Eigenschaften eines UI-Elements im Laufe der Zeit oder auf der Grundlage einer Berechnung verändern.
 ---
 # Kompositionsanimationen
 
@@ -122,7 +123,7 @@ Nachdem Sie die Animation, Keyframes und Eigenschaften definiert haben, können 
 Die allgemeine Syntax lautet wie im folgenden Beispiel:
 
 ```cs
-targetVisual.StartAnimation(“Offset”, animation);
+targetVisual.StartAnimation("Offset", animation);
 ```
 
 Nach Sie die Animation gestartet haben, können Sie sie auch wieder anhalten und trennen. Dies geschieht mithilfe der [**StopAnimation**](https://msdn.microsoft.com/library/windows/apps/Mt590841)-Methode. Geben Sie die Eigenschaft an, deren Animation Sie beenden möchten.
@@ -130,7 +131,7 @@ Nach Sie die Animation gestartet haben, können Sie sie auch wieder anhalten und
 Beispiel:
 
 ```cs
-targetVisual.StopAnimation(“Offset”);
+targetVisual.StopAnimation("Offset");
 ```
 
 ### Abschlussereignisse für Animationen
@@ -167,7 +168,7 @@ Beispiel:
 
 ```cs
 myScopedBatch = _compositor.CreateScopedBatch(CompositionBatchTypes.Animation);
-Visual.StartAnimation(“Opacity”, myAnimation);
+Visual.StartAnimation("Opacity", myAnimation);
 myScopedBatch.End();
 ```
 
@@ -192,7 +193,7 @@ Ausdrucksanimationen sind Animationen, die mit einem mathematischen Ausdruck ang
 Um einen Ausdruck zu erstellen, rufen Sie für das Kompositorobjekt [**CreateExpressionAnimation**](https://msdn.microsoft.com/library/windows/apps/Mt187002) auf und geben den gewünschten Ausdruck an:
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“INSERT_EXPRESSION_STRING”)
+var expression = _compositor.CreateExpressionAnimation("INSERT_EXPRESSION_STRING")
 ```
 
 ### Operatoren, Rangfolge und Orientierung
@@ -229,8 +230,8 @@ In diesem Beispiel sind „ChildOffset“ und „ParentOffset“ Parameter, die 
 In der oben genannten Ausdruckszeichenfolge müssten zwei Parameter erstellt werden, um die beiden visuellen Strukturen zu definieren:
 
 ```cs
-Expression.SetReferenceParameter(“ChildVisual”, childVisual);
-Expression.SetReferenceParameter(“ParentVisual”, parentVisual);
+Expression.SetReferenceParameter("ChildVisual", childVisual);
+Expression.SetReferenceParameter("ParentVisual", parentVisual);
 ```
 
 ### Ausdruckshilfsfunktionen
@@ -244,7 +245,7 @@ Zusätzlich zum Zugriff auf die Operatoren und Eigenschaftenparameter haben Sie 
 Hier ist ein Beispiel für eine komplexere Ausdruckszeichenfolge, die die Hilfsfunktion „Clamp“ verwendet:
 
 ```cs
-Clamp((scroller.Offset.y * -1.0) – container.Offset.y, 0, container.Size.y – header.Size.y)
+Clamp((scroller.Offset.y * -1.0) - container.Offset.y, 0, container.Size.y - header.Size.y)
 ```
 
 ### Starten und Anhalten der Ausdrucksanimation
@@ -264,14 +265,14 @@ _sharedProperties = _compositor.CreatePropertySet();
 Nachdem Sie den Eigenschaftensatz erstellt haben, können Sie eine Eigenschaft und einen Wert mithilfe einer der **Insert\***-Methoden von [**CompositionPropertySet**](https://msdn.microsoft.com/library/windows/apps/Dn706772) hinzufügen. Beispiel:
 
 ```cs
-_sharedProperties.InsertVector3(“NewOffset”, offset);
+_sharedProperties.InsertVector3("NewOffset", offset);
 ```
 
 Nachdem Sie Ihre Ausdrucksanimation erstellt haben, können Sie auf Eigenschaften aus dem Eigenschaftensatz in der Ausdruckszeichenfolge verweisen, indem Sie einen Verweisparameter verwenden. Beispiel:
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“sharedProperties.NewOffset”);
-expression.SetReferenceParameter(“sharedProperties”, _sharedProperties);
+var expression = _compositor.CreateExpressionAnimation("sharedProperties.NewOffset");
+expression.SetReferenceParameter("sharedProperties", _sharedProperties);
 ```
 
 ### Ausdruckskeyframes
@@ -291,7 +292,7 @@ Der folgende Codeausschnitt verwendet beispielsweise eine Kombination aus regul�
 
 ```cs
 var animation = _compositor.CreateScalarKeyFrameAnimation();
-animation.InsertExpressionKeyFrame(0.25, “VisualBOffset.X / VisualAOffset.Y”);
+animation.InsertExpressionKeyFrame(0.25, "VisualBOffset.X / VisualAOffset.Y");
 animation.InsertKeyFrame(1.00f, 0.8f);
 ```
 
@@ -305,7 +306,7 @@ In der Ausdruckssprache ist es möglich, auf den aktuellen Wert und den Ausgangs
 Ein Anwendungsbeispiel in einem Ausdruckskeyframe:
 
 ```cs
-animation.InsertExpressionKeyFrame(0.0f, “this.CurrentValue + delta”);
+animation.InsertExpressionKeyFrame(0.0f, "this.CurrentValue + delta");
 ```
 
 ### Bedingte Ausdrücke
@@ -334,7 +335,7 @@ Und nicht zuletzt werden auch die folgenden Konjunktionen als Operatoren oder Fu
 Der folgende Codeausschnitt zeigt ein Beispiel für die Verwendung von konditionellen Abschnitten in einem Ausdruck:
 
 ```cs
-var expression = _compositor.CreateExpressionAnimation(“target.Offset.x > 50 ? 0.0f +   (target.Offset.x / parent.Offset.x) : 1.0f”);
+var expression = _compositor.CreateExpressionAnimation("target.Offset.x > 50 ? 0.0f +   (target.Offset.x / parent.Offset.x) : 1.0f");
 ```
 
  
@@ -346,6 +347,6 @@ var expression = _compositor.CreateExpressionAnimation(“target.Offset.x > 50 ?
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

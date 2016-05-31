@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
-description: MediaSource-Klasse Verweisen Medien verschieden Quellen Wiedergabe Medien gemeinsam Modell Mediendatenzugriff verfügbar unabhängig zugrunde liegend Medienformat
+description: Die MediaSource-Klasse wird allgemein zum Verweisen auf Medien aus verschiedenen Quellen (etwa lokale Dateien oder Remotedateien) sowie zum Wiedergeben dieser Medien verwendet und macht ein gemeinsames Modell für den Mediendatenzugriff verfügbar – unabhängig vom zugrunde liegenden Medienformat.
 title: Medienwiedergabe mit „MediaSource“
 ---
 
@@ -11,7 +12,9 @@ title: Medienwiedergabe mit „MediaSource“
 
 \[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
 
-Die [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905)-Klasse wird allgemein zum Verweisen auf Medien aus verschiedenen Quellen (etwa lokale Dateien oder Remotedateien) sowie zum Wiedergeben dieser Medien verwendet und macht ein gemeinsames Modell für den Mediendatenzugriff verfügbar – unabhängig vom zugrunde liegenden Medienformat. Die [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939)-Klasse erweitert den Funktionsumfang von **MediaSource** und ermöglicht die Verwaltung und Auswahl mehrerer Audio-, Video- und Metadatentitel in einem Medienelement. [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) ermöglicht die Erstellung von Wiedergabelisten auf der Grundlage von Medienelementen.
+Die [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905)-Klasse wird allgemein zum Verweisen auf Medien aus verschiedenen Quellen (etwa lokale Dateien oder Remotedateien) sowie zum Wiedergeben dieser Medien verwendet und macht ein gemeinsames Modell für den Mediendatenzugriff verfügbar – unabhängig vom zugrunde liegenden Medienformat. Die [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939)-Klasse erweitert den Funktionsumfang von **MediaSource** und ermöglicht die Verwaltung und Auswahl mehrerer Audio-, Video- und Metadatentitel in einem Medienelement. [
+              **MediaPlaybackList**
+            ](https://msdn.microsoft.com/library/windows/apps/dn930955) ermöglicht die Erstellung von Wiedergabelisten auf der Grundlage von Medienelementen.
 
 Der Code in diesem Artikel wurde aus dem SDK-Beispiel [VideoPlayback](http://go.microsoft.com/fwlink/p/?LinkId=620020&clcid=0x409) übernommen und angepasst. Dieses Beispiel können Sie herunterladen, um sich den verwendeten Code im Kontext anzusehen oder ihn als Ausgangspunkt für Ihre eigene App zu verwenden.
 
@@ -123,7 +126,7 @@ Erstellen Sie ein neues, geeignetes Marker-Objekt für die Art des erstellten Me
 
 [!code-cs[AddDataTrack](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetAddDataTrack)]
 
-Das **CueEntered**-Ereignis wird ausgelöst, wenn die Startzeit eines Markers erreicht wurde – vorausgesetzt, der Darstellungsmodus des zugeordneten Titels hat einen der folgenden Werte: **ApplicationPresented**, **Hidden** oder **PlatformPresented.** Im Präsentationsmodus **Disabled** werden keine Marker-Ereignisse für Metadatentitel ausgelöst. Dieses Beispiel gibt einfach die benutzerdefinierten, dem Marker zugeordneten Daten im Debugfenster aus.
+Das **CueEntered**-Ereignis wird ausgelöst, wenn die Startzeit eines Markers erreicht wurde und der zugehörige Titel den Präsentationsmodus **ApplicationPresented**, **Hidden** oder **PlatformPresented** hat. Marker-Ereignisse werden nicht für Metadatentitel ausgelöst, wenn der Präsentationsmodus für den Titel **Disabled** ist. Dieses Beispiel gibt einfach die benutzerdefinierten, dem Marker zugeordneten Daten im Debugfenster aus.
 
 [!code-cs[DataCueEntered](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetDataCueEntered)]
 
@@ -137,7 +140,7 @@ Dieses Beispiel fügt einen benutzerdefinierten Texttitel hinzu. Hierzu wird bei
 
 Mithilfe des [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)-Elements können Sie eine Wiedergabeliste mit Medienelementen (dargestellt durch **MediaPlaybackItem**-Objekte) erstellen.
 
-**Hinweis** Elemente in einer [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) werden mit lückenloser Wiedergabe gerendert. Das System verwendet die in MP3- oder AAC-codierten Dateien bereitgestellten Metadaten, um die für die lückenlose Wiedergabe erforderliche Verzögerungs- oder Auffüllkorrektur (Delay/Padding) zu ermitteln. Werden diese Metadaten von den MP3- oder AAC-codierten Dateien nicht bereitgestellt, ermittelt das System Verzögerungen und Auffüllungen heuristisch. Bei verlustfreien Formaten wie PCM, FLAC oder ALAC ergreift das System keine Maßnahme, da diese Encoder keine Verzögerungen oder Auffüllungen verursachen.
+**Hinweis**  Elemente in einer [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) werden mit lückenloser Wiedergabe gerendert. Das System verwendet die in MP3- oder AAC-codierten Dateien bereitgestellten Metadaten, um die für die lückenlose Wiedergabe erforderliche Verzögerungs- oder Auffüllkorrektur (Delay/Padding) zu ermitteln. Werden diese Metadaten von den MP3- oder AAC-codierten Dateien nicht bereitgestellt, ermittelt das System Verzögerungen und Auffüllungen heuristisch. Bei verlustfreien Formaten wie PCM, FLAC oder ALAC ergreift das System keine Maßnahme, da diese Encoder keine Verzögerungen oder Auffüllungen verursachen.
 
 Deklarieren Sie zunächst eine Variable zum Speichern Ihres **MediaPlaybackList**-Elements.
 
@@ -174,6 +177,6 @@ Geben Sie durch Festlegen der [**AutoRepeatEnabled**](https://msdn.microsoft.com
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

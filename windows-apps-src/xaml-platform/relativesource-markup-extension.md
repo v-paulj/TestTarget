@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Stellt eine Methode bereit, um die Quelle einer Bindung als relative Beziehung im Laufzeitobjektdiagramm anzugeben.
 title: RelativeSource-Markuperweiterung
 ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
@@ -28,11 +29,9 @@ Stellt eine Methode bereit, um die Quelle einer Bindung als relative Beziehung i
 
 ## XAML-Werte
 
-| Benennung | Beschreibung |
-| {RelativeSource Self} | Erzeugt einen [<strong>Mode</strong>](https://msdn.microsoft.com/library/windows/apps/br209915) mit dem Wert<strong>Self</strong>. Das Zielelement sollte als Quelle für diese Bindung verwendet werden. Dies ist nützlich, wenn eine Eigenschaft eines Elements an eine andere Eigenschaft im gleichen Element gebunden werden soll. |
-| {RelativeSource TemplatedParent} | Erzeugt eine [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391), die als Quelle für diese Bindung verwendet wird. Dies ist nützlich, wenn Laufzeitinformationen in Bindungen auf Vorlagenebene angewendet werden sollen. | 
+| Term | Beschreibung | | {RelativeSource Self} | Erzeugt einen [<strong>Mode</strong>](https://msdn.microsoft.com/library/windows/apps/br209915)-Wert mit dem Wert <strong>Self</strong>. Das Zielelement sollte als Quelle für diese Bindung verwendet werden. Dies ist nützlich, wenn eine Eigenschaft eines Elements an eine andere Eigenschaft im gleichen Element gebunden werden soll. | | {{RelativeSource TemplatedParent} | Erzeugt eine [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391), die als Quelle für diese Bindung verwendet wird. Dies ist nützlich, wenn Laufzeitinformationen in Bindungen auf Vorlagenebene angewendet werden sollen. | 
 
-## Anmerkungen
+## Hinweise
 
 Mit einer [**Bindung**](https://msdn.microsoft.com/library/windows/apps/br209820) kann [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) entweder als Attribut für ein **Binding**-Objektelement oder als Komponente in einer [{Binding}-Markuperweiterung](binding-markup-extension.md) festgelegt werden. Aus diesem Grund werden zwei verschiedene Varianten der XAML-Syntax dargestellt.
 
@@ -42,7 +41,7 @@ Der **Self**-Modus ist in Fällen nützlich, in denen das gleiche Element als Qu
 
 Im Folgenden finden Sie ein Beispiel hierfür. Dieses [**Rechteck**](https://msdn.microsoft.com/library/windows/apps/br243371) verwendet eine [{Binding}-Markuperweiterung](binding-markup-extension.md), damit [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) und [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) immer gleich sind und eine Darstellung als Quadrat erfolgt. Nur die Höhe wird als fester Wert festgelegt. Der standardmäßige [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) dieses **Rechtecks** ist **null** anstelle von **this**. Daher verwenden wir das `RelativeSource={RelativeSource Self}`-Argument in der Syntax der {Binding}-Markuperweiterung, um die Datenkontextquelle als Objekt selbst festzulegen (und die Bindung an ihre anderen Eigenschaften zu ermöglichen).
 
-```XAML
+```XML
 <Rectangle
   Fill="Orange" Width="200"
   Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}"
@@ -51,7 +50,7 @@ Im Folgenden finden Sie ein Beispiel hierfür. Dieses [**Rechteck**](https://msd
 
 Eine weitere nützliche Technik ist die Verwendung von `RelativeSource={RelativeSource Self}` zum Festlegen der [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)-Eigenschaft eines Objekts auf sich selbst, wobei die [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)-Klasse mit einer benutzerdefinierten Eigenschaft erweitert wurde, die bereits ein sofort einsatzfähiges Ansichtsmodell für ihre eigene Datenbindung bereitstellt. Diese Methode sehen Sie in einigen der SDK-Beispielen: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
 
-**Hinweis:** Die Verwendung von **RelativeSource** in XAML zeigt nur die beabsichtigte Verwendung: das Festlegen eines Werts für [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) in XAML als Teil eines Bindungsausdrucks. Theoretisch sind andere Verwendungen möglich, wenn Sie eine Eigenschaft mit einem [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)-Wert festlegen.
+**Hinweis**  Die Verwendung von **RelativeSource** in XAML zeigt nur die beabsichtigte Verwendung, nämlich das Festlegen eines Werts für [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) in XAML als Teil eines Bindungsausdrucks. Theoretisch sind andere Verwendungen möglich, wenn Sie eine Eigenschaft mit einem [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)-Wert festlegen.
 
 ## Verwandte Themen
 
@@ -63,6 +62,6 @@ Eine weitere nützliche Technik ist die Verwendung von `RelativeSource={Relative
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

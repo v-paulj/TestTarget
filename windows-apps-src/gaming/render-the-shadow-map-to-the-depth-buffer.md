@@ -1,10 +1,11 @@
 ---
+author: mtoepke
 title: Rendern der Schattenmap zum Tiefenpuffer
-description: Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine 2-D-Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird.
+description: Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine zweidimensionale Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird.
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
 ---
 
-# Rendern der Schattenmap zum Tiefenpuffer
+# Rendern der Schattenmap für den Tiefenpuffer
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -117,7 +118,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-**Optimieren des Frustums:** Stellen Sie sicher, dass in Ihrer Implementierung ein exakter Frustum (Kegelstumpf) berechnet wird, damit Sie mit dem Tiefenpuffer die größtmögliche Präzision erzielen. Weitere Tipps zu Schattenmethoden finden Sie unter [Häufig verwendete Methoden zur Verbesserung von Tiefenmaps für Schatten](https://msdn.microsoft.com/library/windows/desktop/ee416324).
+**Optimieren des Frustums:**  Stellen Sie sicher, dass in Ihrer Implementierung ein exaktes Frustum berechnet wird, damit Sie mit dem Tiefenpuffer die größtmögliche Präzision erzielen. Weitere Tipps zu Schattenmethoden finden Sie unter [Häufig verwendete Methoden zur Verbesserung von Tiefenmaps für Schatten](https://msdn.microsoft.com/library/windows/desktop/ee416324).
 
 ## Vertex-Shader für Schattendurchlauf
 
@@ -151,6 +152,6 @@ Im nächsten Teil dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie Sch
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

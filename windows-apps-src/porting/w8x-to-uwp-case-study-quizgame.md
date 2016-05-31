@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
 description: Dieses Thema enthält eine Fallstudie zum Portieren eines funktionierenden Peer-zu-Peer-Quizspiels (WinRT 8.1-Beispiel-App) zu einer UWP (Universelle Windows-Plattform)-App für Windows 10.
 title: Windows-Runtime 8.x zu universeller Windows-Plattform (UWP) – Fallstudie, QuizGame-Beispiel-App (Peer-zu-Peer)
@@ -18,11 +19,11 @@ Die individuelle Anpassung der beiden Hälften für PC bzw. Telefone ist sinnvol
 
 Für die App werden Muster verwendet, bei denen Ansichten und Ansichtsmodelle genutzt werden. Sie werden sehen, dass der Portiervorgang für diese App aufgrund dieser klaren Trennung sehr einfach ist.
 
-**Hinweis**  Bei diesem Beispiel wird vorausgesetzt, dass Ihr Netzwerk für das Senden und Empfangen von benutzerdefinierten UDP-Gruppenmulticastpaketen konfiguriert ist (dies ist bei den meisten Heimnetzwerken der Fall, gilt aber nicht für alle Netzwerke). Im Beispiel werden auch TCP-Pakete gesendet und empfangen.
+**Hinweis:**  Bei diesem Beispiel wird vorausgesetzt, dass Ihr Netzwerk für das Senden und Empfangen von benutzerdefinierten UDP-Gruppenmulticastpaketen konfiguriert ist (dies ist bei den meisten Heimnetzwerken der Fall, gilt aber nicht für alle Netzwerke). Im Beispiel werden auch TCP-Pakete gesendet und empfangen.
 
  
 
-**Hinweis**   Wenn beim Öffnen von QuizGame10 in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
+**Hinweis:**   Wenn beim Öffnen von QuizGame10 in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
 
  
 
@@ -82,11 +83,11 @@ Basierend auf diesen Optionen portieren wir „QuizGame.Windows” zu einem neue
 
 **QuizGame10-Projektmappe**
 
--   Erstellen Sie eine neue Projektmappe (**Neues Projekt** &gt; **Andere Projekttypen** &gt; **Visual Studio-Projektmappen**), und geben Sie ihr den Namen QuizGame10.
+-   Erstellen Sie eine neue Projektmappe (**Neues Projekt**&gt;**Andere Projekttypen**&gt;**Visual Studio-Projektmappen**) und geben Sie ihr den Namen QuizGame10.
 
 **P2PHelper**
 
--   Erstellen Sie in der Projektmappe über **Neues Projekt** &gt; **Windows Universal** &gt; **Class Library (Windows Universal)** ein neues Windows 10-Klassenbibliotheksprojekt, und geben Sie ihm den Namen „P2PHelper”.
+-   Erstellen Sie in der Projektmappe über (**Neues Projekt**&gt;**Windows Universal**&gt;**Class Library (Windows Universal)**) ein neues Windows 10-Klassenbibliotheksprojekt und geben Sie für das Projekt den Namen „P2PHelper” ein.
 -   Löschen Sie „Class1.cs“ aus dem neuen Projekt.
 -   Kopieren Sie „P2PSession.cs“, „P2PSessionClient.cs“ und „P2PSessionHost.cs“ in den Ordner des neuen Projekts, und fügen Sie die kopierten Dateien in das neue Projekt ein.
 -   Das Projekt kann dann ohne weitere Änderungen erstellt werden.
@@ -98,9 +99,9 @@ Basierend auf diesen Optionen portieren wir „QuizGame.Windows” zu einem neue
 
 **QuizGameHost**
 
--   Erstellen Sie über**Hinzufügen** &gt; **Neues Projekt** &gt; **Windows Universal** &gt; **Leere Anwendung (Windows Universal)** ein neues Windows 10-Projekt, und geben Sie ihm den Namen „QuizGameHost”.
--   Fügen Sie einen Verweis auf P2PHelper hinzu (**Verweis hinzufügen** &gt; **Projekte** &gt; **Projektmappe** &gt; **P2PHelper**).
--   Erstellen Sie im **Projektmappen-Explorer** für jeden freigegebenen Ordner auf dem Datenträger einen neuen Ordner. Klicken Sie nacheinander mit der rechten Maustaste auf die einzelnen Ordner, die Sie gerade erstellt haben, und klicken Sie dann auf **Hinzufügen** &gt; **Vorhandenes Element**. Wechseln Sie anschließend eine Ordnerebene nach oben. Öffnen Sie den entsprechenden freigegebenen Ordner, wählen Sie alle Dateien aus, und klicken Sie anschließend auf **Link hinzufügen**.
+-   Erstellen Sie über (**Hinzufügen**&gt;**Neues Projekt**&gt;**Windows Universal**&gt;**Leere Anwendung (Windows Universal)**) ein neues Windows 10-App-Projekt und geben Sie für das Projekt den Namen „QuizGameHost” ein.
+-   Fügen Sie einen Verweis auf P2PHelper hinzu (**Verweis hinzufügen**&gt;**Projekte**&gt;**Projektmappe**&gt;**P2PHelper**).
+-   Erstellen Sie im **Projektmappen-Explorer** für jeden freigegebenen Ordner auf dem Datenträger einen neuen Ordner. Klicken Sie nacheinander mit der rechten Maustaste auf die einzelnen Ordner, die Sie gerade erstellt haben, und klicken Sie dann auf **Hinzufügen**&gt;**Vorhandenes Element**. Wechseln Sie anschließend eine Ordnerebene nach oben. Öffnen Sie den entsprechenden freigegebenen Ordner, wählen Sie alle Dateien aus, und klicken Sie anschließend auf **Link hinzufügen**.
 -   Kopieren Sie „MainPage.xaml“ aus „\\QuizGame.Windows\\“ in „\\QuizGameHost\\“, und ändern Sie den Namespace in „QuizGameHost“.
 -   Kopieren Sie „App.xaml“ aus „\\QuizGame.Shared\\“ in „\\QuizGameHost\\“, und ändern Sie den Namespace in „QuizGameHost“.
 -   Anstatt „app.xaml.cs“ zu überschreiben, behalten wir die Version im neuen Projekt bei und nehmen nur eine gezielte Änderung vor, um den lokalen Testmodus zu unterstützen. Ersetzen Sie in „app.xaml.cs“ die folgende Codezeile:
@@ -119,15 +120,15 @@ durch diese Codezeile:
 #endif
 ```
 
--   Fügen Sie unter **Eigenschaften** &gt; **Erstellen** &gt; **Bedingte Kompilierungssymbole** den Text „LOCALTESTMODEON“ hinzu.
+-   Fügen Sie unter **Eigenschaften**&gt;**Erstellen**&gt;**Bedingte Kompilierungssymbole** den Text „LOCALTESTMODEON“ hinzu.
 -   Jetzt können Sie wieder auf den Code zurückgreifen, den Sie der Datei „app.xaml.cs“ hinzugefügt haben, und den TestView-Typ auflösen.
 -   Ändern Sie in „package.appxmanifest“ den capability-Namen von „internetClient“ in „internetClientServer“.
 
 **QuizGameClient**
 
--   Erstellen Sie über **Hinzufügen** &gt; **Neues Projekt** &gt; **Windows Universal** &gt; **Leere Anwendung (Windows Universal)** ein neues Windows 10-App-Projekt, und geben Sie ihm den Namen „QuizGameClient”.
--   Fügen Sie einen Verweis auf P2PHelper hinzu (**Verweis hinzufügen** &gt; **Projekte** &gt; **Projektmappe** &gt; **P2PHelper**).
--   Erstellen Sie im **Projektmappen-Explorer** für jeden freigegebenen Ordner auf dem Datenträger einen neuen Ordner. Klicken Sie nacheinander mit der rechten Maustaste auf die einzelnen Ordner, die Sie gerade erstellt haben, und klicken Sie dann auf **Hinzufügen** &gt; **Vorhandenes Element**. Wechseln Sie anschließend eine Ordnerebene nach oben. Öffnen Sie den entsprechenden freigegebenen Ordner, wählen Sie alle Dateien aus, und klicken Sie anschließend auf **Link hinzufügen**.
+-   Erstellen Sie über (**Hinzufügen**&gt;**Neues Projekt**&gt;**Windows Universal**&gt;**Leere Anwendung (Windows Universal)**) ein neues Windows 10-App-Projekt und geben Sie für das Projekt den Namen „QuizGameClient” ein.
+-   Fügen Sie einen Verweis auf P2PHelper hinzu (**Verweis hinzufügen**&gt;**Projekte**&gt;**Projektmappe**&gt;**P2PHelper**).
+-   Erstellen Sie im **Projektmappen-Explorer** für jeden freigegebenen Ordner auf dem Datenträger einen neuen Ordner. Klicken Sie nacheinander mit der rechten Maustaste auf die einzelnen Ordner, die Sie gerade erstellt haben, und klicken Sie dann auf **Hinzufügen**&gt;**Vorhandenes Element**. Wechseln Sie anschließend eine Ordnerebene nach oben. Öffnen Sie den entsprechenden freigegebenen Ordner, wählen Sie alle Dateien aus, und klicken Sie anschließend auf **Link hinzufügen**.
 -   Kopieren Sie „MainPage.xaml“ aus „\\QuizGame.WindowsPhone\\“ in „\\QuizGameClient\\“, und ändern Sie den Namespace in „QuizGameClient“.
 -   Kopieren Sie „App.xaml“ aus „\\QuizGame.Shared\\“ in „\\QuizGameClient\\“, und ändern Sie den Namespace in „QuizGameClient“.
 -   Ändern Sie in „package.appxmanifest“ den capability-Namen von „internetClient“ in „internetClientServer“.
@@ -149,7 +150,7 @@ Wir können das adaptive Visual State-Manager-Feature nutzen, um dies zu beheben
 -   Ändern Sie unter `OptionContentControlStyle` den Wert des **FontSize**-Setters in „20“. Durch diesen und den vorherigen Schritt erhalten wir eine gute Typhierarchie, die auf allen Geräten einwandfrei funktioniert. Dies sind deutlich flexiblere Größen als beim Wert „30“, den wir für die Windows 8.1-App verwendet haben.
 -   Fügen Sie dem **Grid**-Stammelement schließlich den geeigneten Visual State-Manager-Markupcode hinzu.
 
-```xaml
+```xml
 <VisualStateManager.VisualStateGroups>
     <VisualStateGroup>
         <VisualState x:Name="WideState">
@@ -171,7 +172,7 @@ Wir können das adaptive Visual State-Manager-Feature nutzen, um dies zu beheben
 
 Sie werden feststellen, dass die Schaltflächen in Windows 10 in der Vorlage nicht über die gleichen Abstände für das Toucheingabeziel verfügen. Dies lässt sich mit zwei kleinen Änderungen beheben. Fügen Sie diesen Markupcode zuerst in QuizGameHost und QuizGameClient jeweils der Datei „app.xaml“ hinzu.
 
-```xaml
+```xml
 <Style TargetType="Button">
     <Setter Property="Margin" Value="12"/>
 </Style>
@@ -179,7 +180,7 @@ Sie werden feststellen, dass die Schaltflächen in Windows 10 in der Vorlage nic
 
 Fügen Sie diesen Setter anschließend dem `OptionButtonStyle`-Element in „\\View\\ClientView.xaml“ hinzu.
 
-```xaml
+```xml
 <Setter Property="Margin" Value="6"/>
 ```
 
@@ -190,6 +191,6 @@ Dank dieser letzten Optimierung verhält sich die App genauso wie vor dem Portie
 Die App, die wir im Rahmen dieser Fallstudie portiert haben, war eine relativ komplexe App mit mehrere Projekten, einer Klassenbibliothek und einer größeren Menge an Code und UI-Elementen. Trotzdem war der Portiervorgang einfach. Ein Grund für das einfache Portieren ist die große Ähnlichkeit zwischen der Windows 10-Entwicklerplattform und den Windows 8.1- und Windows Phone 8.1-Plattformen. Ein anderer Grund ist der Entwurf der ursprünglichen App, bei dem darauf geachtet wurde, dass die Modelle, Ansichtsmodelle und Ansichten separat gehalten wurden.
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

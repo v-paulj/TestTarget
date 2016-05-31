@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Im Windows Dev Center-Dashboard können Sie all Ihre Apps für Windows-Geräte zentral verwalten und übermitteln.
 title: Verwenden des Windows Dev Center-Dashboards
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
@@ -9,7 +10,7 @@ ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
 
 Im Windows Dev Center-Dashboard können Sie all Ihre Apps für Windows-Geräte zentral verwalten und übermitteln.
 
-> **Hinweis**   Sie müssen über ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) verfügen, um auf das Windows Dev Center-Dashboard zuzugreifen.
+> **Hinweis:**   Sie müssen über ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) verfügen, um auf das Windows Dev Center-Dashboard zuzugreifen.
 
 Wenn Sie eine [Übermittlung für Ihre App](app-submissions.md) (erstmalig oder als Update) erstellen, können Sie [App-Pakete](upload-app-packages.md) für alle unterstützten Betriebssysteme hochladen, während Kunden im Store automatisch das Paket angeboten wird, das am besten für sie geeignet ist. Sie können dieselben [Beschreibungen](create-app-descriptions.md) und [Grafiken](app-screenshots-and-images.md) für alle von der App unterstützten Betriebssysteme verwenden oder die [Beschreibung für bestimmte Plattformen anpassen](create-platform-specific-descriptions.md).
 
@@ -32,6 +33,6 @@ Apps, die im vorherigen Windows Phone Dev Center und Windows Store-Dashboard mit
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

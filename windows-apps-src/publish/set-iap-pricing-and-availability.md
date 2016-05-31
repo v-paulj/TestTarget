@@ -1,5 +1,6 @@
 ---
-Description: Beim Übermitteln eines IAPs bestimmen die Optionen auf der Seite „Preise und Verfügbarkeit“, zu welchem Preis und wie das IAP Kunden angeboten werden soll.
+author: jnHs
+Description: Beim Übermitteln eines IAPs bestimmen die Optionen auf der Seite Preise und Verfügbarkeit, zu welchem Preis und wie das IAP Kunden angeboten werden soll.
 title: Festlegen der Preise und Verfügbarkeit von IAPs
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
 ---
@@ -50,6 +51,6 @@ Sie können festlegen, ob Ihr IAP Kunden zum Kauf angeboten werden soll. Wählen
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

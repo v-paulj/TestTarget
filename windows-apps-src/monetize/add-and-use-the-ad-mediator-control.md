@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 3C03FDD8-FA61-4E7B-BDCA-3C29DFEA20E4
 description: Befolgen Sie nach der Installation des Microsoft Store Engagement and Monetization SDK die Anweisungen in diesem Thema, um das Ad Mediator-Steuerelement in Ihrer App zu verwenden.
 title: Hinzufügen und Verwenden des Ad Mediator-Steuerelements
@@ -28,19 +29,19 @@ So fügen Sie Ihrem Projekt eine Instanz des Ad Mediator-Steuerelements hinzu:
     -   In einem Windows 8.1- oder Windows Phone 8.1-Projekt mit C# oder Visual Basic und XAML verwenden Sie das **AdMediatorControl**-Element unter dem Abschnitt **AdMediator**.
     -   In einem Windows Phone Silverlight-Projekt verwenden Sie das **AdMediatorControl**-Element unter dem Abschnitt **Alle Windows Phone-Steuerelemente**.
 
-    **Hinweis**  Beim ersten Ziehen des **AdMediatorControl**-Steuerelement in den Designer in einem UWP-, Windows 8.1- oder Windows Phone 8.1-Projekt mit C# oder Visual Basic und XAML fügt Visual Studio Ihrem Projekt den erforderlichen Ad Mediator-Assemblyverweis hinzu, das Steuerelement wird dem Designer jedoch noch nicht hinzugefügt. Klicken Sie zum Hinzufügen des Steuerelements in der von Visual Studio angezeigten Meldung auf „OK“, warten dann einige Sekunden auf die Aktualisierung des Designers und ziehen das Steuerelement anschließend erneut in den Designer. Wenn Sie dem Designer das Steuerelement weiterhin nicht hinzufügen können, stellen Sie sicher, dass Ihr Projekt die geeignete Prozessorarchitektur für Ihre App aufweist (z. B. **X 86**) statt einer **beliebigen CPU**. Das Steuerelement kann dem Designer nicht hinzugefügt werden, wenn das Projekt für die Buildplattform auf eine **beliebige CPU** ausgerichtet ist.
+    > **Hinweis**  Beim ersten Ziehen des **AdMediatorControl**-Steuerelements in den Designer in einem UWP-, Windows 8.1- oder Windows Phone 8.1-Projekt mit C# oder Visual Basic und XAML fügt Visual Studio Ihrem Projekt den erforderlichen Ad Mediator-Assemblyverweis hinzu, das Steuerelement wird dem Designer jedoch noch nicht hinzugefügt. Klicken Sie zum Hinzufügen des Steuerelements in der von Visual Studio angezeigten Meldung auf „OK“, warten dann einige Sekunden auf die Aktualisierung des Designers und ziehen das Steuerelement anschließend erneut in den Designer. Wenn Sie dem Designer das Steuerelement weiterhin nicht hinzufügen können, stellen Sie sicher, dass Ihr Projekt die geeignete Prozessorarchitektur für Ihre App aufweist (z. B. **X 86**) statt einer **beliebigen CPU**. Das Steuerelement kann dem Designer nicht hinzugefügt werden, wenn das Projekt für die Buildplattform auf eine **beliebige CPU** ausgerichtet ist.
 
 5.  Visual Studio fügt einen Assemblyverweis für Ad Mediator zu Ihrem Projekt hinzu und fügt XAML für das Ad Mediator-Steuerelement auf der aktuellen Seite ein, u. a. eine eindeutige ID und einen Namen für das Steuerelement. Der Assemblyverweis und die XAML variieren je nach Zielplattform. Bei einer UWP (Universelle Windows-Plattform)-App lautet der Name der Assembly z. B. **Microsoft.AdMediator.Universal**, und die generierte XAML ähnelt dem folgenden Beispiel.
 
     ```xml
     // Code that gets added to the XAML page header
-        xmlns:Universal="using:Microsoft.AdMediator.Universal"
+    xmlns:Universal="using:Microsoft.AdMediator.Universal"
 
-        // Code that gets added for the ad mediator control
-        <Universal:AdMediatorControl x:Name="AdMediator_3D4884"
-         Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="250"
-         Id="AdMediator-Id-D1FDFDA7-EABB-474C-940C-ECA7FBCFF143" Margin="121,175,0,0"
-         VerticalAlignment="Top" Width="300"/>
+    // Code that gets added for the ad mediator control
+    <Universal:AdMediatorControl x:Name="AdMediator_3D4884"
+      Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="250"
+      Id="AdMediator-Id-D1FDFDA7-EABB-474C-940C-ECA7FBCFF143" Margin="121,175,0,0"
+      VerticalAlignment="Top" Width="300"/>
     ```
 
     Das **Name**-Element vereinfacht die Identifizierung des spezifischen Steuerelements in Ihrer App beim Konfigurieren der Anzeigenvermittlung. Sie können dieses beliebig ändern. Achten Sie jedoch darauf, das **Id**-Element nicht zu ändern oder zu duplizieren. Diese **Id** muss für jedes Steuerelement in Ihrer App eindeutig sein.
@@ -51,7 +52,7 @@ So fügen Sie Ihrem Projekt eine Instanz des Ad Mediator-Steuerelements hinzu:
 
 Nachdem Sie die gewünschten Steuerelemente hinzugefügt haben, können Sie die Anzeigennetzwerke über „Verbundene Dienste“ konfigurieren.
 
-**Wichtig**  Wenn Sie später ein zusätzliches AdMediatorControl-Element hinzufügen, müssen Sie es erneut über „Verbundene Dienste“ konfigurieren. Andernfalls kann das neue Steuerelement die Anzeigenvermittlung nicht verwenden.
+> **Wichtig**  Wenn Sie später ein zusätzliches AdMediatorControl-Element hinzufügen, müssen Sie es erneut über „Verbundene Dienste“ konfigurieren. Andernfalls kann das neue Steuerelement die Anzeigenvermittlung nicht verwenden.
 
 So konfigurieren Sie die Anzeigennetzwerke
 
@@ -62,16 +63,16 @@ So konfigurieren Sie die Anzeigennetzwerke
 
 3.  Klicken Sie im Fenster **Ad Mediator** (Visual Studio 2015) oder **Dienste-Manager** (Visual Studio 2013) auf **Anzeigennetzwerke auswählen**, wählen Sie dann die zu verwendenden Anzeigennetzwerke aus, und klicken Sie im Fenster **Anzeigennetzwerke auswählen** auf **OK**.
 
-    **Tipp**  Fügen Sie am besten alle Netzwerke hinzu, bei denen Sie angemeldet sind, auch wenn Sie nicht alle sofort in Ihrer App verwenden möchten. Nachdem die App veröffentlicht wurde, können Sie konfigurieren, wie oft jedes Netzwerk in Dev Center verwendet wird (oder ein Netzwerk festlegen, das Sie zuvor noch nicht genutzt haben), ohne Codeänderungen vorzunehmen und die App erneut einzureichen.
+    > **Tipp**  Fügen Sie am besten alle Netzwerke hinzu, für die Sie Konten besitzen, auch wenn Sie nicht alle sofort in Ihrer App verwenden möchten. Nachdem die App veröffentlicht wurde, können Sie konfigurieren, wie oft jedes Netzwerk in Dev Center verwendet wird (oder ein Netzwerk festlegen, das Sie zuvor noch nicht genutzt haben), ohne Codeänderungen vorzunehmen und die App erneut einzureichen.
 
     Visual Studio ruft die erforderlichen Assemblys für die ausgewählten Anzeigennetzwerke ab und fügt diese Assemblyverweise zum Projekt hinzu. Nachdem dieser Vorgang abgeschlossen ist, klicken Sie im Dialogfenster zum **Abrufen des Status** auf **OK**.
 
 4.  Wählen Sie im Fenster **Ad Mediator** (Visual Studio 2015) oder **Dienste-Manager** (Visual Studio 2013) optional die einzelnen Netzwerke aus, und klicken Sie auf **Konfigurieren**, um die Konfigurationsinformationen für die einzelnen Netzwerke einzugeben, die beim Testen der App verwendet werden. Diese Informationen werden in der Datei „AdMediator.config“ in Ihrem Projekt gespeichert. Sie können diese Informationen ändern, wenn Sie im Windows Dev Center-Dashboard das Verhalten des Anzeigennetzwerks konfigurieren. Weitere Informationen finden Sie unter [Übermitteln der App und Konfigurieren der Anzeigenvermittlung](submit-your-app-and-configure-ad-mediation.md).
-    **Hinweis**  Wenn Sie in diesem Schritt keine Konfigurationsinformationen eingeben, verwendet die Anzeigenvermittlung automatisch Testkonfigurationswerte, wenn Sie Ihre App auf dem Entwicklungscomputer (für UWP-Apps und XAML-Apps für Windows 8.1) oder im Emulator bzw. auf einem Gerät (für Windows Phone-Apps) ausführen.
+    > **Hinweis**  Wenn Sie in diesem Schritt keine Konfigurationsinformationen eingeben, verwendet die Anzeigenvermittlung automatisch Testkonfigurationswerte, wenn Sie Ihre App auf dem Entwicklungscomputer (für UWP-Apps und XAML-Apps für Windows 8.1) oder im Emulator bzw. auf einem Gerät (für Windows Phone-Apps) ausführen.
 
 5.  Überprüfen Sie im Fenster **Ad Mediator** (Visual Studio 2015) oder **Dienste-Manager** (Visual Studio 2013), ob für jedes von Ihnen ausgewählte Anzeigennetzwerk **Abgerufen** angezeigt wird. Klicken Sie auf **OK**, um die Änderungen an Ihr Projekt zu übermitteln.
 
-**Hinweis** Wenn Sie später auf eine neuere Version des Microsoft Store Engagement and Monetization SDK upgraden, müssen Sie **Verbundene Dienste** neu starten, damit automatisch abgerufene DLL-Dateien des Anzeigennetzwerks ordnungsgemäß aktualisiert werden.
+> **Hinweis**  Wenn Sie später ein Upgrade auf eine neuere Version des Microsoft Store Engagement and Monetization SDK durchführen, müssen Sie **Verbundene Dienste** neu starten, damit automatisch abgerufene DLL-Dateien des Anzeigennetzwerks ordnungsgemäß aktualisiert werden.
 
 ### Deklarieren der erforderlichen Funktionen
 
@@ -88,7 +89,7 @@ Der folgende Screenshot zeigt die erforderlichen Funktionen für verschiedene An
 
 Unter Umständen sehen Sie, dass bestimmte DLL-Dateien nicht abgerufen wurden. In diesem Fall müssen Sie diese manuell hinzufügen. Links zum Herunterladen einzelner Assemblys finden Sie unter [Auswählen und Verwalten von Anzeigennetzwerken](select-and-manage-your-ad-networks.md).
 
-**Hinweis**  Wenn Sie DLL-Dateien manuell hinzufügen, erhalten Sie möglicherweise die Fehlermeldung „Dem Projekt kann kein Verweis auf eine höhere Version oder inkompatible Assembly hinzugefügt werden." Klicken Sie zum Beheben dieses Fehlers mit der rechten Maustaste auf die DLL-Datei im Explorer, und wählen Sie dann **Eigenschaften**. Klicken Sie im Abschnitt „Sicherheit“ auf **Aufheben**.
+> **Hinweis**  Wenn Sie DLL-Dateien manuell hinzufügen, erhalten Sie möglicherweise die Fehlermeldung „Dem Projekt kann kein Verweis auf eine höhere Version oder inkompatible Assembly hinzugefügt werden." Klicken Sie zum Beheben dieses Fehlers mit der rechten Maustaste auf die DLL-Datei im Explorer, und wählen Sie dann **Eigenschaften**. Klicken Sie im Abschnitt „Sicherheit“ auf **Aufheben**.
 
 ![Schaltfläche „Aufheben“ zum Beheben der Fehlermeldung](images/ad-med-4.png)
 ## Anpassen der Größe und Position
@@ -121,14 +122,13 @@ Microsoft Advertising unterstützt nur Anzeigen in den folgenden Standardgröß
 
 -   Windows 10 und Windows 8.1:
     -   160 x 600
-    -   250 x 250 (Beachten Sie, dass nur sehr wenige Anzeigen in dieser Größe verfügbar sind. Sie sollten andere Größen verwenden, um die Füllrate und eCPM zu maximieren.)
     -   300 x 250
     -   300 x 600
     -   728 x 90
 -   Windows 10 Mobile, Windows Phone 8.1 und Windows Phone 8:
     -   300 x 50
     -   320 x 50
-    -   480 x 80
+    -   480 x 80 (Diese Größe wird nur für Windows Phone Silverlight unterstützt.)
     -   640 x 100
 
 Möglicherweise möchten Sie eine Ad Mediator-Steuerelementgröße angeben, die keiner der von Microsoft Advertising unterstützten Anzeigengrößen entspricht (etwa, wenn eine andere Größe besser zur Benutzeroberfläche Ihrer App passt oder wenn das Steuerelement auch in anderen Anzeigennetzwerken verwendet werden soll, die andere Anzeigengrößen unterstützen). Hierzu geben Sie die genaue gewünschte Steuerelementgröße im Designer oder im XAML-Code an und weisen dann die optionalen Parameter **Breite** und **Höhe** für Microsoft Advertising der unterstützten Größe zu, die am ehesten in die Grenzen des Steuerelements passt. Das Steuerelement wird im Designer mit der angegebenen genauen Größe angezeigt, aber die von Microsoft Advertising geschalteten Anzeigen entsprechen der angegebenen Größe mit den optionalen Parametern **Breite** und **Höhe**.
@@ -158,7 +158,7 @@ Der folgende Code veranschaulicht, wie eine Timeoutdauer für Microsoft Advertis
 myAdMediatorControl.AdSdkTimeouts[AdSdkNames.MicrosoftAdvertising] = TimeSpan.FromSeconds(10);
 ```
 
-**Hinweis**  Alternativ können Sie den Timeoutwert auf der Seite **Gewinnbringende Nutzung mit Anzeigen** im Dev Center-Dashboard festlegen. Wenn Sie das Timeout im Code und im Dashboard festgelegt haben, überschreibt der im Code angegebene Wert den Dashboardwert.
+> **Hinweis**  Alternativ können Sie den Timeoutwert auf der Seite **Gewinnbringende Nutzung mit Anzeigen** im Dev Center-Dashboard festlegen. Wenn Sie das Timeout im Code und im Dashboard festgelegt haben, überschreibt der im Code angegebene Wert den Dashboardwert.
 
 ## Ereignishandling
 
@@ -198,7 +198,7 @@ void AdMediator_Bottom_AdError(object sender, Microsoft.AdMediator.Core.Events.A
 
 ## Behandeln von unbehandelten Ausnahmen von Anzeigennetzwerken
 
-**Hinweis**  Beim Testen haben wir eine Reihe von unbehandelten Ausnahmen von bestimmten Anzeigennetzwerken identifiziert, die innerhalb der App gelöst werden müssen, um App-Abstürze zu vermeiden. Wir empfehlen dringend, das folgende Codebeispiel zu kopieren und in die Datei „App.Xaml.cs“ einzufügen.
+> **Hinweis**  Beim Testen haben wir eine Reihe von unbehandelten Ausnahmen von bestimmten Anzeigennetzwerken identifiziert, die innerhalb der App gelöst werden müssen, um App-Abstürze zu vermeiden. Wir empfehlen dringend, das folgende Codebeispiel zu kopieren und in die Datei „App.Xaml.cs“ einzufügen.
 
 Code für eine UWP-, Windows 8.1- oder Windows Phone-App mit C# und XAML
 
@@ -211,7 +211,7 @@ void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
       if (e != null)
       {
          Exception exception = e.Exception;
-         if (exception is NullReferenceException &amp;&amp; exception.ToString().ToUpper().Contains("SOMA"))
+         if (exception is NullReferenceException && exception.ToString().ToUpper().Contains("SOMA"))
          {
             Debug.WriteLine("Handled Smaato null reference exception {0}", exception);
             e.Handled = true;
@@ -240,25 +240,25 @@ private void Application_UnhandledException(object sender, ApplicationUnhandledE
     if (e != null)
    {
        Exception exception = e.ExceptionObject;
-       if ((exception is XmlException || exception is NullReferenceException) &amp;&amp; exception.ToString().ToUpper().Contains("INNERACTIVE"))
+       if ((exception is XmlException || exception is NullReferenceException) && exception.ToString().ToUpper().Contains("INNERACTIVE"))
        {
            Debug.WriteLine("Handled Inneractive exception {0}", exception);
            e.Handled = true;
            return;
        }
-       else if (exception is NullReferenceException &amp;&amp; exception.ToString().ToUpper().Contains("SOMA"))
+       else if (exception is NullReferenceException && exception.ToString().ToUpper().Contains("SOMA"))
        {
            Debug.WriteLine("Handled Smaato null reference exception {0}", exception);
            e.Handled = true;
            return;
        }
-       else if ((exception is System.IO.IOException || exception is NullReferenceException) &amp;&amp; exception.ToString().ToUpper().Contains("GOOGLE"))
+       else if ((exception is System.IO.IOException || exception is NullReferenceException) && exception.ToString().ToUpper().Contains("GOOGLE"))
       {
           Debug.WriteLine("Handled Google exception {0}", exception);
           e.Handled = true;
           return;
        }
-       else if ((exception is NullReferenceException || exception is XamlParseException) &amp;&amp; exception.ToString().ToUpper().Contains("MICROSOFT.ADVERTISING"))
+       else if ((exception is NullReferenceException || exception is XamlParseException) && exception.ToString().ToUpper().Contains("MICROSOFT.ADVERTISING"))
        {
            Debug.WriteLine("Handled Microsoft.Advertising exception {0}", exception);
            e.Handled = true;
@@ -288,6 +288,6 @@ if (Debugger.IsAttached)
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

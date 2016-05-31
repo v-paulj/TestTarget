@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Einrichten der Umgebung für die UWP-Entwicklung auf Xbox
 description: Schritte zum Einrichten und Testen der Umgebung für die UWP-Entwicklung auf Xbox
 area: Xbox
@@ -24,7 +25,8 @@ In diesem Artikel werden die Schritte zum Einrichten und Testen der Entwicklungs
 
 Installieren Sie Windows 10 Anniversary SDK Preview Build 14295. Informationen zur Installation finden Sie unter [Insider Preview-Updates für Entwickler herunterladen](http://go.microsoft.com/fwlink/p/?LinkId=780552).
 
-  > **Wichtig**&nbsp;&nbsp;Sie müssen das aktuelle SDK installieren, Sie müssen jedoch _nicht_ die aktuelle Windows Insider Preview-Version des Betriebssystems installieren.
+  > **Wichtig**
+            &nbsp;&nbsp;Sie müssen das aktuelle SDK installieren, Sie müssen jedoch _nicht_ die aktuelle Windows Insider Preview-Version des Betriebssystems installieren.
 
 ## Erstellen Ihrer ersten Anwendung
 
@@ -49,7 +51,7 @@ Installieren Sie Windows 10 Anniversary SDK Preview Build 14295. Informationen z
   1. Geben Sie in **Remotecomputer** die System-IP-Adresse oder den Hostnamen der Xbox One-Konsole ein. Informationen zum Ermitteln der IP-Adresse oder des Hostnamens finden Sie unter [Einführung in Xbox One-Tools](introduction-to-xbox-tools.md).
   1. Wählen Sie in der Dropdownliste **Authentifizierungsmodus** den Eintrag **Universell (unverschlüsseltes Protokoll)** aus.
 
-    ![C# BlankApp Property Pages](images/vs_remote.jpg)
+    ![C#-Eigenschaftenseiten für „Leere App“](images/vs_remote.jpg)
 
 ### Starten eines C++-Projekts
 
@@ -75,13 +77,13 @@ Installieren Sie Windows 10 Anniversary SDK Preview Build 14295. Informationen z
 1. Wenn dies Ihre erste Bereitstellung ist, werden Sie in einem Dialogfeld in Visual Studio aufgefordert, Ihr Gerät per PIN zu koppeln.
 
   1. Um eine PIN abzurufen, öffnen Sie auf der Startseite der Xbox One-Konsole **Dev Home**.
-  1. Wählen Sie **Pair with Visual Studio** aus.
+  1. Wählen Sie **Mit Visual Studio koppeln** aus.
 
-    ![Pair with Visual Studio dialog](images/devhome_visualstudio.png)
+    ![Dialogfeld „Mit Visual Studio koppeln“](images/devhome_visualstudio.png)
 
-  1. Geben Sie im Dialogfeld **Pair with Visual Studio** die PIN ein. Die folgende PIN ist nur ein Beispiel und stimmt nicht mit Ihrer PIN überein.
+  1. Geben Sie im Dialogfeld **Mit Visual Studio koppeln** die PIN ein. Die folgende PIN ist nur ein Beispiel und stimmt nicht mit Ihrer PIN überein.
 
-    ![Pair with Visual Studio PIN dialog](images/devhome_pin.png)
+    ![Dialogfeld „Mit Visual Studio per PIN koppeln“](images/devhome_pin.png)
 
   1. Gegebenenfalls auftretende Bereitstellungsfehler werden im Fenster **Ausgabe** angezeigt.
 
@@ -99,6 +101,6 @@ Herzlichen Glückwunsch! Sie haben Ihre erste UWP-App auf Xbox erfolgreich erste
 ----
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

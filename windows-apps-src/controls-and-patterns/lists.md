@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Listen zeigen und ermöglichen die Interaktion mit sammlungsbasierten Inhalten.
 title: Listen
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
-label: Listen
+label: Lists
 template: detail.hbs
 ---
 # Listen
@@ -18,9 +19,9 @@ Für jedes Listenmuster sind Entwurfsrichtlinien, Features und Beispiele aufgef�
 
 ## Wichtige APIs
 
--   [**ListView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242878)
--   [**GridView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242705)
--   [**ComboBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209348)
+-   [**ListView-Klasse **](https://msdn.microsoft.com/library/windows/apps/br242878)
+-   [**GridView-Klasse **](https://msdn.microsoft.com/library/windows/apps/br242705)
+-   [**ComboBox-Klasse **](https://msdn.microsoft.com/library/windows/apps/br209348)
 
 
 ## Listenansichten
@@ -174,7 +175,6 @@ Empfehlungen für die Befehlsleiste finden Sie unter [Richtlinien für Befehlsle
 
 ## Verwandte Artikel
 
-**Für Designer**
 - [Hub](hub.md)
 - [Master/Details](master-details.md)
 - [Navigationsbereich](nav-pane.md)
@@ -189,6 +189,6 @@ Empfehlungen für die Befehlsleiste finden Sie unter [Richtlinien für Befehlsle
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

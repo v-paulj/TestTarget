@@ -1,8 +1,9 @@
 ---
-Description: Layoutpanels dienen zum Anordnen und Gruppieren von UI-Elementen in Ihrer App.
-title: Layoutpanels für Universelle-Windows-Plattform-(UWP)-Apps
+author: Jwmsft
+Description: Verwenden Sie Layoutpanels, um UI-Elemente in Ihrer App anzuordnen und zu gruppieren.
+title: Layoutpanels für UWP-Apps (Apps für die universelle Windows-Plattform)
 ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
-label: Layoutpanels
+label: Layout panels
 template: detail.hbs
 ---
 # Layoutpanels
@@ -30,7 +31,8 @@ Hier sehen Sie ein Beispiel für das Festlegen der angefügten Eigenschaft [**Ca
 
 Weitere Informationen zu angefügten Eigenschaften finden Sie unter [Übersicht über angefügte Eigenschaften](../xaml-platform/attached-properties-overview.md).
 
-> **Hinweis**&nbsp;&nbsp;Eine angefügte Eigenschaft ist ein XAML-Konzept, das spezielle Syntax zum Abrufen aus oder Festlegen in Code erfordert. Informationen zur Verwendung angefügter Eigenschaften in Code finden Sie im Abschnitt *Angefügte Eigenschaften in Code* des Artikels *Übersicht über angefügte Eigenschaften*.
+> **Note**
+            &nbsp;&nbsp;Eine angefügte Eigenschaft ist ein XAML-Konzept, das spezielle Syntax zum Abrufen aus oder Festlegen in Code erfordert. Informationen zur Verwendung angefügter Eigenschaften in Code finden Sie im Abschnitt *Angefügte Eigenschaften in Code* des Artikels *Übersicht über angefügte Eigenschaften*.
 
 **Panelrahmen**
 
@@ -50,7 +52,9 @@ Durch Verwendung der integrierten Rahmeneigenschaften kann die Anzahl der XAML-E
 
 ## RelativePanel
 
-Mit [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) können Sie das Layout von UI-Elementen festlegen, indem Sie angeben, an welcher Position sie relativ zu anderen Elementen und dem Panel platziert werden sollen. Standardmäßig wird ein Element in der oberen linken Ecke des Panels positioniert. Sie können [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) und [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) verwenden, um die Benutzeroberfläche für unterschiedliche Fenstergrößen neu anzuordnen.
+[
+              **RelativePanel**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) ermöglicht Ihnen das Layout von UI-Elementen, indem Sie angeben, an welcher Position sie relativ zu anderen Elementen und dem Panel platziert werden sollen. Standardmäßig wird ein Element in der oberen linken Ecke des Panels positioniert. Sie können [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) und [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) verwenden, um die Benutzeroberfläche für unterschiedliche Fenstergrößen neu anzuordnen.
 
 Die folgende Tabelle zeigt die angefügten Eigenschaften, mit denen Sie ein Element auf die Kante oder die Mitte des Panels ausrichten und in Bezug auf andere Elemente ausrichten und positionieren können.
 
@@ -97,7 +101,9 @@ Die folgenden Aspekte müssen in Bezug auf das Ändern der Rechtecksgrößen bea
 
 ## StackPanel
 
-Das [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) ist ein einfaches Layoutpanel, das seine untergeordneten Elemente in einer einzelnen Zeile anordnet. Die Zeile kann horizontal oder vertikal ausgerichtet werden. StackPanel-Steuerelemente werden i. d. R. verwendet, wenn Sie nur einen kleinen Teil der UI auf der Seite anordnen möchten.
+[
+              **StackPanel**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) ist ein einfaches Layoutpanel, das seine untergeordneten Elemente in einer einzelnen Zeile anordnet. Die Zeile kann horizontal oder vertikal ausgerichtet werden. StackPanel-Steuerelemente werden i. d. R. verwendet, wenn Sie nur einen kleinen Teil der UI auf der Seite anordnen möchten.
 
 Mit der [**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.orientation.aspx)-Eigenschaft können Sie die Richtung der untergeordneten Elemente angeben. Die Standardausrichtung ist [**Vertikal**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.orientation.aspx).
 
@@ -158,7 +164,9 @@ In diesem Beispiel funktioniert die Festlegung der Größe wie folgt:
 
 ## VariableSizedWrapGrid
 
-[**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) stellt ein Layoutpanel im Rasterstil zur Verfügung, in dem Elemente in Zeilen oder Spalten angeordnet werden, die automatisch in eine neue Zeile oder Spalte umbrochen werden, wenn der [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx)-Wert erreicht ist. 
+[
+              **VariableSizedWrapGrid**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) stellt ein Layoutpanel im Rasterstil zur Verfügung, in dem Elemente in Zeilen oder Spalten angeordnet werden, die automatisch in eine neue Zeile oder Spalte umbrochen werden, wenn der [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx)-Wert erreicht wird. 
 
 Mit der [**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.orientation.aspx)-Eigenschaft wird angegeben, ob Elemente im Raster vor dem Umbrechen in Zeilen oder Spalten hinzugefügt werden. Die Standardausrichtung ist **Vertikal**, d. h., das Raster fügt Elemente von oben nach unten hinzu, bis eine Spalte voll ist, dann erfolgt ein Umbruch in eine neue Spalte. Wenn der Wert **Horizontal** lautet, fügt das Raster Elemente von links nach rechts hinzu und fügt dann einen Umbruch in eine neue Zeile ein.
 
@@ -219,6 +227,6 @@ Verwenden Sie das Canvas-Panel mit Bedacht. Es ist zwar in einigen Szenarien hil
 Es gibt verschiedene spezielle Panels, die nur als [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) zum Anzeigen von Elementen in einem [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx)-Element verwendet werden können. Dies sind [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) und [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx). Diese Panel können nicht für das allgemeine UI-Layout verwendet werden.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

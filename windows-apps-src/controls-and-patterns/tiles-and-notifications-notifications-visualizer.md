@@ -1,5 +1,6 @@
 ---
-Description: Notifications Visualizer ist eine App für die universelle Windows-Plattform (UWP) im Store, die Entwickler dabei unterstützt, adaptive Live-Kacheln für Windows 10 zu entwerfen.
+author: mijacobs
+Description: Notifications Visualizer ist eine neue App für die Universelle Windows-Plattform (UWP) im Store, die Entwickler dabei unterstützt, adaptive Livekacheln für Windows 10 zu entwerfen.
 title: Notifications Visualizer
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
@@ -9,10 +10,10 @@ template: detail.hbs
 # Notifications Visualizer
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Notifications Visualizer ist eine neue App für die universelle Windows-Plattform (UWP) im [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1), die Entwickler dabei unterstützt, adaptive Live-Kacheln für Windows 10 zu entwerfen.
+
+Notifications Visualizer ist eine neue App für die Universelle Windows-Plattform (UWP) im [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1), die Entwickler dabei unterstützt, adaptive Livekacheln für Windows 10 zu entwerfen.
 
 ## <span id="Overview"></span><span id="overview"></span><span id="OVERVIEW"></span>Übersicht
 
@@ -27,7 +28,7 @@ Dieser Screenshot der App zeigt die XML-Nutzlast und die Art und Weise, wie Kach
 
 Mit Notifications Visualizer können Sie adaptive Kachelnutzlasten erstellen und testen, ohne die App selbst bearbeiten und bereitstellen zu müssen. Nachdem Sie eine Nutzlast mit idealen visuellen Ergebnisse erstellt haben, können Sie sie in Ihre App integrieren. Weitere Informationen finden Sie unter [Senden einer lokalen Kachelbenachrichtigung](tiles-and-notifications-sending-a-local-tile-notification.md).
 
-**Hinweis**  Die Simulation des Windows-Startmenüs von Notifications Visualizer ist nicht immer hundertprozentig genau, und bestimmte Nutzlasteigenschaften wie [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712) werden nicht unterstützt. Wenn Sie das gewünschte Kacheldesign fertig haben, testen Sie es, indem Sie die Kachel an das tatsächliche Startmenü anheften, um sicherzustellen, dass es wie gewünscht angezeigt wird.
+**Hinweis**  Die Simulation des Windows-Startmenüs mit Notifications Visualizer ist nicht immer hundertprozentig genau, und bestimmte Nutzlasteigenschaften wie [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712) werden nicht unterstützt. Wenn Sie das gewünschte Kacheldesign fertig haben, testen Sie es, indem Sie die Kachel an das tatsächliche Startmenü anheften, um sicherzustellen, dass es wie gewünscht angezeigt wird.
 
  
 
@@ -63,6 +64,6 @@ Dieser Screenshot der App zeigt den Kachel-Editor:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

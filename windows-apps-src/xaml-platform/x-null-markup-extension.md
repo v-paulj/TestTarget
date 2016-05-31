@@ -1,5 +1,6 @@
 ---
-description: gibt im XAML-Markup einen NULL-Wert für eine Eigenschaft an.
+author: jwmsft
+description: Gibt im XAML-Markup einen NULL-Wert für eine Eigenschaft an.
 title: xNull-Markuperweiterung
 ms.assetid: E6A4038E-4ADA-4E82-9824-582FC16AB037
 ---
@@ -32,6 +33,6 @@ Einige Windows-Runtime-Typen akzeptieren NULL-Werte. Sollte bei einem Typ, der N
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

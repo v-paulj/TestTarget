@@ -42,8 +42,6 @@ So richten Sie Datenformate ein
 
 Wenn ein Benutzer Ihre App auswählt (i. d. R. durch die Auswahl aus einer Liste verfügbarer Ziel-Apps auf der Benutzeroberfläche für das Freigeben), wird ein [**Application.OnShareTargetActivated**][OnShareTargetActivated]-Ereignis ausgelöst. Ihre App muss dieses Ereignis behandeln, um die Daten, die der Benutzer freigeben möchte, verarbeiten zu können.
 
-Beachten Sie Folgendes: Falls Ihre App zum Zeitpunkt der Aktivierung als Freigabeziel bereits ausgeführt wird, wird die vorhandene Instanz der App beendet und eine neue Instanz der App gestartet, um den Vertrag zu behandeln.
-
 <!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
 protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)
@@ -61,8 +59,8 @@ if (shareOperation.Data.Contains(StandardDataFormats.Text))
     string text = await shareOperation.Data.GetTextAsync();
 
     // To output the text from this example, you need a TextBlock control
-    // with a name of &quot;sharedContent&quot;.
-    sharedContent.Text = &quot;Text: &quot; + text;
+    // with a name of "sharedContent".
+    sharedContent.Text = "Text: " + text;
 } 
 ```
 
@@ -85,7 +83,7 @@ shareOperation.ReportSubmittedBackgroundTask();
 Rufen Sie [**ReportError**][ReportError] auf, falls ein Fehler auftritt, um eine Fehlermeldung an das System zu senden. Den Benutzern wird die Meldung angezeigt, wenn sie den Status der Freigabe überprüfen. An dieser Stelle wird die App heruntergefahren und die Freigabe beendet. Der Benutzer muss zum Freigeben des Inhalts für die App von vorn beginnen. In Abhängigkeit vom Szenario können Sie entscheiden, dass ein bestimmter Fehler nicht schwerwiegend genug ist, um den Freigabevorgang zu beenden. In diesem Fall können Sie sich gegen das Aufrufen von **ReportError** entscheiden und mit dem Freigeben fortfahren.
 
 ```cs
-shareOperation.ReportError(&quot;Could not reach the server! Try again later.&quot;); 
+shareOperation.ReportError("Could not reach the server! Try again later."); 
 ```
 
 Zum Abschluss der erfolgreichen Verarbeitung der freigegebenen Daten durch Ihre App sollten Sie [**ReportCompleted**][ReportCompleted] aufrufen, um das System zu informieren.
@@ -114,13 +112,13 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 
         // For quicklinks, the supported FileTypes and DataFormats are set 
         // independently from the manifest
-        SupportedFileTypes = { &quot;*&quot; },
+        SupportedFileTypes = { "*" },
         SupportedDataFormats = { StandardDataFormats.Text, StandardDataFormats.Uri, 
                 StandardDataFormats.Bitmap, StandardDataFormats.StorageItems }
     };
 
     StorageFile iconFile = await Windows.ApplicationModel.Package.Current.InstalledLocation.CreateFileAsync(
-            &quot;assets\\user.png&quot;, CreationCollisionOption.OpenIfExists);
+            "assets\\user.png", CreationCollisionOption.OpenIfExists);
     quickLinkInfo.Thumbnail = RandomAccessStreamReference.CreateFromFile(iconFile);
     shareOperation.ReportCompleted(quickLinkInfo);
 }
@@ -142,6 +140,6 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

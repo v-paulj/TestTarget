@@ -1,5 +1,6 @@
 ---
-description: Das Programmierkonzept von Ereignissen in einer Windows-Runtime-App bei Verwendung von C#-, Visual Basic- oder Visual C++-Komponentenerweiterungen (C++/CX) als Programmiersprache und XAML für die UI-Definition wird beschrieben.
+author: jwmsft
+description: Das Programmierkonzept von Ereignissen in einer Windows-Runtime-App bei Verwendung von C#-, Visual Basic- oder Visual C++-Komponentenerweiterungen (C++/CX) als Programmiersprache und XAML für die UI-Definition wird beschrieben
 title: Übersicht über Ereignisse und Routingereignisse
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ---
@@ -30,13 +31,14 @@ Sie definieren die UI für Ihre Windows-Runtime-App mittels XAML-Generierung. Be
 
 Zur Ereignisverknüpfung in XAML gehört, dass Sie den Namen der Handlermethode, die Sie bereits definiert haben oder später im CodeBehind definieren werden, als Zeichenfolge angeben. Diese XAML definiert beispielsweise ein [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)-Objekt mit anderen Eigenschaften ([x:Name-Attribut](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366)), die als Attribute zugewiesen sind, und verknüpft einen Handler für das [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Ereignis der Schaltfläche durch einen Verweis auf eine Methode namens `showUpdatesButton_Click`:
 
-```XAML
+```XML
 <Button x:Name="showUpdatesButton"
   Content="{Binding ShowUpdatesText}"
   Click="showUpdatesButton_Click"/>
 ```
 
-**Tipp**  *Ereignisverknüpfung* ist ein Begriff der Programmiersprache. Er bezieht sich auf den Prozess oder Code, mit dem Sie angeben, dass Vorkommen eines Ereignisses eine benannte Handlermethode aufrufen sollen. In den meisten prozeduralen Codemodellen handelt es sich bei der Ereignisverknüpfung um impliziten oder expliziten „AddHandler“-Code, der sowohl das Ereignis als auch die Methode benennt und in der Regel eine Zielobjektinstanz verwendet. In XAML ist "AddHandler" implizit und die Ereignisverknüpfung umfasst nur das Benennen des Ereignisses als Attributnamen eines Objektelement und das Benennen des Handlers als Wert dieses Attributs.
+**Tipp**
+            *Ereignisverknüpfung* ist ein Begriff der Programmiersprache. Er bezieht sich auf den Prozess oder Code, mit dem Sie angeben, dass Vorkommen eines Ereignisses eine benannte Handlermethode aufrufen sollen. In den meisten prozeduralen Codemodellen handelt es sich bei der Ereignisverknüpfung um impliziten oder expliziten „AddHandler“-Code, der sowohl das Ereignis als auch die Methode benennt und in der Regel eine Zielobjektinstanz verwendet. In XAML ist "AddHandler" implizit und die Ereignisverknüpfung umfasst nur das Benennen des Ereignisses als Attributnamen eines Objektelement und das Benennen des Handlers als Wert dieses Attributs.
 
 Sie schreiben den eigentlichen Handler in der Programmiersprache, die Sie für Ihren gesamten App-Code oder CodeBehind verwenden. Mit dem Attribut `Click="showUpdatesButton_Click"` haben Sie einen Vertrag erstellt, mit dem beim Kompilieren des Markups und Analysieren des XAML sowohl der XAML-Markupkompilierschritt in der Erstellungsaktion Ihrer IDE als auch die mögliche XAML-Analyse beim Laden der App eine Methode mit dem Namen `showUpdatesButton_Click` finden können, die Teil des App-Codes ist. `showUpdatesButton_Click` muss eine Methode darstellen, die eine kompatible Methodensignatur (basierend auf einem Delegaten) für jeden Handler des [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Ereignisses implementiert. Dieser Code definiert z. B. den `showUpdatesButton_Click`-Handler.
 
@@ -62,7 +64,7 @@ void MyNamespace::BlankPage::showUpdatesButton_Click(Platform::Object^ sender, W
 
 In diesem Beispiel basiert die `showUpdatesButton_Click`-Methode auf dem [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812)-Delegaten. Sie wissen, dass dies der zu verwendende Delegat ist, weil er in der Syntax für die [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Methode auf der MSDN-Referenzseite aufgeführt wird.
 
-**Tipp**  Visual Studio bietet eine bequeme Methode zum Benennen des Ereignishandlers und zum Definieren der Handlermethode während der Bearbeitung von XAML. Wenn Sie den Attributnamen des Ereignisses im XAML-Text-Editor bereitstellen, warten Sie einen Moment, bis eine Microsoft IntelliSense-Liste angezeigt wird. Wenn Sie in der Liste auf **&lt;New Event Handler&gt;** klicken, schlägt Microsoft Visual Studio einen Methodennamen vor, der auf dem **x:Name** des Elements (oder Typbezeichnung), dem Ereignisnamen und einem numerischen Suffix basiert. Anschließend können Sie mit der rechten Maustaste auf den ausgewählten Ereignishandler und dann mit der linken Maustaste auf **Zum Ereignishandler navigieren** klicken. Dadurch navigieren Sie direkt zu der neu eingefügten Ereignishandlerdefinition, wie sie in der Code-Editoransicht Ihrer CodeBehind-Datei für die XAML-Seite angezeigt wird. Der Ereignishandler hat bereits die richtige Signatur, einschließlich des *sender*-Parameters und der Ereignisdatenklasse, die von dem Ereignis verwendet wird. Wenn zudem bereits eine Handlermethode mit der richtigen Signatur im CodeBehind vorhanden ist, wird der Name dieser Methode zusammen mit der Option **&lt;Neuer Ereignishandler&gt;** im automatisch vervollständigten Dropdownliste angezeigt. Sie können auch die Tabulatortaste drücken, anstatt auf die IntelliSense-Listenelemente zu klicken.
+**Tipp**  Visual Studio bietet eine bequeme Methode zum Benennen des Ereignishandlers und zum Definieren der Handlermethode während der Bearbeitung von XAML. Wenn Sie den Attributnamen des Ereignisses im XAML-Text-Editor bereitstellen, warten Sie einen Moment, bis eine Microsoft IntelliSense-Liste angezeigt wird. Wenn Sie in der Liste auf **&lt;Neuer Ereignishandler&gt;** klicken, schlägt Microsoft Visual Studio einen Methodennamen vor, der auf dem **x:Name** des Elements (oder der Typbezeichnung), dem Ereignisnamen und einem numerischen Suffix basiert. Anschließend können Sie mit der rechten Maustaste auf den ausgewählten Ereignishandler und dann mit der linken Maustaste auf **Zum Ereignishandler navigieren** klicken. Dadurch navigieren Sie direkt zu der neu eingefügten Ereignishandlerdefinition, wie sie in der Code-Editoransicht Ihrer CodeBehind-Datei für die XAML-Seite angezeigt wird. Der Ereignishandler hat bereits die richtige Signatur, einschließlich des *sender*-Parameters und der Ereignisdatenklasse, die von dem Ereignis verwendet wird. Wenn zudem bereits eine Handlermethode mit der richtigen Signatur im CodeBehind vorhanden ist, wird der Name dieser Methode zusammen mit der Option **&lt;Neuer Ereignishandler&gt;** im Auto-Vervollständigen-Dropdown angezeigt. Sie können auch die Tabulatortaste drücken, anstatt auf die IntelliSense-Listenelemente zu klicken.
 
 ## Definieren eines Ereignishandlers
 
@@ -80,7 +82,7 @@ Bei einigen Ereignissen ist die Kenntnis der speziellen Eigenschaftswerte der Er
 
 ### Ereignishandler, die das **async**-Muster verwenden
 
-In einigen Fällen wird die Verwendung von APIs empfohlen, die innerhalb eines Ereignishandlers ein **async**-Muster verwenden. Beispielsweise können Sie einen [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) auf einer [**AppBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) verwenden, um eine Dateiauswahl anzuzeigen und mit dieser zu interagieren. Viele der Dateiauswahl-APIs sind jedoch asynchron. Sie müssen innerhalb eines **async**/awaitable-Bereichs aufgerufen werden. Dies wird vom Compiler erzwungen. Sie können dem Ereignishandler das **async**-Schlüsselwort hinzuzufügen, sodass der Handler nun **async** **void** ist. Nun kann der Ereignishandler **async**/awaitable-Aufrufe ausführen.
+In einigen Fällen wird die Verwendung von APIs empfohlen, die innerhalb eines Ereignishandlers ein **async**-Muster verwenden. Beispielsweise können Sie einen [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) auf einer [**AppBar**](https://msdn.microsoft.com/library/windows/apps/hh701927) verwenden, um eine Dateiauswahl anzuzeigen und mit dieser zu interagieren. Viele der Dateiauswahl-APIs sind jedoch asynchron. Sie müssen innerhalb eines **async**/awaitable-Bereichs aufgerufen werden. Dies wird vom Compiler erzwungen. Sie können dem Ereignishandler das **async**-Schlüsselwort hinzuzufügen, sodass der Handler nun **async****void** ist. Nun kann der Ereignishandler **async**/awaitable-Aufrufe ausführen.
 
 Ein Beispiel für die Benutzerinteraktions-Ereignisbehandlung mit dem **async**-Muster finden Sie unter [Dateizugriff und -auswahl](https://msdn.microsoft.com/library/windows/apps/jj655411) (in der Reihe [Erstellen Ihrer ersten Windows-Runtime-App mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)). Siehe auch [Aufrufen asynchroner APIs in C].
 
@@ -92,7 +94,7 @@ In C# wird für die Syntax der `+=`-Operator verwendet. Sie registrieren den Han
 
 Wenn Objekten, die in der Laufzeit-UI angezeigt werden, Ereignishandler per Code hinzugefügt werden, ist es üblich, diese Handler als Reaktion auf ein Objektlebensdauer-Ereignis oder einen Rückruf hinzuzufügen, wie z. B. [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) oder [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737). Die Ereignishandler für das relevante Objekt stehen dann zur Laufzeit für Ereignisse bereit, die von Benutzern eingeleitet werden. Dieses Beispiel zeigt eine XAML-Gliederung der Seitenstruktur und führt anschließend die C#-Sprachsyntax für das Hinzufügen eines Ereignishandlers zu einem Objekt auf.
 
-```xaml
+```xml
 <Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
   <StackPanel>
     <TextBlock Name="textBlock1">Put the pointer over this text</TextBlock>
@@ -121,7 +123,7 @@ void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
 
 Für Visual Basic-Syntax gibt es zwei Möglichkeiten Sie können eine parallele C#-Syntax verwenden und den Instanzen die Handler direkt anfügen. Dazu benötigen Sie das **AddHandler**-Schlüsselwort und den **AddressOf**-Operator, der den Handlermethodennamen dereferenziert.
 
-Die zweite Möglichkeit für die Visual Basic-Syntax besteht darin, das **Handles**-Schlüsselwort für Ereignishandler zu verwenden. Das ist in Fällen angebracht, in denen beim Laden voraussichtlich Handler für Objekte vorhanden sind und für die Objektlebensdauer bestehen bleiben. Wenn Sie **Handles** für ein in XAML definiertes Objekt verwenden, müssen Sie einen **Name**/**x:Name** bereitstellen. Dieser Name wird zum Instanzenqualifizierer, der für den *Instance.Event*-Teil der **Handles**-Syntax benötigt wird. In diesem Fall benötigen Sie keinen Ereignishandler, der auf der Objektlebensdauer basiert, um das Anfügen der anderen Ereignishandler einzuleiten. Die **Handles**-Verbindungen werden beim Kompilieren der XAML-Seite erstellt.
+Die zweite Möglichkeit für die Visual Basic-Syntax besteht darin, das **Handles**-Schlüsselwort für Ereignishandler zu verwenden. Das ist in Fällen angebracht, in denen beim Laden voraussichtlich Handler für Objekte vorhanden sind und für die Objektlebensdauer bestehen bleiben. Wenn Sie **Handles** für ein in XAML definiertes Objekt verwenden, müssen Sie einen **Name** / **x:Name** bereitstellen. Dieser Name wird zum Instanzenqualifizierer, der für den *Instance.Event*-Teil der **Handles**-Syntax benötigt wird. In diesem Fall benötigen Sie keinen Ereignishandler, der auf der Objektlebensdauer basiert, um das Anfügen der anderen Ereignishandler einzuleiten. Die **Handles**-Verbindungen werden beim Kompilieren der XAML-Seite erstellt.
 
 ```vb
 Private Sub textBlock1_PointerEntered(ByVal sender As Object, ByVal e As PointerRoutedEventArgs) Handles textBlock1.PointerEntered
@@ -131,15 +133,15 @@ End Sub
 
 **Hinweis**  Im Allgemeinen werden statt des **Handles**-Schlüsselworts Visual Studio und die zugehörige XAML-Entwurfsoberfläche als Instanzbehandlungstechnik verwendet. Das Erstellen der Ereignishandlerverknüpfung in XAML ist Teil eines typischen Designer-Entwickler-Workflows, und die **Handles**-Schlüsselworttechnik ist mit dem Verknüpfen der Ereignishandler in XAML nicht kompatibel.
 
-Auch in C++ verwenden Sie die Syntax **+=**. Es gibt jedoch Unterschiede zum allgemeinen C#-Format:
+Auch in C++ verwenden Sie die **+=**-Syntax. Es gibt jedoch Unterschiede zum allgemeinen C#-Format:
 
 -   Es gibt keinen Rückschluss auf Delegaten. Sie müssen deshalb **ref new** für die Delegatinstanz verwenden.
 -   Der Delegatkonstruktor besitzt zwei Parameter und benötigt das Zielobjekt als ersten Parameter. Normalerweise geben Sie **this** an.
--   Der Delegatkonstruktor benötigt die Methodenadresse als zweiten Parameter, sodass sich der Referenzierungsoperator **&** vor dem Methodennamen befindet.
+-   Der Delegatenkonstruktor erfordert die Methodenadresse als zweiten Parameter, sodass der **&**-Verweisoperator vor dem Methodennamen steht.
 
 ```cpp
 textBlock1->PointerEntered += 
-ref new PointerEventHandler(this,&amp;BlankPage::textBlock1_PointerExited);
+ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerExited);
 ```
 
 ### Entfernen von Ereignishandlern im Code
@@ -154,7 +156,9 @@ In einigen seltenen Fällen sollten Ereignishandler explizit entfernt werden. Da
 -   Benutzerdefinierte statische Ereignisse
 -   Handler für Seitennavigationen
 
-[**FrameworkElement.Unloaded**](https://msdn.microsoft.com/library/windows/apps/br208748) oder [**Page.NavigatedFrom**](https://msdn.microsoft.com/library/windows/apps/br227507) sind mögliche Ereignisauslöser mit entsprechenden Positionen in der Zustandsverwaltung und der Objektlebensdauer, sodass sie zum Entfernen von Handlern für andere Ereignisse verwendet werden können.
+[
+              **FrameworkElement.Unloaded**
+            ](https://msdn.microsoft.com/library/windows/apps/br208748) oder [**Page.NavigatedFrom**](https://msdn.microsoft.com/library/windows/apps/br227507) sind mögliche Ereignisauslöser mit entsprechenden Positionen in der Zustandsverwaltung und der Objektlebensdauer, sodass sie zum Entfernen von Handlern für andere Ereignisse verwendet werden können.
 
 Beispielsweise können Sie mit diesem Code einen Ereignishandler mit dem Namen **textBlock1\_PointerEntered** aus dem Zielobjekt **textBlock1** entfernen.
 
@@ -241,15 +245,19 @@ Bestimmte Objekte sind Bestandteil einer Beziehung mit der primären visuellen S
 Das Bestimmen, ob und wo auf der UI ein Element für die Maus-, Touch und Stifteingabe sichtbar ist, wird als *Treffertests* bezeichnet. Bei Toucheingabeaktionen und interaktionsspezifischen Ereignissen oder Manipulationsereignissen, die aus einer Toucheingabeaktion resultieren, muss ein Element bei Treffertests sichtbar sein, damit es der Ereignisquelle entsprechen und das der Aktion zugeordnete Ereignis auslösen kann. Andernfalls durchläuft die Aktion das Element bis zu zugrunde liegenden oder übergeordneten Elementen in der visuellen Struktur, die mit dieser Eingabe interagieren könnte. Treffertests werden von mehreren Faktoren beeinflusst. Sie können jedoch feststellen, ob ein bestimmtes Element Eingabeereignisse auslösen kann, indem Sie die zugehörige Eigenschaft [**IsHitTestVisible**](https://msdn.microsoft.com/library/windows/apps/br208933) überprüfen. Diese Eigenschaft gibt nur dann **true** zurück, wenn das Element die folgenden Kriterien erfüllt:
 
 -   Der [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992)-Eigenschaftenwert des Elements ist [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006).
--   Der Wert der Eigenschaft **Background** oder **Fill** ist nicht **null**. Ein Wert **null** für [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) führt zu Transparenz und Unsichtbarkeit von Treffertests. (Wenn Sie ein Element transparent machen und zugleich Treffertests für das Element ermöglichen möchten, verwenden Sie einen [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061)-Pinsel anstelle von **null**.)
+-   Der Wert der Eigenschaft **Background** oder **Fill** ist nicht **null**. Ein Wert **null**[**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) führt zu Transparenz und Unsichtbarkeit von Treffertests. (Wenn Sie ein Element transparent machen und zugleich Treffertests für das Element ermöglichen möchten, verwenden Sie einen [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061)-Pinsel anstelle von **null**.)
 
-**Hinweis**  **Background** und **Fill** werden nicht durch [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) definiert, sondern durch verschiedene abgeleitete Klassen wie [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) und [**Form**](https://msdn.microsoft.com/library/windows/apps/br243377). Die von Ihnen für Vorder- und Hintergrundeigenschaften verwendeten Implikationen von Pinseln sind jedoch für Treffertests und Eingabeereignisse identisch. Dabei ist es unerheblich, welche Unterklasse die Eigenschaften implementiert.
+**Hinweis**
+            **Background** und **Fill** werden nicht durch [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) definiert, sondern durch verschiedene abgeleitete Klassen wie [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390) und [**Form**](https://msdn.microsoft.com/library/windows/apps/br243377). Die von Ihnen für Vorder- und Hintergrundeigenschaften verwendeten Implikationen von Pinseln sind jedoch für Treffertests und Eingabeereignisse identisch. Dabei ist es unerheblich, welche Unterklasse die Eigenschaften implementiert.
 
 -   Wenn das Element ein Steuerelement ist, muss dessen Wert für die Eigenschaft [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) **true** sein.
 -   Das Element muss im Layout über reale Dimensionen verfügen. Ein Element, bei dem [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) und [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) 0 sind, kann keine Eingabeereignisse auslösen.
 
-Bei einigen Steuerelementen sind besondere Regeln bezüglich Treffertests zu beachten. Beispielsweise besitzt [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) die Eigenschaft **Background** nicht. Dennoch können innerhalb des gesamten Bereichs der zugehörigen Dimensionen Treffertests ausgeführt werden. [**Image**-
-						](https://msdn.microsoft.com/library/windows/apps/br242752) und [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)-Steuerelemente können in den zugehörigen definierten Rechtecksdimensionen auf Treffer getestet werden. Dabei ist es unerheblich, ob in der Medienquelldatei transparente Inhalte wie Alphakanäle angezeigt werden. [**WebView**](https://msdn.microsoft.com/library/windows/apps/br227702)-Steuerelemente weisen ein spezielles Treffertestverhalten auf, da die Eingabe durch das gehostete HTML behandelt werden kann und Skriptereignisse auslösen kann.
+Bei einigen Steuerelementen sind besondere Regeln bezüglich Treffertests zu beachten. Beispielsweise besitzt [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) die Eigenschaft **Background** nicht. Dennoch können innerhalb des gesamten Bereichs der zugehörigen Dimensionen Treffertests ausgeführt werden. [
+              **Image**
+            ](https://msdn.microsoft.com/library/windows/apps/br242752) und [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)-Steuerelemente können in den zugehörigen definierten Rechtecksdimensionen auf Treffer getestet werden. Dabei ist es unerheblich, ob in der Medienquelldatei transparente Inhalte wie Alphakanäle angezeigt werden. [
+              **WebView**
+            ](https://msdn.microsoft.com/library/windows/apps/br227702)-Steuerelemente weisen ein spezielles Treffertestverhalten auf, da die Eingabe durch das gehostete HTML behandelt werden kann und Skriptereignisse auslösen kann.
 
 Für die meisten [**Panel**](https://msdn.microsoft.com/library/windows/apps/br227511)-Klassen und [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)-Elemente können im eigenen Hintergrund zwar keine Treffertests ausgeführt werden, sie können jedoch dennoch Benutzereingabeereignisse verarbeiten, die von den in ihnen integrierten Elementen weitergeleitet werden.
 
@@ -287,6 +295,6 @@ Das Definieren eines benutzerdefinierten Ereignisses erfolgt in der Regel im Rah
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Mit Listenanimationen können Sie einzelne oder mehrere Elemente in einer Sammlung wie z. B. einem Fotoalbum oder einer Liste mit Suchergebnissen einfügen oder entfernen.
 title: Hinzufügen und Löschen von Animationen in UWP-Apps
 ms.assetid: A85006AE-4992-457a-B514-500B8BEF5DC8
@@ -9,7 +10,7 @@ template: detail.hbs
 # Hinzufügen und Löschen von Animationen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Mit Listenanimationen können Sie einzelne oder mehrere Elemente in einer Sammlung wie z. B. einem Fotoalbum oder einer Liste mit Suchergebnissen einfügen oder entfernen.
 
@@ -28,7 +29,7 @@ Mit Listenanimationen können Sie einzelne oder mehrere Elemente in einer Sammlu
 -   Verwenden Sie Listenanimationen nicht, um einen Container anzuzeigen oder zu entfernen. Diese Animationen sind für Elemente einer bereits angezeigten Auflistung oder Menge vorgesehen. Verwenden Sie Popupanimationen, um einen kurzlebigen Container auf der App-Oberfläche ein- oder auszublenden. Verwenden Sie Inhaltsübergangsanimationen, um einen Container, der Teil der App-Oberfläche ist, anzuzeigen oder zu ersetzen.
 -   Verwenden Sie Listenanimationen nicht für eine vollständige Menge von Elementen. Verwenden Sie die Inhaltsübergangsanimationen, um eine vollständige Auflistung innerhalb des Containers hinzuzufügen oder zu entfernen.
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die Universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Artikel
 
@@ -48,6 +49,6 @@ Mit Listenanimationen können Sie einzelne oder mehrere Elemente in einer Sammlu
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

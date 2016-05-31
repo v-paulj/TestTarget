@@ -1,10 +1,11 @@
 ---
+author: mcleblanc
 description: Im Hintergrund Ihrer Benutzeroberfläche befinden sich Ihre Geschäfts- und Datenebenen.
-title: Portieren von Windows Phone Silverlight-Geschäfts-/-Datenebenen zu UWP
+title: Portieren von Windows Phone Silverlight-Geschäfts- und -Datenebenen zu UWP
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
 ---
 
-#  Portieren von Windows Phone Silverlight-Geschäfts- und -Datenebenen auf UWP
+#  Portieren von Windows Phone Silverlight-Geschäfts- und -Datenebenen zu UWP
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
@@ -136,6 +137,6 @@ Das nächste Thema ist [Portieren für Formfaktor und Benutzerfreundlichkeit](wp
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

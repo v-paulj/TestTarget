@@ -1,12 +1,13 @@
 ---
-description: Stellt durch Auswertung eines Ressourcenverweises einen XAML-Attributwert bereit und nutzt Systemlogik, mit der Ressourcen nach aktivem Design abgerufen werden.
+author: jwmsft
+description: Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource ausgewertet wird. Dabei wird zusätzliche Systemlogik genutzt, mit der unterschiedliche Ressourcen je nach derzeit aktivem Design abgerufen werden.
 title: ThemeResource-Markuperweiterung
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
 ---
 
 # {ThemeResource}-Markuperweiterung
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource ausgewertet wird. Dabei wird zusätzliche Systemlogik genutzt, mit der unterschiedliche Ressourcen je nach derzeit aktivem Design abgerufen werden. Ähnlich wie bei der [{StaticResource}-Markuperweiterung](staticresource-markup-extension.md) werden Ressourcen in einem [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) definiert, und mit einer **ThemeResource**-Syntax wird auf den Schlüssel dieser Ressource im **ResourceDictionary** verwiesen.
 
@@ -20,7 +21,7 @@ Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis au
 
 | Benennung | Beschreibung |
 |------|-------------|
-| Schlüssel | Der Schlüssel für die angeforderte Ressource. Dieser Schlüssel wird anfänglich durch das [**ResourceDictionary**>](https://msdn.microsoft.com/library/windows/apps/br208794) zugewiesen. Ein Ressourcenschlüssel kann eine beliebige in der XamlName-Grammatik definierte Zeichenfolge sein. |
+| Schlüssel | Der Schlüssel für die angeforderte Ressource. Dieser Schlüssel wird anfänglich durch das [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) zugewiesen. Ein Ressourcenschlüssel kann eine beliebige in der XamlName-Grammatik definierte Zeichenfolge sein. |
  
 ## Anmerkungen
 
@@ -59,9 +60,10 @@ Die Windows-Runtime stellt einen Satz von Ressourcen bereit, die ausdrücklich f
 
 Für die XAML-Definitionen von Ansichtszuständen in einer Steuerelementvorlage sollten immer **ThemeResource**-Verweise verwendet werden, wenn eine zugrunde liegende Ressource vorhanden ist, die sich aufgrund einer Designänderung ändern kann. Eine Systemdesignänderung führt normalerweise nicht gleichzeitig auch zu einer Änderung des Ansichtszustands. In diesem Fall müssen für die Ressourcen **ThemeResource**-Verweise verwendet werden, damit Werte für den weiterhin aktiven Ansichtszustand neu ausgewertet werden können. Falls Sie beispielsweise über einen Ansichtszustand verfügen, mit dem eine Pinselfarbe eines bestimmten Teils der UI und eine der dazugehörigen Eigenschaften geändert wird, und diese Pinselfarbe jeweils von Design zu Design unterschiedlich ist, sollten Sie einen **ThemeResource**-Verweis verwenden. Damit stellen Sie den Wert dieser Eigenschaft in der Standardvorlage und außerdem alle Änderungen des Ansichtszustands für diese Standardvorlage bereit.
 
-Die Nutzung von **ThemeResource** lässt sich ggf. für eine Reihe abhängiger Werte erkennen. Beispielsweise kann für einen [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723)-Wert, der von einem [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)-Element verwendet wird, bei dem es sich außerdem um eine Ressource mit Schlüssel handelt, ein **ThemeResource**-Verweis verwendet werden. Für alle UI-Eigenschaften, von denen die **SolidColorBrush**-Ressource mit Schlüssel verwendet wird, würde jedoch auch ein **ThemeResource**-Verweis verwendet werden. Eine dynamische Änderung des Werts bei einer Designänderung wird also jeweils speziell von den Eigenschaften vom Typ [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) ermöglicht.
+Die Nutzung von **ThemeResource** lässt sich ggf. in eine Reihe abhängiger Werte erkennen. Beispielsweise kann für einen [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723)-Wert, der von einem [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)-Element verwendet wird, bei dem es sich außerdem um eine Ressource mit Schlüssel handelt, ein **ThemeResource**-Verweis verwendet werden. Für alle UI-Eigenschaften, von denen die **SolidColorBrush**-Ressource mit Schlüssel verwendet wird, würde jedoch auch ein **ThemeResource**-Verweis verwendet werden. Eine dynamische Änderung des Werts bei einer Designänderung wird also jeweils speziell von den Eigenschaften vom Typ [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) ermöglicht.
 
-**Hinweis**  Die Auswertung von `{ThemeResource}` und Laufzeitressourcen beim Wechseln von Designs wird in Windows 8.1-XAML-Code unterstützt, jedoch nicht in XAML-Code für Apps, die auf Windows 8 ausgerichtet sind.
+**Hinweis**
+            Die Auswertung von `{ThemeResource}` und Laufzeitressourcen beim Wechseln von Designs wird in Windows 8.1-XAML-Code unterstützt, jedoch nicht in XAML-Code für Apps, die auf Windows 8 ausgerichtet sind.
 
 ### Systemressourcen
 
@@ -73,7 +75,7 @@ Systemressourcen sind häufig die zugrunde liegenden Werte für ein Design mit h
 
 Unten ist XAML-Beispielcode aus den Standarddateien „generic.xaml” und „themeresources.xaml” angegeben, um die Verwendung von **ThemeResource** zu veranschaulichen. Wir sehen uns nur eine Vorlage ([**Button**](https://msdn.microsoft.com/library/windows/apps/br209265))-Standardvorlage) und die Deklaration von zwei Eigenschaften ([**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) und [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414)) als Reaktion auf Designänderungen an.
 
-```xaml
+```xml
     <!-- Default style for Windows.UI.Xaml.Controls.Button -->
     <Style TargetType="Button">
         <Setter Property="Background" Value="{ThemeResource ButtonBackgroundThemeBrush}" />
@@ -85,7 +87,7 @@ Für die Eigenschaften wird hier ein [**Brush**](https://msdn.microsoft.com/libr
 
 Diese Eigenschaften werden auch von einigen Ansichtszuständen für ein [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)-Element angepasst. Beispielsweise ändert sich die Hintergrundfarbe, wenn Benutzer auf eine Schaltfläche klicken. Auch hier werden von den Animationen [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395) und [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) im Storyboard des Ansichtszustands [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132)-Objekte und Verweise auf Pinsel mit **ThemeResource** als Keyframewert verwendet.
 
-```xaml
+```xml
 <VisualState x:Name="Pressed">
   <Storyboard>
     <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Border"
@@ -102,7 +104,7 @@ Diese Eigenschaften werden auch von einigen Ansichtszuständen für ein [**Butto
 
 Jeder dieser Pinsel wurde bereits in „generic.xaml” definiert: Die Definition musste durchgeführt werden, bevor diese von Vorlagen genutzt wurden, um XAML-Vorwärtsverweise zu vermeiden. Unten sind diese Definitionen für das Designverzeichnis „Default” aufgeführt.
 
-```xaml
+```xml
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Default">
 ... 
@@ -116,7 +118,7 @@ Jeder dieser Pinsel wurde bereits in „generic.xaml” definiert: Die Definitio
 
 In allen anderen Designverzeichnissen sind diese Pinsel ebenfalls definiert, z. B.:
 
-```xaml
+```xml
         <ResourceDictionary x:Key="HighContrast">
             <!-- High Contrast theme resources -->
 ...
@@ -150,6 +152,6 @@ Sobald ein Ressourcenschlüssel als Teil einer **{ThemeResource}**-Verwendung vo
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

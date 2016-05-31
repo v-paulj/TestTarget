@@ -1,7 +1,8 @@
 ---
+author: mcleblanc
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: Zertifizierungskit für Windows-Apps
-description: Für die Veröffentlichung im Windows Store oder die Windows-Zertifizierung sollten Sie sie vor dem Übermitteln auf Ihrem Computer überprüfen und testen. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen.
+description: Damit Ihre App möglichst gute Chancen auf eine Veröffentlichung im Windows Store oder Windows-Zertifizierung hat, sollten Sie sie auf Ihrem Computer überprüfen und testen, bevor Sie sie zur Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen.
 ---
 # Zertifizierungskit für Windows-Apps
 
@@ -49,11 +50,11 @@ Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Ap
 
 ## Überprüfung der Windows-App mit dem Zertifizierungskit für Windows-Apps über eine Befehlszeile
 
-**Wichtig** Das Zertifizierungskit für Windows-Apps muss im Kontext einer aktiven Benutzersitzung ausgeführt werden.
+**Wichtig**  Das Zertifizierungskit für Windows-Apps muss im Kontext einer aktiven Benutzersitzung ausgeführt werden.
 
 1.  Navigieren Sie im Befehlsfenster zum Verzeichnis mit dem Zertifizierungskit für Windows-Apps.
 
-    **Hinweis** Der Standardpfad lautet „C:\\Programme\\Windows Kits\\10\\App Certification Kit\\“.
+    **Hinweis**   Der Standardpfad lautet „C:\\Programme\\Windows Kits\\10\\App Certification Kit\\“.
 
 2.  Geben Sie die folgenden Befehle in dieser Reihenfolge ein, um eine App zu testen, die bereits auf dem Testcomputer installiert ist:
 
@@ -69,9 +70,9 @@ Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Ap
 
 3.  Öffnen Sie nach dem Test die Berichtsdatei `[report file name]`, und überprüfen Sie die Testergebnisse.
 
-**Hinweis** Das Zertifizierungskit für Windows-Apps kann über einen Dienst ausgeführt werden. Der Dienst muss den Kitvorgang jedoch innerhalb einer aktiven Benutzersitzung initiieren, und die Ausführung unter „Session0“ ist nicht möglich.
+**Hinweis**  Das Zertifizierungskit für Windows-Apps kann über einen Dienst ausgeführt werden. Der Dienst muss den Kitvorgang jedoch innerhalb einer aktiven Benutzersitzung initiieren, und die Ausführung unter „Session0“ ist nicht möglich.
 
-**Hinweis** Weitere Informationen zur Befehlszeile des Zertifizierungskits für Windows-Apps erhalten Sie, wenn Sie den Befehl `appcert.exe /?` eingeben.
+**Hinweis**   Weitere Informationen zur Befehlszeile des Zertifizierungskits für Windows-Apps erhalten Sie durch Eingabe des Befehls `appcert.exe /?`
 
 ## Testen mit einem Computer mit geringem Energieverbrauch
 
@@ -94,6 +95,6 @@ Da Computer mit geringem Energieverbrauch weiterentwickelt werden, können sich 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,17 +1,19 @@
 ---
+author: mcleblanc
 title: Zugreifen auf Sensoren und Geräte von einer Hintergrundaufgabe
-description: Mit DeviceUseTrigger kann die universelle Windows-App im Hintergrund auf Sensoren und Peripheriegeräte zugreifen, auch wenn die Vordergrund-App angehalten wird.
+description: Mit DeviceUseTrigger kann Ihre universelle Windows-App im Hintergrund auf Sensoren und Peripheriegeräte zugreifen. Dies ist selbst dann möglich, wenn die Vordergrund-App angehalten wird.
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
 ---
 
 # Zugreifen auf Sensoren und Geräte von einer Hintergrundaufgabe
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 [
-							Mit **DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) kann Ihre universelle Windows-App im Hintergrund auf Sensoren und Peripheriegeräte zugreifen. Dies ist selbst dann möglich, wenn die Vordergrund-App angehalten wird. Je nachdem, wo Ihre App ausgeführt wird, kann sie eine Hintergrundaufgabe zum Synchronisieren von Daten mit Geräten oder zum Überwachen von Sensoren verwenden. Zur Verbesserung der Akkulaufzeit und Sicherstellung der Zustimmung durch den Benutzer unterliegt die Nutzung von [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) den Richtlinien, die in diesem Thema beschrieben werden.
+              Mit **DeviceUseTrigger**
+            ](https://msdn.microsoft.com/library/windows/apps/dn297337) kann Ihre universelle Windows-App im Hintergrund auf Sensoren und Peripheriegeräte zugreifen. Dies ist selbst dann möglich, wenn die Vordergrund-App angehalten wird. Je nachdem, wo Ihre App ausgeführt wird, kann sie eine Hintergrundaufgabe zum Synchronisieren von Daten mit Geräten oder zum Überwachen von Sensoren verwenden. Zur Verbesserung der Akkulaufzeit und Sicherstellung der Zustimmung durch den Benutzer unterliegt die Nutzung von [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) den Richtlinien, die in diesem Thema beschrieben werden.
 
 Erstellen Sie zum Zugreifen auf Sensoren oder Peripheriegeräte im Hintergrund eine Hintergrundaufgabe, für die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) verwendet wird. Ein Beispiel für die Vorgehensweise auf einem PC finden Sie unter [Beispiel für ein benutzerdefiniertes USB-Gerät](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Ein Beispiel für ein Smartphone finden Sie unter [Beispiel für Hintergrundsensoren](http://go.microsoft.com/fwlink/p/?LinkId=393307).
 
@@ -41,7 +43,7 @@ Hintergrundaufgaben mit [**DeviceUseTrigger**](https://msdn.microsoft.com/librar
 | Netzwerk (drahtgebunden)    | ![Dieses Protokoll wird unterstützt.](images/ap-tools.png)                                                                                                                                            |
 | Netzwerk (WLAN)    | ![Dieses Protokoll wird unterstützt.](images/ap-tools.png)                                                                                                                                            |
 | IDeviceIOControl | ![DeviceServicingTrigger unterstützt IDeviceIOControl.](images/ap-tools.png)                                                                                                                       |
-| Sensor-API      | ![DeviceServicingTrigger unterstützt APIs für universelle Sensoren](images/ap-tools.png) (beschränkt auf Sensoren der [universellen Gerätefamilie](https://msdn.microsoft.com/library/windows/apps/dn894631)) |
+| Sensor-API      | ![](images/ap-tools.png)deviceservicingtrigger supports universal sensors apis[ (auf Sensoren der ](https://msdn.microsoft.com/library/windows/apps/dn894631)universellen Gerätefamilie beschränkt) |
 
  
 
@@ -194,6 +196,6 @@ Zusätzlich zu [**Unregister**](https://msdn.microsoft.com/library/windows/apps/
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

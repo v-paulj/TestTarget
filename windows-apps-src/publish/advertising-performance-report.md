@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Performance-Daten für die Anzeigeneinheiten in Ihren Apps können Sie mithilfe der Berichte zur Anzeigen-Performance auf App- und Kontoebene im Windows Dev Center-Dashboard anzeigen.
 title: Bericht zur Anzeigen-Performance
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
@@ -9,17 +10,19 @@ ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
 
 Zum Anzeigen von Performance-Daten für die Anzeigeneinheiten in Ihren Apps können Sie die folgenden Berichte im Windows Dev Center-Dashboard verwenden:
 
--   [Bericht zur Anzeigen-Performance auf App-Ebene](advertising-performance-report.md#app-level-advertising-performance-report). Dieser Bericht enthält die Performance-Daten für die Microsoft-Anzeigeneinheiten in der aktuell im Dashboard ausgewählten App.
--   [Bericht zur Anzeigen-Performance auf Kontoebene](advertising-performance-report.md#account-level-advertising-performance-report). Dieser Bericht enthält die detaillierten Performance-Daten für Microsoft-Anzeigeneinheiten und Community-Anzeigen für alle Apps, die in Ihrem Entwicklerkonto registriert sind.
--   [Bericht zur Anzeigen-Performance auf Dashboardebene](advertising-performance-report.md#dashboard-level-advertising-performance-report). Dieser Bericht befindet sich auf der Seite **Dashboardübersicht** und enthält eine Zusammenfassung der Performance-Daten für Microsoft-Anzeigeneinheiten in allen Apps, die in Ihrem Entwicklerkonto registriert sind.
+-   [Bericht zur Anzeigenleistung auf App-Ebene](advertising-performance-report.md#app-level-advertising-performance-report). Dieser Bericht enthält die Performance-Daten für die Microsoft-Anzeigeneinheiten in der aktuell im Dashboard ausgewählten App.
+-   [Bericht zur Anzeigenleistung auf Kontoebene](advertising-performance-report.md#account-level-advertising-performance-report). Dieser Bericht enthält die detaillierten Performance-Daten für Microsoft-Anzeigeneinheiten und Community-Anzeigen für alle Apps, die in Ihrem Entwicklerkonto registriert sind.
+-   [Bericht zur Anzeigenleistung auf Dashboardebene](advertising-performance-report.md#dashboard-level-advertising-performance-report). Dieser Bericht befindet sich auf der Seite **Dashboardübersicht** und enthält eine Zusammenfassung der Performance-Daten für Microsoft-Anzeigeneinheiten in allen Apps, die in Ihrem Entwicklerkonto registriert sind.
 
-Standardmäßig werden die Berichte nach der Performance in den letzten 30 Tagen auf allen Geräten gefiltert. Klicken Sie zum Ändern dieser Filter auf **Seitenfilter**, und wählen Sie einen anderen Zeitrahmen oder einen individuellen Gerätetyp aus. Beachten Sie, dass die Aggregation der Daten basierend auf UTC und nicht Ihrer jeweiligen Zeitzone erfolgt.
+Standardmäßig werden die Berichte nach der Performance in den letzten 30 Tagen auf allen Geräten gefiltert. Klicken Sie zum Ändern dieser Filter auf **Seitenfilter**, und wählen Sie einen anderen Zeitrahmen oder einen individuellen Gerätetyp aus. 
+
+> **Hinweis** Es gibt möglicherweise Unterschiede zwischen Leistungsberichten in Dev Center und pubCenter. Im Gegensatz zur Aggregation von pubCenter-Berichten erfolgt die Aggregation von Daten zur Anzeigenleistung in Dev Center auf der Grundlage von UTC und nicht Ihrer jeweiligen Zeitzone.
 
 Die folgenden Abschnitte enthalten weitere Details zu diesen Berichten.
 
 ## Bericht zur Anzeigen-Performance auf App-Ebene
 
-Diese Seite enthält Performance-Daten in Diagramm-, Weltkarten- und Tabellenform für die Microsoft-Anzeigeneinheiten in der aktuell im Dashboard ausgewählten App. Wählen Sie zum Anzeigen dieses Berichts eine Ihrer Apps im Dashboard aus, und klicken Sie im Navigationsbereich auf **Analysen** &gt; **Anzeigen-Performance**.
+Diese Seite enthält Performance-Daten in Diagramm-, Weltkarten- und Tabellenform für die Microsoft-Anzeigeneinheiten in der aktuell im Dashboard ausgewählten App. Wählen Sie zum Anzeigen dieses Berichts eine Ihrer Apps im Dashboard aus, und klicken Sie im Navigationsbereich auf **Analyse**&gt;**Anzeigen-Performance**.
 
 Die Daten werden aus den folgenden Leistungsmetriken abgerufen, die für die Anzeigen in Ihrer App nachverfolgt werden:
 
@@ -68,9 +71,9 @@ Die Daten werden aus den folgenden Leistungsmetriken abgerufen, die für die Anz
 -   **Anforderungen**: Die Anzahl der von Ihrer App gesendeten Community-Anzeigenanforderungen.
 -   **Füllrate**: Gibt den Prozentsatz der von Ihrer App gesendeten Community-Anzeigenanforderungen an, bei denen eine Anzeige angezeigt wurde.
 -   **Klicks**: Gibt an, wie häufig in Ihrer App auf eine Community-Anzeige geklickt wurde.
--   **CTR** (Click-Through Rate): Gibt an, wie oft auf eine Community-Anzeige geklickt wurde (geteilt durch die Anzahl von Anzeigenaufrufen).
--   **Erworbenes Guthaben**: Das für diese App erworbene Community-Anzeigenguthaben. Ausführlichere Informationen zum Erwerb von Guthaben finden Sie unter [Über Community Anzeigen](about-community-ads.md).
--   **Beanspruchtes Guthaben**: Das für diese App beanspruchte Community-Anzeigenguthaben. Ausführlichere Informationen zur Beanspruchung von Guthaben finden Sie unter [Über Community Anzeigen](about-community-ads.md).
+-   **CTR** (Click-Through-Rate): Gibt an, wie oft auf eine Community-Anzeige geklickt wurde (geteilt durch die Anzahl von Anzeigenaufrufen).
+-   **Erworbenes Guthaben**: Gibt das für diese App erworbene Community-Anzeigenguthaben an. Ausführlichere Informationen zum Erwerb von Guthaben finden Sie unter [Über Community Anzeigen](about-community-ads.md).
+-   **Beanspruchtes Guthaben**: Gibt das für diese App beanspruchte Community-Anzeigenguthaben an. Ausführlichere Informationen zur Beanspruchung von Guthaben finden Sie unter [Über Community Anzeigen](about-community-ads.md).
 
 Klicken Sie auf **Diagramm** oder **Karte**, um die Daten für eine dieser Metriken in einer Diagramm- oder Weltkartenansicht zu analysieren. Klicken Sie auf die Kopfzeilen oberhalb des Diagramms oder der Karte, um zwischen den verschiedenen Metriken zu wechseln. In der Kartenansicht stellen dunklere Schattierungen höhere Werte und hellere Schattierungen niedrigere Werte dar. Sie können mit der Maus auf ein bestimmtes Land oder eine Region auf der Karte zeigen, um den Wert der ausgewählten Metrik zu analysieren. Sie können auch einen beliebigen Bereich der Karte vergrößern, um Daten für kleinere Länder anzuzeigen.
 
@@ -87,6 +90,6 @@ Der Abschnitt **Anzeigen-Performance** auf der Seite **Dashboard-Übersicht** en
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

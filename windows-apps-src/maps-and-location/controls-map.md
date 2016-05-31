@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 Description: Mithilfe des Kartensteuerelements können Straßenkarten und Luftansichten, Wegbeschreibungen, Suchergebnisse und Verkehr angezeigt werden.
 title: Richtlinien für Karten
 ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
@@ -68,6 +69,6 @@ Dieses Beispiel zeigt eine App mit einem 3D-Luftbild und einer Streetside-Ansich
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

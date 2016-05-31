@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Befolgen Sie bei der Auswahl von Schriftarten und der Angabe von Schriftgraden und Schriftfarben die folgenden Richtlinien.
 title: Schriftarten
 ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
@@ -8,10 +9,6 @@ template: detail.hbs
 
 # Richtlinien für Schriftarten
 
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
 **Wichtige APIs**
 
 -   [**FontFamily-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/br209655)
@@ -20,7 +17,7 @@ Die richtige Verwendung von Schriftgraden, -breiten, -farben, Laufweite und Abst
 
 Eine Liste der Segoe UI Symbol-Symbole finden Sie unter [**Richtlinien für Segoe UI Symbol-Symbole**](segoe-ui-symbol-font.md).
 
-## <span id="The_Windows_10_type_ramp"></span><span id="the_windows_10_type_ramp"></span><span id="THE_WINDOWS_10_TYPE_RAMP"></span>Die Typhierarchie von Windows 10
+## <span id="The_Windows_10_type_ramp"></span><span id="the_windows_10_type_ramp"></span><span id="THE_WINDOWS_10_TYPE_RAMP"></span>Der Typenverlauf von Windows 10
 
 
 Die Typhierarchie stellt eine wichtige gestalterische Beziehung zwischen Überschrift und Textkörper her und schafft damit eine klare und verständliche Hierarchie zwischen den verschiedenen Ebenen. Benutzer verstehen sofort, wo sie Informationen finden und wie Sie die Seite analysieren können.
@@ -271,11 +268,12 @@ Dies ist die Liste der Schriftarten, die garantiert in allen Editionen von Windo
 
 ## <span id="related_topics"></span>Verwandte Themen
 
-
 **Für Designer**
 * [Beschriftung (oder Textblock)](labels.md)
 * [Segoe UI Symbol-Symbole](segoe-ui-symbol-font.md)
-**Für Entwickler (XAML)**
+            
+          
+            **Für Entwickler (XAML)**
 * [XAML-Designressourcen](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [Gestalten einer App-Seite](https://msdn.microsoft.com/library/windows/apps/hh872191)
 * [Segoe UI Symbol-Symbole](segoe-ui-symbol-font.md)
@@ -294,6 +292,6 @@ Dies ist die Liste der Schriftarten, die garantiert in allen Editionen von Windo
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

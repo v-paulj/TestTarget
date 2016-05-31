@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: Windows 10 und neue Entwicklungstools stellen Werkzeuge, Features und Umgebungen zur Verfügung, die durch die neue universelle Windows-Plattform (UWP) unterstützt werden.
 title: Neuigkeiten für Entwickler in Windows 10, RTM – Juli 2015
 ---
@@ -95,7 +96,7 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 <li>[<strong>Windows.UI.Xaml.Controls.Maps</strong>](https://msdn.microsoft.com/library/windows/apps/dn610751)-Namespace – Anzeigen von Karten.</li>
 <li>[<strong>Windows.Services.Maps</strong>](https://msdn.microsoft.com/library/windows/apps/dn636979)-Namespace – Suchen nach Orten und Routen.</li>
 </ul>
-<p>Fordern Sie einen Schlüssel im [Bing Maps Developer Center](https://www.bingmapsportal.com/) an, um diese APIs noch heute in einer universellen Windows-App einsetzen zu können. Weitere Informationen finden Sie unter [How to authenticate a Maps app](https://msdn.microsoft.com/library/windows/apps/xaml/dn741528). Eine weitere Neuheit für Windows 10 besteht darin, dass PC- und Smartphone-Benutzer über die Einstellungs-App Offlinekarten herunterladen können. Sofern verfügbar, werden Offlinekarten vom [<strong>MapControl</strong>](https://msdn.microsoft.com/library/windows/apps/dn637004)-Element zum Anzeigen von Karten genutzt, wenn kein Internetzugriff verfügbar ist.</p></td>
+<p>Fordern Sie einen Schlüssel im [Bing Maps Developer Center](https://www.bingmapsportal.com/) an, um diese APIs heute schon in einer universellen Windows-App einsetzen zu können. Weitere Infos finden Sie unter [So wird’s gemacht: Authentifizieren einer Karten-App](https://msdn.microsoft.com/library/windows/apps/xaml/dn741528). Eine weitere Neuheit für Windows 10 besteht darin, dass PC- und Smartphone-Benutzer über die Einstellungs-App Offlinekarten herunterladen können. Sofern verfügbar, werden Offlinekarten vom [<strong>MapControl</strong>](https://msdn.microsoft.com/library/windows/apps/dn637004)-Element zum Anzeigen von Karten genutzt, wenn kein Internetzugriff verfügbar ist.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Zuordnung für Eingabeschaltfläche</td>
@@ -107,7 +108,7 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 <p>Das [<strong>InkCanvas</strong>](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement definiert einen Überlagerungsbereich zum Zeichnen und Rendern letzter Striche. Die Funktionen dieses Steuerelements (Eingabe, Verarbeitung und Rendering) basieren auf den Klassen [<strong>InkPresenter</strong>](https://msdn.microsoft.com/library/windows/apps/dn922011), [<strong>InkStroke</strong>](https://msdn.microsoft.com/library/windows/apps/br208485), [<strong>InkRecognizer</strong>](https://msdn.microsoft.com/library/windows/apps/br208478) und [<strong>InkSynchronizer</strong>](https://msdn.microsoft.com/library/windows/apps/dn903979).</p>
 <p></p>
 <div class="alert">
-<strong>Wichtig</strong> Diese Klassen werden in Windows-Apps mit JavaScript nicht unterstützt.
+<strong>Wichtig</strong>  Diese Klassen werden in Windows-Apps mit JavaScript nicht unterstützt.
 </div>
 <div>
  
@@ -204,7 +205,7 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 <td align="left"><p>In universellen Windows-Apps wird die [<strong>PasswordRevealMode</strong>](https://msdn.microsoft.com/library/windows/apps/dn890867)-Eigenschaft durch die [<strong>IsPasswordRevealButtonEnabled</strong>](https://msdn.microsoft.com/library/windows/apps/hh702579)-Eigenschaft ersetzt, um ein einheitliches Verhalten in allen Gerätefamilien zu gewährleisten.</p>
 <p></p>
 <div class="alert">
-<strong>Achtung</strong>: Vor Windows 10 wurde die Schaltfläche für die Kennwortanzeige nicht standardmäßig angezeigt. In universellen Windows-Apps wird sie standardmäßig angezeigt. Wenn die Sicherheit Ihrer App erfordert, dass das Kennwort immer verdeckt ist, muss [<strong>PasswordRevealMode</strong>](https://msdn.microsoft.com/library/windows/apps/dn890867) auf „Hidden“ festgelegt werden.
+<strong>Achtung</strong>  Vor Windows 10 wurde die Schaltfläche für die Kennwortanzeige nicht standardmäßig angezeigt. In universellen Windows-Apps wird sie standardmäßig angezeigt. Wenn die Sicherheit Ihrer App erfordert, dass das Kennwort immer verdeckt ist, muss [<strong>PasswordRevealMode</strong>](https://msdn.microsoft.com/library/windows/apps/dn890867) auf „Hidden“ festgelegt werden.
 </div>
 <div>
  
@@ -220,7 +221,7 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 </tr>
 <tr class="even">
 <td align="left">ContentDialog</td>
-<td align="left">Das [<strong>ContentDialog</strong>](https://msdn.microsoft.com/library/windows/apps/dn633972)-Steuerelement aus Windows Phone 8.1 ist jetzt für universelle Windows-Apps in allen Gerätefamilien verfügbar. Mit <strong>ContentDialog</strong> können Sie ein anpassbares modales Dialogfeld anzeigen, das auf sämtlichen Geräten einwandfrei funktioniert.</td>
+<td align="left">Das [<strong>ContentDialog</strong>](https://msdn.microsoft.com/library/windows/apps/dn633972)-Steuerelement aus Windows Phone 8.1 ist jetzt für universelle Windows-Apps in allen Gerätefamilien verfügbar. <strong>ContentDialog</strong> ermöglicht die Anzeige eines anpassbaren modalen Dialogfelds, das auf sämtlichen Geräten einwandfrei funktioniert.</td>
 </tr>
 <tr class="odd">
 <td align="left">Pivot</td>
@@ -285,7 +286,7 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 <td align="left">Cortana</td>
 <td align="left"><p>Erweitern Sie die grundlegenden Funktionen von <strong>Cortana</strong> durch Sprachbefehle, die eine einzelne Aktion in einer externen Anwendung starten und ausführen.</p>
 <p><strong>Cortana</strong> integriert die grundlegenden Funktionen Ihrer App, bietet einen zentralen Einstiegspunkt, über den der Benutzer die meisten Aufgaben ohne Öffnen der App ausführen kann, und wird somit zum Bindeglied zwischen Ihrer App und dem Benutzer. In vielen Fällen spart der Benutzer dadurch viel Zeit und Mühe.</p>
-<p>Hier erfahren Sie Folgendes: [integrate your app into the Cortana canvas](https://msdn.microsoft.com/library/windows/apps/xaml/dn974230) In den speziell für <strong>Cortana</strong> geschriebenen Entwurfsempfehlungen und Richtlinien für die Gestaltung der Benutzeroberfläche unter [Design basics for Universal Windows apps](https://dev.windows.com/design/design-basics) finden Sie wertvolle Anregungen.</p></td>
+<p>Hier erfahren Sie, wie Sie [Ihre App in die Cortana-Canvas integrieren](https://msdn.microsoft.com/library/windows/apps/xaml/dn974230). In den speziell für <strong>Cortana</strong> geschriebenen Entwurfsempfehlungen und Richtlinien für die Gestaltung der Benutzeroberfläche in den [Designgrundlagen für universelle Windows-Apps](https://dev.windows.com/design/design-basics) finden Sie wertvolle Anregungen.</p></td>
 </tr>
 <tr class="even">
 <td align="left">Datei-Explorer</td>
@@ -299,11 +300,11 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 <td align="left">Einstellungen</td>
 <td align="left"><p>Verwenden Sie das ms-settings-Protokoll mit der [<strong>LaunchUriAsync</strong>](https://msdn.microsoft.com/library/windows/apps/hh701476)-Methode, um integrierte Einstellungsseiten anzuzeigen. Der folgende Code zeigt beispielsweise die WLAN-Einstellungsseite an.</p>
 <p><code>bool result = await Launcher.LaunchUriAsync(new Uri(&quot;ms-settings://network/wifi&quot;));</code></p>
-<p>Eine Liste der Einstellungsseiten, die Sie anzeigen können, finden Sie unter [How to display built-in settings pages by using the ms-settings protocol](https://msdn.microsoft.com/library/windows/apps/jj207014.aspx).</p></td>
+<p>Eine Liste der Einstellungsseiten, die Sie anzeigen können, finden Sie unter [Anzeigen integrierter Einstellungsseiten mithilfe des ms-settings-Protokolls](https://msdn.microsoft.com/library/windows/apps/jj207014.aspx).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">App-zu-App-Kommunikation</td>
-<td align="left"><p>Neue APIs unter Windows 10 für die [app-to-app communication](https://msdn.microsoft.com/library/windows/apps/xaml/dn997827) ermöglichen Windows-Anwendungen (und Windows-Webanwendungen) das gegenseitige Starten und das Austauschen von Daten und Dateien.</p>
+<td align="left"><p>Neue APIs unter Windows 10 für die [App-zu-App-Kommunikation](https://msdn.microsoft.com/library/windows/apps/xaml/dn997827) ermöglichen Windows-Anwendungen (und Windows-Webanwendungen) das gegenseitige Starten und das Austauschen von Daten und Dateien.</p>
 <p>Dank dieser neuen APIs können komplexe Aufgaben, für die Benutzer bisher mehrere Anwendungen nutzen mussten, jetzt nahtlos durchgeführt werden. Mit Ihrer App kann beispielsweise eine App für ein soziales Netzwerk gestartet werden, um einen Kontakt auszuwählen, oder eine Kassenanwendung, um einen Bezahlvorgang durchzuführen.</p></td>
 </tr>
 <tr class="even">
@@ -312,8 +313,8 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 </tr>
 <tr class="odd">
 <td align="left">App-Paketmanifest</td>
-<td align="left"><p>Die Aktualisierungen der [package manifest schema](https://msdn.microsoft.com/library/windows/apps/br211474)-Referenz für Windows 10 enthalten Elemente, die hinzugefügt, entfernt oder geändert wurden.</p>
-<p>Unter [Element Hierarchy](https://msdn.microsoft.com/library/windows/apps/dn934819) finden Sie Referenzinformationen zu allen Elementen, Attributen und Typen im Schema.</p></td>
+<td align="left"><p>Die Aktualisierungen der [Paketmanifestschema](https://msdn.microsoft.com/library/windows/apps/br211474)-Referenz für Windows 10 enthalten Elemente, die hinzugefügt, entfernt und geändert wurden.</p>
+<p>Unter [Elementhierarchie](https://msdn.microsoft.com/library/windows/apps/dn934819) finden Sie Referenzinformationen zu allen Elementen, Attributen und Typen im Schema.</p></td>
 </tr>
 </tbody>
 </table>
@@ -333,10 +334,10 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 <td align="left">Microsoft Surface Hub</td>
 <td align="left"><p>Der Microsoft Surface Hub ist ein leistungsfähiges Tool für die Teamarbeit und eine großformatige Anzeigeplattform für universelle Windows-Apps, die direkt auf dem Surface Hub oder auf einem angeschlossenen Gerät laufen.</p>
 <p>Entwickeln Sie eigene, speziell auf Ihr Unternehmen ausgerichtete Apps, die Vorteile wie Großbildschirm, Touch- und Freihandeingabe und umfassende integrierte Hardware wie Kameras und Sensoren optimal nutzen.</p>
-<p>Unter [Design basics for Universal Windows apps](https://dev.windows.com/design/design-basics) finden Sie Entwurfsempfehlungen und Richtlinien für die Gestaltung der Benutzeroberfläche, die sich speziell auf den Surface Hub beziehen. In diesen Dokumenten werden Techniken für reaktionsfähiges Design für universelle Windows-Apps erläutert.</p>
+<p>Unter [Designgrundlagen für universelle Windows-Apps](https://dev.windows.com/design/design-basics) finden Sie Entwurfsempfehlungen und Richtlinien für die Gestaltung der Benutzeroberfläche, die sich speziell auf den Surface-Hub beziehen. In diesen Dokumenten werden Techniken für reaktionsfähiges Design für universelle Windows-Apps erläutert.</p>
 <p>Ausführliche Informationen zur Unterstützung freigegebener Apps finden Sie unter [<strong>SharedModeSettings</strong>](https://msdn.microsoft.com/library/windows/apps/dn949019).</p>
 <p>Informationen zur Freihandeingabe und Details zur Unterstützung der Multipoint-Freihandeingabe im neuen [<strong>InkCanvas</strong>](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement finden Sie unter [<strong>Windows.UI.Input.Inking</strong>](https://msdn.microsoft.com/library/windows/apps/br208524) und [<strong>Windows.UI.Input.Inking.Core</strong>](https://msdn.microsoft.com/library/windows/apps/dn958452).</p>
-<p>Informationen zur Verarbeitung von Sensoreingaben finden Sie unter [Integrating devices, printers, and sensors](https://msdn.microsoft.com/library/windows/apps/br229563).</p></td>
+<p>Informationen zur Verarbeitung von Sensoreingaben finden Sie unter [Integrieren von Geräten, Druckern und Sensoren](https://msdn.microsoft.com/library/windows/apps/br229563).</p></td>
 </tr>
 <tr class="even">
 <td align="left">Position</td>
@@ -352,9 +353,9 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 <tr class="odd">
 <td align="left">AllJoyn</td>
 <td align="left"><p>Mit dem Windows-Runtime-Namespace [<strong>Windows.Devices.AllJoyn</strong>](https://msdn.microsoft.com/library/windows/apps/dn894971) wird die Microsoft-Implementierung von AllJoyn-Open Source-Softwareframework und -diensten eingeführt. Diese APIs ermöglichen Ihrer universalen Windows-Gerät-App, sich an mit AllJoyn gesteuerten Internet der Dinge (Internet of Things, IoT)-Szenarien mit anderen Geräten zu beteiligen. Weitere Details über die AllJoyn C-APIs erhalten Sie, wenn Sie die Dokumentation unter [The AllSeen Alliance](https://allseenalliance.org/) herunterladen.</p>
-<p>Mit dem in dieser Version enthaltenen Tool [AllJoynCodeGen tool](https://msdn.microsoft.com/library/windows/apps/dn913809) generieren Sie eine Windows-Komponente, mit der Sie AllJoyn-Szenarien für Ihre Geräte-App ermöglichen können.</p>
+<p>Mit dem in dieser Version enthaltenen Tool [AllJoynCodeGen](https://msdn.microsoft.com/library/windows/apps/dn913809) generieren Sie eine Windows-Komponente, mit der Sie AllJoyn-Szenarien für Ihre Geräte-App ermöglichen.</p>
 <div class="alert">
-<strong>Hinweis</strong> Windows 10 IoT Core ist jetzt für eine neue Klasse kleiner Geräte verfügbar, sodass Sie IoT-Geräte (Internet der Dinge) mit Windows und Visual Studio erstellen können. Weitere Informationen zu Windows IoT finden Sie unter [WindowsOnDevices.com](http://www.windowsondevices.com/).
+<strong>Hinweis</strong>  Windows 10 IoT Core ist jetzt für eine neue Klasse kleiner Geräte verfügbar, sodass Sie IoT-Geräte (Internet der Dinge) mit Windows und Visual Studio erstellen können. Weitere Informationen zu Windows IoT finden Sie unter [WindowsOnDevices.com](http://www.windowsondevices.com/).
 </div>
 <div>
  
@@ -421,7 +422,7 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 <tr class="even">
 <td align="left">Media Foundation Transcode Video Processor (XVP)-Unterstützung für Media Foundation-Transformationen (MFTs)</td>
 <td align="left"><p>Windows-Apps, die Media Foundation-Transformationen (MFTs) verwenden, können jetzt den <strong>Media Foundation Transcode Video Processor</strong> (XVP) zum Konvertieren, Skalieren und Transformieren von Rohvideodaten verwenden:</p>
-<p>Das neue [MF_XVP_CALLER_ALLOCATES_OUTPUT](https://msdn.microsoft.com/library/windows/desktop/dn803919)-Attribut ermöglicht die Ausgabe von Texturen, die dem Aufrufer zugeordnet sind, auch im Microsoft DirectX Video Acceleration (DXVA)-Modus.</p>
+<p>Das neue [MF_XVP_CALLER_ALLOCATES_OUTPUT](https://msdn.microsoft.com/library/windows/desktop/dn803919)-Attribut ermöglicht selbst im Microsoft DirectX Video Acceleration (DXVA)-Modus die Ausgabe an Texturen, die dem Aufrufer zugeordnet sind.</p>
 <p>Mit der neuen [<strong>IMFVideoProcessorControl2</strong>](https://msdn.microsoft.com/library/windows/desktop/dn800741)-Schnittstelle kann Ihre App Hardwareeffekte aktivieren, unterstützte Hardwareeffekte abfragen und den vom Videoprozessor durchgeführten Drehvorgang außer Kraft setzen.</p></td>
 </tr>
 <tr class="odd">
@@ -490,7 +491,7 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 <td align="left">Wi-Fi Direct-API-Update</td>
 <td align="left"><p>Der Gerätebroker wird aktualisiert, um die Kopplung mit Geräten zu ermöglichen, ohne die App zu verlassen. Mithilfe der Erweiterungen des [<strong>Windows.Devices.WiFiDirect</strong>](https://msdn.microsoft.com/library/windows/apps/dn297687)-Namespace kann ein Gerät dafür sorgen, dass es für andere Geräte auffindbar ist. Außerdem kann es auf eingehende Verbindungsbenachrichtigungen lauschen.</p>
 <div class="alert">
-<strong>Hinweis</strong>: In dieser Version sind die Verbesserungen am Wi-Fi Direct-Feature nicht in UX integriert und unterstützen nur die Kopplung per Tastendruck. Außerdem unterstützt diese Version nur eine aktive Verbindung.
+<strong>Hinweis</strong>  In dieser Version sind die Verbesserungen am Wi-Fi Direct-Feature nicht in die Benutzeroberfläche integriert und unterstützen nur die Kopplung per Tastendruck. Außerdem unterstützt diese Version nur eine aktive Verbindung.
 </div>
 <div>
  
@@ -534,9 +535,9 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 </tr>
 <tr class="even">
 <td align="left">Version</td>
-<td align="left"><p>Mithilfe der [Version Helper functions](https://msdn.microsoft.com/library/windows/desktop/dn424972) können Sie die Version des Betriebssystems ermitteln. Unter Windows 10 wurden diese Hilfsfunktionen um die neue Funktion [<strong>IsWindows10OrGreater</strong>](https://msdn.microsoft.com/library/windows/desktop/dn905474) erweitert. Zur Abfrage der Systemversion sollten Sie diese Hilfsfunktionen anstelle der veralteten [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451)-Funktion und [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439)-Funktion verwenden. Weitere Informationen zum Abrufen der Systemversion finden Sie unter [ Getting the System Version](https://msdn.microsoft.com/library/windows/desktop/ms724429).</p>
-<p>Wenn Sie die veraltete [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451)-Funktion oder [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439)-Funktion verwenden, um die Versionsinformationen in einer [<strong>OSVERSIONINFOEX</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724833)-Struktur oder [<strong>OSVERSIONINFO</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724834)-Struktur abzurufen, müssen Sie berücksichtigen, dass die darin enthaltenen Versionsnummern von 6.3 für Windows 8.1 und Windows Server 2012 R2 auf 10.0 für Windows 10 erhöht werden. Weitere Informationen zu Versionsnummern des Betriebssystems finden Sie unter [Operating System Version](https://msdn.microsoft.com/library/windows/desktop/ms724832).</p>
-<p>Außerdem müssen Sie Ihre Anwendung explizit auf Windows 8.1 oder Windows 10 ausrichten, um mithilfe der [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451)-Funktion oder [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439)-Funktion die richtigen Versionsinformationen für diese Versionen abzurufen. Weitere Informationen dazu, wie Sie die Anwendung auf diese Windows-Versionen ausrichten, finden Sie unter [Targeting your application for Windows](https://msdn.microsoft.com/library/windows/desktop/dn481241).</p></td>
+<td align="left"><p>Mithilfe der [Versionsabfrage-Funktionen](https://msdn.microsoft.com/library/windows/desktop/dn424972) können Sie die Version des Betriebssystems ermitteln. Unter Windows 10 wurden diese Hilfsfunktionen um die neue Funktion [<strong>IsWindows10OrGreater</strong>](https://msdn.microsoft.com/library/windows/desktop/dn905474) erweitert. Zur Abfrage der Systemversion sollten Sie diese Hilfsfunktionen anstelle der veralteten [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451)-Funktion und [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439)-Funktion verwenden. Weitere Informationen zum Abfragen der Systemversion finden Sie unter [Abrufen der Systemversion](https://msdn.microsoft.com/library/windows/desktop/ms724429).</p>
+<p>Wenn Sie die veraltete [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451)-Funktion oder [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439)-Funktion verwenden, um die Versionsinformationen in einer [<strong>OSVERSIONINFOEX</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724833)-Struktur oder [<strong>OSVERSIONINFO</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724834)-Struktur abzurufen, müssen Sie berücksichtigen, dass die darin enthaltenen Versionsnummern von 6.3 für Windows 8.1 und Windows Server 2012 R2 auf 10.0 für Windows 10 erhöht werden. Weitere Informationen zu Versionsnummern des Betriebssystems finden Sie unter [Version des Betriebssystems](https://msdn.microsoft.com/library/windows/desktop/ms724832).</p>
+<p>Außerdem müssen Sie Ihre Anwendung explizit auf Windows 8.1 oder Windows 10 ausrichten, um mithilfe der [<strong>GetVersionEx</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724451)-Funktion oder [<strong>GetVersion</strong>](https://msdn.microsoft.com/library/windows/desktop/ms724439)-Funktion die richtigen Versionsinformationen für diese Versionen abzurufen. Weitere Informationen dazu, wie Sie die Anwendung auf diese Windows-Versionen ausrichten, finden Sie unter [Ausrichten Ihrer Anwendung auf Windows](https://msdn.microsoft.com/library/windows/desktop/dn481241).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Benutzerinformationen</td>
@@ -585,7 +586,7 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 </tr>
 <tr class="even">
 <td align="left">Ablaufprotokollierung</td>
-<td align="left"><p>[TraceLogging](https://msdn.microsoft.com/library/windows/desktop/dn904636) ist eine neue Ereignisablauf-API für Benutzermodus-Apps und Kernelmodustreiber. Sie basiert auf [Event Tracing for Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW). Diese API bietet eine vereinfachte Möglichkeit, Code zu instrumentieren und strukturierte Daten mit Ereignissen einzubeziehen, ohne dass eine separate Manifest-XML-Datei für die Instrumentierung erforderlich ist.</p>
+<td align="left"><p>[TraceLogging](https://msdn.microsoft.com/library/windows/desktop/dn904636) ist eine neue Ereignisablaufverfolgungs-API für Benutzermodus-Apps und Kernelmodustreiber. Sie basiert auf der [Ereignisablaufverfolgung für Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW). Diese API liefert eine vereinfachte Möglichkeit, Code zu instrumentieren und strukturierte Daten mit Ereignissen einzubeziehen, ohne dass eine separate Manifest-XML-Datei für die Instrumentierung erforderlich ist.</p>
 <p>TraceLogging-APIs für WinRT, .NET und C/C++ sind für verschiedene Entwicklerzielgruppen verfügbar.</p></td>
 </tr>
 </tbody>
@@ -620,7 +621,7 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 </tr>
 <tr class="odd">
 <td align="left">Benutzerdefinierte Titelleisten</td>
-<td align="left">Für UWP-Apps für die Desktop-Gerätefamilie können Sie nun die [<strong>ApplicationViewTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906115)-Klasse mit der [<strong>ApplicationView.TitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906131)-Eigenschaft und [<strong>Window.SetTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn965560)-Methode verwenden, um den Inhalt der standardmäßigen Windows-Titelleiste durch Ihren eigenen benutzerdefinierten XAML-Inhalt zu ersetzen. Die XAML wird als „system chrome“, behandelt, damit Windows die Eingabeereignisse anstelle Ihrer App behandelt. Dies bedeutet, dass der Benutzer weiterhin ziehen und die Größe des Fensters verändern kann, auch dann, wenn er auf den Inhalt Ihrer benutzerdefinierten Titelleiste klickt.</td>
+<td align="left">Für UWP-Apps für die Familie der Desktopgeräte können Sie nun die [<strong>ApplicationViewTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906115)-Klasse mit der [<strong>ApplicationView.TitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn906131)-Eigenschaft und [<strong>Window.SetTitleBar</strong>](https://msdn.microsoft.com/library/windows/apps/dn965560)-Methode verwenden, um den Inhalt der standardmäßigen Windows-Titelleiste durch Ihren eigenen benutzerdefinierten XAML-Inhalt zu ersetzen. Ihr XAML-Code wird als „System Chrome“, behandelt, damit die Eingabeereignisse von Windows anstatt von Ihrer App behandelt werden. Dies bedeutet, dass der Benutzer weiterhin ziehen und die Größe des Fensters verändern kann, auch dann, wenn er auf den Inhalt Ihrer benutzerdefinierten Titelleiste klickt.</td>
 </tr>
 </tbody>
 </table>
@@ -638,10 +639,10 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 <tbody>
 <tr class="odd">
 <td align="left">Internet Explorer</td>
-<td align="left"><p>Internet Explorer führt den Edgemodus ein: ein neuer „Live“-Dokumentmodus, der für maximale Interoperabilität mit anderen modernen Browsern und Webinhalten entwickelt wurde. Dieser experimentelle Modus wird nach und nach einer zufällig ausgewählten Gruppe von Windows 10-Benutzern bereitgestellt. Sie können den Edgemodus über den neuen IE-Mechanismus <strong>about:flags</strong> manuell aktivieren oder deaktivieren. Weitere Informationen:</p>
+<td align="left"><p>Internet Explorer führt den Edgemodus ein: ein neuer Live-Dokumentmodus, der für maximale Interoperabilität mit anderen modernen Browsern und Webinhalten entwickelt wurde. Dieser experimentelle Modus wird nach und nach einer zufällig ausgewählten Gruppe von Windows 10-Benutzern bereitgestellt. Sie können den Edgemodus über den neuen IE-Mechanismus <strong>about:flags</strong> manuell aktivieren oder deaktivieren. Weitere Informationen:</p>
 <ul>
-<li>[Living on the Edge – our next step in helping the web just work](http://blogs.msdn.com/b/ie/archive/2014/11/11/living-on-the-edge-our-next-step-in-interoperability.aspx).</li>
-<li>[The Internet Explorer for Windows 10 Developer Guide](https://dev.windows.com/microsoft-edge/).</li>
+<li>[Der Edgemodus – unser nächster Schritt](http://blogs.msdn.com/b/ie/archive/2014/11/11/living-on-the-edge-our-next-step-in-interoperability.aspx).</li>
+<li>[Das Entwicklerhandbuch für Internet Explorer für Windows 10](https://dev.windows.com/microsoft-edge/).</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -686,6 +687,6 @@ Im Folgenden werden die neuen Features in Windows 10, RTM einzeln erläutert.
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

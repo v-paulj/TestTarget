@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Behandeln des Anhaltens von Apps
 description: Hier erfahren Sie, wie Sie wichtige Anwendungsdaten speichern, wenn das System die App anhält.
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
@@ -7,7 +8,7 @@ ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
 # Behandeln des Anhaltens von Apps
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -58,7 +59,7 @@ MainPage::MainPage()
 {
    InitializeComponent();
    Application::Current->Suspending += 
-       ref new SuspendingEventHandler(this, &amp;MainPage::App_Suspending);
+       ref new SuspendingEventHandler(this, &MainPage::App_Suspending);
 }
 ```
 
@@ -107,11 +108,11 @@ Das System versucht, die App und die dazugehörigen Daten zu speichern, während
 
 Das System benachrichtigt eine App nicht, wenn sie beendet wird. Wenn Ihre App angehalten wird, muss sie daher die App-Daten speichern und die exklusiven Ressourcen und Dateihandles freigeben, damit diese beim erneuten Aktivieren der App nach der Beendigung wiederhergestellt werden können.
 
-> **Hinweis**   Wenn Sie asynchrone Arbeiten erledigen müssen, während die App angehalten wird, müssen Sie den Abschluss des Anhaltens bis zur Fertigstellung Ihrer Arbeit verzögern. Mithilfe der [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690)-Methode im [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688)-Objekt (verfügbar über die Ereignisargumente) können Sie den Abschluss des Anhaltens verzögern, bis Sie die [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685)-Methode für das zurückgegebene [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684)-Objekt aufgerufen haben.
+> **Hinweis**  Wenn Sie asynchrone Arbeiten erledigen müssen, während die App angehalten wird, müssen Sie den Abschluss des Anhaltens bis zur Fertigstellung Ihrer Arbeit verzögern. Mithilfe der [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690)-Methode im [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688)-Objekt (verfügbar über die Ereignisargumente) können Sie den Abschluss des Anhaltens verzögern, bis Sie die [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685)-Methode für das zurückgegebene [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684)-Objekt aufgerufen haben.
 
-> **Hinweis**  Zum Verbessern der Reaktionsfähigkeit des Systems in Windows 8.1 erhalten die Apps auf angehaltene Ressourcen einen Zugriff mit geringer Priorität. Zur Unterstützung dieser neuen Priorität wird das Timeout für den Anhaltevorgang ausgedehnt, sodass die App für normale Priorität unter Windows über einen 5-Sekunden-Timeout und unter Windows Phone über einen Timeout von 1 bis 10 Sekunden verfügt. Dieses Timeout-Fenster kann weder verlängert noch geändert werden.
+> **Hinweis**  Zum Verbessern der Reaktionsfähigkeit des Systems in Windows 8.1 erhalten angehaltene Apps nur eine geringe Priorität beim Zugriff auf Ressourcen. Zur Unterstützung dieser neuen Priorität wird das Timeout für den Anhaltevorgang ausgedehnt, sodass die App für normale Priorität unter Windows über einen 5-Sekunden-Timeout und unter Windows Phone über einen Timeout von 1 bis 10 Sekunden verfügt. Dieses Timeout-Fenster kann weder verlängert noch geändert werden.
 
-> **Hinweis zum Debuggen mit Visual Studio:**  Visual Studio verhindert, dass in Windows eine an den Debugger angefügte App angehalten wird. Dies hat den Zweck, dem Benutzer das Anzeigen der Debugging-Benutzeroberfläche von Visual Studio zu ermöglichen, während die App ausgeführt wird. Beim Debuggen einer App können Sie mit Visual Studio ein Anhalteereignis an die App senden. Stellen Sie sicher, dass die Symbolleiste **Debugspeicherort** angezeigt wird, und klicken Sie dann auf das Symbol **Anhalten**.
+> **Hinweis zum Debuggen mit Visual Studio:**  Visual Studio verhindert, dass Windows eine an den Debugger angeschlossene App anhält. Dies hat den Zweck, dem Benutzer das Anzeigen der Debugging-Benutzeroberfläche von Visual Studio zu ermöglichen, während die App ausgeführt wird. Beim Debuggen einer App können Sie mit Visual Studio ein Anhalteereignis an die App senden. Stellen Sie sicher, dass die Symbolleiste **Debugspeicherort** angezeigt wird, und klicken Sie dann auf das Symbol **Anhalten**.
 
 ## Verwandte Themen
 
@@ -129,6 +130,6 @@ Das System benachrichtigt eine App nicht, wenn sie beendet wird. Wenn Ihre App a
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

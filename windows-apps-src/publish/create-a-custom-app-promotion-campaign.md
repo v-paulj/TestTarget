@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Neben dem Erstellen einer Anzeigenkampagne für Ihre App, die in Windows-Apps ausgeführt wird, können Sie Ihre App auch über andere Kanäle bewerben.
 title: Erstellen einer benutzerdefinierten Werbekampagne für Apps
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
@@ -19,7 +20,7 @@ Sie können Leistungsdaten einer benutzerdefinierten Kampagne für Ihre App auf 
 -   Wenn es sich bei Ihrer App um eine App für die universelle Windows-Plattform (UWP) handelt, kann sie mit der [**GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt186445)-Methode programmgesteuert die benutzerdefinierte Kampagnen-ID abrufen, die zu einer Konvertierung geführt hat.
 -   Sie können Seitenaufrufe und Konvertierungen für Ihre App oder Ihr IAP aus dem Bericht [Kanäle und Konvertierungen](channels-and-conversions-report.md) im Dev Center-Dashboard abrufen.
 
-> **Wichtig** Diese Daten werden nur für Kunden nachverfolgt, die Windows 10 ausführen. Kunden, die andere Betriebssysteme verwenden, können trotzdem den Link zu Ihrem App-Eintrag aufrufen, es werden jedoch keine Daten über die Aktivitäten dieser Kunden eingeschlossen.
+> **Wichtig**  Diese Daten werden nur für Kunden nachverfolgt, die Windows 10 ausführen. Kunden, die andere Betriebssysteme verwenden, können trotzdem den Link zu Ihrem App-Eintrag aufrufen, es werden jedoch keine Daten über die Aktivitäten dieser Kunden eingeschlossen.
 
  
 
@@ -44,7 +45,7 @@ Um als Konvertierung für den Bericht [Kanäle und Konvertierungen](channels-and
 
 -   Ein Kunde mit einem bekannten Microsoft-Konto klickt auf eine App-URL, die eine benutzerdefinierte Kampagnen-ID enthält, und wird auf die Windows Store-Seite für die App weitergeleitet.
 -   Der gleiche Kunde (identifiziert mit demselben Microsoft-Konto) installiert die App innerhalb von 24 Stunden, nachdem er auf die Windows Store-URL mit der benutzerdefinierten Kampagnen-ID geklickt hat. Dies gilt als eine Konvertierung, auch wenn der Kunde die App auf einem anderen Computer oder Gerät als auf dem installiert, auf dem auf die Windows Store-URL mit der benutzerdefinierten Kampagnen-ID geklickt wurde.
-    > **Hinweis** Für App-Installationen, die als Konvertierungen für eine benutzerdefinierte Kampagne gezählt werden, werden IAP-Einkäufe in der App ebenfalls als Konvertierungen für dieselbe benutzerdefinierte Kampagne gezählt.
+    > **Hinweis**  Für App-Installationen, die als Konvertierungen für eine benutzerdefinierte Kampagne gezählt werden, werden IAP-Einkäufe in der App ebenfalls als Konvertierungen für dieselbe benutzerdefinierte Kampagne gezählt.
 
      
 
@@ -61,7 +62,7 @@ So erstellen Sie eine Windows Store-Seiten-URL für Ihre App mit einer benutzerd
 1.  Erstellen Sie eine ID-Zeichenfolge für Ihre benutzerdefinierte Kampagne. Diese Zeichenfolge kann bis zu 100 Zeichen enthalten. Es wird jedoch empfohlen, kurze, leicht erkennbare Kampagnen-IDs zu definieren.
 2.  Rufen Sie die Windows Store-Seiten-URL für Ihre App im HTML- oder Protokollformat ab. Die HTML-Format-URL ist auf der Seite [**App-Identität** im Dev Center-Dashboard](link-to-your-app.md) verfügbar.
     -   Verwenden Sie das HTTP-Format, wenn Sie möchten, dass Kunden in einem Browser auf die Windows Store-Seite Ihrer App navigieren (diese URL startet auch die Windows Store-App mit Ihrem App-Eintrag, wenn die Windows Store-App installiert ist). Diese URL hat das Format **`https://www.microsoft.com/store/apps/*your app name*/*your app ID*`**. Die HTTP-URL für Skype lautet beispielsweise `https://www.microsoft.com/store/apps/skype/9wzdncrfj364`.
-        > **Hinweis** URLs im HTTP-Format können zum Navigieren zum Windows Store in einem Browser auf Computern und Tablets unter Windows 7 und neueren Versionen sowie auf Smartphones mit mindestens Windows Phone 8 verwendet werden.
+        > **Hinweis**  URLs im HTTP-Format können zum Navigieren zum Windows Store in einem Browser auf Computern und Tablets unter Windows 7 und neueren Versionen sowie auf Smartphones mit mindestens Windows Phone 8 verwendet werden.
     -   Verwenden Sie das Protokollformat, wenn Sie Ihre App in anderen Windows-Apps bewerben, die auf einem Gerät oder Computer mit installierter Windows Store-App ausgeführt werden, und Sie möchten, dass Kunden die Seite Ihrer App in der Windows Store-App öffnen. Diese URL hat das Format **`ms-windows-store://pdp/?PRODUCTID=*your app id*`**. Die Protokoll-URL für Skype lautet beispielsweise `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364`.
 3.  Fügen Sie am Ende der URL für Ihre App die folgende Zeichenfolge an:
     -   Fügen Sie an eine HTTP-Format-URL **`?cid=*my custom campaign ID*`** an. Wenn Skype beispielsweise eine Kampagnen-ID mit dem Wert **custom\_campaign** einführt, würde die neue HTTP-URL einschließlich der Kampagnen-ID folgendermaßen lauten: `https://www.microsoft.com/store/apps/skype/9wzdncrfj364?cid=custom\_campaign`.
@@ -82,7 +83,7 @@ Im folgenden Beispiel wird veranschaulicht, wie mit der [**GetAppPurchaseCampaig
 string campaignId = await CurrentApp.GetAppPurchaseCampaignIdAsync();
 ```
 
-``` ManagedCPlusPlus
+``` cpp
 HString campaignId;
 HRESULT hr = CurrentApp::GetAppPurchaseCampaignIdAsync(campaignId.GetAddressOf());
 ```
@@ -129,6 +130,6 @@ Bevor Sie eine URL für eine benutzerdefinierte Kampagnen bewerben, empfehlen wi
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

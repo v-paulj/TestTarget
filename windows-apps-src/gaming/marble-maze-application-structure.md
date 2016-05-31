@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Marble Maze-Anwendungsstruktur
 description: Die Struktur einer DirectX-UWP-App unterscheidet sich von der einer herkömmlichen Desktopanwendung.
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
@@ -96,7 +97,7 @@ Wenn die Handler für diese Ereignisse aufgerufen werden, übergeben sie die Ein
 
 Damit das Spiel innerhalb von 5 Sekunden nach dem Starten auf Fensterereignisse reagieren kann, wird empfohlen, die Spielressourcen asynchron oder im Hintergrund zu laden. Während die Objekte im Hintergrund geladen werden, kann das Spiel auf Fensterereignisse reagieren.
 
-> **Hinweis** Sie können auch das Hauptmenü anzeigen, wenn es bereit ist, und den übrigen Ressourcen erlauben, den Ladevorgang im Hintergrund fortzusetzen. Wenn der Benutzer eine Menüoption auswählt, bevor alle Ressourcen geladen wurden, kann beispielsweise durch Anzeigen einer Statusleiste angegeben werden, dass Szenenressourcen weiter geladen werden.
+> **Hinweis**  Sie können auch das Hauptmenü anzeigen, wenn es bereit ist, und den übrigen Ressourcen ermöglichen, den Ladevorgang im Hintergrund fortzusetzen. Wenn der Benutzer eine Menüoption auswählt, bevor alle Ressourcen geladen wurden, kann beispielsweise durch Anzeigen einer Statusleiste angegeben werden, dass Szenenressourcen weiter geladen werden.
 
  
 
@@ -116,7 +117,7 @@ Die **MarbleMaze**-Klasse definiert das *m\_deferredResourcesReady*-Kennzeichen,
 
 Weitere Informationen zur asynchronen Programmierung für UWP-Apps finden Sie unter [Asynchrone Programmierung in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
->> > **Tipp** Sollten Sie z. B. einen Spielcode schreiben, der Teil einer Windows-Runtime-C++-Bibliothek (d. h. eine DLL) ist, können Sie im Abschnitt [Erstellen asynchroner Vorgänge in C++ für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/hh750113.aspx) lesen, wie asynchrone Vorgänge erstellt werden, die von Apps und anderen Bibliotheken genutzt werden können.
+>> > **Tipp**   Sollten Sie z. B. einen Spielcode schreiben, der Teil einer Windows-Runtime-C++-Bibliothek (d. h. eine DLL) ist, können Sie im Abschnitt [Erstellen asynchroner Vorgänge in C++ für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/hh750113.aspx) lesen, wie asynchrone Vorgänge erstellt werden, die von Apps und anderen Bibliotheken genutzt werden können.
 
  
 
@@ -346,7 +347,7 @@ void MarbleMaze::LoadState()
 }
 ```
 
-> **Wichtig** Marble Maze unterscheidet nicht zwischen Kaltstart – d. h. einem erstmaligen Start ohne vorheriges Anhalteereignis – und dem Fortsetzen vom angehaltenen Zustand aus. Dies ist der empfohlene Entwurf für alle UWP-Apps.
+> **Wichtig**  Marble Maze unterscheidet nicht zwischen Kaltstart – d. h. einem erstmaligen Start ohne vorheriges Anhalteereignis – und dem Fortsetzen vom angehaltenen Zustand aus. Dies ist der empfohlene Entwurf für alle UWP-Apps.
 
  
 
@@ -372,6 +373,6 @@ Informationen zu einigen der wichtigsten Vorgehensweisen, die Sie beim Verwenden
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

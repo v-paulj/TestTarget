@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Randbasierte Animationen blenden UI-Elemente ein oder aus, die vom Bildschirmrand ausgehen.
 title: Animationen für randbasierte Benutzeroberflächenelemente in UWP-Apps
 ms.assetid: 5A8F73B1-F4F6-424b-9EDF-A9766C5DEAE8
@@ -9,7 +10,7 @@ template: detail.hbs
 # Animationen für randbasierte Benutzeroberflächenelemente
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Randbasierte Animationen blenden UI-Elemente ein oder aus, die vom Bildschirmrand ausgehen. Die Aktionen zum Anzeigen und Ausblenden können von Benutzern oder von der App initiiert werden. Die UI-Elemente können die Anwendung überlagern oder Teil der Hauptoberfläche der App sein. Wenn das UI-Element Teil der App-Oberfläche ist, müssen Sie möglicherweise die Größe der restlichen App entsprechend anpassen.
 
@@ -54,6 +55,6 @@ Randbasierte Animationen blenden UI-Elemente ein oder aus, die vom Bildschirmran
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

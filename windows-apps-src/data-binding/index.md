@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 83b4be37-6613-4d00-a48a-0451a24a30fb
 title: Datenbindung
 description: Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Daten anzeigen und diese Daten optional synchronisieren kann.
@@ -19,6 +20,6 @@ Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Dat
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

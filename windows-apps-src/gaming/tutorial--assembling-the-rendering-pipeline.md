@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Zusammensetzen des Renderingframeworks
 description: Jetzt ist es Zeit, einen Blick darauf zu werfen, wie diese Struktur und der Zustand im Beispielspiel zum Anzeigen der Grafiken verwendet werden.
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
@@ -16,7 +17,7 @@ Mittlerweile wissen Sie, wie ein Spiel für die universelle Windows-Plattform (U
 
 -   Einrichten eines einfachen Renderingframeworks zum Anzeigen der Grafikausgabe für ein UWP-DirectX-Spiel
 
-> **Hinweis:** Die folgenden Codedateien werden hier nicht näher erläutert, enthalten aber Klassen und Methoden, die in diesem Thema verwendet werden. Den entsprechenden Code finden Sie [am Ende dieses Themas](#code_sample):
+> **Hinweis**    Die folgenden Codedateien werden hier nicht näher erläutert, enthalten aber Klassen und Methoden, die in diesem Thema verwendet werden. Den entsprechenden Code finden Sie [am Ende dieses Themas](#code_sample):
 -   **Animate.h/.cpp**.
 -   **BasicLoader.h/.cpp**. Enthält Methoden zum synchronen und asynchronen Laden von Gittern, Shadern und Texturen. Sehr nützlich!
 -   **MeshObject.h/.cpp**, **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** und **WorldMesh.h/.cpp**. Enthalten die Definitionen der im Spiel verwendeten Objektgrundtypen – etwa die Munition, die zylinder- und kegelförmigen Hindernisse sowie die Wände des Schießstands. (**GameObject.cpp**enthält die Methode zum Rendern dieser Grundtypen und wird in diesem Thema kurz erläutert.)
@@ -853,7 +854,7 @@ Im Code des Beispielspiels definieren und implementieren wir die Grundtypen in z
 
 **MeshObject.h/.cpp** definiert die Basisklasse für alle Gitterobjekte. Die Dateien **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** und **WorldMesh.h/.cpp** enthalten den Code, der die Konstantenpuffer für jeden Grundtyp mit den Daten für den Vertex und die Vertexnormale auffüllt, die die Geometrie des Grundtyps bestimmen. Diese Codedateien sind ein guter Ausgangspunkt, wenn Sie erfahren möchten, wie Sie Direct3D-Grundtypen in Ihrer eigenen Spiel-App erstellen. Da sie für die Implementierung dieses Spiels zu spezifisch sind, werden wir sie jedoch hier nicht behandeln. Für unsere Zwecke gehen wir einfach davon aus, dass die Scheitelpunktpuffer für jeden Grundtyp aufgefüllt wurden, und untersuchen, wie diese Puffer im Beispielspiel verwendet werden, um das Spiel selbst zu aktualisieren.
 
-Die Basisklasse für Objekte, die die Grundtypen aus der Perspektive des Spiels darstellen, wird in **GameObject.h./.cpp.** definiert. Diese Klasse (**GameObject**) definiert die Felder und Methoden für das allgemeine Verhalten aller Grundtypen. Von diesem übergeordneten Objekt werden alle Grundtypenobjekte abgeleitet. Werfen wir einen Blick auf die Definition:
+Die Basisklasse für Objekte, die die Grundtypen aus der Perspektive des Spiels darstellen, wird in **GameObject.h./.cpp** definiert. Diese Klasse **GameObject** definiert die Felder und Methoden für das allgemeinen Verhalten aller Grundtypen. Von diesem übergeordneten Objekt werden alle Grundtypenobjekte abgeleitet. Werfen wir einen Blick auf die Definition:
 
 ```cpp
 ref class GameObject
@@ -1003,7 +1004,7 @@ Wird eine Kollision (Treffer) erkannt, überprüft **GameObject::Render** den ak
 
 Hier sehen Sie, wie **Material::RenderSetup** die Konstantenpuffer konfiguriert und die Shaderressourcen zuweist. Auch hier wird der Konstantenpuffer speziell für Änderungen an Grundtypen verwendet.
 
-> **Hinweis:** Die **Material**-Klasse wird in **Material.h/.cpp** definiert.
+> **Hinweis**   Die **Material**-Klasse wird in **Material.h/.cpp** definiert.
 
  
 
@@ -6320,6 +6321,6 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die univer
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,18 +1,19 @@
 ---
-Description: Vorlagen für adaptive Kacheln sind ein neues Feature in Windows 10 und ermöglichen den Entwurf eigener Inhalte für Kachelbenachrichtigungen mithilfe einer einfachen, flexiblen Markupsprache, die sich an unterschiedliche Bildschirmdichten anpasst.
+author: mijacobs
+Description: Vorlagen für adaptive Kacheln sind ein neues Feature in Windows 10 und ermöglichen den Entwurf eigener Inhalte für Kachelbenachrichtigungen mithilfe einer einfachen, flexiblen Markupsprache, die sich an unterschiedliche Bildschirmdichten anpasst.
 title: Erstellen adaptiver Kacheln
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
-label: Erstellen adaptiver Kacheln
+label: Create adaptive tiles
 template: detail.hbs
 ---
 
 # Erstellen adaptiver Kacheln
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Vorlagen für adaptive Kacheln sind ein neues Feature in Windows 10 und ermöglichen den Entwurf eigener Inhalte für Kachelbenachrichtigungen mithilfe einer einfachen, flexiblen Markupsprache, die sich an unterschiedliche Bildschirmdichten anpasst. Dieser Artikel beschreibt, wie Sie adaptive Live-Kacheln für Ihre UWP-App (Universelle Windows-Plattform) erstellen. Die vollständige Liste adaptiver Elemente und Attribute finden Sie unter [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md).
+
+Vorlagen für adaptive Kacheln sind ein neues Feature in Windows 10 und ermöglichen den Entwurf eigener Inhalte für Kachelbenachrichtigungen mithilfe einer einfachen, flexiblen Markupsprache, die sich an unterschiedliche Bildschirmdichten anpasst. Dieser Artikel beschreibt, wie Sie adaptive Live-Kacheln für Ihre UWP-App (Universelle Windows-Plattform) erstellen. Die vollständige Liste adaptiver Elemente und Attribute finden Sie unter [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md).
 
 (Falls gewünscht, können Sie weiterhin die voreingestellten Vorlagen aus dem [Windows 8-Kachelvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761491) beim Entwerfen von Benachrichtigungen für Windows 10 verwenden.)
 
@@ -23,7 +24,7 @@ Vorlagen für adaptive Kacheln sind ein neues Feature in Windows 10 und ermögl
 
 **Installieren von Notifications Visualizer.** Diese kostenlose UWP-App erleichtert das Entwerfen adaptiver Live-Kacheln, indem Ihre Kachel während der Bearbeitung in einer sofortigen visuellen Vorschau dargestellt wird, die mit dem XAML-Editor bzw. der Entwurfsansicht in Visual Studio vergleichbar ist. Weitere Informationen finden Sie in [diesem Blogbeitrag](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/09/22/introducing-notifications-visualizer-for-windows-10.aspx). Der Download von Notifications Visualizer steht [hier](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) bereit.
 
-## <span id="Usage_guidance"></span><span id="usage_guidance"></span><span id="USAGE_GUIDANCE"></span>Hinweise zur Verwendung
+## <span id="Usage_guidance"></span><span id="usage_guidance"></span><span id="USAGE_GUIDANCE"></span>Informationen zur Verwendung
 
 
 Adaptive Vorlagen sind für die Unterstützung verschiedener Formfaktoren und Benachrichtigungstypen konzipiert. Elemente wie Gruppen und Untergruppen verknüpfen Inhalte miteinander und implizieren selbst kein bestimmtes visuelles Verhalten. Die endgültige Darstellung einer Benachrichtigung sollte auf dem spezifischen Gerät basieren, auf dem sie angezeigt wird, beispielsweise einem Smartphone, Tablet, Desktop oder anderen Gerät.
@@ -227,9 +228,8 @@ new TileVisual()
 
 Das Branding kann für bestimmte Kachelgrößen auf zwei Weisen angewendet werden:
 
-1. Indem das Attribut auf das [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element angewendet wird
-2. Indem das Attribut auf das [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element angewendet wird, das sich auf die gesamte Benachrichtigungsnutzlast auswirkt
-Wenn Sie für eine Bindung kein Branding angeben, wird das für das visuelle Element angegebene Branding verwendet.
+1. Durch Anwenden des Attributs auf das [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element
+2. Durch Anwenden des Attributs auf das [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md) -Element, was sich auf die gesamte Benachrichtigungsnutzlast auswirkt. Wenn Sie für eine Bindung kein Branding angeben, wird das Branding verwendet, das auf dem visual-Element bereitgestellt wird.
 
 ```XML
 <tile>
@@ -276,14 +276,14 @@ TileContent content = new TileContent()
 
 Wenn Sie in der Benachrichtigungsnutzlast kein Branding angeben, wird das Branding durch die Eigenschaften der Basiskachel bestimmt. Wenn auf der Basiskachel der Anzeigename dargestellt ist, wird für das Branding standardmäßig „name“ verwendet. Wenn kein Anzeigename vorhanden ist, wird für das Branding standardmäßig „none“ verwendet.
 
-**Hinweis**  Dies ist eine Änderung gegenüber Windows 8.x, wo das Standardbranding „logo“ lautete.
+**Hinweis**  Dies ist eine Änderung gegenüber Windows 8.x, wo das Standardbranding „logo“ lautete.
 
  
 
 ## <span id="Display_name"></span><span id="display_name"></span><span id="DISPLAY_NAME"></span>Anzeigename
 
 
-Sie können den Anzeigenamen einer Benachrichtigung überschreiben, indem Sie für das **displayName**-Attribut die gewünschte Textzeichenfolge eingeben. Wie beim Branding können Sie diesen im [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element angeben, das sich auf die gesamte Benachrichtigungsnutzlast auswirkt, oder im [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element, das nur einzelne Kacheln betrifft.
+Sie können den Anzeigenamen einer Benachrichtigung überschreiben, indem Sie für das **displayName**-Attribut die gewünschte Textzeichenfolge eingeben. Wie beim Branding können Sie dies für das [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element angeben, was sich auf die gesamte Benachrichtigungsnutzlast auswirkt, oder für das [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element, was nur einzelne Kacheln betrifft.
 
 ```XML
 <tile>
@@ -435,7 +435,7 @@ new TileText()
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
 | &lt;text hint-style="\*" /&gt; | Zeichenhöhe               | Schriftbreite |
-| caption                        | 12 effektive Pixel (Epx) | Regular     |
+| caption                        | 12 effektive Pixel (epx) | Regular     |
 | body                           | 15 Epx                    | Regular     |
 | base                           | 15 Epx                    | Semibold    |
 | subtitle                       | 20 Epx                    | Regular     |
@@ -843,7 +843,7 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 Mithilfe des &lt;image&gt;-Elements werden Bilder auf der Kachelbenachrichtigung angezeigt. Bilder können als Inlinebilder im Kachelinhalt (Standard), als Hintergrundbild hinter dem Inhalt oder als animiertes Vorschaubild, das von oben in die Benachrichtigung hineingleitet, konfiguriert werden.
 
-**Hinweis**  [Für die Dateigröße und Abmessungen von Bildern gelten Einschränkungen](https://msdn.microsoft.com/library/windows/apps/hh781198).
+**Hinweis**  Für die [Dateigröße und Abmessungen von Bildern](https://msdn.microsoft.com/library/windows/apps/hh781198) gelten Einschränkungen.
 
  
 
@@ -1333,9 +1333,9 @@ Das Ergebnis sieht wie folgt aus:
 
 **Verwendung von „hint-overlay“ auf einem Vorschaubild**
 
-Sie können **hint-overlay** auf einem Vorschaubild für mehr Deckkraft und bessere Lesbarkeit des Anzeigenamens der Kachel verwenden. Wenn Sie **hint-overlay** für das &lt;binding&gt;-Element angeben, wird die Überlagerung sowohl auf das Hintergrund- als auch das Vorschaubild angewendet.
+Sie können **hint-overlay** auf einem Vorschaubild für mehr Deckkraft und bessere Lesbarkeit des Anzeigenamens der Kachel verwenden. Wenn Sie **hint-overlay** für das &lt;binding&gt;-Element angeben, wird die Überlagerung sowohl auf das Hintergrundbild als auch das Vorschaubild angewendet.
 
-Sie können **hint-overlay** auch auf ein &lt;image&gt;-Element mit „placement="peek"“ oder „placement="background"“ anwenden, um für jedes dieser Bilder eine unterschiedliche Deckkraftstufe zu verwenden. Wenn Sie keine Überlagerung angeben, ist der Standardwert 20 % für das Hintergrundbild und 0 % für das Vorschaubild.
+Sie können **hint-overlay** auch auf ein &lt;image&gt;-Element mit dem placement-Wert „peek“ oder „background“ anwenden, um für jedes dieser Bilder eine unterschiedliche Deckkraftstufe zu verwenden. Wenn Sie keine Überlagerung angeben, ist der Standardwert 20 % für das Hintergrundbild und 0 % für das Vorschaubild.
 
 Dieses Beispiel zeigt ein Hintergrundbild mit 20 % Deckkraft (links) und 0 % Deckkraft (rechts):
 
@@ -1344,11 +1344,11 @@ Dieses Beispiel zeigt ein Hintergrundbild mit 20 % Deckkraft (links) und 0 % D
 ## <span id="Vertical_alignment__text_stacking_"></span><span id="vertical_alignment__text_stacking_"></span><span id="VERTICAL_ALIGNMENT__TEXT_STACKING_"></span>Vertikale Ausrichtung (hint-textStacking)
 
 
-Sie können die vertikale Ausrichtung der Inhalte auf einer Kachel steuern, indem Sie das **hint-textStacking**-Attribut sowohl für das [&lt;binding>&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element als auch das [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element verwenden. Der gesamte Inhalt wird standardmäßig vertikal am oberen Rand ausgerichtet, kann aber auch in der Mitte oder am unteren Rand ausgerichtet werden.
+Sie können die vertikale Ausrichtung der Inhalte auf einer Kachel steuern, indem Sie das **hint-textStacking**-Attribut sowohl für das [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element als auch das [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element verwenden. Der gesamte Inhalt wird standardmäßig vertikal am oberen Rand ausgerichtet, kann aber auch in der Mitte oder am unteren Rand ausgerichtet werden.
 
-### <span id="Text_stacking_on_binding_element"></span><span id="text_stacking_on_binding_element"></span><span id="TEXT_STACKING_ON_BINDING_ELEMENT"></span>„hint-textStacking“ für binding-Element
+### <span id="Text_stacking_on_binding_element"></span><span id="text_stacking_on_binding_element"></span><span id="TEXT_STACKING_ON_BINDING_ELEMENT"></span>Gestapelter Text für binding-Element
 
-Bei Anwendung auf die [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Ebene wird die vertikale Ausrichtung des Benachrichtigungsinhalts durch „hint-textStacking“ als Ganzes festgelegt und im verfügbaren vertikalen Bereich über dem Branding-/Signalbereich ausgerichtet.
+Bei Anwendung auf die [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Ebene wird durch Textstapelung die vertikale Ausrichtung des Benachrichtigungsinhalts als Ganzes festgelegt und im verfügbaren vertikalen Bereich über dem Branding-/Signalbereich ausgerichtet.
 
 ```XML
 ...
@@ -1392,11 +1392,11 @@ TileMedium = new TileBinding()
 ...
 ```
 
-![„hint-textStacking“ für binding-Element](images/adaptive-tiles-textstack-bindingelement.png)
+![Gestapelter Text für binding-Element](images/adaptive-tiles-textstack-bindingelement.png)
 
-### <span id="Text_stacking_on_subgroup_element"></span><span id="text_stacking_on_subgroup_element"></span><span id="TEXT_STACKING_ON_SUBGROUP_ELEMENT"></span>„hint-textStacking“ für subgroup-Element
+### <span id="Text_stacking_on_subgroup_element"></span><span id="text_stacking_on_subgroup_element"></span><span id="TEXT_STACKING_ON_SUBGROUP_ELEMENT"></span>Gestapelter Text für subgroup-Element
 
-Bei Anwendung auf die [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Ebene wird die vertikale Ausrichtung des Inhalts der Untergruppe (Spalte) durch „hint-textStacking” festgelegt und im verfügbaren vertikalen Bereich innerhalb der gesamten Gruppe ausgerichtet.
+Bei Anwendung auf die [&lt;subgroup&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Ebene wird die vertikale Ausrichtung des Inhalts der Untergruppe (Spalte) durch gestapelten Text festgelegt und im verfügbaren vertikalen Bereich innerhalb der gesamten Gruppe ausgerichtet.
 
 ```XML
 ...
@@ -1488,6 +1488,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

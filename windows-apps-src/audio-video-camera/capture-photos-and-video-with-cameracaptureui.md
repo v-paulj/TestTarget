@@ -1,10 +1,11 @@
 ---
+author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: Dieser Artikel beschreibt, wie Sie die „CameraCaptureUI“-Klasse zum Aufnehmen von Fotos oder Videos mit der in Windows integrierten Kamera-UI verwenden.
-title: Aufnehmen von Fotos und Videos mit CameraCaptureUI
+title: Aufnehmen von Fotos und Videos mit „CameraCaptureUI“
 ---
 
-# Aufnehmen von Fotos und Videos mit CameraCaptureUI
+# Aufnehmen von Fotos und Videos mit „CameraCaptureUI“
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
@@ -106,6 +107,6 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die unive
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

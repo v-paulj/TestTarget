@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Systemressourcen für UWP-Apps und -Spiele auf der Xbox One
 description: UWP auf Xbox-Systemressourcen
 area: Xbox
@@ -21,12 +22,10 @@ Daher haben UWP-Apps und -Spiele Zugriff auf die folgenden Ressourcen:
 
 Für die **Anwendungsentwicklung** müssen Sie berücksichtigen, dass die verfügbaren Ressourcen im Vergleich zu einem Standard-PC möglicherweise eingeschränkt sind.
 
-Für die **Spieleentwicklung** müssen Sie berücksichtigen, dass Xbox One, wie andere Spielekonsolen, 
-eine spezialisierte Hardwarekomponente ist, die ein spezifisches hardwarebasiertes Entwicklungskit erfordert, um ihr volles Potenzial abzurufen. 
-Wenn Sie an der Entwicklung eines Spiels arbeiten, das auf das maximale Potenzial der Xbox One-Hardware zugreifen muss, 
-können Sie sich beim [ID@Xbox](http://www.xbox.com/en-us/Developers/id)-Programm registrieren, um Zugang zu Xbox One-Entwicklungskits zu erhalten, die DirectX 12 unterstützen.
+Bei der **Spieleentwicklung** müssen Sie bedenken, dass die Xbox One (wie andere Spielekonsolen auch) eine spezielle Hardware ist, für die ein spezielles hardwarebasiertes Entwicklungskit erforderlich ist, um auf alle Funktionen zugreifen zu können. 
+Wenn Sie für ein Spiel das maximale Potenzial der Xbox One-Hardware benötigen, können Sie sich beim [ID@Xbox](http://www.xbox.com/en-us/Developers/id)-Programm registrieren, um Zugriff auf das SDK (und damit DirectX 12-Unterstützung) zu erhalten.
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

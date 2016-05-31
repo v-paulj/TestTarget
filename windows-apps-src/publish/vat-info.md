@@ -1,5 +1,6 @@
 ---
-description: Wenn Sie einen Katalog mit Apps und IAPs haben, können Sie mit der Windows Store-Sammlungs-API und der Windows Store-Einkaufs-API Besitzerinformationen abrufen.
+author: jnHs
+Description: Wenn Sie während des Dev Center-Registrierungsprozesses eine Umsatzsteuer-Identifikationsnummer angeben müssen, finden Sie im Folgenden grundlegende Informationen.
 title: Umsatzsteuerinfo
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
 ---
@@ -245,6 +246,6 @@ Beachten Sie, dass Microsoft keine Steuertipps gibt und die folgende Tabelle nur
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

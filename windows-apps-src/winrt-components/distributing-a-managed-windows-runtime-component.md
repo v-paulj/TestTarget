@@ -1,5 +1,6 @@
 ---
-title: Verteilen einer verwalteten Windows-Runtime-Komponente
+author: martinekuan
+title: Verteilen einer verwalteten Komponente für Windows-Runtime
 description: Sie können Ihre Windows-Runtime-Komponente durch Kopieren der Dateien verteilen.
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
 ---
@@ -50,7 +51,7 @@ Eine komplexe Komponente enthält in der Regel Windows-Ressourcen, aber lesen Si
 **So erstellen Sie ein Erweiterungs-SDK**
 
 1.  Überprüfen Sie, ob das Visual Studio-SDK installiert ist. Sie können das Visual Studio-SDK von der Seite [Visual Studio-Downloads](https://www.visualstudio.com/downloads/download-visual-studio-vs) herunterladen.
-2.  Erstellen eines neues Projekts mit der VSIX-Projektvorlage Sie finden die Vorlage in der Kategorie „Erweiterbarkeit” unter Visual C# oder Visual Basic. Diese Vorlage wird als Teil des Visual Studio-SDK installiert. ([Exemplarische Vorgehensweise: Erstellen eines SDK mit C# oder Visual Basic](https://msdn.microsoft.com/library/jj127119.aspx) oder [Exemplarische Vorgehensweise: Erstellen eines SDK mit C++](https://msdn.microsoft.com/library/jj127117.aspx)zeigt die Verwendung dieser Vorlage in einem sehr einfachen Szenario. )
+2.  Erstellen eines neues Projekts mit der VSIX-Projektvorlage Sie finden die Vorlage in der Kategorie „Erweiterbarkeit” unter Visual C# oder Visual Basic. Diese Vorlage wird als Teil des Visual Studio-SDK installiert. ([Exemplarische Vorgehensweise: Erstellen eines SDK mit C# oder Visual Basic](https://msdn.microsoft.com/library/jj127119.aspx) oder [Exemplarische Vorgehensweise: Erstellen eines SDK mit C++](https://msdn.microsoft.com/library/jj127117.aspx) zeigt die Verwendung dieser Vorlage in einem sehr einfachen Szenario. )
 3.  Legen Sie die Ordnerstruktur für Ihr SDK fest. Die Ordnerstruktur beginnt auf der Stammebene des VSIX-Projekts mit den Ordnern **References**, **Redist** und **DesignTime**.
 
     -   **References** ist der Speicherort für Binärdateien, die Ihre Benutzer für die Programmierung verwenden können. Das Erweiterungs-SDK erstellt in den Visual Studio-Projekten Ihrer Benutzer Verweise auf diese Dateien.
@@ -61,7 +62,7 @@ Eine komplexe Komponente enthält in der Regel Windows-Ressourcen, aber lesen Si
 
     In jedem Konfigurationsordner können Sie Architekturordner für plattformspezifische Dateien bereitstellen. Wenn Sie dieselben Dateien für alle Plattformen verwenden, können Sie einen einzelnen Ordner mit dem Namen „neutral” vorsehen. Einzelheiten zur Ordnerstruktur, einschließlich anderer Namen für Architekturordner, finden Sie unter [Gewusst wie: Erstellen eines Software Development Kit (SDK)](https://msdn.microsoft.com/library/hh768146.aspx) in der MSDN Library. (Dieser Artikel behandelt Plattform-SDKs und Erweiterungs-SDKs. Reduzieren Sie den Abschnitt über Plattform-SDKs, um Missverständnisse zu vermeiden. )
 
-4.  Erstellen Sie eine SDK-Manifestdatei. Das Manifest enthält den Namen, die Version, die Architekturen, die Ihr SDK unterstützt, die .NET Framework-Versionen und Informationen darüber, wie Visual Studio Ihr SDK verwendet. Ausführliche Informationen und ein Beispiel dazu finden Sie unter [Gewusst wie: Erstellen eines Software Development Kit (SDK)](https://msdn.microsoft.com/library/hh768146.aspx).
+4.  Erstellen Sie eine SDK-Manifestdatei. Das Manifest enthält den Namen, die Version, die Architekturen, die Ihr SDK unterstützt, .NET Framework-Versionen und Informationen darüber, wie Visual Studio Ihr SDK verwendet. Ausführliche Informationen und ein Beispiel dazu finden Sie unter [Gewusst wie: Erstellen eines Software Development Kit (SDK)](https://msdn.microsoft.com/library/hh768146.aspx).
 5.  Erstellen und verteilen Sie das Erweiterungs-SDK. Ausführliche Informationen einschließlich Lokalisierung und Signierung des VSIX-Pakets finden Sie unter „VSIX Deployment” in der MSDN Library.
 
 ## Verwandte Themen
@@ -74,6 +75,6 @@ Eine komplexe Komponente enthält in der Regel Windows-Ressourcen, aber lesen Si
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Behandeln der App-Aktivierung
 description: Erfahren Sie, wie Sie die App-Aktivierung durch Überschreiben der OnLaunched-Methode behandeln.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
@@ -7,7 +8,7 @@ ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
 # Behandeln der App-Aktivierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -24,7 +25,7 @@ Die [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows
 
 Definieren Sie die Klasse für Ihre Anwendung.
 
-```xaml
+```xml
 <Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
              x:Class="AppName.App" >
@@ -180,6 +181,6 @@ Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/librar
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

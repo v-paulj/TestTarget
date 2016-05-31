@@ -1,5 +1,6 @@
 ---
-Description: Der Bericht „Nutzung“ im Windows Dev Center-Dashboard gibt Aufschluss darüber, wie Kunden Ihre App verwenden.
+author: jnHs
+Description: Der Bericht Nutzung im Windows Dev Center-Dashboard gibt Aufschluss darüber, wie Kunden Ihre App verwenden.
 title: Bericht „Nutzung“
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ---
@@ -7,7 +8,7 @@ ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 # Bericht „Nutzung“
 
 
-> **Wichtig:** Der Bericht **Nutzung** enthält nur dann Daten, wenn Sie das [Visual Studio Application Insights SDK](http://go.microsoft.com/fwlink/?LinkId=615086) in Ihrer App (oder beim Erstellen Ihres Pakets das Kontrollkästchen „Telemetrie im Windows Dev Center anzeigen“) aktiviert haben. Bevor Daten in diesem Bericht angezeigt werden, müssen Sie die App außerdem im einheitlichen Dev Center-Dashboard einreichen und die App-Nutzungstelemetrie in Ihren Kontoeinstellungen aktivieren.
+> **Wichtig**  Der Bericht **Nutzung** enthält nur dann Daten, wenn Sie das [Visual Studio Application Insights SDK](http://go.microsoft.com/fwlink/?LinkId=615086) in Ihrer App (oder beim Erstellen Ihres Pakets das Kontrollkästchen „Telemetrie im Windows Dev Center anzeigen“) aktiviert haben. Bevor Daten in diesem Bericht angezeigt werden, müssen Sie die App außerdem im einheitlichen Dev Center-Dashboard einreichen und die App-Nutzungstelemetrie in Ihren Kontoeinstellungen aktivieren.
 
 Der Bericht **Nutzung** im Windows Dev Center-Dashboard gibt Aufschluss darüber, wie Kunden Ihre App verwenden. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um die Daten offline anzuzeigen.
 
@@ -20,7 +21,7 @@ Beachten Sie, dass das mit Ihrem Entwicklerkonto verknüpfte Microsoft-Konto auc
 
 Im oberen Seitenbereich können Sie das **Filter anwenden** erweitern, um alle Daten auf dieser Seite nach Datumsbereich und/oder Produktgruppe (zugehörigen Betriebssystemversionen) zu filtern.
 
--   **Datum**: Der Standardfilter lautet **Letzte 72 Stunden**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
+-   **Datum**: Der Standardfilter lautet **Letzte 72 Stunden**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
 -   **Produktgruppen**: Die Standardeinstellung lautet **Alle**. Wenn Ihre App mehr als eine Produktgruppe enthält, können Sie hier eine bestimmte auswählen.
 
 Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den unter **Filter anwenden** ausgewählten Zeitraum. Standardmäßig gehören dazu Daten für alle unterstützten Produktgruppen, sofern Sie nicht mithilfe des Abschnitts **Filter anwenden** nach einer einzelnen Gruppe gefiltert haben.
@@ -65,6 +66,6 @@ Das Diagramm **Seitenaufrufe in den letzten 30 Tagen** zeigt die Gesamtanzahl de
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

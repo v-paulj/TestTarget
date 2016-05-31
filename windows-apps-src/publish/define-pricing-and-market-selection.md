@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Der Windows Store erreicht Kunden in über 200 Ländern und Regionen in aller Welt.
 title: Festlegen des Preises und Auswählen der Märkte
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
@@ -282,8 +283,8 @@ Sie können Ihre App (oder Ihr IAP) für mindestens einen der folgenden Märkte 
 -   Vereinigtes Königreich
 -   Vereinigte Staaten
 -   Uruguay
--   USA Kleinere Amerikanische Überseeinseln
--   USA Jungferninseln
+-   Kleinere Amerikanische Überseeinseln
+-   Amerikanische Jungferninseln
 -   Usbekistan
 -   Venezuela
 -   Vietnam
@@ -535,8 +536,8 @@ Folgende Märkte sind in "Restliche Welt" für Windows 8.x enthalten:
 -   Turks- und Caicosinseln
 -   Tuvalu
 -   Uganda
--   USA Kleinere Amerikanische Überseeinseln
--   USA Jungferninseln
+-   Kleinere Amerikanische Überseeinseln
+-   Amerikanische Jungferninseln
 -   Usbekistan
 -   Venezuela
 -   Vietnam
@@ -549,6 +550,6 @@ Folgende Märkte sind in "Restliche Welt" für Windows 8.x enthalten:
 > **Hinweis:** Eine Liste der Länder und Regionen, in denen Sie sich für ein Entwicklerkonto registrieren können, finden Sie unter [Kontotypen, Standorte und Gebühren](https://msdn.microsoft.com/library/windows/apps/jj863494).
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

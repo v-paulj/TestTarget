@@ -1,16 +1,19 @@
 ---
+author: Jwmsft
 Description: Registerkarten und Pivots ermöglichen Benutzern die Navigation zwischen häufig verwendeten Inhalten.
 title: Registerkarten und Pivots
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
-label: Registerkarten und Pivots
+label: Tabs and pivots
 template: detail.hbs
 ---
-# Registerkarten und Pivots
+# Pivots und Registerkarten
 
-Registerkarten und Pivots werden für die Navigation zwischen häufig genutzten verschiedenen Inhaltskategorien verwendet. Das Registerkarten-/Pivotmuster besteht aus zwei oder mehr Inhaltsbereichen mit entsprechenden Kategorieheadern. Die Header werden dauerhaft auf dem Bildschirm angezeigt und verfügen über einen eindeutigen Auswahlstatus, damit Benutzer stets direkt erkennen, in welcher Kategorie sie sich befinden.
+Pivotsteuerelemente und Registerkarten werden für die Navigation zwischen häufig genutzten verschiedenen Inhaltskategorien verwendet. Das Registerkarten/Pivots bestehen aus zwei oder mehr Inhaltsbereichen mit entsprechenden Kategorieheadern. Die Header werden dauerhaft auf dem Bildschirm angezeigt und verfügen über einen eindeutigen Auswahlstatus, damit Benutzer stets direkt erkennen, in welcher Kategorie sie sich befinden.
 ![Beispiele für Registerkarten](images/HIGSecOne_Tabs.png)
 
-Registerkarten und Pivots werden mithilfe des [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx)-Steuerelements erstellt und folgen grundsätzlich dem gleichen Muster. Die grundlegenden Funktionen des Pivot-Steuerelements werden weiter unten in diesem Artikel beschrieben.
+Registerkarten sind eine visuelle Pivotvariante und werden mit dem [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx)-Steuerelement erstellt. [
+              Ein **Codebeispiel**
+            ](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlPivot) für ein benutzerdefiniertes Pivot ist auf GitHub verfügbar.
 
 <span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
 
@@ -18,52 +21,33 @@ Registerkarten und Pivots werden mithilfe des [**Pivot**](https://msdn.microsoft
 
 ## Das Registerkarten-/Pivotmuster
 
-Beim Erstellen einer App mit dem Registerkarten-/Pivotmuster müssen basierend auf dem konfigurierbaren Featuresatz des Musters einige wichtige Designvariablen berücksichtigt werden.
+Wenn Sie eine App mit dem Registerkarten-/Pivotmuster erstellen, sind einige wichtige Designelemente zu berücksichtigen.
 
-- **Platzierung des Headers.**   Header können am oberen oder unteren Bildschirmrand platziert werden.
-    
-    **Hinweis**&nbsp;&nbsp;Wenn Header unten im Bildschirm platziert werden, muss die Vorlage für das Pivot-Steuerelement neu erstellt werden.
-- **Headerbeschriftungen.**  Header können mit einem Symbol mit Text, nur mit Text oder nur mit einem Symbol versehen werden.
+- **Headerbeschriftungen.**  Header können ein Symbol mit Text oder nur Text enthalten.
 - **Headerausrichtung.**  Header können links ausgerichtet oder zentriert werden.
-- **Navigation auf oberster oder auf einer untergeordneten Ebene.**  Registerkarten/Pivots können für alle Navigationsebenen verwendet und in einem Muster mit Navigation auf oberster Ebene/untergeordneter Ebene gestapelt werden. Wenn zwei Ebenen mit Registerkarten/Pivots vorhanden sind, sollten sich der Header der obersten Ebene und der Header der untergeordneten Ebene optisch unterscheiden, damit sie von Benutzern leicht auseinandergehalten werden können.
+- **Navigation auf oberster oder auf einer untergeordneten Ebene.**  Registerkarten/Pivots können für eine der Navigationsebenen verwendet werden. Optional kann der [Navigationsbereich](nav-pane.md) als primäre Ebene dienen und Registerkarten/Pivots als sekundäre.
 - **Unterstützung für Touchgesten**  Für Geräte, die Touchgesten unterstützen, können Sie für die Navigation zwischen Inhaltskategorien einen von zwei Interaktionssätzen verwenden:
-    1. Tippen Sie auf einen Registerkarten-/Pivotheader, um zur gewünschten Kategorie zu navigieren, oder wischen Sie über den Inhaltsbereich, um zur benachbarten Kategorie zu navigieren.
-    2. Tippen Sie auf einen Registerkarten-/Pivotheader, um zur gewünschten Kategorie zu navigieren (keine Wischgeste).
-
-### Musterkonfigurationen
-
-Die optimale Anordnung des Registerkarten-/Pivotmusters hängt vom Interaktionsszenario und den Geräten ab, auf denen Ihre App angezeigt wird. In dieser Tabelle werden einige der wichtigsten Szenarien und Musterkonfigurationen beschrieben.
-
-Interaktionsszenario|Empfohlene Konfiguration
---------------------|-------------------------
-Horizontales Wechseln zwischen 2 bis 5 Inhaltskategorien in einer Listen- oder Rasteransicht auf oberster Ebene auf einem Smartphone oder Phablet|Registerkarte/Pivots: am oberen Bildschirmrand, zentriert
-|Headerbeschriftung: Symbole + Text
-|Wischen auf dem Inhaltsbereich: aktiviert
-Wechseln zwischen verschiedenen Inhaltskategorien auf einem Smartphone oder Phablet, bei dem sich das Wischen auf dem Inhaltsbereich nicht für die Navigation eignet|Registerkarte/Pivots: am unteren Bildschirmrand, zentriert
-|Headerbeschriftung: Symbole + Text
-|Wischen auf dem Inhaltsbereich: deaktiviert
-Navigation auf oberster Ebene mit Maus und Tastatur|Registerkarte/Pivots: am oberen Bildschirmrand, links ausgerichtet
- *oder*|Headerbeschriftungen: nur Text
- Navigation auf Seitenebene auf einem Gerät mit Toucheingabe|Wischen auf dem Inhaltsbereich: deaktiviert
+    1. Tippen Sie auf einen Registerkarten-/Pivotheader, um zur gewünschten Kategorie zu navigieren.
+    2. Wischen Sie über dem Inhaltsbereich nach links oder rechts, um zur benachbarten Kategorie zu navigieren.
 
 ## Beispiele
 
-Anhand dieses Entwurfs einer Food Truck-App wird das Platzieren von Registerkarten-/Pivotheadern am oberen oder unteren Bildschirmrand veranschaulicht. Das Platzieren von Registerkarten-/Pivotheadern am unteren Rand eignet sich auf Mobilgeräten gut für die Erreichbarkeit.
+Standardmäßig Pivotsteuerelement in Cortana-Erinnerungen.
 
-![Beispiel für Registerkarten auf einem mobilen Gerät](images/uap_foodtruck_phone_320_tabsboth.png)
+![Ein Pivot-Beispiel in Cortana-Erinnerungen](images/pivot_cortana-reminders.png)
 
-Der Entwurf der Food Truck-App auf Laptops/Desktops enthält reine Textheader. Die Verwendung von Symbolen mit Text als Header eignet sich für Touchziele. Für Maus und Tastatur können jedoch auch reine Textheader verwendet werden.
+Registerkartenmuster in der App „Alarm & Uhr“
 
-![Beispiel für Registerkarten auf dem Desktop](images/uap_foodtruck_desktop_home_700.png)
+![Ein Beispiel für Registerkarten im „Alarm & Uhr“](images/tabs_alarms-and-clock.png)
 
-## Erstellen eines Pivot-Steuerelements
+## Erstellen eines Pivotsteuerelements
 
-Das Registerkarten-/Pivotnavigationsmuster wird mithilfe des [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx)-Steuerelements erstellt. Das Steuerelement enthält die in diesem Abschnitt beschriebenen grundlegenden Funktionen.
+Das [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx)-Steuerelement enthält die in diesem Abschnitt beschriebenen grundlegenden Funktionen.
 
 Dieser XAML-Code erzeugt ein grundlegendes Pivot-Steuerelement mit 3 Inhaltsbereichen.
 
 ```xaml
-<Pivot x:Name="rootPivot" Title="PIVOT TITLE">
+<Pivot x:Name="rootPivot" Title="Pivot Title">
     <PivotItem Header="Pivot Item 1">
         <!--Pivot content goes here-->
         <TextBlock Text="Content of pivot item 1."/>
@@ -79,23 +63,23 @@ Dieser XAML-Code erzeugt ein grundlegendes Pivot-Steuerelement mit 3 Inhaltsbere
 </Pivot>
 ```
 
-**Pivot-Elemente**
+### Pivot-Elemente
 
 Das Pivot-Steuerelement ist ein [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx), daher kann es eine Sammlung von Elementen jeden Typs enthalten. Jedes zum Pivot-Steuerelement hinzugefügte Element, das nicht ausdrücklich ein [**PivotItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivotitem.aspx)-Element ist, wird implizit in ein PivotItem eingeschlossen. Da ein Pivot-Element häufig zum Navigieren zwischen Inhaltsseiten verwendet wird, ist es üblich, die Sammlung von [**Elementen**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.items.aspx) direkt mit XAML-UI-Elementen zu füllen. Alternativ können Sie die Eigenschaft [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemssource.aspx) auf eine Datenquelle festlegen. In der ItemsSource gebundene Elemente können beliebigen Typs sein, wenn es sich jedoch nicht explizit um PivotItems handelt, müssen Sie eine [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx)- und eine [**HeaderTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.headertemplate.aspx)-Eigenschaft definieren, um festzulegen, wie die Elemente angezeigt werden sollen.
 
-Mit der Eigenschaft [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.selecteditem.aspx) können Sie das aktive Element des Pivot-Steuerelements abrufen oder festlegen. Mit der Eigenschaft [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.selectedindex.aspx) können Sie den Index des aktiven Elements abrufen oder festlegen. 
+Mit der Eigenschaft [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.selecteditem.aspx) können Sie das aktive Element des Pivot-Steuerelements abrufen oder festlegen. Mit der Eigenschaft [**SelectedIndex**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.selectedindex.aspx) können Sie den Index des aktiven Elements abrufen oder festlegen.
 
-**Pivotheader**
+### Pivotheader
 
-Sie können die Eigenschaften [**LeftHeader**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.leftheader.aspx) und [**RightHeader**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.rightheader.aspx) verwenden, um weitere Steuerelemente zum Pivotheader hinzuzufügen. 
+Sie können die Eigenschaften [**LeftHeader**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.leftheader.aspx) und [**RightHeader**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.rightheader.aspx) verwenden, um weitere Steuerelemente zum Pivotheader hinzuzufügen.
 
 ### Pivot-Interaktion
 
-Das Steuerelement beinhaltet die folgenden Touchgesteninteraktionen:
+Das Steuerelement erkennt die folgenden Touchgesteninteraktionen:
 
--   Durch Tippen auf einen Header wird zum Abschnittsinhalt dieses Headers navigiert.
--   Durch Wischen nach links oder rechts auf einem Header wird zum benachbarten Header/Abschnitt navigiert.
--   Durch Wischen nach links oder rechts auf einem Abschnittsinhalt wird zum benachbarten Header/Abschnitt navigiert.
+-   Durch Tippen auf den Header eines Pivotelements wird zum Abschnittsinhalt dieses Headers navigiert.
+-   Durch Wischen nach links oder rechts auf dem Header eines Pivotelements wird zum benachbarten Abschnitt navigiert.
+-   Durch Wischen nach links oder rechts auf einem Abschnittsinhalt wird zum benachbarten Abschnitt navigiert.
 
 Das Steuerelement ist in zwei Modi verfügbar:
 
@@ -108,25 +92,22 @@ Das Steuerelement ist in zwei Modi verfügbar:
 
 -   Falls nicht alle Pivotheader in den verfügbaren Bereich passen, werden Pivots in einer Karussellansicht dargestellt.
 -   Durch Tippen auf eine Pivotbeschriftung wird die entsprechende Seite aufgerufen, und die aktive Pivotbeschriftung rückt an die erste Position.
-
-Das Steuerelement enthält integrierte Haltepunktfunktionen, die auf der Anzahl der Header und der Zeichenfolgenlänge der Beschriftungen basieren.
+-   Pivotelemente in einer Karussellschleife wechseln vom letzten zum ersten Pivotabschnitt.
 
 ## Empfehlungen
 
--   Die Ausrichtung der Registerkarten-/Pivotheader sollte auf der Bildschirmgröße basieren. Bei Bildschirmbreiten unter 720 Epx ist die Zentrierung in der Regel besser geeignet. Bei Bildschirmbreiten über 720 Epx wird in den meisten Fällen die Linksausrichtung empfohlen.
--   Wenn Registerkarten-/Pivotheader beim Skalieren eines Fensters nicht auf die verfügbare Bildschirmfläche passen, empfiehlt es sich, sie in den Überlaufbereich auszulagern.
--   Registerkarten/Pivots können bei jeder Bildschirmausrichtung verwendet werden. Stellen Sie jedoch sicher, dass im Quer- und im Hochformat die gleiche Gesamtanzahl an Headern (sichtbar und ausgeblendet) angezeigt wird.
--   Verwenden Sie nicht mehr als 5 Header im Karussellmodus, da der Benutzer sonst leicht den Überblick verlieren kann.
--   Das Platzieren von Registerkarten am unteren Rand eignet sich auf Mobilgeräten gut für die Erreichbarkeit, falls Wischen in einem anderen Bereich der UI verwendet wird. Zudem befinden sich dann nicht zu viele UI-Elemente am oberen Rand.
--   Wenn eine Bildschirmtastatur bereitgestellt wird, können Header auf dem Bildschirm ausgeblendet werden, um Platz freizugeben.
+-   Die Ausrichtung der Registerkarten-/Pivotheader sollte auf der Bildschirmgröße basieren. Bei Bildschirmbreiten unter 720 epx ist die Zentrierung in der Regel besser geeignet. Bei Bildschirmbreiten über 720 epx ist in den meisten Fällen die Linksausrichtung empfehlenswert.
+-   Vermeiden Sie mehr als 5 Header bei Verwendung des Karussell-Modus (Roundtrip), da mehr als Schleifen verwirrend sein können.
+-   Verwenden Sie das Registerkartenmuster nur, wenn Ihre Pivotelemente unterschiedliche Symbole besitzen.
+-   Fügen Sie Text in Pivotelementheader ein, damit Benutzer die Bedeutung der einzelnen Pivotabschnitte verstehen. Symbole sind nicht unbedingt für alle Benutzer selbsterklärend.
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Themen
 
 [Navigationsdesigngrundlagen](https://msdn.microsoft.com/library/windows/apps/dn958438)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

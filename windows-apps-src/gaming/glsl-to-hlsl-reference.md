@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: GLSL-zu-HLSL-Referenz
 description: Sie portieren Ihren OpenGL Shader Language (GLSL)-Code zu Microsoft High Level Shader Language (HLSL)-Code, wenn Sie Ihre Grafikarchitektur von OpenGL ES 2.0 zu Direct3D 11 portieren, um ein Spiel für die universelle Windows-Plattform (UWP) zu erstellen.
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
@@ -55,7 +56,7 @@ Folgende allgemeine Unterschiede bestehen zwischen GLSL und HLSL:
 </tr>
 <tr class="even">
 <td align="left">In die Grafik-API integrierte Shaderkompilierung</td>
-<td align="left">Der HLSL-Compiler [compiles the shader](https://msdn.microsoft.com/library/windows/desktop/bb509633) in eine binäre Zwischendarstellung, bevor er von Direct3D an den Treiber übergeben wird.
+<td align="left">Der HLSL-Compiler [kompiliert den Shader](https://msdn.microsoft.com/library/windows/desktop/bb509633) in eine binäre Zwischendarstellung, bevor er von Direct3D an den Treiber übergeben wird.
 <div class="alert">
 <strong>Hinweis</strong>  Diese binäre Darstellung ist hardwareunabhängig. Sie wird normalerweise beim Erstellen der App und nicht zur Laufzeit kompiliert.
 </div>
@@ -68,7 +69,7 @@ Folgende allgemeine Unterschiede bestehen zwischen GLSL und HLSL:
 <td align="left">Konstantenpuffer und Datenübertragungen über Eingabelayoutdeklarationen</td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Types](#types)</p>
+<td align="left"><p>[Typen](#types)</p>
 <p>Typischer Vektortyp: vec2/3/4</p>
 <p>lowp, mediump, highp</p></td>
 <td align="left"><p>Typischer Vektortyp: float2/3/4</p>
@@ -86,7 +87,7 @@ Folgende allgemeine Unterschiede bestehen zwischen GLSL und HLSL:
 <td align="left">Zeilenmatrizen (Standard)</td>
 <td align="left">Spaltenmatrizen (Standard)
 <div class="alert">
-<strong>Hinweis</strong>   Verwenden Sie den <strong>row_major</strong>-Typmodifizierer, um das Layout für eine Variable zu ändern. Weitere Informationen finden Sie unter [Variable Syntax](https://msdn.microsoft.com/library/windows/desktop/bb509706). Sie können auch ein Compilerkennzeichen oder ein Pragma angeben, um den globalen Standardwert zu ändern.
+<strong>Hinweis</strong>   Verwenden Sie den <strong>row_major</strong>-Typmodifizierer, um das Layout für eine Variable zu ändern. Weitere Informationen finden Sie unter [Variablensyntax](https://msdn.microsoft.com/library/windows/desktop/bb509706). Sie können auch ein Compilerkennzeichen oder ein Pragma angeben, um den globalen Standardwert zu ändern.
 </div>
 <div>
  
@@ -129,7 +130,7 @@ In GLSL wenden Sie Modifizierer (Qualifizierer) auf eine globale Shadervariablen
 <p>Sie übergeben eine Uniform-Variable vom App-Code in die Vertex- und/oder Fragment-Shader. Sie müssen die Werte aller Uniform-Variablen festlegen, bevor Sie Dreiecke mit den Shadern zeichnen, damit ihre Werte gleich bleiben, während ein Dreieckgitter gezeichnet wird. Diese Werte sind einheitlich. Einige Uniform-Variablen werden für den gesamten Frame festgelegt und andere speziell für ein bestimmtes Vertex-/Pixelshaderpaar.</p>
 <p>Uniform-Variablen sind Variablen, die pro Polygon gelten.</p></td>
 <td align="left"><p>Verwenden Sie einen Konstantenpuffer.</p>
-<p>Siehe [How to: Create a Constant Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476896) und [Shader Constants](https://msdn.microsoft.com/library/windows/desktop/bb509581).</p></td>
+<p>Siehe [So wird's gemacht: Erstellen eines Konstantenpuffers](https://msdn.microsoft.com/library/windows/desktop/ff476896) und [Shaderkonstanten](https://msdn.microsoft.com/library/windows/desktop/bb509581).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>variierende Variable</strong></p>
@@ -139,8 +140,8 @@ In GLSL wenden Sie Modifizierer (Qualifizierer) auf eine globale Shadervariablen
 <tr class="odd">
 <td align="left"><p><strong>Attribut</strong></p>
 <p>Ein Attribut ist Teil der Beschreibung eines Scheitelpunkts, die Sie vom App-Code an den Vertex-Shader übergeben. Anders als bei einer Uniform-Variable legen Sie den Wert jedes Attributs für jeden Scheitelpunkt fest, sodass jeder Scheitelpunkt einen anderen Wert haben kann. Attributvariablen sind Variablen, die pro Scheitelpunkt gelten.</p></td>
-<td align="left"><p>Definieren Sie einen Vertexpuffer in Ihrem Direct3D-App-Code, und passen Sie ihn an die im Vertex-Shader definierte Scheitelpunkteingabe an. Optional können Sie einen Indexpuffer definieren. Siehe [How to: Create a Vertex Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476899) und [How to: Create an Index Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476897).</p>
-<p>Erstellen Sie ein Eingabelayout in Ihrem Direct3D-App-Code, und passen Sie die Semantikwerte an die Werte in der Scheitelpunkteingabe an. Siehe [Create the input layout](https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout).</p></td>
+<td align="left"><p>Definieren Sie einen Scheitelpunktpuffer in Ihrem Direct3D-App-Code, und passen Sie ihn an die im Vertex-Shader definierte Scheitelpunkteingabe an. Optional können Sie einen Indexpuffer definieren. Siehe [So wird's gemacht: Erstellen eines Scheitelpunktpuffers](https://msdn.microsoft.com/library/windows/desktop/ff476899) und [So wird's gemacht: Erstellen eines Indexpuffers](https://msdn.microsoft.com/library/windows/desktop/ff476897).</p>
+<p>Erstellen Sie ein Eingabelayout in Ihrem Direct3D-App-Code, und passen Sie die Semantikwerte an die Werte in der Scheitelpunkteingabe an. Siehe [Erstellen des Eingabelayouts](https://msdn.microsoft.com/library/windows/desktop/bb205117#Create_the_Input_Layout).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>const</strong></p>
@@ -177,7 +178,7 @@ Ziehen Sie beim Portieren Ihrer GLSL-Typen zu HLSL die folgende Tabelle zurate.
 <td align="left">Skalare Typen: float, int, bool</td>
 <td align="left"><p>Skalare Typen: float, int, bool</p>
 <p>also, uint, double</p>
-<p>Weitere Informationen finden Sie unter [Scalar Types](https://msdn.microsoft.com/library/windows/desktop/bb509646).</p></td>
+<p>Weitere Informationen finden Sie unter [Skalare Typen](https://msdn.microsoft.com/library/windows/desktop/bb509646).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Vektortyp</p>
@@ -199,8 +200,8 @@ Ziehen Sie beim Portieren Ihrer GLSL-Typen zu HLSL die folgende Tabelle zurate.
 <li>min16uint</li>
 </ul></li>
 </ul>
-<p>Weitere Informationen finden Sie unter [Vector Type](https://msdn.microsoft.com/library/windows/desktop/bb509707) und [Keywords](https://msdn.microsoft.com/library/windows/desktop/bb509568).</p>
-<p>Der Vektor verfügt auch über eine Typdefinition „float4“ (typedef vector &lt;float, 4&gt; vector;). Weitere Informationen finden Sie unter [User-Defined Type](https://msdn.microsoft.com/library/windows/desktop/bb509702).</p></td>
+<p>Weitere Informationen finden Sie unter [Vektortyp](https://msdn.microsoft.com/library/windows/desktop/bb509707) und [Schlüsselwörter](https://msdn.microsoft.com/library/windows/desktop/bb509568)</p>
+<p>Der Vektor verfügt auch über eine Typdefinition "float4" (typedef vector &lt;float, 4&gt; vector;). Weitere Informationen finden Sie unter [Benutzerdefinierter Typ](https://msdn.microsoft.com/library/windows/desktop/bb509702).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Matrixtyp</p>
@@ -223,19 +224,19 @@ Ziehen Sie beim Portieren Ihrer GLSL-Typen zu HLSL die folgende Tabelle zurate.
 <li>min16uint</li>
 </ul></li>
 </ul>
-<p>Sie können auch den [matrix type](https://msdn.microsoft.com/library/windows/desktop/bb509623) verwenden, um eine Matrix zu definieren.</p>
+<p>Sie können auch den [Matrixtyp](https://msdn.microsoft.com/library/windows/desktop/bb509623) verwenden, um eine Matrix zu definieren.</p>
 <p>Beispiel: matrix &lt;float, 2, 2&gt; fMatrix = {0.0f, 0.1, 2.1f, 2.2f};</p>
-<p>Die Matrix verfügt auch über eine Typdefinition „float4x4“ (typedef matrix &lt;float, 4, 4&gt; matrix;). Weitere Informationen finden Sie unter [User-Defined Type](https://msdn.microsoft.com/library/windows/desktop/bb509702).</p></td>
+<p>Die Matrix verfügt auch über eine Typdefinition "float4x4" (typedef matrix &lt;float, 4, 4&gt; matrix;). Weitere Informationen finden Sie unter [Benutzerdefinierter Typ](https://msdn.microsoft.com/library/windows/desktop/bb509702).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Genauigkeitsqualifizierer für „float“, „int“ und „sampler“</p>
+<td align="left"><p>Genauigkeitsqualifizierer für "float", "int" und "sampler"</p>
 <ul>
 <li><p>highp</p>
-<p>Dieser Qualifizierer dient für minimale Genauigkeitsanforderungen, die größer sind als die Anforderungen von „min16float“ und kleiner als ein ganzer 32-Bit-Float-Wert. Äquivalent in HLSL:</p>
+<p>Dieser Qualifizierer dient für minimale Genauigkeitsanforderungen, die größer sind als die Anforderungen von "min16float" und kleiner als ein ganzer 32-Bit-Float-Wert. Äquivalent in HLSL:</p>
 <p>highp float -&gt; float</p>
 <p>highp int -&gt; int</p></li>
 <li><p>mediump</p>
-<p>Dieser auf „float“float und „int“ angewendete Qualifizierer entspricht „min16float“ und „min12int“ in HLSL. Mindestens 10 Bits Mantisse (nicht wie "min10float").</p></li>
+<p>Dieser auf float und int angewendete Qualifizierer entspricht min16float und min12int in HLSL. Mindestens 10 Bits Mantisse (nicht wie "min10float").</p></li>
 <li><p>lowp</p>
 <p>Dieser auf "float" angewendete Qualifizierer bietet einen Gleitkommabereich von -2 bis 2. Entspricht „min10float“ in HLSL.</p></li>
 </ul></td>
@@ -246,10 +247,10 @@ Ziehen Sie beim Portieren Ihrer GLSL-Typen zu HLSL die folgende Tabelle zurate.
 <p>Min. 2.8-Bit-Festpunktwert mit Vorzeichen (2 Bits ganze Zahl und 8 Bits Nachkommakomponente). Die 8-Bit-Nachkommakomponente kann inklusive 1 sein (anstelle von exklusive), um den kompletten Bereich von -2 bis 2 zu verwenden.</p></li>
 <li>min16int: min. 16-Bit-Ganzzahl mit Vorzeichen</li>
 <li><p>min12int: min. 12-Bit-Ganzzahl mit Vorzeichen</p>
-<p>Dieser Typ dient für „10Level9“ ([9_x feature levels](https://msdn.microsoft.com/library/windows/desktop/ff476876)). Ganze Zahlen werden dort durch Gleitkommazahlen dargestellt. Dies ist die Genauigkeit, die Sie erhalten, wenn Sie eine ganze Zahl mit einer 16-Bit-Gleitkommazahl emulieren.</p></li>
+<p>Dieser Typ dient für "10Level9" ([9_x-Funktionsebenen](https://msdn.microsoft.com/library/windows/desktop/ff476876)). Ganze Zahlen werden dort durch Gleitkommazahlen dargestellt. Dies ist die Genauigkeit, die Sie erhalten, wenn Sie eine ganze Zahl mit einer 16-Bit-Gleitkommazahl emulieren.</p></li>
 <li>min16uint: min. 16-Bit-Ganzzahl ohne Vorzeichen</li>
 </ul>
-<p>Weitere Informationen finden Sie unter [Scalar Types](https://msdn.microsoft.com/library/windows/desktop/bb509646) und [Using HLSL minimum precision](https://msdn.microsoft.com/library/windows/desktop/hh968108).</p></td>
+<p>Weitere Informationen finden Sie unter [Skalare Typen](https://msdn.microsoft.com/library/windows/desktop/bb509646) und [Verwenden der HLSL-Mindestgenauigkeit](https://msdn.microsoft.com/library/windows/desktop/hh968108).</p></td>
 </tr>
 <tr class="odd">
 <td align="left">sampler2D</td>
@@ -321,7 +322,7 @@ Ziehen Sie beim Portieren von vordefinierten globalen GLSL-Variablen zu HLSL die
 <p>Fragmentfarbe für die Farbzuordnung „n“</p></td>
 <td align="left"><p>SV_Target[n]</p>
 <p>Diese Semantik ist vom Typ <strong>float4</strong>.</p>
-<p>Ausgabewert des Pixelshaders, der im Renderziel „n“ gespeichert wird, wobei 0 &lt;= n &lt;= 7.</p></td>
+<p>Ausgabewert des Pixelshaders, der im Renderziel "n" gespeichert wird, wobei 0 &lt;= n &lt;= 7.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>gl_FragCoord</strong></p>
@@ -544,7 +545,7 @@ m_d3dDeviceContext->PSSetShader(pixelShader.Get(),nullptr,0);
 m_d3dDeviceContext->IASetInputLayout(inputLayout.Get());
 m_d3dDeviceContext->IASetVertexBuffers(0, 1, vertexBuffer.GetAddressOf(), &stride, &offset);
 
-// Set the primitive’s topology.
+// Set the primitive's topology.
 m_d3dDeviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
 // Draw a triangle with 3 vertices. triangleVertices is an array of 3 vertices.
@@ -565,6 +566,6 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

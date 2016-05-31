@@ -1,6 +1,7 @@
 ---
+author: martinekuan
 title: Übergeben von Arrays an eine Komponente für Windows-Runtime
-description: Parameter in der UWP (Universal Windows-Plattform) sind entweder für die Eingabe oder für die Ausgabe, nie für beide, vorgesehen. Das bedeutet, dass der Inhalt eines Arrays, der an eine Methode übergeben wird, wie auch das Array selbst, für die Eingabe oder für die Ausgabe vorgesehen sind.
+description: Parameter in der UWP (Universal Windows-Plattform) sind entweder für die Eingabe oder für die Ausgabe, nie für beide, vorgesehen. Das bedeutet, dass der Inhalt eines Arrays, der an eine Methode übergeben wird, wie auch das Array selbst für die Eingabe oder für die Ausgabe vorgesehen sind.
 ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
 ---
 
@@ -62,6 +63,6 @@ Ist der Aufrufer in verwaltetem Code geschrieben, ist das ursprüngliche Array f
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

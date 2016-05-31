@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Das Windows Dev Center-Dashboard bietet Ihnen die Möglichkeit, Ihre App nur für bestimmte Personen bereitzustellen. Auf diese Weise können Tester die App ausprobieren, bevor Sie sie für die Allgemeinheit anbieten.
 title: Betatests und zielgerichtete Verteilung
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
@@ -60,7 +61,7 @@ Um diese Option zu verwenden, aktivieren Sie beim Einrichten der App auf der Sei
 
 Für Tests auf Windows Phone 8.1 und früher ist es mit dieser Option möglich, die Verteilung der App zu beschränken. Nur Benutzer, deren (mit dem jeweiligen Microsoft-Konto verknüpfte) E-Mail-Adresse Sie in das Feld eingegeben haben, können die App über einen direkten Link zum App-Eintrag herunterladen.
 
-> **Wichtig:** Benutzer mit den eingegebenen E-Mail-Adressen können die App nur auf Geräten unter Windows Phone 8.1 (oder einer älteren Version) herunterladen.
+> **Wichtig:**  Benutzer mit den eingegebenen E-Mail-Adressen können die App nur auf Geräten unter Windows Phone 8.1 (oder einer älteren Version) herunterladen.
  
 Den direkten Link zur App finden Sie im Dashboard auf der Seite [App-Identität](view-app-identity-details.md). (Verwenden Sie die **URL für Windows Phone**.) Kein Kunde ist in der Lage, die App durch Suchen oder Browsen im Store zu finden. Auch wenn sie über den Links zum App-Eintrag verfügen, können sie die App nicht herunterladen, sofern sie nicht ein Microsoft-Konto verwenden, das einer E-Mail-Adresse zugeordnet ist, die Sie beim Einreichen dieser App bereitgestellt haben.
 
@@ -80,6 +81,6 @@ Wenn Sie diese Option auswählen, beachten Sie Folgendes:
 -   Sie können den Zugriff auf die App nicht widerrufen, nachdem sie von den Testern heruntergeladen wurde. Nachdem sie die App heruntergeladen haben, können sie diese weiterhin verwenden, und sie erhalten sämtliche Updates, die Sie übermitteln.
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

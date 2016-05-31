@@ -1,8 +1,9 @@
 ---
-description: In diesem Thema erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer SMS starten, damit Benutzer eine SMS senden können. Sie können die Felder der SMS vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche "Senden" tippen.
+author: Xansky
+description: In diesem Thema erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer SMS starten, damit Benutzer eine SMS senden können. Sie können die Felder der SMS vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.
 title: Senden einer SMS
 ms.assetid: 4D7B509B-1CF0-4852-9691-E96D8352A4D6
-keywords: Kontakte, SMS, senden
+keywords: contacts, SMS, send
 ---
 
 # Senden einer SMS
@@ -14,12 +15,12 @@ In diesem Thema erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer SMS sta
 
 ## Starten des Dialogfelds zum Verfassen einer SMS
 
-Erstellen Sie ein neues [**ChatMessage**](https://msdn.microsoft.com/library/windows/apps/Dn642160)-Objekt, und legen Sie die Daten fest, die im Dialogfeld zum Verfassen einer E-Mail bereits vorhanden sein sollen. Rufen Sie [**ShowComposeSmsMessageAsync**](https://msdn.microsoft.com/library/windows/apps/Dn642160manager-showcomposesmsmessageasync) auf, um das Dialogfeld anzuzeigen.
+Erstellen Sie ein neues [**ChatMessage**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.chat.chatmessage)-Objekt, und legen Sie die Daten fest, die im Dialogfeld zum Verfassen einer E-Mail bereits vorhanden sein sollen. Rufen Sie [**ShowComposeSmsMessageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessagemanager.showcomposesmsmessageasync) auf, um das Dialogfeld anzuzeigen.
 
 ```cs
-private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipient, 
-    string messageBody, 
-    StorageFile attachmentFile, 
+private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipient,
+    string messageBody,
+    StorageFile attachmentFile,
     string mimeType)
 {
     var chatMessage = new Windows.ApplicationModel.Chat.ChatMessage();
@@ -36,7 +37,7 @@ private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipien
         chatMessage.Attachments.Add(attachment);
     }
 
-    var phone = recipient.Phones.FirstOrDefault&lt;Windows.ApplicationModel.Contacts.ContactPhone&gt;();
+    var phone = recipient.Phones.FirstOrDefault<Windows.ApplicationModel.Contacts.ContactPhone>();
     if (phone != null)
     {
         chatMessage.Recipients.Add(phone.Number);
@@ -54,8 +55,6 @@ In diesem Thema haben Sie erfahren, wie Sie das Dialogfeld zum Verfassen einer S
 * [Auswählen von Kontakten](selecting-contacts.md)
 
 
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

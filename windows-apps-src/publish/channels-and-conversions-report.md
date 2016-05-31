@@ -1,5 +1,6 @@
 ---
-Description: Im Bericht zu Kanälen und Konvertierungen im Windows Dev Center-Dashboard können Sie sehen, wie Kunden unter Windows 10 zu dem Eintrag Ihrer App gelangt sind.
+author: jnHs
+Description: Im Bericht zu Kanälen und Konvertierungen im Windows Dev Center-Dashboard können Sie sehen, wie Kunden unter Windows 10 zu dem Eintrag Ihrer App gelangt sind.
 title: Bericht zu Kanälen und Konvertierungen
 ms.assetid: C359B9FB-A17B-4A8E-B8EE-19F2F98AA4FF
 ---
@@ -33,9 +34,9 @@ Ein *Seitenaufruf* bedeutet, dass ein Kunde die Store-Eintragsseite für Ihre Ap
 
 Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten auf dieser Seite nach Datumsbereich und/oder Markt zu filtern.
 
--   **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
+-   **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
 -   **Markt**: Die Standardeinstellung ist **Alle Märkte**. Sie können einen bestimmten Markt auswählen, wenn auf dieser Seite nur Details der in diesem Markt ansässigen Kunden angezeigt werden sollen.
--   **Gerätetyp**: Der Standardfilter lautet **Alle Geräte**. Sie können einen bestimmten Gerätetyp auswählen, wenn auf dieser Seite nur Daten von Kunden angezeigt werden sollen, die ein Gerät dieses Typs verwenden.
+-   **Gerätetyp**: Der Standardfilter ist **Alle Geräte**. Sie können einen bestimmten Gerätetyp auswählen, wenn auf dieser Seite nur Daten von Kunden angezeigt werden sollen, die ein Gerät dieses Typs verwenden.
 
 Die Informationen in allen unten aufgeführten Diagrammen beziehen sich auf den im Bereich **Filter anwenden** ausgewählten Zeitraum und entsprechen den von Ihnen hier ausgewählten Filtern.
 
@@ -92,6 +93,6 @@ Bei benutzerdefinierten Kampagnen können Sie auch die Anzahl der App-Konvertier
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

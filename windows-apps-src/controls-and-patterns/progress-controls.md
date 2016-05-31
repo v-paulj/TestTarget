@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Ein Statussteuerelement gibt dem Benutzer eine Rückmeldung, dass ein Vorgang mit langer Laufzeit ausgeführt wird.
 title: Richtlinien für Statussteuerelemente
 ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
-label: Statussteuerelemente
+label: Progress controls
 template: detail.hbs
 ---
 # Statussteuerelemente
@@ -73,10 +74,18 @@ Die Verwendung eines Statussteuerelements ist nicht in jedem Fall erforderlich. 
 Durch eine bestimmte Statusleiste wird angegeben, welchen Fortschritt die App erzielt hat. Mit Fortschreiten der Arbeit wird die Leiste aufgefüllt. Verwenden Sie eine exakte Statusanzeige, wenn Sie die verbleibende Arbeit (ausgedrückt als Dauer, Bytes, Dateien oder durch eine andere quantifizierbare Größe) abschätzen können.
 
 Die Statusanzeige bietet diverse Eigenschaften für Einstellungen und das Bestimmen des Fortschritts:
-- [**IsIndeterminate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx): Gibt an, ob die Statusanzeige unbestimmt ist. Durch Festlegen auf **false** erstellen Sie eine bestimmte Statusanzeige.
-- [**Minimum**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.minimum.aspx): Der Beginn des Wertebereichs. Der Standardwert ist 0.0.
-- [**Maximum**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.maximum.aspx): Das Ende des Wertebereichs. Der Standardwert ist 1.0. 
-- [**Value**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.value.aspx): Eine Zahl, die den aktuellen Fortschritt angibt. Wenn Sie den Status eines Dateidownloads anzeigen möchten, könnte dieser Wert auf die Anzahl heruntergeladener Byte festgelegt werden (legen Sie zusätzlich Maximum auf die Summe herunterzuladender Byte fest).
+- [
+              **IsIndeterminate**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.progressbar.isindeterminate.aspx): Gibt an, ob die Statusanzeige unbestimmt ist. Durch Festlegen auf **false** erstellen Sie eine bestimmte Statusanzeige.
+- [
+              **Minimum**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.minimum.aspx): Der Beginn des Wertebereichs. Der Standardwert ist 0.0.
+- [
+              **Maximum**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.maximum.aspx): Das Ende des Wertebereichs. Der Standardwert ist 1.0. 
+- [
+              **Value**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.primitives.rangebase.value.aspx): Eine Zahl, die den aktuellen Fortschritt angibt. Wenn Sie den Status eines Dateidownloads anzeigen möchten, könnte dieser Wert auf die Anzahl heruntergeladener Byte festgelegt werden (legen Sie zusätzlich Maximum auf die Summe herunterzuladender Byte fest).
  
 Das folgende Beispiel zeigt eine wertbasierte bestimmte Statusanzeige. 
 
@@ -266,18 +275,24 @@ stackPanel1.Children.Add(progressRing1);
     Falls nicht, zeigen Sie kein Statussteuerelement an.
 
 -   **Ist bekannt, wie lange es dauert, die Aufgabe abzuschließen?**
-    -   **Ja:** **Dauert es länger als zwei Sekunden, bis die Aufgabe abgeschlossen ist?**
+    -   **Ja:**
+            **Dauert es länger als zwei Sekunden, bis die Aufgabe abgeschlossen ist?**
         -   **Ja:** Verwenden Sie eine bestimmte Statusanzeige. Stellen Sie für Aufgaben, die länger als 10 Sekunden dauern, eine Option zum Abbrechen der Aufgabe bereit.
         -   **Nein:** Zeigen Sie kein Statussteuerelement an.
 
-    -   **Nein:** **Ist die Interaktion mit der UI für Benutzer blockiert, bis die Aufgabe abgeschlossen ist?**
-        -   **Ja:** **Ist diese Aufgabe Teil eines Prozesses aus mehreren Schritten, bei dem der Benutzer spezifische Details zum Prozess wissen muss?**
+    -   **Nein:**
+            **Ist die Interaktion mit der UI für Benutzer blockiert, bis die Aufgabe abgeschlossen ist?**
+        -   **Ja:**
+            **Ist diese Aufgabe Teil eines Prozesses aus mehreren Schritten, bei dem der Benutzer spezifische Details zum Prozess wissen muss?**
             -   **Ja:** Verwenden Sie einen unbestimmten Statusring mit horizontalem Statustext in der Mitte des Bildschirms.
             -   **Nein:** Verwenden Sie einen unbestimmten Statusring ohne Text in der Mitte des Bildschirms.
-        -   **Nein:** **Handelt es sich um eine primäre Aktivität?**
-            -   **Ja:** **Hängt der Status mit einem einzelnen, spezifischen Element auf der UI zusammen?**
+        -   **Nein:**
+            **Handelt es sich um eine primäre Aktivität?**
+            -   **Ja:**
+            **Hängt der Status mit einem einzelnen, spezifischen Element auf der UI zusammen?**
                 -   **Ja:** Verwenden Sie einen unbestimmten Inlinestatusring mit Statustext neben dem zugehörigen UI-Element.
-                -   **Nein:** **Wird eine große Datenmenge in eine Liste geladen?**
+                -   **Nein:**
+            **Wird eine große Datenmenge in eine Liste geladen?**
                     -   **Ja:** Verwenden Sie die unbestimmte Statusleiste oben mit Platzhaltern, um eingehende Inhalte darzustellen.
                     -   **Nein:** Verwenden Sie die unbestimmte Statusleiste oben im Bildschirm oder auf der Oberfläche.
             -   **Nein:** Verwenden Sie Statustext in einer Ecke oben im Bildschirm.
@@ -293,6 +308,6 @@ stackPanel1.Children.Add(progressRing1);
 - [So wird's gemacht: Erstellen einer benutzerdefinierten unbestimmten Statusleiste für Windows Phone](http://go.microsoft.com/fwlink/p/?LinkID=392426)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

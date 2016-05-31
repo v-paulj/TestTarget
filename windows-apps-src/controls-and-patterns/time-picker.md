@@ -1,8 +1,9 @@
 ---
-Description: Mit der Zeitauswahl verfügen Sie über eine standardmäßige Methode, mit der Benutzer einen Zeitwert per Touch-, Maus- oder Tastatureingabe auswählen können.
+author: Jwmsft
+Description: Mit der Zeitauswahl verfügen Sie über eine standardmäßige Methode, mit der die Benutzer einen Zeitwert per Touch-, Maus- oder Tastatureingabe auswählen können.
 title: Zeitauswahl
 ms.assetid: 5124ecda-09e6-449e-9d4a-d969dca46aa3
-label: Zeitauswahl
+label: Time picker
 template: detail.hbs
 ---
 
@@ -43,18 +44,19 @@ Die fertige Zeitauswahl sieht wie folgt aus:
 
 ![Beispiel für Zeitauswahl](images/time-picker-closed.png)
 
-> **Hinweis**&nbsp;&nbsp;Wichtige Informationen zu *Datums- und Zeitwerten* finden Sie im Artikel [Datums- und Uhrzeitsteuerelemente](date-and-time.md#datetime-and-calendar-values).
+> **Hinweis**
+            &nbsp;&nbsp;Wichtige Informationen zu Uhrzeit- und Datumswerten finden Sie unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values) im Artikel *Steuerelemente für Datum und Uhrzeit*.
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Themen
 
-- [Datums- und Uhrzeitsteuerelemente](date-and-time.md)
+- [Steuerelemente für Datum und Uhrzeit](date-and-time.md)
 - [Kalenderdatumsauswahl](calendar-date-picker.md)
 - [Kalenderansicht](calendar-view.md)
 - [Datumsauswahl](date-picker.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

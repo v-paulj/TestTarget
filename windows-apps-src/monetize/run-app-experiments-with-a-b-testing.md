@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 Description: Sie können über das Windows Dev Center-Dashboard Experimente für Ihre UWP-Apps (Universelle Windows-Plattform) mit A/B-Tests durchführen.
 title: Ausführen von Experimenten mit A/B-Tests
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
@@ -49,6 +50,6 @@ Um möglichst aussagekräftige Ergebnisse zu erzielen, sollten Sie beim Durchfü
 * [Erstellen und Ausführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

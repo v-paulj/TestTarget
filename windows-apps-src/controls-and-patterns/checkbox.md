@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Dient zum Aktivieren oder Deaktivieren von Aktionselementen. Kann für einzelne oder mehrere Listenelemente verwendet werden.
 title: Kontrollkästchen
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
@@ -70,7 +71,7 @@ Mit der [**IsChecked**](https://msdn.microsoft.com/library/windows/apps/windows.
 
 In diesem Beispiel wird die **IsChecked**-Eigenschaft des Kontrollkästchens zum Akzeptieren der Servicebedingungen an die [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.isenabled.aspx)-Eigenschaft der Schaltfläche zum Absenden gebunden. Die Schaltfläche zum Absenden wird nur aktiviert, wenn die Vertragsbedingungen akzeptiert werden.
 
-> Hinweis: Hier ist nur der relevante Code zu sehen. Weitere Informationen zu Datenbindungen und Wertkonvertern finden Sie unter [Übersicht "Datenbindung"](../data-binding/data-binding-quickstart.md).
+> Hinweis&nbsp;&nbsp;Wir zeigen hier nur den relevanten Code. Weitere Informationen zu Datenbindungen und Wertkonvertern finden Sie unter [Übersicht "Datenbindung"](../data-binding/data-binding-quickstart.md).
 
 ```xaml
 ...
@@ -287,6 +288,6 @@ private void SetCheckedState()
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

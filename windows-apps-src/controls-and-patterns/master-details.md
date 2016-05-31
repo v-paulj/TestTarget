@@ -1,8 +1,9 @@
 ---
-description: Beim Master/Details-Muster werden eine Masterliste und die Details für das derzeit ausgewählte Element angezeigt. Dieses Muster wird häufig für E-Mails und Kontaktlisten/Adressbücher verwendet.
+author: Jwmsft
+Description: Beim Master/Details-Muster werden eine Masterliste und die Details für das derzeit ausgewählte Element angezeigt. Dieses Muster wird häufig für E-Mails und Kontaktlisten/Adressbücher verwendet.
 title: Master/Details
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
-label: Master/Details
+label: Master/details
 template: detail.hbs
 ---
 # Master/Details-Muster
@@ -71,16 +72,16 @@ In diesem Entwurf einer App zur Verfolgung der Börse wird ein Master/Details-Mu
 
 ![Beispiel für eine App mit dem Master/Details-Muster, auf dem Desktop](images/uap-finance-desktop700.png)
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die Universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Artikel
 
 - [Listen](lists.md)
-- [Suchen](search.md)
+- [Suche](search.md)
 - [App- und Befehlsleisten](app-bars.md)
 - [**ListView-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242878)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

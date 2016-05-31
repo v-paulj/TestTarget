@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Sie haben die Möglichkeit, eine Anzeige zu erstellen, um eine Ihrer Apps in Ihren anderen Apps zu bewerben – und das kostenlos. Wir bezeichnen dies als Eigenwerbung.
 title: Über Eigenwerbung
 ms.assetid: C6507C8B-351B-49E7-A194-35AB05BC3358
@@ -31,6 +32,6 @@ Wenn Eigenwerbung für App A in App B erscheint, wird der Aufruf weder in Rechnu
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Ermöglicht dem Benutzer das Festlegen eines Werts in einem angegebenen Bereich.
 title: Schieberegler
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
-label: Schieberegler
+label: Sliders
 template: detail.hbs
 ---
 # Schieberegler
@@ -30,8 +31,8 @@ Hier sind einige weitere Faktoren, die Sie bei der Entscheidung für oder gegen 
 -   **Handelt es sich bei der Einstellung um eine relative Anzahl?** Ist dies nicht der Fall, verwenden Sie stattdessen [Optionsfelder](radio-button.md) oder ein [Listenfeld](lists.md).
 -   **Handelt es sich bei der Einstellung um einen exakten, bekannten numerischen Wert?** Wenn ja, verwenden Sie ein numerisches [Textfeld](text-box.md).
 -   **Wäre es für Benutzer hilfreich, sofort Feedback zur Auswirkung von Einstellungsänderungen zu erhalten?** Wenn ja, verwenden Sie einen Schieberegler. Beispielsweise können Benutzer eine Farbe leichter auswählen, wenn sie sofort sehen, wie sich Änderungen an den Werten für Farbton, Sättigung oder Leuchtdichte auswirken.
--   **Weist die Einstellung einen Bereich aus vier oder mehr Werten auf?** Ist dies nicht der Fall, verwenden Sie [Optionsfelder](radio-button.md).
--   **Kann der Benutzer den Wert ändern?** Schieberegler sind für Benutzerinteraktionen vorgesehen. Wenn der Wert in keinem Fall von Benutzern geändert werden kann, verwenden Sie stattdessen schreibgeschützten Text.
+-   **Weist die Einstellung einen Bereich aus vier oder mehr Werten auf?** Ist dies nicht der Fall, verwenden Sie stattdessen [Optionsfelder](radio-button.md).
+-   **Können Benutzer den Wert ändern?** Schieberegler dienen zur Benutzerinteraktion. Wenn der Wert in keinem Fall von Benutzern geändert werden kann, verwenden Sie stattdessen schreibgeschützten Text.
 
 Wenn Sie zwischen einem Schieberegler und einem numerischen Textfeld entscheiden, verwenden Sie in folgenden Fällen ein numerisches Textfeld:
 
@@ -163,10 +164,12 @@ Ziehen Sie beim Entwerfen eines benutzerdefinierten Schiebereglers Möglichkeite
 
 **Für Designer**
 - [Richtlinien für Umschalter](toggles.md)
-**Für Entwickler (XAML)**
+            
+          
+            **Für Entwickler (XAML)**
 - [**Slider-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209614)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

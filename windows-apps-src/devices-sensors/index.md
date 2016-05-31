@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
 title: Geräte, Sensoren und Leistung
 description: Damit Ihren Benutzern umfangreiche Einsatzmöglichkeiten geboten werden können, ist es möglicherweise erforderlich, externe Geräte oder Sensoren in die App zu integrieren.
@@ -15,8 +16,9 @@ Damit Ihren Benutzern umfangreiche Einsatzmöglichkeiten geboten werden können,
 
 | Thema | Beschreibung |
 |-------|-------------|
-| [Aktivieren von Gerätefunktionen](enable-device-capabilities.md) | In diesem Lernprogramm wird beschrieben, wie Gerätefunktionen in Microsoft Visual Studio deklariert werden. Diese Funktionen bieten Ihnen die Möglichkeit, in Ihrer App Kameras, Mikrofone, Positionssensoren und andere Geräte zu verwenden. | 
-| [Auflisten von Geräten](enumerate-devices.md) | Der Enumeration-Namespace ermöglicht die Suche nach Geräten, die intern mit dem System verbunden, extern verbunden oder über Drahtlos- oder Netzwerkprotokolle entdeckt werden können. |
+| [Aktivieren von Gerätefunktionen](enable-device-capabilities.md) | In diesem Lernprogramm wird beschrieben, wie Gerätefunktionen in Microsoft Visual Studio deklariert werden. Diese Funktionen ermöglichen Ihrer App die Verwendung von Kameras, Mikrofonen, Positionssensoren und anderen Geräten. | 
+| [Aktivieren des Benutzermoduszugriffs für Windows IoT](enable-usermode-access.md) | In diesem Lernprogramm wird der Benutzermoduszugriff auf GPIO, I2C, SPI und UART auf Windows 10 IoT Core beschrieben. |
+| [Auflisten von Geräten](enumerate-devices.md) | Der Namespace enumeration ermöglicht die Suche nach Geräten, die intern mit dem System verbunden, extern verbunden oder über Drahtlos- oder Netzwerkprotokolle erkannt werden können. |
 | [Koppeln von Geräten](pair-devices.md) | Einige Geräte müssen gekoppelt werden, bevor sie verwendet werden können. Der [<strong>Windows.Devices.Enumeration</strong>](https://msdn.microsoft.com/library/windows/apps/BR225459)-Namespace unterstützt drei verschiedene Verfahren zum Koppeln von Geräten: |
 | [Out-of-Band-Kopplung](out-of-band-pairing.md) | In diesem Abschnitt wird beschrieben, wie Sie mit der Out-of-Band-Kopplung eine Verbindung zwischen Apps und bestimmten Geräten herstellen können, ohne eine Erkennung zu erfordern. | 
 | [Sensoren](sensors.md) | Mithilfe von Sensoren können Apps die Beziehung zwischen einem Gerät und der physischen Umgebung ermitteln. Sensoren können für die App die Richtung, Ausrichtung und Bewegung des Geräts erfassen. |
@@ -28,6 +30,6 @@ Damit Ihren Benutzern umfangreiche Einsatzmöglichkeiten geboten werden können,
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

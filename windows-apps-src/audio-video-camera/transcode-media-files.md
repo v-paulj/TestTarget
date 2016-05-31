@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: A1A0D99A-DCBF-4A14-80B9-7106BEF045EC
-description: Mit den Windows.Media.Transcoding-APIs können Sie Videodateien in ein anderes Format transcodieren.
+description: Mit den Windows.Media.Transcoding-APIs können Sie Videodateien von einem Format in ein anderes transcodieren.
 title: Transcodieren von Mediendateien
 ---
 
@@ -70,6 +71,6 @@ Sie können Reaktionsereignisse registrieren, wenn sich der Fortschritt der asyn
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

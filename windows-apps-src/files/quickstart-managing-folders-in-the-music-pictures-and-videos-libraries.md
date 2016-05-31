@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: Dateien und Ordner in den Musik-, Bild- und Videobibliotheken
 description: Fügen Sie vorhandene Musik-, Bilder- oder Video-Ordner den entsprechenden Bibliotheken hinzu. Sie können auch Ordner aus Bibliotheken entfernen, die Liste der Ordner in einer Bibliothek abrufen und gespeicherte Fotos, Musik und Videos untersuchen.
@@ -34,7 +35,7 @@ Eine Bibliothek ist eine virtuelle Sammlung von Ordnern, die standardmäßig ein
 ## Abrufen eines Verweises auf eine Bibliothek
 
 
-**Hinweis:** Denken Sie daran, die entsprechende Funktion zu deklarieren.
+**Hinweis**  Denken Sie daran, die entsprechende Funktion zu deklarieren.
  
 
 Rufen Sie die [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725)-Methode auf, um einen Verweis auf die Musik-, Bild- oder Videobibliothek des Benutzers zu erhalten. Geben Sie den entsprechenden Wert der [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399)-Enumeration ein.
@@ -117,15 +118,15 @@ Ein Gerät bietet fünf vordefinierte Speicherorte, an denen Benutzer und Apps M
 
 Die Speicherorte lauten:
 
--   Ordner **Bilder** Enthält Bilder.
+-   Ordner **Bilder**. Enthält Bilder.
 
-    -   Ordner **Eigene Aufnahmen** Enthält Fotos und Videos, die mit der integrierten Kamera aufgenommen wurden.
+    -   Ordner **Eigene Aufnahmen**. Enthält Fotos und Videos, die mit der integrierten Kamera aufgenommen wurden.
 
-    -   Ordner **Gespeicherte Bilder** Enthält Bilder, die der Benutzer aus anderen Apps gespeichert hat.
+    -   Ordner **Gespeicherte Bilder**. Enthält Bilder, die der Benutzer aus anderen Apps gespeichert hat.
 
--   Ordner **Musik** Enthält Songs, Podcasts und Hörbücher.
+-   Ordner **Musik**. Enthält Songs, Podcasts und Hörbücher.
 
--   Ordner **Video** Enthält Videos.
+-   Ordner **Video**. Enthält Videos.
 
 Mediendateien können von Benutzern und Apps auch außerhalb der Medienbibliothekordner auf der SD-Karte gespeichert werden. Durchsuchen Sie den Inhalt der SD-Karte, um eine Mediendatei auf der SD-Karte auf zuverlässige Weise zu finden, oder bitten Sie den Benutzer, mithilfe einer Dateiauswahl auf die Datei zuzugreifen. Weitere Informationen finden Sie unter [Zugreifen auf die SD-Karte](access-the-sd-card.md).
 
@@ -321,6 +322,6 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

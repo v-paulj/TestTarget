@@ -119,7 +119,7 @@ Die folgenden Codezeilen zeigen eine einfache Methode zum Überprüfen, ob der B
 var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
 if (!keyCredentialAvailable)
 {
-   // User didn&#39;t set up PIN yet
+   // User didn't set up PIN yet
    return;
 }
 ```
@@ -166,7 +166,7 @@ static async void RegisterUser(string AccountId)
     var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
     if (!keyCredentialAvailable)
     {
-        // The user didn&#39;t set up a PIN yet
+        // The user didn't set up a PIN yet
         return;
     }
 
@@ -450,6 +450,6 @@ Mission erfüllt! Sie haben das Internet gerade sicherer gemacht!
 * [Microsoft Passport-Anmelde-App](microsoft-passport-login.md)
 * [Microsoft Passport-Anmeldedienst](microsoft-passport-login-auth-service.md)
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

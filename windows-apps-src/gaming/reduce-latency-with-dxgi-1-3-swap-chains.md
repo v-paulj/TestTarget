@@ -1,6 +1,7 @@
 ---
-title: Reduzieren der Latenz mit DXGI 1.3-Swapchains
-description: Verwenden Sie DXGI 1.3 zum Reduzieren der geltenden Framelatenz. Warten Sie, bis die Swapchain den Zeitpunkt für das Rendern eines neuen Frames signalisiert.
+author: mtoepke
+title: Reduzieren der Latenz mit DXGI 1.3-Swapchains
+description: Verwenden Sie DXGI 1.3 zum Reduzieren der geltenden Framelatenz, indem Sie warten, bis die Swapchain den geeigneten Zeitpunkt signalisiert, um mit dem Rendern eines neuen Frames zu beginnen.
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
 ---
 
@@ -27,7 +28,7 @@ Geben Sie das [**DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT**](ht
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
 ```
 
-> **Hinweis:** Dieses Flag kann nicht wie andere Flags mithilfe von [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) hinzugefügt oder entfernt werden. Von DXGI wird ein Fehlercode zurückgegeben, wenn dieses Flag anders als bei der Erstellung der Swapchain festgelegt wird.
+> **Hinweis**  Dieses Flag kann nicht wie andere Flags mithilfe von [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) hinzugefügt oder entfernt werden. Von DXGI wird ein Fehlercode zurückgegeben, wenn dieses Flag anders als bei der Erstellung der Swapchain festgelegt wird.
 
  
 
@@ -157,6 +158,6 @@ Weitere Informationen zur Programmierung mit Multithreading unter Windows finden
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

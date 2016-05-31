@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Verwenden Sie ein RichTextBlock-Element mit RichTextBlockOverflow-Elementen, um erweiterte Textlayouts zu erstellen.
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
-label: Rich-Text-Block
+label: Rich text block
 template: detail.hbs
 ---
 # Rich-Text-Block
@@ -126,7 +127,7 @@ Die angefügten Eigenschaften der [Typography](https://msdn.microsoft.com/librar
 
 Siehe „Typografie“ und „Richtlinien für Schriftarten“.
 
-\[Dieser Artikel enthält spezielle Informationen zu UWP-Apps (Universal Windows Platform) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Artikel
 
@@ -146,6 +147,6 @@ Siehe „Typografie“ und „Richtlinien für Schriftarten“.
 - [StringLength-Eigenschaft](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

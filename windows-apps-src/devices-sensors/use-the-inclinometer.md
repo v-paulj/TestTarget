@@ -1,16 +1,17 @@
 ---
+author: DBirtolo
 ms.assetid: 16AD53CA-1252-456C-8567-2263D3EC95F3
 title: Verwenden des Neigungsmessers
 description: Hier erfahren Sie, wie Sie mithilfe des Neigungsmessers Werte für Nick-, Roll- und Gierwinkel ermitteln.
 ---
 # Verwenden des Neigungsmessers
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Inclinometer**](https://msdn.microsoft.com/library/windows/apps/BR225766)
+-   [**Neigungsmesser**](https://msdn.microsoft.com/library/windows/apps/BR225766)
 
 Hier erfahren Sie, wie Sie mithilfe des Neigungsmessers Werte für Nick-, Roll- und Gierwinkel ermitteln.
 
@@ -123,7 +124,7 @@ Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen erset
 
 Sie müssen den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen. Wenn Sie z. B. ein Projekt mit dem Namen **InclinometerCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="InclinometerCS.MainPage"`. Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:InclinometerCS"`.
 
--   Drücken Sie F5, oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
+-   Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
 
 Wenn die App ausgeführt wird, können Sie die Neigungsmesserwerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.
 
@@ -139,7 +140,7 @@ Die App stellt eine Verbindung mit dem Standardneigungsmesser in der **MainPage*
 _inclinometer = Inclinometer.GetDefault();
 ```
 
-Die App legt das Berichtsintervall in der **MainPage**-Methode fest. Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60 Hz). Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest. Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.
+Die App legt das Berichtsintervall in der **MainPage**-Methode fest. Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60 Hz). Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest. Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.
 
 ```csharp
 uint minReportInterval = _inclinometer.MinimumReportInterval;
@@ -149,7 +150,7 @@ _inclinometer.ReportInterval = reportInterval;
 
 Die neuen Neigungsmesserdaten werden in der **ReadingChanged**-Methode erfasst. Wenn der Sensortreiber neue Daten vom Sensor empfängt, übergibt er die Werte mithilfe dieses Ereignishandlers an Ihre App. Die App registriert diesen Ereignishandler in der folgenden Zeile.
 
-```
+```csharp
 _inclinometer.ReadingChanged += new TypedEventHandler<Inclinometer, 
 InclinometerReadingChangedEventArgs>(ReadingChanged);
 ```
@@ -171,6 +172,6 @@ Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieb
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

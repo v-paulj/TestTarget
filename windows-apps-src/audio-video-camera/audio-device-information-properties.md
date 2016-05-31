@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 3b75d881-bdcf-402b-a330-23cd29d68e53
 description: Dieser Artikel enthält eine Liste mit den DeviceInformation-Eigenschaften für Audiogeräte.
 title: Eigenschaften für Audiogeräteinformationen
@@ -26,6 +27,6 @@ Allgemeine Informationen zum Aufzählen von Geräten unter Windows finden Sie un
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

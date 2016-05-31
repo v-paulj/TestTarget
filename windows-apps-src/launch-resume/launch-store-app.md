@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Starten der Windows Store-App
 description: In diesem Thema wird das ms-windows-store-URI-Schema beschrieben. Ihre App kann mit diesem URI-Schema die Windows Store-App mit bestimmten Seiten des Store starten.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
@@ -26,11 +27,11 @@ In diesem Thema wird das **ms-windows-store:**-URI-Schema beschrieben. Ihre App 
 </td>
 </tr>
 <tr>
-<td rowspan="4">Startet die Seite mit Produktdetails für ein Produkt. <p>Die Produkt-ID wird für Kunden unter Windows 10 empfohlen, aber frühere Ausführungsmethoden (Beispiel: PFN) funktionieren weiterhin.</p>
+<td rowspan="4">Startet die Seite mit Produktdetails für ein Produkt. <p>Store-ID wird für Kunden mit Windows 10 empfohlen und funktioniert für alle Betriebssystemversionen. Die früheren Verfahren hierfür (Beispiel: PFN) werden jedoch weiterhin unterstützt.</p>
 <p>Diese Werte finden Sie im Windows Dev Center-Dashboard auf der Seite <a href="https://msdn.microsoft.com/library/windows/apps/mt148561.aspx">App-Identität</a> im Abschnitt zur App-Verwaltung für die einzelnen Apps.</p>
 </td>
 <td>
-Produkt-ID <p>(Empfohlen)</p>
+Store-ID <p>(Empfohlen)</p>
 </td>
 <td>
 <p>ms-windows-store://pdp/?ProductId=9WZDNCRFHVJL</p>
@@ -38,7 +39,7 @@ Produkt-ID <p>(Empfohlen)</p>
 </tr>
 <tr>
 <td>Paketfamilienname (PFN)</td>
-<td>ms-windows-store://pdp/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe 
+<td>ms-windows-store://pdp/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe
 </td>
 </tr>
 <tr>
@@ -47,17 +48,17 @@ Produkt-ID <p>(Empfohlen)</p>
 </tr>
 <tr>
 <td>Produkt-ID (Windows 8.x)</td>
-<td>ms-windows-store://pdp/?AppId=f022389f-f3a6-417e-ad23-704fbdf57117 
+<td>ms-windows-store://pdp/?AppId=f022389f-f3a6-417e-ad23-704fbdf57117
 </td>
 </tr>
 <tr>
 <td rowspan="4">Startet das Schreiben einer Bewertung für ein Produkt.</td>
-<td>Produkt-ID <p>(Empfohlen)</p></td>
+<td>Store-ID <p>(Empfohlen)</p></td>
 <td>ms-windows-store://review/?ProductId=9WZDNCRFHVJL </td>
 </tr>
 <tr>
 <td>Paketfamilienname (PFN)</td>
-<td>ms-windows-store://review/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe 
+<td>ms-windows-store://review/?PFN= Microsoft.Office.OneNote_8wekyb3d8bbwe
 </td>
 </tr>
 <tr>
@@ -71,7 +72,7 @@ Produkt-ID <p>(Empfohlen)</p>
 <tr>
 <td>Startet eine Suche nach Produkten, die einer Dateierweiterung zugeordnet sind. </td>
 <td />
-<td>ms-windows-store://assoc/?FileExt=pdf 
+<td>ms-windows-store://assoc/?FileExt=pdf
 </td>
 </tr>
 <tr>
@@ -107,7 +108,7 @@ Startet eine Suche für die angegebene Abfrage. Leerzeichen in der Abfrage sind 
 <td>Startet eine Suche nach Produkten eines angegebenen Herausgebers. Leerzeichen in der Abfrage sind zulässig. 
 </td>
 <td />
-<td>ms-windows-store://publisher/?name=Microsoft Corporation 
+<td>ms-windows-store://publisher/?name=Microsoft Corporation
 </td>
 </tr>
 <tr><td>Startet die Downloads- und Updateseite.</td>
@@ -129,6 +130,6 @@ Startet eine Suche für die angegebene Abfrage. Leerzeichen in der Abfrage sind 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

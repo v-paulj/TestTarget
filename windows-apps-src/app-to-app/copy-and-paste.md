@@ -16,7 +16,7 @@ In diesem Artikel wird erläutert, wie das Kopieren und Einfügen mit der Zwisch
 
 In vielen Fällen müssen Sie keinen Code für die Unterstützung von Zwischenablageaktionen schreiben. Viele der Standard-XAML-Steuerelemente, die Sie beim Erstellen Ihrer Apps verwenden können, unterstützen bereits Zwischenablageaktionen. Weitere Informationen zu den verfügbaren Steuerelementen finden Sie in der [Steuerelementliste][ControlsList].
 
-## Vorbereitung
+## Vorbereiten
 
 Schließen Sie zunächst den [**Windows.ApplicationModel.DataTransfer**][DataTransfer]-Namespace in Ihre App ein. Fügen Sie dann eine Instanz des [**DataPackage**][DataPackage]-Objekts hinzu. Dieses Objekt enthält sowohl die vom Benutzer kopierten Daten als auch alle Eigenschaften (z. B. eine Beschreibung), die Sie einfügen möchten.
 
@@ -49,7 +49,7 @@ Clipboard.SetContent(dataPackage);
 ```
 ## Einfügen
 
-Rufen Sie zum Abrufen des Inhalts der Zwischenablage die statische [**Clipboard.GetContent**[GetContent]-Methode auf. Die Methode gibt eine [**DataPackageView**][DataPackageView] mit dem Inhalt zurück. Dieses Objekt ist mit dem [**DataPackage**][DataPackage]-Objekt nahezu identisch, der Inhalt ist allerdings schreibgeschützt. Anhand dieses Objekts können Sie dann entweder mit der [**AvailableFormats**][AvailableFormats]-Methode oder mit der [**Contains**][Contains]-Methode ermitteln, welche Formate verfügbar sind. Rufen Sie anschließend die entsprechende **DataPackageView**-Methode auf, um die Daten abzurufen.
+Rufen Sie zum Abrufen des Inhalts der Zwischenablage die statische [**Clipboard.GetContent**[GetContent]-Methode auf. Die Methode gibt ein [**DataPackageView**][DataPackageView]-Objekt mit dem Inhalt zurück. Dieses Objekt ist mit dem [**DataPackage**][DataPackage]-Objekt nahezu identisch, nur dass der Inhalt schreibgeschützt ist. Anhand dieses Objekts können Sie dann entweder mit der [**AvailableFormats**][AvailableFormats]- oder der [**Contains**][Contains]-Methode ermitteln, welche Formate verfügbar sind. Rufen Sie anschließend die entsprechende **DataPackageView**-Methode auf, um die Daten abzurufen.
 
 ```cs
 DataPackageView dataPackageView = Clipboard.GetContent();
@@ -63,7 +63,7 @@ if (dataPackageView.Contains(StandardDataFormats.Text))
 
 ## Nachverfolgen von Änderungen an der Zwischenablage
 
-Zusätzlich zu den Befehlen zum Kopieren und Einfügen empfiehlt es sich unter Umständen, auch Änderungen an der Zwischenablage nachzuverfolgen. Behandeln Sie dafür das [**Clipboard.ContentChanged**][ContentChanged]-Ereignis der Zwischenablage.
+Zusätzlich zu den Befehlen zum Kopieren und Einfügen empfiehlt es sich unter Umständen, auch Änderungen an der Zwischenablage nachzuverfolgen. Verarbeiten Sie dafür das [**Clipboard.ContentChanged**][ContentChanged]-Ereignis der Zwischenablage.
 
 ```cs
 Clipboard.ContentChanged += (s, e) => 
@@ -97,6 +97,6 @@ Clipboard.ContentChanged += (s, e) =>
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

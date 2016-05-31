@@ -1,5 +1,6 @@
 ---
-description: Beim Einreichen eines IAPs werden die in Schritt „s“ eingegebenen Infos den Kunden Ihrer App angezeigt.
+author: jnHs
+Description: Beim Einreichen eines IAPs werden die in Schritt „s“ eingegebenen Informationen den Kunden Ihrer App angezeigt.
 title: Erstellen von IAP-Beschreibungen
 ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
 ---
@@ -7,7 +8,7 @@ ms.assetid: 07178278-A18A-4F73-A660-0047DAAE49B5
 # Erstellen von IAP-Beschreibungen
 
 
-Beim Einreichen eines IAPs werden die im Schritt **Beschreibungen** eingegebenen Infos den Kunden Ihrer App angezeigt. Verfassen Sie die Beschreibung mit besonderer Sorgfalt, um den Kunden das IAP in ansprechender Weise zu präsentieren. Sie können die Beschreibung für jede Sprache anpassen, in der Sie Ihre App anbieten.
+Beim Einreichen eines IAPs werden die im Schritt **Beschreibungen** eingegebenen Informationen den Kunden Ihrer App angezeigt. Verfassen Sie die Beschreibung mit besonderer Sorgfalt, um den Kunden das IAP in ansprechender Weise zu präsentieren. Sie können die Beschreibung für jede Sprache anpassen, in der Sie Ihre App anbieten.
 
 ## Sprachen
 
@@ -44,6 +45,6 @@ Sie können auch ein Bild bereitstellen, das dem Benutzer beim Kauf des Produkts
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

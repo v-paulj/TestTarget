@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Erstellen und Anzeigen einfacher Gitter
 description: In 3D-Spielen für die universelle Windows-Plattform (UWP) werden Spielobjekte und Oberflächen in der Regel durch Polygone dargestellt.
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
@@ -11,7 +12,7 @@ ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
 
 In 3D-Spielen für die universelle Windows-Plattform (UWP) werden Spielobjekte und Oberflächen in der Regel durch Polygone dargestellt. Die Liste der Vertizes, die die Struktur dieser polygonalen Objekte und Oberflächen darstellen, werden als Gitter bezeichnet. Hier erstellen wir ein einfaches Gitter für ein Würfelobjekt und stellen es zum Rendern und Anzeigen für die Shader-Pipeline bereit.
 
-> **Wichtig:** Der hier enthaltene Beispielcode verwendet Typen (wie etwa „DirectX::XMFLOAT3“ und „DirectX::XMFLOAT4X4“) und Inlinemethoden, die in „DirectXMath.h“ deklariert werden. Wenn Sie diesen Code ausschneiden und einfügen, nehmen Sie auch „DirectXMath.h“ in Ihr Projekt auf (\#include).
+> **Wichtig:**  Der hier enthaltene Beispielcode verwendet Typen (wie etwa „DirectX::XMFLOAT3“ und „DirectX::XMFLOAT4X4“) und Inlinemethoden, die in „DirectXMath.h“ deklariert werden. Wenn Sie diesen Code ausschneiden und einfügen, nehmen Sie auch &lt;DirectXMath.h&gt; in Ihr Projekt auf.
 
  
 
@@ -91,7 +92,7 @@ In diesem Code geben Sie ein Layout für die Vertizes an – genauer gesagt: wel
 
 -   **COLOR**: Eine HLSL-Semantik für Farbdaten. Genau wie **POSITION** besteht auch sie aus drei 32-Bit-Gleitkommawerten (DirectX::XMFLOAT3). Jeder Wert enthält eine Farbkomponente: rot (r), blau (b) oder grün (g). Diese werden als Gleitkommazahl zwischen 0 und 1 ausgedrückt.
 
-    **COLOR** -Werte werden in der Regel als RGBA-Wert aus vier Komponenten am Ende der Shader-Pipeline zurückgegeben. In diesem Beispiel legen Sie in der Shader-Pipeline für alle Pixel den Alpha-Wert „A“ auf „1,0“ (maximale Deckkraft) fest.
+    **COLOR**-Werte werden in der Regel als RGBA-Wert aus vier Komponenten am Ende der Shader-Pipeline zurückgegeben. In diesem Beispiel legen Sie in der Shader-Pipeline für alle Pixel den Alpha-Wert „A“ auf „1,0“ (maximale Deckkraft) fest.
 
 Die vollständige Formatliste finden Sie unter [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059). Die vollständige HLSL-Semantikliste finden Sie unter [Semantik](https://msdn.microsoft.com/library/windows/desktop/bb509647).
 
@@ -188,7 +189,7 @@ Konstante Puffer werden von der HLSL-Syntax nicht geändert. Sie können sie än
 
 Dieses Beispiel enthält nur eine Art von Daten, die sich nie ändern: die DirectX::XMFLOAT4X4-Daten für die drei Matrizen.
 
-> **Hinweis:** In dem hier dargestellten Beispielcode werden spaltenweise absteigende Matrizen (column-major) verwendet. Sie können stattdessen zeilenweise absteigende Matrizen (row-major) verwenden, indem Sie das **row\_major**-Schlüsselwort in HLSL angeben und sicherstellen, dass die Quellmatrixdaten ebenfalls zeilenweise absteigend angeordnet sind. „DirectXMath“ verwendet zeilenweise absteigende Matrizen und kann direkt mit HLSL-Matrizen verwendet werden, die mit dem **row\_major**-Schlüsselwort definiert werden.
+> **Hinweis:**  In dem hier dargestellten Beispielcode werden spaltenweise absteigende Matrizen (column-major) verwendet. Sie können stattdessen zeilenweise absteigende Matrizen (row-major) verwenden, indem Sie das **row\_major**-Schlüsselwort in HLSL angeben und sicherstellen, dass die Quellmatrixdaten ebenfalls zeilenweise absteigend angeordnet sind. „DirectXMath“ verwendet zeilenweise absteigende Matrizen und kann direkt mit HLSL-Matrizen verwendet werden, die mit dem **row\_major**-Schlüsselwort definiert werden.
 
  
 
@@ -240,7 +241,7 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> **Hinweis:** In der Regel deklarieren Sie die Projektionsmatrix beim Einrichten gerätespezifischer Ressourcen, da die Multiplikationsergebnisse mit den aktuellen 2D-Viewportgrößenparametern (die häufig der Pixelhöhe und -breite der Anzeige entsprechen) übereinstimmen müssen. Ändern sich diese, müssen Sie die Werte für die X- und die Y-Koordinate entsprechend skalieren.
+> **Hinweis:**  In der Regel deklarieren Sie die Projektionsmatrix beim Einrichten gerätespezifischer Ressourcen, da die Multiplikationsergebnisse mit den aktuellen 2D-Viewportgrößenparametern (die häufig der Pixelhöhe und -breite der Anzeige entsprechen) übereinstimmen müssen. Ändern sich diese, müssen Sie die Werte für die X- und die Y-Koordinate entsprechend skalieren.
 
  
 
@@ -444,6 +445,6 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die unive
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

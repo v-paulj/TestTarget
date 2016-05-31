@@ -1,5 +1,6 @@
 ---
-Description: Sie können Apps in mehr als 100 Sprachen an den Windows Store einreichen.
+author: jnHs
+Description: Sie können Apps in mehr als 100 Sprachen an den Windows Store übermitteln.
 title: Unterstützte Sprachen
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
 ---
@@ -7,7 +8,7 @@ ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
 # Unterstützte Sprachen
 
 
-Sie können Apps in mehr als 100 Sprachen an den Windows Store einreichen.
+Sie können Apps in mehr als 100 Sprachen an den Windows Store übermitteln.
 
 Unter [Richtlinien für die Globalisierung und Lokalisierung](../globalizing/globalizing-portal.md) und [Verwalten von Sprache und Region](../globalizing/manage-language-and-region.md) finden Sie weitere Informationen zum Konfigurieren von Sprachen in Apps. Wir bieten auch ein [Multilingual App Toolkit](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370), mit dessen Hilfe Sie Apps programmieren können, die mehrere Sprachen unterstützen.
 
@@ -133,6 +134,6 @@ Die folgenden Sprachen werden vom Windows Store unterstützt. Ihre App muss mind
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

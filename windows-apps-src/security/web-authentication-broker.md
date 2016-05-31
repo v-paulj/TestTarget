@@ -32,7 +32,7 @@ Der Anforderungs-URI wird als *requestUri*-Parameter der [**AuthenticateAsync**]
 Das folgende Beispiel zeigt, wie der Anforderungs-URI erstellt wird.
 
 ```cs
-string startURL = "https://<providerendpoint>?client_id=<clientid>&amp;scope=<scopes>&amp;response_type=token";
+string startURL = "https://<providerendpoint>?client_id=<clientid>&scope=<scopes>&response_type=token";
 string endURL = "http://<appendpoint>";
 
 System.Uri startURI = new System.Uri(startURL);
@@ -148,7 +148,21 @@ Der Fiddler-Webdebugger kann Apps verwendet werden.
 
 1.  Da AuthHost in einem eigenen App-Container ausgeführt wird, um Funktionen für private Netzwerke zu ermöglichen, müssen Sie einen Registrierungsschlüssel festlegen: Windows Registry Editor Version 5.00
 
-    **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Image File Execution Options**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
+    **HKEY\_LOCAL\_MACHINE**
+            \\
+            **SOFTWARE**
+            \\
+            **Microsoft**
+            \\
+            **Windows NT**
+            \\
+            **CurrentVersion**
+            \\
+            **Image File Execution Options**
+            \\
+            **authhost.exe**
+            \\
+            **EnablePrivateNetwork** = 00000001
 
                          Data type  
                          DWORD
@@ -173,6 +187,6 @@ Der Fiddler-Webdebugger kann Apps verwendet werden.
 
 3.  Fügen Sie Fiddler eine Firewallregel für eingehenden Datenverkehr hinzu.
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

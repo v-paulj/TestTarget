@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 Description: 'Dies ist ein Übersichtsthema mit umfassenden Informationen zum Zusammenhang zwischen dem Unternehmensdatenschutz (Enterprise Data Protection, EDP) und Dateien, Puffern, Zwischenablage, Netzwerk, Hintergrundaufgaben und dem Schutz von Daten bei Sperre.'
 MS-HAID: 'dev\_enterprise.edp\_hub'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -8,7 +9,7 @@ title: 'Unternehmensdatenschutz'
 
 # Unternehmensdatenschutz
 
-__Hinweis__ EDP-Richtlinien (Enterprise Data Protection, Unternehmensdatenschutz) können nicht unter Windows 10- Version 1511 (Build 10586) oder älter verwendet werden.
+__Hinweis__ EDP-Richtlinien (Enterprise Data Protection, Unternehmensdatenschutz) können nicht unter Windows 10 (Version 1511, Build 10586 oder älter) verwendet werden.
 
 Dies ist ein Übersichtsthema mit umfassenden Informationen zum Zusammenhang zwischen dem Unternehmensdatenschutz (Enterprise Data Protection, EDP) und Dateien, Puffern, Zwischenablage, Netzwerk, Hintergrundaufgaben und dem Schutz von Daten bei Sperre.
 
@@ -173,7 +174,11 @@ private void SwitchMailbox(Mailbox targetMailbox)
 
 In diesem Szenario wird das Beispiel einer optimierten E-Mail-App betrachtet, die für die Verwaltung von Unternehmens- und privaten E-Mails konzipiert wurde. Wenn die App in einer Organisation ausgeführt wird, in der eine DPL-Richtlinie (Data Protection Under Lock, Schutz von Daten bei Sperre) verwaltet wird, muss die App alle vertraulichen Daten aus dem Arbeitsspeicher entfernen, während das Gerät gesperrt ist. Hierzu registriert sie sich für das [**ProtectionPolicyManager.ProtectedAccessSuspending**](https://msdn.microsoft.com/library/windows/apps/dn705787)-Ereignis und das [**ProtectionPolicyManager.ProtectedAccessResumed**](https://msdn.microsoft.com/library/windows/apps/dn705786)-Ereignis, damit eine Benachrichtigung erfolgt, wenn das Gerät gesperrt und entsperrt wird (für den Fall, dass DPL aktiv ist).
 
-[**ProtectedAccessSuspending**](https://msdn.microsoft.com/library/windows/apps/dn705787) wird ausgelöst, bevor auf dem Gerät bereitgestellte Datenschutzschlüssel vorübergehend entfernt werden. Diese Schlüssel werden entfernt, wenn das Gerät gesperrt ist, um sicherzustellen, dass kein nicht autorisierter Zugriff auf verschlüsselte Daten erfolgen kann, während das Gerät gesperrt ist und möglicherweise nicht von seinem Besitzer verwendet wird. [**ProtectedAccessResumed**](https://msdn.microsoft.com/library/windows/apps/dn705786) wird ausgelöst, wenn die Schlüssel nach dem Entsperren des Geräts wieder verfügbar sind.
+[
+              **ProtectedAccessSuspending**
+            ](https://msdn.microsoft.com/library/windows/apps/dn705787) wird ausgelöst, bevor auf dem Gerät bereitgestellte Datenschutzschlüssel vorübergehend entfernt werden. Diese Schlüssel werden entfernt, wenn das Gerät gesperrt ist, um sicherzustellen, dass kein nicht autorisierter Zugriff auf verschlüsselte Daten erfolgen kann, während das Gerät gesperrt ist und möglicherweise nicht von seinem Besitzer verwendet wird. [
+              **ProtectedAccessResumed**
+            ](https://msdn.microsoft.com/library/windows/apps/dn705786) wird ausgelöst, wenn die Schlüssel nach dem Entsperren des Geräts wieder verfügbar sind.
 
 Durch das Behandeln dieser beiden Ereignisse kann die App sicherstellen, dass vertrauliche Inhalte im Arbeitsspeicher mit [**DataProtectionManager**](https://msdn.microsoft.com/library/windows/apps/dn706017) geschützt werden. Außerdem sollten alle für die geschützten Dateien geöffneten Dateidatenströme geschlossen werden, um sicherzustellen, dass das System keine sensiblen Daten im Arbeitsspeicher zwischenspeichert. Hierzu stehen folgende Möglichkeiten zur Verfügung. Um einen von einer Open-Methode einer **StorageFile** zurückgegebenen Dateidatenstrom zu schließen, rufen Sie die **Dispose**-Methode für den Datenstrom auf. Sie können die Verwendung des Datenstroms mit einer using-Anweisung (C\# oder VB) beschränken. Alternativ können Sie den Datenstrom mit einem **DataReader**-Objekt oder einem **DataWriter**-Objekt umschließen und die **Dispose**-Methode oder using-Anweisung mit diesem Objekt verwenden.
 
@@ -207,7 +212,7 @@ private DisplayedMail currentlyDisplayedMail = new DisplayedMail()
 // Gets the app's protected mail database file, then opens and stores a stream on it.
 private async void OpenMailDatabase()
 {
-    // Only attempt to open the database file stream if we know it&#39;s closed.
+    // Only attempt to open the database file stream if we know it's closed.
     if (this.mailDatabaseStream == null)
     {
         StorageFolder appDataStorageFolder = ApplicationData.Current.LocalFolder;
@@ -233,7 +238,7 @@ private void AppSetup()
 // Background work called when the app receives an email.
 private async void AppMailReceived(string fauxEmail)
 {
-    // Only attempt to write to the database file stream if we know it&#39;s open.
+    // Only attempt to write to the database file stream if we know it's open.
     if (this.mailDatabaseStream != null)
     {
         IBuffer emailAsBuffer = CryptographicBuffer.ConvertStringToBinary
@@ -339,7 +344,7 @@ private string mailIdentity = "contoso.com";
 void MailAppSetup()
 {
     ProtectionPolicyManager.ProtectedContentRevoked += ProtectionPolicyManager_ProtectedContentRevoked;
-    // Code goes here to set up mailbox for &#39;mailIdentity&#39;.
+    // Code goes here to set up mailbox for 'mailIdentity'.
 }
 
 private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, ProtectedContentRevokedEventArgs e)
@@ -351,7 +356,7 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
         return;
     }
 
-    // Code goes here to delete any metadata associated with &#39;mailIdentity&#39;.
+    // Code goes here to delete any metadata associated with 'mailIdentity'.
 }
 ```
 
@@ -372,6 +377,6 @@ Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent("contoso.c
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

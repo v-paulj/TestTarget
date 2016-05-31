@@ -1,6 +1,7 @@
 ---
+author: mtoepke
 title: Laden von Ressourcen im DirectX-Spiel
-description: meisten Spiele Ressourcen Objekte (Shader, Texturen, vordefinierte Gitter, andere Grafikdaten) aus lokalem Speicher oder über anderen Datenstrom geladen
+description: In den meisten Spielen werden Ressourcen und Objekte (wie Shader, Texturen, vordefinierte Gitter oder andere Grafikdaten) an bestimmten Stellen aus dem lokalen Speicher oder über einen anderen Datenstrom geladen.
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
 ---
 
@@ -47,15 +48,15 @@ Sie können über die folgenden Links auf den vollständigen Code für diese Bei
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Complete code for BasicLoader](complete-code-for-basicloader.md)</p></td>
+<td align="left"><p>[Vollständiger Code für BasicLoader](complete-code-for-basicloader.md)</p></td>
 <td align="left"><p>Vollständiger Code für eine Klasse und Methoden, die gitterförmige Grafikobjekte konvertieren und in den Speicher laden.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Complete code for BasicReaderWriter](complete-code-for-basicreaderwriter.md)</p></td>
+<td align="left"><p>[Vollständiger Code für BasicReaderWriter](complete-code-for-basicreaderwriter.md)</p></td>
 <td align="left"><p>Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien. Wird von der [BasicLoader](complete-code-for-basicloader.md)-Klasse verwendet.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Complete code for DDSTextureLoader](complete-code-for-ddstextureloader.md)</p></td>
+<td align="left"><p>[Vollständiger Code für DDSTextureLoader](complete-code-for-ddstextureloader.md)</p></td>
 <td align="left"><p>Vollständiger Code für eine Klasse und Methode, die eine DDS-Textur aus dem Speicher lädt.</p></td>
 </tr>
 </tbody>
@@ -312,7 +313,7 @@ Eine DDS-Datei ist eine Binärdatei mit den folgenden Informationen:
 
 -   Beschreibung der Daten in der Datei
 
-    Die Daten werden mit einer Headerbeschreibung per [**DDS\_HEADER**](https://msdn.microsoft.com/library/windows/desktop/bb943982) beschrieben. Das Pixelformat wird mit [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984) definiert. Beachten Sie, dass die Strukturen **DDS\_HEADER** und **DDS\_PIXELFORMAT** die veralteten DirectDraw 7-Strukturen „DDSURFACEDESC2“, „DDSCAPS2“ und „DDPIXELFORMAT“ ersetzen. **DDS\_HEADER** ist die binäre Entsprechung von „DDSURFACEDESC2“ und „DDSCAPS2“. **DDS\_PIXELFORMAT** ist die binäre Entsprechung von „DDPIXELFORMAT“.
+    Die Daten werden mit einer Headerbeschreibung per [**DDS\_HEADER**](https://msdn.microsoft.com/library/windows/desktop/bb943982) beschrieben. Das Pixelformat wird mit [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984) definiert. Beachten Sie, dass die Strukturen **DDS\_HEADER** und **DDS\_PIXELFORMAT** die veralteten DirectDraw 7-Strukturen „DDSURFACEDESC2“, „DDSCAPS2“ und „DDPIXELFORMAT“ ersetzen. **DDS\_HEADER** ist die binäre Entsprechung von DDSURFACEDESC2 und DDSCAPS2. **DDS\_PIXELFORMAT** ist die binäre Entsprechung von DDPIXELFORMAT.
 
     ```cpp
     DWORD               dwMagic;
@@ -704,6 +705,6 @@ Sie sollten jetzt mit den Methoden zum asynchronen Laden häufig verwendeter Res
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

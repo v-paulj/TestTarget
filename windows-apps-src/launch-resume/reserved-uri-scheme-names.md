@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Reservierte Datei- und URI-Schemanamen
 description: Sie können URI-Zuordnungen verwenden, um Ihre App automatisch zu starten, wenn eine andere App ein bestimmtes URI-Schema startet.
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
@@ -125,6 +126,6 @@ Die folgenden Dateitypen sind für das Betriebssystem reserviert:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

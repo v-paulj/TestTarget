@@ -1,15 +1,17 @@
 ---
-Description: Speichern Sie Freihandstrichdaten mithilfe eingebetteter serialisierter Freihandformat-Metadaten (Ink Serialized Format, ISF) in einer GIF-Datei (Graphics Interchange Format).
-title: Speichern und Abrufen von Freihandstrichen
+author: Karl-Bridge-Microsoft
+Description: UWP-Apps, die Windows Ink unterstützen, können Freihandstriche in eine ISF-Datei (Ink Serialized Format) serialisieren und daraus deserialisieren. Die ISF-Datei ist eine GIF-Bild mit zusätzlichen Metadaten für alle Eigenschaften und Verhaltensweisen von Freihandstrichen. Apps ohne Unterstützung der Freihandeingabe können das statische GIF-Bild, einschließlich Alphakanal-Hintergrundtransparenz, anzeigen.
+title: Speichern und Abrufen der Daten von Windows Ink-Strichen
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
-label: Store and retrieve ink strokes
+label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
+keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, Ink Serialized Format
 ---
 
-# Speichern und Abrufen von Freihandstrichen
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+# Speichern und Abrufen der Daten von Windows Ink-Strichen
 
-Apps, die Freihandeingaben unterstützen, können Freihandmetadaten mit vollständiger Genauigkeit serialisieren und deserialisieren, wobei alle Eigenschaften und Verhalten beibehalten werden. Apps ohne Unterstützung der Freihandeingabe können das statische GIF-Bild, einschließlich Alpha-Kanal-Hintergrundtransparenz, anzeigen.
+
+UWP-Apps, die Windows Ink unterstützen, können Freihandstriche in eine ISF-Datei (Ink Serialized Format) serialisieren und daraus deserialisieren. Die ISF-Datei ist eine GIF-Bild mit zusätzlichen Metadaten für alle Eigenschaften und Verhaltensweisen von Freihandstrichen. Apps ohne Unterstützung der Freihandeingabe können das statische GIF-Bild, einschließlich Alphakanal-Hintergrundtransparenz, anzeigen.
 
 
 **Wichtige APIs**
@@ -32,7 +34,6 @@ Hier wird veranschaulicht, wie Sie in einem [**InkCanvas**](https://msdn.microso
 1.  Zuerst wird die Benutzeroberfläche eingerichtet.
 
     Die Benutzeroberfläche enthält die Schaltflächen „Speichern“, „Laden“ und „Löschen“ sowie den [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
-
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -63,7 +64,6 @@ Hier wird veranschaulicht, wie Sie in einem [**InkCanvas**](https://msdn.microso
 2.  Dann werden einige grundlegende Verhalten für Freihandeingaben festgelegt.
 
     Der [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ist so konfiguriert, dass die Eingabedaten von Stift und Maus als Freihandstriche ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) interpretiert werden, und es werden Listener für die Klickereignisse der Schaltflächen deklariert.
-
 ```    CSharp
 public MainPage()
     {
@@ -90,7 +90,6 @@ public MainPage()
     Wenn eine Datei ausgewählt ist, wird ein auf [**ReadWrite**](https://msdn.microsoft.com/library/windows/apps/br241731) festgelegter [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241635)-Datenstrom geöffnet.
 
     Anschließend wird [**SaveAsync**](https://msdn.microsoft.com/library/windows/apps/br242114) aufgerufen, um die vom [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) verwalteten Freihandstriche in den Datenstrom zu serialisieren.
-
 ```    CSharp
 // Save ink data to a file.
     private async void btnSave_Click(object sender, RoutedEventArgs e)
@@ -154,7 +153,7 @@ public MainPage()
     }
 ```
 
-**Hinweis**  
+[!NOTE]  
 Zum Speichern von Freihanddaten wird nur das Format GIF unterstützt. Aus Gründen der Abwärtskompatibilität werden allerdings von der [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607)-Methode (im nächsten Abschnitt veranschaulicht) weitere Formate unterstützt.
 
  
@@ -167,7 +166,6 @@ Hier wird veranschaulicht, wie Freihandstriche aus einer Datei geladen und in ei
 1.  Zuerst wird die Benutzeroberfläche eingerichtet.
 
     Die Benutzeroberfläche enthält die Schaltflächen „Speichern“, „Laden“ und „Löschen“ sowie den [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535).
-
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -198,7 +196,6 @@ Hier wird veranschaulicht, wie Freihandstriche aus einer Datei geladen und in ei
 2.  Dann werden einige grundlegende Verhalten für Freihandeingaben festgelegt.
 
     Der [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) ist so konfiguriert, dass die Eingabedaten von Stift und Maus als Freihandstriche ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) interpretiert werden, und es werden Listener für die Klickereignisse der Schaltflächen deklariert.
-
 ```    CSharp
 public MainPage()
     {
@@ -225,7 +222,6 @@ public MainPage()
     Wenn eine Datei ausgewählt ist, wird ein auf [**Read**](https://msdn.microsoft.com/library/windows/apps/br241635) festgelegter [**IRandomAccessStream**](https://msdn.microsoft.com/library/windows/apps/br241731)-Datenstrom geöffnet.
 
     Anschließend wird [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607) aufgerufen, um die gespeicherten Freihandstriche zu lesen, zu serialisieren und in den [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) zu laden. Das Laden der Striche in den **InkStrokeContainer** bewirkt, dass sie sofort vom [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) auf dem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) gerendert werden.
-
 ``` csharp
 // Load ink data from a file.
 private async void btnLoad_Click(object sender, RoutedEventArgs e)
@@ -262,16 +258,12 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 **Hinweis**  
 Zum Speichern von Freihanddaten wird nur das Format GIF unterstützt. Aus Gründen der Abwärtskompatibilität werden allerdings von der [**LoadAsync**](https://msdn.microsoft.com/library/windows/apps/hh701607)-Methode die folgenden Formate unterstützt.
 
-| Format                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                           |
+| Format                    | Beschreibung |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | InkSerializedFormat       | Gibt Freihandeingaben an, die mithilfe des ISF beibehalten werden. Dabei handelt es sich um die kompakteste permanente Freihanddarstellung. Sie kann in ein binäres Dokumentformat eingebettet oder direkt in der Zwischenablage platziert werden.                                                                                                                                                                                                         |
 | Base64InkSerializedFormat | Gibt Freihandeingaben an, die durch Codieren von ISF als Base64-Datenstrom beibehalten werden. Dieses Format wird bereitgestellt, damit Freihandeingaben direkt in einer XML-Datei oder HTML-Datei codiert werden können.                                                                                                                                                                                                                                                |
 | Gif                       | Dieses Format definiert Freihandeingaben, die mithilfe einer GIF-Datei beibehalten werden, die ISF in Form von Metadaten enthält, die in die Datei eingebettet sind. So ist es möglich, Freihandeingaben in Anwendungen anzuzeigen, die nicht über die Funktion zur Freihandeingabe verfügen, während die Eingaben beim Wechsel zu einer Anwendung mit Freihandeingabe in vollem Umfang erhalten bleiben. Das Format ermöglicht nicht nur die Verwendung in Anwendungen mit und ohne Freihandfunktion, sondern ist bestens geeignet für den Transport von Freihandinhalt innerhalb einer HTML-Datei. |
-| Base64Gif                 | Dieses Format definiert Freihandeingaben, die mithilfe einer Base64-codierten verstärkten GIF-Datei beibehalten werden. Dieses Format wird bereitgestellt, wenn Freihandeingaben direkt in einer XML- oder HTML-Datei codiert werden müssen, um sie später in ein Bild zu konvertieren. Dieses Format kann beispielsweise in einem XML-Format verwendet werden, das erstellt wurde, um alle Freihandinformationen zu speichern, und das verwendet wird, um HTML über XSLT (Extensible Stylesheet Language Transformations) zu erstellen.                           |
-
- 
-
- 
+| Base64Gif                 | Dieses Format definiert Freihandeingaben, die mithilfe einer Base64-codierten verstärkten GIF-Datei beibehalten werden. Dieses Format wird bereitgestellt, wenn Freihandeingaben direkt in einer XML- oder HTML-Datei codiert werden müssen, um sie später in ein Bild zu konvertieren. Dieses Format kann beispielsweise in einem XML-Format verwendet werden, das erstellt wurde, um alle Freihandinformationen zu speichern, und das verwendet wird, um HTML über XSLT (Extensible Stylesheet Language Transformations) zu erstellen. 
 
 ## <span id="Copy_and_paste_ink_strokes_with_the_clipboard"></span><span id="copy_and_paste_ink_strokes_with_the_clipboard"></span><span id="COPY_AND_PASTE_INK_STROKES_WITH_THE_CLIPBOARD"></span>Kopieren und Einfügen von Freihandstrichen mit der Zwischenablage
 
@@ -285,7 +277,6 @@ In diesem Beispiel wird die Strichauswahl aktiviert, wenn die Eingabe mit einer 
 1.  Zuerst wird die Benutzeroberfläche eingerichtet.
 
     Die Benutzeroberfläche enthält die Schaltflächen „Ausschneiden“, „Kopiere“, „Einfügen“ und „Löschen“ sowie den [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) und einen Auswahlzeichenbereich.
-
 ```    XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -324,7 +315,6 @@ In diesem Beispiel wird die Strichauswahl aktiviert, wenn die Eingabe mit einer 
     Die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft wird für die Interpretation von Eingabedaten von Stift oder Maus als Freihandstriche ([**InputDeviceTypes**](https://msdn.microsoft.com/library/windows/apps/dn922019)) konfiguriert. Hier werden außerdem Listener für die Click-Ereignisse der Schaltflächen sowie Zeiger- und Strichereignisse für die Auswahlfunktion deklariert.
 
     Ein umfassendes Beispiel für das Implementieren der Strichauswahl finden Sie in [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md) unter [Durchlaufende Eingabe für die erweiterte Verarbeitung](pen-and-stylus-interactions.md#passthrough).
-
 ```    CSharp
 public MainPage()
     {
@@ -377,7 +367,6 @@ public MainPage()
     Anschließend wird [**DeleteSelected**](https://msdn.microsoft.com/library/windows/apps/br244233) aufgerufen, um die Striche aus dem Freihandeingabe-Zeichenbereich zu entfernen.
 
     Schließlich werden alle Auswahlstriche aus dem Auswahlzeichenbereich gelöscht.
-
 ```    CSharp
 private void btnCut_Click(object sender, RoutedEventArgs e)
     {
@@ -386,7 +375,6 @@ private void btnCut_Click(object sender, RoutedEventArgs e)
         ClearSelection();
     }
 ```
-
 ```    CSharp
 // Clean up selection UI.
     private void ClearSelection()
@@ -410,7 +398,6 @@ private void btnCut_Click(object sender, RoutedEventArgs e)
 ```
 
     For copy, we simply call [**CopySelectedToClipboard**](https://msdn.microsoft.com/library/windows/apps/br244232) on the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) of the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011).
-
 ```    CSharp
 private void btnCopy_Click(object sender, RoutedEventArgs e)
     {
@@ -421,7 +408,6 @@ private void btnCopy_Click(object sender, RoutedEventArgs e)
     For paste, we call [**CanPasteFromClipboard**](https://msdn.microsoft.com/library/windows/apps/br208495) to ensure that the content on the clipboard can be pasted to the ink canvas.
 
     If so, we call [**PasteFromClipboard**](https://msdn.microsoft.com/library/windows/apps/br208503) to insert the clipboard ink strokes into the [**InkStrokeContainer**](https://msdn.microsoft.com/library/windows/apps/br208492) of the [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011), which then renders the strokes to the ink canvas.
-
 ```    CSharp
 private void btnPaste_Click(object sender, RoutedEventArgs e)
     {
@@ -439,8 +425,8 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 ## <span id="related_topics"></span>Verwandte Artikel
 
-
 * [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md)
+
 **Beispiele**
 * [Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Einfaches Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620312)
@@ -454,6 +440,6 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

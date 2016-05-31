@@ -28,6 +28,6 @@ Zusätzlich zum Freigabe-Vertrag können in Apps auch herkömmliche Verfahren zu
 | [Schützen von zwischen Apps übertragenen Unternehmensdaten mithilfe von EDP](use-edp-to-protect-enterprise-data-transferred-between-apps.md) | Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten EDP-Szenarien mit Datenübertragung durchgeführt werden müssen. |
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,6 +1,7 @@
 ---
+author: mcleanbyron
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
-description: Verwenden Sie diese Methode in der Windows Store-Sammlungs-API, um alle Produkte eines Kunden für Apps abzurufen, die Ihrer Azure AD-Client-ID zugeordnet sind. Sie können die Abfrage auf ein bestimmtes Produkt beschränken oder weitere Filter verwenden.
+description: Verwenden Sie diese Methode in der Windows Store-Sammlungs-API, um alle Produkte, die sich im Besitz eines Kunden befinden, für Apps abzurufen, die Ihrer Azure AD-Client-ID zugeordnet sind. Sie können die Abfrage auf ein bestimmtes Produkt beschränken oder weitere Filter verwenden.
 title: Produktabfrage
 ---
 
@@ -36,8 +37,8 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.                           |
-| Host           | string | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
+| Authorization  | Zeichenfolge | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
+| Host           | Zeichenfolge | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
 | Content-Type   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
@@ -72,14 +73,14 @@ Das ProductSkuId-Objekt enthält die folgenden Parameter.
 
 | Parameter | Typ   | Beschreibung                                                                                                                                                                                                                                                                                                            | Erforderlich |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| productId | string | Die Produkt-ID aus dem Windows Store-Katalog. Wenn Sie Ihre Produkt-ID ermitteln möchten, navigieren Sie im Windows Dev Center-Dashboard zu Ihrer App, wechseln zur Seite **App-Verwaltung** &gt; **App-Identität** und rufen das Suffix der im Feld **URL für Windows 10** dargestellten Zeichenfolge ab. Beispiel für eine Produkt-ID: 9WZDNCRFJ3Q8. | Ja      |
+| productId | string | Die Produkt-ID aus dem Windows Store-Katalog. Wenn Sie Ihre Produkt-ID ermitteln möchten, navigieren Sie im Windows Dev Center-Dashboard zu Ihrer App, wechseln zur Seite **App-Verwaltung**&gt;**App-Identität** und rufen das Suffix der im Feld **URL für Windows 10** dargestellten Zeichenfolge ab. Beispiel für eine Produkt-ID: 9WZDNCRFJ3Q8. | Ja      |
 | skuID     | string | Die SKU-ID aus dem Windows Store-Katalog. Beispiel für eine SKU-ID: 0010.                                                                                                                                                                                                                                                | Ja      |
 
  
 
 ### Anforderungsbeispiel
 
-```
+```syntax
 POST https://collections.mp.microsoft.com/v6.0/collections/query HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1Q…….
 Host: collections.mp.microsoft.com
@@ -162,7 +163,7 @@ Das IdentityContractV6-Objekt enthält die folgenden Parameter.
 
 ### Antwortbeispiel
 
-```
+```syntax
 HTTP/1.1 200 OK
 Content-Length: 7241
 Content-Type: application/json
@@ -210,6 +211,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 * [Verlängern eines Windows Store-ID-Schlüssels](renew-a-windows-store-id-key.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

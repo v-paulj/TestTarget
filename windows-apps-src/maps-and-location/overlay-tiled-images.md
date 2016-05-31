@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 title: Überlagern von nebeneinander angeordneten Bildern in einer Karte
 description: Überlagern Sie Bilder von Drittanbietern oder benutzerdefinierte nebeneinander angeordnete Bilder in einer Karte mithilfe von Kachelquellen. Verwenden Sie Kachelquellen, um spezielle Infos wie Wetterdaten, Einwohnerzahlen oder seismische Daten zu überlagern oder die Standardkarte vollständig zu ersetzen.
 ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
@@ -7,7 +8,7 @@ ms.assetid: 066BD6E2-C22B-4F5B-AA94-5D6C86A09BDF
 # Überlagern von nebeneinander angeordneten Bildern in einer Karte
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Überlagern Sie Bilder von Drittanbietern oder benutzerdefinierte nebeneinander angeordnete Bilder in einer Karte mithilfe von Kachelquellen. Verwenden Sie Kachelquellen, um spezielle Infos wie Wetterdaten, Einwohnerzahlen oder seismische Daten zu überlagern oder die Standardkarte vollständig zu ersetzen.
@@ -52,7 +53,7 @@ Weitere Informationen über das Kachelsystem von Kartendiensten finden Sie unter
 
     ```cs
         HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
-          "http://www.<web service name>.com/z={zoomlevel}&amp;x={x}&amp;y={y}");
+          "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
     ```
 
 2.  Instanziieren und konfigurieren Sie eine [**MapTileSource**](https://msdn.microsoft.com/library/windows/apps/dn637144)-Klasse. Geben Sie die [**MapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn637141)-Klasse an, die Sie im vorherigen Schritt als [**DataSource**](https://msdn.microsoft.com/library/windows/apps/dn637149)-Eigenschaft der **MapTileSource**-Klasse festgelegt haben.
@@ -109,7 +110,7 @@ Im folgenden Beispiel überlagern Kacheln aus einem fiktiven Webdienst eine Kart
             // Create an HTTP data source.
             // This example retrieves tiles from a fictitious web service.
             HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
-                "http://www.<web service name>.com/z={zoomlevel}&amp;x={x}&amp;y={y}");
+                "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
 
             // Optionally, add custom HTTP headers if the web service requires them.
             dataSource.AdditionalRequestHeaders.Add("header name", "header value");
@@ -128,7 +129,7 @@ void MainPage::AddHttpMapTileSource()
        GeoboundingBox^ boundingBox = ref new GeoboundingBox(northWest, southEast);
 
        auto dataSource = ref new Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource(
-             "http://www.<web service name>.com/z={zoomlevel}&amp;x={x}&amp;y={y}");
+             "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
 
        dataSource->AdditionalRequestHeaders->Insert("header name", "header value");
 
@@ -215,7 +216,7 @@ using System.Threading.Tasks;
             MapTileUriRequestedEventArgs args)
         {
             // Get a deferral to do something asynchronously.
-            // Omit this line if you don&#39;t have to do something asynchronously.
+            // Omit this line if you don't have to do something asynchronously.
             var deferral = args.Request.GetDeferral();
 
             // Get the custom Uri.
@@ -225,7 +226,7 @@ using System.Threading.Tasks;
             args.Request.Uri = uri;
 
             // Notify the app that the custom Uri is ready.
-            // Omit this line also if you don&#39;t have to do something asynchronously.
+            // Omit this line also if you don't have to do something asynchronously.
             deferral.Complete();
         }
 
@@ -306,7 +307,7 @@ using System.Threading.Tasks;
         }
 ```
 
-```ManagedCPlusPlus
+```cpp
 InMemoryRandomAccessStream^ TileSources::CustomRandomAccessSteram::get()
 {
        int pixelHeight = 256;
@@ -363,6 +364,6 @@ So ersetzen Sie die Standardkarte durch Drittanbieter- oder benutzerdefinierte K
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

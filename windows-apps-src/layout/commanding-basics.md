@@ -1,16 +1,13 @@
 ---
+author: mijacobs
 Description: Bei den Befehlselementen in einer Universellen Windows-Plattform (UWP)-App handelt es sich um die interaktiven Benutzeroberflächenelemente, mit denen der Benutzer Aktionen durchführen kann, um beispielsweise eine E-Mail zu senden, ein Element zu löschen oder ein Formular zu übermitteln.
-title: Befehlsdesigngrundlagen für Universelle Windows-Plattform (UWP)-Apps
+title: Befehlsdesigngrundlagen für Apps der universellen Windows-Plattform (UWP)
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
-label: Befehlsdesigngrundlagen
+label: Command design basics
 template: detail.hbs
 ---
 
 #  Befehlsdesigngrundlagen für UWP-Apps
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Bei den *Befehlselementen* in einer Universellen Windows-Plattform (UWP)-App handelt es sich um die interaktiven Benutzeroberflächenelemente, mit denen der Benutzer Aktionen durchführen kann, um beispielsweise eine E-Mail zu senden, ein Element zu löschen oder ein Formular zu übermitteln. Dieser Artikel beschreibt Befehlselemente wie Schaltflächen und Kontrollkästchen, die unterstützten Interaktionen sowie die Befehlsoberflächen (wie etwa Befehlsleisten und Kontextmenüs), auf denen sie sich befinden können.
 
@@ -21,7 +18,7 @@ Die wichtigste Entscheidung bei der Gestaltung einer Befehlsschnittstelle ist di
 
 Empfehlungen zur Planung geeigneter Interaktionen für Ihre App finden Sie unter [Planen Ihrer App](https://msdn.microsoft.com/library/windows/apps/hh465427.aspx).
 
-## <span id="Use_the_right_command_element_for_the_interaction"></span><span id="use_the_right_command_element_for_the_interaction"></span><span id="USE_THE_RIGHT_COMMAND_ELEMENT_FOR_THE_INTERACTION"></span>Verwenden Sie das richtige Befehlselement für die Interaktion
+## <span id="Use_the_right_command_element_for_the_interaction"></span><span id="use_the_right_command_element_for_the_interaction"></span><span id="USE_THE_RIGHT_COMMAND_ELEMENT_FOR_THE_INTERACTION"></span>Verwenden Sie das richtige Befehlelement für die Interaktion
 
 
 Die Verwendung passender Elemente für die richtigen Interaktionen kann den Unterschied zwischen einer intuitiv bedienbaren App und einer komplizierten oder verwirrenden App ausmachen. Die Universal Windows Platform (UWP) bietet eine Vielzahl von Befehlselementen in Form von Steuerelementen, die Sie in Ihrer App verwenden können. Die folgende Liste enthält einige der gängigsten Steuerelemente sowie eine Zusammenfassung der jeweils möglichen Interaktionen:
@@ -36,7 +33,7 @@ Die Verwendung passender Elemente für die richtigen Interaktionen kann den Unte
 
  
 
-(Eine vollständige Liste finden Sie unter [UX-Richtlinien für Steuerelemente und Muster](https://dev.windows.com/design/controls-patterns).)
+Eine vollständige Liste finden Sie unter [Steuerelemente und UI-Elemente](https://dev.windows.com/design/controls-patterns).
 
 ## <span id="_________Place_commands_on_the_right_surface_______"></span><span id="_________place_commands_on_the_right_surface_______"></span><span id="_________PLACE_COMMANDS_ON_THE_RIGHT_SURFACE_______"></span> Platzieren von Befehlen auf der passenden Oberfläche
 
@@ -71,15 +68,15 @@ Die folgende Liste enthält die unter Windows verfügbaren Befehlsoberflächen s
 <p>Wählen Sie die Befehle für die Canvas aber mit Bedacht. Wenn Sie zu viele Befehle auf der App-Canvas positionieren, geht wertvoller Platz und die Übersichtlichkeit für den Benutzer verloren. Selten verwendete Befehle sind unter Umständen auf einer anderen Befehlsoberfläche besser aufgehoben – beispielsweise in einem Menü oder auf der Befehlsleiste im Bereich „Mehr“.</p></td>
 </tr>
 <tr class="even">
-<td align="left">[Command bar](https://msdn.microsoft.com/library/windows/apps/hh465302)
+<td align="left">[Befehlsleiste](https://msdn.microsoft.com/library/windows/apps/hh465302)
 <p><img src="images/controls-appbar-icons-200.png" alt="Example of a command bar with icons" /></p></td>
 <td align="left"><p>Über eine Befehlsleiste können Benutzer komfortabel auf Aktionen zugreifen. Auf einer App-Leiste können Sie Befehle oder Optionen für den jeweiligen Benutzerkontext anzeigen (etwa Fotoauswahl oder Zeichnungsmodus).</p>
 <p>Befehlsleisten können am oberen Bildschirmrand, am unteren Bildschirmrand oder sowohl am oberen als auch am unteren Bildschirmrand platziert werden. Das folgende Design einer Fotobearbeitungs-App zeigt den Inhaltsbereich und die Befehlsleiste:</p>
 <p><img src="images/commands-appcanvas-example.png" alt="A photo app" /></p>
-<p>Weitere Informationen zu Befehlsleisten finden Sie im Artikel [Guidelines for command bar](https://msdn.microsoft.com/library/windows/apps/hh465302).</p></td>
+<p>Weitere Informationen zu Befehlsleisten finden Sie unter [Richtlinien für die Befehlsleiste](https://msdn.microsoft.com/library/windows/apps/hh465302).</p></td>
 </tr>
 <tr class="odd">
-<td align="left">[Menus and context menus](../controls-and-patterns/dialogs-popups-menus.md)
+<td align="left">[Menüs und Kontextmenüs](../controls-and-patterns/dialogs-popups-menus.md)
 <p><img src="images/controls-contextmenu-singlepane.png" alt="Example of a single-pane context menu" /></p></td>
 <td align="left"><p>Mitunter ist es effektiver, mehrere Befehle in einem Befehlsmenü zu gruppieren. In Menüs können Sie platzsparend mehrere Optionen unterbringen. Menüs können interaktive Steuerelemente enthalten.</p>
 <p>Kontextmenüs eignen sich für Verknüpfungen mit häufig verwendeten Aktionen und ermöglichen den Zugriff auf sekundäre Befehle, die nur in bestimmten Kontexten relevant sind.</p>
@@ -92,13 +89,13 @@ Die folgende Liste enthält die unter Windows verfügbaren Befehlsoberflächen s
 </ul>
 <p>Dieses Beispiel zeigt das Design für eine U-Bahn-App mit einem Kontextmenü, über das der Benutzer die Route ändern, ein Lesezeichen für die Route hinzufügen oder einen anderen Zug auswählen kann.</p>
 <p><img src="images/subway/uap-subway-ak-8in-dashboard-200.png" alt="A context menu in an subway app" /></p>
-<p>Weitere Informationen zu Kontextmenüs finden Sie im Artikel [Guidelines for context menu](https://msdn.microsoft.com/library/windows/apps/hh465308).</p></td>
+<p>Weitere Informationen zu Kontextmenüs finden Sie unter [Richtlinien für Kontextmenüs](https://msdn.microsoft.com/library/windows/apps/hh465308).</p></td>
 </tr>
 <tr class="even">
-<td align="left">[Dialog controls](../controls-and-patterns/dialogs-popups-menus.md)
+<td align="left">[Dialogfeld-Steuerelemente](../controls-and-patterns/dialogs-popups-menus.md)
 <p><img src="images/controls-dialog-twobutton-200.png" alt="Example of a simple two-button dialog" /></p></td>
 <td align="left"><p>Dialogfelder sind modale Benutzeroberflächenüberlagerungen, die kontextbezogene App-Informationen enthalten. Die meisten Dialogfelder blockieren die Interaktion mit dem App-Fenster, bis sie explizit geschlossen werden, und erfordern häufig eine Aktion des Benutzers.</p>
-<p>Dialogfelder können als störend empfunden werden und sollten daher nur in bestimmten Situationen zum Einsatz kommen. Weitere Informationen finden Sie im Abschnitt [When to confirm or undo actions](#whentoconfirm).</p></td>
+<p>Dialogfelder können als störend empfunden werden und sollten daher nur in bestimmten Situationen zum Einsatz kommen. Weitere Informationen finden Sie unter [Bestätigen oder Rückgängigmachen von Aktionen](#whentoconfirm)</p></td>
 </tr>
 <tr class="odd">
 <td align="left">[Flyout](../controls-and-patterns/dialogs-popups-menus.md)
@@ -110,7 +107,7 @@ Die folgende Liste enthält die unter Windows verfügbaren Befehlsoberflächen s
 <li>Anzeigen weiterer Details zu einem Element</li>
 <li>Anfordern einer Aktionsbestätigung, ohne die Interaktion mit der App zu blockieren</li>
 </ul>
-<p>Flyouts können geschlossen werden, indem Benutzer auf eine Stelle außerhalb des Flyouts tippen oder klicken. Weitere Informationen zu Flyout-Steuerelementen finden Sie im Artikel [Dialogs, menus, and popups](../controls-and-patterns/dialogs-popups-menus.md).</p></td>
+<p>Flyouts können geschlossen werden, indem Benutzer auf eine Stelle außerhalb des Flyouts tippen oder klicken. Weitere Informationen zu den Flyout-Steuerelementen finden Sie im Artikel [Dialogfelder, Menüs und Popups](../controls-and-patterns/dialogs-popups-menus.md).</p></td>
 </tr>
 </tbody>
 </table>
@@ -144,7 +141,7 @@ Ganz gleich, wie gut die Benutzeroberfläche gestaltet ist und wie vorsichtig de
 Ausführliche Informationen zum Optimieren der Benutzerfreundlichkeit bei einem bestimmten Eingabetyp oder -gerät finden Sie unter [Einführung in die Interaktion](../input-and-devices/input-primer.md).
 
 
-\[Dieser Artikel enthält spezielle Informationen zu UWP-Apps und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
  
 
@@ -155,6 +152,6 @@ Ausführliche Informationen zum Optimieren der Benutzerfreundlichkeit bei einem 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

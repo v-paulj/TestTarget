@@ -1,5 +1,6 @@
 ---
-description: Wenn Ihrem Entwicklerkonto die entsprechenden Berechtigungen gewährt wurden, können Sie Vorinstallationspakete generieren und herunterladen, die von einem OEM verwendet werden können, um Ihre App in ein Image einzuschließen.
+author: jnHs
+Description: Wenn Ihrem Entwicklerkonto die entsprechenden Berechtigungen gewährt wurden, können Sie Vorinstallationspakete generieren und herunterladen, die von einem OEM verwendet werden können, um Ihre App in ein Image einzuschließen.
 title: Generieren von Vorinstallationspaketen für OEMs
 ms.assetid: AC3A45E8-7BBD-44E9-B2D3-B74B7C9B2BC9
 ---
@@ -34,7 +35,7 @@ Die ZIP-Datei kann dem OEM zur Verfügung gestellt werden, damit er sie in sein 
 ## Support
 
 
-Wenn Sie weitere Fragen zum Generieren von Vorinstallationspaketen haben, senden Sie eine E-Mail an <partnerops@microsoft.com>.
+Falls Sie weitere Fragen zum Generieren von Vorinstallationspaketen haben, senden Sie eine E-Mail an <partnerops@microsoft.com>.
 
  
 
@@ -45,6 +46,6 @@ Wenn Sie weitere Fragen zum Generieren von Vorinstallationspaketen haben, senden
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

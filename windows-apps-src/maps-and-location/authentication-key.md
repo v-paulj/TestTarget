@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 title: Anfordern eines Kartenauthentifizierungsschlüssels
 description: Ihre universelle Windows-App muss authentifiziert werden, bevor sie die MapControl-Klasse und Kartendienste im Windows.Services.Maps-Namespace verwenden kann.
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
@@ -12,7 +13,7 @@ ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
 
 Ihre [universelle Windows-App](https://msdn.microsoft.com/library/windows/apps/dn894631) muss authentifiziert werden, bevor sie die [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Klasse und Kartendienste im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)-Namespace verwenden kann. Zum Authentifizieren Ihrer App müssen Sie einen Kartenauthentifizierungsschlüssel angeben. In diesem Thema wird beschrieben, wie Sie einen Kartenauthentifizierungsschlüssel vom [Bing Maps Developer Center](https://www.bingmapsportal.com/) anfordern und Ihrer App hinzufügen.
 
-**Tipp** Um mehr über das Verwenden von Karten in Ihrer App zu erfahren, laden Sie das folgende Beispiel aus den [API-Beispielen für die Universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter:
+**Tipp** Um mehr über das Verwenden von Karten in Ihrer App zu erfahren, laden Sie das folgende Beispiel aus den [API-Beispielen für die universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter:
 
 -   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -40,7 +41,7 @@ So erstellen Sie einen neuen Schlüssel
     -   **Anwendungsname:** Der Name Ihrer Anwendung.
     -   **Anwendungs-URL (optional):** Die URL Ihrer Anwendung.
     -   **Schlüsseltyp:** Wählen Sie **Basic** oder **Enterprise** aus.
-    -   **Anwendungstyp:** Wählen Sie **Universelle Windows-App** für die Verwendung in Ihrer universellen Windows-App aus.
+    -   **Anwendungstyp:** Wählen Sie **Universelle Windows-App** für die Verwendung in Ihrer universellen Windows-App aus.
 
     So sieht das Formular aus.
 
@@ -65,7 +66,7 @@ Setzen Sie zum Authentifizieren der [**MapControl**](https://msdn.microsoft.com/
 
 -   In diesem Beispiel wird die **MapServiceToken**-Eingeschaft auf den Wert des Authentifizierungsschlüssels im XAML-Markup gesetzt.
 
-    ```xaml
+    ```xml
     <Maps:MapControl x:Name="MapControl1" MapServiceToken="abcdef-abcdefghijklmno"/>
     ```
 
@@ -90,6 +91,6 @@ Um Dienste im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/win
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

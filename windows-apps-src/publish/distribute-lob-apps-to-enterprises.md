@@ -1,22 +1,23 @@
 ---
-description: Über den Windows Store für Unternehmen können Sie branchenspezifische Apps (Line-of-Business-Apps, LOB-Apps) direkt für Unternehmen veröffentlichen, damit diese Volumenlizenzen erwerben können, ohne die Apps im Store allgemein zur Verfügung zu stellen.
-title: Verteilen von Branchen-Apps an Unternehmen
+author: jnHs
+Description: Über den Windows Store für Unternehmen können Sie branchenspezifische Apps (Line-of-Business-Apps, LOB-Apps) direkt für Unternehmen veröffentlichen, damit diese Volumenlizenzen erwerben können, ohne die Apps im Store allgemein zur Verfügung zu stellen.
+title: Verteilen von branchenspezifischen Apps an Unternehmen
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
 ---
 
-# Verteilen von Branchen-Apps an Unternehmen
+# Verteilen von branchenspezifischen Apps an Unternehmen
 
 
 Über den Windows Store für Unternehmen können Sie branchenspezifische Apps (Line-of-Business-Apps, LOB-Apps) direkt für Unternehmen veröffentlichen, damit diese Volumenlizenzen erwerben können, ohne die Apps im Store allgemein zur Verfügung zu stellen.
 
-> **Wichtig**  Zurzeit können nur kostenlose Apps über den Windows Store exklusiv an Unternehmen verteilt werden. Wenn Sie eine kostenpflichtige App als branchenspezifische App übermitteln, wird sie später für das Unternehmen verfügbar gemacht, nachdem die Unterstützung für den Volumekauf hinzugefügt wurde. 
+> **Wichtig**  Zurzeit können nur kostenlose Apps über den Windows Store exklusiv an Unternehmen verteilt werden. Wenn Sie eine kostenpflichtige App als LOB übermitteln, steht sie dem Unternehmen derzeit nicht zur Verfügung. 
 
 ## Einrichten der Unternehmenszuordnung
 
 
 Der erste Schritt beim exklusiven Veröffentlichen von branchenspezifischen Apps für ein Unternehmen besteht darin, eine Zuordnung zwischen Ihrem Konto und dem privaten Store des Unternehmens einzurichten.
 
-> **Wichtig**  Dieser Zuordnungsprozess muss vom Unternehmen initiiert werden. Weitere Informationen finden Sie unter [Arbeiten mit LOB-Apps](http://go.microsoft.com/fwlink/p/?LinkId=698846).
+> **Wichtig**  Dieser Zuordnungsprozess muss vom Unternehmen initiiert werden und muss an die E-Mail-Adresse in den **Kontaktinformationen** Ihres Kontos gesendet werden. Weitere Informationen finden Sie unter [Arbeiten mit LOB-Apps](http://go.microsoft.com/fwlink/p/?LinkId=698846).
 
 Wenn ein Unternehmen Sie zum Veröffentlichen von Apps für die exklusive Nutzung in diesem Unternehmen einlädt, erhalten Sie eine E-Mail mit einem Link, über den Sie die Zuordnung bestätigen können. Sie können diese Zuordnungen auch unter **Unternehmenszusammenschlüsse** in Ihren **Kontoeinstellungen** bestätigen.
 
@@ -74,6 +75,6 @@ Weitere Informationen finden Sie unter [Querladen von Branchen-Apps in Windows 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 Description: Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden – also beispielsweise auch die Flussrichtung von rechts nach links (right-to-left, RTL).
 title: Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
@@ -9,10 +10,10 @@ template: detail.hbs
 # Anpassen von Layout und Schriftarten und Unterstützen von „Von rechts nach links“
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden, z. B. auch die Flussrichtung von rechts nach links (right-to-left, RTL).
+
+Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden – also beispielsweise auch die Flussrichtung von rechts nach links (right-to-left, RTL).
 
 ## <span id="Layout_guidelines"></span><span id="layout_guidelines"></span><span id="LAYOUT_GUIDELINES"></span>Layoutrichtlinien
 
@@ -25,7 +26,7 @@ Verwenden Sie flexible Layoutmechanismen anstelle einer absoluten Positionierung
 
 Geben Sie eine **Uid** für ein Element an:
 
-```XAML
+```XML
 <TextBlock x:Uid="Block1">
 ```
 
@@ -37,7 +38,7 @@ Bei XAML-Layoutsteuerelementen wie [**Grid**](https://msdn.microsoft.com/library
 
 Geben Sie eine **Uid** für die Hauptseite der App an:
 
-```XAML
+```XML
 <Page x:Uid="MainPage">
 ```
 
@@ -76,7 +77,7 @@ Unterstützen Sie mit der [**writing-mode**](https://msdn.microsoft.com/library/
 
 Wenn Ihre App Bilder enthält, die für die Leserichtung von rechts nach links gespiegelt werden müssen (Umkehrung desselben Bilds), können Sie die [**FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716)-Eigenschaft anwenden:
 
-```XAML
+```XML
 <!-- en-US\localized.xaml -->
 <Image ... FlowDirection="LeftToRight" />
 
@@ -97,7 +98,7 @@ Wenn Ihre App Bilder enthält, die für Rechts-nach-links-Sprachen gespiegelt we
 ## <span id="Fonts"></span><span id="fonts"></span><span id="FONTS"></span>Schriftarten
 
 
-**Für XAML und HTML:** Verwenden Sie die [**LanguageFont**](https://msdn.microsoft.com/library/windows/apps/br206864)-Schriftartenersetzungs-APIs für den programmgesteuerten Zugriff auf die empfohlene Familie sowie Grad, Breite und Schnitt der Schriftart für eine spezielle Sprache. Das **LanguageFont**-Objekt ermöglicht den Zugriff auf die richtigen Schriftartinformationen für verschiedene Inhaltskategorien: UI-Kopfzeilen, Benachrichtigungen, Textkörper und Schriftarten für den Textkörper, die vom Benutzer bearbeitet werden können.
+**Für XAML und HTML:** Verwenden Sie die [**LanguageFont**](https://msdn.microsoft.com/library/windows/apps/br206864)-Schriftartenersetzungs-APIs für den programmgesteuerten Zugriff auf die empfohlene Familie sowie den Grad, die Breite und den Schnitt der Schriftart für eine spezielle Sprache. Das **LanguageFont**-Objekt ermöglicht den Zugriff auf die richtigen Schriftartinformationen für verschiedene Inhaltskategorien: UI-Kopfzeilen, Benachrichtigungen, Textkörper und Schriftarten für den Textkörper, die vom Benutzer bearbeitet werden können.
 
 ### <span id="HTML"></span><span id="html"></span>HTML
 
@@ -113,6 +114,6 @@ Bei Apps, die mehrere Sprachen auf einer einzigen Seite anzeigen, sollte das **l
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

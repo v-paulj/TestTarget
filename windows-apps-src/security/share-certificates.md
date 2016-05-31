@@ -28,7 +28,7 @@ In diesem Artikel werden die Microsoft-Internetinformationsdienste (Microsoft In
 ## Erstellen und Veröffentlichen eines sicheren Webdiensts
 
 
-1.  Führen Sie Microsoft Visual Studio als Administrator aus, und wählen Sie auf der Startseite die Option **Neues Projekt** aus. Für die Veröffentlichung eines Webdiensts auf einem IIS-Server ist Administratorzugriff erforderlich. Ändern Sie im Dialogfeld "Neues Projekt" das Framework in **.NET Framework 3.5**. Wählen Sie **Visual C#** -&gt; **Web** -&gt; **Visual Studio** -&gt; **ASP.NET-Webdienstanwendung**. Geben Sie der Anwendung den Namen "FirstContosoBank". Klicken Sie auf **OK**, um das Projekt zu erstellen.
+1.  Führen Sie Microsoft Visual Studio als Administrator aus, und wählen Sie auf der Startseite die Option **Neues Projekt** aus. Für die Veröffentlichung eines Webdiensts auf einem IIS-Server ist Administratorzugriff erforderlich. Ändern Sie im Dialogfeld „Neues Projekt“ das Framework in **.NET Framework 3.5**. Wählen Sie **Visual C#** -&gt;**Web** -&gt;**Visual Studio** -&gt;**ASP.NET-Webdienstanwendung**. Geben Sie der Anwendung den Namen „FirstContosoBank“. Klicken Sie auf **OK**, um das Projekt zu erstellen.
 2.  Ersetzen Sie in der Datei **Service1.asmx.cs** die standardmäßige Webmethode **HelloWorld** durch die folgende "Login"-Methode.
     ```cs
             [WebMethod]
@@ -53,10 +53,10 @@ In diesem Artikel werden die Microsoft-Internetinformationsdienste (Microsoft In
 1.  Führen Sie den **Internetinformationsdienste (IIS)-Manager** aus.
 2.  Erweitern Sie die Websites für Ihren IIS-Server. Wählen Sie unter **Standardwebsite** den neuen Webdienst "FirstContosoBank". Wählen Sie im Abschnitt **Aktionen** die Option **Erweiterte Einstellungen...**.
 3.  Legen Sie den **Anwendungspool** auf **.NET v2.0** fest, und klicken Sie auf **OK**.
-4.  Wählen Sie im **Internetinformationsdienste (IIS)-Manager** Ihren IIS-Server aus, und doppelklicken Sie anschließend auf **Serverzertifikate**. Wählen Sie im Abschnitt **Aktionen** die Option **Selbstsigniertes Zertifikat erstellen...**. Geben Sie "ContosoBank" als Anzeigenamen für das Zertifikat ein, und klicken Sie auf **OK**. Es wird ein neues Zertifikat zur Verwendung durch den IIS-Server im Format "&lt;Servername&gt;.&lt;Domänenname&gt;" erstellt.
-5.  Wählen Sie im **Internetinformationsdienste (IIS)-Manager** die Standardwebsite aus. Wählen Sie im Abschnitt **Aktionen** die Option **Bindung**, und klicken Sie anschließend auf **Hinzufügen...**. Wählen Sie als Typ "https", legen Sie den Port auf "443" fest, und geben Sie den vollständigen Hostnamen für Ihren IIS-Server ein ("&lt;Servername&gt;.&lt;Domänenname&gt;"). Legen Sie das SSL-Zertifikat auf "ContosoBank" fest. Klicken Sie auf **OK**. Klicken Sie im Fenster **Sitebindungen** auf **Schließen**.
+4.  Wählen Sie im **Internetinformationsdienste (IIS)-Manager** Ihren IIS-Server aus, und doppelklicken Sie anschließend auf **Serverzertifikate**. Wählen Sie im Abschnitt **Aktionen** die Option **Selbstsigniertes Zertifikat erstellen...**. Geben Sie "ContosoBank" als Anzeigenamen für das Zertifikat ein, und klicken Sie auf **OK**. Es wird ein neues Zertifikat zur Verwendung durch den IIS-Server im Format „&lt;Servername&gt;.&lt;Domänenname&gt;“ erstellt.
+5.  Wählen Sie im **Internetinformationsdienste (IIS)-Manager** die Standardwebsite aus. Wählen Sie im Abschnitt **Aktionen** die Option **Bindung**, und klicken Sie anschließend auf **Hinzufügen...**. Wählen Sie als Typ https, legen Sie den Port auf 443 fest, und geben Sie den vollständigen Hostnamen für Ihren IIS-Server ein („&lt;Servername&gt;.&lt;Domänenname&gt;“). Legen Sie das SSL-Zertifikat auf „ContosoBank“ fest. Klicken Sie auf **OK**. Klicken Sie im Fenster **Sitebindungen** auf **Schließen**.
 6.  Wählen Sie im **Internetinformationsdienste (IIS)-Manager** den Webdienst "FirstContosoBank" aus. Doppelklicken Sie auf **SSL-Einstellungen**. Aktivieren Sie **SSL erforderlich**. Wählen Sie unter **Clientzertifikate** die Option **Erforderlich**. Klicken Sie im Abschnitt **Aktionen** auf **Übernehmen**.
-7.  Sie können überprüfen, ob der Webdienst richtig konfiguriert ist, indem Sie den Webbrowser öffnen und die folgende Webadresse eingeben: "https://&lt;Servername&gt;.&lt;Domänenname&gt;/FirstContosoBank/Service1.asmx". Beispiel: "https://myserver.example.com/FirstContosoBank/Service1.asmx". Wenn der Webdienst richtig konfiguriert ist, werden Sie zum Auswählen eines Clientzertifikats für den Zugriff auf den Webdienst aufgefordert.
+7.  Sie können überprüfen, ob der Webdienst richtig konfiguriert ist, indem Sie den Webbrowser öffnen und die folgende Webadresse eingeben: https://&lt;server-name&gt;.&lt;domain-name&gt;/FirstContosoBank/Service1.asmx. Beispiel: „https://myserver.example.com/FirstContosoBank/Service1.asmx“. Wenn der Webdienst richtig konfiguriert ist, werden Sie zum Auswählen eines Clientzertifikats für den Zugriff auf den Webdienst aufgefordert.
 
 Sie können diese Schritte wiederholen, um mehrere Webdienste zu erstellen, auf die mit demselben Clientzertifikat zugegriffen werden kann.
 
@@ -67,13 +67,13 @@ Nachdem Sie nun über mindestens einen sicheren Webdienst verfügen, können Ihr
 
 Falls keine Clientzertifikate verfügbar sind, muss der Benutzer dem Zertifikatspeicher ein Zertifikat hinzufügen. Sie können Code in die App einfügen, der Benutzern die Auswahl einer PFX-Datei mit einem Clientzertifikat und das Importieren dieses Zertifikats in den Clientzertifikatspeicher ermöglicht.
 
-**Tipp**  Verwenden Sie "makecert.exe" zum Erstellen einer PFX-Datei zur Verwendung für diese Schnellstartanleitung. Informationen zur Verwendung von „makecert.exe“ finden Sie unter [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968).
+**Tipp**  Verwenden Sie „makecert.exe“ zum Erstellen einer PFX-Datei zur Verwendung für diese Schnellstartanleitung. Informationen zur Verwendung von „makecert.exe“ finden Sie unter [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968).
 
  
 
 1.  Öffnen Sie Visual Studio, und erstellen Sie auf der Startseite ein neues Projekt. Geben Sie dem neuen Projekt den Namen "FirstContosoBankApp". Klicken Sie auf **OK**, um das neue Projekt zu erstellen.
 2.  Fügen Sie in der Datei "MainPage.xaml" dem standardmäßigen **Grid**-Element den folgenden XAML-Code hinzu. Dieser XAML-Code enthält Folgendes: eine Schaltfläche zum Suchen nach einer zu importierenden PFX-Datei, ein Textfeld zum Eingeben eines Kennworts für eine kennwortgeschützte PFX-Datei, eine Schaltfläche zum Importieren einer ausgewählten PFX-Datei, eine Schaltfläche zum Anmelden beim sicheren Webdienst und einen Textblock zum Anzeigen des Zustands der aktuellen Aktion.
-    ```xaml
+    ```xml
     <Button x:Name="Import" Content="Import Certificate (PFX file)" HorizontalAlignment="Left" Margin="352,305,0,0" VerticalAlignment="Top" Height="77" Width="260" Click="Import_Click" FontSize="16"/>
     <Button x:Name="Login" Content="Login" HorizontalAlignment="Left" Margin="611,305,0,0" VerticalAlignment="Top" Height="75" Width="240" Click="Login_Click" FontSize="16"/>
     <TextBlock x:Name="Result" HorizontalAlignment="Left" Margin="355,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="153" Width="560"/>
@@ -94,9 +94,9 @@ Falls keine Clientzertifikate verfügbar sind, muss der Benutzer dem Zertifikats
     using Windows.Storage.Streams;
     ```
 
-5.  Fügen Sie in der Datei "MainPage.xaml.cs" der **MainPage**-Klasse die folgenden Variablen hinzu. Damit werden die Adresse für die sichere "Login"-Methode des Webdiensts "FirstContosoBank" sowie eine globale Variable, die ein PFX-Zertifikat zum Importieren in den Zertifikatspeicher enthält, angegeben. Aktualisieren Sie den &lt;Servernamen&gt; auf den vollqualifizierten Servernamen Ihres IIS-Servers (Microsoft Internet Information Server).
+5.  Fügen Sie in der Datei "MainPage.xaml.cs" der **MainPage**-Klasse die folgenden Variablen hinzu. Damit werden die Adresse für die sichere Login-Methode des Webdiensts „FirstContosoBank“ sowie eine globale Variable, die ein PFX-Zertifikat zum Importieren in den Zertifikatspeicher enthält, angegeben. Ersetzen Sie &lt;Servername&gt; durch den vollqualifizierten Servernamen Ihres IIS-Servers (Microsoft Internet Information Server).
     ```cs
-    private Uri requestUri = new Uri("https://&lt;server-name&gt;/FirstContosoBank/Service1.asmx?op=Login");
+    private Uri requestUri = new Uri("https://<server-name>/FirstContosoBank/Service1.asmx?op=Login");
     private string pfxCert = null;
     ```
 
@@ -200,6 +200,6 @@ Falls keine Clientzertifikate verfügbar sind, muss der Benutzer dem Zertifikats
 
 Mithilfe dieser Schritte können Sie mehrere Apps erstellen, für die dasselbe Benutzerzertifikat verwendet wird, um auf dieselben oder unterschiedliche sichere Webdienste zuzugreifen.
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

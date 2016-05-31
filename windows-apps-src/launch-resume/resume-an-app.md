@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Behandeln der App-Fortsetzung
 description: Hier erfahren Sie, wie Sie den angezeigten Inhalt aktualisieren, wenn das System die App fortsetzt.
 ms.assetid: DACCC556-B814-4600-A10A-90B82664EA15
@@ -51,7 +52,7 @@ MainPage::MainPage()
 {
     InitializeComponent();
     Application::Current->Resuming += 
-        ref new EventHandler<Platform::Object^>(this, &amp;MainPage::App_Resuming);
+        ref new EventHandler<Platform::Object^>(this, &MainPage::App_Resuming);
 }
 ```
 
@@ -87,7 +88,7 @@ void MainPage::App_Resuming(Object^ sender, Object^ e)
 }
 ```
 
-> **Hinweis:** Da das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis nicht im UI-Thread ausgelöst wird, muss mit einem Verteiler der UI-Thread aufgerufen und ein Update eingefügt werden (falls Sie dies in Ihrem Handler umsetzen möchten).
+> **Hinweis**  Da das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis nicht im UI-Thread ausgelöst wird, muss mit einem Verteiler der UI-Thread aufgerufen und ein Update eingefügt werden (falls Sie dies in Ihrem Handler umsetzen möchten).
 
 ## Anmerkungen
 
@@ -96,9 +97,9 @@ Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum De
 
 Wenn Ihre App keine Inhalte anzeigt, die aktualisiert werden müssen, muss das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis nicht behandelt werden.
 
-**Hinweis zum Debuggen mit Visual Studio:** Wenn Ihre App an den Visual Studio-Debugger angefügt ist, können Sie ein **Resume**-Ereignis an die App senden. Sorgen Sie dafür, dass die Symbolleiste **Debugspeicherort** angezeigt wird, und klicken Sie auf das Dropdownelement neben dem Symbol **Anhalten**. Wählen Sie dann **Fortsetzen** aus.
+**Hinweis zum Debuggen mit Visual Studio:  ** Wenn Ihre App an den Visual Studio-Debugger angeschlossen ist, können Sie ein **Resume**-Ereignis an die App senden. Sorgen Sie dafür, dass die Symbolleiste **Debugspeicherort** angezeigt wird, und klicken Sie auf das Dropdownelement neben dem Symbol **Anhalten**. Wählen Sie dann **Fortsetzen** aus.
 
-> **Hinweis:** Für Windows Phone Store-Apps folgt auf das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis immer [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), auch wenn Ihre App derzeit angehalten ist und der Benutzer Ihre App über eine primäre Kachel oder die App-Liste neu startet. Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden. Überprüfen Sie die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736)-Eigenschaft, um zu ermitteln, ob die App über eine primäre oder sekundäre Kachel gestartet wurde. Entscheiden Sie basierend auf dieser Information, ob die App neu gestartet oder fortgesetzt werden soll.
+> **Hinweis**  Für Windows Phone Store-Apps folgt auf das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis immer [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), auch wenn Ihre App derzeit angehalten ist und der Benutzer Ihre App über eine primäre Kachel oder die App-Liste neu startet. Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden. Überprüfen Sie die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736)-Eigenschaft, um zu ermitteln, ob die App über eine primäre oder sekundäre Kachel gestartet wurde. Entscheiden Sie basierend auf dieser Information, ob die App neu gestartet oder fortgesetzt werden soll.
 
 ## Verwandte Themen
 
@@ -110,6 +111,6 @@ Wenn Ihre App keine Inhalte anzeigt, die aktualisiert werden müssen, muss das [
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

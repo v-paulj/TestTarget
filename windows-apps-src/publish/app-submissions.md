@@ -1,12 +1,6 @@
 ---
-Description: Nachdem Sie Ihre App durch Reservierung eines Namens erstellt haben, können Sie mit der Veröffentlichung beginnen. Der erste Schritt ist die Übermittlung der App.
-title: App-Übermittlungen
-ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
-keywords: App übermitteln
-keywords: erforderliche Informationen
-keywords: erforderliche Felder
-keywords: erforderliche Daten
-keywords: Prüfliste
+author: jnHs Description: Nachdem Sie Ihre App durch Reservierung eines Namens erstellt haben, können Sie mit der Veröffentlichung beginnen. Der erste Schritt ist die Übermittlung der App.
+title: App-Übermittlungen ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4 keywords: Übermitteln von Apps keywords: erforderliche Informationen keywords: erforderliche Felder keywords: Prüfliste
 ---
 
 # App-Übermittlungen
@@ -95,9 +89,9 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 | **Hinweise**                     | Optional                                    | [Hinweise für Zertifizierung](notes-for-certification.md)             |
 
  
-**Hinweis**  Informationen zum Veröffentlichen von Branchen-Apps direkt für Unternehmen finden Sie unter [Verteilen von Branchen-Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
+**Hinweis**  Informationen zum Veröffentlichen von branchenspezifischen Apps direkt für Unternehmen finden Sie unter [Verteilen von branchenspezifischen Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,17 +1,18 @@
 ---
-description: Sie können mit Stilen die Steuerelementeigenschaften festlegen und dies für andere Elemente übernehmen, um so für ein einheitliches Erscheinungsbild zu sorgen.
+author: Jwmsft
+Description: Sie können mit Stilen die Steuerelementeigenschaften festlegen und diese Einstellungen dann für andere Steuerelemente übernehmen, um so für ein einheitliches Erscheinungsbild zu sorgen.
 MS-HAID: 'dev\_ctrl\_layout\_txt.styling\_controls'
 MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh
 title: Formatieren von Steuerelementen
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
-label: Formatieren von Steuerelementen
+label: Styling controls
 template: detail.hbs
 ---
 
 # Formatieren von Steuerelementen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darstellung. Sie können mit Stilen die Steuerelementeigenschaften festlegen und diese Einstellungen dann für andere Steuerelemente übernehmen, um so für ein einheitliches Erscheinungsbild zu sorgen.
 
@@ -146,10 +147,8 @@ Verwenden Sie nach Möglichkeit die Stile der standardmäßigen Windows-Runtime-
 
 Für die [**Template**](https://msdn.microsoft.com/library/windows/apps/br209465)-Eigenschaft eines [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390)-Elements kann ein Stilsetter verwendet werden. Dieser erstellt faktisch den größten Teil eines typischen XAML-Stils und der XAML-Ressourcen einer App. Eine ausführlichere Beschreibung finden Sie im Thema [Steuerelementvorlagen](control-templates.md).
 
-**Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

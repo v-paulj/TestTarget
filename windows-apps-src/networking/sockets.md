@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 description: Sie können als UWP-App-Entwickler (Universelle Windows-Plattform) Windows.Networking.Sockets und Winsock zur Kommunikation mit anderen Geräten verwenden.
 title: Sockets
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
@@ -6,7 +7,7 @@ ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
 
 # Sockets
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Wichtige APIs**
 
@@ -14,6 +15,8 @@ ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
 -   [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms740673)
 
 Sie können als UWP-App-Entwickler (Universelle Windows-Plattform) [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) und [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523) zur Kommunikation mit anderen Geräten verwenden. In diesem Thema finden Sie umfassende Anleitungen zur Verwendung des **Windows.Networking.Sockets**-Namespace, um Netzwerkvorgänge durchzuführen.
+
+>**Hinweis**  Zur Sicherstellung der [Netzwerkisolation](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx) verbietet das System die Einrichtung von Socketverbindungen (Sockets oder WinSock) zwischen zwei UWP-Apps, die auf demselben Computer ausgeführt werden, über die lokale Loopbackadresse (127.0.0.0) oder durch explizite Angabe der lokalen IP-Adresse. Dies bedeutet, dass Sie Sockets nicht für die Kommunikation zwischen zwei UWP-Apps verwenden können. UWP stellt andere Mechanismen für die Kommunikation zwischen Apps zur Verfügung. Einzelheiten finden Sie unter [App-zu-App-Kommunikation](https://msdn.microsoft.com/windows/uwp/app-to-app/index).
 
 ## Grundlegende TCP-Socketvorgänge
 
@@ -248,7 +251,7 @@ foreach (IBuffer packet in packetsToSend)
 await outputStream.FlushAsync();
 ```
 
-In früheren Versionen von Windows wurde sofort **FlushAsync** zurückgegeben und dadurch konnte nicht garantiert werden, dass alle Vorgänge für den Stream bereits abgeschlossen wurden. In Windows 10 hat sich das Verhalten geändert. **FlushAsync** wird jetzt garantiert zurückgegeben, nachdem alle Vorgänge im Ausgabestream abgeschlossen wurden.
+In früheren Versionen von Windows wurde sofort **FlushAsync** zurückgegeben und dadurch konnte nicht garantiert werden, dass alle Vorgänge für den Stream bereits abgeschlossen wurden. In Windows 10 hat sich das Verhalten geändert. **FlushAsync** kehrt jetzt garantiert zurück, nachdem alle Vorgänge im Ausgabedatenstrom abgeschlossen sind.
 
 Es gibt einige wichtige Einschränkungen, die für Schreibvorgänge im Batch in Ihrem Code gelten.
 
@@ -293,6 +296,6 @@ Sie können [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms74067
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

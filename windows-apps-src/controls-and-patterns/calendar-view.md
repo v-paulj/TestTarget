@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: In einer Kalenderansicht können Benutzer einen Kalender anzeigen und damit interagieren. Als Ansichten sind Monat, Jahr und zehn Jahre möglich.
 title: Kalenderansicht
 ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
@@ -57,7 +58,8 @@ Benutzer können die Auswahl eines Datums aufheben, indem sie im Kalenderraster 
 
 Mithilfe des [**SelectedDatesChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddateschanged.aspx)-Ereignisses können Sie sich bei Änderungen an der [**SelectedDates**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendarview.selecteddates.aspx)-Sammlung benachrichtigen lassen.
 
-> **Hinweis**&nbsp;&nbsp;Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
+> **Hinweis**
+            &nbsp;&nbsp;Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
 
 ### Anpassen des Erscheinungsbilds der Kalenderansicht
 
@@ -190,6 +192,6 @@ private void CalendarView_CalendarViewDayItemChanging(CalendarView sender,
 - [Uhrzeitauswahl](time-picker.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

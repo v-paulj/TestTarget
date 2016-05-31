@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe
 description: Verwenden Sie eine Hintergrundaufgabe, um die Live-Kachel Ihrer App mit neuen Inhalten zu aktualisieren.
 Search.SourceType: Video
@@ -149,7 +150,7 @@ namespace BackgroundTasks
 6.  Klicken oder tippen Sie auf die Registerkarte **Anwendungsbenutzeroberfläche**.
 7.  Legen Sie die Option **Benachrichtigungen bei gesperrtem Bildschirm** auf **Text für Infoanzeiger und Kachel**fest.
 8.  Legen Sie im Feld **Infoanzeigerlogo** einen Pfad zu einem Symbol mit einer Größe von 24 x 24 Pixel fest.
-    **Wichtig:** Für dieses Symbol dürfen nur einfarbige und transparente Pixel verwendet werden.
+    **Wichtig**  Für dieses Symbol dürfen nur einfarbige und transparente Pixel verwendet werden.
 9.  Legen Sie im Feld **Kleines Logo** einen Pfad zu einem Symbol der Größe 30 x 30 Pixel fest.
 10. Legen Sie im Feld **Breites Logo** einen Pfad zu einem Symbol mit einer Größe von 310 x 150 Pixel fest.
 
@@ -158,7 +159,7 @@ namespace BackgroundTasks
 
 Erstellen Sie zum Registrieren Ihrer Aufgabe ein [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Objekt.
 
-> **Hinweis:** Ab Windows 8.1 werden Parameter für die Registrierung von Hintergrundaufgaben zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Ihre App muss Szenarien mit nicht erfolgreicher Registrierung von Hintergrundaufgaben problemlos verarbeiten können. Verwenden Sie beispielsweise eine Bedingungsanweisung, um die App auf Registrierungsfehler zu prüfen, und wiederholen Sie die nicht erfolgreiche Registrierung mit anderen Parameterwerten.
+> **Hinweis**  Ab Windows 8.1 werden Parameter für die Registrierung von Hintergrundaufgaben zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Ihre App muss Szenarien mit nicht erfolgreicher Registrierung von Hintergrundaufgaben problemlos verarbeiten können. Verwenden Sie beispielsweise eine Bedingungsanweisung, um die App auf Registrierungsfehler zu prüfen, und wiederholen Sie die nicht erfolgreiche Registrierung mit anderen Parameterwerten.
  
 
 Fügen Sie auf der Hauptseite der App die **RegisterBackgroundTask**-Methode hinzu, und rufen Sie sie im **OnNavigatedTo**-Ereignishandler auf.
@@ -241,13 +242,13 @@ namespace ContosoApp
 Legen Sie zum Debuggen der Hintergrundaufgabe in der Run-Methode der Aufgabe einen Haltepunkt fest. Wählen Sie die Hintergrundaufgabe auf der Symbolleiste **Debugspeicherort** aus. Das System ruft dann sofort die Run-Methode auf.
 
 1.  Legen Sie in der Run-Methode der Aufgabe einen Haltepunkt fest.
-2.  Drücken Sie F5, oder tippen Sie auf **Debuggen &gt; Debugging starten**, um die App bereitzustellen und auszuführen.
+2.  Drücken Sie F5 oder tippen Sie auf **Debuggen &gt; Debugging starten**, um die App bereitzustellen und auszuführen.
 3.  Wechseln Sie nach dem Start der App zurück zu Visual Studio.
 4.  Stellen Sie sicher, dass die Symbolleiste **Debugspeicherort** sichtbar ist. Sie befindet sich im Menü **Ansicht &gt; Symbolleisten**.
 5.  Klicken Sie in der Symbolleiste **Debugspeicherort** auf die Dropdownliste **Anhalten**, und wählen Sie **BlogFeedBackgroundTask**aus.
 6.  Visual Studio hält die Ausführung am Haltepunkt an.
-7.  Drücken Sie F5, oder tippen Sie auf **Debuggen &gt; Fortsetzen**, um die Ausführung der App fortzusetzen.
-8.  Drücken Sie UMSCHALT+F5, oder tippen Sie auf **Debuggen &gt; Debugging beenden**, um das Debuggen zu beenden.
+7.  Drücken Sie F5 oder tippen Sie auf **Debuggen &gt; Fortsetzen**, um die Ausführung der App fortzusetzen.
+8.  Drücken Sie UMSCHALT+F5 oder tippen Sie auf **Debuggen &gt; Debugging** beenden, um das Debuggen zu beenden.
 9.  Kehren Sie zur Kachel der App auf dem Startbildschirm zurück. Nach einigen Sekunden werden in der Kachel der App Kachelbenachrichtigungen angezeigt.
 
 ## Verwandte Themen
@@ -267,6 +268,6 @@ Legen Sie zum Debuggen der Hintergrundaufgabe in der Run-Methode der Aufgabe ein
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

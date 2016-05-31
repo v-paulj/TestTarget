@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Erste Schritte: Was kommt als Nächstes?
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
 description: Mithilfe dieser grundlegenden Informationen können Sie nun interessantere UWP-Apps schreiben.
@@ -29,8 +30,9 @@ Wir sind davon überzeugt, dass Ihnen Windows 10 neue Möglichkeiten zur App-En
 * [Ressourcen für iOS-Entwickler](https://msdn.microsoft.com/library/windows/apps/jj945493)
 * [Windows-Steuerelemente für iOS-Entwickler](https://msdn.microsoft.com/library/windows/apps/dn263255)
 * [Windows-Cookbook für iOS-Entwickler](https://msdn.microsoft.com/library/windows/apps/dn263256)
+* [Blog "Building Apps for Windows"](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

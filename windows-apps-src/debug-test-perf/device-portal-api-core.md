@@ -1,6 +1,7 @@
 ---
+author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
-title: Referenz zu Kern-APIs des Geräteportals
+title: Referenz zu Kern-APIs des Device Portal
 description: Hier erhalten Sie Informationen zu den Kern-REST-APIs für das Windows Device Portal, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können.
 ---
 
@@ -19,8 +20,8 @@ Mit dem folgenden Anforderungsformat können Sie eine App installieren.
 
 Methode      | Anforderungs-URI
 :------     | :-----
-POST | /api/appx/packagemanager/package
-
+POST | /api/app/packagemanager/package
+<br />
 **URI-Parameter**
 
 Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
@@ -28,10 +29,10 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 URI-Parameter | Beschreibung
 :---          | :---
 package   | (**erforderlich**) Der Dateiname des zu installierenden Pakets.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -39,12 +40,16 @@ package   | (**erforderlich**) Der Dateiname des zu installierenden Pakets.
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | Bereitstellungsanforderung akzeptiert und wird verarbeitet
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -61,15 +66,15 @@ Mit dem folgenden Anforderungsformat können Sie den Status einer derzeit ausgef
  
 Methode      | Anforderungs-URI
 :------     | :-----
-GET | /api/appx/packagemanager/state
-
+GET | /api/app/packagemanager/state
+<br />
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -77,12 +82,16 @@ GET | /api/appx/packagemanager/state
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | Das Ergebnis der letzten Bereitstellung
+204 | Die Installation läuft
+404 | Keine Installationsaktion wurde gefunden
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -99,16 +108,16 @@ Mit dem folgenden Anforderungsformat können Sie eine App deinstallieren.
  
 Methode      | Anforderungs-URI
 :------     | :-----
-DELETE | /api/appx/packagemanager/package
-
+DELETE | /api/app/packagemanager/package
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -116,12 +125,16 @@ DELETE | /api/appx/packagemanager/package
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -139,12 +152,12 @@ Mit dem folgenden Anforderungsformat können Sie eine Liste der auf dem System i
  
 Methode      | Anforderungs-URI
 :------     | :-----
-GET | /api/appx/packagemanager/packages
-
+GET | /api/app/packagemanager/packages
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
@@ -156,12 +169,41 @@ GET | /api/appx/packagemanager/packages
 
 **Antwort**
 
-Die Antwort enthält eine Liste der installierten Pakete mit zugehörigen Details.
-
+Die Antwort enthält eine Liste der installierten Pakete mit zugehörigen Details. Die Vorlage für diese Antwort lautet wie folgt.
+```
+{"InstalledPackages": [
+    {
+        "Name": string,
+        "PackageFamilyName": string,
+        "PackageFullName": string,
+        "PackageOrigin": int, (https://msdn.microsoft.com/en-us/library/windows/desktop/dn313167(v=vs.85).aspx)
+        "PackageRelativeId": string,
+        "Publisher": string,
+        "Version": {
+            "Build": int,
+            "Major": int,
+            "Minor": int,
+            "Revision": int
+     },
+     "RegisteredUsers": [
+     {
+        "UserDisplayName": string,
+        "UserSID": string
+     },...
+     ]
+    },...
+]}
+```
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -182,7 +224,7 @@ Mit dem folgenden Anforderungsformat können Sie eine Liste der auf dem Computer
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/devicemanager/devices
-
+<br />
 
 **URI-Parameter**
 
@@ -190,7 +232,7 @@ GET | /api/devicemanager/devices
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -198,12 +240,31 @@ GET | /api/devicemanager/devices
 
 **Antwort**
 
-- Die Antwort enthält eine JSON-Struktur, die eine hierarchische Struktur der Geräte enthält.
+Die Antwort enthält ein JSON-Array von Geräten, die mit dem Gerät verbunden sind.
+``` 
+{"DeviceList": [
+    {
+        "Class": string,
+        "Description": string,
+        "ID": string,
+        "Manufacturer": string,
+        "ParentID": string,
+        "ProblemCode": int,
+        "StatusCode": int
+    },...
+]}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -222,7 +283,7 @@ Mit dem folgenden Anforderungsformat können Sie die Liste aller verfügbaren Ab
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/debug/dump/usermode/dumps
-
+<br />
 
 **URI-Parameter**
 
@@ -238,12 +299,18 @@ GET | /api/debug/dump/usermode/dumps
 
 **Antwort**
 
-- Die Antwort enthält eine Liste der Absturzabbilder für jede quergeladene Anwendung.
+Die Antwort enthält eine Liste der Absturzabbilder für jede quergeladene Anwendung.
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -260,7 +327,7 @@ Mit dem folgenden Anforderungsformat können Sie die Absturzabbildsammlungs-Eins
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/debug/dump/usermode/crashcontrol
-
+<br />
 
 **URI-Parameter**
 
@@ -269,10 +336,10 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 URI-Parameter | Beschreibung
 :---          | :---
 packageFullname   | (**erforderlich**) Der vollständige Name des Pakets für die quergeladene App.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -280,12 +347,21 @@ packageFullname   | (**erforderlich**) Der vollständige Name des Pakets für di
 
 **Antwort**
 
-- Keine
+Die Antwort weist das folgende Format auf.
+```
+{"CrashDumpEnabled": bool}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -302,7 +378,7 @@ Mit dem folgenden Anforderungsformat können Sie das Absturzabbild einer quergel
 Methode      | Anforderungs-URI
 :------     | :-----
 DELETE | /api/debug/dump/usermode/crashdump
-
+<br />
 
 **URI-Parameter**
 
@@ -312,10 +388,10 @@ URI-Parameter | Beschreibung
 :---          | :---
 packageFullname   | (**erforderlich**) Der vollständige Name des Pakets für die quergeladene App.
 fileName   | (**erforderlich**) Der Name der Absturzabbilddatei, die gelöscht werden soll.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -323,12 +399,16 @@ fileName   | (**erforderlich**) Der Name der Absturzabbilddatei, die gelöscht w
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -346,7 +426,7 @@ Methode      | Anforderungs-URI
 :------     | :-----
 DELETE | /api/debug/dump/usermode/crashcontrol
 
-
+<br />
 **URI-Parameter**
 
 Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
@@ -354,10 +434,10 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 URI-Parameter | Beschreibung
 :---          | :---
 packageFullname   | (**erforderlich**) Der vollständige Name des Pakets für die quergeladene App.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -365,12 +445,16 @@ packageFullname   | (**erforderlich**) Der vollständige Name des Pakets für di
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -387,7 +471,7 @@ Mit dem folgenden Anforderungsformat können Sie das Absturzabbild einer quergel
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/debug/dump/usermode/crashdump
-
+<br />
 
 **URI-Parameter**
 
@@ -397,7 +481,7 @@ URI-Parameter | Beschreibung
 :---          | :---
 packageFullname   | (**erforderlich**) Der vollständige Name des Pakets für die quergeladene App.
 fileName   | (**erforderlich**) Der Name der Absturzabbilddatei, die Sie herunterladen möchten.
-
+<br />
 **Anforderungsheader**
 
 - Keine
@@ -408,12 +492,18 @@ fileName   | (**erforderlich**) Der Name der Absturzabbilddatei, die Sie herunte
 
 **Antwort**
 
-- Die Antwort enthält eine Absturzabbilddatei. Sie können die Absturzabbilddatei mit WinDbg oder Visual Studio untersuchen.
+Die Antwort enthält eine Absturzabbilddatei. Sie können die Absturzabbilddatei mit WinDbg oder Visual Studio untersuchen.
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -430,7 +520,7 @@ Mit dem folgenden Anforderungsformat können Sie Absturzabbilder für eine querg
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/debug/dump/usermode/crashcontrol
-
+<br />
 
 **URI-Parameter**
 
@@ -439,10 +529,10 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 URI-Parameter | Beschreibung
 :---          | :---
 packageFullname   | (**erforderlich**) Der vollständige Name des Pakets für die quergeladene App.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -450,12 +540,14 @@ packageFullname   | (**erforderlich**) Der vollständige Name des Pakets für di
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -472,7 +564,7 @@ Mit dem folgenden Anforderungsformat können Sie die Liste der Fehlerüberprüfu
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/debug/dump/kernel/dumplist
-
+<br />
 
 **URI-Parameter**
 
@@ -488,12 +580,24 @@ GET | /api/debug/dump/kernel/dumplist
 
 **Antwort**
 
-- Die Antwort enthält eine Liste der Minidumpdateinamen und die Größen dieser Dateien.
+Die Antwort enthält eine Liste der Minidumpdateinamen und die Größen dieser Dateien. Diese Liste wird das folgende Format aufweisen. Der zweite *FileName*-Parameter ist die Größe der Datei. Dies ist ein bekanntes Problem.
+```
+{"DumpFiles": [
+    {
+        "FileName": string,
+        "FileName": string
+    },...
+]}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -509,7 +613,7 @@ Mit dem folgenden Anforderungsformat können Sie eine Fehlerüberprüfungs-Speic
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/debug/dump/kernel/dump
-
+<br />
 
 **URI-Parameter**
 
@@ -518,7 +622,7 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 URI-Parameter | Beschreibung
 :---          | :---
 filename   | (**erforderlich**) Der Dateiname der Speicherabbilddatei. Sie finden diesen mithilfe der API zum Abrufen der Speicherabbildliste.
-
+<br />
 **Anforderungsheader**
 
 - Keine
@@ -529,12 +633,18 @@ filename   | (**erforderlich**) Der Dateiname der Speicherabbilddatei. Sie finde
 
 **Antwort**
 
-- Die Antwort enthält die Speicherabbilddatei. Sie können diese Datei mithilfe von WinDbg untersuchen.
+Die Antwort enthält die Speicherabbilddatei. Sie können diese Datei mithilfe von WinDbg untersuchen.
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -551,7 +661,7 @@ Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/debug/dump/kernel/crashcontrol
 
-
+<br />
 **URI-Parameter**
 
 - Keine
@@ -566,12 +676,26 @@ GET | /api/debug/dump/kernel/crashcontrol
 
 **Antwort**
 
-- Die Antwort enthält die CrashControl-Einstellungen. Weitere Informationen zu CrashControl finden Sie im Artikel [](https://technet.microsoft.com/library/cc951703.aspx).
+Die Antwort enthält die CrashControl-Einstellungen. Weitere Informationen zu CrashControl finden Sie im Artikel [](https://technet.microsoft.com/library/cc951703.aspx). Die Vorlage für die Antwort lautet wie folgt.
+```
+{
+    "autoreboot": int,
+    "dumptype": int,
+    "maxdumpcount": int,
+    "overwrite": int
+}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -587,7 +711,7 @@ Mit dem folgenden Anforderungsformat können Sie ein Live-Kernelspeicherabbild a
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/debug/dump/livekernel
-
+<br />
 
 **URI-Parameter**
 
@@ -603,12 +727,18 @@ GET | /api/debug/dump/livekernel
 
 **Antwort**
 
-- Die Antwort enthält das vollständige Kernelmodus-Speicherabbild. Sie können diese Datei mithilfe von WinDbg untersuchen.
+Die Antwort enthält das vollständige Kernelmodus-Speicherabbild. Sie können diese Datei mithilfe von WinDbg untersuchen.
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -624,7 +754,7 @@ Mit dem folgenden Anforderungsformat können Sie das Speicherabbild von einem Li
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/debug/dump/usermode/live
-
+<br />
 
 **URI-Parameter**
 
@@ -633,7 +763,7 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 URI-Parameter | Beschreibung
 :---          | :---
 pid   | (**erforderlich**) Die eindeutige Prozess-ID für den betreffenden Prozess.
-
+<br />
 **Anforderungsheader**
 
 - Keine
@@ -644,12 +774,18 @@ pid   | (**erforderlich**) Die eindeutige Prozess-ID für den betreffenden Proze
 
 **Antwort**
 
-- Die Antwort enthält die Prozesssicherung. Sie können diese Datei mit WinDbg oder Visual Studio untersuchen.
+Die Antwort enthält die Prozesssicherung. Sie können diese Datei mit WinDbg oder Visual Studio untersuchen.
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -665,7 +801,7 @@ Mit dem folgenden Anforderungsformat können Sie die Einstellungen zum Sammeln v
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/debug/dump/kernel/crashcontrol
-
+<br />
 
 **URI-Parameter**
 
@@ -677,10 +813,10 @@ autoreboot   | (**optional**) True oder False. Dieser Parameter gibt an, ob das 
 dumptype   | (**optional**) Der Speicherabbildtyp. Die unterstützten Werte finden Sie unter [CrashDumpType-Enumeration](https://msdn.microsoft.com/library/azure/microsoft.azure.management.insights.models.crashdumptype.aspx).
 maxdumpcount   | (**optional**) Die maximale Anzahl der zu speichernden Speicherabbilder.
 overwrite   | (**optional**) True oder False. Dieser Parameter gibt an, ob alte Speicherabbilder überschrieben werden, wenn der durch *maxdumpcount* angegebene Höchstwert für die Anzahl von Speicherabbildern erreicht wurde.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -688,12 +824,16 @@ overwrite   | (**optional**) True oder False. Dieser Parameter gibt an, ob alte 
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -706,12 +846,12 @@ overwrite   | (**optional**) True oder False. Dieser Parameter gibt an, ob alte 
 
 **Anforderung**
 
-Mit dem folgenden Anforderungsformat können Sie eine Echtzeit-ETW-Sitzung erstellen. Dies erfolgt über ein Websocket.
+Mit dem folgenden Anforderungsformat können Sie eine Echtzeit-ETW-Sitzung erstellen. Dies erfolgt über ein Websocket.  ETW-Ereignisse werden auf dem Server zusammengefasst und einmal pro Sekunde an den Client gesendet. 
  
 Methode      | Anforderungs-URI
 :------     | :-----
 GET/WebSocket | /api/etw/session/realtime
-
+<br />
 
 **URI-Parameter**
 
@@ -727,18 +867,73 @@ GET/WebSocket | /api/etw/session/realtime
 
 **Antwort**
 
-- Die Antwort enthält die ETW-Ereignisse von den aktivierten Anbietern.
+Die Antwort enthält die ETW-Ereignisse von den aktivierten Anbietern.  ETW-WebSocket-Befehle finden Sie unten. 
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
 * Windows-Desktop
 * HoloLens
 * IoT
+
+### ETW-WebSocket-Befehle
+Diese Befehle werden vom Client an den Server gesendet.
+
+Befehl | Beschreibung
+:----- | :-----
+Anbieter *{guid}* aktivieren *{level}* | Den durch *{guid}* (ohne Klammern) markierten Anbieter auf der angegebenen Ebene aktivieren. *{level}* ist ein **int** von 1 (am wenigsten detailliert) bis 5 (ausführlich).
+Anbieter *{guid}* deaktivieren | Den durch *{guid}* (ohne Klammern) markierten Anbieter deaktivieren.
+
+Diese Antworten werden vom Server an den Client gesendet. Diese werden als Text gesendet, und erhalten Sie das folgende Format durch eine JSON-Analyse.
+```
+{
+    "Events":[
+        {
+            "Timestamp": int,
+            "Provider": string,
+            "ID": int, 
+            "TaskName": string,
+            "Keyword": int,
+            "Level": int,
+            payload objects...
+        },...
+    ],
+    "Frequency": int
+}
+```
+
+Nutzlast-Objekte sind zusätzliche Schlüssel-Wert-Paare (Zeichenkette:Zeichenkette), die im ursprünglichen ETW-Ereignis bereitgestellt werden.
+
+Beispiel:
+```
+{
+    "ID" : 42, 
+    "Keyword" : 9223372036854775824, 
+    "Level" : 4, 
+    "Message" : "UDPv4: 412 bytes transmitted from 10.81.128.148:510 to 132.215.243.34:510. ",
+    "PID" : "1218", 
+    "ProviderName" : "Microsoft-Windows-Kernel-Network", 
+    "TaskName" : "KERNEL_NETWORK_TASK_UDPIP", 
+    "Timestamp" : 131039401761757686, 
+    "connid" : "0", 
+    "daddr" : "132.245.243.34", 
+    "dport" : "500", 
+    "saddr" : "10.82.128.118", 
+    "seqnum" : "0", 
+    "size" : "412", 
+    "sport" : "500"
+}
+```
 
 ---
 ### Auflisten der registrierten ETW-Anbieter
@@ -750,7 +945,7 @@ Mit dem folgenden Anforderungsformat können Sie die registrierten Anbieter aufl
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/etw/providers
-
+<br />
 
 **URI-Parameter**
 
@@ -766,12 +961,24 @@ GET | /api/etw/providers
 
 **Antwort**
 
-- Die Antwort enthält die Liste der ETW-Anbieter. Diese Liste enthält den Anzeigenamen und die GUID für jeden Anbieter.
+Die Antwort enthält die Liste der ETW-Anbieter. Diese Liste enthält den Anzeigenamen und die GUID für jeden Anbieter im folgenden Format.
+```
+{"Providers": [
+    {
+        "GUID": string, (GUID)
+        "Name": string
+    },...
+]}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -780,26 +987,24 @@ GET | /api/etw/providers
 * IoT
 
 ---
-## Netzwerke
----
-### Abrufen der aktuellen IP-Konfiguration
+### Auflisten der benutzerdefinierten ETW-Anbieter, die von der Plattform verfügbar gemacht werden.
 
 **Anforderung**
 
-Mit dem folgenden Anforderungsformat können Sie die aktuelle IP-Konfiguration abrufen.
+Mit dem folgenden Anforderungsformat können Sie die registrierten Anbieter auflisten.
  
 Methode      | Anforderungs-URI
 :------     | :-----
-GET | /api/networking/ipconfig
-
+GET | /api/etw/customproviders
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -807,22 +1012,25 @@ GET | /api/networking/ipconfig
 
 **Antwort**
 
-- Die Antwort enthält die IP-Konfiguration.
+200 OK. Die Antwort enthält die Liste der ETW-Anbieter. Diese Liste enthält den Anzeigenamen und die GUID für jeden Anbieter.
+
+```
+{"Providers": [
+    {
+        "GUID": string, (GUID)
+        "Name": string
+    },...
+]}
+```
 
 **Statuscode**
 
-Die folgende Tabelle enthält mögliche zusätzliche Statuscodes, die durch diesen Vorgang zurückgegeben werden können.
-
-HTTP-Statuscode      | Beschreibung
-:------     | :-----
-200 | Der Vorgang wurde erfolgreich abgeschlossen.
-500 | Es ist ein interner Serverfehler aufgetreten.
-
+- Standardstatuscodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
 * Windows-Desktop
-* Xbox
 * HoloLens
 * IoT
 
@@ -833,20 +1041,20 @@ HTTP-Statuscode      | Beschreibung
 
 **Anforderung**
 
-Sie können mit dem folgenden Anforderungsformat den Namen eines Computers abrufen.
+Sie können den Namen eines Computers durch Verwendung des folgenden Anforderungsformats abrufen.
  
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/os/machinename
-
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -854,12 +1062,22 @@ GET | /api/os/machinename
 
 **Antwort**
 
-- Keine
+Die Antwort enthält den Namen des Computers im folgenden Format. 
+
+```
+{"ComputerName": string}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -878,15 +1096,15 @@ Mit dem folgenden Anforderungsformat können Sie die Betriebssysteminformationen
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/os/info
-
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -894,12 +1112,28 @@ GET | /api/os/info
 
 **Antwort**
 
-- Keine
+Die Antwort enthält die Betriebssysteminformationen im folgenden Format.
+
+```
+{
+    "ComputerName": string,
+    "OsEdition": string,
+    "OsEditionId": int,
+    "OsVersion": string,
+    "Platform": string
+}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -918,7 +1152,7 @@ Mit dem folgenden Anforderungsformat können Sie den Namen eines Computers festl
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/os/machinename
-
+<br />
 
 **URI-Parameter**
 
@@ -927,10 +1161,10 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 URI-Parameter | Beschreibung
 :---          | :---
 name | (**erforderlich**) Der neue Name für den Computer.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -938,12 +1172,14 @@ name | (**erforderlich**) Der neue Name für den Computer.
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -959,16 +1195,17 @@ name | (**erforderlich**) Der neue Name für den Computer.
 
 **Anforderung**
 
-Mit dem folgenden Anforderungsformat können Sie die Liste der derzeit ausgeführten Prozesse abrufen.
+Mit dem folgenden Anforderungsformat können Sie die Liste der derzeit ausgeführten Prozesse abrufen.  Dies kann auch zu einer WebSocket-Verbindung aktualisiert werden, wobei einmal pro Sekunde die gleichen JSON-Daten per Push an den Client gesendet werden. 
  
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/resourcemanager/processes
-
+GET/WebSocket | /api/resourcemanager/processes
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
@@ -980,12 +1217,33 @@ GET | /api/resourcemanager/processes
 
 **Antwort**
 
-- Die Antwort enthält eine Liste der Prozesse mit Details für jeden Prozess. Die Informationen weisen das JSON-Format auf.
+Die Antwort enthält eine Liste der Prozesse mit Details für jeden Prozess. Die Informationen sind im JSON-Format und haben die folgende Vorlage.
+```
+{"Processes": [
+    {
+        "CPUUsage": int,
+        "ImageName": string,
+        "PageFileUsage": int,
+        "PrivateWorkingSet": int,
+        "ProcessId": int,
+        "SessionId": int,
+        "UserName": string,
+        "VirtualSize": int,
+        "WorkingSetSize": int
+    },...
+]}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1003,15 +1261,17 @@ Mit dem folgenden Anforderungsformat können Sie die Leistungsstatistik des Syst
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/resourcemanager/systemperf
-
+GET/WebSocket | /api/resourcemanager/systemperf
+<br />
+Dies kann auch auf eine WebSocket-Verbindung aktualisiert werden.  Sie stellt unten einmal pro Sekunde die gleichen JSON-Daten bereit. 
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1019,12 +1279,49 @@ GET | /api/resourcemanager/systemperf
 
 **Antwort**
 
-- Die Antwort enthält die Leistungsstatistik für das System, z. B. CPU- und GPU-Nutzung, Speicherzugriff und Netzwerkzugriff. Diese Informationen weisen das JSON-Format auf.
+Die Antwort enthält die Leistungsstatistik für das System, z. B. CPU- und GPU-Nutzung, Speicherzugriff und Netzwerkzugriff. Diese Informationen sind im JSON-Format und haben die folgende Vorlage.
+```
+{
+    "AvailablePages": int,
+    "CommitLimit": int,
+    "CommittedPages": int,
+    "CpuLoad": int,
+    "IOOtherSpeed": int,
+    "IOReadSpeed": int,
+    "IOWriteSpeed": int,
+    "NonPagedPoolPages": int,
+    "PageSize": int,
+    "PagedPoolPages": int,
+    "TotalInstalledInKb": int,
+    "TotalPages": int,
+    "GPUData": 
+    {
+        "AvailableAdapters": [{ (One per detected adapter)
+            "DedicatedMemory": int,
+            "DedicatedMemoryUsed": int,
+            "Description": string,
+            "SystemMemory": int,
+            "SystemMemoryUsed": int,
+            "EnginesUtilization": [ float,... (One per detected engine)]
+        },...
+    ]},
+    "NetworkingData": {
+        "NetworkInBytes": int,
+        "NetworkOutBytes": int
+    }
+}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1045,15 +1342,15 @@ Mit dem folgenden Anforderungsformat können Sie den aktuellen Akkustatus abrufe
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/power/battery
-
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1061,17 +1358,36 @@ GET | /api/power/battery
 
 **Antwort**
 
-- Keine
+Die Informationen zum aktuellen Akkustatus werden im folgenden Format zurückgegeben.
+```
+{
+    "AcOnline": int (0 | 1),
+    "BatteryPresent": int (0 | 1),
+    "Charging": int (0 | 1),
+    "DefaultAlert1": int,
+    "DefaultAlert2": int,
+    "EstimatedTime": int,
+    "MaximumCapacity": int,
+    "RemainingCapacity": int
+}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
 * HoloLens
 * IoT
+* Mobilgerät
 
 ---
 ### Abrufen des aktiven Energieschemas
@@ -1083,15 +1399,15 @@ Mit dem folgenden Anforderungsformat können Sie das aktive Energieschema abrufe
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/power/activecfg
-
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1099,12 +1415,21 @@ GET | /api/power/activecfg
 
 **Antwort**
 
-- Keine
+Das aktive Energieschema hat das folgende Format.
+```
+{"ActivePowerScheme": string (guid of scheme)}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -1120,28 +1445,34 @@ Mit dem folgenden Anforderungsformat können Sie den Unterwert für ein Energies
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/power/cfg/*<power scheme path>*
-
+<br />
+Optionen:
+- SCHEME_CURRENT
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
-- Keiner
+Eine vollständige Liste der verfügbaren Energiezustände ist auf einzelne Anwendungen bezogen und enthält die Einstellungen zur Kennzeichnung verschiedener Energiezustände wie niedriger und kritischer Ladezustand. 
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -1157,15 +1488,15 @@ Mit dem folgenden Anforderungsformat können Sie den Energiestatus des Systems �
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/power/state
-
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1173,57 +1504,25 @@ GET | /api/power/state
 
 **Antwort**
 
-- Keine
+Die Informationen zum Energiezustand haben die folgende Vorlage.
+```
+{"LowPowerStateAvailable": bool}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
 * HoloLens
-* IoT
-
----
-### Abrufen eines Berichts zur Ruhezustandsuntersuchung
-
-**Anforderung**
-
-Mit dem folgenden Anforderungsformat können Sie einen Bericht zur Ruhezustandsuntersuchung abrufen.
- 
-Methode      | Anforderungs-URI
-:------     | :-----
-GET | /api/power/sleepstudy/reports
-
-
-**URI-Parameter**
-
-Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
-
-URI-Parameter | Beschreibung
-:---          | :---
-FileName | (**erforderlich**) Der Dateiname des Berichts zur Ruhezustandsuntersuchung, den Sie herunterladen möchten.
-
-**Anforderungsheader**
-
-- Keine
-
-**Anforderungstext**
-
-- Keiner
-
-**Antwort**
-
-- Keine
-
-**Statuscode**
-
-- Standardstatuscodes
-
-**Verfügbare Gerätefamilien**
-
-* Windows-Desktop
 * IoT
 
 ---
@@ -1236,7 +1535,7 @@ Mit dem folgenden Anforderungsformat können Sie das aktive Energieschema festle
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/power/activecfg
-
+<br />
 
 **URI-Parameter**
 
@@ -1245,10 +1544,10 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 URI-Parameter | Beschreibung
 :---          | :---
 scheme | (**erforderlich**) Die GUID des Schemas, das Sie als das aktive Energieschema für das System festlegen möchten.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1256,12 +1555,16 @@ scheme | (**erforderlich**) Die GUID des Schemas, das Sie als das aktive Energie
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -1277,7 +1580,7 @@ Mit dem folgenden Anforderungsformat können Sie den Unterwert für ein Energies
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/power/cfg/*<power scheme path>*
-
+<br />
 
 **URI-Parameter**
 
@@ -1287,10 +1590,10 @@ URI-Parameter | Beschreibung
 :---          | :---
 valueAC | (**erforderlich**) Der für den Netzbetrieb zu verwendende Wert.
 valueDC | (**erforderlich**) Der für den Akkubetrieb zu verwendende Wert.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1298,12 +1601,57 @@ valueDC | (**erforderlich**) Der für den Akkubetrieb zu verwendende Wert.
 
 **Antwort**
 
-- Keine
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes.
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows-Desktop
+* IoT
+
+---
+### Abrufen eines Berichts zur Ruhezustandsuntersuchung
+
+**Anforderung**
+
+Methode      | Anforderungs-URI
+:------     | :-----
+GET | /api/power/sleepstudy/report
+<br />
+Mit dem folgenden Anforderungsformat können Sie einen Bericht zur Ruhezustandsuntersuchung abrufen.
+
+**URI-Parameter**
+URI-Parameter | Beschreibung
+:---          | :---
+FileName | (**erforderlich**) Der vollständige Name für die Datei, die Sie herunterladen möchten. Dieser Wert sollte hex64-codiert sein.
+<br />
+**Anforderungsheader**
+
+- Keiner
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+
+Die Antwort ist eine Datei mit der Ruhezustandsuntersuchung. 
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -1319,15 +1667,15 @@ Mit dem folgenden Anforderungsformat können Sie die verfügbaren Berichte zu Ru
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/power/sleepstudy/reports
-
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1335,12 +1683,26 @@ GET | /api/power/sleepstudy/reports
 
 **Antwort**
 
-- Keine
+Die Liste der verfügbaren Berichte hat die folgende Vorlage.
+
+```
+{"Reports": [
+    {
+        "FileName": string
+    },...
+]}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -1355,16 +1717,16 @@ Mit dem folgenden Anforderungsformat können Sie die Transformation der Ruhezust
  
 Methode      | Anforderungs-URI
 :------     | :-----
-GET | /api/power/sleepstudy/reports
-
+GET | /api/power/sleepstudy/transform
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1372,12 +1734,18 @@ GET | /api/power/sleepstudy/reports
 
 **Antwort**
 
-- Keine
+Die Antwort enthält die Transformation der Ruhezustandsuntersuchung.
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -1395,15 +1763,15 @@ Mit dem folgenden Anforderungsformat können Sie den Zielcomputer neu starten.
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/control/restart
-
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1411,12 +1779,14 @@ POST | /api/control/restart
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1435,15 +1805,15 @@ Mit dem folgenden Anforderungsformat können Sie den Zielcomputer herunterfahren
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/control/shutdown
-
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1451,12 +1821,16 @@ POST | /api/control/shutdown
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1477,7 +1851,7 @@ Mit dem folgenden Anforderungsformat können Sie eine Modern App starten.
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/taskmanager/app
-
+<br />
 
 **URI-Parameter**
 
@@ -1487,10 +1861,10 @@ URI-Parameter | Beschreibung
 :---          | :---
 appid   | (**erforderlich**) Die PRAID für die App, die gestartet werden soll. Dieser Wert sollte hex64-codiert sein.
 package   | (**erforderlich**) Der vollständige Name für das App-Paket, das Sie starten möchten. Dieser Wert sollte hex64-codiert sein.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1498,12 +1872,16 @@ package   | (**erforderlich**) Der vollständige Name für das App-Paket, das Si
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1522,7 +1900,7 @@ Mit dem folgenden Anforderungsformat können Sie eine Modern App beenden.
 Methode      | Anforderungs-URI
 :------     | :-----
 DELETE | /api/taskmanager/app
-
+<br />
 
 **URI-Parameter**
 
@@ -1532,10 +1910,10 @@ URI-Parameter | Beschreibung
 :---          | :---
 package   | (**erforderlich**) Der vollständige Name des App-Pakets, das Sie beenden möchten. Dieser Wert sollte hex64-codiert sein.
 forcestop   | (**optional**) Der Wert **yes** gibt an, dass das Beenden sämtlicher Prozesse erzwungen werden soll.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1543,12 +1921,16 @@ forcestop   | (**optional**) Der Wert **yes** gibt an, dass das Beenden sämtlic
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1558,18 +1940,18 @@ forcestop   | (**optional**) Der Wert **yes** gibt an, dass das Beenden sämtlic
 * IoT
 
 ---
-## WLAN
+## Netzwerk
 ---
-### Auflisten der Drahtlos-Netzwerkschnittstellen
+### Abrufen der aktuellen IP-Konfiguration
 
 **Anforderung**
 
-Mit dem folgenden Anforderungsformat können Sie die Drahtlos-Netzwerkschnittstellen auflisten.
+Mit dem folgenden Anforderungsformat können Sie die aktuelle IP-Konfiguration abrufen.
  
 Methode      | Anforderungs-URI
 :------     | :-----
-GET | /api/wifi/interfaces
-
+GET | /api/networking/ipconfig
+<br />
 
 **URI-Parameter**
 
@@ -1585,12 +1967,120 @@ GET | /api/wifi/interfaces
 
 **Antwort**
 
-- Eine Liste der verfügbaren Drahtlosschnittstellen mit Details. Die Details umfassen z. B. GUID, Beschreibung, Anzeigename usw.
+Die Antwort enthält die IP-Konfiguration in der folgenden Vorlage.
+
+```
+{"Adapters": [
+    {
+        "Description": string,
+        "HardwareAddress": string,
+        "Index": int,
+        "Name": string,
+        "Type": string,
+        "DHCP": {
+            "LeaseExpires": int, (timestamp)
+            "LeaseObtained": int, (timestamp)
+            "Address": {
+                "IpAddress": string,
+                "Mask": string
+            }
+        },
+        "WINS": {(WINS is optional)
+            "Primary": {
+                "IpAddress": string,
+                "Mask": string
+            },
+            "Secondary": {
+                "IpAddress": string,
+                "Mask": string
+            }
+        },
+        "Gateways": [{ (always 1+)
+            "IpAddress": "10.82.128.1",
+            "Mask": "255.255.255.255"
+            },...
+        ],
+        "IpAddresses": [{ (always 1+)
+            "IpAddress": "10.82.128.148",
+            "Mask": "255.255.255.0"
+            },...
+        ]
+    },...
+]}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* Xbox
+* HoloLens
+* IoT
+
+--
+### Auflisten der Drahtlos-Netzwerkschnittstellen
+
+**Anforderung**
+
+Mit dem folgenden Anforderungsformat können Sie die Drahtlos-Netzwerkschnittstellen auflisten.
+ 
+Methode      | Anforderungs-URI
+:------     | :-----
+GET | /api/wifi/interfaces
+<br />
+
+**URI-Parameter**
+
+- Keine
+
+**Anforderungsheader**
+
+- Keine
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+
+Eine Liste der verfügbaren Drahtlosschnittstellen mit Details im folgenden Format.
+
+``` 
+{"Interfaces": [{
+    "Description": string,
+    "GUID": string (guid with curly brackets),
+    "Index": int,
+    "ProfilesList": [
+        {
+            "GroupPolicyProfile": bool,
+            "Name": string, (Network currently connected to)
+            "PerUserProfile": bool
+        },...
+    ]
+    }
+]}
+```
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes.
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1609,7 +2099,7 @@ Mit dem folgenden Anforderungsformat können Sie die Liste der Drahtlosnetzwerke
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/wifi/networks
-
+<br />
 
 **URI-Parameter**
 
@@ -1617,11 +2107,11 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 
 URI-Parameter | Beschreibung
 :---          | :---
-interface   | (**erforderlich**) Die GUID für die Netzwerkschnittstelle, die zum Suchen nach Drahtlosnetzwerken verwendet werden soll.
-
+interface   | (**erforderlich**) Die GUID für die Netzwerkschnittstelle, die zum Suchen nach Drahtlosnetzwerken verwendet werden soll, ohne Klammern. 
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1629,12 +2119,38 @@ interface   | (**erforderlich**) Die GUID für die Netzwerkschnittstelle, die zu
 
 **Antwort**
 
-- Die Liste der an der angegebenen *interface* gefundenen Drahtlosnetzwerke. Diese enthält Details zu den Netzwerken.
+Die Liste der an der angegebenen *interface* gefundenen Drahtlosnetzwerke. Diese enthält Details für die Netzwerke im folgenden Format.
+
+```
+{"AvailableNetworks": [
+    {
+        "AlreadyConnected": bool,
+        "AuthenticationAlgorithm": string, (WPA2, etc)
+        "Channel": int,
+        "CipherAlgorithm": string, (e.g. AES)
+        "Connectable": int, (0 | 1)
+        "InfrastructureType": string,
+        "ProfileAvailable": bool,
+        "ProfileName": string,
+        "SSID": string,
+        "SecurityEnabled": int, (0 | 1)
+        "SignalQuality": int,
+        "BSSID": [int,...],
+        "PhysicalTypes": [string,...]
+    },...
+]}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1653,7 +2169,7 @@ Mit dem folgenden Anforderungsformat können Sie eine Verbindung mit einem WLAN-
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/wifi/network
-
+<br />
 
 **URI-Parameter**
 
@@ -1664,11 +2180,12 @@ URI-Parameter | Beschreibung
 interface   | (**erforderlich**) Die GUID für die Netzwerkschnittstelle, die zum Herstellen der Verbindung mit dem Netzwerk verwendet werden soll.
 op   | (**erforderlich**) Gibt die durchzuführende Aktion an. Mögliche Werte sind „connect“ und „disconnect“.
 ssid   | (**erforderlich, wenn *op* == connect**) Die SSID des Netzwerks, mit dem die Verbindung hergestellt werden soll.
-key   | (**erforderlich, wenn *op* == connect**) Der gemeinsam verwendete Schlüssel.
+Schlüssel   | (**erforderlich, wenn *op* == connect und Netzwerk erfordert Authentifizierung**) Die gemeinsam verwendete Schlüssel.
+createprofile | (**erforderlich**) Erstellen Sie ein Profil für das Netzwerk auf dem Gerät.  Dadurch stellt das Gerät künftig automatisch eine Verbindung zum Netzwerk her. Dies kann **ja** oder **nein** sein. 
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1676,12 +2193,14 @@ key   | (**erforderlich, wenn *op* == connect**) Der gemeinsam verwendete Schlü
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1700,7 +2219,7 @@ Mit dem folgenden Anforderungsformat können Sie ein Profil löschen, das einem 
 Methode      | Anforderungs-URI
 :------     | :-----
 DELETE | /api/wifi/network
-
+<br />
 
 **URI-Parameter**
 
@@ -1710,10 +2229,10 @@ URI-Parameter | Beschreibung
 :---          | :---
 interface   | (**erforderlich**) Die GUID der Netzwerkschnittstelle, die dem zu löschenden Profil zugeordnet ist.
 profile   | (**erforderlich**) Der Name des zu löschenden Profils.
-
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1721,12 +2240,14 @@ profile   | (**erforderlich**) Der Name des zu löschenden Profils.
 
 **Antwort**
 
-- Keine
-
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1746,8 +2267,8 @@ Mit dem folgenden Anforderungsformat können Sie eine WER-Datei herunterladen.
  
 Methode      | Anforderungs-URI
 :------     | :-----
-GET | /api/wer/reports/file
-
+GET | /api/wer/report/file
+<br />
 
 **URI-Parameter**
 
@@ -1757,12 +2278,12 @@ URI-Parameter | Beschreibung
 :---          | :---
 user   | (**erforderlich**) Der dem Bericht zugeordnete Benutzername.
 type   | (**erforderlich**) Der Typ des Berichts. Dieser kann **queried** oder **archived** lauten.
-name   | (**erforderlich**) Der Name des Berichts.
-file   | (**erforderlich**) Der Name der Datei des Berichts, die heruntergeladen werden soll.
-
+name   | (**erforderlich**) Der Name des Berichts. Dieser sollte base64-codiert sein. 
+file   | (**erforderlich**) Der Name der Datei des Berichts, die heruntergeladen werden soll. Dieser sollte base64-codiert sein. 
+<br />
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1770,12 +2291,18 @@ file   | (**erforderlich**) Der Name der Datei des Berichts, die heruntergeladen
 
 **Antwort**
 
-- Keine
+- Antwort enthält die angeforderte Datei. 
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -1791,8 +2318,8 @@ Mit dem folgenden Anforderungsformat können Sie die Dateien in einem WER-Berich
  
 Methode      | Anforderungs-URI
 :------     | :-----
-GET | /api/wer/reports/files
-
+GET | /api/wer/report/files
+<br />
 
 **URI-Parameter**
 
@@ -1802,24 +2329,35 @@ URI-Parameter | Beschreibung
 :---          | :---
 user   | (**erforderlich**) Der dem Bericht zugeordnete Benutzer.
 type   | (**erforderlich**) Der Typ des Berichts. Dieser kann **queried** oder **archived** lauten.
-name   | (**erforderlich**) Der Name des Berichts.
-
+name   | (**erforderlich**) Der Name des Berichts. Dieser sollte base64-codiert sein. 
+<br />
 **Anforderungsheader**
-
-- Keine
-
-**Anforderungstext**
 
 - Keiner
 
-**Antwort**
+**Anforderungstext**
 
-- Keine
+```
+{"Files": [
+    {
+        "Name": string, (Filename, not base64 encoded)
+        "Size": int (bytes)
+    },...
+]}
+```
+
+**Antwort**
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -1836,15 +2374,15 @@ Mit dem folgenden Anforderungsformat können Sie die WER-Berichte abrufen.
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/wer/reports
-
+<br />
 
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -1852,12 +2390,32 @@ GET | /api/wer/reports
 
 **Antwort**
 
-- Keine
+Die WER-Berichte in folgendem Format.
+
+```
+{"WerReports": [
+    {
+        "User": string,
+        "Reports": [
+            {
+                "CreationTime": int,
+                "Name": string, (not base64 encoded)
+                "Type": string ("Queue" or "Archive")
+            },
+    },...
+]}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows-Desktop
@@ -1871,12 +2429,12 @@ GET | /api/wer/reports
 
 **Anforderung**
 
-Mit dem folgenden Anforderungsformat können Sie ein WPR-Profil hochladen und die Ablaufverfolgung mit diesem Profil starten.
+Mit dem folgenden Anforderungsformat können Sie ein WPR-Profil hochladen und die Ablaufverfolgung mit diesem Profil starten.  Es kann immer nur eine Spur ausgeführt werden. Das Profil bleibt nicht auf dem Gerät. 
  
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/wpr/customtrace
-
+<br />
 
 **URI-Parameter**
 
@@ -1892,12 +2450,25 @@ POST | /api/wpr/customtrace
 
 **Antwort**
 
-- Gibt den WPR-Sitzungsstatus zurück.
+Der Status der WPR-Sitzung im folgenden Format.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (normal or boot)
+}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1915,7 +2486,7 @@ Mit dem folgenden Anforderungsformat können Sie eine WPR-Start-Ablaufverfolgung
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/wpr/boottrace
-
+<br />
 
 **URI-Parameter**
 
@@ -1924,7 +2495,7 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 URI-Parameter | Beschreibung
 :---          | :---
 profile   | (**erforderlich**) Dieser Parameter ist beim Starten erforderlich. Der Name des Profils, das eine Leistungs-Ablaufverfolgungssitzung starten soll. Die möglichen Profile werden in „perfprofiles/profiles.json“ gespeichert.
-
+<br />
 **Anforderungsheader**
 
 - Keine
@@ -1935,12 +2506,25 @@ profile   | (**erforderlich**) Dieser Parameter ist beim Starten erforderlich. D
 
 **Antwort**
 
-- Diese API gibt beim Starten den WPR-Sitzungsstatus zurück.
+Beim Start gibt diese API den Status der WPR-Sitzung im folgenden Format zurück.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (boot)
+}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1958,7 +2542,7 @@ Mit dem folgenden Anforderungsformat können Sie eine WPR-Start-Ablaufverfolgung
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/wpr/boottrace
-
+<br />
 
 **URI-Parameter**
 
@@ -1978,8 +2562,14 @@ GET | /api/wpr/boottrace
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -1992,12 +2582,12 @@ GET | /api/wpr/boottrace
 
 **Anforderung**
 
-Mit dem folgenden Anforderungsformat können Sie eine WPR-Ablaufverfolgungssitzung starten. Diese wird auch als Leistungs-Ablaufverfolgungssitzung bezeichnet.
+Mit dem folgenden Anforderungsformat können Sie eine WPR-Ablaufverfolgungssitzung starten. Diese wird auch als Leistungs-Ablaufverfolgungssitzung bezeichnet.  Es kann immer nur eine Spur ausgeführt werden. 
  
 Methode      | Anforderungs-URI
 :------     | :-----
 POST | /api/wpr/trace
-
+<br />
 
 **URI-Parameter**
 
@@ -2006,7 +2596,7 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 URI-Parameter | Beschreibung
 :---          | :---
 profile   | (**erforderlich**) Der Name des Profils, das eine Leistungs-Ablaufverfolgungssitzung starten soll. Die möglichen Profile werden in „perfprofiles/profiles.json“ gespeichert.
-
+<br />
 **Anforderungsheader**
 
 - Keine
@@ -2017,12 +2607,25 @@ profile   | (**erforderlich**) Der Name des Profils, das eine Leistungs-Ablaufve
 
 **Antwort**
 
-- Diese API gibt beim Starten den WPR-Sitzungsstatus zurück.
+Beim Start gibt diese API den Status der WPR-Sitzung im folgenden Format zurück.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (normal)
+}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -2040,7 +2643,7 @@ Mit dem folgenden Anforderungsformat können Sie eine WPR-Ablaufverfolgungssitzu
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/wpr/trace
-
+<br />
 
 **URI-Parameter**
 
@@ -2060,8 +2663,14 @@ GET | /api/wpr/trace
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -2079,7 +2688,7 @@ Mit dem folgenden Anforderungsformat können Sie den Status der aktuellen WPR-Si
 Methode      | Anforderungs-URI
 :------     | :-----
 GET | /api/wpr/status
-
+<br />
 
 **URI-Parameter**
 
@@ -2095,12 +2704,25 @@ GET | /api/wpr/status
 
 **Antwort**
 
-- Der Status der WPR-Ablaufverfolgungssitzung.
+Der Status der WPR-Ablaufverfolgungssitzung im folgenden Format.
+
+```
+{
+    "SessionType": string, (Running or Idle) 
+    "State": string (normal or boot)
+}
+```
 
 **Statuscode**
 
-- Standardstatuscodes
+Diese API hat die folgenden erwarteten Statuscodes.
 
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -2109,6 +2731,6 @@ GET | /api/wpr/status
 * IoT
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

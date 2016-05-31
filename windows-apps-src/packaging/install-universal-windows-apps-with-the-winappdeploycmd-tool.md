@@ -1,7 +1,8 @@
 ---
+author: msatranjr
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
-description: Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine UWP (Universelle Windows-Plattform)-App von einem Windows 10-Computer auf beliebigen Windows 10 Mobile-Geräten bereitstellen können.
+description: Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine UWP (Universelle Windows-Plattform)-App von einem Windows 10-Computer auf beliebigen Windows 10 Mobile-Geräten bereitstellen können.
 ---
 # Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
 
@@ -69,15 +70,15 @@ Die folgende Tabelle enthält die Optionen für **WinAppDeployCmd.exe**.
 |                        |                                                                              |
 |------------------------|------------------------------------------------------------------------------|
 | **Argument**           | **Beschreibung**                                                              |
-| &lt;x&gt;              | Das Timeout in Sekunden. (Der Standardwert ist 10.)                                          |
-| &lt;Adresse&gt;        | Die IP-Adresse oder der eindeutige Bezeichner des Zielgeräts.                        |
-| &lt;a&gt;&lt;b&gt; ... | Der Abhängigkeitspfad für die einzelnen App-Paketabhängigkeiten.                    |
+| &lt;x&gt;              | Zeitüberschreitung in Sekunden. (Der Standardwert ist 10.)                                          |
+| &lt;address&gt;        | Die IP-Adresse oder der eindeutige Bezeichner des Zielgeräts.                        |
+| &lt;a&gt;&lt;b&gt; ... | Der Abhängigkeitspfad für die einzelnen App-Paket-Abhängigkeiten.                    |
 | &lt;p&gt;              | Eine alphanumerische PIN, die in den Geräteeinstellungen angezeigt und zum Herstellen einer Verbindung verwendet wird. |
-| &lt;Pfad&gt;           | Der Dateisystempfad.                                                            |
-| &lt;Name&gt;           | Der vollständige Paketname für das zu deinstallierende App-Paket.                          |
+| &lt;path&gt;           | Dateisystempfad.                                                            |
+| &lt;name&gt;           | Der vollständige Paketname für das zu deinstallierende App-Paket.                          |
 
  
-## Beispiele zu „WinAppDeployCmd.exe“
+## Beispiele für „WinAppDeployCmd.exe“
 
 Im Folgenden einige Beispiele dazu, wie Sie mithilfe der Syntax für **WinAppDeployCmd.exe** eine Bereitstellung über die Befehlszeile vornehmen.
 
@@ -107,6 +108,6 @@ WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

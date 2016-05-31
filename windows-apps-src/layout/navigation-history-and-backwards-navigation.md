@@ -1,17 +1,14 @@
 ---
-description: Navigation in UWP-Apps (Universelle Windows-Plattform) basiert auf flexiblem Modell aus Navigationsstrukturen, Navigationselementen, Funktionen auf Systemebene
-title: Navigationsdesigngrundlagen für UWP-Apps (Univ. Windows-Plattform)
+author: mijacobs
+Description: Die Navigation in UWP-Apps (Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene.
+title: Navigationsdesigngrundlagen für Universal Windows Platform (UWP)-Apps
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
-label: Verlauf und Rückwärtsnavigation
+label: History and backwards navigation
 template: detail.hbs
 ---
 
 #  Navigationsverlauf und Rückwärtsnavigation
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Im Internet stellen einzelne Websites eigenen Navigationssysteme bereit, beispielsweise ein Inhaltsverzeichnis, Schaltflächen, Menüs, einfache Listen mit Links usw. Die Navigationsfunktionalität kann je nach Website stark variieren. Es gibt jedoch eine konsistente Navigationsfunktion: Zurück. Die meisten Browser bieten eine Zurück-Schaltfläche, die unabhängig von der Website das gleiche Verhalten aufweist.
 
@@ -156,16 +153,16 @@ private void App_BackRequested(object sender,
     }
 }
 ```
-## <span id="Enable_the_title_bar_back_button"></span><span id="enable_the_title_bar_back_button"></span><span id="ENABLE_THE_TITLE_BAR_BACK_BUTTON"></span>Aktivieren der Titelleisten-Zurück-Schaltfläche
+## <span id="Enable_the_title_bar_back_button"></span><span id="enable_the_title_bar_back_button"></span><span id="ENABLE_THE_TITLE_BAR_BACK_BUTTON"></span>Aktivieren der Schaltfläche „Zurück“ auf der Titelleiste
 
 
-Geräte, die den Desktopmodus (in der Regel PCs und Laptops, aber auch einige Tablets) unterstützen und auf denen die Einstellung (**Einstellungen &gt; System &gt; Tablet-Modus**) aktiviert ist, bieten keine globale Navigationsleiste mit Zurück-Systemschaltfläche.
+Geräte, die den Desktopmodus unterstützen (in der Regel PCs und Laptops, aber auch einige Tablets) und auf denen die Einstellung (**Einstellungen &gt; System &gt; Tablet-Modus**) aktiviert ist, bieten keine globale Navigationsleiste mit der Systemschaltfläche „Zurück“.
 
 Im Desktopmodus wird jede App in einem Fenster mit Titelleiste ausgeführt. Sie können eine alternative Zurück-Schaltfläche für Ihre App bereitstellen, die in dieser Titelleiste angezeigt wird.
 
 Die Titelleisten-Zurück-Schaltfläche ist nur in Apps verfügbar, die auf Geräten im Desktop-Modus ausgeführt werden. Sie unterstützt nur den In-App-Navigationsverlauf. Der App-zu-App-Navigationsverlauf wird nicht unterstützt.
 
-**Wichtig**  Die Titelleisten-Zurück-Schaltfläche wird standardmäßig nicht angezeigt. Sie müssen sie aktivieren.
+**Wichtig**  Die Schaltfläche „Zurück“ der Titelleiste wird standardmäßig nicht angezeigt. Sie müssen sie aktivieren.
 
  
 
@@ -257,7 +254,7 @@ Wenn Sie Ihre eigene Zurück-Stapelnavigation bereitstellen möchten, sollte die
 <tr class="odd">
 <td align="left"><p><strong>Seite zu Seite, verschiedene Peer-Gruppen</strong></p></td>
 <td align="left"><strong>Ja</strong>
-          <p>In der folgenden Abbildung navigiert der Benutzer von Ebene 1 der App zu Ebene 2. Dabei werden Peer-Gruppen durchlaufen, sodass die Navigation dem Navigationsverlauf hinzugefügt wird.</p>
+<p>In der folgenden Abbildung navigiert der Benutzer von Ebene 1 der App zu Ebene 2. Dabei werden Peer-Gruppen durchlaufen, sodass die Navigation dem Navigationsverlauf hinzugefügt wird.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Navigation across peer groups" /></p>
 <p>In der nächsten Abbildung navigiert der Benutzer zwischen zwei Peer-Gruppen derselben Ebene. Er durchläuft erneut Peer-Gruppen, sodass die Navigation dem Navigationsverlauf hinzugefügt wird.</p>
 <p><img src="images/nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Navigation across peer groups" /></p></td>
@@ -266,28 +263,28 @@ Wenn Sie Ihre eigene Zurück-Stapelnavigation bereitstellen möchten, sollte die
 <td align="left"><p><strong>Seite zu Seite, gleiche Peer-Gruppe, kein Bildschirmnavigationselement</strong></p>
 <p>Der Benutzer navigiert von einer Seite zu einer anderen mit derselben Peer-Gruppe. Es gibt kein Navigationselement, das immer vorhanden ist (wie Registerkarten/Pivots oder ein angedockter Navigationsbereich) und das eine direkte Navigation zu beiden Seiten ermöglicht.</p></td>
 <td align="left"><strong>Ja</strong>
-          <p>In der folgenden Abbildung navigiert der Benutzer zwischen zwei Seiten in derselben Peer-Gruppe. Die Seiten verwenden keine Registerkarten oder angedockten Navigationsbereich, sodass die Navigation dem Navigationsverlauf hinzugefügt wird.</p>
+<p>In der folgenden Abbildung navigiert der Benutzer zwischen zwei Seiten in derselben Peer-Gruppe. Die Seiten verwenden keine Registerkarten oder angedockten Navigationsbereich, sodass die Navigation dem Navigationsverlauf hinzugefügt wird.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>Seite zu Seite, gleiche Peer-Gruppe, mit einem Bildschirmnavigationselement</strong></p>
 <p>Der Benutzer navigiert von einer Seite zu einer anderen in derselben Peer-Gruppe. Beide Seiten werden im gleichen Navigationselement angezeigt. Beide Seiten verwenden beispielsweise das gleiche Registerkarten/Pivots-Element, oder beide Seiten werden in einem angedockten Navigationsbereich angezeigt.</p></td>
 <td align="left"><strong>Nein</strong>
-          <p>Wenn der Benutzer die Zurück-Schaltfläche drückt, wird wieder die letzte Seite aufgerufen, die geöffnet war, bevor der Benutzer zur aktuellen Peer-Gruppe navigierte.</p>
+<p>Wenn der Benutzer die Zurück-Schaltfläche drückt, wird wieder die letzte Seite aufgerufen, die geöffnet war, bevor der Benutzer zur aktuellen Peer-Gruppe navigierte.</p>
 <p><img src="images/nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Anzeigen einer vorübergehenden Benutzeroberfläche</strong>
-          <p>Die App zeigt ein Popupfenster oder ein untergeordnetes Fenster an, z. B. ein Dialogfeld, einen Begrüßungsbildschirm oder eine Bildschirmtastatur. Anderenfalls wechselt die App in einen speziellen Modus, z. B. den Mehrfachauswahlmodus.</p></td>
+<p>Die App zeigt ein Popupfenster oder ein untergeordnetes Fenster an, z. B. ein Dialogfeld, einen Begrüßungsbildschirm oder eine Bildschirmtastatur. Anderenfalls wechselt die App in einen speziellen Modus, z. B. den Mehrfachauswahlmodus.</p></td>
 <td align="left"><strong>Nein</strong>
-          <p>Wenn der Benutzer die Zurück-Schaltfläche drückt, sollte die vorübergehende Benutzeroberfläche geschlossen werden (durch Ausblenden der Bildschirmtastatur, Abbrechen des Dialogfelds usw.) und zur Seite zurückgekehrt werden, die die vorübergehende Benutzeroberfläche aufgerufen hat.</p>
+<p>Wenn der Benutzer die Zurück-Schaltfläche drückt, sollte die vorübergehende Benutzeroberfläche geschlossen werden (durch Ausblenden der Bildschirmtastatur, Abbrechen des Dialogfelds usw.) und zur Seite zurückgekehrt werden, die die vorübergehende Benutzeroberfläche aufgerufen hat.</p>
 <p><img src="images/back-transui.png" alt="Showing a transient UI" /></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><strong>Aufzählen von Elementen</strong>
-          <p>Die App zeigt die Inhalte für ein Bildschirmelement an, z. B. die Details für das ausgewählte Element in der Master/Details-Liste.</p></td>
+<p>Die App zeigt die Inhalte für ein Bildschirmelement an, z. B. die Details für das ausgewählte Element in der Master/Details-Liste.</p></td>
 <td align="left"><strong>Nein</strong>
-          <p>Das Aufzählen von Elementen ist mit der Navigation innerhalb einer Peer-Gruppe vergleichbar. Wenn der Benutzer die Zurück-Schaltfläche drückt, sollte zu der Seite navigiert werden, die vor der aktuellen Seite angezeigt wurde, die die Elementenaufzählung enthält.</p>
+<p>Das Aufzählen von Elementen ist mit der Navigation innerhalb einer Peer-Gruppe vergleichbar. Wenn der Benutzer die Zurück-Schaltfläche drückt, sollte zu der Seite navigiert werden, die vor der aktuellen Seite angezeigt wurde, die die Elementenaufzählung enthält.</p>
 <img src="images/nav/nav-enumerate.png" alt="Iterm enumeration" /></td>
 </tr>
 </tbody>
@@ -299,7 +296,7 @@ Wenn Sie Ihre eigene Zurück-Stapelnavigation bereitstellen möchten, sollte die
 Wenn der Benutzer zu einer anderen App wechselt und zu Ihrer App zurückkehrt, wird empfohlen, zur letzten Seite im Navigationsverlauf zurückzukehren.
 
 
-\[Dieser Artikel enthält spezielle Informationen zu UWP-Apps und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 
 
@@ -310,6 +307,6 @@ Wenn der Benutzer zu einer anderen App wechselt und zu Ihrer App zurückkehrt, w
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

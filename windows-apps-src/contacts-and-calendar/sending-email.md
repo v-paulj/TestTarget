@@ -1,8 +1,9 @@
 ---
-description: Hier erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer E-Mail starten, damit Benutzer eine E-Mail senden können. Sie können die Felder der E-Mail vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche "Senden" tippen.
+author: Xansky
+description: Hier erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer E-Mail starten, damit Benutzer eine E-Mail senden können. Sie können die Felder der E-Mail vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.
 title: Senden von E-Mails
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
-keywords: Kontakte, E-Mail, Senden
+keywords: contacts, email, send
 ---
 
 # Senden von E-Mails
@@ -41,7 +42,7 @@ private async void ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
         emailMessage.Attachments.Add(attachment);
     }
 
-    var email = recipient.Emails.FirstOrDefault&lt;Windows.ApplicationModel.Contacts.ContactEmail&gt;();
+    var email = recipient.Emails.FirstOrDefault<Windows.ApplicationModel.Contacts.ContactEmail>();
     if (email != null)
     {
         var emailRecipient = new Windows.ApplicationModel.Email.EmailRecipient(email.Address);
@@ -70,6 +71,6 @@ In diesem Thema haben Sie erfahren, wie Sie das Dialogfeld zum Verfassen einer E
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

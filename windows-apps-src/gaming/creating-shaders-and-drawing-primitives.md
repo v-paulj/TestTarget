@@ -1,6 +1,7 @@
 ---
+author: mtoepke
 title: Erstellen von Shadern und Zeichnen von Grundtypen
-description: Hier wird das Kompilieren und Erstellen von Shadern mit HLSL-Quelldateien veranschaulicht, die zum Zeichnen von Grundtypen auf dem Bildschirm verwendet werden.
+description: Im Folgenden wird das Kompilieren und Erstellen von Shadern mit HLSL-Quelldateien veranschaulicht, die zum Zeichnen von Grundtypen auf dem Bildschirm verwendet werden.
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
 ---
 
@@ -13,7 +14,7 @@ Im Folgenden wird das Kompilieren und Erstellen von Shadern mit HLSL-Quelldateie
 
 Ein gelbes Dreieck wird mit Vertex- und Pixelshadern erstellt. Nach dem Erstellen des Direct3D-Geräts, der Swapchain und der Renderingzielansicht werden Daten aus Binärshaderobjektdateien auf dem Datenträger gelesen.
 
-**Ziel:** Shader erstellen und Grundtypen zeichnen.
+**Ziel:**  Shader erstellen und Grundtypen zeichnen.
 
 ## Voraussetzungen
 
@@ -204,8 +205,8 @@ In der Endlosschleife wird ein gelbes Dreieck auf der blauen Oberfläche gezeich
 **So zeichnen Sie ein gelbes Dreieck**
 
 1.  Wir rufen zunächst [**ID3D11DeviceContext::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) auf, um das Streamen der Vertexpufferdaten in die Eingabeassemblerphase zu beschreiben.
-2.  Als Nächstes rufen wir [**ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) und [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453) auf, um die Vertex- und Indexpuffer an die Eingabe-Assembly-Phase zu binden.
-3.  Nun rufen wir [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455) mit dem [**D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLESTRIP**](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP)-Wert auf, um für die Eingabe-Assembly-Phase anzugeben, dass die Vertexdaten als Dreieckskette interpretiert werden.
+2.  Als Nächstes rufen wir [**ID3D11DeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) und [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453) auf, um die Vertex- und Indexpuffer an den Eingabeassemblerzustand zu binden.
+3.  Nun rufen wir [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455) mit dem [**D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLESTRIP**](https://msdn.microsoft.com/library/windows/desktop/ff476189#D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP)-Wert auf, um für den Eingabeassemblerzustand anzugeben, dass die Vertexdaten als Dreieckskette interpretiert werden.
 4.  Im nächsten Schritt rufen wir [**ID3D11DeviceContext::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493) auf, um die Vertexshaderphase mit dem Vertexshadercode zu initialisieren. Zudem rufen wir [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) auf, um die Pixelshaderphase mit dem Pixelshadercode zu initialisieren.
 5.  Abschließend wird [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) aufgerufen, um das Dreieck zu zeichnen und an die Renderingpipeline zu senden.
 
@@ -293,6 +294,6 @@ Als Nächstes wird ein kreisender 3D-Würfel erstellt, und Lichteffekte werden a
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

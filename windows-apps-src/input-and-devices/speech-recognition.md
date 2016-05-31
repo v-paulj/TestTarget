@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Nutzen Sie die Spracherkennung als Eingabemöglichkeit oder zum Ausführen einer Aktion, eines Befehls oder einer Aufgabe.
 title: Spracherkennung
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
@@ -8,8 +9,6 @@ template: detail.hbs
 
 # Spracherkennung
 
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Nutzen Sie die Spracherkennung als Eingabemöglichkeit oder zum Ausführen einer Aktion, eines Befehls oder einer Aufgabe.
 
@@ -38,7 +37,7 @@ Mit einer *Einschränkung* werden die Wörter und Wortgruppen (Vokabular) defini
 
 Sie können verschiedene Arten von Einschränkungen bei der Spracherkennung nutzen:
 
-1.  **Vordefinierte Grammatiken** ([**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446))
+1.  **Vordefinierte Grammatiken** ([**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)).
 
     Mit vordefinierten Diktier- und Websuchgrammatiken können Sie eine Spracherkennung für Ihre App bereitstellen, ohne eine Grammatik erstellen zu müssen. Bei Verwendung dieser Grammatiken wird die Spracherkennung von einem Remotewebdienst durchgeführt, und die Ergebnisse werden an das Gerät zurückgegeben.
 
@@ -46,17 +45,17 @@ Sie können verschiedene Arten von Einschränkungen bei der Spracherkennung nutz
 
     Die Grammatik für die Websuche enthält wie die Diktiergrammatik eine große Anzahl von Wörtern und Ausdrücken, die Benutzer sagen können. Sie ist allerdings für die Erkennung von Begriffen optimiert, die beim Suchen im Web häufig verwendet werden.
 
-    **Hinweis**  Da vordefinierte Diktier- und Websuchgrammatiken sehr umfangreich sein können und online bereitgestellt werden (nicht auf dem Gerät), ist die Leistung u. U. nicht so gut wie bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.
+    **Hinweis**  Da vordefinierte Diktier- und Websuchgrammatiken sehr umfangreich sein können und online bereitgestellt werden (nicht auf dem Gerät), kann die Leistung schlechter sein als bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.
 
      
 
-    These predefined grammars can be used to recognize up to 10 seconds of speech input and require no authoring effort on your part. However, they do require a connection to a network.
+    Diese vordefinierten Grammatiken können zum Erkennen von bis zu zehn Sekunden Spracheingabe verwendet werden. Sie müssen dazu keinen Code selbst erstellen. Sie erfordern jedoch eine Netzwerkverbindung.
 
-    To use web-service constraints, speech input and dictation support must be enabled in **Settings** by turning on the "Get to know me" option in the Settings -&gt; Privacy -&gt; Speech, inking, and typing page.
+    Zum Verwenden der Webdiensteinschränkungen muss die Unterstützung für die Spracheingabe und das Diktieren unter **Einstellungen** &gt;Datenschutz &gt; „Datenschutzeinstellungen für Sprache, Freihand und Eingabe“ aktiviert sein.
 
-    Here, we show how to test whether speech input is enabled and open the Settings -&gt; Privacy -&gt; Speech, inking, and typing page, if not.
+    Hier wird erläutert, wie Sie testen, ob die Spracheingabe aktiviert ist, und wie Sie die Seite „Einstellungen &gt; Datenschutz &gt; Datenschutzeinstellungen für Sprache, Freihand und Eingabe“ öffnen.
 
-    First, we initialize a global variable (HResultPrivacyStatementDeclined) to the HResult value of 0x80045509. See [Exception handling for in C\# or Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
+    Zuerst initialisieren wir eine globale Variable (HResultPrivacyStatementDeclined) für den HResult-Wert 0x80045509. Weitere Informationen finden Sie unter [Ausnahmebehandlung in C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
 
 ```    CSharp
 private static uint HResultPrivacyStatementDeclined = 0x80045509;</code></pre></td>
@@ -205,10 +204,14 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 **Entwickler**
-* [Sprachinteraktionen](speech-interactions.md)
-**Designer**
-* [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121)
-**Beispiele**
+* [Interaktionen mit der Spracherkennung](speech-interactions.md)
+            
+          
+            **Designer**
+* [Entwicklungsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121)
+            
+          
+            **Beispiele**
 * [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -219,6 +222,6 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

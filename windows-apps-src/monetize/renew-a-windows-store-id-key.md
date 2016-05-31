@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: Verwenden Sie diese Methode zum Verlängern eines Windows Store-Schlüssels.
 title: Verlängern eines Windows Store-ID-Schlüssels
@@ -54,7 +55,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 ### Anforderungsbeispiel
 
-```
+```syntax
 POST https://collections.mp.microsoft.com/v6.0/b2b/keys/renew HTTP/1.1
 Content-Length: 2774
 Content-Type: application/json
@@ -79,7 +80,7 @@ Host: collections.mp.microsoft.com
 
 ### Antwortbeispiel
 
-```
+```syntax
 HTTP/1.1 200 OK
 Content-Length: 1646
 Content-Type: application/json
@@ -114,6 +115,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

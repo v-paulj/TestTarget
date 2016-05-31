@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Unformatierte Benachrichtigungen sind kurze, allgemeine Pushbenachrichtigungen.
 title: Übersicht über unformatierte Benachrichtigungen
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
@@ -9,14 +10,14 @@ template: detail.hbs
 # Übersicht über unformatierte Benachrichtigungen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Unformatierte Benachrichtigungen sind kurze, allgemeine Pushbenachrichtigungen. Sie dienen ausschließlich zu Anweisungszwecken und enthalten keine UI-Komponente. Wie bei anderen Pushbenachrichtigungen übermittelt das Feature für den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Service, WNS) unformatierte Benachrichtigungen von Ihrem Clouddienst an Ihre App.
 
 Unformatierte Benachrichtigungen können für verschiedenste Zwecke verwendet werden, z. B. zum Auslösen einer Hintergrundaufgabe in der App, wenn der Benutzer der App die entsprechende Berechtigung erteilt hat. Durch die Verwendung von WNS für die Kommunikation mit der App entfällt der Verarbeitungsaufwand für das Erstellen dauerhafter Socketverbindungen, Senden von HTTP GET-Nachrichten und andere Verbindungen zwischen Dienst und App.
 
-**Wichtig**  Um die Funktionsweise von unformatierten Benachrichtigungen verstehen zu können, sollten Sie mit den in [Übersicht über den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Service, WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md) erörterten Konzepten vertraut sein.
+**Wichtig**   Um die Funktionsweise von unformatierten Benachrichtigungen verstehen zu können, sollten Sie mit den in [Übersicht über den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Service, WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md) erörterten Konzepten vertraut sein.
 
  
 
@@ -84,7 +85,7 @@ Falls die App nicht aktiv ist und keine [Hintergrundaufgaben](#bg_tasks) verwend
 
 ### <span id="bg_tasks"></span><span id="BG_TASKS"></span>Von unformatierten Benachrichtigungen ausgelöste Hintergrundaufgaben
 
-**Wichtig**  Vor der Verwendung von Hintergrundaufgaben für unformatierte Benachrichtigungen muss einer App über [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) die Berechtigung zum Ausführen von Hintergrundaufgaben erteilt werden.
+**Wichtig**   Vor der Verwendung von Hintergrundaufgaben für unformatierte Benachrichtigungen muss einer App über [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) die Berechtigung zum Ausführen von Hintergrundaufgaben erteilt werden.
 
  
 
@@ -125,6 +126,6 @@ Weitere Informationen erhalten Sie, indem Sie das [Beispiel für unformatierte B
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Mithilfe von Inhaltsübergangsanimationen können Sie den Inhalt eines Bildschirmbereichs ändern und gleichzeitig den Container oder Hintergrund unverändert lassen. Neuer Inhalt wird eingeblendet. Muss vorhandener Inhalt ersetzt werden, wird dieser Inhalt ausgeblendet.
 title: Richtlinien für Inhaltsübergangsanimationen
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
@@ -7,7 +8,7 @@ ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 # Inhaltsübergangsanimationen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+
 
 
 **Wichtige APIs**
@@ -28,7 +29,7 @@ Mithilfe von Inhaltsübergangsanimationen können Sie den Inhalt eines Bildschir
 -   Verwenden Sie Inhaltsübergangsanimationen nicht, wenn sich die gesamte Seite ändert. Verwenden Sie in diesem Fall die Seitenübergangsanimationen.
 -   Verwenden Sie Inhaltsübergangsanimationen nicht, wenn der Inhalt nur aktualisiert wird. Inhaltsübergangsanimationen sollen auf Bewegungen hinweisen. Verwenden Sie für Aktualisierungen Ein- und Ausblendungsanimationen.
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## <span id="related_topics"></span>Verwandte Artikel
 
@@ -47,6 +48,6 @@ Mithilfe von Inhaltsübergangsanimationen können Sie den Inhalt eines Bildschir
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

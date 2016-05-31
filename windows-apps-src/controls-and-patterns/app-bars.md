@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 label: App bars/command bars
 template: detail.hbs
 ---
@@ -46,7 +47,9 @@ Dies ist die gleiche Befehlsleiste im geöffneten Zustand. Die Beschriftungen ze
 ![Geschlossene Befehlsleiste](images/commandbar_anatomy_open.png)
 
 Die Befehlsleiste ist in 4 Hauptbereiche unterteilt:
-- Die Schaltfläche für weitere Optionen (\[•••\]) wird rechts auf der Leiste angezeigt. Das Auswählen der Schaltfläche für weitere Optionen (\[•••\]) hat zwei Folgen: Die Beschriftungen auf den primären Befehlsschaltflächen werden eingeblendet, und das Überlaufmenü wird geöffnet, sofern sekundäre Befehle vorhanden sind. 
+- Die Schaltfläche für weitere Optionen (\[•••\]) wird rechts auf der Leiste angezeigt. Das Auswählen der Schaltfläche für weitere Optionen (\[•••\]) hat zwei Folgen: Die Beschriftungen auf den primären Befehlsschaltflächen werden eingeblendet, und das Überlaufmenü wird geöffnet, sofern sekundäre Befehle vorhanden sind. Die Schaltfläche wird nicht angezeigt, wenn keine sekundären Befehle oder ausgeblendeten Beschriftungen vorhanden sind. [
+              `OverflowButtonVisibility`
+            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx), eine Eigenschaft, ermöglicht Apps das standardmäßige Verhalten „Automatisch im Hintergrund“ zu ändern.
 - Der Inhaltsbereich wird an der linken Seite der Leiste ausgerichtet. Er wird angezeigt, wenn die `Content`-Eigenschaft gefüllt ist.
 - Der Bereich für primäre Befehle wird an der rechten Seite der Leiste (neben der Schaltfläche für weitere Optionen (\[•••\])) ausgerichtet. Er wird angezeigt, wenn die `PrimaryCommands`-Eigenschaft gefüllt ist.  
 - Das Überlaufmenü wird nur angezeigt, wenn die Befehlsleiste geöffnet ist und die `SecondaryCommands`-Eigenschaft gefüllt ist. 
@@ -97,6 +100,17 @@ Befehle können programmgesteuert nach Bedarf zwischen „PrimaryCommands“ und
 
 Die Steuerelemente für die App-Leistenschaltfläche zeichnen sich durch ein Symbol und eine zugeordnete Beschriftung aus. Es gibt zwei Größen: normal und kompakt. Standardmäßig wird die Beschriftung angezeigt. Wenn die [**IsCompact**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.iscompact.aspx)-Eigenschaft auf **true** festgelegt wird, wird die Beschriftung ausgeblendet. Bei Verwendung in einem CommandBar-Steuerelement überschreibt die Befehlsleiste automatisch die IsCompact-Eigenschaft der Schaltfläche, wenn die Befehlsleiste geöffnet und geschlossen wird.
 
+Damit Beschriftungen von App-Leistenschaltflächen rechts neben den entsprechenden Symbolen angezeigt werden, können Apps die neue [`DefaultLabelPosition`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.defaultlabelposition.aspx)-Eigenschaft von CommandBar nutzen. Bei einzelnen App-Leistenschaltflächen kann die Position der Beschriftung nicht geändert werden. Dies muss über die Befehlsleiste erfolgen.
+```xaml
+<CommandBar DefaultLabelPosition="Right">
+    <AppBarToggleButton Icon="Shuffle" Label="Shuffle"/>
+    <AppBarToggleButton Icon="RepeatAll" Label="Repeat"/>
+</CommandBar>
+```
+
+Hier sehen Sie, wie der oben gezeigte Codeausschnitt aussieht, wenn er von einer App gezeichnet wird.
+
+![Befehlsleiste mit Beschriftungen auf der rechten Seite](images/app-bar-labels-on-right.png)
 
 Wenn Sie eine App-Leistenschaltfläche im Überlaufmenü (SecondaryCommands) platzieren, wird nur Text angezeigt. Dies ist der gleiche Schalter in der App-Leistenschaltfläche im Aktionsbereich als primärer Befehl (oben) und im Überlaufbereich als sekundärer Befehl (unten).
 
@@ -124,8 +138,6 @@ Sie können dem Inhaltsbereich beliebige XAML-Elemente hinzufügen, indem Sie di
 Wenn primäre Befehle und Inhalte vorhanden sind, haben die primären Befehle Vorrang. Dies kann dazu führen, dass der Inhalt abgeschnitten wird. 
 
 Wenn [**ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx) auf **Compact** festgelegt wurde, kann der Inhalt abgeschnitten werden, wenn er größer als die kompakte Größe der Befehlsleiste ist. Behandeln Sie das [**Opening**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.opening.aspx)-Ereignis und das [**Closed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closed.aspx)-Ereignis, um Teile der Benutzeroberfläche im Inhaltsbereich anzuzeigen oder auszublenden, damit sie nicht beschnitten werden. Weitere Informationen finden Sie im Abschnitt [Geöffneter und geschlossener Zustand](#open-and-closed-states).
-
-
 
 ## Geöffneter und geschlossener Zustand
 
@@ -196,7 +208,8 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 }
 ```
 
->**Hinweis**&nbsp;&nbsp;Die Implementierung von Bearbeitungsbefehlen sprengt den Umfang dieses Beispiels. Weitere Informationen finden Sie im Artikel zu [RichEditBox](rich-edit-box.md).
+>**Hinweis**
+            &nbsp;&nbsp;Die Implementierung von Bearbeitungsbefehlen sprengt den Umfang dieses Beispiels. Weitere Informationen finden Sie im Artikel zu [RichEditBox](rich-edit-box.md).
 
 Auch wenn die Modi „Minimal“ und „Hidden“ in einigen Situationen nützlich sind, beachten Sie, dass es für die Benutzer verwirrend sein kann, wenn alle Aktionen ausgeblendet werden.
 
@@ -216,13 +229,13 @@ Befehlsleisten können am oberen Rand des App-Fensters, am unteren Rand des App-
 
 -   Bei kleinen Handheld-Geräten empfiehlt es sich, Befehlsleisten am unteren Bildschirmrand zu platzieren, da sie dort besser erreichbar sind.
 -   Wenn Sie bei Geräten mit größerem Bildschirm nur eine Befehlsleiste verwenden, wird empfohlen, sie in der Nähe des oberen Fensterrands zu platzieren.
-Die Größe des physischen Bildschirms können Sie mithilfe der [**DiagonalSizeInInches**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.display.displayinformation.diagonalsizeininches.aspx)-API ermitteln.
+Die Größe des physischen Bildschirms können Sie mithilfe der [**DiagonalSizeInInches**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayinformation.diagonalsizeininches.aspx)-API ermitteln.
 
 Befehlsleisten können auf Bildschirmen mit einzelner Ansicht (linkes Beispiel) und auf Bildschirmen mit mehreren Ansichten (rechtes Beispiel) in folgenden Bildschirmbereichen platziert werden: Inlinebefehlsleisten können überall im Aktionsbereich platziert werden.
 
 ![Beispiel 2 für die Platzierung der App-Leiste](images/AppbarGuidelines_Placement2.png)
 
->**Fingereingabegeräte**: Falls die Befehlsleiste für den Benutzer sichtbar bleiben muss, wenn die Bildschirmtastatur (oder Soft Input Panel, SIP) angezeigt wird, können Sie die Befehlsleiste der `BottomAppBar`-Eigenschaft einer Seite zuordnen. Sie wird dann verschoben und bleibt sichtbar, wenn die Bildschirmtastatur eingeblendet ist. Andernfalls müssen Sie die Befehlsleiste inline relativ zum App-Inhalt platzieren.
+>**Fingereingabegeräte**: Falls die Befehlsleiste für den Benutzer sichtbar bleiben muss, wenn die Bildschirmtastatur (oder ein Soft Input Panel, SIP) angezeigt wird, können Sie die Befehlsleiste der `BottomAppBar`-Eigenschaft einer Seite zuordnen. Sie wird dann verschoben und bleibt sichtbar, wenn die Bildschirmtastatur eingeblendet ist. Andernfalls müssen Sie die Befehlsleiste inline relativ zum App-Inhalt platzieren.
 
 ### Aktionen
 
@@ -238,7 +251,7 @@ Sie können zwar alle Aktionen im Überlaufbereich platzieren, sodass auf der Be
 
 ### Flyouts auf einer Befehlsleiste
 
-Ziehen Sie logische Gruppierungen für die Befehle in Erwägung. Platzieren Sie z. B. die Befehle „Antworten“, „Allen antworten“ und „Weiterleiten“ im Menü „Antworten“. Mit einer App-Leistenschaltfläche wird zwar üblicherweise ein einzelner Befehl aktiviert, sie kann jedoch auch zum Anzeigen eines [**MenuFlyout**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.menuflyout.aspx)- oder [**Flyout**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.flyout.aspx)-Elements mit benutzerdefiniertem Inhalt verwendet werden.
+Ziehen Sie logische Gruppierungen für die Befehle in Erwägung. Platzieren Sie z. B. die Befehle „Antworten“, „Allen antworten“ und „Weiterleiten“ im Menü „Antworten“. Mit einer App-Leistenschaltfläche wird zwar üblicherweise ein einzelner Befehl aktiviert, sie kann jedoch auch zum Anzeigen eines [**MenuFlyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyout.aspx)- oder [**Flyout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.aspx)-Elements mit benutzerdefiniertem Inhalt verwendet werden.
 
 ![Beispiel für Flyouts auf einer Befehlsleiste](images/AppbarGuidelines_Flyouts.png)
 
@@ -258,16 +271,23 @@ Ziehen Sie logische Gruppierungen für die Befehle in Erwägung. Platzieren Sie 
 -   Auf größeren Bildschirmen hat es sich bewährt, App-Leisten am oberen Fensterrand zu platzieren.
 -   Mithilfe von Haltepunkten können Sie bei einer Änderung der Fenstergröße Aktionen in das Menü bzw. aus dem Menü verschieben.
 -   Mithilfe der Bildschirmdiagonale können Sie die Position der App-Leiste auf der Grundlage der Bildschirmgröße ändern.
+-   Zur Verbesserung der Lesbarkeit können Sie Beschriftungen rechts neben die Symbole der App-Leistenschaltflächen verschieben. Bei Beschriftungen, die sich unten befinden, müssen Benutzer die Befehlsleiste öffnen, um die Beschriftungen anzuzeigen. Beschriftungen auf der rechten Seite werden auch angezeigt, wenn die Befehlsleiste geschlossen ist. Diese Optimierung funktioniert gut bei größeren Fenstern.
 
 ## Verwandte Artikel
 
 **Für Designer**
-[Befehlsdesigngrundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958433)
+            
+          
+            [Befehlsdesigngrundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958433)
 
 **Für Entwickler (XAML)**
-[**CommandBar**](https://msdn.microsoft.com/library/windows/apps/dn279427)
+            
+          
+            [
+              **CommandBar**
+            ](https://msdn.microsoft.com/library/windows/apps/dn279427)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: Sensoren
 description: Mithilfe von Sensoren können Apps die Beziehung zwischen einem Gerät und der physischen Umgebung ermitteln. Sensoren können für die App die Richtung, Ausrichtung und Bewegung des Geräts erfassen.
@@ -123,6 +124,6 @@ Einige Beispiele zur Verwendung verschiedener Sensoren finden Sie unter [Beispie
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
 description: Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein In-App-Produkt (IAP) während eines bestimmten Zeitraums und andere optionale Filter abzurufen.
 title: Abrufen von IAP-Käufen
@@ -37,7 +38,7 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
+| Authorization | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;. |
 
  
 
@@ -64,7 +65,7 @@ Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufda
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">string</td>
-<td align="left">Die Produkt-ID der App, für die Sie IAP-Kaufdaten abrufen möchten. Die Produkt ID ist im Eintragungslink der App eingebettet, die auf der [App identity page](https://msdn.microsoft.com/library/windows/apps/mt148561) des Dev Center-Dashboards verfügbar ist. Ein Beispiel für eine Produkt-ID ist 9WZDNCRFJ3Q8.</td>
+<td align="left">Die Produkt-ID der App, für die Sie IAP-Kaufdaten abrufen möchten. Die Produkt ID ist im Eintragungslink der App eingebettet, die auf der [Seite App-Identität](https://msdn.microsoft.com/library/windows/apps/mt148561) des Dev Center-Dashboards verfügbar ist. Ein Beispiel für eine Produkt-ID ist 9WZDNCRFJ3Q8.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="even">
@@ -100,7 +101,7 @@ Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufda
 <tr class="odd">
 <td align="left">filter</td>
 <td align="left">string</td>
-<td align="left">Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Weitere Informationen finden Sie unten im Abschnitt [filter fields](#filter-fields).</td>
+<td align="left">Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Weitere Informationen finden Sie unten im Abschnitt [Filterfelder](#filter-fields).</td>
 <td align="left">Nein</td>
 </tr>
 <tr class="even">
@@ -244,7 +245,7 @@ Die Liste der unterstützten Felder finden Sie in der folgenden Tabelle. Zeichen
 
 Die folgenden Beispiele zeigen verschiedene Anforderungen für den Abruf von IAP-Kaufdaten für Apps. Ersetzen Sie die Werte *inAppProductId* oder *applicationId* durch die entsprechenden Produkt-IDs für Ihre App oder Ihr IAP.
 
-```
+```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?inAppProductId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
 Authorization: Bearer <your access token>
 
@@ -332,6 +333,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
  
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

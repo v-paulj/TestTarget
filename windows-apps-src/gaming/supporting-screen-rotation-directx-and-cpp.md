@@ -1,13 +1,14 @@
 ---
+author: mtoepke
 title: Unterstützen der Bildschirmausrichtung (DirectX und C++)
-description: An dieser Stelle erläutern wir die bewährten Methoden zum Umgang mit der Bildschirmausrichtung in Ihrer UWP-DirectX-App, sodass die Grafikhardware der Windows 10-Geräte effizient und effektiv verwendet wird.
+description: An dieser Stelle erläutern wir die bewährten Methoden zum Umgang mit der Bildschirmausrichtung in Ihrer UWP-DirectX-App, sodass die Grafikhardware der Windows 10-Geräte effizient und effektiv verwendet wird.
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
 ---
 
 # Unterstützen der Bildschirmausrichtung (DirectX und C++)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Ihre App für die universelle Windows-Plattform (UWP) kann beim Behandeln des [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)-Ereignisses mehrere Bildschirmausrichtungen unterstützen. An dieser Stelle erläutern wir die bewährten Methoden zum Umgang mit der Bildschirmausrichtung in Ihrer UWP-DirectX-App, sodass die Grafikhardware der Windows 10-Geräte effizient und effektiv verwendet wird.
 
@@ -339,7 +340,7 @@ Für die einzelnen Prozesse ist die Arbeit ein wenig umfangreicher als bei einer
 
     Die Auswahl der richtigen Matrix erfolgt basierend auf den von Windows 10 bereitgestellten Daten (beispielsweise basierend auf den Ergebnissen von [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)) zum Bestimmen der Bildschirmausrichtung. Sie wird mit den Koordinaten der einzelnen Pixel (Direct2D) oder Vertizes (Direct3D) in der Szene multipliziert, wodurch sie zur Anpassung an die Bildschirmausrichtung effektiv gedreht werden. (Beachten Sie, dass der Bildschirmursprung in Direct2D als obere linke Ecke und in Direct3D als logische Mitte des Fensters definiert ist.)
 
-> **Hinweis**   Weitere Informationen zu den für die Drehung verwendeten 2D-Transformationen und zu deren Definition finden Sie unter [Definieren von Matrizen für die Bildschirmdrehung (2D)](#defining_matrices_2d). Weitere Informationen zu den für die Drehung verwendeten 3D-Transformationen finden Sie unter [Definieren von Matrizen für die Bildschirmdrehung (3D)](#defining_matrices_3d).
+> **Hinweis**  Weitere Informationen zu den für die Drehung verwendeten 2D-Transformationen und zu deren Definition finden Sie unter [Definieren von Matrizen für die Bildschirmdrehung (2D)](#defining_matrices_2d). Weitere Informationen zu den für die Drehung verwendeten 3D-Transformationen finden Sie unter [Definieren von Matrizen für die Bildschirmdrehung (3D)](#defining_matrices_3d).
 
  
 
@@ -552,6 +553,6 @@ Wenn Sie nun die Rendermethode aufrufen, wird die aktuelle Drehungsmatrix (gemä
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

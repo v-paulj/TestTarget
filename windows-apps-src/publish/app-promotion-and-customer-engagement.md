@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Nachdem Ihre App im Windows Store verfügbar ist, sollten Sie sie so vielen Kunden wie möglich präsentieren.
 title: App-Werbung und Kundenbindung
 ms.assetid: 86DA61A2-1B84-4B2B-8697-85A75D39A686
@@ -27,6 +28,6 @@ Nachdem Ihre App im Windows Store verfügbar ist, sollten Sie sie so vielen Kund
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

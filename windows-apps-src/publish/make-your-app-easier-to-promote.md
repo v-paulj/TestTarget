@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Machen Sie auf Ihre App aufmerksam! Neben einer möglichst ansprechenden Gestaltung Ihrer App bieten sich einige weitere Methoden an, die das Bewerben Ihrer App im Windows Store und auf anderen Websites erleichtern und dazu beitragen, dass die App mehr Aufmerksamkeit erhält.
 title: Einfacheres Bewerben Ihrer App
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
@@ -43,6 +44,6 @@ Wenn diese Richtlinien beachten, wird das Bewerben Ihrer App in Rezensionen, soz
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

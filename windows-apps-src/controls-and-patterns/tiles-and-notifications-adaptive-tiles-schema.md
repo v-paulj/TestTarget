@@ -1,16 +1,13 @@
 ---
+author: mijacobs
 Description: Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive Kacheln erstellen können.
 title: Adaptive Kacheln – Schema und Vorlagen
 ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
-label: Adaptive Kacheln – Schema und Vorlagen
+label: Adaptive tile schema and templates
 template: detail.hbs
 ---
 
 # Vorlagen für adaptive Kacheln: Schema und Richtlinien
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive Kacheln erstellen können. Anweisungen und Beispiele finden Sie unter [Erstellen adaptiver Kacheln](tiles-and-notifications-create-adaptive-tiles.md).
 
@@ -131,11 +128,6 @@ textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle
 </subgroup>
 ```
 
-**Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, hilft Ihnen die [archivierte Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.
-
- 
-
 ## <span id="related_topics"></span>Verwandte Themen
 
 
@@ -149,6 +141,6 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die unive
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Behandeln des Vorabstarts von Apps
 description: Erfahren Sie, wie Sie den Vorabstart von Apps durch Überschreiben der OnLaunched-Methode behandeln.
 ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
@@ -7,7 +8,7 @@ ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
 # Behandeln des Vorabstarts von Apps
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -58,7 +59,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
             // TODO: This is not a prelaunch activation. Perform operations which
             // assume that the user explicitly launched the app such as updating
             // the online presence of the user on a social network, updating a 
-            // what&#39;s new feed, etc.
+            // what's new feed, etc.
         }
 
         // Place the frame in the current Window
@@ -67,7 +68,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
     if (rootFrame.Content == null)
     {
-        // When the navigation stack isn&#39;t restored navigate to the first page,
+        // When the navigation stack isn't restored navigate to the first page,
         // configuring the new page by passing required information as a navigation parameter
         rootFrame.Navigate(typeof(MainPage), e.Arguments);
     }
@@ -76,7 +77,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
-**Tipp**  Wenn Sie das Vorabstarten ablehnen möchten, aktivieren Sie das [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740)-Kennzeichen. Wenn es festgelegt ist, kehren Sie von „OnLaunched()“ zurück, bevor Sie Aufgaben zum Erstellen eines Frames ausführen oder das Fenster aktivieren.
+**Tipp**  Wenn Sie Vorabstarts deaktivieren möchten, aktivieren Sie das [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740)-Kennzeichen. Wenn es festgelegt ist, kehren Sie von „OnLaunched()“ zurück, bevor Sie Aufgaben zum Erstellen eines Frames ausführen oder das Fenster aktivieren.
 
  
 
@@ -98,7 +99,7 @@ public sealed partial class MainPage : Page
     void WindowVisibilityChangedEventHandler(System.Object sender, Windows.UI.Core.VisibilityChangedEventArgs e)
     {
         // Perform operations that should take place when the application becomes visible rather than 
-        // when it is prelaunched, such as building a what&#39;s new feed 
+        // when it is prelaunched, such as building a what's new feed 
     }
 }
 ```
@@ -114,7 +115,7 @@ public sealed partial class MainPage : Page
     -   Nachfolgend ein Beispiel für eine Leistungsauswirkung: Um die aktuelle Wetterlage abzurufen, sollte gewartet werden, bis der Benutzer zur App wechselt. Die Infos sollten nicht beim Vorabstart der App geladen werden, weil sie erneut geladen werden müssen, wenn die App sichtbar wird, um sicherzustellen, dass die Informationen aktuell sind.
 -   Wenn die Live-Kachel Ihrer App beim Start gelöscht wird, stellen Sie diese Aktion bis zum VisibilityChanged-Ereignis zurück.
 -   Die Telemetrie für Ihre App sollte zwischen normalen Kachelaktivierungen und Vorabstartaktivierungen unterscheiden, damit Sie das problematische Szenario ermitteln können.
--   Wenn Sie Microsoft Visual Studio 2015 Update 1 und Windows 10, Version 1511 verwenden, können Sie den Vorabstart Ihrer App in Visual Studio 2015 simulieren, indem Sie **Debuggen** &gt; **Andere Debugziele** &gt; **Vorabstart der universellen Windows-App debuggen** auswählen.
+-   Wenn Sie Microsoft Visual Studio 2015 Update 1 und Windows 10, Version 1511 verwenden, können Sie den Vorabstart Ihrer App in Visual Studio 2015 simulieren, indem Sie **Debuggen**&gt;**Andere Debugziele**&gt;**Vorabstart universeller Windows-Apps debuggen** auswählen.
 
 ## Verwandte Themen
 
@@ -128,6 +129,6 @@ public sealed partial class MainPage : Page
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

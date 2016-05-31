@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Die Kalenderdatumsauswahl ist ein Dropdownsteuerelement, das für die Auswahl eines einzelnen Datums in einer Kalenderansicht optimiert ist, in der kontextbezogene Informationen wie der Wochentag oder die Belegung des Kalenders von Bedeutung sind.
 title: Kalenderdatumsauswahl
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
@@ -63,7 +64,8 @@ Wenn SIe das Datum in Code festlegen, wird der Wert durch die Eigenschaften [**M
 
 Mithilfe des [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx)-Ereignisses können Sie sich bei Änderungen am „Date“-Wert benachrichtigen lassen.
 
-> **Hinweis**&nbsp;&nbsp;Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
+> **Hinweis**
+            &nbsp;&nbsp;Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
 
 ### Festlegen von Kopfzeilen- und Platzhaltertext
 
@@ -84,6 +86,6 @@ Als Standardtext für den Platzhalter wird „Datum auswählen“ angezeigt. Sie
 - [Uhrzeitauswahl](time-picker.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

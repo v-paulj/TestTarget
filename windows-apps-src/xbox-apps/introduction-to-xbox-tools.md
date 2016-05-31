@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Einführung in Xbox One-Tools
 description: Xbox One-spezifisches Tool Dev Home (unter Verwendung des Windows Device Portal).
 area: Xbox
@@ -10,22 +11,22 @@ In diesem Abschnitt wird das Xbox One-spezifische Tool _Dev Home_ unter Verwendu
 
 ## Dev Home
 
-_Dev Home_ ist ein Tool im Xbox One Development Kit, das für Entwicklerproduktivität sorgt. Dev Home bietet Funktionen zum Verwalten und Konfigurieren Ihres Dev Kit.
+_Dev Home_ ist ein Tool im Xbox One Development Kit, das die Produktivität von Entwicklern unterstützen soll. Dev Home bietet Funktionen zum Verwalten und Konfigurieren Ihres Dev Kit.
 
 Wählen Sie zum Öffnen von Dev Home die Kachel **Dev Home** im Startbildschirm. Ist keine Kachel vorhanden, befindet sich die Konsole nicht im Entwicklermodus.
 
   ![Windows Device Portal](images/windowsdeviceportal_1.png)
 
 ### Benutzeroberfläche
-Die Dev Home-Benutzeroberfläche ist in die folgenden Bereiche unterteilt.
+Die Dev Home-Benutzeroberfläche ist in die in den folgenden Abschnitten beschriebenen Bereiche unterteilt. Beachten Sie, dass die Konsolen-IP-Adresse und der Anzeigenamen hier angezeigt werden.
 
   ![DevHome-UI](images/devhome_ui.png)
 
 #### Header
-Der Header enthält wichtige globale Informationen über das Dev Kit. Dazu gehören der Konsolenname, die IP-Adresse, die entsprechende Xbox Live-Sandbox und die Version des ausgeführten Betriebssystems. Auf der rechten Seite des Header werden die aktuelle Uhrzeit und das aktuelle Datum des Systems angezeigt.
+Der Header enthält wichtige globale Informationen über das Dev Kit „auf einen Blick“. Dazu gehören der Konsolenname, die IP-Adresse, die entsprechende Xbox Live-Sandbox und die Version des ausgeführten Betriebssystems. Auf der rechten Seite des Header werden die aktuelle Uhrzeit und das aktuelle Datum des Systems angezeigt.
 
 #### Tool-Fenster
-Unter dem Header befindet sich der Bereich der App, der eine Reihe von konfigurierbaren Tool-Fenstern enthält. Diese sollen Entwicklern die Anpassung der App ermöglichen, um Zugriff auf verschiedene Tools und Informationsgruppen zu bieten. Weitere Informationen zu den Tools finden Sie in den folgenden Beschreibungen der einzelnen Tools. Informationen zum Konfigurieren von Layout und Darstellung der Tool-Fenster finden Sie im Abschnitt [Anpassen von Dev Home](#customizing-dev-home) später auf dieser Seite. 
+Unter dem Header befindet sich der Bereich der App, der eine Reihe von konfigurierbaren Tool-Fenstern enthält. Diese sollen Entwicklern die Anpassung der App ermöglichen, um Zugriff auf verschiedene Tools und Informationsgruppen zu bieten. Weitere Informationen zu den Tools finden Sie in den folgenden Beschreibungen der einzelnen Tools. Informationen zum Konfigurieren von Layout und Darstellung der Tool-Fenster finden Sie im Abschnitt [Anpassen von Dev Home](#customizing-dev-home) später auf dieser Seite.
 
 ##### Hauptmenü
 Durch Drücken auf die Schaltfläche **Menü** auf Ihrem Controller oder durch Navigieren zur Menüschaltfläche („Hamburger“) oben links im Bildschirm können Sie auf das Hauptmenü zugreifen, das Ihnen die Konfiguration der Designfarbe und des Hintergrundbilds für den App-Workspace ermöglicht, und Feedback zur App geben.
@@ -78,15 +79,17 @@ Das Tool für Konsoleneinstellungen bietet schnellen Zugriff auf die Einstellung
 ### Festlegen eines Hostnamens für die Konsole
 Bei der Kommunikation mit der Konsole von Ihrem Entwicklungs-PC können Sie einen Anzeigenamen (_Hostname_) für das Xbox One Dev Kit als Alternative für die Konsolen-IP-Adresse festlegen. Ihr Entwicklungs-PC und das Dev Kit müssen sich für Hostnamen-Konnektivität im selben Subnetz befinden.  
 
-Um einen Hostnamen für ein Dev Kit zu definieren, gehen Sie zum Tool für die Konsoleneinstellungen, und geben Sie im Feld __Hostname__ den Hostnamen ein.  
+Um einen Hostnamen für ein Dev Kit zu definieren, navigieren Sie zum Tool für die Konsoleneinstellungen und geben im Feld __Hostname__ den Hostnamen ein.  
 
-  > **Hinweis**&nbsp;&nbsp;Eindeutigkeit wird beim Erstellen des Hostnamens nicht erzwungen. Vermeiden Sie doppelte Namen. Eine Möglichkeit ist, den Hostnamen vom Namen Ihres Entwicklungscomputers abzuleiten, der in der Regel eindeutig in einer Organisation ist.
+  > **Hinweis**
+            &nbsp;&nbsp;Eindeutigkeit wird beim Erstellen des Hostnamens nicht erzwungen. Vermeiden Sie doppelte Namen. Eine Möglichkeit ist, den Hostnamen vom Namen Ihres Entwicklungscomputers abzuleiten, der in der Regel eindeutig in einer Organisation ist.
 
 ## Windows Device Portal
 Das Windows Device Portal (WDP) ist ein OneCore-Tool zur Geräteverwaltung, das eine browserbasierte Geräteverwaltung ermöglicht.
 
-> **Hinweis**&nbsp;&nbsp;In dieser Developer Preview gilt Folgendes: Wenn Sie WDP in Dev Home starten, stürzt Dev Home ab, nachdem Sie Ihren Benutzernamen und Ihr Kennwort eingegeben und auf **Speichern** geklickt haben. 
-Die Anmeldeinformationen werden gespeichert, aber WDP nicht gestartet. 
+> **Hinweis**
+            &nbsp;&nbsp;In dieser Developer Preview stürzt Dev Home ab, wenn Sie WDP in Dev Home starten, Ihren Benutzernamen und Ihr Kennwort eingeben und auf **Speichern** klicken.
+Die Anmeldeinformationen werden gespeichert, aber WDP nicht gestartet.
 Sie können WDP starten, indem Sie Xbox One neu starten.
 
 So aktivieren Sie WDP auf Ihrer Xbox One-Konsole:
@@ -117,6 +120,6 @@ So aktivieren Sie WDP auf Ihrer Xbox One-Konsole:
 ----
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

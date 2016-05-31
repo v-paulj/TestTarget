@@ -1,8 +1,9 @@
 ---
-title: Erstellen eines einfachen Spiels für die UWP mit DirectX
+author: mtoepke
+title: Erstellen eines einfachen Spiels für die universelle Windows-Plattform (UWP) mit DirectX
 description: In diesen Tutorials lernen Sie, wie Sie ein einfaches Spiel für die universelle Windows-Plattform (UWP) mit DirectX und C++ erstellen.
 ms.assetid: 9edc5868-38cf-58cc-1fb3-8fb85a7ab2c9
-keywords: ["DirectX-Spielbeispiel", "Spielbeispiel, universelle Windows-Plattform (UWP)", "Direct3D 11-Spiel"]
+keywords: ["DirectX game sample", "game sample, Universal Windows Platform (UWP)", "Direct3D 11 game"]
 ---
 
 # Erstellen eines einfachen Spiels für die universelle Windows-Plattform (UWP) mit DirectX
@@ -54,7 +55,7 @@ Das Beispiel veranschaulicht folgende Spielkonzepte:
 | [Definieren des UWP-App-Frameworks für das Spiel](tutorial--building-the-games-metro-style-app-framework.md) | Wenn Sie Code für ein UWP-Spiel mit DirectX erstellen, müssen Sie zunächst das Framework erstellen, das die Interaktion der Spielobjekte mit Windows ermöglicht. Hierzu gehören Windows-Runtime-Eigenschaften wie die Behandlung von Anhalte-/Fortsetzungsereignissen, Fensterfokus und Andocken sowie die Ereignisse, Interaktionen und Übergänge für die Benutzeroberfläche. Wir erläutern, wie das Beispielspiel strukturiert ist und wie der übergeordnete Zustandsautomat für die Interaktion zwischen Spieler und System definiert wird. |
 | [Definieren des Hauptobjekts für das Spiel](tutorial--defining-the-main-game-loop.md) | In diesem Abschnitt widmen wir uns den Details des Hauptobjekts des Beispielspiels. Außerdem erfahren Sie, wie die implementierten Regeln in Interaktionen mit der Spielwelt übersetzt werden. |
 | [Zusammensetzen des Renderingframeworks](tutorial--assembling-the-rendering-pipeline.md) | Jetzt ist es Zeit, einen Blick darauf zu werfen, wie diese Struktur und der Zustand im Beispielspiel zum Anzeigen der Grafiken verwendet werden. Hier beschäftigen wir uns mit der Implementierung eines Renderingframeworks – von der Initialisierung des Grafikgeräts bis zur Darstellung der anzuzeigenden Grafikobjekte. |
-| [Hinzufügen einer Benutzeroberfläche](tutorial--adding-a-user-interface.md) | Sie haben gesehen, wie das Beispielspiel das Hauptspielobjekt implementiert, und das grundlegende Renderingframework kennen gelernt. Jetzt wollen wir uns ansehen, wie das Spiel dem Spieler Feedback zum Spielzustand gibt. Hier erfahren Sie, wie Sie einfache Menüoptionen und Head-Up-Anzeigekomponenten zur 3D-Grafikpipelineausgabe hinzufügen. |
+| [Hinzufügen einer Benutzeroberfläche](tutorial--adding-a-user-interface.md) | Sie haben gesehen, wie das Beispiel das Hauptspielobjekt implementiert, und das grundlegende Renderingframework kennengelernt. Jetzt wollen wir uns ansehen, wie das Spiel dem Spieler Feedback zum Spielzustand gibt. Hier erfahren Sie, wie Sie einfache Menüoptionen und Head-Up-Anzeigekomponenten zur 3D-Grafikpipelineausgabe hinzufügen. |
 | [Hinzufügen von Steuerelementen](tutorial--adding-controls.md) | In diesem Thema befassen wir uns damit, wie das Beispielspiel die Bewegungs-/Blicksteuerung in einem 3D-Spiel implementiert und wie einfache Steuerungen für Toucheingabe, Maus und Gamecontroller entwickelt werden. |
 | [Hinzufügen von Sound](tutorial--adding-sound.md) | In diesem Schritt untersuchen wir, wie das Beispielshooterspiel mit den [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813)-APIs ein Objekt für die Soundwiedergabe erstellt. |
 | [Erweitern des Spielbeispiels](tutorial-resources.md) | Herzlichen Glückwunsch! Sie sind nun mit den Schlüsselkomponenten eines einfachen dreidimensionalen UWP-DirectX-Spiels vertraut. Sie können das Framework für ein Spiel (einschließlich Ansichtsanbieter und Rendering-Pipeline) einrichten und eine einfache Spielschleife implementieren. Zudem können Sie ein einfaches Benutzeroberflächenoverlay erstellen und Soundeffekte und Steuerelemente einbauen. Damit sind Sie der Erstellung eines eigenen Spiels einen großen Schritt näher gekommen. Hier finden Sie einige Ressourcen, um Ihre Kenntnisse im Bereich der DirectX-Spieleentwicklung weiter zu vertiefen. |
@@ -69,6 +70,6 @@ Das Beispiel veranschaulicht folgende Spielkonzepte:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

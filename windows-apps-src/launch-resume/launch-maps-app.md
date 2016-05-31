@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Starten der Windows-Karten-App
 description: Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können.
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
@@ -12,7 +13,7 @@ ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
 
 Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können. In diesem Thema werden die **bingmaps:**-, **ms-drive-to:**-, **ms-walk-to:**- und *ms-settings:*-Uniform Resource Identifier (URI)-Schemas erläutert. Verwenden Sie diese URI-Schemas zum Starten der Windows-Karten-App für bestimmte Karten, Wegbeschreibungen und Suchergebnisse oder um über die Einstellungs-App Offlinekarten für Windows-Karten herunterzuladen.
 
-**Tipp** Um mehr über das Starten der Windows-Karten-App aus Ihrer App zu erfahren, laden Sie das [UWP-Kartenbeispiel (Universelle Windows-Plattform)](http://go.microsoft.com/fwlink/p/?LinkId=619977) aus dem Repository [Beispiele für universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) bei GitHub herunter.
+**Tipp** Um mehr über das Starten der Windows-Karten-App aus Ihrer App zu erfahren, laden Sie das [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) aus dem Repository [Beispiele für universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.
 
 ## Einführung in URIs
 
@@ -137,7 +138,7 @@ Sie können Wegbeschreibungen zwischen zwei Punkten mit dem *rtp*-Parameter anze
 
 Mit den **ms-drive-to:**- und **ms-walk-to:**-URI-Schemas können Sie direkt eine detaillierte Ansicht einer Route starten. Diese URI-Schemas können nur Wegbeschreibungen von der aktuellen Position des Benutzers bereitstellen. Wenn Sie Wegbeschreibungen zwischen Punkten bereitstellen müssen, die nicht die aktuelle Position des Benutzers enthalten, verwenden Sie das **bingmaps:**-URI-Schema wie im vorherigen Abschnitt beschrieben. Weitere Informationen zu diesen URI-Schemas finden Sie unter dem [ms-drive-to:](#msdriveto)- und [ms-walk-to:](#mswalkto)-Parameterverweis.
 
-> **Wichtig** Wenn die URI-Schemas **ms-drive-to:** oder **ms-walk-to:** gestartet werden, überprüft die Karten-App, ob für das Gerät bereits einen GPS-Positionsfixpunkt bestimmt wurde. Ist dies der Fall, geht die Karten-App zu detaillierten Wegbeschreibungen über. Falls nicht, zeigt die App die Routenübersicht an, wie unter [Anzeigen von Wegbeschreibungen und Verkehr](#directions) beschrieben.
+> **Wichtig**  Wenn die URI-Schemas **ms-drive-to:** oder **ms-walk-to:** gestartet werden, überprüft die Karten-App, ob für das Gerät bereits ein GPS-Positionsfixpunkt bestimmt wurde. Ist dies der Fall, geht die Karten-App zu detaillierten Wegbeschreibungen über. Falls nicht, zeigt die App die Routenübersicht an, wie unter [Anzeigen von Wegbeschreibungen und Verkehr](#directions) beschrieben.
 
  
 
@@ -189,7 +190,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>degreeslon = ["-"] 1*2DIGIT ["." 1*7DIGIT]</p>
 <p>Beispiel:</p>
 <p>cp=40.726966~-74.006076</p></td>
-<td align="left"><p>Beide Werte müssen in Dezimalgrad ausgedrückt werden und durch eine Tilde (**~**) getrennt sein.</p>
+<td align="left"><p>Beide Werte müssen in Dezimalgrad ausgedrückt und durch eine Tilde (**~**) getrennt werden.</p>
 <p>Gültige Längengradwerte liegen zwischen -180 und einschließlich +180.</p>
 <p>Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90.</p></td>
 </tr>
@@ -205,7 +206,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>degreeslon = ["-"] 12DIGIT ["." 17DIGIT]</p>
 <p>Beispiel:</p>
 <p>bb=39.719_-74.52~41.71_-73.5</p></td>
-<td align="left"><p>Ein rechteckiger Bereich, der den in Dezimalgrad ausgedrückten Begrenzungsrahmen angibt. Untere linke Ecke und obere rechte Ecke sind durch eine Tilde (**~**) getrennt. Breiten- und Längengrad sind jeweils durch einen Unterstrich (**_**) getrennt.</p>
+<td align="left"><p>Ein rechteckiger Bereich, der den in Dezimalgrad ausgedrückten Begrenzungsrahmen angibt. Die untere linke Ecke und die obere rechte Ecke werden durch eine Tilde (**~**) getrennt. Breiten- und Längengrad sind jeweils durch einen Unterstrich (**_**) getrennt.</p>
 <p>Gültige Längengradwerte liegen zwischen -180 und einschließlich +180.</p>
 <p>Gültige Breitengradwerte liegen zwischen -90 und einschließlich +90.</p><p>Die Parameter „cp“ und „lvl“ werden ignoriert, wenn ein Begrenzungsrahmen bereitgestellt wird.</p></td>
 </tr>
@@ -249,7 +250,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 </ul>
 <p>Unter Windows 10 sind die Stile der Luftansicht und der 3D-Ansicht identisch.</p>
 <div class="alert">
-**Hinweis** Wenn der **sty**-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei sty=r zurückgegeben.
+**Hinweis**  Wenn der **sty**-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei sty=r zurückgegeben.
 </div>
 <div>
  
@@ -287,7 +288,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>ss=1</p></td>
 <td align="left"><p>Gibt an, dass bei folgendem Parameter Straßenbilder angezeigt werden: <code>ss=1</code>. Wenn der **ss**-Parameter ausgelassen wird, wird dasselbe Ergebnis wie bei folgendem Parameter zurückgegeben: <code>ss=0</code>. Verwenden Sie den Wert in Verbindung mit dem **cp**-Parameter, um die Position der Straßenansicht festzulegen.</p>
 <div class="alert">
-> **Hinweis** Straßenbilder sind nicht in allen Regionen verfügbar.
+> **Hinweis**  Straßenbilder sind nicht in allen Regionen verfügbar.
 </div>
 <div>
  
@@ -301,7 +302,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>trfc=1</p></td>
 <td align="left"><p>Gibt an, ob die Karte Verkehrsinformationen enthält. Wenn der trfc-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei folgendem Parameter zurückgegeben: <code>trfc=0</code>.</p>
 <div class="alert">
-> **Hinweis** Verkehrsinformationen sind nicht in allen Regionen verfügbar.
+> **Hinweis**  Verkehrsinformationen sind nicht in allen Regionen verfügbar.
 </div>
 <div>
  
@@ -330,7 +331,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>Bei einer unvollständigen Route wird keine Routenlinie gezeichnet.</p>
 <p>Geben Sie dies zusammen mit dem **mode**-Parameter an, um die Transportmethode (fahren, laufen oder öffentliche Verkehrsmittel) anzugeben. Wenn **mode** nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt.</p>
 <div class="alert">
-**Hinweis** Ein Titel kann für eine Position verwendet werden, wenn diese durch den **pos**-Parameterwert festgelegt ist. Anstatt der Breiten- und Längengrade wird der Titel angezeigt.
+**Hinweis**  Ein Titel kann für eine Position verwendet werden, wenn diese durch den **pos**-Parameterwert festgelegt ist. Anstatt der Breiten- und Längengrade wird der Titel angezeigt.
 </div>
 <div>
  
@@ -370,7 +371,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>Trennen Sie Namen und mehrere Punkte durch Tilden (**~**).</p>
 <p>Wenn das angegebene Element eine Tilde enthält, muss die Tilde als folgender Parameter codiert sein: <code>%7E</code>. Wenn es nicht zusammen mit den Parametern für den Mittelpunkt und Zoomfaktor angegeben wird, liefert die Sammlung die beste Kartenansicht.</p>
 
-<p>**Hinweis** Wenn das angegebene Element einen Unterstrich enthält, muss der Unterstrich als „%255F“ doppelt verschlüsselt sein.</p>
+<p>**Wichtig** Wenn das angegebene Element einen Unterstrich enthält, muss der Unterstrich als „%255F“ doppelt verschlüsselt werden.</p>
 
 <p>Wenn das angegebene Element einen Unterstrich enthält, muss der Unterstrich als „%255F“ doppelt verschlüsselt sein.</p></td>
 </tr>
@@ -384,7 +385,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 
 Der URI zum Starten einer Anforderung für detaillierte Wegbeschreibungen muss nicht codiert werden und hat das folgende Format.
 
-> **Hinweis** In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#directions).
+> **Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#directions).
 
  
 
@@ -401,7 +402,7 @@ Der URI zum Starten einer Anforderung für detaillierte Wegbeschreibungen muss n
 
 Der URI zum Starten einer Anforderung für detaillierte Fußwegbeschreibungen muss nicht codiert werden und hat das folgende Format.
 
-> **Hinweis** In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#directions).
+> **Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#directions).
 
  
 
@@ -415,7 +416,7 @@ Der URI zum Starten einer Anforderung für detaillierte Fußwegbeschreibungen mu
 ## ms-settings: Parameterverweis
 
 
-Die Syntax für Karten-App-spezifische Parameter für das **ms-settings:**-URI-Schema wird unten definiert. **maps-downloadmaps** wird zusammen mit dem **ms-settings:**-URI in der Form **ms-settings:maps-downloadmaps?** angegeben, um die Einstellungsseite für Offlinekarten anzugeben.
+Die Syntax für Karten-App-spezifische Parameter für das **ms-settings:**-URI-Schema wird unten definiert. **maps-downloadmaps** wird zusammen mit dem **ms-settings:**-URI in Form von **ms-settings:maps-downloadmaps?** angegeben, um die Offlineseite für Karteneinstellungen anzugeben.
 
  
 
@@ -427,6 +428,6 @@ Die Syntax für Karten-App-spezifische Parameter für das **ms-settings:**-URI-S
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

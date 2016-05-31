@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Auf der Seite „Preise und Verfügbarkeit“ des App-Übermittlungsprozesses können Sie festlegen, wie viel Ihre App kosten soll, ob Sie eine kostenlose Testversion anbieten und wie, wann und wo sie für Kunden verfügbar ist.
 title: Festlegen von Preisen und Verfügbarkeit von Apps
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
@@ -97,6 +98,6 @@ Sie können das Veröffentlichungsdatum auch nach dem Einreichen der App ändern
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

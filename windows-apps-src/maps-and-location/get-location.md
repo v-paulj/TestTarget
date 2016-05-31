@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 title: Abrufen der Position eines Benutzers
 description: Ermitteln Sie den Standort des Benutzers, und reagieren Sie auf Änderungen des Standorts. Der Zugriff auf die Position eines Benutzers wird über die Datenschutzeinstellungen in der Einstellungs-App verwaltet. In diesem Thema wird auch gezeigt, wie Sie überprüfen, ob Ihre App über die Berechtigung zum Zugriff auf den Benutzerstandort verfügt.
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
@@ -36,7 +37,7 @@ In diesem Abschnitt erfahren Sie, wie Sie den geografische Standort eines Benutz
 
 ### Schritt 1: Anfordern des Zugriffs auf den Standort des Benutzers
 
-**Wichtig** Sie müssen über die [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152)-Methode Zugriff auf den Standort des Benutzers anfordern, bevor Sie versuchen, auf den Benutzerstandort zuzugreifen. Sie müssen die **RequestAccessAsync**-Methode aus dem UI-Thread aufrufen, und die App muss sich im Vordergrund befinden. Ihre App kann erst auf Standortdaten des Benutzers zugreifen, nachdem der Benutzer der App den Zugriff gewährt hat.
+**Wichtig** Sie müssen über die [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152)-Methode Zugriff auf Positionsdaten des Benutzers anfordern, bevor Sie versuchen, auf die Position des Benutzers zuzugreifen. Sie müssen die **RequestAccessAsync**-Methode aus dem UI-Thread aufrufen, und die App muss sich im Vordergrund befinden. Ihre App kann erst auf Standortdaten des Benutzers zugreifen, nachdem der Benutzer der App den Zugriff gewährt hat.
 
 ```csharp
 using Windows.Devices.Geolocation;
@@ -224,7 +225,7 @@ async private void OnPositionChanged(Geolocator sender, PositionChangedEventArgs
 
 Wenn Ihre App gemäß den Standortdatenschutzeinstellungen nicht auf den Standort des Benutzers zugreifen darf, sollten Sie einen praktischen Link zu den **Standortdatenschutzeinstellungen** in der **Einstellungs**-App bereitstellen. In diesem Beispiel wird ein Hyperlink-Steuerelement verwendet, um zum `ms-settings:privacy-location`-URI zu navigieren.
 
-```xaml
+```xml
 <!--Set Visibility to Visible when access to location is denied -->  
 <TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic" 
                  Visibility="Collapsed" Margin="0,15,0,0" TextWrapping="Wrap" >
@@ -249,7 +250,7 @@ bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-locatio
 
 Bevor Ihre App auf die Position des Benutzers zugreifen kann, muss **Position** auf dem Gerät aktiviert sein. Vergewissern Sie sich in der **Einstellungs**-App, dass die folgenden **Datenschutzeinstellungen für den Standort** aktiviert sind:
 
--   **Position dieses Geräts...** ist **aktiviert** (gilt nicht für Windows 10 Mobile)
+-   **Position dieses Geräts** ist **aktiviert** (gilt nicht für Windows 10 Mobile)
 -   Die Einstellung **Position** der Positionsdienste ist **aktiviert**.
 -   Ihre App hat unter **Wählen Sie Apps aus, die Ihren Standort verwenden dürfen** die Einstellung **Ein**.
 
@@ -262,6 +263,6 @@ Bevor Ihre App auf die Position des Benutzers zugreifen kann, muss **Position** 
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

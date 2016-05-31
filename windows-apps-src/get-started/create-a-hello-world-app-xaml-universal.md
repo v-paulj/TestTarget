@@ -1,4 +1,5 @@
 ---
+author: martinekuan
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Erstellen der App „Hello, world“ (XAML)
 description: In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows 10 abzielt.
@@ -8,7 +9,7 @@ description: In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Appli
 
 In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows 10 abzielt. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows 10 ausgeführt werden kann. In diesem Thema geht es um die Erstellung einer App, die für Desktops und mobile Geräte gleichermaßen gut geeignet ist.
 
-**Wichtig** Dieses Lernprogramm ist für Microsoft Visual Studio 2015 und Windows 10 konzipiert. Die korrekte Funktionsweise mit früheren Versionen ist nicht sichergestellt.
+**Wichtig**   Dieses Lernprogramm ist für Microsoft Visual Studio 2015 und Windows 10 konzipiert. Die korrekte Funktionsweise mit früheren Versionen ist nicht sichergestellt.
 
 Hier erfahren Sie Folgendes:
 
@@ -31,11 +32,11 @@ Hier erfahren Sie Folgendes:
 
 1.  Starten Sie Visual Studio 2015.
 
-   Der Visual Studio 2015-Startbildschirm wird angezeigt. (Hinweis: Im weiteren Verlauf wird Visual Studio 2015 kurz als Visual Studio bezeichnet.)
+   Der Visual Studio 2015-Startbildschirm wird angezeigt. (Hinweis: Im weiteren Verlauf wird Visual Studio 2015 kurz als Visual Studio bezeichnet.)
 
-2.  Klicken Sie im Menü **Datei** auf **Neu** und dann auf **Projekt**.
+2.  Klicken Sie im Menü **Datei** auf **Neu** > **Projekt**.
 
-   Das Dialogfeld **Neues Projekt** wird geöffnet. Im linken Bereich des Dialogfelds können Sie den Typ der anzuzeigenden Vorlagen auswählen.
+   Das Dialogfeld **Neues Projekt** wird geöffnet. Im linken Bereich des Dialogfelds können Sie die Art der anzuzeigenden Vorlagen auswählen.
 
 3.  Erweitern Sie im linken Bereich die Option **Installiert > Vorlagen > Visual C# > Windows**, und wählen Sie anschließend die Vorlagengruppe **Universal**. Im mittleren Bereich des Dialogfelds sehen Sie eine Liste mit Projektvorlagen für Apps der universellen Windows-Plattform (UWP).
 
@@ -138,7 +139,7 @@ Lassen Sie uns nun der App einige Inhalte hinzufügen.
         <TextBlock Text="What' s your name?"/>
         <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
             <TextBox x:Name="nameInput" Width="280" HorizontalAlignment="Left"/>
-            <Button x:Name="inputButton" Content="Say &amp;quot;Hello&amp;quot;"/>
+            <Button x:Name="inputButton" Content="Say &quot;Hello&quot;"/>
         </StackPanel>
         <TextBlock x:Name="greetingOutput"/>
     </StackPanel>
@@ -208,7 +209,7 @@ Zusätzlich zu den Optionen zum Debuggen auf einem Desktopgerät enthält Visual
 -   usw. (verschiedene Emulatoren mit anderen Konfigurationen)
 
 Es ist ratsam, Ihre App auf einem Gerät mit kleinem Bildschirm und begrenztem Arbeitsspeicher zu testen. Wählen Sie also die Option **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
-**So beginnen Sie mit dem Debuggen auf einem Emulator für mobile Geräte**
+**So beginnen Sie mit dem Debuggen in einem Emulator für mobile Geräte**
 
 1.  Wählen Sie auf der **Standardsymbolleiste** im Menü mit den Zielgeräten (![Menü „Debuggen starten“](images/startdebug-full.png)) die Option **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
 2.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Debuggen starten** (![Schaltfläche „Debuggen starten“](images/startdebug-sm.png)).
@@ -253,7 +254,7 @@ Welche Ereignisse sollten behandelt werden? Windows Store-Apps können auf unter
     Im XAML-Editor wird der XAML-Code für das [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)-Element aktualisiert, sodass der [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737)-Ereignishandler wie folgt deklariert wird:
 
 ```xml   
-   <Button x:Name="inputButton" Content="Say &amp;quot;Hello&amp;quot;" Click="Button_Click"/>
+   <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
 ```    
 
 5.  Fügen Sie dem Ereignishandler, den Sie auf der CodeBehind-Seite erstellt haben, Code hinzu. Rufen Sie im Ereignishandler den Namen des Benutzers aus dem [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Steuerelement `nameInput` ab, und erstellen Sie damit eine Begrüßung. Verwenden Sie das [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)-Element `greetingOutput` zum Anzeigen des Ergebnisses.
@@ -317,6 +318,6 @@ Das zweite [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR2
 Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows 10 und die UWP erstellt!
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

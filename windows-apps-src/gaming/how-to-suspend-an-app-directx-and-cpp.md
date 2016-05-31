@@ -1,6 +1,7 @@
 ---
+author: mtoepke
 title: So wird's gemacht: Anhalten einer App (DirectX und C++)
-description: In diesem Thema wird gezeigt, wie wichtige Systemzustände und App-Daten gespeichert werden, wenn das System Ihre DirectX-App für die UWP anhält.
+description: In diesem Thema wird gezeigt, wie wichtige Systemzustände und App-Daten gespeichert werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) anhält.
 ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
 ---
 
@@ -149,6 +150,6 @@ Das System benachrichtigt eine App nicht, wenn sie beendet wird. Wenn Ihre App a
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

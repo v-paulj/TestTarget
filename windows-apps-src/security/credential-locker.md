@@ -86,7 +86,7 @@ private Windows.Security.Credentials.PasswordCredential GetCredentialFromLocker(
         else
         {
             // When there are multiple usernames,
-            // retrieve the default username. If one doesn’t
+            // retrieve the default username. If one doesn't
             // exist, then display UI to have the user select
             // a default username.
 
@@ -127,6 +127,6 @@ Speichern Sie Kennwörter nur unter den folgenden Bedingungen im Schließfach f�
 
 Speichern Sie Anmeldeinformationen niemals als Nur-Text mit App-Daten oder Roamingeinstellungen.
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

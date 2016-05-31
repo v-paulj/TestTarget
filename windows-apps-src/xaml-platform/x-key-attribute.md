@@ -1,12 +1,13 @@
 ---
-description: dient zum Identifizieren von Elementen, die als Ressourcen erstellt und referenziert werden und innerhalb eines ResourceDictionary-Elements vorhanden sind.
+author: jwmsft
+description: Dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt und referenziert werden und innerhalb eines ResourceDictionary-Elements vorhanden sind.
 title: xKey-Attribut
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
 ---
 
 # x:Key-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt und referenziert werden und innerhalb eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)-Elements vorhanden sind.
 
@@ -41,7 +42,7 @@ Im Anschluss finden Sie die maßgebende Grammatik für eine Zeichenfolge, die in
 XamlName ::= NameStartChar (NameChar)*
 NameStartChar ::= LetterCharacter | '_'
 NameChar ::= NameStartChar | DecimalDigit
-LetterCharacter ::= ('a'-'z') | ('A'–'Z')
+LetterCharacter ::= ('a'-'z') | ('A'-'Z')
 DecimalDigit ::= '0'-'9'
 CombiningCharacter::= none
 ```
@@ -64,6 +65,6 @@ Ein Element in einem Ressourcenwörterbuch kann einen Wert für **x:Key** auslas
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,5 +1,6 @@
 ---
-description: Sie können Werbecodes für Apps oder In-App-Produkte (IAP) generieren, die Sie im Windows Store veröffentlicht haben.
+author: jnHs
+Description: Sie können Werbecodes für Apps oder In-App-Produkte (IAP) generieren, die Sie im Windows Store veröffentlicht haben.
 title: Generieren von Werbecodes
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ---
@@ -88,15 +89,15 @@ Wenn Sie eine einlösbare URL verteilt haben, wird in den folgenden Schritten di
 
 1.  Der Benutzer klickt auf die einlösbare URL.
 
-    Der Browser wird mit einer authentifizierten Seite für die **Codeeinlösung** unter <https://account.microsoft.com/billing/redeem> geöffnet. Diese Seite enthält eine Beschreibung der App, für die der Benutzer den Code einlöst.
+    Der Browser öffnet eine authentifizierte Seite **Code einlösen** unter <https://account.microsoft.com/billing/redeem>. Diese Seite enthält eine Beschreibung der App, für die der Benutzer den Code einlöst.
 
 2.  Der Benutzer klickt auf **Einlösen**.
 
-    Der Browser navigiert zur Seite **Danke** mit dem Link **Abrufen** ***&lt;Name Ihrer App&gt;***.
+    Der Browser navigiert zur Seite **Danke** mit dem Link **Abrufen*****&lt;Name Ihrer App&gt;***.
 
     > **Hinweis**  Benutzern wird bei diesem Schritt eine Fehlermeldung angezeigt, wenn Ihre App noch nicht veröffentlicht wurde.
 
-3.  Der Benutzer klickt auf **Abrufen** ***&lt;Name Ihrer App&gt;***.
+3.  Der Benutzer klickt auf **Abrufen*****&lt;Name Ihrer App&gt;***.
 
 4.  Wenn sich der Benutzer an einem Computer mit Windows Store für Windows 10 oder Windows 8.1 befindet, wird die Übersichtsseite für die App im Windows Store geöffnet. Der Benutzer kann dann zum kostenlosen Installieren der App auf **Installieren** klicken.
 
@@ -129,6 +130,6 @@ Sie können auch eine aktive Bestellung aus dieser Tabelle herunterladen.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

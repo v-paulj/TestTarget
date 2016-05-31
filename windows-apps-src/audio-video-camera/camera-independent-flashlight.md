@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: D20C8E01-4E78-4115-A2E8-07BB3E67DDDC
 description: In diesem Artikel wird beschrieben, wie Sie auf die Taschenlampe eines Geräts zugreifen und diese verwenden, sofern vorhanden. Die Taschenlampenfunktion wird unabhängig von der Kamera des Geräts und der Blitzfunktion der Kamera verwaltet.
 title: Kameraunabhängige Taschenlampe
@@ -41,7 +42,7 @@ Sobald Sie eine Instanz der [**Lamp**](https://msdn.microsoft.com/library/window
 
 [!code-cs[LampSettingsOn](./code/Lamp/cs/MainPage.xaml.cs#SnippetLampSettingsOn)]
 
-Schalten Sie die Leuchte aus, in dem Sie die [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn894330)-Eigenschaft auf **false** setzen.
+Schalten Sie die Leuchte aus, indem Sie die [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn894330)-Eigenschaft auf **false** setzen.
 
 [!code-cs[LampSettingsOff](./code/Lamp/cs/MainPage.xaml.cs#SnippetLampSettingsOff)]
 
@@ -74,6 +75,6 @@ Wenn Sie die Leuchte nicht mehr verwenden, sollten Sie sie deaktivieren und [**L
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

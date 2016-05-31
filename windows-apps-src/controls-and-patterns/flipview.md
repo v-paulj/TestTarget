@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Dient zum Anzeigen von Bildern in einer Sammlung, z. B. Fotos in einem Album oder Elementen auf einer Seite mit den Produktdetails, wobei jeweils ein Bild angezeigt wird.
 title: Richtlinien für Flip-Ansicht-Steuerelemente
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
@@ -101,7 +102,8 @@ Hier wird die ItemsSource an eine [**CollectionViewSource**](https://msdn.micros
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**Hinweis**&nbsp;&nbsp;Sie können eine Flip-Ansicht auffüllen, indem Sie entweder der Items-Sammlung Elemente hinzufügen oder die ItemsSource-Eigenschaft festlegen. Die beiden Methoden können jedoch nicht gleichzeitig verwendet werden. Wenn Sie die ItemsSource-Eigenschaft festlegen und dann ein Element in XAML hinzufügen, wird das hinzugefügte Element ignoriert. Wenn Sie die ItemsSource-Eigenschaft festlegen und der Items-Sammlung ein Element in Code hinzufügen, wird eine Ausnahme ausgelöst.
+>**Hinweis**
+            &nbsp;&nbsp;Sie können eine Flip-Ansicht auffüllen, indem Sie entweder der Items-Sammlung Elemente hinzufügen oder die ItemsSource-Eigenschaft festlegen. Die beiden Methoden können jedoch nicht gleichzeitig verwendet werden. Wenn Sie die ItemsSource-Eigenschaft festlegen und dann ein Element in XAML hinzufügen, wird das hinzugefügte Element ignoriert. Wenn Sie die ItemsSource-Eigenschaft festlegen und der Items-Sammlung ein Element in Code hinzufügen, wird eine Ausnahme ausgelöst.
 
 ### Festlegen der Darstellung der Elemente
 
@@ -201,11 +203,11 @@ Für größere Sammlungen (10-25 Elemente) kann eine Anzeige mit mehr Kontext, z
 
 ## Verwandte Artikel
 
-[Richtlinien für Listen](https://msdn.microsoft.com/library/windows/apps/mt186889)
+- [Richtlinien für Listen](https://msdn.microsoft.com/library/windows/apps/mt186889)
 - [**FlipView-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242678)
 - [**CarouselPanel-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/hh967950)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

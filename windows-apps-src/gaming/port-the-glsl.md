@@ -1,10 +1,11 @@
 ---
+author: mtoepke
 title: Portieren des GLSL-Codes
-description: Code Puffer und Shaderobjekte erstellt konfiguriert in Shadern enthaltene Code von GLSL von OpenGL ES 2.0 in HLSL von Direct3D 11 muss portiert werden
+description: Nachdem Sie sich um den Code gekümmert haben, mit dem die Puffer und Shaderobjekte erstellt und konfiguriert werden, muss der in diesen Shadern enthaltene Code von der GL Shader Language (GLSL) von OpenGL ES 2.0 in die High-Level Shader Language (HLSL) von Direct3D 11 portiert werden.
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
 ---
 
-# Portieren des GLSL-Codes
+# Portieren der GLSL
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -148,12 +149,10 @@ Die Farbe für das Pixel an der Position wird in das Renderziel geschrieben. Das
 ## Vorheriger Schritt
 
 
-[Portieren der Vertexpuffer und -daten](port-the-vertex-buffers-and-data-config.md)
-Nächster Schritt
+[Portieren der Vertexpuffer und -daten](port-the-vertex-buffers-and-data-config.md) Nächster Schritt
 ---------
 
-[Zeichnen auf den Bildschirm](draw-to-the-screen.md)
-Anmerkungen
+[Zeichnen auf den Bildschirm](draw-to-the-screen.md) Anmerkungen
 -------
 
 Wenn Sie mit der HLSL-Semantik und dem Packen von Konstantenpuffern vertraut sind, können Sie einigen Debugaufwand vermeiden und Möglichkeiten zur Optimierung schaffen. Lesen Sie sich nach Möglichkeit die Themen [Variablensyntax (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Einführung in Puffer in Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898) und [Erstellen eines Konstantenpuffers](https://msdn.microsoft.com/library/windows/desktop/ff476896) durch. Hier sind als Anfang schon einmal einige Tipps aufgeführt, die in Verbindung mit der Semantik und Konstantenpuffern zu beachten sind:
@@ -185,6 +184,6 @@ Wenn Sie mit der HLSL-Semantik und dem Packen von Konstantenpuffern vertraut sin
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Starten der Einstellungs-App von Windows
 description: Erfahren Sie, wie Sie die Windows-Einstellungs-App aus Ihrer App starten können. In diesem Thema wird das ms-settings-URI-Schema beschrieben. Verwenden Sie dieses URI-Schema, um die Windows-Einstellungs-App mit bestimmten Einstellungsseiten zu starten.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
@@ -29,7 +30,7 @@ Um direkt die **Einstellungs**-App zu starten, verwenden Sie das in den folgende
 
 In diesem Beispiel wird ein Hyperlink-XAML-Steuerelement verwendet, um die Datenschutzeinstellungsseite für das Mikrofon mit der `ms-settings:privacy-microphone`-URI zu starten.
 
-```xaml
+```xml
 <!--Set Visibility to Visible when access to the microphone is denied -->  
 <TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic" 
                  Visibility="Collapsed" Margin="0,15,0,0" TextWrapping="Wrap" >
@@ -125,6 +126,6 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

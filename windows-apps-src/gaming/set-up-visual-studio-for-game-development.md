@@ -1,5 +1,6 @@
 ---
-title: Verwenden von Visual Studio-Tools für die Spieleprogrammierung
+author: mtoepke
+title: Visual Studio-Tools für die Spieleprogrammierung
 description: Sie erhalten eine Übersicht über spezielle DirectX-Tools, die unter Visual Studio verfügbar sind.
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 ---
@@ -7,7 +8,7 @@ ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 # Visual Studio-Tools für die Spieleprogrammierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Zusammenfassung**
 
@@ -37,7 +38,7 @@ Erstellen Sie [Buildanpassungsdateien](#custom), um diese Formate zur Buildzeit 
 
 Weitere Informationen finden Sie unter [Arbeiten mit Texturen und Bildern](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> **Hinweis**  Der Grafik-Editor ist nicht als Ersatz für eine Bildbearbeitungs-App mit vollem Funktionsumfang gedacht, sondern speziell für viele einfache Anzeige- und Bearbeitungsfälle geeignet.
+> **Hinweis**  Der Grafik-Editor ist nicht als Ersatz für eine Bildbearbeitungs-App mit vollem Funktionsumfang gedacht, aber für viele einfache Anzeige- und Bearbeitungsfälle geeignet.
 
  
 
@@ -56,7 +57,7 @@ Dies ist ein Screenshot eines Modells im Editor, auf das Beleuchtungsfunktionen 
 
 Weitere Informationen finden Sie unter [Arbeiten mit 3D-Modellen](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
 
-> **Hinweis**  Der Modell-Editor ist nicht als Ersatz für eine Modellbearbeitungs-App mit vollem Funktionsumfang gedacht, sondern ist speziell für viele einfache Anzeige- und Bearbeitungsfälle geeignet.
+> **Hinweis**  Der Modell-Editor ist nicht als Ersatz für eine Modellbearbeitungs-App mit vollem Funktionsumfang gedacht, aber für viele einfache Anzeige- und Bearbeitungsfälle geeignet.
 
  
 
@@ -133,7 +134,7 @@ Visual Studio enthält grafikspezifische Debugtools. Verwenden Sie diese Tools z
 
 Weitere Informationen finden Sie unter [Debuggen von DirectX-Grafiken](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
 
-> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -146,6 +147,6 @@ Weitere Informationen finden Sie unter [Debuggen von DirectX-Grafiken](https://m
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

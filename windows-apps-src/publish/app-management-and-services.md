@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Im Windows Dev Center-Dashboard können Sie Details zu einzelnen Apps anzeigen und verwalten sowie Dienste wie Pushbenachrichtigungen und Karten konfigurieren.
 title: App-Verwaltung und -Dienste
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
@@ -22,7 +23,7 @@ Abhängig vom Pakettyp Ihrer App und den jeweiligen Anforderungen können Sie ei
 
 -   **Microsoft Azure Mobile Apps** ermöglichen das Senden von Pushbenachrichtigungen, die Authentifizierung und Verwaltung von App-Benutzern und das Speichern von App-Daten in der Cloud. Weitere Informationen finden Sie in der [Mobile Apps-Dokumentation](http://go.microsoft.com/fwlink/p/?LinkId=221116).
 
--   Der **Microsoft-Pushbenachrichtigungsdienst (MPNS)** kann mit Ihren XAP-Paketen für Windows Phone verwendet werden. Sie können eine begrenzte Anzahl nicht authentifizierter Benachrichtigungen senden, ohne hier eine Konfiguration vorzunehmen. Zur Vermeidung von Drosselungslimits wird jedoch empfohlen, authentifizierte Benachrichtigungen zu verwenden. Wenn Sie diesen Dienst verwenden, müssen Sie ein Zertifikat in das auf der Seite **Pushbenachrichtigungen** bereitgestellte Feld hochladen. Weitere Informationen finden Sie unter [Einrichten eines authentifizierten Webdiensts zum Senden von Pushbenachrichtigungen für Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
+-   Der **Microsoft-Pushbenachrichtigungsdienst (Microsoft Push Notification Service, MPNS)** kann mit Ihren XAP-Paketen für Windows Phone verwendet werden. Sie können eine begrenzte Anzahl nicht authentifizierter Benachrichtigungen senden, ohne hier eine Konfiguration vorzunehmen. Zur Vermeidung von Drosselungslimits wird jedoch empfohlen, authentifizierte Benachrichtigungen zu verwenden. Wenn Sie diesen Dienst verwenden, müssen Sie ein Zertifikat in das auf der Seite **Pushbenachrichtigungen** bereitgestellte Feld hochladen. Weitere Informationen finden Sie unter [Einrichten eines authentifizierten Webdiensts zum Senden von Pushbenachrichtigungen für Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
 
 ### Experimentation
 
@@ -34,7 +35,7 @@ Weitere Informationen finden Sie unter [Ausführen von App-Experimenten mit A/B-
 
 Wenn Sie Kartendienste in Apps unter Windows Phone 8.1 und früheren Versionen verwenden möchten, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihren App-Code einfügen. Sie finden das Token auf der Seite **Karten** im Abschnitt **Dienste**.
 
-> **Hinweis**  Um Kartendienste in Apps zu verwenden, die auf andere Betriebssysteme ausgerichtet sind, besuchen Sie das [Bing Maps Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](https://msdn.microsoft.com/library/windows/apps/mt219694).
+> **Hinweis:**  Um Kartendienste in Apps zu verwenden, die auf andere Betriebssysteme ausgerichtet sind, besuchen Sie das [Bing Maps Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](https://msdn.microsoft.com/library/windows/apps/mt219694).
 
 Weitere Informationen finden Sie unter [Verwenden von Kartendiensten](use-map-services.md).
 
@@ -77,6 +78,6 @@ Entwickler mit OEM-Berechtigungen können auf der Seite **Aktuelle Pakete** auß
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

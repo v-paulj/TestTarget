@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
 title: Bewährte Methoden für die Leistung Ihrer App beim Starten
 description: Erstellen Sie UWP-Apps (Universelle Windows-Plattform) mit optimalen Startzeiten, indem Sie die Vorgehensweise bei Start und Aktivierung optimieren.
@@ -98,7 +99,7 @@ Im Fenster mit der [Visuellen Live-Struktur von Visual Studio](http://blogs.msdn
 
 ![Visuelle Live-Struktur:](images/live-visual-tree.png)
 
-**Verwenden Sie „x:DeferLoadStrategy“**. Das Reduzieren eines Elements oder das Festlegen der Deckkraft auf 0 verhindert nicht, dass das Element erstellt wird. Mit „x:DeferLoadStrategy“ können Sie das Laden eines UI-Bestandteils verschieben und es später laden, wenn es benötigt wird. Dies ist eine gute Möglichkeit, um die Verarbeitung von UI-Elementen aufzuschieben, die auf dem Startbildschirm nicht sichtbar sind. Sie können sie dann bei Bedarf oder im Rahmen einer Verzögerungslogik laden. Um das Laden auszulösen, müssen Sie für das Element nur FindName aufrufen. Ein Beispiel und weitere Informationen finden Sie unter [x:DeferLoadStrategy-Attribut](https://msdn.microsoft.com/library/windows/apps/Mt204785).
+**Verwenden Sie x:DeferLoadStrategy**. Das Reduzieren eines Elements oder das Festlegen der Deckkraft auf 0 verhindert nicht, dass das Element erstellt wird. Mit „x:DeferLoadStrategy“ können Sie das Laden eines UI-Bestandteils verschieben und es später laden, wenn es benötigt wird. Dies ist eine gute Möglichkeit, um die Verarbeitung von UI-Elementen aufzuschieben, die auf dem Startbildschirm nicht sichtbar sind. Sie können sie dann bei Bedarf oder im Rahmen einer Verzögerungslogik laden. Um das Laden auszulösen, müssen Sie für das Element nur FindName aufrufen. Ein Beispiel und weitere Informationen finden Sie unter [x:DeferLoadStrategy-Attribut](https://msdn.microsoft.com/library/windows/apps/Mt204785).
 
 **Virtualisierung**. Falls Ihre Benutzeroberfläche Listen- oder Wiederholungsinhalte enthält, empfehlen wir Ihnen dringend, die UI-Virtualisierung zu nutzen. Wenn die Listen-UI nicht virtualisiert ist, werden alle Elemente vorher erstellt, und dies kann den Startvorgang verlängern. Weitere Informationen finden Sie unter [Optimieren der ListView- und GridView-Benutzeroberfläche](optimize-gridview-and-listview.md).
 
@@ -146,173 +147,173 @@ Initialisieren Sie mit dem Konstruktor der App lediglich Datenstrukturen, die f�
 Eine App kann aus unterschiedlichen Gründen aktiviert werden, und diese müssen unter Umständen alle individuell behandelt werden. Durch Überschreiben der Methoden [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/BR242330), [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/BR242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701801), [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/BR242335), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/BR242336) und [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Hh701806) können Sie jede Aktivierungsursache behandeln. In diesen Methoden muss die App unter anderem eine UI erstellen, sie [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/BR209051) zuweisen und anschließend [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) aufrufen. An diesem Punkt wird der Begrüßungsbildschirm durch die von der App erstellte UI ersetzt. Hierbei kann es sich entweder um einen Ladebildschirm oder bereits um die eigentliche UI der App handeln, sofern bei der Aktivierung genügend Informationen für deren Erstellung vorliegen.
 
 > [!div class="tabbedCodeSnippets"]
-```csharp
-public partial class App : Application
-{
-    // A handler for regular activation.
-    async protected override void OnLaunched(LaunchActivatedEventArgs args)
-    {
-        base.OnLaunched(args);
-
-        // Asynchronously restore state based on generic launch.
-
-        // Create the ExtendedSplash screen which serves as a loading page while the
-        // reader downloads the section information.
-        ExtendedSplash eSplash = new ExtendedSplash();
-
-        // Set the content of the window to the extended splash screen.
-        Window.Current.Content = eSplash;
-
-        // Notify the Window that the process of activation is completed
-        Window.Current.Activate();
-    }
-
-    // a different handler for activation via the search contract
-    async protected override void OnSearchActivated(SearchActivatedEventArgs args)
-    {
-        base.OnSearchActivated(args);
-
-        // Do an asynchronous restore based on Search activation
-
-        // the rest of the code is the same as the OnLaunched method
-    }
-}
-
-partial class ExtendedSplash : Page
-{
-    // This is the UIELement that's the game's home page.
-    private GameHomePage homePage;
-
-    public ExtendedSplash()
-    {
-        InitializeComponent();
-        homePage = new GameHomePage();
-    }
-
-    // Shown for demonstration purposes only.
-    // This is typically autogenerated by Visual Studio.
-    private void InitializeComponent()
-    {
-    }
-}
-```
-```vb
-    Partial Public Class App
-    Inherits Application
-
-    ' A handler for regular activation.
-    Protected Overrides Async Sub OnLaunched(ByVal args As LaunchActivatedEventArgs)
-        MyBase.OnLaunched(args)
-
-        ' Asynchronously restore state based on generic launch.
-
-        ' Create the ExtendedSplash screen which serves as a loading page while the
-        ' reader downloads the section information.
-        Dim eSplash As New ExtendedSplash()
-
-        ' Set the content of the window to the extended splash screen.
-        Window.Current.Content = eSplash
-
-        ' Notify the Window that the process of activation is completed
-        Window.Current.Activate()
-    End Sub
-
-    ' a different handler for activation via the search contract
-    Protected Overrides Async Sub OnSearchActivated(ByVal args As SearchActivatedEventArgs)
-        MyBase.OnSearchActivated(args)
-
-        ' Do an asynchronous restore based on Search activation
-
-        ' the rest of the code is the same as the OnLaunched method
-    End Sub
-End Class
-
-Partial Friend Class ExtendedSplash
-    Inherits Page
-
-    Public Sub New()
-        InitializeComponent()
-
-        ' Downloading the data necessary for 
-        ' initial UI on a background thread.
-        Task.Run(Sub() DownloadData())
-    End Sub
-
-    Private Sub DownloadData()
-        ' Download data to populate the initial UI.
-
-        ' Create the first page. 
-        Dim firstPage As New MainPage()
-
-        ' Add the data just downloaded to the first page
-
-        ' Replace the loading page, which is currently 
-        ' set as the window’s content, with the initial UI for the app
-        Window.Current.Content = firstPage
-    End Sub
-
-    ' Shown for demonstration purposes only.
-    ' This is typically autogenerated by Visual Studio.
-    Private Sub InitializeComponent()
-    End Sub
-End Class 
-```
+> ```csharp
+> public partial class App : Application
+> {
+>     // A handler for regular activation.
+>     async protected override void OnLaunched(LaunchActivatedEventArgs args)
+>     {
+>         base.OnLaunched(args);
+> 
+>         // Asynchronously restore state based on generic launch.
+> 
+>         // Create the ExtendedSplash screen which serves as a loading page while the
+>         // reader downloads the section information.
+>         ExtendedSplash eSplash = new ExtendedSplash();
+> 
+>         // Set the content of the window to the extended splash screen.
+>         Window.Current.Content = eSplash;
+> 
+>         // Notify the Window that the process of activation is completed
+>         Window.Current.Activate();
+>     }
+> 
+>     // a different handler for activation via the search contract
+>     async protected override void OnSearchActivated(SearchActivatedEventArgs args)
+>     {
+>         base.OnSearchActivated(args);
+> 
+>         // Do an asynchronous restore based on Search activation
+> 
+>         // the rest of the code is the same as the OnLaunched method
+>     }
+> }
+> 
+> partial class ExtendedSplash : Page
+> {
+>     // This is the UIELement that's the game's home page.
+>     private GameHomePage homePage;
+> 
+>     public ExtendedSplash()
+>     {
+>         InitializeComponent();
+>         homePage = new GameHomePage();
+>     }
+> 
+>     // Shown for demonstration purposes only.
+>     // This is typically autogenerated by Visual Studio.
+>     private void InitializeComponent()
+>     {
+>     }
+> }
+> ```
+> ```vb
+>     Partial Public Class App
+>     Inherits Application
+> 
+>     ' A handler for regular activation.
+>     Protected Overrides Async Sub OnLaunched(ByVal args As LaunchActivatedEventArgs)
+>         MyBase.OnLaunched(args)
+> 
+>         ' Asynchronously restore state based on generic launch.
+> 
+>         ' Create the ExtendedSplash screen which serves as a loading page while the
+>         ' reader downloads the section information.
+>         Dim eSplash As New ExtendedSplash()
+> 
+>         ' Set the content of the window to the extended splash screen.
+>         Window.Current.Content = eSplash
+> 
+>         ' Notify the Window that the process of activation is completed
+>         Window.Current.Activate()
+>     End Sub
+> 
+>     ' a different handler for activation via the search contract
+>     Protected Overrides Async Sub OnSearchActivated(ByVal args As SearchActivatedEventArgs)
+>         MyBase.OnSearchActivated(args)
+> 
+>         ' Do an asynchronous restore based on Search activation
+> 
+>         ' the rest of the code is the same as the OnLaunched method
+>     End Sub
+> End Class
+> 
+> Partial Friend Class ExtendedSplash
+>     Inherits Page
+> 
+>     Public Sub New()
+>         InitializeComponent()
+> 
+>         ' Downloading the data necessary for 
+>         ' initial UI on a background thread.
+>         Task.Run(Sub() DownloadData())
+>     End Sub
+> 
+>     Private Sub DownloadData()
+>         ' Download data to populate the initial UI.
+> 
+>         ' Create the first page. 
+>         Dim firstPage As New MainPage()
+> 
+>         ' Add the data just downloaded to the first page
+> 
+>         ' Replace the loading page, which is currently 
+>         ' set as the window's content, with the initial UI for the app
+>         Window.Current.Content = firstPage
+>     End Sub
+> 
+>     ' Shown for demonstration purposes only.
+>     ' This is typically autogenerated by Visual Studio.
+>     Private Sub InitializeComponent()
+>     End Sub
+> End Class 
+> ```
 
 Apps, die im Aktivierungshandler eine Ladeseite anzeigen, beginnen mit der UI-Erstellung im Hintergrund. Nach Erstellung dieses Elements tritt dessen [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723)-Ereignis auf. Im Ereignishandler ersetzen Sie den Fensterinhalt (also den derzeit angezeigten Ladebildschirm) durch die neu erstellte Startseite.
 
 Bei Apps mit längerer Initialisierungsperiode ist das Anzeigen einer Ladeseite unverzichtbar. Abgesehen davon, dass der Benutzer Feedback zum Aktivierungsprozess erhält, wird der Prozess beendet, wenn [**Window.Activate**](https://msdn.microsoft.com/library/windows/apps/BR209046) nicht innerhalb von 15 Sekunden nach dem Start des Aktivierungsprozess aufgerufen wird.
 
 > [!div class="tabbedCodeSnippets"]
-```csharp
-partial class GameHomePage : Page
-{
-    public GameHomePage()
-    {
-        InitializeComponent();
-
-        // add a handler to be called when the home page has been loaded
-        this.Loaded += ReaderHomePageLoaded;
-
-        // load the minimal amount of image and sound data from disk necessary to create the home page.        
-    }
-    
-    void ReaderHomePageLoaded(object sender, RoutedEventArgs e)
-    {
-        // set the content of the window to the home page now that it’s ready to be displayed.
-        Window.Current.Content = this;
-    }
-
-    // Shown for demonstration purposes only.
-    // This is typically autogenerated by Visual Studio.
-    private void InitializeComponent()
-    {
-    }
-}
-```
-```vb
-    Partial Friend Class GameHomePage
-    Inherits Page
-
-    Public Sub New()
-        InitializeComponent()
-
-        ' add a handler to be called when the home page has been loaded
-        AddHandler Me.Loaded, AddressOf ReaderHomePageLoaded
-
-        ' load the minimal amount of image and sound data from disk necessary to create the home page.        
-    End Sub
-
-    Private Sub ReaderHomePageLoaded(ByVal sender As Object, ByVal e As RoutedEventArgs)
-        ' set the content of the window to the home page now that it’s ready to be displayed.
-        Window.Current.Content = Me
-    End Sub
-
-    ' Shown for demonstration purposes only.
-    ' This is typically autogenerated by Visual Studio.
-    Private Sub InitializeComponent()
-    End Sub
-End Class
-```
+> ```csharp
+> partial class GameHomePage : Page
+> {
+>     public GameHomePage()
+>     {
+>         InitializeComponent();
+> 
+>         // add a handler to be called when the home page has been loaded
+>         this.Loaded += ReaderHomePageLoaded;
+> 
+>         // load the minimal amount of image and sound data from disk necessary to create the home page.        
+>     }
+>     
+>     void ReaderHomePageLoaded(object sender, RoutedEventArgs e)
+>     {
+>         // set the content of the window to the home page now that it's ready to be displayed.
+>         Window.Current.Content = this;
+>     }
+> 
+>     // Shown for demonstration purposes only.
+>     // This is typically autogenerated by Visual Studio.
+>     private void InitializeComponent()
+>     {
+>     }
+> }
+> ```
+> ```vb
+>     Partial Friend Class GameHomePage
+>     Inherits Page
+> 
+>     Public Sub New()
+>         InitializeComponent()
+> 
+>         ' add a handler to be called when the home page has been loaded
+>         AddHandler Me.Loaded, AddressOf ReaderHomePageLoaded
+> 
+>         ' load the minimal amount of image and sound data from disk necessary to create the home page.        
+>     End Sub
+> 
+>     Private Sub ReaderHomePageLoaded(ByVal sender As Object, ByVal e As RoutedEventArgs)
+>         ' set the content of the window to the home page now that it's ready to be displayed.
+>         Window.Current.Content = Me
+>     End Sub
+> 
+>     ' Shown for demonstration purposes only.
+>     ' This is typically autogenerated by Visual Studio.
+>     Private Sub InitializeComponent()
+>     End Sub
+> End Class
+> ```
 
 Ein Beispiel für die Verwendung erweiterter Begrüßungsbildschirme finden Sie im [Beispiel für einen Begrüßungsbildschirm](http://go.microsoft.com/fwlink/p/?linkid=234889).
 
@@ -330,7 +331,7 @@ Wie genau eine App auf die einzelnen Startphasen reagiert, liegt ganz bei Ihnen.
 
 Wiederverwendbarer Code liegt oft in Gestalt von in das Projekt einbezogenen Modulen (DLL-Dateien) vor. Zum Laden dieser Module muss auf den Datenträger zugegriffen werden, was – wie Sie sich vorstellen können – schnell einen größeren Mehraufwand bedeuten kann. Dieser Aspekt wirkt sich am stärksten bei einem Kaltstart aus, kann aber auch Auswirkungen auf den Warmstart haben. Im Falle von C# und Visual Basic versucht die CLR, die Auswirkungen bestmöglich zu verzögern, indem sie die Assemblys nur bei Bedarf lädt. Mit anderen Worten: Die CLR lädt ein Modul erst, wenn in einer ausgeführten Methode darauf verwiesen wird. Verweisen Sie im Startcode also nur auf Assemblys, die für den Start Ihrer App erforderlich sind, damit die CLR keine überflüssigen Module lädt. Falls Ihr Startpfad nicht verwendete Codepfade mit unnötigen Verweisen enthält, können Sie diese Codepfade in andere Methoden auslagern, um unnötige Ladevorgänge zu vermeiden.
 
-Eine weitere Möglichkeit zum Optimieren von Modulladevorgängen ist das Kombinieren von App-Modulen. Eine einzelne große Assembly wird in der Regel schneller geladen als zwei kleinere Assemblys. Dies ist allerdings nicht immer möglich. Außerdem sollten Sie Module nur dann kombinieren, wenn dieser Schritt keine großen Nachteile für die Entwicklerproduktivität oder die Wiederverwendbarkeit des Codes bedeutet. Welche Module beim Start geladen werden, können Sie mit Tools wie [PerfView](http://go.microsoft.com/fwlink/p/?linkid=251609) oder mit der [Windows-Leistungsanalyse](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/ff191077.aspx) ermitteln.
+Eine weitere Möglichkeit zum Optimieren von Modulladevorgängen ist das Kombinieren von App-Modulen. Eine einzelne große Assembly wird in der Regel schneller geladen als zwei kleinere Assemblys. Dies ist allerdings nicht immer möglich. Außerdem sollten Sie Module nur dann kombinieren, wenn dieser Schritt keine großen Nachteile für die Entwicklerproduktivität oder die Wiederverwendbarkeit des Codes bedeutet. Welche Module beim Start geladen werden, können Sie mit Tools wie [PerfView](http://go.microsoft.com/fwlink/p/?linkid=251609) oder mit der [Windows-Leistungsanalyse](https://msdn.microsoft.com/library/windows/apps/xaml/ff191077.aspx) ermitteln.
 
 ### Verwenden intelligenter Webanforderungen
 
@@ -342,13 +343,13 @@ Sie können die Ladezeit der App erheblich verbessern, wenn Sie ihren Inhalt (wi
 
 Die Leistung, die für „Frame“ beachtet werden sollte, dreht sich vor allem um das Journaling und Zwischenspeichern von Seiten.
 
-**Framejournaling**: Wenn Sie mit Frame.Navigate() zu einer Seite navigieren, wird der Frame.BackStack-Sammlung für die aktuelle Seite ein PageStackEntry-Element hinzugefügt. PageStackEntry ist relativ klein, aber es gibt keinen integrierten Grenzwert für die Größe der BackStack-Sammlung. Für Benutzer ist es potenziell möglich, eine Navigation in einer Schleife durchzuführen und diese Sammlung unendlich groß werden zu lassen.
+**Framejournaling**. Wenn Sie mit Frame.Navigate() zu einer Seite navigieren, wird der Frame.BackStack-Sammlung für die aktuelle Seite ein PageStackEntry-Element hinzugefügt. PageStackEntry ist relativ klein, aber es gibt keinen integrierten Grenzwert für die Größe der BackStack-Sammlung. Für Benutzer ist es potenziell möglich, eine Navigation in einer Schleife durchzuführen und diese Sammlung unendlich groß werden zu lassen.
 
 Das PageStackEntry-Element enthält auch den Parameter, der an die Frame.Navigate()-Methode übergeben wurde. Es wird empfohlen, dass dieser Parameter einen primitiven, serialisierbaren Typ aufweist (z. B. „int“ oder „string“), damit die Frame.GetNavigationState()-Methode funktioniert. Mit diesem Parameter kann aber auch auf ein Objekt verwiesen werden, das mit einem erheblich umfangreicheren Arbeitssatz oder weiteren Ressourcen verbunden ist, sodass auch der Aufwand für jeden Eintrag im BackStack-Element deutlich ansteigt. Beispielsweise können Sie ein StorageFile-Element als Parameter verwenden, und dies bedeutet, dass das BackStack-Element eine unendliche Anzahl von Dateien geöffnet lässt.
 
 Daher ist es ratsam, die Navigationsparameter klein zu halten und die Größe des BackStack-Elements zu beschränken. Das BackStack-Element ist ein standardmäßiger Vektor (IList in C#, Platform::Vector in C++/CX) und kann daher gekürzt werden, indem einfach Einträge entfernt werden.
 
-**Zwischenspeichern von Seiten**: Wenn Sie mit der Frame.Navigate-Methode auf eine Seite navigieren, wird standardmäßig eine neue Instanz der Seite instanziiert. Wenn Sie mit Frame.GoBack dann wieder zurück auf die vorherige Seite navigieren, wird analog dazu eine neue Instanz der vorherigen Seite zugeordnet.
+**Zwischenspeichern von Seiten**. Wenn Sie mit der Frame.Navigate-Methode auf eine Seite navigieren, wird standardmäßig eine neue Instanz der Seite instanziiert. Wenn Sie mit Frame.GoBack dann wieder zurück auf die vorherige Seite navigieren, wird analog dazu eine neue Instanz der vorherigen Seite zugeordnet.
 
 „Frame“ verfügt aber über die Möglichkeit einer optionalen Zwischenspeicherung von Seiten, mit der diese Instanziierungen vermieden werden können. Verwenden Sie die Page.NavigationCacheMode-Eigenschaft, um eine Seite in den Cache einzufügen. Wenn Sie diesen Modus auf „Required“ festlegen, wird das Zwischenspeichern der Seite erzwungen. Bei der Einstellung „Enabled“ ist die Zwischenspeicherung zulässig. Standardmäßig beträgt die Cachegröße zehn Seiten, aber dies kann mit der Frame.CacheSize-Eigenschaft überschrieben werden. Alle Seiten mit der Einstellung „Required“ werden zwischengespeichert, und wenn weniger Seiten als mit „CacheSize Required“ festgelegt vorhanden sind, können auch Seiten mit der Einstellung „Enabled“ zwischengespeichert werden.
 
@@ -358,6 +359,6 @@ Aus diesem Grund ist es zu empfehlen, das Zwischenspeichern von Seiten so einzus
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

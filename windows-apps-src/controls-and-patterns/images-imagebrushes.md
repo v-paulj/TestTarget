@@ -1,13 +1,14 @@
 ---
-description: Erfahren Sie, wie Sie Bilder in Ihre App integrieren. Dazu gehört auch die Verwendung der APIs der beiden XAML-Hauptklassen: Image und ImageBrush.
+author: Jwmsft
+Description: Erfahren Sie, wie Sie Bilder in Ihre App integrieren. Dazu gehört auch die Verwendung der APIs der beiden XAML-Hauptklassen, Image und ImageBrush.
 title: Bilder und Bildpinsel
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
-label: Bilder und Bildpinsel
+label: Images and image brushes
 template: detail.hbs
 ---
 # Bilder und Bildpinsel
 
-Sie können zum Anzeigen von Bildern entweder das **Image**-Objekt oder das **ImageBrush**-Objekt verwenden. Ein Image-Objekt rendert ein Bild, und ein ImageBrush-Objekt zeichnet ein anderes Objekt mit einem Bild. 
+Sie können zum Anzeigen von Bildern das **Image**-Objekt oder das **ImageBrush**-Objekt verwenden. Ein Image-Objekt rendert ein Bild, und ein ImageBrush-Objekt zeichnet ein anderes Objekt mit einem Bild. 
 
 <span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
 
@@ -63,10 +64,10 @@ Hier ist die Ellipse, die von „ImageBrush“ gezeichnet wurde.
 
 Wenn Sie den [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx)-Wert oder [**Height**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx)-Wert eines **Image**-Objekts nicht festlegen, wird es mit den von **Source** angegebenen Abmessungen des Bilds angezeigt. Durch das Festlegen von **Width** und **Height** wird ein rechteckiger Bereich erstellt, in dem das Bild angezeigt wird. Sie können festlegen, wie das Bild den Bereich auffüllt, indem Sie die [**Stretch**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.stretch.aspx)-Eigenschaft verwenden. Die Stretch-Eigenschaft akzeptiert die folgenden Werte, die durch die [**Stretch**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx)-Enumeration definiert werden:
 
--   **None**: Das Bild wird nicht bis zum Ausfüllen des Ausgabebereichs gestreckt. Beachten Sie bei dieser Stretch-Einstellung Folgendes: Wenn das Quellbild größer als der enthaltende Bereich ist, wird das Bild abgeschnitten. Dies sollte hier normalerweise jedoch vermieden werden, da nicht gesteuert werden kann, welcher Ausschnitt angezeigt wird, wie dies bei einer absichtlichen [**Clip**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.clip.aspx)-Anwendung der Fall ist.
--   **Uniform**: Die Bildgröße wird so angepasst, dass das Bild in die Abmessungen der Ausgabe passt. Das Seitenverhältnis des Inhalts bleibt jedoch erhalten. Dies ist der Standardwert.
--   **UniformToFill**: Das Bild wird so skaliert, dass es den Ausgabebereich vollständig ausfüllt, das ursprüngliche Seitenverhältnis jedoch beibehalten wird.
--   **Fill**: Die Bildgröße wird so angepasst, dass das Bild in die Abmessungen der Ausgabe passt. Da Höhe und Breite des Inhalts unabhängig voneinander dimensioniert werden, wird das ursprüngliche Seitenverhältnis möglicherweise nicht beibehalten. Mit anderen Worten, das Bild wird eventuell verzerrt, um den Ausgabebereich vollständig auszufüllen
+-   **None**: Das Bild wird nicht gestreckt, um den Ausgabebereich auszufüllen. Beachten Sie bei dieser Stretch-Einstellung Folgendes: Wenn das Quellbild größer als der enthaltende Bereich ist, wird das Bild abgeschnitten. Dies sollte hier normalerweise jedoch vermieden werden, da nicht gesteuert werden kann, welcher Ausschnitt angezeigt wird, wie dies bei einer absichtlichen [**Clip**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.clip.aspx)-Anwendung der Fall ist.
+-   **Uniform**: Die Bildgröße wird angepasst, sodass das Bild in die Abmessungen der Ausgabe passt. Das Seitenverhältnis des Inhalts bleibt jedoch erhalten. Dies ist der Standardwert.
+-   **UniformToFill**: Das Bild wird skaliert, sodass es den Ausgabebereich vollständig ausfüllt, das ursprüngliche Seitenverhältnis jedoch beibehalten wird.
+-   **Fill**: Die Bildgröße wird angepasst, sodass das Bild in die Abmessungen der Ausgabe passt. Da Höhe und Breite des Inhalts unabhängig voneinander dimensioniert werden, wird das ursprüngliche Seitenverhältnis möglicherweise nicht beibehalten. Mit anderen Worten, das Bild wird eventuell verzerrt, um den Ausgabebereich vollständig auszufüllen
 
 ![Ein Beispiel für Streckeinstellungen](images/Image_Stretch.jpg)
 
@@ -123,7 +124,7 @@ Weitere Informationen zu App-Ressourcen und zum Packen von Bildquellen in einer 
 
 ### RenderTargetBitmap
 
-Die [**RenderTargetBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.rendertargetbitmap.aspx)-Klasse kann die XAML-Benutzeroberflächenstruktur aus einer ausgeführten App erfassen und dann eine Bitmapbildquelle darstellen. Nach der Erfassung kann diese Bildquelle auf andere Teile der App angewendet, vom Benutzer als Ressourcen- oder App-Daten gespeichert oder für andere Szenarien verwendet werden. Ein besonders hilfreiches Szenario ist die Erstellung eines Laufzeitminiaturbilds einer XAML-Seite für ein Navigationsschema. Dies kann beispielsweise die Bereitstellung eines Bildlinks über ein [**Hub**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.hub.aspx)-Steuerelement sein. **RenderTargetBitmap** verfügt über einige Einschränkungen hinsichtlich des Inhalts, der in dem erfassten Bild angezeigt wird. Weitere Informationen finden Sie im API-Referenzthema für [**RenderTargetBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.rendertargetbitmap.aspx).
+Die [**RenderTargetBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.rendertargetbitmap.aspx)-Klasse kann die XAML-Benutzeroberflächenstruktur aus einer ausgeführten App erfassen und dann eine Bitmapbildquelle darstellen. Nach der Erfassung kann diese Bildquelle auf andere Teile der App angewendet, vom Benutzer als Ressourcen- oder App-Daten gespeichert oder für andere Szenarien verwendet werden. Ein besonders hilfreiches Szenario ist die Erstellung eines Laufzeitminiaturbilds einer XAML-Seite für ein Navigationsschema. Dies kann beispielsweise die Bereitstellung eines Bildlinks über ein [**Hub**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.hub.aspx)-Steuerelement sein. **RenderTargetBitmap** besitzt einige Einschränkungen hinsichtlich des Inhalts, der im erfassten Bild angezeigt wird. Weitere Informationen finden Sie im API-Referenzthema für [**RenderTargetBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.rendertargetbitmap.aspx).
 
 ### Bildquellen und Skalierung
 
@@ -135,22 +136,13 @@ Weitere Informationen zur Berücksichtigung der Skalierung in Ihrem App-Design f
 
 In der Regel werden das Image- und das ImageBrush-Element mit XAML und nicht mit Code angegeben. Das liegt daran, dass diese Elemente häufig von Entwicklungstools als Teil einer XAML-UI-Definition ausgegeben werden.
 
-Wenn Sie „Image“ oder „ImageBrush“ mit Code definieren, verwenden Sie die Standardkonstruktoren, und legen Sie dann die relevanten Eigenschaften ([**Image.Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) oder [**ImageBrush.ImageSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)) fest. Die Quelleigenschaften erfordern ein [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx)-Objekt (keinen URI), wenn Sie sie mithilfe von Code festlegen. Falls es sich bei Ihrer Quelle um einen Datenstrom handelt, initialisieren Sie den Wert mit der [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx)-Methode. Ist Ihre Quelle ein (URI), der Ihrer App Inhalt mit dem **ms-appx**- oder dem **ms-resource**-Schema hinzufügt, verwenden Sie den [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx)-Konstruktor, für den ein URI angegeben wird. Falls beim Abrufen oder Decodieren der Bildquelle Probleme mit der Zeitsteuerung auftreten und Sie alternativen Inhalt anzeigen müssen, bis die Bildquelle verfügbar ist, können Sie auch das [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx)-Ereignis behandeln. Beispielcode finden Sie unter [Beispiel für XAML-Bilder](http://go.microsoft.com/fwlink/p/?linkid=238575).
+Wenn Sie „Image“ oder „ImageBrush“ mit Code definieren, verwenden Sie die Standardkonstruktoren, und legen Sie dann die relevanten Eigenschaften ([**Image.Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) oder [**ImageBrush.ImageSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)) fest. Die Quelleigenschaften erfordern ein [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx)-Objekt (keinen URI), wenn Sie sie mithilfe von Code festlegen. Falls es sich bei Ihrer Quelle um einen Datenstrom handelt, initialisieren Sie den Wert mit der [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx)-Methode. Ist Ihre Quelle ein (URI), der Ihrer App Inhalt mit dem **ms-appx**- oder dem **ms-resource**-Schema hinzufügt, verwenden Sie den [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx)-Konstruktor, für den ein URI angegeben wird. Wenn beim Abrufen oder Decodieren der Bildquelle Probleme mit der Zeitsteuerung auftreten und Sie alternativen Inhalt anzeigen müssen, bis die Bildquelle verfügbar ist, können Sie auch das [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx)-Ereignis behandeln. Beispielcode finden Sie unter [Beispiel für XAML-Bilder](http://go.microsoft.com/fwlink/p/?linkid=238575).
 
-> **Hinweis**&nbsp;Wenn Sie Bilder mithilfe von Code festlegen, können Sie die automatische Behandlung für den Zugriff auf nicht qualifizierte Ressourcen mit den aktuellen Skalierungs- und Kulturqualifizierern verwenden. Alternativ können Sie auch [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) und [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) mit Qualifizierern für Kultur und Skalierung verwenden, um die Ressourcen direkt abzurufen. Weitere Informationen finden Sie unter [Ressourcenverwaltungssystem](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
-
-## Empfehlungen
-
-
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
-
-## Verwandte Artikel
-
-**Für Designer**
-
-**Für Entwickler (XAML)**
+> **Hinweis**
+            &nbsp;&nbsp;Wenn Sie Bilder mithilfe von Code festlegen, können Sie die automatische Behandlung für den Zugriff auf nicht qualifizierte Ressourcen mit den aktuellen Skalierungs- und Kulturqualifizierern verwenden. Alternativ können Sie auch [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) und [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) mit Qualifizierern für Kultur und Skalierung verwenden, um die Ressourcen direkt abzurufen. Weitere Informationen finden Sie unter [Ressourcenverwaltungssystem](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
 
 
-<!--HONumber=Mar16_HO1-->
+
+<!--HONumber=May16_HO2-->
 
 

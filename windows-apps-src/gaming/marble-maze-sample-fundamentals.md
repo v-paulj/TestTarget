@@ -1,7 +1,8 @@
 ---
+author: mtoepke
 title: Grundlagen am Beispiel von Marble Maze
-description: fundamentale Eigenschaften Marble Maze-Projekts wie Visual C++ in der Windows Runtime-Umgebung verwenden erstellen strukturieren wie es aufgebaut ist.
-MS.AssetId: 73329b29-62e3-1b36-01db-b7744ee5b4c3
+description: In diesem Dokument werden die fundamentalen Eigenschaften des Marble Maze-Projekts beschrieben, beispielsweise wie Visual C++ in der Windows Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist.
+ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
 ---
 
 # Grundlagen am Beispiel von Marble Maze
@@ -33,7 +34,7 @@ Beim Erstellen des Visual Studio-Projekts für Marble Maze haben wir mit einem b
 
 Eine wichtige Projekteinstellung in der Voralge **DirectX 11-App (Universelle Windows-App)** ist die Option **/ZW**. Diese Option ermöglicht dem Programm die Verwendung der Windows-Runtime-Spracherweiterungen. Sie ist standardmäßig aktiviert, wenn Sie die Visual Studio-Vorlage verwenden.
 
-> **Achtung** Die Option **/ZW** ist nicht kompatibel mit Optionen wie **/clr**. Im Fall von **/clr** bedeutet dies, dass Sie ein Visual C++-Projekt nicht gleichzeitig auf das .NET Framework und die Windows-Runtime ausrichten können.
+> **Achtung**   Die Option **/ZW** ist nicht kompatibel mit Optionen wie **/clr**. Im Fall von **/clr** bedeutet dies, dass Sie ein Visual C++-Projekt nicht gleichzeitig auf das .NET Framework und die Windows-Runtime ausrichten können.
 
  
 
@@ -68,7 +69,7 @@ Die Windows-Runtime ist eine Programmierschnittstelle, die Sie zum Erstellen von
 Diese Sprachen erfordern für den Aufruf von Windows-Runtime-APIs aus JavaScript und .NET Projektionen, die für die jeweilige Sprachumgebung spezifisch sind. Wenn Sie eine Windows-Runtime-API aus JavaScript oder .NET aufrufen, rufen Sie die Projektion auf, die wiederum die zugrunde liegende ABI-Funktion aufruft. Sie können zwar die ABI-Funktionen direkt aus Standard-C++ aufrufen, jedoch stellt Microsoft auch Projektionen für C++ bereit, da diese die Verwendung der Windows-Runtime-APIs stark vereinfachen und dennoch eine hohe Leistung aufrecht erhalten. Microsoft stellt außerdem Spracherweiterungen für Visual C++ bereit, die spezielle Unterstützung für die Windows-Runtime-Projektionen bieten. Viele dieser Spracherweiterungen ähneln der Syntax für die Sprache C++/CLI. Anstelle einer Zielgruppenadressierung für die Common Language Runtime (CLR) durchzuführen, verwenden systemeigene Apps diese Syntax zum Erreichen der Windows-Runtime. Der Modifizierer in Form einer Objektreferenz, bzw. des Hütchensymbols (^), ist ein wichtiger Teil dieser neuen Syntax, da er die automatische Löschung von Runtime-Objekten anhand einer Referenzzählung ermöglicht. Anstatt Methoden wie **AddRef** und **Release** zum Verwalten der Lebensdauer eines Windows-Runtime-Objekts aufzurufen, löscht die Runtime das Objekt, wenn keine andere Komponente darauf verweist. Dies ist beispielsweise der Fall, wenn es den Bereich verlässt oder wenn Sie alle Verweise auf **nullptr** festlegen. Ein weiterer wichtiger Aspekt beim Erstellen von UWP-Apps ist das **ref new**-Schlüsselwort. Verwenden Sie **ref new** anstelle von **new**, um Windows-Runtime-Objekte mit Verweiszählung zu erstellen. Weitere Informationen finden Sie unter [Typsystem (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755822).
 
 > **Wichtig**  
-Wenn Sie Windows-Runtime-Objekte oder Windows-Runtime-Komponenten erstellen, müssen Sie nur **^** und **ref new** verwenden. Sie können die C++-Standardsyntax verwenden, wenn Sie Kernanwendungscode schreiben, in dem die Windows-Runtime nicht genutzt wird.
+Wenn Sie Windows-Runtime-Objekte oder Komponenten für die Windows-Runtime erstellen, müssen Sie nur **^** und **ref new** verwenden. Sie können die C++-Standardsyntax verwenden, wenn Sie Kernanwendungscode schreiben, in dem die Windows-Runtime nicht genutzt wird.
 
 In Marble Maze werden mit **^** und [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) vom Heap zugewiesene Objekte verwaltet und Arbeitsspeicherverluste minimiert. Es wird empfohlen, mit ^ die Lebensdauer von Windows-Runtime-Variablen zu verwalten, mit **ComPtr** die Lebensdauer von COM-Variables zu verwalten (z. B. bei Verwendung von DirectX) und mit std::[**std::shared\_ptr**](https://msdn.microsoft.com/library/windows/apps/bb982026) oder [**std::unique\_ptr**](https://msdn.microsoft.com/library/windows/apps/ee410601) die Lebensdauer sämtlicher vom Heap zugewiesenen C++-Objekte zu verwalten.
 
@@ -141,6 +142,6 @@ Lesen Sie die Informationen unter [Marble Maze-Anwendungsstruktur](marble-maze-a
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

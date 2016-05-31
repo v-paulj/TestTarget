@@ -1,18 +1,19 @@
 ---
-Description: In diesem Artikel werden die vier Benachrichtigungsoptionen – lokal, geplant, periodisch und Push – behandelt, die Kachel- und Signalaktualisierungen sowie Popupbenachrichtigungsinhalte bereitstellen.
+author: mijacobs
+Description: In diesem Artikel werden die vier Benachrichtigungsoptionen&\#8212;lokal, geplant, periodisch und Push&\#8212;behandelt, die Kachel- und Signalaktualisierungen sowie Popupbenachrichtigungsinhalte bereitstellen.
 title: Auswählen einer Methode für die Übermittlung von Benachrichtigungen
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
-label: Auswählen einer Methode für die Übermittlung von Benachrichtigungen
+label: Choose a notification delivery method
 template: detail.hbs
 ---
 
 # Auswählen einer Methode für die Übermittlung von Benachrichtigungen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-In diesem Artikel werden die vier Benachrichtigungsoptionen – lokal, geplant, periodisch und Push – behandelt, die Kachel- und Signalaktualisierungen sowie Popupbenachrichtigungsinhalte bereitstellen. Eine Kachel oder eine Popupbenachrichtigung kann dem Benutzer Informationen anzeigen, auch wenn der Benutzer nicht direkt mit Ihrer App beschäftigt ist. Basierend auf der Art und dem Inhalt Ihrer App sowie den Informationen, die Sie bereitstellen möchten, können Sie die am besten geeignete Benachrichtigungsmethode bzw. -methoden für Ihr Szenario bestimmen.
+
+In diesem Artikel werden die vier Benachrichtigungsoptionen – lokal, geplant, periodisch und Push – behandelt, die Kachel- und Signalaktualisierungen sowie Popupbenachrichtigungsinhalte bereitstellen. Eine Kachel oder eine Popupbenachrichtigung kann dem Benutzer Informationen anzeigen, auch wenn der Benutzer nicht direkt mit Ihrer App beschäftigt ist. Basierend auf der Art und dem Inhalt Ihrer App sowie den Informationen, die Sie bereitstellen möchten, können Sie die am besten geeignete Benachrichtigungsmethode bzw. -methoden für Ihr Szenario bestimmen.
 
 ## <span id="Notification_delivery_methods__overview"></span><span id="notification_delivery_methods__overview"></span><span id="NOTIFICATION_DELIVERY_METHODS__OVERVIEW"></span>Übersicht über Methoden für die Benachrichtigungsübermittlung
 
@@ -47,7 +48,7 @@ In dieser Tabelle sind die Benachrichtigungsübermittlungstypen zusammengefasst.
 <td align="left">Kachel, Signal, Popup</td>
 <td align="left">Eine Reihe von API-Aufrufen, die Benachrichtigungen senden, während Ihre App ausgeführt wird, und die Kachel oder das Signal direkt aktualisieren oder eine Popupbenachrichtigung senden.</td>
 <td align="left"><ul>
-<li>Eine Musik-App aktualisiert ihre Kachel so, dass „Aktuelle Wiedergabe“ angezeigt wird.</li>
+<li>Eine Musik-App aktualisiert ihre Kachel so, dass &quot;Aktuelle Wiedergabe&quot; angezeigt wird.</li>
 <li>Eine Spiele-App aktualisiert ihre Kachel mit der Bestwertung des Benutzers, wenn dieser das Spiel verlässt.</li>
 <li>Ein Signal, dessen Symbol anzeigt, dass neue Informationen in der App gelöscht werden, wenn die App aktiviert wird.</li>
 </ul></td>
@@ -65,9 +66,9 @@ In dieser Tabelle sind die Benachrichtigungsübermittlungstypen zusammengefasst.
 <td align="left">Kachel, Signal</td>
 <td align="left">Benachrichtigungen, mit denen Kacheln und Signale regelmäßig in einem festen Zeitintervall durch Abrufen von neuem Inhalt aus einem Clouddienst aktualisiert werden.</td>
 <td align="left"><ul>
-<li>Eine Wetter-App aktualisiert ihre Kachel, in der die Vorschau angezeigt wird, in Intervallen von 30 Minuten.</li>
-<li>Eine Website mit „täglichen Deals” aktualisiert ihren Deal des Tages jeden Morgen.</li>
-<li>Eine Kachel, die die Tage bis zu einem Ereignis anzeigt, aktualisiert den angezeigten Countdown jeden Tag um Mitternacht.</li>
+<li>Eine Wetter-App aktualisiert ihre Kachel, in der die Vorschau angezeigt wird, in Intervallen von 30 Minuten.</li>
+<li>Eine Website für &quot;Tägliche Deals&quot; aktualisiert ihren Deal des Tages jeden Morgen.</li>
+<li>Eine Kachel, welche die Anzahl der Tage bis zu einem Ereignis anzeigt, aktualisiert den angezeigten Countdown jeden Tag um Mitternacht.</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -144,12 +145,8 @@ Weitere Informationen finden Sie unter:
 
 -   [Übersicht über die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md)
 -   [Richtlinien für Pushbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/hh761462)
--   [Codebeispiele für UWP-Benachrichtigungen (universelle Windows-Plattform)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+-   [Codebeispiele für UWP (Universelle Windows-Plattform)-Benachrichtigungen](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-**Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
 
 ## <span id="related_topics"></span>Verwandte Themen
 
@@ -170,6 +167,6 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die unive
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

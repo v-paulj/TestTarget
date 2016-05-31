@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Starten und Reaktivieren von Apps (DirectX und C++)
 description: Hier erfahren Sie, wie Sie Ihre DirectX-App für die universelle Windows-Plattform (UWP) starten, anhalten und reaktivieren.
 ms.assetid: c35025f8-0450-2f61-fe84-070fd7379622
@@ -27,6 +28,6 @@ Hier erfahren Sie, wie Sie Ihre DirectX-App für die universelle Windows-Plattfo
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,5 +1,6 @@
 ---
-description: Sie erfahren, wie Kontakte und Kalenderinformationen in Ihrer UWP-App verwendet werden.
+author: Xansky
+description: Erfahren Sie, wie Kontakte und Kalenderinformationen in Ihrer UWP-App verwendet werden.
 title: Kontakte und Kalender
 ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
 ---
@@ -32,6 +33,6 @@ Die folgenden Themen enthalten Informationen zu verschiedenen Verfahren, wie Ihr
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

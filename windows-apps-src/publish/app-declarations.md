@@ -1,5 +1,6 @@
 ---
-Description: Im Abschnitt App-Deklarationen der Seite App-Eigenschaften können Sie während des Übermittlungsprozesses zusätzliche Informationen zu Ihrer App bereitstellen.
+author: jnHs
+Description: Im Abschnitt „App-Deklarationen“ der Seite „App-Eigenschaften“ können Sie während des Übermittlungsprozesses zusätzliche Informationen zu Ihrer App bereitstellen.
 title: App-Deklarationen
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ---
@@ -61,6 +62,6 @@ Wenn Sie verhindern möchten, dass die App-Daten in automatische Sicherungen ein
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

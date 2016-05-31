@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: Scannen aus Ihrer App
 description: Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können.
@@ -54,9 +55,9 @@ Windows erkennt Scanner nicht automatisch. Sie müssen diesen Schritt ausführen
        await
        MainPage.Current.Dispatcher.RunAsync(
              Windows.UI.Core.CoreDispatcherPriority.Normal,
-             () =&gt;
+             () =>
              {
-                MainPage.Current.NotifyUser(String.Format(&quot;Scanner with device id {0} has been added&quot;, deviceInfo.Id), NotifyType.StatusMessage);
+                MainPage.Current.NotifyUser(String.Format("Scanner with device id {0} has been added", deviceInfo.Id), NotifyType.StatusMessage);
 
                 // search the device list for a device with a matching device id
                 ScannerDataItem match = FindInList(deviceInfo.Id);
@@ -100,7 +101,7 @@ Zum Scan mit den Standardeinstellungen ist Ihre App bei der Auswahl eines Scanne
 
 Ihre App kann den [automatisch konfigurierten Scan](https://msdn.microsoft.com/library/windows/hardware/Ff539393) des Geräts mit den optimalen Scaneinstellungen verwenden. Bei dieser Option kann das Gerät selbst die besten Scaneinstellungen, wie Farbmodus und Scanauflösung, basierend auf dem zu scannenden Inhalt bestimmen. Das Gerät wählt die Scaneinstellungen zur Laufzeit für jeden neuen Scanauftrag.
 
-**Hinweis**  Da dieses Feature nicht von allen Scannern unterstützt wird, muss die App prüfen, ob der Scanner das Feature unterstützt, bevor sie diese Einstellung verwendet.
+**Hinweis**  Da diese Funktion nicht von allen Scannern unterstützt wird, muss die App prüfen, ob der Scanner die Funktion unterstützt, bevor sie diese Einstellung verwendet.
 
 In diesem Beispiel prüft die App zunächst, ob der Scanner die automatische Konfiguration unterstützt, und startet dann den Scanvorgang. Um einen Flachbett- oder Einzugsscanner anzugeben, ersetzen Sie einfach **AutoConfigured** durch **Flatbed** oder **Feeder**.
 
@@ -122,7 +123,7 @@ Sie können Code hinzufügen, um eine Scanvorschau vor dem Scan in einen Ordner 
 ```csharp
 if (myScanner.IsPreviewSupported(ImageScannerScanSource.Flatbed))
 {
-    rootPage.NotifyUser(&quot;Scanning&quot;, NotifyType.StatusMessage);
+    rootPage.NotifyUser("Scanning", NotifyType.StatusMessage);
                 // Scan API call to get preview from the flatbed.
                 var result = await myScanner.ScanPreviewToStreamAsync(
                     ImageScannerScanSource.Flatbed, stream);
@@ -159,8 +160,8 @@ cancellationToken = new CancellationTokenSource();
 2.  Richten Sie den Fortschritts-Ereignishandler ein, und rufen Sie den Scanfortschritt ab.
 
 ```csharp
-    rootPage.NotifyUser(&quot;Scanning&quot;, NotifyType.StatusMessage);
-    var progress = new Progress&lt;UInt32&gt;(ScanProgress);
+    rootPage.NotifyUser("Scanning", NotifyType.StatusMessage);
+    var progress = new Progress<UInt32>(ScanProgress);
 ```
 
 ## Scannen in die Bildbibliothek
@@ -169,6 +170,6 @@ Benutzer können dynamisch mit der [**FolderPicker**](https://msdn.microsoft.com
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: awkoren
 Description: 'Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten EDP-Szenarien mit Datenübertragung durchgeführt werden müssen.'
 MS-HAID: 'dev\_app\_to\_app.use\_edp\_to\_protect\_enterprise\_data\_transferred\_between\_apps'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -8,11 +9,11 @@ title: Schützen von zwischen Apps übertragenen Unternehmensdaten mithilfe von 
 
 # Schützen von zwischen Apps übertragenen Unternehmensdaten mithilfe von EDP
 
-__Hinweis:__ EDP-Richtlinien (Enterprise Data Protection, Unternehmensdatenschutz) können nicht unter Windows 10 (Version 1511, Build 10586 oder älter) verwendet werden.
+__Hinweis__ EDP-Richtlinien (Enterprise Data Protection, Unternehmensdatenschutz) können nicht unter Windows 10 (Version 1511, Build 10586 oder älter) verwendet werden.
 
 Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten EDP-Szenarien mit Datenübertragung durchgeführt werden müssen. Umfassende Informationen zu den Zusammenhängen zwischen EDP und Dateien, Datenströmen, Zwischenablage, Netzwerk, Hintergrundaufgaben und dem Schutz von Daten im Sperrzustand finden Sie unter [Unternehmensdatenschutz (EDP)](../enterprise/edp-hub.md).
 
-**Hinweis:** Das [Unternehmensdatenschutz-Beispiel (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) veranschaulicht viele der in diesem Thema beschriebenen Dateiszenarien.
+**Hinweis**  Das [Unternehmensdatenschutz-Beispiel (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) veranschaulicht viele der in diesem Thema beschriebenen Dateiszenarien.
 
 ## Voraussetzungen
 
@@ -51,7 +52,7 @@ private void OnFileLoaded(FileProtectionInfo fileProtectionInfo, string contents
         }
         else
         {
-            // Enterprise policy is not in effect, because the file&#39;s identity
+            // Enterprise policy is not in effect, because the file's identity
             // is not managed. In this case, we have a file protected to an
             // unmanaged identity, which is not a valid situation.
             // We still have to call ClearProcessUIPolicy if we want to clear the policy.
@@ -123,7 +124,7 @@ private async void OnPasteWithApplyPolicy()
         {
             ProtectionPolicyEvaluationResult policyResult =
                 await dataPackageView.RequestAccessAsync(dataPackageView.Properties.EnterpriseId);
-            if (this.isNewEmptyDocument &amp;&amp;
+            if (this.isNewEmptyDocument &&
                 policyResult == ProtectionPolicyEvaluationResult.Allowed)
             {
                 // If this is a new and empty document, and we're allowed to access
@@ -207,7 +208,7 @@ In Ihrer App ist ein neues, leeres Dokument geöffnet, das im leeren Zustand als
 
 Wenn Sie in Ihrer App den Freigabe-Vertrag unterstützen, müssen Sie zum Einrichten einer Freigabequelle den Unternehmensidentitätskontext im [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/br205873)-Element festlegen, wie in diesem Codebeispiel zu sehen.
 
-**Hinweis:** Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
+**Hinweis**  Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
 
 
 
@@ -264,7 +265,7 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
             if (this.isNewEmptyDocument && protectionPolicyEvaluationResult ==
                 ProtectionPolicyEvaluationResult.Allowed)
             {
-                // If this is a new and empty document, and we&#39;re allowed to access
+                // If this is a new and empty document, and we're allowed to access
                 // the data, then we can avoid popping the consent dialog.
                 bool isIdentityManaged = ProtectionPolicyManager.TryApplyProcessUIPolicy
                     (shareOperation.Data.Properties.EnterpriseId);
@@ -300,7 +301,7 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 
 In diesem Szenario wird die UI für Einfügevorgänge nur aktiviert, wenn sich Daten in der Zwischenablage befinden. Für dieses Feature können Sie die [**ProtectionPolicyManager.CheckAccess**](https://msdn.microsoft.com/library/windows/apps/dn705783)-Methode verwenden, die eine passive Überprüfung der Richtlinie ermöglicht.
 
-**Hinweis:** Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
+**Hinweis**  Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
 
 
 
@@ -333,7 +334,7 @@ private bool IsClipboardPeekAllowedAsync()
 
 Das Szenario veranschaulicht die Überprüfung des Zugriffs für einen Einfügevorgang.
 
-**Hinweis:** Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
+**Hinweis**  Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
 
 
 
@@ -377,7 +378,7 @@ private async void OnPasteWithRequestAccess()
 }
 ```
 
-**Hinweis:** Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die UWP-Apps (Universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
 
@@ -394,6 +395,6 @@ private async void OnPasteWithRequestAccess()
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

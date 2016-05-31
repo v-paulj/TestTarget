@@ -1,4 +1,5 @@
 ---
+author: jnHs
 title: Bericht „Anzeigen für die App-Installation“
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
 description: 
@@ -8,8 +9,8 @@ description:
 
 Es gibt zwei Möglichkeiten, die Seite **Berichte „Anzeigen für die App-Installation“** im Dev Center aufzurufen:
 
--   Klicken Sie im linken Navigationsmenü der App-Seite auf **Analyse** &gt; **Anzeigen für die App-Installation**.
--   Klicken Sie im linken Navigationsmenü der App-Seite auf **Monetisierung** &gt; **Bewerben Ihrer App**, und klicken Sie dann auf den Link **Bericht** einer Kampagne.
+-   Klicken Sie im linken Navigationsmenü der App-Seite auf **Analyse**&gt;**Anzeigen für die App-Installation**.
+-   Klicken Sie im linken Navigationsmenü der App-Seite auf **Monetarisierung**&gt;**Bewerben Ihrer App**, und klicken Sie dann auf den Link **Bericht** einer Kampagne.
 
 Sie sehen die beiden folgenden Abschnitte: **Anzeigenleistung** und **Verlauf der Rechnungsstellung für das Konto**.
 
@@ -64,6 +65,6 @@ Hier können Sie alle Transaktionen in Zusammenhang mit Ihrem Konto einsehen. F�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

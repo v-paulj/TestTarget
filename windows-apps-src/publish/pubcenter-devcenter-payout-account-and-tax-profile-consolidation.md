@@ -1,17 +1,18 @@
 ---
+author: jnHs
 Description: Wenn Sie zuvor ein pubCenter-Auszahlungskonto für Ihre Microsoft Advertising-Einnahmen eingerichtet hatten, wird dieses Konto ab dem 1. April 2016 nicht mehr für Zahlungen verwendet. Sie erhalten Ihre Zahlungen jetzt auf Ihr Dev Center-Auszahlungskonto.
-title: pubCenter-/DevCenter-Auszahlungskonto- und -Steuerprofilkonsolidierung
+title: Konsolidierung des pubCenter- und DevCenter-Auszahlungskontos und -Steuerprofils
 ms.assetid: 1EC55E2F-2BC5-4982-A569-A59082A808EC
 ---
 
 # Konsolidierung des pubCenter- und DevCenter-Auszahlungskontos und -Steuerprofils
 
 
-Wenn Sie zuvor ein pubCenter-Auszahlungskonto für Ihre Microsoft Advertising-Einnahmen eingerichtet hatten, wird dieses Konto ab dem 1. April 2016 nicht mehr für Zahlungen verwendet. Sie erhalten Ihre Zahlungen jetzt auf Ihr Dev Center-Auszahlungskonto.
+Wenn Sie zuvor ein pubCenter-Auszahlungskonto für Ihre Microsoft Advertising-Einnahmen eingerichtet hatten, wird dieses Konto ab dem 1. April 2016 nicht mehr für Zahlungen verwendet. Sie erhalten Ihre Zahlungen jetzt auf Ihr Dev Center-Auszahlungskonto.
 
-Um sicherzustellen, dass fällige Zahlungen pünktlich übermittelt werden, melden Sie sich vor dem 31. März 2016 bei Ihrem Dev Center-Dashboard an, bestätigen Sie, dass Ihr [Auszahlungskonto und Steuerprofil](setting-up-your-payout-account-and-tax-forms.md) ordnungsgemäß eingerichtet und auf dem neuesten Stand sind.
+Um sicherzustellen, dass fällige Zahlungen pünktlich übermittelt werden, melden Sie sich bei Ihrem Dev Center-Dashboard an und bestätigen, dass Ihr [Auszahlungskonto und Steuerprofil](setting-up-your-payout-account-and-tax-forms.md) ordnungsgemäß eingerichtet und auf dem neuesten Stand sind.
 
-> **Wichtig:** Wenn Sie in Dev Center noch kein Auszahlungskonto oder Steuerprofil eingerichtet haben, müssen Sie dies vor dem 31. März 2016 durchführen. Weitere Informationen finden Sie unter [Einrichten von Auszahlungskonten und Steuerformularen](setting-up-your-payout-account-and-tax-forms.md).
+> **Wichtig**  Wenn Sie in Dev Center noch kein Auszahlungskonto oder Steuerprofil eingerichtet haben, müssen Sie dies jetzt durchführen. Weitere Informationen finden Sie unter [Einrichten von Auszahlungskonten und Steuerformularen](setting-up-your-payout-account-and-tax-forms.md).
 
 Weitere Informationen zu Zahlungen in Dev Center finden Sie unter [Auszahlungszusammenfassung](payout-summary.md). Informationen zu den in verschiedenen Ländern und Regionen für Auszahlungen verwendeten Währungen finden Sie unter [Märkte für das Entwicklerkonto und die App-Übermittlung](account-types-locations-and-fees.md#account_markets).
 
@@ -19,12 +20,7 @@ Es wird auch empfohlen, die folgenden häufig gestellten Fragen zu lesen, um wei
 
 ## Häufig gestellte Fragen
 
-
-### Welches Konto für meine Auszahlung im März 2016 verwendet?
-
-Im März 2016 verwenden wir noch das in pubCenter eingerichtete Auszahlungskonto und Steuerprofil. Dies ist die letzte Verwendung dieser Informationen. Ab dem 1. April 2016 werden Ihre Microsoft Advertising-Einnahmen auf das PayPal- oder Bankkonto gezahlt, das Sie in Dev Center einrichten.
-
-### Ich habe mein pubCenter- und Dev Center-Konto mit demselben Microsoft-Konto in derselben Region/im selben Land registriert. Wie erhalte ich mein Geld?
+### Ich habe mein pubCenter- und DevCenter-Konto mit demselben Microsoft-Konto in derselben Region/im selben Land registriert. Wie erhalte ich mein Geld?
 
 Ihre Microsoft Advertising-Einnahmen werden an das Auszahlungskonto (PayPal- oder Bankkonto) entrichtet, das Sie in Dev Center einrichten.
 
@@ -84,6 +80,6 @@ Eröffnen Sie für alle Fragen oder Anfragen ein [Supportticket](http://go.micro
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

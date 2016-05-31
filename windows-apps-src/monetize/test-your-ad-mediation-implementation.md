@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 54ECD653-7FC2-4A95-AC5A-972C4FB5A54B
 description: Vor dem Übermitteln Ihrer App empfehlen wir, die Implementierung der Anzeigenvermittlung zu testen.
 title: Testen der Implementierung der Anzeigenvermittlung
@@ -20,7 +21,7 @@ Die Anzeigennetzwerke werden der Reihe nach rotierend angezeigt, d. h. ein Netz
 
 Testanzeigen werden für Anzeigennetzwerke angezeigt, die diese unterstützen. Beachten Sie, dass die Testanzeigen manchmal wie Fehler aussehen. Überprüfen Sie unbedingt Ihre Ereignisse, um festzustellen, ob Fehler aufgetreten sind.
 
-**Hinweis**  Beim Testen einer Windows Phone-Silverlight-App gibt Google AdMob immer den Fehler **Ungültige Anforderung** zurück, da keine Testmetadaten verwendet werden. Zum Überprüfen Ihrer Google AdMob-Implementierung müssen Sie wie im nächsten Abschnitt beschrieben die erforderlichen Parameter eingeben.
+> **Hinweis**  Beim Testen einer Windows Phone-Silverlight-App gibt Google AdMob immer den Fehler **Ungültige Anforderung** zurück, da keine Testmetadaten verwendet werden. Zum Überprüfen Ihrer Google AdMob-Implementierung müssen Sie wie im nächsten Abschnitt beschrieben die erforderlichen Parameter eingeben.
 
  
 
@@ -48,9 +49,6 @@ Beim Übermitteln Ihres App-Pakets an das Windows Dev Center-Dashboard werden di
  
 
 
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

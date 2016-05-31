@@ -1,5 +1,6 @@
 ---
-description: Lese Liste, vermeiden dadurch Probleme, die Zertifizierung von Apps verhindern oder nach Veröffentlichung der App bei Stichprobenkontrolle auftreten können
+author: jnHs
+Description: Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zertifizierung von Apps verhindern oder nach der Veröffentlichung der App bei einer Stichprobenkontrolle auftreten können.
 title: Vermeiden allgemeiner Zertifizierungsfehler
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
 ---
@@ -15,7 +16,7 @@ Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zerti
 
 -   Reichen Sie die App erst ein, wenn sie fertig ist. Sie können die Beschreibung Ihrer App gern nutzen, um auf geplante Features hinzuweisen. Achten Sie jedoch darauf, dass Ihre App keine unvollständigen Abschnitte, Links zu unfertigen Webseiten oder andere Elemente enthält, die Kunden darauf schließen lassen, dass sich die App in einem unvollständigen Zustand befindet.
 
--   Testen Sie die App vor dem Einreichen mit dem [Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt186449).
+-   [Testen Sie die App vor dem Einreichen mit dem Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt186449).
 
 -   Testen Sie die App unter verschiedenen Konfigurationen, um größtmögliche Stabilität sicherzustellen.
 
@@ -39,6 +40,6 @@ Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zerti
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Ausführen einer Hintergrundaufgabe für einen Timer
 description: Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine regelmäßige Hintergrundaufgabe ausführen.
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
@@ -32,11 +33,11 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
 
     -   Wenn *FreshnessTime* auf 15 Minuten und *OneShot* auf „false“ festgelegt ist, wird die Aufgabe in den ersten 15 Minuten nach dem Registrierungszeitpunkt und dann regelmäßig alle 15 Minuten ausgeführt.
 
-    **Hinweis**  Wenn *FreshnessTime* auf weniger als 15 Minuten festgelegt ist, wird bei einem Registrierungsversuch der Hintergrundaufgabe eine Ausnahme ausgelöst.
+    **Hinweis**  Wenn *FreshnessTime* auf weniger als 15 Minuten festgelegt ist, wird bei dem Versuch, die Hintergrundaufgabe zu registrieren, eine Ausnahme ausgelöst.
 
      
 
-    For example, this trigger will cause a background task to run once an hour:
+    Dieser Auslöser veranlasst beispielsweise, dass eine Hintergrundaufgabe einmal pro Stunde ausgeführt wird:
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -49,7 +50,7 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
 ## (Optional) Hinzufügen einer Bedingung
 
 
--   Erstellen Sie bei Bedarf eine Hintergrundaufgabenbedingung, um zu steuern, wann die Aufgabe ausgeführt wird. Eine Bedingung sorgt dafür, dass die Hintergrundaufgabe erst ausgeführt wird, wenn die Bedingung erfüllt ist. Weitere Informationen finden Sie unter [Festlegen von Bedingungen für die Ausführung einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md).
+-   Erstellen Sie bei Bedarf eine Bedingung für die Hintergrundaufgabe, um zu steuern, wann die Aufgabe ausgeführt wird. Eine Bedingung sorgt dafür, dass die Hintergrundaufgabe erst ausgeführt wird, wenn die Bedingung erfüllt ist. Weitere Informationen finden Sie unter [Festlegen von Bedingungen für die Ausführung einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md).
 
     In diesem Beispiel ist die Bedingung auf **UserPresent** festgelegt, damit die ausgelöste Aufgabe nur ausgeführt wird, wenn der Benutzer aktiv ist. Eine Liste mit möglichen Bedingungen finden Sie in [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
 
@@ -83,14 +84,14 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
 
     > > [!div class="tabbedCodeSnippets"]
     > ```cs
-    > string entryPoint = “Tasks.ExampleBackgroundTaskClass”;
-    > string taskName   = “Example hourly background task”;
+    > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
+    > string taskName   = "Example hourly background task";
     > 
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
     > ```cpp
-    > String ^ entryPoint = “Tasks.ExampleBackgroundTaskClass”;
-    > String ^ taskName   = “Example hourly background task”;
+    > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
+    > String ^ taskName   = "Example hourly background task";
     > 
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
@@ -102,7 +103,7 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
 
 > **Hinweis**  Ab Windows 10 muss der Benutzer Ihre App nicht mehr zum Sperrbildschirm hinzufügen, um Hintergrundaufgaben zu nutzen. Die verschiedenen Arten von Auslösern für Hintergrundaufgaben werden unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md)erläutert.
 
-> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform(UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
 ## Verwandte Themen
@@ -130,6 +131,6 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

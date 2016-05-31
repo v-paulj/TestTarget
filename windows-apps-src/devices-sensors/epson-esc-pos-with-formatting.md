@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 70667353-152B-4B18-92C1-0178298052D4
 title: Epson ESC/POS mit Formatierung
-description: Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z. B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden.
+description: Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z. B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden.
 ---
 # Epson ESC/POS mit Formatierung
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
@@ -30,22 +31,22 @@ Im folgenden Beispiel wird die Verwendung von ESC/POS-Befehlen zum Drucken von f
 
 ```csharp
 // … prior plumbing code removed for brevity
-// this code assumed you’ve already created a receipt print job (printJob)
-// and also that you’ve already checked the PosPrinter Capabilities to 
+// this code assumed you've already created a receipt print job (printJob)
+// and also that you've already checked the PosPrinter Capabilities to 
 // verify that the printer supports Bold and DoubleHighDoubleWide print modes
 
-const string ESC = “\u001B”;
-const string GS = “\u001D”;
-const string InitializePrinter = ESC + “@”;
-const string BoldOn = ESC + “E” + “\u0001”;
-const string BoldOff = ESC + “E” + “\0”;
-const string DoubleOn = GS + “!” + “\u0011”;  // 2x sized text (double-high + double-wide)
-const string DoubleOff = GS + “!” + “\0”;
+const string ESC = "\u001B";
+const string GS = "\u001D";
+const string InitializePrinter = ESC + "@";
+const string BoldOn = ESC + "E" + "\u0001";
+const string BoldOff = ESC + "E" + "\0";
+const string DoubleOn = GS + "!" + "\u0011";  // 2x sized text (double-high + double-wide)
+const string DoubleOff = GS + "!" + "\0";
 
 printJob.Print(InitializePrinter);
-printJob.PrintLine(“Here is some normal text.”);
-printJob.PrintLine(BoldOn + “Here is some bold text.” + BoldOff);
-printJob.PrintLine(DoubleOn + “Here is some large text.” + DoubleOff);
+printJob.PrintLine("Here is some normal text.");
+printJob.PrintLine(BoldOn + "Here is some bold text." + BoldOff);
+printJob.PrintLine(DoubleOn + "Here is some large text." + DoubleOff);
 
 printJob.ExecuteAsync();
 ```
@@ -55,6 +56,6 @@ Weitere Informationen zu ESC/POS, darunter zu den verfügbaren Befehlen, finden 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

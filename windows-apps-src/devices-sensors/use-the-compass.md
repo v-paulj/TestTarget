@@ -1,16 +1,17 @@
 ---
+author: DBirtolo
 ms.assetid: 5B30E32F-27E0-4656-A834-391A559AC8BC
 title: Verwenden des Kompasses
 description: Hier erfahren Sie, wie Sie mithilfe des Kompasses die aktuelle Richtung ermitteln.
 ---
 # Verwenden des Kompasses
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Compass**](https://msdn.microsoft.com/library/windows/apps/BR225705)
+-   [**Kompass**](https://msdn.microsoft.com/library/windows/apps/BR225705)
 
 \[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
 
@@ -123,7 +124,7 @@ You'll need to rename the namespace in the previous snippet with the name you ga
 
 Ersetzen Sie im obigen Codeausschnitt den ersten Teil des Klassennamens durch den Namespace Ihrer App. Wenn Sie z. B. ein Projekt mit dem Namen **CompassCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="CompassCS.MainPage"`. Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:CompassCS"`.
 
--   Drücken Sie F5, oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
+-   Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
 
 Wenn die App ausgeführt wird, können Sie die Kompasswerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.
 
@@ -139,7 +140,7 @@ Die App stellt eine Verbindung mit dem Standardkompass in der **MainPage**-Metho
 _compass = Compass.GetDefault(); // Get the default compass object
 ```
 
-Die App legt das Berichtsintervall in der **MainPage**-Methode fest. Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60 Hz). Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest. Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.
+Die App legt das Berichtsintervall in der **MainPage**-Methode fest. Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60 Hz). Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest. Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.
 
 ```csharp
 uint minReportInterval = _compass.MinimumReportInterval;
@@ -175,6 +176,6 @@ Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieb
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

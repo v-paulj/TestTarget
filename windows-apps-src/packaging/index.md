@@ -1,7 +1,8 @@
 ---
+author: msatranjr
 ms.assetid: 1abcbb13-80f0-4bf1-a812-649ee8bd1915
 title: Verpacken von Apps
-description: Dieser Abschnitt enthält Artikel oder verlinkt zu Artikeln zum Verpacken von UWP (Universelle Windows-Plattform)-Apps.
+description: Dieser Abschnitt enthält Artikel oder Links zum Verpacken von UWP (Universelle Windows-Plattform)-Apps.
 ---
 # Verpacken von Apps
 
@@ -20,6 +21,6 @@ Dieser Abschnitt enthält Artikel oder Links zum Verpacken von UWP (Universelle 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

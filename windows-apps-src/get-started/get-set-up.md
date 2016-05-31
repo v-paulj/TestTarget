@@ -1,7 +1,8 @@
 ---
+author: martinekuan
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
-title: Vorbereitungen
-description: Die Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen.
+title: Vorbereiten
+description: Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen.
 ---
 # Vorbereitung
 
@@ -50,6 +51,6 @@ Die vollständige Liste der Tools und Downloads finden Sie unter [Downloads](htt
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

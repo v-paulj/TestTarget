@@ -1,14 +1,6 @@
 ---
-Description: Sie können In-App-Käufe von konsumierbaren Produkten – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um den Kunden beim Kauf Stabilität und Zuverlässigkeit zu bieten.
-title: Unterstützen von Käufen konsumierbarer In-App-Produkte
-ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
-keywords: In-App-Angebot
-keywords: konsumierbar
-keywords: In-App-Einkauf
-keywords: In-App-Produkt
-keywords: Unterstützen von In-App-Einkäufen
-keywords: In-App-Einkauf, Codebeispiel
-keywords: In-App-Angebot, Codebeispiel
+author: mcleanbyron description: Sie können In-App-Käufe von konsumierbaren Produkten – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um den Kunden beim Kauf Stabilität und Zuverlässigkeit zu bieten.
+title: Aktivieren konsumierbarer In-App-Produktkäufe ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4 Schlüsselwörter: In-App-Angebot Schlüsselwörter: konsumierbar Schlüsselwörter: In-App-Einkauf Schlüsselwörter: In-App-Produkt Schlüsselwörter: Unterstützen von In-App Schlüsselwörter: Codebeispiel für In-App-Einkauf Schlüsselwörter: Codebeispiel für In-App-Angebot
 ---
 
 # Unterstützen von Käufen konsumierbarer In-App-Produkte
@@ -79,7 +71,7 @@ Im folgenden Beispiel wird die Verwendung des Arrays aus dem vorhergehenden Beis
 ```CSharp
 private Boolean IsLocallyFulfilled(string productId, Guid transactionId)
 {
-    return grantedConsumableTransactionIds.ContainsKey(productId) &amp;&amp; grantedConsumableTransactionIds[productId].Contains(transactionId);
+    return grantedConsumableTransactionIds.ContainsKey(productId) && grantedConsumableTransactionIds[productId].Contains(transactionId);
 }
 ```
 
@@ -127,6 +119,6 @@ private async void GetUnfulfilledConsumables()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

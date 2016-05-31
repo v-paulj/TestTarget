@@ -1,13 +1,14 @@
 ---
+author: mcleblanc
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
-title: Universelle Windows-Plattform-Komponenten und Interop-Optimierung
-description: Erstellen Sie UWP-Apps, die UWP-Komponenten verwenden, mit systemeigenen und verwalteten Typen zusammenarbeiten und Probleme mit der Interopleistung vermeiden.
+title: Universelle Windows-Plattform-Komponenten und Optimierung der Interoperabilität
+description: Erstellen Sie UWP (Universelle Windows-Plattform)-Apps, die UWP-Komponenten verwenden, mit systemeigenen und verwalteten Typen zusammenarbeiten und gleichzeitig Probleme mit der Interopleistung vermeiden.
 ---
 # Universelle Windows-Plattform-Komponenten und Interop-Optimierung
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Erstellen Sie universelle Windows-Plattform-Apps (UWP), die UWP-Komponenten verwenden, mit systemeigenen und verwalteten Typen zusammenarbeiten und gleichzeitig Probleme mit der Interopleistung vermeiden.
+Erstellen Sie UWP (Universelle Windows-Plattform)-Apps, die UWP-Komponenten verwenden, mit systemeigenen und verwalteten Typen zusammenarbeiten und gleichzeitig Probleme mit der Interopleistung vermeiden.
 
 ## Bewährte Methoden für die Interoperabilität mit UWP-Komponenten
 
@@ -38,7 +39,7 @@ Es sind viele Aufrufe in einem kurzen Zeitraum erforderlich, damit die Auswirkun
 
 ### Erwägen der Verwendung von .NET für UWP-Apps
 
-Es gibt bestimmte Fälle, in denen eine Aufgabe mithilfe der UWP oder .NET für UWP-Apps ausgeführt werden kann. Sie sollten .NET-Typen und UWP-Typen nach Möglichkeit nicht mischen. Verwenden Sie die einen oder die anderen Typen. Beispielweise können Sie einen XML-Datenstrom mithilfe des [**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/BR206173)-Typs (ein UWP-Typ) oder des [**System.Xml.XmlReader**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.xml.xmlreader.aspx)-Typs (ein .NET-Typ) analysieren. Verwenden Sie die API, die dieselbe Technologie wie der Datenstrom aufweist. Wenn Sie beispielsweise XML aus einem [**MemoryStream**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.io.memorystream.aspx) lesen, verwenden Sie den **System.Xml.XmlReader**-Typ, da es sich bei beiden Typen um .NET-Typen handelt. Wenn Sie aus einer Datei lesen, verwenden Sie den **Windows.Data.Xml.Dom.XmlDocument**-Typ, da es sich bei den Datei-APIs und **XmlDocument** um UWP-Komponenten handelt.
+Es gibt bestimmte Fälle, in denen eine Aufgabe mithilfe der UWP oder .NET für UWP-Apps ausgeführt werden kann. Sie sollten .NET-Typen und UWP-Typen nach Möglichkeit nicht mischen. Verwenden Sie die einen oder die anderen Typen. Beispielweise können Sie einen XML-Datenstrom mithilfe des [**Windows.Data.Xml.Dom.XmlDocument**](https://msdn.microsoft.com/library/windows/apps/BR206173)-Typs (ein UWP-Typ) oder des [**System.Xml.XmlReader**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.xmlreader.aspx)-Typs (ein .NET-Typ) analysieren. Verwenden Sie die API, die dieselbe Technologie wie der Datenstrom aufweist. Wenn Sie beispielsweise XML aus einem [**MemoryStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.memorystream.aspx) lesen, verwenden Sie den **System.Xml.XmlReader**-Typ, da es sich bei beiden Typen um .NET-Typen handelt. Wenn Sie aus einer Datei lesen, verwenden Sie den **Windows.Data.Xml.Dom.XmlDocument**-Typ, da es sich bei den Datei-APIs und **XmlDocument** um UWP-Komponenten handelt.
 
 ### Kopieren von Windows-Runtime-Objekten in .NET-Typen
 
@@ -68,11 +69,11 @@ Mit der UWP können Entwickler Apps mithilfe von XAML-Code in ihrer bevorzugten 
 
 ![Interopübergänge sollten die Ausführungszeit des Programms nicht beherrschen.](images/interop-transitions.png)
 
-Die unter [**.NET für Windows-Apps**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/br230232.aspx) aufgelisteten Typen tragen nicht zum Interopaufwand bei, wenn sie von C# oder Visual Basic aus verwendet werden. Als Faustregel kann angenommen werden, dass Typen in Namespaces, die mit „Windows.“ beginnen, zur UWP gehören und Typen in Namespaces, die mit „System.” beginnen, .NET-Typen sind. Denken Sie daran, dass selbst die einfache Verwendung von UWP-Typen, z. B. Speicherzuordnung oder Zugriff auf Eigenschaften, Interoperabilitätskosten nach sich zieht.
+Die unter [**.NET für Windows-Apps**](https://msdn.microsoft.com/library/windows/apps/xaml/br230232.aspx) aufgelisteten Typen tragen nicht zum Interopaufwand bei, wenn sie von C# oder Visual Basic aus verwendet werden. Als Faustregel kann angenommen werden, dass Typen in Namespaces, die mit „Windows.“ beginnen, zur UWP gehören und Typen in Namespaces, die mit „System.” beginnen, .NET-Typen sind. Denken Sie daran, dass selbst die einfache Verwendung von UWP-Typen, z. B. Speicherzuordnung oder Zugriff auf Eigenschaften, Interoperabilitätskosten nach sich zieht.
 
 Sie sollten Ihre App messen und feststellen, ob die Interoperabilität einen großen Teil der Ausführungszeit Ihrer App verschlingt, bevor Sie daran gehen, die Interoperabilitätskosten zu optimieren. Wenn Sie die Leistung Ihrer App mit Visual Studio analysieren, erhalten Sie leicht eine obere Grenze für die Interoperabilitätskosten, indem Sie in der Ansicht **Funktionen** auf die inklusive Zeit achten, die von Methoden verbraucht wird, die die UWP aufrufen.
 
-Wenn Ihre App aufgrund des Interoperabilitätsaufwands langsam ist, können Sie die Leistung der App verbessern, indem Sie die Anzahl von UWP-API-Aufrufen in Pfaden mit wichtigem Code reduzieren. Beispielsweise kann eine Spielengine, die unzählige physische Berechnungen durchführt und hierzu ständig Position und Dimensionen von [**UIElements**](https://msdn.microsoft.com/library/windows/apps/BR208911) abfragt, sehr viel Zeit sparen, indem die notwendigen Infos aus **UIElements** in lokalen Variablen gespeichert werden. Anschließend werden diese zwischengespeicherte Werte für die Berechnungen verwendet, und das Endergebnis wird nach Abschluss der Berechnungen wieder an **UIElements** zurückgegeben. Ein weiteres Beispiel: Wenn C#- oder Visual Basic-Code sehr häufig auf eine Auflistung zugreift, ist es effizienter, eine Auflistung aus dem [**System.Collections**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.collections.aspx)-Namespace anstatt aus dem [**Windows.Foundation.Collections**](https://msdn.microsoft.com/library/windows/apps/BR206657)-Namespace zu verwenden. Sie können auch erwägen, Aufrufe von UWP-Komponenten zu kombinieren. Ein Fall, in dem dies möglich ist, ist die Verwendung der [**Windows.Storage.BulkAccess**](https://msdn.microsoft.com/library/windows/apps/BR207676)-APIs.
+Wenn Ihre App aufgrund des Interoperabilitätsaufwands langsam ist, können Sie die Leistung der App verbessern, indem Sie die Anzahl von UWP-API-Aufrufen in Pfaden mit wichtigem Code reduzieren. Beispielsweise kann eine Spielengine, die unzählige physische Berechnungen durchführt und hierzu ständig Position und Dimensionen von [**UIElements**](https://msdn.microsoft.com/library/windows/apps/BR208911) abfragt, sehr viel Zeit sparen, indem die notwendigen Infos aus **UIElements** in lokalen Variablen gespeichert werden. Anschließend werden diese zwischengespeicherte Werte für die Berechnungen verwendet, und das Endergebnis wird nach Abschluss der Berechnungen wieder an **UIElements** zurückgegeben. Ein weiteres Beispiel: Wenn C#- oder Visual Basic-Code sehr häufig auf eine Auflistung zugreift, ist es effizienter, eine Auflistung aus dem [**System.Collections**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.aspx)-Namespace anstatt aus dem [**Windows.Foundation.Collections**](https://msdn.microsoft.com/library/windows/apps/BR206657)-Namespace zu verwenden. Sie können auch erwägen, Aufrufe von UWP-Komponenten zu kombinieren. Ein Fall, in dem dies möglich ist, ist die Verwendung der [**Windows.Storage.BulkAccess**](https://msdn.microsoft.com/library/windows/apps/BR207676)-APIs.
 
 ### Erstellen einer UWP-Komponente
 
@@ -84,6 +85,6 @@ Alle Vorschläge für das Erzielen einer guten Leistung in Apps gelten auch für
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

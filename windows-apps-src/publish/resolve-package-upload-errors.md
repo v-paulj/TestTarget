@@ -1,13 +1,14 @@
 ---
-Description: Wenn während der App-Einreichung Fehler der App-Übermittlung auftreten, müssen Sie diese beheben, bevor Sie die App im Store einreichen können.
-title: Beheben von Paketuploadfehlern
+author: jnHs
+Description: Wenn während der App-Übermittlung Fehler beim Hochladen von App-Paketen auftreten, müssen Sie diese beheben, bevor Sie die App an den Store übermitteln können.
+title: Beheben von Paketübertragungsfehlern
 ms.assetid: 0D01E43C-F3A7-4FA2-B479-1B5579FF531A
 ---
 
-# Beheben von Paketuploadfehlern
+# Beheben von Paketübertragungsfehlern
 
 
-Wenn während der [App-Einreichung](app-submissions.md) Fehler beim [Hochladen von App-Paketen](upload-app-packages.md) auftreten, müssen Sie diese beheben, bevor Sie die App im Store einreichen können. Die Fehlermeldung weist darauf hin, worin das Problem besteht und was eventuell erforderlich ist, um das Problem zu beheben. Hier sind einige Verweise auf zusätzliche Informationen zur Behebung dieser Fehler.
+Wenn während der [App-Übermittlung](upload-app-packages.md) Fehler beim Hochladen von [App-Paketen](app-submissions.md) auftreten, müssen Sie diese beheben, bevor Sie die App an den Store übermitteln können. Die Fehlermeldung weist darauf hin, worin das Problem besteht und was eventuell erforderlich ist, um das Problem zu beheben. Hier sind einige Verweise auf zusätzliche Informationen zur Behebung dieser Fehler.
 
 ## Pakettypfehler für Windows Phone 8.1
 
@@ -23,7 +24,7 @@ Informationen zum Beheben von Fehlern im Zusammenhang mit Versionsnummern und zu
 
 Beachten Sie außerdem, falls Ihre Übermittlung mehr als eine Windows Phone 8.1-XAP besitzt, müssen sie die gleichen Versionsnummern aufweisen.
 
-**Hinweis:** Bei weiteren Fragen im Zusammenhang mit anderen Fehlermeldungen und Hilfe zu Ihrer Lösung finden Sie in unseren [Foren](http://go.microsoft.com/fwlink/p/?LinkId=224196).
+**Hinweis**  Weiteren Fragen und Antworten zu anderen Fehlermeldungen finden Sie in unseren [Foren](http://go.microsoft.com/fwlink/p/?LinkId=224196).
 
  
 
@@ -36,6 +37,6 @@ Beachten Sie außerdem, falls Ihre Übermittlung mehr als eine Windows Phone 8.1
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

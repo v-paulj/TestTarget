@@ -1,6 +1,7 @@
 ---
+author: mcleblanc
 title: Erstellen und Registrieren einer Hintergrundaufgabe
-description: Erstellen Sie eine Hintergrundaufgabenklasse, und registrieren Sie sie für die Ausführung, wenn sich die App nicht im Vordergrund befindet.
+description: Erstellen Sie eine Hintergrundaufgabenklasse, und registrieren Sie diese für die Ausführung, wenn sich die App nicht im Vordergrund befindet.
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
 ---
 
@@ -25,7 +26,7 @@ Sie können Code im Hintergrund ausführen, indem Sie Klassen schreiben, die die
 
 Die folgenden Schritte zeigen, wie Sie eine neue Klasse zum Implementieren der [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)-Schnittstelle schreiben. Erstellen Sie zunächst ein neues Projekt in Ihrer Projektmappe für Hintergrundaufgaben. Fügen Sie zu Ihrer Hintergrundaufgabe eine neue leere Klasse hinzu, und importieren Sie den Namespace [Windows.ApplicationModel.Background](https://msdn.microsoft.com/library/windows/apps/br224847).
 
-1.  Erstellen Sie ein neues Projekt für Hintergrundaufgaben, und fügen Sie es zu Ihrer Projektmappe hinzu. Klicken Sie zu diesem Zweck mit der rechten Maustaste auf Ihren Projektmappenknoten im **Projektmappen-Explorer**, und wählen Sie „Hinzufügen -&gt; Neues Projekt“ aus. Wählen Sie dann den Projekttyp **Komponente für Windows-Runtime (Universal Windows)** aus, geben Sie dem Projekt einen Namen, und klicken Sie auf „OK“.
+1.  Erstellen Sie ein neues Projekt für Hintergrundaufgaben, und fügen Sie es zu Ihrer Projektmappe hinzu. Klicken Sie zu diesem Zweck mit der rechten Maustaste auf Ihren Projektmappenknoten im **Projektmappen-Explorer**, und wählen Sie „Hinzufügen &gt; Neues Projekt“ aus. Wählen Sie dann den Projekttyp **Komponente für Windows-Runtime (Universal Windows)** aus, geben Sie dem Projekt einen Namen, und klicken Sie auf „OK“.
 2.  Verweisen Sie auf das Hintergrundaufgabenprojekt aus dem Projekt für UWP-Apps (Universelle Windows-Plattform).
 
     Klicken Sie für eine C++-App mit der rechten Maustaste auf Ihr App-Projekt, und wählen Sie **Eigenschaften** aus. Gehen Sie dann zu **Allgemeine Eigenschaften**, und klicken Sie auf **Neuen Verweis hinzufügen**. Aktivieren Sie das Kontrollkästchen neben Ihrem Hintergrundaufgabenprojekt, und klicken Sie in beiden Dialogfeldern auf **OK**.
@@ -34,7 +35,7 @@ Die folgenden Schritte zeigen, wie Sie eine neue Klasse zum Implementieren der [
 
 3.  Erstellen Sie eine neue Klasse zum Implementieren der Schnittstelle [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). Die [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811)-Methode ist ein erforderlicher Einstiegspunkt und wird aufgerufen, wenn das angegebene Ereignis ausgelöst wird. Diese Methode ist in jeder Hintergrundaufgabe erforderlich.
 
-    > **Hinweis** Die Hintergrundaufgabenklasse selbst sowie alle anderen Klassen im Hintergrundaufgabenprojekt müssen **öffentliche** Klassen sein, die **versiegelt** sind.
+    > **Hinweis**  Die Hintergrundaufgabenklasse selbst sowie alle anderen Klassen im Hintergrundaufgabenprojekt müssen **öffentliche** Klassen sein, die **versiegelt** sind.
 
     Der folgende Beispielcode zeigt einen sehr einfachen Startpunkt für eine Hintergrundaufgabenklasse:
 
@@ -144,7 +145,7 @@ Die folgenden Schritte zeigen, wie Sie eine neue Klasse zum Implementieren der [
 
 Die folgenden Schritte werden in einer Ihrer App-Klassen durchgeführt (beispielsweise in „MainPage.xaml.cs“).
 
-> **Hinweis** Sie können auch eine Funktion erstellen, die sich nur um das Registrieren von Hintergrundaufgaben kümmert. Siehe dazu [Registrieren einer Hintergrundaufgabe](register-a-background-task.md). In einem solchen Fall können Sie die nächsten drei Schritte überspringen, einfach den Auslöser konstruieren und der Registrierungsfunktion zur Verfügung stellen, zusammen mit dem Aufgabennamen, dem entsprechenden Einstiegspunkt und, optional, einer Bedingung.
+> **Hinweis**  Sie können auch eine Funktion erstellen, die sich nur um das Registrieren von Hintergrundaufgaben kümmert. Siehe dazu [Registrieren einer Hintergrundaufgabe](register-a-background-task.md). In einem solchen Fall können Sie die nächsten drei Schritte überspringen, einfach den Auslöser konstruieren und der Registrierungsfunktion zur Verfügung stellen, zusammen mit dem Aufgabennamen, dem entsprechenden Einstiegspunkt und, optional, einer Bedingung.
 
  
 **Registrieren der auszuführenden Hintergrundaufgabe**
@@ -226,8 +227,7 @@ Die folgenden Schritte werden in einer Ihrer App-Klassen durchgeführt (beispiel
 
     Der folgende Code registriert die Hintergrundaufgabe und speichert das Ergebnis:
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     BackgroundTaskRegistration task = builder.Register();
 >     ```
 >     ```cpp
@@ -247,8 +247,7 @@ Sie sollten eine Methode mit dem [**BackgroundTaskCompletedEventHandler**](https
 
     Der folgende Beispielcode erkennt den Abschluss der Hintergrundaufgabe und ruft eine Beispielmethode zur Aktualisierung der Benutzeroberfläche auf, die eine Meldungszeichenfolge erfordert.
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
 >     {
 >         var settings = Windows.Storage.ApplicationData.Current.LocalSettings;
@@ -275,12 +274,11 @@ Sie sollten eine Methode mit dem [**BackgroundTaskCompletedEventHandler**](https
 
     Der folgende Beispielcode fügt dem [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786)-Element ein [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)-Element hinzu:
 
-> [!div class="tabbedCodeSnippets"]
->     ```cs
+> [!div class="tabbedCodeSnippets"] ```cs
 >     task.Completed += new BackgroundTaskCompletedEventHandler(OnCompleted);
 >     ```
 >     ```cpp
->     task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &amp;ExampleBackgroundTask::OnCompleted);
+>     task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &ExampleBackgroundTask::OnCompleted);
 >     ```
 
 ## Deklarieren im App-Manifest, dass die App Hintergrundaufgaben verwendet
@@ -297,7 +295,7 @@ Bevor Ihre App Hintergrundaufgaben ausführen kann, müssen Sie alle Hintergrund
 
     Das folgende Erweiterungselement wird zur Datei „Package.appxmanifest“ hinzugefügt, um die Hintergrundaufgabe zu registrieren:
 
-    ```xaml
+    ```xml
     <Extensions>
       <Extension Category="windows.backgroundTasks" EntryPoint="RuntimeComponent1.ExampleBackgroundTask">
         <BackgroundTasks>
@@ -312,13 +310,13 @@ Bevor Ihre App Hintergrundaufgaben ausführen kann, müssen Sie alle Hintergrund
 
 Sie sollten jetzt über die Grundlagen verfügen, um eine Hintergrundaufgabenklasse zu schreiben, die Hintergrundaufgabe in Ihrer App zu registrieren und Ihre App so zu konfigurieren, dass Sie den Abschluss der Hintergrundaufgabe erkennt. Sie sollten auch mit der Aktualisierung des Anwendungsmanifests vertraut sein, damit Ihre App die Hintergrundaufgabe erfolgreich registrieren kann.
 
-> **Hinweis** Laden Sie das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunter, um ähnliche Codebeispiele im Kontext einer vollständigen und stabilen App für die UWP (Universelle Windows-Plattform) mit Hintergrundaufgaben zu erhalten.
+> **Hinweis**  Laden Sie das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunter, um ähnliche Codebeispiele im Kontext einer vollständigen und stabilen App für die UWP (Universelle Windows-Plattform) mit Hintergrundaufgaben zu erhalten.
 
  
 
 Eine API-Referenz, konzeptionelle Richtlinien zu Hintergrundaufgaben und ausführlichere Anweisungen zum Schreiben von Apps, die Hintergrundaufgaben verwenden, finden Sie unter den folgenden verwandten Themen:
 
-> **Hinweis** Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.
+> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die UWP (Universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.
 
  
 
@@ -353,6 +351,6 @@ Eine API-Referenz, konzeptionelle Richtlinien zu Hintergrundaufgaben und ausfüh
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

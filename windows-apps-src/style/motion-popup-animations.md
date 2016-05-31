@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Verwenden Sie Popupanimationen, um Popup-UI-Elemente für Flyouts oder benutzerdefinierte Popup-UI-Elemente anzuzeigen und auszublenden. Popupelemente sind Container, die über dem Inhalt der App angezeigt werden und ausgeblendet werden, wenn Benutzer außerhalb des Popupelements tippen oder klicken.
 title: Animationen für Popupbenutzeroberflächen in UWP-Apps
 ms.assetid: 4E9025CE-FC90-4d4c-9DE6-EC6B6F2AD9DF
@@ -10,7 +11,7 @@ template: detail.hbs
 
 Verwenden Sie Popupanimationen, um Popup-UI-Elemente für Flyouts oder benutzerdefinierte Popup-UI-Elemente anzuzeigen und auszublenden. Popupelemente sind Container, die über dem Inhalt der App angezeigt werden und ausgeblendet werden, wenn Benutzer außerhalb des Popupelements tippen oder klicken.
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **Wichtige APIs**
@@ -46,6 +47,6 @@ Verwenden Sie Popupanimationen, um Popup-UI-Elemente für Flyouts oder benutzerd
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

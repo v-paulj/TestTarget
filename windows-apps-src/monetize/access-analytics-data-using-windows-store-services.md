@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Verwenden Sie zum programmgesteuerten Abrufen von Analysedaten für Apps, die für Ihr Windows Dev Center-Konto oder für das Konto Ihrer Organisation registriert sind, die Windows Store-Analyse-API.
 title: Zugreifen auf Analysedaten mit Windows Store-Diensten
@@ -49,13 +50,13 @@ Nachdem Sie Ihrem Dev Center-Konto eine Azure AD-Anwendung zugeordnet und die Cl
 
 Befolgen Sie zum Abrufen des Zugriffstokens die Anweisungen unter [Aufrufe zwischen Diensten mithilfe von Clientanmeldeinformationen](https://msdn.microsoft.com/library/azure/dn645543.aspx), um eine HTTP-POST-Anforderung an den nachfolgenden Azure AD-Endpunkt zu senden.
 
-```
+```syntax
 https://login.microsoftonline.com/<tenant id>/oauth2/token
 ```
 
 -   Melden Sie sich zum Abrufen Ihrer Mandanten-ID beim [Azure-Verwaltungsportal](http://manage.windowsazure.com/) an, navigieren Sie zu **Active Directory**, und klicken Sie auf das Verzeichnis, das Sie mit Ihrem Dev Center-Konto verknüpft haben. Die Mandanten-ID für dieses Verzeichnis ist in die URL für diese Seite eingebettet; dies wird in der Zeichenfolge *your\_tenant\_ID* im untenstehenden Beispiel veranschaulicht.
 
-  ```
+  ```syntax
   https://manage.windowsazure.com/@<your_tenant_name>#Workspaces/ActiveDirectoryExtension/Directory/<your_tenant_ID>/directoryQuickStart
   ```
 
@@ -236,6 +237,6 @@ Die Windows Store-Analyse-API gibt Fehlerantworten in einem JSON-Objekt zurück,
  
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

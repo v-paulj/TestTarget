@@ -1,6 +1,7 @@
 ---
+author: mcleblanc
 title: Debuggen einer Hintergrundaufgabe
-description: So debuggen Sie eine Hintergrundaufgabe einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung im Windows-Ereignisprotokoll.
+description: Hier erfahren Sie, wie Sie eine Hintergrundaufgabe einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung im Windows-Ereignisprotokoll debuggen.
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
 ---
 
@@ -38,7 +39,7 @@ Hintergrundaufgaben können mit Microsoft Visual Studio manuell ausgelöst werde
 
     Dies funktioniert nur dann, wenn die Hintergrundaufgabe bereits registriert ist und noch auf den Auslöser wartet. Wenn eine Hintergrundaufgabe z. B. mit einem einmaligen TimeTrigger registriert und der Trigger bereits ausgelöst wurde, hat ein Start der Aufgabe mit Visual Studio keine Wirkung.
 
-    **Hinweis:** Hintergrundaufgaben mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) oder [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) und Hintergrundaufgaben mit einem [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) mit dem Triggertyp [**SmsReceived**](https://msdn.microsoft.com/library/windows/apps/br224839) können nicht auf diese Weise aktiviert werden.     
+    **Hinweis:**  Hintergrundaufgaben mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) oder [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) und Hintergrundaufgaben mit einem [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) mit dem Triggertyp [**SmsReceived**](https://msdn.microsoft.com/library/windows/apps/br224839) können nicht auf diese Weise aktiviert werden.     
 
     ![Debuggen von Hintergrundaufgaben](images/debugging-activation.png)
 
@@ -68,8 +69,8 @@ Die Aktivierung von Hintergrundaufgaben hängt davon ab, ob drei Dinge ordnungsg
     Wenn Sie sich an dieses Verfahren halten und das Ereignisprotokoll den falschen Einstiegspunkt oder Trigger für die Hintergrundaufgabe anzeigt, wird die Hintergrundaufgabe nicht ordnungsgemäß von der App registriert. Weitere Informationen zu dieser Aufgabe finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md).
 
     1.  Öffnen Sie die Ereignisanzeige, indem Sie zum Startbildschirm wechseln und nach „eventvwr.exe“ suchen.
-    2.  Wechseln Sie in der Ereignisanzeige zu **Anwendungs- und Dienstprotokolle** -&gt; **Microsoft** -&gt; **Windows** -&gt; **BackgroundTaskInfrastructure**.
-    3.  Wählen Sie im Aktionsbereich **Ansicht** -&gt; **Analytische und Debugprotokolle einblenden**, um die Diagnoseprotokollierung zu aktivieren.
+    2.  Wechseln Sie in der Ereignisanzeige zu **Anwendungs- und Dienstprotokolle** -&gt; **Microsoft** -&gt;**Windows** -&gt;**BackgroundTaskInfrastructure**.
+    3.  Wählen Sie im Aktionsbereich **Ansicht** -&gt;**Analytische und Debugprotokolle einblenden**, um die Diagnoseprotokollierung zu aktivieren.
     4.  Wählen Sie die Option **Diagnoseprotokoll** aus, und klicken Sie auf **Protokoll aktivieren**.
     5.  Versuchen Sie nun, die App zu verwenden, um die Hintergrundaufgabe erneut zu registrieren und zu aktivieren.
     6.  Zeigen Sie detaillierte Fehlerinformationen im Diagnoseprotokoll an. Dies schließt den Einstiegspunkt ein, der für die Hintergrundaufgabe registriert ist.
@@ -112,6 +113,6 @@ Weitere Informationen zum Debuggen einer Hintergrundaufgabe mit VS finden Sie un
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

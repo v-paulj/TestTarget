@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: Diese Richtlinien unterstützen Sie beim Gestalten von effektiven Hilfeinhalten für Ihre App.
 title: Richtlinien für die App-Hilfe
 label: Guidelines for app help
@@ -25,21 +26,21 @@ Ein Benutzer wird erst dann nach Hilfeinhalten suchen, wenn bereits ein Problem 
 
 Jede Hilfe sollte unabhängig von ihrer Art folgenden Prinzipien entsprechen:
 
--   **Leicht verständlich:** Hilfe, die den Benutzer verwirrt, ist schlimmer als überhaupt keine Hilfe.
+-   **Leicht verständlich:** Hilfe, die den Benutzer verwirrt, ist schlimmer als gar keine Hilfe.
 
--   **Einfach:** Benutzer, die Hilfe benötigen, möchten klare Antworten, die ihnen unmittelbar angezeigt werden.
+-   **Geradlinig:** Benutzer, die Hilfe benötigen, möchten klare Antworten, die ihnen direkt angezeigt werden.
 
--   **Relevant:** Benutzer möchten nicht nach ihrem jeweiligen Problem suchen müssen. Sie möchten, dass ihnen möglichst relevante Hilfe unmittelbar angezeigt wird (man spricht von „kontextbezogener Hilfe“), oder sie möchten eine leicht zu bedienende Oberfläche.
+-   **Relevant:** Benutzer möchten nicht nach ihrem spezifischen Problem suchen müssen. Sie möchten, dass ihnen möglichst relevante Hilfe unmittelbar angezeigt wird (man spricht von „kontextbezogener Hilfe“), oder sie möchten eine leicht zu bedienende Oberfläche.
 
 -   **Direkt:** Wenn ein Benutzer nach Hilfe sucht, möchte er auch Hilfe bekommen. Enthält die App Seiten zum Melden von Fehlern, für Feedback, zum Anzeigen der Nutzungsbedingungen oder ähnliche Funktionen, ist es in Ordnung, wenn diese Seiten über die Hilfe aufgerufen werden können. Aber sie sollten eine untergeordnete Position auf der Haupthilfeseite und nicht den gleichen oder einen höheren Stellenwert haben.
 
--   **Konsistent:** Unabhängig von der Art der Hilfe ist sie dennoch ein Teil der App und sollte wie jeder andere Teil der Benutzeroberfläche behandelt werden. Für die von Ihnen angebotene Hilfe sollten die gleichen Gestaltungsprinzipien gelten wie für die eigentliche App, nämlich Benutzerfreundlichkeit, Barrierefreiheit und Stil.
+-   **Konsistent:** Die Hilfe ist unabhängig von ihrer Art ein Teil der App und sollte wie jeder andere Teil der Benutzeroberfläche behandelt werden. Für die von Ihnen angebotene Hilfe sollten die gleichen Gestaltungsprinzipien gelten wie für die eigentliche App, nämlich Benutzerfreundlichkeit, Barrierefreiheit und Stil.
 
 ## <span id="types_of_help"></span><span id="TYPES_OF_HELP"></span>Arten von Hilfe
 
 Es gibt drei grundlegende Kategorien von Hilfeinhalten, die jeweils mit unterschiedlichen Stärken verbunden sind und sich für unterschiedliche Zwecke eignen. Verwenden Sie in der App je nach Bedarf eine beliebige Kombination dieser Kategorien.
 
-#### <span id="instructional_ui"></span><span id="INSTRUCTIONAL_UI"></span>Benutzeroberfläche mit Anweisungen
+#### <span id="instructional_ui"></span><span id="INSTRUCTIONAL_UI"></span>Benutzeroberfläche mit Anleitungen
 
 In der Regel sollten Benutzer die Kernfunktionen der App ohne Anweisungen verwenden können. Aber manchmal ist bei der App eine bestimmte Geste erforderlich, oder möglicherweise gibt es sekundäre Features, die nicht sofort offensichtlich sind. In diesem Fall sollte die Benutzeroberfläche Anweisungen enthalten, die Benutzern erklären, wie bestimmte Aufgaben ausgeführt werden.
 
@@ -60,6 +61,6 @@ Für ausführliche Lernprogramme, erweiterte Funktionen oder Bibliotheken mit Hi
 \[Dieser Artikel enthält spezielle Informationen zu Apps für die Universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

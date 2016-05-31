@@ -1,5 +1,6 @@
 ---
-title: Diagnostizieren von Fehlerbedingungen für Windows-Runtime-Komponenten
+author: martinekuan
+title: Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime
 description: Dieser Artikel enthält zusätzliche Informationen zu Einschränkungen bei Komponenten für Windows-Runtime, die mit verwaltetem Code geschrieben wurden.
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
 ---
@@ -7,7 +8,7 @@ ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
 # Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 \[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
 
@@ -18,7 +19,7 @@ In diesem Artikel werden aber nicht alle Fehler abgedeckt. Die hier beschriebene
 ## Fehlermeldung beim Implementieren einer asynchronen Schnittstelle stellt den falschen Typ bereit
 
 
-Verwaltete Komponenten für Windows-Runtime können die UWP-Schnittstellen (Universelle Windows-Plattform) nicht implementieren, die asynchrone Aktionen oder Vorgänge darstellen ([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)oder [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). Stattdessen stellt das .NET Framework die [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) -Klasse zum Generieren von asynchronen Vorgängen in Komponenten für Windows-Runtime bereit. Die Fehlermeldung, die Winmdexp.exe bei dem Versuch anzeigt, eine asynchrone Schnittstelle zu implementieren, verweist auf diese Klasse mit ihrem früheren Namen, AsyncInfoFactory. Das .NET Framework enthält die AsyncInfoFactory-Klasse nicht mehr.
+Verwaltete Komponenten für Windows-Runtime können die UWP-Schnittstellen (Universelle Windows-Plattform) nicht implementieren, die asynchrone Aktionen oder Vorgänge darstellen ([IAsyncAction](https://msdn.microsoft.com/library/br205781.aspx), [IAsyncActionWithProgress&lt;TProgress&gt;](https://msdn.microsoft.com/library/br205784.aspx), [IAsyncOperation&lt;TResult&gt;](https://msdn.microsoft.com/library/windows/apps/br206598.aspx) oder [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)). Stattdessen stellt das .NET Framework die [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx) -Klasse zum Generieren von asynchronen Vorgängen in Komponenten für Windows-Runtime bereit. Die Fehlermeldung, die Winmdexp.exe bei dem Versuch anzeigt, eine asynchrone Schnittstelle zu implementieren, verweist auf diese Klasse mit ihrem früheren Namen, AsyncInfoFactory. Das .NET Framework enthält die AsyncInfoFactory-Klasse nicht mehr.
 
 | Fehlernummer | Meldungstext                                                                                                                                                                                                                                                          |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -33,7 +34,7 @@ Verwaltete Komponenten für Windows-Runtime können die UWP-Schnittstellen (Univ
 ## Fehlende Verweise auf mscorlib.dll oder System.Runtime.dll
 
 
-Dieses Problem tritt nur auf, wenn Sie Winmdexp.exe aus der Befehlszeile ausführen. Wir empfehlen die Verwendung der Option „/reference”, um Verweise auf „mscorlib.dll“ und „System.Runtime.dll“ von den .NET Framework-Kernverweisassemblys einzuschließen, die sich in „%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETCore\\v4.5“ („%ProgramFiles%\\...“ auf einem 32-Bit-Computer) befinden.
+Dieses Problem tritt nur auf, wenn Sie Winmdexp.exe aus der Befehlszeile ausführen. Wir empfehlen die Verwendung der Option „/reference”, um Verweise auf mscorlib.dll und System.Runtime.dll von den .NET Framework-Kernverweisassemblys einzuschließen, die sich in „%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETCore\\v4.5" ("%ProgramFiles%\\...” auf einem 32-Bit-Computer) befinden.
 
 | Fehlernummer | Meldungstext                                                                                                                                     |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -119,9 +120,9 @@ Ein Typ in einer Komponente für Windows-Runtime darf nicht wie ein Namespace be
 
 Die öffentliche Schnittstelle der Komponente darf nur UWP-Typen verfügbar machen. Das .NET Framework stellt aber auch Zuordnungen für einige häufig verwendete Typen bereit, die im .NET Framework und in der UWP Unterschiede aufweisen. Somit können .NET Framework-Entwickler mit bekannten Typen arbeiten, anstatt sich erst mit neuen Typen vertraut machen zu müssen. Sie können diese zugeordneten .NET Framework-Typen in der öffentliche Schnittstelle der Komponente verwenden. Weitere Informationen hierzu finden Sie in „Deklarieren von Typen in Komponenten für Windows-Runtime” und „Übergeben von universellen Windows-Plattform-Typen an verwalteten Code” unter [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)sowie unter [.NET Framework-Zuordnungen von Windows-Runtime-Typen](net-framework-mappings-of-windows-runtime-types.md).
 
-Viele dieser Zuordnungen sind Schnittstellen. Zum Beispiel wird [IList&lt;T&gt;](https://msdn.microsoft.com/library/5y536ey6.aspx) der UWP-Schnittstelle [IVector&lt;T&gt;](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)zugeordnet. Wenn Sie List&lt;string&gt; (`List(Of String)` in Visual Basic) anstelle von IList&lt;string&gt; als Parametertyp verwenden, stellt Winmdexp.exe eine Liste von Alternativen zur Verfügung, die alle von List&lt;T&gt; implementierten, zugeordneten Schnittstellen enthält. Bei geschachtelten Typen wie List&lt;Dictionary&lt;int, string&gt;&gt; (List(Of Dictionary(Of Integer, String)) in Visual Basic) bietet Winmdexp.exe verschiedene Optionen für jede Schachtelungsebene an. Diese Listen können recht umfangreich sein.
+Viele dieser Zuordnungen sind Schnittstellen. Zum Beispiel wird [IList&lt;T&gt;](https://msdn.microsoft.com/library/5y536ey6.aspx) der UWP-Schnittstelle [IVector&lt;T&gt;](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) zugeordnet. Wenn Sie List&lt;string&gt; (`List(Of String)` in Visual Basic) anstelle von IList&lt;string&gt; als Parametertyp verwenden, stellt Winmdexp.exe eine Liste von Alternativen zur Verfügung, die alle von List&lt;T&gt; implementierten, zugeordneten Schnittstellen enthält. Bei geschachtelten Typen wie List&lt;Dictionary&lt;int, string&gt;&gt; (List(Of Dictionary(Of Integer, String)) in Visual Basic) bietet Winmdexp.exe verschiedene Optionen für jede Schachtelungsebene an. Diese Listen können recht umfangreich sein.
 
-Im Allgemeinen sollte die Schnittstelle ausgewählt werden, die dem Typ am nächsten ist. Für Dictionary&lt;int, string&gt;, ist beispielsweise IDictionary&lt;int, string&gt; am besten geeignet.
+Im Allgemeinen sollte die Schnittstelle ausgewählt werden, die dem Typ am nächsten ist. Für Dictionary&lt;int, string&gt; ist beispielsweise IDictionary&lt;int, string&gt; am besten geeignet.
 
 > **Wichtig**  JavaScript verwendet die Schnittstelle, die zuerst in der Liste der Schnittstellen angezeigt wird, die ein verwalteter Typ implementiert. Wenn Sie beispielsweise Dictionary&lt;int, string&gt; an JavaScript-Code zurückgeben, wird IDictionary&lt;int, string&gt; angezeigt, unabhängig davon, welche Schnittstelle Sie als Rückgabetyp angeben. Das bedeutet, dass die erste Schnittstelle Member enthalten muss, die in den nächsten Schnittstellen erscheinen, damit diese Member für JavaScript sichtbar sind.
 
@@ -152,7 +153,7 @@ Im Allgemeinen sollte die Schnittstelle ausgewählt werden, die dem Typ am näch
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>Die Methode '{0}' weist in der Signatur einen Parameter vom Typ '{1}' auf. Obwohl es sich bei diesem generischen Typ nicht um einen gültigen Windows-Runtime-Typ handelt, werden von diesem Typ oder von dessen generischen Parametern Schnittstellen implementiert, die gültige Windows-Runtime-Typen sind. {2}</p>
-> **Note**  Für {2} fügt Winmdexp.exe eine Liste von Alternativen an, wie „Ändern Sie eventuell den Typ 'System.Collections.Generic.List&lt;T&gt;' in der Methodensignatur in einen der folgenden Typen: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'.”
+> **Hinweis**  Für {2} fügt Winmdexp.exe eine Liste von Alternativen an, wie „Ändern Sie eventuell den Typ 'System.Collections.Generic.List&lt;T&gt;' in der Methodensignatur in einen der folgenden Typen: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'.”
 </td>
 </tr>
 <tr class="even">
@@ -247,6 +248,6 @@ JavaScript-Code kann auf die Ausgabeparameter einer Methode, einschließlich des
 * [Winmdexp.exe (Windows Runtime Metadata Export Tool)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

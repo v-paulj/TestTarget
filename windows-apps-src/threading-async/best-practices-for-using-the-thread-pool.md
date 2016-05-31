@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 95CF7F3D-9E3A-40AC-A083-D8A375272181
 title: Bewährte Methoden zum Verwenden des Threadpools
 description: In diesem Thema werden bewährte Methoden für die Verwendung des Threadpools beschrieben.
@@ -32,7 +33,7 @@ In diesem Thema werden bewährte Methoden für die Verwendung des Threadpools be
 ## Nicht empfohlene Aktionen
 
 
--   Erstellen Sie keine regelmäßigen Zeitgeber mit einem *period*-Wert &lt;1 Millisekunde (einschließlich 0). Andernfalls verhält sich die Arbeitsaufgabe wie ein einmaliger Zeitgeber.
+-   Erstellen Sie keine regelmäßigen Timer mit einem *period*-Wert von &lt;1 Millisekunde (einschließlich 0). Andernfalls verhält sich die Arbeitsaufgabe wie ein einmaliger Timer.
 
 -   Senden Sie keine regelmäßigen Arbeitsaufgaben, deren Ausführung länger dauert als die im *period*-Parameter festgelegte Dauer.
 
@@ -51,6 +52,6 @@ In diesem Thema werden bewährte Methoden für die Verwendung des Threadpools be
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

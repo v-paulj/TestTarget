@@ -1,11 +1,11 @@
 ---
+author: Jwmsft
 Description: Media Player wird zum Anzeigen und Wiedergeben von Videos, Audiodateien und Bildern verwendet.
 title: Media Player
 ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
 label: Media player
 template: detail.hbs
-author: mijacobs
 ---
 # Media Player
 
@@ -70,7 +70,7 @@ Sie können das [**MediaElement**](https://msdn.microsoft.com/library/windows/ap
 ### Festlegen der Medienquelle
 Legen Sie die [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419)-Eigenschaft auf den Pfad der gewünschten Datei fest, um Dateien aus dem Netzwerk oder in die App eingebettete Dateien wiederzugeben.
 
-**Tipp** Zum Öffnen von Dateien aus dem Internet müssen Sie die **Internet (Client)**-Funktion im App-Manifest (Package.appxmanifest) deklarieren. Weitere Informationen zum Deklarieren von Funktionen finden Sie unter [Deklaration der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
+**Tipp**  Zum Öffnen von Dateien aus dem Internet müssen Sie die **Internet (Client)**-Funktion im App-Manifest (Package.appxmanifest) deklarieren. Weitere Informationen zum Deklarieren von Funktionen finden Sie unter [Deklaration der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
  
 
@@ -264,7 +264,9 @@ private void MediaElement_CurrentStateChanged(object sender, RoutedEventArgs e)
     ```
 
 ### Programmgesteuertes Steuern der Medienwiedergabe
-[**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) stellt zahlreiche Eigenschaften, Methoden und Ereignisse zum Steuern der Audio- und Videowiedergabe bereit. Eine vollständige Liste der Eigenschaften, Methoden und Ereignisse finden Sie auf der Referenzseite zu [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926).
+[
+              **MediaElement**
+            ](https://msdn.microsoft.com/library/windows/apps/br242926) stellt zahlreiche Eigenschaften, Methoden und Ereignisse zum Steuern der Audio- und Videowiedergabe bereit. Eine vollständige Liste der Eigenschaften, Methoden und Ereignisse finden Sie auf der Referenzseite zu [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926).
     
 
 ### Auswählen von Audiotiteln in verschiedenen Sprachen
@@ -333,13 +335,20 @@ private void FullWindow_Click(object sender, object e)
 
 Verwenden Sie die [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422)-Eigenschaft, um zu ändern, wie der Videoinhalt den Container ausfüllt, in dem er sich befindet. Das Video wird dabei entsprechend dem [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968)-Wert vergrößert bzw. verkleinert oder gestreckt. Die **Stretch**-Zustände sind mit den Bildformateinstellungen bei vielen Fernsehern vergleichbar. Sie können dieses Verhalten mit einer Schaltfläche verknüpfen und dem Benutzer die Auswahl der gewünschten Einstellung ermöglichen.
 
--   [**None**](https://msdn.microsoft.com/library/windows/apps/br242968) zeigt den Inhalt mit der systemeigenen Auflösung in seiner Originalgröße an.
--   [**Uniform**](https://msdn.microsoft.com/library/windows/apps/br242968) füllt unter Beibehaltung des Seitenverhältnisses und des Bildinhalts den größtmöglichen Platz aus. Dies kann zu horizontalen oder vertikalen schwarzen Balken an den Rändern des Videos führen. Dieser Zustand ist mit Breitbildmodi vergleichbar.
--   [**UniformToFill**](https://msdn.microsoft.com/library/windows/apps/br242968) füllt den gesamten Platz unter Beibehaltung des Seitenverhältnisses aus. Dies kann dazu führen, dass ein Teil des Bilds abgeschnitten wird. Dieser Zustand ist mit Vollbildmodi vergleichbar.
--   [**Fill**](https://msdn.microsoft.com/library/windows/apps/br242968) füllt den gesamten Platz aus, ohne das Seitenverhältnis beizubehalten. Das Bild wird nicht zugeschnitten, kann aber gestreckt werden. Dieser Zustand ist mit Streckmodi vergleichbar.
+-   [
+              **None**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) zeigt den Inhalt mit der systemeigenen Auflösung in seiner Originalgröße an.
+-   [
+              **Uniform**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) füllt unter Beibehaltung des Seitenverhältnisses und des Bildinhalts den größtmöglichen Platz aus. Dies kann zu horizontalen oder vertikalen schwarzen Balken an den Rändern des Videos führen. Dieser Zustand ist mit Breitbildmodi vergleichbar.
+-   [
+              **UniformToFill**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) füllt den gesamten Platz unter Beibehaltung des Seitenverhältnisses aus. Dies kann dazu führen, dass ein Teil des Bilds abgeschnitten wird. Dieser Zustand ist mit Vollbildmodi vergleichbar.
+-   [
+              **Fill**
+            ](https://msdn.microsoft.com/library/windows/apps/br242968) füllt den gesamten Platz aus, ohne das Seitenverhältnis beizubehalten. Das Bild wird nicht zugeschnitten, kann aber gestreckt werden. Dieser Zustand ist mit Streckmodi vergleichbar.
 
-![Stretch-Enumerationswerte](images/Image_Stretch.jpg)
-In diesem Beispiel werden mit einem [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244)-Element die [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968)-Optionen durchlaufen. Eine **switch**-Anweisung überprüft den aktuellen Zustand der [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422)-Eigenschaft und legt sie auf den nächsten Wert in der **Stretch**-Enumeration fest. So kann der Benutzer zwischen verschiedenen Streckungszuständen wechseln.
+![Stretch-Enumerationswerte](images/Image_Stretch.jpg) In diesem Beispiel werden mit einem [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244)-Element die [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968)-Optionen durchlaufen. Eine **switch**-Anweisung überprüft den aktuellen Zustand der [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422)-Eigenschaft und legt sie auf den nächsten Wert in der **Stretch**-Enumeration fest. So kann der Benutzer zwischen verschiedenen Streckungszuständen wechseln.
 
 ```xaml
 <AppBarButton Icon="Switch" 
@@ -400,14 +409,12 @@ Fügen Sie beliebige benutzerdefinierte Optionen in den Mediaplayer ein, um die 
 -   Versuchen Sie nicht, die Steuerleiste mit zu vielen Optionen zu überladen.
 -   Minimieren Sie die Medienzeitachse nicht unter ihre minimale Standardgröße, weil dadurch ihre Effektivität stark verringert wird.
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die Universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
-
 ## Verwandte Artikel
 
 - [Befehlsdesigngrundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958433)
 - [Inhaltsdesigngrundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958434)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

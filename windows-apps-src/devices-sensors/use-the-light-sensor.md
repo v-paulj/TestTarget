@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 15BAB25C-DA8C-4F13-9B8F-EA9E4270BCE9
 title: Verwenden des Lichtsensors
 description: Hier erfahren Sie, wie Sie mithilfe des Umgebungslichtsensors veränderte Lichtverhältnisse erkennen.
 ---
 # Verwenden des Lichtsensors
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
@@ -122,7 +123,7 @@ Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen erset
 
 Sie müssen den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen. Wenn Sie etwa ein Projekt mit dem Namen **LightingCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="LightingCS.MainPage"`. Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:LightingCS"`.
 
--   Drücken Sie F5, oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
+-   Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
 
 Sobald die App ausgeführt wird, können Sie die Lichtsensorwerte ändern, indem das für den Sensor verfügbare Licht verändern oder die Emulatortools verwenden.
 
@@ -166,6 +167,6 @@ Diese neuen Werte werden in ein TextBlock-Element des XAML-Projektcodes geschrie
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

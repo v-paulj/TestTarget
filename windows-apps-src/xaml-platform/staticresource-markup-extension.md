@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Stellt durch Auswerten eines Verweises auf eine bereits definierte Quelle einen Wert für ein beliebiges XAML-Attribut bereit. Ressourcen sind in einem ResourceDictionary definiert, und mit der Verwendung einer StaticResource wird auf den Schlüssel dieser Ressource im ResourceDictionary verwiesen.
 title: StaticResource-Markuperweiterung
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
@@ -6,7 +7,7 @@ ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
 
 # {StaticResource}-Markuperweiterung
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Stellt durch Auswerten eines Verweises auf eine bereits definierte Quelle einen Wert für ein beliebiges XAML-Attribut bereit. Ressourcen sind in einem [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) definiert, und mit der Verwendung einer **StaticResource** wird auf den Schlüssel dieser Ressource im **ResourceDictionary** verwiesen.
 
@@ -20,7 +21,7 @@ Stellt durch Auswerten eines Verweises auf eine bereits definierte Quelle einen 
 
 | Benennung | Beschreibung |
 |------|-------------|
-| key | Der Schlüssel für die angeforderte Ressource. Dieser Schlüssel wird anfänglich durch das [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) zugewiesen. Ein Ressourcenschlüssel kann eine beliebige in der XamlName-Grammatik definierte Zeichenfolge sein. |
+| Schlüssel | Der Schlüssel für die angeforderte Ressource. Dieser Schlüssel wird anfänglich durch das [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) zugewiesen. Ein Ressourcenschlüssel kann eine beliebige in der XamlName-Grammatik definierte Zeichenfolge sein. |
 
 ## Hinweise
 
@@ -45,7 +46,7 @@ Die [{ThemeResource}-Markuperweiterung](themeresource-markup-extension.md) ist e
 
 Der folgende XAML-Beispielcode stammt aus dem [XAML-Datenbindungsbeispiel](http://go.microsoft.com/fwlink/p/?linkid=226854).
 
-```xaml
+```xml
 <StackPanel Margin="5">
     <!-- Add converter as a resource to reference it from a Binding. --> 
     <StackPanel.Resources>
@@ -81,6 +82,6 @@ Sobald ein Ressourcenschlüssel als Teil einer **{StaticResource}**-Verwendung v
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

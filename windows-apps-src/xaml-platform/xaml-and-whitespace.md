@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 description: Informationen zu von XAML verwendeten Regeln für die Leerzeichenverarbeitung.
 title: XAML und Leerzeichen
 ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
@@ -6,7 +7,7 @@ ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
 
 # XAML und Leerzeichen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Informationen zu von XAML verwendeten Regeln für die Leerzeichenverarbeitung.
 
@@ -19,7 +20,7 @@ In XAML werden genau wie in XML Leerstellen, Zeilenvorschub und Tabulator als Le
 -   Alle aufeinanderfolgenden Leerstellen werden gelöscht und durch eine einzelne Leerstelle ersetzt.
 -   Direkt auf das Starttag folgende Leerstellen werden gelöscht.
 -   Leerstellen, die sich direkt vor dem Endtag befinden, werden gelöscht.
--   Mit *ostasiatischen Zeichen* sind die Unicode-Zeichenbereiche "U+20000 bis U+2FFFD" und "U+30000 bis U+3FFFD" gemeint. Diese Teilmenge wird gelegentlich auch als *CJK-Ideogramm* bezeichnet. Weitere Informationen finden Sie unter http://www.unicode.org.
+-   Mit *ostasiatischen Zeichen* sind die Unicode-Zeichenbereiche „U+20000 bis U+2FFFD“ und „U+30000 bis U+3FFFD“ gemeint. Diese Teilmenge wird gelegentlich auch als *CJK-Ideogramm* bezeichnet. Weitere Informationen finden Sie unter http://www.unicode.org.
 
 "Default" entspricht dem Zustand, der durch den Standardwert des **xml:space**-Attributs angegeben wird.
 
@@ -42,12 +43,12 @@ Auch bei Inhaltsmodellen, die Zeichenfolgen akzeptieren, gilt das folgende Stand
 
 Leerzeichen im Quell-XAML-Code können für die spätere Darstellung auf unterschiedliche Arten beibehalten werden. Diese sind von der XAML-Leerzeichennormalisierung des XAML-Verarbeiters nicht betroffen.
 
-`xml:space="preserve"`: Geben Sie dieses Attribut auf der Ebene des Elements an, für das die Leerzeichen erhalten bleiben sollen. Beachten Sie, dass dadurch alle Leerzeichen erhalten bleiben, einschließlich derer, die möglicherweise von Codeeditoren oder Designoberflächen hinzugefügt werden, um Markupelemente als visuell intuitive Schachtelung auszurichten. Ob diese Leerzeichen gerendert werden ist ebenfalls wieder eine Frage des Inhaltsmodells für das Containerelement. Wir raten davon ab, `xml:space="preserve"` auf Stammebene anzugeben, da die Mehrzahl an Objektmodellen Leerzeichen in der Regel nicht als signifikant ansehen. Legen Sie das Attribut stattdessen explizit nur auf der Ebene der Elemente fest, die Leerzeichen innerhalb von Zeichenfolgen rendern oder bei denen es sich um Sammlungen handelt, in denen Leerzeichen von Bedeutung sind.
+`xml:space="preserve"`: Geben Sie dieses Attribut auf der Ebene des Elements an, für das die Leerzeichen erhalten bleiben sollen. Beachten Sie, dass dadurch alle Leerzeichen erhalten bleiben, einschließlich derer, die möglicherweise von Codeeditoren oder Entwurfsoberflächen hinzugefügt werden, um Markupelemente als visuell intuitive Schachtelung auszurichten. Ob diese Leerzeichen gerendert werden ist ebenfalls wieder eine Frage des Inhaltsmodells für das Containerelement. Wir raten davon ab, `xml:space="preserve"` auf Stammebene anzugeben, da die Mehrzahl an Objektmodellen Leerzeichen in der Regel nicht als signifikant ansehen. Legen Sie das Attribut stattdessen explizit nur auf der Ebene der Elemente fest, die Leerzeichen innerhalb von Zeichenfolgen rendern oder bei denen es sich um Sammlungen handelt, in denen Leerzeichen von Bedeutung sind.
 
 Entitäten und geschützte Leerzeichen: In XAML kann eine beliebige Unicodeentität innerhalb eines Textobjektmodells angegeben werden. Sie können dedizierte Entitäten wie geschützte Leerzeichen (in UTF-8-Codierung) verwenden. Darüber hinaus können Sie Rich-Text-Steuerelemente verwenden, die geschützte Leerzeichen unterstützen. Gehen Sie mit Bedacht vor, wenn Sie Layoutmerkmale wie Einzüge mithilfe von Entitäten simulieren, da die Laufzeitausgabe der Entitäten von einer größeren Anzahl von Faktoren abhängt als bei den allgemeinen Layoutkomponenten, beispielsweise der ordnungsgemäßen Verwendung von Bereichen und Rändern.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

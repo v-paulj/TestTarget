@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: In diesem Artikel werden bewährte Methoden für das Erstellen und Anzeigen von App-Einstellungen beschrieben.
 title: Richtlinien für App-Einstellungen
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
@@ -10,14 +11,14 @@ template: detail.hbs
 # Richtlinien für App-Einstellungen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 App-Einstellungen sind die vom Benutzer anpassbaren Teile Ihrer App und live innerhalb der Einstellungsseite einer App. Beispielsweise kann ein Benutzer in einer Newsreader-App angeben, welche neuen Quellen oder wie viele Spalten auf dem Bildschirm angezeigt werden sollen. Und die Einstellungen einer Wetter-App können es dem Benutzer ermöglichen, zwischen Celsius und Fahrenheit als Standardmaßeinheit zu wählen. In diesem Artikel werden bewährte Methoden für das Erstellen und Anzeigen von App-Einstellungen beschrieben.
 
 ![Beispiel für einen Einstellungsbereich](images/app-settings.png)
 
-## <span id="Should_I_include_a_settings_page_in_my_app_"></span><span id="should_i_include_a_settings_page_in_my_app_"></span><span id="SHOULD_I_INCLUDE_A_SETTINGS_PAGE_IN_MY_APP_"></span>Sollte die App eine Seite für App-Einstellungen enthalten?
+## <span id="Should_I_include_a_settings_page_in_my_app_"></span><span id="should_i_include_a_settings_page_in_my_app_"></span><span id="SHOULD_I_INCLUDE_A_SETTINGS_PAGE_IN_MY_APP_"></span>Sollte die App eine Seite für App-Einstellungen beinhalten?
 
 Hier sind Beispiele für App-Optionen, die zu einer Seite für App-Einstellungen gehören: 
 
@@ -104,14 +105,14 @@ Wenn Sie eine Liste der gewünschten Elemente auf der Seite für App-Einstellung
 -   Fassen Sie selten verwendete Einstellungen zu einem einzelnen Eintrag zusammen, damit für gängigere Einstellungen jeweils ein eigener Eintrag zur Verfügung steht. Fassen Sie Inhalte oder Links, die nur Informationen enthalten, unter der Einstellung „Info“ zusammen.
 -   Wiederholen Sie die Funktionen nicht im Berechtigungsbereich. Windows stellt diesen Bereich standardmäßig bereit, und er kann nicht geändert werden.
 
-## <span id="add_settings_to_flyouts"></span><span id="ADD_SETTINGS_TO_FLYOUTS"></span>Hinzufügen von Einstellungsinhalten zum Einstellungen-Flyout
+## <span id="add_settings_to_flyouts"></span><span id="ADD_SETTINGS_TO_FLYOUTS"></span> Hinzufügen von Einstellungsinhalten zum Einstellungen-Flyout
 
 
 -   Stellen Sie Inhalte von oben nach unten in einer einzelnen, ggf. bildlauffähigen Spalte dar. Beschränken Sie den Bildlauf auf die doppelte Bildschirmhöhe.
 -   Verwenden Sie die folgenden Steuerelemente für App-Einstellungen:
 
     -   [Umschalter](../controls-and-patterns/toggles.md): Benutzer können Werte aktivieren oder deaktivieren.
-    -   [Optionsfelder](../controls-and-patterns/radio-button.md): Benutzer können aus bis zu fünf zusammenhängenden Optionen, die sich gegenseitig ausschließen, eine auswählen.
+    -   [Optionsfelder](../controls-and-patterns/radio-button.md): Benutzer können aus bis zu fünf zusammenhängenden, sich gegenseitig ausschließenden Optionen eine Option auswählen.
     -   [Texteingabefeld](../controls-and-patterns/text-block.md): Benutzer können hier Text eingeben. Wählen Sie die Art des Texteingabefelds passend zum Typ des vom Benutzer erhaltenen Texts aus, beispielsweise für E-Mail-Adressen oder Kennwörter.
     -   [Hyperlinks](../controls-and-patterns/hyperlinks.md): Benutzer werden zu einer anderen Seite innerhalb der App oder zu einer externen Website weitergeleitet. Wenn ein Benutzer auf einen Hyperlink klickt, wird das Einstellungen-Flyout geschlossen.
     -   [Schaltflächen](../controls-and-patterns/buttons.md): Benutzer können eine Aktion sofort ausführen, ohne das aktuell geöffnete Einstellungen-Flyout zu schließen.
@@ -128,14 +129,17 @@ Wenn Sie eine Liste der gewünschten Elemente auf der Seite für App-Einstellung
 
 * [Befehlsdesigngrundlagen](https://msdn.microsoft.com/library/windows/apps/dn958433)
 * [Richtlinien für Statussteuerelemente](https://msdn.microsoft.com/library/windows/apps/hh465469)
-**Für Entwickler (XAML)**
+            
+          
+            **Für Entwickler (XAML)**
 * [Speichern und Abrufen von App-Daten](https://msdn.microsoft.com/library/windows/apps/mt299098)
-* [**EntranceThemeTransition**](https://msdn.microsoft.com/library/windows/apps/br210288)
-�
+* [
+              **EntranceThemeTransition**
+            ](https://msdn.microsoft.com/library/windows/apps/br210288) �
 
 �
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

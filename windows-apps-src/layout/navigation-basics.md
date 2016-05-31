@@ -1,16 +1,13 @@
 ---
-description: Navigation in UWP-Apps (Universelle Windows-Plattform) basiert auf flexiblem Modell aus Navigationsstrukturen, Navigationselementen, Funktionen auf Systemebene
-title: Navigationsdesigngrundlagen für UWP-Apps (Univ. Windows-Plattform)
+author: mijacobs
+Description: Die Navigation in UWP-Apps (Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene.
+title: Navigationsdesigngrundlagen für Universal Windows Platform (UWP)-Apps
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
-label: Navigationsdesigngrundlagen
+label: Navigation design basics
 template: detail.hbs
 ---
 
 #  Navigationsdesigngrundlagen für UWP-Apps
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Die Navigation in UWP-Apps (Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene. Gemeinsam ermöglichen sie eine Reihe intuitiver Benutzererfahrungen für die Navigation zwischen Apps, Seiten und Inhalten.
 
@@ -119,7 +116,7 @@ Bei der Peer-to-Peer-Navigation empfehlen wir die Nutzung von Registerkarten ode
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[Tabs and pivot](../controls-and-patterns/tabs-pivot.md)</p>
+<td align="left"><p>[Registerkarten und Pivot](../controls-and-patterns/tabs-pivot.md)</p>
 <p><img src="images/nav/nav-tabs-sm-300.png" alt="Tab-based navigation" /></p></td>
 <td align="left">Zeigt eine dauerhafte Liste mit Links zu Seiten auf derselben Ebene an.
 <p>Verwenden Sie in folgenden Fällen Registerkarten/Pivots:</p>
@@ -132,7 +129,7 @@ Bei der Peer-to-Peer-Navigation empfehlen wir die Nutzung von Registerkarten ode
 <p><img src="images/food-truck-finder/uap-foodtruck-tabletphone-sbs-sm-400.png" alt="Example of an app using tabs/pivots pattern" /></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Nav pane](../controls-and-patterns/nav-pane.md)</p>
+<td align="left"><p>[Navigationsbereich](../controls-and-patterns/nav-pane.md)</p>
 <p><img src="images/nav/nav-navpane-4page-thumb.png" alt="A navigation pane" /></p></td>
 <td align="left">Zeigt eine Liste mit Links zu den übergeordneten Seiten an.
 <p>Verwenden Sie in folgenden Fällen einen Navigationsbereich:</p>
@@ -188,7 +185,7 @@ Hierarchische Navigationselemente ermöglichen die Navigation zwischen einer üb
 <p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Master/details](../controls-and-patterns/master-details.md)</p>
+<td align="left"><p>[Master/Details](../controls-and-patterns/master-details.md)</p>
 <p><img src="images/higsecone-masterdetail-thumb.png" alt="Master/details" /></p></td>
 <td align="left">Zeigt eine Liste (Masteransicht) der Elementübersichten an. Durch Auswahl eines Elements wird die entsprechende Elementseite im Detailbereich angezeigt.
 <p>Verwenden Sie in folgenden Fällen das Master/Details-Element:</p>
@@ -221,7 +218,7 @@ Hierarchische Navigationselemente ermöglichen die Navigation zwischen einer üb
 <tbody>
 <tr class="odd">
 <td align="left">Zurück</td>
-<td align="left"><p>Der Benutzer soll den Navigationsverlauf innerhalb einer App und, abhängig vom Gerät, auch von App zu App durchlaufen können. Weitere Informationen finden Sie im Abschnitt [Make your app work well with system-level navigation features](#backnavigation) , der weiter unten in diesem Artikel aufgeführt ist.</p></td>
+<td align="left"><p>Der Benutzer soll den Navigationsverlauf innerhalb einer App und, abhängig vom Gerät, auch von App zu App durchlaufen können. Weitere Informationen finden Sie im Abschnitt [So sorgen Sie dafür, dass in Ihrer App die Navigationsfeatures auf Systemebene gut funktionieren](#backnavigation), der weiter unten in diesem Artikel aufgeführt ist.</p></td>
 </tr>
 </tbody>
 </table>
@@ -256,7 +253,7 @@ Hierarchische Navigationselemente ermöglichen die Navigation zwischen einer üb
 Sie können Navigationselemente kombinieren, um eine für Ihre App geeignete Navigationserfahrung zu erstellen. Ihre App kann beispielsweise einen Navigationsbereich verwenden, um auf Seiten auf oberster Ebene und Registerkarten auf Seiten der zweiten Ebene zuzugreifen.
 
 
-\[Dieser Artikel enthält spezielle Informationen zu UWP-Apps und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 
 
@@ -267,6 +264,6 @@ Sie können Navigationselemente kombinieren, um eine für Ihre App geeignete Nav
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

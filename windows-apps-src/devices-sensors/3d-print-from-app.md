@@ -1,4 +1,5 @@
 ---
+author: PatrickFarley
 title: 3D-Drucken in der App
 description: Erfahren Sie, wie Sie Ihrer universellen Windows-App 3D-Druckfunktionen hinzufügen. In diesem Thema wird erläutert, wie das 3D-Drucken-Dialogfeld aufgerufen wird, nachdem Sie sich vergewissert haben, dass das 3D-Modell gedruckt werden kann und im richtigen Format vorliegt.
 ms.assetid: D78C4867-4B44-4B58-A82F-EDA59822119C
@@ -14,7 +15,7 @@ ms.assetid: D78C4867-4B44-4B58-A82F-EDA59822119C
 
 -   [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/dn998169)
 
-Erfahren Sie, wie Sie Ihrer universellen Windows-App 3D-Druckfunktionen hinzufügen. In diesem Thema wird erläutert, wie das 3D-Drucken-Dialogfeld aufgerufen wird, nachdem Sie sich vergewissert haben, dass das 3D-Modell gedruckt werden kann und im richtigen Format vorliegt.
+Erfahren Sie, wie Sie Ihrer Universellen Windows-App 3D-Druckfunktionen hinzufügen. In diesem Thema wird erläutert, wie Sie 3D-Geometriedaten in Ihre App laden und das 3D-Druckdialogfeld starten, nachdem Sie sichergestellt haben, dass Ihr 3D-Modell druckbar ist und das richtige Format hat. Ein Beispiel wie dieses Verfahren in Aktion funktioniert, finden Sie unter [Beispiel für 3D-Druck – UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting).
 
 ## Einrichten von Klassen
 
@@ -25,18 +26,18 @@ Fügen Sie in der Klasse, der 3D-Druckfunktionen zugewiesen werden sollen, den [
 
 In dieser konkreten Anleitung werden die folgenden zusätzlichen Namespaces verwendet:
 
-[!code-cs[OtherNamespaces](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetOtherNamespaces)]
+[!code-cs[AndereNamespaces](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetOtherNamespaces)]
 
-Weisen Sie der Klasse anschließend einige hilfreiche Memberfelder zu. Deklarieren Sie ein [Print3DTask](https://msdn.microsoft.com/library/windows/apps/dn998044)-Objekt so, dass es als Verweis auf die Druckaufgabe fungiert, die an den Druckertreiber übergeben werden soll. Deklarieren Sie ein [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt so, dass es die Originaldatei mit den 3D-Daten enthält. Deklarieren Sie schließlich ein [Printing3D3MFPackage](https://msdn.microsoft.com/library/windows/apps/dn998063)-Objekt, das ein 3D-Modell mit allen erforderlichen Metadaten darstellt, das gedruckt werden kann.
+Weisen Sie der Klasse anschließend einige hilfreiche Memberfelder zu. Deklarieren Sie ein [Print3DTask](https://msdn.microsoft.com/library/windows/apps/dn998044)-Objekt so, dass es als Verweis auf die Druckaufgabe fungiert, die an den Druckertreiber übergeben werden soll. Deklarieren Sie ein [StorageFile](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt so, dass es die Originaldatei mit den 3D-Daten enthält. Deklarieren Sie schließlich ein [Printing3D3MFPackage](https://msdn.microsoft.com/library/windows/apps/dn998063)-Objekt, das ein 3D-Modell mit allen erforderlichen Metadaten darstellt und gedruckt werden kann.
 
 [!code-cs[DeclareVars](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetDeclareVars)]
 
 ## Erstellen einer einfachen UI
 
 
-In diesem Beispiel werden drei Benutzersteuerelemente verwendet: eine Schaltfläche zum Laden, die eine Datei im Programmspeicher ablegt, eine Schaltfläche zum Optimieren, mit der die Datei ggf. geändert wird sowie eine Schaltfläche zum Drucken, über die der Druckauftrag initiiert wird. Der folgende Code generiert diese Schaltflächen (mit den zugehörigen Click-Ereignishandlern) in der XAML-Datei Ihrer Klasse:
+In diesem Beispiel werden drei Benutzersteuerelemente verwendet: eine Schaltfläche zum Laden, die eine Datei im Programmspeicher ablegt, eine Schaltfläche zum Optimieren, mit der die Datei ggf. geändert wird, sowie eine Schaltfläche zum Drucken, über die der Druckauftrag initiiert wird. Der folgende Code generiert diese Schaltflächen (mit den zugehörigen Click-Ereignishandlern) in der XAML-Datei Ihrer Klasse:
 
-[!code-xml[Buttons](./code/3dprinthowto/cs/MainPage.xaml#SnippetButtons)]
+[!code-xml[Schaltflächen](./code/3dprinthowto/cs/MainPage.xaml#SnippetButtons)]
 
 Hinzufügen eines **TextBlock** für UI-Feedback.
 
@@ -55,7 +56,7 @@ Laden Sie in der `OnLoadClick`-Methode mit der [FileOpenPicker](https://msdn.mic
 
 An dieser Stelle können Sie eine 3D-Datendatei in den Speicher der App laden. 3D-Geometriedaten liegen jedoch in den unterschiedlichsten Formaten vor, und hinsichtlich des 3D-Drucks sind nicht alle effizient. In Windows 10 wird der 3MF-Dateityp (3D Manufacturing Format) für alle 3D-Druckaufgaben verwendet.
 
-> **Hinweis**  Der 3MF-Dateityp unterstützt eine Vielzahl von Funktionen, die in dieser Anleitung nicht behandelt werden. Weitere Informationen zu 3MF und den Features des Formats für Hersteller und Verbraucher von 3D-Produkten finden Sie in der [3MF-Spezifikation](http://3mf.io/what-is-3mf/3mf-specification/).
+> **Hinweis**  Der 3MF-Dateityp unterstützt eine Vielzahl von Funktionen, die in dieser Anleitung nicht behandelt werden. Weitere Informationen zu 3MF und den Features des Formats für Hersteller und Verbraucher von 3D-Produkten finden Sie in der [3MF-Spezifikation](http://3mf.io/what-is-3mf/3mf-specification/). Wie Sie diese Features mithilfe von Windows 10-APIs nutzen, finden Sie im Lernprogramm [Generieren ein 3MF-Pakets](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf).
 
 Glücklicherweise kann die [3D Builder](https://www.microsoft.com/store/apps/3d-builder/9wzdncrfj3t6)-App Dateien der gängigsten 3D-Formate öffnen und diese als 3MF-Dateien speichern. In diesem Beispiel mit variierendem Dateityp besteht eine sehr einfache Lösung darin, dass 3D Builder geöffnet und der Benutzer aufgefordert wird, die importierten Daten als 3MF-Datei zu speichern und anschließend neu zu laden.
 
@@ -113,10 +114,13 @@ Nach dem Registrieren des **TaskRequested**-Ereignishandlers können Sie die **S
 
 [!code-cs[ShowDialog](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetShowDialog)]
 
-Schließlich empfiehlt es sich, die Registrierung der Ereignishandler aufzuheben, nachdem die Steuerung von der App fortgesetzt wurde:
-[!code-cs[DeregisterMyTaskRequested](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetDeregisterMyTaskRequested)]
+Schließlich empfiehlt es sich, die Registrierung der Ereignishandler aufzuheben, nachdem die Steuerung von der App fortgesetzt wurde: [!code-cs[DeregisterMyTaskRequested](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetDeregisterMyTaskRequested)]
 
+## Verwandte Themen
 
+[Generieren eines 3MF-Pakets](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf)
+
+[Beispiel für 3D-Druck – UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
  
 
  
@@ -126,6 +130,6 @@ Schließlich empfiehlt es sich, die Registrierung der Ereignishandler aufzuheben
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

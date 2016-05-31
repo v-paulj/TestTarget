@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Geräteportal für HoloLens
 description: Hier erfahren Sie, wie Sie mit dem Windows Device Portal für HoloLens Ihr HoloLens-Gerät per Fernzugriff konfigurieren und verwalten können.
@@ -18,7 +19,7 @@ description: Hier erfahren Sie, wie Sie mit dem Windows Device Portal für HoloL
 4. Wählen Sie das Menüelement **Aktualisieren** aus.
 5. Wählen Sie das Menüelement **Für Entwickler** aus.
 6. Aktivieren Sie den **Entwicklermodus**.
-7. [Führen Sie einen Bildlauf nach unten durch](https://dev.windows.com/holographic/Gestures.html#Navigation), und aktivieren Sie das Geräteportal.
+7. [Führen Sie einen Bildlauf nach unten durch](https://dev.windows.com/holographic/Gestures.html#Navigation), und aktivieren Sie Device Portal.
 
 
 ### Koppeln des Geräts
@@ -29,7 +30,7 @@ description: Hier erfahren Sie, wie Sie mit dem Windows Device Portal für HoloL
 2. Suchen Sie die IP-Adresse des Geräts. – Suchen Sie die IP-Adresse auf dem Gerät unter „Einstellungen“ > „Netzwerk und Internet“ > „WLAN“ > „Erweiterte Optionen“.
     Sie können auch fragen „Hey Cortana, wie lautet meine IP-Adresse?“
 
-3. Rufen Sie in einem Webbrowser auf dem PC „`https://<YOUR_HOLOLENS_IP_ADDRESS>`“ auf.
+3. Rufen Sie in einem Webbrowser auf dem PC „“ auf. `https://<YOUR_HOLOLENS_IP_ADDRESS>`
     - Im Browser wird die folgende Meldung angezeigt: „Es besteht ein Problem mit dem Sicherheitszertifikat der Website.“ Der Grund dafür ist, dass das für das Geräteportal ausgestellte Zertifikat ein Testzertifikat ist. Sie können diesen Zertifikatfehler vorerst ignorieren und fortfahren.
 
 ### Herstellen einer Verbindung über USB 
@@ -61,7 +62,7 @@ Wenn im Browser eine Meldung zu einem Zertifikatfehler angezeigt wird, können S
 
 Jede HoloLens generiert ein eindeutiges selbstsigniertes Zertifikat für die SSL-Verbindung. Standardmäßig wird dieses Zertifikat vom Webbrowser des PC nicht als vertrauenswürdig angesehen, und Sie erhalten möglicherweise eine Meldung zu einem Zertifikatfehler. Sie können dieses Zertifikat von der HoloLens herunterladen (über USB oder ein vertrauenswürdiges WLAN-Netzwerk) und es auf dem PC als vertrauenswürdig einstufen, um eine sichere Verbindung mit dem Gerät herzustellen.
 1. Vergewissern Sie sich, dass Sie sich in einem sicheren Netzwerk (USB-Verbindung oder vertrauenswürdiges WLAN-Netzwerk) befinden.
-2. Laden Sie das Zertifikat des Geräts von der Seite „Sicherheit“ im Geräteportal herunter. Klicken Sie in der rechten oberen Liste der Symbole auf den Link „Sicherheit“, oder navigieren Sie zu „`https://<YOUR_HOLOLENS_IP_ADDRESS>/devicesecurity.htm`“.
+2. Laden Sie das Zertifikat des Geräts von der Seite „Sicherheit“ im Geräteportal herunter. Klicken Sie in der rechten oberen Liste der Symbole auf den Link „Sicherheit“, oder navigieren Sie zu „“. `https://<YOUR_HOLOLENS_IP_ADDRESS>/devicesecurity.htm`
 
 3. Installieren Sie das Zertifikat im Speicher „Vertrauenswürdige Stammzertifizierungsstellen“ auf dem PC.- Geben Sie im Windows-Menü „Computerzertifikate verwalten“ ein, und starten Sie das Applet.
     - Erweitern Sie den Ordner „Vertrauenswürdige Stammzertifizierungsstellen“.
@@ -165,6 +166,6 @@ Sendet die Tastatureingabe vom Remotecomputer an die HoloLens.
 Klicken oder tippen Sie auf den Bereich unter „Virtual keyboard“, um das Senden von Tastatureingaben an die HoloLens zu aktivieren. Geben Sie im Textfeld „Eingabetext“ Text ein, und klicken oder tippen Sie auf „Senden“, um die Tastatureingaben an die aktive App zu senden.
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

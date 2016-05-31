@@ -1,7 +1,6 @@
-#XAML-Beispiele für Entwickler
-In diesem Thema werden XAML-Beispiele für Entwickler von Xbox One-Apps aufgeführt.
+Autor: Mtoepke #XAML-Beispiele für Entwickler. Dieses Thema enthält XAML-Beispiele für Entwickler von Xbox One-Apps.
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

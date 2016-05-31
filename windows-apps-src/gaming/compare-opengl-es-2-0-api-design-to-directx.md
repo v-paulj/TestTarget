@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Planen der Portierung von OpenGL ES 2.0 zu Direct3D
 description: Wenn Sie ein Spiel von der iOS- oder Android-Plattform portieren, haben Sie vermutlich erheblich in OpenGL ES 2.0 investiert.
 ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
@@ -114,6 +115,6 @@ Direct3D kann jedoch ein rechtshändiges Koordinatensystem unterstützen. Direct
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

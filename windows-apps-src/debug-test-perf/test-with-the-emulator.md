@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: Testen mit dem Emulator für Microsoft Windows 10 Mobile
 description: Mit den Tools des Emulators für Microsoft Windows 10 Mobile können Sie die praktische Interaktion mit einem Gerät simulieren und die Features Ihrer App testen.
@@ -33,7 +34,7 @@ Betriebssystem
 -   64 Bit
 -   Mindestens Pro-Edition
 
-Informationen zum Überprüfen der BIOS-Anforderungen finden Sie unter [So wird's gemacht: Aktivieren von Hyper-V für den Emulator für Windows Phone 8](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj863509.aspx).
+Informationen zum Überprüfen der BIOS-Anforderungen finden Sie unter [So wird's gemacht: Aktivieren von Hyper-V für den Emulator für Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/xaml/jj863509.aspx).
 
 Klicken Sie zum Überprüfen der RAM- und Betriebssystemanforderungen in der Systemsteuerung auf **System und Sicherheit** und anschließend auf **System**.
 
@@ -63,13 +64,9 @@ Neben der Unterstützung der Universal Windows Platform (UWP) bietet der Emulato
 -   NFC-Unterstützung. Der Emulator ermöglicht NFC-Simulationen sowie das Testen und Entwickeln universeller Apps mit NFC- und Näherungsfunktionen.
 -   Systemeigene Hardwarebeschleunigung verbessert die Grafikleistung im Emulator durch die Verwendung der lokalen Grafikkarte. Um die Beschleunigung verwenden zu können, muss eine unterstützte Grafikkarte installiert sein, und Sie müssen die Beschleunigung auf der Registerkarte **Sensoren** auf der Einstellungsbenutzeroberfläche **Zusätzliche Tools** des Emulators aktivieren.
 
-> **Hinweis**  An der Benutzeroberfläche wurde eine wichtige Änderung vorgenommen. In dieser Version des Emulators wird die Hardwaretastatur mit F4 ein- bzw. ausgeblendet. (In älteren Emulatorversionen wurde dafür BILD-AUF/BILD-AB verwendet.)
-
- 
-
 ## Features, die Sie im Emulator testen können
 
-Zusätzlich zu den neuen Features, die im vorherigen Abschnitt erwähnt wurden, können Sie im Emulator für Microsoft Windows 10 Mobile die folgenden häufig verwendeten Features testen.
+Zusätzlich zu den neuen Features, die im vorherigen Abschnitt erwähnt wurden, können Sie im Emulator für Microsoft Windows 10 Mobile die folgenden häufig verwendeten Features testen.
 
 -   **Bildschirmauflösung, Bildschirmgröße und Arbeitsspeicher**. Stellen Sie Ihre App einem breiten Markt zur Verfügung, indem Sie sie unter verschiedenen Emulatorimages testen, die verschiedene Bildschirmauflösungen, physische Größen und Arbeitsspeicherbeschränkungen simulieren.
 
@@ -85,11 +82,13 @@ Zusätzlich zu den neuen Features, die im vorherigen Abschnitt erwähnt wurden, 
 
     Navigieren Sie im ausgeführten Emulator zur **Einstellungs**-App, wählen Sie die **System**einstellungen aus, und wählen Sie dann **Sprache** oder **Region** aus. Ändern Sie die Einstellungen, die Sie testen möchten. Wenn Sie dazu aufgefordert werden, klicken Sie auf **restart phone**, um die neuen Einstellungen anzuwenden und den Emulator neu zu starten.
 
--   **Anwendungslebenszyklus und Markierung als veraltet**. Testen Sie das Verhalten Ihrer App, wenn diese deaktiviert oder als veraltet markiert wird, indem Sie auf der Seite **Debug** der Projekteigenschaften den Wert der Option **Tombstone upon deactivation while debugging** ändern.
+-   **Anwendungslebenszyklus und Markieren als veraltet**. Testen Sie das Verhalten Ihrer App, wenn diese deaktiviert oder als veraltet markiert wird, indem Sie auf der Seite **Debug** der Projekteigenschaften den Wert der Option **Tombstone upon deactivation while debugging** ändern.
 
--   **Lokaler Ordnerspeicher (ehemals „isolierter Speicher”)**. Daten im isolierten Speicher bleiben während der Emulatorausführung erhalten, gehen beim Schließen des Emulators aber verloren.
+-   **Lokaler Ordnerspeicher (ehemals „isolierter Speicher“)**. Daten im isolierten Speicher bleiben während der Emulatorausführung erhalten, gehen beim Schließen des Emulators aber verloren.
 
 -   **Mikrofon**. Erfordert und nutzt das Mikrofon des Hostcomputers.
+
+-   **Phone-Tastatur**. Der Emulator unterstützt die Zuordnung der Hardware-Tastatur auf Ihrem Entwicklungscomputer zu einer Windows Phone-Tastatur. Das Verhalten der Tasten ist das gleiche wie auf einem Windows Phone-Gerät
 
 -   **Sperrbildschirm**. Drücken Sie bei geöffnetem Emulator auf Ihrer Computertastatur zweimal F12. Die F12-TASTE emuliert die Ein/Aus-Taste des Smartphones. Mit dem ersten Tastendruck wird das Display ausgeschaltet. Mit dem zweiten Tastendruck wird das Display wieder eingeschaltet, und der Sperrbildschirm ist aktiviert. Entsperren Sie den Bildschirm, indem Sie den Sperrbildschirm mithilfe der Maus nach oben schieben.
 
@@ -113,13 +112,44 @@ Tippen Sie auf der Symbolleiste des Emulators auf die Mauseingabeschaltfläche, 
 
 Der Emulatorbildschirm mit aktivierter Mauseingabe.
 
-![Mauseingabeschaltfläche auf der Symbolleiste des Emulators](images/emulator-showing-mouse-input-button-bar.png)
+![Die Mauseingabeschaltfläche auf der Symbolleiste des Emulators.](images/emulator-showing-mouse-input-button-bar.png)
 
 Die Mauseingabeschaltfläche auf der Symbolleiste des Emulators.
 
+## Tastatureingabe
+
+Der Emulator unterstützt die Zuordnung der Hardware-Tastatur auf Ihrem Entwicklungscomputer zu einer Windows Phone-Tastatur. Das Verhalten der Tasten ist das gleiche wie auf einem Windows Phone-Gerät. 
+
+Die Hardware-Tastatur ist standardmäßig nicht aktiviert. Diese Implementierung entspricht eine gleitende Tastatur, die bereitgestellt werden muss, bevor Sie verwendet werden kann. Bevor Sie die Hardwaretastatur aktivieren, akzeptiert der Emulator Tastatureingaben nur von den Steuerelementtasten.
+
+Sonderzeichen auf der Tastatur einer lokalisierten Version eines Windows-Entwicklungscomputer werden vom Emulator nicht unterstützt. Um Sonderzeichen einzugeben, die auf einer lokalisierten Tastatur vorhanden sind, verwenden Sie stattdessen den Eingabebereich (Software Input Panel, SIP). 
+
+Drücken Sie F4, um die Tastatur des Computers im Emulator zu verwenden.
+
+Drücken Sie F4, um die Verwendung der Tastatur des Computers im Emulator zu beenden.
+
+Die folgende Tabelle enthält die Tasten einer Hardwaretastatur, die Sie verwenden können, um Schaltflächen und andere Steuerelemente auf einem Windows Phone zu emulieren.
+
+Beachten Sie, dass mit Emulator Build 10.0.14332 die Zuordnung der Computerhardwaretasten geändert wurde. Die Einträge in der zweiten Spalte der folgenden Tabelle bezeichnen diese neuen Tasten. 
+
+Computerhardwaretasten (Emulator Build 10.0.14295 und früher) | Computerhardwaretasten (Emulator Build 10.0.14332 und höher) | Windows Phone-Hardwaretaste | Hinweise
+--------------------- | ------------------------- | ----------------------------- | -----
+F1 | WIN + ESC | Zurück | Eine lange Betätigung funktioniert wie erwartet.
+F2 | WIN + F2 | Start | Eine lange Betätigung funktioniert wie erwartet.
+F3 | WIN + F3 | Suche |  
+F4 | F4 (keine Änderung) | Schaltet die Verwendung der lokalen Computertastatur ein oder aus. | 
+F6 | WIN + F6 | Kamera halb | Eine dedizierte Kamerataste, die halb gedrückt wird.
+F7 | WIN + F7 | Kamera ganz | Eine dedizierte Kamerataste
+F9 | WIN + F9 | Lauter | 
+F10 | WIN + F10 | Leiser | 
+F12 | WIN + F12 | Stromversorgung | Drücken Sie die Taste F12 zweimal, um den Sperrbildschirm zu aktivieren. Eine lange Betätigung funktioniert wie erwartet.
+ESC | WIN + ESC | Zurück | Eine lange Betätigung funktioniert wie erwartet.
+ 
+
+
 ## Near Field Communication (NFC)
 
-Erstellen und testen Sie Apps mit NFC-Features (Near Field Communication) unter Windows 10 Mobile mithilfe der Registerkarte **NFC** der zusätzlichen Tools**** des Emulators. NFC kann in einer Vielzahl von Szenarien eingesetzt werden – von Näherungsszenarien (z. B. „Zum Senden berühren“) bis hin zur Emulierung von Karten (z. B. „Zum Bezahlen berühren“).
+Erstellen und testen Sie Apps mit NFC-Features (Near Field Communication) unter Windows 10 Mobile mithilfe der Registerkarte **NFC** im Menü **Zusätzliche Tools** des Emulators. NFC kann in einer Vielzahl von Szenarien eingesetzt werden – von Näherungsszenarien (z. B. „Zum Senden berühren“) bis hin zur Emulierung von Karten (z. B. „Zum Bezahlen berühren“).
 
 Zum Testen Ihrer App können Sie mithilfe eines Emulatorpaars zwei sich berührende Smartphones simulieren. Alternativ können Sie Ihre App testen, indem Sie eine Berührung mit einem Tag simulieren. Unter Windows 10 verfügen mobile Geräte zudem über HCE (Host Karte Emulation). Mithilfe des Smartphone-Emulators können Sie die Berührung Ihres Geräts mit einem Bezahlterminal für APDU-Befehl/Antwort-Datenverkehr simulieren.
 
@@ -410,7 +440,7 @@ Die Registerkarte **SD-Karte** simuliert mithilfe eines Ordner auf dem Entwicklu
         -   Wenn Sie während des Synchronisierungsvorgangs auf **Synchronisierung abbrechen** klicken, wird die Karte ausgeworfen, und die Ergebnisse des Synchronisierungsvorgangs sind unvollständig.
     -   Die Schaltfläche **Eject SD card** wird wieder zu **Insert SD card**.
 
-> **Hinweis**  Da von Smartphones verwendete SD-Karten mit dem FAT32-Dateisystem formatiert sind, beträgt die maximale Dateigröße 32 GB.
+> **Hinweis**  Da die vom Smartphone verwendete SD-Karte mit dem FAT32-Dateisystem formatiert ist, beträgt die maximale Dateigröße 32 GB.
 
 Die Geschwindigkeit von Lese- und Schreibvorgängen wird für die simulierte SD-Karte realistisch gedrosselt. Der Zugriff auf eine SD-Karte dauert länger als der Zugriff auf die Festplatte des Computers.
 
@@ -587,7 +617,7 @@ Führen Sie zum Beheben dieses Problems an einer Eingabeaufforderung mit Adminis
  
 ### Die Emulatoren können nicht gestartet werden.
 
-Der Microsoft-Emulator enthält „XDECleanup.exe“ – ein Tool, das alle VMs, differenzierenden Datenträger und emulatorspezifischen Netzwerkswitches löscht. Dieses Tool ist bereits in den Binärdateien (XDE) des Emulators enthalten. Verwenden Sie dieses Tool zum Bereinigen von Emulator-VMs, wenn diese einen fehlerhaften Zustand aufweisen. Führen Sie das Tool über eine Eingabeaufforderung mit Administratorrechten aus: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`.
+Der Microsoft-Emulator enthält „XDECleanup.exe“ – ein Tool, das alle VMs, differenzierenden Datenträger und emulatorspezifischen Netzwerkswitches löscht. Dieses Tool ist bereits in den Binärdateien (XDE) des Emulators enthalten. Verwenden Sie dieses Tool zum Bereinigen von Emulator-VMs, wenn diese einen fehlerhaften Zustand aufweisen. Führen Sie das Tool über eine Eingabeaufforderung mit Administratorrechten aus: .`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
 > **Hinweis**  „XDECleanup.exe“ löscht alle emulatorspezifischen Hyper-V-VMs sowie alle VM-Prüfpunkte und gespeicherten Zustände.
 
@@ -604,14 +634,13 @@ Standardmäßig verwendet der Windows 10 Mobile-Emulator hardwarebeschleunigte 
 So deaktivieren sie die Hardwarbeschleunigung:
 
 1. Starten Sie den Registrierungs-Editor.
-2. Erstellen Sie folgenden Registrierungsunterschlüssel, falls er nicht vorhanden ist:
-   HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
+2. Erstellen Sie den folgenden Registrierungsunterschlüssel, wenn er nicht vorhanden ist: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
 3. Klicken Sie auf den Ordner „10.0”, zeigen Sie auf **Neu**, und klicken Sie dann auf **DWORD-Wert**.
 4. Geben Sie **DisableRemoteFx** ein, und drücken Sie die EINGABETASTE.
 5. Doppelklicken Sie auf **DisableRemoteFx**, geben Sie im Feld **Wert** den Wert 1 ein, wählen Sie die Option **Decimal** aus, und klicken Sie dann auf **OK**.
 6. Schließen Sie den Registrierungs-Editor.
 
-**Hinweis:**  Nach dem Festlegen dieses Registrierungswerts müssen Sie die virtuelle Maschine im Hyper-V-Manager für diejenige Konfiguration löschen, die Sie in Visual Studio gestartet haben, und dann den Emulator mit Softwarerendering neu starten.
+**Hinweis:** Nach dem Festlegen dieses Registrierungswerts müssen Sie die virtuelle Maschine im Hyper-V-Manager für diejenige Konfiguration löschen, die Sie in Visual Studio gestartet haben, und dann den Emulator mit Softwarerendering neu starten.
 
 ## Supportressourcen
 
@@ -619,12 +648,12 @@ Antworten und Problemlösungen für die Windows 10-Tools finden Sie im [Forum f
 
 ## Verwandte Themen
 
-* [Ausführen von Windows Phone-Apps im Emulator](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn632391.aspx)
+* [Ausführen von Windows Phone-Apps im Emulator](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Windows und Windows Phone SDK-Archiv](https://dev.windows.com/downloads/sdk-archive)
  
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

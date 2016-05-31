@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Rendern der Szene mit Tiefentest
 description: Erstellen Sie einen Schatteneffekt, indem Sie dem Vertex-Shader (bzw. Geometry-Shader) und dem Pixel-Shader einen Tiefentest hinzufügen.
 ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
@@ -159,6 +160,6 @@ Der nächste Teil dieser exemplarischen Vorgehensweise beschäftigt sich mit dem
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

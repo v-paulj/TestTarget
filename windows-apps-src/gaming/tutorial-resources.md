@@ -1,6 +1,7 @@
 ---
+author: mtoepke
 title: Erweitern des Spielbeispiels
-description: Herzlichen Glückwunsch! Sie sind nun mit den Schlüsselkomponenten eines einfachen dreidimensionalen DirectX-Spiels für die universelle Windows-Plattform (UWP) vertraut.
+description: Herzlichen Glückwunsch! Sie sind nun mit den Schlüsselkomponenten eines einfachen dreidimensionalen DirectX-Spiels für die Universelle Windows-Plattform (UWP) vertraut.
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
 keywords: ["DirectX, XAML"]
 ---
@@ -30,7 +31,7 @@ Welche Unterschiede bestehen also zwischen der Direct2D-Implementierung einer Be
 
 Gehen Sie wie folgt vor, um den XAML-Code für **SwapChainBackgroundPanel** in der Datei **Main.app.xaml** zu deklarieren:
 
-```xaml
+```xml
 <Page
     x:Name="DXMainPage"
     x:Class="Simple3DGameXaml.MainPage"
@@ -863,7 +864,7 @@ void App::ResetGame()
 
 MainPage.xaml
 
-```xaml
+```xml
 <SwapChainBackgroundPanel
     x:Name="DXSwapChainPanel"
     x:Class="Simple3DGameXaml.MainPage"
@@ -1514,6 +1515,6 @@ Eine Version des Beispielspiels, die XAML für das Overlay verwendet, finden Sie
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

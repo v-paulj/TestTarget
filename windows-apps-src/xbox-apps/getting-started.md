@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Erste Schritte bei der Entwicklung von UWP-Apps auf Xbox One
 description: Einrichten des Computers und der Xbox One für die UWP-Entwicklung
 area: Xbox
@@ -21,7 +22,8 @@ Bevor Sie beginnen, müssen Sie die folgenden Schritte ausführen:
 
 2.  Installieren Sie Windows 10 SDK Preview Build 14295. Diese Version erhalten Sie über das [Windows-Insider-Programm](http://go.microsoft.com/fwlink/p/?LinkId=780552).
   
-  > **Wichtig**&nbsp;&nbsp;Nach der Installation dieses Preview SDKs auf Ihrem PC können Sie Apps, die auf diesem PC erstellt werden, nicht mehr an den Store übermitteln. Daher sollten Sie diesen Schritt nicht auf Ihrem Entwicklungscomputer für die Produktion ausführen. 
+  > **Wichtig**
+            &nbsp;&nbsp;Nach der Installation dieses Preview SDKs auf Ihrem PC können Sie Apps, die auf diesem PC erstellt werden, nicht mehr an den Store übermitteln. Daher sollten Sie diesen Schritt nicht auf Ihrem Entwicklungscomputer für die Produktion ausführen. 
 
 ## Einrichten Ihrer Xbox One-Konsole
 1.  Aktivieren Sie den Entwicklermodus auf der Xbox One. Laden Sie die App herunter, und geben Sie den erhaltenen Aktivierungscode im Dev Center-Konto auf der xboxactivate-Seite ein. Weitere Informationen finden Sie unter [Aktivieren des Entwicklermodus auf Xbox One](devkit-activation.md). 
@@ -30,7 +32,8 @@ Bevor Sie beginnen, müssen Sie die folgenden Schritte ausführen:
 
 3.  Öffnen Sie die DevMode-Aktivierungsapp, und wählen Sie **Switch and restart** aus. Herzlichen Glückwunsch! Ihre Xbox One befindet sich nun im Entwicklermodus.
   
-  > **Hinweis**&nbsp;&nbsp;Ihre Einzelhandelsspiele und -Apps werden im Entwicklermodus nicht ausgeführt, aber die von Ihnen erstellten Apps oder Spiele werden ausgeführt. Wechseln Sie zurück in den Einzelhandelsmodus, um Ihre Lieblingsspiele und -Apps auszuführen.
+  > **Hinweis**
+            &nbsp;&nbsp;Ihre Einzelhandelsspiele und -Apps werden im Entwicklermodus nicht ausgeführt, aber die von Ihnen erstellten Apps oder Spiele werden ausgeführt. Wechseln Sie zurück in den Einzelhandelsmodus, um Ihre Lieblingsspiele und -Apps auszuführen.
 
 ## Erstellen Ihres ersten Projekts in Visual Studio 2015
 
@@ -58,6 +61,6 @@ Ausführliche Informationen finden Sie unter [Einrichtung der Entwicklungsumgebu
 - [UWP auf Xbox One](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

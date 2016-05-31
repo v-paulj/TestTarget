@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Bewertungsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen.
 title: Abrufen von App-Bewertungen
@@ -37,7 +38,7 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
+| Authorization | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;. |
 
  
 
@@ -62,7 +63,7 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">string</td>
-<td align="left">Die Produkt-ID der App, für die Sie Bewertungsdaten abrufen möchten. Die Produkt ID ist im Eintragungslink der App eingebettet, die auf der [App identity page](https://msdn.microsoft.com/library/windows/apps/mt148561) des Dev Center-Dashboards verfügbar ist. Ein Beispiel für eine Produkt-ID ist 9WZDNCRFJ3Q8.</td>
+<td align="left">Die Produkt-ID der App, für die Sie Bewertungsdaten abrufen möchten. Die Produkt ID ist im Eintragungslink der App eingebettet, die auf der [Seite App-Identität](https://msdn.microsoft.com/library/windows/apps/mt148561) des Dev Center-Dashboards verfügbar ist. Ein Beispiel für eine Produkt-ID ist 9WZDNCRFJ3Q8.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="even">
@@ -92,7 +93,7 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 <tr class="even">
 <td align="left">filter</td>
 <td align="left">string</td>
-<td align="left">Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Weitere Informationen finden Sie unten im Abschnitt [filter fields](#filter-fields).</td>
+<td align="left">Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Weitere Informationen finden Sie unten im Abschnitt [Filterfelder](#filter-fields).</td>
 <td align="left">Nein</td>
 </tr>
 <tr class="odd">
@@ -185,7 +186,7 @@ Die Liste der unterstützten Felder finden Sie in der folgenden Tabelle. Zeichen
 
 Die folgenden Beispiele zeigen verschiedene Anforderungen für das Abrufen von Bewertungsdaten. Ersetzen Sie den Wert *ApplicationId* durch die Produkt-ID Ihrer App.
 
-```
+```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/ratings?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
 Authorization: Bearer <your access token>
 
@@ -265,6 +266,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

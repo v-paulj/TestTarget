@@ -1,6 +1,7 @@
 ---
-title: Definieren des UWP-App-Frameworks für das Spiel
-description: Hier sind Details zum Hauptobjekt des Spiels beschrieben und wie die implementierten Regeln in Interaktionen mit der Spielwelt übersetzt werden.
+author: mtoepke
+title: Definieren des UWP-App-Frameworks (Universelle Windows-Plattform) für das Spiel
+description: Wenn Sie Code für ein UWP-Spiel mit DirectX erstellen, müssen Sie zunächst das Framework erstellen, das die Interaktion der Spielobjekte mit Windows ermöglicht.
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
 ---
 
@@ -214,7 +215,9 @@ In unserem Spielbeispiel starten wir eine While-Schleife, die beendet wird, wenn
 
 Wenn Ihr Spiel den Fokus hat, müssen Sie jedes in der Meldungswarteschlange eingehende Ereignis behandeln. Daher müssen Sie [**CoreWindowDispatch.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) mit der Option **ProcessAllIfPresent** aufrufen. Andere Optionen können zu einer verzögerten Verarbeitung von Meldungsereignissen führen. So entsteht der Eindruck, dass das Spiel nicht reagiert oder Toucheingaben nur träge umgesetzt werden.
 
-Wenn die App nicht sichtbar ist, angehalten oder angedockt wurde, möchten wir natürlich nicht, dass sie Meldungen ausgibt, die niemals ankommen, und dabei auch noch Ressourcen beansprucht. Daher muss das Spiel **ProcessOneAndAllPending** verwenden, was eine Blockierung bis zum Eingang eines Ereignisses zur Folge hat. Dieses Ereignis wird dann zusammen mit anderen Ereignissen verarbeitet, die während der Verarbeitung des ersten Ereignisses in der Prozesswarteschlange eingehen. [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) springt nach der Verarbeitung der Warteschlange sofort wieder zurück.
+Wenn die App nicht sichtbar ist, angehalten oder angedockt wurde, möchten wir natürlich nicht, dass sie Meldungen ausgibt, die niemals ankommen, und dabei auch noch Ressourcen beansprucht. Daher muss das Spiel **ProcessOneAndAllPending** verwenden, was eine Blockierung bis zum Eingang eines Ereignisses zur Folge hat. Dieses Ereignis wird dann zusammen mit anderen Ereignissen verarbeitet, die während der Verarbeitung des ersten Ereignisses in der Prozesswarteschlange eingehen. [
+              **ProcessEvents**
+            ](https://msdn.microsoft.com/library/windows/apps/br208215) springt nach der Verarbeitung der Warteschlange sofort wieder zurück.
 
 Das Spiel läuft! Die Ereignisse, die es für den Wechsel des Spielzustands nutzt, werden verteilt und verarbeitet. Die Grafik wird im Rahmen der Spielschleifendurchläufe aktualisiert. Wir hoffen, der Spieler hat Spaß. Aber jeder Spaß ist einmal zu Ende...
 
@@ -311,7 +314,7 @@ Hier sehen Sie die Ereignishandler im Beispiel sowie die jeweils behandelten Ere
 <td align="left">OnLogicalDpiChanged</td>
 <td align="left">Behandelt [<strong>DisplayProperties::LogicalDpiChanged</strong>](https://msdn.microsoft.com/library/windows/apps/br226150). Der DPI-Wert für das Hauptfenster des Spiels hat sich geändert, und die Spiele-App passt ihre Ressourcen entsprechend an.
 <div class="alert">
-<strong>Hinweis:</strong> [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559)-Koordinaten werden genau wie in [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987) in DIPs (Device Independent Pixels; geräteunabhängige Pixel) angegeben. Daher müssen Sie Direct2D über die DPI-Änderung informieren, damit die 2D-Ressourcen oder -Grundtypen korrekt angezeigt werden.
+<strong>Hinweis</strong>  [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559)-Koordinaten werden genau wie in [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987) in DIPs (Device Independent Pixels; geräteunabhängige Pixel) angegeben. Daher müssen Sie Direct2D über die DPI-Änderung informieren, damit die 2D-Ressourcen oder -Grundtypen korrekt angezeigt werden.
 </div>
 <div>
  
@@ -1421,6 +1424,6 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

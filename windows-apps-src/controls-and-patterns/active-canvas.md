@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Ein Muster mit einem Inhalts- und einem Befehlsbereich für Apps mit einer einzelnen Ansicht oder modalen Benutzeroberflächen wie z. B. Fotoanzeige-/Fotobearbeitungs-Apps, Dokumentviewer-Apps, Karten-Apps, Zeichen-Apps oder andere Apps, die eine Ansicht mit freiem Bildlauf nutzen.
 title: Richtlinien für das Muster „Aktive Canvas“
 ms.assetid: 4D768472-64D6-406C-9E87-F750F6B981A0
@@ -28,13 +29,13 @@ Das Muster der aktiven Canvas besteht aus einem Inhaltsbereich und einem Befehls
 
 **Befehlsbereich.**  Falls Sie zahlreiche Befehle anzeigen möchten, wäre eine auf die Bildschirmgröße reagierende Befehlsleiste eine Option. Wenn Sie nicht so viele Befehle anzeigen möchten und nicht unbedingt Wert auf eine reaktionsfähige Benutzeroberfläche legen, bieten sich platzsparende Schaltflächen an.
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Artikel
 
 -   [**App-Leiste und Befehlsleiste**](app-bars.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

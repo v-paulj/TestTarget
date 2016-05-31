@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Bewegungs-/Blicksteuerungen für Spiele
 description: Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen.
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
@@ -154,7 +155,7 @@ Jetzt definieren wir die Felder für den Blickcontroller (für Maus- und Touchei
 -   **m\_lookInUse** gibt an, ob die Blicksteuerung verwendet wird.
 -   **m\_lookPointerID** ist die eindeutige ID für den aktuellen Blickzeiger. Damit wird beim Überprüfen der Zeiger-ID zwischen dem Blickzeiger und dem Bewegungszeiger unterschieden.
 -   **m\_lookLastPoint** ist der letzte Punkt, der im vorherigen Frame erfasst wurde (in Szenenkoordinaten).
--   **m\_lookLastDelta** ist die berechnete Differenz zwischen **m\_position** (aktuell) und **m\_lookLastPoint**.
+-   **m\_lookLastDelta** ist die berechnete Differenz zwischen der aktuellen **m\_position** und **m\_lookLastPoint**.
 
 Zum Schluss definieren wir sechs boolesche Werte für die sechs Bewegungsgrade, mit denen der aktuelle Zustand der einzelnen Bewegungsaktionen angegeben wird (Ein oder Aus):
 
@@ -583,6 +584,6 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die univer
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

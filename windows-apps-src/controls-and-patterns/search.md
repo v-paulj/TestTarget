@@ -1,22 +1,21 @@
 ---
+author: Jwmsft
 Description: Die Suche ist eine der besten Möglichkeiten, um Inhalte in Ihrer App zu finden. In diesem Artikel werden Elemente der Suche sowie Suchbereiche, die Implementierung und Beispiele für die Suche im Kontext behandelt.
 title: Suche und „Auf Seite suchen“
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
-label: Suche
+label: Search
 template: detail.hbs
 ---
 
 # Suche und „Auf Seite suchen“
 
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+Die Suche ist eine der besten Möglichkeiten, um Inhalte in Ihrer App zu finden. In diesem Artikel werden Elemente der Suche sowie Suchbereiche, die Implementierung und Beispiele für die Suche im Kontext behandelt.
 
 **Wichtige APIs**
 
 -   [**AutoSuggestBox-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)
 
-Die Suche ist eine der besten Möglichkeiten, um Inhalte in Ihrer App zu finden. In diesem Artikel werden Elemente der Suche sowie Suchbereiche, die Implementierung und Beispiele für die Suche im Kontext behandelt.
+
 
 ## <span id="Elements_of_the_search_experience"></span><span id="elements_of_the_search_experience"></span><span id="ELEMENTS_OF_THE_SEARCH_EXPERIENCE"></span>Elemente der Suche
 
@@ -29,7 +28,7 @@ Die Suche ist eine der besten Möglichkeiten, um Inhalte in Ihrer App zu finden.
 
  
 
-**Abfrageformulierung/automatischer Vorschlag.**  Die Abfrageformulierung ersetzt den Nulleingabeinhalt, sobald der Benutzer mit der Eingabe beginnt. Während der Eingabe einer Abfragezeichenfolge werden dem Benutzer kontinuierlich aktualisierte Abfragevorschläge oder Optionen zur Mehrdeutigkeitsvermeidung angezeigt, um die Eingabe zu beschleunigen und ihn bei der Formulierung einer geeigneten Abfrage zu unterstützen. Dieses Verhalten von Abfragevorschlägen ist in das [Steuerelement für automatische Vorschläge](auto-suggest-box.md)integriert und ermöglicht auch die Symbolanzeige innerhalb der Suche (beispielsweise ein Mikrofon oder ein Commit-Symbol). Jedes andere Verhalten muss von der App behandelt werden.
+**Abfrageformulierung/automatischer Vorschlag.**  Die Abfrageformulierung ersetzt den Nulleingabeinhalt, sobald der Benutzer mit der Eingabe beginnt. Während der Eingabe einer Abfragezeichenfolge werden dem Benutzer kontinuierlich aktualisierte Abfragevorschläge oder Optionen zur Mehrdeutigkeitsvermeidung angezeigt, um die Eingabe zu beschleunigen und ihn bei der Formulierung einer geeigneten Abfrage zu unterstützen. Dieses Verhalten von Abfragevorschlägen ist in das [Steuerelement für automatische Vorschläge](auto-suggest-box.md) integriert und ermöglicht auch die Symbolanzeige innerhalb der Suche (beispielsweise ein Mikrofon oder ein Commit-Symbol). Jedes andere Verhalten muss von der App behandelt werden.
 
 ![example of query/formulation einen automatischen Vorschlag](images/search-autosuggest-example.png)
 
@@ -48,7 +47,7 @@ Die Suche ist ein gängiges Feature, und die entsprechenden UI-Elemente begegnen
 
 Im Anschluss finden Sie einige gängige Suchbereiche:
 
-**Global** und **Kontext/Eingrenzung**. Übergreifende Suche für mehrere Quellen mit Cloud-basierten und lokalen Inhalten. Zu den unterschiedlichen Ergebnisse zählen beispielsweise URLs, Dokumente, Medien, Aktionen und Apps.
+**Global** und **Kontext/Eingrenzung**  Übergreifende Suche für mehrere Quellen mit Cloud-basierten und lokalen Inhalten. Zu den unterschiedlichen Ergebnisse zählen beispielsweise URLs, Dokumente, Medien, Aktionen und Apps.
 
 **Web.**  Suche nach einem Webindex. Die Ergebnisse können unter anderem Seiten, Entitäten und Antworten umfassen.
 
@@ -97,7 +96,7 @@ Mit zunehmender Eingrenzung oder zunehmendem Kontextbezug des Suchbereichs wird 
 
 Bei bildlauffähigen Listen empfiehlt es sich, darauf zu achten, dass die Sucheingabe immer sichtbar ist. Wir empfehlen, die Sucheingabe zu verankern und so zu konfigurieren, dass der Bildlauf im Hintergrund stattfindet.
 
-Die Funktion für Nulleingabe und Abfrageformulierung ist bei kontextbezogenen/eingegrenzten Suchvorgängen, bei denen die Liste in Echtzeit auf der Grundlage der Benutzereingabe gefiltert wird, optional. Hiervon ausgenommen sind Fälle, bei denen möglicherweise Abfrageformatierungsvorschläge verfügbar sind. Hierzu zählen etwa Filteroptionen für den Posteingang (An:&lt;Eingabezeichenfolge&gt;, Von: &lt;Eingabezeichenfolge&gt;, Betreff: &lt;Eingabezeichenfolge&gt; usw.).
+Die Funktion für Nulleingabe und Abfrageformulierung ist bei kontextbezogenen/eingegrenzten Suchvorgängen, bei denen die Liste in Echtzeit auf der Grundlage der Benutzereingabe gefiltert wird, optional. Hiervon ausgenommen sind Fälle, bei denen möglicherweise Abfrageformatierungsvorschläge verfügbar sind. Hierzu zählen beispielsweise Filteroptionen für den Posteingang (An:&lt;Eingabezeichenfolge&gt;, Von: &lt;Eingabezeichenfolge&gt;, Betreff: &lt;Eingabezeichenfolge&gt; usw.).
 
 ## <span id="examples"></span><span id="EXAMPLES"></span>Beispiel
 
@@ -161,7 +160,7 @@ Die Funktion „Auf Seite suchen“ bietet Benutzern die Möglichkeit, im aktuel
 ## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>Beispiele
 
 
-Stellen Sie eine einfache Möglichkeit zur Verfügung, um das Feature „Auf Seite suchen“ zuzugreifen. In diesem Beispiel auf einer mobilen Benutzeroberfläche wird „Auf Seite suchen“ hinter zwei „Hinzufügen zu…“-Befehlen in einem erweiterbaren Menü angezeigt:
+Stellen Sie eine einfache Möglichkeit zur Verfügung, um das Feature „Auf Seite suchen“ zuzugreifen. In diesem Beispiel auf einer mobilen Benutzeroberfläche wird „Auf Seite suchen“ hinter zwei „Hinzufügen zu…“-Befehlen in einem erweiterbarem Menü angezeigt:
 
 ![„Auf Seite suchen“ (Beispiel 1)](images/findinpage-01.png)
 
@@ -217,6 +216,6 @@ Weitere Informationen zum Hinzufügen von Befehlen zur Befehlsleiste finden Sie 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

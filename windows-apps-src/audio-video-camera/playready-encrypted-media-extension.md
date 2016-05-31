@@ -1,6 +1,7 @@
 ---
+author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: So ändern Sie Ihre Web-App mit PlayReady, um die Änderungen zu unterstützen, die für Windows 10 gegenüber der Windows 8.1-Version vorgenommen wurden.
+description: In diesem Abschnitt wird beschrieben, wie Sie Ihre Web-App mit PlayReady ändern, um die Änderungen zu unterstützen, die gegenüber der Windows 8.1-Version in der Version für Windows 10 vorgenommen wurden.
 title: Verschlüsselte Medienerweiterung von PlayReady
 ---
 
@@ -97,7 +98,7 @@ So richten Sie das sichere Beenden für benutzerdefinierte Steuerelemente oder B
 
 Das folgende Beispiel zeigt, wie Sie das sichere Beenden in Ihrer Web-App verwenden:
 
-``` syntax
+```JavaScript
 // JavaScript source code
 
 var g_prkey = null;
@@ -299,6 +300,6 @@ Weitere Informationen finden Sie in den [Beispielanwendungen](https://code.msdn.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

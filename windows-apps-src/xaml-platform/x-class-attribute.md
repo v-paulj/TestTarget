@@ -1,12 +1,13 @@
 ---
-description: konfiguriert die XAML-Kompilierung, um partielle Klassen zwischen Markup und CodeBehind beizutreten. Die partielle Codeklasse wird in einer separaten Codedatei definiert, die partielle Markupklasse wird von der Codegenerierung während der XAML-Kompilierung erstellt.
+author: jwmsft
+description: Konfiguriert die XAML-Kompilierung, um partielle Klassen zwischen Markup und CodeBehind zu verknüpfen. Die partielle Codeklasse wird in einer separaten Codedatei definiert, die partielle Markupklasse wird von der Codegenerierung während der XAML-Kompilierung erstellt.
 title: xClass-Attribut
 ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
 ---
 
 # x:Class-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Konfiguriert die XAML-Kompilierung, um partielle Klassen zwischen Markup und CodeBehind beizutreten. Die partielle Codeklasse wird in einer separaten Codedatei definiert, die partielle Markupklasse wird von der Codegenerierung während der XAML-Kompilierung erstellt.
 
@@ -28,7 +29,7 @@ Konfiguriert die XAML-Kompilierung, um partielle Klassen zwischen Markup und Cod
 
 ## Hinweise
 
-**x:Class** kann als Attribut für ein beliebiges Element, das als Stamm einer XAML-Datei-/-Objektstruktur fungiert und durch Erstellungsaktionen kompiliert wird, oder für den [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Stamm in der Anwendungsdefinition einer kompilierten Anwendung deklariert werden. Wenn Sie **x:Class** für ein Element, bei dem es sich nicht um einen Seiten- oder Anwendungsstamm handelt, oder unter beliebigen Umständen für eine nicht mit der Buildaktion **Seite** kompilierte XAML-Datei deklarieren, tritt zur Kompilierzeit ein Fehler auf.
+**x:Class** kann als Attribut für ein beliebiges Element deklariert werden, das als Stamm einer XAML-Datei-/-Objektstruktur fungiert und durch Buildvorgänge kompiliert wird, oder für den [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Stamm in der Anwendungsdefinition einer kompilierten Anwendung. Wenn Sie **x:Class** für ein Element, bei dem es sich nicht um einen Seiten- oder Anwendungsstamm handelt, oder unter beliebigen Umständen für eine nicht mit der Buildaktion **Seite** kompilierte XAML-Datei deklarieren, tritt zur Kompilierzeit ein Fehler auf.
 
 Die als **x:Class** verwendete Klasse darf keine geschachtelte Klasse sein.
 
@@ -40,6 +41,6 @@ Ihre CodeBehind-Datei kann zwar eine C++-Datei sein, bestimmte Konventionen rich
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,17 +1,15 @@
 ---
-description: Hier erfahren Sie, wie Sie in einer einfachen Peer-zu-Peer-UWP-App (Universelle Windows-Plattform) mit zwei Seiten navigieren.
+author: Jwmsft
+Description: Hier erfahren Sie, wie Sie in einer einfachen Peer-zu-Peer-App für die Universelle Windows-Plattform (UWP) mit zwei Seiten navigieren.
 title: Peer-zu-Peer-Navigation zwischen zwei Seiten
 ms.assetid: 0A364C8B-715F-4407-9426-92267E8FB525
-label: Peer-zu-Peer-Navigation zwischen zwei Seiten
+label: Peer-to-peer navigation between two pages
 template: detail.hbs
 ---
 
 # <span id="dev_navigation.peer-to-peer_navigation_between_two_pages"></span>Peer-zu-Peer-Navigation zwischen zwei Seiten
 
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-Hier erfahren Sie, wie Sie in einer einfachen Peer-zu-Peer-UWP-App mit zwei Seiten navigieren.
+Hier erfahren Sie, wie Sie in einer einfachen Peer-zu-Peer-App für die Universelle Windows-Plattform (UWP) mit zwei Seiten navigieren.
 
 ![Beispiel für Peer-zu-Peer-Navigation zwischen zwei Seiten](images/nav-peertopeer-2page.png)
 
@@ -33,11 +31,11 @@ Hier erfahren Sie, wie Sie in einer einfachen Peer-zu-Peer-UWP-App mit zwei Seit
 
     Die Projektmappe wird erstellt, und die Projektdateien werden im **Projektmappen-Explorer** angezeigt.
 
-    **Wichtig**  Wenn Sie Visual Studio zum ersten Mal ausführen, werden Sie auf die Entwicklerlizenz hingewiesen. Weitere Infos finden Sie unter [Aktivieren des Geräts für die Entwicklung](https://msdn.microsoft.com/library/windows/apps/dn706236).
+    **Wichtig**  Wenn Sie Visual Studio zum ersten Mal ausführen, werden Sie gebeten, eine Entwicklerlizenz zu beziehen. Weitere Infos finden Sie unter [Aktivieren des Geräts für die Entwicklung](https://msdn.microsoft.com/library/windows/apps/dn706236).
 
      
 
-5.  Klicken Sie zum Ausführen des Programms im Menü auf **Debuggen** &gt; **Debugging starten**, oder drücken Sie F5.
+5.  Wählen Sie zum Ausführen des Programms im Menü **Debugging**&gt;**Debugging starten**, oder drücken Sie F5.
 
     Es wird eine leere Seite angezeigt.
 
@@ -51,7 +49,7 @@ Fügen Sie im nächsten Schritt zwei Inhaltsseiten zum Projekt hinzu.
 Führen Sie die folgenden Schritte zweimal aus, um zwei Seiten zum Navigieren hinzuzufügen.
 
 1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten **BlankApp**, um das Kontextmenü zu öffnen.
-2.  Wählen Sie im Kontextmenü **Hinzufügen** &gt; **Neues Element** aus.
+2.  Wählen Sie im Kontextmenü **Hinzufügen**&gt;**Neues Element**.
 3.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** im mittleren Bereich die Option **Leere Seite** aus.
 4.  Geben Sie in das Feld **Name** den Wert **Page1** (oder **Page2**) ein, und wählen Sie anschließend **Hinzufügen**.
 
@@ -84,8 +82,8 @@ Diese Dateien sollten nun als Teil des Projekts „NavApp1“ aufgeführt werden
 <li>Page2.xaml.cpp</li>
 <li>Page2.xaml.h
 <div class="alert">
-<strong>Hinweis</strong>
-          <p>Funktionen sind in der Headerdatei (.h) deklariert und in der CodeBehind-Datei (.cpp) implementiert.</p>
+<strong>Hinweis</strong>  
+<p>Funktionen sind in der Headerdatei (.h) deklariert und in der CodeBehind-Datei (.cpp) implementiert.</p>
 </div>
 <div>
  
@@ -108,7 +106,7 @@ Fügen Sie folgenden Inhalt zur UI von „Page1.xaml“ hinzu.
     </table>
 ```
 
--   Fügen Sie das folgende [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)-Element als untergeordnetes Element des [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)-Stammelements und nach dem `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Element hinzu.
+-   Fügen Sie das folgende [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)-Element als untergeordnetes Element des [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)-Stammelements und nach dem `pageTitle`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Element hinzu.
 
     <span codelanguage="XAML"></span>
 ```    XAML
@@ -166,7 +164,7 @@ Nehmen Sie die folgenden Änderungen an der UI von „Page2.xaml“ vor.
     </table>
 ```
 
--   Fügen Sie das folgende [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)-Element als untergeordnetes Element des [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)-Stammelements und nach dem `pageTitle` [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Element hinzu.
+-   Fügen Sie das folgende [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)-Element als untergeordnetes Element des [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704)-Stammelements und nach dem `pageTitle`[**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Element hinzu.
 
     <span codelanguage="XAML"></span>
 ```    XAML
@@ -312,7 +310,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
-**Hinweis**  In diesem Beispielcode wird der Rückgabewert von [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) verwendet, um eine App-Ausnahme auszulösen, wenn die Navigation zum ersten Fensterframe der App einen Fehler verursacht. Wenn **Navigate** den Wert **true** zurückgibt, findet die Navigation statt.
+**Hinweis**  In diesem Beispielcode wird der Rückgabewert von [**Navigate**](https://msdn.microsoft.com/library/windows/apps/br242694) verwendet, um eine App-Ausnahme auszulösen, wenn die Navigation zum anfänglichen Fensterframe der App einen Fehler verursacht. Wenn **Navigate** den Wert **true** zurückgibt, findet die Navigation statt.
 
  
 
@@ -353,7 +351,7 @@ Hier werden eine [**TextBlock**](https://msdn.microsoft.com/library/windows/apps
 </StackPanel>
 ```
 
-Fügen Sie im `HyperlinkButton_Click`-Ereignishandler der CodeBehind-Datei „Page1.xaml“ einen Parameter hinzu, der die `Text`-Eigenschaft von `name` [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) auf die `Navigate`-Methode verweist.
+Fügen Sie im `HyperlinkButton_Click`-Ereignishandler der CodeBehind-Datei „Page1.xaml“ einen Parameter hinzu, der für die `Navigate`-Methode auf die `Text`-Eigenschaft von `name`[**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) verweist.
 
 ```ManagedCPlusPlus
 void Page1::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
@@ -448,6 +446,6 @@ public Page1()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

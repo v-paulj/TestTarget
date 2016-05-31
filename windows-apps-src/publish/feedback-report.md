@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Im Feedbackbericht im Windows Dev Center-Dashboard werden die Probleme, Vorschläge und Upvotes angezeigt, die Ihre Windows 10-Kunden über den Feedback-Hub übermittelt haben.
 title: Feedbackbericht
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
@@ -8,11 +9,13 @@ ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
 
 Ermuntern Sie Ihre Kunden, Ihnen Feedback zu Ihrer App zu geben. Dies ist eine hervorragende Möglichkeit, um mehr über die Probleme und Funktionen zu erfahren, die ihnen besonders wichtig sind. Wenn Ihre Kunden wissen, dass sie Ihnen ihr Feedback direkt senden können, geben sie mit höherer Wahrscheinlichkeit keine negative Bewertung ab. 
 
+> **Hinweis** Der in diesem Artikel beschriebene Feedback-Bericht ist noch nicht für alle Entwicklerkonten verfügbar.
+
 Verwenden Sie die Feedback-API im [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk), um es Ihren Kunden zu ermöglichen, den [Feedback-Hub direkt aus Ihrer App heraus zu starten](../monetize/launch-feedback-hub-from-your-app.md). Bedenken Sie, dass jeder Kunde, der Ihre App auf einem Windows 10-Gerät heruntergeladen hat, das den Feedback-Hub unterstützt, mithilfe der Feedback-Hub-App ein Feedback abgeben kann. Aus diesem Grund wird in diesem Bericht möglicherweise Feedback von Kunden angezeigt, auch wenn Sie in Ihrer App nicht explizit um Feedback gebeten haben.
 
 > **Tipp** Feedback ist besonders wertvoll, wenn Sie [Flight-Pakete](package-flights.md) verwenden, da im Feedbackbericht das spezifische Paket aufgeführt wird, das auf dem Gerät des jeweiligen Kunden installiert war, als er das Feedback abgegeben hat.
 
-Im **Feedbackbericht** im Windows Dev Center-Dashboard werden die Probleme, Vorschläge und Upvotes angezeigt, die Ihre Windows 10-Kunden über den Feedback-Hub übermittelt haben. Sie können diese Informationen in Ihrem Dashboard anzeigen oder die Daten exportieren, um sie offline anzuzeigen. 
+Im **Feedback**-Bericht im Windows Dev Center-Dashboard werden die Probleme, Vorschläge und Upvotes angezeigt, die Ihre Windows 10-Kunden über den Feedback-Hub übermittelt haben. Sie können diese Informationen in Ihrem Dashboard anzeigen oder die Daten exportieren, um sie offline anzuzeigen. 
 
 ## Anzeigen von Feedbackdetails
 
@@ -49,6 +52,6 @@ Da das Feedback durch ein automatisches Übersetzungssystem übersetzt wird, sin
 Wie bereits erwähnt, wird empfohlen, direkt in Ihrer App einen Link zum Feedback-Hub einzufügen, um die Benutzer zu ermuntern, Feedback abzugeben. Weitere Informationen finden Sie unter [Feedback-Hub in Ihrer App starten](../monetize/launch-feedback-hub-from-your-app.md).
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

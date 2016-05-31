@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Sound vervollständigt die Benutzererfahrung einer Anwendung und trägt zur Vereinheitlichung des Erscheinungsbilds von Windows auf allen Plattformen bei.
 label: Sound
 title: Sound
@@ -20,11 +21,13 @@ Der **ElementSoundPlayer** ist ein integriertes Soundsystem innerhalb von XAML, 
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
-Der **ElementSoundPlayer** verfügt über drei Zustände: **Ein**, **Aus** und **Auto**.
+Der **ElementSoundPlayer** verfügt über drei Zustände: **Ein****Aus** und **Auto**.
 
-In der Einstellung **Aus** wird unabhängig davon, wo Ihre App ausgeführt wird, niemals Sound wiedergegeben. In der Einstellung **Ein** werden für Ihre App auf jeder Plattform Sounds wiedergegeben.
+In der Einstellung **Aus** wird unabhängig davon, wo Ihre App ausgeführt wird, niemals Sound wiedergegeben. In der Einstellung **Ein** werden für Sounds für Ihre App auf jeder Plattform wiedergegeben.
+
 ### Sound für TV und Xbox
-Sound ist ein wesentlicher Bestandteil der 1-Foot Experience, also des Designs für drei Meter Abstand, und standardmäßig hat der **ElementSoundPlayer** den Zustand **Auto**, was bedeutet, dass Sound nur dann wiedergegeben wird, wenn Ihre App auf Xbox ausgeführt wird.
+
+Sound ist ein wesentlicher Bestandteil der 10-Fuß-Schnittstelle. Standardmäßig verwendet der **ElementSoundPlayer** den Zustand **Auto**, was bedeutet, dass Sound nur dann wiedergegeben wird, wenn Ihre App auf Xbox ausgeführt wird.
 Weitere Informationen zur Funktionsweise von Sound für TV und Xbox finden Sie im Artikel [Entwerfen für Xbox und Fernsehgeräte](http://go.microsoft.com/fwlink/?LinkId=760736).
 
 ## Lautstärkeüberschreibung
@@ -131,6 +134,6 @@ Diese Wechselfunktion soll verhindern, dass die Focus-Sounds monoton werden und 
 * [Entwerfen für Xbox und Fernsehgeräte](http://go.microsoft.com/fwlink/?LinkId=760736)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

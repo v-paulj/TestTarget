@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und geben einfach und schnell nur die erforderlichen Informationen weiter. 
 title: Symbole
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
@@ -82,7 +83,7 @@ Diese Linien können beim Erstellen von Symbolen kombiniert, verknüpft, gedreht
     </tr>  
 </table>
 
-### Beispiele
+<p>Einige Beispiele:</p>
 
 <table>
     <tr>
@@ -95,7 +96,7 @@ Diese Linien können beim Erstellen von Symbolen kombiniert, verknüpft, gedreht
 
 ## Kurven
 
-Gekrümmte Linien entstehen aus Abschnitten eines ganzen Kreises und sollten nur dann verzerrt, wenn dies für die Verankerung am Pixelraster erforderlich ist. 
+Kurvenlinien entstehen aus Abschnitten eines ganzen Kreises und sollten nur dann verzerrt werden, wenn dies für die Verankerung am Pixelraster erforderlich ist. 
 
 <table>
     <tr>
@@ -152,9 +153,7 @@ Farbsignale sollten nur zur Übermittlung des Status eines Symbols verwendet wer
 
 <table>
 <tr><td>Grün: #128B44</td><td>Blau: #2C71B9</td><td>Gelb: #FDC214</td></tr>
-<tr><td>Positiv: fertig, 
-abgeschlossen </td><td>Neutral: Hilfe, 
-Benachrichtigung </td><td>Warnend: Hinweis, Warnung </td></tr>
+<tr><td>Positiv: fertig, abgeschlossen </td><td>Neutral: Hilfe, Benachrichtigung </td><td>Warnend: Hinweis, Warnung </td></tr>
 <tr><td>![Green status](images/icons-color-inbadging-1.png)</td><td>![Blue status](images/icons-color-inbadging-2.png)</td>
 <td>![Yellow status](images/icons-color-inbadging-3.png)</td></tr>
 </table>
@@ -172,6 +171,7 @@ Signale sollten bei einem Raster der Größe 32 × 32 px 10 bis 18 px umfass
 
 * [Richtlinien für die Ressourcen für Kacheln und Symbole](../controls-and-patterns/tiles-and-notifications-app-assets.md)
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
 
 

@@ -18,7 +18,7 @@ Das Bureau of Industry and Security (BIS) im United States Department of Commerc
 
  
 
-Weitere Informationen zum Department of Commerce der USA und dem Bureau of Industry and Security finden Sie unter [Informationen zum Bureau of Industry and Security](http://go.microsoft.com/fwlink/p/?LinkID=245644).
+Weitere Informationen zum United States Department of Commerce und dem BIS finden Sie unter [Informationen zum Bureau of Industry and Security](http://go.microsoft.com/fwlink/p/?LinkID=245644).
 
 Informationen zu den Export Administration Regulations (EAR), die den Export von Technologien regeln, die Verschlüsselung enthalten, finden Sie unter [EAR-Bestimmungen für Waren, die Verschlüsselung nutzen](http://go.microsoft.com/fwlink/p/?LinkID=245645).
 
@@ -55,6 +55,6 @@ Wenn Ihre App Kryptografie- oder Verschlüsselungsfunktionen für eine Aufgabe a
 Wenn Sie keine ECCN besitzen, informieren Sie sich unter [Fragen und Antworten zur ECCN](http://go.microsoft.com/fwlink/p/?LinkID=245646).
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

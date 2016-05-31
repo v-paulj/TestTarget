@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Der Windows Store ermöglicht die „Abrechnung über den Mobilfunkanbieter“ als Zahlungsmethode für Mobilfunkanbieter, die diese Funktion unterstützen.
 title: Abrechnung über den Mobilfunkanbieter
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
@@ -43,7 +44,7 @@ Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von de
 | Australien            | Telstra                                                            |
 | Österreich              | A1 Telekom, T-Mobile                                               |
 | Bahrain              | Zain, VIVA                                                         |
-| Belgien              | BASE, Mobistar                                                     |
+| Belgien              | BASE, Mobistar, Proximus                                                     |
 | Brasilien               | Claro                                                              |
 | Bulgarien             | Telenor                                                            |
 | Kanada               | Fido, Rogers, Telus                                                |
@@ -64,7 +65,7 @@ Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von de
 | Ungarn              | Telenor, T-Mobile                                                  |
 | Indien                | Idea                                                               |
 | Indonesien            | Indosat, Telkomsel, XL Axiata, AXIS                                |
-| Irland              | O2, Vodafone                                                       |
+| Irland              | O2, Vodafone, Three                                                      |
 | Italien                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
 | Jordanien               | Zain, Umniah                                                       |
 | Kenia                | Safaricom                                                          |
@@ -82,7 +83,7 @@ Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von de
 | Polen               | T-Mobile, Orange, Polkomtel (Plus)                                 |
 | Puerto Rico          | Claro                                                              |
 | Rumänien              | Orange, Vodafone                                                   |
-| Russland               | Beeline                                                            |
+| Russische Föderation               | Beeline, MTS                                                          |
 | Saudi-Arabien         | Zain                                                               |
 | Singapur            | M1, SingTel, StarHub                                               |
 | Slowakei             | T-Mobile                                                           |
@@ -110,6 +111,6 @@ Diese Liste wird regelmäßig aktualisiert, wenn wir die Unterstützung für die
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

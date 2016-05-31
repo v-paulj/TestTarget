@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Automatischer Start mit automatischer Wiedergabe
 description: Sie können die automatische Wiedergabe verwenden, um Ihre App als Option bereitzustellen, wenn ein Benutzer ein Gerät an seinen PC anschließt. Hierzu zählen Nicht-Volumegeräte wie Kameras oder Media Player und Volumegeräte wie USB-Sticks, SD-Karten oder DVDs.
 ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
@@ -61,9 +62,9 @@ Die Einstellung **Aktionsanzeigename** gibt die Zeichenfolge an, die bei der aut
 
 ### Schritt 2: Hinzufügen von XAML-UI
 
-Öffnen Sie die Datei „MainPage.xaml“, und fügen Sie dem Standardabschnitt &lt;Grid&gt; folgenden XAML-Code hinzu:
+Öffnen Sie die Datei „MainPage.xaml“, und fügen Sie dem Standardabschnitt &lt;Grid&gt; folgenden XAML-Code hinzu.
 
-```xaml
+```xml
 <TextBlock FontSize="18">File List</TextBlock>
 <TextBlock x:Name="FilesBlock" HorizontalAlignment="Left" TextWrapping="Wrap" 
            VerticalAlignment="Top" Margin="0,20,0,0" Height="280" Width="240" />
@@ -73,7 +74,7 @@ Die Einstellung **Aktionsanzeigename** gibt die Zeichenfolge an, die bei der aut
 
 ### Schritt 3: Hinzufügen von Initialisierungscode
 
-Der Code in diesem Schritt überprüft den Wert des Verbs in der **Verb**-Eigenschaft. Dabei handelt es sich um eines der Startargumente, die beim **OnFileActivated**-Ereignis an die App übergeben werden. Anschließend ruft der Code entsprechend der vom Benutzer ausgewählten Option eine Methode auf. Beim Kameraspeicherereignis wird bei der automatischen Wiedergabe der Stammordner des Kameraspeichers an die App übergeben. Sie können diesen Ordner aus dem ersten Element der **Files**-Eigenschaft abrufen.
+Der Code in diesem Schritt überprüft den Verb-Wert in der **Verb**-Eigenschaft. Dabei handelt es sich um eines der Startargumente, die beim **OnFileActivated**-Ereignis an die App übergeben werden. Anschließend ruft der Code entsprechend der vom Benutzer ausgewählten Option eine Methode auf. Beim Kameraspeicherereignis wird bei der automatischen Wiedergabe der Stammordner des Kameraspeichers an die App übergeben. Sie können diesen Ordner aus dem ersten Element der **Files**-Eigenschaft abrufen.
 
 Öffnen Sie die Datei „App.xaml.cs“, und fügen Sie der **App**-Klasse den folgenden Code hinzu.
 
@@ -254,9 +255,9 @@ Die APIs, die für den Speicherzugriff auf einem tragbaren Windows-Gerät erford
 
 ### Schritt 3: Hinzufügen von XAML-UI
 
-Öffnen Sie die Datei „MainPage.xaml“, und fügen Sie dem Standardabschnitt &lt;Grid&gt; folgenden XAML-Code hinzu:
+Öffnen Sie die Datei „MainPage.xaml“, und fügen Sie dem Standardabschnitt &lt;Grid&gt; folgenden XAML-Code hinzu.
 
-```xaml
+```xml
 <StackPanel Orientation="Vertical" Margin="10,0,-10,0">
     <TextBlock FontSize="24">Device Information</TextBlock>
     <StackPanel Orientation="Horizontal">
@@ -282,7 +283,7 @@ Die APIs, die für den Speicherzugriff auf einem tragbaren Windows-Gerät erford
 
 ### Schritt 4: Hinzufügen von Aktivierungscode
 
-Der Code dieses Schritts verweist auf die Kamera als [**StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654), indem er die Geräteinformations-ID der Kamera an die [**FromId**](https://msdn.microsoft.com/library/windows/apps/br225655)-Methode übergibt. Die Geräteinformations-ID der Kamera wird ermittelt, indem die Ereignisargumente zunächst in [**DeviceActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224710) umgewandelt werden und anschließend der Wert von der [**DeviceInformationId**](https://msdn.microsoft.com/library/windows/apps/br224711)-Eigenschaft abgerufen wird.
+Der Code in diesem Schritts verweist auf die Kamera als [**StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654), indem er die Geräteinformations-ID der Kamera an die [**FromId**](https://msdn.microsoft.com/library/windows/apps/br225655)-Methode übergibt. Die Geräteinformations-ID der Kamera wird ermittelt, indem die Ereignisargumente zunächst in [**DeviceActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224710) umgewandelt werden und anschließend der Wert von der [**DeviceInformationId**](https://msdn.microsoft.com/library/windows/apps/br224711)-Eigenschaft abgerufen wird.
 
 Öffnen Sie die Datei „App.xaml.cs“, und fügen Sie der **App**-Klasse den folgenden Code hinzu.
 
@@ -405,7 +406,7 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 
 1.  Drücken Sie F5, um die App zu erstellen und bereitzustellen (im Debugmodus).
 2.  Führen Sie Ihre App aus, indem Sie eine Kamera an Ihren Computer anschließen. Wählen Sie die App anschließend in der Liste mit Optionen für die automatische Wiedergabe aus.
-    **Note**  Nicht alle Kameras zeigen das **WPD\\ImageSource**-Geräteereignis für die automatische Wiedergabe an.
+    **Hinweis**  Nicht alle Kameras zeigen das **WPD\\ImageSource**-Geräteereignis für die automatische Wiedergabe an.
 
      
 
@@ -449,9 +450,9 @@ Der Wert für **Inhaltsereignis** ist der Text, den Sie für den **CustomEvent**
 
 ### Schritt 3: Hinzufügen von XAML-UI
 
-Öffnen Sie die Datei „MainPage.xaml“, und fügen Sie dem Standardabschnitt &lt;Grid&gt; folgenden XAML-Code hinzu:
+Öffnen Sie die Datei „MainPage.xaml“, und fügen Sie dem Standardabschnitt &lt;Grid&gt; folgenden XAML-Code hinzu.
 
-```xaml
+```xml
 <StackPanel Orientation="Vertical">
     <TextBlock FontSize="28" Margin="10,0,800,0">Files</TextBlock>
     <TextBlock x:Name="FilesBlock" FontSize="22" Height="600" Margin="10,0,800,0" />
@@ -577,6 +578,6 @@ Sie können Ihre App als Ereignishandler für Inhalte oder Geräte zur automatis
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

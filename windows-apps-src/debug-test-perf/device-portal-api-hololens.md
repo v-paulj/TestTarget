@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 41ac0142-4d86-4bb3-b580-36d0d6956091
 title: Referenz zu Geräteportal-APIs für HoloLens
 description: Hier erhalten Sie Informationen zu den HoloLens-REST-APIs für das Windows Device Portal, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können.
@@ -1409,6 +1410,6 @@ loopback   | (**optional**) Gibt an, ob Audioaufnahmen der Anwendung aufgezeichn
 - Standardstatuscodes
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

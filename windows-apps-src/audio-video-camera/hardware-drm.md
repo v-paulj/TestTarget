@@ -1,17 +1,18 @@
 ---
+author: eliotcowley
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
-description: Übersicht, Hinzufügen der hardwarebasierten Verwaltung digitaler Rechte (Digital Rights Management, DRM) mit PlayReady zu Ihrer App für die UWP
-title: Hardware-DRM
+description: Dieses Thema enthält eine Übersicht über das Hinzufügen der hardwarebasierten Verwaltung digitaler Rechte (Digital Rights Management, DRM) mit PlayReady zu Ihrer App für die universelle Windows-Plattform (UWP).
+title: Hardwarebasiertes DRM
 ---
 
-# Hardware-DRM
+# Hardwarebasiertes DRM
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Dieses Thema enthält eine Übersicht über das Hinzufügen der hardwarebasierten Verwaltung digitaler Rechte (Digital Rights Management, DRM) mit PlayReady zu Ihrer App für die universelle Windows-Plattform (UWP).
 
-**Hinweis**  Hardwarebasiertes DRM wird nur auf bestimmter Hardware mit einer Windows 10-Version der jeweiligen Hardwarefirmware unterstützt. Weitere Informationen zu den Garantien finden Sie unter [PlayReady-Kompatibilität und Stabilitätsregeln](http://www.microsoft.com/playready/licensing/compliance/).
+**Hinweis**  Das hardwarebasierte DRM wird nur auf bestimmter Hardware mit einer Windows 10-Version der jeweiligen Hardwarefirmware unterstützt. Weitere Informationen zu den Garantien finden Sie unter [PlayReady-Kompatibilität und Stabilitätsregeln](http://www.microsoft.com/playready/licensing/compliance/).
 
 Inhaltsanbieter verwenden zunehmend hardwarebasierten Schutz, um die Berechtigung zur Wiedergabe vollständiger hochwertiger Inhalte in Apps zu gewähren. Aus diesem Grund wurde PlayReady stabile Unterstützung für eine Hardwareimplementierung des kryptografischen Cores hinzugefügt. Diese Unterstützung ermöglicht die sichere Wiedergabe von HD (1080p)- und Ultra-High-Definition (UHD)-Inhalten auf mehreren Geräteplattformen. Schlüsselmaterial (einschließlich privater Schlüssel, Inhaltsschlüssel und anderer Schlüsselmaterialien zum Ableiten oder Entsperren dieser Schlüssel) sowie entschlüsselte komprimierte und nicht komprimierte Videobeispiele werden durch Hardwaresicherheit geschützt.
 
@@ -23,7 +24,7 @@ Auf die Details der Windows-TEE-Implementierung gehen wir in diesem Dokument nic
 
 ![Diagramm der Windows-TEE-Komponenten](images/windowsteecomponentdiagram720.jpg)
 
-## Überlegungen zur Verwendung des Hardware-DRM
+## Überlegungen zur Verwendung des hardwarebasierten DRM
 
 Dieses Thema enthält eine kurze Liste der Punkte, die Sie beim Entwickeln von Apps mit Verwendung des Hardware-DRM berücksichtigen sollten.
 
@@ -53,23 +54,23 @@ Das Hardware-DRM wird standardmäßig verwendet, wenn es vom System unterstützt
 
 Das folgende Beispiel zeigt, wie Sie das Hardware-DRM außer Kraft setzen. Diesen Schritt müssen Sie nur vor dem Wechseln ausführen. Stellen Sie außerdem sicher, dass kein PlayReady-Objekt im Speicher vorhanden ist. Andernfalls kann es zu unerwartetem Verhalten kommen.
 
-``` syntax
+```js
 var applicationData = Windows.Storage.ApplicationData.current;
-var localSettings = applicationData.localSettings.createContainer(“PlayReady”, Windows.Storage.ApplicationDataCreateDisposition.always);
-localSettings.values[“SoftwareOverride”] = 1;
+var localSettings = applicationData.localSettings.createContainer("PlayReady", Windows.Storage.ApplicationDataCreateDisposition.always);
+localSettings.values["SoftwareOverride"] = 1;
 ```
 
 Wenn Sie das Hardware-DRM wieder verwenden möchten, legen Sie den **SoftwareOverride**-Wert auf **0** fest.
 
 **MediaProtectionManager** muss für jede Medienwiedergabe wie folgt festgelegt werden:
 
-``` syntax
-mediaProtectionManager.properties[“Windows.Media.Protection.UseSoftwareProtectionLayer”] = true;
+```js
+mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectionLayer"] = true;
 ```
 
-Überprüfen Sie unter „C:\\Benutzer\\&lt;Benutzername&gt;\\AppData\\Local\\Packages\\&lt;Anwendungsname&gt;\\LocalState\\PlayReady\\\*“, ob das Hardware-DRM oder Software-DRM festgelegt ist.
+Die beste Möglichkeit, herauszufinden, ob Sie ein hardwarebasiertes DRM oder ein softwarebasiertes DRM verwenden, besteht darin, C:\\Users\\&lt;username&gt;\\AppData\\Local\\Packages\\&lt;application name&gt;\\LocalState\\PlayReady\\\* zu betrachten.
 
--   Wenn eine Datei mit der Erweiterung „mspr.hds“ vorhanden ist, ist Software-DRM ausgewählt.
+-   Wenn eine Datei mit der Erweiterung „mspr.hds“ vorhanden ist, verwenden Sie ein softwarebasiertes DRM.
 -   Ist eine weitere Datei mit der Erweiterung „\*.hds“ vorhanden, ist Hardware-DRM ausgewählt.
 -   Sie können auch den gesamten PlayReady-Ordner löschen und den Test wiederholen.
 
@@ -79,7 +80,7 @@ In diesem Abschnitt wird beschrieben, wie Sie den auf dem System unterstützten 
 
 Sie können die [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441)-Methode verwenden, um festzustellen, ob das System eine bestimmte Hardwarefunktion für die Verwaltung digitaler Rechte (Digital Rights Management, DRM) unterstützt. Beispiel:
 
-``` syntax
+```cpp
 boolean PlayReadyStatics->CheckSupportedHardware(PlayReadyHardwareDRMFeatures enum);
 ```
 
@@ -89,6 +90,6 @@ Sie können auch die [**PlayReadyStatics.PlayReadyCertificateSecurityLevel**](ht
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

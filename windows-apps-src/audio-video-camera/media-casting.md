@@ -1,7 +1,8 @@
 ---
+author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
 description: In diesem Artikel wird beschrieben, wie Sie Medien von einer universellen Windows-App für Remotegeräte umwandeln.
-title: Umwandlung von Medien
+title: Medienumwandlung
 ---
 
 # Medienumwandlung
@@ -19,7 +20,7 @@ Um dem Benutzer das Öffnen einer wiederzugebenden Videodatei im **MediaElement*
 
 [!code-cs[BuiltInCastingUsing](./code/MediaCastingWin10/cs/MainPage.xaml.cs#SnippetBuiltInCastingUsing)]
 
-Fügen Sie in der XAML-Datei der App ein **MediaElement** hinzu, und legen Sie [**AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn298977) auf "true" fest.
+Fügen Sie in der XAML-Datei der App ein **MediaElement** hinzu, und legen Sie [**AreTransportControlsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn298977) auf „true“ fest.
 
 [!code-xml[MediaElement](./code/MediaCastingWin10/cs/MainPage.xaml#SnippetMediaElement)]
 
@@ -61,7 +62,7 @@ Rufen Sie im **Click**-Ereignishandler für die Schaltfläche [**TransformToVisu
 
 Rufen Sie im **CastingDeviceSelected**-Ereignishandler die [**CreateCastingConnection**](https://msdn.microsoft.com/library/windows/apps/dn972547)-Methode der [**SelectedCastingDevice**](https://msdn.microsoft.com/library/windows/apps/dn972546)-Eigenschaft der Ereignisargumente auf, die das vom Benutzer ausgewählte Umwandlungsgerät darstellt. Registrieren Sie Handler für die Ereignisse [**ErrorOccurred**](https://msdn.microsoft.com/library/windows/apps/dn972519) und [**StateChanged**](https://msdn.microsoft.com/library/windows/apps/dn972523). Rufen Sie abschließend [**RequestStartCastingAsync**](https://msdn.microsoft.com/library/windows/apps/dn972520) auf, um die Umwandlung zu starten; übergeben Sie dabei das Ergebnis der [**GetAsCastingSource**](https://msdn.microsoft.com/library/windows/apps/dn920012)-Methode des **MediaElement**-Objekts, um anzugeben, dass es sich bei den umzuwandelnden Medien um den Inhalt des **MediaElement** handelt.
 
-**Hinweis** Die Umwandlungsverbindung muss im UI-Thread initiiert werden. Da **CastingDeviceSelected** nicht für den UI-Thread aufgerufen wird, müssen Sie diese Aufrufe innerhalb eines Aufrufs von [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) platzieren, sodass diese für den UI-Thread aufgerufen werden.
+**Hinweis**  Die Umwandlungsverbindung muss im UI-Thread initiiert werden. Da **CastingDeviceSelected** nicht für den UI-Thread aufgerufen wird, müssen Sie diese Aufrufe innerhalb eines Aufrufs von [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) platzieren, sodass diese für den UI-Thread aufgerufen werden.
 
 [!code-cs[CastingDeviceSelected](./code/MediaCastingWin10/cs/MainPage.xaml.cs#SnippetCastingDeviceSelected)]
 
@@ -150,6 +151,6 @@ Implementieren Sie zum Schluss den Handler für die Schaltfläche zum Trennen. B
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

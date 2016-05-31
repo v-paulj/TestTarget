@@ -1,13 +1,14 @@
 ---
+author: mtoepke
 title: Spiele und DirectX
-description: Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen, Verteilen und Vermarkten von Spielen. Hier erhalten Sie Informationen zum Starten eines neuen Spiels oder Portieren eines vorhandenen Spiels.
+description: Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen, Verteilen und Monetisieren von Spielen. Hier erhalten Sie Informationen zum Starten eines neuen Spiels oder Portieren eines vorhandenen Spiels.
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 ---
 
 # Spiele und DirectX
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen, Verteilen und Monetisieren von Spielen. Hier erhalten Sie Informationen zum Starten eines neuen Spiels oder Portieren eines vorhandenen Spiels.
 
@@ -62,6 +63,6 @@ Damit Sie die Übersichten und Lernprogramme zur Spieleentwicklung optimal nutze
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

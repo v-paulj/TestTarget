@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: F8A741B4-7A6A-4160-8C5D-6B92E267E6EA
 title: Koppeln von Geräten
 description: Einige Geräte müssen gekoppelt werden, bevor sie verwendet werden können. Der Windows.Devices.Enumeration-Namespace unterstützt drei verschiedene Verfahren zum Koppeln von Geräten:
@@ -70,6 +71,6 @@ Wenn Sie ein Beispiel zur Verwendung der [**Windows.Devices.Enumeration**](https
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

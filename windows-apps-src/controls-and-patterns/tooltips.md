@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Verwenden Sie eine QuickInfo, damit der Benutzer weitere Informationen über ein Steuerelement erhält, bevor er zum Ausführen einer Aktion aufgefordert wird.
 title: QuickInfos
 ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
@@ -9,7 +10,7 @@ template: detail.hbs
 
 # QuickInfos
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Eine QuickInfo ist eine kurze Beschreibung, die mit einem anderen Steuerelement oder Objekt verknüpft ist. QuickInfos erläutern Benutzern unbekannte Objekte, die in der Benutzeroberfläche nicht direkt beschrieben werden. Sie wird automatisch angezeigt, wenn der Benutzer den Fokus auf ein Steuerelement verschiebt, es gedrückt hält oder mit dem Mauszeiger darauf zeigt. Sie wird nach einigen Sekunden wieder ausgeblendet, wenn der Benutzer den Finger, den Mauszeiger oder den Tastatur-/Gamepad-Fokus bewegt.
 
@@ -69,6 +70,6 @@ Eine QuickInfo in der Bing-Karten-App.
 * [**QuickInfo-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227608)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

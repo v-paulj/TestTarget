@@ -1,21 +1,22 @@
 ---
+author: DelfCo
 Description: Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und wenn Sie Ihre Apps für einen bestimmten Markt lokalisieren.
 Search.Refinement.TopicID: 180
-title: Richtlinien für die Globalisierung und Lokalisierung
+title: Richtlinien für Globalisierung und Lokalisierung
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
 label: Do's and don'ts
 template: detail.hbs
 ---
 
-# Empfohlene und nicht empfohlene Vorgehensweisen für die Globalisierung und Lokalisierung
+# Empfohlene und nicht empfohlene Vorgehensweisen für Globalisierung und Lokalisierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **Wichtige APIs**
 
--   [**Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)
+-   [**Globalisierung**](https://msdn.microsoft.com/library/windows/apps/br206813)
 -   [**Globalization.NumberFormatting**](https://msdn.microsoft.com/library/windows/apps/br226136)
 -   [**Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859)
 -   [**Resources**](https://msdn.microsoft.com/library/windows/apps/br206022)
@@ -85,10 +86,10 @@ Bereiten Sie Ihre App für die einfache Anpassung an verschiedene Märkte vor, i
 </tr>
 <tr class="odd">
 <td align="left"><p>Vermeiden Sie politische Beleidigungen in Karten oder bei Verweisen auf Regionen.</p></td>
-<td align="left"><p>Karten können umstrittene regionale oder nationale Grenzen enthalten und erweisen sich als eine häufige Quelle von politischen Beleidigungen. Achten Sie darauf, dass die UI für die Auswahl von Nationen &quot;Land/Region&quot; aufweist. Wird ein umstrittenes Gebiet in einer Liste mit der Bezeichnung &quot;Länder&quot; (z. B. in einem Adressformular) aufgeführt, könnten Sie Ärger bekommen.</p></td>
+<td align="left"><p>Karten können umstrittene regionale oder nationale Grenzen enthalten und erweisen sich als eine häufige Quelle von politischen Beleidigungen. Achten Sie darauf, dass die Benutzeroberfläche für die Auswahl von Nationen die Formulierung &quot;Land/Region&quot; verwendet. Wenn ein umstrittenes Gebiet in einer Liste mit der Bezeichnung &quot;Länder&quot; (z. B. in einem Adressformular) aufgeführt wird, könnte dies zu Problemen führen.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Verwenden Sie zum Vergleichen von Sprachtags nicht allein den Zeichenfolgenvergleich.</p></td>
+<td align="left"><p>Verwenden Sie zum Vergleichen von Sprachtags nicht nur den Zeichenfolgenvergleich.</p></td>
 <td align="left"><p>BCP-47-Sprachtags sind komplex. Beim Vergleichen von Sprachtags muss einiges berücksichtigt werden, wie z. B. der Abgleich von Skriptinformationen, Legacytags und mehrfache regionale Varianten. Das Ressourcenverwaltungssystem in Windows übernimmt den Abgleich für Sie. Sie können eine Ressourcengruppe in beliebigen Sprachen angeben, und das System wählt die geeignete Gruppe für den Benutzer und die App aus.</p>
 <p>Weitere Informationen zur Ressourcenverwaltung finden Sie unter [<strong>Definition der App-Ressourcen</strong>](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321).</p></td>
 </tr>
@@ -166,7 +167,7 @@ Bereiten Sie Ihre App für die einfache Anpassung an verschiedene Märkte vor, i
 </tr>
 <tr class="even">
 <td align="left"><p>Wiederholen Sie eine Zeichenfolge nicht in einem unterschiedlichen Kontext.</p></td>
-<td align="left"><p>Setzen Sie dieselbe Zeichenfolge nicht in einem anderen Kontext ein. Selbst einfache Wörter wie &quot;on&quot; oder &quot;off&quot; werden je nach Kontext verschieden übersetzt.</p></td>
+<td align="left"><p>Verwenden Sie Zeichenfolgen nicht erneut in anderen Kontexten, da auch einfache Wörter wie &quot;on&quot; oder &quot;off&quot; je nach Kontext verschieden übersetzt werden.</p></td>
 </tr>
 </tbody>
 </table>
@@ -187,6 +188,6 @@ Bereiten Sie Ihre App für die einfache Anpassung an verschiedene Märkte vor, i
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

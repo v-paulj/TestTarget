@@ -1,7 +1,8 @@
 ---
+author: TylerMSFT
 ms.assetid: 066711E0-D5C4-467E-8683-3CC64EDBCC83
 title: Aufrufen asynchroner APIs in C# oder Visual Basic
-description: Die UWP enthält viele asynchrone APIs. Dadurch bleibt Ihre App reaktionsfähig, wenn sie über einen längeren Zeitraum mit einer Aufgabe beschäftigt ist.
+description: Die Universelle Windows-Plattform (UWP) enthält viele asynchrone APIs. Diese sorgen dafür, dass Ihre App reaktionsfähig bleibt, wenn sie über einen längeren Zeitraum mit einer Aufgabe beschäftigt ist.
 ---
 # Aufrufen asynchroner APIs in C# oder Visual Basic
 
@@ -23,9 +24,8 @@ Angenommen, Sie haben eine App, die Titel von Blogbeiträgen von einem bestimmte
 
 In diesem Beispiel wird durch Aufrufen der asynchronen Methode [**SyndicationClient.RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460) die Liste der Blogbeiträge abgerufen und auf die Ergebnisse gewartet.
 
-> [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
-[!code-csharp[Main](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
-[!code-vb[Main](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
+> [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"] [!code-csharp[Main](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
+          [!code-vb[Main](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
 
 Zu diesem Beispiel gibt es eine Reihe wichtiger Dinge anzumerken. Zunächst verwendet die Zeile `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` den **await**-Operator mit dem Aufruf der asynchronen Methode [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/BR243460). Der **await**-Operator teilt dem Compiler gewissermaßen mit, dass Sie eine asynchrone Methode aufrufen. Der Compiler übernimmt daraufhin einen Teil der Arbeit für Sie. Als Nächstes enthält die Deklaration des Ereignishandlers das Schlüsselwort **async**. Sie müssen dieses Schlüsselwort in der Methodendeklaration aller Methoden angeben, in denen Sie den **await**-Operator verwenden.
 
@@ -57,7 +57,9 @@ Die Tabelle hier enthält Beispiele asynchroner Methoden sowie den Rückgabetyp 
 | [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/JJ635275) | [**IAsyncOperation&lt;StorageFile&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206598)                                                                                | [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171)          |
 | [**XmlDocument.SaveToFileAsync**](https://msdn.microsoft.com/library/windows/apps/BR206284)                 | [**IAsyncAction**](https://msdn.microsoft.com/library/windows/apps/BR206580)                                                                                                           | **void**                                          |
 | [**InkStrokeContainer.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/Hh701757)               | [**IAsyncActionWithProgress&lt;UInt64&gt;**](https://msdn.microsoft.com/library/windows/apps/BR206580withprogress_1)                                                                   | **void**                                          |
-| [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [**DataReaderLoadOperation**](https://msdn.microsoft.com/library/windows/apps/BR208120), ein benutzerdefiniertes Ergebnis, das **IAsyncOperation&lt;UInt32&gt;** implementiert. | [**UInt32**](T:System.UInt32)                     |
+| [**DataReader.LoadAsync**](https://msdn.microsoft.com/library/windows/apps/BR208135)                            | [
+              **DataReaderLoadOperation**
+            ](https://msdn.microsoft.com/library/windows/apps/BR208120), ein benutzerdefiniertes Ergebnis, das **IAsyncOperation&lt;UInt32&gt;** implementiert. | [**UInt32**](T:System.UInt32)                     |
 
  
 
@@ -107,6 +109,6 @@ Windows 7 themes: the distinctive artwork of Cheng Ling, 7/20/2011 9:53:07 AM -0
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

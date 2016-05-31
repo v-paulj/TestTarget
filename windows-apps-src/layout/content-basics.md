@@ -1,16 +1,13 @@
 ---
+author: mijacobs
 Description: Der Hauptzweck einer App besteht darin, den Zugriff auf Inhalte zu gewähren. In einer Fotobearbeitungs-App sind Fotos der Content, in einer Reise-App Karten und Informationen über die Reiseziele usw.
-title: Content-Design-Grundlagen für UWP-Apps (Universelle Windows-Plattform)
+title: Grundlagen des Inhaltsdesigns für UWP-Apps (Universelle Windows-Plattform)
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
-label: Content-Design-Grundlagen
+label: Content design basics
 template: detail.hbs
 ---
 
-#  Inhaltsdesigngrundlagen für UWP-Apps
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+#  Grundlagen des Inhaltsdesigns für UWP-Apps (Universelle Windows-Plattform)
 
 Der Hauptzweck jeder App ist das Bereitstellen von Zugriff auf Content: In einer Fotobearbeitungs-App sind Fotos der Content, in einer Reise-App Karten und Informationen über die Reiseziele usw. Navigationselemente bieten Zugriff auf Content; Befehlselemente ermöglichen dem Benutzer die Interaktion mit Content; Content-Elemente zeigen den tatsächlichen Content an.
 
@@ -70,7 +67,7 @@ Allgemeine Empfehlungen für Apps mit interaktivem Content:
 ## <span id="Commonly_used_content_elements"></span><span id="commonly_used_content_elements"></span><span id="COMMONLY_USED_CONTENT_ELEMENTS"></span>Häufig verwendete Content-Elemente
 
 
-Häufig zum Anzeigen von Content verwendete UI-Elemente. (Eine vollständige Liste der UI-Elemente finden Sie unter [UX-Richtlinien für Steuerelemente und Muster](https://msdn.microsoft.com/library/windows/apps/dn611856).)
+Häufig zum Anzeigen von Content verwendete UI-Elemente. (Eine vollständige Liste der UI-Elemente finden Sie unter [Steuerelemente und Muster](https://msdn.microsoft.com/library/windows/apps/dn611856).)
 
 <table>
 <colgroup>
@@ -88,41 +85,39 @@ Häufig zum Anzeigen von Content verwendete UI-Elemente. (Eine vollständige Lis
 <tbody>
 <tr class="odd">
 <td align="left">Audio und Video</td>
-<td align="left">[Media playback and transport controls](../controls-and-patterns/media-playback.md)</td>
+<td align="left">[Steuerelemente für Medienwiedergabe und -transport](../controls-and-patterns/media-playback.md)</td>
 <td align="left">Gibt Audio- und Videoinhalte wieder.</td>
 </tr>
 <tr class="even">
 <td align="left">Bild-Viewer</td>
-<td align="left">[Flip view](../controls-and-patterns/flipview.md), [image](../controls-and-patterns/images-imagebrushes.md)</td>
+<td align="left">[Flip-Ansicht](../controls-and-patterns/flipview.md), [Bild](../controls-and-patterns/images-imagebrushes.md)</td>
 <td align="left">Zeigt Bilder an. Die „Flip-Ansicht“ zeigt Bilder nacheinander in einer Sammlung an, wie etwa Fotos in einem Album oder Elemente auf einer Produktdetailseite.</td>
 </tr>
 <tr class="odd">
 <td align="left">Listen</td>
-<td align="left">[drop-down list, list box, list view and grid view](../controls-and-patterns/lists.md)</td>
+<td align="left">[Dropdownliste, Listenfeld, Listen- und Rasteransicht](../controls-and-patterns/lists.md)</td>
 <td align="left">Stellt Elemente in einer interaktiven Liste oder einem Raster dar. Verwenden Sie diese Elemente, um Benutzern die Auswahl eines Films aus einer Liste mit Neuerscheinungen oder die Verwaltung von Inventar zu ermöglichen.</td>
 </tr>
 <tr class="even">
 <td align="left">Text und Texteingabe</td>
-<td align="left"><p>[Text block](../controls-and-patterns/text-block.md), [text box](../controls-and-patterns/text-box.md), [rich edit box](../controls-and-patterns/rich-edit-box.md)</p>
+<td align="left"><p>[Textblock](../controls-and-patterns/text-block.md), [Textfeld](../controls-and-patterns/text-box.md), [Rich-Edit-Feld](../controls-and-patterns/rich-edit-box.md)</p>
 </td>
-<td align="left">Zeigt Text an. Einige Elemente ermöglichen dem Benutzer das Bearbeiten von Text. Weitere Informationen finden Sie unter [Text controls](../controls-and-patterns/text-controls.md).</td>
+<td align="left">Zeigt Text an. Einige Elemente ermöglichen dem Benutzer das Bearbeiten von Text. Weitere Informationen finden Sie unter [Textsteuerelemente](../controls-and-patterns/text-controls.md)</td>
 </tr>
 </tbody>
 </table>
 
- 
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die Universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
-
- 
 
  
 
+ 
 
 
 
 
 
-<!--HONumber=Mar16_HO1-->
+
+<!--HONumber=May16_HO2-->
 
 

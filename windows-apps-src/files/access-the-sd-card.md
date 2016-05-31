@@ -1,7 +1,8 @@
 ---
+author: TylerMSFT
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: Zugreifen auf die SD-Karte
-description: Sie können weniger wichtige Daten auf einer optionalen microSD-Karte speichern. Dies gilt besonders für Geräte, die nur über einen begrenzten Speicher verfügen.
+description: Sie können weniger wichtige Daten auf einer optionalen microSD-Karte speichern und auf diese zugreifen. Dies gilt besonders für kostengünstige Geräte, die nur über einen begrenzten internen Speicher verfügen.
 ---
 # Zugreifen auf die SD-Karte
 
@@ -146,6 +147,6 @@ using Windows.Storage;
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

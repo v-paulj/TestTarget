@@ -1,4 +1,5 @@
 ---
+author: DBirtolo
 ms.assetid: 23001DA5-C099-4C02-ACE9-3597F06ECBF4
 title: IDs der AEP-Dienstklasse
 description: Die AEP-Dienste (Zuordnungsendpunkt) bieten einen Programmierungsvertrag für Dienste, die von einem Gerät über ein bestimmtes Protokoll unterstützt werden. Für mehrere dieser Dienste sind Bezeichner festgelegt, die verwendet werden sollen, wenn auf sie verwiesen wird.
@@ -125,6 +126,6 @@ System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D716D8EC26B29B}
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

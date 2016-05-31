@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
 title: Abrufen von Akkuinformationen
-description: Erfahren Sie, wie Sie mithilfe von APIs im Windows.Devices.Power-Namespace ausführliche Akkuinformationen erhalten.
+description: Erfahren Sie, wie Sie mithilfe von APIs im Windows.Devices.Power-Namespace ausführliche Akkuinformationen erhalten
 ---
 # Abrufen von Akkuinformationen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
@@ -250,7 +251,7 @@ namespace App1
             TextBlock txt5 = new TextBlock { Text = "Fully-charged energy capacity (mWh): " + report.FullChargeCapacityInMilliwattHours.ToString() };
             TextBlock txt6 = new TextBlock { Text = "Remaining energy capacity (mWh): " + report.RemainingCapacityInMilliwattHours.ToString() };
 
-            // Create energy capacity progress bar &amp; labels
+            // Create energy capacity progress bar & labels
             TextBlock pbLabel = new TextBlock { Text = "Percent remaining energy capacity" };
             pbLabel.Margin = new Thickness(0,10, 0, 5);
             pbLabel.FontFamily = new FontFamily("Segoe UI");
@@ -333,6 +334,6 @@ Führen Sie schließlich Folgendes aus, um diese einfache Akku-App auszuführen:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

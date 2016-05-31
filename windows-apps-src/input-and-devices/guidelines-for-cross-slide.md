@@ -1,8 +1,9 @@
 ---
+author: mijacobs
 Description: Verwenden Sie Querziehen, um Auswahlinteraktionen mit einer Streifbewegung und Ziehinteraktionen (Verschieben) mit einer Ziehbewegung zu unterstützen.
 title: Richtlinien für Querziehen
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
-label: Querziehen
+label: Cross-slide
 template: detail.hbs
 ---
 
@@ -50,7 +51,7 @@ Beachten Sie die folgenden Richtlinien, wenn Sie eine Querziehfunktion in Ihrer 
 
 Verwenden Sie das Querziehen für Listen oder Auflistungen, bei denen ein Bildlauf nur in eine Richtung möglich ist. Weitere Informationen finden Sie unter [Hinzufügen von ListView-Steuerelementen](https://msdn.microsoft.com/library/windows/apps/hh465382).
 
-**Hinweis** In Fällen, in denen der Inhaltsbereich in zwei Richtungen verschoben werden kann, z. B. in einem Webbrowser oder E-Reader, sollte die zeitlich festgelegte Interaktion des Gedrückthaltens verwendet werden, um das Kontextmenü für Objekte wie Bilder und Links aufzurufen.
+**Hinweis**  In Fällen, in denen der Inhaltsbereich in zwei Richtungen verschoben werden kann, z. B. in einem Webbrowser oder E-Reader, sollte die zeitlich festgelegte Interaktion des Gedrückthaltens verwendet werden, um das Kontextmenü für Objekte wie Bilder und Links aufzurufen.
 
  
 
@@ -130,8 +131,10 @@ Wenn mehrere Objekte verschoben werden müssen, geben Sie dem Benutzer die Mögl
 * [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Eingabebeispiel mit geringer Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
-**Archivbeispiele**
+* [Beispiel für visuelle Fokus-Elemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+            
+          
+            **Archivbeispiele**
 * [Eingabe: Beispiel XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Eingabe: Beispiel für Fingereingabe-Treffertests](http://go.microsoft.com/fwlink/p/?linkid=231590)
@@ -149,6 +152,6 @@ Wenn mehrere Objekte verschoben werden müssen, geben Sie dem Benutzer die Mögl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

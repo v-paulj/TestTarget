@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Verwenden Sie Ein- und Ausblendungsanimationen, um Elemente anzuzeigen oder nicht anzuzeigen. Die beiden üblichen Animationen dieser Art sind das Einblenden und das Ausblenden.
 title: Ein-und Ausblendungsanimationen in UWP-Apps
 ms.assetid: 975E5EE3-EFBE-4159-8D10-3C94143DD07F
@@ -7,9 +8,6 @@ template: detail.hbs
 ---
 
 # Ein- und Ausblendungsanimationen
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Verwenden Sie Ein- und Ausblendungsanimationen, um Elemente anzuzeigen oder nicht anzuzeigen. Die beiden üblichen Animationen dieser Art sind das Einblenden und das Ausblenden.
 
@@ -45,6 +43,6 @@ Verwenden Sie Ein- und Ausblendungsanimationen, um Elemente anzuzeigen oder nich
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

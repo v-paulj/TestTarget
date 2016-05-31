@@ -1,7 +1,8 @@
 ---
+author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: Fallstudie Informationen in Bookstore1, beginnt mit einer universellen 8.1-App, die gruppierte Daten in einem SemanticZoom-Steuerelement anzeigt.
-title: Windows Runtime 8.x zu UWP – Fallstudie, Bookstore2
+description: Diese Fallstudie baut auf den Informationen in Bookstore1 auf, beginnend mit einer universellen 8.1-App, die gruppierte Daten in einem SemanticZoom-Steuerelement anzeigt.
+title: Windows Runtime 8.x zu UWP – Fallstudie Bookstore2
 ---
 
 # Windows Runtime 8.x zu UWP – Fallstudie: Bookstore2
@@ -10,7 +11,7 @@ title: Windows Runtime 8.x zu UWP – Fallstudie, Bookstore2
 
 Diese Fallstudie baut auf den Informationen in [Bookstore1](w8x-to-uwp-case-study-bookstore1.md) auf und beginnt mit einer universellen 8.1-App, die gruppierte Daten in einem [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)-Steuerelement anzeigt. Im Ansichtsmodell stellt jede Instanz der **Author**-Klasse die Gruppe der vom betreffenden Autor verfassten Titel dar. In **SemanticZoom** können wir dann entweder die Bücherliste nach Autoren gruppiert anzeigen oder die Liste verkleinern, um eine Sprungliste der Autoren zu erhalten. Die Sprungliste ermöglicht eine wesentlich schnellere Navigation im Vergleich zum Blättern in der Bücherliste. Wir führen Sie durch die Schritte zum Portieren der App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10.
 
-**Hinweis**   Wenn beim Öffnen von Bookstore2Universal\_10 in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
+**Hinweis**   Wenn beim Öffnen von „Bookstore2Universal\_10“ in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
 
 ## Downloads
 
@@ -106,7 +107,7 @@ In dieser Fallstudie werden wir die erste Alternative untersuchen. Wenn Sie möc
 -   Öffnen Sie im Bookstore2\_81.WindowsPhone-Projekt die Datei „BookstoreStyles.xaml“. Kopieren Sie aus dieser Datei die drei selben (oben aufgeführten) Ressourcen sowie die beiden Konverter für Sprunglistenelemente und die Namespacepräfix-Deklaration Windows\_UI\_Xaml\_Controls\_Primitives, und fügen Sie alle in „BookstoreStyles.xaml“ in Ihrem neuen Projekt ein.
 -   Fügen Sie in „SeZoUC.xaml“ in Ihrem neuen Projekt dem oben hinzugefügten **Grid** das entsprechende Markup des Visual State-Managers hinzu.
 
-```xaml
+```xml
     <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -168,6 +169,6 @@ In dieser Fallstudie haben wir es mit einer aufwändigeren Benutzeroberfläche a
 Die nächsten Fallstudie ist [QuizGame](w8x-to-uwp-case-study-quizgame.md), in der wir den Zugriff auf und die Anzeige von gruppierten Daten behandeln.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

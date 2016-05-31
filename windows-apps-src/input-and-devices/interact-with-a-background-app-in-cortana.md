@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Hier erfahren Sie, wie ein Benutzer während der Ausführung eines Sprachbefehls über die Spracheingabe und die Canvas von Cortana mit einer Hintergrund-App interagieren kann.
 title: Interagieren mit einer Hintergrund-App
 ms.assetid: 6C60F03C-A242-435D-96BB-736892CC1CA6
@@ -8,16 +9,15 @@ template: detail.hbs
 
 # Interagieren mit einer Hintergrund-App in Cortana
 
+Ermöglichen Sie Benutzerinteraktion mit einer Hintergrund-App über Sprach- und Texteingabe im **Cortana**-Canvas, während ein Sprachbefehl ausgeführt wird.
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
 
 -   [**Windows.ApplicationModel.VoiceCommands**](https://msdn.microsoft.com/library/windows/apps/dn706594)
--   [**VCD (Voice Command Definition)-Elemente und -Attribute v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
+-   [**Voice Command Definition (VCD) Elements and Attributes v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593)
 
-Ermöglichen Sie Benutzerinteraktion mit einer Hintergrund-App über Sprach- und Texteingabe in den **Cortana**-Canvas beim Ausführen eines Sprachbefehls.
 
 Cortana unterstützt einen vollständigen Sprachnavigationsworkflow mit Ihrer App. Dieser Workflow wird von der App definiert und kann die folgenden Funktionen unterstützen: 
 
@@ -37,21 +37,21 @@ Wenn Sie noch keine Erfahrung mit der Entwicklung von UWP-Apps (Universelle Wind
 -   [Erstellen Ihrer ersten App](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   Informationen zu Ereignissen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
-**Richtlinien für die Benutzerfreundlichkeit:**
+**Richtlinien für die Benutzerfreundlichkeit:  **
 
-Unter [Cortana-Entwurfsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn974233) finden Sie Informationen zur Integration Ihrer App mit **Cortana**. Unter [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121) finden Sie nützliche Tipps für den Entwurf einer nützlichen und interaktiven sprachaktivierten App.
+Unter [Cortana-Entwurfsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn974233) finden Sie Informationen zur Integration Ihrer App mit **Cortana**. Unter [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121) finden Sie hilfreiche Tipps für den Entwurf einer nützlichen und interaktiven sprachaktivierten App.
 
-## <span id="Feedback_strings"></span><span id="feedback_strings"></span><span id="FEEDBACK_STRINGS"></span>Feedback-Zeichenfolgen
+## <span id="Feedback_strings"></span><span id="feedback_strings"></span><span id="FEEDBACK_STRINGS"></span>Feedbackzeichenfolgen
 
 Erstellen Sie Feedback-Zeichenfolgen, die sowohl auf dem Bildschirm angezeigt als auch von **Cortana** gesprochen werden.
 
 Die [Cortana-Entwurfsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn974233)enthalten Empfehlungen für das Erstellen von Zeichenfolgen für **Cortana**.
 
-## <span id="Feedback_strings"></span><span id="feedback_strings"></span><span id="FEEDBACK_STRINGS"></span>Feedback-Zeichenfolgen
+## <span id="Feedback_strings"></span><span id="feedback_strings"></span><span id="FEEDBACK_STRINGS"></span>Feedbackzeichenfolgen
 
 Inhaltskarten können zusätzlichen Kontext für den Benutzer bereitstellen und dazu beitragen, die Feedback-Zeichenfolgen möglichst kurz zu halten.
 
-**Cortana** unterstützt die folgenden Inhaltskartenvorlagen. (Für den Abschlussbildschirm kann nur eine einzelne Vorlage verwendet werden.)
+**Cortana** unterstützt die folgenden Inhaltskartenvorlagen. (Für den Abschlussbildschirm kann nur eine einzige Vorlage verwendet werden.)
 
     -   Title only
     -   Title with up to three lines of text
@@ -190,7 +190,7 @@ Hier sehen Sie einen Übergabebildschirm für die App **Adventure Works**. In di
 
 Wenn der App-Dienst mehr als 500 ms benötigt, um ReportSuccessAsync aufzurufen, zeigt **Cortana** dem Benutzer einen Statusbildschirm an. Das App-Symbol wird angezeigt, und Sie müssen sowohl eine GUI- als auch eine TTS-Statuszeichenfolge bereitstellen, die deutlich macht, dass die Aufgabe aktiv bearbeitet wird.
 
-**Cortana** zeigt einen Statusbildschirm maximal fünf Sekunden lang an. Nach fünf Sekunden zeigt **Cortana** eine Fehlermeldung an, und der App-Dienst wird geschlossen. Sollte die Durchführung der Aktion länger als fünf Sekunden dauern, kann der App-Dienst **Cortana** mit weiteren Statusbildschirmen aktualisieren.
+**Cortana** zeigt einen Statusbildschirm maximal für 5 Sekunden an. Nach fünf Sekunden zeigt **Cortana** eine Fehlermeldung an, und der App-Dienst wird geschlossen. Sollte die Durchführung der Aktion länger als fünf Sekunden dauern, kann der App-Dienst **Cortana** mit weiteren Statusbildschirmen aktualisieren.
 
 Hier sehen Sie einen Statusbildschirm für die App **Adventure Works**. In diesem Beispiel hat ein Benutzer eine Reise nach Las Vegas storniert. Der Statusbildschirm enthält eine aktionsspezifische Meldung, ein Symbol und eine Inhaltskachel mit Informationen zur stornierten Reise.
 
@@ -343,7 +343,7 @@ private async Task SendCompletionMessageForCancellation(string destination)
 }
 ```
 
-## <span id="Disambiguation_screen"></span><span id="disambiguation_screen"></span><span id="DISAMBIGUATION_SCREEN"></span>Mehrdeutigkeitsvermeidungsbildschirm
+## <span id="Disambiguation_screen"></span><span id="disambiguation_screen"></span><span id="DISAMBIGUATION_SCREEN"></span>Bildschirm zur Vermeidung von Mehrdeutigkeiten
 
 
 Wenn für eine per Sprachbefehl angegebene Aktion mehrere Ergebnisse möglich sind, kann der App-Dienst vom Benutzer weitere Informationen anfordern.
@@ -472,6 +472,6 @@ var userMessage = new VoiceCommandUserMessage();
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

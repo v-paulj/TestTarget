@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 Description: 'In diesem Thema wird veranschaulicht, wie Sie einen geschützten Threadkontext erstellen, bevor Sie in einem Unternehmensdatenschutz-Szenario (Enterprise Data Protection, EDP) Netzwerkverbindungen erstellen.'
 MS-HAID: 'dev\_networking.tagging\_network\_connections\_with\_edp\_identity'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -8,11 +9,11 @@ title: Markieren von Netzwerkverbindungen mit EDP-Identität
 
 # Markieren von Netzwerkverbindungen mit EDP-Identität
 
-__Hinweis__ Die Richtlinie für den Unternehmensdatenschutz (Enterprise Data Protection, EDP) kann nicht auf Windows 10, Version 1511 (Build 10586) oder früher angewendet werden.
+__Hinweis__ EDP-Richtlinien (Enterprise Data Protection, Unternehmensdatenschutz) können nicht unter Windows 10 (Version 1511, Build 10586 oder älter) verwendet werden.
 
 In diesem Thema wird veranschaulicht, wie Sie einen geschützten Threadkontext erstellen, bevor Sie in einem Unternehmensdatenschutz-Szenario (Enterprise Data Protection, EDP) Netzwerkverbindungen erstellen. Umfassende Informationen zu den Zusammenhängen zwischen EDP und Dateien, Datenströmen, Zwischenablage, Netzwerk, Hintergrundaufgaben und dem Schutz von Daten im Sperrzustand finden Sie unter [Unternehmensdatenschutz (EDP)](../enterprise/edp-hub.md).
 
-**Hinweis**  [Unternehmensdatenschutz (EDP) – Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) veranschaulicht viele EDP-Szenarien.
+**Hinweis**  Das [Unternehmensdatenschutz (EDP) – Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) veranschaulicht viele EDP-Szenarien.
 
 
 
@@ -36,11 +37,13 @@ In diesem Thema wird veranschaulicht, wie Sie einen geschützten Threadkontext e
 
 In diesem Szenario synchronisiert eine optimierte Mail-App eine Reihe von Postfächern, bei denen es sich um eine Mischung aus geschäftlichen und privaten Postfächern handelt. Die App übergibt die Identität des Benutzers an einen Aufruf von [**ProtectionPolicyManager.CreateCurrentThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706025), um einen geschützten Threadkontext zu erstellen. Hierdurch werden alle Netzwerkverbindungen markiert, die mit dieser Identität anschließend auf demselben Thread hergestellt werden, und der durch die Unternehmensrichtlinie gesteuerte Zugriff auf Unternehmensnetzwerkressourcen wird ermöglicht.
 
-Der Begriff „Unternehmen“ bezieht sich hierbei auf das Unternehmen, zu dem die Benutzeridentität gehört. [**CreateCurrentThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706025) gibt unabhängig von der Richtliniendurchsetzung ein [**ThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706029)-Objekt zurück. Wenn die App auf die Behandlung gemischter Ressourcen vorbereitet ist, kann sie sich dafür entscheiden, **CreateCurrentThreadNetworkContext** für alle Identitäten aufzurufen. Nach dem Abrufen von Netzwerkressourcen ruft die App **Dispose** für das **ThreadNetworkContext**-Objekt auf, um alle Identitätsmarkierungen aus dem aktuellen Thread zu löschen. Es hängt von Ihrer Programmiersprache ab, welches Muster Sie zum Verwerfen des Kontextobjekts verwenden.
+Der Begriff „Unternehmen“ bezieht sich hierbei auf das Unternehmen, zu dem die Benutzeridentität gehört. [
+              **CreateCurrentThreadNetworkContext**
+            ](https://msdn.microsoft.com/library/windows/apps/dn706025) gibt unabhängig von der Richtliniendurchsetzung ein [**ThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706029)-Objekt zurück. Wenn die App auf die Behandlung gemischter Ressourcen vorbereitet ist, kann sie sich dafür entscheiden, **CreateCurrentThreadNetworkContext** für alle Identitäten aufzurufen. Nach dem Abrufen von Netzwerkressourcen ruft die App **Dispose** für das **ThreadNetworkContext**-Objekt auf, um alle Identitätsmarkierungen aus dem aktuellen Thread zu löschen. Es hängt von Ihrer Programmiersprache ab, welches Muster Sie zum Verwerfen des Kontextobjekts verwenden.
 
 Falls die Identität nicht bekannt ist, kann die App die per Unternehmensrichtlinie verwaltete Identität über die Netzwerkadresse der Ressource mit der [**ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync**](https://msdn.microsoft.com/library/windows/apps/dn706027)-API abfragen.
 
-**Hinweis**  Wie im Codebeispiel zu sehen ist, besteht das richtige Verwendungsmuster für  [**CreateCurrentThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706025) darin, den Geltungszeitraum auf ein Minimum zu beschränken. Sie sollten den Kontext des Unternehmensnetzwerks festlegen, Netzwerkverbindungen erstellen, den Kontext zurücksetzen, Verbindungen verwenden und dann schließen. Im folgenden Codebeispiel werden die Details veranschaulicht. Beachten Sie, dass Sie keine Dateien für einen Thread erstellen können, während der Unternehmensnetzwerkkontext für diesen Thread festgelegt ist. Dadurch würde die Datei automatisch verschlüsselt werden, und zwar unabhängig davon, ob die Datei personenbezogen sein soll. Dies ist einer der Gründe, warum das Zurücksetzen des Kontexts zum frühestmöglichen Zeitpunkt empfohlen wird.
+**Hinweis**  Wie im Codebeispiel zu sehen ist, besteht das richtige Verwendungsmuster für [**CreateCurrentThreadNetworkContext**](https://msdn.microsoft.com/library/windows/apps/dn706025) darin, den Geltungszeitraum auf ein Minimum zu beschränken. Sie sollten den Kontext des Unternehmensnetzwerks festlegen, Netzwerkverbindungen erstellen, den Kontext zurücksetzen, Verbindungen verwenden und dann schließen. Im folgenden Codebeispiel werden die Details veranschaulicht. Beachten Sie, dass Sie keine Dateien für einen Thread erstellen können, während der Unternehmensnetzwerkkontext für diesen Thread festgelegt ist. Dadurch würde die Datei automatisch verschlüsselt werden, und zwar unabhängig davon, ob die Datei personenbezogen sein soll. Dies ist einer der Gründe, warum das Zurücksetzen des Kontexts zum frühestmöglichen Zeitpunkt empfohlen wird.
 
 
 
@@ -105,7 +108,7 @@ public static async void SyncMailbox(string identity)
 }
 ```
 
-**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, hilft Ihnen die [archivierte Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.
+**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
 
@@ -124,6 +127,6 @@ public static async void SyncMailbox(string identity)
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
-title: Enumerieren von Geräten über ein Netzwerk
+title: Auflisten von Geräten über ein Netzwerk
 description: Zusätzlich zum Ermitteln von lokal verbundenen Geräten können Sie mithilfe der Windows.Devices.Enumeration-APIs Geräte über Drahtlos- und Netzwerkprotokolle enumerieren.
 ---
 # Enumerieren von Geräten über ein Netzwerk
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** Wichtige APIs **
@@ -35,8 +36,8 @@ Wenn Sie eine eigene Auswahl erstellen, wird dringend empfohlen, den Umfang der 
 | Windows-Sofortverbindung (WNC)                    | **{4c1b1ef8-2f62-4b9f-9bc5-b21ab636138f}** |
 | WiGig-Docks                                  | **{a277f3a5-8764-4f88-8045-4c5e962640b1}** |
 | WLAN-Bereitstellung für HP-Drucker           | **{c85ef710-f344-4792-bb6d-85a4346f1e69}** |
-| Bluetooth                                    | Zurzeit nicht bereitgestellt                     |
-| Bluetooth LE                                 | Zurzeit nicht bereitgestellt                     |
+| Bluetooth                                    | **{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}** |
+| Bluetooth LE                                 | **{bb7bb05e-5972-42b5-94fc-76eaa7084d49}** |
 
  
 
@@ -78,6 +79,6 @@ System.Devices.AepContainer.ProtocolIds:~~"{0e261de4-12f0-46e6-91ba-428607ccef64
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

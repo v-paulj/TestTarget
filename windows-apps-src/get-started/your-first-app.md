@@ -1,11 +1,12 @@
 ---
+author: martinekuan
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
 title: Erstellen Ihrer ersten App
-description: Das Erstellen einer UWP-App (Universal Windows Platform) für Windows 10 ist einfacher, als Sie denken.
+description: Das Erstellen einer UWP (Universelle Windows-Plattform)-App für Windows 10 ist einfacher, als Sie denken.
 ---
 # Erstellen Ihrer ersten App
 
-Das Erstellen einer UWP-App (Universal Windows Platform) für Windows 10 ist einfacher, als Sie denken. Sie müssen zu Beginn keine neue Programmiersprache erlernen, sondern können auf Ihre bereits vorhandenen Kenntnisse zurückgreifen:
+Das Erstellen einer UWP (Universelle Windows-Plattform)-App für Windows 10 ist einfacher, als Sie denken. Sie müssen zu Beginn keine neue Programmiersprache erlernen, sondern können auf Ihre bereits vorhandenen Kenntnisse zurückgreifen:
 
 -   C# oder Visual Basic mit XAML
 -   C++ mit XAML
@@ -68,6 +69,6 @@ Verfügen Sie über Erfahrung mit iOS oder Android? Im Abschnitt [Portieren von 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

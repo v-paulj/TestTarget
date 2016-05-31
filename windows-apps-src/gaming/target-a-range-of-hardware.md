@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Unterstützen von Schattenmaps für unterschiedliche Hardware
 description: Rendern Sie Schatten in noch besserer Qualität auf schnelleren Geräten und schnellere Schatten auf weniger leistungsfähigen Geräten.
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
@@ -7,7 +8,7 @@ ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
 # Unterstützen von Schattenmaps für unterschiedliche Hardware
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Rendern Sie Schatten in noch besserer Qualität auf schnelleren Geräten und schnellere Schatten auf weniger leistungsfähigen Geräten. Teil 4 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -114,7 +115,7 @@ UWP-Apps (Universelle Windows-Plattform) können eine dynamische Shaderkompilier
 
 Im Projektdateieintrag für die linear gefilterte Version des Shaders wird LINEAR definiert:
 
-```
+```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
@@ -143,7 +144,7 @@ Im Projektdateieintrag für die linear gefilterte Version des Shaders wird LINEA
 
 Der Projektdateieintrag für die linear gefilterte Version des Shaders enthält keine Präprozessordefinitionen:
 
-```
+```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Pixel</ShaderType>
   <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Pixel</ShaderType>
@@ -173,6 +174,6 @@ Der Projektdateieintrag für die linear gefilterte Version des Shaders enthält 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

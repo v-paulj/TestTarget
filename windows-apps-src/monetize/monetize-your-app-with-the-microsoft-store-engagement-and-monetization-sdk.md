@@ -1,12 +1,13 @@
 ---
+author: mcleanbyron
 Description: Das Microsoft Store Engagement and Monetization SDK bietet Bibliotheken und Tools zum Hinzufügen von Features zu Ihren Apps, mit denen Sie mehr Geld verdienen und Kunden gewinnen können.
-title: Monetisierung Ihrer App und Kundengewinnung mit dem Microsoft Store Engagement and Monetization SDK
+title: Microsoft Store Engagement and Monetization SDK
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
 ---
 
-# Monetisierung Ihrer App und Kundengewinnung mit dem Microsoft Store Engagement and Monetization SDK
+# Microsoft Store Engagement and Monetization SDK
 
-Das Microsoft Store Engagement and Monetization SDK bietet Bibliotheken und Tools, mit denen Sie mehr Geld verdienen und Kunden gewinnen können. Mit diesen können Sie z. B. Anzeigen in Ihren Apps einblenden und Experimente mit A/B-Tests durchführen. Dieses SDK ersetzt das Microsoft Universal Ad Client SDK und wird ständig weiterentwickelt, um neue Funktionen für die Kundengewinnung und Monetarisierung bereitzustellen.
+Das Microsoft Store Engagement and Monetization SDK bietet Bibliotheken und Tools, mit denen Sie mehr Geld verdienen und Kunden gewinnen können. Mit diesen können Sie z. B. Anzeigen in Ihren Apps einblenden und Experimente mit A/B-Tests durchführen. Dieses SDK ersetzt das Microsoft Universal Ad Client SDK und wird ständig weiterentwickelt, um neue Funktionen für die Kundengewinnung und Monetarisierung bereitzustellen.
 
 
 ## In dem SDK verfügbare Features
@@ -15,7 +16,7 @@ Das Microsoft Store Engagement and Monetization SDK enthält Bibliotheken und To
 
 ### Durchführen von Experimenten mit A/B-Tests für UWP-Apps
 
-Führen Sie A/B-Tests in Ihren UWP-Apps durch, um die Effektivität der Features für einige Kunden zu messen, bevor Sie die Features für alle Benutzer freigeben. Verwenden Sie nach Definition eines Experiments im Dev Center-Dashboard die [ExperimentClient](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.engagementclient.aspx)-Klasse zum Abrufen von Varianten für Ihr Experiment in der App, verwenden Sie diese Daten zum Ändern des Verhaltens des Features, das Sie testen, und verwenden Sie dann die [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx)-Methode zum Senden des Anzeigeereignisses und der Umwandlungsereignisse an Dev Center. Verwenden Sie dann das Dashboard zum Anzeigen der Ergebnisse und Verwalten des Experiments.
+Führen Sie A/B-Tests in Ihren UWP-Apps durch, um die Effektivität der Features für einige Kunden zu messen, bevor Sie die Features für alle Benutzer freigeben. Verwenden Sie nach Definition eines Experiments im Dev Center-Dashboard die [ExperimentClient](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentclient.aspx)-Klasse zum Abrufen von Varianten für Ihr Experiment in der App, verwenden Sie diese Daten zum Ändern des Verhaltens des Features, das Sie testen, und verwenden Sie dann die [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx)-Methode zum Senden des Anzeigeereignisses und der Umwandlungsereignisse an Dev Center. Verwenden Sie dann das Dashboard zum Anzeigen der Ergebnisse und Verwalten des Experiments.
 
 Weitere Informationen finden Sie unter [Durchführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md).
 
@@ -24,6 +25,8 @@ Weitere Informationen finden Sie unter [Durchführen von App-Experimenten mit A/
 Verwenden Sie die [Feedback](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.feedback.aspx)-Klasse in Ihren UWP-Apps, um Ihre Windows 10-Kunden auf den Feedback-Hub zu verweisen. Dort können Kunden ihre Probleme und Vorschläge übermitteln und Feedback anderer Benutzer lesen und bewerten. Verwalten Sie anschließend dieses Feedback im [Feedbackbericht](../publish/feedback-report.md) im Dev Center-Dashboard.
 
 Weitere Informationen finden Sie unter [Feedback-Hub über Ihre App starten](launch-feedback-hub-from-your-app.md).
+
+>**Hinweis** Der **Feedback**-Bericht ist zurzeit nur für Entwicklerkonten verfügbar, die Mitglied des [Dev Center-Insider-Programms](../publish/dev-center-insider-program.md) sind.
 
 ### Anzeigen von Werbung in Ihren Apps
 
@@ -72,6 +75,6 @@ Andere Bibliotheken im SDK, einschließlich Microsoft.Advertising.dll für ander
 * [Feedback-Hub über Ihre App starten](launch-feedback-hub-from-your-app.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

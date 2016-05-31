@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 Description: Bereiten Sie Ihre App für die Lokalisierung vor, um sie an andere Märkte, Sprachen oder Regionen anzupassen.
 title: Vorbereiten Ihrer App für die Lokalisierung
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
@@ -9,7 +10,7 @@ template: detail.hbs
 # Vorbereiten Ihrer App für die Lokalisierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Bereiten Sie Ihre App für die Lokalisierung vor, um sie an andere Märkte, Sprachen oder Regionen anzupassen. Lesen Sie zuerst unbedingt die [empfohlene und nicht empfohlene Vorgehensweisen](guidelines-and-checklist-for-globalizing-your-app.md).
@@ -28,14 +29,14 @@ Fügen Sie den Ressourcendateien Ihrer App Lokalisierungskommentare hinzu. Die K
 
 **XAML:** RESW-Dateien (in Visual Studio mithilfe von XAML erstellte App-Ressourcen) verfügen über ein Kommentarelement. Beispiel:
 
-```XAML
+```XML
 <data name="String1">
     <value>Hello World</value>
     <comment>A greeting (This is a comment to the localizer)</comment>
 </data>
 ```
 
-**HTML:** RESJSON-Dateien (in Visual Studio mithilfe von HTML erstellte App-Ressourcen) ermöglichen die Aufnahme von Metadaten in Felder, die mit einem Unterstrich beginnen, wie z. B. Kommentare:
+**HTML:** RESJSON-Dateien (in Visual Studio mithilfe von HTML erstellte App-Ressourcen) ermöglichen die Aufnahme von Metadaten in Felder, die mit einem Unterstrich beginnen, wie z. B. Kommentare:
 
 ```json
 {
@@ -86,9 +87,9 @@ Lokalisieren Sie bestimmte Zeichenfolgen, nicht Tags. Beachten Sie folgende Beis
 
  
 
-Wenn das Tag „&lt;link&gt;“ in die Ressourcen aufgenommen wird, wird es ebenfalls lokalisiert. Dadurch wird das Tag ungültig. Nur die Zeichenfolgen selbst dürfen lokalisiert werden. Betrachten Sie Tags generell als Code, der vom Lokalisierungsinhalt getrennt gehalten werden sollte. Lange Zeichenfolgen sollten jedoch Markup enthalten, um den Kontext zu wahren und eine Sortierung zu ermöglichen.
+Wenn das Tag &lt;link&gt; in die Ressourcen aufgenommen wird, wird es ebenfalls lokalisiert. Dadurch wird das Tag ungültig. Nur die Zeichenfolgen selbst dürfen lokalisiert werden. Betrachten Sie Tags generell als Code, der vom Lokalisierungsinhalt getrennt gehalten werden sollte. Lange Zeichenfolgen sollten jedoch Markup enthalten, um den Kontext zu wahren und eine Sortierung zu ermöglichen.
 
-## <span id="do_not_use_the_same_strings_in_dissimilar_contexts."></span><span id="DO_NOT_USE_THE_SAME_STRINGS_IN_DISSIMILAR_CONTEXTS."></span>Verwenden Sie den gleichen String nicht in unterschiedlichem Kontext.
+## <span id="do_not_use_the_same_strings_in_dissimilar_contexts."></span><span id="DO_NOT_USE_THE_SAME_STRINGS_IN_DISSIMILAR_CONTEXTS."></span>Verwenden Sie nicht die gleichen Zeichenfolgen in unterschiedlichen Kontexten.
 
 
 Es mag vernünftig erscheinen, eine Zeichenfolge mehrmals zu verwenden. Allerdings können erhebliche Lokalisierungsprobleme auftreten, wenn ein Wort oder Ausdruck mehrere Bedeutungen oder Kontexte besitzt.
@@ -186,6 +187,6 @@ Die Sortierung folgt dem **regionalen Format der Systemsteuerung**:
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

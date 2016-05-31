@@ -1,5 +1,6 @@
 ---
-title: Windows Runtime 8.x zu UWP – Fallstudie, Bookstore1
+author: mcleblanc
+title: Windows Runtime 8.x zu UWP – Fallstudie: Bookstore1
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
 description: Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen universellen 8.1-App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10.
 ---
@@ -14,7 +15,7 @@ Die portierte App besteht aus einem **ListBox**-Element, das an ein Ansichtsmode
 
 Die vorherigen Themen in diesem Abschnitt beschreiben die Unterschiede zwischen den Plattformen und bieten umfassende Informationen und Anleitungen zum Portierungsprozess für verschiedene Aspekte einer App, vom XAML-Markup über die Bindung an ein Ansichtsmodell bis hin zum Zugreifen auf Daten. Dieser Leitfaden soll anhand einer Fallstudie ergänzt werden, indem ein praktisches Beispiel vorgestellt wird. Bei den Fallstudien wird davon ausgegangen, dass Sie die Anleitung gelesen haben. Sie wird nicht wiederholt.
 
-**Hinweis**   Wenn beim Öffnen von Bookstore1Universal\_10 in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
+**Hinweis**   Wenn beim Öffnen von „Bookstore1Universal\_10“ in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
 
 ## Downloads
 
@@ -123,6 +124,6 @@ Wir konnten uns auch davon überzeugen, dass das Portieren von Ansichtsmodellen 
 Die nächsten Fallstudie ist [Bookstore2](w8x-to-uwp-case-study-bookstore2.md), in der wir den Zugriff auf und die Anzeige von gruppierten Daten behandeln.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

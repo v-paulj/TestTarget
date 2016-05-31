@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 Description: 'Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten, dateibezogenen EDP-Szenarien durchgeführt werden müssen.'
 MS-HAID: 'dev\_files.protect\_your\_enterprise\_data\_with\_edp'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -8,7 +9,7 @@ title: 'Schützen von Dateien mithilfe des Unternehmensdatenschutzes (EDP)'
 
 # Schützen von Dateien mithilfe des Unternehmensdatenschutzes (EDP)
 
-__Hinweis__ Die Richtlinie für den Unternehmensdatenschutz (Enterprise Data Protection, EDP) kann nicht auf Windows 10, Version 1511 (Build 10586) oder früher angewendet werden.
+__Hinweis__ EDP-Richtlinien (Enterprise Data Protection, Unternehmensdatenschutz) können nicht unter Windows 10 (Version 1511, Build 10586 oder älter) verwendet werden.
 
 Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten, dateibezogenen EDP-Szenarien durchgeführt werden müssen. Umfassende Informationen zu den Zusammenhängen zwischen EDP und Dateien, Datenströmen, Zwischenablage, Netzwerk, Hintergrundaufgaben und dem Schutz von Daten im Sperrzustand finden Sie unter [Unternehmensdatenschutz (EDP)](../enterprise/edp-hub.md).
 
@@ -24,7 +25,7 @@ Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gä
 
     Eine App, die von sich aus dafür sorgt, dass Unternehmensdaten unter der Kontrolle des verwaltenden Unternehmens bleiben, wird als unternehmensoptimierte App bezeichnet. Eine optimierte App ist leistungsfähiger, intelligenter, flexibler und vertrauenswürdiger als eine nicht optimierte App. Durch Deklaration der eingeschränkten **enterpriseDataPolicy**-Funktion teilt die App dem System mit, dass sie optimiert ist. Zur Optimierung gehört jedoch mehr als nur das Festlegen einer Funktion. Weitere Informationen finden Sie unter [Unternehmensoptimierte Apps](../enterprise/edp-hub.md#enterprise-enlightened-apps).
 
--   **Verstehen der asynchronen Programmierung für UWP-Apps (Universelle Windows-Plattform)**
+-   **Kenntnisse in der asynchronen Programmierung für Apps für die universelle Windows-Plattform (UWP)**
 
     Informationen zum Schreiben von asynchronen Apps in C# oder Visual Basic finden Sie unter [Aufrufen asynchroner APIs in C\# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Informationen zum Schreiben von asynchronen Apps in C++ finden Sie unter [Asynchrone Programmierung in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
@@ -41,7 +42,7 @@ string localFolderPath = ApplicationData.Current.LocalFolder.Path;
 
 Nachdem Sie den Pfad kennen, ist es einfach, die von der App erstellten Dateien im Datei-Explorer zu finden. Dadurch können Sie sicherstellen, dass die Dateien geschützt sind und der Schutz der richtigen Identität zugeordnet ist.
 
-Aktivieren Sie im Datei-Explorer unter **Ordner- und Suchoptionen ändern** auf der Registerkarte **Ansicht** die Option **Verschlüsselte Dateien in Farbe anzeigen**. Außerdem können Sie im Datei-Explorer den Befehl **Ansicht** &gt; **Spalten hinzufügen** verwenden, um die Spalte **Verschlüsselt für** hinzuzufügen. Dadurch wird die Unternehmensidentität angezeigt, für die die Dateien geschützt sind.
+Aktivieren Sie im Datei-Explorer unter **Ordner- und Suchoptionen ändern** auf der Registerkarte **Ansicht** die Option **Verschlüsselte Dateien in Farbe anzeigen**. Außerdem können Sie im Datei-Explorer den Befehl **Ansicht**&gt;**Spalten hinzufügen** verwenden, um die Spalte **Verschlüsselt für** hinzuzufügen. Dadurch wird die Unternehmensidentität angezeigt, für die die Dateien geschützt sind.
 
 ## Schützen von Unternehmensdaten in einer neuen Datei (für eine interaktive App)
 
@@ -79,7 +80,7 @@ private async void SaveEnterpriseDataToFile(string enterpriseData, string identi
 ## Schutz von Unternehmensdaten in einer neuer Datei (für eine Hintergrundaufgabe)
 
 
-Die im vorangehenden Abschnitt verwendete [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157)-API eignet sich nur für interaktive Apps. Bei einer Hintergrundaufgabe kann Ihr Code auch ausgeführt werden, während der Sperrbildschirm aktiviert ist. Unter Umständen verwendet die Organisation auch eine sichere Richtlinie vom Typ DPL (Data Protection Under Lock, Schutz von Daten bei Sperre), durch die Entschlüsselungsschlüssel, die für den Zugriff auf geschützte Ressourcen erforderlich sind, bei der Sperrung des Geräts vorübergehend aus dem Arbeitsspeicher entfernt werden. Dies beugt Datenverlusten vor, wenn das Gerät verloren geht. Das Feature entfernt auch Schlüssel für geschützte Dateien, wenn deren Handles geschlossen werden. Es ist jedoch möglich, während des Sperrzeitfensters (Zeitraum zwischen dem Sperren und Entsperren des Geräts) neue geschützte Dateien zu erstellen, auf sie zuzugreifen und gleichzeitig das Dateihandle offen zu halten. **StorageFolder.CreateFileAsync** schließt das Handle beim Erstellen der Datei, sodass dieser Algorithmus nicht verwendet werden kann.
+Die im vorangehenden Abschnitt verwendete [**FileProtectionManager.ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/dn705157)-API eignet sich nur für interaktive Apps. Bei einer Hintergrundaufgabe kann Ihr Code auch ausgeführt werden, während der Sperrbildschirm aktiviert ist. Unter Umständen verwendet die Organisation auch eine sichere Richtlinie vom Typ DPL (Data Protection Under Lock, Schutz von Daten bei Sperre), durch die Entschlüsselungsschlüssel, die für den Zugriff auf geschützte Ressourcen erforderlich sind, bei der Sperrung des Geräts vorübergehend aus dem Arbeitsspeicher entfernt werden. Dies beugt Datenverlusten vor, wenn das Gerät verloren geht. Das Feature entfernt auch Schlüssel für geschützte Dateien, wenn deren Handles geschlossen werden. Es ist jedoch möglich, während des Sperrzeitfensters (Zeitraum zwischen dem Sperren und Entsperren des Geräts) neue geschützte Dateien zu erstellen, auf sie zuzugreifen und gleichzeitig das Dateihandle offen zu halten. **StorageFolder.CreateFileAsync** schließt das Handle nach dem Erstellen der Datei, sodass dieser Algorithmus nicht verwendet werden kann.
 
 1.  Erstellen Sie eine neue Datei mithilfe von **StorageFolder.CreateFileAsync**.
 2.  Verschlüsseln Sie sie mithilfe von **FileProtectionManager.ProtectAsync**.
@@ -109,7 +110,7 @@ private async void SaveEnterpriseDataToFile(string enterpriseData, string identi
         await FileProtectionManager.CreateProtectedAndOpenAsync(storageFolder,
             "sample.txt", identity, CreationCollisionOption.ReplaceExisting);
 
-    // It&#39;s important to successfully protect a file *before* writing enterprise data to it.
+    // It's important to successfully protect a file *before* writing enterprise data to it.
     if (protectedFileCreateResult.ProtectionInfo.Identity == identity &&
         protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus.Protected)
     {
@@ -244,7 +245,7 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 }
 ```
 
-**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, hilft Ihnen die [archivierte Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.
+**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -263,6 +264,6 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

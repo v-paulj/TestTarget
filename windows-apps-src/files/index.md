@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Dateien, Ordner und Bibliotheken
 description: Hier erhalten Sie Informationen zum Lesen und Schreiben von App-Einstellungen, zur Datei- und Ordnerauswahl und zu speziellen Speicherorten im Sandkasten, wie z. B. Video-/Musikbibliothek.
@@ -40,6 +41,6 @@ Verwenden Sie die APIs im [Windows.Storage](https://msdn.microsoft.com/library/w
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

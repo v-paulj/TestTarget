@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Verwenden Sie im Windows Dev Center-Dashboard die Berichte zur Partnerleistung auf App- und Kontoebene, um Leistungsdaten für die Partneranzeigen in Ihren Apps anzuzeigen.
 title: Bericht zur Partnerleistung
 ms.assetid: 38AD494C-0F85-4FED-8732-9064D1FC503D
@@ -17,18 +18,19 @@ Die folgenden Abschnitte enthalten weitere Details zu diesen Berichten.
 
 ## Bericht zur Partneranzeigenleistung auf App-Ebene
 
-Dieser Bericht enthält Partneranzeigen-Leistungsdaten in Diagramm- und Tabellenform für die aktuell im Dashboard ausgewählte App. Wählen Sie zum Anzeigen dieses Berichts eine Ihrer Apps im Dashboard aus, und klicken Sie im Navigationsbereich auf **Analysen** &gt; **Affiliates performance**.
+Dieser Bericht enthält Partneranzeigen-Leistungsdaten in Diagramm- und Tabellenform für die aktuell im Dashboard ausgewählte App. Wählen Sie zum Anzeigen dieses Berichts eine Ihrer Apps im Dashboard aus, und klicken Sie im Navigationsbereich auf **Analysen**&gt;**Affiliates performance**.
 
 Die Daten werden aus den folgenden sieben Leistungsmetriken abgerufen, die für die Anzeigen in Ihrer App nachverfolgt werden:
 
--   **Geschätzter Umsatz**: Die geschätzten Einnahmen, die Sie als Kommission für genehmigte Einkäufe von Benutzern erhalten haben, die in Ihrer App auf Partneranzeigen klicken.
+-   **Estimated earnings (approved)**: Die geschätzten Einnahmen, die Sie als Kommission für genehmigte Einkäufe von Benutzern erhalten haben, die in Ihrer App auf Partneranzeigen klicken.
+-   **Estimated earnings (pending approval)**: Der ungefähre Betrag, den Sie als Kommission für die Einkäufe, für die eine Genehmigung noch aussteht, erhalten können.
 -   **Aufrufe**: Gibt an, wie häufig eine Partneranzeige in Ihrer App angezeigt wurde.
 -   **Klicks**: Gibt an, wie oft in Ihrer App auf eine Partneranzeige geklickt wurde.
--   **CTR** (Click-Through Rate): Gibt an, wie oft auf eine Partneranzeige geklickt wurde (geteilt durch die Anzahl von Partneranzeigenaufrufen).
+-   **CTR** (Click-Through-Rate): Gibt an, wie oft auf eine Partneranzeige geklickt wurde (geteilt durch die Anzahl von Partneranzeigenaufrufen).
 -   **Purchases (approved)**: Die Anzahl genehmigter Einkäufe von Benutzern, die in Ihrer App auf Partneranzeigen klicken.
 -   **Purchases (pending approval)**: Die Anzahl von Einkäufen mit ausstehender Genehmigung, die von Benutzern getätigt wurden, die in Ihrer App auf Partneranzeigen klicken.
 
-> **Hinweis:** Die Daten für **Geschätzter Umsatz**, **Purchases (approved)** und **Purchases (pending approval)** eines bestimmten Tags können sich ändern, nachdem Einkäufe genehmigt oder abgelehnt wurden.
+> **Hinweis**  Nachdem ein Benutzer ein Produkt im Store gekauft hat, gibt es eine Wartezeit von 45 Tagen, ehe der Kauf für das Partneranzeigenprogramm genehmigt werden kann. Aufgrund dieser Wartezeit können sich die Daten für **Estimated earnings (approved)**, **Estimated earnings (pending approval)**, **Purchases (approved)** und **Purchases (pending approval)** für einen bestimmten Tag ändern, nachdem die Einkäufe genehmigt oder abgelehnt wurden.
 
 ## Bericht zur Partneranzeigenleistung auf Dashboardebene
 
@@ -43,6 +45,6 @@ Der Abschnitt **Affiliates performance** auf der Seite **Dashboardübersicht** e
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

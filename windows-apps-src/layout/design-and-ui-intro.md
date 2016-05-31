@@ -1,18 +1,15 @@
 ---
-description: Dieser Artikel beschreibt die Features, Vorteile und Anforderungen der Plattform für UWP-Apps (Universelle Windows-Plattform) aus Entwurfsperspektive. Hier erfahren Sie, welche Komponenten die Plattform kostenlos zur Verfügung stellt und welche Tools verfügbar sind.
-title: Einführung in das Universal Windows Platform (UWP)-App-Design
+author: mijacobs
+Description: Dieser Artikel beschreibt die Features, Vorteile und Anforderungen der Plattform für UWP-Apps (Universelle Windows-Plattform) aus Entwurfsperspektive. Hier erfahren Sie, welche Komponenten die Plattform kostenlos zur Verfügung stellt und welche Tools verfügbar sind.
+title: Einführung in das UWP-App-Design
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
-label: Einführung in das UWP-App-Design
+label: Intro to UWP app design
 template: detail.hbs
 ---
 
 #  Einführung in das UWP-App-Design 
 
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
-Eine App für die universelle Windows-Plattform (UWP) kann auf beliebigen Windows-Geräten ausgeführt werden – Smartphones, Tablets oder PCs.
+Eine App für die Universelle Windows-Plattform (UWP) kann auf beliebigen Windows-Geräten ausgeführt werden – Smartphones, Tablets oder PCs.
 
 ![Windows-Geräte](images/1894834-hig-device-primer-01-500.png)
 
@@ -103,14 +100,14 @@ Der Einfachheit halber sehen wir uns den Aufbau einer App aus der Entwurfsperspe
 <td align="left"><p><img src="images/1895065-hig-anatomyofanapp-02.png" alt="Navigation, command, and content areas of an address book app" /></p>
 <p></p></td>
 <td align="left"><strong>Navigationselemente</strong>
-          <p>Mithilfe von Navigationselementen können Benutzer die Inhalte auswählen, die sie anzeigen möchten. Beispiele für Navigationselemente sind etwa [tabs and pivots](../controls-and-patterns/tabs-pivot.md), [hyperlinks](../controls-and-patterns/hyperlinks.md) und [nav panes](../controls-and-patterns/nav-pane.md).</p>
-<p>Navigationselemente werden ausführlich im Artikel [Navigation design basics](navigation-basics.md) behandelt.</p>
+<p>Mithilfe von Navigationselementen können Benutzer die Inhalte auswählen, die sie anzeigen möchten. Zu den Navigationselementen zählen beispielsweise [Registerkarten und Pivots](../controls-and-patterns/tabs-pivot.md), [Hyperlinks](../controls-and-patterns/hyperlinks.md) und [Navigationsbereiche](../controls-and-patterns/nav-pane.md).</p>
+<p>Navigationselemente werden ausführlich im Artikel [Navigationsdesigngrundlagen](navigation-basics.md) behandelt.</p>
 <strong>Befehlselemente</strong>
-          <p>Befehlselemente initiieren Aktionen wie etwa das Bearbeiten, Speichern oder Freigeben von Inhalten. Beispiele für Befehlselemente sind [button](../controls-and-patterns/buttons.md) und [command bar](../controls-and-patterns/app-bars.md). Zu den Befehlselementen können auch Tastenkombinationen gehören, die nicht auf dem Bildschirm angezeigt werden.</p>
-<p>Befehlselemente werden ausführlich im Artikel [Command design basics](commanding-basics.md) behandelt.</p>
+<p>Befehlselemente initiieren Aktionen wie etwa das Bearbeiten, Speichern oder Freigeben von Inhalten. Zu den Befehlselementen zählen beispielsweise [Schaltflächen](../controls-and-patterns/buttons.md) und die [Befehlsleiste](../controls-and-patterns/app-bars.md). Zu den Befehlselementen können auch Tastenkombinationen gehören, die nicht auf dem Bildschirm angezeigt werden.</p>
+<p>Befehlselemente werden ausführlich im Artikel [Befehlsdesigngrundlagen](commanding-basics.md) behandelt.</p>
 <strong>Inhaltselemente</strong>
-          <p>Die Inhaltselemente zeigen die Inhalte der App an. Bei einer Zeichen-App kann als Inhalt beispielsweise eine Zeichnung und bei einer Nachrichten-App beispielsweise ein Nachrichtenartikel angezeigt werden.</p>
-<p>Inhaltselemente werden ausführlich im Artikel [Content design basics](content-basics.md) behandelt.</p></td>
+<p>Die Inhaltselemente zeigen die Inhalte der App an. Bei einer Zeichen-App kann als Inhalt beispielsweise eine Zeichnung und bei einer Nachrichten-App beispielsweise ein Nachrichtenartikel angezeigt werden.</p>
+<p>Inhaltselemente werden ausführlich im Artikel [Inhaltsdesigngrundlagen](content-basics.md) behandelt.</p></td>
 </tr>
 </tbody>
 </table>
@@ -121,7 +118,7 @@ Eine App verfügt mindestens über einen Begrüßungsbildschirm und eine Startse
 
 Bei der Entscheidung für die UI-Elemente für Ihre App sollten Sie die Geräte und Bildschirmgrößen berücksichtigen, auf denen Ihre App ausgeführt werden wird.
 
-## <span id="Why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="WHY_TAILOR_YOUR_APP_FOR_SPECIFIC_DEVICE_FAMILIES_AND_SCREEN_SIZES_"></span>Anpassen Ihrer App an bestimmte Geräte und Bildschirmgrößen.
+## <span id="Why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="why_tailor_your_app_for_specific_device_families_and_screen_sizes_"></span><span id="WHY_TAILOR_YOUR_APP_FOR_SPECIFIC_DEVICE_FAMILIES_AND_SCREEN_SIZES_"></span>Anpassen Ihrer App an bestimmte Geräte und Bildschirmgrößen
 
 
 UWP-Apps verwenden effektive Pixel, um sicherzustellen, dass Ihre Designelemente lesbar sind und auf allen Geräten mit Windows verwendet werden können. Warum sollten also Sie überhaupt die Benutzeroberfläche Ihrer App für eine bestimmte Gerätefamilie anpassen wollen?
@@ -218,6 +215,6 @@ Hier sehen Sie ein Beispiel für diese Methode, die beim Entwerfen einer Smart H
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

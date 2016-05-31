@@ -1,15 +1,14 @@
 ---
-title: Geteilte Ansicht
+author: Jwmsft
+title: Geteilte Darstellung
 ms.assetid: E9E4537F-1160-4183-9A83-26602FCFDC9A
-description: Ein Steuerelement für die geteilte Ansicht verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich.
-label: Geteilte Ansicht
+description: Ein Steuerelement für die geteilte Darstellung verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich.
+label: Split view
 template: detail.hbs
 ---
 
-# Richtlinien für das Steuerelement für die geteilte Ansicht
+# Richtlinien für das SplitView -Steuerelement
 
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -17,7 +16,7 @@ template: detail.hbs
 -   [**SplitView-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn864360)
 -   [**SplitView-Objekt (HTML)**](https://msdn.microsoft.com/library/windows/apps/dn919970)
 
-Ein Steuerelement für die geteilte Ansicht verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich. Der Inhaltsbereich ist immer sichtbar. Der Bereich kann erweitert und reduziert werden oder geöffnet bleiben und kann vom linken oder rechten Rand eines App-Fensters eingeblendet werden. Der Bereich verfügt über drei Modi:
+Ein Steuerelement für die geteilte Ansicht verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich. Der Inhaltsbereich ist immer sichtbar. Der Bereich kann erweitert und reduziert werden oder geöffnet bleiben und kann vom linken oder rechten Rand eines App-Fensters eingeblendet werden. Der Bereich verfügt über vier Modi:
 
 -   **Überlagerung**
 
@@ -27,27 +26,27 @@ Ein Steuerelement für die geteilte Ansicht verfügt über einen erweiterbaren/r
 
     Der Bereich ist immer sichtbar und überlagert den Inhaltsbereich nicht. Der Bereich und der Inhaltsbereich teilen sich die verfügbare Bildschirmfläche.
 
--   **Kompakt**
+-   **CompactOverlay**
 
-    Der Bereich ist in diesem Modus immer sichtbar. Diese Ansicht ist gerade breit genug für die Anzeige von Symbolen (in der Regel 48 epx breit). Der Bereich und der Inhaltsbereich teilen sich die verfügbare Bildschirmfläche. Obwohl der standardmäßige kompakte Modus den Inhaltsbereich nicht überlagert kann er in einen breiteren Bereich umgewandelt werden, um mehr Inhalt anzuzeigen. Dadurch wird der Inhaltsbereich überlagert.
+    Ein kleiner Teil des Bereich – gerade breit genug für die Anzeige von Symbolen – ist in diesem Modus immer sichtbar. Die Standardbreite für den geschlossen Bereich ist 48px und kann mit `CompactPaneLength` geändert werden. Wenn das Fenster geöffnet ist, wird den Inhaltsbereich überlagert werden.
+
+-   **CompactInline**
+
+    Ein kleiner Teil des Bereich – gerade breit genug für die Anzeige von Symbolen – ist in diesem Modus immer sichtbar. Die Standardbreite für den geschlossen Bereich ist 48px und kann mit `CompactPaneLength` geändert werden. Wenn das Fenster geöffnet ist, reduziert es den Platz für Inhalte, die weggeschoben werden.
 
 ## <span id="Is_this_the_right_control_"></span><span id="is_this_the_right_control_"></span><span id="IS_THIS_THE_RIGHT_CONTROL_"></span>Ist dies das richtige Steuerelement?
 
+Das Steuerelement für die geteilte Darstellung kann zum Erstellen eines [Navigationsbereichs](nav-pane.md) verwendet werden. Zum Erstellen dieses Musters fügen Sie eine Schaltfläche zum Erweitern/Reduzieren (die „Hamburger“-Schaltfläche) sowie eine Listenansicht mit den Navigationselementen hinzu.
 
-Das Steuerelement für die geteilte Ansicht kann zum Erstellen eines [Navigationsbereichsmusters](nav-pane.md) verwendet werden. Zum Erstellen dieses Musters fügen Sie dem Steuerelement für die geteilte Ansicht eine Schaltfläche zum Erweitern/Reduzieren (die „Hamburger“-Schaltfläche) und eine Listenansicht hinzu.
+Das Steuerelement für die geteilte Darstellung kann auch für „Schubladen“-Funktionalität (Benutzer können den zusätzlichen Bereich öffnen und schließen) verwendet werden.
 
 ## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>Beispiele
 
+Das Steuerelement für die geteilte Darstellung ist in seiner standardmäßigen Form ein Basiscontainer. Hier ein Beispiel der Microsoft Edge-App, in dem SplitView verwendet wird, um den Hub anzuzeigen.
 
-Das Steuerelement für die geteilte Ansicht in seiner standardmäßigen Form ist ein grundlegender Container. Werden eine Schaltfläche und eine Listenansicht hinzugefügt, ist das Steuerelement für die geteilte Ansicht bereit zur Verwendung als Navigationsmenü. Hier sehen Sie Beispiele des Steuerelements für die geteilte Ansicht als Navigationsmenü im erweiterten und kompakten Modus.
-
-![Beispiel für das Menü einer geteilten Ansicht im Überlagerungsmodus und im kompakten Modus](images/controls-splitview-menu01.png)
-## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Empfehlungen
+![Beispiel für die geteilte Darstellung mit Microsoft Edge](images/split_view_Edge.png)
 
 
--   Bei Verwendung der geteilten Ansicht für ein Navigationsmenü wird empfohlen, Navigationssteuerelemente, die Zugriff auf andere Bereiche der App bieten, im Bereich zu platzieren. Das Verwenden des Bereichs für die Navigation ermöglicht eine einheitliche Benutzererfahrung. Diese Menüimplementierung hilft Benutzern darüber hinaus, einen Überblick über die Bestandteile der App zu gewinnen, sie kann einen Schnellzugriff auf die Startseite der Apps bieten und Benutzer motivieren, weitere Bereiche der App genauer zu erkunden.
-
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
 
 ## <span id="related_topics"></span>Verwandte Themen
 
@@ -59,10 +58,6 @@ Das Steuerelement für die geteilte Ansicht in seiner standardmäßigen Form ist
  
 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

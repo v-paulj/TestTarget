@@ -1,6 +1,7 @@
 ---
+author: mtoepke
 title: Tools für die Grafikdiagnose
-description: Hier erfahren Sie, in Visual Studio Grafikdiagnosefeatures (einschließlich Grafikdebugging, Analyse von Grafikframes und GPU-Verwendung) abrufen und verwenden
+description: Hier erfahren Sie, wie Sie in Visual Studio die Grafikdiagnosefeatures, einschließlich Grafikdebugging, Analyse von Grafikframes und GPU-Verwendung, abrufen und verwenden.
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
 ---
 
@@ -34,6 +35,6 @@ Die Grafikdiagnosefeatures ermöglichen das Erstellen von Direct3D-Debugging-Ger
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

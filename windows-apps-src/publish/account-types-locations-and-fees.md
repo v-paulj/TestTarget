@@ -1,4 +1,5 @@
 ---
+author: jnHs
 ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: Kontotypen, Standorte und Gebühren
 description: Wir bieten individuelle Konten für Entwickler und Unternehmenskonten für Entwickler in vielen Ländern und Regionen.
@@ -10,7 +11,7 @@ Wir bieten zwei Entwicklerkontotypen an: individuelle Konten und Unternehmenskon
 
 > **Hinweis**  Mit dem Entwicklerkonto kann immer nur ein einzelnes Microsoft-Konto verknüpft werden – unabhängig davon, ob Sie ein Konto für ein Unternehmen oder für eine Einzelperson erstellen. Stellen Sie beim Registrieren für ein Konto sicher, dass Sie sich mit dem Microsoft-Konto anmelden, das Sie für Ihr Entwicklerkonto verwenden möchten.
 
-Zu [Beginn des Registrierungsprozesses](http://go.microsoft.com/fwlink/p/?LinkId=615100) müssen Sie entscheiden, ob Sie ein individuelles Konto oder ein Unternehmenskonto erstellen möchten.
+Zu [Beginn des Registrierungsprozesses](http://go.microsoft.com/fwlink/p/?LinkId=615100) müssen Sie entscheiden, ob Sie ein individuelles Konto oder ein Unternehmenskonto erstellen möchten. Individuelle Konten sind für einzelne Entwickler vorgesehen, die alleine arbeiten. Unternehmenskonten sind für Organisationen und Unternehmen vorgesehen. Mit einem Unternehmenskonto erhalten Sie Zugriff auf zusätzliche App-Funktionen. Unternehmenskonten müssen nach der Registrierung außerdem zusätzlich geprüft werden, um sicherzustellen, dass Sie für die Einrichtung des Kontos für Ihr Unternehmen autorisiert sind. Diese Überprüfung kann zwischen wenigen Tagen und mehreren Wochen dauern und umfasst häufig einen Telefonanruf Ihres Unternehmens. Beide Arten von Konten ermöglichen die Übermittlung von Apps, Add-Ins und Diensten.
 
 > **Wichtig**  Sie können den Kontotyp nicht mehr ändern, nachdem Sie Ihre Wahl getroffen haben. Achten Sie also darauf, dass Sie den richtigen Typ auswählen.
 
@@ -20,7 +21,7 @@ Im Folgenden sind die grundlegenden Unterschiede zwischen den beiden Kontotypen 
 |--------------------|-----------------|
 | <ul><li>Einschränkungen bei der Verwendung bestimmter App-Funktionen</li><li>Kostet ca. 19 US-Dollar (einmalige Registrierungsgebühr; der exakte Betrag variiert je nach Land bzw. Region)</li></ul> | <ul><li>Erfordert die Überprüfung durch Symantec oder Dun & Bradstreet</li><li>Umfassenderer Zugriff auf App-Funktionen</li><li>Erfordert, dass Ihr Unternehmen als solches im Land oder in der Region seiner Niederlassung anerkannt ist</li><li>Kostet ca. 99 US-Dollar (einmalige Registrierungsgebühr; der exakte Betrag variiert je nach Land bzw. Region)</li></ul> |
 
-> **Wichtig**   Wenn Sie ein Unternehmenskonto erstellen möchten, machen Sie sich mit unseren [Richtlinien für Unternehmenskonten](opening-a-developer-account.md#additional-guidelines-for-company-accounts) vertraut.
+> **Wichtig**  Wenn Sie ein Unternehmenskonto erstellen möchten, machen Sie sich mit unseren [Richtlinien für Unternehmenskonten](opening-a-developer-account.md#additional-guidelines-for-company-accounts) vertraut.
 
 Unternehmenskonten sind etwas teurer. Das liegt hauptsächlich daran, dass wir durch einige zusätzliche Schritte sicherstellen, dass Sie von Ihrem Unternehmen autorisiert wurden und zum Einrichten des Kontos berechtigt sind. Einer der wichtigsten Vorteile eines Unternehmenskontos besteht in der Möglichkeit, Apps einzureichen, durch die zusätzliche [App-Funktionsdeklarationen](https://msdn.microsoft.com/library/windows/apps/Mt270968) deklariert werden.
 
@@ -118,10 +119,10 @@ In der Spalte **PayPal** wird angegeben, ob PayPal als Zahlungsmethode für Ihr 
 |  Deutschland | 14 EUR | 75 EUR | EUR, Auszahlung per Banküberweisung | Ja | 
 |  Ghana | 19 USD | 99 USD | GHS, Auszahlung per Banküberweisung | Nein | 
 |  Griechenland | 14 EUR | 75 EUR | EUR, Auszahlung per Banküberweisung | Ja | 
-|  Grönland | 19 USD | 99 USD | Keine Auszahlung | Nein | 
-|  Grenada | 19 USD | 99 USD | Keine Auszahlung | Nein | 
-|  Guatemala | 19 USD | 99 USD | GTQ, Auszahlung per Banküberweisung | Nein | 
-|  Guinea | 19 USD | 99 USD | USD, Auszahlung per Banküberweisung | Nein | 
+|  Grönland | 19 USD | 99 USD | Keine Auszahlung | Nein | 
+|  Grenada | 19 USD | 99 USD | Keine Auszahlung | Nein | 
+|  Guatemala | 145 GTQ | 750 GTQ | GTQ, Auszahlung per Banküberweisung | Nein | 
+|  Guinea | 19 USD | 99 USD | USD, Auszahlung per Banküberweisung | Nein | 
 |  Guinea-Bissau | 19 USD | 99 USD | Keine Auszahlung | Nein | 
 |  Guyana | 19 USD | 99 USD | Keine Auszahlung | Nein | 
 |  Haiti | 19 USD | 99 USD | USD, Auszahlung per Banküberweisung | Nein | 
@@ -139,9 +140,9 @@ In der Spalte **PayPal** wird angegeben, ob PayPal als Zahlungsmethode für Ihr 
 |  Japan | 1847 JPY | 9800 JPY | JPY, Auszahlung per Banküberweisung | Ja | 
 |  Jordanien | 13 JOD | 70 JOD | JOD, Auszahlung per Banküberweisung | Nein | 
 |  Kasachstan | 2897 KZT | 15038 KZT | KZT, Auszahlung per Banküberweisung | Nein | 
-|  Kenia | 19 USD | 99 USD | KES, Auszahlung per Banküberweisung | Nein | 
-|  Kiribati | 19 USD | 99 USD | Keine Auszahlung | Nein | 
-|  Korea, Republik | 21216 KRW | 108000 KRW | USD, Auszahlung per Banküberweisung | Nein | 
+|  Kenia | 1900 KES | 9999 KES | KES, Auszahlung per Banküberweisung | Nein | 
+|  Kiribati | 19 USD | 99 USD | Keine Auszahlung | Nein | 
+|  Korea, Repulik | 21216 KRW | 108000 KRW | USD, Auszahlung per Banküberweisung | Nein | 
 |  Kuwait | 5 KWD | 28 KWD | KWD, Auszahlung per Banküberweisung | Nein | 
 |  Kirgisistan | 19 USD | 99 USD | Keine Auszahlung | Nein | 
 |  Laos | 19 USD | 99 USD | USD, Auszahlung per Banküberweisung | Nein | 
@@ -178,8 +179,8 @@ In der Spalte **PayPal** wird angegeben, ob PayPal als Zahlungsmethode für Ihr 
 |  Niederlande | 14 EUR | 75 EUR | EUR, Auszahlung per Banküberweisung | Ja | 
 |  Neuseeland | 24 NZD | 140 NZD | NZD, Auszahlung per Banküberweisung | Ja | 
 |  Nicaragua | 19 USD | 99 USD | USD, Auszahlung per Banküberweisung | Nein | 
-|  Niger | 19 USD | 99 USD | XOF, Auszahlung per Banküberweisung | Nein | 
-|  Nigeria | 19 USD | 99 USD | NGN, Auszahlung per Banküberweisung | Nein | 
+|  Niger | 19 USD | 99 USD | XOF, Auszahlung per Banküberweisung | Nein | 
+|  Nigeria | 3700 NGN | 19500 NGN | NGN, Auszahlung per Banküberweisung | Nein | 
 |  Norwegen | 113 NOK | 580 NOK | NOK, Auszahlung per Banküberweisung | Ja | 
 |  Oman | 7 OMR | 40 OMR | OMR, Auszahlung per Banküberweisung | Nein | 
 |  Pakistan | 1959 PKR | 9000 PKR | PKR, Auszahlung per Banküberweisung | Nein | 
@@ -192,7 +193,7 @@ In der Spalte **PayPal** wird angegeben, ob PayPal als Zahlungsmethode für Ihr 
 |  Polen | 59 PLN | 280 PLN | PLN, Auszahlung per Banküberweisung | Ja | 
 |  Portugal | 14 EUR | 75 EUR | EUR, Auszahlung per Banküberweisung | Ja | 
 |  Katar | 69 QAR | 360 QAR | QAR, Auszahlung per Banküberweisung | Nein | 
-|  Rumänien | 63 RON | 360 RON | USD, Auszahlung per Banküberweisung | Nein | 
+|  Rumänien | 14 EUR | 75 EUR | USD, Auszahlung per Banküberweisung | Nein | 
 |  Russland | 626 RUB | 3000 RUB | RUB, Auszahlung per Banküberweisung | Ja* | 
 |  Ruanda | 19 USD | 99 USD | RWF, Auszahlung per Banküberweisung | Nein | 
 |  St. Kitts und Nevis | 19 USD | 99 USD | Keine Auszahlung | Nein | 
@@ -254,6 +255,6 @@ In der Spalte **PayPal** wird angegeben, ob PayPal als Zahlungsmethode für Ihr 
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

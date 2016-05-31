@@ -1,15 +1,16 @@
 ---
+author: mtoepke
 title: Hinzufügen einer Benutzeroberfläche
-description: Sie haben gesehen, wie das Beispielspiel das Hauptspielobjekt implementiert, und das grundlegende Renderingframework kennen gelernt.
+description: Sie haben gesehen, wie das Beispiel das Hauptspielobjekt implementiert, und das grundlegende Renderingframework kennengelernt.
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
 ---
 
 # Hinzufügen einer Benutzeroberfläche
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Sie haben gesehen, wie das Beispielspiel das Hauptspielobjekt implementiert, und das grundlegende Renderingframework kennen gelernt. Jetzt wollen wir uns ansehen, wie das Spiel dem Spieler Feedback zum Spielzustand gibt. Hier erfahren Sie, wie Sie einfache Menüoptionen und Heads-Up-Anzeigekomponenten zur 3D-Grafikpipelineausgabe hinzufügen.
+Sie haben gesehen, wie das Beispiel das Hauptspielobjekt implementiert, und das grundlegende Renderingframework kennengelernt. Jetzt wollen wir uns ansehen, wie das Spiel dem Spieler Feedback zum Spielzustand gibt. Hier erfahren Sie, wie Sie einfache Menüoptionen und Heads-Up-Anzeigekomponenten zur 3D-Grafikpipelineausgabe hinzufügen.
 
 ## Ziel
 
@@ -168,7 +169,7 @@ void GameHud::Render(
 
 In diesem Code wird das für das Overlay eingerichtete Direct2D-Renderziel aktualisiert, um die Änderungen der Trefferzahl, die verbleibende Zeit und die Levelnummer zu aktualisieren. Die Rechtecke werden mit [**DrawRect**](https://msdn.microsoft.com/library/windows/desktop/dd371902)-Aufrufen und die Fadenkreuze mit zwei [**DrawLine**](https://msdn.microsoft.com/library/windows/desktop/dd371895)-Aufrufen gezeichnet.
 
-> **Hinweis:** Ihnen ist vermutlich aufgefallen, dass der Aufruf von **GameHud::Render** einen [**Windows::Foundation::Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)-Parameter verwendet, der die Größe des Hauptfenster-Rechtecks enthält. Dieser Aufruf veranschaulicht einen wichtigen Teil der Oberflächenprogrammierung: Das Abrufen der Fenstergröße in einer als DIPs (geräteunabhängige Pixel) bezeichneten Einheit, wobei ein DIP als 1/96 Zoll definiert ist. Beim Zeichnen skaliert Direct2D die Zeichnungseinheiten mithilfe der Dots per Inch (DPI)-Einstellung von Windows in tatsächliche Pixel. Ebenso geben Sie beim Zeichnen von Text mit DirectWrite DIPs anstelle von Punkten für die Schriftgröße an. DIPs werden als Gleitkommazahlen angegeben.
+> **Hinweis**   Ihnen ist vermutlich aufgefallen, dass der Aufruf von **GameHud::Render** einen [**Windows::Foundation::Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)-Parameter verwendet, der die Größe des Hauptfenster-Rechtecks enthält. Dieser Aufruf veranschaulicht einen wichtigen Teil der Oberflächenprogrammierung: Das Abrufen der Fenstergröße in einer als DIPs (geräteunabhängige Pixel) bezeichneten Einheit, wobei ein DIP als 1/96 Zoll definiert ist. Beim Zeichnen skaliert Direct2D die Zeichnungseinheiten mithilfe der Dots per Inch (DPI)-Einstellung von Windows in tatsächliche Pixel. Ebenso geben Sie beim Zeichnen von Text mit DirectWrite DIPs anstelle von Punkten für die Schriftgröße an. DIPs werden als Gleitkommazahlen angegeben.
 
  
 
@@ -1487,6 +1488,6 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

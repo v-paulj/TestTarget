@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Auf der Seite „Pakete“ werden alle Paketdateien (XAP, APPX, APPXUPLOAD und/oder APPXBUNDLE) für die App hochgeladen, die Sie übermitteln. Sie können in diesem Schritt Pakete für jedes Betriebssystem hochladen, auf das die App ausgerichtet ist.
 title: Hochladen von App-Paketen
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
@@ -18,7 +19,7 @@ Um Pakete hochzuladen, ziehen Sie sie in das Uploadfeld oder klicken, um Ihre Da
 
 Falls Sie [Flight-Pakete](package-flights.md) für Ihre App erstellt haben, wird eine Dropdownliste mit der Option zum Kopieren von Paketen aus einem Ihrer Flight-Pakete angezeigt. Wählen Sie das Flight-Paket mit den Paketen aus, die Sie übertragen möchten. Anschließend können Sie einige oder alle der Pakete auswählen, um sie in diese Übermittlung aufzunehmen.
 
-> **Wichtig:** Für Windows 10 muss immer die APPXUPLOAD-Datei (nicht die APPX- oder die APPXBUNDLE-Datei) hochgeladen werden. Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter [Verpacken universeller Windows-Apps für Windows 10](../packaging/packaging-uwp-apps.md).
+> **Wichtig**  Für Windows 10 muss immer die APPXUPLOAD-Datei (nicht die APPX- oder die APPXBUNDLE-Datei) hochgeladen werden. Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter [Verpacken universeller Windows-Apps für Windows 10](../packaging/packaging-uwp-apps.md).
 
 Wenn beim Überprüfen Ihrer Pakete Probleme erkannt werden, müssen Sie das Paket entfernen, das Problem beheben, und dann erneut versuchen, es hochzuladen. Weitere Informationen finden Sie unter [Beheben von Paketuploadfehlern](resolve-package-upload-errors.md).
 
@@ -54,6 +55,6 @@ Es wird empfohlen, [Visual Studio Application Insights](http://go.microsoft.com/
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

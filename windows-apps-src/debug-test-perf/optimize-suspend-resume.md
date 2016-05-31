@@ -1,7 +1,8 @@
 ---
+author: mcleblanc
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
 title: Optimieren von Anhalten/Fortsetzen
-description: Erstellen Sie UWP-Apps, die die Verwendung des Prozesslebensdauer-Systems optimieren und nach dem Anhalten oder Beenden effizient fortgesetzt werden.
+description: Erstellen Sie Apps für die universelle Windows-Plattform (UWP), die die Verwendung des Prozesslebensdauer-Systems optimieren und nach dem Anhalten oder Beenden effizient fortgesetzt werden.
 ---
 # Optimieren von Anhalten/Fortsetzen
 
@@ -51,11 +52,13 @@ Wenn Sie Ihre Daten serialisieren, sollten Sie ein erneutes Serialisieren vermei
 
 ### Serialisieren von Daten in C# und Visual Basic
 
-Als Serialisierungstechnologien für .NET-Apps stehen die Klassen [**System.Xml.Serialization.XmlSerializer**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx), [**System.Runtime.Serialization.DataContractSerializer**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) und [**System.Runtime.Serialization.Json.DataContractJsonSerializer**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.runtime.serialization.json.datacontractjsonserializer.aspx) zur Verfügung.
+Als Serialisierungstechnologien für .NET-Apps stehen die Klassen [**System.Xml.Serialization.XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx), [**System.Runtime.Serialization.DataContractSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) und [**System.Runtime.Serialization.Json.DataContractJsonSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.json.datacontractjsonserializer.aspx) zur Verfügung.
 
-Aus Leistungsgründen empfehlen wir die Verwendung der [**XmlSerializer**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx)-Klasse. Die **XmlSerializer**-Klasse zeichnet sich durch die schnellste Serialisierung und Deserialisierung sowie durch einen geringen Speicherbedarf aus. **XmlSerializer** ist nur in wenigen Bereichen mit .NET Framework verknüpft. Im Vergleich zu den anderen Serialisierungstechnologien müssen daher für die Verwendung von **XmlSerializer** weniger Module in Ihre App geladen werden.
+Aus Leistungsgründen empfehlen wir die Verwendung der [**XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx)-Klasse. Die **XmlSerializer**-Klasse zeichnet sich durch die schnellste Serialisierung und Deserialisierung sowie durch einen geringen Speicherbedarf aus. **XmlSerializer** ist nur in wenigen Bereichen mit .NET Framework verknüpft. Im Vergleich zu den anderen Serialisierungstechnologien müssen daher für die Verwendung von **XmlSerializer** weniger Module in Ihre App geladen werden.
 
-[**DataContractSerializer**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) erleichtert die Serialisierung von benutzerdefinierten Klassen, obwohl es nicht so leistungsfähig wie **XmlSerializer** ist. Wenn Sie eine bessere Leistung benötigen, denken Sie über einen Wechsel nach. Generell sollten Sie nur ein Serialisierungsprogramm laden und **XmlSerializer** vorziehen, falls Sie nicht die Funktionen eines anderen Serialisierungsprogramms benötigen.
+[
+              **DataContractSerializer**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) vereinfacht die Serialisierung angepasster Klassen, auch wenn es größere Auswirkungen auf die Leistung als **XmlSerializer** hat. Wenn Sie eine bessere Leistung benötigen, denken Sie über einen Wechsel nach. Generell sollten Sie nur ein Serialisierungsprogramm laden und **XmlSerializer** vorziehen, falls Sie nicht die Funktionen eines anderen Serialisierungsprogramms benötigen.
 
 ### Verringern des Speicherbedarfs
 
@@ -86,6 +89,6 @@ Bei den meisten Apps ist keine Behandlung des [**Resuming**](https://msdn.micros
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

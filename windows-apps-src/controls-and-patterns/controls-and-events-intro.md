@@ -1,8 +1,9 @@
 ---
-description: erstellen Benutzeroberfläche App mit Elementen wie Schaltflächen, Textfeldern und Kombinationsfeldern, um Daten anzuzeigen und Benutzereingaben zu erhalten. Hier zeigen wir Ihnen, wie Sie Ihrer App Steuerelemente hinzufügen.
+author: Jwmsft
+Description: Sie erstellen die Benutzeroberfläche für Ihre App mit Steuerelementen wie Schaltflächen, Textfeldern und Kombinationsfeldern, um Daten anzuzeigen und Benutzereingaben zu erhalten. Hier zeigen wir Ihnen, wie Sie Ihrer App Steuerelemente hinzufügen.
 title: Hinzufügen von Steuerelementen und Verarbeiten von Ereignissen
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
-label: Einführung in Steuerelemente und Ereignisse
+label: Intro to controls and events
 template: detail.hbs
 ---
 # Einführung in Steuerelemente und Ereignisse
@@ -123,15 +124,15 @@ Sie können ein Ereignis auch dem zugehörigen Ereignishandler im „CodeBehind�
 Button1.Click += new RoutedEventHandler(Button_Click);
 ```
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Themen
 
 -   [**Befehlsleisten**](app-bars.md)
--   [Suchen](search.md)
+-   [Suche](search.md)
 -   [Flyouts](dialogs-popups-menus.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

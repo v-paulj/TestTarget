@@ -1,8 +1,9 @@
 ---
-Description: Überlegen Sie einmal, wie häufig wir jeden Tag Texte lesen – in E-Mails, in Büchern, auf Straßenschildern, in Form von Preisen auf einer Speisekarte, als Reifendruckluftangaben oder Plakate auf Werbetafeln an der Bushaltestelle.
+author: Jwmsft
+Description: Überlegen Sie einmal, wie häufig wir jeden Tag Texte lesen – E-Mails, Büchern, Straßenschilder, Preise auf einer Speisekarte, Reifendruckangaben oder Plakate auf Werbetafeln an der Bushaltestelle.
 title: Textsteuerelemente
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
-label: Textsteuerelemente
+label: Text controls
 template: detail.hbs
 ---
 # Textsteuerelemente
@@ -55,14 +56,14 @@ Verwenden Sie ein **RichEditBox**-Element, um RTF-Dateien anzuzeigen und zu bear
 
 Es bestehen zahlreiche Möglichkeiten, Benutzereingaben in Ihrer App zu erhalten. Diese Fragen helfen Ihnen festzustellen, ob sich eines der Standardeingabefelder oder ein anderes Steuerelement am besten eignet, um Benutzereingaben zu erhalten.
 
--   **Ist es praktisch umsetzbar, alle gültigen Werte effizient aufzuzählen?** Wenn dies der Fall ist, ziehen Sie die Verwendung eines der Auswahlsteuerelemente in Betracht, z. B. [Kontrollkästchen](checkbox.md), [Dropdownliste](lists.md), Listenfeld, [Optionsfeld](radio-button.md), [Schieberegler](slider.md), [Umschalter](toggles.md), [Datumsauswahl](date-and-time.md) oder Zeitauswahl.
--   **Gibt es nur relativ wenige gültige Werte?** Wenn dies der Fall ist, empfiehlt sich die Verwendung einer [Dropdownliste](lists.md) oder eines Listenfelds, insbesondere wenn es sich um längere Werte handelt.
--   **Bestehen für die gültigen Daten keinerlei Einschränkungen? Oder sind die gültigen Daten nur durch das Format eingeschränkt (eingeschränkte Länge oder Zeichentypen)?** Ist dies der Fall, verwenden Sie ein Texteingabesteuerelement. Sie können die Anzahl der Zeichen, die eingegeben werden können, beschränken, und Sie können das Format in Ihrem App-Code überprüfen.
+-   **Ist es praktisch umsetzbar, alle gültigen Werte effizient aufzuzählen?** Wenn dies der Fall ist, ziehen Sie die Verwendung eines der Auswahlsteuerelemente in Betracht, wie [Kontrollkästchen](checkbox.md), [Dropdownliste](lists.md), Listenfeld, [Optionsfeld](radio-button.md), [Schieberegler](slider.md), [Umschalter](toggles.md), [Datumsauswahl](date-and-time.md) oder Zeitauswahl.
+-   **Gibt es nur relativ wenige gültige Werte?** Wenn dies der Fall ist, sollten Sie eine [Einblendliste](lists.md) oder ein Listenfeld in Erwägung ziehen, insbesondere, wenn die Werte viele Zeichen enthalten.
+-   **Gelten für die Daten keinerlei Einschränkungen? Oder ist die Gültigkeit der Daten nur durch das Format (bestimmte Länge oder Zeichentypen) beschränkt?** Wenn ja, verwenden Sie einen Texteingabesteuerelement. Sie können die Anzahl der Zeichen, die eingegeben werden können, beschränken, und Sie können das Format in Ihrem App-Code überprüfen.
 -   **Stellt der Wert einen Datentyp dar, der über ein spezielles allgemeines Steuerelement verfügt?** Ist dies der Fall, verwenden Sie das entsprechende Steuerelement anstelle eines Texteingabesteuerelements. Verwenden Sie anstelle eines Texteingabesteuerelements zum Beispiel [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681), um eine Dateneingabe zu akzeptieren.
 -   Wenn die Daten streng numerisch sind:
     -   **Handelt es sich bei dem Wert, der eingegeben wird, um einen Näherungswert und/oder ist der Wert relativ zu einem anderen Wert auf derselben Seite?** Wenn dies der Fall ist, sollten Sie einen [Schieberegler](slider.md) verwenden.
-    -   **Wäre es für Benutzer hilfreich, sofort Feedback zur Auswirkung von Einstellungsänderungen zu erhalten?** Wenn ja, verwenden Sie einen [Schieberegler](slider.md), eventuell zusammen mit einem begleitenden Steuerelement.
-    -   **Besteht die Möglichkeit, dass der eingegebene Wert angepasst wird, nachdem das Ergebnis geprüft wurde, z. B. die einzustellende Lautstärke oder Helligkeit?** Wenn dies der Fall ist, verwenden Sie einen [Schieberegler](slider.md).
+    -   **Wäre es für Benutzer hilfreich, sofort Feedback zur Auswirkung von Einstellungsänderungen zu erhalten?** Wenn dies der Fall ist, sollten Sie einen [Schieberegler](slider.md) verwenden, eventuell zusammen mit einem begleitenden Steuerelement.
+    -   **Besteht die Möglichkeit, dass der eingegebene Wert angepasst wird, nachdem das Ergebnis geprüft wurde, z. B. die einzustellende Lautstärke oder Helligkeit?** Wenn dies der Fall ist, sollten Sie einen [Schieberegler](slider.md) verwenden.
     
 ## Beispiele
 
@@ -102,8 +103,7 @@ Richtlinien für Schriftarten finden Sie in den folgenden Artikeln:
 
 Um Benutzern die Eingabe von Daten mit der Bildschirmtastatur oder dem Soft Input Panel (SIP) zu erleichtern, können Sie den Eingabeumfang des Textsteuerelements an die Art der Daten anpassen, die der Benutzer vermutlich eingeben wird.
 
->Tipp 
->Diese Informationen gelten nur für das SIP. Sie gelten nicht für Hardwaretastaturen oder die Bildschirmtastatur, die in den Windows-Optionen für erleichterte Bedienung verfügbar ist.
+>Hinweis: Diese Informationen gelten nur für das SIP. Sie gelten nicht für Hardwaretastaturen oder die Bildschirmtastatur, die in den Windows-Optionen für erleichterte Bedienung verfügbar ist.
 
 Die Bildschirmtastatur kann für die Texteingabe verwendet werden, wenn Ihre App auf einem Gerät mit Touchscreen ausgeführt wird. Die Bildschirmtastatur wird aufgerufen, wenn der Benutzer auf ein bearbeitbares Eingabefeld wie etwa ein TextBox oder RichEditBox tippt. Benutzer können Daten in Ihre App schneller und einfacher eingeben, wenn Sie den Eingabeumfang des Textsteuerelements an die Art der Daten anpassen, die der Benutzer vermutlich eingeben wird. Der Eingabeumfang bietet dem System einen Hinweis auf die Art von Text, die vermutlich über das Steuerelement eingegeben wird. Auf diese Weise kann das System ein spezielles Bildschirmtastaturlayout für den Eingabetyp bereitstellen.
 
@@ -134,7 +134,7 @@ Weitere Informationen finden Sie unter der [**IsColorFontEnabled**](https://msdn
 
 ## Richtlinien für Zeilen- und Absatztrennzeichen
 
-**Gilt für:** TextBlock, RichTextBlock, mehrzeiliges TextBox, RichEditBox
+**Gilt für:** TextBlock, RichTextBlock, mehrzeilige TextBox, RichEditBox
 
 Verwenden Sie das Zeilentrennzeichen (0x2028) und das Absatztrennzeichen (0x2029), um Nur-Text zu trennen. Nach jeder Zeilentrennung wird eine neue Zeile begonnen. Nach jedem Absatztrennzeichen wird ein neuer Absatz begonnen.
 
@@ -144,7 +144,7 @@ Sie können in Ihrer App das Zeilentrennzeichen verwenden, um ein unbedingtes Ze
 
 Ihre App kann zwischen Textabsätzen ein Absatztrennzeichen einfügen. Die Verwendung dieses Trennzeichens ermöglicht das Erstellen von Nur-Text-Dateien, die mit unterschiedlichen Zeilenhöhen auf verschiedenen Betriebssystemen formatiert werden können. Das Zielsystem kann alle Zeilentrennzeichen ignorieren und Absätze nur an den Absatztrennzeichen umbrechen.
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Artikel
 
@@ -160,6 +160,6 @@ Ihre App kann zwischen Textabsätzen ein Absatztrennzeichen einfügen. Die Verwe
 - [StringLength-Eigenschaft](https://msdn.microsoft.com/library/system.string.length.aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

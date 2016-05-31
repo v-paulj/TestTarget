@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 Description: Vor dem Ausführen eines Experiments in Ihrer Universellen Windows-Plattform(UWP)-App mit A/B-Test müssen Sie Ihr Experiment im Dev Center-Dashboard definieren.
 title: Definieren des Experiments im Dev Center-Dashboard
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
@@ -63,7 +64,7 @@ Wenn Sie die Eingabe in die erforderlichen Felder für Ihr Experiment abgeschlos
 
 Wenn Sie mit den Parametern für Ihr Experiment zufrieden sind Sie bereit sind, es zu aktivieren, damit Sie mit der Datenerfassung von Ihrer App beginnen können, klicken Sie auf **Aktivieren**. Wenn das Experiment aktiv ist, kann Ihre App Variationseinstellungen abrufen und Anzeige- und Umwandlungsereignisse im Dev Center melden.
 
-> **Wichtig**  Nach der Aktivierung eines Experiments können Sie die Experimentparameter nicht mehr ändern, sofern es sich nicht um ein Testexperiment handelt (d. h. Sie haben beim Erstellen des Experiments das Kontrollkästchen **Testexperiment** aktiviert). Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
+> **Wichtig** Nach der Aktivierung eines Experiments können Sie die Experimentparameter nicht mehr ändern, sofern es sich nicht um ein Testexperiment handelt (d. h. Sie haben beim Erstellen des Experiments das Kontrollkästchen **Testexperiment** aktiviert). Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
 
 ## Nächste Schritte
 
@@ -79,6 +80,6 @@ Nachdem Sie Ihr Experiment im Dev Center-Dashboard definiert haben, sind Sie ber
   * [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

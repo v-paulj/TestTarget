@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
 description: In diesem Thema werden die Effekte für Videoaufnahmeszenarien beschrieben. Dazu zählt auch der Videostabilisierungseffekt.
 title: Effekte für die Videoaufnahme
@@ -11,7 +12,7 @@ title: Effekte für die Videoaufnahme
 In diesem Thema werden die Effekte für Videoaufnahmeszenarien beschrieben. Dazu zählt auch der Videostabilisierungseffekt.
 
 **Hinweis**  
-Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienaufnahme in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.
+Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.
 
 ## Videostabilisierungseffekt
 
@@ -84,6 +85,6 @@ Rufen Sie zum Bereinigen des Videostabilisierungseffekts [**ClearEffectsAsync**]
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

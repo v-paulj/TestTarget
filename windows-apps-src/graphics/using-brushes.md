@@ -1,19 +1,21 @@
 ---
+author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: Verwenden von Pinseln
-description: Mit Brush-Objekten werden Innenbereiche oder Konturen von Formen, Text, Teilen von Steuerelementen gezeichnet, Objekt auf Benutzeroberfläche sichtbar
+description: Mit Brush-Objekten werden Innenbereiche oder Ränder von Formen, Text und Teilen von Steuerelementen gezeichnet, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist.
 ---
 # Verwenden von Pinseln
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** Wichtige APIs **
 
 -   [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)
 
-[
-							Mit **Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)-Objekten werden Innenbereiche oder Konturen von Formen, Text und Teilen von Steuerelementen gezeichnet, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist. Machen Sie sich im Folgenden mit den verfügbaren Pinseln und deren Verwendung vertraut.
+Mit [
+              **Brush**
+            ](https://msdn.microsoft.com/library/windows/apps/BR228076)-Objekten werden Innenbereiche oder Konturen von Formen, Text und Teilen von Steuerelementen gezeichnet, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist. Machen Sie sich im Folgenden mit den verfügbaren Pinseln und deren Verwendung vertraut.
 
 ## Einführung in Pinsel
 
@@ -93,8 +95,7 @@ Dieses Beispiel erstellt einen linearen Farbverlauf mit vier Farben, der zum Zei
 
 Die Farbe der einzelnen Punkte zwischen den Farbverlaufsstopps wird linear als eine Kombination der von den beiden umgebenden Farbverlaufsstopps angegebenen Farben interpoliert. In der Abbildung sind die Farbverlaufsstopps aus dem vorherigen Beispiel hervorgehoben. Die Kreise kennzeichnen die Position der Farbverlaufsstopps, und die gestrichelten Linie zeigt die Farbverlaufsachse.
 
-![Farbverlaufsstopps](images/linear-gradients-stops.png)
-Sie können die Linie ändern, an der die Farbverlaufsstopps liegen, indem Sie die [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.startpoint.aspx)-Eigenschaft und die [**EndPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.endpoint.aspx)-Eigenschaft auf andere Werte als die Standardausgangswerte `(0,0)` und `(1,1)` festlegen. Durch Ändern der Koordinatenwerte für **StartPoint** und **EndPoint** können Sie horizontale oder vertikale Farbverläufe erstellen, die Richtung des Farbverlaufs umkehren oder die Farbverlaufsausdehnung verkleinern und so auf einen kleineren Bereich als den gesamten gezeichneten Bereich anwenden. Zum Verkleinern des Farbverlaufs legen Sie die Werte für **StartPoint** und/oder **EndPoint** auf einen Wert zwischen 0 und 1 fest. Angenommen, Sie möchten einen horizontalen Farbverlauf erstellen, bei dem der Farbverlauf nur in der linken Hälfte des Pinsels erfolgt und die rechte Hälfte nur die letzte [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078)-Farbe hat. Hierfür geben Sie einen **StartPoint** von `(0,0)` und einen **EndPoint** von `(0.5,0)` an.
+![Farbverlaufsstopps](images/linear-gradients-stops.png) Sie können die Linie ändern, an der die Farbverlaufsstopps liegen, indem Sie die [**StartPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.startpoint.aspx)-Eigenschaft und die [**EndPoint**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.lineargradientbrush.endpoint.aspx)-Eigenschaft auf andere Werte als die Standardausgangswerte `(0,0)` und `(1,1)` festlegen. Durch Ändern der Koordinatenwerte für **StartPoint** und **EndPoint** können Sie horizontale oder vertikale Farbverläufe erstellen, die Richtung des Farbverlaufs umkehren oder die Farbverlaufsausdehnung verkleinern und so auf einen kleineren Bereich als den gesamten gezeichneten Bereich anwenden. Zum Verkleinern des Farbverlaufs legen Sie die Werte für **StartPoint** und/oder **EndPoint** auf einen Wert zwischen 0 und 1 fest. Angenommen, Sie möchten einen horizontalen Farbverlauf erstellen, bei dem der Farbverlauf nur in der linken Hälfte des Pinsels erfolgt und die rechte Hälfte nur die letzte [**GradientStop**](https://msdn.microsoft.com/library/windows/apps/BR210078)-Farbe hat. Hierfür geben Sie einen **StartPoint** von `(0,0)` und einen **EndPoint** von `(0.5,0)` an.
 
 ### <span id="Use_tools_to_make_gradients"></span><span id="use_tools_to_make_gradients"></span><span id="USE_TOOLS_TO_MAKE_GRADIENTS"></span>Verwenden von Tools zum Erstellen von Farbverläufen
 
@@ -126,7 +127,9 @@ So sieht der gerenderte [**ImageBrush**](https://msdn.microsoft.com/library/wind
 
 ![Ein gerenderter ImageBrush](images/brushes-imagebrush.jpg)
 
-[**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) und [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) verweisen beide mit einem URI (Uniform Resource Identifier) auf eine Bildquelldatei. Die Bildquelldatei liegt dabei in verschiedenen Formaten vor. Diese Bildquelldateien werden als URIs angegeben. Weitere Informationen zum Angeben von Bildquellen, zu den verwendbaren Bildformaten und zum Packen dieser Dateien in einer App finden Sie unter [„Image“ und „ImageBrush“](https://msdn.microsoft.com/library/windows/apps/Mt280382).
+[
+              **ImageBrush**
+            ](https://msdn.microsoft.com/library/windows/apps/BR210101) und [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) verweisen beide mit einem URI (Uniform Resource Identifier) auf eine Bildquelldatei. Die Bildquelldatei liegt dabei in verschiedenen Formaten vor. Diese Bildquelldateien werden als URIs angegeben. Weitere Informationen zum Angeben von Bildquellen, zu den verwendbaren Bildformaten und zum Packen dieser Dateien in einer App finden Sie unter [„Image“ und „ImageBrush“](https://msdn.microsoft.com/library/windows/apps/Mt280382).
 
 ## Pinsel und Text
 
@@ -162,8 +165,9 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 Verwenden Sie für [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) und [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) den Standardkonstruktor, und rufen Sie dann andere APIs auf, bevor Sie diesen Pinsel für eine UI-Eigenschaft verwenden.
 
--   [
-							Für **ImageSource**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.imagebrush.imagesourceproperty.aspx) ist ein [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235) (kein URI) erforderlich, wenn Sie einen [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) mithilfe von Code definieren. Falls es sich bei Ihrer Quelle um einen Datenstrom handelt, initialisieren Sie den Wert mit der [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522)-Methode. Ist Ihre Quelle ein (URI), der Ihrer App Inhalt mit dem **ms-appx**- oder dem **ms-resource**-Schema hinzufügt, verwenden Sie den [**BitmapImage**](https://msdn.microsoft.com/en-us/library/windows/apps/br243238.aspx)-Konstruktor, für den ein URI angegeben wird. Falls beim Abrufen oder Decodieren der Bildquelle Probleme mit der Zeitsteuerung auftreten und Sie alternativen Inhalt anzeigen müssen, bis die Bildquelle verfügbar ist, können Sie auch das [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imageopened.aspx)-Ereignis behandeln.
+-   Für [
+              **ImageSource**
+            ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.imagebrush.imagesourceproperty.aspx) ist ein [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235) (kein URI) erforderlich, wenn Sie einen [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) mithilfe von Code definieren. Falls es sich bei Ihrer Quelle um einen Datenstrom handelt, initialisieren Sie den Wert mit der [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522)-Methode. Ist Ihre Quelle ein (URI), der Ihrer App Inhalt mit dem **ms-appx**- oder dem **ms-resource**-Schema hinzufügt, verwenden Sie den [**BitmapImage**](https://msdn.microsoft.com/en-us/library/windows/apps/br243238.aspx)-Konstruktor, für den ein URI angegeben wird. Falls beim Abrufen oder Decodieren der Bildquelle Probleme mit der Zeitsteuerung auftreten und Sie alternativen Inhalt anzeigen müssen, bis die Bildquelle verfügbar ist, können Sie auch das [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imageopened.aspx)-Ereignis behandeln.
 -   Für [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) müssen Sie möglicherweise [**Redraw**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.redraw.aspx) aufrufen, wenn Sie kürzlich die [**SourceName**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.sourcename.aspx)-Eigenschaft zurückgesetzt haben oder der Inhalt von [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702) ebenfalls mittels Code geändert wird.
 
 Codebeispiele finden Sie auf den Referenzseiten für [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) und [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101).
@@ -176,6 +180,6 @@ Codebeispiele finden Sie auf den Referenzseiten für [**WebViewBrush**](https://
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

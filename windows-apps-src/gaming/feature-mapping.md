@@ -1,10 +1,11 @@
 ---
-title: Zuordnen von DirectX 9-Features zu DirectX 11-APIs
+author: mtoepke
+title: Zuordnung von DirectX 9-Funktionen zu DirectX 11-APIs
 description: Erfahren Sie, wie die Features Ihres Direct3D 9-Spiels zu Direct3D 11 und zur Universellen Windows-Plattform (UWP) zugeordnet werden.
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
 ---
 
-# Zuordnen von DirectX 9-Features zu DirectX 11-APIs
+# Zuordnung von DirectX 9-Funktionen zu DirectX 11-APIs
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
@@ -21,7 +22,7 @@ Erfahren Sie, wie die Features Ihres Direct3D 9-Spiels zu Direct3D 11 und zur 
 ## Zuordnen von Direct3D 9-Features zu DirectX 11-APIs
 
 
-[Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) ist nach wie vor die Grundlage von DirectX-Grafiken; die API wurde seit DirectX 9 jedoch geändert:
+[Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) ist nach wie vor die Grundlage von DirectX-Grafiken, die API wurde seit DirectX 9 jedoch geändert:
 
 -   Zum Einrichten von Grafikadaptern wird die Microsoft DirectX Graphics Infrastructure (DXGI) verwendet. Verwenden Sie [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534) zum Auswählen von Pufferformaten, Erstellen von Swapchains, Darstellen von Frames und Erstellen freigegebener Ressourcen. Siehe [Übersicht über DXGI](https://msdn.microsoft.com/library/windows/desktop/bb205075).
 -   Ein Direct3D-Gerätekontext wird zum Festlegen des Pipelinestatus und Generieren von Renderbefehlen verwendet. In den meisten unserer Beispiele wird ein unmittelbarer Kontext verwendet, um direkt auf dem Gerät zu rendern. Direct3D 11 unterstützt auch das Multithread-Rendering, wobei dann verzögerte Kontexte verwendet werden. Siehe [Einführung in ein Gerät in Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476880).
@@ -129,7 +130,7 @@ Ziehen Sie beim Konvertieren von Code von Direct3D 9 in Direct3D 11 die folgen
 <td align="left"><p>[<strong>IDirect3DDevice9</strong>] (https://msdn.microsoft.com/library/windows/desktop/bb174336)</p></td>
 <td align="left"><p>[<strong>ID3D11Device2</strong>] (https://msdn.microsoft.com/library/windows/desktop/dn280493)</p>
 <p>[<strong>ID3D11DeviceContext2</strong>] (https://msdn.microsoft.com/library/windows/desktop/dn280498)</p>
-<p>Die Grafikpipelinestufen werden in [GrafikpipelineGraphics Pipeline](https://msdn.microsoft.com/library/windows/desktop/ff476882) beschrieben.</p></td>
+<p>Die Grafikpipelinestufen werden unter [Grafikpipeline](https://msdn.microsoft.com/library/windows/desktop/ff476882) erläutert.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[<strong>IDirect3D9</strong>] (https://msdn.microsoft.com/library/windows/desktop/bb174300)</p></td>
@@ -668,6 +669,6 @@ Ziehen Sie beim Konvertieren von Direct3D 9-Formaten in DXGI-Formate die folgen
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

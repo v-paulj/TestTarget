@@ -1,5 +1,6 @@
 ---
-description: Das Hub-Steuerelement verwendet ein hierarchisches Navigationsmuster, um Apps zu unterstützen, die eine relationale Informationsarchitektur erfordern.
+author: Jwmsft
+Description: Das Hub-Steuerelement verwendet ein hierarchisches Navigationsmuster, um Apps zu unterstützen, die eine relationale Informationsarchitektur erfordern.
 title: Hub-Steuerelemente
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
@@ -8,7 +9,7 @@ template: detail.hbs
 # Hub-Steuerelement/-Muster
 
 
-Mit einem Hub-Steuerelement können Sie App-Inhalte in unterschiedlichen, aber zusammenhängenden Abschnitten oder Kategorien organisieren. Abschnitte in einem Hub sind für das Durchlaufen in einer bevorzugten Reihenfolge vorgesehen und können als Ausgangspunkt für den Zugriff auf detaillierte Inhalte dienen.
+Mit einem Hub-Steuerelement können Sie App-Inhalte in unterschiedlichen, jedoch zusammenhängenden Abschnitten oder Kategorien organisieren. Abschnitte in einem Hub sind für das Durchlaufen in einer bevorzugten Reihenfolge vorgesehen und können als Ausgangspunkt für den Zugriff auf detaillierte Inhalte dienen.
 
 ![Beispiel für einen Hub](images/hub_example_tablet.png)
 
@@ -67,7 +68,7 @@ Es gibt eine Reihe von Möglichkeiten zum Erstellens eines Layouts und zum Navig
 ![Beispiel für einen vertikal verschobenen Hub](images/controls_hub_vertical_pan.png)
 **Horizontale Verschiebung mit vertikalem Bildlauf der Liste/des Rasters**
 
-![Beispiel für einen horizontal verschobenen Hub mit einem vertikalen Bildlauf der Liste](images/controls_hub_horizontal_vertical_scroll.png)
+![Beispiel für einen horizontal verschobenen Hub mit einer Liste mit vertikalem Bildlauf](images/controls_hub_horizontal_vertical_scroll.png)
 **Vertikale Verschiebung mit horizontalem Bildlauf der Liste/des Rasters**
 
 ![Beispiel für einen horizontal verschobenen Hub](images/controls_hub_vertical_horizontal_scroll.png)
@@ -97,23 +98,18 @@ Auf mobilen Geräten ist jeweils ein Hub-Abschnitt sichtbar.
     -   Abstand zwischen Abschnitten
     -   Abstand zwischen einem Abschnitt und dem oberen oder unteren Rand des Hubs
     -   Textstil und -größe in Überschriften und Inhalt
-    -   Farbe des Hintergrunds, der Abschnitte, Abschnittsüberschriften und Abschnittsinhalte
+    -   Farbe des Hintergrunds, der Abschnitte, der Abschnittsüberschriften und der Abschnittsinhalte
 
-\[Dieser Artikel enthält spezielle Informationen zu UWP-Apps und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Artikel
------------------------------------------------
 
-**Für Designer**
 - [Navigationsgrundlagen](https://msdn.microsoft.com/library/windows/apps/dn958438)
-
-**Für Entwickler (XAML)**
-- [Hierarchisches Navigationsmuster von A bis Z](https://msdn.microsoft.com/library/windows/apps/xaml/dn440585)
 - [**Hub-Klasse „Windows.UI.Xaml.Controls“**](https://msdn.microsoft.com/library/windows/apps/dn251843)
 - [Beispiel für ein XAML-Hub-Steuerelement](http://go.microsoft.com/fwlink/p/?LinkID=310072)
 - [Verwenden von Hubs](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

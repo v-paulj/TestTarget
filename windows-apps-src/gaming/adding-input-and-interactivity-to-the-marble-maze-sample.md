@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel
 description: UWP-Spiele können auf den verschiedensten Geräten ausgeführt werden, beispielsweise auf Desktopcomputern, Laptops und Tablets.
 ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
@@ -12,7 +13,7 @@ ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
 
 UWP-Spiele können auf den verschiedensten Geräten ausgeführt werden, beispielsweise auf Desktopcomputern, Laptops und Tablets. Für ein Gerät sind viele verschiedene Eingabe- und Steuerungsmechanismen möglich. Unterstützen Sie mehrere Eingabegeräte, damit die Kunden Ihr Spiel ganz nach ihren persönlichen Vorlieben und Fähigkeiten spielen können. In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücksichtigen sollten, wenn Sie mit Eingabegeräten arbeiten. Außerdem erfahren Sie, wie diese Methoden in Marble Maze angewendet werden.
 
-> **Hinweis**   Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Hinweis**  Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 Hier sind einige der wichtigsten in diesem Dokument erörterten Punkte für das Arbeiten mit Eingaben in Ihrem Spiel:
@@ -29,7 +30,7 @@ Hier sind einige der wichtigsten in diesem Dokument erörterten Punkte für das 
 
 Marble Maze unterstützt allgemeine Xbox 360-Controllergeräte, Maus und Toucheingabe zum Auswählen von Menüelementen und Xbox 360-Controller, Maus, Toucheingabe und Beschleunigungsmesser zum Steuern des Spielverlaufs. Marble Maze ruft die Eingaben vom Controller mithilfe der XInput-API ab. Bei der Toucheingabe können Anwendungen Eingaben mit der Fingerspitze nachverfolgen und darauf reagieren. Ein Beschleunigungsmesser ist ein Sensor, der die Kraft misst, die entlang der X-, Y- und Z-Achsen angewendet wird. Mit der Windows-Runtime können Sie den aktuellen Zustand des Beschleunigungsmessers abrufen und Touchereignisse über den Ereignisbehandlungsmechanismus der Windows-Runtime empfangen.
 
-> **Hinweis**  In diesem Dokument wird der Begriff Toucheingabe für Touch- und Mauseingabe und sowie Zeigereingabe verwendet. Damit sind alle Geräte gemeint, die Zeigerereignisse verwenden. Da bei der Touch- und Mauseingabe Standardzeigerereignisse verwendet werden, können Sie jedes der Geräte verwenden, um Menüelemente auszuwählen und den Spielverlauf zu steuern.
+> **Hinweis**  In diesem Dokument wird der Begriff Toucheingabe für Touch- und Mauseingabe sowie Zeigereingabe verwendet. Damit sind alle Geräte gemeint, die Zeigerereignisse verwenden. Da bei der Touch- und Mauseingabe Standardzeigerereignisse verwendet werden, können Sie jedes der Geräte verwenden, um Menüelemente auszuwählen und den Spielverlauf zu steuern.
 
  
 
@@ -521,6 +522,6 @@ Lesen Sie [Hinzufügen von Audio zum Marble Maze-Beispiel](adding-audio-to-the-m
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

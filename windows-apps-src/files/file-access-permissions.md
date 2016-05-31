@@ -1,7 +1,8 @@
 ---
+author: TylerMSFT
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: Berechtigungen für den Dateizugriff
-description: Hier erfahren Sie, wie Apps standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen können. Apps können darüber hinaus mithilfe der Dateiauswahl oder über die Deklaration von Funktionen auf weitere Speicherorte zugreifen.
+description: Apps können standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen. Apps können darüber hinaus mithilfe der Dateiauswahl oder über die Deklaration von Funktionen auf weitere Speicherorte zugreifen.
 ---
 # Berechtigungen für den Dateizugriff
 
@@ -14,7 +15,7 @@ Apps können standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen. Ap
 
 Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisystemspeicherorte zugreifen:
 
--   **Installationsverzeichnis von Anwendungen**. Der Ordner, in welchem Ihre Anwendung im System des Benutzers installiert ist.
+-   **Installationsverzeichnis von Anwendungen** Der Ordner, in welchem Ihre Anwendung im System des Benutzers installiert ist.
 
     Es gibt im Wesentlichen zwei Möglichkeiten, auf Dateien und Ordner im Installationsverzeichnis Ihrer App zuzugreifen.
 
@@ -121,7 +122,9 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
         );
         ```
  
-        [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) ist überladen, sodass Sie festlegen können, was das System im Falle einer bereits vorhandenen gleichnamigen Datei im Downloadordner des Benutzers tun sollte. Nach vollständiger Ausführung dieser Methoden wird ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) zurückgegeben, das die erstellte Datei darstellt. Diese Datei wird im Beispiel `newFile` genannt.
+        [
+              **DownloadsFolder**
+            ](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) ist überladen, sodass Sie festlegen können, was das System im Falle einer bereits vorhandenen gleichnamigen Datei im Downloadordner des Benutzers tun sollte. Nach vollständiger Ausführung dieser Methoden wird ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) zurückgegeben, das die erstellte Datei darstellt. Diese Datei wird im Beispiel `newFile` genannt.
 
     -   Sie können im Downloadordner des Benutzers wie folgt einen Unterordner erstellen:
         > [!div class="tabbedCodeSnippets"]
@@ -137,7 +140,9 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
         );
         ```
  
-        [**DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) ist überladen, sodass Sie festlegen können, was das System im Falle eines bereits bestehenden gleichnamigen Unterordners im Ordner "Downloads" des Benutzers tun sollte. Nach vollständiger Ausführung dieser Methoden wird ein [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) zurückgegeben, der den erstellten Unterordner darstellt. Diese Datei wird im Beispiel `newFolder` genannt.
+        [
+              **DownloadsFolder**
+            ](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) ist überladen, sodass Sie festlegen können, was das System im Falle eines bereits bestehenden gleichnamigen Unterordners im Ordner "Downloads" des Benutzers tun sollte. Nach vollständiger Ausführung dieser Methoden wird ein [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) zurückgegeben, der den erstellten Unterordner darstellt. Diese Datei wird im Beispiel `newFolder` genannt.
 
     Wenn Sie eine Datei oder einen Ordner im Downloadordner erstellen, empfehlen wir, die Datei oder den Ordner der [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) Ihrer App hinzuzufügen, sodass zukünftig leicht auf dieses Element zugegriffen werden kann.
 
@@ -160,6 +165,6 @@ In der folgenden Tabelle sind weitere Speicherorte aufgeführt, auf die Sie durc
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

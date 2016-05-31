@@ -1,6 +1,7 @@
 ---
+author: martinekuan
 title: Erstellen von Komponenten für Windows-Runtime in C++
-description: Artikel beschreibt Komponente Windows-Runtime C++ erstellen, DLL, aus universeller Windows-App aufgerufen, mit JavaScript, C#, Visual Basic oder C++ entwickelt
+description: In diesem Artikel wird beschrieben, wie Sie eine Komponente für Windows-Runtime mit C++ erstellen. Dabei handelt es sich um eine DLL, die aus einer Universellen Windows-App aufgerufen werden kann, die mit JavaScript (oder C#, Visual Basic oder C++) entwickelt wurde.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
 ---
 
@@ -303,7 +304,7 @@ for (var i = 0; i < outVector.length; i++)
 document.getElementById('P6').innerHTML = result;
 ```
 
-In den .NET-Sprachen wird „IVector&lt;T&gt;” als „IList&lt;T&gt;” betrachtet.
+In den .NET-Sprachen wird „IVector&lt;T&gt; ” als „IList&lt;T&gt;” betrachtet.
 
 ```csharp
 private void SortListItems()
@@ -596,6 +597,6 @@ Wenn Sie ein C++-Komponentenprojekt für Windows-Runtime aus einer Projektmappe 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

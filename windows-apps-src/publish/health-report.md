@@ -1,5 +1,6 @@
 ---
-Description: Über den Bericht „Integrität“ im Windows Dev Center-Dashboard können Sie Daten zur Leistung und Qualität Ihrer App, einschließlich App-Abstürzen, abrufen.
+author: jnHs
+Description: Über den Bericht „Integrität“ im Windows Dev Center-Dashboard können Sie Daten zur Leistung und Qualität Ihrer App einschließlich App-Abstürzen abrufen.
 title: Bericht „Integrität“
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
 ---
@@ -58,6 +59,6 @@ Diese Informationen basieren auf dem Prozentsatz der Gesamtereignisse. Im oberen
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

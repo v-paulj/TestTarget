@@ -13,13 +13,13 @@ In diesem Artikel erfahren Sie, wie Sie Ihrer Universellen Windows-Plattform (UW
 
 ## Festlegen gültiger Bereiche
 
-Verwenden Sie die Eigenschaften [**AllowDrop**][AllowDrop] und [**CanDrag**][CanDrag], um die Bereiche der App festzulegen, die für Drag & Drop infrage kommen.
+Verwenden Sie die Eigenschaften [**AllowDrop**][AllowDrop] und [**CanDrag**][CanDrag], um die Bereiche der App festzulegen, die für Drag & Drop infrage kommen.
 
-Das folgende Markup veranschaulicht, wie Sie mithilfe von [**AllowDrop**][AllowDrop] in XAML einen bestimmten Bereich der App als gültig für Dropvorgänge festlegen. Wenn ein Benutzer versucht, Elemente an anderer Stelle abzulegen, wird dies vom System nicht zugelassen. Wenn Benutzer die Möglichkeit haben sollen, Elemente an einer beliebigen Stelle Ihrer App abzulegen, legen Sie den gesamten Hintergrund als Dropziel fest.
+Das folgende Markup zeigt, wie Sie mithilfe von [**AllowDrop**][AllowDrop] in XAML einen bestimmten Bereich der App als für Dropvorgänge gültig festlegen. Wenn ein Benutzer versucht, Elemente an anderer Stelle abzulegen, wird dies vom System nicht zugelassen. Wenn Benutzer die Möglichkeit haben sollen, Elemente an einer beliebigen Stelle Ihrer App abzulegen, legen Sie den gesamten Hintergrund als Dropziel fest.
 
 [!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
 
-Beim Ziehen sollten Sie in der Regel genau festlegen, was gezogen werden kann. Benutzer möchten meist nur bestimmte Elemente ziehen, z. B. Bilder, jedoch nicht alle Elemente in Ihrer App. Nachfolgend sehen Sie, wie Sie [**CanDrag**][CanDrag] mithilfe von XAML festlegen.
+Beim Ziehen sollten Sie in der Regel genau festlegen, was gezogen werden kann. Benutzer möchten meist nur bestimmte Elemente ziehen, z. B. Bilder, jedoch nicht alle Elemente in Ihrer App. So legen Sie [**CanDrag**][CanDrag] mithilfe von XAML fest
 
 [!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]
 
@@ -27,13 +27,13 @@ Sie müssen keine weiteren Aktionen durchführen, um das Ziehen zu ermöglichen;
 
 ## Verarbeiten des DragOver-Ereignisses
 
-Das [**DragOver**][DragOver]-Ereignis wird ausgelöst, wenn ein Benutzer ein Element über Ihre App gezogen, aber noch nicht abgelegt hat. In diesem Handler müssen Sie mithilfe der [**DragEventArgs.AcceptedOperation**][AcceptedOperation]-Eigenschaft angeben, welche Art von Vorgängen Ihre App unterstützt. Kopieren ist der häufigste Vorgang.
+Das Ereignis [**DragOver**][DragOver] wird ausgelöst, wenn ein Benutzer ein Element über Ihre App gezogen, jedoch noch nicht abgelegt hat. In diesem Handler müssen Sie mithilfe der Eigenschaft [**DragEventArgs.AcceptedOperation**][AcceptedOperation] angeben, welche Art von Vorgängen durch Ihre App unterstützt werden. Kopieren ist der häufigste Vorgang.
 
 [!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]
 
 ## Verarbeiten des Dropereignisses
 
-Das [**Drop**][Drop]-Ereignis tritt auf, wenn der Benutzer Elemente in einem gültigen Dropbereich ablegt. Verarbeiten Sie dieses Ereignis mit der [**DragEventArgs.DataView**][DataView]-Eigenschaft.
+Das Ereignis [**Drop**][Drop] tritt ein, wenn der Benutzer Elemente in einem gültigen Dropbereich ablegt. Sie verarbeiten diese mittels der Eigenschaft [**DragEventArgs.DataView**][DataView].
 
 Der Einfachheit halber wird im folgenden Beispiel angenommen, dass der Benutzer ein einzelnes Foto abgelegt hat und auf dieses zugreift. In der Praxis können Benutzer mehrere Elemente unterschiedlicher Formate gleichzeitig ablegen. Ihre App sollte diese Möglichkeit behandeln, indem sie überprüft, welche Dateitypen abgelegt wurden, sie entsprechend verarbeiten und den Benutzer benachrichtigen, wenn er versucht, eine Aktion auszuführen, die von der App nicht unterstützt wird.
 
@@ -41,7 +41,7 @@ Der Einfachheit halber wird im folgenden Beispiel angenommen, dass der Benutzer 
 
 ## Anpassen der Benutzeroberfläche
 
-Das System bietet eine Standardbenutzeroberfläche für Drag & Drop. Sie können jedoch auch verschiedene Teile der Benutzeroberfläche anpassen, indem Sie benutzerdefinierte Beschriftungen und Symbole festlegen oder angeben, dass keine Benutzeroberfläche angezeigt werden soll. Verwenden Sie zum Anpassen der Benutzeroberfläche die Eigenschaft [**DragUIOverride**][DragUiOverride] im Ereignishandler [**DragOver**][DragOver].
+Das System bietet eine Standardbenutzeroberfläche für Drag & Drop. Sie können jedoch auch verschiedene Teile der Benutzeroberfläche anpassen, indem Sie benutzerdefinierte Beschriftungen und Symbole festlegen oder angeben, dass keine Benutzeroberfläche angezeigt werden soll. Um die Benutzeroberfläche anzupassen, verwenden Sie die Eigenschaft [**DragUIOverride**][DragUiOverride] im Ereignishandler [**DragOver**][DragOver].
 
 [!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
 
@@ -56,6 +56,6 @@ Das System bietet eine Standardbenutzeroberfläche für Drag & Drop. Sie könn
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

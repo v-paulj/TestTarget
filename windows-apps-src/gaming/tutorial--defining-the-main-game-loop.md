@@ -1,6 +1,7 @@
 ---
+author: mtoepke
 title: Definieren des Hauptobjekts für das Spiel
-description: Hier sind Details zum Hauptobjekt des Spiels beschrieben und wie die implementierten Regeln in Interaktionen mit der Spielwelt übersetzt werden.
+description: In diesem Abschnitt widmen wir uns den Details des Hauptobjekts des Beispielspiels. Außerdem erfahren Sie, wie die implementierten Regeln in Interaktionen mit der Spielwelt übersetzt werden.
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
 ---
 
@@ -26,7 +27,7 @@ Der Großteil der Grundstruktur des Spiels wird in den folgenden Dateien definie
 
 In [Definieren des UWP-App-Frameworks für das Spiel](tutorial--building-the-games-metro-style-app-framework.md) haben wir das in **App.cpp** definierte Framework des Spiels behandelt.
 
-**Simple3DGame.cpp** stellt den Code für eine Klasse (**Simple3DGame**) bereit, die die Implementierung des eigentlichen Gameplays angibt. Zuvor haben wir die Behandlung des Beispielspiels als UWP-App beleuchtet. Nun widmen wir uns dem Code, der es zu einem Spiel macht.
+**Simple3DGame.cpp** stellt den Code für eine Klasse **Simple3DGame** bereit, die die Implementierung des eigentlichen Gameplays angibt. Zuvor haben wir die Behandlung des Beispielspiels als UWP-App beleuchtet. Nun widmen wir uns dem Code, der es zu einem Spiel macht.
 
 Den vollständigen Code für **Simple3DGame.h/.cpp** finden Sie unter [Vollständiger Beispielcode für diesen Abschnitt](#code_sample).
 
@@ -3619,6 +3620,6 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die univer
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

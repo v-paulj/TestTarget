@@ -1,10 +1,11 @@
 ---
+author: mtoepke
 title: Portieren der Vertexpuffer und -daten
-description: Definieren Sie die Vertexpuffer für die Gitter/Indexpuffer, um die Shader die Scheitelpunkte (Vertices) in einer angegebenen Reihenfolge zu durchlaufen.
+description: In diesem Schritt definieren Sie die Vertexpuffer für die Gitter und die Indexpuffer, mit deren Hilfe die Shader die Vertices in einer angegebenen Reihenfolge durchlaufen können.
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
 ---
 
-# Portieren der Vertexpuffer und -daten
+# Portieren der Vertexpuffer und -Daten
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -147,7 +148,7 @@ Mit dieser Eingabebeschreibung wird ein Vertex als ein Vektorpaar mit jeweils dr
 
 Eine Liste aller möglichen Formattypen finden Sie unter [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059).
 
-Nachdem das Layout für die Eingabe pro Vertex definiert wurde, erstellen Sie das Layoutobjekt. Im folgenden Code schreiben Sie es in **m\_inputLayout**, eine Variable vom Typ **ComPtr** (die auf ein Objekt vom Typ [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575) verweist). **fileData** enthält das kompilierte Vertex-Shaderobjekt aus dem vorherigen Schritt [Portieren der Shader](port-the-shader-config.md).
+Nachdem das Layout für die Eingabe pro Vertex definiert wurde, erstellen Sie das Layoutobjekt. Im folgenden Code schreiben Sie es in **m\_inputLayout**, eine Variable vom Typ **ComPtr** (die auf ein Objekt vom Typ [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575) verweist). **fileData** enthält das kompilierte Vertexshaderobjekt aus dem vorherigen Schritt [Portieren der Shader](port-the-shader-config.md).
 
 Direct3D: Erstellen des vom Vertexpuffer verwendeten Eingabelayouts
 
@@ -312,6 +313,6 @@ Fügen Sie den Code, mit dem unter [**ID3D11Device**](https://msdn.microsoft.com
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

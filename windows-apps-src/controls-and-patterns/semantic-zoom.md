@@ -1,14 +1,15 @@
 ---
+author: Jwmsft
 Description: Ein semantisches Zoomsteuerelement ermöglicht Benutzern, zwischen zwei verschiedenen semantischen Ansichten des gleichen Datensatzes zu zoomen.
 title: Semantischer Zoom
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
-label: Semantischer Zoom
+label: Semantic zoom
 template: detail.hbs
 ---
 
 # Semantischer Zoom
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Mit dem Steuerelement für den semantischen Zoom können Benutzer zwischen zwei unterschiedlichen Ansichten desselben Inhalts zoomen, um schnell durch große Datenmengen zu navigieren. Die vergrößerte Ansicht ist die Hauptansicht des Inhalts. In dieser Ansicht werden die gesamten Daten angezeigt. Die verkleinerte Ansicht zeigt den gleichen Inhalt auf höherer Ebene. In dieser Ansicht werden normalerweise die Gruppenköpfe für gruppierte Daten angezeigt. Bei der Anzeige eines Adressbuchs kann der Benutzer beispielsweise einen Buchstaben vergrößern und die zu dem betreffenden Buchstaben gehörenden Namen einsehen. 
 
@@ -41,7 +42,7 @@ Ein Adressbuch ist ein Beispiel für einen Datensatz, der sich mit einem Steuere
 -   Verwenden Sie Gruppennamen für Elemente in einer gruppierten Auflistung.
 -   Verwenden Sie die Sortierreihenfolge für eine nicht gruppierte, aber sortierte Sammlung; sortieren Sie beispielsweise Datumsangaben chronologisch und Namenslisten alphabetisch.
 
-\[Dieser Artikel enthält spezielle Informationen zu UWP-Apps (Universal Windows Platform) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Artikel
 
@@ -64,6 +65,6 @@ Ein Adressbuch ist ein Beispiel für einen Datensatz, der sich mit einem Steuere
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

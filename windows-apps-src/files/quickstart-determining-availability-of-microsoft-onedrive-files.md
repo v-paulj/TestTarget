@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 3604524F-112A-474F-B0CA-0726DC8DB885
 title: Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien
 description: Ermitteln Sie mithilfe der StorageFile.IsAvailable-Eigenschaft, ob eine Microsoft OneDrive-Datei verfügbar ist.
@@ -30,7 +31,9 @@ Ermitteln Sie mithilfe der [**StorageFile.IsAvailable**](https://msdn.microsoft.
 
 Benutzer können OneDrive-Dateien als „Offline verfügbar“ (Standardeinstellung) oder „Nur online verfügbar“ kennzeichnen. Diese Funktion bietet Benutzern die Möglichkeit, große Dateien (z. B. Bilder und Videos) in ihren OneDrive-Speicher zu verschieben, als nur online verfügbar zu kennzeichnen und so Speicherplatz auf der Festplatte zu sparen (lokal wird nur eine Datei mit Metadaten gespeichert).
 
-[**StorageFile.IsAvailable**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.isavailable.aspx) wird zum Ermitteln verwendet, ob eine Datei momentan verfügbar ist. Die folgende Tabelle zeigt den Wert der **StorageFile.IsAvailable**-Eigenschaft in verschiedenen Szenarien.
+[
+              **StorageFile.IsAvailable**
+            ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.storagefile.isavailable.aspx) wird zum Ermitteln verwendet, ob eine Datei momentan verfügbar ist. Die folgende Tabelle zeigt den Wert der **StorageFile.IsAvailable**-Eigenschaft in verschiedenen Szenarien.
 
 | Dateityp                              | Online | Getaktetes Netzwerk        | Offline |
 |-------------------------------------------|--------|------------------------|---------|
@@ -90,6 +93,6 @@ private async void CheckAvailabilityOfFilesInPicturesLibrary()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

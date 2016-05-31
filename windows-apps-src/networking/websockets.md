@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 description: WebSockets stellt einen Mechanismus für die schnelle und sichere bidirektionale Webkommunikation zwischen einem Client und einem Server mithilfe von HTTP(S) bereit.
 title: WebSockets
 ms.assetid: EAA9CB3E-6A3A-4C13-9636-CCD3DE46E7E2
@@ -171,7 +172,7 @@ Vor dem Herstellen einer Verbindung und Senden von Daten mit einem WebSocket mus
 
 Sobald eine Verbindung hergestellt ist, kann der WebSocket-Client Daten an den Server senden. Die [**DataWriter.StoreAsync**](https://msdn.microsoft.com/library/windows/apps/br208171)-Methode gibt einen Parameter zurück, der einer ganzen Zahl ohne Vorzeichen zugeordnet ist. Dadurch ändern sich die Definitionen der Aufgaben, die zum Senden der Nachricht und Herstellen der Verbindung ausgeführt werden.
 
-**Hinweis**   Wenn Sie ein neues DataWriter-Objekt mit dem OutputStream von MessageWebSocket erstellen, übernimmt der DataWriter den Besitz am OutputStream und der Outputstream wird neu zugeordnet, wenn der DataWriter den Gültigkeitsbereich verlässt. Dadurch schlagen alle nachfolgenden Versuche, den OutputStream zu verwenden, mit einem HRESULT-Wert 0x80000013 fehl. Um zu vermeiden, dass der OutputStream neu zugeordnet wird, ruft dieser Code die DetachStream-Methode des DataWriters auf, die den Besitzer des Datenstroms an das WebSocket-Objekt zurückgibt.
+**Hinweis**   Wenn Sie ein neues DataWriter-Objekt mit dem OutputStream von MessageWebSocket erstellen, übernimmt der DataWriter den Besitz am OutputStream, und die Zuordnung von Outputstream wird aufgehoben, wenn der DataWriter den Gültigkeitsbereich verlässt. Dadurch schlagen alle nachfolgenden Versuche, den OutputStream zu verwenden, mit einem HRESULT-Wert 0x80000013 fehl. Um zu vermeiden, dass der OutputStream neu zugeordnet wird, ruft dieser Code die DetachStream-Methode des DataWriters auf, die den Besitzer des Datenstroms an das WebSocket-Objekt zurückgibt.
 
 Die folgende Funktion sendet die angegebene Zeichenfolge an einen verbundenen WebSocket und gibt eine Bestätigungsnachricht im Ausgabefenster des Debuggers aus.
 
@@ -221,10 +222,16 @@ Die folgende Funktion sendet die angegebene Zeichenfolge an einen verbundenen We
 
 ## Verwenden erweiterter Steuerelemente mit WebSockets
 
-[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) - und [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) folgen dem gleichen Modell für die Verwendung erweiterter Steuerelemente. Den zuvor genannten Hauptklassen entsprechen verwandte Klassen für den Zugriff auf erweiterte Steuerelemente.
+[
+              **MessageWebSocket**
+            ](https://msdn.microsoft.com/library/windows/apps/br226842) und [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) folgen dem gleichen Modell für die Verwendung erweiterter Steuerelemente. Den zuvor genannten Hauptklassen entsprechen verwandte Klassen für den Zugriff auf erweiterte Steuerelemente.
 
-[**MessageWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226843) stellt Socketsteuerungsdaten für ein [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)-Objekt bereit.
-[**StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924) stellt Socketsteuerungsdaten für ein [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Objekt bereit.
+[
+              **MessageWebSocketControl**
+            ](https://msdn.microsoft.com/library/windows/apps/br226843) stellt Socketsteuerungsdaten für ein [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)-Objekt bereit.
+[
+              **StreamWebSocketControl**
+            ](https://msdn.microsoft.com/library/windows/apps/br226924) stellt Socketsteuerungsdaten für ein [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Objekt bereit.
 Das Grundmodell für die Verwendung erweiterter Steuerelemente ist für beide WebSocket-Typen gleich. In der folgenden Erläuterung wird exemplarisch ein [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Objekt verwendet, der gleiche Prozess kann jedoch auch mit einem Objekt vom Typ [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) ausgeführt werden.
 
 1.  Erstellen Sie das [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Objekt.
@@ -239,11 +246,17 @@ Das Grundmodell für die Verwendung erweiterter Steuerelemente ist für beide We
 
 ## WebSocket-Informationsklassen
 
-[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) und [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) besitzen jeweils eine entsprechende Klasse, die zusätzliche Informationen über eine WebSocket-Instanz bereitstellt.
+[
+              **MessageWebSocket**
+            ](https://msdn.microsoft.com/library/windows/apps/br226842) und [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) besitzen jeweils eine entsprechende Klasse, die zusätzliche Informationen über eine WebSocket-Instanz bereitstellt.
 
-[**MessageWebSocketInformation**](https://msdn.microsoft.com/library/windows/apps/br226849) enthält Informationen zu einem [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842), und Sie rufen eine Instanz der Informationsklasse mit der [**MessageWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226861)-Eigenschaft ab.
+[
+              **MessageWebSocketInformation**
+            ](https://msdn.microsoft.com/library/windows/apps/br226849) enthält Informationen zu [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842), und Sie rufen eine Instanz der Informationsklasse mit der [**MessageWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226861)-Eigenschaft ab.
 
-[**StreamWebSocketInformation**](https://msdn.microsoft.com/library/windows/apps/br226929) enthält Informationen zu einem [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923), und Sie rufen eine Instanz der Informationsklasse mit der [**StreamWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226935)-Eigenschaft ab.
+[
+              **StreamWebSocketInformation**
+            ](https://msdn.microsoft.com/library/windows/apps/br226929) enthält Informationen zu [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923), und Sie rufen eine Instanz der Informationsklasse mit der [**StreamWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226935)-Eigenschaft ab.
 
 Beachten Sie, dass alle Eigenschaften für beide Informationsklassen schreibgeschützt sind und Sie aktuelle Informationen zu einem beliebigen Zeitpunkt während der Lebensdauer eines Websocket-Objekts abrufen können.
 
@@ -340,6 +353,6 @@ Das folgende Beispiel erstellt eine Aufgabe, die nach der angegebenen Verzögeru
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

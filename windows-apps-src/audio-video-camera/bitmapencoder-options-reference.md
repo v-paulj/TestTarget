@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 98BD79B3-F420-43C5-98D3-52EBDDB479A0
 description: In diesem Artikel sind die Codierungsoptionen aufgeführt, die mit BitmapEncoder verwendet werden können.
 title: Referenz zu BitmapEncoder-Optionen
@@ -38,6 +39,6 @@ In diesem Artikel sind die Codierungsoptionen aufgeführt, die mit [**BitmapEnco
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Aktivierung des Xbox One-Entwicklermodus
 description: Dieser Artikel beschreibt das Aktivieren des Entwicklermodus, sodass Sie zwischen Einzelhandelsmodus und Entwicklermodus wechseln können.
 area: Xbox
@@ -14,9 +15,11 @@ area: Xbox
 Die Xbox One verfügt über zwei Modi: *Einzelhandelsmodus* (1) und *Entwicklermodus* (2). Im Einzelhandelsmodus ist die Konsole in dem Zustand, in dem sie von jedem Kunden oder Benutzer einer Xbox One-Konsole verwendet wird: Sie können als Benutzer Spiele spielen und Apps ausführen. Im Entwicklermodus können Sie Software für die Konsole entwickeln, jedoch keine Spiele spielen und Apps ausführen.
 Der Entwicklermodus kann auf jeder Xbox One-Konsole aktiviert werden. Nach dem Aktivieren des Entwicklermodus können Sie zwischen dem Einzelhandelsmodus (2a) und dem Entwicklermodus (2b) wechseln.
 
-> **Wichtig**&nbsp;&nbsp;Wenn Sie auf der Xbox One den Entwicklermodus aktivieren, registrieren Sie sich für Xbox-Systemupdates, um eine Developer Preview-Version zu erhalten, die eine Vorabversion der Software für Testzwecke umfasst. Dies bedeutet, dass einige beliebte Spiele und Apps nicht wie erwartet funktionieren und gelegentlich Abstürze und Datenverlust auftreten. Wenn Sie die Developer Preview verlassen, wird Ihre Konsole auf die Werkseinstellungen zurückgesetzt, und Sie müssen alle Spiele, Apps und Inhalte erneut installieren. 
+> **Wichtig**
+            &nbsp;&nbsp;Wenn Sie auf der Xbox One den Entwicklermodus aktivieren, registrieren Sie sich für Xbox-Systemupdates, um eine Developer Preview-Version zu erhalten, die eine Vorabversion der Software für Testzwecke umfasst. Dies bedeutet, dass einige beliebte Spiele und Apps nicht wie erwartet funktionieren und gelegentlich Abstürze und Datenverlust auftreten. Wenn Sie die Developer Preview verlassen, wird Ihre Konsole auf die Werkseinstellungen zurückgesetzt, und Sie müssen alle Spiele, Apps und Inhalte erneut installieren. 
 
-> **Hinweis**&nbsp;&nbsp;Sie können den Entwicklermodus auf der Xbox One nicht aktivieren, wenn Sie bereits an einem laufenden Vorschauprogramm, z. B. Xbox One Beta, teilnehmen. Sie können ein vorhandenes Vorschauprogramm mithilfe der Xbox Preview Dashboard-App verlassen. 
+> **Hinweis**
+            &nbsp;&nbsp;Sie können den Entwicklermodus auf der Xbox One nicht aktivieren, wenn Sie bereits an einem laufenden Vorschauprogramm, z. B. Xbox One Beta, teilnehmen. Sie können ein vorhandenes Vorschauprogramm mithilfe der Xbox Preview Dashboard-App verlassen. 
 
 ![Xbox One-Modi](images/dev-mode-flow.png)
 
@@ -24,15 +27,16 @@ Der Entwicklermodus kann auf jeder Xbox One-Konsole aktiviert werden. Nach dem A
 
 1.  Starten Sie die Xbox One-Konsole.
 
-2.  Suchen Sie im Xbox One-Store die DevMode-Aktivierungsapp, und installieren Sie sie.  
+2.  Suchen Sie im Xbox One-Store die DevMode-Aktivierungs-App, und installieren Sie sie.  
     ![](images/activation-store-search.png)
 
 3.  Navigieren Sie zu **My games & apps** > **Apps**.
 
-    ![DevMode-Aktivierungsapp](images/activation-step-3.png)
-4. Öffnen Sie die Devmode-Aktivierungsapp.    
+    ![DevMode-Aktivierungs-App](images/activation-step-3.png)
+4. Öffnen Sie die Devmode-Aktivierungs-App.    
     
-    > **Hinweis**&nbsp;&nbsp;Bitte lesen Sie die Haftungsausschlüsse sorgfältig durch. Im Rahmen der Aktivierung der Xbox für die Entwicklung erhalten Sie frühe Pre-Release-Builds. Zum Ausführen von Spielen und Apps müssen Sie in den Einzelhandelsmodus zu wechseln. Quergeladene Apps werden nur im Entwicklermodus ausgeführt.
+    > **Hinweis**
+            &nbsp;&nbsp;Bitte lesen Sie die Haftungsausschlüsse sorgfältig durch. Im Rahmen der Aktivierung der Xbox für die Entwicklung erhalten Sie frühe Pre-Release-Builds. Zum Ausführen von Spielen und Apps müssen Sie in den Einzelhandelsmodus zu wechseln. Quergeladene Apps werden nur im Entwicklermodus ausgeführt.
 
 5.  Notieren Sie sich den in der DevMode-Aktivierungsapp angezeigten Code.  
 
@@ -40,13 +44,18 @@ Der Entwicklermodus kann auf jeder Xbox One-Konsole aktiviert werden. Nach dem A
     
 6.  Rufen Sie [developer.microsoft.com/xboxactivate](https://developer.microsoft.com/xboxactivate) auf.
 7.  Melden Sie sich mit Ihrem Dev Center-Konto beim Dev Center an.  
-8.  Geben Sie den in der DevMode Aktivierungsapp angezeigten Aktivierungscode ein.   
+8.  Geben Sie den in der DevMode Aktivierungs-App angezeigten Aktivierungscode ein.   
    
-     > **Hinweis**&nbsp;&nbsp;Ihrem Konto ist eine begrenzte Anzahl von Aktivierungen zugewiesen. Nach dem Aktivieren des Entwicklermodus wird im Dev Center angegeben, dass Sie eine der mit Ihrem Konto verknüpften Aktivierungen verwendet haben. 
+     > **Hinweis**
+            &nbsp;&nbsp;Ihrem Konto ist eine begrenzte Anzahl von Aktivierungen zugewiesen. Nach dem Aktivieren des Entwicklermodus wird im Dev Center angegeben, dass Sie eine der mit Ihrem Konto verknüpften Aktivierungen verwendet haben. 
     
     ![Aktivierungsschritt 8](images/activation-step-8.png)    
     
-9.  Klicken Sie auf **Agree and activate**. Dadurch wird die Seite neu geladen, und Ihr Gerät wird in der Tabelle aufgeführt.  
+9.  Klicken Sie auf **Agree and activate**. Dadurch wird die Seite neu geladen, und Ihr Gerät wird in der Tabelle aufgeführt.
+    
+    > **Hinweis**
+            &nbsp;&nbsp;Die Bedingungen der Vereinbarung zum Programm zur Aktivierung des Xbox One-Entwicklermodus finden Sie [hier](http://go.microsoft.com/fwlink/?LinkId=760399).
+
 10. Nachdem Sie den Aktivierungscode eingegeben haben, wird auf der Konsole ein Statusbildschirm für den Aktivierungsvorgang angezeigt.  
 11. Nach Abschluss der Aktivierung müssen Sie warten, bis die Konsole auf die erforderliche Vorabversion aktualisiert wurde. Dies kann mehrere Stunden dauern. Bitte haben Sie Geduld.  
 
@@ -74,6 +83,6 @@ Nachdem der Entwicklermodus auf der Konsole aktiviert wurde, können Sie mithilf
 - [UWP auf Xbox One](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

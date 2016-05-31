@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Mit der Datumsauswahl verfügen Sie über eine standardisierte Methode, Benutzern die Möglichkeit zu bieten, einen lokalisierten Datumswert per Touch-, Maus- oder Tastatureingabe auszuwählen. 
 title: Datumsauswahl
 ms.assetid: d4a01425-4dee-4de3-9a05-3e85c3fc03cb
@@ -44,7 +45,8 @@ Die fertige Datumsauswahl sieht wie folgt aus:
 
 ![Beispiel für eine Datumsauswahl](images/date-picker-closed.png)
 
-> **Hinweis:**&nbsp;&nbsp;Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
+> **Hinweis**
+            &nbsp;&nbsp;Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
 
 
 
@@ -56,6 +58,6 @@ Die fertige Datumsauswahl sieht wie folgt aus:
 - [Uhrzeitauswahl](time-picker.md)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

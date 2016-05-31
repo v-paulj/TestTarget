@@ -1,13 +1,14 @@
 ---
+author: mtoepke
 title: Asynchrone Programmierung (DirectX und C++)
-description: Dieses Thema behandelt verschiedene Aspekte, die Sie beim Verwenden der asynchronen Programmierung und des Threadings mit DirectX berücksichtigen sollten.
+description: In diesem Thema werden verschiedene Aspekte behandelt, die Sie beim Verwenden der asynchronen Programmierung und des Threadings mit DirectX berücksichtigen sollten.
 ms.assetid: 17613cd3-1d9d-8d2f-1b8d-9f8d31faaa6b
 ---
 
 # Asynchrone Programmierung (DirectX und C++)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Dieses Thema behandelt verschiedene Aspekte, die Sie beim Verwenden der asynchronen Programmierung und des Threadings mit DirectX berücksichtigen sollten.
 
@@ -28,7 +29,7 @@ Wenn Ihr Spiel ausreichend komplex ist oder Sie die Leistung verbessern möchten
 
 Ihre App kann diese Komponenten in mehreren gleichzeitigen Threads verwalten. Das asynchrone Laden wirkt sich positiv auf die Datei-E/A aus, insbesondere auf das Laden von Objekten, da Ihr Spiel oder Ihre App sich in einem interaktiven Zustand befinden kann, während mehrere (oder mehrere Hundert) Megabytes von Objekten geladen oder gestreamt werden. Es ist am einfachsten, diese Threads mit der [Parallel Patterns Library (PPL)](https://msdn.microsoft.com/library/dd492418.aspx) und dem **task**-Muster zu erstellen und zu verwalten, die in dem in der Datei „PPLTasks.h“ definierten **concurrency**-Namespace enthalten sind. Wenn Sie die [Parallel Patterns Library](https://msdn.microsoft.com/library/dd492418.aspx) verwenden, können Sie direkt von den Hyperthreading-CPUs mit mehreren Kernen profitieren und verschiedene Verbesserungen erzielen, z. B. durch verkürzte Ladezeiten oder weniger Störungen und Verzögerungen bei umfassenden CPU-Berechnungen oder Netzwerkverarbeitung.
 
-> **Hinweis**   In einer App für die universelle Windows-Plattform (UWP) wird die Benutzeroberfläche (UI) komplett in einem Singlethread-Apartment (STA) ausgeführt. Wenn Sie eine UI für Ihr DirectX-Spiel mit [XAML-Interoperabilität](directx-and-xaml-interop.md) erstellen, können Sie nur mithilfe von STA auf die Steuerelemente zugreifen.
+> **Hinweis**  In einer App für die universelle Windows-Plattform (UWP) wird die Benutzeroberfläche komplett in einem Singlethread-Apartment (STA) ausgeführt. Wenn Sie eine UI für Ihr DirectX-Spiel mit [XAML-Interoperabilität](directx-and-xaml-interop.md) erstellen, können Sie nur mithilfe von STA auf die Steuerelemente zugreifen.
 
  
 
@@ -62,6 +63,6 @@ Erstellen Sie mit [**ID3D11Device::CreateDeferredContext**](https://msdn.microso
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

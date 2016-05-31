@@ -1,10 +1,11 @@
 ---
-title: Vergleich v. OpenGL ES 2.0-Puffern, Uniformen, Vertexattr. M. Direct3D
-description: Beim Portieren zu Direct3D 11 aus OpenGL ES 2.0 müssen Sie Syntax und API-Verhalten zum Übergeben von Daten zwischen der App und den Shaderprogrammen ändern.
+author: mtoepke
+title: Vergleichen von OpenGL ES 2.0-Puffern, -uniform-Elementen und -Vertexattributen mit Direct3D
+description: Während des Portierens zu Direct3D 11 aus OpenGL ES 2.0 müssen Sie die Syntax und das API-Verhalten zum Übergeben von Daten zwischen der App und den Shaderprogrammen ändern.
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
 ---
 
-# Vergleichen von OpenGL ES 2.0-Puffern, „uniform“-Elementen und Vertexattributen mit Direct3D
+# Vergleichen von OpenGL ES 2.0-Puffern, -uniform-Variablen und -Vertexattributen mit Direct3D
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -296,6 +297,6 @@ struct VertexShaderInput
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

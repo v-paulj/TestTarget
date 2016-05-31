@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: So wird's gemacht: Aktivieren einer App (DirectX und C++)
 description: In diesem Thema erfahren Sie, wie Sie die Aktivierungsbenutzeroberfläche für eine DirectX-App für die universelle Windows-Plattform (UWP) definieren.
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
@@ -89,6 +90,6 @@ void App::Run()
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Der Umschalter stellt einen physischen Schalter dar, mit dem Benutzer Dinge ein- oder ausschalten können.
 title: Richtlinien für Umschaltersteuerelemente
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
-label: Umschalter
+label: Toggle switches
 template: detail.hbs
 ---
 # Umschalter
@@ -156,6 +157,6 @@ Sie können auch komplexeren Inhalt verwenden, indem Sie die Eigenschaften [**On
 - [**ToggleSwitch-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209712)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

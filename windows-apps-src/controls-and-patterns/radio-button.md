@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Mit Optionsfeldern können Benutzer eine oder mehrere Optionen auswählen.
 title: Richtlinien für Optionsfelder
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
-label: Optionsfelder
+label: Radio buttons
 template: detail.hbs
 ---
 # Optionsfelder
@@ -53,7 +54,8 @@ Optionsfelder funktionieren in Gruppen. Es gibt zwei Arten zur Gruppierung von O
 - Platzieren Sie sie im gleichen übergeordneten Container.
 - Legen Sie die [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx)-Eigenschaft für jedes Optionsfeld auf denselben Wert fest.
 
-> **Hinweis:** Eine Gruppe von Optionsfeldern verhält sich wie ein einzelnes Steuerelement, wenn der Zugriff darauf über die Tastatur erfolgt. Der Benutzer kann mit der TAB-TASTE nur auf die jeweils ausgewählte Option zugreifen, mithilfe der Pfeiltasten kann der Benutzer jedoch in der Gruppe navigieren.
+> **Hinweis**
+            &nbsp;&nbsp;Eine Gruppe von Optionsfeldern verhält sich wie ein einzelnes Steuerelement, wenn der Zugriff darauf über die Tastatur erfolgt. Der Benutzer kann mit der TAB-TASTE nur auf die jeweils ausgewählte Option zugreifen, mithilfe der Pfeiltasten kann der Benutzer jedoch in der Gruppe navigieren.
 
 In diesem Beispiel wird die erste Gruppe von Optionsfeldern implizit gruppiert, da die Felder im selben StackPanel-Element enthalten sind. Die zweite Gruppe ist auf zwei StackPanel-Elemente aufgeteilt, damit sie explizit nach GroupName gruppiert werden.
 
@@ -179,6 +181,6 @@ Diese Abbildung zeigt die richtige Vorgehensweise zum Platzieren und Anordnen vo
 - [**Windows.UI.Xaml.Controls RadioButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227544)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

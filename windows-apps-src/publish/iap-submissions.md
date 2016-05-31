@@ -1,5 +1,6 @@
 ---
-description: IAPs werden über das Windows Dev Center-Dashboard veröffentlicht.
+author: jnHs
+Description: IAPs werden über das Windows Dev Center-Dashboard veröffentlicht.
 title: IAP-Übermittlungen
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
 ---
@@ -46,7 +47,7 @@ Eine Beschreibung ist erforderlich. Es wird empfohlen, für jede von der App unt
 
 Nachdem Sie diese Informationen eingegeben haben, klicken Sie auf **An Store übermitteln**. In den meisten Fällen dauert der Zertifizierungsprozess etwa eine Stunde. Danach wird Ihr IAP im Store veröffentlicht und steht für Kunden zum Kauf bereit.
 
-**Hinweis** Das IAP muss außerdem im Code Ihrer App implementiert werden. Weitere Informationen finden Sie unter [Ermöglichen von In-App-Produktkäufen](https://msdn.microsoft.com/library/windows/apps/mt219684).
+**Hinweis**  Der IAP muss außerdem im Code Ihrer App implementiert werden. Weitere Informationen finden Sie unter [Ermöglichen von In-App-Produktkäufen](https://msdn.microsoft.com/library/windows/apps/mt219684).
 
 
 ## Aktualisieren eines IAPs nach der Veröffentlichung
@@ -54,7 +55,7 @@ Nachdem Sie diese Informationen eingegeben haben, klicken Sie auf **An Store üb
 
 Sie können ein veröffentlichtes IAP jederzeit ändern. IAP-Änderungen werden unabhängig von Ihrer App eingereicht und veröffentlicht. Sie müssen daher in der Regel nicht die gesamte App aktualisieren, um Änderungen an einem IAP wie das Aktualisieren des Preises oder der Beschreibung vorzunehmen.
 
-> **Wichtig** Wenn die App für Kunden unter Windows 8.x verfügbar ist, müssen Sie eine neue App-Übermittlung erstellen und veröffentlichen, um die IAP-Updates für diese Kunden sichtbar zu machen. Auch wenn Sie neue IAPs einer App für Windows 8.x hinzufügen, nachdem die App veröffentlicht wurde, müssen Sie den App-Code aktualisieren, um auf diese IAPs zu verweisen, und dann die App erneut einreichen. Andernfalls sind die neue IAPs nicht für Kunden unter Windows 8.x sichtbar.
+> **Wichtig**  Wenn die App für Kunden unter Windows 8.x verfügbar ist, müssen Sie eine neue App-Übermittlung erstellen und veröffentlichen, um die IAP-Updates für diese Kunden sichtbar zu machen. Auch wenn Sie neue IAPs einer App für Windows 8.x hinzufügen, nachdem die App veröffentlicht wurde, müssen Sie den App-Code aktualisieren, um auf diese IAPs zu verweisen, und dann die App erneut einreichen. Andernfalls sind die neue IAPs nicht für Kunden unter Windows 8.x sichtbar.
 
 Wechseln Sie zum Einreichen von Updates im Dashboard zur Seite des IAPs, und klicken Sie auf **Aktualisieren**. Dadurch wird eine neue Einreichung für das IAP erstellt, wobei die Informationen aus der vorherigen Einreichung als Ausgangspunkt verwendet werden. Ändern Sie die gewünschten Informationen, und klicken Sie dann auf **An Store einreichen**.
 
@@ -62,6 +63,6 @@ Wenn Sie zuvor angebotene IAPs entfernen möchten, können Sie dies tun, indem S
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

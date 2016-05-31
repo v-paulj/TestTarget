@@ -1,15 +1,16 @@
 ---
+author: mcleblanc
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
 title: Verbessern der Leistung bei der Garbage Collection
-description: In C# und Visual Basic geschriebene Apps für die universelle Windows-Plattform (UWP) profitieren von der automatischen Arbeitsspeicherverwaltung des .NET Garbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten des .NET Garbage Collectors sowie über die bewährten Methoden zur Leistungssteigerung für den Garbage Collector in UWP-Apps.
+description: In C# und Visual Basic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NET Garbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten des .NET Garbage Collectors sowie über die bewährten Methoden zur Leistungssteigerung für den Garbage Collector in UWP-Apps.
 ---
 # Verbessern der Leistung bei der Garbage Collection
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-In C# und Visual Basic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NET Garbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten des .NET Garbage Collectors sowie über die bewährten Methoden zur Leistungssteigerung für den Garbage Collector in UWP-Apps. Weitere Informationen zur Funktionsweise des .NET Garbage Collectors sowie zu Debugging- und Leistungsanalysetools für den Garbage Collector finden Sie unter [Garbage Collection](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/0xy59wtx.aspx).
+In C# und Visual Basic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NET Garbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten des .NET Garbage Collectors sowie über die bewährten Methoden zur Leistungssteigerung für den Garbage Collector in UWP-Apps. Weitere Informationen zur Funktionsweise des .NET Garbage Collectors sowie zu Debugging- und Leistungsanalysetools für den Garbage Collector finden Sie unter [Garbage Collection](https://msdn.microsoft.com/library/windows/apps/xaml/0xy59wtx.aspx).
 
-**Hinweis** Die Notwendigkeit in das Standardverhalten des Garbage Collectors eingreifen zu müssen, ist ein starkes Indiz für allgemeine Speicherprobleme mit Ihrer App. Weitere Informationen finden Sie unter [Speichernutzungstool beim Debuggen in Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Dieses Thema betrifft ausschließlich C# und Visual Basic.
+**Hinweis**  Die Notwendigkeit, in das Standardverhalten des Garbage Collector eingreifen zu müssen, ist ein starkes Indiz für allgemeine Speicherprobleme mit Ihrer App. Weitere Informationen finden Sie unter [Speichernutzungstool beim Debuggen in Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Dieses Thema betrifft ausschließlich C# und Visual Basic.
 
  
 
@@ -25,23 +26,23 @@ Zur Ermittlung der Leistung des Garbage Collectors können zwei Aspekte betracht
 
 ### Versionsverweise
 
-Ein Verweis auf ein Objekt in Ihrer App verhindert die Bereinigung dieses Objekts sowie aller Objekte, auf die es verweist. Der .NET-Compiler erkennt sehr zuverlässig, wann eine Variable nicht mehr verwendet wird, sodass Objekte, die von dieser Variablen gehalten werden, der Collection zugeführt werden können. Manchmal ist es jedoch möglicherweise nicht ohne Weiteres ersichtlich, dass Objekte auf andere Objekte verweisen, da sich ein Teil des Objektgraphs unter Umständen im Besitz von Bibliotheken befindet, die Ihre App verwendet. Informationen zu den Tools und Techniken, mit denen Sie ermitteln können, welche Objekte nach einer Garbage Collection noch vorhanden sind, finden Sie unter [Garbage Collection und Leistung](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/ee851764.aspx).
+Ein Verweis auf ein Objekt in Ihrer App verhindert die Bereinigung dieses Objekts sowie aller Objekte, auf die es verweist. Der .NET-Compiler erkennt sehr zuverlässig, wann eine Variable nicht mehr verwendet wird, sodass Objekte, die von dieser Variablen gehalten werden, der Collection zugeführt werden können. Manchmal ist es jedoch möglicherweise nicht ohne Weiteres ersichtlich, dass Objekte auf andere Objekte verweisen, da sich ein Teil des Objektgraphs unter Umständen im Besitz von Bibliotheken befindet, die Ihre App verwendet. Informationen zu den Tools und Techniken, mit denen Sie ermitteln können, welche Objekte nach einer Garbage Collection noch vorhanden sind, finden Sie unter [Garbage Collection und Leistung](https://msdn.microsoft.com/library/windows/apps/xaml/ee851764.aspx).
 
 ### Auslösen einer Garbage Collection bei Bedarf
 
 Lösen Sie eine Garbage Collection nur aus, nachdem Sie die Leistung Ihrer App ermittelt haben und zu dem Schluss gekommen sind, dass sich eine Bereinigung positiv auf das Ergebnis auswirkt.
 
-Rufen Sie zum Auslösen der Garbage Collection einer bestimmten Generation Folgendes auf: [**GC.Collect(n)**]https://msdn.microsoft.com/en-us/library/windows/apps/xaml/y46kxc5e.aspx). „n“ steht hierbei für die gewünschte Generation (0, 1 oder 2).
+Rufen Sie zum Auslösen der Garbage Collection einer Generation [**GC.Collect(n)**](https://msdn.microsoft.com/library/windows/apps/xaml/y46kxc5e.aspx) auf, wobei „n“ für die Generation steht, die Sie erfassen möchten (0, 1 oder 2).
 
-**Hinweis** Wir raten davon ab, in Ihrer App eine Garbage Collection zu erzwingen, da der Garbage Collector den besten Zeitpunkt für eine Bereinigung anhand einer Vielzahl von Heuristiken ermittelt und die Erzwingung einer Bereinigung somit häufig eine unnötige Belastung der CPU darstellt. Falls Ihre App allerdings eine große Anzahl von Objekten enthält, die nicht mehr verwendet werden, und Sie den entsprechenden Arbeitsspeicher wieder für das System freigeben möchten, ist die Erzwingung einer Garbage Collection unter Umständen dennoch angemessen. So können Sie beispielsweise in einem Spiel eine Bereinigung am Ende einer Ladesequenz auslösen, um vor Spielbeginn Arbeitsspeicher freizugeben.
+**Hinweis**  Wir empfehlen, in Ihrer App keine Garbage Collection zu erzwingen, da der Garbage Collector den besten Zeitpunkt für eine Collection anhand einer Vielzahl heuristischer Daten ermittelt und die Erzwingung einer Collection somit häufig eine unnötige Belastung der CPU darstellt. Falls Ihre App allerdings eine große Anzahl von Objekten enthält, die nicht mehr verwendet werden, und Sie den entsprechenden Arbeitsspeicher wieder für das System freigeben möchten, ist die Erzwingung einer Garbage Collection unter Umständen dennoch angemessen. So können Sie beispielsweise in einem Spiel eine Bereinigung am Ende einer Ladesequenz auslösen, um vor Spielbeginn Arbeitsspeicher freizugeben.
  
-Damit Sie nicht versehentlich zu viele Garbage Collections auslösen, können Sie [**GCCollectionMode**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bb495757.aspx) auf **Optimized** festlegen. Dadurch wird der Garbage Collector angewiesen, nur dann eine Garbage Collection zu starten, wenn eine ausreichend hohe Produktivität dies rechtfertigt.
+Damit Sie nicht versehentlich zu viele Garbage Collections auslösen, können Sie [**GCCollectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/bb495757.aspx) auf **Optimized** festlegen. Dadurch wird der Garbage Collector angewiesen, nur dann eine Garbage Collection zu starten, wenn eine ausreichend hohe Produktivität dies rechtfertigt.
 
 ## Verringern der erforderlichen Zeit für die Garbage Collection
 
 Dieser Abschnitt gilt, wenn Sie Ihre App analysiert und eine hohe Garbage Collection-Dauer festgestellt haben. Die Pausenzeiten für die Garbage Collection werden von folgenden Aspekten beeinflusst: der erforderlichen Zeit zum Ausführen eines einzelnen Garbage Collection-Durchlaufs und der Zeit, die die App insgesamt für Garbage Collections aufwendet. Die Dauer einer Bereinigung hängt davon ab, wie viele Livedaten der Collector analysieren muss. Die Größe der Generationen 0 und 1 ist zwar begrenzt, die Größe der Generation 2 nimmt jedoch mit steigender Anzahl aktiver langlebiger Objekte in Ihrer App immer weiter zu. Das bedeutet, dass auch die Bereinigungsdauer für die Generationen 0 und 1 begrenzt ist, während Collections der Generation 2 ggf. mehr Zeit in Anspruch nehmen. Da eine Garbage Collection Arbeitsspeicher freigibt, um Zuordnungsanforderungen zu befriedigen, hängt die Ausführungshäufigkeit von Garbage Collections in erster Linie davon ab, wie viel Arbeitsspeicher Sie zuordnen.
 
-Der Garbage Collector hält Ihre App von Zeit zu Zeit an, um Arbeiten auszuführen. Dabei wird die App aber nicht zwingend für die gesamte Dauer der Bereinigung angehalten. Die Pausenzeiten sind für den Benutzer Ihrer App üblicherweise nicht wahrnehmbar. Dies gilt besonders bei Bereinigungen der Generationen 0 und 1. Die [Hintergrund-Garbage Collection](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/ee787088.aspx#background-garbage-collection) des .NET Garbage Collectors ermöglicht die parallele Ausführung von Bereinigungen der Generation 2 während der App-Ausführung. Die App wird dabei jeweils nur ganz kurz angehalten. Bereinigungen der Generation 2 können allerdings nicht immer im Hintergrund ausgeführt werden. In diesem Fall ist die Pause unter Umständen für den Benutzer wahrnehmbar, sofern der Heap entsprechend groß (über 100 MB) ist.
+Der Garbage Collector hält Ihre App von Zeit zu Zeit an, um Arbeiten auszuführen. Dabei wird die App aber nicht zwingend für die gesamte Dauer der Bereinigung angehalten. Die Pausenzeiten sind für den Benutzer Ihrer App üblicherweise nicht wahrnehmbar. Dies gilt besonders bei Bereinigungen der Generationen 0 und 1. Die [Hintergrund-Garbage Collection](https://msdn.microsoft.com/library/windows/apps/xaml/ee787088.aspx#background-garbage-collection) des .NET Garbage Collectors ermöglicht die parallele Ausführung von Bereinigungen der Generation 2 während der App-Ausführung. Die App wird dabei jeweils nur ganz kurz angehalten. Bereinigungen der Generation 2 können allerdings nicht immer im Hintergrund ausgeführt werden. In diesem Fall ist die Pause unter Umständen für den Benutzer wahrnehmbar, sofern der Heap entsprechend groß (über 100 MB) ist.
 
 Häufig ausgeführte Garbage Collections können eine höhere CPU-Auslastung (und damit einen höheren Energiebedarf) sowie längere Ladezeiten oder geringere Bildfrequenzen in Ihrer Anwendung zur Folge haben. Im Anschluss finden Sie einige Techniken, mit denen Sie die Dauer der Garbage Collection sowie Pausenzeiten für die Garbage Collection einer verwalteten UWP-App verringern können.
 
@@ -65,7 +66,7 @@ Wie bereits erwähnt, wird jedes Objekt ab einer Größe von 85 KB dem Heap für
 
 ### Vermeiden von Objekten mit vielen Verweisen
 
-Der Garbage Collector folgt den Verweisen zwischen Objekten, um zu ermitteln, bei welchen Objekten es sich um Liveobjekte handelt. Den Ausgangspunkt bildet dabei jeweils der Stamm in Ihrer App. Weitere Informationen finden Sie unter [Vorgänge während einer Garbage Collection](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/ee787088.aspx#what-happens-during-a-garbage-collection). Enthält ein Objekt eine Vielzahl von Verweisen, bedeutet dies einen höheren Aufwand für den Garbage Collector. Eine gängige Technik (besonders bei großen Objekten) ist das Konvertieren von Objekten mit vielen Verweisen in Objekte ohne Verweise (beispielsweise, indem anstelle eines Verweises ein Index gespeichert wird). Diese Technik funktioniert natürlich nur, wenn diese Vorgehensweise logisch möglich ist.
+Der Garbage Collector folgt den Verweisen zwischen Objekten, um zu ermitteln, bei welchen Objekten es sich um Liveobjekte handelt. Den Ausgangspunkt bildet dabei jeweils der Stamm in Ihrer App. Weitere Informationen finden Sie unter [Vorgänge während einer Garbage Collection](https://msdn.microsoft.com/library/windows/apps/xaml/ee787088.aspx#what-happens-during-a-garbage-collection). Enthält ein Objekt eine Vielzahl von Verweisen, bedeutet dies einen höheren Aufwand für den Garbage Collector. Eine gängige Technik (besonders bei großen Objekten) ist das Konvertieren von Objekten mit vielen Verweisen in Objekte ohne Verweise (beispielsweise, indem anstelle eines Verweises ein Index gespeichert wird). Diese Technik funktioniert natürlich nur, wenn diese Vorgehensweise logisch möglich ist.
 
 Das Ersetzen von Objektverweisen durch Indizes kann sich für Ihre App als komplizierte Änderung mit Störpotenzial erweisen und ist besonders für große Objekte mit einer Vielzahl von Verweisen gedacht. Führen Sie diesen Schritt nur aus, wenn Sie in Ihrer App eine hohe Garbage Collection-Dauer feststellen, die auf Objekte mit vielen Verweisen zurückzuführen ist.
 
@@ -78,6 +79,6 @@ Das Ersetzen von Objektverweisen durch Indizes kann sich für Ihre App als kompl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

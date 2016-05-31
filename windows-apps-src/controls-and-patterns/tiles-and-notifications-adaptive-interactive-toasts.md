@@ -1,15 +1,16 @@
 ---
-desription: Mit adaptiven und interaktiven Popups können Sie flexible Popups mit mehr Inhalt, optionalen Inlinebildern und optionaler Benutzerinteraktion erstellen.
+author: mijacobs
+Description: Mit adaptiven und interaktiven Popupbenachrichtigungen können Sie flexible Popupbenachrichtigungen mit mehr Inhalt, optionalen Inlinebildern und optionaler Benutzerinteraktion erstellen.
 title: Adaptive und interaktive Popupbenachrichtigungen
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
-label: Adaptive und interaktive Popupbenachrichtigungen
+label: Adaptive and interactive toast notifications
 template: detail.hbs
 ---
 
 # Adaptive und interaktive Popupbenachrichtigungen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Mit adaptiven und interaktiven Popupbenachrichtigungen können Sie flexible Popupbenachrichtigungen mit mehr Inhalt, optionalen Inlinebildern und optionaler Benutzerinteraktion erstellen.
@@ -20,7 +21,7 @@ Beim adaptiven und interaktiven Popupbenachrichtigungsmodell haben diese Updates
 -   Drei verschiedene Aktivierungstypen für die wichtigste Popupbenachrichtigung und für jede Aktion.
 -   Die Option zum Erstellen von Benachrichtigungen für bestimmte Szenarios wie Alarme, Erinnerungen und eingehende Anrufe.
 
-**Hinweis**  Die Legacyvorlagen von Windows 8.1 und Windows Phone 8.1 finden Sie im [Legacy-Popupvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761494).
+**Hinweis**  Die Legacyvorlagen von Windows 8.1 und Windows Phone 8.1 finden Sie im [Legacy-Popupvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761494).
 
  
 
@@ -29,9 +30,9 @@ Beim adaptiven und interaktiven Popupbenachrichtigungsmodell haben diese Updates
 
 Popupbenachrichtigungen werden mit XML erstellt und enthalten in der Regel diese wichtigen Elemente:
 
--   &lt;visual&gt; umfasst den Inhalt, den Benutzer visuell wahrnehmen können, z. B. Text und Bilder.
--   &lt;actions&gt; enthält Schaltflächen/Eingaben, die der Entwickler innerhalb der Benachrichtigung hinzufügen möchte.
--   &lt;audio&gt; legt den Ton beim Anzeigen der Benachrichtigung fest.
+-   &lt;visual&gt; umfasst den Inhalt, den Benutzer visuell wahrnehmen können, z. B. Text und Bilder
+-   &lt;actions&gt; enthält Schaltflächen/Eingaben, die der Entwickler innerhalb der Benachrichtigung hinzufügen möchte
+-   &lt;audio&gt; legt den Ton beim Anzeigen der Benachrichtigung fest
 
 Hier sehen Sie ein Codebeispiel:
 
@@ -72,9 +73,9 @@ Alle Attribute, die im Abschnitt „Visuelle Elemente“ und dessen untergeordne
 In UWP-Apps können Sie Ihren Popupbenachrichtigungen Schaltflächen und andere Eingaben hinzufügen, um Benutzern mehr Aktionen außerhalb der App zu ermöglichen. Diese Aktionen werden unter dem Element &lt;actions&gt; angegeben. Davon können Sie zwei Arten angeben:
 
 -   &lt;action&gt; wird als Schaltfläche auf Desktops und mobilen Geräten angezeigt. Sie können bis zu fünf benutzerdefinierte Aktionen oder Systemaktionen innerhalb einer Popupbenachrichtigung angeben.
--   &lt;input&gt; ermöglicht Benutzereingaben, z. B. schnelles Beantworten einer Nachricht oder Auswählen einer Option aus einem Dropdownmenü.
+-   &lt;input&gt; ermöglicht Benutzereingaben, z. B. schnelles Beantworten einer Nachricht oder Auswählen einer Option aus einem Dropdown-Menü.
 
-Sowohl &lt;action&gt; als auch &lt;input&gt; sind bei Windows-Geräten adaptiv. Bei mobilen Geräten oder Desktop-Geräten stellt &lt;action&gt; beispielsweise eine Schaltfläche dar, auf die Benutzer tippen/klicken können. &lt;input&gt; für Text ist ein Feld, in dem Benutzer über eine physische Tastatur oder eine Bildschirmtastatur Text eingeben können. Diese Elemente passen sich auch an zukünftige Interaktionsszenarios an, z. B. eine per Sprachansage angekündigte Aktion oder eine Texteingabe per Diktat.
+Sowohl &lt;action&gt; als auch &lt;input&gt; gelten für die Windows-Gerätefamilie. Bei mobilen Geräten oder Desktop-Geräten stellt &lt;action&gt; beispielsweise eine Schaltfläche dar, auf die Benutzer tippen/klicken können. &lt;input&gt; für Text ist ein Feld, in dem Benutzer über eine physische Tastatur oder eine Bildschirmtastatur Text eingeben können. Diese Elemente passen sich auch an zukünftige Interaktionsszenarios an, z. B. eine per Sprachansage angekündigte Aktion oder eine Texteingabe per Diktat.
 
 Wenn vom Benutzer eine Aktion ausgeführt wird, können Sie eine der folgenden Aktionen ausführen, indem Sie das Attribut [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) im &lt;action&gt;-Element angeben:
 
@@ -101,8 +102,7 @@ Sie können Popupbenachrichtigungen für Alarme, Erinnerungen und eingehende Anr
 
 -   Eine Erinnerungs-Popupbenachrichtigung bleibt auf dem Bildschirm, bis der Benutzer sie schließt oder eine Aktion ausführt. Unter Windows Mobile können Erinnerungs-Popupbenachrichtigungen auch vorab vergrößert angezeigt werden.
 -   Alarmbenachrichtigungen teilen nicht nur die oben genannten Verhaltensweisen mit Erinnerungsbenachrichtigungen, sondern können zudem automatisch Audioschleifen abspielen.
--   Benachrichtigungen über eingehende Anrufe werden auf Windows Mobile-Geräten im Vollbildmodus angezeigt. Dazu wird das Szenario-Attribut innerhalb des Stammelements einer Popupbenachrichtigung angegeben – &lt;toast&gt;:
-    &lt;toast scenario=" { default | alarm | reminder | incomingCall } " &gt;
+-   Benachrichtigungen über eingehende Anrufe werden auf Windows Mobile-Geräten im Vollbildmodus angezeigt. Dies erfolgt durch Angabe des Szenarioattributs innerhalb des Stammelements einer &lt;Popupbenachrichtigung&gt;: &lt;Popupszenario = " {default | alarm | reminder | incomingCall }" &gt;
 
 ## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>XML-Beispiele
 
@@ -372,13 +372,13 @@ In den folgenden Schemas bedeutet ein Suffix „?“, dass ein Attribut optional
 
 launch?
 
--   launch? = string
+-   launch? = Zeichenfolge
 -   Dies ist ein optionales Attribut.
 -   Eine Zeichenfolge wird an die Anwendung übergeben, wenn sie durch das Popup aktiviert wird.
 -   Abhängig vom Wert für „activationType“ kann dieser Wert von der App im Vordergrund, innerhalb der Hintergrundaufgabe oder von einer anderen App empfangen werden, die per Protokollstart über die ursprüngliche App gestartet wird.
 -   Das Format und der Inhalt dieser Zeichenfolge werden von der App für eigene Zwecke definiert.
 -   Wenn der Benutzer zum Starten der zugeordneten App auf das Popup tippt oder klickt, stellt die Startzeichenfolge der App den Kontext bereit, um dem Benutzer eine Ansicht passend zum Popupinhalt zu ermöglichen, anstatt sie in der Standardgröße starten.
--   Ist die Aktivierung erfolgt, weil der Benutzer auf eine Aktion statt auf den Popuptext geklickt hat, ruft der Entwickler die vordefinierten „Argumente“ in diesem &lt;action&gt;-Tag zurück, anstatt das vordefinierte &lt;toast&gt; -Tag zu „starten“.
+-   Ist die Aktivierung erfolgt, weil der Benutzer auf eine Aktion statt auf den Popuptext geklickt hat, erhält der Entwickler die vordefinierten „Argumente“ in diesem &lt;action&gt;-Tag zurück, statt des vordefinierten „launch“ im &lt;toast&gt;-Tag.
 
 duration?
 
@@ -405,7 +405,7 @@ scenario?
 version?
 
 -   version? = nonNegativeInteger
--   Dieses Attribut ist nicht erforderlich, da die Versionskontrolle bei &lt;visual&gt; veraltet ist. In Kürze gibt es ein neues Versionskontrolle-Modell, das Sie bei Bedarf aus einer höheren Hierarchie angeben können.
+-   Dieses Attribut ist nicht erforderlich, da die Versionskontrolle für &lt;visual&gt; veraltet ist. In Kürze gibt es ein neues Versionskontrolle-Modell, das Sie bei Bedarf aus einer höheren Hierarchie angeben können.
 
 lang?
 
@@ -622,16 +622,16 @@ Gehen Sie wie folgt vor, um individuelle Aktionen zum erneuten Erinnern und Schl
 -   Legen Sie Folgendes fest: activationType = "system"
 -   Legen Sie Argumente fest = "snooze" | "dismiss"
 -   Legen Sie Inhalt fest:
-    -   Wenn Sie wünschen, dass lokalisierte Zeichenfolgen für „snooze“ und „dismiss“ in den Aktionen angezeigt werden, legen Sie den Inhalt als leere Zeichenfolge fest: &lt;action content = "/&gt;
-    -   Wenn Sie eine benutzerdefinierte Zeichenfolge wünschen, geben Sie seinen Wert an: &lt;action content="Remind me later" /&gt;
+    -   Wenn Sie wünschen, dass lokalisierte Zeichenfolgen für „snooze“ und „dismiss“ in den Aktionen angezeigt werden, legen Sie den Inhalt als leere Zeichenfolge fest: &lt;action content = ""/&gt;
+    -   Wenn Sie eine benutzerdefinierte Zeichenfolge wünschen, geben Sie seinen Wert an: &lt;action content="Erinnere mich später" /&gt;
 -   Legen Sie Eingaben fest:
     -   Wenn Sie nicht möchten, dass der Benutzer ein Intervall für das erneute Erinnern auswählen kann, sondern das erneute Erinnern an die Benachrichtigung nur einmal in einem vom System definierten (in allen Betriebssystemen einheitlichen) Zeitintervall erfolgt, legen Sie keinen Wert für &lt;input&gt; fest.
     -   Wenn Sie mögliche Intervalle für das erneute Erinnern bereitstellen möchten:
-        -   Gegen Sie „hint-inputId„ in der Aktion für das erneute Erinnerung an.
+        -   Gegen Sie „hint-inputId“ in der Aktion für das erneute Erinnerung an.
         -   Stimmen Sie die ID der Eingabe auf den Wert für „hint-inputId“ der Aktion für das erneute Erinnern ab: &lt;input id="snoozeTime"&gt;&lt;/input&gt;&lt;action hint-inputId="snoozeTime"/&gt;
         -   Legen Sie für die Auswahl-ID eine positive ganze Zahl (nonNegativeInteger) fest, die dem Intervall für das erneute Erinnern in Minuten entspricht: &lt;selection id="240" /&gt; bedeutet, dass die erneute Erinnerung in vier Stunden erfolgt.
-        -   Stellen Sie sicher, dass der Wert für „defaultInput“ in &lt;input&gt; einer der IDs der untergeordneten &lt;selection&gt;-Elemente entspricht.
-        -   Sie können bis zu (aber nicht mehr als) 5 &lt;selection&gt;-Werte bereitstellen
+        -   Stellen Sie sicher, dass der Wert für „defaultInput“ in &lt;input&gt; einer der IDs der untergeordneten &lt;selection&gt; -Elemente entspricht.
+        -   Sie können bis zu (aber nicht mehr als) 5 &lt;selection&gt;-Werte bereitstellen
 
  
 
@@ -642,6 +642,6 @@ Gehen Sie wie folgt vor, um individuelle Aktionen zum erneuten Erinnern und Schl
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

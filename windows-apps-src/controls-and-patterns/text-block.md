@@ -1,6 +1,7 @@
 ---
+author: Jwmsft
 ms.assetid: DA562509-D893-425A-AAE6-B2AE9E9F8A19
-label: Textblock
+label: Text block
 template: detail.hbs
 ---
 # Textblock
@@ -60,16 +61,29 @@ Von der Inline-Klasse abgeleitete Elemente, z. B. Bold, Italic, Run, Span und L
 XAML verwendet, wenn möglich, einen effizienteren Codepfad für Layouttext. Dieser schnelle Pfad verringert die gesamte Arbeitsspeicherauslastung und reduziert erheblich die CPU-Zeit für die Abmessung und Anordnung von Text. Dieser schnelle Pfad gilt nur für TextBlock und sollte deshalb nach Möglichkeit RichtTextBlock gegenüber bevorzugt werden.
 
 Bestimmte Bedingungen erfordern TextBlock, um auf einen prozessorintensiven Codepfad mit zahlreichen Funktionen zum Rendern von Text zurückzugreifen. Damit das Rendern von Text im schnellen Pfad weiterhin ausgeführt wird, beachten Sie beim Festlegen der Eigenschaften unbedingt die im Folgenden aufgeführten Richtlinien.
-- [**Text**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): Die wichtigste Bedingung ist, dass der schnelle Pfad nur verwendet wird, wenn Sie Text durch explizites Definieren der Text-Eigenschaft festlegen, entweder in XAML oder im Code (wie in den vorherigen Beispielen dargestellt). Beim Festlegen des Textes über die Inlines-Sammlung von TextBlock (z. B. `<TextBlock>Inline text</TextBlock>` wird der schnelle Pfad aufgrund der potenziellen Komplexität mehrerer Formate deaktiviert.
-- [**CharacterSpacing**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): Nur der Standardwert 0 ist ein schneller Pfad.
-- [**Typografie**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): Nur die Standardwerte für die verschiedenen Typografie-Eigenschaften sind schnelle Pfade.
-- [**TextTrimming**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): Nur die Werte für **None**, **CharacterEllipsis** und **WordEllipsis** sind schnelle Pfade. Der **Clip**-Wert deaktiviert den schnellen Pfad.
-- [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): Wenn [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx) nicht 0 ist, deaktivieren die **BaselineToBaseline**- und **MaxHeight**-Werte den schnellen Pfad.
-- [**IsTextSelectionEnabled**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): Nur **false** ist ein schneller Pfad. Wenn diese Eigenschaft auf **true** festgelegt wird, wird der schnelle Pfad deaktiviert.
+- [
+              **Text**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.text.aspx): Die wichtigste Bedingung ist, dass der schnelle Pfad nur verwendet wird, wenn Sie Text durch explizites Definieren der Text-Eigenschaft festlegen, entweder in XAML oder im Code (wie in den vorherigen Beispielen dargestellt). Beim Festlegen des Textes über die Inlines-Sammlung von TextBlock (z. B. `<TextBlock>Inline text</TextBlock>` wird der schnelle Pfad aufgrund der potenziellen Komplexität mehrerer Formate deaktiviert.
+- [
+              **CharacterSpacing**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.characterspacing.aspx): Nur der Standardwert 0 ist ein schneller Pfad.
+- [
+              **Typography**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.documents.typography.aspx): Nur die Standardwerte für die verschiedenen Typography -Eigenschaften sind schnelle Pfade.
+- [
+              **TextTrimming**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.texttrimming.aspx): Nur die Werte **None**, **CharacterEllipsis** und **WordEllipsis** sind schnelle Pfade. Der **Clip**-Wert deaktiviert den schnellen Pfad.
+- [
+              **LineStackingStrategy**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.linestackingstrategy.aspx): Wenn [LineHeight](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.lineheight.aspx) nicht 0 ist, deaktivieren die **BaselineToBaseline**- und **MaxHeight**-Werte den schnellen Pfad.
+- [
+              **IsTextSelectionEnabled**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.istextselectionenabled.aspx): Nur **false** ist ein schneller Pfad. Wenn diese Eigenschaft auf **true** festgelegt wird, wird der schnelle Pfad deaktiviert.
 
-Sie können die [DebugSettings.IsTextPerformanceVisualizationEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.debugsettings.istextperformancevisualizationenabled.aspx)-Eigenschaft während des Debuggens auf **true** festlegen, um festzustellen, ob das Rendern von Text im schnellen Pfad erfolgt. Wenn diese Eigenschaft auf „true” festgelegt ist, wird der Text im schnellen Pfad in Hellgrün angezeigt. 
+Sie können die [DebugSettings.IsTextPerformanceVisualizationEnabled](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.debugsettings.istextperformancevisualizationenabled.aspx)-Eigenschaft während des Debuggens auf **true** festlegen, um festzustellen, ob das Rendern von Text im schnellen Pfad erfolgt. Wenn diese Eigenschaft auf „true“ festgelegt ist, wird der Text im schnellen Pfad in Hellgrün angezeigt. 
 
->**Tipp**&nbsp;&nbsp;Dieses Feature wird in der folgenden Sitzung aus Build 2015 ausführlich erläutert: [XAML-Leistung: Techniken zur Maximierung der Benutzerfreundlichkeit von universellen Windows-Apps, die mit XAML erstellt wurden](https://channel9.msdn.com/Events/Build/2015/3-698).
+>**Tipp**
+            &nbsp;&nbsp;Dieses Feature wird in der folgenden Sitzung aus Build 2015 ausführlich erläutert: [XAML-Leistung – Techniken zum Optimieren der Umgebung einer Universellen Windows-App, die mit XAML erstellt wurde](https://channel9.msdn.com/Events/Build/2015/3-698).
 
  
 
@@ -97,17 +111,19 @@ In diesem Beispiel wird die erste TextBlock-Klasse unter Verwendung des schnelle
 <StackPanel/>
 ```
 
-Wenn Sie diesen XAML-Code im Debugmodus mit der auf „true” festgelegten IsTextPerformanceVisualizationEnabled-Eigenschaft ausführen, sieht das Ergebnis wie folgt aus.
+Wenn Sie diesen XAML-Code im Debugmodus mit der auf „true“ festgelegten IsTextPerformanceVisualizationEnabled-Eigenschaft ausführen, sieht das Ergebnis wie folgt aus.
 
 ![Im Debugmodus gerenderter Text](images/text-block-rendering-performance.png)
 
->**Achtung**&nbsp;&nbsp;Die Farbe von Text, der nicht im schnellen Pfad enthalten ist, wird nicht geändert. Wenn die Farbe von Text in der App als Hellgrün angegeben ist, wird der Text auch noch in Hellgrün angezeigt, wenn er sich im langsameren Renderingpfad befindet. Verwechseln Sie Text, der in der App auf Grün festgelegt ist, nicht mit Text im schnellen Pfad, der aufgrund der Debugeinstellungen grün ist.
+>**Achtung**
+            &nbsp;&nbsp;Die Farbe von Text, der nicht im schnellen Pfad enthalten ist, wird nicht geändert. Wenn die Farbe von Text in der App als Hellgrün angegeben ist, wird der Text auch noch in Hellgrün angezeigt, wenn er sich im langsameren Renderingpfad befindet. Verwechseln Sie Text, der in der App auf Grün festgelegt ist, nicht mit Text im schnellen Pfad, der aufgrund der Debugeinstellungen grün ist.
 
 ## Formatieren von Text
 
 Obwohl die Text-Eigenschaft Nur-Text speichert, können Sie verschiedene Formatierungsoptionen auf das TextBlock-Steuerelement anwenden, um das Rendern des Texts in der App anzupassen. Sie können Standard-Steuerelementeigenschaften, z. B. FontFamily, FontSize, FontStyle, Foreground und CharacterSpacing festlegen, um das Erscheinungsbild des Texts zu ändern. Sie können den Text auch mit Inlinetextelementen und angefügten Typografie-Eigenschaften formatieren. Diese Optionen beeinflussen nur die lokale Anzeige des Texts im TextBlock. Wenn Sie den Text kopieren und z. B. in ein Rich-Text-Steuerelement einfügen, wird daher keine Formatierung angewendet.
 
->**Hinweis**&nbsp;&nbsp;Beachten Sie, dass Inlinetextelemente und nicht standardmäßige Typografiewerte nicht im schnellen Pfad gerendert werden, wie im vorherigen Abschnitt erläutert.
+>**Hinweis**
+            &nbsp;&nbsp;Beachten Sie, dass Inlinetextelemente und nicht standardmäßige Typografiewerte nicht im schnellen Pfad gerendert werden (dies wurde im vorherigen Abschnitt erläutert).
  
 
 ### Inline-Elemente
@@ -158,11 +174,6 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 <TextBlock>12 x <Run Typography.Fraction="Slashed">1/3</Run> = 4.</TextBlock>
 ```
 
-## Empfehlungen
-
-
-
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
 
 ## Verwandte Artikel
 
@@ -182,6 +193,6 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 - [StringLength-Eigenschaft](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

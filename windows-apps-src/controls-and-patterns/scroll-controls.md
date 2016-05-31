@@ -1,8 +1,9 @@
 ---
+author: Jwmsft
 Description: Mittels Verschiebung und Bildlauf können Benutzer Inhalte erreichen, die sich jenseits der Bildschirmgrenzen befinden.
 title: Richtlinien für Bildlaufleisten
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
-label: Bildlaufleisten
+label: Scroll bars
 template: detail.hbs
 ---
 # Bildlaufleisten
@@ -16,7 +17,7 @@ Mittels Verschiebung und Bildlauf können Benutzer Inhalte erreichen, die sich j
 
 Ein Bildlaufanzeigesteuerelement umfasst so viele Inhalte, wie in den Viewport passen, und entweder eine oder zwei Bildlaufleisten. Fingerbewegungen können zum Verschieben und Zoomen verwendet werden (die Bildlaufleisten werden nur während der Bearbeitung eingeblendet), während der Zeiger für den Bildlauf genutzt werden kann. Bei einer Streichbewegung erfolgt die Verschiebung mit Trägheit.
 
-**Hinweis**  Windows: Es gibt zwei Anzeigemodi für das Verschieben je nach ermitteltem Eingabegerät: Verschiebungsindikatoren für Fingereingabe und Bildlaufleisten für andere Eingabegeräte, darunter Maus, Touchpad, Tastatur und Eingabestift.
+**Hinweis**  Windows: Es gibt, je nach ermitteltem Eingabegerät, zwei Anzeigemodi für das Verschieben – Verschiebungsindikatoren für Fingereingabe und Bildlaufleisten für andere Eingabegeräte, darunter Maus, Touchpad, Tastatur und Eingabestift.
 
 ![Beispiel für standardmäßige Bildlaufleisten und Verschiebungsindikatoren-Steuerelemente](images/SCROLLBAR.png)
 
@@ -40,7 +41,9 @@ Dieser XAML-Code veranschaulicht das Einfügen eines Bilds in einer Bildlaufanze
 
 ## ScrollViewer in einer Steuerelementvorlage
 
-Normalerweise ist das ScrollViewer-Steuerelement Teil von anderen Steuerelementen. Eine ScrollViewer-Komponente zeigt zusammen mit der [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx)-Klasse zur Unterstützung nur dann einen Viewport sowie Bildlaufleisten an, wenn der Layoutbereich des Hoststeuerelements einschränkt wird und kleiner als die Größe des erweiterten Inhalts ist. Dies ist häufig bei Listen der Fall, daher enthalten [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)- und [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)-Vorlagen immer ScrollViewer. [**TextBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) und [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) umfassen ebenfalls ScrollViewer in der Vorlage.
+Normalerweise ist das ScrollViewer-Steuerelement Teil von anderen Steuerelementen. Eine ScrollViewer-Komponente zeigt zusammen mit der [**ScrollContentPresenter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollcontentpresenter.aspx)-Klasse zur Unterstützung nur dann einen Viewport sowie Bildlaufleisten an, wenn der Layoutbereich des Hoststeuerelements einschränkt wird und kleiner als die Größe des erweiterten Inhalts ist. Dies ist häufig bei Listen der Fall, daher enthalten [**ListView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.listview.aspx)- und [**GridView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.gridview.aspx)-Vorlagen immer ScrollViewer. [
+              **TextBox**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx) und [**RichEditBox**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx) umfassen ebenfalls ScrollViewer in ihren Vorlagen.
 
 Wenn eine **ScrollViewer**-Komponente in einem Steuerelement vorhanden ist, ist im Hoststeuerelement häufig die Ereignisbehandlung für bestimmte Eingabeereignisse und Bearbeitungen integriert, mit denen ein Bildlauf für den Inhalt durchgeführt werden kann. GridView interpretiert z. B. eine Wischbewegung, wodurch für den Inhalt ein horizontaler Bildlauf durchgeführt wird. Die Eingabeereignisse und Manipulationen von Rohdaten, die das Hoststeuerelement empfängt, werden als durch das Steuerelement behandelt betrachtet, und untergeordnete Ereignisse wie [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.pointerpressed.aspx) werden nicht ausgelöst oder per Bubbling an übergeordnete Container weitergeleitet. Sie können das integrierte Verhalten des Steuerelements teilweise ändern, indem Sie eine Steuerelementklasse und die virtuellen **On***-Methoden für Ereignisse überschreiben oder eine neue Vorlage für das Steuerelement verwenden. In beiden Fällen ist es allerdings nicht unkompliziert, das ursprüngliche Standardverhalten zu reproduzieren, das in der Regel vorhanden ist, damit das Steuerelement wie erwartet auf Ereignisse und Eingabeaktionen und -gesten des Benutzers reagiert. Sie sollten daher genau überlegen, ob das Eingabeereignis wirklich ausgelöst werden soll. Sie sollten überprüfen, ob andere Eingabeereignisse oder Gesten vorhanden sind, die nicht von dem Steuerelement behandelt werden, und diese im Entwurf für die App oder die Steuerelementinteraktion verwenden.
 
@@ -88,6 +91,6 @@ In Fällen, in denen ein ScrollViewer explizit in Ihrem XAML-Code vorhanden ist,
 * [**ScrollViewer-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209527)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

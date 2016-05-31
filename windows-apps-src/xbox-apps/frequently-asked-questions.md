@@ -1,4 +1,5 @@
 ---
+author: Mtoepke
 title: Häufig gestellte Fragen
 description: Häufig gestellte Fragen zu UWP auf Xbox.
 area: Xbox
@@ -43,7 +44,8 @@ Befinden Sie sich im Einzelhandelsmodus, sehen Sie die üblichen Gold-/Live-Inha
 Ja, Sie können vom Entwicklermodus in den Einzelhandelsmodus wechseln, in dem Sie Ihre Spiele spielen können. 
 Weitere Informationen finden Sie auf der Seite zur [Aktivierung des Xbox One-Entwicklermodus](devkit-activation.md). 
 
-> **ACHTUNG**&nbsp;&nbsp;Das Xbox Developer Preview System Update enthält experimentelle und Vorabversionen der Software. 
+> **ACHTUNG**
+            &nbsp;&nbsp;Das Xbox Developer Preview System Update enthält experimentelle und Vorabversionen der Software. 
 Dies bedeutet, dass einige beliebte Spiele und Apps nicht wie erwartet funktionieren und gelegentlich Abstürze und Datenverlust auftreten.
 
 ### Werden meine Spiele und Apps oder gespeicherte Änderungen verloren gehen?
@@ -75,8 +77,7 @@ Die auf einer Xbox One Einzelhandels-Konsole erstellten und getesteten UWP-Apps 
 
 Sie können UWP und die Xbox One im Entwicklermodus verwenden, um Ihre Spiele auf der Xbox One zu erstellen und zu testen. 
 Um UWP-Spiele veröffentlichen zu können, müssen Sie sich bei [ID@XBOX](http://www.xbox.com/en-us/Developers/id) registrieren. 
-[ID@Xbox](http://www.xbox.com/en-us/Developers/id) bietet Entwicklern den vollständigen Zugriff auf Xbox Live-APIs für ihre Spiele, einschließlich von Gamerscore und Erfolgen 
-sowie der Möglichkeit, Multiplayer zwischen Geräten, Cloudspeicherung und alle Features von Xbox Live auf Xbox One zu nutzen. 
+[ID@Xbox](http://www.xbox.com/en-us/Developers/id) bietet Entwicklern den vollständigen Zugriff auf Xbox Live-APIs für ihre Spiele, einschließlich von Gamerscore und Erfolgen, sowie der Möglichkeit, Multiplayer zwischen Geräten, Cloudspeicherung und alle Features von Xbox Live auf Xbox One zu nutzen. 
 [ID@Xbox](http://www.xbox.com/en-us/Developers/id) kann darüber hinaus den Zugriff auf Xbox One-Entwicklungskits für Spiele bereitstellen, die das maximale Potenzial der Xbox One Hardware benötigen.
 
 ### Können die standardmäßigen Spielengines verwendet werden?
@@ -119,17 +120,20 @@ Wenn Visual Studio eine Verbindung herstellen kann, aber die Bereitstellung fehl
 
 1. Stellen Sie sicher, dass Ihre App nicht installiert ist, indem Sie sie in der Collections-App in der Xbox One-Shell deinstallieren. 
 
-> **Hinweis**&nbsp;&nbsp;Die Deinstallation Ihrer App vom Windows Device Portal (WDP) behebt das Problem nicht.
+> **Hinweis**
+            &nbsp;&nbsp;Die Deinstallation Ihrer App vom Windows Device Portal (WDP) behebt das Problem nicht.
 
 2. Wenn die Probleme weiterhin bestehen, deinstallieren Sie Ihre Anwendung bzw. Ihr Spiel in der Collections-App, verlassen Sie den Entwicklermodus, starten Sie den Einzelhandelsmodus neu, und wechseln Sie wieder in den Entwicklermodus. 
 Dadurch wird der Dev-Speicher gelöscht.
 
 3. Wenn die Probleme weiterhin bestehen, führen Sie die oben genannten Schritte aus, und verwenden Sie dann **Reset and keep my games & apps**, um jeden gespeicherten Zustand auf Ihrer Xbox One zu löschen. 
-Gehen Sie zu „Einstellungen > System > Console info & updates > Reset console“, und wählen Sie dann die Schaltfläche **Reset and keep my games & apps**.
+Gehen Sie zu "Einstellungen > System > Console info & updates > Reset console", und wählen Sie dann die Schaltfläche **Reset and keep my games & apps**.
 
-> **Vorsicht**&nbsp;&nbsp;Dadurch werden alle gespeicherten Einstellungen auf Ihrer Xbox One gelöscht, einschließlich drahtlose Einstellungen, Benutzerkonten und Spielestatus, die nicht im Cloud-Speicher gespeichert wurden.
+> **Achtung**
+            &nbsp;&nbsp;Dadurch werden alle gespeicherten Einstellungen auf Ihrer Xbox One gelöscht, einschließlich drahtlose Einstellungen, Benutzerkonten und Spielestatus, die nicht im Cloud-Speicher gespeichert wurden.
 
-> **Vorsicht**&nbsp;&nbsp;Verwenden Sie NICHT die Schaltfläche **Reset and remove everything**.
+> **Achtung**
+            &nbsp;&nbsp;Verwenden Sie NICHT die Schaltfläche **Reset and remove everything**.
 Dadurch werden alle Spiele, Apps, Einstellungen und Inhalte gelöscht, der Entwicklermodus wird deaktiviert und Ihre Konsole wird aus der Developer Preview-Gruppe entfernt.
 
 ### Wie kann ich beim Erstellen einer App mit HTML/JavaScript die Gamepad-Navigation aktivieren?
@@ -145,6 +149,6 @@ Weitere Informationen finden Sie im Projekt [TVHelpers](https://github.com/Micro
 - [UWP auf Xbox One](index.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

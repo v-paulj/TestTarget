@@ -1,5 +1,6 @@
 ---
-description: Mit einer App im Windows Dev Center-Dashboard können Sie Details zur Identität der App im Windows Store anzeigen und einen Link zum Eintrag im Store abrufen.
+author: jnHs
+Description: Bei der Arbeit mit einer App im Windows Dev Center-Dashboard können Sie Details zur eindeutigen Identität der App anzeigen, die ihr im Windows Store zugewiesen wurde, und einen Link zum Eintrag Ihrer App im Store abrufen.
 title: Anzeigen von Details zur App-Identität
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
 ---
@@ -11,7 +12,7 @@ Bei der Arbeit mit einer App im Windows Dev Center-Dashboard können Sie Details
 
 Um diese Informationen zu suchen, navigieren Sie zu einer Ihrer Apps und erweitern im linken Navigationsmenü **App-Verwaltung**. Klicken Sie auf **App-Identität**, um diese Details anzuzeigen.
 
-> **Hinweis**  Sie benötigen einen [reservierten Namen](create-your-app-by-reserving-a-name.md) für Ihre App, um die meisten Identitätsdetails einzusehen.
+> **Hinweis:**  Sie benötigen einen [reservierten Namen](create-your-app-by-reserving-a-name.md) für Ihre App, um die meisten Identitätsdetails einzusehen.
 
 ## In das appx-Manifest einzuschließende Werte
 
@@ -35,22 +36,23 @@ Die folgenden zusätzlichen Werte beziehen sich auf die Paketfamilie der App, we
 
 ## Erstellen eines Links zum Eintrag Ihrer App
 
+Der Link zu Ihrer App-Seite kann geteilt werden, um Kunden das Auffinden der App im Store zu erleichtern. Dieser Link hat das Format **`https://www.microsoft.com/store/apps/<your app's Store ID>`**.
 
-Der Link zu Ihrer App-Seite kann geteilt werden, um Kunden das Auffinden der App im Store zu erleichtern. Dieser Link hat das Format **`https://www.microsoft.com/store/apps/<your app's Product ID>`**.
-
-> **Hinweis**  Je nachdem, für welche Betriebssystemversionen Sie Apps anbieten, kann hier mehr als ein Link angezeigt werden. Alle Apps zeigen die URL für Windows 10 in dem oben angegebenen Format an, das für jedes Betriebssystem funktioniert. Es werden möglicherweise zusätzliche Links für Windows 8.1 und frühere Versionen bzw. Windows Phone 8.1 und frühere Versionen angezeigt, die nur auf den angegebenen Betriebssystemversionen funktionieren.
+> **Hinweis:**  Diese URL funktioniert auf jeder Version des Betriebssystems, auf dem die App verfügbar ist. Es werden möglicherweise auch zusätzliche Links für Windows 8.1 und frühere Versionen bzw. Windows Phone 8.1 und frühere Versionen angezeigt, die nur auf den angegebenen Betriebssystemversionen funktionieren.
 
 Wenn ein Kunde auf diesen Link klickt, wird die webbasierte Eintragsseite für Ihre App geöffnet. Wenn Ihre App für das Windows-Gerät des Kunden verfügbar ist, wird die Store-App gestartet und der App-Eintrag angezeigt.
 
- 
+Die **Store-ID** Ihrer App wird in diesem Abschnitt auch angezeigt. Diese Store-ID kann dazu verwendet werden, [Store-Badges zu generieren](http://go.microsoft.com/fwlink/p/?LinkId=534236) oder Ihre App anderweitig zu identifizieren.
 
  
 
+ 
 
 
 
 
 
-<!--HONumber=Mar16_HO1-->
+
+<!--HONumber=May16_HO2-->
 
 

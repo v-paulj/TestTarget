@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Verwenden Sie Drag & Drop-Animationen, wenn Benutzer Objekte verschieben, z. B. wenn sie ein Element innerhalb einer Liste verschieben oder ein Element auf einem anderen ablegen.
 title: Animationen für Drag & Drop-Vorgang in UWP-Apps
 ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
@@ -9,7 +10,7 @@ template: detail.hbs
 # Animationen für Drag & Drop-Vorgang
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Verwenden Sie Drag & Drop-Animationen, wenn Benutzer Objekte verschieben, z. B. wenn sie ein Element innerhalb einer Liste verschieben oder ein Element auf einem anderen ablegen.
 
@@ -65,6 +66,6 @@ Verwenden Sie Drag & Drop-Animationen, wenn Benutzer Objekte verschieben, z. B. 
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

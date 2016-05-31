@@ -1,36 +1,33 @@
 ---
-Description: description: Identifizieren Sie die Eingabegeräte, die mit einem Gerät für die UWP verbunden sind, und identifizieren Sie ihre Funktionen und Attribute.
-title: title: Identifizieren von Eingabegeräten
+author: Karl-Bridge-Microsoft
+Description: Identifizieren Sie die Eingabegeräte, die mit einem Gerät für die universelle Windows-Plattform (UWP) verbunden sind, sowie deren Funktionen und Attribute.
+title: Identifizieren von Eingabegeräten
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
 template: detail.hbs
 ---
 
-# ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
+# Identifizieren von Eingabegeräten
+
+Identifizieren Sie die Eingabegeräte, die mit einem Gerät für die universelle Windows-Plattform (UWP) verbunden sind, sowie deren Funktionen und Attribute.
+
+**Wichtige APIs**
+
+-   [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)
+-   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383)
+-   [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 
 
-label: Identifizieren von Eingabegeräten template: detail.hbs
+## <span id="Retrieve_mouse_properties"></span><span id="retrieve_mouse_properties"></span><span id="RETRIEVE_MOUSE_PROPERTIES"></span>Abrufen von Mauseigenschaften
 
 
-**Identifizieren von Eingabegeräten**
+Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)-Klasse, mit der Sie die Eigenschaften abrufen können, die von einer oder mehreren angeschlossenen Mäusen bereitgestellt werden. Erstellen Sie einfach ein neues **MouseCapabilities**-Objekt, und rufen Sie die benötigten Eigenschaften ab.
 
--   [**\[ Aktualisiert für UWP-Apps unter Windows 10.**](https://msdn.microsoft.com/library/windows/apps/br225648)
--   [**Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]**](https://msdn.microsoft.com/library/windows/apps/br208383)
--   [**Wichtige APIs**](https://msdn.microsoft.com/library/windows/apps/br242084)
-
-Windows.Devices.Input
-
-
-## Windows.UI.Input
-
-
-Windows.UI.Xaml.Input Identifizieren Sie die Eingabegeräte, die mit einem Gerät für die universelle Windows-Plattform (UWP) verbunden sind, und identifizieren Sie ihre Funktionen und Attribute.
-
-<span id="Retrieve_mouse_properties"></span><span id="retrieve_mouse_properties"></span><span id="RETRIEVE_MOUSE_PROPERTIES"></span>Abrufen von Mauseigenschaften
+**Hinweis**  Die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Mäusen: Boolesche Eigenschaften geben Werte ungleich 0 zurück, wenn mindestens eine Maus eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert einer der Mäuse zurückgeben.
 
  
 
-Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)-Klasse, mit der Sie die Eigenschaften, die von einer oder mehreren angeschlossenen Mäusen bereitgestellt werden, abrufen können.
+Der folgende Code verwendet eine Reihe von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Elementen, um die einzelnen Mauseigenschaften und -werte anzuzeigen.
 
 ```CSharp
 private void GetMouseProperties()
@@ -44,12 +41,12 @@ private void GetMouseProperties()
 }
 ```
 
-## Erstellen Sie einfach ein neues **MouseCapabilities**-Objekt, und rufen Sie die benötigten Eigenschaften ab.
+## <span id="Retrieve_keyboard_properties"></span><span id="retrieve_keyboard_properties"></span><span id="RETRIEVE_KEYBOARD_PROPERTIES"></span>Abrufen von Tastatureigenschaften
 
 
-**Hinweis** Die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Mäusen: Boolesche Eigenschaften geben Werte ungleich 0 zurück, wenn mindestens eine Maus eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert einer der Mäuse zurückgeben. Der folgende Code verwendet eine Reihe von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Elementen, um die einzelnen Mauseigenschaften und -werte anzuzeigen.
+Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**KeyboardCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225623)-Klasse, mit der Sie ermitteln können, ob eine Tastatur angeschlossen ist. Erstellen Sie einfach ein neues **KeyboardCapabilities**-Objekt, und rufen Sie die [**KeyboardPresent**](https://msdn.microsoft.com/library/windows/apps/br225625)-Eigenschaft ab.
 
-<span id="Retrieve_keyboard_properties"></span><span id="retrieve_keyboard_properties"></span><span id="RETRIEVE_KEYBOARD_PROPERTIES"></span>Abrufen von Tastatureigenschaften
+Der folgende Code verwendet ein [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Element, um die Tastatureigenschaft und ihren Wert anzuzeigen.
 
 ```CSharp
 private void GetKeyboardProperties()
@@ -59,16 +56,16 @@ private void GetKeyboardProperties()
 }
 ```
 
-## Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**KeyboardCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225623)-Klasse, mit der Sie ermitteln können, ob eine Tastatur angeschlossen ist.
+## <span id="Retrieve_touch_properties"></span><span id="retrieve_touch_properties"></span><span id="RETRIEVE_TOUCH_PROPERTIES"></span>Abrufen von Berührungseigenschaften
 
 
-Erstellen Sie einfach ein neues **KeyboardCapabilities**-Objekt, und rufen Sie die [**KeyboardPresent**](https://msdn.microsoft.com/library/windows/apps/br225625)-Eigenschaft ab. Der folgende Code verwendet ein [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Element, um die Tastatureigenschaft und ihren Wert anzuzeigen.
+Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644)-Klasse, mit der Sie ermitteln können, ob Touchdigitalisierungsgeräte angeschlossen sind. Erstellen Sie einfach ein neues **TouchCapabilities**-Objekt, und rufen Sie die benötigten Eigenschaften ab.
 
-<span id="Retrieve_touch_properties"></span><span id="retrieve_touch_properties"></span><span id="RETRIEVE_TOUCH_PROPERTIES"></span>Abrufen von Berührungseigenschaften
+**Hinweis**  Die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Touchdigitalisierungsgeräten: Boolesche Eigenschaften geben Werte ungleich 0 zurück, wenn mindestens ein Digitalisierungsgerät eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert eines der Digitalisierungsgeräte zurückgeben.
 
  
 
-Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644)-Klasse, mit der Sie ermitteln können, ob Touchdigitalisierungsgeräte angeschlossen sind.
+Der folgende Code verwendet eine Reihe von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Elementen, um die Eigenschaften und Werte der einzelnen Touchdigitalisierer anzuzeigen.
 
 ```CSharp
 private void GetTouchProperties()
@@ -79,16 +76,16 @@ private void GetTouchProperties()
 }
 ```
 
-## Erstellen Sie einfach ein neues **TouchCapabilities**-Objekt, und rufen Sie die benötigten Eigenschaften ab.
+## <span id="Retrieve_pointer_properties"></span><span id="retrieve_pointer_properties"></span><span id="RETRIEVE_POINTER_PROPERTIES"></span>Abrufen von Zeigereigenschaften
 
 
-**Hinweis** Die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Touchdigitalisierungsgeräten: Boolesche Eigenschaften geben Werte ungleich 0 zurück, wenn mindestens eine Maus eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert einer der Mäuse zurückgeben. Der folgende Code verwendet eine Reihe von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Elementen, um die Eigenschaften und Werte der einzelnen Touchdigitalisierer anzuzeigen.
+Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633)-Klasse, mit der Sie abrufen können, ob eines der erkannten Geräte Zeigereingaben (Toucheingabe, Stift oder Maus) unterstützt. Erstellen Sie einfach ein neues **PointerDevice**-Objekt, und rufen Sie die benötigten Eigenschaften ab.
 
-<span id="Retrieve_pointer_properties"></span><span id="retrieve_pointer_properties"></span><span id="RETRIEVE_POINTER_PROPERTIES"></span>Abrufen von Zeigereigenschaften
+**Hinweis**  Die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Zeigegeräten: Boolesche Eigenschaften geben Werte ungleich 0 zurück, wenn mindestens ein Zeigegerät eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert eines der Zeigegeräte zurückgeben.
 
  
 
-Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633)-Klasse, mit der Sie abrufen können, ob eines der erkannten Geräte Zeigereingaben (Toucheingabe, Stift oder Maus) unterstützt.
+Der folgende Code zeigt in einer Tabelle die Eigenschaften und Werte der einzelnen Zeigergeräte an.
 
 ```CSharp
 private void GetPointerDevices()
@@ -175,15 +172,16 @@ private void GetPointerDevices()
     }
 ```
 
-## Erstellen Sie einfach ein neues **PointerDevice**-Objekt, und rufen Sie die benötigten Eigenschaften ab.
+## <span id="related_topics"></span>Verwandte Artikel
 
 
-****Hinweis** Die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Zeigegeräten: Boolesche Eigenschaften geben Werte ungleich 0 zurück, wenn mindestens eine Maus eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert einer der Mäuse zurückgeben.**
-* [Der folgende Code zeigt in einer Tabelle die Eigenschaften und Werte der einzelnen Zeigergeräte an.](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [<span id="related_topics"></span>Verwandte Artikel](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Beispiele](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-**Einfaches Eingabebeispiel**
-* [Eingabebeispiel mit geringer Latenz](http://go.microsoft.com/fwlink/p/?linkid=231530)
+**Beispiele**
+* [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Eingabebeispiel mit geringer Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+
+**Archivbeispiele**
+* [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
  
 
  
@@ -193,6 +191,6 @@ private void GetPointerDevices()
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

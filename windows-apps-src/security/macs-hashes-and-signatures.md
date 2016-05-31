@@ -186,6 +186,6 @@ Durch das Signieren wird nur sichergestellt, dass die ursprüngliche Nachricht n
 
 Sie können ein [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478)-Objekt verwenden, um die verfügbaren Signaturalgorithmen aufzulisten und ein Schlüsselpaar zu generieren oder zu importieren. Sie können statische Methoden der [**CryptographicHash**](https://msdn.microsoft.com/library/windows/apps/br241498)-Klasse zum Signieren einer Nachricht oder Überprüfen einer Signatur verwenden.
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

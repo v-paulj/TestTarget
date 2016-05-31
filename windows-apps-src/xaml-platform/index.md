@@ -1,4 +1,5 @@
 ---
+author: jwmsft
 ms.assetid: b632a6cc-3503-4ab8-bfd1-dde731bd89ab
 description: Dieser Abschnitt enthält Themen, in denen Programmierkonzepte erläutert werden, die generell für alle von Ihnen geschriebenen Apps gelten.
 title: XAML-Plattform
@@ -22,6 +23,6 @@ Dieser Abschnitt enthält Themen, in denen Programmierkonzepte erläutert werden
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

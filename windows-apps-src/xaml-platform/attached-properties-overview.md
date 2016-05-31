@@ -1,5 +1,6 @@
 ---
-description: Erläutert das Konzept einer angefügten Eigenschaft in XAML, einschließlich einiger Beispiele.
+author: jwmsft
+description: Erläutert das Konzept einer angefügten Eigenschaft in XAML und bietet einige Beispiele.
 title: Übersicht über angefügte Eigenschaften
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
 ---
@@ -18,7 +19,7 @@ Es wird davon ausgegangen, dass Sie das Grundkonzept von Abhängigkeitseigenscha
 
 Der wesentliche Vorteil von angefügten Eigenschaften ist, dass sie die Verwendung einer XAML-Syntax ermöglichen. In XAML legen Sie angefügte Eigenschaften mithilfe der Syntax _AttachedPropertyProvider.PropertyName_ fest. Hier ist ein Beispiel, wie Sie [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) in XAML festlegen können.
 
-```XAML
+```XML
 <Canvas>
   <Button Canvas.Left="50">Hello</Button>
 </Canvas>
@@ -102,7 +103,7 @@ Der Punkt im Namen einer angefügten Eigenschaft ist ein wichtiger Teil des Iden
 
 - Wenn Sie eine angefügte Eigenschaft als Teil des Zielpfads für eine Animation angeben möchten, schließen Sie den Namen der angefügten Eigenschaft in Klammern („()“) ein, beispielsweise „(Canvas.Left)“. Weitere Informationen finden Sie unter [PropertyPath-Syntax](property-path-syntax.md).
 
-**Achtung**  Eine Einschränkung bei der XAML-Implementierung der Windows-Runtime besteht jedoch darin, dass Sie eine benutzerdefinierte angefügte Eigenschaft nicht animieren können.
+**Achtung**  Eine Einschränkung bei der XAML-Implementierung der Windows-Runtime besteht darin, dass Sie eine benutzerdefinierte angefügte Eigenschaft nicht animieren können.
  
 - Wenn Sie eine angefügte Eigenschaft als Zieleigenschaft für einen Ressourcenverweis aus einer Ressourcendatei zu **x:Uid** angeben möchten, verwenden Sie eine spezielle Syntax, die eine vollqualifizierte **using:**-Deklaration in eckigen Klammern („\[\]“) im Codestil einfügt, um einen absichtlichen Umfangsumbruch zu erstellen. Beispiel: Nehmen wir an, es ist ein „<TextBlock x:Uid="Title" />“-Element vorhanden. In diesem Fall lautet der Ressourcenschlüssel in der Ressourcendatei zum Erreichen des **Canvas.Top**-Werts für diese Instanz „Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top“. Weitere Informationen zu Ressourcendateien und XAML finden Sie unter [Schnellstart: Übersetzen von UI-Ressourcen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
@@ -117,6 +118,6 @@ Der Punkt im Namen einer angefügten Eigenschaft ist ein wichtiger Teil des Iden
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

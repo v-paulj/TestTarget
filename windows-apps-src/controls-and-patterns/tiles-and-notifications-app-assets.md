@@ -1,18 +1,19 @@
 ---
-Description: Ressourcen für App-Symbole, die in einer Vielzahl von Formen innerhalb des Windows 10-Betriebssystems vorkommen, sind die Aushängeschilder für Ihre App für die universelle Windows-Plattform (UWP).
+author: mijacobs
+Description: Ressourcen für App-Symbole, die in einer Vielzahl von Formen innerhalb des Windows 10-Betriebssystems vorkommen, sind die Aushängeschilder für Ihre App für die Universelle Windows-Plattform (UWP).
 title: Ressourcen für Kacheln und Symbole
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
-label: Ressourcen für Kacheln und Symbole
+label: Tile and icon assets
 template: detail.hbs
 ---
 
 # Richtlinien für die Ressourcen für Kacheln und Symbole
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Ressourcen für App-Symbole, die in einer Vielzahl von Formen innerhalb des Windows 10-Betriebssystems vorkommen, sind die Aushängeschilder für Ihre App für die universelle Windows-Plattform (UWP). In diesen Richtlinien wird beschrieben, wo Ressourcen für App-Symbole im System angezeigt werden, und Sie erhalten ausführliche Designtipps zum Erstellen ansprechender Symbole.
+
+Ressourcen für App-Symbole, die in einer Vielzahl von Formen innerhalb des Windows 10-Betriebssystems vorkommen, sind die Aushängeschilder für Ihre App für die Universelle Windows-Plattform (UWP). In diesen Richtlinien wird beschrieben, wo Ressourcen für App-Symbole im System angezeigt werden, und Sie erhalten ausführliche Designtipps zum Erstellen ansprechender Symbole.
 
 ![Starten von Windows 10 und Kacheln](images/assetguidance01.jpg)
 
@@ -220,7 +221,7 @@ Wenn die Standardressourcen für Ihre App eine akzeptable Anzeigeumgebung bei ei
 
 Wenn Sie Ressourcen mit hohem Kontrast bereitstellen möchten, müssen Sie beide Sätze – weiß auf schwarz und schwarz auf weiß – verwenden. Wenn Sie diese Ressourcen in Ihr Paket aufnehmen, können Sie einen Ordner "Kontrast Schwarz" für weiß auf schwarz, und einen Ordner "Kontrast Weiß" für schwarz auf weiß erstellen.
 
-## <span id="Asset_size_tables"></span><span id="asset_size_tables"></span><span id="ASSET_SIZE_TABLES"></span>Tabellen der Ressourcengrößen
+## <span id="Asset_size_tables"></span><span id="asset_size_tables"></span><span id="ASSET_SIZE_TABLES"></span>Größentabellen
 
 
 Es wird dringend empfohlen, dass Sie mindestens Ressourcen für die Skalierungsfaktoren 100, 200 und 400 Skalierungsfaktoren bereitstellen. Wenn Sie Ressourcen für alle Skalierungsfaktoren bereitstellen, liefert dies eine optimale Benutzererfahrung.
@@ -365,9 +366,9 @@ Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die e
 -   Dateinamenformat: nicht zutreffend
 -   Betroffene Apps: Nachrichten, Telefon, Store usw.
 -   Anwendungsmöglichkeiten:
-    -   Iconic-Kachel
+    -   Ikonische Kachel
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## <span id="related_topics"></span>Verwandte Themen
 
@@ -383,6 +384,6 @@ Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die e
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Erfahren Sie, wie Sie Cortana mit flexibleren Befehlen in natürlicher Sprache erweitern, bei denen der Benutzer den App-Namen an beliebiger Stelle im Befehl verwenden kann.
 title: Unterstützen von Sprachbefehlen in natürlicher Sprache in Cortana
 ms.assetid: 281E068A-336A-4A8D-879A-D8715C817911
@@ -7,9 +8,6 @@ template: detail.hbs
 ---
 
 # Unterstützen von Sprachbefehlen in natürlicher Sprache in Cortana
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Erweitern Sie **Cortana** mit flexibleren Befehlen in natürlicher Sprache, bei denen der Benutzer den App-Namen an beliebiger Stelle im Befehl verwenden kann.
 
@@ -29,7 +27,7 @@ Der App-Name kann bei Sprachbefehlen wie folgt verwendet werden:
 -   Als Infix (innerhalb des Befehls)
 -   Als Suffix (nach dem Befehl)
 
-**Voraussetzungen:**
+**Voraussetzungen:  **
 
 Dieses Thema baut auf [Starten einer Hintergrund-App mit Sprachbefehlen in Cortana](launch-a-background-app-with-voice-commands-in-cortana.md) auf. Wir zeigen hier weitere Features anhand einer Reiseplanungs- und Verwaltungs-App mit dem Namen **Adventure Works**.
 
@@ -38,20 +36,19 @@ Wenn Sie noch keine Erfahrung mit der Entwicklung von UWP-Apps (Universelle Wind
 -   [Erstellen Ihrer ersten App](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   Informationen zu Ereignissen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
-**Richtlinien für die Benutzerfreundlichkeit:**
+**Richtlinien für die Benutzerfreundlichkeit:  **
 
-Unter [Cortana-Entwurfsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn974233) finden Sie Informationen zur Integration Ihrer App mit **Cortana**. Unter [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121) finden Sie nützliche Tipps für den Entwurf einer nützlichen und interaktiven sprachaktivierten App.
+Unter [Cortana-Entwurfsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn974233) finden Sie Informationen zur Integration Ihrer App mit **Cortana**. Unter [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121) finden Sie hilfreiche Tipps für den Entwurf einer nützlichen und interaktiven sprachaktivierten App.
 
 ## <span id="Specify_an_AppName_element_in_the_VCD"></span><span id="specify_an_appname_element_in_the_vcd"></span><span id="SPECIFY_AN_APPNAME_ELEMENT_IN_THE_VCD"></span>Angeben eines **AppName**-Elements in der VCD-Datei
 
 
 Mithilfe des **AppName**-Elements wird in einem Sprachbefehl ein benutzerfreundlicher Name für eine App angegeben.
-
 ```XML
 <AppName>Adventure Works</AppName>
 ```
 
-## <span id="Specify_where_the_app_name_can_be_spoken_in_the_voice_command"></span><span id="specify_where_the_app_name_can_be_spoken_in_the_voice_command"></span><span id="SPECIFY_WHERE_THE_APP_NAME_CAN_BE_SPOKEN_IN_THE_VOICE_COMMAND"></span>Angeben der Position, an der der App-Name innerhalb des Sprachbefehls gesagt werden kann
+## <span id="Specify_where_the_app_name_can_be_spoken_in_the_voice_command"></span><span id="specify_where_the_app_name_can_be_spoken_in_the_voice_command"></span><span id="SPECIFY_WHERE_THE_APP_NAME_CAN_BE_SPOKEN_IN_THE_VOICE_COMMAND"></span>Angeben der Position, an welcher der App-Name innerhalb des Sprachbefehls gesagt werden kann
 
 
 Das **ListenFor**-Element verfügt über ein **RequireAppName**-Attribut, das angibt, wo der App-Name innerhalb des Sprachbefehls verwendet werden kann. Dieses Attribut unterstützt vier Werte:
@@ -63,7 +60,6 @@ Das **ListenFor**-Element verfügt über ein **RequireAppName**-Attribut, das an
     Gibt an, dass der Benutzer den Namen Ihrer App vor dem Befehl sagen muss.
 
     Hier hört Cortana auf "Adventure Works, wann ist meine Reise nach Las Vegas".
-
 ```xml
 <ListenFor RequireAppName="BeforePhrase"> show [my] trip to {destination} </ListenFor>
 ```
@@ -75,7 +71,6 @@ Das **ListenFor**-Element verfügt über ein **RequireAppName**-Attribut, das an
     Das System stellt eine lokalisierte Begriffsliste mit präpositionalen Konjunktionen bereit. Diese enthält Ausdrücke wie "mithilfe von", "mit" und "in".
 
     Hier hört Cortana auf Befehle wie "Zeige meine nächste Reise nach Las Vegas in Adventure Works" oder "Zeige meine nächste Reise nach Las Vegas mit Adventure Works".
-
 ```xml
 <ListenFor RequireAppName="AfterPhrase">show [my] next trip to {destination} </ListenFor>
 ```
@@ -87,7 +82,6 @@ Das **ListenFor**-Element verfügt über ein **RequireAppName**-Attribut, das an
     Für die Suffix-Variante stellt das System eine lokalisierte Begriffsliste mit präpositionalen Konjunktionen bereit. Diese enthält Ausdrücke wie "mithilfe von", "mit" und "in".
 
     Hier hört Cortana auf Befehle wie "Adventure Works, zeige meine nächste Reise nach Las Vegas" oder "Zeige meine nächste Reise nach Las Vegas in Adventure Works".
-
 ``` xml
 <ListenFor RequireAppName="BeforeOrAfterPhrase">show [my] next trip to {destination}</ListenFor>
 ```
@@ -99,7 +93,6 @@ Das **ListenFor**-Element verfügt über ein **RequireAppName**-Attribut, das an
     Auf den App-Namen muss explizit mit dem **{builtin:AppName}**-Tag verwiesen werden.
 
     Hier hört Cortana auf Befehle wie "Adventure Works, zeige meine nächste Reise nach Las Vegas" oder "Zeige meine nächste Adventure Works-Reise nach Las Vegas".
-
 ```xml
 <ListenFor RequireAppName="ExplicitlySpecified">show [my] next {builtin:AppName} trip to {destination} </ListenFor>
 ```
@@ -108,7 +101,7 @@ Das **ListenFor**-Element verfügt über ein **RequireAppName**-Attribut, das an
 
 Wenn Sie ein **ListenFor**-Element deklarieren, bei dem **RequireAppName** entweder auf "AfterPhrase" oder auf "ExplicitlySpecified" festgelegt ist, müssen bestimmte Anforderungen erfüllt werden:
 
-1.  **{builtin:AppName}** muss genau einmal vorkommen, wenn **RequireAppName** auf "ExplicitlySpecified" festgelegt ist.
+1.  **{builtin:AppName}** muss genau einmal vorkommen, wenn **RequireAppName** auf „ExplicitlySpecified“ festgelegt ist.
 
     Bei diesem Wert kann das System nicht ableiten, an welcher Position der App-Name innerhalb des Sprachbefehls verwendet werden kann. Die Position muss explizit angegeben werden.
 
@@ -117,7 +110,6 @@ Wenn Sie ein **ListenFor**-Element deklarieren, bei dem **RequireAppName** entwe
     Dies macht es unwahrscheinlicher, dass **Cortana** Ihre App startet, wenn der Name Ihrer App (oder ein Teil des Namens) an beliebiger Stelle in einem Sprachbefehl auftaucht.
 
     Hier sehen Sie eine ungültige Deklaration, bei der die Gefahr besteht, dass **Cortana** die App **Adventure Works** startet, wenn der Benutzer etwas sagt wie "Show me reviews for Kinect adventure works (Rezensionen für Kinect Adventure-Inhalte anzeigen)".
-
 ```xml
 <ListenFor RequireAppName="ExplicitlySpecified">{searchPhrase} {builtin:AppName}</ListenFor>
 ```
@@ -129,13 +121,12 @@ Wenn Sie ein **ListenFor**-Element deklarieren, bei dem **RequireAppName** entwe
     Dadurch können Sie Ihre Anwendung optimal einrichten und dafür sorgen, dass sie nicht ungewollt gestartet wird, wenn ein Benutzer beispielsweise „Find Kinect Adventure works“ (Kinect Adventure-Inhalte suchen) sagt.
 
     Hier sehen Sie ungültige Deklarationen, bei denen die Gefahr besteht, dass **Cortana** die App **Adventure Works** startet, wenn der Benutzer etwas sagt wie "Hey Adventure Works" oder "Find Kinect adventure works (Kinect Adventure-Inhalte suchen)".
-
 ```xml
 <ListenFor RequireAppName="ExplicitlySpecified">Hey {builtin:AppName}</ListenFor>
 <ListenFor RequireAppName="ExplicitlySpecified">Find {searchPhrase} {builtin:AppName}</ListenFor>
 ```
 
-## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Anmerkungen
+## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Hinweise
 
 Durch die Unterstützung zusätzlicher Sprachbefehlsvariationen für **Cortana** erhöht sich auch die allgemeine Benutzerfreundlichkeit Ihrer App.
 
@@ -150,9 +141,7 @@ Verwenden Sie in Situationen, in denen sich ein Konflikt mit vorhandenen Funktio
 
 Hier sehen Sie eine VCD-Datei, die verschiedene Möglichkeiten für natürlichere Sprachbefehle veranschaulicht:
 
-**Hinweis** Sie können mehrere **ListenFor**-Elemente mit jeweils unterschiedlichen **RequireAppName**-Attributwerten verwenden.
-
- 
+**Hinweis**  Sie können mehrere **ListenFor**-Elemente mit jeweils unterschiedlichen **RequireAppName**-Attributwerten verwenden. 
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -220,6 +209,6 @@ Hier sehen Sie eine VCD-Datei, die verschiedene Möglichkeiten für natürlicher
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

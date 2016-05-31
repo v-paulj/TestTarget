@@ -1,11 +1,12 @@
 ---
+author: DBirtolo
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: Verwenden des Ausrichtungssensors
 description: Hier erfahren Sie, wie Sie mithilfe der Ausrichtungssensoren die Ausrichtung des Geräts ermitteln.
 ---
 # Verwenden des Ausrichtungssensors
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
@@ -163,7 +164,7 @@ Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen erset
 
 Sie müssen den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen. Wenn Sie z. B. ein Projekt mit dem Namen **OrientationSensorCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="OrientationSensorCS.MainPage"`. Außerdem sollten Sie `xmlns:local="using:App1"` durch `xmlns:local="using:OrientationSensorCS"` ersetzen.
 
--   Drücken Sie F5, oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
+-   Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
 
 Wenn die App ausgeführt wird, können Sie die Ausrichtung ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.
 
@@ -309,7 +310,7 @@ Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen erset
 
 Sie müssen den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen. Wenn Sie z. B. ein Projekt mit dem Namen **SimpleOrientationCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="SimpleOrientationCS.MainPage"`. Außerdem sollten Sie `xmlns:local="using:App1"` durch `xmlns:local="using:SimpleOrientationCS"` ersetzen.
 
--   Drücken Sie F5, oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
+-   Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
 
 Wenn die App ausgeführt wird, können Sie die Ausrichtung ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.
 
@@ -347,6 +348,6 @@ Diese neuen Werte werden in ein TextBlock-Element des XAML-Projektcodes geschrie
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

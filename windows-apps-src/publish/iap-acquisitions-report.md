@@ -1,17 +1,18 @@
 ---
-description: Im Bericht „IAP-Käufe“ im Windows Dev Center-Dashboard sehen Sie, wie viele IAPs Sie verkauft haben und demografische und plattformspezifische Details einsehen
-title: Bericht „IAP-Käufe“
+author: jnHs
+Description: Im Bericht IAP-Käufe im Windows Dev Center-Dashboard können Sie sehen, wie viele IAPs Sie verkauft haben. Außerdem können Sie demografische und plattformspezifische Details anzeigen.
+title: Bericht zu IAP-Käufen
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ---
 
-# Bericht „IAP-Käufe“
+# Bericht zu IAP-Käufen
 
 
-Im Bericht **IAP-Käufe** im Windows Dev Center-Dashboard können Sie sehen, wie viele IAPs Sie verkauft haben. Außerdem können Sie demografische und plattformspezifische Details einsehen. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um die Daten offline anzuzeigen. Sie können diese Daten jedoch auch programmgesteuert mit der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
+Im Bericht **IAP-Käufe** im Windows Dev Center-Dashboard können Sie sehen, wie viele IAPs Sie verkauft haben. Außerdem können Sie demografische und plattformspezifische Details anzeigen. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um die Daten offline anzuzeigen. Sie können diese Daten jedoch auch programmgesteuert mit der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 In diesem Bericht steht „IAP-Kauf“ für einen Kunden, der ein IAP von Ihnen erworben hat. Wenn ein Kunde mehrere Käufe desselben konsumierbaren IAPs getätigt hat, werden diese als separate IAP-Käufe aufgeführt.
 
-> **Wichtig** Im Bericht **IAP-Käufe** sind keine Daten über Erstattungen, Rückbuchungen, Rückvergütungen usw. enthalten. Um die Erträge aus Ihren Apps zu schätzen, besuchen Sie [Auszahlungszusammenfassung](payout-summary.md). Klicken Sie im Abschnitt **Reserviert** auf den Link **Reservierte Transaktionen herunterladen**.
+> **Wichtig**  Im Bericht **IAP-Käufe** sind keine Daten über Erstattungen, Rückbuchungen, Rückvergütungen usw. enthalten. Um die Erträge aus Ihren Apps zu schätzen, besuchen Sie [Auszahlungszusammenfassung](payout-summary.md). Klicken Sie im Abschnitt **Reserviert** auf den Link **Reservierte Transaktionen herunterladen**.
 
 ## Anwenden von Filtern
 
@@ -19,7 +20,7 @@ In diesem Bericht steht „IAP-Kauf“ für einen Kunden, der ein IAP von Ihnen 
 Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten auf dieser Seite nach Datumsbereich und/oder Gerätetyp zu filtern. Sie können auch Daten nach einem bestimmten IAP filtern.
 
 -   **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
--   **IAP**: Der Standardfilter lautet **Alle IAPs**. Wenn Sie Daten zu Käufen nur für einen Ihrer IAPs anzeigen möchten, können Sie hier einen bestimmten angeben.
+-   **IAP**: Der Standardfilter ist **Alle IAPs**. Wenn Sie Daten zu Käufen nur für einen Ihrer IAPs anzeigen möchten, können Sie hier einen bestimmten angeben.
 -   **Gerätetyp**: Die Standardeinstellung ist **Alle Geräte**. Wenn Daten für IAP-Käufe nur für einen bestimmten Gerätetyp angezeigt werden sollen, können Sie hier einen bestimmten auswählen.
 
 Die Informationen in den unten angezeigten Diagrammen beziehen sich auf den unter **Filter anwenden** ausgewählten Zeitraum.
@@ -64,6 +65,6 @@ Im Diagramm **Betriebssystemversion** wird die Gesamtzahl der Käufe entsprechen
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

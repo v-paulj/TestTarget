@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Längere Anzeige des Begrüßungsbildschirms
 description: Verlängern Sie die Anzeige eines Begrüßungsbildschirms, indem Sie für die App einen erweiterten Begrüßungsbildschirm erstellen. Mit diesem erweiterten Bildschirm wird der beim Starten der App angezeigte Begrüßungsbildschirm imitiert. Er kann aber angepasst werden.
 ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
@@ -18,7 +19,7 @@ ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
 
 Verlängern Sie die Anzeige eines Begrüßungsbildschirms, indem Sie für die App einen erweiterten Begrüßungsbildschirm erstellen. Mit diesem erweiterten Bildschirm wird der beim Starten der App angezeigte Begrüßungsbildschirm imitiert. Er kann aber angepasst werden. Mit einem erweiterten Begrüßungsbildschirm können Sie das Startverhalten unabhängig davon definieren, ob Sie Echtzeitinformationen zum Ladevorgang anzeigen oder der App lediglich zusätzliche Zeit zum Vorbereiten der UI-Anfangselemente geben möchten.
 
-> **Hinweis** Die Bezeichnung „erweiterter Begrüßungsbildschirm“ in diesem Thema bezieht sich auf einen Begrüßungsbildschirm, der für längere Zeit auf dem Bildschirm angezeigt wird. Sie bezieht sich nicht auf eine Unterklasse, die von der [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse abgeleitet ist.
+> **Hinweis**  Die Bezeichnung „erweiterter Begrüßungsbildschirm“ in diesem Thema bezieht sich auf einen Begrüßungsbildschirm, der für längere Zeit auf dem Bildschirm angezeigt wird. Sie bezieht sich nicht auf eine Unterklasse, die von der [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse abgeleitet ist.
 
  
 
@@ -56,7 +57,7 @@ In der Datei „ExtendedSplash.xaml“:
 
 Fügen Sie in „ExtendedSplash.xaml“ folgenden Code hinzu, um die Elemente [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) und [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752) sowie ein [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Steuerelement zu definieren:
 
-```xaml
+```xml
     <Grid Background="#464646">
         <Canvas>
             <Image x:Name="extendedSplashImage" Source="Assets/SplashScreen.png"/>
@@ -65,7 +66,7 @@ Fügen Sie in „ExtendedSplash.xaml“ folgenden Code hinzu, um die Elemente [*
     </Grid>
 ```
 
-**Hinweis** Mit diesem Code wird die Breite des [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Elements auf 20 Pixel festgelegt. Sie können die Breite manuell auf einen Wert festlegen, der für Ihre App geeignet ist. Das Steuerelement wird jedoch nicht für Breiten unterhalb von 20 Pixel gerendert.
+**Hinweis**  Mit diesem Code wird die Breite des [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Elements auf 20 Pixel festgelegt. Sie können die Breite manuell auf einen Wert festlegen, der für Ihre App geeignet ist. Das Steuerelement wird jedoch nicht für Breiten unterhalb von 20 Pixel gerendert.
 
  
 
@@ -120,7 +121,7 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
         if (splash != null)
         {
             // Register an event handler to be executed when the splash screen has been dismissed.
-            splash.Dismissed += new TypedEventHandler&lt;SplashScreen, Object&gt;(DismissedEventHandler);
+            splash.Dismissed += new TypedEventHandler<SplashScreen, Object>(DismissedEventHandler);
 
             // Retrieve the window coordinates of the splash screen image.
             splashImageRect = splash.ImageLocation;
@@ -168,7 +169,7 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
     Legen Sie in der Datei „ExtendedSplash.xaml.cs“ die `dismissed`-Klassenvariable als Reaktion auf das [**SplashScreen.Dismissed**](https://msdn.microsoft.com/library/windows/apps/br224764)-Ereignis auf „true“ fest. Falls Ihre App über Setupvorgänge verfügt, fügen Sie sie diesem Ereignishandler hinzu.
 
     ```cs
-    // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application&#39;s first view).
+    // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application's first view).
     void DismissedEventHandler(SplashScreen sender, object e)
     {
         dismissed = true;
@@ -209,7 +210,7 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
     }
     ```
 
-    **Hinweis** Bevor Sie versuchen, die Bildposition abzurufen, müssen Sie wie im Beispiel gezeigt sicherstellen, dass die Klassenvariable (`splash`) ein gültiges [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Objekt enthält.
+    **Hinweis**  Bevor Sie versuchen, die Bildposition abzurufen, müssen Sie wie im Beispiel gezeigt sicherstellen, dass die Klassenvariable (`splash`) ein gültiges [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Objekt enthält (siehe Beispiel).
 
      
 
@@ -222,7 +223,7 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
     {
         if (loadState)
         {
-             // code to load your app&#39;s state here 
+             // code to load your app's state here 
         }
     }
     ```
@@ -255,13 +256,13 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 ## Vollständiger Code
 
 
-> **Hinweis** Der folgende Code unterscheidet sich leicht von den Codeausschnitten der vorherigen Schritte.
+> **Hinweis**  Der folgende Code unterscheidet sich leicht von den Codeausschnitten der vorherigen Schritte.
 -   „ExtendedSplash.xaml“ enthält eine `DismissSplash`-Schaltfläche. Beim Klicken auf diese Schaltfläche wird mit dem `DismissSplashButton_Click`-Ereignishandler die `DismissExtendedSplash`-Methode aufgerufen. Rufen Sie in der App `DismissExtendedSplash` auf, wenn das Laden von Ressourcen oder Initialisieren der UI in der App abgeschlossen ist.
 -   Für diese App wird auch eine Projektvorlage für eine UWP-App verwendet, bei der die [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682)-Navigation zum Einsatz kommt. Der Startaktivierungshandler ([**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)) definiert in „App.xaml.cs“ dann ein `rootFrame`-Element und verwendet es zum Festlegen des Inhalts für das App-Fenster.
 
 ExtendedSplash.xaml: Dieses Beispiel enthält eine `DismissSplash`-Schaltfläche, da keine App-Ressourcen geladen werden müssen. Blenden Sie den erweiterten Begrüßungsbildschirm in der App automatisch aus, wenn das Laden von Ressourcen oder Vorbereiten der UI-Anfangselemente in der App abgeschlossen ist.
 
-```xaml
+```xml
 <Page
     x:Class="SplashScreenExample.ExtendedSplash"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -385,7 +386,7 @@ namespace SplashScreenExample
             }
         }
 
-        // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application&#39;s first view).
+        // Include code to be executed when the system has transitioned from the splash screen to the extended splash screen (application's first view).
         void DismissedEventHandler(SplashScreen sender, object e)
         {
             dismissed = true;
@@ -492,7 +493,7 @@ namespace SplashScreenExample
 
             if (rootFrame.Content == null)
             {
-                // When the navigation stack isn&#39;t restored navigate to the first page,
+                // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
@@ -548,6 +549,6 @@ namespace SplashScreenExample
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

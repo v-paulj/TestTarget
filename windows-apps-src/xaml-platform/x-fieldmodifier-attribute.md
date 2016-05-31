@@ -1,5 +1,6 @@
 ---
-description: ändert XAML-Kompilierungsverhalten, Felder für Verweise auf benannte Objekte mit öffentlichem Zugriff definiert, nicht das private Standardverhalten
+author: jwmsft
+description: Ändert das XAML-Kompilierungsverhalten, sodass Felder für Verweise auf benannte Objekte mit öffentlichem Zugriff definiert werden und nicht das private Standardverhalten aufweisen.
 title: xFieldModifier-Attribut
 ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
 ---
@@ -18,7 +19,7 @@ ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
 
 ## Abhängigkeiten
 
-[x:Name attribute](x-name-attribute.md) muss in demselben Element ebenfalls bereitgestellt werden.
+[x:Name-Attribut](x-name-attribute.md) muss in demselben Element ebenfalls bereitgestellt werden.
 
 ## Hinweise
 
@@ -28,10 +29,10 @@ Sie können auch **NonPublic** (**internal** in C# oder C++/CX, **Friend** in Vi
 
 **x:FieldModifier** ist nur für Elemente mit einem [x:Name-Attribut](x-name-attribute.md) relevant, weil unter diesem Namen auf das Feld verwiesen wird, nachdem dieses den Zustand „public“ erreicht hat.
 
-**Hinweis**  Windows-Runtime XAML unterstützt **x:ClassModifier** oder **x:Subclass** nicht.
+**Hinweis**  Windows-Runtime-XAML unterstützt weder **x:ClassModifier** noch **x:Subclass**.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: 923D8156-81D3-4A1E-9D02-DB219F600FDB
-description: In diesem Artikel wird beschrieben, wie Apps für die Universelle Windows-Plattform (UWP) erstellt werden, die Audio im Hintergrund wiedergeben.
+description: In diesem Artikel wird beschrieben, wie Apps für die universelle Windows-Plattform (UWP) erstellt werden, die Audio im Hintergrund wiedergeben.
 title: Hintergrundaudio
 ---
 
@@ -134,6 +135,6 @@ In der folgenden Tabelle ist aufgeführt, welche Richtlinie auf welchen Gerätet
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,20 +1,21 @@
 ---
-title: Hinzufügen von Audiodaten zum Marble Maze-Beispiel
-description: Hier werden Methoden beschrieben, die Sie bei der Arbeit mit Audio berücksichtigen sollten, und wie diese Methoden in Marble Maze angewendet werden.
+author: mtoepke
+title: Hinzufügen von Audio zum Marble Maze-Beispiel
+description: In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücksichtigen sollten, wenn Sie mit Audio arbeiten. Außerdem erfahren Sie, wie diese Methoden in Marble Maze angewendet werden.
 ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
 ---
 
-# Hinzufügen von Audiodaten zum Marble Maze-Beispiel
+# Hinzufügen von Audio zum Marble Maze-Beispiel
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücksichtigen sollten, wenn Sie mit Audio arbeiten. Außerdem erfahren Sie, wie diese Methoden in Marble Maze angewendet werden. Marble Maze verwendet Microsoft Media Foundation, um Audioressourcen aus einer Datei zu laden, und XAudio2, um Audio zu mischen und wiederzugeben und Effekte auf Audio anzuwenden.
 
 Marble Maze gibt Musik im Hintergrund wieder und verwendet außerdem Spielsounds, die auf Spielereignisse hinweisen, beispielsweise wenn die Murmel an eine Wand prallt. Wichtig ist bei der Implementierung, dass Marble Maze einen Hall- oder Echoeffekt verwendet, um den Klang einer aufprallenden Murmel zu simulieren. Die Implementierung des Halleffekts bewirkt, dass Sie Echos in kleineren Räumen schneller und lauter hören. In größeren Räumen dagegen sind die Echos leiser und nicht so schnell zu hören.
 
-> **Hinweis**   Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Hinweis**  Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
 
 Hier sind einige der wichtigsten in diesem Dokument erörterten Punkte für das Arbeiten mit Audio in Ihrem Spiel:
 
@@ -100,7 +101,7 @@ Die **Audio::CreateResources**-Methode führt einen ähnlichen Schritt aus, um d
 
 ###  Erstellen des Halleffekts
 
-Sie können für jede Stimme mit XAudio2 Effektsequenzen erstellen, die Audio verarbeiten. Eine solche Sequenz wird als Effektkette bezeichnet. Verwenden Sie Effektketten, wenn Sie mindestens einen Effekt auf eine Stimme anwenden möchten. Effektketten können destruktiv sein, d. h., jeder Effekt in der Kette kann den Audiopuffer überschreiben. Diese Eigenschaft ist wichtig, da XAudio2 nicht garantiert, dass Ausgabepuffer lautlos initialisiert werden. Effektobjekte werden in XAudio2 durch plattformübergreifende Audioverarbeitungsobjekte (Audio Processing Object, XAPO) dargestellt. Weitere Informationen zu XAPO finden Sie in den [Übersichten über XAPO](o:microsoft.directx_sdk.xapo.audio_overview_xapo).
+Sie können für jede Stimme mit XAudio2 Effektsequenzen erstellen, die Audio verarbeiten. Eine solche Sequenz wird als Effektkette bezeichnet. Verwenden Sie Effektketten, wenn Sie mindestens einen Effekt auf eine Stimme anwenden möchten. Effektketten können destruktiv sein, d. h., jeder Effekt in der Kette kann den Audiopuffer überschreiben. Diese Eigenschaft ist wichtig, da XAudio2 nicht garantiert, dass Ausgabepuffer lautlos initialisiert werden. Effektobjekte werden in XAudio2 durch plattformübergreifende Audioverarbeitungsobjekte (Audio Processing Object, XAPO) dargestellt. Weitere Informationen zu XAPO finden Sie in der [XAPO-Übersicht](https://msdn.microsoft.com/library/windows/desktop/ee415735).
 
 Führen Sie beim Erstellen einer Effektkette die folgenden Schritte aus:
 
@@ -142,7 +143,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-> **Tipp**   Wenn Sie eine vorhandene Effektkette an eine vorhandene Submixstimme anfügen oder die aktuelle Effektkette ersetzen möchten, verwenden Sie die [**IXAudio2Voice::SetEffectChain**](https://msdn.microsoft.com/library/windows/desktop/ee418594)-Methode.
+> **Tipp**  Wenn Sie eine vorhandene Effektkette an eine vorhandene Submixstimme anfügen oder die aktuelle Effektkette ersetzen möchten, verwenden Sie die [**IXAudio2Voice::SetEffectChain**](https://msdn.microsoft.com/library/windows/desktop/ee418594)-Methode.
 
  
 
@@ -295,7 +296,7 @@ CopyMemory(&m_waveFormat, waveFormat, sizeof(m_waveFormat));
 CoTaskMemFree(waveFormat);
 ```
 
-> **Wichtig**   Die [**MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177)-Funktion verwendet **CoTaskMemAlloc** zum Zuordnen des [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799)-Objekts. Rufen Sie daher unbedingt **CoTaskMemFree** auf, wenn Sie dieses Objekt nicht mehr verwenden.
+> **Wichtig**  Die [**MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177)-Funktion verwendet **CoTaskMemAlloc** zum Zuordnen des [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799)-Objekts. Rufen Sie daher unbedingt **CoTaskMemFree** auf, wenn Sie dieses Objekt nicht mehr verwenden.
 
  
 
@@ -528,7 +529,7 @@ if(sound == RollingEvent)
 
 Für die Hintergrundmusik verwaltet Marble Maze aber die Puffer direkt, sodass es die Menge des verwendeten Arbeitsspeichers besser steuern kann. Wenn Ihre Musikdateien zu groß sind, können Sie die Musikdaten in kleinere Puffer streamen. Dadurch können Sie die Größe des Arbeitsspeichers besser auf die Verarbeitung und das Streamen von Audiodaten im Spiel abstimmen.
 
-> **Tipp**  Wenn Ihr Spiel eine niedrige oder veränderliche Framerate hat, kann die Verarbeitung von Audio im Hauptthread zu unerwarteten Pausen oder zu Knacken im Audio führen. Das kommt daher, dass dem Audiomodul nicht genug gepufferte Audiodaten zur Verfügung stehen. Wenn dieses Problem bei Ihrem Spiel zu erwarten ist, denken Sie darüber nach, Audio in einem getrennten Thread zu verarbeiten, in dem kein Rendering ausgeführt wird. Dieser Ansatz ist besonders hilfreich auf Computern mit mehreren Prozessoren, da Ihr Spiel die Prozessoren verwenden kann, die sich im Leerlauf befinden.
+> **Tipp**  Wenn Ihr Spiel eine niedrige oder veränderliche Framerate hat, kann die Audio-Verarbeitung im Hauptthread zu unerwarteten Pausen oder zu Knacken im Audio führen. Das kommt daher, dass dem Audiomodul nicht genug gepufferte Audiodaten zur Verfügung stehen. Wenn dieses Problem bei Ihrem Spiel zu erwarten ist, denken Sie darüber nach, Audio in einem getrennten Thread zu verarbeiten, in dem kein Rendering ausgeführt wird. Dieser Ansatz ist besonders hilfreich auf Computern mit mehreren Prozessoren, da Ihr Spiel die Prozessoren verwenden kann, die sich im Leerlauf befinden.
 
  
 
@@ -541,7 +542,7 @@ Die **MarbleMaze**-Klasse stellt Methoden wie **PlaySoundEffect**, **IsSoundEffe
 m_audio.PlaySoundEffect(FallingEvent);
 ```
 
-Die **Audio::PlaySoundEffect**-Methode ruft die [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471)-Methode auf, um die Wiedergabe des Sounds zu starten. Wenn die **IXAudio2SourceVoice::Start**-Methode bereits aufgerufen wurde, wird sie nicht erneut gestartet. Anschließend führt **Audio::PlaySoundEffect** eine benutzerdefinierte Logik für bestimmte Sounds aus.
+Die **Audio::PlaySoundEffect**-Methode ruft die [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471)-Methode auf, um die Wiedergabe des Sounds zu starten. Wenn die **IXAudio2SourceVoice::Start**-Methode bereits aufgerufen wurde, wird sie nicht erneut gestartet. **Audio::PlaySoundEffect** führt anschließend eine benutzerdefinierte Logik für bestimmte Sounds aus.
 
 ```cpp
 void Audio::PlaySoundEffect(SoundEvent sound)
@@ -760,7 +761,7 @@ if (m_engineExperiencedCriticalError)
 
 Marble Maze verwendet außerdem das **m\_engineExperiencedCriticalError**-Kennzeichen, damit XAudio2 nicht aufgerufen wird, wenn kein Audiogerät verfügbar ist. Wenn dieses Kennzeichen festgelegt ist, verarbeitet die **MarbleMaze::Update**-Methode zum Beispiel kein Audio für Roll- oder Kollisionsereignisse. Die App versucht, das Audiomodul in jedem Frame zu reparieren, wenn dies notwendig ist. Das **m\_engineExperiencedCriticalError**-Kennzeichen ist aber möglicherweise festgelegt, wenn der Computer nicht über ein Audiogerät verfügt oder wenn die Kopfhörer getrennt werden und kein anderes Audiogerät verfügbar ist.
 
-> **Achtung**   Sie sollten grundsätzlich im Hauptteil eines Modulrückrufs keine Blockierungsvorgänge ausführen. Diese können zu Leistungsproblemen führen. Marble Maze legt im **OnCriticalError**-Rückruf ein Kennzeichen fest und behandelt später den Fehler in der normalen Audioverarbeitungsphase. Weitere Informationen zu XAudio2-Rückrufen finden Sie unter [XAudio2-Rückrufe](https://msdn.microsoft.com/library/windows/desktop/ee415745).
+> **Achtung**  Sie sollten grundsätzlich im Hauptteil eines Modulrückrufs keine Blockierungsvorgänge ausführen. Diese können zu Leistungsproblemen führen. Marble Maze legt im **OnCriticalError**-Rückruf ein Kennzeichen fest und behandelt später den Fehler in der normalen Audioverarbeitungsphase. Weitere Informationen zu XAudio2-Rückrufen finden Sie unter [XAudio2-Rückrufe](https://msdn.microsoft.com/library/windows/desktop/ee415745).
 
  
 
@@ -779,6 +780,6 @@ Marble Maze verwendet außerdem das **m\_engineExperiencedCriticalError**-Kennze
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

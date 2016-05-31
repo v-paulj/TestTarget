@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Im Abschnitt „Beschreibungen“ des App-Übermittlungprozesses stellen Sie den Text und die Bilder bereit, die den Kunden im Store-Eintrag der App angezeigt werden.
 title: Erstellen von App-Beschreibungen
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
@@ -24,6 +25,8 @@ Klicken Sie zum Hinzufügen oder Entfernen von Sprachen für Ihre Beschreibungen
 Im Abschnitt **Additional description languages** können sie auf **Manage additional languages** klicken, um Sprachen hinzuzufügen oder zu entfernen, die nicht in Ihren Paketen enthalten sind. Aktivieren Sie die Kontrollkästchen für die Sprachen, die Sie hinzufügen möchten, und klicken Sie dann auf **Aktualisieren**. Die ausgewählten Sprachen werden im Abschnitt **Additional description languages** angezeigt. Klicken Sie zum Entfernen einer oder mehrerer dieser Sprachen auf **Entfernen** (oder klicken Sie auf **Manage additional languages**, und deaktivieren Sie die Kontrollkästchen für die Sprachen, die Sie entfernen möchten).
 
 Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren.
+
+> **Hinweis**  Wenn Sie eine Beschreibung in einer Sprache erstellen, die von Ihren Paketen nicht unterstützt wird, müssen Sie angeben, welche Ihrer reservierten App-Namen in dieser Beschreibung angezeigt werden sollen, da für diese Sprache kein verknüpftes Paket vorliegt, von dem der Name abgerufen werden könnte. Der Name, den Sie hier wählen, gilt nur für den Store-Eintrag für diese Sprache und wirkt sich nicht auf den Namen aus, der angezeigt wird, wenn ein Kunde die App installiert.
 
 Klicken Sie zum Bearbeiten einer Beschreibung in der Übermittlungsübersicht auf ihren Namen. Die Abschnitte der Seite **Beschreibung** werden nachstehend beschrieben.
 
@@ -58,7 +61,7 @@ Das Symbol für die App-Kachel wird verwendet, wenn der App-Eintrag Kunden mit W
 
 Hierbei handelt es sich um kurze Zusammenfassungen der wichtigsten App-Features. Diese werden dem Kunden neben der Beschreibung als Aufzählung im App-Eintrag angezeigt. Die Beschreibung sollte pro Feature nur wenige Wörter (und nicht mehr als 200 Zeichen) enthalten. Sie können bis zu 20 Features hinzufügen.
 
-**Hinweis** Diese werden im Eintrag mit Aufzählungszeichen versehen, fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
+**Hinweis**  Diese werden im Eintrag mit Aufzählungszeichen versehen, fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
 
  
 
@@ -66,7 +69,7 @@ Hierbei handelt es sich um kurze Zusammenfassungen der wichtigsten App-Features.
 
 Beschreiben Sie die Hardwarekonfigurationen, die für die ordnungsgemäße Funktionsweise der App erforderlich sind. Dies ist besonders wichtig, wenn Ihre App Hardware benötigt, die u. U. nicht auf jedem Computer vorhanden ist. Diese werden dem Kunden im App-Eintrag als Aufzählung angezeigt. Die Beschreibung sollte pro Element nur wenige Wörter (und nicht mehr als 200 Zeichen) enthalten. Sie können bis zu 11 Elemente hinzufügen.
 
-**Hinweis** Diese werden im Eintrag mit Aufzählungszeichen versehen, fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
+**Hinweis**  Diese werden im Eintrag mit Aufzählungszeichen versehen, fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
 
  
 
@@ -77,7 +80,7 @@ Im Unterschied zu den oben angegebenen Feldern können die Felder im Abschnitt *
 
 ### Schlüsselwörter
 
-Schlüsselwörter sind einzelne Wörter oder kurze Ausdrücke, die für Kunden nicht angezeigt werden, jedoch dazu beitragen, dass Ihre App in Suchergebnissen erscheint. Sie können bis zu acht Schlüsselwörter mit maximal 45 Zeichen einschließen.
+Schlüsselwörter sind einzelne Wörter oder kurze Ausdrücke, die für Kunden nicht angezeigt werden, jedoch dazu beitragen, dass Ihre App in Suchergebnissen erscheint. Sie können bis zu sieben Schlüsselwörter mit maximal 30 Zeichen einschließen.
 
 Wenn Sie Schlüsselwörter hinzufügen möchten, sollten Sie überlegen, mit welchen Begriffen Kunden nach Ihrer App suchen würden, insbesondere, wenn sie nicht im App-Namen vorkommen. Verwenden Sie nur Schlüsselwörter, die wirklich für Ihre App relevant sind.
 
@@ -103,7 +106,7 @@ Geben Sie die URL der Webseite für Ihre App ein. Diese URL muss auf eine Seite 
 
 Geben Sie die URL der Webseite ein, auf der Ihre Kunden Support für die App erhalten, oder eine E-Mail-Adresse, unter der Kunden den Support erreichen können.
 
-**Wichtig** Microsoft bietet keinen App-Support für Ihre Kunden.
+**Wichtig**  Microsoft bietet keinen App-Support für Ihre Kunden.
 
  
 
@@ -111,9 +114,9 @@ Geben Sie die URL der Webseite ein, auf der Ihre Kunden Support für die App erh
 
 Wenn Ihre App über eine Datenschutzrichtlinie verfügt, geben Sie die URL hier ein. Sie müssen sicherstellen, dass die geltenden Datenschutzgesetze eingehalten werden und müssen bei Bedarf eine Datenschutzrichtlinie bereitstellen.
 
-**Wichtig** Microsoft stellt keine standardmäßigen Datenschutzrichtlinien für Ihre App bereit. Außerdem ist Ihre App nicht durch Datenschutzrichtlinien von Microsoft abgedeckt. Um festzustellen, ob Ihre App eine Datenschutzrichtlinie benötigt, lesen Sie die [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und die [Windows Store-Richtlinien](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_5_1).
+**Wichtig**  Microsoft stellt keine standardmäßigen Datenschutzrichtlinien für Ihre App bereit. Außerdem ist Ihre App nicht durch Datenschutzrichtlinien von Microsoft abgedeckt. Um festzustellen, ob Ihre App eine Datenschutzrichtlinie benötigt, lesen Sie die [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und die [Windows Store-Richtlinien](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_5_1).
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

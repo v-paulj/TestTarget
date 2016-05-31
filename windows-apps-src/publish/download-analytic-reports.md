@@ -1,5 +1,6 @@
 ---
-description: Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Informationen offline anzuzeigen.
+author: jnHs
+Description: Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Informationen offline anzuzeigen.
 title: Herunterladen von Analyseberichten
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
 ---
@@ -22,6 +23,6 @@ Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Inform
 4.  Klicken Sie auf die Schaltfläche **Berichte herunterladen**, und speichern oder öffnen Sie die TSV-Datei.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

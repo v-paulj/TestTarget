@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 Description: In dieser exemplarischen Vorgehensweise wird Ihr erstes Experiment mit A/B-Tests erstellt und ausgeführt.
 title: Erstellen und Ausführen eines ersten Experiments mit A/B-Tests
 ms.assetid: 16A2B129-14E1-4C68-86E8-52F1BE58F256
@@ -38,7 +39,7 @@ Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie ein Windows
 9. Stellen Sie sicher, dass das Kontrollkästchen **Gleichmäßig verteilen** aktiviert ist, damit die Varianten gleichmäßig über Ihre App verteilt werden.
 10. Klicken Sie auf **Speichern** und dann auf **Aktivieren**.
 
-> **Wichtig** Nach der Aktivierung eines Experiments können Sie die Experimentparameter nicht mehr ändern, sofern es sich nicht um ein Testexperiment handelt (d. h. Sie haben beim Erstellen des Experiments das Kontrollkästchen **Test experiment** aktiviert). In der Regel wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren. Der Einfachheit halber können Sie in dieser exemplarischen Vorgehensweise das Experimentieren jetzt aktivieren.
+> **Wichtig**  Nach der Aktivierung eines Experiments können Sie die Experimentparameter nicht mehr ändern, sofern es sich nicht um ein Testexperiment handelt (d. h. Sie haben beim Erstellen des Experiments das Kontrollkästchen **Testexperiment** aktiviert). In der Regel wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren. Der Einfachheit halber können Sie in dieser exemplarischen Vorgehensweise das Experimentieren jetzt aktivieren.
 
 ## Codieren des Experiments in der App
 
@@ -153,13 +154,13 @@ private string apiKey = "F48AC670-4472-4387-AB7D-D65B095153FB";
 
 Warten Sie nach Abschluss des vorherigen Abschnitts mindestens ein paar Stunden, und führen Sie dann diese Schritte aus, um die Ergebnisse Ihres Experiments zu überprüfen und das Experiment abzuschließen.
 
-> **Hinweis** Sobald Sie ein Experiment aktivieren, beginnt Dev Center umgehend mit der Erfassung von Daten aus allen Apps, die zum Protokollieren von Daten für Ihr Experiment instrumentiert sind. Bis zur Anzeige von Experimentdaten im Dashboard können jedoch mehrere Stunden vergehen.
+> **Hinweis**  Sobald Sie ein Experiment aktivieren, beginnt Dev Center umgehend mit der Erfassung von Daten aus allen Apps, die zum Protokollieren von Daten für Ihr Experiment instrumentiert sind. Bis zur Anzeige von Experimentdaten im Dashboard können jedoch mehrere Stunden vergehen.
 
 1. Kehren Sie in Dev Center zur Seite **Experimentation** für Ihre App zurück.
 2. Klicken Sie im Abschnitt **Experimente** auf den Filter **Aktiv** und dann auf **Optimize Button Clicks**, um zur Seite für dieses Experiments zu wechseln.
 3. Vergewissern Sie sich, dass die Ergebnisse in den Abschnitten **Results summary** und **Results details** Ihren Erwartungen entsprechen. Ausführlichere Informationen zu diesen Abschnitten finden Sie unter [Verwalten des Experiments im Dev Center-Dashboard](manage-your-experiment.md#review-the-results-of-your-experiment).
 
-  >**Hinweis** Dev Center meldet nur das erste Umwandlungsereignis für jeden Benutzer innerhalb eines Zeitraums von 24 Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer mit mehreren Umwandlungsereignissen verfälscht wird.
+  >**Hinweis**  Dev Center meldet nur das erste Umwandlungsereignis für jeden Benutzer innerhalb eines Zeitraums von 24 Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer mit mehreren Umwandlungsereignissen verfälscht wird.
 
 4. Jetzt sind Sie bereit, das Experiment zu beenden. Klicken Sie im Abschnitt **Results summary** in der Spalte **Variation B** auf **Wechseln**. Dadurch wird für alle Benutzer Ihrer App zur blauen Schaltfläche gewechselt.
 5. Klicken Sie auf **OK**, um zu bestätigen, dass Sie das Experiment beenden möchten.
@@ -174,6 +175,6 @@ Warten Sie nach Abschluss des vorherigen Abschnitts mindestens ein paar Stunden,
   * [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

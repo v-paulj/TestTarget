@@ -1,11 +1,12 @@
 ---
+author: TylerMSFT
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
 title: Erstellen einer regelmäßigen Arbeitsaufgabe
 description: Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die regelmäßig wiederholt wird.
 ---
 # Erstellen einer regelmäßigen Arbeitsaufgabe
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
@@ -18,11 +19,13 @@ Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die regelmäßig wiede
 
 Verwenden Sie die [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915)-Methode, um eine regelmäßige Arbeitsaufgabe zu erstellen. Stellen Sie eine Lambda-Funktion zum Ausführen der Arbeit bereit, und geben Sie mit dem *period*-Parameter das Intervall zwischen den Übermittlungen an. Das Intervall wird anhand einer [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996)-Struktur angegeben. Nach jedem Verstreichen des Intervalls wird die Arbeitsaufgabe erneut gesendet. Stellen Sie daher sicher, dass es lang genug ist, um die Arbeit auszuführen.
 
-[**CreateTimer**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) gibt ein [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587)-Objekt zurück. Speichern Sie das Objekt für den Fall, dass der Timer abgebrochen werden muss.
+[
+              **CreateTimer**
+            ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) gibt ein [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587)-Objekt zurück. Speichern Sie das Objekt für den Fall, dass der Timer abgebrochen werden muss.
 
-> **Hinweis** Für das Intervall sollte nicht Null (oder ein Wert kleiner als eine Millisekunde) angegeben werden. Andernfalls verhält sich der regelmäßige Timer wie ein einmaliger Timer.
+> **Hinweis**  Für das Intervall sollte nicht Null (oder ein Wert kleiner als eine Millisekunde) angegeben werden. Andernfalls verhält sich der regelmäßige Timer wie ein einmaliger Timer.
 
-> **Hinweis** Sie können [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) verwenden, um auf die Benutzeroberfläche zuzugreifen und den Status der Arbeitsaufgabe anzuzeigen.
+> **Hinweis:**  Sie können [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) verwenden, um auf die Benutzeroberfläche zuzugreifen und den Status der Arbeitsaufgabe anzuzeigen.
 
 Das folgende Beispiel erstellt eine Arbeitsaufgabe, die alle 60 Sekunden ausgeführt wird:
 
@@ -156,14 +159,14 @@ Das folgende Beispiel erstellt eine regelmäßige Arbeitsaufgabe, die alle 60 S
 > 
 >         }),
 >         period,
->         ref new TimerDestroyedHandler([&amp;](ThreadPoolTimer ^ source)
+>         ref new TimerDestroyedHandler([&](ThreadPoolTimer ^ source)
 >         {
 >             // 
 >             // TODO: Handle periodic timer cancellation.
 >             // 
 > 
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
->                 ref new DispatchedHandler([&amp;]()
+>                 ref new DispatchedHandler([&]()
 >                 {
 >                     // 
 >                     // UI components can be accessed within this scope.
@@ -200,6 +203,6 @@ Informationen zu einmaligen Timern finden Sie unter [Senden einer Arbeitsaufgabe
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

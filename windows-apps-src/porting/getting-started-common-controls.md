@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: Erste Schritte mit allgemeinen Steuerelementen
 title: Erste Schritte mit allgemeinen Steuerelementen
@@ -18,7 +19,7 @@ Das Besondere bei UWP-Steuerelementen ist, dass sie den Typ des Geräts erkennen
 |------------------------------|--------------------------------------|
 | Aktivitätsanzeige (**UIActivityIndicatorView**) | [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> Siehe auch [Schnellstart: Hinzufügen von Statussteuerelementen](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) |
 | Anzeigenbanner-Ansicht (**ADBannerView**) und Anzeigenbanner-Ansichtsdelegat (**ADBannerViewDelegate**) | Siehe [Microsoft Advertising SDK](http://go.microsoft.com/fwlink/p/?LinkId=263494) |
-| Schaltfläche (UIButton) | [Button](https://msdn.microsoft.com/library/windows/apps/br209265) <br/> Siehe auch [Schnellstart: Hinzufügen von Schaltflächensteuerelementen](https://msdn.microsoft.com/library/windows/apps/xaml/jj153346) |
+| Schaltfläche (UIButton) | [Taste](https://msdn.microsoft.com/library/windows/apps/br209265) <br/> Siehe auch [Schnellstart: Hinzufügen von Schaltflächensteuerelementen](https://msdn.microsoft.com/library/windows/apps/xaml/jj153346) |
 | Datumsauswahl (UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
 | Bildansicht (UIImageView) | [Image](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Siehe auch [Image und ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
 | Bezeichnung (UILabel) | [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) <br/> Siehe auch [Schnellstart: Anzeigen von Text](https://msdn.microsoft.com/library/windows/apps/xaml/hh700392) |
@@ -56,6 +57,6 @@ Unter [Steuerelementliste](https://msdn.microsoft.com/library/windows/apps/mt185
 * [Build 2014: Erstellen von zusammengeführten XAML-Apps mit Visual Studio](http://go.microsoft.com/fwlink/p/?LinkID=397876)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

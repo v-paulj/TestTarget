@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Der Bericht „Rezensionen“ im Windows Dev Center-Dashboard gibt Aufschluss über die Kommentare, die Kunden beim Bewerten Ihrer App im Store eingegeben haben.
 title: Bericht „Rezensionen“
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
@@ -9,7 +10,7 @@ ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 
 Der Bericht **Rezensionen** im Windows Dev Center-Dashboard gibt Aufschluss über die Kommentare, die Kunden beim Bewerten Ihrer App im Store eingegeben haben. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um Ihre Daten offline anzuzeigen. Sie können diese Daten jedoch auch programmgesteuert mit der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
-> **Hinweis**  Auf dieser Seite können Sie auch auf [Kundenrezensionen reagieren](respond-to-customer-reviews.md).
+> **Hinweis**  Auf dieser Seite können Sie auch [auf Kundenrezensionen reagieren](respond-to-customer-reviews.md).
 
 Dieser Bericht zeigt der Anzahl der Sterne, mit denen ein Kunde Ihre App beim Hinterlassen einer Rezension bewertet hat, ohne die Sterne-Bewertungen für die App zu analysieren. Statistiken zu Ihren Bewertungen finden Sie im [Bericht „Bewertungen“](ratings-report.md).
 
@@ -35,17 +36,17 @@ Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten
 
 -   **Bewertung**: Standardmäßig ist die Bewertung „Alle Sterne“ aktiviert, Sie können jedoch einzelne Bewertungen (von 1 bis 5 Sternen) aktivieren bzw. deaktivieren, wenn Sie nur Rezensionen mit einer bestimmten Sternebewertung anzeigen möchten.
 -   **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
--   **Rezensionsinhalt**: Die Standardeinstellung lautet **Alle** und schließt Bewertungen ohne Rezensionstext ein. Sie können **Bewertungen mit Rezensionsinhalt** auswählen, um nur Bewertungen mit geschriebenen Rezensionsinhalten anzuzeigen.
--   **Zielbetriebssystem**: Die Standardeinstellung lautet **Alle**. Sie können ein bestimmtes Zielbetriebssystem auswählen, wenn auf dieser Seite nur Bewertungen von Kunden angezeigt werden sollen, die Ihre für das spezifische Betriebssystem ausgelegten Pakete verwenden.
--   **Antworten**: Die Standardeinstellung lautet **Alle**. Sie können die Rezensionen so filtern, dass nur die Kundenrezensionen angezeigt werden, auf die Sie [geantwortet](respond-to-customer-reviews.md) haben, oder nur die, auf die Sie noch nicht geantwortet haben.
--   **Updates**: Die Standardeinstellung lautet **Alle**. Sie können die Rezensionen so filtern, dass nur diejenigen angezeigt werden, die vom Kunden aktualisiert wurden, nachdem Sie auf eine [Rezension geantwortet haben](respond-to-customer-reviews.md), oder nur die, die noch nicht vom Kunden aktualisiert wurden.
+-   **Rezensionsinhalt**: Die Standardeinstellung ist **Alle** und schließt Bewertungen ohne Rezensionstext ein. Sie können **Bewertungen mit Rezensionsinhalt** auswählen, um nur Bewertungen mit geschriebenen Rezensionsinhalten anzuzeigen.
+-   **Zielbetriebssystem**: Die Standardeinstellung ist **Alle**. Sie können ein bestimmtes Zielbetriebssystem auswählen, wenn auf dieser Seite nur Bewertungen von Kunden angezeigt werden sollen, die Ihre für das spezifische Betriebssystem ausgelegten Pakete verwenden.
+-   **Antworten**: Die Standardeinstellung ist **Alle**. Sie können die Rezensionen so filtern, dass nur die Kundenrezensionen angezeigt werden, auf die Sie [geantwortet](respond-to-customer-reviews.md) haben, oder nur die, auf die Sie noch nicht geantwortet haben.
+-   **Updates**: Die Standardeinstellung ist **Alle**. Sie können die Rezensionen so filtern, dass nur diejenigen angezeigt werden, die vom Kunden aktualisiert wurden, nachdem Sie auf eine [Rezension geantwortet haben](respond-to-customer-reviews.md), oder nur die, die noch nicht vom Kunden aktualisiert wurden.
 -   **Markt**: Die Standardeinstellung ist **Alle Märkte**. Sie können einen bestimmten Markt auswählen, wenn auf dieser Seite nur Rezensionen der in diesem Markt ansässigen Kunden angezeigt werden sollen.
--   **Gerätetyp**: Der Standardfilter lautet **Alle Geräte**. Sie können einen bestimmten Gerätetyp auswählen, wenn auf dieser Seite nur Rezensionen von Kunden angezeigt werden sollen, die ein Gerät dieses Typs verwenden.
--   **Paketversion**: Der Standardfilter lautet **Alle Pakete**. Sie können ein bestimmtes Paket auswählen, wenn diese Seite nur Rezensionen von Kunden angezeigt werden sollen, die für die Rezension der App dieses Paket verwendet haben.
+-   **Gerätetyp**: Der Standardfilter ist **Alle Geräte**. Sie können einen bestimmten Gerätetyp auswählen, wenn auf dieser Seite nur Rezensionen von Kunden angezeigt werden sollen, die ein Gerät dieses Typs verwenden.
+-   **Paketversion**: Der Standardfilter ist **Alle Pakete**. Sie können ein bestimmtes Paket auswählen, wenn diese Seite nur Rezensionen von Kunden angezeigt werden sollen, die für die Rezension der App dieses Paket verwendet haben.
 
 Die Informationen in allen unten aufgeführten Diagrammen beziehen sich auf den im Bereich **Filter anwenden** ausgewählten Zeitraum und entsprechen den von Ihnen hier ausgewählten Filtern.
 
-> **Hinweis**  Bei der durchschnittlichen Bewertung, die einem Kunden im Store angezeigt wird, werden der Markt und der Gerätetyp des Kunden sowie die Bewertungen aus dem vergangenen Jahr berücksichtigt, daher können die Inhalte in diesem Bericht davon abweichen. Um zu sehen, wie die durchschnittliche Bewertung für einen bestimmten Kunden im Store angezeigt wird, müssen Sie nach einem bestimmten Markt und Gerätetyp filtern und das **Datum** auf **Letzte 12 Monate** festlegen.
+> **Hinweis**  Bei der durchschnittlichen Bewertung, die einem Kunden im Store angezeigt wird, werden der Markt und der Gerätetyp des Kunden sowie die Bewertungen aus dem vergangenen Jahr berücksichtigt. Daher können die Inhalte in diesem Bericht davon abweichen. Um zu sehen, wie die durchschnittliche Bewertung für einen bestimmten Kunden im Store angezeigt wird, müssen Sie nach einem bestimmten Markt und Gerätetyp filtern und das **Datum** auf **Letzte 12 Monate** festlegen.
 
 ## Übersetzen von Rezensionen
 
@@ -78,6 +79,6 @@ Im Folgenden finden Sie einige zusätzliche Aktionen, die Sie basierend auf den 
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

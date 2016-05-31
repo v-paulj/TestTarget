@@ -1,6 +1,7 @@
 ---
+author: mcleblanc
 title: Behandeln einer abgebrochenen Hintergrundaufgabe
-description: Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet.
+description: Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet.
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
 ---
 
@@ -16,7 +17,7 @@ ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
 
 Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet.
 
-> **Hinweis**  Für alle Gerätefamilien mit Ausnahme von Desktops können Hintergrundaufgaben beendet werden, wenn der Arbeitsspeicher des Geräts knapp wird. Wenn eine Ausnahme über wenig Arbeitsspeicher nicht angezeigt oder von der App nicht behandelt wird, wird die Hintergrundaufgabe ohne Warnung und ohne Auslösen des OnCanceled-Ereignisses beendet. Dadurch soll die Benutzerfreundlichkeit der App im Vordergrund sichergestellt werden. Entwerfen Sie die Hintergrundaufgabe so, dass dieses Szenario behandelt wird.
+> **Hinweis:**  Mit Ausnahme von Desktopgeräten können Hintergrundaufgaben bei allen Gerätefamilien beendet werden, wenn der Arbeitsspeicher des Geräts knapp wird. Wenn eine Ausnahme über wenig Arbeitsspeicher nicht angezeigt oder von der App nicht behandelt wird, wird die Hintergrundaufgabe ohne Warnung und ohne Auslösen des OnCanceled-Ereignisses beendet. Dadurch soll die Benutzerfreundlichkeit der App im Vordergrund sichergestellt werden. Entwerfen Sie die Hintergrundaufgabe so, dass dieses Szenario behandelt wird.
 
 Dieses Thema setzt voraus, dass Sie bereits eine Hintergrundaufgabenklasse erstellt haben, einschließlich der Run-Methode, die für die Hintergrundaufgabe als Einstiegspunkt verwendet wird. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie die Infos unter [Erstellen und Registrieren einer Hintergrundaufgabe](create-and-register-a-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
@@ -102,7 +103,7 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
->     if ((_cancelRequested == false) &amp;&amp; (_progress &lt; 100))
+>     if ((_cancelRequested == false) && (_progress < 100))
 >     {
 >         _progress += 10;
 >         _taskInstance.Progress = _progress;
@@ -115,7 +116,7 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 >     }
 > ```
 > ```cpp
->     if ((CancelRequested == false) &amp;&amp; (Progress &lt; 100))
+>     if ((CancelRequested == false) && (Progress < 100))
 >     {
 >         Progress += 10;
 >         TaskInstance->Progress = Progress;
@@ -128,7 +129,7 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 >     }
 > ```
 
-> **Hinweis**  Das oben dargestellte Codebeispiel verwendet die Eigenschaft [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800), mit der der Fortschritt der Hintergrundaufgabe aufgezeichnet wird. Der Fortschritt wird der App mithilfe der [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Klasse gemeldet.
+> **Hinweis**  Das oben gezeigte Codebeispiel verwendet die Eigenschaft [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800), mit der der Fortschritt der Hintergrundaufgabe aufgezeichnet wird. Der Fortschritt wird der App mithilfe der [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Klasse gemeldet.
 
 Ändern Sie die Run-Methode, damit sie nach dem Anhalten der Arbeit aufzeichnet, ob die Aufgabe ausgeführt oder abgebrochen wurde.
 
@@ -136,7 +137,7 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
->     if ((_cancelRequested == false) &amp;&amp; (_progress &lt; 100))
+>     if ((_cancelRequested == false) && (_progress < 100))
 >     {
 >         _progress += 10;
 >         _taskInstance.Progress = _progress;
@@ -171,7 +172,7 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 >     }
 > ```
 > ```cpp
->     if ((CancelRequested == false) &amp;&amp; (Progress &lt; 100))
+>     if ((CancelRequested == false) && (Progress < 100))
 >     {
 >         Progress += 10;
 >         TaskInstance->Progress = Progress;
@@ -186,7 +187,7 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 >         
 >         auto settings = ApplicationData::Current->LocalSettings;
 >         auto key = TaskInstance->Task->Name;
->         settings->Values->Insert(key, (Progress &lt; 100) ? "Canceled" : "Completed");
+>         settings->Values->Insert(key, (Progress < 100) ? "Canceled" : "Completed");
 >         
 >         //
 >         // Indicate that the background task has completed.
@@ -243,7 +244,7 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 > //
 > private void PeriodicTimerCallback(ThreadPoolTimer timer)
 > {
->     if ((_cancelRequested == false) &amp;&amp; (_progress < 100))
+>     if ((_cancelRequested == false) && (_progress < 100))
 >     {
 >         _progress += 10;
 >         _taskInstance.Progress = _progress;
@@ -283,7 +284,7 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 >     //
 >     // Associate a cancellation handler with the background task.
 >     //
->     taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &amp;SampleBackgroundTask::OnCanceled);
+>     taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &SampleBackgroundTask::OnCanceled);
 > 
 >     //
 >     // Get the deferral object from the task instance, and take a reference to the taskInstance.
@@ -293,7 +294,7 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 > 
 >     auto timerDelegate = [this](ThreadPoolTimer^ timer)
 >     {
->         if ((CancelRequested == false) &amp;&amp;
+>         if ((CancelRequested == false) &&
 >             (Progress < 100))
 >         {
 >             Progress += 10;
@@ -323,7 +324,7 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 > }
 > ```
 
-> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Apps für die universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 ## Verwandte Themen
 
@@ -345,6 +346,6 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

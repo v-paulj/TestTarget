@@ -1,7 +1,8 @@
 ---
+author: martinekuan
 ms.assetid: 16AB1111-4BA8-4352-B796-E97AA9243E31
 title: Bereit für die Registrierung?
-description: Registrieren Sie sich jetzt für ein Entwicklerkonto, um Ihre Apps im Windows Store veröffentlichen und an anderen Microsoft-Programmen teilnehmen zu können.
+description: Registrieren Sie sich jetzt für ein Entwicklerkonto, um Ihre Apps im Windows Store veröffentlichen und an anderen Microsoft-Programmen teilnehmen zu können.
 ---
 # Bereit für die Registrierung?
 
@@ -19,6 +20,6 @@ Sobald Sie Ihr Entwicklerkonto eröffnet haben, können Sie [Ihre App erstellen,
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

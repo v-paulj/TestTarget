@@ -1,6 +1,7 @@
 ---
+author: jnHs
 Description: Microsoft Advertising in pubCenter wurde in das Windows Dev Center integriert.
-title: pubCenter-Dev Center integration
+title: pubCenter-Dev Center-Integration
 ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
 ---
 
@@ -9,7 +10,7 @@ ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
 
 **Wichtig**
 
--   Ab dem 1. April 2016 werden Ihre Microsoft Advertising-Einnahmen auf das Auszahlungskonto gezahlt, das Sie in Dev Center eingerichtet haben. Sie sollten nun alle Updates oder Änderungen an Ihrem Auszahlungskonto und Steuerprofil nur in Dev Center verwalten. Achten Sie darauf, vor dem 31. März 2016 alle erforderlichen Updates vorzunehmen. Weitere Informationen finden Sie unter [Konsolidierung des pubCenter- und DevCenter-Auszahlungskontos und -Steuerprofils](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
+-   Ab dem 1. April 2016 werden Ihre Microsoft Advertising-Einnahmen auf das Auszahlungskonto gezahlt, das Sie in Dev Center eingerichtet haben. Sie sollten nun alle Updates oder Änderungen an Ihrem Auszahlungskonto und Steuerprofil nur in Dev Center verwalten. Weitere Informationen finden Sie unter [Konsolidierung des pubCenter- und DevCenter-Auszahlungskontos und -Steuerprofils](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 -   Ab dem 1. Dezember 2015 [muss Ihr pubCenter-Konto mit Ihrem Dev Center-Konto verknüpft sein](#scenario-3-you-have-dev-center-and-pubcenter-accounts-registered-with-different-microsoft-accounts), um Auszahlungen zu erhalten.
 -   Ihr Auszahlungsverlauf wird in PubCenter nicht mehr aktualisiert. Zum Überprüfen Ihres Auszahlungsverlaufs müssen Sie ab jetzt [Ihr pubCenter-Konto mit Ihrem Dev Center-Konto verknüpfen](#scenario-3-you-have-dev-center-and-pubcenter-accounts-registered-with-different-microsoft-accounts) und anschließend im Dev Center-Dashboard die Seite [Auszahlungszusammenfassung](payout-summary.md) verwenden.
 
@@ -20,7 +21,7 @@ Falls Sie mehrere Konten in pubCenter und im Dev Center haben, hängt die Ausf�
 ## Szenario 1: Sie haben ein Dev Center-Konto und ein pubCenter-Konto mit demselben Microsoft-Konto, die im selben Land bzw. in derselben Region registriert sind.
 
 
-**Beispiel**: Sie besitzen ein unter „\[name\]@outlook.com” registriertes Dev Center-Konto in den USA. Außerdem haben Sie ein unter „\[name\]@outlook.com” registriertes pubCenter-Konto in den USA.
+**Beispiel**: Sie besitzen ein unter „\[name\]@outlook.com“ registriertes Dev Center-Konto in den USA. Außerdem haben Sie ein unter „\[name\]@outlook.com” registriertes pubCenter-Konto in den USA.
 
 **Ergebnis**: Ihr pubCenter-Konto wurde automatisch mit Ihrem Dev Center-Konto verknüpft. Es ist keine Aktion Ihrerseits erforderlich.
 
@@ -34,12 +35,12 @@ Falls Sie mehrere Konten in pubCenter und im Dev Center haben, hängt die Ausf�
 -   Ihre Auszahlungsberichte sind jetzt in Ihrem Dev Center-Konto verfügbar. Weitere Informationen zu Auszahlungsberichten im Dev Center finden Sie unter [Auszahlungszusammenfassung](payout-summary.md).
 -   All Ihre Werbekampagnen für Apps sind jetzt Ihrem Dev Center-Konto zugeordnet und können direkt im Dev Center verwaltet werden.
 
-> **Hinweis:** Es ist nicht mehr möglich, Anzeigeneinheiten oder neue Werbekampagnen für Apps in pubCenter zu erstellen. Informationen zum Erstellen von Anzeigeneinheiten im Dev Center finden Sie unter [Monetisierung durch Werbeanzeigen](monetize-with-ads.md). Informationen zum Erstellen von App-Werbekampagnen im Dev Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md).
+> **Hinweis**  Es ist nicht mehr möglich, Anzeigeneinheiten oder neue Werbekampagnen für Apps in pubCenter zu erstellen. Informationen zum Erstellen von Anzeigeneinheiten im Dev Center finden Sie unter [Monetisierung durch Werbeanzeigen](monetize-with-ads.md). Informationen zum Erstellen von App-Werbekampagnen im Dev Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md).
 
 ## Szenario 2: Sie haben ein Dev Center-Konto und ein pubCenter-Konto mit demselben Microsoft-Konto, die aber in unterschiedlichen Ländern bzw. Regionen registriert sind.
 
 
-**Beispiel**: Sie besitzen ein unter „\[name\]@outlook.com” registriertes Dev Center-Konto in den USA. Außerdem haben Sie ein unter „\[name\]@outlook.com” registriertes pubCenter-Konto in Indien.
+**Beispiel**: Sie besitzen ein unter „\[name\]@outlook.com“ registriertes Dev Center-Konto in den USA. Außerdem haben Sie ein unter „\[name\]@outlook.com” registriertes pubCenter-Konto in Indien.
 
 **Ergebnis**: Ihr pubCenter-Konto wurde automatisch mit Ihrem Dev Center-Konto verknüpft. Es ist keine Aktion Ihrerseits erforderlich.
 
@@ -52,19 +53,19 @@ Falls Sie mehrere Konten in pubCenter und im Dev Center haben, hängt die Ausf�
 -   Ihre Auszahlungsberichte sind jetzt in Ihrem Dev Center-Konto verfügbar. Weitere Informationen zu Auszahlungsberichten im Dev Center finden Sie unter [Auszahlungszusammenfassung](payout-summary.md).
 -   All Ihre Werbekampagnen für Apps sind jetzt Ihrem Dev Center-Konto zugeordnet und können direkt im Dev Center verwaltet werden.
 
-> **Hinweis:** Es ist nicht mehr möglich, Anzeigeneinheiten oder neue Werbekampagnen für Apps in pubCenter zu erstellen. Informationen zum Erstellen von Anzeigeneinheiten im Dev Center finden Sie unter [Monetisierung durch Werbeanzeigen](monetize-with-ads.md). Informationen zum Erstellen von App-Werbekampagnen im Dev Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md).
+> **Hinweis**  Es ist nicht mehr möglich, Anzeigeneinheiten oder neue Werbekampagnen für Apps in pubCenter zu erstellen. Informationen zum Erstellen von Anzeigeneinheiten im Dev Center finden Sie unter [Monetisierung durch Werbeanzeigen](monetize-with-ads.md). Informationen zum Erstellen von App-Werbekampagnen im Dev Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md).
 
 ## Szenario 3: Sie haben Dev Center- und pubCenter-Konten, die mit unterschiedlichen Microsoft-Konten registriert sind.
 
 
-**Beispiel**: Sie besitzen ein unter „\[name\]@outlook.com” registriertes Dev Center-Konto. Außerdem haben Sie ein unter „\[anderer\_name\]@outlook.com” registriertes pubCenter-Konto.
+**Beispiel**: Sie besitzen ein unter „\[name\]@outlook.com“ registriertes Dev Center-Konto. Außerdem haben Sie ein unter „\[anderer\_name\]@outlook.com” registriertes pubCenter-Konto.
 
 **Ergebnis**: Sie müssen Ihre pubCenter-Konten manuell mit Ihrem Dev Center-Konto verknüpfen. Gehen Sie dazu wie folgt vor:
 
 1.  Melden Sie sich bei dem pubCenter-Konto an, das Sie verknüpfen möchten.
 2.  Auf der Seite **Meine Informationen** dieses Kontos finden Sie einen **Code für die Verknüpfung mit dem pubCenter-Konto**. Halten Sie diesen Code bereit.
 
-    > **Hinweis:** Alle 60 Minuten wird ein neuer Code für die Kontoverknüpfung generiert.
+    > **Hinweis**  Alle 60 Minuten wird ein neuer Code für die Kontoverknüpfung generiert.
 
 3.  Melden Sie sich von Ihrem pubCenter-Konto ab.
 4.  Melden Sie sich bei Ihrem [Dev Center-Konto](https://dev.windows.com/) an.
@@ -72,7 +73,7 @@ Falls Sie mehrere Konten in pubCenter und im Dev Center haben, hängt die Ausf�
 6.  Geben Sie die E-Mail-Adresse des pubCenter-Kontos und den Code für die Kontoverknüpfung ein.
 7.  Klicken Sie auf **Konto verknüpfen**. Ihr pubCenter-Konto wird mit Ihrem Dev Center-Konto verknüpft.
 
-    > **Hinweis:** Sie können ein oder mehrere pubCenter-Konten mit Ihrem Dev Center-Konto verknüpfen. Jedes pubCenter-Konto kann jedoch nur mit einem Dev Center-Konto verknüpft werden.
+    > **Hinweis**  Sie können ein oder mehrere pubCenter-Konten mit Ihrem Dev Center-Konto verknüpfen. Jedes pubCenter-Konto kann jedoch nur mit einem Dev Center-Konto verknüpft werden.
 
 Nachdem Ihr pubCenter-Konto mit einem Dev Center-Konto verknüpft wurde:
 
@@ -85,7 +86,7 @@ Nachdem Ihr pubCenter-Konto mit einem Dev Center-Konto verknüpft wurde:
 -   Ihre pubCenter-Auszahlungsberichte sind jetzt in Ihrem Dev Center-Konto verfügbar. Weitere Informationen zu Auszahlungsberichten im Dev Center finden Sie unter [Auszahlungszusammenfassung](payout-summary.md).
 -   Alle Werbekampagnen für Apps, die Sie in pubCenter eingerichtet haben, werden automatisch angehalten. Erstellen Sie neue Kampagnen künftig im Dev Center.
 
-> **Hinweis:** Es ist nicht mehr möglich, Anzeigeneinheiten oder neue Werbekampagnen für Apps in pubCenter zu erstellen. Informationen zum Erstellen von Anzeigeneinheiten im Dev Center finden Sie unter [Monetisierung durch Werbeanzeigen](monetize-with-ads.md). Informationen zum Erstellen von App-Werbekampagnen im Dev Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md).
+> **Hinweis**  Es ist nicht mehr möglich, Anzeigeneinheiten oder neue Werbekampagnen für Apps in pubCenter zu erstellen. Informationen zum Erstellen von Anzeigeneinheiten im Dev Center finden Sie unter [Monetisierung durch Werbeanzeigen](monetize-with-ads.md). Informationen zum Erstellen von App-Werbekampagnen im Dev Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md).
 
 ## Weitere Hinweise und Empfehlungen
 
@@ -113,7 +114,7 @@ Das Erstellen neuer Anzeigeeinheiten in pubCenter wird nicht mehr unterstützt. 
 
 ### Wie erstelle ich Anzeigeneinheiten im Dev Center?
 
-Klicken Sie im Dev Center auf der Seite Ihrer App auf **Monetisierung** &gt; **Monetisierung durch Werbeanzeigen**. Weitere Informationen zum Erstellen von Anzeigeneinheiten im Dev Center finden Sie unter [Monetisierung durch Werbeanzeigen](monetize-with-ads.md).
+Klicken Sie im Dev Center auf der Seite Ihrer App auf **Monetisierung**&gt;**Monetisierung durch Werbeanzeigen**. Weitere Informationen zum Erstellen von Anzeigeneinheiten im Dev Center finden Sie unter [Monetisierung durch Werbeanzeigen](monetize-with-ads.md).
 
 ### Ich habe die aktuelle Version der Anzeigenvermittler-Erweiterung installiert und meiner App das Anzeigenvermittlungs-Steuerelement hinzugefügt. Muss ich auch pubCenter aufrufen und eine neue Anzeigeneinheit erstellen?
 
@@ -121,7 +122,7 @@ Wenn Sie die aktuelle Version der [Anzeigenvermittlungs-Erweiterung](http://go.m
 
 ### Ich verwende noch eine ältere Version des Anzeigenvermittlungs-Steuerelements in meiner App, und ich benötige eine neue Anzeigeneinheits-ID. Wie erstelle ich Anzeigeeinheiten?
 
-Im Dev Center-Dashboard können Sie eine neue Anzeigeneinheit für Ihre App erstellen. Klicken Sie im Dev Center auf der Seite Ihrer App auf **Monetisierung** &gt; **Monetisierung durch Werbeanzeigen**. Weitere Informationen zum Erstellen von Anzeigeneinheiten im Dev Center finden Sie unter [Monetisierung durch Werbeanzeigen](monetize-with-ads.md).
+Im Dev Center-Dashboard können Sie eine neue Anzeigeneinheit für Ihre App erstellen. Klicken Sie im Dev Center auf der Seite Ihrer App auf **Monetisierung**&gt;**Monetisierung durch Werbeanzeigen**. Weitere Informationen zum Erstellen von Anzeigeneinheiten im Dev Center finden Sie unter [Monetisierung durch Werbeanzeigen](monetize-with-ads.md).
 
 ### Meine Anzeigeneinheiten wurden automatisch erstellt, da ich das Anzeigenvermittlungs-Steuerelement verwendet und bestätigt habe, dass Anzeigen bereitgestellt werden. Ich habe auch mehrere anderen Anzeigeneinheiten manuell im Dev Center erstellt. Muss ich noch etwas unternehmen, um Einnahmen durch diese Anzeigeneinheiten zu erhalten?
 
@@ -133,11 +134,11 @@ Künftig können Sie nur noch im Dev Center Werbekampagnen für Apps erstellen.
 
 ### Wie erstelle ich Werbekampagnen für Apps im Dev Center?
 
-Klicken Sie im Dev Center auf der Seite Ihrer App auf **Monetisierung** &gt; **Bewerben Ihrer App**. Weitere Informationen zum Erstellen von Anzeigenkampagnen für Ihre Apps im Dev Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md).
+Klicken Sie im Dev Center auf der Seite Ihrer App auf **Monetisierung**&gt;**Bewerben Ihrer App**. Weitere Informationen zum Erstellen von Anzeigenkampagnen für Ihre Apps im Dev Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md).
 
 ### Wo kann ich im Dev Center die Leistungsdaten anzeigen?
 
-Klicken Sie im Dev Center auf der Seite Ihrer App auf **Analysen** &gt; **Microsoft Advertising-Leistung**. Weitere Informationen finden Sie unter [Bericht zur Anzeigenleistung](advertising-performance-report.md).
+Klicken Sie im Dev Center auf der Seite Ihrer App auf **Analysen**&gt;**Microsoft Advertising-Leistung**. Weitere Informationen finden Sie unter [Bericht zur Anzeigenleistung](advertising-performance-report.md).
 
 ### Wie kann ich meine Zahlungsmethode und Steuerinformationen im Dev Center verwalten?
 
@@ -180,6 +181,6 @@ Ja, die in pubCenter und Dev Center angezeigten Daten können sich geringfügig
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: Aufbau von Visual Studio
 title: Aufbau von Visual Studio
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
@@ -40,9 +41,9 @@ Im Gegensatz zu Xcode, wo Layout- und Bindungsinformationen in einer XIB- oder e
 
 Ändern wir nun die Schaltflächendetails. Wie Sie nachvollziehen können, muss zum Ändern des Namens der Schaltfläche in Xcode der Wert des Felds **Titel** im Eigenschaftenpanel geändert werden.
 
-Bei Verwendung von Visual Studio gehen Sie ähnlich vor. Tippen Sie im Bereich **Entwurf** auf die Schaltfläche, damit sie den Fokus erhält. Ändern Sie dann im Bereich **Eigenschaften** den Wert des Felds **Inhalt** von „Button“ in „Press Me“. Aktualisieren Sie als Nächstes den Namen des Schaltflächen-Steuerelements, indem Sie den **Name**-Wert von „&lt;No Name&gt;“ in „myButton“ ändern, wie hier gezeigt:
+Bei Verwendung von Visual Studio gehen Sie ähnlich vor. Tippen Sie im Bereich **Entwurf** auf die Schaltfläche, damit sie den Fokus erhält. Ändern Sie dann im Bereich **Eigenschaften** den Wert des Felds **Inhalt** von „Button“ in „Press Me“. Aktualisieren Sie als Nächstes den Namen des Schaltflächen-Steuerelements, indem Sie den **Name**-Wert von "&lt;No Name&gt;" in "myButton" ändern, wie hier gezeigt:
 
-![Fenster „Schaltflächeneigenschaften“ in Visual Studio](images/ios-to-uwp/vs-button-properties.png)
+![Fenster "Schaltflächeneigenschaften" in Visual Studio](images/ios-to-uwp/vs-button-properties.png)
 
 Lassen Sie uns nun Code zum Ändern der Inhalte des **TextBlock**-Steuerelements in „Hello, World!“ schreiben, sodass dieser Text angezeigt wird, nachdem der Benutzer auf die Schaltfläche getippt hat.
 
@@ -86,9 +87,9 @@ In Visual Studio müssen Sie das Steuerelement nicht zuordnen, da dies immer aut
 1.  Tippen Sie auf die Registerkarte der Datei „MainPage.xaml“.
 2.  Tippen Sie im Bereich **Entwurf** auf das **TextBlock**-Steuerelement.
 3.  Tippen Sie im Bereich **Eigenschaften** auf die Schaltfläche mit dem Schraubenschlüssel, um die zugehörigen Eigenschaften anzuzeigen.
-4.  Ändern Sie im Feld **Name** den Eintrag „&lt;No Name&gt;“ in „myLabel“.
+4.  Ändern Sie im Feld **Name** den Eintrag "&lt;No Name&gt;" in "myLabel".
 
-![Fenster „Bezeichnungseigenschaften“ in Visual Studio](images/ios-to-uwp/vs-label-properties.png)
+![Fenster "Bezeichnungseigenschaften" in Visual Studio](images/ios-to-uwp/vs-label-properties.png)
 
 Lassen Sie uns nun dem Click-Ereignis der Schaltfläche Code hinzufügen. Tippen Sie dazu auf die Datei „MainPage.xaml.cs“, und fügen Sie dem myButton\_Click-Ereignishandler den folgenden Code hinzu.
 
@@ -120,6 +121,6 @@ Wenn Sie die App beenden möchten, tippen Sie in Visual Studio auf das Menü **D
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

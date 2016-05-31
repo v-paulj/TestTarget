@@ -1,11 +1,12 @@
 ---
+author: TylerMSFT
 ms.assetid: AAE467F9-B3C7-4366-99A2-8A880E5692BE
-title: Übermitteln einer Arbeitsaufgabe mithilfe eines Timers
+title: Senden einer Arbeitsaufgabe mithilfe eines Timers
 description: Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die nach dem Ablaufen eines Timers ausgeführt wird.
 ---
 # Übermitteln einer Arbeitsaufgabe mithilfe eines Timers
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
@@ -18,7 +19,7 @@ Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die nach dem Ablaufen 
 
 Verwenden Sie die [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921)-Methode, um einen Timer für die Arbeitsaufgabe zu erstellen. Stellen Sie eine Lambda-Funktion zum Ausführen der Arbeit bereit, und geben Sie mit dem *delay*-Parameter an, wie lange der Threadpool warten soll, bevor er die Arbeitsaufgabe einem verfügbaren Thread zuweist. Die Verzögerung wird mithilfe einer [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996)-Struktur angegeben.
 
-> **Hinweis:** Sie können [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) verwenden, um auf die Benutzeroberfläche zuzugreifen und den Status der Arbeitsaufgabe anzuzeigen.
+> **Hinweis:**  Sie können [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) verwenden, um auf die Benutzeroberfläche zuzugreifen und den Status der Arbeitsaufgabe anzuzeigen.
 
 Das folgende Beispiel erstellt eine Arbeitsaufgabe, die in drei Minuten ausgeführt wird:
 
@@ -69,7 +70,7 @@ Das folgende Beispiel erstellt eine Arbeitsaufgabe, die in drei Minuten ausgefü
 >                     // UI components can be accessed within this scope.
 >                     // 
 > 
->                     ExampleUIUpdateMethod(&quot;Timer completed.&quot;);
+>                     ExampleUIUpdateMethod("Timer completed.");
 > 
 >                 }));
 > 
@@ -148,7 +149,7 @@ Das folgende Beispiel erstellt einen Timer, der die Arbeitsaufgabe übermittelt,
 > completed = false;
 > 
 > ThreadPoolTimer ^ DelayTimer = ThreadPoolTimer::CreateTimer(
->         ref new TimerElapsedHandler([&amp;](ThreadPoolTimer ^ source)
+>         ref new TimerElapsedHandler([&](ThreadPoolTimer ^ source)
 >         {
 >             // 
 >             // TODO: Work
@@ -158,7 +159,7 @@ Das folgende Beispiel erstellt einen Timer, der die Arbeitsaufgabe übermittelt,
 >             // Update the UI thread by using the UI core dispatcher.
 >             // 
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
->                 ref new DispatchedHandler([&amp;]()
+>                 ref new DispatchedHandler([&]()
 >                 {
 >                     // 
 >                     // UI components can be accessed within this scope.
@@ -170,14 +171,14 @@ Das folgende Beispiel erstellt einen Timer, der die Arbeitsaufgabe übermittelt,
 > 
 >         }),
 >         delay,
->         ref new TimerDestroyedHandler([&amp;](ThreadPoolTimer ^ source)
+>         ref new TimerDestroyedHandler([&](ThreadPoolTimer ^ source)
 >         {
 >             // 
 >             // TODO: Handle work cancellation/completion.
 >             // 
 > 
 >             Dispatcher->RunAsync(CoreDispatcherPriority::High,
->                 ref new DispatchedHandler([&amp;]()
+>                 ref new DispatchedHandler([&]()
 >                 {
 >                     // 
 >                     // Update the UI thread by using the UI core dispatcher.
@@ -227,6 +228,6 @@ Informationen zu Wiederholungstimern finden Sie unter [Erstellen einer regelmä�
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

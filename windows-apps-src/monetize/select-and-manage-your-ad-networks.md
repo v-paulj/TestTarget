@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 86D9D3CF-8FDC-4B67-881B-DF33A1BEE8BF
 description: Vor dem Verwenden der Anzeigenvermittlung müssen Sie Konten bei jedem Anzeigennetzwerk einrichten, das Sie in Ihren Apps verwenden möchten.
 title: Auswählen und Verwalten der Anzeigennetzwerke
@@ -101,7 +102,7 @@ Hinweis: Wenn Sie das [Ad Mediator-Steuerelement hinzufügen](add-and-use-the-ad
 
 Neben den erforderlichen Parametern verfügt jedes Anzeigennetzwerk auch über zusätzliche optionale Parameter, die Sie über Code in Ihrer App festlegen können. Die vollständige Liste der optionalen Parameter finden Sie in der Dokumentation zu den einzelnen Anzeigennetzwerken. Verwenden Sie zum Festlegen dieser optionalen Parameter im Code die **AdSdkOptionalParameters**-Eigenschaft Ihres **AdMediatorControl**-Objekts.
 
-Das folgende Beispiel veranschaulicht, wie der **CountryOrRegion**-Parameter für Microsoft Advertising festgelegt wird.
+Das folgende Beispiel veranschaulicht das Festlegen der [CountryOrRegion](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.countryorregion.aspx)-Eigenschaft für Microsoft Advertising auf den aus zwei Buchstaben bestehenden Code für das Land oder die Region des Benutzers.
 
 ```CSharp
 myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.MicrosoftAdvertising]["CountryOrRegion"] = "IN";
@@ -125,6 +126,6 @@ myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.Smaato]["Height"] = 250;
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

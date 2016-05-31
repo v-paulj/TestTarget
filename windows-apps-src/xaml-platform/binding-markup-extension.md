@@ -1,6 +1,7 @@
 ---
+author: jwmsft
 description: Die Binding-Markuperweiterung wird beim Laden von XAML in eine Instanz der Binding-Klasse konvertiert.
-title: {Binding}-Markuperweiterung
+title: Binding-Markuperweiterung
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 ---
 
@@ -10,7 +11,7 @@ ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 
 **Hinweis**  Es steht ein neuer Bindungsmechanismus für Windows 10 zur Verfügung, der für Leistung und Entwicklerproduktivität optimiert wurde. Weitere Informationen finden Sie unter [{x:Bind}-Markuperweiterung](x-bind-markup-extension.md)
 
-**Note**  Allgemeine Informationen zur Verwendung der Datenbindung in Ihrer App mit **{Binding}** (sowie einen Gesamtvergleich von **{x:Bind}** und **{Binding}**) finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Hinweis**  Allgemeine Informationen zur Verwendung der Datenbindung in Ihrer App mit **{Binding}** (sowie einen vollständigen Vergleich von **{x:Bind}** und **{Binding}**) finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 description: Die **{Binding}**-Markuperweiterung wird beim Laden von XAML in eine Instanz der [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)-Klasse konvertiert. Dieses Binding-Objekt ruft einen Wert aus einer Eigenschaft für eine Datenquelle ab. Das Binding-Objekt kann optional konfiguriert werden, um Änderungen am Wert der Datenquelleneigenschaft zu beobachten und den eigenen Wert anhand dieser Änderungen zu aktualisieren. Es kann optional auch konfiguriert werden, um Änderungen am eigenen Wert per Push zurück an die Quelleigenschaft zu senden. Die als Ziel einer Datenbindung verwendete Eigenschaft muss eine Abhängigkeitseigenschaft sein. Weitere Informationen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).
 
@@ -37,7 +38,9 @@ description: Die **{Binding}**-Markuperweiterung wird beim Laden von XAML in ein
 | Benennung | Beschreibung |
 |------|-------------|
 | *propertyPath* | Eine Zeichenfolge, die den Eigenschaftspfad für die Bindung angibt. Weitere Informationen finden Sie unten im Abschnitt [Eigenschaftspfad](#property-path). |
-| *bindingProperties* | *propName*=*value*\[, *propName*=*value*\]*<br/>Eine oder mehrere Bindungseigenschaften, die mithilfe einer Name-/Wert-Paarsyntax angegeben werden. |
+| *bindingProperties* | *propName*
+            =
+            *value*\[, *propName*=*value*\]*<br/>Eine oder mehrere Bindungseigenschaften, die mithilfe einer Name-/Wert-Paarsyntax angegeben werden. |
 | *propName* | Der Zeichenfolgenname der für das [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)-Objekt festzulegenden Eigenschaft. Beispiel: „Konverter“. | 
 | *value* | Der für die Eigenschaft festzulegende Wert. Die Syntax des Arguments hängt von der Eigenschaft der festgelegten Binding-Klasse ab. Weitere Informationen finden Sie unten im Abschnitt [Mit {Binding} festlegbare Eigenschaften der Bindungsklasse](#properties-of-binding). |
 
@@ -60,7 +63,7 @@ Weitere Informationen zur Zeichenfolgensyntax für einen Eigenschaftspfad, zu Ei
 ## Mit {Binding} festlegbare Eigenschaften der Bindungsklasse
 
 
-**{Binding}** wird mit der *bindingProperties*-Platzhaltersyntax angegeben, da in der Markuperweiterung mehrere Lese-/Schreibeigenschaften einer [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)-Klasse festgelegt werden können. Die Eigenschaften können in beliebiger Reihenfolge mithilfe von durch Kommas getrennten Paaren *propName*=*value* angegeben. Für einige Eigenschaften sind Typen erforderlich, die keine Typkonvertierung enthalten, sodass für diese eigene innerhalb von **{Binding}** geschachtelte Markuperweiterungen erforderlich sind.
+**{Binding}** wird mit der *bindingProperties*-Platzhaltersyntax angegeben, da in der Markuperweiterung mehrere Lese-/Schreibeigenschaften einer [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)-Klasse festgelegt werden können. Die Eigenschaften können in beliebiger Reihenfolge mithilfe von durch Kommas getrennten Paaren *propName*=*value* angegeben werden. Für einige Eigenschaften sind Typen erforderlich, die keine Typkonvertierung enthalten, sodass für diese eigene innerhalb von **{Binding}** geschachtelte Markuperweiterungen erforderlich sind.
 
 | Eigenschaft | Beschreibung |
 |----------|-------------|
@@ -72,21 +75,25 @@ Weitere Informationen zur Zeichenfolgensyntax für einen Eigenschaftspfad, zu Ei
 | [**FallbackValue**](https://msdn.microsoft.com/library/windows/apps/dn279345) | Gibt einen Wert an, der angezeigt wird, wenn die Quelle oder der Pfad nicht aufgelöst werden können. | 
 | [**Mode**](https://msdn.microsoft.com/library/windows/apps/br209829) | Gibt den Bindungsmodus als eine der folgenden Zeichenfolgen an: „OneTime“, „OneWay“ oder „TwoWay“. Diese Zeichenfolgen entsprechen den Konstantennamen der [**BindingMode**](https://msdn.microsoft.com/library/windows/apps/br209822)-Enumeration. Der Standardwert hängt vom Bindungsziel ab, in den meisten Fällen ist es jedoch „OneWay“. Beachten Sie, dass dieser vom Standard für **{x:Bind}** abweicht, der „OneTime“ lautet. | 
 | [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) | Gibt durch das Beschreiben der Position der Bindungsquelle relativ zur Position des Bindungsziels eine Datenquelle an. Die Angabe erfolgt über das Laufzeitobjektdiagramm, indem z. B. das übergeordnete Objekt angegeben wird. Legen Sie die [{RelativeSource}-Markuperweiterung](relativesource-markup-extension.md) fest. |
-| [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) | Gibt die Objektdatenquelle an. ##In der **Binding**-Markuperweiterung die [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946). |
+| [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832) | Gibt die Objektdatenquelle an. In der **Binding**-Markuperweiterung erfordert die [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832)-Eigenschaft einen Objektverweis, beispielsweise einen Verweis in der [{StaticResource}-Markuperweiterung](staticresource-markup-extension.md) Ist die Eigenschaft nicht angegeben, wird die Quelle vom aktiven Datenkontext angegeben. Häufig wird ein Source-Wert nicht in einzelnen Bindungen angegeben, sondern stattdessen der gemeinsame **DataContext** für mehrere Bindungen verwendet. Weitere Informationen finden Sie unter [**DataContext**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.datacontext.aspx) oder [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946). |
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | Gibt einen Wert an, der angezeigt wird, wenn der Quellwert aufgelöst werden kann, aber explizit **null** ist. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | Gibt den Zeitpunkt für Aktualisierungen von Bindungsquellen an. Wenn keine Angabe erfolgt, lautet der Standardwert **Default**. |
 
-**Hinweis**  Wenn Sie Markup von **{x:Bind}** in **{Binding}** konvertieren, beachten Sie die unterschiedlichen Standardwerte der **Mode**-Eigenschaft.
+**Hinweis**  Wenn Sie Markup von **{Binding}** in **{x:Bind}** konvertieren, beachten Sie die unterschiedlichen Standardwerte der **Mode**-Eigenschaft.
 
-[**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) und **ConverterLanguage** hängen mit der Konvertierung eines Werts oder Typs aus der Bindungsquelle in einen mit der Bindungszieleigenschaft kompatiblen Typ oder Wert zusammen. Weitere Informationen und Beispiele finden Sie im Abschnitt „Datenkonvertierungen“ unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
+[
+              **Converter**
+            ](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) und **ConverterLanguage** hängen mit der Konvertierung eines Werts oder Typs aus der Bindungsquelle in einen mit der Bindungszieleigenschaft kompatiblen Typ oder Wert zusammen. Weitere Informationen und Beispiele finden Sie im Abschnitt „Datenkonvertierungen“ unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-[**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) und [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) geben eine Bindungsquelle an und schließen sich somit gegenseitig aus.
+[
+              **Source**
+            ](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) und [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) geben eine Bindungsquelle an und schließen sich somit gegenseitig aus.
 
-**Tipp**  Wenn Sie eine einzelne geschweifte Klammer für einen Wert angeben müssen wie beispielsweise in [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) or [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), stellen Sie ihr einen umgekehrten Schrägstrich voran: `\{`. Setzen Sie alternativ die gesamte Zeichenfolge mit den geschweiften Klammern, für die Escapezeichen verwendet werden müssen, in weitere Anführungszeichen, z. B. `ConverterParameter='{Mix}'`.
+**Tipp**  Wenn Sie eine einzelne geschweifte Klammer für einen Wert angeben müssen, beispielsweise in [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) oder [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), stellen Sie ihr einen umgekehrten Schrägstrich voran: `\{`. Setzen Sie alternativ die gesamte Zeichenfolge mit den geschweiften Klammern, für die Escapezeichen verwendet werden müssen, in weitere Anführungszeichen, z. B. `ConverterParameter='{Mix}'`.
 
 ## Beispiele
 
-```XAML
+```XML
 <!-- binding a UI element to a view model -->    
 <Page ... >
     <Page.DataContext>
@@ -97,7 +104,7 @@ Weitere Informationen zur Zeichenfolgensyntax für einen Eigenschaftspfad, zu Ei
 </Page>
 ```
 
-```XAML
+```XML
 <!-- binding a UI element to another UI element -->
 <Page ... >
     <Page.Resources>
@@ -123,6 +130,6 @@ Mit Microsoft IntelliSense in Microsoft Visual Studio werden die Eigenschaften d
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

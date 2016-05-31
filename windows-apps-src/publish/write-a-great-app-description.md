@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Eine aussagekräftige Beschreibung hebt Ihre App von anderen im Windows Store ab und animiert Kunden zum Download.
 title: Erstellen einer interessanten App-Beschreibung
 ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
@@ -12,8 +13,8 @@ Eine aussagekräftige Beschreibung hebt Ihre App von anderen im Windows Store ab
 
 Hier einige Tipps für eine optimale App-Beschreibung.
 
--   **Wecken Sie Interesse in den ersten Sätzen.** Der Anfang Ihrer Beschreibung ist am wichtigsten. Die ersten Zeilen müssen die Aufmerksamkeit eines Kunden erregen und aufrechterhalten. Überlegen Sie sich, wie Sie in einem oder zwei Sätzen Ihre App so erklären können, dass die Beschreibung zum Herunterladen anregt.
--   **Stellen Sie wichtige Infos zu Ihrer App bereit.** Schließen Sie an den Aufmacher weitere Vorteile, In-App-Einkaufsmöglichkeiten und andere für Kunden interessante Details an. Stellen Sie sicher, dass alle offenzulegenden Informationen enthalten sind, zu deren Angabe Sie in den Märkten, in denen Ihre App vertrieben wird, gesetzlich verpflichtet sind.
+-   **Wecken Sie Interesse in den ersten Sätzen.** Der Anfang Ihrer Beschreibung ist am wichtigsten. Die ersten Zeilen müssen die Aufmerksamkeit eines Kunden erregen und aufrechterhalten. Beginnen Sie mit dem Nutzenversprechen: Warum sollten potenzielle Kunden Zeit und Geld in den Kauf Ihrer App investieren? Welchen Vorteil bietet Ihre App gegenüber anderen? Erläutern Sie in ein oder zwei einfachen, verständlichen Sätzen, warum Ihre App einzigartig ist und niemand darauf verzichten sollte.
+-   **Stellen Sie wichtige Infos zu Ihrer App bereit.** Schließen Sie an den Aufmacher weitere Vorteile, In-App-Kaufmöglichkeiten und andere für Kunden interessante Details an. Stellen Sie sicher, dass alle offenzulegenden Informationen enthalten sind, zu deren Angabe Sie in den Märkten, in denen Ihre App vertrieben wird, gesetzlich verpflichtet sind.
 -   **Verwenden Sie Listen und kurze Absätze.** Potenzielle Kunden werfen u. U. nur einen kurzen Blick auf die Beschreibung Ihrer App. Erleichtern Sie das Überfliegen, indem Sie den Inhalt in kurzen Absätzen und Listen zusammenfassen.
     > **Hinweis**  Das Hinzufügen einer Liste der [App-Features](create-app-descriptions.md#app-features) ist ebenfalls eine großartige Methode, um Funktion und Zweck Ihrer App schnell erkennbar zu machen. Diese Liste wird direkt unter der App-Beschreibung angezeigt.
 -   **Vermeiden Sie trockene Formulierungen.** Verwenden Sie bei der Beschreibung lebendige Sprache. Achten Sie darauf, dass der Zweck Ihrer App eindeutig beschrieben ist, die Beschreibung jedoch nicht langweilig klingt. Für viele Apps eignet sich ein ungezwungener, freundlicher Tonfall.
@@ -34,6 +35,6 @@ Hier einige Tipps für eine optimale App-Beschreibung.
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Der Bericht „Anzeigenvermittlung“ gibt Aufschluss über Ihre effektive Füllrate und die jeweiligen Füllraten für die verwendeten Anzeigennetzwerke.
 title: Bericht „Anzeigenvermittlung“
 ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
@@ -18,7 +19,7 @@ Der Bericht **Anzeigenvermittlung** gibt Aufschluss über Ihre effektive Füllra
 
 Im oberen Seitenbereich können Sie die **Seitenfilter** erweitern, um alle Daten auf dieser Seite nach Datumsbereich und/oder Markt zu filtern.
 
--   **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
+-   **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
 -   **Markt**: Die Standardeinstellung ist **Alle Märkte**. Sie können einen bestimmten Markt auswählen, wenn auf dieser Seite nur Bewertungen der in diesem Markt ansässigen Kunden angezeigt werden sollen.
 -   **Plattform**: Die Standardeinstellung ist **Alle Plattformen**. Wenn Ihre App auf mehrere Plattformen ausgerichtet ist, können Sie eine bestimmte Plattform auswählen.
 
@@ -62,6 +63,6 @@ Das Diagramm **Fehler nach Typ** zeigt die spezifischen Fehler, die in den einze
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

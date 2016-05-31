@@ -1,4 +1,5 @@
 ---
+author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Eröffnen eines Entwicklerkontos
 description: Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos.
@@ -18,11 +19,11 @@ Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und
 3.  Wählen Sie den gewünschten [Entwicklerkontotyp](account-types-locations-and-fees.md) (Einzelkonto oder Unternehmenskonto) aus. Dies kann später nicht mehr geändert werden. Wählen Sie also unbedingt den richtigen Kontotyp aus. Machen Sie sich bei einem Unternehmenskonto mit den [Richtlinien](#additional-guidelines-for-company-accounts) vertraut.
 4.  Geben Sie die Kontaktinformationen ein, die Sie für Ihr Entwicklerkonto verwenden möchten.
 
-  > **Note**  Wir nutzen diese Angaben ausschließlich für die Kontaktaufnahme in kontobezogenen Angelegenheiten. Sie erhalten beispielsweise eine Bestätigungsnachricht per E-Mail nach erfolgter Registrierung. Danach senden wir Ihnen Nachrichten, wenn Sie Geld von uns erhalten oder wenn Korrekturen an Ihrem Konto erforderlich sind. Außerdem senden wir möglicherweise wie oben beschrieben Informations-E-Mails, sofern Sie den Empfang nicht transaktionsbezogener E-Mails nicht ablehnen.
+  > **Note**  Wir verwenden diese Angaben ausschließlich für die Kontaktaufnahme in kontobezogenen Angelegenheiten. Sie erhalten beispielsweise eine Bestätigungsnachricht per E-Mail nach erfolgter Registrierung. Danach senden wir Ihnen Nachrichten, wenn Sie Geld von uns erhalten oder wenn Korrekturen an Ihrem Konto erforderlich sind. Außerdem senden wir möglicherweise wie oben beschrieben Informations-E-Mails, sofern Sie den Empfang nicht transaktionsbezogener E-Mails nicht ablehnen.
 
    Wenn Sie sich als Unternehmen registrieren, müssen Sie auch den Namen, die E-Mail-Adresse und die Telefonnummer der Person eingeben, die das Konto Ihres Unternehmens genehmigt.
 
-5.  Geben Sie den gewünschten **Anzeigenamen des Herausgebers** an. Wenn Sie einen Namen eingeben, der bereits von einem anderen Benutzer ausgewählt wurde oder dessen Nutzungsrechte bei einer anderen Person liegen, können Sie diesen Namen nicht auswählen. Für Unternehmenskonten muss der Anzeigename des Herausgebers der eingetragene Unternehmens- oder Handelsname Ihrer Organisation sein. Wählen Sie den Namen mit Bedacht, da Kunden diesen Namen sehen und Ihre Apps unter diesem Namen kennenlernen.
+5.  Geben Sie den **Anzeigenamen des Herausgebers** an, den Sie verwenden möchten (maximal 50 Zeichen). Wenn Sie einen Namen eingeben, der bereits von einem anderen Benutzer ausgewählt wurde oder dessen Nutzungsrechte bei einer anderen Person liegen, können Sie diesen Namen nicht auswählen. Für Unternehmenskonten muss der Anzeigename des Herausgebers der eingetragene Unternehmens- oder Handelsname Ihrer Organisation sein. Wählen Sie den Namen mit Bedacht, da Kunden diesen Namen sehen und Ihre Apps unter diesem Namen kennenlernen.
 
   >  **Hinweis**  Stellen Sie sicher, dass Sie zur Verwendung dieses Namens berechtigt sind. Wurde der von Ihnen gewählte Name bereits als Marke eingetragen oder urheberrechtlich geschützt, wird Ihr Konto unter Umständen geschlossen. Weitere Informationen finden Sie unter [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/Hh694058). Wenn eine andere Person einen Herausgeberanzeigenamen verwendet, den Sie markenrechtlich oder anderweitig geschützt haben, [wenden Sie sich an Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).    
 
@@ -74,6 +75,6 @@ Wenn Sie Ihr Konto schließen, sollten Sie wissen, was mit Ihren im Windows Stor
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

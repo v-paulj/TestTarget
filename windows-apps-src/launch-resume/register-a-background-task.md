@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Registrieren einer Hintergrundaufgabe
 description: Hier erfahren Sie, wie eine Funktion erstellt wird, die zum sicheren Registrieren der meisten Hintergrundaufgaben wiederverwendet werden kann.
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
@@ -26,7 +27,7 @@ Dieses Thema behandelt schrittweise eine Hilfsfunktion, die Hintergrundaufgaben 
 
 Universelle Windows-Apps müssen jedoch [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen, bevor Hintergrund-Triggertypen registriert werden.
 
-Wenn Sie sicherstellen möchten, dass Ihre universelle Windows-App nach der Freigabe eines Updates weiterhin ordnungsgemäß ausgeführt wird, rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) und [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) auf, sobald die App nach der Aktualisierung gestartet wird. Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md).
+Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) und anschließend [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) auf, wenn die App nach der Aktualisierung gestartet wird, um sicherzustellen, dass Ihre universelle Windows-App nach der Veröffentlichung eines Updates weiterhin ordnungsgemäß ausgeführt wird. Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md).
 
 ## Definieren von Methodensignatur und Rückgabetyp
 
@@ -42,7 +43,7 @@ Diese Methode übernimmt den Einstiegspunkt der Aufgabe, den Namen der Aufgabe, 
 >                                                 IBackgroundCondition condition)
 > {
 >     
->     // We’ll add code to this function in subsequent steps.
+>     // We'll add code to this function in subsequent steps.
 > 
 > }
 > ```
@@ -54,7 +55,7 @@ Diese Methode übernimmt den Einstiegspunkt der Aufgabe, den Namen der Aufgabe, 
 >                                              IBackgroundCondition ^ condition)
 > {
 >     
->     // We’ll add code to this function in subsequent steps.
+>     // We'll add code to this function in subsequent steps.
 > 
 > }
 > ```
@@ -66,7 +67,7 @@ Diese Methode übernimmt den Einstiegspunkt der Aufgabe, den Namen der Aufgabe, 
 
 Sie können die vorhandenen Registrierungen durch Abfrage der [**BackgroundTaskRegistration.AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787)-Eigenschaft und Iteration über das Ergebnis überprüfen. Überprüfen Sie die Namen aller Instanzen: wenn ein Name mit dem Namen der Aufgabe übereinstimmt, die registriert werden soll, verlassen Sie die Schleife, und legen Sie eine Flag-Variable fest, damit Ihr Code im nächsten Schritt einen anderen Pfad wählen kann.
 
-> **Hinweis:** Verwenden Sie innerhalb Ihrer App eindeutige Namen für Aufgaben. Stellen Sie sicher, dass jede Hintergrundaufgabe einen eindeutigen Namen hat.
+> **Hinweis**  Verwenden Sie innerhalb Ihrer App eindeutige Namen für Hintergrundaufgaben. Stellen Sie sicher, dass jede Hintergrundaufgabe einen eindeutigen Namen hat.
 
 Der folgende Code registriert eine Hintergrundaufgabe mit dem im vorigen Schritt erstellten [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838):
 
@@ -95,7 +96,7 @@ Der folgende Code registriert eine Hintergrundaufgabe mit dem im vorigen Schritt
 >         }
 >     }
 >     
->     // We’ll register the task in the next step.
+>     // We'll register the task in the next step.
 > }
 > ```
 > ```cpp
@@ -128,7 +129,7 @@ Der folgende Code registriert eine Hintergrundaufgabe mit dem im vorigen Schritt
 >         hascur = iter->MoveNext();
 >     }
 >     
->     // We’ll register the task in the next step.
+>     // We'll register the task in the next step.
 > }
 > ```
 
@@ -139,7 +140,7 @@ Der folgende Code registriert eine Hintergrundaufgabe mit dem im vorigen Schritt
 
 Registrieren Sie die Aufgabe dann mithilfe eines neuen [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Objekts. Der Code sollte überprüfen, ob der Parameter für die Bedingung null ist, und andernfalls die Bedingung an das Registrierungsobjekt anfügen. Geben Sie die von der [**BackgroundTaskBuilder.Register**](https://msdn.microsoft.com/library/windows/apps/br224772)-Methode zurückgegebene [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786) zurück.
 
-> **Hinweis:** Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App Szenarien, in denen die Registrierung von Hintergrundaufgaben einen Fehler verursacht, problemlos verarbeitet.
+> **Hinweis**  Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App Szenarien, in denen die Registrierung von Hintergrundaufgaben einen Fehler verursacht, problemlos verarbeitet.
 
 Im folgenden Beispiel wird entweder die vorhandene Aufgabe zurückgegeben, oder es wird Code hinzugefügt, mit dem die Hintergrundaufgabe registriert wird (ggf. einschließlich der Systembedingung):
 
@@ -361,7 +362,7 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 > }
 > ```
 
-> **Hinweis:** Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 ## Verwandte Themen
@@ -393,6 +394,6 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

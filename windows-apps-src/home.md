@@ -43,6 +43,6 @@ In den folgenden Artikeln finden Sie eine Einführung in die universelle Windows
 | [XAML-Plattform](xaml-platform/index.md) | Steigen Sie mit den grundlegenden Konzepten der XAML-Programmiersprache ein. Oder wenn Sie bereits mit XAML vertraut sind, überspringen Sie diesen Teil, und erfahren Sie, wie Windows-Runtime-Features mithilfe von Visual Studio in XAML implementiert werden können, um eine beeindruckende, universelle Windows-App zu erstellen. |
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

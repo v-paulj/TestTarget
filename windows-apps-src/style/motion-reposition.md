@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Verwenden Sie die Animation für das Ändern der Position, um eines oder mehrere Elemente an eine neue Position zu verschieben.
 title: Animationen für Positionsänderungen in UWP-Apps
 ms.assetid: 25D1EE31-5C25-4F21-B34C-FBD8FB1C8FFF
@@ -9,7 +10,7 @@ template: detail.hbs
 # Animationen für Positionsänderungen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Verwenden Sie die Animation für das Ändern der Position, um eines oder mehrere Elemente an eine neue Position zu verschieben.
 
@@ -43,6 +44,6 @@ Verwenden Sie die Animation für das Ändern der Position, um eines oder mehrere
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

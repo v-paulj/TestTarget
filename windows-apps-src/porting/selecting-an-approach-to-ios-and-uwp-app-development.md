@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: Welche Optionen gibt es beim Entwickeln von plattformübergreifenden Apps?
 title: Auswählen eines Ansatzes für die Entwicklung von iOS- und UWP-Apps
 ms.assetid: 5CDAB313-07B7-4A32-A49B-026361DCC853
@@ -90,6 +91,6 @@ Bei einer vorhandenen iOS-App stehen weniger Optionen zur Verfügung. Es ist jed
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

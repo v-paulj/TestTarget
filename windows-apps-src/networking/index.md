@@ -1,4 +1,5 @@
 ---
+author: DelfCo
 ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: Technologien für den Zugriff auf das Netzwerk und Webdienste.
 title: Netzwerk und Webdienste
@@ -22,6 +23,7 @@ Die folgenden Netzwerk- und Webdiensttechnologien sind für Entwickler von UWP (
 | [Hintergrundübertragungen](background-transfers.md)                                         | Verwenden Sie die Hintergrundübertragungs-API zum zuverlässigen Kopieren von Dateien im Netzwerk.           |
 | [Markieren von Netzwerkverbindungen mit EDP-Identität](tagging_network_connections_with_edp_identity.md) | In diesem Thema wird veranschaulicht, wie Sie einen geschützten Threadkontext erstellen, bevor Sie in einem Unternehmensdatenschutz-Szenario (Enterprise Data Protection, EDP) Netzwerkverbindungen erstellen. |
 
-<!--HONumber=Mar16_HO5-->
+
+<!--HONumber=May16_HO2-->
 
 

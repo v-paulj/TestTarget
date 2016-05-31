@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: beac6333-655a-4bcf-9caf-bba15f715ea5
 title: Threading und asynchrone Programmierung
 description: Mithilfe von Threading und der asynchronen Programmierung kann Ihre App Aufgaben asynchron in parallelen Threads ausführen.
@@ -24,7 +25,7 @@ Der Threadpool bietet eine höhere Effizienz beim Verwalten von Threads, da der 
 | Thema                                                                                                          | Beschreibung                         |
 |----------------------------------------------------------------------------------------------------------------|-------------------------------------|
 | [Asynchrone Programmierung (UWP-Apps)](asynchronous-programming-universal-windows-platform-apps.md)              | In diesem Thema werden die asynchrone Programmierung auf der Universellen Windows-Plattform (UWP) und ihre Darstellung in C#, Microsoft Visual Basic .NET, Visual C++-Komponentenerweiterungen (C++/CX) und JavaScript erläutert. |
-| [Asynchrone Programmierung in C++ (UWP-Apps)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in C++/CX mithilfe der <code>task</code>-Klasse beschrieben, die im <code>concurrency</code>-Namespace in „ppltasks.h“ definiert wird. |
+| [Asynchrone Programmierung in C++ (UWP-Apps)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in C++/CX mithilfe der <code>task</code><code>concurrency</code>-Klasse beschrieben, die im -Namespace in „ppltasks.h“ definiert wird. |
 | [Bewährte Methoden zum Verwenden des Threadpools](best-practices-for-using-the-thread-pool.md)                         | In diesem Thema werden bewährte Methoden für die Verwendung des Threadpools beschrieben. |
 | [Aufrufen asynchroner APIs in C# oder Visual Basic](call-asynchronous-apis-in-csharp-or-visual-basic.md)             | Die Universelle Windows-Plattform (UWP) enthält viele asynchrone APIs. Diese sorgen dafür, dass Ihre App reaktionsfähig bleibt, wenn sie über einen längeren Zeitraum mit einer Aufgabe beschäftigt ist. In diesem Thema wird die Verwendung asynchroner Methoden aus der Universellen Windows-Plattform (UWP) in C# oder Microsoft Visual Basic erläutert. |
 | [Erstellen einer regelmäßigen Arbeitsaufgabe](create-a-periodic-work-item.md)                                                   | Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die regelmäßig wiederholt wird. |
@@ -36,6 +37,6 @@ Der Threadpool bietet eine höhere Effizienz beim Verwalten von Threads, da der 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

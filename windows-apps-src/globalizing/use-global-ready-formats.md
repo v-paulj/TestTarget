@@ -1,15 +1,16 @@
 ---
+author: DelfCo
 Description: Entwickeln Sie eine für den globalen Markt geeignete App mit geeigneter Formatierung für Datumsangaben, Uhrzeiten, Zahlen und Währungen.
 title: Verwenden weltweit einsetzbarer Formate
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
-label: Verwenden weltweit einsetzbarer Formate
+label: Use global-ready formats
 template: detail.hbs
 ---
 
 # <span id="dev_globalizing.use_global-ready_formats"></span>Verwenden weltweit einsetzbarer Formate
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+
 
 
 **Wichtige APIs**
@@ -117,7 +118,7 @@ Zur Vereinfachung der Anpassung an neue Märkte können Sie bereits bei der App-
 
     // Results for display.
     var results = "Fixed number (" + fractionalNumber + ")\n" +
-                  "With user&#39;s default currency: " + currencyDefault + "\n" +
+                  "With user's default currency: " + currencyDefault + "\n" +
                   "Formatted US Dollar: " + currencyUSD + "\n" +
                   "Formatted Euro (fr-FR defaults): " + currencyEuroFR;
     ```
@@ -149,7 +150,7 @@ Zur Vereinfachung der Anpassung an neue Märkte können Sie bereits bei der App-
 
     // Results for display.
     var results = "Fixed number (" + fractionalNumber + ")\n" +
-                  "With user&#39;s default currency: " + currencyDefault + "\n" +
+                  "With user's default currency: " + currencyDefault + "\n" +
                   "Formatted US Dollar: " + currencyUSD + "\n" +
                   "Formatted Euro (fr-FR defaults): " + currencyEuroFR;
     ```
@@ -189,6 +190,6 @@ Zur Vereinfachung der Anpassung an neue Märkte können Sie bereits bei der App-
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

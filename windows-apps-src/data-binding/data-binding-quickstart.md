@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: Übersicht Datenbindung
 description: In diesem Thema erfahren Sie, wie Sie in einer UWP-App (Universelle Windows-Plattform) ein Steuerelement (oder ein anderes Benutzeroberflächenelement) an ein einzelnes Element oder ein Elementsteuerelement an eine Sammlung von Elementen binden.
@@ -194,7 +195,7 @@ Dies ist das Ergebnis.
 Binden an eine Sammlung von Elementen
 ------------------------------------------------------------------------------------------------------------------
 
-Ein häufiges Szenario ist das Binden an eine Sammlung von Geschäftsobjekten. In C# und Visual Basic stellt die generische [**ObservableCollection&lt;T&gt;**](T:System.Collections.ObjectModel.ObservableCollection%601)-Klasse eine gute Wahl für die Datenbindung bei Sammlungen dar, da sie die [**INotifyPropertyChanged**](T:System.ComponentModel.INotifyPropertyChanged)-Schnittstelle und die [**INotifyCollectionChanged**](T:System.Collections.Specialized.INotifyCollectionChanged)-Schnittstelle implementiert. Diese Schnittstellen bieten eine Änderungsbenachrichtigung für Bindungen, wenn Elemente hinzugefügt oder entfernt werden oder eine Eigenschaft der Liste selbst geändert wird. Wenn Ihre gebundenen Steuerelemente bei Änderungen an Eigenschaften von Objekten in der Sammlung aktualisiert werden sollen, muss das Geschäftsobjekt auch **INotifyPropertyChanged** implementieren. Weitere Informationen finden Sie unter [Datenbindung im Detail](data-binding-in-depth.md).
+Ein häufiges Szenario ist das Binden an eine Sammlung von Geschäftsobjekten. In C# und Visual Basic stellt die generische [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/ms668604.aspx)-Klasse eine gute Wahl für die Datenbindung bei Sammlungen dar, da sie die  [**INotifyPropertyChanged**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx)-Schnittstelle und die [**INotifyCollectionChanged**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx)-Schnittstelle implementiert. Diese Schnittstellen bieten eine Änderungsbenachrichtigung für Bindungen, wenn Elemente hinzugefügt oder entfernt werden oder eine Eigenschaft der Liste selbst geändert wird. Wenn Ihre gebundenen Steuerelemente bei Änderungen an Eigenschaften von Objekten in der Sammlung aktualisiert werden sollen, muss das Geschäftsobjekt auch **INotifyPropertyChanged** implementieren. Weitere Informationen finden Sie unter [Datenbindung im Detail](data-binding-in-depth.md).
 
 In diesem nächsten Beispiel wird eine [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) an eine Sammlung von `Recording`-Objekten gebunden. Beginnen wir, indem wir die Sammlung zum Ansichtsmodell hinzufügen. Fügen Sie einfach diese neuen Member zur **RecordingViewModel**-Klasse hinzu.
 
@@ -279,11 +280,11 @@ And then bind a [**ListView**](https://msdn.microsoft.com/library/windows/apps/B
 </Page>
 ```
 
-Wir haben noch keine Datenvorlage für die **Recording**-Klasse bereitgestellt. Daher kann das Benutzeroberflächenframework nur [**ToString**](M:System.Object.ToString) für jedes Element in der [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) aufrufen. Die Standardimplementierung von **ToString** ist die Rückgabe des Typnamens.
+Wir haben noch keine Datenvorlage für die **Recording**-Klasse bereitgestellt. Daher kann das Benutzeroberflächenframework nur [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) für jedes Element in der [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) aufrufen. Die Standardimplementierung von **ToString** ist die Rückgabe des Typnamens.
 
 ![Binden einer Listenansicht](images/xaml-databinding1.png)
 
-Um dies zu beheben, können wir entweder [**ToString**](M:System.Object.ToString) so überschreiben, dass der Wert von **OneLineSummary** zurückgegeben wird, oder wir können eine Datenvorlage bereitstellen. Die Datenvorlagenoption wird häufiger verwendet ist auch deutlich flexibler. Sie legen eine Datenvorlage mithilfe der [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369)-Eigenschaft eines Inhaltssteuerelements oder mit der [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830)-Eigenschaft eines Elementsteuerelements fest. Nachfolgend sind zwei Möglichkeiten zum Entwerfen einer Datenvorlage für **Recording** dargestellt, zusammen mit einer Abbildung des Ergebnisses.
+Um dies zu beheben, können wir entweder [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) so überschreiben, dass der Wert von **OneLineSummary** zurückgegeben wird, oder wir können eine Datenvorlage bereitstellen. Die Datenvorlagenoption wird häufiger verwendet ist auch deutlich flexibler. Sie legen eine Datenvorlage mithilfe der [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369)-Eigenschaft eines Inhaltssteuerelements oder mit der [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830)-Eigenschaft eines Elementsteuerelements fest. Nachfolgend sind zwei Möglichkeiten zum Entwerfen einer Datenvorlage für **Recording** dargestellt, zusammen mit einer Abbildung des Ergebnisses.
 
 ``` xml
     <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
@@ -326,7 +327,7 @@ Sie können auch alle Details der **Recording**-Objekte in [**ListView**](https:
 
 Sie haben zwei Möglichkeiten, dieses Verhalten zu implementieren. Sie können die Detailansicht an die [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770)-Eigenschaft der [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) binden. Alternativ können Sie eine [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) verwenden: Binden Sie sowohl die **ListView** als auch die Detailansicht an die **CollectionViewSource** (dies behandelt das derzeit ausgewählte Elements für Sie). Die beiden Methoden sind unten aufgeführt und haben dieselben Ergebnisse, wie in der Abbildung dargestellt.
 
-**Hinweis:** Bisher haben wir in diesem Thema nur die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) verwendet. Für die beiden weiter unten aufgeführten Methoden wird jedoch die flexiblere (jedoch weniger leistungsfähige) [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) benötigt.
+**Hinweis:**  Bisher haben wir in diesem Thema nur die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) verwendet. Für die beiden weiter unten aufgeführten Methoden wird jedoch die flexiblere (jedoch weniger leistungsfähige) [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) benötigt.
 
 Sehen wir uns zuerst die [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770)-Methode an. Bei Verwendung von Komponentenerweiterungen für Visual C++ (C++/CX) muss dann – da wir [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden – das [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872)-Attribut zur **Recording**-Klasse hinzugefügt werden.
 
@@ -395,7 +396,7 @@ Nachfolgend ist das identische Ergebnis für die beiden Methoden dargestellt.
 Formatieren oder Konvertieren von Datenwerten für die Anzeige
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-Es gibt ein kleines Problem mit dem oben gezeigten Rendering. Die **ReleaseDateTime**-Eigenschaft ist nicht nur ein Datum, sondern liegt als [**DateTime**](T:System.DateTime) vor und wird daher mit einer Genauigkeit angezeigt, die nicht notwendig ist. Eine Lösung besteht darin, eine Zeichenfolgeneigenschaft zur **Recording**-Klasse hinzuzufügen, die `this.ReleaseDateTime.ToString("d")` zurückgibt. Indem wir diese Eigenschaft **ReleaseDate** nennen, geben wir an, dass sie ein Datum und nicht das Datum und die Uhrzeit zurückgibt. Die Benennung als **ReleaseDateAsString** gibt dann auch noch an, dass sie eine Zeichenfolge zurückgibt.
+Es gibt ein kleines Problem mit dem oben gezeigten Rendering. Die **ReleaseDateTime**-Eigenschaft ist nicht nur ein Datum, sondern liegt als [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx) vor und wird daher mit einer Genauigkeit angezeigt, die nicht notwendig ist. Eine Lösung besteht darin, eine Zeichenfolgeneigenschaft zur **Recording**-Klasse hinzuzufügen, die `this.ReleaseDateTime.ToString("d")` zurückgibt. Indem wir diese Eigenschaft **ReleaseDate** nennen, geben wir an, dass sie ein Datum und nicht das Datum und die Uhrzeit zurückgibt. Die Benennung als **ReleaseDateAsString** gibt dann auch noch an, dass sie eine Zeichenfolge zurückgibt.
 
 Eine flexiblere Lösung ist die Verwendung eines so genannten „Wertkonverters“. Nachfolgend ist ein Beispiel zum Erstellen Ihres eigenen Wertkonverter aufgeführt. Fügen Sie diesen Code zu Ihrer „Recording.cs“-Quellcodedatei hinzu.
 
@@ -450,6 +451,6 @@ Dies ist das Ergebnis.
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

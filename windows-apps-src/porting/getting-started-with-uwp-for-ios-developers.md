@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 description: Erste Schritte mit UWP für iOS-Entwickler
 title: Erste Schritte mit UWP für iOS-Entwickler
 ms.assetid: 9F67068B-E578-4C70-B3E0-DFF150FA9BDD
@@ -27,6 +28,7 @@ Für die ersten Schritte bei diesen exemplarischen Vorgehensweisen benötigen Si
 | [Erste Schritte: Navigation](getting-started-navigation.md) | Bei einer Windows 10-App ist die Verwendung der [Frame](https://msdn.microsoft.com/library/windows/apps/br242682)-Klasse eine der Methoden zum Verwalten dieser Navigation. Die folgende exemplarische Vorgehensweise veranschaulicht, wie Sie dies ausprobieren können. |
 | [Erste Schritte: Animation](getting-started-animation.md) | Animationen in Windows-Apps können programmgesteuert erstellt werden. Sie können jedoch auch deklarativ mittels Extensible Application Markup Language (XAML) definiert werden. |
 | [Erste Schritte: Was kommt als Nächstes?](getting-started-what-next.md) | Mithilfe dieser grundlegenden Informationen können Sie nun interessantere UWP-Apps schreiben. Informationen zu den nächsten Schritte finden Sie in den folgenden Themen. Führen Sie dann Visual Studio aus, und beginnen Sie mit dem Schreiben von Code. |
+| [Windows-Apps-Konzeptzuordnung](https://msdn.microsoft.com//windows/uwp/porting/android-ios-uwp-map) | Wie sich iOS-Konzepte als Windows (und Android) Funktionen begreifen lassen |
 
  
 
@@ -35,10 +37,6 @@ Für die ersten Schritte bei diesen exemplarischen Vorgehensweisen benötigen Si
  
 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

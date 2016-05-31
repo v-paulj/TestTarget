@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Aufzählen und Abfragen von Dateien und Ordnern
 description: Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Bibliothek, auf einem Gerät oder an einer Netzwerkadresse befinden. Sie können auch durch Erstellen von Datei- und Ordnerabfragen Dateien und Ordner an bestimmten Speicherorten abrufen.
@@ -11,7 +12,7 @@ description: Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in
 
 Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Bibliothek, auf einem Gerät oder an einer Netzwerkadresse befinden. Sie können auch durch Erstellen von Datei- und Ordnerabfragen Dateien und Ordner an bestimmten Speicherorten abrufen.
 
-**Hinweis:** Weitere Informationen finden Sie im [Beispiel für Ordnerenumeration](http://go.microsoft.com/fwlink/p/?linkid=619993).
+**Hinweis**  Weitere Informationen finden Sie im [Beispiel für Ordnerenumeration](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
  
 ## Voraussetzungen
@@ -26,7 +27,7 @@ Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Biblio
 
 ## Auflisten der Dateien und Ordner an einem Speicherort
 
-> **Hinweis:** Denken Sie daran, die **picturesLibrary**-Funktion anzugeben.
+> **Hinweis**  Denken Sie daran, die **picturesLibrary**-Funktion anzugeben.
 
 In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276)-Methode, um alle Dateien im Stammordner der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (nicht in den Unterordnern) abzurufen und die Namen der einzelnen Dateien aufzulisten. Als Nächstes verwenden wir die [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227280)-Methode, um alle Unterordner in der **PicturesLibrary** abzurufen und die Namen der einzelnen Unterordner aufzulisten.
 
@@ -41,47 +42,47 @@ In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**]
 > using namespace concurrency;
 > using namespace std;
 > 
-> // Geben Sie die „Pictures Folder“-Funktion in der „appxmanifext“-Datei an.
+> // Be sure to specify the Pictures Folder capability in the appxmanifext file.
 > StorageFolder^ picturesFolder = KnownFolders::PicturesLibrary;
 > 
-> // Verwenden Sie „shared_ptr“, sodass die Zeichenfolge im Speicher bleibt.
-> // bis die letzte Aufgabe abgeschlossen iste.
+> // Use a shared_ptr so that the string stays in memory
+> // until the last task is complete.
 > auto outputString = make_shared<wstring>();
 > *outputString += L"Files:\n";
 > 
-> // Rufen Sie einen schreibgeschützten Vektor der Dateiobjekte ab,
-> // und übergeben Sie diesen an die Fortsetzung.n. 
+> // Get a read-only vector of the file objects
+> // and pass it to the continuation. 
 > create_task(picturesFolder->GetFilesAsync())        
->     // outputString wird nach Wert erfasst. Dadurch wird eine a copy 
->     // von „shared_ptr“ erstellt und die Referenz-eanzahl erhöht.
->     .then ([outputString] (IVectorView\<StorageFile^>^ files)
-> {        
->     for ( unsigned int i = 0 ; i < files->Size; i++)
->     {
->         *outputString += files->GetAt(i)->Name->Data();
->         *outputString += L"\n";
->     }
-> })
->     // Der Rückgabetyp musspe 
->     // hier explizit angegeben werden: -> IAsyncOperation<...>
->     .then([picturesFolder]() -> IAsyncOperation\<IVectorView\<StorageFolder^>^>^ 
-> {
->     return picturesFolder->GetFoldersAsync();
-> })
->     // Erfassen Sie „this“ für den Zugriff auf „m_OutputTextBlock“ von innerhalb der Zambda.
->     .then([this, outputString](IVectorView\<StorageFolder^>^ folders)
-> {        
->     *outputString += L"Folders:\n";
+>    // outputString is captured by value, which creates a copy 
+>    // of the shared_ptr and increments its reference count.
+>    .then ([outputString] (IVectorView\<StorageFile^>^ files)
+>    {        
+>        for ( unsigned int i = 0 ; i < files->Size; i++)
+>        {
+>            *outputString += files->GetAt(i)->Name->Data();
+>            *outputString += L"\n";
+>       }
+>    })
+>    // We need to explicitly state the return type 
+>    // here: -> IAsyncOperation<...>
+>    .then([picturesFolder]() -> IAsyncOperation\<IVectorView\<StorageFolder^>^>^ 
+>    {
+>        return picturesFolder->GetFoldersAsync();
+>    })
+>    // Capture "this" to access m_OutputTextBlock from within the lambda.
+>    .then([this, outputString](IVectorView\<StorageFolder^>^ folders)
+>    {        
+>        *outputString += L"Folders:\n";
 > 
->     for ( unsigned int i = 0; i < folders->Size; i++)
->     {
->         *outputString += folders->GetAt(i)->Name->Data();
->         *outputString += L"\n";
->     }
+>        for ( unsigned int i = 0; i < folders->Size; i++)
+>        {
+>           *outputString += folders->GetAt(i)->Name->Data();
+>           *outputString += L"\n";
+>        }
 > 
->     // „m_OutputTextBlock“ ist ein in XAML definierter TextBlock.
->     m_OutputTextBlock->Text = ref new String((*outputString).c_str());
-> });
+>        // Assume m_OutputTextBlock is a TextBlock defined in the XAML.
+>        m_OutputTextBlock->Text = ref new String((*outputString).c_str());
+>     });
 > ```
 > ```cs
 > StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
@@ -131,7 +132,7 @@ In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**]
 > ```
 
 
-> **Hinweis:** Denken Sie in C# oder Visual Basic daran, das **async**-Schlüsselwort in der Methodendeklaration aller Methoden anzugeben, in denen Sie den **await**-Operator verwenden.
+> **Hinweis**  Denken Sie in C# oder Visual Basic daran, das **async**-Schlüsselwort in der Methodendeklaration aller Methoden anzugeben, in denen Sie den **await**-Operator verwenden.
  
 
 Alternativ können Sie die [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286)-Methode verwenden, um alle Elemente (Dateien und Ordner) an einem bestimmten Speicherort abzurufen. Im folgenden Beispiel wird die **GetItemsAsync**-Methode verwendet, um alle Dateien und Unterordner im Stammordner der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) abzurufen (nicht in den Unterordnern). Anschließend werden die Namen der einzelnen Dateien und Unterordner aufgelistet. Wenn das Element ein Unterordner ist, wird dem Namen die Zeichenfolge `"folder"` angefügt.
@@ -203,7 +204,7 @@ Alternativ können Sie die [**GetItemsAsync**](https://msdn.microsoft.com/librar
 > Next item
 > ```
 
-## Query files in a location and enumerate matching files
+## Abfragen von Dateien aus einem Speicherort und Auflisten der entsprechenden Dateien
 
 In diesem Beispiel erfolgt eine Abfrage nach allen Dateien in der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156), die nach Monat gruppiert werden, wobei das Beispiel dieses Mal auch die Unterordner rekursiv durchsucht. Zunächst wird [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) aufgerufen und der [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957)-Wert an die Methode übergeben. Dadurch erhalten wir ein [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066)-Objekt.
 
@@ -226,8 +227,8 @@ Als Nächstes wird [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.m
 > StorageFolderQueryResult^ queryResult = 
 >     picturesFolder->CreateFolderQuery(CommonFolderQuery::GroupByMonth);
 > 
-> // shared_ptr verwenden, sodass „outputString“ im Speicher bleibt
-> // bis die Aufgabe abgeschlossen ist (Bereichsüberschreitung der Funktion)e.
+> // Use shared_ptr so that outputString remains in memory
+> // until the task completes, which is after the function goes out of scope.
 > auto outputString = std::make_shared<wstring>();
 > 
 > create_task( queryResult->GetFoldersAsync()).then([this, outputString] (IVectorView<StorageFolder^>^ view) 
@@ -268,12 +269,12 @@ Als Nächstes wird [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.m
 > {
 >     IReadOnlyList<StorageFile> fileList = await folder.GetFilesAsync();
 > 
->     // Den Monat und die Anzahl der Dateien in dieser Gruppe zu drucken.
+>     // Print the month and number of files in this group.
 >     outputText.AppendLine(folder.Name + " (" + fileList.Count + ")");
 > 
 >     foreach (StorageFile file in fileList)
 >     {
->         // Den Namen der Datei drucken.
+>         // Print the name of the file.
 >         outputText.AppendLine("   " + file.Name);
 >     }
 > }
@@ -293,12 +294,12 @@ Als Nächstes wird [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.m
 >     Dim fileList As IReadOnlyList(Of StorageFile) =
 >         Await folder.GetFilesAsync()
 > 
->     ' Den Monat und die Anzahl der Dateien in dieser Gruppe zu drucken.
+>     ' Print the month and number of files in this group.
 >     outputText.AppendLine(folder.Name & " (" & fileList.Count & ")")
 > 
 >     For Each file As StorageFile In fileList
 > 
->         ' Den Namen der Datei drucken.
+>         ' Print the name of the file.
 >         outputText.AppendLine("   " & file.Name)
 > 
 >     Next file
@@ -306,7 +307,7 @@ Als Nächstes wird [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.m
 > Next folder
 > ```
 
-Die Ausgabe des Beispiels sieht in etwa wie folgt.
+Die Ausgabe des Beispiels sieht in etwa wie folgt aus:
 
 ``` syntax
 July ‎2015 (2)
@@ -319,6 +320,6 @@ July ‎2015 (2)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

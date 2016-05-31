@@ -1,4 +1,5 @@
 ---
+author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
 description: In diesem Artikel erfahren Sie, wie Sie Steuerelemente eines Videoaufnahmegeräts verwenden, um erweiterte Foto- und Videoaufnahmeszenarien (einschließlich optischer Bildstabilisierung und fließendem Zoom) zu ermöglichen.
 title: Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen
@@ -15,7 +16,7 @@ Die in diesem Artikel beschriebenen Steuerelemente werden alle mithilfe desselbe
 
 Der Code in diesem Artikel wurde aus dem [Camera Manual Controls SDK-Beispiel](http://go.microsoft.com/fwlink/?LinkId=619479) übernommen und angepasst. Sie können das Beispiel herunterladen, um den verwendeten Code im Kontext anzuzeigen oder das Beispiel als Ausgangspunkt für Ihre eigene App zu verwenden.
 
-**Hinweis:** Dieser Artikel baut auf Konzepten und Code auf, die unter [Aufnehmen von Fotos und Videos mit „MediaCapture“](capture-photos-and-video-with-mediacapture.md), erläutert werden. Darin werden die Schritte für die Implementierung einer einfachen Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienaufnahme in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits über eine ordnungsgemäß initialisierte MediaCapture-Instanz verfügt.
+**Hinweis:**  Dieser Artikel baut auf Konzepten und Code auf, die unter [Aufnehmen von Fotos und Videos mit „MediaCapture“](capture-photos-and-video-with-mediacapture.md), erläutert werden. Darin werden die Schritte für die Implementierung einer einfachen Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits über eine ordnungsgemäß initialisierte MediaCapture-Instanz verfügt.
 
 Alle in diesem Artikel beschriebenen Gerätesteuerelement-APIs gehören dem [**Windows.Media.Devices**](https://msdn.microsoft.com/library/windows/apps/br206902)-Namespace an.
 
@@ -90,7 +91,7 @@ Legen Sie im Handler des Kontrollkästchens für die Reduzierung des Rote-Augen-
 
 Legen Sie schließlich im Handler des Kontrollkästchens für die Videotaschenlampe die [**Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078)-Eigenschaft auf den gewünschten Wert fest.
 
-[!code-cs[Torch](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
+[!code-cs[Taschenlampe](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
 
 **Hinweis:** Auf einigen Geräten wird die Taschenlampe erst aktiviert, wenn [**TorchControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) auf „true“ festgelegt ist, für das Gerät ein Vorschaudatenstrom ausgeführt wird und die Videoaufnahme aktiv ist. Folgende Reihenfolge wird empfohlen: Schalten Sie die Videovorschau ein, und aktivieren Sie dann die Taschenlampe, indem Sie **Enabled** auf „true“ festlegen. Initiieren Sie anschließend die Videoaufnahme. Auf einigen Geräten wird das Licht der Taschenlampe aktiviert, nachdem die Vorschau gestartet wurde. Auf anderen Geräten kann es sein, dass die Taschenlampe erst aufleuchtet, wenn die Videoaufnahme gestartet wird.
 
@@ -114,7 +115,7 @@ Erstellen Sie ein neues [**FocusSettings**](https://msdn.microsoft.com/library/w
 
 [!code-cs[CafFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCafFocusRadioButton)]
 
-**Wichtig:** Der Autofokusmodus wird nur während der Ausführung des Vorschaudatenstroms unterstützt. Vergewissern Sie sich, dass der Vorschaudatenstrom ausgeführt wird, bevor Sie den fortlaufenden Autofokus aktivieren.
+**Wichtig:**  Der Autofokusmodus wird nur während der Ausführung des Vorschaudatenstroms unterstützt. Vergewissern Sie sich, dass der Vorschaudatenstrom ausgeführt wird, bevor Sie den fortlaufenden Autofokus aktivieren.
 
 ### Tippen zum Scharfstellen
 
@@ -160,9 +161,22 @@ Rufen Sie schließlich [**FocusAsync**](https://msdn.microsoft.com/library/windo
 
 **Wichtig:** Beim Implementieren von „Tippen zum Scharfstellen“ ist die Reihenfolge der Vorgänge wichtig. Die APIs müssen in folgender Reihenfolge aufgerufen werden:
 
-**1.**[**FocusControl.Configure**](https://msdn.microsoft.com/library/windows/apps/dn608067)
-**2.**[**RegionsOfInterestControl.SetRegionsAsync**](https://msdn.microsoft.com/library/windows/apps/dn279070)
-**3.**[**FocusControl.FocusAsync**](https://msdn.microsoft.com/library/windows/apps/dn297794)
+**1.**
+            [
+              **FocusControl.Configure**
+            ](https://msdn.microsoft.com/library/windows/apps/dn608067)
+            
+          
+            **2.**
+            [
+              **RegionsOfInterestControl.SetRegionsAsync**
+            ](https://msdn.microsoft.com/library/windows/apps/dn279070)
+            
+          
+            **3.**
+            [
+              **FocusControl.FocusAsync**
+            ](https://msdn.microsoft.com/library/windows/apps/dn297794)
 
 [!code-cs[TapToFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapToFocus)]
 
@@ -190,7 +204,7 @@ Der Fokuswert muss innerhalb des vom Gerät unterstützten Bereichs liegen und m
 
 Legen Sie den Wert des Schieberegler-Steuerelements auf den aktuellen Wert von **FocusControl** fest, nachdem Sie die Registrierung des [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/br209737)-Ereignishandlers aufgehoben haben. Das Ereignis wird dann nicht ausgelöst, wenn der Wert festgelegt wird.
 
-[!code-cs[Focus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocus)]
+[!code-cs[Fokus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocus)]
 
 Rufen Sie im **Checked**-Ereignishandler für das Optionsfeld für den manuellen Fokus das **FocusControl**-Objekt ab, und rufen Sie [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) auf, falls Ihre App den Fokus durch einen Aufruf von [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081) entsperrt hat.
 
@@ -324,6 +338,7 @@ Legen Sie den Zoomfaktor auf dem Aufnahmegerät fest, indem Sie ein neues [**Zoo
 
 * [Aufnehmen von Fotos und Videos mit „MediaCapture“](capture-photos-and-video-with-mediacapture.md)
 
-<!--HONumber=Mar16_HO2-->
+
+<!--HONumber=May16_HO2-->
 
 

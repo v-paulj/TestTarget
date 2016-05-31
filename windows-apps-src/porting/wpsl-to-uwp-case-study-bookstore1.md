@@ -1,6 +1,7 @@
 ---
+author: mcleblanc
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
-description: Hier wird eine Fallstudie für das Portieren einer sehr einfachen Windows Phone Silverlight-App auf eine UWP -App für Windows 10 vorgestellt.
+description: In diesem Thema wird eine Fallstudie für das Portieren einer sehr einfachen Windows Phone Silverlight-App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10 vorgestellt.
 title: Windows Phone Silverlight zu UWP – Fallstudie: Bookstore1
 ---
 
@@ -8,13 +9,13 @@ title: Windows Phone Silverlight zu UWP – Fallstudie: Bookstore1
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-In diesem Thema wird eine Fallstudie für das Portieren einer sehr einfachen Windows Phone Silverlight-App auf eine UWP (Universelle Windows-Plattform)-App für Windows 10 vorgestellt. Mit Windows 10 können Sie ein einzelnes App-Paket erstellen, das Ihre Kunden auf einer Vielzahl von Geräten installieren können – und genau das werden wir in dieser Fallstudie tun. Weitere Informationen finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
+In diesem Thema wird eine Fallstudie für das Portieren einer sehr einfachen Windows Phone Silverlight-App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10 vorgestellt. Mit Windows 10 können Sie ein einzelnes App-Paket erstellen, das Ihre Kunden auf einer Vielzahl von Geräten installieren können – und genau das werden wir in dieser Fallstudie tun. Weitere Informationen finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 Die portierte App besteht aus einem **ListBox**-Element, das an ein Ansichtsmodell gebunden ist. Das Ansichtsmodell verfügt über eine Liste mit Büchern, für die Titel, Autor und Bucheinband angezeigt werden. Für die Bucheinbandbilder ist **Buildvorgang** auf **Inhalt** und **In Ausgabeverzeichnis kopieren** auf **Nicht kopieren** festgelegt.
 
 Die vorherigen Themen in diesem Abschnitt beschreiben die Unterschiede zwischen den Plattformen und bieten umfassende Informationen und Anleitungen zum Portierungsprozess für verschiedene Aspekte einer App, vom XAML-Markup über die Bindung an ein Ansichtsmodell bis hin zum Zugreifen auf Daten. Dieser Leitfaden soll anhand einer Fallstudie ergänzt werden, indem ein praktisches Beispiel vorgestellt wird. Bei den Fallstudien wird davon ausgegangen, dass Sie die Anleitung gelesen haben. Sie wird nicht wiederholt.
 
-**Hinweis** Wenn beim Öffnen von Bookstore1Universal\_10 in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md#targetplatformversion) aus.
+**Hinweis**   Wenn beim Öffnen von „Bookstore1Universal\_10“ in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](wpsl-to-uwp-troubleshooting.md#targetplatformversion) aus.
 
 ## Downloads
 
@@ -79,7 +80,7 @@ Für diese App zählt Element \#3 nicht zu den Schulden, da die Statusleiste (e
 | PhoneTextNormalStyle                | CaptionTextBlockStyle  |
 | PhoneTextTitle1Style                | HeaderTextBlockStyle   |
  
-Zum Festlegen dieser Stile können Sie sie einfach in den Markup-Editor eingeben oder die Visual Studio-XAML-Tools verwenden und sie festlegen, ohne etwas einzugeben. Klicken Sie dazu mit der rechten Maustaste auf **TextBlock** und dann auf **Stil bearbeiten** &gt; **Ressource anwenden**. Um dies für die **TextBlock**-Elemente in der Elementvorlage auszuführen, klicken Sie mit der rechten Maustaste auf das **ListBox**-Element und klicken dann auf **Weitere Vorlagen bearbeiten** &gt; **Erstellte Elemente bearbeiten (ItemTemplate)**.
+Zum Festlegen dieser Stile können Sie sie einfach in den Markup-Editor eingeben oder die Visual Studio-XAML-Tools verwenden und sie festlegen, ohne etwas einzugeben. Klicken Sie dazu mit der rechten Maustaste auf **TextBlock**, und klicken Sie dann auf **Stil bearbeiten** &gt; **Ressource anwenden**. Um dies für die **TextBlock**-Elemente in der Elementvorlage auszuführen, klicken Sie mit der rechten Maustaste auf das **ListBox**-Element und klicken dann auf **Weitere Vorlagen bearbeiten** &gt; **Erstellte Elemente bearbeiten (ItemTemplate)**.
 
 Die Elemente sind mit einem weißen Hintergrund mit 80 % Deckkraft unterlegt, da der Standardstil des **ListBox**-Steuerelements den Hintergrund auf die `ListBoxBackgroundThemeBrush`-Systemressource festlegt. Legen Sie `Background="Transparent"` für das **ListBox**-Element fest, um den Hintergrund zu löschen. Zur Linksausrichtung der **TextBlock**-Elemente in der Elementvorlage bearbeiten Sie sie erneut wie oben beschrieben und legen unter **Margin** für beide **TextBlock**-Elemente den Wert `"9.6,0"` fest.
 
@@ -130,6 +131,6 @@ In dieser Fallstudie wurde der Prozess zum Portieren einer einfachen App veransc
 Die nächste Fallstudie ist [Bookstore2](wpsl-to-uwp-case-study-bookstore2.md), in der wir den Zugriff auf und die Anzeige von gruppierten Daten behandeln.
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

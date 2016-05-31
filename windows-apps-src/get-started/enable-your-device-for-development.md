@@ -1,11 +1,6 @@
 ---
-ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
-title: Aktivieren Ihres Geräts für die Entwicklung
-description: Bei Windows 10-Geräten wird ein anderer Entwicklungsansatz verfolgt.
-keywords: Erste Schritte
-keywords: Entwicklerlizenz
-keywords: Visual Studio, Entwicklerlizenz
-keywords: Gerät aktivieren
+author: martinekuan ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD title: Aktivieren Sie Ihr Gerät für die Entwicklung description: Bei Windows 10-Geräten wird ein anderer Entwicklungsansatz verfolgt.
+Schlüsselwörter: Erste Schritte Schlüsselwörter: Entwicklerlizenz Schlüsselwörter: Visual Studio, Entwicklerlizenz Schlüsselwörter: Gerät aktivieren
 ---
 # Aktivieren Ihres Geräts für die Entwicklung
 
@@ -27,10 +22,10 @@ Klicken Sie in diesem Dialogfeld auf **Einstellungen für Entwickler**, um direk
 
 Unter Windows 10 können Sie wählen, welche Entwicklerfeatures Sie auf dem Gerät aktivieren möchten. Dies gilt für sämtliche Windows 10-Geräte – also sowohl für Desktops als auch für Tablets und Smartphones. Sie können ein Gerät für die Entwicklung oder nur für das Querladen aktivieren.
 
--   *Querladen* dient zum Installieren und anschließendem Ausführen oder Testen einer App, die nicht vom Windows Store zertifiziert wurde. Hierzu zählen beispielsweise interne Unternehmens-Apps.
+-   *Querladen* dient zum Installieren und Ausführen oder Testen einer App, die nicht vom Windows Store zertifiziert wurde. Hierzu zählen beispielsweise interne Unternehmens-Apps.
 -   Im *Entwicklermodus* können Sie Apps querladen und Apps aus Visual Studio im Debugmodus ausführen.
 
-**Hinweis**  Achten Sie beim Querladen von Apps darauf, dass diese aus einer vertrauenswürdigen Quelle stammen. Wenn Sie eine quergeladene, nicht vom Windows Store zertifizierte App installieren, bestätigen Sie, dass Sie über alle erforderlichen Rechte zum Querladen dieser App verfügen und die alleinige Verantwortung für jegliche Schäden tragen, die durch das Installieren und Ausführen dieser App entstehen können. Weitere Informationen finden Sie in diesen [Datenschutzbestimmungen](http://go.microsoft.com/fwlink/?LinkId=521839) im Abschnitt zu Windows unter „Windows Store“.
+**Hinweis**  Achten Sie beim Querladen von Apps darauf, dass diese aus einer vertrauenswürdigen Quelle stammen. Wenn Sie eine quergeladene, nicht vom Windows Store zertifizierte App installieren, bestätigen Sie, dass Sie über alle erforderlichen Rechte zum Querladen dieser App verfügen und die alleinige Verantwortung für jegliche Schäden tragen, die durch das Installieren und Ausführen dieser App entstehen können. Weitere Informationen finden Sie in diesen [Datenschutzbestimmungen](http://go.microsoft.com/fwlink/?LinkId=521839) im Abschnitt zu Windows &gt; „Windows Store“.
 
 **So verwenden Sie Entwicklerfeatures**
 
@@ -82,7 +77,7 @@ Spezifische Informationen für Gerätefamilien
 Es gibt verschiedene Tools, mit denen Sie eine App von einem Windows 10-PC auf einem mobilen Gerät bereitstellen können. Beide Geräte müssen über eine kabelgebundene oder drahtlose Verbindung mit dem gleichen Subnetz des Netzwerks verbunden sein oder über USB verbunden werden. Mit beiden aufgeführten Methoden wird nur das App-Paket (APPX) installiert, nicht die Zertifikate.
 
 -   Verwenden Sie das Tool für die Windows 10-Anwendungsbereitstellung (WinAppDeployCmd). Weitere Informationen zum [Tool WinAppDeployCmd](http://msdn.microsoft.com/library/windows/apps/mt203806.aspx).
--   Ab Windows 10, Version 1511, ist im [Geräteportal](#device_portal) die Bereitstellung aus Ihrem Browser auf einem mobilen Gerät unter Windows 10, Version 1511 oder höher, möglich. Auf der Seite **Apps** im Geräteportal (&lt;IP&gt;/appmanager.md) können Sie ein App-Paket (APPX) hochladen und auf dem Gerät installieren.
+-   Ab Windows 10, Version 1511, ist im [Device Portal](#device_portal) die Bereitstellung aus Ihrem Browser auf einem mobilen Gerät unter Windows 10, Version 1511 oder höher, möglich. Auf der Seite **Apps** im Device Portal (&lt;IP&gt;/appmanager.md) können Sie ein App-Paket (APPX) hochladen und auf dem Gerät installieren.
 
  
 
@@ -97,7 +92,7 @@ Legen Sie mithilfe von „gpedit.msc“ die Gruppenrichtlinien für die Gerätea
 **Aktivieren des Geräts mithilfe von „gpedit“**
 
 1.  Führen Sie **Gpedit.msc** aus.
-2.  Navigieren Sie zu Richtlinie für "Lokaler Computer" > Computerkonfiguration > Administrative Vorlagen > Windows-Komponenten > App-Paketbereitstellung.
+2.  Navigieren Sie zu „Richtlinie für "Lokaler Computer" &gt; Computerkonfiguration &gt; Administrative Vorlagen &gt; Windows-Komponenten &gt; App-Paketbereitstellung.
 3.  Bearbeiten Sie zum Aktivieren des Querladens die folgenden Richtlinien:
 
     -   **Zulassen, dass alle vertrauenswürdigen Apps installiert werden**
@@ -145,7 +140,7 @@ Diese Abbildung zeigt Entwicklerfeatures für Mobilgeräte unter Windows 10, Ver
 
 ![Entwicklermodusoptionen für Mobilgeräte](images/devmode-mob-options.png)
 
-### <span id="device-discovery-and-pairing"></span>Geräteerkennung und Geräteportal
+### <span id="device-discovery-and-pairing"></span>Geräteerkennung und Device Portal
 
 Weitere Informationen zur Geräteerkennung und zum Geräteportal finden Sie in der [Übersicht über das Windows-Geräteportal](../debug-test-perf/device-portal.md).
 
@@ -177,6 +172,6 @@ Fehler : DEP0700 : Registrierung der App fehlgeschlagen.
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

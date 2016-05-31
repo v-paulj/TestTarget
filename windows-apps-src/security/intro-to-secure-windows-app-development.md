@@ -38,8 +38,8 @@ Um die Daten zu schützen, muss die Person, die den Zugriff anfordert, sich iden
 Um sich bei einem bestimmten Dienst und/oder einer App zu authentifizieren, verwendet der Benutzer als Anmeldeinformationen eine Information, ein Gerät und/oder ein Merkmal. Diese Punkte werden als Authentifizierungsfaktoren bezeichnet.
 
 -   **Benutzerinformation** ist in der Regel ein Kennwort, kann aber auch eine Geheimzahl (PIN) oder eine Kombination aus „geheimer“ Frage und Antwort sein.
--   **Benutzergerät** ist häufig ein Hardwarespeichergerät wie ein USB-Stick mit den eindeutigen Authentifizierungsdaten des Benutzers.
--   **Benutzermerkmal** umfasst häufig Fingerabdrücke, mittlerweile kommen jedoch vermehrt auch Faktoren wie Sprach-, Gesichts- oder Augenmerkmale und Verhaltensmuster des Benutzers zum Einsatz. Werden sie als Daten gespeichert, bezeichnet man diese als Biometrie.
+-   **Benutzergerät** ist meistens ein Hardwarespeichergerät wie ein USB-Stick mit den eindeutigen Authentifizierungsdaten des Benutzers.
+-   **Benutzermerkmal** umfasst häufig Fingerabdrücke. Mittlerweile werden jedoch zunehmend auch Faktoren wie Sprach-, Gesichts- oder Augenmerkmale und Verhaltensmuster des Benutzers verwendet. Werden sie als Daten gespeichert, bezeichnet man diese als Biometrie.
 
 Ein vom Benutzer erstelltes Kennwort ist naturgemäß ein Authentifizierungsfaktor, reicht aber häufig nicht aus. Jeder, der das Kennwort kennt, kann die Identität des Benutzers annehmen, dem das Kennwort gehört. Eine Smartcard bietet u. U. höhere Sicherheit, kann aber gestohlen, verloren oder verlegt werden. Ein System, das einen Benutzer anhand seines Fingerabdrucks oder eines Augenscans authentifizieren kann, bietet u. U. die höchste und komfortabelste Sicherheit, erfordert jedoch teure und spezialisierte Hardware (z. B. eine Intel RealSense-Kamera für die Gesichtserkennung), die möglicherweise nicht allen Benutzern zur Verfügung steht.
 
@@ -219,7 +219,7 @@ private async Task ValidateSSLRoot()
         await httpClient.GetAsync(bingUri);
 
     // Get the list of certificates that were used to
-    // validate the server&#39;s identity
+    // validate the server's identity
     IReadOnlyList<Certificate> serverCertificates = response.RequestMessage.TransportInformation.ServerIntermediateCertificates;
   
     // Perform validation
@@ -263,7 +263,7 @@ Um autorisierten Zugriff auf Webdienste zu gewährleisten, müssen sie bei jedem
 
 **Herausgeber/Administratoren** der API können die API einfach über das Herausgeberportal von Azure API Management konfigurieren. Hier können API-Sätze erstellt werden, und der Zugriff darauf kann verwaltet werden. So können Sie steuern, wer Zugriff auf welche APIs hat.
 
-**Entwickler**, die auf diese APIs zugreifen möchten, können Anfragen über das Entwicklerportal stellen. Sie können sofort Zugriff gewähren oder eine Genehmigung durch den Herausgeber/Administrator vorschreiben. Entwickler können auch die API-Dokumentation und Beispielcode im Entwicklerportal anzeigen, um schnell die vom Webdienst angebotenen APIs anzuwenden.
+**Entwickler**, die auf diese APIs zugreifen möchten, können Anfragen über das Entwicklerportal stellen. Dieses kann sofort Zugriff gewähren oder eine Genehmigung durch den Herausgeber/Administrator vorschreiben. Entwickler können auch die API-Dokumentation und Beispielcode im Entwicklerportal anzeigen, um schnell die vom Webdienst angebotenen APIs anzuwenden.
 
 Die von diesen Entwicklern erstellten **apps** können dann über den von Azure API Management angebotenen Proxy auf die API zugreifen. Der Proxy ermöglicht das Ausblenden des tatsächlichen Endpunkts der API auf dem Server des Herausgebers/Administrators und kann zudem zusätzliche Logik wie die API-Übersetzung ermöglichen, um sicherzustellen, dass die verfügbar gemachte API einheitlich ist, wenn eine API an eine andere weitergeleitet wird. Der Dienst kann mithilfe der IP-Filterung auch API-Aufrufe von einer bestimmten oder mehreren IP-Domänen blockieren. Zum Schutz seiner Webdienste verwendet Azure API Management eine Reihe öffentlicher Schlüssel, die sogenannten API-Schlüssel, um jeden API-Aufruf zu authentifizieren und zu autorisieren. Wenn die Autorisierung einen Fehler verursacht, wird der Zugriff auf die API und die unterstützten Funktionen blockiert.
 
@@ -342,7 +342,7 @@ private PasswordCredential GetCredentialFromLocker()
     else if (credentialList.Count > 0)
     {
         // When there are multiple usernames,
-        // retrieve the default username. If one doesn’t
+        // retrieve the default username. If one doesn't
         // exist, then display UI to have the user select
         // a default username.
         defaultUserName = GetDefaultUserNameUI();
@@ -496,6 +496,6 @@ Wenn die Daten auf dem Gerät empfangen werden, bietet das Windows-App-Modell me
 -   [**Windows.Security.ExchangeActiveSyncProvisioning**](https://msdn.microsoft.com/library/windows/apps/hh701506)
 -   [**Windows.Security.EnterpriseData**](https://msdn.microsoft.com/library/windows/apps/dn279153)
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

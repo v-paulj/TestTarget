@@ -1,10 +1,11 @@
 ---
+author: jwmsft
 description: Sie können die PropertyPath-Klasse und die Zeichenfolgensyntax verwenden, um einen PropertyPath-Wert entweder in XAML oder in Code zu instanziieren.
-title: Eigenschaftspfadsyntax
+title: PropertyPath-Syntax
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ---
 
-# Eigenschaftspfadsyntax
+# PropertyPath-Syntax
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
@@ -99,7 +100,9 @@ Die [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)
 
 Meistens ist es in XAML möglich, eine [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)-Klasse ohne jeglichen Code anzuwenden. In einigen Fällen ist es jedoch sinnvoll, ein **PropertyPath**-Objekt mithilfe von Code zu definieren und dieses zur Laufzeit einer Eigenschaft zuzuordnen.
 
-[**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259) verfügt über einen [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261)-Konstruktor und hat keinen Standardkonstruktor. Die Zeichenfolge, die Sie diesem Konstruktor übergeben, wird mithilfe der zuvor beschriebenen Eigenschaftspfadsyntax definiert. Dies ist dieselbe Zeichenfolge, mit der Sie [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) als XAML-Attribut zuweisen können. Die einzige andere API der **PropertyPath**-Klasse ist die schreibgeschützte [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260)-Eigenschaft. Sie können diese Eigenschaft als Konstruktionszeichenfolge für eine andere **PropertyPath**-Instanz verwenden.
+[
+              **PropertyPath**
+            ](https://msdn.microsoft.com/library/windows/apps/br244259) verfügt über einen [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261)-Konstruktor und hat keinen Standardkonstruktor. Die Zeichenfolge, die Sie diesem Konstruktor übergeben, wird mithilfe der zuvor beschriebenen Eigenschaftspfadsyntax definiert. Dies ist dieselbe Zeichenfolge, mit der Sie [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) als XAML-Attribut zuweisen können. Die einzige andere API der **PropertyPath**-Klasse ist die schreibgeschützte [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260)-Eigenschaft. Sie können diese Eigenschaft als Konstruktionszeichenfolge für eine andere **PropertyPath**-Instanz verwenden.
 
 ## Verwandte Themen
 
@@ -113,6 +116,6 @@ Meistens ist es in XAML möglich, eine [**PropertyPath**](https://msdn.microsoft
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

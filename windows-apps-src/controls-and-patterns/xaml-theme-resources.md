@@ -1,17 +1,16 @@
 ---
+author: Jwmsft
 Description: Bei Designressourcen in XAML handelt es sich um einen Satz von Ressourcen, die abhängig vom aktiven Systemdesign verschiedene Werte anwenden.
 MS-HAID: 'dev\_ctrl\_layout\_txt.xaml\_theme\_resources'
 MSHAttr: 'PreferredLib:/library/windows/apps'
 Search.Product: eADQiWindows 10XVcnh
 title: XAML-Designressourcen
 ms.assetid: 41B87DBF-E7A2-44E9-BEBA-AF6EEBABB81B
-label: XAML-Designressourcen
+label: XAML theme resources
 template: detail.hbs
 ---
 
 # XAML-Designressourcen
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Bei Designressourcen in XAML handelt es sich um einen Satz von Ressourcen, die abhängig vom aktiven Systemdesign verschiedene Werte anwenden. Es gibt drei Designs, die das XAML-Framework unterstützt: „Light“, „Dark“ und „HighContrast“.
 
@@ -30,9 +29,10 @@ Für eine [{StaticResource}-Markuperweiterung](../xaml-platform/staticresource-m
 ## Designressourcen und deren Verwendung in der Ressourcenverzeichnisstruktur
 
 
-Jede Designressource ist Teil der XAML-Datei „themeresources.xaml“. Zu Designzwecken steht „themeresources.xaml“ im Order \\(Program Files)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP\\&lt;SDK version&gt;\\Generic einer Windows Software Development Kit (SDK)-Installation zur Verfügung. Die Ressourcenverzeichnisse in „themeresources.xaml“ werden auch in „generic.xaml“ im selben Verzeichnis reproduziert.
+Jede Designressource ist Teil der XAML-Datei „themeresources.xaml“. Zu Designzwecken steht „themeresources.xaml“ im Order „\\(Programme)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP\\&lt;SDK version&gt;\\Generic“ aus einer Windows Software Development Kit (SDK)-Installation zur Verfügung. Die Ressourcenverzeichnisse in „themeresources.xaml“ werden auch in „generic.xaml“ im selben Verzeichnis reproduziert.
 
-> **Hinweis**&nbsp;&nbsp;Die Windows-Runtime verwendet diese physischen Dateien nicht für die Runtime-Suche. Daher befinden sie sich in einem speziellen DesignTime-Ordner und werden nicht standardmäßig in Apps kopiert. Stattdessen sind die Ressourcenverzeichnisse als Teil der Windows-Runtime selbst im Speicher vorhanden, und die XAML-Ressource Ihrer App verweist auf Designressourcen (oder Systemressourcen), die dort zu Laufzeit aufgelöst werden.
+> **Hinweis**
+            &nbsp;&nbsp;Die Windows-Runtime verwendet diese physischen Dateien nicht für die Runtime-Suche. Daher befinden sie sich in einem speziellen DesignTime-Ordner und werden nicht standardmäßig in Apps kopiert. Stattdessen sind die Ressourcenverzeichnisse als Teil der Windows-Runtime selbst im Speicher vorhanden, und die XAML-Ressource Ihrer App verweist auf Designressourcen (oder Systemressourcen), die dort zu Laufzeit aufgelöst werden.
 
  ## Richtlinien für die Verwendung von Designressourcen
 
@@ -116,9 +116,10 @@ Weitere Informationen zum Unterstützen von Designs mit hohem Kontrast finden Si
 
 ### Systemakzentfarbe
 
-Neben der Systemdesignfarben mit hohem Kontrast wird die Akzentfarbe des Systems als spezielle Ressource mit dem Schlüssel `SystemAccentColor` bereitgestellt. Zur Laufzeit ruft diese Ressource die Farbe an, die der Benutzer als Akzentfarbe in den Windows-Einstellungen zur Personalisierung angegeben hat.
+Neben der Systemdesignfarben mit hohem Kontrast wird die Akzentfarbe des Systems als spezielle Ressource mit dem Schlüssel `SystemAccentColor` bereitgestellt. Zur Laufzeit ruft diese Ressource die Farbe ab, die der Benutzer als Akzentfarbe in den Windows-Einstellungen zur Personalisierung angegeben hat.
 
-> **Hinweis**&nbsp;&nbsp;Es ist möglich, die Systemfarbressourcen für hohen Kontrast und Akzentfarbe durch Erstellen von Ressourcen mit demselben Namen zu überschreiben, aber es wird empfohlen, die Farbauswahl des Benutzers zu respektieren, insbesondere für Einstellungen für hohen Kontrast.
+> **Hinweis**
+            &nbsp;&nbsp;Es ist möglich, die Systemfarbressourcen für hohen Kontrast und Akzentfarbe durch Erstellen von Ressourcen mit demselben Namen zu überschreiben, aber es wird empfohlen, die Farbauswahl des Benutzers zu respektieren, insbesondere bei Einstellungen für hohen Kontrast.
 
 ### Designabhängige Pinsel
 
@@ -146,7 +147,8 @@ Sie können das `SystemControl[Simple HighContrast name][Simple light/dark name]
 For many examples of how the brushes are used in the XAML control templates, see the [Default control styles and templates](default-control-styles-and-templates.md).
 -->
 
-> **Hinweis**&nbsp;&nbspNicht jede mögliche Kombination von \[*Einfacher Name für HighContrast*\]\[*Einfacher Name für hell/dunkel*\] wird als Pinselressource bereitgestellt.
+> **Hinweis**
+            &nbsp;&nbsp;Nicht jede Kombination aus \[*Einfacher Name für HighContrast*\]\[*Einfacher Name für hell/dunkel*\] wird als Pinselressource bereitgestellt.
 
 ## Die XAML-Typhierarchie
 
@@ -272,7 +274,7 @@ Stellt die gemeinsamen Eigenschaften für alle anderen [**TextBlock**](https://m
 
 **TargetType**: [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)
 
-Stellt die gemeinsamen Eigenschaften für alle anderen [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)-Textcontainerstile bereit.
+Stellt die gemeinsamen Eigenschaften für alle anderen [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)-Containerstile bereit.
 
 ```XAML
 <!-- Usage -->
@@ -307,7 +309,8 @@ Stellt die gemeinsamen Eigenschaften für alle anderen [**RichTextBlock**](https
 </Style>
 ```
 
-> **Hinweis**&nbsp;&nbsp;  Die [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)-Stile verfügen nicht über alle Texthierarchiestile von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652). Dies liegt hauptsächlich daran, dass das blockbasierte Dokumentobjektmodell für **RichTextBlock** das Festlegen von Attributen für die einzelnen Textelemente erleichtert. Außerdem entsteht, wenn Sie [**TextBlock.Text**](https://msdn.microsoft.com/library/windows/apps/br209676) mit der XAML-Inhaltseigenschaft festlegen, eine Situation, in der kein zu formatierendes Textelement vorhanden ist und Sie daher den Container formatieren müssen. Das ist für **RichTextBlock** kein Problem, da sein Textinhalt immer in spezifischen Textelementen wie [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/br244503) enthalten sein muss, in denen Sie XAML-Stile für die Kopfzeile, die Seitenunterüberschrift und ähnliche Texthierarchiedefinitionen festlegen können.
+> **Hinweis**
+            &nbsp;&nbsp;  Die [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)-Stile verfügen nicht über alle Texthierarchiestile von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652). Dies liegt hauptsächlich daran, dass das blockbasierte Dokumentobjektmodell für **RichTextBlock** das Festlegen von Attributen für die einzelnen Textelemente erleichtert. Außerdem entsteht, wenn Sie [**TextBlock.Text**](https://msdn.microsoft.com/library/windows/apps/br209676) mit der XAML-Inhaltseigenschaft festlegen, eine Situation, in der kein zu formatierendes Textelement vorhanden ist und Sie daher den Container formatieren müssen. Das ist für **RichTextBlock** kein Problem, da sein Textinhalt immer in spezifischen Textelementen wie [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/br244503) enthalten sein muss, in denen Sie XAML-Stile für die Kopfzeile, die Seitenunterüberschrift und ähnliche Texthierarchiedefinitionen festlegen können.
 
 ## Sonstige benannte Stile
 
@@ -436,10 +439,9 @@ Um dieses Problem zu beheben, verwenden Sie die [{StaticResource}-Markuperweiter
 
 Beachten Sie, dass die [{ThemeResource}-Markuperweiterung](../xaml-platform/themeresource-markup-extension.md) weiterhin im HighContrast-Wörterbuch anstelle der [{StaticResource}-Markuperweiterung](../xaml-platform/staticresource-markup-extension.md) verwendet wird. Diese Situation fällt unter die Ausnahme, die weiter oben in den Richtlinien angegeben wurde. Die meisten Pinselwerte für das HighContrast-Design verwenden eine Farbauswahl, die global vom System gesteuert wird, aber für XAML als Ressource mit einem speziellen Namen („SystemColor“ ist dem Namen vorangestellt) verfügbar gemacht wird. Das System ermöglicht es den Benutzern, im Center für erleichterte Bedienung die spezifischen Farben festzulegen, die für ihre Einstellungen für hohen Kontrast verwendet werden sollen. Diese Farbauswahl gilt für die speziell benannten Ressourcen. Das XAML-Framework verwendet das gleiche Designänderungsereignis, um auch diese Pinsel zu aktualisieren, wenn es erkennt, dass sie auf Systemebene geändert wurden. Darum wird hier die {ThemeResource}-Markuperweiterung verwendet.
 
-> **Hinweis**&nbsp;&nbsp;  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
-<!--HONumber=Mar16_HO1-->
+
+<!--HONumber=May16_HO2-->
 
 

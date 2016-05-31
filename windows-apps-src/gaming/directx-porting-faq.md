@@ -1,5 +1,6 @@
 ---
-title: Portierung von DirectX 11 – häufig gestellte Fragen
+author: mtoepke
+title: DirectX 11 – Häufig gestellte Fragen zur Portierung
 description: Antworten auf häufig gestellte Fragen zur Portierung von Spielen zur Universellen Windows-Plattform (UWP)
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
 ---
@@ -25,7 +26,9 @@ Das Direct3D-Gerät wird jetzt zum Erstellen von Ressourcen im Videospeicher ver
 ##  Muss ich meinen Spieltimer für UWP aktualisieren?
 
 
-[**QueryPerformanceCounter**](https://msdn.microsoft.com/library/windows/desktop/ms644904) in Verbindung mit [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905) ist nach wie vor die beste Methode, um einen Spieltimer für UWP-Apps zu implementieren.
+[
+              **QueryPerformanceCounter**
+            ](https://msdn.microsoft.com/library/windows/desktop/ms644904) in Verbindung mit [**QueryPerformanceFrequency**](https://msdn.microsoft.com/library/windows/desktop/ms644905) ist nach wie vor die beste Methode, um einen Spieltimer für UWP-Apps zu implementieren.
 
 Eine Kleinigkeit sollten Sie im Hinblick auf Timer und den UWP-App-Lebenszyklus beachten. Das Anhalten und Fortsetzen ist nicht das Gleiche wie das erneute Starten eines Desktopspiels durch den Spieler, da das Spiel in diesem Fall eine Momentaufnahme ab dem Zeitpunkt fortsetzt, zu dem das Spiel zuletzt gespielt wurde. Ist viel Zeit vergangen – z. B. einige Wochen – können bei einigen Timerimplementierungen Fehler auftreten. Sie können App-Lebenszyklusereignisse verwenden, um Ihren Timer beim Fortsetzen des Spiels zurückzusetzen.
 
@@ -134,6 +137,6 @@ Informationen hierzu finden Sie in der [Oberflächenformatzuordnung](feature-map
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

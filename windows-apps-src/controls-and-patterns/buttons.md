@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 label: Buttons
 template: detail.hbs
 ---
@@ -155,39 +156,34 @@ Der Bereich des Navigationsverlaufs (in der App oder global) ist vom Gerät und 
 
 Die Benutzeroberfläche für die Zurück-Schaltfläche des Systems ist für jedes Gerät und jeden Eingabetyp optimiert. Die Navigationsfunktion hingegen ist auf allen Geräten und UWP-Apps (Universelle Windows-Plattform) global und einheitlich gültig. Zu diesen Unterschieden zählen:
 
-Geräte
-Smartphone
-![Zurück-Funktion des Systems auf einem Smartphone](images/nav-back-phone.png)
+Geräte Smartphone ![Zurück-Funktion des Systems auf einem Smartphone](images/nav-back-phone.png)
 -   Immer vorhanden.
 -   Eine Software- oder Hardwareschaltfläche am unteren Rand des Geräts.
 -   Globale Rückwärtsnavigation innerhalb der App und zwischen Apps.
 
-<span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>Tablet
-![Zurück-Funktion des Systems auf einem Tablet (im Tablet-Modus)](images/nav-back-tablet.png)
+<span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>Tablet ![Zurück-Funktion des Systems auf einem Tablet (im Tablet-Modus)](images/nav-back-tablet.png)
 -   Im Tablet-Modus immer vorhanden.
 
     In Desktopmodus nicht verfügbar. Stattdessen kann die Zurück-Schaltfläche in der Titelleiste aktiviert werden. Weitere Infos finden Sie unter [PC, Laptop, Tablet](#PC).
 
-    Benutzer können zwischen dem Tablet- und dem Desktopmodus wechseln, indem sie unter **Einstellungen &gt; System &gt; Tablet-Modus** die Option **Durch die Verwendung des Geräts als Tablet wird die Toucheingabe in Windows verbessert** aktivieren.
+    Benutzer können zwischen dem Tablet- und dem Desktopmodus wechseln, indem sie unter **Einstellungen &gt; System &gt; Tablet-Modus** die Option **Durch die Verwendung des Geräts als Tablet wird die Toucheingabe in Windows verbessert** aktivieren.
 
 -   Eine Softwareschaltfläche in der Navigationsleiste am unteren Rand des Geräts.
 -   Globale Rückwärtsnavigation innerhalb der App und zwischen Apps.
 
-<span id="PC"></span><span id="pc"></span>PC, Laptop, Tablet
-![Zurück-Funktion des Systems auf einem PC oder Laptop](images/nav-back-pc.png)
+<span id="PC"></span><span id="pc"></span>PC, Laptop, Tablet ![Zurück-Funktion des Systems auf einem PC oder Laptop](images/nav-back-pc.png)
 -   Optional im Desktopmodus.
 
     Im Tablet-Modus nicht verfügbar. Weitere Infos finden Sie unter [Tablet](#Tablet).
 
     Standardmäßig deaktiviert. Muss zur Verwendung aktiviert werden.
 
-    Benutzer können zwischen dem Tablet- und dem Desktopmodus wechseln, indem sie unter **Einstellungen &gt; System &gt; Tablet-Modus** die Option **Durch die Verwendung des Geräts als Tablet wird die Toucheingabe in Windows verbessert** aktivieren.
+    Benutzer können zwischen dem Tablet- und dem Desktopmodus wechseln, indem sie unter **Einstellungen &gt; System &gt; Tablet-Modus** die Option **Durch die Verwendung des Geräts als Tablet wird die Toucheingabe in Windows verbessert** aktivieren.
 
 -   Eine Softwareschaltfläche in der Titelleiste der App.
 -   Ermöglicht die Rückwärtsnavigation nur innerhalb der App. Unterstützt keine App-zu-App-Navigation.
 
-Surface Hub
-![Zurück-Funktion des Systems auf einem Surface Hub](images/nav-back-surfacehub.png)
+Surface Hub ![Zurück-Funktion des Systems auf einem Surface Hub](images/nav-back-surfacehub.png)
 -   Immer vorhanden.
 -   Eine Softwareschaltfläche am unteren Rand des Geräts.
 -   Ermöglicht die Rückwärtsnavigation innerhalb der App und zwischen Apps.
@@ -229,6 +225,6 @@ Surface Hub
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

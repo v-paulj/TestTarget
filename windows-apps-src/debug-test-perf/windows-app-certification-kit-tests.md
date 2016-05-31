@@ -1,7 +1,8 @@
 ---
+author: mcleblanc
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Tests im Zertifizierungskit für Windows-Apps
-description: Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, um sicherzustellen, dass eine App für die Veröffentlichung im Windows Store bereit ist.
+description: Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, mit denen Sie sicherstellen können, dass eine App für die Veröffentlichung im Windows Store bereit ist.
 ---
 ## Tests im Zertifizierungskit für Windows-Apps
 
@@ -306,11 +307,11 @@ Apps müssen die APIs für Windows Store-Apps verwenden (Windows-Runtime- oder u
 
 Stellen Sie sicher, dass die App als Releasebuild und nicht als Debugbuild kompiliert wurde.
 
-> **Hinweis** Der Debugbuild einer App besteht diesen Test nicht, auch wenn die App nur [APIs für Windows Store-Apps](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bg124285.aspx) verwendet.
+> **Hinweis**  Der Debugbuild einer App besteht diesen Test nicht, auch wenn die App nur [APIs für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx) verwendet.
 
-Prüfen Sie die Fehlermeldungen, um die von der App verwendete API zu identifizieren, die keine [API für Windows Store-Apps](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/bg124285.aspx) ist.
+Prüfen Sie die Fehlermeldungen, um die von der App verwendete API zu identifizieren, die keine [API für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx) ist.
 
-> **Hinweis** C++-Apps, die unter einer Debugkonfiguration erstellt wurden, bestehen diesen Test nicht. Dies gilt auch, wenn für die Konfiguration nur APIs aus dem Windows SDK für Windows Store-Apps verwendet werden. Weitere Informationen finden Sie unter [Alternativen zu Windows-APIs in Windows Store-Apps](http://go.microsoft.com/fwlink/p/?LinkID=244022).
+> **Hinweis**  C++-Apps, die unter einer Debugkonfiguration erstellt wurden, bestehen diesen Test nicht. Dies gilt auch, wenn für die Konfiguration nur APIs aus dem Windows SDK für Windows Store-Apps verwendet werden. Weitere Informationen finden Sie unter [Alternativen zu Windows-APIs in Windows Store-Apps](http://go.microsoft.com/fwlink/p/?LinkID=244022).
 
 ## Leistungstests
 
@@ -403,7 +404,7 @@ Orientieren Sie sich an der folgenden Tabelle.
 <tr><td>
 <p>Für das Bild muss mindestens eine Variante ohne TargetSize-Qualifizierer definiert sein. Sie müssen einen Scale-Qualifizierer definieren oder „Scale” und „TargetSize” nicht angeben. In diesem Fall wird „Scale-100” verwendet.</p>
 </td><td>
-<p>Weitere Informationen finden Sie unter <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn958435.aspx">Reaktionsfähiges Design für UWP-Apps (Universelle Windows-Plattform) – Grundlagen</a> und <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh465241.aspx">Richtlinien für App-Ressourcen</a>.</p>
+<p>Weitere Informationen finden Sie unter <a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx">Reaktionsfähiges Design für UWP-Apps (Universelle Windows-Plattform) – Grundlagen</a> und <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">Richtlinien für App-Ressourcen</a>.</p>
 </td></tr>
 <tr><td>
 <p>Das Paket enthält keine Datei „resources.pri”.</p>
@@ -425,7 +426,7 @@ Orientieren Sie sich an der folgenden Tabelle.
 <tr><td>
 <p>Die Zeichenfolge „{string}“ entspricht nicht der Längenbeschränkung von maximal {number} Zeichen.</p>
 </td><td>
-<p>Weitere Informationen finden Sie unter <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt148525.aspx">App-Paketanforderungen</a>.</p>
+<p>Weitere Informationen finden Sie unter <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">App-Paketanforderungen</a>.</p>
 <p>In der tatsächlichen Meldung wird „{string}“ durch die Zeichenfolge mit dem Fehler ersetzt, und {number} enthält die maximale Länge.</p>
 </td></tr>
 <tr><td>
@@ -438,12 +439,12 @@ Orientieren Sie sich an der folgenden Tabelle.
 <tr><td>
 <p>Die Zeichenfolge darf nicht leer sein (Länge größer 0 (null)).</p>
 </td><td>
-<p>Weitere Informationen finden Sie unter <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt148525.aspx">App-Paketanforderungen</a>.</p>
+<p>Weitere Informationen finden Sie unter <a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt148525.aspx">App-Paketanforderungen</a>.</p>
 </td></tr>
 <tr><td>
 <p>In der Datei „resources.pri” ist keine Standardressource angegeben.</p>
 </td><td>
-<p>Weitere Informationen finden Sie unter <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh465241.aspx">Richtlinien für App-Ressourcen</a>.</p>
+<p>Weitere Informationen finden Sie unter <a href="https://msdn.microsoft.com/library/windows/apps/xaml/hh465241.aspx">Richtlinien für App-Ressourcen</a>.</p>
 <p>In der Standardbuildkonfiguration nimmt Visual Studio nur Bildressourcen mit der Skalierung 200 % in das App-Paket auf, wenn ein Bündel generiert wird, andere Ressourcen werden im Ressourcenpaket abgelegt. Stellen Sie sicher, dass Sie entweder Bildressourcen mit der Skalierung 200 % einschließen oder Ihr Projekt für die Aufnahme der vorhandenen Ressourcen konfigurieren.</p>
 </td></tr>
 <tr><td>
@@ -538,7 +539,7 @@ Stellen Sie sicher, dass die App unter der Direct3D-Featureebene 9\-1 richtig g
 
 ### Direct3D-Kürzung nach dem Anhalten
 
-> **Hinweis** Dieser Test gilt nur für Windows Store-Apps, die für Windows 8.1 und höher entwickelt wurden.
+> **Hinweis**  Dieser Test gilt nur für Windows Store-Apps, die für Windows 8.1 und höher entwickelt wurden.
 
 ### Hintergrund
 
@@ -572,14 +573,14 @@ Falls eine oder mehrere dieser Funktionen deklariert werden, wird Benutzern wäh
 
 ### Maßnahmen
 
-Sie können erwägen, die Sonderfunktion zu entfernen, wenn diese für die App nicht erforderlich ist. Die Verwendung dieser Funktionen unterliegt außerdem einer weiteren Prüfung anhand der Onboarding-Richtlinie.
+Sie können erwägen, die Sonderfunktion zu entfernen, wenn diese für die App nicht erforderlich ist. Die Verwendung dieser Funktionen unterliegt außerdem einer weiteren Prüfung anhand der Richtlinie für die Aufnahme.
 <!--TODO: after migrating dev-packaging, link to [if your app doesn't require it](dev-packaging.app-capability-declarations#special-and-restricted-capabilities)-->
 
-## Überprüfung der Windows-Runtime-Metadaten
+## Windows-Runtime-Metadatenvalidierung
 
 ### Hintergrund
 
-Es wird sichergestellt, dass die als Teil einer App mitgelieferten Komponenten mit dem UWP-Typsystem kompatibel sind.
+Es wird sichergestellt, dass die Komponenten, die als Teil einer App mitgeliefert werden, mit dem UWP-Typsystem kompatibel sind.
 
 ### Testdetails
 
@@ -587,7 +588,7 @@ Es wird überprüft, ob die **WINMD**-Dateien im Paket den UWP-Regeln entspreche
 
 ### Maßnahmen
 
--   **Test auf Attribut ExclusiveTo:** Stellen Sie sicher, dass von UWP-Klassen keine Schnittstellen implementiert werden, die für eine andere Klasse als „ExclusiveTo” gekennzeichnet sind.
+-   **ExclusiveTo-Attributtest:** Stellen Sie sicher, dass von UWP-Klassen keine Schnittstellen implementiert werden, die für eine andere Klasse als „ExclusiveTo” gekennzeichnet sind.
 -   **Test auf Anordnung von Typen:** Stellen Sie sicher, dass die Metadaten für alle UWP-Typen in der WINMD-Datei enthalten sind, die im App-Paket über den längsten Namen mit Namespaceübereinstimmung verfügt.
 -   **Test auf Groß-/Kleinschreibung von Typnamen:** Stellen Sie sicher, dass alle UWP-Typen im App-Paket eindeutige Namen aufweisen, bei denen die Groß-/Kleinschreibung nicht zu berücksichtigen ist. Vergewissern Sie sich außerdem, dass UWP-Typnamen im App-Paket nicht auch als Namespacename verwendet werden.
 -   **Test auf Korrektheit des Typnamens:** Stellen Sie sicher, dass im globalen Namespace oder im Windows-Namespace der obersten Ebene keine UWP-Typen vorhanden sind.
@@ -598,11 +599,11 @@ Es wird überprüft, ob die **WINMD**-Dateien im Paket den UWP-Regeln entspreche
 
 ### Test auf für Plattform geeignete Dateien
 
-Apps, die gemischte Binärdateien installieren, stürzen je nach Prozessorarchitektur des Benutzers u. U. ab oder werden nicht korrekt ausgeführt.
+Apps, von denen gemischte Binärdateien installiert werden, stürzen je nach der Prozessorarchitektur von Benutzern möglicherweise ab oder werden nicht richtig ausgeführt.
 
 ### Hintergrund
 
-Bei diesem Test werden die Binärdateien in einem App-Paket auf Architekturkonflikte überprüft. Ein App-Paket sollte keine Binärdateien enthalten, die unter der im Manifest angegebenen Prozessorarchitektur nicht verwendet werden können. Das Einfügen von nicht unterstützten Binärdateien kann zum Absturz der App oder zu einem unnötigen Anstieg der Paketgröße einer App führen.
+Bei diesem Test werden die Binärdateien in einem App-Paket auf Architekturkonflikte geprüft. Ein App-Paket sollte keine Binärdateien enthalten, die unter der im Manifest angegebenen Prozessorarchitektur nicht verwendet werden können. Das Einfügen von nicht unterstützten Binärdateien kann zum Absturz der App oder zu einem unnötigen Anstieg der Paketgröße einer App führen.
 
 ### Testdetails
 
@@ -612,15 +613,15 @@ Es wird überprüft, ob die Bitanzahl jeder einzelnen Datei im PE-Header korrekt
 
 Befolgen Sie diese Richtlinien, um sicherzustellen, dass Ihr App-Paket nur Dateien enthält, die von der im App-Manifest angegebenen Architektur unterstützt werden:
 
--   Wenn die Zielprozessorarchitektur der App den Prozessortyp „Neutral“ aufweist, darf das App-Paket keine x86-, x64- oder ARM-Binärdateien oder -Imagedateien enthalten.
+-   Wenn die Zielprozessorarchitektur der App den Prozessortyp "Neutral" aufweist, kann die App keine x86-, x64- oder ARM-Binärdateien oder -Abbilddateien enthalten.
 
--   Wenn die Zielprozessorarchitektur der App den Prozessortyp „x86“ aufweist, darf das App-Paket nur x86-Binärdateien oder -Imagedateien enthalten. Wenn das Paket x64- oder ARM-Binärdateien oder -Imagedateien enthält, tritt beim Test ein Fehler auf.
+-   Wenn die Zielprozessorarchitektur der App den Prozessortyp "x86" aufweist, darf das App-Paket nur x86-Binärdateien oder -Abbilddateien enthalten. Wenn das Paket x64- oder ARM-Binärtypen oder -Imagetypen enthält, tritt beim Test ein Fehler auf.
 
--   Wenn die Zielprozessorarchitektur der App den Prozessortyp „x64“ aufweist, muss das App-Paket x64-Binärdateien oder -Imagedateien enthalten. Beachten Sie, dass das Paket in diesem Fall auch x86-Dateien enthalten kann. Für die Hauptoberfläche der App sollte jedoch die x64-Binärdatei genutzt werden.
+-   Wenn die Zielprozessorarchitektur der App den Prozessortyp "x64" aufweist, muss das App-Paket x64-Binärdateien oder -Abbilddateien enthalten. Beachten Sie, dass das Paket in diesem Fall auch x86-Dateien enthalten kann. Für die Hauptoberfläche der App sollte jedoch die x64-Binärdatei genutzt werden.
 
-    Falls das Paket jedoch ARM-Binärdateien oder -Imagedateien oder ausschließlich x86-Binärdateien oder -Imagedateien enthält, tritt beim Test ein Fehler auf.
+    Falls das Paket jedoch ARM-Binärdateien oder -Abbilddateien oder ausschließlich x86-Binärdateien oder -Abbilddateien enthält, tritt beim Test ein Fehler auf.
 
--   Wenn die Zielprozessorarchitektur der App den Prozessortyp „ARM“ aufweist, darf das App-Paket nur ARM-Binärdateien oder -Imagedateien enthalten. Wenn das Paket x64- oder x86-Binärdateien oder -Abbilddateien enthält, tritt beim Test ein Fehler auf.
+-   Wenn die Zielprozessorarchitektur der App den Prozessortyp "ARM" aufweist, darf das App-Paket nur ARM-Binärdateien oder -Abbilddateien enthalten. Wenn das Paket x64- oder x86-Binärdateien oder -Abbilddateien enthält, tritt beim Test ein Fehler auf.
 
 ### Test der unterstützten Verzeichnisstruktur
 
@@ -646,17 +647,17 @@ Mit dem Test der WinJS-Hintergrundaufgabe wird sichergestellt, dass JavaScript-A
 
 ### Hintergrund
 
-Apps mit JavaScript-Hintergrundaufgaben müssen „Close()“ als letzte Anweisung der Hintergrundaufgabe aufrufen. Ist dies bei Apps nicht der Fall, kann das System unter Umständen nicht in den verbundenen Standbymodus zurückkehren, was zu einer schnelleren Entleerung des Akkus führen kann.
+Apps mit JavaScript-Hintergrundaufgaben müssen "Close()" als letzte Anweisung der Hintergrundaufgabe aufrufen. Ist dies bei Apps nicht der Fall, kann das System unter Umständen nicht in den verbundenen Standbymodus zurückkehren, was zu einer schnelleren Entleerung des Akkus führen kann.
 
 ### Testdetails
 
-Wenn für Apps im Manifest keine Hintergrundaufgabendatei angegeben ist, gilt der Test als bestanden. Andernfalls wird beim Testen die JavaScript-Hintergrundaufgabendatei analysiert, die im App-Paket angegeben ist, und nach einer Close()-Anweisung gesucht. Wird diese gefunden, gilt der Test als bestanden. Falls nicht, gilt der Test als nicht bestanden.
+Wenn für Apps im Manifest keine Hintergrundaufgabe angegeben ist, gilt der Test als bestanden. Andernfalls wird beim Testen die JavaScript-Hintergrundaufgabendatei analysiert, die im App-Paket angegeben ist, und nach einer Close()-Anweisung gesucht. Wird diese gefunden, gilt der Test als bestanden. Falls nicht, gilt der Test als nicht bestanden.
 
 ### Maßnahmen
 
 Aktualisieren Sie den JavaScript-Hintergrundcode so, dass „Close()” richtig aufgerufen wird.
 
-> **Hinweis** Dieser Artikel ist für Windows 10-Entwickler gedacht, die UWP-Apps schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die UWP-Apps schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -665,10 +666,6 @@ Aktualisieren Sie den JavaScript-Hintergrundcode so, dass „Close()” richtig 
  
 
 
-
-
-
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

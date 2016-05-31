@@ -1,4 +1,5 @@
 ---
+author: Karl-Bridge-Microsoft
 Description: Erfahren Sie, wie Sie mithilfe des Spracherkennungsergebnisses zur Laufzeit auf die Liste der unterstützten Begriffe (PhraseList-Elemente) in einer VCD-Datei (Voice Command Definition) zugreifen und diese aktualisieren
 title: Dynamisches Ändern von VCD-Begriffslisten
 ms.assetid: 98024EAC-EC0E-44AA-AEC5-A611BA7C5884
@@ -9,7 +10,7 @@ template: detail.hbs
 # Dynamisches Ändern von VCD-Begriffslisten
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+
 
 
 **Wichtige APIs**
@@ -21,13 +22,13 @@ Erfahren Sie, wie Sie mithilfe des Spracherkennungsergebnisses zur Laufzeit auf 
 
 Das dynamische Ändern einer Begriffsliste zur Laufzeit ist nützlich, wenn der Sprachbefehl sich speziell auf eine Aufgabe bezieht, die benutzerdefinierte oder transiente App-Daten umfasst. 
 
-Angenommen, Sie haben eine Reise-App, bei der Benutzer Reiseziele eingeben können, und Sie möchten, dass Benutzer die App starten können, indem sie den Namen der App und anschließend „Reise nach &lt;Ziel&gt;anzeigen“ sagen. Im **ListenFor**-Element selbst geben Sie Folgendes an: `<ListenFor> Show trip to {destination}  </ListenFor>`, wobei „Ziel“ der Wert des Attributs **Label** für die **PhraseList** ist.
+Angenommen, Sie haben eine Reise-App, bei der Benutzer Reiseziele eingeben können, und Sie möchten, dass Benutzer die App starten können, indem sie den Namen der App gefolgt von „Reise nach &lt;Ziel&gt; anzeigen“ sagen. Im **ListenFor**-Element selbst geben Sie Folgendes an: `<ListenFor> Show trip to {destination}  </ListenFor>`, wobei „Ziel“ der Wert des Attributs **Label** für die **PhraseList** ist.
 
 Durch das Aktualisieren der Begriffsliste zur Laufzeit muss kein eigenes **ListenFor**-Element für jedes mögliche Ziel mehr erstellt werden. Stattdessen können Sie **PhraseList** dynamisch mit Zielen auffüllen, die vom Benutzer beim Eingeben der Reiseroute angegeben werden. 
 
 Weitere Informationen zu **PhraseList** und anderen VCD-Elementen finden Sie in unter [**VCD elements and attributes v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593).
 
-**Voraussetzungen:**
+**Voraussetzungen:  **
 
 Dieses Thema baut auf [Starten einer Vordergrund-App mit Sprachbefehlen in Cortana](launch-a-foreground-app-with-voice-commands-in-cortana.md) auf. Wir zeigen hier weitere Features anhand einer Reiseplanungs- und Verwaltungs-App mit dem Namen **Adventure Works**.
 
@@ -36,9 +37,9 @@ Wenn Sie noch keine Erfahrung mit der Entwicklung von UWP-Apps (Universelle Wind
 -   [Erstellen Ihrer ersten App](https://msdn.microsoft.com/library/windows/apps/bg124288)
 -   Informationen zu Ereignissen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
-**Richtlinien für die Benutzerfreundlichkeit:**
+**Richtlinien für die Benutzerfreundlichkeit:  **
 
-Unter [Cortana-Entwurfsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn974233) finden Sie Informationen zur Integration Ihrer App mit **Cortana**. Unter [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121) finden Sie nützliche Tipps für den Entwurf einer nützlichen und interaktiven sprachaktivierten App.
+Unter [Cortana-Entwurfsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn974233) finden Sie Informationen zur Integration Ihrer App mit **Cortana**. Unter [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121) finden Sie hilfreiche Tipps für den Entwurf einer nützlichen und interaktiven sprachaktivierten App.
 
 ## <span id="Identify_the_command"></span><span id="identify_the_command"></span><span id="IDENTIFY_THE_COMMAND"></span>Identifizieren des Befehls und Aktualisieren der Begriffsliste
 
@@ -92,7 +93,7 @@ if (Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.
 }
 ```
 
-## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Anmerkungen
+## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Hinweise
 
 
 Eine **PhraseList** eignet sich zur Einschränkung der Erkennung für einen relativ kleinen Satz oder Wörter. Wenn der Wörtersatz zu groß ist (z. B. mehrere hundert Wörter umfasst) oder nicht eingeschränkt werden soll, verwenden Sie das **PhraseTopic**-Element und ein **Subject**-Element zum Einschränken der Relevanz der Spracherkennungsergebnisse, um die Skalierbarkeit zu verbessern.
@@ -150,6 +151,6 @@ Dieses Beispiel zeigt ein **PhraseTopic** mit einem **Szenario** „Suche“, da
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

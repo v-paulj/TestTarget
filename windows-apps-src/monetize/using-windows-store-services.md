@@ -1,6 +1,7 @@
 ---
+author: mcleanbyron
 ms.assetid: 9FCBAF2E-5419-4169-A17C-9C4058DCF909
-description: Windows Store Dienste verfügbar, über REST-APIs aufrufen, programmgesteuert auf Datentypen zugreifen für Windows Dev Center-Konto oder Organisation registriert
+description: Der Windows Store stellt mehrere Dienste bereit, die Sie über REST-APIs aufrufen können, um programmgesteuert auf bestimmte Datentypen für Apps zugreifen können, die für Ihr eigenes oder das Windows Dev Center-Konto Ihrer Organisation registriert sind.
 title: Verwenden von Windows Store-Diensten
 ---
 
@@ -9,7 +10,7 @@ title: Verwenden von Windows Store-Diensten
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Der Windows Store macht mehrere Dienste verfügbar, die Sie über REST-APIs aufrufen können, um programmgesteuert auf bestimmte Datentypen für Apps zugreifen können, die für Ihr Windows Dev Center-Konto oder das Ihrer Organisation registriert sind.
+Der Windows Store stellt mehrere Dienste bereit, die Sie über REST-APIs aufrufen können, um programmgesteuert auf bestimmte Datentypen für Apps zugreifen können, die für Ihr eigenes Windows Dev Center-Konto oder das Ihrer Organisation registriert sind.
 
 ## Inhalt dieses Abschnitts
 
@@ -28,6 +29,6 @@ Der Windows Store macht mehrere Dienste verfügbar, die Sie über REST-APIs aufr
  
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

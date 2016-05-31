@@ -1,14 +1,13 @@
 ---
+author: Jwmsft
 Description: Während der Texteingabe und -bearbeitung wird der Benutzer durch die Rechtschreibprüfung darauf aufmerksam gemacht, dass ein Wort falsch geschrieben ist, indem das Wort mit einer Wellenlinie unterstrichen wird und dem Benutzer eine Korrekturoption angeboten wird.
 title: Rechtschreibprüfung und Textvorhersage
 ms.assetid: B867C956-5AB2-4207-A8DE-179CE7871180
-label: Rechtschreibprüfung und Textvorhersage
+label: Spell checking and text prediction
 template: detail.hbs
 ---
 
 # Richtlinien für die Rechtschreibprüfung
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Während der Texteingabe und -bearbeitung wird der Benutzer durch die Rechtschreibprüfung darauf aufmerksam gemacht, dass ein Wort falsch geschrieben ist, indem das Wort mit einer roten Wellenlinie unterstrichen wird. Außerdem wird dem Benutzer eine Korrekturmöglichkeit angeboten.
 
@@ -47,14 +46,16 @@ Für JavaScript-Steuerelemente ist die Rechtschreibprüfung für mehrzeilige Tex
 
 Für XAML-TextBox-Steuerelemente ist die Rechtschreibprüfung standardmäßig deaktiviert. Sie können sie durch Festlegen der **IsSpellCheckEnabled**-Eigenschaft auf **true** aktivieren.
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## <span id="related_topics"></span>Verwandte Artikel
 
 * [Text und Textsteuerelemente](text-controls.md)
 * [Richtlinien für die Texteingabe](https://msdn.microsoft.com/library/windows/apps/hh750315)
 * [Richtlinien für Text und Typografie](https://msdn.microsoft.com/library/windows/apps/hh700394)
-**Für Entwickler (XAML)**
+            
+          
+            **Für Entwickler (XAML)**
 * [**TextBox.IsSpellCheckEnabled-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/br209688)
 * [**TextBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209683)
 
@@ -65,6 +66,6 @@ Für XAML-TextBox-Steuerelemente ist die Rechtschreibprüfung standardmäßig de
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

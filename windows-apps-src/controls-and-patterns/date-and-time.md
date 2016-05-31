@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Mit Datums- und Uhrzeitsteuerelementen können Sie das Datum und die Uhrzeit anzeigen und festlegen. Dieser Artikel enthält Entwurfsrichtlinien und hilft Ihnen beim Auswählen des richtigen Steuerelements.
 title: Richtlinien für Datums- und Uhrzeitsteuerelemente
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
@@ -97,7 +98,8 @@ Ein verwandtes Konzept ist die Calendar-Klasse, die beeinflusst, wie die Daten i
 
 .NET unterstützt auch einen Typ mit der Bezeichnung [ **DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx), der implizit in [ **DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx) konvertierbar ist. Somit könnte ein Typ „DateTime“ in .NET-Code verwendet werden, der zum Festlegen von Werten verwendet wird, bei denen es sich eigentlich um DateTimeOffset handelt. Weitere Informationen zum Unterschied zwischen DateTime und DateTimeOffset finden Sie in den Bemerkungen in der [ **DateTimeOffset** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx)-Klasse.
 
-> **Hinweis:**&nbsp;&nbsp;Eigenschaften, die Datumsobjekte verwenden, können nicht als XAML-Attributzeichenfolge festgelegt werden, da der Windows-Runtime-XAML-Parser nicht über eine Konvertierungslogik zum Konvertieren von Zeichenfolgen in Datumsangaben als DateTime/DateTimeOffset Objekte verfügt. In der Regel legen Sie diese Werte im Code fest. Eine andere Möglichkeit besteht darin, ein Datum zu definieren, das als Datenobjekt oder im Datenkontext verfügbar ist, und anschließend die Eigenschaft als XAML-Attribut festzulegen, das auf einen [\{Binding\}-Markuperweiterung](../xaml-platform/binding-markup-extension.md)-Ausdruck verweist, der auf das Datum als Daten zugreifen kann.
+> **Hinweis**
+            &nbsp;&nbsp;Eigenschaften, die Datumsobjekte verwenden, können nicht als XAML-Attributzeichenfolge festgelegt werden, da der Windows-Runtime-XAML-Parser nicht über eine Konvertierungslogik zum Konvertieren von Zeichenfolgen in Datumsangaben als DateTime/DateTimeOffset-Objekte verfügt. In der Regel legen Sie diese Werte im Code fest. Eine andere Möglichkeit besteht darin, ein Datum zu definieren, das als Datenobjekt oder im Datenkontext verfügbar ist, und anschließend die Eigenschaft als XAML-Attribut festzulegen, das auf einen [\{Binding\}-Markuperweiterung](../xaml-platform/binding-markup-extension.md)-Ausdruck verweist, der auf das Datum als Daten zugreifen kann.
 
 
 ## Verwandte Themen
@@ -109,6 +111,6 @@ Ein verwandtes Konzept ist die Calendar-Klasse, die beeinflusst, wie die Daten i
 - [**TimePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn299280)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

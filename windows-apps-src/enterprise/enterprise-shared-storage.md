@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: B48E21AB-0EA5-444B-8333-393DD8D1B76D
 title: Im Unternehmen freigegebener Speicher
 description: Im Unternehmen freigegebener Speicher definiert lokale Datenspeicherorte für Branchenanwendungen zum Freigeben von Daten.
@@ -57,7 +58,7 @@ StorageFolder folder =
     await StorageFolder.GetFolderFromPathAsync(enterprisePersistentFolderRoot);
 
 // Get the files in the folder.
-IReadOnlyList&lt;StorageFile&gt; sortedItems =
+IReadOnlyList<StorageFile> sortedItems =
     await folder.GetFilesAsync();
 
 // Iterate over the results and print the list of files
@@ -68,6 +69,6 @@ foreach (StorageFile file in sortedItems)
 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

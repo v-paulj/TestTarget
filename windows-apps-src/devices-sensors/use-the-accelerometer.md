@@ -1,16 +1,17 @@
 ---
+author: DBirtolo
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
 title: Verwenden des Beschleunigungsmessers
 description: Hier erfahren Sie, wie Sie mithilfe des Beschleunigungsmessers auf Benutzerbewegungen reagieren können.
 ---
 # Verwenden des Beschleunigungsmessers
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
 -   [**Windows.Devices.Sensors**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**Accelerometer**](https://msdn.microsoft.com/library/windows/apps/BR225687)
+-   [**Beschleunigungsmesser**](https://msdn.microsoft.com/library/windows/apps/BR225687)
 
 \[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
 
@@ -125,11 +126,11 @@ Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen erset
 
 Sie müssen den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen. Wenn Sie etwa ein Projekt mit dem Namen **AccelerometerCS**erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="AccelerometerCS.MainPage"`. Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:AccelerometerCS"`.
 
--   Drücken Sie F5, oder wählen Sie **Debuggen** &gt; **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
+-   Drücken Sie F5 oder wählen Sie **Debuggen**&gt;**Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
 
 Wenn die App ausgeführt wird, können Sie die Beschleunigungsmesserwerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.
 
--   Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** &gt; **Debugging beenden** auswählen.
+-   Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen**&gt;**Debugging beenden** auswählen.
 
 ### Erläuterung
 
@@ -141,7 +142,7 @@ Die App stellt eine Verbindung mit dem Standardbeschleunigungsmesser in der **Ma
 _accelerometer = Accelerometer.GetDefault();
 ```
 
-Die App legt das Berichtsintervall in der **MainPage**-Methode fest. Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60 Hz). Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest. Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.
+Die App legt das Berichtsintervall in der **MainPage**-Methode fest. Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60 Hz). Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest. Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.
 
 ```csharp
 uint minReportInterval = _accelerometer.MinimumReportInterval;
@@ -169,6 +170,6 @@ Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieb
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

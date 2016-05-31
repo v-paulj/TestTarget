@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 5E722AFF-539D-456E-8C4A-ADE90CF7674A
 description: Wenn Ihre App einen großen In-App-Produktkatalog enthält, können Sie optional das in diesem Thema beschriebene Verfahren zum Verwalten des Katalogs ausführen.
 title: Verwalten eines großen Katalogs mit In-App-Produkten
@@ -15,7 +16,7 @@ Zur Aktivierung dieser Funktion verwenden Sie die [**RequestProductPurchaseAsync
 
 Im Store wird nur die *offerId* aus der Kaufanforderung des entsprechenden [**PurchaseResults**](https://msdn.microsoft.com/library/windows/apps/dn263392) verwendet. Mit diesem Verfahren werden die Informationen, die ursprünglich bei der [Eintragung des In-App-Produkts im Store](https://msdn.microsoft.com/library/windows/apps/mt148551) bereitgestellt wurden, nicht direkt geändert.
 
-**Hinweis**  Ab Windows 10 ist die Anzahl von Produkteinträgen pro Entwicklerkonto im Store nicht länger beschränkt. In früheren Versionen galt eine Store-Beschränkung von 200 Produkteinträgen pro Entwicklerkonto; mit dem in diesem Thema beschriebenen Verfahren kann diese Beschränkung umgangen werden.
+**Hinweis**  Ab Windows 10 ist die Anzahl von Produkteinträgen pro Entwicklerkonto im Store nicht länger eingeschränkt. In früheren Versionen galt eine Store-Beschränkung von 200 Produkteinträgen pro Entwicklerkonto; mit dem in diesem Thema beschriebenen Verfahren kann diese Beschränkung umgangen werden.
 
 ## Voraussetzungen
 
@@ -112,6 +113,6 @@ switch (result)
 * [**ProductPurchaseDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/dn263384)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

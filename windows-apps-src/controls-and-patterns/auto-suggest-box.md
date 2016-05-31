@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 Description: Ein Texteingabefeld, das während der Benutzereingabe Vorschläge anzeigt.
 title: Richtlinien für Felder mit automatischen Vorschlägen
 ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
@@ -151,6 +152,6 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 - [StringLength-Eigenschaft](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: Jwmsft
 ms.assetid: ad7a739c-fd70-4068-9007-da28028abea3
 title: Grafiken und Animationen
 description: Die Themen in diesem Abschnitt enthalten erste Schritte zum Verwenden von Grafiken und Animationen in Store-Apps.
@@ -33,6 +34,6 @@ Grafiken und Animationen sind für die Verwendung durch App-Entwickler mithilfe 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 Description: Nachdem Sie Ihr Experiment im Dev Center-Dashboard definiert und in Ihrer App programmiert haben, können Sie das Experiment aktivieren und das Dev Center-Dashboard zum Prüfen der Ergebnisse Ihres Experiments verwenden.
 title: Verwalten des Experiments im Dev Center-Dashboard
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
@@ -21,7 +22,7 @@ Wenn Sie mit den Parametern für Ihr Experiment im Dashboard zufrieden sind und 
 3. Wählen Sie im Navigationsbereich **Dienste** und dann **Experimentation**.
 4. Der Abschnitt **Experimente** enthält Experimententwürfe, aktive und beendete Experimente für die aktuelle App. Klicken Sie auf den Filter **Entwurf**, und klicken Sie dann für das Experiment, das Sie aktivieren möchten, auf **Aktivieren**.
 
-> **Wichtig** Nach der Aktivierung eines Experiments können Sie die Experimentparameter nicht mehr ändern, sofern es sich nicht um ein Testexperiment handelt (d. h. Sie haben beim Erstellen des Experiments das Kontrollkästchen **Testexperiment** aktiviert). Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
+> **Wichtig**  Nach der Aktivierung eines Experiments können Sie die Experimentparameter nicht mehr ändern, wenn es sich nicht um ein Testexperiment handelt (d. h. Sie haben beim Erstellen des Experiments das Kontrollkästchen **Testexperiment** aktiviert). Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
 
 
 ## Prüfen der Experimentergebnisse
@@ -52,6 +53,6 @@ Wenn Sie mit den Parametern für Ihr Experiment im Dashboard zufrieden sind und 
   * [Durchführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

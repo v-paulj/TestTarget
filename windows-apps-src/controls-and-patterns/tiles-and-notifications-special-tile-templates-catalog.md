@@ -1,5 +1,6 @@
 ---
-description: Spezielle Kachelvorlagen sind individuelle Vorlagen, die animiert sind mit denen Sie Vorgänge durchführen können, die mit adaptiven Kacheln nicht möglich sind.
+author: mijacobs
+Description: Spezielle Kachelvorlagen sind individuelle Vorlagen, die animiert sind oder mit denen Sie Vorgänge durchführen können, die mit adaptiven Kacheln nicht möglich sind.
 title: Spezielle Kachelvorlagen
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
@@ -9,7 +10,7 @@ template: detail.hbs
 # Spezielle Kachelvorlagen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Spezielle Kachelvorlagen sind individuelle Vorlagen, die animiert sind oder mit denen Sie Vorgänge durchführen können, die mit adaptiven Kacheln nicht möglich sind. Jede spezielle Kachelvorlage wurde speziell für Windows 10 erstellt, mit Ausnahme der Iconic-Kachelvorlage, einer klassischen Spezialvorlage, die für Windows 10 aktualisiert wurde. In diesem Artikel werden drei spezielle Kachelvorlagen behandelt: Iconic, Fotos und Kontakte.
@@ -21,7 +22,7 @@ Mit der Iconic-Vorlage (auch als „IconWithBadge“-Vorlage bezeichnet) können
 
 ![Kleine und mittelgroße E-Mail-Kacheln](images/iconic-template-mail-2sizes.png)
 
-### <span id="How_to_create_an_iconic_tile"></span><span id="how_to_create_an_iconic_tile"></span><span id="HOW_TO_CREATE_AN_ICONIC_TILE"></span>Erstellen einer Iconic-Kachel
+### <span id="How_to_create_an_iconic_tile"></span><span id="how_to_create_an_iconic_tile"></span><span id="HOW_TO_CREATE_AN_ICONIC_TILE"></span>Erstellen einer ikonischen Kachel
 
 In den folgenden Schritten wird alles erläutert, was Sie zum Erstellen einer Iconic-Kachel für Windows 10 wissen müssen. Auf hoher Ebene benötigen Sie Ihre Iconic-Bildressource. Dann senden Sie mithilfe der Iconic-Vorlage eine Benachrichtigung an die Kachel und senden schließlich eine Signalbenachrichtigung, die die auf der Kachel anzuzeigende Zahl bereitstellt.
 
@@ -82,7 +83,7 @@ Das Signal der Kachel wird entsprechend aktualisiert.
 
 **Schritt 5: Zusammenfassung**
 
-Die folgende Abbildung zeigt, wie die verschiedenen APIs und Nutzlasten den einzelnen Aspekten der Iconic-Kachelvorlage zugeordnet sind. Ein [Kachelbenachrichtigung](https://msdn.microsoft.com/library/windows/apps/hh779724) (die die &lt;binding&gt;-Elemente enthält) dient zum Angeben der Iconic-Vorlage und der Bildressource; eine [Signalbenachrichtigung](https://msdn.microsoft.com/library/windows/apps/hh779719) gibt den numerischen Wert an; Kacheleigenschaften steuern den Anzeigenamen, die Farbe und weitere Eigenschaften der Kachel.
+Die folgende Abbildung zeigt, wie die verschiedenen APIs und Nutzlasten den einzelnen Aspekten der ikonischen Kachelvorlage zugeordnet sind. Ein [Kachelbenachrichtigung](https://msdn.microsoft.com/library/windows/apps/hh779724) (die diese &lt;binding&gt;-Elemente enthält) dient zum Angeben der ikonischen Vorlage und der Bildressource. Eine [Signalbenachrichtigung](https://msdn.microsoft.com/library/windows/apps/hh779719) gibt den numerischen Wert an. Kacheleigenschaften steuern den Anzeigenamen, die Farbe und vieles mehr der Kachel.
 
 ![APIs und Nutzlasten, die der Iconic-Kachelvorlage zugeordnet sind](images/iconic-template-properties-info.png)
 
@@ -282,6 +283,6 @@ Informationen zum Senden der Benachrichtigung finden Sie unter [Auswählen einer
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Verwenden Sie Zeigeranimationen, um Benutzern visuelles Feedback zu liefern, wenn diese auf ein Element tippen.
 title: Animationen für Zeigerklicks in UWP-Apps
 ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
@@ -10,7 +11,7 @@ template: detail.hbs
 
 Verwenden Sie Zeigeranimationen, um Benutzern visuelles Feedback zu liefern, wenn diese auf ein Element tippen. Bei der Animation für „Zeiger nach unten“ wird das gedrückte Element leicht verkleinert und geneigt. Sie wird wiedergegeben, wenn erstmalig auf ein Element getippt wird. Die Animation für „Zeiger nach oben“, mit der der ursprüngliche Zustand des Elements wiederhergestellt wird, wird beim Loslassen des Zeigers wiedergegeben.
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 **Wichtige APIs**
@@ -43,6 +44,6 @@ Verwenden Sie Zeigeranimationen, um Benutzern visuelles Feedback zu liefern, wen
 
 
 
-<!--HONumber=Mar16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

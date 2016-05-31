@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 Description: 'Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten EDP-Szenarien im Zusammenhang mit Datenströmen und Puffern durchgeführt werden müssen.'
 MS-HAID: 'dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers'
 MSHAttr: 'PreferredLib:/library/windows/apps'
@@ -8,11 +9,11 @@ title: 'Schützen von Datenströmen und Puffern mithilfe des Unternehmensdatensc
 
 # Schützen von Datenströmen und Puffern mithilfe des Unternehmensdatenschutzes (Enterprise Data Protection, EDP)
 
-__Hinweis:__ EDP-Richtlinien (Enterprise Data Protection, Unternehmensdatenschutz) können nicht unter Windows 10 (Version 1511, Build 10586 oder älter) verwendet werden.
+__Hinweis__ EDP-Richtlinien (Enterprise Data Protection, Unternehmensdatenschutz) können nicht unter Windows 10 (Version 1511, Build 10586 oder älter) verwendet werden.
 
 Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten EDP-Szenarien im Zusammenhang mit Datenströmen und Puffern durchgeführt werden müssen. Umfassende Informationen zu den Zusammenhängen zwischen EDP und Dateien, Datenströmen, Zwischenablage, Netzwerk, Hintergrundaufgaben und dem Schutz von Daten im Sperrzustand finden Sie unter [Unternehmensdatenschutz (EDP)](../enterprise/edp-hub.md).
 
-**Hinweis:** Das [Unternehmensdatenschutz-Beispiel (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) veranschaulicht viele der in diesem Thema beschriebenen Dateiszenarien.
+**Hinweis**  Das [Unternehmensdatenschutz-Beispiel (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) veranschaulicht viele der in diesem Thema beschriebenen Dateiszenarien.
 
 ## Voraussetzungen
 
@@ -32,7 +33,7 @@ Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gä
 ## Schützen eines Datenstroms für eine Unternehmensidentität
 
 
-**Hinweis:** Wenn Sie einen Datenstrom oder Puffer schützen, sollten Sie unbedingt das [**ProtectionPolicyManager.PolicyChanged**](https://msdn.microsoft.com/library/windows/apps/mt608411)-Ereignis abonnieren, damit Ihre App Bescheid weiß, wenn EDP auf dem Gerät deaktiviert wird. In diesem Fall muss der Schutz sämtlicher Datenströme und Puffer aufgehoben werden. Alle weiterhin geschützten Datenströme und Puffer können potenziell widerrufen werden, wenn der Benutzer die Registrierung des Geräts in der mobilen Geräteverwaltung (Mobile Device Management, MDM) aufhebt. Und wenn EDP bei der Ressourcenerstellung deaktiviert wurde, ist dieser Widerruf nicht zulässig. Dies lässt sich vermeiden, wenn bei der Deaktivierung von EDP der Schutz der Ressourcen aufgehoben wird.
+**Hinweis**  Wenn Sie einen Datenstrom oder Puffer schützen, sollten Sie unbedingt das [**ProtectionPolicyManager.PolicyChanged**](https://msdn.microsoft.com/library/windows/apps/mt608411)-Ereignis abonnieren, damit Ihre App Bescheid weiß, wenn EDP auf dem Gerät deaktiviert wird. In diesem Fall muss der Schutz sämtlicher Datenströme und Puffer aufgehoben werden. Alle weiterhin geschützten Datenströme und Puffer können potenziell widerrufen werden, wenn der Benutzer die Registrierung des Geräts in der mobilen Geräteverwaltung (Mobile Device Management, MDM) aufhebt. Und wenn EDP bei der Ressourcenerstellung deaktiviert wurde, ist dieser Widerruf nicht zulässig. Dies lässt sich vermeiden, wenn bei der Deaktivierung von EDP der Schutz der Ressourcen aufgehoben wird.
 
 
 
@@ -279,7 +280,7 @@ private async void EnableUIPolicyFromProtectedBuffer(IBuffer buffer)
     {
         // In this case, the app has lost access to the buffer
         // (ProtectedToOtherIdentity, Revoked). This must be handled.
-        // &#39;Unprotected&#39; is never returned for GetProtectionInfoAsync().
+        // 'Unprotected' is never returned for GetProtectionInfoAsync().
         return;
     }
 
@@ -288,7 +289,7 @@ private async void EnableUIPolicyFromProtectedBuffer(IBuffer buffer)
 
 ```
 
-**Hinweis:** Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -307,6 +308,6 @@ private async void EnableUIPolicyFromProtectedBuffer(IBuffer buffer)
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,5 +1,6 @@
 ---
-Description: Halten Sie sich bei der Verwendung von Geofencing in Ihrer App an die folgenden bewährten Methoden.
+author: PatrickFarley
+Description: Wenden Sie bei der Verwendung von Geofencing in Ihrer App die folgenden bewährten Methoden an.
 title: Richtlinien für Geofencing-Apps
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
 ---
@@ -118,10 +119,10 @@ Falls Ihre App Geofence-Bereiche mit kleinem Radius erfordert, empfehlen Sie Ben
 ## Verwandte Themen
 
 
-* [Einrichten von Geofence-Bereichen](https://msdn.microsoft.com/library/windows/apps/mt219702)
+* [Einrichten eines Geofence](https://msdn.microsoft.com/library/windows/apps/mt219702)
 * [Abrufen der aktuellen Position](https://msdn.microsoft.com/library/windows/apps/mt219698)
 <!--* [Design guidelines for privacy-aware apps](guidelines-for-enabling-sensitive-devices.md)-->
-* [UWP location sample (geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
+* [UWP-Positionsbeispiel (Geolocation)](http://go.microsoft.com/fwlink/p/?linkid=533278)
  
 
  
@@ -131,6 +132,6 @@ Falls Ihre App Geofence-Bereiche mit kleinem Radius erfordert, empfehlen Sie Ben
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

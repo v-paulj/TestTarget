@@ -1,6 +1,7 @@
 ---
-title: x:DeferLoadStrategy-Attribut
-description: xDeferLoadStrategy verzögert die Erstellung eines Elements und seiner untergeordneten Elemente, verkürzt Startzeit, erhöht leicht die Arbeitsspeicherauslastung Jedes betroffene Element erhöht die Arbeitsspeicherauslastung um ca. 600 Bytes.
+author: jwmsft
+title: xDeferLoadStrategy-Attribut
+description: „xDeferLoadStrategy“ verzögert die Erstellung eines Elements und seiner untergeordneten Elemente, verkürzt die Startzeit, erhöht aber leicht die Arbeitsspeicherauslastung. Jedes betroffene Element erhöht die Arbeitsspeicherauslastung um ca. 600 Bytes.
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 ---
 
@@ -54,7 +55,7 @@ Eine allgemeine Richtlinie besteht darin, Ihre Anwendung vorher und nachher zu m
 
 ## Beispiel
 
-```xaml
+```xml
 <Grid x:Name="DeferredGrid" x:DeferLoadStrategy="Lazy">
     <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
@@ -82,6 +83,6 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

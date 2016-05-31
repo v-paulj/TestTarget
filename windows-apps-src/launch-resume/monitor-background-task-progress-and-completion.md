@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 title: Überwachen des Status und Abschlusses von Hintergrundaufgaben
 description: Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Status und Abschluss erkennt.
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
@@ -7,7 +8,7 @@ ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 # Überwachen des Status und Abschlusses von Hintergrundaufgaben
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -45,8 +46,7 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
 
     Das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) aktualisiert z. B. die Benutzeroberfläche.
 
-    > [!div class="tabbedCodeSnippets"]
-    >     ```cs
+    > [!div class="tabbedCodeSnippets"] ```cs
     >     private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
     >     {
     >         UpdateUI();
@@ -66,8 +66,7 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
 
     Verwenden Sie das folgende Profil für die Ereignishandlermethode für die OnProgress-Hintergrundaufgabe:
 
-    > [!div class="tabbedCodeSnippets"]
-    >     ```cs
+    > [!div class="tabbedCodeSnippets"] ```cs
     >     private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)
     >     {
     >         // TODO: Add code that deals with background task progress.
@@ -84,12 +83,7 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
 
     So aktualisiert beispielsweise das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) die Benutzeroberfläche mit dem Fortschrittsstatus, der mithilfe des *args*-Parameters übergeben wird:
 
-    > [!div class="tabbedCodeSnippets"]
-    >     ```cs
-    >     private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)
-    >     {
-    >         var progress = "Progress: " + args.Progress + "%";
-    >         BackgroundTaskSample.SampleBackgroundTaskProgress = progress;
+    > [!div class="tabbedCodeSnippets"]     ```cs     private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)     {         var progress = "Progress: " + args.Progress + "%";         BackgroundTaskSample.SampleBackgroundTaskProgress = progress;
     > 
     >         UpdateUI();
     >     }
@@ -111,23 +105,15 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
 
     So ruft beispielsweise das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) für jede Hintergrundaufgabe, die es registriert, die folgende Funktion auf:
 
-    > [!div class="tabbedCodeSnippets"]
-    >     ```cs
+    > [!div class="tabbedCodeSnippets"] ```cs
     >     private void AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration task)
     >     {
     >         task.Progress += new BackgroundTaskProgressEventHandler(OnProgress);
     >         task.Completed += new BackgroundTaskCompletedEventHandler(OnCompleted);
     >     }
     >     ```
-    >     ```cpp
-    >     void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration^ task)
-    >     {
-    >         auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressEventArgs^ args)
-    >         {
-    >             auto progress = "Progress: " + args->Progress + "%";
-    >             BackgroundTaskSample::SampleBackgroundTaskProgress = progress;
-    >             UpdateUI();
-    >         };
+    >     ```cpp     void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration^ task)     {         auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressEventArgs^ args)
+    >                   {             auto progress = "Progress: " + args->Progress + "%";             BackgroundTaskSample::SampleBackgroundTaskProgress = progress;             UpdateUI();         };
     > 
     >         task->Progress += ref new BackgroundTaskProgressEventHandler(progress);
     >         
@@ -145,18 +131,7 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
 
     So verwendet beispielsweise das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) den folgenden Code, um Ereignishandler anzufügen, wenn zur Seite „SampleBackgroundTask“ navigiert wird:
 
-    > [!div class="tabbedCodeSnippets"]
-    >     ```cs
-    >     protected override void OnNavigatedTo(NavigationEventArgs e)
-    >     {
-    >         foreach (var task in BackgroundTaskRegistration.AllTasks)
-    >         {
-    >             if (task.Value.Name == BackgroundTaskSample.SampleBackgroundTaskName)
-    >             {
-    >                 AttachProgressAndCompletedHandlers(task.Value);
-    >                 BackgroundTaskSample.UpdateBackgroundTaskStatus(BackgroundTaskSample.SampleBackgroundTaskName, true);
-    >             }
-    >         }
+    > [!div class="tabbedCodeSnippets"]     ```cs     protected override void OnNavigatedTo(NavigationEventArgs e)     {         foreach (var task in BackgroundTaskRegistration.AllTasks)         {             if (task.Value.Name == BackgroundTaskSample.SampleBackgroundTaskName)             {                 AttachProgressAndCompletedHandlers(task.Value);                 BackgroundTaskSample.UpdateBackgroundTaskStatus(BackgroundTaskSample.SampleBackgroundTaskName, true);             }         }
     > 
     >         UpdateUI();
     >     }
@@ -219,6 +194,6 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

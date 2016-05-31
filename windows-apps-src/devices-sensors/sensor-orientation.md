@@ -1,7 +1,8 @@
 ---
+author: DBirtolo
 ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
-title: Ausrichtungssensor
-description: Sensordaten der Klassen „Accelerometer“, „Gyrometer“, „Compass“, „Inclinometer“ und „OrientationSensor“ sind durch ihre Referenzachsen definiert. Diese Achsen werden durch das Querformat des Geräts bestimmt und drehen sich mit dem Gerät, wenn es vom Benutzer gedreht wird.
+title: Sensorausrichtung
+description: Sensordaten der Klassen Accelerometer, Gyrometer, Compass, Inclinometer und OrientationSensor sind durch ihre Referenzachsen definiert. Diese Achsen werden durch das Querformat des Geräts bestimmt und drehen sich mit dem Gerät, wenn es vom Benutzer gedreht wird.
 ---
 # Sensorausrichtung
 
@@ -152,11 +153,9 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 Die [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206371)-Daten müssen auf andere Weise geändert werden. Stellen Sie sich diese unterschiedlichen Ausrichtungen als Drehungen um die Z-Achse entgegen dem Uhrzeigersinn vor. Folglich müssen wir die Drehung umkehren, um wieder die Ausrichtung des Benutzers zu erhalten. Für Quaterniondaten können wir anhand der eulerschen Formel eine Drehung mit einer Referenzquaternion definieren, und außerdem können wir eine Referenzdrehungsmatrix verwenden.
 
-![Eulersche Formel](images/eulers-formula.png)
-Um die gewünschte relative Ausrichtung zu erhalten, multiplizieren Sie das Referenzobjekt mit dem absoluten Objekt. Beachten Sie, dass diese Berechnung nicht kommutativ ist.
+![Eulerformel](images/eulers-formula.png) Um die gewünschte relative Ausrichtung zu erhalten, multiplizieren Sie das Referenzobjekt mit dem absoluten Objekt. Beachten Sie, dass diese Berechnung nicht kommutativ ist.
 
-![Multiplizieren des Referenzobjekts mit dem absoluten Objekt](images/orientation-formula.png)
-Im vorangehenden Ausdruck wird das absolute Objekt von den Sensordaten zurückgegeben.
+![Multiplizieren des Referenzobjekts mit dem absoluten Objekt](images/orientation-formula.png) Im vorangehenden Ausdruck wird das absolute Objekt von den Sensordaten zurückgegeben.
 
 | Bildschirmausrichtung  | Drehung gegen den Uhrzeigersinn um Z | Referenzquaternion (Drehung in umgekehrter Richtung) | Referenzdrehungsmatrix (Drehung in umgekehrter Richtung) | 
 |----------------------|------------------------------------|-----------------------------------------|----------------------------------------------|
@@ -167,6 +166,6 @@ Im vorangehenden Ausdruck wird das absolute Objekt von den Sensordaten zurückge
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

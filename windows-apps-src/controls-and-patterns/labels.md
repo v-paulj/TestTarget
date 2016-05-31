@@ -1,17 +1,15 @@
 ---
-Description: Verwenden Sie eine Beschriftung, um den Benutzer darauf hinzuweisen, was er in ein benachbartes Steuerelement eingeben soll. Sie können auch eine Gruppe verwandter Steuerelemente beschriften oder in der Nähe davon Anweisungstexte anzeigen.
-title: Beschriftungen
+author: Jwmsft
+Description: Verwenden Sie ein Label, um den Benutzer darauf hinzuweisen, was er in ein benachbartes Steuerelement eingeben soll. Sie können auch eine Gruppe verwandter Steuerelemente beschriften oder in der Nähe davon Anweisungstexte anzeigen.
+title: Labels
 ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
-label: Beschriftungen
+label: Labels
 template: detail.hbs
 ---
 
-# Beschriftungen
+# Labels
 
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-Eine Beschriftung ist der Name bzw. Titel eines Steuerelements oder einer Gruppe verwandter Steuerelemente.
+Ein Label ist der Name bzw. Titel eines Steuerelements oder einer Gruppe verwandter Steuerelemente.
 
 **Wichtige APIs**
 
@@ -35,8 +33,6 @@ In XAML verfügen zahlreiche Steuerelemente über eine integrierte Header-Eigens
 -   Wenn Sie in einer Beschriftung Anweisungstext nutzen, können Sie bei der Länge von Textzeichenfolgen und bei den Satzzeichen großzügiger sein.
 
 ## <span id="related_topics"></span>Verwandte Themen
-
-
 * [Textsteuerelemente](text-controls.md)
 
 **Für Entwickler**
@@ -59,6 +55,6 @@ In XAML verfügen zahlreiche Steuerelemente über eine integrierte Header-Eigens
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

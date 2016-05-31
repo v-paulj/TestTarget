@@ -1,12 +1,13 @@
 ---
-Description: Seite „Altersfreigabe“ des App-Übermittlungsprozesses Informationen bereitstellen, Altersfreigaben von der International Age Ratings Coalition (IARC) erhalten
+author: jnHs
+Description: Auf der Seite „Altersfreigaben“ des App-Übermittlungsprozesses können Sie Informationen zu Ihrer App bereitstellen, damit sie die entsprechenden Altersfreigaben von der International Age Ratings Coalition (IARC) erhalten kann.
 title: Altersfreigaben
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
 ---
 
 # Altersfreigaben
 
-Auf der Seite **Altersfreigabe** des [App-Übermittlungsprozesses](app-submissions.md) können Sie Informationen zu Ihrer App bereitstellen, damit sie die entsprechenden Altersfreigaben von der [International Age Ratings Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854) erhalten kann. Bei diesen Freigaben geht es um die Eignung des Inhalts einer App und ihrer Metadaten, nicht um das Alter der Zielgruppe für Ihre App.
+Auf der Seite **Altersfreigaben** des [App-Übermittlungsprozesses](app-submissions.md) können Sie Informationen zu Ihrer App bereitstellen, damit sie die entsprechenden Altersfreigaben von der [International Age Ratings Coalition (IARC)](http://go.microsoft.com/fwlink/p/?LinkId=716854) erhalten kann. Bei diesen Freigaben geht es um die Eignung des Inhalts einer App und ihrer Metadaten, nicht um das Alter der Zielgruppe für Ihre App.
 
 ## Beantworten des Fragebogens zu den Altersfreigaben
 
@@ -22,7 +23,7 @@ Klicken Sie nach dem Beantworten aller Fragen auf **Save and generate**. Alle zu
 
 Bei der nächsten Aktualisierung Ihrer App werden auf dieser Seite alle Freigaben angezeigt, die der App zugewiesen wurden. Sie können auch auf **Bearbeiten** klicken, wenn Sie den Fragebogen erneut ausfüllen möchten. Sie müssen den Fragebogen erneut ausfüllen, wenn sich der Inhalt Ihrer App so geändert hat, dass sich Sie Ihre Antworten anpassen müssen. IARC kann die Fragen auch von Zeit zu Zeit aktualisieren. In diesem Fall werden Sie unter Umständen aufgefordert, den Fragebogen erneut auszufüllen, wenn Sie ein Update übermitteln.
 
-> **Hinweis**  Das südkoreanische Recht erfordert, dass in Südkorea verfügbar gemachte Spiele durch das [Game Rating Board](http://go.microsoft.com/fwlink/p/?LinkId=228256) Südkoreas bewertet werden. Wenn Ihre App ein Spiel ist und Sie es in Südkorea anbieten möchten, müssen Sie diesen zusätzlichen Abschnitt ausfüllen und das Freigabezertifikat hochladen. Wenn Ihre App kein Spiel ist oder Sie es nicht in Südkorea anbieten möchten, können Sie diesen Abschnitt leer lassen.
+> **Hinweis**  Das südkoreanische Recht erfordert, dass in Südkorea zur Verfügung gestellt Spiele durch das [Game Rating Board](http://go.microsoft.com/fwlink/p/?LinkId=228256) Südkoreas bewertet werden. Wenn Ihre App ein Spiel ist und Sie es in Südkorea anbieten möchten, müssen Sie diesen zusätzlichen Abschnitt ausfüllen und das Freigabezertifikat hochladen. Wenn Ihre App kein Spiel ist oder Sie es nicht in Südkorea anbieten möchten, können Sie diesen Abschnitt leer lassen.
 
 ## Einlegen von Einspruch gegen Freigaben oder verweigerte Klassifizierungen
 
@@ -44,6 +45,6 @@ Bisher haben Entwickler die Altersfreigabe für ihre App selbst angegeben, ansta
 | 18+ (geeignet für Erwachsene)            | Spiele mit dieser Altersfreigabe können intensive, grausame Gewalt oder Blut enthalten, was nur für Erwachsene geeignet ist. Alle Inhalte müssen den [Inhaltsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944) entsprechen.                                                                                                                                                            |
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

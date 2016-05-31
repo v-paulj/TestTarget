@@ -1,13 +1,14 @@
 ---
-description: Durch Links können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI starten
-title: Links
+author: Jwmsft
+Description: Über Hyperlinks können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten.
+title: Hyperlinks
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
-label: Links
+label: Hyperlinks
 template: detail.hbs
 ---
-# Links
+# Hyperlinks
 
-Durch Links können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten. Sie haben zwei Möglichkeiten, einer XAML-App einen Link hinzuzufügen: über das **Link**textelement oder das **HyperlinkButton**-Steuerelement.
+Über Hyperlinks können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten. Sie haben zwei Möglichkeiten, einer XAML-App einen Link hinzuzufügen: über das **Link**textelement oder das **HyperlinkButton**-Steuerelement.
 
 ![Eine Linkschaltfläche](images/controls/hyperlink-button.png)
 
@@ -45,11 +46,12 @@ In diesem Beispiel wird veranschaulicht, wie Sie ein Linktextelement in einem [T
 </StackPanel>
 
 ```
-Der Link wird inline angezeigt und wird mit dem umgebenden Text umbrochen:
+Der Link wird inline angezeigt und mit dem umgebenden Text umbrochen:
 
 ![Beispiel für einen Link als Textelement](images/controls_hyperlink-element.png) 
 
-> **Tipp**&nbsp;Wenn Sie einen Link in einem Textsteuerelement mit anderen Textelementen in XAML verwenden, platzieren Sie den Inhalt in einem [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx)-Container und wenden das Attribut `xml:space="preserve"` auf den Span-Container an, um die Leerstelle zwischen dem Link und anderen Elementen beizubehalten.
+> **Tipp**
+            &nbsp;&nbsp;Wenn Sie einen Link in einem Textsteuerelement mit anderen Textelementen in XAML verwenden, platzieren Sie den Inhalt in einem [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx)-Container and wenden das Attribut `xml:space="preserve"` auf den Span-Container an, um die Leerstelle zwischen dem Link und anderen Elementen beizubehalten.
 
 ## Erstellen eines HyperlinkButton-Elements
 
@@ -80,7 +82,8 @@ Die Navigation wird bei beiden Linktypen gleich gehandhabt. Sie können die Eige
 
 Wenn Sie mit dem Link zu einem URI navigieren möchten, legen Sie die NavigateUri-Eigenschaft fest. Wenn ein Benutzer auf den Link klickt oder tippt, wird der angegebene URI im Standardbrowser geöffnet. Der Standardbrowser wird in einem separaten Prozess von Ihrer App ausgeführt.
 
-> **Hinweis**&nbsp;Sie müssen nicht das Schema „http:“ oder „https:“ verwenden. Sie können Schemas wie „ms-appx:“, „ms-appdata:“ oder „ms-resources:“ verwenden, falls Ressourceninhalte vorhanden sind, die in einem Browser geladen werden können. Das Schema „file:“ ist ausdrücklich blockiert. Weitere Informationen finden Sie unter [URI-Schemas](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
+> **Note**
+            &nbsp;&nbsp;Sie müssen nicht das Schema „http:“ oder „https:“ verwenden. Sie können Schemas wie „ms-appx:“, „ms-appdata:“ oder „ms-resources:“ verwenden, falls Ressourceninhalte vorhanden sind, die in einem Browser geladen werden können. Das Schema „file:“ ist ausdrücklich blockiert. Weitere Informationen finden Sie unter [URI-Schemas](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
 
 > Wenn ein Benutzer auf den Link klickt, wird der Wert der NavigateUri-Eigenschaft an einen Systemhandler für URI-Typen und -Schemas übergeben. Das System startet dann die App, die für das Schema des URIs registriert ist, der für „NavigateUri“ angegeben wird.
 
@@ -122,7 +125,7 @@ Da es sich bei einem Link nicht um ein [UIElement](https://msdn.microsoft.com/li
 
 **Inhalt**
 
-Für den Link liegen Einschränkungen in Bezug auf den Inhalt vor, der in der [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx)-Sammlung enthalten sein darf. Genauer gesagt: Ein Link lässt nur [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx)- und andere [Span]()-Typen zu, die keinen anderen Link darstellen. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) kann nicht in der Inlines-Sammlung eines Links enthalten sein. Beim Versuch, eingeschränkte Inhalte hinzuzufügen, wird eine Ausnahme für ein ungültiges Argument oder eine XAML-Analyseausnahme ausgelöst.
+Für den Link liegen Einschränkungen in Bezug auf den Inhalt vor, der in der [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx)-Sammlung enthalten sein darf. Genauer gesagt: Ein Link lässt nur [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx)- und andere [Span]()-Typen zu, die keinen anderen Link darstellen. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) darf nicht in der Inlines-Sammlung eines Links enthalten sein. Beim Versuch, eingeschränkte Inhalte hinzuzufügen, wird eine Ausnahme für ein ungültiges Argument oder eine XAML-Analyseausnahme ausgelöst.
 
 **Links und Design-/Formatvorlagenverhalten**
 
@@ -137,13 +140,11 @@ Die Standardfarbe des Links ist die Akzentfarbe des Systems. Dieses Verhalten k�
 -   Separate Links sollten weit genug voneinander platziert werden, damit der Benutzer zwischen ihnen unterscheiden kann und sie mühelos einzeln auswählen kann.
 -   Fügen Sie Hyperlinks QuickInfos hinzu, die dem Benutzer anzeigen, wohin er umgeleitet wird. Wenn der Benutzer zu einer externen Website weitergeleitet werden soll, schließen Sie den Namen der Domäne der obersten Ebene in die QuickInfo ein und formatieren den Text mit einer zweiten Schriftfarbe.
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Artikel
 
-[Textsteuerelemente](text-controls.md)
-
-**Für Designer**
+- [Textsteuerelemente](text-controls.md)
 - [Richtlinien für QuickInfos](tooltips.md)
 
 **Für Entwickler (XAML)**
@@ -151,6 +152,6 @@ Die Standardfarbe des Links ist die Akzentfarbe des Systems. Dieses Verhalten k�
 - [**Windows.UI.Xaml.Controls.HyperlinkButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242739)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

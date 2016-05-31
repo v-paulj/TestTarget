@@ -1,11 +1,12 @@
 ---
-Description:Sie können ein RichEditBox-Steuerelement verwenden, um Rich-Text-Dokumente zu bearbeiten, die formatierten Text, Hyperlinks und Bilder enthalten. Sie können den Schreibschutz für ein RichEditBox-Steuerelement aktivieren, indem Sie die IsReadOnly-Eigenschaft des Steuerelements auf „true“ festlegen.
+author: Jwmsft
+Description: Sie können ein RichEditBox-Steuerelement verwenden, um Rich-Text-Dokumente zu bearbeiten, die formatierten Text, Hyperlinks und Bilder enthalten. Sie können den Schreibschutz für ein RichEditBox-Steuerelement aktivieren, indem Sie die IsReadOnly-Eigenschaft des Steuerelements auf „true“ festlegen.
 title: RichEditBox
 ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
-label: Rich-Edit-Feld
+label: Rich edit box
 template: detail.hbs
 ---
-# Rich-Edit-Feld
+# RichEditBox
 Sie können ein RichEditBox-Steuerelement verwenden, um Rich-Text-Dokumente zu bearbeiten, die formatierten Text, Hyperlinks und Bilder enthalten. Sie können den Schreibschutz für ein RichEditBox-Steuerelement aktivieren, indem Sie die IsReadOnly-Eigenschaft des Steuerelements auf **true** festlegen.
 
 <span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
@@ -17,7 +18,7 @@ Sie können ein RichEditBox-Steuerelement verwenden, um Rich-Text-Dokumente zu b
 
 ## Ist dies das richtige Steuerelement?
 
-Verwenden Sie **RichEditBox** zum Anzeigen und Bearbeiten von Textdateien. RichEditBox wird nicht verwendet, um wie bei anderen Standard-Texteingabefeldern Benutzereingaben in der App abzurufen. Hier arbeiten Sie vielmehr mit Textdateien, die nicht in Ihrer App enthalten sind. Normalerweise speichern Sie Text, der in einer RichEditBox eingegeben wird, in einer RTF-Datei.
+Verwenden Sie **RichEditBox** zum Anzeigen und Bearbeiten von Textdateien. RichEditBox wird nicht verwendet, um wie bei anderen Standard-Texteingabefeldern Benutzereingaben in der App abzurufen. Es wird vielmehr dazu verwendet, mit Textdateien zu arbeiten, die von Ihrer App getrennt sind. Normalerweise speichern Sie Text, der in einer RichEditBox eingegeben wird, in einer RTF-Datei.
 -   Wenn der Hauptzweck des mehrzeiligen Textfelds darin besteht, Dokumente zu erstellen (z. B. Blogeinträge oder die Inhalte einer E-Mail-Nachricht) und diese Dokumente Rich-Text erfordern, verwenden Sie ein Rich-Text-Feld.
 -   Wenn die Benutzer in der Lage sein sollen, ihre Texte zu formatieren, verwenden Sie ein Rich-Text-Feld.
 -   Wenn Texte erfasst werden, die nur genutzt und nicht für die Benutzer erneut angezeigt werden, verwenden Sie ein Nur-Text-Eingabesteuerelement.
@@ -189,11 +190,11 @@ Weitere Informationen zur Verwendung von Eingabeumfängen finden Sie unter [Verw
 -   Legen Sie die Höhe des Textsteuerelements so fest, dass genügend Platz für typische Einträge vorhanden ist.
 -   Die Höhe der Texteingabesteuerelemente sollte sich während der Benutzereingabe nicht verändern.
 -   Verwenden Sie kein mehrzeiliges Textfeld, wenn die Benutzer nur eine Zeile benötigen.
--   Verwenden Sie kein Rich-Text-Steuerelement, wenn ein Nur-Text-Steuerelement angemessen ist.
+-   Verwenden Sie kein Rich-Text-Steuerelement, wenn ein Nur-Text-Steuerelement ausreicht.
 
 
 
-\[Dieser Artikel enthält spezielle Informationen zu UWP-Apps (Universal Windows Platform) und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Artikel
 
@@ -209,10 +210,7 @@ Weitere Informationen zur Verwendung von Eingabeumfängen finden Sie unter [Verw
 - [**Windows.UI.Xaml.Controls PasswordBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227519)
 
 
-**Für Entwickler (Sonstige)**
-- [StringLength-Eigenschaft](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
-
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

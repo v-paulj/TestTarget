@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Toucheingabesteuerelemente für Spiele
 description: Hier erfahren Sie, wie Sie Ihrem C++-Spiel für die universelle Windows-Plattform (UWP) mit DirectX einfache touchbasierte Steuerelemente hinzufügen.
 ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
@@ -13,7 +14,7 @@ Hier erfahren Sie, wie Sie Ihrem C++-Spiel für die universelle Windows-Plattfor
 
 Sie können diese Steuerungen in Spiele integrieren, bei denen der Spieler in einer 3D-Umgebung (z. B. einer Karte oder einem Spielfeld) einen Bildlauf ausführen oder die Ansicht schwenken soll. Bei einem Strategie- oder Puzzlespiel kann der Spieler mit diesen Steuerungen z. B. durch Schwenken nach links oder rechts eine Spielumgebung anzeigen, die größer als der Bildschirm ist.
 
-> **Hinweis:** Der Code eignet sich auch für mausbasierte Schwenksteuerungen. Die zeigerbezogenen Ereignisse werden von den Windows-Runtime-APIs abstrahiert, sodass sie toucheingabe- oder mausbasierte Zeigerereignisse behandeln können.
+> **Hinweis**  Der Code eignet sich auch für mausbasierte Schwenksteuerungen. Die zeigerbezogenen Ereignisse werden von den Windows-Runtime-APIs abstrahiert, sodass sie toucheingabe- oder mausbasierte Zeigerereignisse behandeln können.
 
  
 
@@ -115,7 +116,7 @@ Die folgenden Methoden und Eigenschaften verwenden wir, um die Zustandsinformati
 -   **SetPosition** ist eine Methode, die die App aufruft, um die Koordinaten (X, Y und Z) der Steuerungen im Szenenbereich festzulegen. Beachten Sie, dass die Z-Koordinate in diesem Lernprogramm immer Null ist.
 -   **get\_Position** ist eine Eigenschaft, auf die die App zugreift, um die aktuelle Position der Kamera im Szenenbereich abzurufen. Diese Eigenschaft wird verwendet, um der App die aktuelle Kameraposition mitzuteilen.
 -   **get\_FixedLookPoint** ist eine Eigenschaft, auf die die App zugreift, um den aktuellen Punkt abzurufen, auf den die Kamera gerichtet ist. In diesem Beispiel ist der Punkt auf die Normale der X-Y-Ebene beschränkt.
--   **Update** ist eine Methode, die den Controllerzustand liest und die Kameraposition aktualisiert. Dieses Element wird in der Hauptschleife der App kontinuierlich aufgerufen, um die Kameracontrollerdaten und die Kameraposition im Szenenbereich zu aktualisieren.
+-   **Update** ist eine Methode, die den Controllerzustand liest und die Kameraposition aktualisiert. &lt;Etwas&gt; wird in der Hauptschleife der App kontinuierlich aufgerufen, um die Kameracontrollerdaten und die Kameraposition im Szenenbereich zu aktualisieren.
 
 Jetzt haben Sie alle Komponenten, die Sie zum Implementieren von Toucheingabesteuerungen benötigen. Sie können feststellen, wann und wo die Fingereingabe- oder Mauszeigerereignisse stattgefunden haben und um welche Aktion es sich dabei handelt. Sie können die Position und Ausrichtung der Kamera in Bezug zum Szenenbereich festlegen und die Änderungen nachverfolgen. Und schließlich können Sie die neue Kameraposition der aufrufenden App mitteilen.
 
@@ -347,6 +348,6 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die univer
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

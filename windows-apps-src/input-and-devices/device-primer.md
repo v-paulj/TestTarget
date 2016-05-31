@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Wenn Sie sich mit den Geräten vertraut machen, die UWP-Apps (Universelle Windows-Plattform) unterstützen, können Sie für jeden Formfaktor die bestmögliche Benutzerfreundlichkeit bieten.
 title: Einführung der Geräte für UWP-Apps (Universelle Windows-Plattform)
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
@@ -9,7 +10,7 @@ template: detail.hbs
 #  Einführung der Geräte für UWP-Apps (Universelle Windows-Plattform)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 ![Windows-Geräte](images/device-primer/1894834-hig-device-primer-01-500.png)
@@ -123,7 +124,7 @@ Typische Gerätefunktionen
 
  
 
-## <span id="Surface_Hub_devices"></span><span id="surface_hub_devices"></span><span id="SURFACE_HUB_DEVICES"></span>Surface Hub-Geräte
+## <span id="Surface_Hub_devices"></span><span id="surface_hub_devices"></span><span id="SURFACE_HUB_DEVICES"></span>Surface Hub-Geräte
 
 
 Der Microsoft Surface Hub ist ein Gerät für die Zusammenarbeit mit großem Bildschirm, der für die gleichzeitige Verwendung durch mehrere Benutzer konzipiert ist.
@@ -156,7 +157,7 @@ Typische Gerätefunktionen
 
  
 
-## <span id="Windows_IoT_devices"></span><span id="windows_iot_devices"></span><span id="WINDOWS_IOT_DEVICES"></span>Windows IoT-Geräte
+## <span id="Windows_IoT_devices"></span><span id="windows_iot_devices"></span><span id="WINDOWS_IOT_DEVICES"></span>Windows IoT-Geräte
 
 
 Bei Windows IoT-Geräten handelt es sich um eine neue Klasse von Geräten, bei denen das Einbetten von kleinen elektronischen Geräten, Sensoren und Verbindungen in physische Objekte im Mittelpunkt steht. Diese Geräte sind in der Regel über ein Netzwerk oder das Internet verbunden, um die erfassten realen Daten zu melden und in manchen Fällen auf diese Daten zu reagieren. Geräte können entweder keinen Bildschirm besitzen („monitorlose“ Geräte) oder an einen kleinen Bildschirm mit maximal 3,5 Zoll angeschlossen sein (Geräte mit Monitor).
@@ -186,13 +187,13 @@ Typische Gerätefunktionen
 
  
 
-\[Dieser Artikel enthält spezielle Informationen zu UWP-Apps und Windows 10. Laden Sie für Windows 8.1 die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
  
 
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,17 +1,18 @@
 ---
+author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
-Beschreibung; In diesem Thema wird das Abrufen eines Vorschauframes aus dem Vorschaustream der Medienaufnahme beschrieben.
+description: In diesem Thema wird das Abrufen eines Vorschauframes aus dem Vorschaustream der Medienaufnahme veranschaulicht.
 title: Abrufen eines Vorschauframes
 ---
 
 # Abrufen eines Vorschauframes
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Thema wird das Abrufen eines Vorschauframes aus dem Vorschaustream der Medienaufnahme veranschaulicht.
 
 **Hinweis**  
-Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienaufnahme in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Der Code in diesem Artikel geht davon aus, dass Ihre App bereits eine Instanz von MediaCapture besitzt, die ordnungsgemäß initialisiert wurde, und Sie ein [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) mit einem aktiven Videovorschaustream besitzen.
+Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Der Code in diesem Artikel geht davon aus, dass Ihre App bereits eine Instanz von MediaCapture besitzt, die ordnungsgemäß initialisiert wurde, und Sie ein [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) mit einem aktiven Videovorschaustream besitzen.
 
 Neben den Namespaces, die für eine einfache Medienaufzeichnung erforderlich sind, erfordert das Aufzeichnen eines Vorschauframes den folgenden Namespace.
 
@@ -48,7 +49,7 @@ Wenn Sie den Vorschauframe nicht mehr benötigen, rufen Sie auf jeden Fall die z
 
 ## Verwandte Themen
 
-* [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Aufnehmen von Fotos und Videos mit "MediaCapture"](capture-photos-and-video-with-mediacapture.md)
  
 
  
@@ -58,6 +59,6 @@ Wenn Sie den Vorschauframe nicht mehr benötigen, rufen Sie auf jeden Fall die z
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

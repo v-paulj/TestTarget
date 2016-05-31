@@ -1,4 +1,5 @@
 ---
+author: QuinnRadich
 Description: Entwerfen Sie externe Hilfeseiten mit ausführlichen Anweisungen und Hinweisen zu Ihrer App.
 title: Richtlinien zum Entwerfen von externen Hilfeseiten
 label: External help
@@ -37,6 +38,6 @@ Externe Hilfeseiten sind ideal, um für die Benutzer Lernprogramme und exemplari
 * [Richtlinien für die App-Hilfe](guidelines-for-app-help.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

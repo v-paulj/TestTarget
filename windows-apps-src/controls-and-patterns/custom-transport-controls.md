@@ -1,8 +1,9 @@
 ---
-description: Der MediaPlayer verfügt über anpassbare XAML-Transportsteuerelemente, um die Steuerung von Audio-und Videoinhalten zu verwalten.
+author: Jwmsft
+Description: Der MediaPlayer verfügt über anpassbare XAML-Transportsteuerelemente, um die Steuerung von Audio-und Videoinhalten zu verwalten.
 title: Erstellen benutzerdefinierter Medientransportsteuerelemente
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
-label: Erstellen benutzerdefinierter Medientransportsteuerelemente
+label: Create custom media transport controls
 template: detail.hbs
 ---
 # Erstellen benutzerdefinierter Transportsteuerelemente
@@ -11,7 +12,8 @@ MediaElement verfügt über anpassbare XAML-Transportsteuerelemente, um die Steu
 
 Sie sollten bereits mit den Klassen MediaElement und MediaTransportControls vertraut sein. Weitere Informationen finden Sie im Leitfaden für das MediaElement-Steuerelement. 
 
-> **Tipp**&nbsp;&nbsp;Die Beispiele in diesem Thema basieren auf dem [Beispiel für die Steuerelemente für den Medientransport](http://go.microsoft.com/fwlink/p/?LinkId=620023). Sie können das Beispiel herunterladen, um den fertigen Code anzuzeigen und auszuführen.
+> **Tipp**
+            &nbsp;&nbsp;Die Beispiele in diesem Thema basieren auf dem [Beispiel für die Steuerelemente für den Medientransport](http://go.microsoft.com/fwlink/p/?LinkId=620023). Sie können das Beispiel herunterladen, um den fertigen Code anzuzeigen und auszuführen.
 
 <span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
 
@@ -31,7 +33,8 @@ Allerdings gibt es möglicherweise Szenarien, in denen Sie das Erscheinungsbild 
 
 Sie können die Darstellung des Steuerelements durch Ändern der Standardvorlage anpassen. Wenn Sie das Verhalten des Steuerelements ändern oder neue Befehle hinzufügen möchten, können Sie ein benutzerdefiniertes Steuerelement erstellen, das von MediaTransportControls abgeleitet wird.
 
->**Tipp**&nbsp;&nbsp;Anpassbare Steuerelementvorlagen sind ein leistungsfähiges Feature der XAML-Plattform. Ihre Verwendung hat jedoch auch Konsequenzen, die Sie berücksichtigen sollten. Wenn Sie eine Vorlage anpassen, wird sie zu einem statischen Teil Ihrer App und erhält daher keine Plattformupdates, die von Microsoft für die Vorlage durchgeführt werden. Wenn von Microsoft Vorlagenupdates herausgegeben werden, sollten Sie die neue Vorlage nutzen und erneut anpassen, um von den Vorteilen der aktualisierten Vorlage zu profitieren.
+>**Tipp**
+            &nbsp;&nbsp;Anpassbare Steuerelementvorlagen sind ein leistungsfähiges Feature der XAML-Plattform, aber bei ihrer Nutzung ergeben sich auch Konsequenzen, die Sie berücksichtigen sollten. Wenn Sie eine Vorlage anpassen, wird sie zu einem statischen Teil Ihrer App und erhält daher keine Plattformupdates, die von Microsoft für die Vorlage durchgeführt werden. Wenn von Microsoft Vorlagenupdates herausgegeben werden, sollten Sie die neue Vorlage nutzen und erneut anpassen, um von den Vorteilen der aktualisierten Vorlage zu profitieren.
 
 ## Vorlagenstruktur
 
@@ -40,11 +43,16 @@ Das [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/xaml/w
 - Im zweiten Abschnitt werden die verschiedenen visuellen Zustände definiert, die von MediaTransportControls verwendet werden.
 - Der dritte Abschnitt enthält das [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)-Element, in dem die verschiedenen MediaTransportControls-Elemente zusammengeführt werden und mit dem das Layout der Komponenten definiert wird.
 
-> **Hinweis**&nbsp;&nbsp;Weitere Informationen zum Ändern von Vorlagen finden Sie unter [Steuerelementvorlagen](). Sie können einen Text-Editor oder vergleichbare Editoren in Ihrer IDE verwenden, um die XAML-Dateien in \(*Programmdateien*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK-Version*)\Generic zu öffnen. Das Standardformat und die Vorlage für jedes Steuerelement werden in der Datei **generic.xaml** definiert. Sie finden die MediaTransportControls-Vorlage in generic.xaml, indem Sie nach „MediaTransportControls“ suchen.
+> **Hinweis**
+            &nbsp;&nbsp;Weitere Informationen zum Ändern von Vorlagen finden Sie unter [Steuerelementvorlagen](). Sie können einen Text-Editor oder vergleichbare Editoren in Ihrer IDE verwenden, um die XAML-Dateien in \(*Programmdateien*)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\\(*SDK-Version*)\Generic zu öffnen. Das Standardformat und die Vorlage für jedes Steuerelement werden in der Datei **generic.xaml** definiert. Sie finden die MediaTransportControls-Vorlage in generic.xaml, indem Sie nach „MediaTransportControls“ suchen.
 
 In den folgenden Abschnitten erfahren Sie, wie Sie einige der wichtigsten Elemente der Transportsteuerelemente anpassen: 
-- [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): ermöglicht Benutzern das Scrubbing durch ihre Medien und zeigt darüber hinaus den Fortschritt an
-- [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): enthält alle Schaltflächen
+- [
+              **Slider**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx): ermöglicht Benutzern das Scrubbing durch ihre Medien und zeigt darüber hinaus den Fortschritt an.
+- [
+              **CommandBar**
+            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.aspx): enthält alle Schaltflächen.
 Weitere Informationen finden Sie im Abschnitt zum Aufbau des MediaTransportControls-Referenzthemas. 
 
 ## Anpassen der Transportsteuerelemente
@@ -166,7 +174,8 @@ Da das Überlaufmenü aus Textschaltflächen besteht, müssen Sie der Schaltflä
 </CommandBar.SecondaryCommands>
 ```
 
-> **Wichtig**&nbsp;&nbsp;Sie müssen die Schaltfläche nach wie vor sichtbar machen und aktivieren, damit sie im Überlaufmenü verwendet werden kann. In diesem Beispiel ist das PlaybackRateButton-Element nicht im Überlaufmenü sichtbar, es sei denn, die IsPlaybackRateButtonVisible-Eigenschaft ist auf „true“ festgelegt. Es ist nicht aktiviert, es sei denn, die IsPlaybackRateEnabled-Eigenschaft ist auf „true“ festgelegt. Das Festlegen dieser Eigenschaften wird im vorherigen Abschnitt erläutert.
+> **Wichtig**
+            &nbsp;&nbsp;Sie müssen die Schaltfläche nach wie vor sichtbar machen und aktivieren, damit sie im Überlaufmenü verwendet werden kann. In diesem Beispiel ist das PlaybackRateButton-Element nicht im Überlaufmenü sichtbar, es sei denn, die IsPlaybackRateButtonVisible-Eigenschaft ist auf „true“ festgelegt. Es ist nicht aktiviert, es sei denn, die IsPlaybackRateEnabled-Eigenschaft ist auf „true“ festgelegt. Das Festlegen dieser Eigenschaften wird im vorherigen Abschnitt erläutert.
 
 ### Hinzufügen einer benutzerdefinierten Schaltfläche
 
@@ -239,7 +248,7 @@ public sealed class CustomMediaTransportControls : MediaTransportControls
 
 Das „seek“-Steuerelement von MediaTransportControls wird durch ein [**Slider**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.slider.aspx) bereitgestellt. Eine Möglichkeit zum Anpassen besteht darin, die Granularität des Suchverhaltens zu ändern. 
 
-Der standardmäßige Suchschieberegler ist in 100 Segmente unterteilt, sodass das Suchverhalten auf diese Anzahl von Abschnitten begrenzt ist. Sie können die Granularität des Suchschiebereglers ändern, indem Sie das Slider-Element aus der visuellen XAML-Struktur in Ihrem [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediaelement.mediaopened.aspx)-Ereignishandler abrufen. In diesem Beispiel wird gezeigt, wie Sie mithilfe von [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx) einen Verweis auf das Slider-Element abrufen, dann das Standardschrittintervall des Schiebereglers von 1 % in 0,1 % (1000 Schritte) ändern, wenn das Medium länger als 120 Minuten ist. Das MediaElement hat den Namen `MediaElement1`.
+Der standardmäßige Suchschieberegler ist in 100 Segmente unterteilt, sodass das Suchverhalten auf diese Anzahl von Abschnitten begrenzt ist. Sie können die Granularität des Suchschiebereglers ändern, indem Sie das Slider-Element aus der visuellen XAML-Struktur in Ihrem [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.mediaelement.mediaopened.aspx)-Ereignishandler abrufen. In diesem Beispiel wird gezeigt, wie Sie mithilfe von [**VisualTreeHelper**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.visualtreehelper.aspx) einen Verweis auf das Slider-Element abrufen, dann das Standardschrittintervall des Schiebereglers von 1 % in 0,1 % (1.000 Schritte) ändern, wenn das Medium länger als 120 Minuten ist. Das MediaElement hat den Namen `MediaElement1`.
 
 ```csharp
 private void MediaElement_MediaOpened(object sender, RoutedEventArgs e)
@@ -254,13 +263,13 @@ private void MediaElement_MediaOpened(object sender, RoutedEventArgs e)
 }
 ```
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die universelle Windows-Plattform (UWP) und Windows 10. Wenn Sie Anleitungen für Windows 8.1 benötigen, laden Sie die [PDF-Datei mit Windows 8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+
 
 ## Verwandte Artikel
 
 - [Medienwiedergabe](media-playback.md)
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

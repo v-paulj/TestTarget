@@ -1,11 +1,6 @@
 ---
-description: Wenn Sie Kunden die kostenlose Nutzung Ihrer App während eines Testzeitraums ermöglichen möchten, können Sie Ihre Kunden dazu bringen, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features während des Testzeitraums beschränken oder ausschließen.
-title: Ausschließen oder Beschränken von Features in einer Testversion
-ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: kostenlose Testversion
-keywords: kostenloser Testzeitraum
-keywords: kostenlose Testversion, Codebeispiel
-keywords: kostenlose Testversion, Codebeispiel
+author: mcleanbyron Description: Wenn Sie Kunden die kostenlose Nutzung Ihrer App während eines Testzeitraums ermöglichen möchten, können Sie Ihre Kunden dazu bringen, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features während des Testzeitraums beschränken oder ausschließen.
+title: Ausschließen oder Beschränken von Features in einer Testversion ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056 keywords: kostenlose Testversion keywords: kostenloser Testzeitraum keywords: kostenlose Testversion, Codebeispiel keywords: kostenlose Testversion, Beispielcode
 ---
 
 # Ausschließen oder Beschränken von Features in einer Testversion
@@ -166,7 +161,9 @@ void DisplayTrialVersionExpirationTime()
 
 Testen Sie nun die App mithilfe simulierter Aufrufe an den Lizenzserver. Ersetzen Sie in JavaScript, C#, Visual Basic oder Visual C++ im Initialisierungscode der App Verweise auf [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) durch [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766).
 
-[**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) ruft testspezifische Lizenzierungsinformationen aus einer XML-Datei mit dem Namen „WindowsStoreProxy.xml“ ab, die sich in %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData befindet. Sind dieser Pfad und diese Datei nicht vorhanden, müssen Sie diese bei der Installation oder während der Laufzeit erstellen. Wenn die Datei WindowsStoreProxy.xml nicht am angegebenen Speicherort vorhanden ist, und Sie versuchen, auf die [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768)-Eigenschaft zuzugreifen, erhalten Sie eine Fehlermeldung.
+[
+              **CurrentAppSimulator**
+            ](https://msdn.microsoft.com/library/windows/apps/hh779766) ruft testspezifische Lizenzierungsinformationen aus einer XML-Datei mit dem Namen "WindowsStoreProxy.xml" ab, die sich in %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData befindet. Sind dieser Pfad und diese Datei nicht vorhanden, müssen Sie diese bei der Installation oder während der Laufzeit erstellen. Wenn die Datei WindowsStoreProxy.xml nicht am angegebenen Speicherort vorhanden ist, und Sie versuchen, auf die [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768)-Eigenschaft zuzugreifen, erhalten Sie eine Fehlermeldung.
 
 Dieses Beispiel veranschaulicht das Hinzufügen von Code, um die App in unterschiedlichen Lizenzierungszuständen zu testen.
 
@@ -233,6 +230,6 @@ Weitere Informationen zum Beschreiben Ihrer App finden Sie unter [Erstellen von 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

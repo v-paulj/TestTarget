@@ -1,4 +1,5 @@
 ---
+author: mcleanbyron
 ms.assetid: 69E05E56-B5F0-4D4C-A1FF-B6EAFF5D0E28
 description: Während der Übermittlung können Sie das gewünschte Verhalten der Anzeigenvermittlung konfigurieren. Dieses können Sie später anpassen, ohne dazu Codeänderungen vorzunehmen oder neue Pakete zu übermitteln.
 title: Übermitteln der App und Konfigurieren der Anzeigenvermittlung
@@ -24,7 +25,8 @@ Die folgenden Schritte beschreiben, wie Sie im Abschnitt **Windows-Anzeigenvermi
 1.  Stellen Sie sicher, dass unter **Konfigurieren der Vermittlung für** das richtige App-Paket ausgewählt ist.
 2.  Stellen Sie sicher, dass unter **Ziel** die Option **Baseline** ausgewählt ist.
 3.  Wählen Sie unter **Aktualisierungsrate** die Länge des Vermittlungszyklus aus (die Häufigkeit, mit der neue Anzeigen eingeblendet werden). Die Dauer muss zwischen 30 und 120 Sekunden liegen.
-    **Hinweis**  Wenn Sie in einem Ihrer Anzeigennetzwerkportale bereits eine Aktualisierungsrate konfiguriert haben, achten Sie darauf, hier die gleiche Aktualisierungsrate festzulegen.
+  > **Hinweis**  Wenn Sie in einem Ihrer Anzeigennetzwerkportale bereits eine Aktualisierungsrate konfiguriert haben, achten Sie darauf, hier die gleiche Aktualisierungsrate festzulegen.
+
 4.  Als Nächstes enthält der Abschnitt **Windows-Anzeigenvermittlung** alle von der App verwendeten Anzeigennetzwerke. Es werden zwei verschiedene Methoden bereitgestellt, um anzugeben, wie oft die einzelnen Anzeigennetzwerke von der App verwendet werden sollen. Wählen Sie eine der folgenden Optionen aus der Dropdownliste **Vermittlungstyp** aus:
 
     -   **Nach Gewicht sortieren**. Wählen Sie diese Option aus, um Prozentwerte auf die einzelnen Anzeigennetzwerke anzuwenden. Diese geben an, wie oft jedes Anzeigennetzwerk von der App verwendet werden soll. Die für alle Anzeigennetzwerke festgelegten Prozentsätze müssen insgesamt genau 100 % ergeben. Weitere Informationen finden Sie unter [Sortieren von Anzeigennetzwerken nach Gewicht](#order-ad-networks-by-weight).
@@ -98,7 +100,7 @@ Sofern die folgenden Bedingungen erfüllt sind, werden die vorhandenen Konfigura
 
 Wenn eine dieser Bedingungen nicht erfüllt ist, müssen Sie die Basiskonfiguration und alle marktspezifischen Zielkonfigurationen für Ihre App neu erstellen.
 
-**Hinweis**  Die ID eines **AdMediatorControl**-Steuerelements wird generiert, wenn Sie es auf eine Entwurfsoberfläche in Ihrer App ziehen. Diese ID wird nur geändert, wenn Sie das Steuerelement löschen und anschließend ersetzen, indem Sie ein neues Steuerelement auf die gleiche Oberfläche ziehen.
+> **Hinweis**  Die ID eines **AdMediatorControl**-Steuerelements wird generiert, wenn Sie es auf eine Entwurfsoberfläche in Ihrer App ziehen. Diese ID wird nur geändert, wenn Sie das Steuerelement löschen und anschließend ersetzen, indem Sie ein neues Steuerelement auf die gleiche Oberfläche ziehen.
 
  
 
@@ -162,6 +164,6 @@ Sie möchten Microsoft Advertising und Inneractive gleichermaßen verwenden, sod
  
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

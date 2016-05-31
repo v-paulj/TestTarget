@@ -1,5 +1,6 @@
 ---
-description: Abhängigkeitseigenschaftensystem steht beim Entwickeln einer Windows-Runtime-App mit C++, C# oder Visual Basic und XAML-Definitionen für UI zur Verfügung
+author: jwmsft
+description: In diesem Thema wird das Abhängigkeitseigenschaftensystem erläutert, das Ihnen beim Entwickeln einer Windows-Runtime-App mit C++, C# oder Visual Basic und XAML-Definitionen für die UI zur Verfügung steht.
 title: Übersicht über Abhängigkeitseigenschaften
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
 ---
@@ -36,7 +37,7 @@ Eine Abhängigkeitseigenschaft repräsentiert oder unterstützt ein spezifisches
 
 Mit Abhängigkeitseigenschaften werden die grundlegenden Windows-Runtime-Eigenschaftsfunktionen erweitert, indem ein globaler, interner Eigenschaftenspeicher bereitgestellt wird, in dem alle Abhängigkeitseigenschaften einer App zur Laufzeit gesichert werden. Dies ist eine Alternative zur Standardvorgehensweise, bei der die Eigenschaft mit einem privaten Feld abgesichert wird, das in der Eigenschaftsdefinitionsklasse als privat festgelegt ist. Sie können sich diesen internen Eigenschaftenspeicher als einen Satz von Bezeichnern und Werten vorstellen, der für jedes einzelne Objekt vorhanden ist (sofern es sich um ein [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)-Element handelt). Die einzelnen Eigenschaften werden im Speicher nicht anhand des Namens identifiziert, sondern durch eine [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)-Instanz. Vom Eigenschaftensystem wird dieses Implementierungsdetail jedoch meist ausgeblendet: Sie können auf Abhängigkeitseigenschaften normalerweise über einen einfachen Namen (den programmgesteuerten Eigenschaftsnamen in der verwendeten Codesprache oder beim Schreiben von XAML-Code mithilfe eines Attributnamens) zugreifen.
 
-Der Basistyp, der dem Abhängigkeitseigenschaftensystem zugrunde liegt, ist [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). Mit **DependencyObject** werden Methoden definiert, die auf die Abhängigkeitseigenschaft zugreifen können. Instanzen einer abgeleiteten **DependencyObject** -Klasse stellen die interne Unterstützung des bereits erwähnten Eigenschaftenspeicherkonzepts bereit.
+Der Basistyp, der dem Abhängigkeitseigenschaftensystem zugrunde liegt, ist [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356). Mit **DependencyObject** werden Methoden definiert, die auf die Abhängigkeitseigenschaft zugreifen können. Instanzen einer abgeleiteten **DependencyObject**-Klasse stellen die interne Unterstützung des bereits erwähnten Eigenschaftenspeicherkonzepts bereit.
 
 Im Folgenden finden Sie einen Überblick über die Terminologie, die für die Beschreibung der Abhängigkeitseigenschaften verwendet wird:
 
@@ -132,7 +133,7 @@ Für eine Abhängigkeitseigenschaft kann der Wert festgelegt werden, indem eine 
 
 Im folgenden Beispiel wird der [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676)-Wert für ein [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Element per Bindung im XAML-Code festgelegt. Bei der Datenbindung werden ein übernommener Datenkontext und eine Objektdatenquelle verwendet. (Letztere sind in dem verkürzten Beispiel nicht sichtbar. Ein umfassenderes Beispiel mit Kontext und Quelle finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).)
 
-```XAML
+```XML
 <Canvas>
   <TextBlock Text="{Binding Team.TeamName}"/>
 </Canvas>
@@ -195,12 +196,14 @@ Die Threadingmerkmale von [**DependencyObject**](https://msdn.microsoft.com/libr
 * [Storyboardanimationen](https://msdn.microsoft.com/library/windows/apps/mt187354)
 * [Erstellen von Komponenten für Windows-Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [XAML-Beispiel für Benutzer und benutzerdefinierte Steuerelemente](http://go.microsoft.com/fwlink/p/?linkid=238581)
-**APIs für Abhängigkeitseigenschaften**
+            
+          
+            **APIs für Abhängigkeitseigenschaften**
 * [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
 * [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,13 +1,14 @@
 ---
+author: DBirtolo
 ms.assetid: 26834A51-512B-485B-84C8-ABF713787588
 title: Erstellen einer NFC-Smartcard-App
-description: Windows Phone 8.1 hat Apps mit NFC-Kartenemulation per SIM-basiertem sicherem Element unterstützt. Für dieses Modell war es aber erforderlich, dass Apps für das sichere Bezahlen eng mit den Betreibern von mobilen Netzwerken gekoppelt waren.
+description: Windows Phone 8.1 hat Apps mit NFC-Kartenemulation per SIM-basiertem sicherem Element unterstützt. Für dieses Modell war es aber erforderlich, dass Apps für das sichere Bezahlen eng mit den Betreibern von mobilen Netzwerken gekoppelt waren.
 ---
 # Erstellen einer NFC-Smartcard-App
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Wichtig**  Dieses Thema gilt nur für Windows 10 Mobile.
+**Wichtig**  Dieses Thema trifft nur auf Windows 10 Mobile zu.
 
 Windows Phone 8.1 hat Apps mit NFC-Kartenemulation per SIM-basiertem sicherem Element unterstützt. Für dieses Modell war es aber erforderlich, dass Apps für das sichere Bezahlen eng mit den Betreibern von mobilen Netzwerken gekoppelt waren. Dadurch wurde die Vielfältigkeit möglicher Zahlungslösungen anderer Händler oder Entwickler eingeschränkt, die nicht mit Betreibern von mobilen Netzwerken gekoppelt waren. In Windows 10 Mobile haben wir eine neue Technologie für die Kartenemulation eingeführt, die die Bezeichnung „Host-Kartenemulation“ (Host Card Emulation, HCE) trägt. Mithilfe von HCE-Technologie kann Ihre App direkt mit einem NFC-Kartenleser kommunizieren. In diesem Thema wird veranschaulicht, wie die Host-Kartenemulation (HCE) für Windows 10 Mobile-Geräte funktioniert und wie Sie eine HCE-App entwickeln können, bei der Kunden ohne Zusammenarbeit mit dem Betreiber eines mobilen Netzwerks per Smartphone auf Ihre Dienste zugreifen können, anstatt mit einer physischen Karte.
 
@@ -160,7 +161,7 @@ void BgTask::HandleHceActivation()
         if (Windows::Phone::System::SystemProtection::ScreenLocked)
         {
             auto denyIfLocked = Windows::Storage::ApplicationData::Current->RoamingSettings->Values->Lookup("DenyIfPhoneLocked");
-            if (denyIfLocked != nullptr &amp;&amp; (bool)denyIfLocked == true)
+            if (denyIfLocked != nullptr && (bool)denyIfLocked == true)
             {
                 // The phone is locked, and our current user setting is to deny transactions while locked so let the user know
                 // Denied
@@ -176,7 +177,7 @@ void BgTask::HandleHceActivation()
         }
 
         m_emulator->ApduReceived += ref new TypedEventHandler<SmartCardEmulator^, SmartCardEmulatorApduReceivedEventArgs^>(
-            this, &amp;BgTask::ApduReceived);
+            this, &BgTask::ApduReceived);
 
         m_emulator->ConnectionDeactivated += ref new TypedEventHandler<SmartCardEmulator^, SmartCardEmulatorConnectionDeactivatedEventArgs^>(
                 [this](
@@ -228,7 +229,7 @@ public static byte[] AID_OTHER =
         {
             (byte)'1', (byte)'2', (byte)'3', (byte)'4',
             (byte)'5', (byte)'6', (byte)'7', (byte)'8',
-            (byte)'O', (byte)'T', (byte)'H', (byte)'E', (byte)'R’
+            (byte)'O', (byte)'T', (byte)'H', (byte)'E', (byte)'R'
         };
 
 var appletIdGroup = new SmartCardAppletIdGroup(
@@ -363,7 +364,7 @@ Die Hintergrundaufgabe der App wird nur dann gestartet, wenn das Smartphone gesp
 
 ## AID-Registrierung und andere Updates für SIM-basierte Apps
 
-Kartenemulations-Apps, bei denen die SIM-Karte als sicheres Element verwendet wird, können beim Windows-Dienst registriert werden, um die auf der SIM-Karte unterstützten AIDs zu deklarieren. Diese Registrierung ähnelt einer HCE-basierten App-Registrierung. Der einzige Unterschied ist der [**SmartCardEmulationType**](https://msdn.microsoft.com/library/windows/apps/Dn894639), der für SIM-basierte Apps auf „Uicc“ festgelegt werden sollte. Als Ergebnis der Zahlungskartenregistrierung wird der Anzeigename der Karte auch im Menü mit den NFC-Einstellungen eingefügt.
+Kartenemulations-Apps, bei denen die SIM-Karte als sicheres Element verwendet wird, können beim Windows-Dienst registriert werden, um die auf der SIM-Karte unterstützten AIDs zu deklarieren. Diese Registrierung ähnelt einer HCE-basierten App-Registrierung. Der einzige Unterschied ist der [**SmartCardEmulationType**](https://msdn.microsoft.com/library/windows/apps/Dn894639), der für SIM-basierte Apps auf „Uicc“ festgelegt werden sollte. Als Ergebnis der Zahlungskartenregistrierung wird der Anzeigename der Karte auch in das Menü mit den NFC-Einstellungen eingefügt.
 
 ```csharp
 var appletIdGroup = new SmartCardAppletIdGroup(
@@ -374,12 +375,12 @@ var appletIdGroup = new SmartCardAppletIdGroup(
 ```
 
 ** Wichtig **  
-Die Legacyunterstützung des binären SMS-Abfangverfahrens in Windows Phone 8.1 wurde entfernt und in Windows 10 Mobile durch eine neue umfassendere SMS-Unterstützung ersetzt. Alle älteren Windows Phone 8.1-Apps, die hierauf basieren, müssen aktualisiert werden, damit sie die neuen Windows 10 Mobile-SMS-APIs nutzen.
+Die Legacyunterstützung des binären SMS-Abfangverfahrens in Windows Phone 8.1 wurde entfernt und in Windows 10 Mobile durch eine neue, umfassendere SMS-Unterstützung ersetzt. Alle älteren Windows Phone 8.1-Apps, die hierauf basieren, müssen aktualisiert werden, damit sie die neuen Windows 10 Mobile-SMS-APIs nutzen.
 
 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

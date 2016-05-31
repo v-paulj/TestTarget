@@ -1,13 +1,14 @@
 ---
-title: OpenGL ES 2.0 zu Direct3D 11 – Referenz
-description: Verwenden Sie diese Referenzthemen zum Suchen nach der API-Zuordnung und kurzen Codebeispielen bei der Portierung von OpenGL ES 2.0 zu Direct3D 11
+author: mtoepke
+title: OpenGL ES 2.0 zu Direct3D 11 – Referenz
+description: Verwenden Sie diese Referenzthemen zum Suchen nach der API-Zuordnung und kurzen Codebeispielen, wenn Sie die Portierung von OpenGL ES 2.0 zu Direct3D 11 durchführen.
 ms.assetid: fe18c8a9-b113-8f5d-9c31-c294dede8560
 ---
 
 # OpenGL ES 2.0 zu Direct3D 11 – Referenz
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Verwenden Sie diese Referenzthemen zum Suchen nach der API-Zuordnung und kurzen Codebeispielen, wenn Sie die Portierung von OpenGL ES 2.0 zu Direct3D 11 durchführen.
 ## 
@@ -24,8 +25,8 @@ Verwenden Sie diese Referenzthemen zum Suchen nach der API-Zuordnung und kurzen 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>[GLSL-to-HLSL reference](glsl-to-hlsl-reference.md)</p></td>
-<td align="left"><p>Beim [port your graphics architecture from OpenGL ES 2.0 to Direct3D 11](port-from-opengl-es-2-0-to-directx-11-1.md) zum Erstellen eines Spiels für die Universelle Windows-Plattform (UWP) portieren Sie den OpenGL Shader Language (GLSL)-Code zu Microsoft High Level Shader Language (HLSL)-Code.</p></td>
+<td align="left"><p>[GLSL-zu-HLSL-Referenz](glsl-to-hlsl-reference.md)</p></td>
+<td align="left"><p>Sie portieren Ihren OpenGL Shader Language (GLSL)-Code zu Microsoft High Level Shader Language (HLSL)-Code, wenn Sie Ihre [Grafikarchitektur von OpenGL ES 2.0 zu Direct3D 11 portieren](port-from-opengl-es-2-0-to-directx-11-1.md), um ein Spiel für die universelle Windows-Plattform (UWP) zu erstellen.</p></td>
 </tr>
 </tbody>
 </table>
@@ -41,6 +42,6 @@ Verwenden Sie diese Referenzthemen zum Suchen nach der API-Zuordnung und kurzen 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

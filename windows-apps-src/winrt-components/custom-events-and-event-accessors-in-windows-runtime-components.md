@@ -1,13 +1,14 @@
 ---
-title: Benutzerdef. Ereignisse und -accessoren in Windows-Runtime-Komponenten
-description: .NET Framework-Unterstützung Windows-Runtime vereinfacht Deklarieren Ereigniskomponenten, Unterschiede zwischen Ereignismuster UWP .NET Framework verborgen
+author: martinekuan
+title: Benutzerdefinierte Ereignisse und Ereignisaccessoren in Komponenten für Windows-Runtime
+description: Die .NET Framework-Unterstützung für Komponenten für Windows-Runtime erleichtert die Deklaration von Ereigniskomponenten, indem die Unterschiede zwischen dem Ereignismuster der universellen Windows-Plattform (UWP) und dem Ereignismuster von .NET Framework verborgen werden.
 ms.assetid: 6A66D80A-5481-47F8-9499-42AC8FDA0EB4
 ---
 
 # Benutzerdefinierte Ereignisse und Ereignisaccessoren in Komponenten für Windows-Runtime
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
@@ -92,7 +93,7 @@ Der folgende Code für das Ereignis „NumberChanged” zeigt das grundlegende M
 > End Event
 > ```
 
-Die statische („Shared” in Visual Basic) Methode „GetOrCreateEventRegistrationTokenTable” erstellt die Instanz des Ereignisses des EventRegistrationTokenTable&lt;T&gt;-Objekts mit einer Verzögerung. Übergeben Sie das Feld auf Klassenebene, das die Tokentabelleninstanz enthalten soll, an diese Methode. Wenn das Feld leer ist, erstellt die Methode die Tabelle, speichert einen Verweis auf die Tabelle in dem Feld und gibt einen Verweis auf die Tabelle zurück. Wenn das Feld bereits einen Verweis auf die Tokentabelle enthält, gibt die Methode einfach diesen Verweis zurück.
+Die statische („Shared” in Visual Basic) Methode „GetOrCreateEventRegistrationTokenTable” erstellt die Instanz des Ereignisses des EventRegistrationTokenTable&lt;T&gt;-Objekts verzögert. Übergeben Sie das Feld auf Klassenebene, das die Tokentabelleninstanz enthalten soll, an diese Methode. Wenn das Feld leer ist, erstellt die Methode die Tabelle, speichert einen Verweis auf die Tabelle in dem Feld und gibt einen Verweis auf die Tabelle zurück. Wenn das Feld bereits einen Verweis auf die Tokentabelle enthält, gibt die Methode einfach diesen Verweis zurück.
 
 > **Wichtig**  Um Threadsicherheit zu gewährleisten, muss das Feld, das die Instanz des Ereignisses „EventRegistrationTokenTable&lt;T&gt;” enthält, ein Feld auf Klassenebene sein. Wenn dies ein Feld auf Klassenebene ist, stellt die Methode „GetOrCreateEventRegistrationTokenTable” sicher, dass alle Threads dieselbe Instanz der Tabelle abrufen, wenn mehrere Threads versuchen, die Tokentabelle zu erstellen. Für ein bestimmtes Ereignis müssen alle Aufrufe der Methode „GetOrCreateEventRegistrationTokenTable” dasselbe Feld auf Klassenebene verwenden.
 
@@ -107,7 +108,7 @@ Zu den anderen Membern der EventRegistrationTokenTable&lt;T&gt;-Klasse, die im U
 
 -   Die [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx)-Eigenschaft gibt einen Delegaten zurück, der alle Ereignishandler enthält, die derzeit zum Behandeln des Ereignisses registriert sind. Verwenden Sie diesen Delegaten zum Auslösen des Ereignisses, oder verwenden Sie die Methoden der Delegate-Klasse, um die Handler einzeln aufzurufen.
 
-    >**Hinweis**  Wir empfehlen, dass Sie dem Muster weiter oben in diesem Artikel gezeigten Beispiel folgen und den Delegaten in eine temporäre Variable kopieren, bevor Sie ihn aufrufen. Dadurch wird eine Racebedingung verhindert, in der ein Thread den letzten Ereignishandler entfernt, indem der Delegat auf null festlegt wird, kurz bevor ein anderer Thread versucht, den Delegaten aufzurufen. Delegaten sind unveränderlich, sodass die Kopie weiterhin gültig ist.
+    >**Hinweis**  Wir empfehlen, dass Sie dem Muster weiter des oben in diesem Artikel gezeigten Beispiels folgen und den Delegaten in eine temporäre Variable kopieren, bevor Sie ihn aufrufen. Dadurch wird eine Racebedingung verhindert, in der ein Thread den letzten Ereignishandler entfernt, indem der Delegat auf null festlegt wird, kurz bevor ein anderer Thread versucht, den Delegaten aufzurufen. Delegaten sind unveränderlich, sodass die Kopie weiterhin gültig ist.
 
 Nehmen Sie eigenen Code nach Bedarf in die Accessoren auf. Wenn Threadsicherheit wichtig ist, müssen Sie eigene Sperren für Ihren Code vorsehen.
 
@@ -125,6 +126,6 @@ Visual Basic-Benutzer: Im .NET Framework ist ein Ereignis einfach ein Multicastd
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

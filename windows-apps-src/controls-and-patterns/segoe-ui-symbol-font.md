@@ -1,24 +1,23 @@
 ---
+author: Jwmsft
 Description: In diesem Artikel finden Sie eine Liste der in der Schriftart „Segoe MDL2 Assets“ enthaltenen Glyphen und Hinweise zu deren Verwendung.
 Search.Refinement.TopicID: 184
-title: Symbolrichtlinien für Segoe MDL2
+title: Richtlinien für Segoe MDL2-Symbole
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
-label: Segoe MDL2-Symbole
+label: Segoe MDL2 icons
 template: detail.hbs
 ---
 
 # Richtlinien für Segoe MDL2-Symbole
 
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+In diesem Artikel finden Sie eine Liste der in der Schriftart „Segoe MDL2 Assets“ enthaltenen Glyphen und Hinweise zu deren Verwendung. Sie erhalten die Schriftart durch die Installation von Windows 10.
 
 **Wichtige APIs**
 
 -   [**Symbol-Enumeration (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn252842)
 -   [**AppBarIcon-Enumeration (HTML)**](https://msdn.microsoft.com/library/windows/apps/hh770557)
 
-In diesem Artikel finden Sie eine Liste der in der Schriftart „Segoe MDL2 Assets“ enthaltenen Glyphen und Hinweise zu deren Verwendung. Sie erhalten die Schriftart durch die Installation von Windows 10.
+
 
 ## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Empfehlungen
 
@@ -30,7 +29,7 @@ In diesem Artikel finden Sie eine Liste der in der Schriftart „Segoe MDL2 Asse
 
 Die Symbolschriftart **Segoe UI Symbol** für Windows 8/8.1 wurde durch **Segoe MDL2 Assets** ersetzt, die ab der Veröffentlichung von Windows 10 gilt. Sie kann im Prinzip auf ähnliche Weise wie die ältere Schriftart verwendet werden. Es wurden jedoch viele Glyphen mit den festgelegten Metriken der Schriftart in den Windows 10-Symbolstil umgezeichnet, sodass Symbole im em-Quadrat der Schriftart ausgerichtet werden und nicht anhand einer typografischen Grundlinie.
 
-**Hinweis**   Ein **Em** ist eine Maßeinheit in der Schriftart. Ein em in der Schriftart entspricht 100 % des angegebenen Punktwerts bei 72 ppi. Beispielsweise entspricht 16 pt 16 px bei 72 ppi (wird auch als 100 %-Plateau bezeichnet). Die neuen MDL2-Schriftarten wurden entwickelt, damit der Platzbedarf des Symbolbereichs einem em-Quadrat entspricht. Wenn Sie also 16 px für die Breite und Höhe im Code angeben, erhalten Sie ein 16 px x 16 px großes Symbol. Dies bedeutet jedoch nicht immer, dass das Symbol die vollständige Abmessung beansprucht.
+**Hinweis**  Ein **Em** ist eine Maßeinheit in der Schriftart. Ein em in der Schriftart entspricht 100 % des angegebenen Punktwerts bei 72 ppi. Beispielsweise entspricht 16 pt 16 px bei 72 ppi (wird auch als 100 %-Plateau bezeichnet). Die neuen MDL2-Schriftarten wurden entwickelt, damit der Platzbedarf des Symbolbereichs einem em-Quadrat entspricht. Wenn Sie also 16 px für die Breite und Höhe im Code angeben, erhalten Sie ein 16 px x 16 px großes Symbol. Dies bedeutet jedoch nicht immer, dass das Symbol die vollständige Abmessung beansprucht.
 
  
 
@@ -385,7 +384,7 @@ Fügen Sie zusätzlichen Code hinzu, um Kreise um diese Glyphen zu erstellen.
 
  
 
-## <span id="AppBar_glyphs"></span><span id="appbar_glyphs"></span><span id="APPBAR_GLYPHS"></span>Glyphen für die App-Leiste
+## <span id="AppBar_glyphs"></span><span id="appbar_glyphs"></span><span id="APPBAR_GLYPHS"></span>AppBar-Glyphen
 
 
 Verwenden Sie Glyphen der folgenden Liste für eine [**AppBar**](https://msdn.microsoft.com/library/windows/apps/br229670). Üblicherweise werden sie anhand ihrer Enumerationsnamen bezeichnet. Zudem sind sie als 20 px x 20 px große Symbole ohne Kreis entworfen.
@@ -1598,8 +1597,10 @@ Verwenden Sie Glyphen der folgenden Liste für eine [**AppBar**](https://msdn.mi
 
 **Für Designer**
 * [Richtlinien für Schriftarten](fonts.md)
-* [W3C für welche Sprachen werden von rechts nach links (RTL) geschrieben?](http://www.i18nguy.com/temp/rtl.mdl)
-**Für Entwickler (XAML)**
+* [W3C für Sprachen, die von rechts nach links (RTL) geschrieben werden?](http://www.i18nguy.com/temp/rtl.mdl)
+            
+          
+            **Für Entwickler (XAML)**
 * [**Symbol-Enumeration**](https://msdn.microsoft.com/library/windows/apps/dn252842)
 
 
@@ -1610,6 +1611,6 @@ Verwenden Sie Glyphen der folgenden Liste für eine [**AppBar**](https://msdn.mi
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

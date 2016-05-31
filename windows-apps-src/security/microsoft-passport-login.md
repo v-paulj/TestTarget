@@ -53,7 +53,7 @@ In dieser Übung lernen Sie, wie Sie ermitteln, ob Microsoft Passport auf dem Co
     -   TextBlock-Element für den Status von Microsoft Passport.
     -   TextBlock-Element zur Erläuterung der Anmeldeseite, da kein Back-End und keine konfigurierten Benutzer vorhanden sind.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock Text="Login" FontSize="36" Margin="4" TextAlignment="Center"/>
@@ -64,7 +64,7 @@ In dieser Übung lernen Sie, wie Sie ermitteln, ob Microsoft Passport auf dem Co
         <TextBox x:Name="UsernameTextBox" Margin="4" Width="250"/>
         <Button x:Name="PassportSignInButton" Content="Login" Background="DodgerBlue" Foreground="White"
             Click="PassportSignInButton_Click" Width="80" HorizontalAlignment="Center" Margin="0,20"/>
-        <TextBlock Text="Don&#39;t have an account?"
+        <TextBlock Text="Don't have an account?"
                     TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
         <TextBlock x:Name="RegisterButtonTextBlock" Text="Register now"
                    PointerPressed="RegisterButtonTextBlock_OnPointerPressed"
@@ -76,7 +76,7 @@ In dieser Übung lernen Sie, wie Sie ermitteln, ob Microsoft Passport auf dem Co
                  Margin="4" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
         </Border>
         <TextBlock x:Name="LoginExplaination" FontSize="24" TextAlignment="Center" TextWrapping="Wrap" 
-            Text="Please Note: To demonstrate a login, validation will only occur using the default username &#39;sampleUsername&#39;"/>
+            Text="Please Note: To demonstrate a login, validation will only occur using the default username 'sampleUsername'"/>
       </StackPanel>
     </Grid>
     ```
@@ -489,9 +489,9 @@ In dieser Übung lernen Sie, wie Sie ermitteln, ob Microsoft Passport auf dem Co
 
 Diese Übung baut direkt auf der vorherigen Übung auf. Nach erfolgreicher Anmeldung soll der Benutzer auf eine Willkommensseite weitergeleitet werden, auf der er sich abmelden oder sein Konto löschen kann. Da von Passport ein computerspezifischer Schlüssel erstellt wird, kann ein Benutzerauswahlbildschirm erstellt werden, der alle Benutzer anzeigt, die auf diesem Computer angemeldet waren. Ein Benutzer kann dann eines dieser Konten auswählen, um direkt und ohne erneute Kennworteingabe zur Willkommensseite zu gelangen, da er bereits für den Zugriff auf den Computer authentifiziert wurde.
 
--   1. Fügen Sie im Ordner „Views“ eine neue leere Seite namens „Welcome.xaml“ hinzu. Fügen Sie zur Vervollständigung der Benutzeroberfläche den folgenden XAML-Code hinzu. Dadurch werden ein Titel, der Benutzername des angemeldeten Benutzers und zwei Schaltflächen angezeigt. Über eine der Schaltflächen gelangt der Benutzer wieder zur Benutzerliste (die Sie später noch erstellen), die andere Schaltfläche dient zum Löschen des Benutzers.
+-   Fügen Sie im Ordner „Views“ eine neue leere Seite namens „Welcome.xaml“ hinzu. Fügen Sie zur Vervollständigung der Benutzeroberfläche den folgenden XAML-Code hinzu. Dadurch werden ein Titel, der Benutzername des angemeldeten Benutzers und zwei Schaltflächen angezeigt. Über eine der Schaltflächen gelangt der Benutzer wieder zur Benutzerliste (die Sie später noch erstellen), die andere Schaltfläche dient zum Löschen des Benutzers.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock x:Name="Title" Text="Welcome" FontSize="40" TextAlignment="Center"/>
@@ -624,7 +624,7 @@ Diese Übung baut direkt auf der vorherigen Übung auf. Nach erfolgreicher Anmel
 
 -   Erstellen Sie im Ordner „Views“ eine neue leere Seite namens „UserSelection.xaml“, und fügen Sie den folgenden XAML-Code hinzu, um die Benutzeroberfläche zu definieren. Diese Seite enthält ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)-Element, das alle Benutzer in der lokalen Kontenliste anzeigt, sowie eine Schaltfläche, über die der Benutzer zur Anmeldeseite navigieren und ein weiteres Konto hinzufügen kann.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock x:Name="Title" Text="Select a User" FontSize="36" Margin="4" TextAlignment="Center" HorizontalAlignment="Center"/>
@@ -830,7 +830,7 @@ Diese Übung baut direkt auf der vorherigen Übung auf. Nach erfolgreicher Anmel
             }
         }
 
-        // Can&#39;t use Passport right now, try again later
+        // Can't use Passport right now, try again later
         return false;
     }
     ```
@@ -877,7 +877,7 @@ In dieser Übung erstellen Sie eine neue Seite für die Erstellung eines neuen P
 
 -   Erstellen Sie im Ordner „Views“ eine neue leere Seite namens „PassportRegister.xaml“. Fügen Sie dem XAML-Code Folgendes hinzu, um die Benutzeroberfläche einzurichten. Diese Benutzeroberfläche ähnelt der Benutzeroberfläche für die Anmeldeseite.
 
-    ```xaml
+    ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
       <StackPanel Orientation="Vertical">
         <TextBlock x:Name="Title" Text="Register New Passport User" FontSize="24" Margin="4" TextAlignment="Center"/>
@@ -968,6 +968,6 @@ Neben der Implementierung der Microsoft Passport-Unterstützung sind für Entwic
 * [Microsoft Passport und Windows Hello](microsoft-passport.md)
 * [Microsoft Passport-Anmeldedienst](microsoft-passport-login-auth-service.md)
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

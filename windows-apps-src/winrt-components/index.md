@@ -1,6 +1,7 @@
 ---
+author: martinekuan
 title: Komponenten für Windows-Runtime
-description: Komponenten für Windows-Runtime unabhängige Objekte, instanziieren und von jeder Sprache aus verwenden, einschließlich C#, Visual Basic, JavaScript und C++.
+description: Komponenten für Windows-Runtime sind unabhängige Objekte, die Sie instanziieren und von jeder Sprache aus verwenden können, einschließlich C#, Visual Basic, JavaScript und C++.
 ms.assetid: 55887622-828b-4318-87f2-25592268f7c1
 ---
 
@@ -30,6 +31,6 @@ Sie können Visual Studio und C#, Visual Basic oder C++ verwenden, um Komponente
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

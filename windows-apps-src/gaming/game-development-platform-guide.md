@@ -1,10 +1,11 @@
 ---
-title: Spieletechnologien für Universelle Windows-Plattform (UWP)-Apps
+author: mtoepke
+title: Spieletechnologien für UWP-Apps
 description: Dieses Handbuch enthält Informationen über verfügbare Technologien für die Entwicklung von Spielen für die Universelle Windows-Plattform (UWP).
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
 ---
 
-# Spieletechnologien für Universelle Windows-Plattform (UWP)-Apps
+# Spieletechnologien für UWP-Apps (Universelle Windows-Plattform)
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
@@ -67,7 +68,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="odd">
     <td align="left">Direct3D 12</td>
     <td align="left"><p>Direct3D 12 stellt die nächste Version von Direct3D vor, der 3D-Grafik-API im Herzen von DirectX. Diese Version von Direct3D ist schneller und effizienter als frühere Versionen von Direct3D. Der Kompromiss für die höhere Geschwindigkeit von Direct3D 12 besteht darin, dass die Ebene niedrigerer ist. Sie müssen Ihre Grafikressourcen selbst verwalten und über eine umfassendere Grafikprogrammiererfahrung verfügen, um die höhere Geschwindigkeit zu realisieren.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Verwenden Sie Direct3D 12, wenn Sie die Leistung Ihres Spiels optimieren müssen und das Spiel CPU-gebunden ist.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie in der [Direct3D 12](https://msdn.microsoft.com/library/windows/desktop/dn899121)-Dokumentation.</p></td>
@@ -75,7 +76,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="even">
     <td align="left">Direct3D 11</td>
     <td align="left"><p>Direct3D 11 ist die vorherige Version von Direct3D, mit der Sie 3D-Grafiken unter Verwendung einer höheren Ebene der Hardwareabstraktion als bei D3D 12 erstellen können.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Verwenden Sie Direct3D 11, wenn Sie über vorhandenen Direct3D 11-Code verfügen, Ihr Spiel nicht CPU-gebunden ist, oder Sie davon profitieren möchten, dass Ihre Ressourcen verwaltet werden.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie in der [Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476080)-Dokumentation.</p></td>
@@ -102,7 +103,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="odd">
     <td align="left">Direct2D</td>
     <td align="left"><p>Direct2D ist eine hardwarebeschleunigte 2D-Grafik-API mit unmittelbarem Modus, die das Rendern mit hoher Leistung und in hoher Qualität für 2D-Geometrie, Bitmaps und Text bereitstellt. Die Direct2D-API baut auf Direct3D auf und ist für die Verwendung mit GDI, GDI+ und Direct3D konzipiert.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Direct2D kann anstelle von Direct3D zum Bereitstellen von Grafiken für reine 2D-Spiele verwendet werden, beispielsweise Side-Scroller oder Brettspiele. Es kann auch mit Direct3D für die vereinfachte Erstellung von 2D-Grafiken in einem 3D-Spiel verwendet werden, beispielsweise einer Benutzeroberfläche oder einer Heads-Up-Anzeige.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie in der [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990)-Dokumentation.</p></td>
@@ -110,7 +111,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="even">
     <td align="left">DirectWrite</td>
     <td align="left"><p>DirectWrite stellt zusätzliche Funktionen für das Arbeiten mit Text bereit und kann mit Direct3D oder Direct2D zum Bereitstellen der Textausgabe für Benutzeroberflächen oder andere Bereiche verwendet werden, in denen Text erforderlich ist. DirectWrite unterstützt Messung, Zeichnung und Treffererkennung von Text in mehreren Formaten. DirectWrite behandelt Text in allen unterstützten Sprachen für globale und lokalisierte Anwendungen. DirectWrite stellt außerdem eine API für Glyphenrendering auf niedriger Ebene für Entwickler zur Ausführung von eigenem Layout und eigener Unicode-zu-Glyphen-Verarbeitung bereit.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p></p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie in der [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038)-Dokumentation.</p></td>
@@ -118,7 +119,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="odd">
     <td align="left">DirectComposition</td>
     <td align="left"><p>DirectComposition ist eine Windows-Komponente, die eine Hochleistungs-Bitmapanordnung mit Übergängen, Effekten und Animationen ermöglicht. Anwendungsentwickler können die DirectComposition-API zum Erstellen von visuell ansprechenden Benutzeroberflächen verwenden, die umfassende und fließende animierte Übergänge von einem visuellen Objekt zum nächsten ermöglichen.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>DirectComposition wurde für die vereinfachte Anordnung von visuellen Objekten und Erstellen von animierten Übergängen entwickelt. Wenn Ihr Spiel eine komplexe Benutzeroberfläche erfordert, können Sie DirectComposition zum vereinfachten Erstellen und Verwalten der Benutzeroberfläche verwenden.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie in der [DirectComposition](https://msdn.microsoft.com/library/windows/desktop/hh437371)-Dokumentation.</p></td>
@@ -145,7 +146,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="odd">
     <td align="left">XAudio2</td>
     <td align="left"><p>XAudio2 ist eine Low-Level-Audio-API, die eine grundlegende Signalverarbeitung und -abmischung bereitstellt. XAudio wurde für eine hohe Reaktionsfähigkeit in Bezug auf Audiomodule von Spielen entwickelt. Gleichzeitig können weiterhin benutzerdefinierte Audioeffekte und komplexe Ketten von Audioeffekten und -filtern erstellt werden.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Verwenden Sie XAudio2, wenn Ihr Spiel Sounds mit minimalem Aufwand und minimaler Verzögerung wiedergeben muss.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie in der [XAudio2](https://msdn.microsoft.com/library/windows/desktop/hh405049)-Dokumentation.</p></td>
@@ -153,7 +154,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="even">
     <td align="left">Media Foundation</td>
     <td align="left"><p>Microsoft Media Foundation wurde für die Wiedergabe von Mediendateien und Streams (Audio und Video) entwickelt, kann jedoch auch in Spielen verwendet werden, wenn eine Funktionalität auf höherer Ebene als XAudio2 erforderlich ist und der zusätzliche Aufwand akzeptabel ist.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Media Foundation ist bei Filmszenen oder nichtinteraktiven Komponenten des Spiels besonders nützlich. Media Foundation ist auch für die Decodierung von Audiodateien für die Wiedergabe mit XAudio2 nützlich.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie unter [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197).</p></td>
@@ -180,7 +181,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="odd">
     <td align="left">XInput</td>
     <td align="left"><p>Mit der XInput-Gamecontroller-API können Anwendungen Eingaben von Gamecontrollern erhalten.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Wenn Ihr Spiel die Gamepadeingabe unterstützen muss und Sie über vorhandenen XInput-Code verfügen, können Sie weiterhin XInput verwenden. XInput wurde durch Windows.Gaming.Input für UWP ersetzt, und Sie sollten beim Schreiben von neuem Eingabecode Windows.Gaming.Input anstelle von XInput verwenden.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie in der [XInput](https://msdn.microsoft.com/library/windows/desktop/hh405053)-Dokumentation.</p></td>
@@ -196,7 +197,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <li>Die Möglichkeit, beim Herstellen oder Trennen einer Verbindung durch ein Ereignis anstelle von Abruf benachrichtigt zu werden.</li>
     <li>Die Möglichkeit zum Zuweisen der Eingabe an einen bestimmten Benutzer (Windows.System.User)</li>
     </ul>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Wenn Ihr Spiel Eingaben über ein Gamepad unterstützen muss und einen vorhandenen XInput-Code nicht verwendet, oder wenn Sie einen der oben genannten Vorteile nutzen möchten, sollten Sie Windows.Gaming.Input verwenden.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie in der Dokumentation für [<strong>Windows.Gaming.Input</strong>](https://msdn.microsoft.com/library/windows/apps/dn707817).</p></td>
@@ -204,7 +205,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="odd">
     <td align="left">Windows.UI.Core.CoreWindow</td>
     <td align="left"><p>Mit der Windows.UI.Core.CoreWindow-Klasse können Sie nachverfolgen, wann der Zeiger gedrückt oder verschoben wird oder wann eine Taste gedrückt wird.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Verwenden Sie die Windows.UI.Core.CoreWindows-Ereignisse, wenn Sie nachverfolgen möchten, wann die Maus oder eine Taste in Ihrem Spiel gedrückt wird.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen zum Verwenden der Maus oder Tastatur in Ihrem Spiel finden Sie unter [Bewegungs-/Blicksteuerungen für Spiele](tutorial--adding-move-look-controls-to-your-directx-game.md).</p></td>
@@ -231,7 +232,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="odd">
     <td align="left">DirectXMath</td>
     <td align="left"><p>Die DirectXMath-API bietet SIMD-freundliche C++-Typen und Funktionen für allgemeine lineare Algebra- und mathematische Grafikvorgänge für Spiele.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Die Verwendung von DirectXMath ist optional und vereinfacht allgemeine mathematische Vorgänge.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie in der [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833)-Dokumentation.</p></td>
@@ -258,7 +259,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="odd">
     <td align="left">Windows.Networking.Sockets</td>
     <td align="left"><p>Der Windows.Networking.Sockets-Namespace stellt TCP- und UDP-Sockets bereit, die eine zuverlässige bzw. nicht zuverlässige Netzwerkkommunikation ermöglichen.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Verwenden Sie Windows.Networking.Sockets, wenn Ihr Spiel mit anderen Computern und Geräten über das Netzwerk kommunizieren muss.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie unter [Netzwerk für Spiele](work-with-networking-in-your-directx-game.md).</p></td>
@@ -266,7 +267,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="even">
     <td align="left">Windows.Web.HTTP</td>
     <td align="left"><p>Der Windows.Web.HTTP-Namespace stellt eine zuverlässige Verbindung mit HTTP-Servern bereit, die für den Zugriff auf eine Website verwendet werden kann.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Verwenden Sie Windows.Web.HTTP, wenn Ihr Spiel zum Abrufen oder Speichern von Informationen auf eine Website zugreifen muss.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie unter [Netzwerk für Spiele](work-with-networking-in-your-directx-game.md).</p></td>
@@ -293,7 +294,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="odd">
     <td align="left">DirectX-Toolkit</td>
     <td align="left"><p>Das DirectX-Toolkit (DirectXTK) ist eine Sammlung von Hilfsklassen für DirectX 11.x-Code in C++.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Verwenden Sie das DirectX-Toolkit, wenn Sie C++-Entwickler und auf der Suche nach einem modernen Ersatz für älteren D3DX-Hilfsprogrammcode sind, oder ein XNA Game Studio-Entwickler sind, der zu systemeigenen C++ wechselt.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie auf der DirectX-Toolkit-Projektseite [https://github.com/Microsoft/DirectXTK](https://github.com/Microsoft/DirectXTK).</p></td>
@@ -301,7 +302,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <tr class="even">
     <td align="left">Win2D</td>
     <td align="left"><p>Win2D ist eine einfach zu verwendende Windows-Runtime-API für 2D-Grafikrendering im unmittelbaren Modus.</p>
-    <p><strong>Verwendungsszenarien</strong></p>
+    <p><strong>Gründe für die Verwendung</strong></p>
     <p>Verwenden Sie Win2D, wenn Sie C++-Entwickler sind und einen einfacher zu verwendenden WinRT-Wrapper für Direct2D und DirectWrite benötigen, oder C#-Entwickler sind und Direct2D und DirectWrite verwenden möchten.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie auf der Win2D-Projektseite [https://github.com/Microsoft/Win2D](https://github.com/Microsoft/Win2D)</p></td>
@@ -339,7 +340,7 @@ Eine Alternative zum Schreiben eigener Spielemodule mithilfe der Windows-APIs f�
 
 Wenn Ihr Spiel zur Veröffentlichung bereit steht, müssen Sie ein Entwicklerkonto erstellen und Ihr Spiel an den Windows Store übermitteln.
 
-Informationen zur Übermittlung Ihres Spiels an den Windows Store finden Sie unter <https://dev.windows.com/publish>.
+Informationen zum Übermitteln Ihres Spiels an den Windows Store finden Sie unter <https://dev.windows.com/publish>.
 
  
 
@@ -350,6 +351,6 @@ Informationen zur Übermittlung Ihres Spiels an den Windows Store finden Sie unt
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

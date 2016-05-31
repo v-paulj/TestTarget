@@ -1,5 +1,5 @@
 ---
-Description: Windows 10, Version 1511, und Updates für Entwicklertools stellen weiterhin Tools, Features und Umgebungen bereit, die von der universellen Windows-Plattform unterstützt werden.
+author: QuinnRadich, Description: Windows 10, Version 1511, und Updates für Entwicklungstools stellen weiterhin Tools, Features und Umgebungen bereit, die von der universellen Windows-Plattform unterstützt werden.
 title: Neuigkeiten für Entwickler in Windows 10, Version 1511: November 2015
 ---
 
@@ -7,7 +7,7 @@ title: Neuigkeiten für Entwickler in Windows 10, Version 1511: November 2015
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Windows 10, Version 1511, und Updates für Entwicklertools stellen weiterhin Tools, Features und Umgebungen bereit, die von der universellen Windows-Plattform unterstützt werden. Nach der [Installation der Tools und des SDKs](https://dev.windows.com/downloads) unter Windows 10, Version 1511, können Sie entweder [eine neue universelle Windows-App erstellen](https://msdn.microsoft.com/library/windows/apps/bg124288) oder lesen, wie Sie Ihren vorhandenen [App-Code unter Windows verwenden](https://msdn.microsoft.com/library/windows/apps/mt238321) können.
+Windows 10, Version 1511, und Updates für Entwicklungstools stellen weiterhin Tools, Features und Umgebungen bereit, die von der universellen Windows-Plattform unterstützt werden. Nach der [Installation der Tools und des SDKs](https://dev.windows.com/downloads) unter Windows 10, Version 1511, können Sie entweder [eine neue universelle Windows-App erstellen](https://msdn.microsoft.com/library/windows/apps/bg124288) oder lesen, wie Sie Ihren vorhandenen [App-Code unter Windows verwenden](https://msdn.microsoft.com/library/windows/apps/mt238321) können.
 
 ## Benutzerfreundlichkeit
 
@@ -83,6 +83,6 @@ Entdecken Sie unsere neuen UWP-App-Entwurfsvorlagen für Adobe Photoshop. Zudem 
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

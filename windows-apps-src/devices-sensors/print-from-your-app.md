@@ -1,7 +1,8 @@
 ---
+author: DBirtolo
 ms.assetid: 9A0F1852-A76B-4F43-ACFC-2CC56AAD1C03
 title: Drucken in Apps
-description: Hier erfahren Sie, wie Sie Dokumente in einer universellen Windows-App drucken. In diesem Thema wird zudem gezeigt, wie bestimmte Seiten gedruckt werden.
+description: Hier erfahren Sie, wie Sie Dokumente in einer Universellen Windows-App drucken. In diesem Thema wird zudem gezeigt, wie bestimmte Seiten gedruckt werden.
 ---
 # Drucken in Apps
 
@@ -143,7 +144,7 @@ protected virtual void PrintTaskRequested(PrintManager sender, PrintTaskRequeste
 
 Nachdem die Druckaufgabe erstellt wurde, löst der [**PrintManager**](https://msdn.microsoft.com/library/windows/apps/BR226426) das [**Paginate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.paginate)-Ereignis aus, um eine Sammlung zu druckender Seiten anzufordern, die auf der Druckvorschau-Benutzeroberfläche angezeigt werden. Dies entspricht der **Paginate**-Methode der **IPrintPreviewPageCollection**-Schnittstelle. Der Ereignishandler, den Sie bei der Registrierung erstellt haben, wird zu diesem Zeitpunkt aufgerufen.
 
-**Wichtig**  Wenn der Benutzer die Druckeinstellungen ändert, wird der Ereignishandler für die Aufteilung auf Seiten erneut aufgerufen, damit Sie den Inhalt umbrechen können. Für die bestmögliche Benutzerfreundlichkeit wird empfohlen, die Einstellungen zu überprüfen, bevor Sie den Inhalt umbrechen und die erneute Initialisierung der auf Seiten aufgeteilten Inhalte vermeiden, wenn dies nicht erforderlich ist.
+**Wichtig**  Wenn der Benutzer die Druckeinstellungen ändert, wird der Ereignishandler für die Aufteilung auf Seiten erneut aufgerufen, damit Sie den Inhalt neu umbrechen können. Für die bestmögliche Benutzerfreundlichkeit wird empfohlen, die Einstellungen zu überprüfen, bevor Sie den Inhalt umbrechen und die erneute Initialisierung der auf Seiten aufgeteilten Inhalte vermeiden, wenn dies nicht erforderlich ist.
 
 Im [**Paginate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.printing.printdocument.paginate)-Ereignishandler (der `CreatePrintPreviewPages`-Methode im [UWP-Druckbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619984)) erstellen Sie die Seiten, die auf der Druckvorschau-Benutzeroberfläche angezeigt und an den Drucker gesendet werden. Der Code zum Vorbereiten der App-Inhalte für den Druck muss speziell an Ihre App und die gedruckten Inhalte angepasst werden. Im Quellcode für das [UWP-Druckbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619984) können Sie sehen, wie der Inhalt für das Drucken formatiert wird.
 
@@ -171,7 +172,7 @@ protected virtual void CreatePrintPreviewPages(object sender, PaginateEventArgs 
 
    // We know there are more pages to be added as long as the last RichTextBoxOverflow added to a print preview
    // page has extra content
-   while (lastRTBOOnPage.HasOverflowContent &amp;&amp; lastRTBOOnPage.Visibility == Windows.UI.Xaml.Visibility.Visible)
+   while (lastRTBOOnPage.HasOverflowContent && lastRTBOOnPage.Visibility == Windows.UI.Xaml.Visibility.Visible)
    {
          lastRTBOOnPage = AddOnePrintPreviewPage(lastRTBOOnPage, pageDescription);
    }
@@ -357,7 +358,7 @@ async void printDetailedOptions_OptionChanged(PrintTaskOptionDetails sender, Pri
 }
 ```
 
-**Tipp**  Weitere Informationen zum Analysieren des vom Benutzer in das Textfeld für den Bereich eingegebenen Seitenbereichs finden Sie in der `GetPagesInRange`-Methode im [UWP-Druckbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619984).
+**Tipp**  Weitere Informationen zum Analysieren des vom Benutzer in das Textfeld für den Bereich eingegebenen Werts finden Sie in der `GetPagesInRange`-Methode im [UWP-Druckbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619984).
 
 ## Vorschau auf ausgewählte Seiten
 
@@ -377,6 +378,6 @@ Wenn nur ein Teil der Seiten gedruckt wird, gibt es mehrere Möglichkeiten, den 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

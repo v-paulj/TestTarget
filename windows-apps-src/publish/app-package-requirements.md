@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Halten Sie die folgenden Richtlinien ein, wenn Sie die App-Pakete für die Übermittlung an den Windows Store vorbereiten.
 title: App-Paketanforderungen
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
@@ -79,6 +80,6 @@ Ihre App-Pakete müssen die folgenden Anforderungen erfüllen:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,10 +1,11 @@
 ---
-title: Vollständiger Code für „BasicReaderWriter“
+author: mtoepke
+title: Vollständiger Code für "BasicReaderWriter"
 description: Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien.
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
 ---
 
-# Vollständiger Code für „BasicReaderWriter“
+# Vollständiger Code für "BasicReaderWriter"
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
@@ -25,19 +26,14 @@ Dieses Beispiel kann nicht heruntergeladen werden.
 
 ## Technologien
 
-|                       |                 |
-|-----------------------|-----------------|
-| Programmiersprachen | C++             |
-| Programmiermodelle    | Windows-Runtime |
+**Programmiersprachen** – C++  
+**Programmiermodelle** – Windows-Runtime
 
 
 ## Anforderungen
 
-| Unterstützte Mindestversion (Client) | Windows 10                            |
-|--------------------------|---------------------------------------|
-| Unterstützte Mindestversion (Server) | Windows Server 2016 Technical Preview |
-| Mindestens erforderliches SDK     |                                       |
-
+ **Unterstützte Mindestversion (Client)** – Windows 10       
+ **Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview 
 
 ## Anzeigen des Codes (C++)
 
@@ -265,6 +261,6 @@ task<void> BasicReaderWriter::WriteDataAsync(
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

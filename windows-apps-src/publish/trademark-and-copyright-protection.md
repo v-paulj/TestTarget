@@ -1,5 +1,6 @@
 ---
-Description:Hier erfahren Sie, was Sie tun können, wenn Ihrer Meinung nach eine App Ihre Rechte an geistigem Eigentum verletzt.
+author: jnHs
+Description: Hier erfahren Sie, was Sie tun können, wenn Ihrer Meinung nach eine App Ihre Rechte an geistigem Eigentum verletzt.
 title: Schutz von Marken und Urheberrechten
 ms.assetid: 61C4EEC0-AD4D-4828-ADEC-F18E99DD4FFC
 ---
@@ -63,6 +64,6 @@ Lesen Sie die Benachrichtigung von Microsoft sorgfältig durch, und befolgen sie
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

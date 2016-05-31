@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Ihre In-App-Produkte (IAPs) und Ihren Microsoft Advertising-Verdienst bezahlt werden
 title: Bezahlung
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
@@ -55,6 +56,6 @@ Nachdem Sie die Auszahlungssperre auf **Ein** festgelegt haben, werden alle Ausz
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

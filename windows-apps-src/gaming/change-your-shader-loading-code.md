@@ -1,4 +1,5 @@
 ---
+author: mtoepke
 title: Vergleich der OpenGL ES 2.0-Shaderpipeline mit Direct3D
 description: Vom Konzept her ist die Direct3D 11-Shaderpipeline der in OpenGL ES 2.0 sehr ähnlich.
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
@@ -25,15 +26,24 @@ Die Shaderobjekte werden mit Methoden der [**ID3D11Device1**](https://msdn.micro
 
 Die Direct3D 11-Grafikpipeline wird von Instanzen der [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Schnittstelle verwaltet und umfasst die folgenden Stufen:
 
--   [Eingabe-Assembler-Stufe](https://msdn.microsoft.com/library/windows/desktop/bb205116): Die Eingabe-Assembler-Stufe stellt Daten (Dreiecke, Linien und Punkte) für die Pipeline bereit. [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Methoden, die diese Stufe unterstützen, haben das Präfix „IA“.
--   [Vertex-Shader-Stufe](https://msdn.microsoft.com/library/windows/desktop/bb205146#Vertex_Shader_Stage). Die Vertex-Shader-Stufe verarbeitet Scheitelpunkte und führt dabei in der Regel Vorgänge wie Transformationen, das Anwenden von Skins und Beleuchtung aus. Ein Vertex-Shader verarbeitet immer einen einzigen Eingabescheitelpunkt und erzeugt daraus einen einzigen Ausgabescheitelpunkt. [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Methoden, die diese Stufe unterstützen, haben das Präfix „VS“.
--   [Datenstrom-Ausgabe-Stufe](https://msdn.microsoft.com/library/windows/desktop/bb205121). Die Datenstrom-Ausgabe-Stufe streamt Grundtypdaten auf dem Weg zum Rasterizer aus der Pipeline in den Arbeitsspeicher. Daten können "ausgestreamt" und/oder in den Rasterizer übergeben werden. In den Arbeitsspeicher gestreamte Daten können als Eingabedaten wieder der Pipeline zugeführt oder von der CPU eingelesen werden. [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Methoden, die diese Stufe unterstützen, haben das Präfix „SO“.
+-   [Eingabe-Assembler-Stufe](https://msdn.microsoft.com/library/windows/desktop/bb205116). Die Eingabe-Assembler-Stufe stellt Daten (Dreiecke, Linien und Punkte) für die Pipeline bereit. [
+              **ID3D11DeviceContext1**
+            ](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Methoden, die diese Stufe unterstützen, haben das Präfix „IA“.
+-   [Vertex-Shader-Stufe](https://msdn.microsoft.com/library/windows/desktop/bb205146#Vertex_Shader_Stage). Die Vertex-Shader-Stufe verarbeitet Scheitelpunkte und führt dabei in der Regel Vorgänge wie Transformationen, das Anwenden von Skins und Beleuchtung aus. Ein Vertex-Shader verarbeitet immer einen einzigen Eingabescheitelpunkt und erzeugt daraus einen einzigen Ausgabescheitelpunkt. [
+              **ID3D11DeviceContext1**
+            ](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Methoden, die diese Stufe unterstützen, haben das Präfix „VS“.
+-   [Datenstrom-Ausgabe-Stufe](https://msdn.microsoft.com/library/windows/desktop/bb205121). Die Datenstrom-Ausgabe-Stufe streamt Grundtypdaten auf dem Weg zum Rasterizer aus der Pipeline in den Arbeitsspeicher. Daten können "ausgestreamt" und/oder in den Rasterizer übergeben werden. In den Arbeitsspeicher gestreamte Daten können als Eingabedaten wieder der Pipeline zugeführt oder von der CPU eingelesen werden. [
+              **ID3D11DeviceContext1**
+            ](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Methoden, die diese Stufe unterstützen, haben das Präfix „SO“.
 -   [Rasterizer-Stufe](https://msdn.microsoft.com/library/windows/desktop/bb205125). Der Rasterizer beschneidet Grundtypen, bereitet Grundtypen für den Pixelshader vor und bestimmt, wie Pixelshader aufgerufen werden. Sie können die Rasterung deaktivieren, indem Sie die Pipeline anweisen, dass kein Pixelshader vorhanden ist (setzen Sie die Pixelshader-Stufe mit [**ID3D11DeviceContext::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472) auf NULL), und die Tiefen- und Schablonentests deaktivieren (setzen Sie „DepthEnable“ und „StencilEnable“ in [**D3D11\_DEPTH\_STENCIL\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476110) auf FALSE). Wenn die Rasterung deaktiviert ist, werden damit zusammenhängende Pipelinezähler nicht aktualisiert.
--   [Pixelshader-Stufe](https://msdn.microsoft.com/library/windows/desktop/bb205146#Pixel_Shader_Stage). Die Pixelshader-Stufe empfängt interpolierte Daten für einen Grundtyp und generiert Pro-Pixel-Daten (z. B. die Farbe). [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Methoden, die diese Stufe unterstützen, haben das Präfix „PS“.
--   [Ausgabezusammenführungs-Stufe](https://msdn.microsoft.com/library/windows/desktop/bb205120). Die Ausgabezusammenführungs-Stufe kombiniert verschiedene Ausgabedaten (Pixelshaderwerte, Tiefen- und Schabloneninformationen) mit dem Inhalt des Renderziels und Tiefen-/Schablonenpuffern, um das endgültige Pipelineergebnis zu generieren. [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Methoden, die diese Stufe unterstützen, haben das Präfix „OM“.
+-   [Pixelshader-Stufe](https://msdn.microsoft.com/library/windows/desktop/bb205146#Pixel_Shader_Stage). Die Pixelshader-Stufe empfängt interpolierte Daten für einen Grundtyp und generiert Pro-Pixel-Daten (z. B. die Farbe). [
+              **ID3D11DeviceContext1**
+            ](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Methoden, die diese Stufe unterstützen, haben das Präfix „PS“.
+-   [Ausgabezusammenführungs-Stufe](https://msdn.microsoft.com/library/windows/desktop/bb205120). Die Ausgabezusammenführungs-Stufe kombiniert verschiedene Ausgabedaten (Pixelshaderwerte, Tiefen- und Schabloneninformationen) mit dem Inhalt des Renderziels und Tiefen-/Schablonenpuffern, um das endgültige Pipelineergebnis zu generieren. [
+              **ID3D11DeviceContext1**
+            ](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Methoden, die diese Stufe unterstützen, haben das Präfix „OM“.
 
-(Es gibt auch Stufen für Geometry-Shader, Hull-Shader, Tesselator und Domain-Shader. Diese haben aber keine Äquivalente in OpenGL ES 2.0 und werden hier daher nicht behandelt.)
-Eine vollständige Liste der Methoden für diese Stufen finden Sie auf den Referenzseiten zu [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) und [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). **ID3D11DeviceContext1** erweitert **ID3D11DeviceContext** für Direct3D 11.
+(Es gibt auch Stufen für Geometrie-Shader, Hüllen-Shader, Tesselator und Domain-Shader, aber da es dafür in OpenGL ES 2.0 keine Äquivalente gibt, gehen wir hier nicht weiter darauf ein.) Eine vollständige Liste der Methoden für diese Stufen finden Sie auf den Referenzseiten [ **ID3D11DeviceContext** ](https://msdn.microsoft.com/library/windows/desktop/ff476385) und [ **ID3D11DeviceContext1** ](https://msdn.microsoft.com/library/windows/desktop/hh404598). **ID3D11DeviceContext1** erweitert **ID3D11DeviceContext** für Direct3D 11.
 
 ## Erstellen eines Shaders
 
@@ -124,7 +134,9 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 | OpenGL ES 2.0 | Direct3D 11                                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| glViewport    | [**CD3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/jj151722), [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
+| glViewport    | [
+              **CD3D11\_VIEWPORT**
+            ](https://msdn.microsoft.com/library/windows/desktop/jj151722), [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
 
  
 
@@ -137,7 +149,9 @@ Die Konfiguration eines Vertex-Shaders erfolgt in Direct3D 11 beim Laden des Sh
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|
 | glAttachShader                   | [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524)                       |
 | glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::VSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476489)                       |
-| glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::VSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh446793). |
+| glGetUniformfv, glGetUniformiv   | [
+              **ID3D11DeviceContext1::VSGetConstantBuffers1**
+            ](https://msdn.microsoft.com/library/windows/desktop/hh446793). |
 
  
 
@@ -150,7 +164,9 @@ Die Konfiguration eines Pixelshaders erfolgt in Direct3D 11 beim Laden des Shad
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|
 | glAttachShader                   | [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513)                         |
 | glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::PSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476468)                       |
-| glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::PSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh404645). |
+| glGetUniformfv, glGetUniformiv   | [
+              **ID3D11DeviceContext1::PSGetConstantBuffers1**
+            ](https://msdn.microsoft.com/library/windows/desktop/hh404645). |
 
  
 
@@ -161,7 +177,9 @@ Wenn die Pipeline abgeschlossen ist, zeichnen Sie die Ergebnisse der Shaderstufe
 
 | OpenGL ES 2.0  | Direct3D 11                                                                                                                                                                                                                                         |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| glDrawElements | [**ID3D11DeviceContext1::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407), [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) (oder andere Draw\*-Methoden für [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/ff476385)). |
+| glDrawElements | [
+              **ID3D11DeviceContext1::Draw**
+            ](https://msdn.microsoft.com/library/windows/desktop/ff476407), [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) (oder andere Draw\*-Methoden für [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/ff476385)). |
 | eglSwapBuffers | [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)                                                                                                                                                                              |
 
  
@@ -245,6 +263,6 @@ Ausführliche Informationen zur Verwendung der Semantik mit Direct3D finden Sie 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

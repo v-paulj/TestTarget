@@ -1,6 +1,7 @@
 ---
+author: mcleblanc
 description: Code, der in das Gerät selbst integriert und auf dessen Sensoren abgestimmt ist, umfasst auch Eingaben vom und Ausgaben an den Benutzer.
-title: Portieren von Windows Phone Silverlight zu UWP: E/A, Gerät, App-Modell
+title: Portieren von Windows Phone Silverlight zu UWP: E/A, Gerät und App-Modell
 ms.assetid: bf9f2c03-12c1-49e4-934b-e3fa98919c53
 ---
 
@@ -24,9 +25,9 @@ Weitere Informationen finden Sie unter [App-Lebenszyklus](https://msdn.microsoft
 
 ## Kamera
 
-Im Code der Windows Phone Silverlight-Kameraaufnahme wird die **Microsoft.Devices.Camera**-, **Microsoft.Devices.PhotoCamera**- oder **Microsoft.Phone.Tasks.CameraCaptureTask**-Klasse verwendet. Zum Portieren dieses Codes zur universellen Windows-Plattform (UWP) können Sie die [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124)-Klasse verwenden. Ein Codebeispiel finden Sie im Thema [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836). Mit dieser Methode können Sie ein Foto in einer Speicherdatei aufnehmen. Dazu müssen die **Mikrofon**- und **Webcam**-[**Funktionen**](https://msdn.microsoft.com/library/windows/apps/dn934747) im App-Paketmanifest festgelegt werden.
+Im Code der Windows Phone Silverlight-Kameraaufnahme wird die **Microsoft.Devices.Camera**-, **Microsoft.Devices.PhotoCamera**- oder **Microsoft.Phone.Tasks.CameraCaptureTask**-Klasse verwendet. Zum Portieren dieses Codes zur universellen Windows-Plattform (UWP) können Sie die [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124)-Klasse verwenden. Ein Codebeispiel finden Sie im Thema [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836). Mit dieser Methode können Sie ein Foto in einer Speicherdatei aufnehmen. Dazu müssen die **microphone**- und **webcam**-[**Gerätefunktionen**](https://msdn.microsoft.com/library/windows/apps/dn934747) im App-Paketmanifest festgelegt werden.
 
-Eine weitere Möglichkeit ist die [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030)-Klasse, für die ebenfalls die **Mikrofon**- und **Webcam**-[**Funktionen**](https://msdn.microsoft.com/library/windows/apps/dn934747) erforderlich sind.
+Eine weitere Möglichkeit ist die [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030)-Klasse, für die ebenfalls die **microphone**- und **webcam**-[**Gerätefunktionen**](https://msdn.microsoft.com/library/windows/apps/dn934747) erforderlich sind.
 
 Foto-Apps werden für UWP-Apps nicht unterstützt.
 
@@ -63,17 +64,26 @@ Eine Windows Phone Silverlight-App kann die **Microsoft.Phone.Info.DeviceStatus*
 
 | Windows Phone Silverlight                                                               | UWP                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Eigenschaften **ApplicationCurrentMemoryUsage** und **ApplicationCurrentMemoryUsageLimit** | [
-							Eigenschaften **MemoryManager.AppMemoryUsage**](https://msdn.microsoft.com/library/windows/apps/dn633832) und [**AppMemoryUsageLimit**](https://msdn.microsoft.com/library/windows/apps/dn633836)                                                                                                                                    |
+| **ApplicationCurrentMemoryUsage**-Eigenschaft und **ApplicationCurrentMemoryUsageLimit**-Eigenschaft | [
+              **MemoryManager.AppMemoryUsage**-Eigenschaft
+            ](https://msdn.microsoft.com/library/windows/apps/dn633832) und [**AppMemoryUsageLimit**](https://msdn.microsoft.com/library/windows/apps/dn633836)-Eigenschaft                                                                                                                                    |
 | **ApplicationPeakMemoryUsage**-Eigenschaft                                                 | Verwenden Sie das Tool zur Erstellung von Arbeitsspeicherprofilen in Visual Studio. Weitere Informationen finden Sie unter [Analysieren der Speicherauslastung](http://msdn.microsoft.com/library/windows/apps/dn645469.aspx).                                                                                                                                                                          |
-| **DeviceFirmwareVersion**-Eigenschaft                                                      | [**EasClientDeviceInformation.SystemFirmwareVersion**](https://msdn.microsoft.com/library/windows/apps/dn608144)-Eigenschaft (nur Familie der Desktopgeräte)                                                                                                                                                                             |
-| **DeviceHardwareVersion**-Eigenschaft                                                      | [**EasClientDeviceInformation.SystemHardwareVersion**](https://msdn.microsoft.com/library/windows/apps/dn608145)-Eigenschaft (nur Familie der Desktopgeräte)                                                                                                                                                                             |
-| **DeviceManufacturer**-Eigenschaft                                                         | [**EasClientDeviceInformation.SystemManufacturer**](https://msdn.microsoft.com/library/windows/apps/hh701398)-Eigenschaft (nur Familie der Desktopgeräte)                                                                                                                                                                                |
-| **DeviceName**-Eigenschaft                                                                 | [**EasClientDeviceInformation.SystemProductName**](https://msdn.microsoft.com/library/windows/apps/hh701401)-Eigenschaft (nur Familie der Desktopgeräte)                                                                                                                                                                                 |
+| **DeviceFirmwareVersion**-Eigenschaft                                                      | [
+              **EasClientDeviceInformation.SystemFirmwareVersion**
+            ](https://msdn.microsoft.com/library/windows/apps/dn608144)-Eigenschaft (nur Familie der Desktopgeräte)                                                                                                                                                                             |
+| **DeviceHardwareVersion**-Eigenschaft                                                      | [
+              **EasClientDeviceInformation.SystemHardwareVersion**
+            ](https://msdn.microsoft.com/library/windows/apps/dn608145)-Eigenschaft (nur Familie der Desktopgeräte)                                                                                                                                                                             |
+| **DeviceManufacturer**-Eigenschaft                                                         | [
+              **EasClientDeviceInformation.SystemManufacturer**
+            ](https://msdn.microsoft.com/library/windows/apps/hh701398)-Eigenschaft (nur Familie der Desktopgeräte)                                                                                                                                                                                |
+| **DeviceName**-Eigenschaft                                                                 | [
+              **EasClientDeviceInformation.SystemProductName**
+            ](https://msdn.microsoft.com/library/windows/apps/hh701401)-Eigenschaft (nur Familie der Desktopgeräte)                                                                                                                                                                                 |
 | **DeviceTotalMemory**-Eigenschaft                                                          | Kein Äquivalent                                                                                                                                                                                                                                                                                                                      |
 | **IsKeyboardDeployed**-Eigenschaft                                                         | Kein Äquivalent. Diese Eigenschaft enthält Infos zu Hardwaretastaturen für Mobilgeräte, die nur selten verwendet werden.                                                                                                                                                                                                        |
 | **IsKeyboardPresent**-Eigenschaft                                                          | Kein Äquivalent. Diese Eigenschaft enthält Infos zu Hardwaretastaturen für Mobilgeräte, die nur selten verwendet werden.                                                                                                                                                                                                        |
-| **KeyboardDeployedChanged**-Eigenschaft                                                       | Kein Äquivalent. Diese Eigenschaft enthält Infos zu Hardwaretastaturen für Mobilgeräte, die nur selten verwendet werden.                                                                                                                                                                                                        |
+| **KeyboardDeployedChanged**-Ereignis                                                       | Kein Äquivalent. Diese Eigenschaft enthält Infos zu Hardwaretastaturen für Mobilgeräte, die nur selten verwendet werden.                                                                                                                                                                                                        |
 | **PowerSource**-Eigenschaft                                                                | Kein Äquivalent                                                                                                                                                                                                                                                                                                                      |
 | **PowerSourceChanged**-Ereignis                                                            | Behandeln Sie das [**RemainingChargePercentChanged**](https://msdn.microsoft.com/library/windows/apps/jj207240)-Ereignis (nur Familie der Mobilgeräte). Das Ereignis wird ausgelöst, wenn der Wert der [**RemainingChargePercent**](https://msdn.microsoft.com/library/windows/apps/jj207239)-Eigenschaft (nur Familie der Mobilgeräte) um 1 % verkleinert wird. |
 
@@ -91,6 +101,6 @@ Das nächste Thema lautet [Portieren von Unternehmen und Datenebenen](wpsl-to-uw
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

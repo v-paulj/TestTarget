@@ -1,4 +1,5 @@
 ---
+author: jnHs
 Description: Wenn Ihre App ein AdMediatorControl- oder ein AdControl-Element zum Anzeigen von Werbebannern verwendet, können Sie Ihre Anzeigenfüllrate und Ihren Umsatz steigern, indem Sie in Ihrer App Microsoft-Partneranzeigen anzeigen.
 title: Flight-Pakete
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
@@ -43,9 +44,9 @@ Nachdem Sie die Details des Flight-Pakets gespeichert haben, wird die Übersicht
 
 Sie haben die Option, Pakete auszuwählen, die einer vorherigen Übermittlung zugeordnet waren (entweder einer Übermittlung ohne Test-Flight einem Ihrer anderen Flight-Pakete, falls Sie mehrere haben). Wenn Sie für dieses Flight-Paket neue Pakete verwenden möchten, können Sie diese hier hochladen (mit dem gleichen Verfahren wie beim [Hochladen von App-Paketen](upload-app-packages.md) bei einer regulären Übermittlung ohne Test-Flight). Wenn Sie alle Pakete für dieses Flight-Paket angegeben haben, klicken Sie auf **Speichern**.
 
-Bedenken Sie, dass die Personen in Ihrer Test-Flight-Gruppe nur Pakete abrufen können, die in der Übermittlung eines für diese Gruppe verfügbaren Flight-Pakets enthalten sind. Sie haben keinen Zugriff auf Pakete Ihrer Übermittlung ohne Test-Flight. Achten Sie darauf, Pakete bereitzustellen, die alle Gerätetypen unterstützen, die von den Kunden verwendet werden, die dieses Flight-Paket herunterladen. In den meisten Fällen sollten Sie Pakete bereitstellen, die den gleichen Satz von Gerätefamilien unterstützen, die auch von Ihrer Übermittlung ohne Test-Flight unterstützt werden.
+Wenn Ihre App mehrere Gerätefamilien unterstützt, stellen Sie sicher, dass Sie Pakete einschließen, um den gleichen Satz von Gerätefamilien in Ihrem Test-Flight zu unterstützen. Die Mitglieder Ihrer Test-Flight-Gruppen können **nur** Pakete aus diesem Test-Flight erhalten. Sie können nicht auf Pakete aus anderen Test-Flights oder aus Ihren Übermittlungen ohne Test-Flights zugreifen. 
 
-Denken Sie auch daran, dass die Store-Produktinformationen für Ihre Übermittlung ohne Test-Flight einschließlich der Verfügbarkeit für Gerätefamilien für Kunden in einer Test-Flight-Gruppe verwendet wird. Wenn Ihre Übermittlung ohne Test-Flight keine Pakete enthält, die eine bestimmte Gerätefamilie unterstützen, können Kunden in Ihrem Test-Flight diese App also nicht auf Geräte dieses Typs herunterladen, auch wenn Ihr Flight-Paket Pakete enthält, die diese Gerätefamilie unterstützen.
+Denken Sie auch daran, dass die Informationen zu Ihren Store-Einträgen aus Ihren Übermittlungen ohne Test-Flights stammen, einschließlich Informationen zu den von Ihrer App unterstützten Gerätefamilien. Die Kunden in Ihren Test-Flight-Gruppen können die App nur für Gerätefamilien herunterladen, die von Ihren Übermittlungen ohne Test-Flights unterstützt werden. Weitere Informationen finden Sie unter [Unterstützung für Gerätefamilien](#device-family-support). 
 
 ## Optionen für das Konfigurieren zusätzlicher Flight-Pakete
 
@@ -58,6 +59,16 @@ Wenn Sie Pakete angegeben und alle erforderlichen Optionen konfiguriert haben, k
 Personen, die in Ihren Test-Flight-Gruppen diesem Flight-Paket zugeordnet sind und Ihre App bereits haben, erhalten jetzt ein Update mit den Paketen, die Sie in Ihrem Flight-Paket bereitgestellt haben. Wenn diese Personen Ihre App noch nicht haben, erhalten sie die Pakete aus Ihrem Flight-Paket, wenn sie es installieren. 
 
 > Hinweis: Personen, die ein Paket haben, das nur in einem Flight-Paket verfügbar ist, können die App mit Sternen bewerten und Rezensionen hinterlassen. Ihre Bewertungen und Rezensionen werden jedoch nicht für andere Kunden angezeigt. (Dies schließt ältere 7.x- oder 8.0 XAP-Pakete aus. Bewertungen und Rezensionen von Mitgliedern Ihrer Flight-Gruppen, die diese Pakete verwenden, sind für andere Kunden sichtbar.) Sie können ihr Feedback von allen Kunden, einschließlich derer in Ihrer Flight-Gruppen, in den Bewertungs- und Rezensionsberichten für die App anzeigen.
+
+## Unterstützung für Gerätefamilien
+
+In den meisten Fällen sollten Sie Pakete bereitstellen, die den gleichen Satz von Gerätefamilien unterstützen, die auch von Ihrer Übermittlung ohne Test-Flight unterstützt werden. Die Gerätefamilienverfügbarkeit für eine App basiert stets auf der Übermittlung ohne Test-Flight, unabhängig davon, ob ein Kunde Mitglied einer Test-Flight-Gruppe ist oder nicht.
+
+**Wenn Ihre Übermittlung ohne Test-Flight eine Gerätefamilie unterstützt, die Ihr Flight-Paket nicht unterstützt**, können die Mitglieder Ihrer Test-Flight-Gruppe die App nicht auf diese Gerätefamilie herunterladen. Wenn Ihre Übermittlung ohne Test-Flight beispielsweise Mobilgerät- und Desktoppakete umfasst und Sie anschließend ein Flight-Paket erstellen, das nur ein Mobilgerätpaket enthält, können die Mitglieder Ihrer Test-Flight-Gruppe die App nur auf Mobilgeräte herunterladen, auch wenn Kunden, die nicht Mitglied der Test-Flight-Gruppe sind, ein Desktoppaket herunterladen können. Auch wenn Sie das Flight-Paket nur verwenden, um Änderungen in Ihrem Mobilgerätpaket zu testen, sollten Sie das Desktoppaket aus Ihrer Übermittlung ohne Test-Flight in das Flight-Paket integrieren, damit Kunden in der Test-Flight-Gruppe Ihre App auf Desktopgeräte herunterladen können.
+
+**Wenn Ihr Flight-Paket eine Gerätefamilie unterstützt, die Ihre Übermittlung ohne Test-Flight nicht unterstützt**, kann niemand die App auf diese Gerätefamilie herunterladen, unabhängig davon, ob der betreffende Kunde Mitglied Ihrer Test-Flight-Gruppe ist oder nicht. Wenn Ihre Übermittlung ohne Test-Flight beispielsweise nur ein Mobilgerätpaket enthält und Sie anschließend ein Flight-Paket erstellen, das ein Mobilgerät- und ein Desktoppaket enthält, können die Mitglieder Ihrer Test-Flight-Gruppe die App nach wie vor nur auf Mobilgeräte herunterladen. Das Desktoppaket wird niemandem angeboten, auch keinem Mitglied Ihrer Test-Flight-Gruppe. Wenn Sie Mitgliedern Ihrer Test-Flight-Gruppe ein Desktoppaket zur Verfügung stellen möchten, müssen Sie zunächst Ihre Übermittlung ohne Test-Flight aktualisieren, sodass diese ein Desktoppaket enthält. Um allen Kunden Ihrer App eine optimale Erfahrung zu bieten, sollte Ihre Übermittlung ohne Test-Flight die gleichen Gerätefamilien wie Ihr Flight-Paket unterstützen. 
+
+**Hinweis**  Pakete, die Ihren Flight-Paketen hinzugefügt werden, können jede Betriebssystemversion (oder jeden Build von Windows 10) unterstützen. Wie jedoch bereits gesagt, müssen die Mitglieder von Test-Flight-Gruppen ein Gerät verwenden, auf dem eine Version von Windows 10 ausgeführt wird, die Flight-Pakete unterstützt (Windows.Desktop-Build 10586 oder höher; Windows.Mobile-Build 10586.63 oder höher), um Pakete aus dem Flight-Paket zu erhalten.
 
 ## Aktualisieren oder Ändern Ihres Flight-Pakets
 
@@ -81,17 +92,17 @@ Nehmen wir beispielsweise an, dass Sie neben Ihrer regulären Übermittlung ohne
 
 Wenn Sie eines oder mehrere Pakete in einem veröffentlichten Flight-Paket für Kunden verfügbar machen möchten, die keiner Test-Flight-Gruppe angehören, können Sie Ihre Übermittlung ohne Test-Flight entsprechend aktualisieren, ohne dieselben Pakete erneut hochladen zu müssen. 
 
-Bei der Erstellung Ihrer neuen Übermittlung wird auf der Seite [**Packages**](upload-app-packages.md) eine Dropdownliste mit der Option zum Kopieren von Paketen aus einer vorherigen Übermittlung bzw. einem Flight-Paket angezeigt. Wählen Sie das Flight-Paket Flug mit den Paketen, die Sie übertragen möchten. Anschließend können Sie einige oder alle der Pakete darin auswählen, um sie in die Übermittlung ohne Test-Flight aufzunehmen.
+Bei der Erstellung Ihrer neuen Übermittlung wird auf der Seite [**Packages**](upload-app-packages.md) eine Dropdownliste mit der Option zum Kopieren von Paketen aus einer vorherigen Übermittlung bzw. einem Flight-Paket angezeigt. Wählen Sie das Flight-Paket mit den Paketen aus, die Sie übertragen möchten. Anschließend können Sie einige oder alle der Pakete darin auswählen, um sie in die Übermittlung ohne Test-Flight aufzunehmen.
 
 Beachten Sie, dass dieselben Regeln für Paketvalidierung gelten, auch wenn Pakete aus einer zuvor veröffentlichten Übermittlung verwendet werden. 
 
 ## Löschen eines Flight-Pakets
 
-Zum Löschen eines Flight-Paket, das Sie nicht mehr unterstützen möchten, klicken Sie in der App-Übersicht auf dessen Namen. Klicken Sie auf der Flight-Paket-Übersichtsseite auf **Delete package flight**. (Wenn Sie gerade eine unveröffentlichte Übermittlung des Flight-Pakets ausführen, müssen Sie diese zunächst löschen.) Dies kann bis zu 30 Minuten dauern.
+Zum Löschen eines Flight-Pakets, das Sie nicht mehr unterstützen möchten, klicken Sie in der App-Übersicht auf dessen Namen. Klicken Sie auf der Übersichtsseite für Test-Flights **Ändern** und anschließend auf den Link **Löschen**, um das Flight-Paket zu löschen. (Wenn Sie eine unveröffentlichte Übermittlung des Flight-Pakets ausführen, müssen Sie zunächst diese Übermittlung löschen.) Dies kann bis zu 30 Minuten dauern.
 
-Hinweis: Wenn Sie ein Test-Flight löschen, erhalten alle Kunden in diesem Test-Flight ein App-Update, wenn ein Paket mit einer höheren Versionsnummer als im Flight-Paket vorhanden ist (bzw. sobald ein solches Paket verfügbar wird). Wenn Benutzer die App deinstallieren und später erneut installieren, wird dies als neuer Erwerb behandelt, und die Benutzer erhalten die höchste derzeit verfügbare Version. 
+Wenn Sie ein Flight-Paket löschen, erhalten alle Kunden mit Paketen, die Sie in diesem Flight-Paket verteilt haben, ein App-Update, wenn es ein Paket mit einer höheren Versionsnummer gibt (oder sobald ein solches Paket verfügbar ist). Wenn Benutzer die App deinstallieren und später erneut installieren, wird dies als neuer Kauf behandelt, und die Benutzer erhalten die höchste aktuell verfügbare Version. 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

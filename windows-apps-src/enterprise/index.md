@@ -12,7 +12,7 @@ author: awkoren
 
 Diese Roadmap enthält eine Übersicht über wichtige Unternehmensfeatures für Universelle Windows-Plattform (UWP)-Apps unter Windows 10. Mit Windows 10 können Sie eine App schreiben, die auf allen Geräten bereitgestellt werden kann. So können Sie die großartigen Umgebungen erstellen, die die Benutzer erwarten, und gleichzeitig die im Unternehmen erforderliche Kontrolle über die Sicherheit, Verwaltung und Konfiguration bereitstellen.
 
-**Hinweis** Dieser Artikel richtet sich an Entwickler, die UWP-Apps für Unternehmen schreiben. Informationen zur allgemeinen UWP-Entwicklung finden Sie unter [Anleitungen für Windows 10-Apps](https://msdn.microsoft.com/library/windows/apps/mt244352). Informationen zur WPF-, Windows Forms- und Win32-Entwicklung finden Sie unter [Desktop Dev Center](https://dev.windows.com/en-us/desktop). Ressourcen für IT-Experten, z. B. Bereitstellen von Windows 10 oder Verwalten von Unternehmenssicherheitsfeatures finden Sie unter [Windows 10 auf TechNet](https://msdn.microsoft.com/library/dn986868).
+**Hinweis**  Dieser Artikel ist für Entwickler bestimmt, die UWP-Apps für Unternehmen schreiben. Informationen zur allgemeinen UWP-Entwicklung finden Sie unter [Anleitungen für Windows 10-Apps](https://msdn.microsoft.com/library/windows/apps/mt244352). Informationen zur WPF-, Windows Forms- und Win32-Entwicklung finden Sie unter [Desktop Dev Center](https://dev.windows.com/en-us/desktop). Ressourcen für IT-Experten, z. B. Bereitstellen von Windows 10 oder Verwalten von Unternehmenssicherheitsfeatures finden Sie unter [Windows 10 auf TechNet](https://msdn.microsoft.com/library/dn986868).
 
  
 
@@ -111,6 +111,6 @@ Weitere Informationen zu Prism finden Sie im [GitHub-Repository](https://github.
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

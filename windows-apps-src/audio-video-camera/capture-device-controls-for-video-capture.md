@@ -1,6 +1,7 @@
 ---
+author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
-description: So verwenden Sie Steuerelemente eines Videoaufnahmegeräts, um bessere Videoaufnahmeszenarien, einschließlich HDR-Video und Belichtungspriorität, zu ermöglichen.
+description: In diesem Artikel erfahren Sie, wie Sie Steuerelemente eines Videoaufnahmegeräts verwenden, um verbesserte Videoaufnahmeszenarien, einschließlich HDR-Video und Belichtungspriorität, zu ermöglichen.
 title: Steuerelemente des Aufnahmegeräts für Videoaufnahmen
 ---
 
@@ -13,12 +14,12 @@ In diesem Artikel erfahren Sie, wie Sie Steuerelemente eines Videoaufnahmegerät
 
 Die in diesem Artikel beschriebenen Steuerelemente des Videoaufnahmegeräts werden alle mithilfe desselben Musters zu Ihrer App hinzugefügt. Überprüfen Sie zunächst, ob das Steuerelement auf dem aktuellen Gerät unterstützt wird, auf dem Ihre App ausgeführt wird. Wenn das Steuerelement unterstützt wird, legen Sie den gewünschten Modus für das Steuerelement fest. Wenn ein bestimmtes Steuerelement auf dem aktuellen Gerät nicht unterstützt wird, sollten Sie das UI-Element, über das der Benutzer das Feature aktivieren kann, deaktivieren oder ausblenden.
 
-Alle in diesem Artikel beschriebenen Gerätesteuerelement-APIs sind Member des [**Windows.Media.Devices**](https://msdn.microsoft.com/library/windows/apps/br206902)-Namespaces.
+Alle in diesem Artikel beschriebenen Gerätesteuerelement-APIs gehören dem [**Windows.Media.Devices**](https://msdn.microsoft.com/library/windows/apps/br206902)-Namespace an.
 
 [!code-cs[VideoControllersUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoControllersUsing)]
 
 **Hinweis**  
-Dieser Artikel baut auf Konzepten und Code auf, die unter [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md) erläutert werden. Darin werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienaufnahme in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.
+Dieser Artikel baut auf Konzepten und Code auf, die unter [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md) erläutert werden. Darin werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.
 
 ## HDR-Video
 
@@ -42,7 +43,7 @@ Aktivieren oder deaktivieren Sie das Steuerelement für die Belichtungsprioritä
 
 ## Verwandte Themen
 
-* [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Aufnehmen von Fotos und Videos mit "MediaCapture"](capture-photos-and-video-with-mediacapture.md)
  
 
  
@@ -52,6 +53,6 @@ Aktivieren oder deaktivieren Sie das Steuerelement für die Belichtungsprioritä
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

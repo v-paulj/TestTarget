@@ -1,4 +1,5 @@
 ---
+author: mcleblanc
 ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: Leistung
 description: Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen.
@@ -17,7 +18,7 @@ Durch die Portierung Ihrer App auf Windows 10 lassen sich erhebliche Leistungsst
 | [Optimieren der ListView- und GridView-Benutzeroberfläche](optimize-gridview-and-listview.md) | Verbessern Sie die Leistung und Startzeit von [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) durch UI-Virtualisierung, Elementreduzierung und progressive Aktualisierung von Elementen. |
 | [Virtualisierung von ListView- und GridView-Daten](listview-and-gridview-data-optimization.md) | Verbessern Sie die Leistung und Startzeit von [<strong>GridView</strong>](https://msdn.microsoft.com/library/windows/apps/BR242705) durch Datenvirtualisierung. |
 | [Verbessern der Leistung bei der Garbage Collection](improve-garbage-collection-performance.md) | In C# und Visual Basic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NET Garbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten des .NET Garbage Collectors sowie über die bewährten Methoden zur Leistungssteigerung für den Garbage Collector in UWP-Apps. |
-| [Aufrechterhalten der Reaktionsfähigkeit des UI-Threads](keep-the-ui-thread-responsive.md) | Benutzer erwarten, dass eine App beim Durchführen einer Berechnung reaktionsfähig bleibt, unabhängig vom jeweiligen Computertyp. Das bedeutet für jede App etwas anderes. Für einige Apps bedeutet dies z. B. Folgendes: realistischere physische Effekte bereitstellen, Daten vom Datenträger oder aus dem Internet schneller laden, komplexe Szenen schnell darstellen, schnell zwischen Seiten navigieren, Anweisungen im Nu finden oder schnelles Verarbeiten von Daten. Unabhängig von der Art der Berechnung möchten Benutzer, dass die App auf ihre Eingabe reagiert. Es stört sie, wenn die App scheinbar nicht reagiert, während sie „denkt“. |
+| [Aufrechterhalten der Reaktionsfähigkeit des UI-Threads](keep-the-ui-thread-responsive.md) | Benutzer erwarten, dass eine App beim Durchführen einer Berechnung reaktionsfähig bleibt, unabhängig vom jeweiligen Computertyp. Das bedeutet für jede App etwas anderes. Für einige Apps bedeutet dies z. B. Folgendes: realistischere physische Effekte bereitstellen, Daten vom Datenträger oder aus dem Internet schneller laden, komplexe Szenen schnell darstellen, schnell zwischen Seiten navigieren, Anweisungen im Nu finden oder schnelles Verarbeiten von Daten. Unabhängig von der Art der Berechnung möchten Benutzer, dass die App auf ihre Eingabe reagiert. Es stört sie, wenn die App scheinbar nicht reagiert, während sie &quot;denkt&quot;. |
 | [Optimieren Ihres XAML-Markups](optimize-xaml-loading.md) | Die Analyse von XAML-Markup zum Erstellen von Objekten im Arbeitsspeicher kann für eine komplexe Benutzeroberfläche viel Zeit in Anspruch nehmen. Hier finden Sie einige Punkte, die Sie zur Optimierung der XAML-Markupanalyse, Ladezeit und Effizienz des Arbeitsspeichers für Ihre App vornehmen können. | 
 | [Optimieren des XAML-Layouts](optimize-your-xaml-layout.md) | Das Layout kann sowohl bezüglich der CPU-Auslastung als auch des Aufwands ein ressourcenintensiver Teil einer XAML-App sein. Hier sind einige einfache Schritte, mit denen Sie die Layoutleistung Ihrer XAML-App verbessern können. | 
 | [Tipps zu MVVM und Sprachleistung](mvvm-performance-tips.md) | In diesem Thema werden einige Leistungsaspekte in Bezug auf die Wahl von Softwaredesignmustern und Programmiersprachen erläutert. |
@@ -30,6 +31,6 @@ Durch die Portierung Ihrer App auf Windows 10 lassen sich erhebliche Leistungsst
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

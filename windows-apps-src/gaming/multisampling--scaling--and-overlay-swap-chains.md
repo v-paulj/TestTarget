@@ -1,13 +1,14 @@
 ---
+author: mtoepke
 title: Swapchainskalierung und Überlagerungen
-description: skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen Überlagerungsswapchains (falls verfügbar) verwenden, um visuelle Qualität zu steigern
+description: Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern.
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
 ---
 
 # Swapchainskalierung und Überlagerungen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern.
 
@@ -158,7 +159,7 @@ Führen Sie die folgenden Schritte aus, um eine Vordergrund-Swapchain zu erstell
 
     > **Hinweis**   Legen Sie das [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076)-Flag bei jeder Größenänderung der Swapchain neu fest.
 
-     ```cpp
+    ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(
         2, // Double-buffered swap chain.
         static_cast<UINT>(m_d3dRenderTargetSize.Width),
@@ -323,6 +324,6 @@ Führen Sie die folgenden Schritte aus, um eine Vordergrund-Swapchain zu erstell
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

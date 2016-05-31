@@ -1,4 +1,5 @@
 ---
+author: mijacobs
 Description: Gut gestaltete Animationen machen Apps lebhaft und lassen sie realistisch und perfekt erscheinen. Helfen Sie Benutzern dabei, Kontextänderungen zu verstehen, und verbinden Sie Interaktionen mit visuellen Übergängen.
 title: Bewegung und Animation in UWP-Apps
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
@@ -43,7 +44,7 @@ Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App ko
 
     Durch Animationen kann dem Benutzer mitgeteilt werden, dass das Telefon noch mit der Verarbeitung beschäftigt und nicht eingefroren ist, und es können passiv neue Informationen angezeigt werden, die den Benutzer möglicherweise interessieren.
 
-<h2>Inhalt dieses Abschnitts</h2>
+## Inhalt dieses Abschnitts
 <table>
 <thead>
 <tr class="header">
@@ -53,43 +54,43 @@ Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App ko
 </thead>
 <tbody>
     <tr>
-        <td>[Add and delete](motion-list.md)
+        <td>[Hinzufügen und Löschen](motion-list.md)
         </td>
         <td>Mit Listenanimationen können Sie einzelne oder mehrere Elemente in einer Sammlung wie z. B. einem Fotoalbum oder einer Liste mit Suchergebnissen einfügen oder entfernen.
         </td>
     </tr> 
     <tr>
-        <td>[Drag and drop](motion-dragdrop.md)
+        <td>[Drag & Drop](motion-dragdrop.md)
         </td>
         <td>Verwenden Sie Drag & Drop-Animationen, wenn Benutzer Objekte verschieben, z. B. wenn sie ein Element innerhalb einer Liste verschieben oder ein Element auf einem anderen ablegen.
         </td>
     </tr>
     <tr>
-        <td>[Edge](motion-edgebased.md)
+        <td>[Rand](motion-edgebased.md)
         </td>
         <td>Randbasierte Animationen blenden UI-Elemente ein oder aus, die vom Bildschirmrand ausgehen. Die Aktionen zum Anzeigen und Ausblenden können von Benutzern oder von der App initiiert werden. Die UI-Elemente können die Anwendung überlagern oder Teil der Hauptoberfläche der App sein. Wenn das UI-Element Teil der App-Oberfläche ist, müssen Sie möglicherweise die Größe der restlichen App entsprechend anpassen.
         </td>
     </tr>   
     <tr>
-        <td>[Fade](motion-fade.md)
+        <td>[Einblenden](motion-fade.md)
         </td>
         <td>Verwenden Sie Ein- und Ausblendungsanimationen, um Elemente anzuzeigen oder nicht anzuzeigen. Die beiden üblichen Animationen dieser Art sind das Einblenden und das Ausblenden.
         </td>
     </tr>   
     <tr>
-        <td>[Pointer](motion-pointer.md)
+        <td>[Zeiger](motion-pointer.md)
         </td>
         <td>Zeigeranimationen stellen visuelles Feedback für Benutzer bereit, wenn diese auf ein Element tippen. Bei der Animation für „Zeiger nach unten“ wird das gedrückte Element leicht verkleinert und geneigt. Sie wird wiedergegeben, wenn erstmalig auf ein Element getippt wird. Die Animation für „Zeiger nach oben“, mit der der ursprüngliche Zustand des Elements wiederhergestellt wird, wird beim Loslassen des Zeigers wiedergegeben.
         </td>
     </tr>   
     <tr>
-        <td>[Pop-up animations](motion-popup-animations.md)
+        <td>[Popupanimationen](motion-popup-animations.md)
         </td>
         <td>Verwenden Sie Popupanimationen, um Popup-UI-Elemente für Flyouts oder benutzerdefinierte Popup-UI-Elemente anzuzeigen und auszublenden. Popupelemente sind Container, die über dem Inhalt der App angezeigt werden und ausgeblendet werden, wenn Benutzer außerhalb des Popupelements tippen oder klicken.
         </td>
     </tr>     
     <tr>
-        <td>[Reposition](motion-reposition.md)
+        <td>[Ändern der Position](motion-reposition.md)
         </td>
         <td>Verschiebt Elemente an eine neue Position.
         </td>
@@ -109,6 +110,6 @@ Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App ko
 
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=May16_HO2-->
 
 

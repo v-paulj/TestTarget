@@ -1,5 +1,6 @@
 ---
-description: Entwickler, die eine Windows Phone Silverlight-App haben, können beim Wechsel zu Windows 10 auf Ihre Kenntnisse zurückgreifen und vorhandenen Quellcode nutzen.
+author: mcleblanc
+description: Entwickler, die über eine Windows Phone Silverlight-App verfügen, können beim Wechsel zu Windows 10 auf Ihre Kenntnisse und Fähigkeiten zurückgreifen und Ihren vorhandenen Quellcode umfassend nutzen.
 title: Wechsel von Windows Phone Silverlight zu UWP
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
 ---
@@ -14,7 +15,7 @@ Wenn Sie Ihre Windows Phone Silverlight-App zu einer Windows 10-App portieren,
 
 Bei Bedarf können Sie die Windows Phone Silverlight-Version Ihrer App und die Windows 10-Version gleichzeitig für Kunden verfügbar machen.
 
-**Hinweis**  Dieser Leitfaden soll Sie beim manuellen Portieren Ihrer Windows Phone Silverlight-App auf Windows 10 unterstützen. Zum Portieren Ihrer App können Sie neben den Informationen in diesem Leitfaden auch die Developer Preview der **Silverlight-Brücke von Mobilize.Net** ausprobieren, um den Portierungsprozess zu automatisieren. Dieses Tool analysiert den Quellcode Ihrer App und konvertiert Verweise auf Windows Phone Silverlight-Steuerelemente und -APIs in ihre UWP-Entsprechungen. Da dieses Tool noch die Developer Preview-Version aufweist, unterstützt es noch nicht alle Konvertierungsszenarien. Die meisten Entwickler sollten mit dem Einstieg in dieses Tool jedoch Zeit und Mühe sparen. Besuchen Sie die [Website von Mobilize.NET](http://go.microsoft.com/fwlink/p/?LinkId=624546), um die Developer Preview zu testen.
+**Hinweis**  Dieser Leitfaden soll Sie beim manuellen Portieren Ihrer Windows Phone Silverlight-App zu Windows 10 unterstützen. Zum Portieren Ihrer App können Sie neben den Informationen in diesem Leitfaden auch die Developer Preview der **Silverlight-Brücke von Mobilize.Net** ausprobieren, um den Portierungsprozess zu automatisieren. Dieses Tool analysiert den Quellcode Ihrer App und konvertiert Verweise auf Windows Phone Silverlight-Steuerelemente und -APIs in ihre UWP-Entsprechungen. Da dieses Tool noch die Developer Preview-Version aufweist, unterstützt es noch nicht alle Konvertierungsszenarien. Die meisten Entwickler sollten mit dem Einstieg in dieses Tool jedoch Zeit und Mühe sparen. Besuchen Sie die [Website von Mobilize.NET](http://go.microsoft.com/fwlink/p/?LinkId=624546), um die Developer Preview zu testen.
 
 ## XAML und .NET oder HTML?
 
@@ -22,7 +23,7 @@ Windows Phone Silverlight verfügt über ein XAML-Benutzeroberflächenframework,
 
 Siehe [Roadmap für Universal Windows Platform (UWP)-Apps mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583).
 
-**Hinweis**  Windows 10 unterstützt einen deutlich größeren Teil von .NET Framework als eine Windows Phone Store-App. Windows 10 verfügt beispielsweise über mehrere System.ServiceModel.\*-Namespaces sowie über System.Net, System.Net.NetworkInformation und System.Net.Sockets. Der Zeitpunkt für das Portieren von Windows Phone Silverlight ist also günstig, da Sie Ihren .NET-Code für die Ausführung auf der neuen Plattform einfach kompilieren können. Weitere Informationen finden Sie unter [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md).
+**Hinweis**  Windows 10 unterstützt einen deutlich größeren Teil von .NET Framework als Windows Phone Store-Apps. Windows 10 verfügt beispielsweise über mehrere System.ServiceModel.\*-Namespaces sowie über System.Net, System.Net.NetworkInformation und System.Net.Sockets. Der Zeitpunkt für das Portieren von Windows Phone Silverlight ist also günstig, da Sie Ihren .NET-Code für die Ausführung auf der neuen Plattform einfach kompilieren können. Weitere Informationen finden Sie unter [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md).
 Ein weiterer guter Grund zum Neukompilieren Ihres vorhandenen .NET-Quellcodes in eine Windows 10-App ist, dass Sie von .NET Native profitieren. Dabei handelt es sich um eine fortschrittliche Kompilierungstechnologie, mit der MSIL-Code in Computercode für die systemeigene Ausführung konvertiert wird. .NET Native-Apps starten schneller, verbrauchen weniger Arbeitsspeicher und benötigen weniger Akkuenergie als ihre MSIL-Gegenstücke.
 
 In diesem Portierungshandbuch geht es vorrangig um XAML. Alternativ können Sie mit JavaScript, Cascading Stylesheets (CSS) und HTML5 sowie der Windows-Bibliothek für JavaScript eine funktional vergleichbare App erstellen – viele der verwendeten UWP-APIs sind in diesem Fall identisch. Obwohl sich die Windows-Runtime-Benutzeroberflächenframeworks von XAML und HTML unterscheiden, funktionieren beide für sämtliche Windows-Geräte.
@@ -39,7 +40,7 @@ Die im vorherigen Abschnitt gewählte Option bestimmt die Palette an Geräten, a
 
 -   **Ansicht**. Die Ansicht und das Ansichtsmodell bilden die UI Ihrer App. Im Idealfall besteht die Ansicht aus Markup, das an feststellbare Eigenschaften eines Ansichtsmodells gebunden ist. Ein weiteres gängiges, aber nur auf kurze Sicht zweckmäßiges Muster ist das direkte Ändern von UI-Elementen mit imperativem Code in einer CodeBehind-Datei. In beiden Fällen kann ein Großteil des UI-Markups und -Designs – und sogar imperativer Code zum Ändern von UI-Elementen – einfach portiert werden.
 -   **Ansichtsmodelle und Datenmodelle**. Auch wenn Sie Muster zur Trennung der Zuständigkeiten (z. B. MVVM) nicht ausdrücklich anwenden, gibt es in Ihrer App zwangsläufig Code, der die Funktion des Ansichts- und Datenmodells übernimmt. Code für das Ansichtsmodell nutzt Typen in den Namespaces des Benutzeroberflächenframeworks. Sowohl der Code für das Ansichtsmodell als auch der Code für das Datenmodell nutzen zudem nicht visuelle Betriebssystem- und .NET-APIs (darunter APIs für den Datenzugriff). Und die meisten dieser APIs sind [für UWP-Apps verfügbar](https://msdn.microsoft.com/library/windows/apps/br211369). Sie können daher davon ausgehen, dass sich ein Großteil dieses Codes ohne Änderungen portieren lässt. Bedenken Sie aber, dass ein Ansichtsmodell ein Modell oder eine *Abstraktion* einer Ansicht ist. Ein Ansichtsmodell stellt den Zustand und das Verhalten der UI bereit, während die Ansicht selbst die visuellen Elemente bereitstellt. Aus diesem Grund sind wahrscheinlich für jede UI, die Sie an die verschiedenen, von der UWP unterstützten Formfaktoren anpassen, entsprechende Änderungen des Ansichtsmodells erforderlich. Für Netzwerke und das Aufrufen von Clouddiensten können Sie normalerweise zwischen .NET und UWP-APIs wählen. Informationen zu den Faktoren, die diese Entscheidung beeinflussen, finden Sie unter [Clouddienste, Netzwerk und Datenbanken](wpsl-to-uwp-business-and-data.md#networking-cloud).
--   .**Clouddienste** Höchstwahrscheinlich werden einige (oder sogar die meisten) Teile Ihrer App in Form von Diensten in der Cloud ausgeführt. Der auf dem Clientgerät ausgeführte Teil der App stellt eine Verbindung mit diesen Diensten her. Dies ist der Teil einer verteilten App, bei dem es am wahrscheinlichsten ist, dass er beim Portieren des Clientteils unverändert bleibt. Falls Sie noch keine Clouddienste nutzen, sind [Microsoft Azure Mobile Services](http://azure.microsoft.com/services/mobile-services/) eine gute Wahl für Ihre UWP-App. Sie bieten leistungsstarke Back-End-Komponenten, die universelle Windows-Apps für verschiedenste Dienste aufrufen können – angefangen bei einfachen Benachrichtigungen für Live-Kachelaktualisierungen bis hin zur komplexen Skalierbarkeit, die eine Serverfarm bereitstellen kann.
+-   **Clouddienste**. Höchstwahrscheinlich werden einige (oder sogar die meisten) Teile Ihrer App in Form von Diensten in der Cloud ausgeführt. Der auf dem Clientgerät ausgeführte Teil der App stellt eine Verbindung mit diesen Diensten her. Dies ist der Teil einer verteilten App, bei dem es am wahrscheinlichsten ist, dass er beim Portieren des Clientteils unverändert bleibt. Falls Sie noch keine Clouddienste nutzen, sind [Microsoft Azure Mobile Services](http://azure.microsoft.com/services/mobile-services/) eine gute Wahl für Ihre UWP-App. Sie bieten leistungsstarke Back-End-Komponenten, die universelle Windows-Apps für verschiedenste Dienste aufrufen können – angefangen bei einfachen Benachrichtigungen für Live-Kachelaktualisierungen bis hin zur komplexen Skalierbarkeit, die eine Serverfarm bereitstellen kann.
 
 Überlegen Sie vor oder während der Portierung, ob Ihre App dadurch verbessert werden könnte, wenn Sie sie umgestalten und Code mit einem ähnlichen Zweck in Ebenen zusammenfassen, anstatt ihn willkürlich zu verteilen. Die Aufteilung Ihrer UWP-App in die oben beschriebenen Ebenen erleichtert Ihnen das Ausschließen von Fehlern, das Testen sowie das spätere Lesen und Warten Ihrer App. Sie können die Wiederverwendbarkeit von Funktionen verbessern – und Probleme mit Unterschieden in den UI-APIs vermeiden –, indem Sie das Model-View-ViewModel-Muster ([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx)) anwenden. Dieses Muster trennt die Daten-, Geschäfts- und UI-Teile der App voneinander. Auch innerhalb der UI kann das Muster Zustand und Verhalten von den visuellen Elementen getrennt halten, sodass diese separat getestet werden können. Das MVVM-Muster bietet Ihnen die Möglichkeit, Ihre Daten und Geschäftslogik einmal zu schreiben und auf allen Geräten, unabhängig von der UI, zu verwenden. Es ist wahrscheinlich, dass Sie auch einen Großteil des Ansichtsmodells und der Ansichtselemente auf verschiedenen Geräten wiederverwenden können.
 
@@ -52,13 +53,13 @@ Die gute Nachricht ist, dass auf der Featureebene nur sehr wenig nicht in der UW
 | Feature, für das es kein UWP-Äquivalent gibt | Windows Phone Silverlight-Dokumentation für das Feature |
 |----------------------------------------------|---------------------------------------------------------|
 | Microsoft XNA. Im Allgemeinen wird als Ersatz [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) mit C++ verwendet. Siehe [Entwickeln von Spielen](https://msdn.microsoft.com/library/windows/apps/hh452744) und [Interoperabilität von DirectX und XAML](https://msdn.microsoft.com/library/windows/apps/hh825871). | [XNA-Framework-Klassenbibliothek](http://msdn.microsoft.com/library/bb203940.aspx) | 
-|Foto-Apps | [Objektive für Windows Phone 8](http://msdn.microsoft.com/library/windows/apps/jj206990.aspx) |
+|Foto-Apps | [Foto-Apps für Windows Phone 8](http://msdn.microsoft.com/library/windows/apps/jj206990.aspx) |
 
 &nbsp;
 
 | Thema| Beschreibung|
 |------|------------| 
-| [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md) | Dieses Thema bietet eine umfassende Zuordnung der Windows Phone Silverlight-APIs in ihren UWP-Äquivalenten. |
+| [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md) | Dieses Thema bietet eine umfassende Zuordnung der Windows Phone Silverlight-APIs zu ihren UWP-Äquivalenten. |
 | [Portieren des Projekts](wpsl-to-uwp-porting-to-a-uwp-project.md) | Sie beginnen den Portierungsprozess, indem Sie zunächst in Visual Studio ein neues Windows 10-Projekt erstellen und Ihre Dateien in das Projekt kopieren. |
 | [Fehlerbehebung](wpsl-to-uwp-troubleshooting.md) | Wir empfehlen dringend, dieses Handbuch für das Portieren vollständig zu lesen. Wir wissen aber auch, dass Sie möglichst schnell die Phase erreichen möchten, in der Ihr Projekt erstellt und ausgeführt wird. Zu diesem Zweck können Sie einen temporären Fortschritt erzielen, indem Sie allen nicht unbedingt erforderlichen Code auskommentieren und anschließend zurückkehren, um die Schulden später zu bezahlen. Die Tabelle mit Symptomen und Möglichkeiten zur Problembehandlung in diesem Thema kann in dieser Phase hilfreich für Sie sein, ersetzt jedoch nicht das Lesen der nächsten Themen. Sie können die Tabelle jederzeit zu Rate ziehen, während Sie die weiteren Themen lesen. |
 | [Portieren von XAML und UI](wpsl-to-uwp-porting-xaml-and-ui.md) | Die Vorgehensweise zum Definieren einer UI in Form von deklarativem XAML-Markup lässt sich sehr gut von Windows Phone Silverlight- auf UWP-Apps übertragen. Sie werden feststellen, dass große Abschnitte Ihres Markups kompatibel sind, sobald Sie Verweise auf Systemressourcenschlüssel aktualisiert, einige Namen von Elementtypen geändert und „clr-namespace“ in „using“ geändert haben. |
@@ -75,14 +76,18 @@ Die gute Nachricht ist, dass auf der Featureebene nur sehr wenig nicht in der UW
 * [Anleitung für Universelle Windows-Plattform-Apps (UWP)](https://msdn.microsoft.com/library/windows/apps/dn894631)
 * [Roadmap für Universal Windows Platform (UWP)-Apps mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583)
 * [Nächste Schritte für Windows Phone 8-Entwickler](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
-**Magazine-Artikel**
-* [Visual Studio Magazine: Windows Phone 8.1: Ein Riesenschritt für die Konvergenz](http://go.microsoft.com/fwlink/p/?LinkID=398541)
-**Präsentationen**
+            
+          
+            **Artikel in Magazinen**
+* [Visual Studio Magazine: Windows Phone 8.1: Ein Riesenschritt für die Konvergenz](http://go.microsoft.com/fwlink/p/?LinkID=398541)
+            
+          
+            **Präsentationen**
 * [The Story of Bringing Nokia Music from Windows Phone to Windows 8 (Beschreibung der Bereitstellung von Nokia Music von Windows Phone unter Windows 8)](http://go.microsoft.com/fwlink/p/?LinkId=321521)
  
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

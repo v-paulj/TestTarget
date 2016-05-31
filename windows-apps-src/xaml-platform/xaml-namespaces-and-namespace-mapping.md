@@ -1,5 +1,6 @@
 ---
-description: Im Folgenden werden die XML/XAML-Namespace (xmlns)-Zuordnungen erläutert, wie sie im Stammelement der meisten XAML-Dateien zu finden sind. Darüber hinaus wird erläutert, wie ähnliche Zuordnungen für benutzerdefinierte Typen und Assemblys erstellt werden.
+author: jwmsft
+description: Im Folgenden werden die XML/XAML-Namespacezuordnungen (xmlns) erläutert, wie sie im Stammelement der meisten XAML-Dateien zu finden sind. Darüber hinaus wird erläutert, wie ähnliche Zuordnungen für benutzerdefinierte Typen und Assemblys erstellt werden.
 title: XAML-Namespaces und Namespacezuordnung
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
 ---
@@ -8,7 +9,7 @@ ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Im Folgenden werden die XML/XAML-Namespace (**xmlns**)-Zuordnungen erläutert, wie sie im Stammelement der meisten XAML-Dateien zu finden sind. Darüber hinaus wird erläutert, wie ähnliche Zuordnungen für benutzerdefinierte Typen und Assemblys erstellt werden.
+Im Folgenden werden die XML/XAML-Namespacezuordnungen (**xmlns**) erläutert, wie sie im Stammelement der meisten XAML-Dateien zu finden sind. Darüber hinaus wird erläutert, wie ähnliche Zuordnungen für benutzerdefinierte Typen und Assemblys erstellt werden.
 
 ## Bezug von XAML-Namespaces zu Codedefinitions- und Typbibliotheken
 
@@ -43,21 +44,21 @@ Die XAML-Sprache gibt bestimmte Sprachelemente an, und jedes dieser Elemente sol
 
 ## Andere XAML-Namespaces
 
-Zusätzlich zum Standardnamespace und dem XAML-Sprach-XAML-Namespace „x:“ sind möglicherweise weitere zugeordnete XAML-Namespaces im ursprünglichen Standard-XAML-Code für Apps zu sehen, die so mit Microsoft Visual Studio generiert wurden.
+Zusätzlich zum Standardnamespace und dem XAML-Namespace „x:“ der Programmiersprache XAML sind im anfänglichen standardmäßigen XAML-Code für Apps u. U. weitere zugeordnete XAML-Namespaces enthalten, die von Microsoft Visual Studio generiert wurden.
 
-### **d: (http://schemas.microsoft.com/expression/blend/2008)**
+### **d: (`http://schemas.microsoft.com/expression/blend/2008`)**
 
-Der XAML-Namespace „d:“ soll der Designerunterstützung dienen, speziell der Designerunterstützung auf den XAML-Designoberflächen von Microsoft Visual Studio. Der XAML-Namespace „d:“ ermöglicht Designer- und Designzeitattribute in XAML-Elementen. Diese Designerattribute wirken sich lediglich auf die Designaspekte davon aus, wie sich XAML verhält. Die Designerattribute werden ignoriert, wenn derselbe XAML-Code vom Windows-Runtime-XAML-Parser beim Ausführen einer App geladen wird. Im Allgemeinen sind Designerattribute für alle XAML-Elemente gültig, in der Praxis bestehen jedoch nur bestimmte Szenarien, in denen die Anwendung eines Designerattributs durch Sie selbst angebracht ist. Viele der Designerattribute sind insbesondere dazu vorgesehen, eine höhere Benutzerfreundlichkeit bei der Interaktion mit Datenkontexten und Datenquellen zu gewährleisten, während Sie XAML und Code entwickeln, für die bzw. den die Datenbindung verwendet wird.
+Der XAML-Namespace „d:“ soll der Designerunterstützung dienen, speziell der Designerunterstützung in den XAML-Entwurfsoberflächen von Microsoft Visual Studio. Der XAML-Namespace „d:“ ermöglicht Designer- und Designzeitattribute in XAML-Elementen. Diese Designerattribute wirken sich lediglich auf die Designaspekte davon aus, wie sich XAML verhält. Die Designerattribute werden ignoriert, wenn derselbe XAML-Code vom Windows-Runtime-XAML-Parser beim Ausführen einer App geladen wird. Im Allgemeinen sind Designerattribute für alle XAML-Elemente gültig, in der Praxis bestehen jedoch nur bestimmte Szenarien, in denen die Anwendung eines Designerattributs durch Sie selbst angebracht ist. Viele der Designerattribute sind insbesondere dazu vorgesehen, eine höhere Benutzerfreundlichkeit bei der Interaktion mit Datenkontexten und Datenquellen zu gewährleisten, während Sie XAML und Code entwickeln, für die bzw. den die Datenbindung verwendet wird.
 
--   **Attribute "d:DesignHeight" und "d:DesignWidth":** Diese Attribute werden gelegentlich auf den Stamm der XAML-Datei angewendet, der von Visual Studio oder einer anderen XAML-Designer-Oberfläche erstellt wird. Beispielsweise werden diese Attribute am [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647)-Stamm des XAML festgelegt, das beim Hinzufügen eines neuen **UserControl** zu Ihrem App-Projekt erstellt wird. Diese Attribute vereinfachen das Entwerfen der Zusammensetzung des XAML-Inhalts, sodass Sie bereits im Voraus die Layoutbeschränkungen berücksichtigen können, die u. U. vorhanden sind, sobald der XAML-Inhalt für eine Steuerelementinstanz oder einen anderen Teil einer größeren UI-Seite verwendet wird.
+-   **Attribute „d:DesignHeight“ und „d:DesignWidth“:** Diese Attribute werden gelegentlich auf den Stamm der XAML-Datei angewendet, die von Visual Studio oder einer anderen XAML-Designeroberfläche erstellt wird. Beispielsweise werden diese Attribute am [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647)-Stamm des XAML festgelegt, das beim Hinzufügen eines neuen **UserControl** zu Ihrem App-Projekt erstellt wird. Diese Attribute vereinfachen das Entwerfen der Zusammensetzung des XAML-Inhalts, sodass Sie bereits im Voraus die Layoutbeschränkungen berücksichtigen können, die u. U. vorhanden sind, sobald der XAML-Inhalt für eine Steuerelementinstanz oder einen anderen Teil einer größeren UI-Seite verwendet wird.
 
-   **Hinweis**  Wenn Sie XAML aus Microsoft Silverlight migrieren, sind diese Attribute u. U. in Stammelementen vorhanden, die eine gesamte UI-Seite darstellen. In diesem Fall wird empfohlen, die Attribute zu entfernen. Andere Features des XAML-Designers wie der Simulator eignen sich wahrscheinlich besser zum Entwerfen von Seitenlayouts für die Verarbeitung von Skalierungen und Ansichtszuständen als ein Seitenlayout mit fester Größe mit **d:DesignHeight** und **d:DesignWidth**.
+   **Hinweis**  Wenn Sie XAML aus Microsoft Silverlight migrieren, sind diese Attribute u. U. in Stammelementen enthalten, die eine gesamte UI-Seite darstellen. In diesem Fall wird empfohlen, die Attribute zu entfernen. Andere Features des XAML-Designers wie der Simulator eignen sich wahrscheinlich besser zum Entwerfen von Seitenlayouts für die Verarbeitung von Skalierungen und Ansichtszuständen als ein Seitenlayout mit fester Größe mit **d:DesignHeight** und **d:DesignWidth**.
 
--   **d:DataContext-Attribut:** Sie können dieses Attribut an einem Seitenstamm oder einem Steuerelement festlegen, um alle expliziten oder geerbten [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)-Elemente zu überschreiben, die das Objekt ansonsten hat.
--   **d:DesignSource-Attribut:** Gibt eine Designzeitquelle für eine [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) an, die [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835) überschreibt.
--   **Markuperweiterungen "d:DesignInstance" und "d:DesignData":** Diese Markuperweiterungen werden verwendet, um die Designzeit-Datenressourcen für **d:DataContext** oder **d:DesignSource** bereitzustellen. Die Verwendung von Designzeit-Datenressourcen wird hier nicht vollständig erläutert. Weitere Informationen finden Sie unter [Entwurfszeitattribute](http://go.microsoft.com/fwlink/p/?LinkId=272504). Einige Verwendungsbeispiele finden Sie unter [Beispieldaten für die Entwurfsoberfläche und Prototyperstellung](https://msdn.microsoft.com/library/windows/apps/mt517866).
+-   **d:DataContext-Attribut:** Sie können dieses Attribut für einen Seitenstamm oder ein Steuerelement festlegen, um alle expliziten oder geerbten [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)-Elemente zu überschreiben, die das Objekt ansonsten aufweist.
+-   **d:DesignSource-Attribut:** Gibt eine Entwurfszeit-Datenquelle für [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) an, die [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835) überschreibt.
+-   **Markuperweiterungen „d:DesignInstance“ und „d:DesignData“:** Diese Markuperweiterungen werden verwendet, um die Entwurfszeit-Datenressourcen für **d:DataContext** oder **d:DesignSource** bereitzustellen. Die Verwendung von Designzeit-Datenressourcen wird hier nicht vollständig erläutert. Weitere Informationen finden Sie unter [Entwurfszeitattribute](http://go.microsoft.com/fwlink/p/?LinkId=272504). Einige Verwendungsbeispiele finden Sie unter [Beispieldaten für die Entwurfsoberfläche und Prototyperstellung](https://msdn.microsoft.com/library/windows/apps/mt517866).
 
-### **mc: (http://schemas.openxmlformats.org/markup-compatibility/2006) **
+### **mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
 „mc:“ gibt einen Markupkompatibilitätsmodus zum Lesen von XAML an und unterstützt diesen. In der Regel gehört das „d:“-Präfix zum Attribut **mc:Ignorable**. Diese Methode ermöglicht es Laufzeit-XAML-Parsern, die Designattribute in „d:“ zu ignorieren.
 
@@ -108,6 +109,6 @@ Wenn Sie auf angefügte Eigenschaften verweisen, muss der Besitzer-Typ-Teil der 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,4 +1,5 @@
 ---
+author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
 description: In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in Visual C++-Komponentenerweiterungen (C++/CX) mithilfe der Task-Klasse beschrieben, die im Concurrency-Namespace in „ppltasks.h“ definiert wird.
 title: Asynchrone Programmierung in C++
@@ -12,9 +13,9 @@ In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner 
 
 ## Asynchrone UWP-Typen (Universelle Windows-Plattform)
 
-Die Universelle Windows-Plattform (UWP) umfasst ein ausgearbeitetes Modell für den Aufruf asynchroner Methoden und stellt die Typen bereit, die Sie für die Verwendung dieser Methoden benötigen. Wenn Sie mit dem asynchronen UWP-Modell nicht vertraut sind, sollten Sie den Artikel [Asynchrone Programmierung][AsyncProgramming] lesen, bevor Sie mit diesen Erläuterungen fortfahren.
+Die Universelle Windows-Plattform (UWP) umfasst ein ausgearbeitetes Modell für den Aufruf asynchroner Methoden und stellt die Typen bereit, die Sie für die Verwendung dieser Methoden benötigen. Wenn Sie mit dem asynchronen UWP-Modell nicht vertraut sind, sollten Sie den Artikel [Asynchrone Programmierung][AsyncProgramming] lesen, bevor Sie mit dem Rest dieses Artikels fortfahren.
 
-Sie können zwar die asynchronen UWP-APIs direkt in C++ verwenden, aber es wird empfohlen, die [**Task-Klasse**][task-class] und die zugehörigen Typen und Funktionen zu verwenden. Diese sind im [**Concurrency**][concurrencyNamespace]-Namespace enthalten und in `<ppltasks.h>` definiert. **concurrency::task** ist eine Klasse für allgemeine Zwecke. Bei Verwendung des **/ZW**-Compilerschalters (der für UWP-Apps und die entsprechenden Komponenten benötigt wird) werden jedoch die asynchronen Typen der UWP durch die Task-Klasse gekapselt, was Folgendes vereinfacht:
+Sie können zwar die asynchronen UWP-APIs direkt in C++ verwenden, es wird aber empfohlen, die [**task-Klasse**][task-class] und die zugehörigen Typen und Funktionen zu verwenden. Diese sind im [**Concurrency**][concurrencyNamespace]-Namespace enthalten und in `<ppltasks.h>` definiert. **concurrency::task** ist eine Klasse für allgemeine Zwecke. Bei Verwendung des **/ZW**-Compilerschalters, der für UWP-Apps und die entsprechenden Komponenten benötigt wird, werden jedoch die asynchronen Typen der UWP durch die Task-Klasse gekapselt, was Folgendes vereinfacht:
 
 -   Verkettung mehrerer asynchroner und synchroner Vorgänge
 
@@ -53,7 +54,7 @@ void App::TestAsync()
     // Recommended:
     auto deviceEnumTask = create_task(deviceOp);
 
-    // Call the task’s .then member function, and provide
+    // Call the task's .then member function, and provide
     // the lambda to be invoked when the async operation completes.
     deviceEnumTask.then( [this] (DeviceInformationCollection^ devices ) 
     {       
@@ -69,13 +70,13 @@ void App::TestAsync()
 
 Die Aufgabe, die von der [**task::then**][taskThen]-Funktion erstellt und zurückgegeben wird, wird als *Fortsetzung* bezeichnet. Das Eingabeargument für den benutzerdefinierten Lambda-Ausdruck ist (in diesem Fall) das Ergebnis der beendeten Aufgabe. Derselbe Wert würde auch mit einem Aufruf von [**IAsyncOperation::GetResults**](https://msdn.microsoft.com/library/windows/apps/br206600) bei direkter Verwendung der **IAsyncOperation**-Schnittstelle abgerufen werden.
 
-Der Aufruf der [**task::then**][taskThen]-Methode wird sofort beendet, und der Delegat wird erst ausgeführt, nachdem die asynchronen Vorgänge erfolgreich beendet wurden. In diesem Beispiel wird die Fortsetzung nicht ausgeführt, wenn der asynchrone Vorgang eine Ausnahme auslöst oder aufgrund einer Abbruchanforderung mit einem Abbruch beendet wird. Weiter unten erfahren Sie, wie Sie Fortsetzungen schreiben, die auch bei einem Abbruch oder Fehler der vorhergehenden Aufgabe ausgeführt werden.
+Der Aufruf der [**task::then**][taskThen]-Methode wird sofort beendet. Der Delegat wird erst ausgeführt, nachdem die asynchronen Vorgänge erfolgreich beendet wurden. In diesem Beispiel wird die Fortsetzung nicht ausgeführt, wenn der asynchrone Vorgang eine Ausnahme auslöst oder aufgrund einer Abbruchanforderung mit einem Abbruch beendet wird. Weiter unten erfahren Sie, wie Sie Fortsetzungen schreiben, die auch bei einem Abbruch oder Fehler der vorhergehenden Aufgabe ausgeführt werden.
 
 Sie deklarieren die Aufgabenvariable zwar im lokalen Stapel, aber die Lebensdauer wird so verwaltet, dass die Variable erst gelöscht wird, wenn alle zugehörigen Vorgänge abgeschlossen sind und alle Verweise auf die Variable außerhalb des Bereichs liegen – auch dann, wenn der Aufruf der Methode vor Abschluss des Vorgangs beendet wird.
 
 ## Erstellen von Aufgabenabfolgen
 
-Bei der asynchronen Programmierung werden in vielen Fällen Abfolgen von Vorgängen definiert, sogenannte *Aufgabenabfolgen*, bei denen eine Fortsetzung immer erst ausgeführt wird, wenn die vorhergehende Aufgabe beendet ist. In manchen Fällen erzeugt die letzte (oder *vorhergehende*) Aufgabe einen Wert, den die Fortsetzung als Eingabe akzeptiert. Mithilfe der [**task::then**][taskThen]-Methode können Sie intuitive und leicht nachvollziehbare Aufgabenabfolgen erstellen. Die Methode gibt ein Element vom Typ **task<T>** zurück, wobei **T** der Rückgabetyp der Lambda-Funktion ist. Eine Aufgabenabfolge kann mehrere Fortsetzungen enthalten: `myTask.then(…).then(…).then(…);`
+Bei der asynchronen Programmierung werden in vielen Fällen Abfolgen von Vorgängen definiert, sogenannte *Aufgabenabfolgen*, bei denen eine Fortsetzung immer erst ausgeführt wird, wenn die vorhergehende Aufgabe beendet ist. In manchen Fällen erzeugt die letzte (oder *vorhergehende*) Aufgabe einen Wert, den die Fortsetzung als Eingabe akzeptiert. Mithilfe der [**task::then**][taskThen]-Methode können Sie intuitiv und ganz einfach Aufgabenabfolgen erstellen. Die Methode gibt ein Element vom Typ **task<T>** zurück, wobei **T** der Rückgabetyp der Lambda-Funktion ist. Eine Aufgabenabfolge kann mehrere Fortsetzungen enthalten: `myTask.then(…).then(…).then(…);`
 
 Aufgabenabfolgen sind insbesondere dann nützlich, wenn eine Fortsetzung einen neuen asynchronen Vorgang erstellt. Solche Aufgaben werden als asynchrone Aufgaben bezeichnet. Das folgende Beispiel zeigt eine Aufgabenabfolge mit zwei Fortsetzungen. Die einleitende Aufgabe ruft der Handle für eine bestehende Datei ab. Nach Abschluss dieses Vorgangs startet die erste Fortsetzung einen neuen asynchronen Vorgang, mit dem die Datei gelöscht wird. Nach Abschluss dieses Vorgangs wird die zweite Fortsetzung ausgeführt, die eine Bestätigungsmeldung ausgibt.
 
@@ -107,17 +108,17 @@ Das Beispiel oben zeigt vier zentrale Aspekte:
 
 -   Da die zweite Fortsetzung auf einem Wert basiert, wird sie nicht ausgeführt, wenn der mit dem Aufruf [**DeleteAsync**][deleteAsync] gestartete Vorgang eine Ausnahme auslöst.
 
-**Hinweis**  Aufgabenabfolgen sind nur eine der Möglichkeiten, die **Task**-Klasse zum Erstellen asynchroner Vorgänge zu verwenden. Sie können Vorgänge auch mit den Verknüpfungs- und Auswahloperatoren **&&** und **||** erstellen. Weitere Informationen finden Sie unter [Aufgabenparallelität (Concurrency Runtime)][taskParallelism].
+**Hinweis**  Aufgabenabfolgen sind nur eine Möglichkeit, die **Task**-Klasse zum Erstellen asynchroner Vorgänge zu verwenden. Sie können Vorgänge auch mit den Verknüpfungs- und Auswahloperatoren **&&** und **||** erstellen. Weitere Informationen finden Sie unter [Aufgabenparallelität (Concurrency Runtime)][taskParallelism].
 
 ## Rückgabetypen für Lambda-Funktionen und Aufgaben
 
 Bei Aufgabenfortsetzungen ist der Rückgabetyp der Lambda-Funktion von einem **task**-Objekt umschlossen. Wenn die Lambda-Funktion den **double**-Typ zurückgibt, hat die Fortsetzungsaufgabe den **task<double>**-Typ. Das Aufgabenobjekt ist jedoch so konzipiert, dass es keine unnötig geschachtelten Rückgabetypen erzeugt. Wenn eine Lambda-Funktion den **IAsyncOperation<SyndicationFeed^>^**-Typ zurückgibt, gibt die Fortsetzung den **task<SyndicationFeed^>**-Typ und nicht **task<task<SyndicationFeed^>>** oder **task<IAsyncOperation<SyndicationFeed^>^>^** zurück. Dieser Vorgang wird als *asynchrones Entpacken* bezeichnet und sorgt dafür, dass der asynchrone Vorgang in der Fortsetzung vor dem Aufruf der nächsten Fortsetzung beendet wird.
 
-Beachten Sie oben im Beispiel, dass die Aufgabe den **task<void>**-Typ zurückgibt, obwohl die zugehörige Lambda-Funktion ein [**IAsyncInfo**][IAsyncInfo]-Objekt zurückgegeben hat. Die folgende Tabelle gibt einen Überblick über die Typkonvertierungen zwischen Lambda-Funktionen und den einschließenden Aufgaben:
+Beachten Sie im vorhergehenden Beispiel, dass die Aufgabe den **task<void>**-Typ zurückgibt, obwohl die zugehörige Lambda-Funktion ein [**IAsyncInfo**][IAsyncInfo]-Objekt zurückgegeben hat. Die folgende Tabelle gibt einen Überblick über die Typkonvertierungen zwischen Lambda-Funktionen und den einschließenden Aufgaben:
 
 | | |
 |--------------------------------------------------------|---------------------|
-| Lambda-Rückgabetyp                                     | `.then`-Rückgabetyp |
+| Lambda-Rückgabetyp                                     | `.then` Rückgabetyp |
 | TResult                                                | Task<TResult> |
 | IAsyncOperation<TResult>^                        | Task<TResult> |
 | IAsyncOperationWithProgress<TResult, TProgress>^ | Task<TResult> |
@@ -128,7 +129,7 @@ Beachten Sie oben im Beispiel, dass die Aufgabe den **task<void>**-Typ zurückgi
 
 ## Abbrechen von Aufgaben
 
-In vielen Fällen ist es ratsam, Benutzern die Möglichkeit zum Abbrechen eines asynchronen Vorgangs zu geben. Mitunter müssen Sie möglicherweise außerdem einen Vorgang programmgesteuert außerhalb der Aufgabenabfolge abbrechen. Zwar verfügt jeder \***Async**-Rückgabetyp über eine von [**IAsyncInfo**][IAsyncInfo] geerbte [**Cancel**][IAsyncInfoCancel]-Methode, aber es ist ungünstig, externen Methoden Zugriff darauf zu gewähren. Vorzugsweise sollte für den Abbruch in einer Aufgabenabfolge mithilfe einer [**cancellation\_token\_source**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749985.aspx)-Klasse eine [**cancellation\_token**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749975.aspx)-Klasse erstellt und das Token dann an den Konstruktor der ursprünglichen Aufgabe übergeben werden. Wird eine asynchrone Aufgabe mit einem Abbruchtoken erstellt und die [**cancellation\_token\_source::cancel**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750076.aspx)-Klasse aufgerufen, ruft die Aufgabe im **IAsync\***-Vorgang automatisch **Cancel** auf und übergibt die Abbruchanforderung an die Fortsetzungskette. Im folgenden Pseudocode wird dieses grundlegende Konzept dargestellt.
+In vielen Fällen ist es ratsam, Benutzern die Möglichkeit zum Abbrechen eines asynchronen Vorgangs zu geben. Mitunter müssen Sie außerdem einen Vorgang programmgesteuert von außerhalb der Aufgabenabfolge abbrechen. Zwar verfügt jeder \***Async**-Rückgabetyp über eine von [**IAsyncInfo**][IAsyncInfo] geerbte [**Cancel**][IAsyncInfoCancel]-Methode, aber es ist ungünstig, externen Methoden Zugriff darauf zu gewähren. Vorzugsweise sollte für den Abbruch in einer Aufgabenabfolge mithilfe einer [**cancellation\_token\_source**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749985.aspx)-Klasse eine [**cancellation\_token**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749975.aspx)-Klasse erstellt und das Token dann an den Konstruktor der ursprünglichen Aufgabe übergeben werden. Wird eine asynchrone Aufgabe mit einem Abbruchtoken erstellt und die [**cancellation\_token\_source::cancel**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750076.aspx)-Klasse aufgerufen, ruft die Aufgabe im **IAsync\***-Vorgang automatisch **Cancel** auf und übergibt die Abbruchanforderung an die Fortsetzungskette. Im folgenden Pseudocode wird dieses grundlegende Konzept dargestellt.
 
 ``` cpp
 //Class member:
@@ -145,7 +146,7 @@ auto getFileTask2 = create_task(documentsFolder->GetFileAsync(fileName),
 
 Beim Abbruch einer Aufgabe wird eine [**task\_canceled**][taskCanceled]-Ausnahme in der Aufgabenabfolge weitergegeben. Wertbasierte Fortsetzungen werden nicht ausgeführt. Aufgabenbasierte Fortsetzungen dagegen lösen beim Aufruf von [**task::get**][taskGet] die Ausnahme aus. Stellen Sie bei Fortsetzungen für die Fehlerbehandlung sicher, dass die **task\_canceled**-Ausnahme explizit an die Fortsetzung übergeben wird. (Diese Ausnahme wird nicht von [**Platform::Exception**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh755825.aspx) abgeleitet.)
 
-Abbruchvorgänge sind kooperativ. Wenn eine Fortsetzung neben dem Aufruf einer UWP-Methode zeitintensive Vorgänge ausführt, ist es wichtig, dass Sie den Status des Abbruchtokens regelmäßig überprüfen und die Ausführung bei einem Abbruch beenden. Nach der Bereinigung aller in der Fortsetzung zugeordneten Ressourcen rufen Sie [**cancel\_current\_task**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749945.aspx) auf, um die betreffende Aufgabe abzubrechen und den Abbruch an alle nachfolgenden wertbasierten Fortsetzungen weiterzugeben. Ein weiteres Beispiel: Sie können Aufgabenabfolgen erstellen, die das Ergebnis von [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/BR207871)-Vorgängen darstellen. Wenn der Benutzer auf die Schaltfläche **Abbrechen** klickt, wird die [**IAsyncInfo::Cancel**][IAsyncInfoCancel]-Methode nicht aufgerufen. Stattdessen wird der Vorgang erfolgreich ausgeführt, allerdings mit der Rückgabe **nullptr**. Die Fortsetzung kann den Eingabeparameter testen und **cancel\_current\_task** aufrufen, wenn die Eingabe **nullptr** ist.
+Abbruchvorgänge sind kooperativ. Wenn eine Fortsetzung neben dem Aufruf einer UWP-Methode zeitintensive Vorgänge ausführt, ist es wichtig, dass Sie den Status des Abbruchtokens regelmäßig überprüfen und die Ausführung bei einem Abbruch beenden. Nach der Bereinigung aller in der Fortsetzung zugeordneten Ressourcen rufen Sie [**cancel\_current\_task**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749945.aspx) auf, um die betreffende Aufgabe abzubrechen und den Abbruch an alle nachfolgenden wertbasierten Fortsetzungen weiterzugeben. Ein weiteres Beispiel: Sie können Aufgabenabfolgen erstellen, die das Ergebnis eines [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/BR207871)-Vorgangs darstellen. Wenn der Benutzer auf die Schaltfläche **Abbrechen** klickt, wird die [**IAsyncInfo::Cancel**][IAsyncInfoCancel]-Methode nicht aufgerufen. Stattdessen wird der Vorgang erfolgreich ausgeführt, allerdings mit der Rückgabe **nullptr**. Die Fortsetzung kann den Eingabeparameter testen und **cancel\_current\_task** aufrufen, wenn die Eingabe **nullptr** ist.
 
 Weitere Informationen finden Sie unter [Abbruch in der PPL](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd984117.aspx).
 
@@ -216,7 +217,7 @@ void App::SetFeedText()
 }
 ```
 
-Gibt die Aufgabe nicht [**IAsyncAction**][IAsyncAction] oder [**IAsyncOperation**][IAsyncOperation] zurück, ist sie nicht apartmentfähig, und ihre Fortsetzungen werden standardmäßig im ersten verfügbaren Hintergrundthread ausgeführt.
+Gibt eine Aufgabe nicht [**IAsyncAction**][IAsyncAction] oder [**IAsyncOperation**][IAsyncOperation] zurück, ist sie nicht apartmentfähig, und ihre Fortsetzungen werden standardmäßig im ersten verfügbaren Hintergrundthread ausgeführt.
 
 Sie können den Standardthreadkontext für beide Aufgabenarten außer Kraft setzen, indem Sie die Überladung der [**task::then**][taskThen]-Methode verwenden, die einen [**task\_continuation\_context**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749968.aspx)-Kontext verwendet. In manchen Fällen ist es zum Beispiel vorteilhaft, die Fortsetzung einer apartmentfähigen Aufgabe für einen Hintergrundthread zu planen. Dabei können Sie [**task\_continuation\_context::use\_arbitrary**][useArbitrary] übergeben, um die Vorgänge der Aufgabe für den nächsten verfügbaren Thread in einem Thread mit mehreren Apartments (Multithread-Apartment, MTA) zu planen. Dadurch wird die Leistung der Fortsetzung verbessert, da die entsprechenden Vorgänge nicht mit anderen Vorgängen im UI-Thread synchronisiert sein müssen.
 
@@ -234,7 +235,7 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
     {
         // Create the async operation. feedOp is an 
         // IAsyncOperationWithProgress<SyndicationFeed^, RetrievalProgress>^
-        // but we don’t handle progress in this example.
+        // but we don't handle progress in this example.
 
         auto feedUri = ref new Uri(ref new String(url.c_str()));
         auto feedOp = client->RetrieveFeedAsync(feedUri);
@@ -297,23 +298,23 @@ Methoden mit Unterstützung von [**IAsyncOperationWithProgress**](https://msdn.m
 * [Aufgabenklasse][task-class]
  
 <!-- LINKS -->
-[AsyncProgramming]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464924.aspx> „AsyncProgramming“
-[concurrencyNamespace]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492819.aspx> „Concurrency-Namespace“
-[createTask]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh913025.aspx> „CreateTask“
-[createAsyncCpp]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx> „CreateAsync“
-[deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199> „DeleteAsync“
-[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580> „IAsyncAction“
-[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598> „IAsyncOperation“
-[IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587> „IAsyncInfo“
-[IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel> „IAsyncInfoCancel“
-[taskCanceled]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750106.aspx> „TaskCancelled“
-[task-class]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx> „Task Class“
-[taskGet]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750017.aspx> „TaskGet“
-[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx> „Aufgabenparallelität“
-[taskThen]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx> „TaskThen“
-[useArbitrary]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750036.aspx> „UseArbitrary“
+[AsyncProgramming]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464924.aspx> "AsyncProgramming"
+[concurrencyNamespace]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492819.aspx> "Concurrency-Namespace"
+[createTask]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh913025.aspx> "CreateTask"
+[createAsyncCpp]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx> "CreateAsync"
+[deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199> "DeleteAsync"
+[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580> "IAsyncAction"
+[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598> "IAsyncOperation"
+[IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587> "IAsyncInfo"
+[IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel> "IAsyncInfoCancel"
+[taskCanceled]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750106.aspx> "TaskCancelled"
+[task-class]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx> "Aufgabenklasse"
+[taskGet]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750017.aspx> "TaskGet"
+[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx> "Task-Parallelität"
+[taskThen]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
+[useArbitrary]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

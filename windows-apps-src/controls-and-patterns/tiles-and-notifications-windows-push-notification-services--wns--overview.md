@@ -1,6 +1,7 @@
 ---
-description: Mithilfe von WNS können Drittanbieterentwickler Popup-, Kachel-, Signalupdates und unformatierte Updates von eigenen Clouddiensten aus senden. Dadurch steht ein Mechanismus zur Verfügung, mit dem Sie Ihren Benutzern auf energieeffiziente und verlässliche Weise neue Updates bereitstellen können.
-title: Übersicht über die Windows-Pushbenachrichtigungsdienste (WNS)
+author: mijacobs
+Description: Mithilfe des Windows-Pushbenachrichtigungsdiensts (WNS) können Drittanbieterentwickler Popup-, Kachel-, Signalupdates und unformatierte Updates von ihren eigenen Clouddiensten aus senden. Dadurch steht ein Mechanismus zur Verfügung, mit dem Sie Ihren Benutzern auf energieeffiziente und verlässliche Weise neue Updates bereitstellen können.
+title: Übersicht über die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 label: TBD
 template: detail.hbs
@@ -9,7 +10,7 @@ template: detail.hbs
 # Übersicht über die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 
 Mithilfe des Windows-Pushbenachrichtigungsdiensts (WNS) können Drittanbieterentwickler Popup-, Kachel-, Signalupdates und unformatierte Updates von ihren eigenen Clouddiensten aus senden. Dadurch steht ein Mechanismus zur Verfügung, mit dem Sie Ihren Benutzern auf energieeffiziente und verlässliche Weise neue Updates bereitstellen können.
@@ -143,7 +144,7 @@ Dieses Diagramm veranschaulicht den Datenfluss:
 -   Ist das Gerät offline, speichert WNS standardmäßig für jede App bis zu fünf Kachelbenachrichtigungen (bei aktivierter Warteschlange, ansonsten nur eine), eine Signalbenachrichtigung für jeden Kanal-URI und keine unformatierten Benachrichtigungen. Dieses standardmäßige Zwischenspeicherungsverhalten kann über den [X-WNS-Cache-Policy-Header](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_cache) geändert werden. Beachten Sie, dass Popupbenachrichtigungen nie gespeichert werden, wenn das Gerät offline ist.
 -   In Szenarien mit personalisiertem Benachrichtigungsinhalt für den Benutzer empfiehlt WNS, dass der Clouddienst die Updates umgehend nach Eingang übermittelt. Beispiele für ein solches Szenario wären Feedupdates für soziale Medien, Chateinladungen, Benachrichtigungen über neue Nachrichten oder Warnungen. Als Alternative ist auch denkbar, dass das gleiche allgemeine Update häufig an eine große Untergruppe von Benutzern gesendet wird (beispielsweise Wetterinfos, Börsendaten oder Nachrichten). Gemäß den WNS-Richtlinien muss der zeitliche Abstand zwischen diesen Updates mindestens 30 Minuten betragen. Häufigere Routineupdates werden vom Endbenutzer oder von WNS unter Umständen als Missbrauch wahrgenommen.
 
-## <span id="expiry"></span><span id="EXPIRY"></span>Ablauf von Kachel- und Signalbenachrichtigungen
+## <span id="expiry"></span><span id="EXPIRY"></span>Ablauf der Kachel- und Signalbenachrichtigungen
 
 
 Standardmäßig laufen die Kachel- und Signalbenachrichtigungen drei Tage, nachdem sie heruntergeladen wurden, ab. Wenn eine Benachrichtigung abläuft, wird der Inhalt von der Kachel oder aus der Warteschlange entfernt und nicht mehr angezeigt. Daher wird empfohlen, für alle Kachel- und Signalbenachrichtigungen eine Gültigkeitsdauer festzulegen. Verwenden Sie eine Ablaufzeit, die für Ihre App sinnvoll ist. So können Sie sicherstellen, dass der Inhalt einer Kachel nur so lange beibehalten wird, wie er von Bedeutung ist. Eine explizite Ablaufzeit ist für Inhalte mit definierter Lebensdauer von großer Bedeutung. Durch sie wird außerdem sichergestellt, dass veraltete Inhalte entfernt werden, wenn Ihr Clouddienst keine Benachrichtigungen mehr sendet oder der Benutzer die Verbindung mit dem Netzwerk für längere Zeit trennt.
@@ -158,7 +159,7 @@ Während eines aktiven Börsenhandelstags können Sie beispielsweise die Gültig
 Der Stromsparmodus schränkt Hintergrundaktivitäten auf dem Gerät ein und verlängert dadurch die Akkulaufzeit. In Windows 10 kann der Benutzer den Stromsparmodus auf die automatische Aktivierung festlegen, wenn der Akku einen bestimmten Schwellenwert unterschreitet. Wenn der Stromsparmodus aktiviert ist, ist der Empfang von Pushbenachrichtigungen deaktiviert, um Energie zu sparen. Es gibt allerdings einige Ausnahmen. Mit den folgenden Einstellungen in Windows 10 (in der **Einstellungs**-App) kann der Stromsparmodus so eingerichtet werden, dass Ihre App auch bei aktiviertem Stromsparmodus Pushbenachrichtigungen empfängt.
 
 -   **Im Stromsparmodus Pushbenachrichtigungen von jeder App zulassen**: Alle Apps können Pushbenachrichtigungen empfangen, wenn der Stromsparmodus aktiviert ist. Beachten Sie, dass diese Einstellung nur für Desktop-Editionen von Windows 10 gilt (Home, Pro, Enterprise und Education).
--   **Immer zugelassen**: Bestimmte Apps können im Hintergrund ausgeführt werden, wenn der Stromsparmodus aktiviert ist. Dies beinhaltet auch den Empfang von Pushbenachrichtigungen. Die Liste wird manuell vom Benutzer verwaltet.
+-   **Immer zugelassen**: Bestimmte Apps können im Hintergrund ausgeführt werden, wenn der Stromsparmodus aktiviert ist, und dabei Pushbenachrichtigungen empfangen. Die Liste wird manuell vom Benutzer verwaltet.
 
 Es ist nicht möglich, den Status dieser beiden Einstellungen zu überprüfen, Sie können aber den Status des Stromsparmodus feststellen. Verwenden Sie in Windows 10 die [**EnergySaverStatus**](https://msdn.microsoft.com/library/windows/apps/dn966190)-Eigenschaft, um den Status des Stromsparmodus zu überprüfen. Ihre App kann auch mithilfe des [**EnergySaverStatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn966191)-Ereignisses Änderungen des Stromsparmodus überwachen.
 
@@ -261,6 +262,6 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die unive
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

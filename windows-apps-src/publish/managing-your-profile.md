@@ -1,7 +1,8 @@
 ---
+author: jnHs
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: Verwalten Ihrer Kontoeinstellungen und Profilinformationen
-description: Entwicklerkontoeinstellungen und Profilinformationen im Abschnitt Kontoeinstellungen des einheitlichen Windows Dev Center-Dashboards anzeigen und aktualisieren
+description: Ihre Entwicklerkontoeinstellungen und Profilinformationen können Sie im Abschnitt Kontoeinstellungen des einheitlichen Windows Dev Center-Dashboards anzeigen und aktualisieren.
 ---
 # Verwalten Ihrer Kontoeinstellungen und Profilinformationen
 
@@ -31,6 +32,6 @@ Einige Programme bieten unter Umständen die Möglichkeit, die Funktionen Ihres 
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

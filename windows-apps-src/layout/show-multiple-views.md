@@ -1,16 +1,13 @@
 ---
-Description: Sie können die Produktivität der Benutzer steigern, indem Sie ihnen ermöglichen, unabhängige Teile der App in separaten Fenstern anzuzeigen.
+author: Jwmsft
+Description: Sie können Ihren Benutzern zu mehr Produktivität verhelfen, indem Sie ihnen ermöglichen, unabhängige Teile der App in separaten Fenstern anzuzeigen.
 title: Anzeigen mehrerer Ansichten für eine App
 ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
-label: Anzeigen mehrerer Ansichten für eine App
+label: Show multiple views for an app
 template: detail.hbs
 ---
 
 # Anzeigen mehrerer Ansichten für eine App
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
 
 Sie können die Produktivität der Benutzer steigern, indem Sie ihnen ermöglichen, unabhängige Teile der App in separaten Fenstern anzuzeigen. Ein typisches Beispiel ist eine E-Mail-App, bei der auf der Hauptbenutzeroberfläche die Liste der E-Mails und eine Vorschau der ausgewählten E-Mail angezeigt werden. Benutzer können die Nachrichten jedoch auch in separaten Fenstern öffnen und nebeneinander anzeigen lassen.
 
@@ -184,6 +181,6 @@ Wenn Sie [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

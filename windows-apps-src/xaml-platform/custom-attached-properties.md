@@ -1,5 +1,6 @@
 ---
-description: So wird eine angefügte XAML-Eigenschaft als Abhängigkeitseigenschaft implementiert und die Accessorkonvention definiert, damit sie in XAML verwendet werden kann
+author: jwmsft
+description: Erläutert, wie eine angefügte XAML-Eigenschaft als Abhängigkeitseigenschaft implementiert und die Accessorkonvention definiert wird, die erforderlich ist, damit die angefügte Eigenschaft in XAML verwendet werden kann.
 title: Benutzerdefinierte angefügte Eigenschaften
 ms.assetid: E9C0C57E-6098-4875-AA3E-9D7B36E160E0
 ---
@@ -24,7 +25,7 @@ Möglicherweise möchten Sie eine angefügte Eigenschaft erstellen, wenn es eine
 
 Wenn Sie die angefügte Eigenschaft immer für die Verwendung mit anderen Typen definieren, muss die Klasse, in der die Eigenschaft registriert ist, nicht aus [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) abgeleitet werden. Die Zielparameter für Accessoren müssen jedoch **DependencyObject** verwenden, wenn Sie das typische Modell befolgen, bei dem Ihre angefügte Eigenschaft auch eine Abhängigkeitseigenschaft sein kann, sodass Sie den Sicherungseigenschaftsspeicher verwenden können.
 
-Sie definieren Ihre angefügte Eigenschaft als Abhängigkeitseigenschaft, indem Sie eine **public** **static** **readonly**-Eigenschaft des Typs [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) deklarieren. Sie definieren diese Eigenschaft mithilfe des Rückgabewerts der [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833)-Methode. Der Eigenschaftenname muss mit dem Namen der angefügten Eigenschaft übereinstimmen, die Sie als **RegisterAttached** *name*-Parameter angeben. Am Ende muss die Zeichenfolge „Property“ hinzugefügt sein. Dies ist die bestehende Konvention zum Benennen der Bezeichner von Abhängigkeitseigenschaften im Verhältnis mit den Eigenschaften, die sie darstellen.
+Sie definieren Ihre angefügte Eigenschaft als Abhängigkeitseigenschaft, indem Sie eine **public****static****readonly**-Eigenschaft des Typs [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) deklarieren. Sie definieren diese Eigenschaft mithilfe des Rückgabewerts der [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833)-Methode. Der Eigenschaftenname muss mit dem Namen der angefügten Eigenschaft übereinstimmen, die Sie als **RegisterAttached***name*-Parameter angeben. Am Ende muss die Zeichenfolge „Property“ hinzugefügt sein. Dies ist die bestehende Konvention zum Benennen der Bezeichner von Abhängigkeitseigenschaften im Verhältnis mit den Eigenschaften, die sie darstellen.
 
 Der Hauptunterschied beim Definieren einer benutzerdefinierten Eigenschaft und beim Definieren einer benutzerdefinierten Abhängigkeitseigenschaft besteht darin, wie Sie die Accessoren oder Wrapper definieren. Anstatt die unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md) beschriebene Wrappertechnik zu verwenden, müssen Sie auch statische **Get***PropertyName*- und **Set***PropertyName*-Methoden als Accessoren für die angefügte Eigenschaft bereitstellen. Die Accessoren werden hauptsächlich vom XAML-Parser verwendet, obwohl sie auch von anderen aufrufenden Elementen verwendet werden können, um Werte in Nicht-XAML-Szenarien festzulegen.
 
@@ -34,25 +35,35 @@ Der Hauptunterschied beim Definieren einer benutzerdefinierten Eigenschaft und b
 
 Die Signatur für den **Get**_PropertyName_-Accessor lautet folgendermaßen.
 
-`public static` _valueType_ **Get**_PropertyName_ `(DependencyObject target)`
+`public static` _valueType_
+            **Get**
+            _PropertyName_ `(DependencyObject target)`
 
 Bei Microsoft Visual Basic lautet sie folgendermaßen.
 
-` Public Shared Function Get`_PropertyName_`(ByVal target As DependencyObject) As `_valueType_`)`
+` Public Shared Function Get`_PropertyName_
+            `(ByVal target As DependencyObject) As `
+            _valueType_`)`
 
 Das *target*-Objekt kann in Ihrer Implementierung einen spezielleren Typ aufweisen, muss jedoch von [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) abgeleitet sein. Der *valueType*-Rückgabewert kann in Ihrer Implementierung auch einen spezielleren Typ aufweisen. Der grundlegende **Object**-Typ wird akzeptiert. Häufig soll jedoch Ihre angefügte Eigenschaft Typsicherheit erzwingen. Die Verwendung der Typisierung in den Getter- und Setter-Signaturen ist eine empfohlene Typsicherheitstechnik.
 
 Die Signatur für den **Set***PropertyName*-Accessor lautet folgendermaßen.
 
-`  public static void Set`_PropertyName_` (DependencyObject target , `_valueType_` value)`
+`  public static void Set`_PropertyName_
+            ` (DependencyObject target , `
+            _valueType_` value)`
 
 Bei Microsoft Visual Basic lautet sie folgendermaßen.
 
-`Public Shared Sub Set`_PropertyName_` (ByVal target As DependencyObject, ByVal value As `_valueType_`)`
+`Public Shared Sub Set`_PropertyName_
+            ` (ByVal target As DependencyObject, ByVal value As `
+            _valueType_`)`
 
 Das *target*-Objekt kann in Ihrer Implementierung einen spezielleren Typ aufweisen, muss jedoch von [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) abgeleitet sein. Das *value*-Objekt und dessen *valueType* können in Ihrer Implementierung einen spezielleren Typ aufweisen. Beachten Sie, dass der Wert für diese Methode die Eingabe ist, die vom XAML-Prozessor stammt, wenn er Ihre angefügte Eigenschaft im Markup feststellt. Die Typkonvertierung oder vorhandene Markuperweiterung muss für den von Ihnen verwendeten Typ unterstützt werden, damit der entsprechende Typ auf der Grundlage eines Attributwerts (der letztlich nur eine Zeichenfolge ist) erstellt werden kann. Der grundlegende **Object**-Typ ist akzeptabel. Häufig möchten Sie jedoch zusätzliche Typsicherheit erreichen. Versehen Sie hierzu die Accessoren mit einer Typerzwingung.
 
-**Hinweis**  Es ist auch möglich, über die Eigenschaftselementsyntax eine angefügte Eigenschaft zu definieren, die den beabsichtigten Zweck angibt. In diesem Fall benötigen Sie keine Typkonvertierung für die Werte. Sie müssen allerdings sicherstellen, dass die beabsichtigten Werte in XAML konstruierbar sind. [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505) ist ein Beispiel für eine vorhandene angefügte Eigenschaft, die nur die Eigenschaftselementverwendung unterstützt.
+**Hinweis**  Es ist auch möglich, über die Eigenschaftselementsyntax eine angefügte Eigenschaft zu definieren, die den beabsichtigten Zweck angibt. In diesem Fall benötigen Sie keine Typkonvertierung für die Werte. Sie müssen allerdings sicherstellen, dass die beabsichtigten Werte in XAML konstruierbar sind. [
+              **VisualStateManager.VisualStateGroups**
+            ](https://msdn.microsoft.com/library/windows/apps/hh738505) ist ein Beispiel für eine vorhandene angefügte Eigenschaft, die nur die Eigenschaftselementverwendung unterstützt.
 
 ## Codebeispiel
 
@@ -174,7 +185,7 @@ Nachdem Sie die angefügte Eigenschaft definiert und ihre unterstützenden Eleme
 
 Eine XML-Namespacezuordnung wird in der Regel im Stammelement einer XAML-Seite platziert. Für die Klasse mit dem Namen `GameService` im Namespace `UserAndCustomControls`, der die in den vorherigen Ausschnitten dargestellten Definitionen der angefügten Eigenschaften enthält, sieht die Zuordnung z. B. folgendermaßen aus.
 
-```XAML
+```XML
 <UserControl
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:uc="using:UserAndCustomControls"
@@ -184,30 +195,14 @@ Eine XML-Namespacezuordnung wird in der Regel im Stammelement einer XAML-Seite p
 
 Mithilfe der Zuordnung können Sie die angefügte `GameService.IsMovable` -Eigenschaft für beliebige Elemente festlegen, die Ihrer Zieldefinition entsprechen. Dies schließt auch einen vorhandenen von Windows-Runtime definierten Typ mit ein.
 
-```XAML
-<Image uc:GameService.IsMovable="true" .../></code></pre></td>
-</tr>
-</tbody>
-</table>
+```XML
+<Image uc:GameService.IsMovable="true" .../>
 ```
 
 Wenn Sie die Eigenschaft für ein Element festlegen, das sich auch im selben zugeordneten XML-Namespace befindet, müssen Sie das Präfix dennoch in den Namen der angefügten Eigenschaft einfügen. Das liegt daran, dass das Präfix den Besitzertyp qualifiziert. Es kann nicht angenommen werden, dass sich das Attribut der angefügten Eigenschaft innerhalb desselben XML-Namespace wie das Element befindet, in dem das Attribut enthalten ist, auch wenn Attribute gemäß normalen XML-Regeln Namespaces von Elementen erben können. Wenn Sie beispielsweise `GameService.IsMovable` für einen benutzerdefinierten Typ von `ImageWithLabelControl` (Definition nicht dargestellt) festlegen, sieht das XAML-Element nach wie vor folgendermaßen aus, auch wenn beide im selben Codenamespace definiert und demselben Präfix zugeordnet sind.
 
-```XAML
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XAML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<uc:ImageWithLabelControl uc:GameService.IsMovable="true" .../></code></pre></td>
-</tr>
-</tbody>
-</table>
+```XML
+<uc:ImageWithLabelControl uc:GameService.IsMovable="true" .../>
 ```
 
 **Hinweis**  Wenn Sie eine XAML-Benutzeroberfläche mit C++ schreiben, müssen Sie den Header für den benutzerdefinierten Typ, der die angefügte Eigenschaft definiert, jedes Mal einfügen, wenn eine XAML-Seite diesen Typ verwendet. Jede XAML-Seite hat einen zugeordneten .xaml.h-CodeBehind-Header. Dort sollten Sie (mithilfe von **\#include**) den Header für die Definition des Besitzertyps der angefügten Eigenschaft einfügen.
@@ -256,6 +251,6 @@ Der Code sieht ähnlich dem folgenden Pseudocode aus:
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

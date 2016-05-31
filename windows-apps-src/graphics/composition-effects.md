@@ -1,4 +1,5 @@
 ---
+author: scottmill
 ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
 title: Kompositionseffekte
 description: Mithilfe von Effekt-APIs können Entwickler anpassen, wie ihre Benutzeroberfläche gerendert wird.
@@ -29,8 +30,8 @@ Derzeit unterstützt die Komposition folgende Effekte:
 
 | Effekt               | Beschreibung                                                                                                                                                                                                                |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2D-affine Transformation  | Wendet eine 2D-affine Transformationsmatrix auf ein Bild an. Dieser Effekt wurde verwendet, um die Alphamaske in unseren [Effektbeispielen](https://github.com/Microsoft/composition/tree/master/SDK10240_WIN10_RTM/BasicCompositonEffects) zu animieren.       |
-| Arithmetische Komposition | Kombiniert zwei Bilder mittels einer flexiblen Gleichung. Eine arithmetische Komposition wurde verwendet, um einen Überblendungseffekt in unseren [Beispielen](https://github.com/Microsoft/composition/tree/master/SDK10240_WIN10_RTM/BasicCompositonEffects) zu erzeugen. |
+| 2D-affine Transformation  | Wendet eine 2D-affine Transformationsmatrix auf ein Bild an. Dieser Effekt wurde verwendet, um die Alphamaske in unseren [Effektbeispielen](http://go.microsoft.com/fwlink/?LinkId=785341) zu animieren.       |
+| Arithmetische Komposition | Kombiniert zwei Bilder mittels einer flexiblen Gleichung. Eine arithmetische Komposition wurde verwendet, um einen Überblendungseffekt in unseren [Beispielen](http://go.microsoft.com/fwlink/?LinkId=785341) zu erzeugen. |
 | Fülleffekt         | Erzeugt einen Fülleffekt, der zwei Bilder kombiniert. Die Komposition stellt 21 der 26 in Win2D unterstützten [Füllmethoden](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.md) bereit.        |
 | Farbquelle         | Generiert ein Bild, das eine Volltonfarbe enthält.                                                                                                                                                                               |
 | Komposition            | Kombiniert zwei Bilder. Die Komposition stellt alle 13 in Win2D unterstützten [Kompositionsmodi](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.md) bereit.                                              |
@@ -116,11 +117,11 @@ Starten Sie wie folgt die Animation der Sättigungseigenschaft des Effekts:
 catEffect.Properties.StartAnimation("saturationEffect.Saturation", effectAnimation);
 ```
 
-Im Beispiel [Entsättigung – Animation](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/BasicCompositonEffects/Desaturation%20-%20Animation) finden Sie mithilfe von Keyframes animierte Effekteigenschaften. Das [AlphaMask-Beispiel](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/BasicCompositonEffects/AlphaMask) enthält Informationen zur Verwendung von Effekten und Ausdrücken.
+Im Beispiel [Entsättigung – Animation](http://go.microsoft.com/fwlink/?LinkId=785342) finden Sie mithilfe von Keyframes animierte Effekteigenschaften. Das [AlphaMask-Beispiel](http://go.microsoft.com/fwlink/?LinkId=785343) enthält Informationen zur Verwendung von Effekten und Ausdrücken.
 
 ### Mehrere Effektinstanzen mit unabhängigen Eigenschaften
 
-Wenn angegeben wird, dass ein Parameter während der Effektkompilierung dynamisch sein soll, kann der Parameter pro Effektinstanz geändert werden. Dadurch können zwei visuelle Elemente denselben Effekt verwenden, aber mit unterschiedlichen Effekteigenschaften gerendert werden. Weitere Informationen finden Sie im [Beispiel](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/BasicCompositonEffects/ColorSource%20and%20Blend) zum ColorSource- und Blend-Effekt.
+Wenn angegeben wird, dass ein Parameter während der Effektkompilierung dynamisch sein soll, kann der Parameter pro Effektinstanz geändert werden. Dadurch können zwei visuelle Elemente denselben Effekt verwenden, aber mit unterschiedlichen Effekteigenschaften gerendert werden. Weitere Informationen finden Sie im [Beispiel](http://go.microsoft.com/fwlink/?LinkId=785344) zum ColorSource- und Blend-Effekt.
 
 ## Erste Schritte mit Kompositionseffekten
 
@@ -161,7 +162,7 @@ In den nächsten Schritten verwenden wir Composition-APIs, um einen Sättigungse
 ![Quellbild](images/composition-cat-source.png)
 ### Festlegen der Grundlagen für die Komposition
 
-Anhand des [Beispiels für die visuelle Kompositionsstruktur](https://github.com/Microsoft/composition/tree/master/SDK10586_NOV_UPDATE_RTM/CompositionVisual) auf GitHub erfahren Sie, wie Sie den „Windows.UI.Composition“-Kompositor einrichten, den „ContainerVisual“-Stamm angeben und diesen dem Hauptfenster zuordnen.
+Anhand des [Beispiels für die visuelle Kompositionsstruktur](http://go.microsoft.com/fwlink/?LinkId=785345) auf GitHub erfahren Sie, wie Sie den „Windows.UI.Composition“-Kompositor einrichten, den „ContainerVisual“-Stamm angeben und diesen dem Hauptfenster zuordnen.
 
 ```cs
 _compositor = new Compositor();
@@ -242,6 +243,6 @@ brush.Surface = imageSource.Surface;
 
 
 
-<!--HONumber=Mar16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
