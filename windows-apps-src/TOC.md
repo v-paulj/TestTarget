@@ -371,15 +371,9 @@
 ##### [Exemplarische Vorgehensweise: Beispiele für die Portierung von OpenGL ES 2.0](gaming/walkthrough-sample-ports-from-opengl-es-2-0.md)
 ###### [Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11,1](gaming/port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
 ####### [Shaderobjekte portieren](gaming/port-the-shader-config.md)
-            
-####### 
-            [Vertexpuffer und -Daten portieren](gaming/port-the-vertex-buffers-and-data-config.md)
-            
-####### 
-            [GLSL portieren](gaming/port-the-glsl.md)
-            
-####### 
-            [Auf den Bildschirm zeichnen](gaming/draw-to-the-screen.md)
+####### [Vertexpuffer und -Daten portieren](gaming/port-the-vertex-buffers-and-data-config.md)
+####### [GLSL portieren](gaming/port-the-glsl.md)
+####### [Auf den Bildschirm zeichnen](gaming/draw-to-the-screen.md)
 ##### [OpenGL ES 2.0 zu Direct3D 11.1 – Referenz](gaming/opengl-es-2-0-to-directx-11-1-reference.md)
 ###### [GLSL-zu-HLSL-Referenz](gaming/glsl-to-hlsl-reference.md)
 ### [Ressourcen für die Spieleprogrammierung](gaming/additional-directx-game-programming-resources.md)
