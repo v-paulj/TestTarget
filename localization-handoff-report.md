@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\development-environment-setup.md](https://github.com/Microsoft/windows-apps/blob/ed2a4ab4ae29e739d5048d5c928ae0d5878363dc/windows-apps-src/xbox-apps/development-environment-setup.md) | OutofSyncHandedBackSuccess | [Details](#e6fdd7bbab07f16d13a4c6399273ac47c62e30303822)
+ [windows-apps-src\publish\payout-summary.md](https://github.com/Microsoft/windows-apps/blob/c626a828f9cee6b23ec26fc2eaa60a6477870baf/windows-apps-src/publish/payout-summary.md) | OutofSyncHandedBackSuccess | [Details](#773a072f5656068eb6e0b2d792cf73a7ff1d16f03532)
 
 ## Item Details
-##### <a name='e6fdd7bbab07f16d13a4c6399273ac47c62e30303822'></a> Source: [windows-apps-src\xbox-apps\development-environment-setup.md](https://github.com/Microsoft/windows-apps/blob/ed2a4ab4ae29e739d5048d5c928ae0d5878363dc/windows-apps-src/xbox-apps/development-environment-setup.md)
+##### <a name='773a072f5656068eb6e0b2d792cf73a7ff1d16f03532'></a> Source: [windows-apps-src\publish\payout-summary.md](https://github.com/Microsoft/windows-apps/blob/c626a828f9cee6b23ec26fc2eaa60a6477870baf/windows-apps-src/publish/payout-summary.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [development-environment-setup.065dfefbcdf7dc1b71606c49744ab389600f613c.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/6e5f80534f9e0bf529311f1f564627c016b600af/ol-handoff/Microsoft/windows-apps.de-de/master/development-environment-setup.065dfefbcdf7dc1b71606c49744ab389600f613c.de-de.xlf)
-* Handoff Datetime: 2016-06-01 21:56:15
+* Handoff File: [payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/a39b95a858f5edf062d1e3a0208b7cdaf30f00a5/ol-handoff/Microsoft/windows-apps.de-de/master/payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.de-de.xlf)
+* Handoff Datetime: 2016-06-01 23:32:16
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\xbox-apps\development-environment-setup.md](https://github.com/Microsoft/windows-apps.de-de/blob/bc116d2542b0e55dbcea8b0066b22f4fe390f61b/windows-apps-src/xbox-apps/development-environment-setup.md)
-* Current Handback File: [development-environment-setup.065dfefbcdf7dc1b71606c49744ab389600f613c.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/development-environment-setup.065dfefbcdf7dc1b71606c49744ab389600f613c.de-de.xlf)
+* Current Target File: [windows-apps-src\publish\payout-summary.md](https://github.com/Microsoft/windows-apps.de-de/blob/bc116d2542b0e55dbcea8b0066b22f4fe390f61b/windows-apps-src/publish/payout-summary.md)
+* Current Handback File: [payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.de-de.xlf)
 * Current Handback Datetime: 2016-05-31 12:25:12
 * [Back to Top](#report-top)
 
