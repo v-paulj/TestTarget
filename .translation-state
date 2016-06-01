@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "ba56cb495cf2318a1b9791f3e8a7504a28b5d531",
+  "LastProcessedCommit": "a71f79bd6789452bdc22ad31c2190704fc77afba",
   "LastTranslatedCommit": "bc116d2542b0e55dbcea8b0066b22f4fe390f61b",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
@@ -68765,6 +68765,36 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\create-an-ad-campaign-for-your-app.0957a5069637642985320cbb8e8277b9391121e3.de-de.xlf",
       "HandoffFileCommit": "66452d4d90595d83106a406687153c2c2b2037ff",
       "HandoffDateTime": "2016-06-01T17:37:19.5635412Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "b3509114cee233b451dbe769b945c354e713d555": {
+      "FileHash": "b3509114cee233b451dbe769b945c354e713d555",
+      "SourceFileCommit": "cde4263cbf49ab3347752be678f1cbdac5d33eb8",
+      "SourceFilePath": "windows-apps-src\\xbox-apps\\getting-started.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "windows-apps-src\\xbox-apps\\getting-started.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\windows-apps.de-de\\master\\getting-started.e4f343d7b5d7d1d1af63a09965ea9cc6ef148b08.de-de.xlf",
+      "HandoffFileCommit": "aa48b0c50be55f04db60df7909e23f0aaffbca5e",
+      "HandoffDateTime": "2016-06-01T19:14:11.3419167Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
