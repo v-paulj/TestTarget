@@ -13,7 +13,7 @@ title: Erstellen eines Anzeigensteuerelements in JavaScript
 
 Dieses Beispiel zeigt, wie Sie programmgesteuert ein [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Element mit JavaScript erstellen.
 
-## HTML-<div>-Element für AdControl
+## HTML-div-Element für AdControl
 
 Das **AdControl** benötigt ein **div**-Element auf der HTML-Seite, auf der die Werbung angezeigt wird. Der folgende Code ist ein Beispiel für so ein **div**-Element.
 
