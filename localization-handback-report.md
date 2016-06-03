@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\monetize\create-an-adcontrol-in-javascript.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/create-an-adcontrol-in-javascript.md) | InSyncHandedBackSuccess | [Details](#481f9d785181ca197debdb807bb0b0c7b41686323261)
 
 ## Item Details
+##### <a name='481f9d785181ca197debdb807bb0b0c7b41686323261'></a> Source: [windows-apps-src\monetize\create-an-adcontrol-in-javascript.md](https://github.com/Microsoft/windows-apps/blob/cf695b5c20378f7bbadafb5b98cdd3327bcb0be6/windows-apps-src/monetize/create-an-adcontrol-in-javascript.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\monetize\create-an-adcontrol-in-javascript.md](https://github.com/Microsoft/windows-apps.de-de/blob/d5e06e8fe3a183be7093e3c41feee561922b56ea/windows-apps-src/monetize/create-an-adcontrol-in-javascript.md)
+* Handoff File: [create-an-adcontrol-in-javascript.941a971a20af7c9c5da835f14d0edb4c4e25ac63.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/1e07dcb4307ffb52631a43975f3f6d5173661aae/ol-handoff/Microsoft/windows-apps.de-de/master/create-an-adcontrol-in-javascript.941a971a20af7c9c5da835f14d0edb4c4e25ac63.de-de.xlf)
+* Handoff Datetime: 2016-05-12 14:56:48
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [create-an-adcontrol-in-javascript.941a971a20af7c9c5da835f14d0edb4c4e25ac63.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/f1bdacc1b713c4a5f6bf10b9c1beb5880f6f589f/ol-handback/Microsoft/windows-apps.de-de/master/create-an-adcontrol-in-javascript.941a971a20af7c9c5da835f14d0edb4c4e25ac63.de-de.xlf)
+* Handback Datetime: 2016-06-03 14:39:49
+* [Back to Top](#report-top)
+
 
 ## Error Details
 

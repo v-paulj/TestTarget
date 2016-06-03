@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "814f056eaff5419b9c28ba63cf32012bd82cc554",
-  "LastTranslatedCommit": "40adc8d4c3971d07588fbf8ecb9149c4817ab2a6",
+  "LastTranslatedCommit": "d5e06e8fe3a183be7093e3c41feee561922b56ea",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
       "FileHash": "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3",
@@ -47418,14 +47418,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "bc116d2542b0e55dbcea8b0066b22f4fe390f61b",
+      "TargetFileCommit": "d5e06e8fe3a183be7093e3c41feee561922b56ea",
       "TargetFilePath": "windows-apps-src\\monetize\\create-an-adcontrol-in-javascript.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\windows-apps.de-de\\master\\create-an-adcontrol-in-javascript.941a971a20af7c9c5da835f14d0edb4c4e25ac63.de-de.xlf",
-      "HandbackFileCommit": "1c9c9003998bb686554b589e6359b74d3157482b",
-      "HandbackDateTime": "2016-05-31T12:25:12.6117652Z",
+      "HandbackFileCommit": "f1bdacc1b713c4a5f6bf10b9c1beb5880f6f589f",
+      "HandbackDateTime": "2016-06-03T14:39:49.1314807Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-05-31T12:25:12.6117652Z",
+      "UpdatedDateTime": "2016-06-03T14:39:49.1314807Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
