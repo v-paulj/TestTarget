@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md) | InSyncHandedBackSuccess | [Details](#27c6f82e97e9eb24dedcc5d83a18e6aba69611942198)
 
 ## Item Details
-##### <a name='27c6f82e97e9eb24dedcc5d83a18e6aba69611942198'></a> Source: [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps.de-de/blob/40adc8d4c3971d07588fbf8ecb9149c4817ab2a6/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md)
-* Handoff File: [walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/1e07dcb4307ffb52631a43975f3f6d5173661aae/ol-handoff/Microsoft/windows-apps.de-de/master/walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.de-de.xlf)
-* Handoff Datetime: 2016-05-12 14:56:48
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/197a6fc29d1817606b4f8db53641261c17024f4e/ol-handback/Microsoft/windows-apps.de-de/master/walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.de-de.xlf)
-* Handback Datetime: 2016-06-03 13:40:49
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
