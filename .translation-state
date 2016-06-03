@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "814f056eaff5419b9c28ba63cf32012bd82cc554",
-  "LastTranslatedCommit": "bc116d2542b0e55dbcea8b0066b22f4fe390f61b",
+  "LastTranslatedCommit": "40adc8d4c3971d07588fbf8ecb9149c4817ab2a6",
   "Items": {
     "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3": {
       "FileHash": "3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3",
@@ -31962,14 +31962,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "bc116d2542b0e55dbcea8b0066b22f4fe390f61b",
+      "TargetFileCommit": "40adc8d4c3971d07588fbf8ecb9149c4817ab2a6",
       "TargetFilePath": "windows-apps-src\\gaming\\walkthrough--simple-port-from-direct3d-9-to-11-1.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\windows-apps.de-de\\master\\walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.de-de.xlf",
-      "HandbackFileCommit": "1c9c9003998bb686554b589e6359b74d3157482b",
-      "HandbackDateTime": "2016-05-31T12:25:12.6117652Z",
+      "HandbackFileCommit": "197a6fc29d1817606b4f8db53641261c17024f4e",
+      "HandbackDateTime": "2016-06-03T13:40:49.7140208Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-05-31T12:25:12.6117652Z",
+      "UpdatedDateTime": "2016-06-03T13:40:49.7140208Z",
       "ArchiveFilePath": null,
       "ArchiveFileCommit": null,
       "ArchiveFileDateTime": "0001-01-01T00:00:00",
