@@ -2,7 +2,7 @@
 author: martinekuan
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
 title: Was ist eine App der universellen Windows-Plattform (UWP)?
-description: Hier werden die verschiedenen App-Typen vorgestellt, die wir als universelle Windows-Apps bezeichnen: Windows Store-Apps, Windows Phone Store-Apps und Windows-Runtime-Apps.
+description: Hier werden die verschiedenen App-Typen vorgestellt, die wir als universelle Windows-Apps bezeichnen - Windows Store-Apps, Windows Phone Store-Apps und Windows-Runtime-Apps.
 ---
 
 # Was ist eine App der universellen Windows-Plattform (UWP)?
@@ -90,6 +90,6 @@ Eine ausführlichere Betrachtung der UWP finden Sie unter [Anleitung für Univer
 * [Vorbereitung](get-set-up.md)
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 
