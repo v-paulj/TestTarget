@@ -1,40 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\index.md](https://github.com/Microsoft/windows-apps/blob/d1fb9964abb8ea87505c605fac4a176a3d3dde96/windows-apps-src/xbox-apps/index.md) | OutofSyncHandedBackSuccess | [Details](#df4cfcab9456f8c8416cb13ed59e151d782eabe83880)
- [windows-apps-src\xbox-apps\whats-new.md](https://github.com/Microsoft/windows-apps/blob/7d47f202a07da607115198a4cd02be7a3ff08890/windows-apps-src/xbox-apps/whats-new.md) | HandedOffSuccess | [Details](#27bf792b2fb3c72723ee5b3e1d8d28e63b6405e53890)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/5f3ab63aa4b4dae8221eefb7a1c06d209d5695e4/windows-apps-src/TOC.md) | OutofSyncHandedBackSuccess | [Details](#7a39db2cf9e424841ab28960dac800981c4229f83779)
 
 ## Item Details
-##### <a name='df4cfcab9456f8c8416cb13ed59e151d782eabe83880'></a> Source: [windows-apps-src\xbox-apps\index.md](https://github.com/Microsoft/windows-apps/blob/d1fb9964abb8ea87505c605fac4a176a3d3dde96/windows-apps-src/xbox-apps/index.md)
+##### <a name='7a39db2cf9e424841ab28960dac800981c4229f83779'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/5f3ab63aa4b4dae8221eefb7a1c06d209d5695e4/windows-apps-src/TOC.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [index.d16e2a2199b17d4f07cbc6956844a04c9911bc85.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/b72d5578c075d34074be72963e2dd77a0ea8bfd1/ol-handoff/Microsoft/windows-apps.de-de/master/index.d16e2a2199b17d4f07cbc6956844a04c9911bc85.de-de.xlf)
-* Handoff Datetime: 2016-06-13 22:32:37
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/da794a1576aca99c5c94aa18e8c54cad34a44b3e/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Handoff Datetime: 2016-06-13 23:32:38
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\xbox-apps\index.md](https://github.com/Microsoft/windows-apps.de-de/blob/bc116d2542b0e55dbcea8b0066b22f4fe390f61b/windows-apps-src/xbox-apps/index.md)
-* Current Handback File: [index.d16e2a2199b17d4f07cbc6956844a04c9911bc85.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/index.d16e2a2199b17d4f07cbc6956844a04c9911bc85.de-de.xlf)
+* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.de-de/blob/bc116d2542b0e55dbcea8b0066b22f4fe390f61b/windows-apps-src/TOC.md)
+* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
 * Current Handback Datetime: 2016-05-31 12:25:12
-* [Back to Top](#report-top)
-
-##### <a name='27bf792b2fb3c72723ee5b3e1d8d28e63b6405e53890'></a> Source: [windows-apps-src\xbox-apps\whats-new.md](https://github.com/Microsoft/windows-apps/blob/7d47f202a07da607115198a4cd02be7a3ff08890/windows-apps-src/xbox-apps/whats-new.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [whats-new.b8d20ae2cec9ae573cc97899a792d28d9922e924.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/b72d5578c075d34074be72963e2dd77a0ea8bfd1/ol-handoff/Microsoft/windows-apps.de-de/master/whats-new.b8d20ae2cec9ae573cc97899a792d28d9922e924.de-de.xlf)
-* Handoff Datetime: 2016-06-13 22:32:37
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 
