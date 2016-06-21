@@ -1,16 +1,16 @@
 ---
-title: Erstellen zufälliger Zahlen
-description: Dieser Beispielcode zeigt, wie Sie zufällige Zahlen oder Puffer für die Verwendung bei der Kryptografie in einer UWP (Universelle Windows-Plattform)-App erstellen.
+title: Create random numbers
+description: This example code shows how to create a random number or buffer for use in cryptography in an Universal Windows Platform (UWP) app.
 ms.assetid: 15746824-F93A-4DC7-836E-EBA916D2CFD3
 author: awkoren
 ---
 
-# Erstellen zufälliger Zahlen
+# Create random numbers
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Dieser Beispielcode zeigt, wie Sie zufällige Zahlen oder Puffer für die Verwendung bei der Kryptografie in einer UWP (Universelle Windows-Plattform)-App erstellen.
+This example code shows how to create a random number or buffer for use in cryptography in an Universal Windows Platform (UWP) app.
 
 ```cs
 public string GenerateRandomData()
@@ -35,6 +35,6 @@ public uint GenerateRandomNumber()
 }
 ```
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

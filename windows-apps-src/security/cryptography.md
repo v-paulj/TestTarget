@@ -1,148 +1,148 @@
 ---
-title: Kryptografie
-description: Der Artikel enthält eine Übersicht über die für universelle Windows-Plattform (UWP)-Apps verfügbaren Kryptografiefeatures. Ausführliche Informationen zu bestimmten Aufgaben finden Sie in der Tabelle am Ende dieses Artikels.
+title: Cryptography
+description: The article provides an overview of the cryptography features available to Universal Windows Platform (UWP) apps. For detailed information on particular tasks, see the table at the end of this article.
 ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
 author: awkoren
 ---
 
-# Kryptografie
+# Cryptography
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Der Artikel enthält eine Übersicht über die für universelle Windows-Plattform (UWP)-Apps verfügbaren Kryptografiefeatures. Ausführliche Informationen zu bestimmten Aufgaben finden Sie in der Tabelle am Ende dieses Artikels.
+The article provides an overview of the cryptography features available to Universal Windows Platform (UWP) apps. For detailed information on particular tasks, see the table at the end of this article.
 
-## Terminologie
+## Terminology
 
 
-Die folgende Terminologie wird bei der Kryptografie und bei Public Key-Infrastrukturen (PKI) häufig verwendet.
+The following terminology is commonly used in cryptography and public key infrastructure (PKI).
 
-| Begriff                        | Beschreibung                                                                                                                                                                                           |
+| Term                        | Description                                                                                                                                                                                           |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Verschlüsselung                  | Das Verfahren zum Transformieren von Daten mithilfe von Kryptografiealgorithmus und -schlüssel. Die transformierten Daten können nur mithilfe desselben Algorithmus und desselben (symmetrischen) oder zugehörigen (öffentlichen) Schlüssels wiederhergestellt werden. |
-| Entschlüsselung                  | Das Verfahren zur Rückführung verschlüsselter Daten in ihre ursprüngliche Form.                                                                                                                                         |
-| Klartext                   | Bezog sich ursprünglich auf eine nicht verschlüsselte Textnachricht. Wird heute für jegliche Form unverschlüsselter Daten verwendet.                                                                                                         |
-| Chiffretext                  | Bezog sich ursprünglich auf eine verschlüsselte und daher nicht lesbare Textnachricht. Wird heute für jegliche Form verschlüsselter Daten verwendet.                                                                                  |
-| Hashing                     | Das Verfahren zum Umwandeln von Daten mit variabler Länge in einen Wert mit einer bestimmten Länge, der in der Regel kleiner ist. Indem Sie Hashes vergleichen, können Sie sich mit hoher Zuverlässigkeit versichern, dass zwei oder mehr Daten übereinstimmen.            |
-| Signatur                   | Verschlüsselter Hash digitaler Daten, der in der Regel zur Authentifizierung des Absenders von Daten oder zur Sicherstellung genutzt wird, dass die Daten während der Übertragung nicht manipuliert wurden.                                               |
-| Algorithmus                   | Eine schrittweise Prozedur zur Verschlüsselung von Daten.                                                                                                                                                         |
-| Schlüssel                         | Eine zufällige oder Pseudozufallszahl, die als Eingabe für einen Kryptografiealgorithmus zur Verschlüsselung und Entschlüsselung von Daten verwendet wird.                                                                                               |
-| Kryptografie mit symmetrischem Schlüssel  | Kryptografie, bei der zur Ver- und Entschlüsselung derselbe Schlüssel verwendet wird. Auch bekannt als Kryptografie mit geheimem Schlüssel.                                                                                      |
-| Kryptografie mit asymmetrischem Schlüssel | Kryptografie, bei der zur Ver- und Entschlüsselung verschiedene, mathematisch jedoch in Beziehung stehende Schlüssel verwendet werden. Auch bekannt als Kryptografie mit öffentlichem Schlüssel.                                                          |
-| Codierung                    | Das Verfahren zur Codierung von digitalen Nachrichten, einschließlich Zertifikaten, für die Übertragung über ein Netzwerk.                                                                                                     |
-| Algorithmusanbieter          | Eine DLL-Datei, die einen Kryptografiealgorithmus implementiert.                                                                                                                                                      |
-| Schlüsselspeicheranbieter        | Ein Container zum Speichern von Schlüsselmaterial. Derzeit können Schlüssel in Software, Smartcards und dem Trusted Platform Module (TPM) gespeichert werden.                                                                   |
-| X.509-Zertifikat           | Ein digitales Dokument, das in der Regel von einer Zertifizierungsstelle ausgegeben wird, um die Identität einer Person, eines Systems oder einer Entität für andere interessierte Parteien zu überprüfen.                                            |
+| Encryption                  | The process of transforming data by using a cryptographic algorithm and key. The transformed data can be recovered only by using the same algorithm and the same (symmetric) or related (public) key. |
+| Decryption                  | The process of returning encrypted data to its original form.                                                                                                                                         |
+| Plaintext                   | Originally referred to an unencrypted text message. Currently refers to any unencrypted data.                                                                                                         |
+| Ciphertext                  | Originally referred to an encrypted, and therefore unreadable, text message. Currently refers to any encrypted data.                                                                                  |
+| Hashing                     | The process of converting variable length data into a fixed length, typically smaller, value. By comparing hashes, you can obtain reasonable assurance that two or more data are the same.            |
+| Signature                   | Encrypted hash of digital data typically used to authenticate the sender of the data or verify that the data was not tampered with during transmission.                                               |
+| Algorithm                   | A step-by-step procedure for encrypting data.                                                                                                                                                         |
+| Key                         | A random or pseudorandom number used as input to a cryptographic algorithm to encrypt and decrypt data.                                                                                               |
+| Symmetric Key Cryptography  | Cryptography in which encryption and decryption use the same key. This is also known as secret key cryptography.                                                                                      |
+| Asymmetric Key Cryptography | Cryptography in which encryption and decryption use a different but mathematically related key. This is also called public key cryptography.                                                          |
+| Encoding                    | The process of encoding digital messages, including certificates, for transport across a network.                                                                                                     |
+| Algorithm Provider          | A DLL that implements a cryptographic algorithm.                                                                                                                                                      |
+| Key Storage Provider        | A container for storing key material. Currently, keys can be stored in software, smart cards, or the trusted platform module (TPM).                                                                   |
+| X.509 Certificate           | A digital document, typically issued by a certification authority, to verify the identity of an individual, system, or entity to other interested parties.                                            |
 
  
 ## Namespaces
 
-Die folgenden Namespaces stehen für die Verwendung in einer App zur Verfügung:
+The following namespaces are available for use in apps.
 
 ### Windows.Security.Cryptography
 
-Enthält die Klasse "CryptographicBuffer" und statische Methoden, die Ihnen Folgendes ermöglichen:
+Contains the CryptographicBuffer class and static methods that enable you to:
 
--   Konvertieren von Daten in und aus Zeichenfolgen
--   Konvertieren von Daten in und aus Bytearrays
--   Codieren von Nachrichten zur Netzwerkübertragung
--   Codieren von Nachrichten nach der Übertragung
+-   Convert data to and from strings
+-   Convert data to and from byte arrays
+-   Encode messages for network transport
+-   Decode messages after transport
 
 ### Windows.Security.Cryptography.Certificates
 
-Enthält Klassen, Schnittstellen und Enumerationstypen, die Ihnen Folgendes ermöglichen:
+Contains classes, interfaces, and enumeration types that enable you to:
 
--   Erstellen einer Zertifikatanforderung
--   Installieren einer Zertifikatantwort
--   Importieren eines Zertifikats in einer PFX-Datei
--   Angeben und Abrufen von Zertifikatanforderungseigenschaften
+-   Create a certificate request
+-   Install a certificate response
+-   Import a certificate in a PFX file
+-   Specify and retrieve certificate request properties
 
 ### Windows.Security.Cryptography.Core
 
-Enthält Klassen und Enumerationstypen, die Ihnen Folgendes ermöglichen:
+Contains classes and enumeration types that enable you to:
 
--   Verschlüsseln und Entschlüsseln von Daten
--   Hashing von Daten
--   Signieren von Daten und Überprüfen von Signaturen
--   Erstellen, Importieren und Exportieren von Schlüsseln
--   Arbeit mit Anbietern von Algorithmen asymmetrischer Schlüssel
--   Arbeit mit Anbietern von Algorithmen symmetrischer Schlüssel
--   Arbeit mit Anbietern von Hashalgorithmen
--   Arbeit mit MAC (Machine Authentication Code)-Algorithmusanbietern
--   Arbeit mit Anbietern von Schlüsselableitungsalgorithmen
+-   Encrypt and decrypt data
+-   Hash data
+-   Sign data and verify signatures
+-   Create, import, and export keys
+-   Work with asymmetric key algorithm providers
+-   Work with symmetric key algorithm providers
+-   Work with hash algorithm providers
+-   Work with machine authentication code (MAC) algorithm providers
+-   Work with key derivation algorithm providers
 
 ### Windows.Security.Cryptography.DataProtection
 
-Enthält Klassen, die Ihnen Folgendes ermöglichen:
+Contains classes that enable you to:
 
--   Asynchrone Verschlüsselung und Entschlüsselung statischer Daten
--   Asynchrone Verschlüsselung und Entschlüsselung von Datenströmen
+-   Asynchronously encrypt and decrypt static data
+-   Asynchronously encrypt and decrypt data streams
 
-## Krypto- und PKI-Anwendungsfunktionen
-
-
-Die vereinfachte Schnittstelle für die Anwendungsprogrammierung, die für Apps verfügbar ist, bietet folgende Kryptografie- und PKI-Funktionen (Public Key Interface):
-
-### Kryptografieunterstützung
-
-Sie können folgende Kryptografieaufgaben ausführen. Weitere Informationen finden Sie im [**Windows.Security.Cryptography.Core**](https://msdn.microsoft.com/library/windows/apps/br241547) -Namespace.
-
--   Erstellen symmetrischer Schlüssel
--   Ausführen der symmetrischen Verschlüsselung
--   Erstellen asymmetrischer Schlüssel
--   Ausführen der asymmetrischen Verschlüsselung
--   Ableiten kennwortbasierter Schlüssel
--   Erstellen von Nachrichtenauthentifizierungscodes (MACs)
--   Hashinhalt
--   Digitales Signieren von Inhalt
-
-Das SDK enthält außerdem eine vereinfachte Schnittstelle für kennwortbasierten Datenschutz. Diese können Sie für folgende Aufgaben verwenden. Weitere Informationen finden Sie im [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) -Namespace.
-
--   Asynchroner Schutz statischer Daten
--   Asynchroner Schutz eines statischen Datenstroms
-
-### Codierungsunterstützung
-
-Eine App kann kryptografische Daten für die Übertragung in einem Netzwerk codieren und Daten decodieren, die aus einer Netzwerkquelle empfangen wurden. Weitere Informationen finden Sie unter den statischen Methoden, die im [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404) -Namespace verfügbar sind.
-
-### PKI-Unterstützung
-
-Apps können folgende PKI-Aufgaben ausführen. Weitere Informationen finden Sie im [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476) -Namespace.
-
--   Erstellen eines Zertifikats
--   Erstellen eines selbstsignierten Zertifikats
--   Installieren einer Zertifikatantwort
--   Importieren eines Zertifikats im PFX-Format
--   Verwenden von Smartcardzertifikaten und -schlüsseln (sharedUserCertificates-Funktion ist festgelegt)
--   Verwenden von Zertifikaten aus dem MY-Speicher des Benutzers (sharedUserCertificates-Funktion ist festgelegt)
-
-Sie können das Manifest außerdem für folgende Aktionen verwenden:
-
--   Angeben von anwendungsspezifisch vertrauenswürdigen Stammzertifikaten
--   Angeben von anwendungsspezifisch für Peers vertrauenswürdigen Zertifikaten
--   Explizites Deaktivieren der Vererbung von der Systemvertrauensstellung
--   Angeben von Kriterien für die Zertifikatauswahl
-    -   Nur Hardwarezertifikate
-    -   Mit einem angegebenen Satz an Ausstellern verkettete Zertifikate
-    -   Automatisches Auswählen eines Zertifikats aus dem Anwendungsspeicher
-
-## Detaillierte Artikel
+## Crypto and PKI application capabilities
 
 
-Die folgenden Artikel enthalten weitere Informationen zu Sicherheitsszenarien:
+The simplified application programming interface available for apps enables the following cryptographic and public key infrastructure (PKI) capabilities.
 
-| Thema                                                                         | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+### Cryptography support
+
+You can perform the following cryptographic tasks. For more information, see the [**Windows.Security.Cryptography.Core**](https://msdn.microsoft.com/library/windows/apps/br241547) namespace.
+
+-   Create symmetric keys
+-   Perform symmetric encryption
+-   Create asymmetric keys
+-   Perform asymmetric encryption
+-   Derive password based keys
+-   Create message authentication codes (MACs)
+-   Hash content
+-   Digitally sign content
+
+The SDK also provides a simplified interface for password-based data protection. You can use this to perform the following tasks. For more information, see the [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) namespace.
+
+-   Asynchronous protection of static data
+-   Asynchronous protection of a data stream
+
+### Encoding support
+
+An app can encode cryptographic data for transmission across a network and decode data received from a network source. For more information, see the static methods available in the [**Windows.Security.Cryptography**](https://msdn.microsoft.com/library/windows/apps/br241404) namespace.
+
+### PKI support
+
+Apps can perform the following PKI tasks. For more information, see the [**Windows.Security.Cryptography.Certificates**](https://msdn.microsoft.com/library/windows/apps/br241476) namespace.
+
+-   Create a certificate
+-   Create a self-signed certificate
+-   Install a certificate response
+-   Import a certificate in PFX format
+-   Use smart card certificates and keys (sharedUserCertificates capabilities set)
+-   Use certificates from the user MY store (sharedUserCertificates capabilities set)
+
+Additionally, you can use the manifest to perform the following actions:
+
+-   Specify per application trusted root certificates
+-   Specify per application peer trusted certificates
+-   Explicitly disable inheritance from system trust
+-   Specify the certificate selection criteria
+    -   Hardware certificates only
+    -   Certificates that chain through a specified set of issuers
+    -   Automatically select a certificate from the application store
+
+## Detailed articles
+
+
+The following articles provide more detail on security scenarios:
+
+| Topic                                                                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Zertifikate](certificates.md)                                               | In diesem Artikel wird die Verwendung von Zertifikaten in UWP-Apps beschrieben. Mit digitalen Zertifikaten wird in der Kryptografie für öffentliche Schlüssel ein öffentlicher Schlüssel an eine Person, einen Computer oder eine Organisation gebunden. Die gebundenen Identitäten werden meist dazu verwendet, eine Entität für die andere zu authentifizieren. Zertifikate werden z. B. häufig dazu verwendet, einen Webserver für einen Benutzer und einen Benutzer für einen Webserver zu authentifizieren. Sie können Zertifikatanforderungen erstellen und ausgestellte Zertifikate installieren oder importieren. Außerdem können Sie ein Zertifikat in einer Zertifikathierarchie registrieren. |
-| [Kryptografische Schlüssel](cryptographic-keys.md)                                   | In diesem Artikel wird erläutert, wie Sie mithilfe standardmäßiger Schlüsselableitungsfunktionen Schlüssel ableiten und wie Sie Inhalte mithilfe symmetrischer und asymmetrischer Schlüssel verschlüsseln können.                                                                                                                                                                                                                                                                                                                                                                             |
-| [Datenschutz](data-protection.md)                                         | In diesem Artikel wird erläutert, wie Sie mithilfe der [DataProtectionProvider](https://msdn.microsoft.com/library/windows/apps/br241559)-Klasse im [Windows.Security.Cryptography.DataProtection](https://msdn.microsoft.com/library/windows/apps/br241585)-Namespace digitale Daten in einer UWP-App verschlüsseln und entschlüsseln können.                                                                                                                                                                                                                  |
-| [MACs, Hashes und Signaturen](macs-hashes-and-signatures.md)               | In diesem Artikel wird erläutert, wie Nachrichtenmanipulationen mithilfe von Nachrichtenauthentifizierungscodes (Message Authentication Codes, MACs), Hashes und Signaturen in UWP-Apps erkannt werden können.                                                                                                                                                                                                                                                                                                                                                                                |
-| [Exporteinschränkungen hinsichtlich Kryptografie](export-restrictions-on-cryptography.md) | Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App Kryptografiefunktionen in einer Weise verwendet, die unter Umständen dazu führt, dass sie im Windows Store nicht angezeigt wird.                                                                                                                                                                                                                                                                                                                                                                                            |
-| [Allgemeine Kryptografieaufgaben](common-cryptography-tasks.md)                     | Die folgenden Artikel enthalten Beispielcode für allgemeine UWP-Kryptografieaufgaben, z. B. Erstellen zufälliger Zahlen, Vergleichen von Puffern, Konvertieren zwischen Zeichenfolgen und binären Daten, Kopieren in und aus Bytearrays sowie Codieren und Decodieren von Daten.                                                                                                                                                                                                                                                                                    |
+| [Certificates](certificates.md)                                               | This article discusses the use of certificates in UWP apps. Digital certificates are used in public key cryptography to bind a public key to a person, computer, or organization. The bound identities are most often used to authenticate one entity to another. For example, certificates are often used to authenticate a web server to a user and a user to a web server. You can create certificate requests and install or import issued certificates. You can also enroll a certificate in a certificate hierarchy. |
+| [Cryptographic keys](cryptographic-keys.md)                                   | This article shows how to use standard key derivation functions to derive keys and how to encrypt content using symmetric and asymmetric keys.                                                                                                                                                                                                                                                                                                                                                                             |
+| [Data protection](data-protection.md)                                         | This article explains how to use the [DataProtectionProvider](https://msdn.microsoft.com/library/windows/apps/br241559) class in the [Windows.Security.Cryptography.DataProtection](https://msdn.microsoft.com/library/windows/apps/br241585) namespace to encrypt and decrypt digital data in a UWP app.                                                                                                                                                                                                                  |
+| [MACs, hashes, and signatures](macs-hashes-and-signatures.md)               | This article discusses how message authentication codes (MACs), hashes, and signatures can be used in UWP apps to detect message tampering.                                                                                                                                                                                                                                                                                                                                                                                |
+| [Export restrictions on cryptography](export-restrictions-on-cryptography.md) | Use this info to determine if your app uses cryptography in a way that might prevent it from being listed in the Windows Store.                                                                                                                                                                                                                                                                                                                                                                                            |
+| [Common cryptography tasks](common-cryptography-tasks.md)                     | These articles provide example code for common UWP cryptography tasks, such as creating random numbers, comparing buffers, converting between strings and binary data, copying to and from byte arrays, and encoding and decoding data.                                                                                                                                                                                                                                                                                    |
 
  
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

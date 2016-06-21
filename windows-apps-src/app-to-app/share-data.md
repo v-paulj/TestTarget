@@ -1,66 +1,66 @@
 ---
-description: In diesem Artikel wird erläutert, wie der Freigabe-Vertrag in einer UWP-App (Universelle Windows-Plattform) unterstützt wird.
-title: Freigeben von Daten
+description: This article explains how to support the Share contract in a Universal Windows Platform (UWP) app.
+title: Share data
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
 author: awkoren
 ---
 
-# Freigeben von Daten
+# Share data
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-In diesem Artikel wird erläutert, wie der Freigabe-Vertrag in einer UWP-App (Universelle Windows-Plattform) unterstützt wird. Der Freigabe-Vertrag ist eine einfache Möglichkeit, Daten wie z. B. Text, Links, Fotos und Videos schnell für andere Apps freizugeben. Ein Benutzer möchte beispielsweise mit einer App für ein soziales Netzwerk eine Webseite mit seinen Freunden teilen, oder er möchte in einer Notiz-App einen Link für eine spätere Verwendung speichern.
+This article explains how to support the Share contract in a Universal Windows Platform (UWP) app. The Share contract is an easy way to quickly share data, such as text, links, photos, and videos, between apps. For example, a user might want to share a webpage with their friends using a social networking app, or save a link in a notes app to refer to later.
 
-## Einrichten eines Ereignishandlers
+## Set up an event handler
 
-Fügen Sie einen [**DataRequested**][DataRequested]-Ereignishandler hinzu, der aufgerufen werden soll, wenn der Benutzer die Teilen-Funktion verwendet. Dies kann durch Tippen auf ein Steuerelement in Ihrer App (etwa eine Schaltfläche oder ein App-Leistenbefehl) oder automatisch in einem bestimmten Szenario geschehen (etwa wenn der Benutzer einen Level mit einer hohen Punktzahl abschließt).
+Add a [**DataRequested**][DataRequested] event handler to be called whenever a user invokes share. This can occur either when the user taps a control in your app (such as a button or app bar command) or automatically in a specific scenario (if the user finishes a level and gets a high score, for example).
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
+[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
 
-Wenn ein [**DataRequested**][DataRequested]-Ereignis eintritt, empfängt Ihre App ein [**DataRequest**][DataRequest]-Objekt. Dieses enthält ein [**DataPackage**][DataPackage], mit dem Sie den Inhalt bereitstellen können, den der Benutzer freigeben möchte. Sie müssen einen Titel und die freizugebenden Daten angeben. Eine Beschreibung ist optional, wird aber empfohlen.
+When a [**DataRequested**][DataRequested] event occurs, your app receives a [**DataRequest**][DataRequest] object. This contains a [**DataPackage**][DataPackage] that you can use to provide the content that the user wants to share. You must provide a title and data to share. A description is optional, but recommended.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
+[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
 
-## Wählen von Daten
+## Choose data
 
-Sie können verschiedene Arten von Daten freigeben, einschließlich:
+You can share various types of data, including:
 
--   Nur-Text
--   URIs (Uniform Resource Identifiers)
+-   Plain text
+-   Uniform Resource Identifiers (URIs)
 -   HTML
--   Formatierter Text
+-   Formatted text
 -   Bitmaps
--   Nur-Text
--   Dateien
--   Vom Entwickler definierte Daten
+-   Plain text
+-   Files
+-   Custom developer-defined data
 
-Das [**DataPackage**][DataPackage]-Objekt kann mehrere dieser Formate in beliebiger Kombination enthalten. Im folgenden Beispiel wird das Freigeben von Text veranschaulicht.
+The [**DataPackage**][DataPackage] object can contain one or more of these formats, in any combination. The following example demonstrates sharing text.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
+[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
 
-## Festlegen von Eigenschaften
+## Set properties
 
-Beim Verpacken von Daten für die Freigabe können Sie eine Vielzahl von Eigenschaften angeben, die weitere Informationen zum freigegebenen Inhalt enthalten. Mit diesen Eigenschaften kann die Benutzererfahrung für Ziel-Apps verbessert werden. Die Angabe einer Beschreibung kann beispielsweise nützlich sein, wenn der Benutzer Inhalte für mehrere Apps freigibt. Eine Miniaturansicht beim Freigeben eines Bilds oder eines Links für eine Webseite stellt eine visuelle Referenz für den Benutzer dar. Weitere Informationen finden Sie unter [**DataPackage.DataPackagePropertySet**][DataPackagePropertySet].
+When you package data for sharing, you can supply a variety of properties that provide additional information about the content being shared. These properties help target apps improve the user experience. For example, a description helps when the user is sharing content with more than one app. Adding a thumbnail when sharing an image or a link to a web page provides a visual reference to the user. For more information, see [**DataPackage.DataPackagePropertySet**][DataPackagePropertySet].
 
-Alle Eigenschaften mit Ausnahme des Titels sind optional. Die title-Eigenschaft ist erforderlich und muss festgelegt werden.
+All properties except the title are optional. The title property is mandatory and must be set.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
+[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
 
-## Starten der Benutzeroberfläche für das Freigeben
+## Launch the share UI
 
-Eine Benutzeroberfläche für das Freigeben wird vom System bereitgestellt. Zum Starten rufen Sie die [**ShowShareUI**][ShowShareUi]-Methode auf.
+A UI for sharing is provided by the system. To launch it, call the [**ShowShareUI**][ShowShareUi] method.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
+[!code-cs[[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
-## Behandeln von Fehlern
+## Handle errors
 
-In den meisten Fällen ist das Freigeben von Inhalten ein einfacher Prozess. Es besteht jedoch immer die Möglichkeit, dass unerwartet ein Problem auftritt. Beispielsweise könnte die App davon ausgehen, dass Inhalt ausgewählt wurde, auch wenn der Benutzer nichts ausgewählt hat. Um diese Situationen zu behandeln, verwenden Sie die Methode [**FailWithDisplayText**][FailWithDisplayText], die dem Benutzer eine Meldung anzeigt, wenn ein Fehler auftritt.
+In most cases, sharing content is a straightforward process. However, there's always a chance that something unexpected could happen. For example, the app might require the user to select content for sharing but the user didn't select any. To handle these situations, use the [**FailWithDisplayText**][FailWithDisplayText] method, which will display a message to the user if something goes wrong.
 
-## Verzögern der Freigabe mit Delegaten
+## Delay share with delegates
 
-Manchmal ist es nicht sinnvoll, die Daten, die der Benutzer freigeben möchte, direkt vorzubereiten. Wenn Ihre App zum Beispiel das Senden von großen Bilddateien in verschiedenen Formaten unterstützt, ist es ineffizient, alle diese Bilder zu erstellen, bevor der Benutzer seine Auswahl trifft.
+Sometimes, it might not make sense to prepare the data that the user wants to share right away. For example, if your app supports sending a large image file in several different possible formats, it's inefficient to create all those images before the user makes their selection.
 
-Zur Lösung dieses Problems kann ein [**DataPackage**][DataPackage] einen Delegaten enthalten. Dabei handelt es sich um eine Funktion, die aufgerufen wird, wenn die empfangende App Daten anfordert. Es wird empfohlen, einen Delegaten immer dann zu verwenden, wenn die von einem Benutzer freigegebenen Daten ressourcenintensiv sind.
+To solve this problem, a [**DataPackage**][DataPackage] can contain a delegate — a function that is called when the receiving app requests data. We recommend using a delegate any time that the data a user wants to share is resource-intensive.
 
 <!-- For some reason, this snippet was inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -87,8 +87,8 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 }
 ```
 
-## Verwandte Themen
-* [Empfangen von Daten](receive-data.md)
+## Related topics
+* [Receive data](receive-data.md)
 
 
 <!-- LINKS -->

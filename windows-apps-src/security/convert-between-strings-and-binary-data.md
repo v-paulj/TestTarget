@@ -1,16 +1,16 @@
 ---
-title: Umwandlung zwischen Zeichenfolgen und binären Daten
-description: Dieser Beispielcode zeigt, wie Sie in einer App für die universelle Windows-Plattform (UWP) eine Konvertierung zwischen Zeichenfolgen und binären Daten durchführen.
+title: Convert between strings and binary data
+description: This example code shows how to convert between strings and binary data in an Universal Windows Platform (UWP) app.
 ms.assetid: AED4C74F-E63B-4980-BB4D-28ACCC1AB58B
 author: awkoren
 ---
 
-# Umwandlung zwischen Zeichenfolgen und binären Daten
+# Convert between strings and binary data
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Dieser Beispielcode zeigt, wie Sie in einer UWP-App (Universelle Windows-Plattform) zwischen Zeichenfolgen und binären Daten konvertieren können.
+This example code shows how to convert between strings and binary data in an Universal Windows Platform (UWP) app.
 
 ```cs
 public void ConvertData()
@@ -29,6 +29,6 @@ public void ConvertData()
 }
 ```
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

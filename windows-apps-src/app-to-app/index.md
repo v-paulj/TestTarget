@@ -1,33 +1,33 @@
 ---
 ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
-description: In diesem Abschnitt wird erläutert, wie Sie Daten für UWP-Apps (Universelle Windows-Plattform) freigeben. Dabei geht es unter anderem um den Freigabe-Vertrag, das Kopieren und Einfügen und Drag & Drop.
-title: App-zu-App-Kommunikation
+description: This section explains how to share data between Universal Windows Platform (UWP) apps, including how to use the Share contract, copy and paste, and drag and drop.
+title: App-to-app communication
 author: awkoren
 ---
 
-# App-zu-App-Kommunikation
+# App-to-app communication
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-In diesem Abschnitt wird erläutert, wie Sie Daten für UWP-Apps (Universelle Windows-Plattform) freigeben. Dabei geht es unter anderem um den Freigabe-Vertrag, das Kopieren und Einfügen und Drag & Drop.
+This section explains how to share data between Universal Windows Platform (UWP) apps, including how to use the Share contract, copy and paste, and drag and drop.
 
-Der Freigabe-Vertrag ermöglicht Benutzern das schnelle Austauschen von Daten zwischen Apps. Ein Benutzer möchte beispielsweise mit einer App für ein soziales Netzwerk eine Webseite mit seinen Freunden teilen, oder er möchte in einer Notiz-App einen Link zum späteren Aufrufen speichern. Wenn Ihre App Inhalte in Szenarien empfängt, die ein Benutzer in einer anderen App schnell abschließen kann, sollten Sie einen Freigabe-Vertrag erwägen.
+The Share contract is one way users can quickly exchange data between apps. For example, a user might want to share a webpage with their friends using a social networking app, or save a link in a notes app to refer to later. Consider using a Share contract if your app receives content in scenarios that a user can quickly complete while in the context of another app.
 
-Eine App kann das Feature „Freigeben“ auf zwei unterschiedliche Arten unterstützen. Zunächst kann sie eine Quell-App sein, die vom Benutzer freizugebende Inhalte bereitstellt. Außerdem kann es eine Ziel-App geben, die vom Benutzer als Ziel für die freigegebenen Inhalte ausgewählt wird. Eine App kann sowohl Quell- als auch Ziel-App sein. Wenn Ihre App als Quell-App zum Teilen von Inhalten fungieren soll, müssen Sie festlegen, welche Datenformate die App bereitstellen kann.
+An app can support the Share feature in two ways. First, it can be a source app that provides content that the user wants to share. Second, the app can be a target app that the user selects as the destination for shared content. An app can also be both a source app and a target app. If you want your app to share content as a source app, you need to decide what data formats your app can provide.
 
-Zusätzlich zum Freigabe-Vertrag können in Apps auch herkömmliche Verfahren zum Übertragen von Daten integriert sein, z. B. Drag & Drop und Kopieren und Einfügen. Neben der Kommunikation zwischen UWP-Apps unterstützen diese Methoden auch die Freigabe für Desktopanwendungen.
+In addition to the Share contract, apps can also integrate classic techniques for transferring data, such as dragging and dropping or copy and pasting. In addition to communication between UWP apps, these methods also support sharing to and from desktop applications.
 
-## Inhalt dieses Abschnitts
+## In this section
 
-| Thema | Beschreibung |
+| Topic | Description |
 |-------|-------------|
-| [Freigeben von Daten](share-data.md) | In diesem Artikel wird erläutert, wie der Freigabe-Vertrag in einer UWP-App unterstützt wird. Der Freigabe-Vertrag ist eine einfache Möglichkeit, Daten wie z. B. Text, Links, Fotos und Videos schnell für andere Apps freizugeben. Ein Benutzer möchte beispielsweise mit einer App für ein soziales Netzwerk eine Webseite mit seinen Freunden teilen, oder er möchte in einer Notiz-App einen Link zum späteren Aufrufen speichern. |
-| [Empfangen von Daten](receive-data.md) | In diesem Artikel wird erläutert, wie Sie in Ihrer UWP-App Inhalte empfangen, die in einer anderen App mithilfe des Freigabe-Vertrags freigegeben wurden. Mit diesem Freigabe-Vertrag kann Ihre App als Option angezeigt werden, wenn der Benutzer „Freigeben“ aufruft. |
-| [Kopieren und Einfügen](copy-and-paste.md) | In diesem Artikel wird erläutert, wie das Kopieren und Einfügen mit der Zwischenablage in UWP-Apps unterstützt wird. Kopieren und Einfügen ist die klassische Methode zum Austausch von Daten zwischen Apps oder in einer App, und nahezu jede App kann Zwischenablageaktionen bis zu einem gewissen Grad unterstützen. |
-| [Drag & Drop](drag-and-drop.md) | In diesem Artikel erfahren Sie, wie Sie Ihrer UWP-App Drag & Drop hinzufügen. Drag & Drop ist ein klassisches, natürliches Interaktionsmodell für Inhalte wie Bilder und Dateien. Nach der Implementierung stehen Drag & Drop-Vorgänge für sämtliche Richtungen (App zu App, App zu Desktop und Desktop zu App) zur Verfügung. |
-| [Schützen von zwischen Apps übertragenen Unternehmensdaten mithilfe von EDP](use-edp-to-protect-enterprise-data-transferred-between-apps.md) | Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten EDP-Szenarien mit Datenübertragung durchgeführt werden müssen. |
+| [Share data](share-data.md) | This article explains how to support the Share contract in a UWP app. The Share contract is an easy way to quickly share data, such as text, links, photos, and videos, between apps. For example, a user might want to share a webpage with their friends using a social networking app, or save a link in a notes app to refer to later. |
+| [Receive data](receive-data.md) | This article explains how to receive content in your UWP app shared from another app using Share contract. This Share contract allows your app to be presented as an option when the user invokes Share. |
+| [Copy and paste](copy-and-paste.md) | This article explains how to support copy and paste in UWP apps using the clipboard. Copy and paste is the classic way to exchange data either between apps, or within an app, and almost every app can support clipboard operations to some degree. |
+| [Drag and drop](drag-and-drop.md) | This article explains how to add dragging and dropping in your UWP app. Drag and drop is a classic, natural way of interacting with content such as images and files. Once implemented, drag and drop works seamlessly in all directions, including app-to-app, app-to-desktop, and desktop-to app. |
+| [Use EDP to protect enterprise data transferred between apps](use-edp-to-protect-enterprise-data-transferred-between-apps.md) | This topic shows examples of the coding tasks needed to achieve some of the most common data-transfer-related enterprise data protection (EDP) scenarios. |
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

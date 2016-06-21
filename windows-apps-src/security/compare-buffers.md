@@ -1,16 +1,16 @@
 ---
-title: Vergleichen von Puffern
-description: Dieser Beispielcode zeigt, wie Sie Puffer in einer App für die universelle Windows-Plattform (UWP) vergleichen.
+title: Compare buffers
+description: This example code shows how to compare buffers in an Universal Windows Platform (UWP) app.
 ms.assetid: CB086E51-544A-470D-B7C8-C055271CD615
 author: awkoren
 ---
 
-# Vergleichen von Puffern
+# Compare buffers
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Dieser Beispielcode zeigt, wie Sie Puffer in einer Universellen Windows-Plattform (UWP)-App vergleichen können.
+This example code shows how to compare buffers in an Universal Windows Platform (UWP) app.
 
 ```cs
 public void CompareBuffers()
@@ -45,6 +45,6 @@ public void CompareBuffers()
 }
 ```
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 
