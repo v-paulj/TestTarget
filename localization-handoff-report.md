@@ -1,26 +1,55 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\graphics\composition-animation.md](https://github.com/Microsoft/windows-apps/blob/62f0ea80940ff862d26feaa063414d95b048f685/windows-apps-src/graphics/composition-animation.md) | OutofSyncHandedBackSuccess | [Details](#e0088692b9de10c188f15b85b1f20b98cc1135172648)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/4e9f3de68c44cf545ceee2efd99d9db8cab08676/windows-apps-src/TOC.md) | OutofSyncHandedBackSuccess | [Details](#c732a5a217fb006aff1e814005cfa1ff0c09b0483856)
+ [windows-apps-src\winrt-components\brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md](https://github.com/Microsoft/windows-apps/blob/4e9f3de68c44cf545ceee2efd99d9db8cab08676/windows-apps-src/winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md) | HandedOffSuccess | [Details](#fa7e7404a9a3ab5d75d47b3a5271bd1fd84b55693860)
+ [windows-apps-src\winrt-components\index.md](https://github.com/Microsoft/windows-apps/blob/4e9f3de68c44cf545ceee2efd99d9db8cab08676/windows-apps-src/winrt-components/index.md) | OutofSyncHandedBackSuccess | [Details](#ddbfc30f765bdb1dacbf5c6b72255233fe1340733869)
 
 ## Item Details
-##### <a name='e0088692b9de10c188f15b85b1f20b98cc1135172648'></a> Source: [windows-apps-src\graphics\composition-animation.md](https://github.com/Microsoft/windows-apps/blob/62f0ea80940ff862d26feaa063414d95b048f685/windows-apps-src/graphics/composition-animation.md)
+##### <a name='c732a5a217fb006aff1e814005cfa1ff0c09b0483856'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/4e9f3de68c44cf545ceee2efd99d9db8cab08676/windows-apps-src/TOC.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [composition-animation.64277e041816f40676f859bbeb8895857bec9110.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/e5a63fa9298de364f0347a8924f96118fe4f8641/ol-handoff/Microsoft/windows-apps.de-de/master/composition-animation.64277e041816f40676f859bbeb8895857bec9110.de-de.xlf)
-* Handoff Datetime: 2016-06-23 19:11:33
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/cad8e5bde96a66549faf8b67e8c8bf04206b23e2/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Handoff Datetime: 2016-06-23 20:36:56
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\graphics\composition-animation.md](https://github.com/Microsoft/windows-apps.de-de/blob/bc116d2542b0e55dbcea8b0066b22f4fe390f61b/windows-apps-src/graphics/composition-animation.md)
-* Current Handback File: [composition-animation.64277e041816f40676f859bbeb8895857bec9110.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/composition-animation.64277e041816f40676f859bbeb8895857bec9110.de-de.xlf)
+* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.de-de/blob/f23f7352e85523c2080e4548d15487ba1fd78516/windows-apps-src/TOC.md)
+* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/e787585e48f709968be1ca604abad8e25307473d/ol-handback/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Current Handback Datetime: 2016-06-21 15:01:10
+* [Back to Top](#report-top)
+
+##### <a name='fa7e7404a9a3ab5d75d47b3a5271bd1fd84b55693860'></a> Source: [windows-apps-src\winrt-components\brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md](https://github.com/Microsoft/windows-apps/blob/4e9f3de68c44cf545ceee2efd99d9db8cab08676/windows-apps-src/winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [brokered-windows-runtime-components-for-side-loaded-windows-store-apps.55ac70b0596c54a60c1d03f25ca7482d0090ce24.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/cad8e5bde96a66549faf8b67e8c8bf04206b23e2/ol-handoff/Microsoft/windows-apps.de-de/master/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.55ac70b0596c54a60c1d03f25ca7482d0090ce24.de-de.xlf)
+* Handoff Datetime: 2016-06-23 20:36:56
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='ddbfc30f765bdb1dacbf5c6b72255233fe1340733869'></a> Source: [windows-apps-src\winrt-components\index.md](https://github.com/Microsoft/windows-apps/blob/4e9f3de68c44cf545ceee2efd99d9db8cab08676/windows-apps-src/winrt-components/index.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [index.f4a11554ece92280450147aa65b4bafff4b454c0.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/cad8e5bde96a66549faf8b67e8c8bf04206b23e2/ol-handoff/Microsoft/windows-apps.de-de/master/index.f4a11554ece92280450147aa65b4bafff4b454c0.de-de.xlf)
+* Handoff Datetime: 2016-06-23 20:36:56
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\winrt-components\index.md](https://github.com/Microsoft/windows-apps.de-de/blob/bc116d2542b0e55dbcea8b0066b22f4fe390f61b/windows-apps-src/winrt-components/index.md)
+* Current Handback File: [index.f4a11554ece92280450147aa65b4bafff4b454c0.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/index.f4a11554ece92280450147aa65b4bafff4b454c0.de-de.xlf)
 * Current Handback Datetime: 2016-05-31 12:25:12
 * [Back to Top](#report-top)
 
