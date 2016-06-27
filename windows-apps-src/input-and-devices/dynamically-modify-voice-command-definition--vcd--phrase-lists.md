@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Erfahren Sie, wie Sie mithilfe des Spracherkennungsergebnisses zur Laufzeit auf die Liste der unterstützten Begriffe (PhraseList-Elemente) in einer VCD-Datei (Voice Command Definition) zugreifen und diese aktualisieren
-title: Dynamisches Ändern von VCD-Begriffslisten
+Description: "Erfahren Sie, wie Sie mithilfe des Spracherkennungsergebnisses zur Laufzeit auf die Liste der unterstützten Begriffe (PhraseList-Elemente) in einer VCD-Datei (Voice Command Definition) zugreifen und diese aktualisieren"
+title: "Dynamisches Ändern von VCD-Begriffslisten"
 ms.assetid: 98024EAC-EC0E-44AA-AEC5-A611BA7C5884
 label: Modify VCD phrase lists
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 623243b94cf8ef6b276f8f2971af7bbdbdece81c
+
 ---
 
 # Dynamisches Ändern von VCD-Begriffslisten
@@ -151,6 +154,7 @@ Dieses Beispiel zeigt ein **PhraseTopic** mit einem **Szenario** „Suche“, da
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

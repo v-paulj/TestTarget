@@ -1,11 +1,14 @@
 ---
 author: Jwmsft
-Description: Ein Texteingabefeld, das während der Benutzereingabe Vorschläge anzeigt.
-title: Richtlinien für Felder mit automatischen Vorschlägen
+Description: "Ein Texteingabefeld, das während der Benutzereingabe Vorschläge anzeigt."
+title: "Richtlinien für Felder mit automatischen Vorschlägen"
 ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 2900aa542a7986cac408051159f013e10dd3a5aa
+
 ---
 # Feld mit automatischen Vorschlägen
 Verwenden Sie ein AutoSuggestBox-Element, um eine Liste mit Vorschlägen bereitzustellen, aus der Benutzer bei der Eingabe auswählen können.
@@ -152,6 +155,7 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 - [StringLength-Eigenschaft](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

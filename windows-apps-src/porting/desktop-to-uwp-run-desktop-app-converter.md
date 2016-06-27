@@ -1,8 +1,11 @@
 ---
 author: awkoren
-Description: Führen Sie die Desktop-Konverter-App zum Konvertieren einer Windows-Desktopanwendung (z. B. Win32, WPF und Windows Forms) in eine UWP-App (Universelle Windows-Plattform).
+Description: "Führen Sie die Desktop-Konverter-App zum Konvertieren einer Windows-Desktopanwendung (z. B. Win32, WPF und Windows Forms) in eine UWP-App (Universelle Windows-Plattform)."
 Search.Product: eADQiWindows 10XVcnh
-title: Vorschau für den Desktop-App-Konverter (Project Centennial)
+title: "Vorschau für den Desktop-App-Konverter (Project Centennial)"
+ms.sourcegitcommit: 6d1c6e836d666972641320c73896459490f45924
+ms.openlocfilehash: 874b6452386526d66062a27a5b520cb1a232ae64
+
 ---
 
 # Vorschau für den Desktop-App-Konverter (Project Centennial)
@@ -15,10 +18,35 @@ Desktop-App-Konverter ist die Vorabversion eines Tools, mit dem Sie vorhandene f
 
 Der Konverter führt den Desktop-Installer in einer isolierten Windows-Umgebung mit einem sauberen Basisimage als Teil des Konverterdownloads aus. Es werden alle Registrierungs- und Dateisystem-E/A des Desktop-Installers erfasst und als Teil der Ausgabe gepackt. Der Konverter gibt ein AppX-Paket mit Paketidentität und der Möglichkeit aus, eine breite Palette von WinRT-APIs aufzurufen.
 
+## Das ist neu:
+
+In diesem Abschnitt werden Änderungen zwischen Versionen des Desktop-App-Konverters hervorgehoben. 
+
+### 08.06.2016
+
+* Unterstützung für die Generierung von x86-appx-Paketen auf AMD64-Hostrechnern hinzugefügt, auf denen der Konverter ausgeführt wird.
+* Speicherplatzverwendung durch Entfernen aller zuvor erweiterter Basisimages reduziert.
+* Unterstützung für das Bereinigen temporärer Dateien und aller unnötigen Basisimages hinzugefügt.
+* Unterstützung für das Erkennen von Dateityp- und Protokollzuordnungen verbessert.
+* Logik zum Ermitteln der AppExecutable-Eigenschaft für eine große Anzahl von Apps verbessert.
+* Unterstützung für die Bereitstellung zusätzlicher –InstallerArguments für MSI-basierte Installationsprogramme hinzugefügt.
+* Fehlerkorrekturen für alle PathTooLongException-Fehler während der Konvertierung.
+
+### 12.05.2016
+
+- Unterstützung für Pro-Edition von Windows wiederhergestellt. 
+- Konverter-```-Setup```-Markierung aktiviert nun Windows-Container-Feature und verarbeitet Basisimage-Erweiterung. Führen Sie Folgendes an einer PowerShell-Eingabeaufforderung mit erhöhten Rechten für die einmalige Einrichtung aus: ```PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage BaseImage-12345.wim -Verbose```
+- Automatische Erkennung des App-Installationspfads hinzugefügt und Anwendungsstamm außerhalb von VFS verschoben, um alle nicht benötigten Dateisystemumleitungen zur Laufzeit zu verringern.
+- Automatische Erkennung des erweiterten Basisimage als Teil des Konvertierungsprozesses hinzugefügt.
+- Automatische Erkennung für Dateitypzuordnungen und Protokolle hinzugefügt.
+- Logik zum Erkennen der Startmenüverknüpfung verbessert.
+- Dateisystemfilter zum Beibehalten der von der App installierten MUI-Dateien verbessert.
+- Die unterstützte Desktop-Mindestversion (10.0.14342.0) für Project Centennial im Manifest aktualisiert.
+
 ## Systemanforderungen
 
 ### Unterstütztes Betriebssystem
-+ Windows 10 Anniversary Update Enterprise Edition Preview (Build 10.0.14316.0 und höher)
++ Windows 10 Anniversary Update Enterprise Edition Preview (Build 10.0.14342.0 und höher)
 
 ### Erforderliche Hardwarekonfiguration
 
@@ -33,8 +61,8 @@ Der Computer muss die folgenden Mindestfunktionen aufweisen:
 ## Einrichten des Desktop-App-Konverters   
 Der Desktop-App-Konverter basiert auf Windows 10-Features mit Test-Flight als Bestandteil des Windows-Insider Preview-Builds. Stellen Sie sicher, dass Sie den aktuellen Build für die Verwendung des Konverters nutzen.
 
-1. Stellen Sie sicher, dass Sie die aktuelle Betriebssystemversion von Windows 10 Insider Preview – Enterprise Edition (Build 10.0.14316.0 und höher) verwenden.
-2. Laden Sie die Dateien „DesktopAppConverter.zip“ und „BaseImage-14316.wim“ herunter.
+1. Stellen Sie sicher, dass Sie das neueste Windows 10 Insider Preview-Betriebssystem – Enterprise- oder Pro-Edition (http://insider.windows.com) – haben. 
+2. Laden Sie die DesktopAppConverter.zip und die WIM-Basisimage-Datei herunter, die Ihrem Insider Preview-Build (http://aka.ms/converter) entspricht. 
 3. Extrahieren Sie die Datei „DesktopAppConverter.zip“ in einen lokalen Ordner.
 4. Führen Sie in einem PowerShell-Administratorfenster den folgenden Befehl aus:  
 ```CMD
@@ -42,7 +70,7 @@ PS C:\> Set-ExecutionPolicy bypass
 ```
 5. Führen Sie den folgenden Befehl in einem PowerShell- Administratorfenster zum Einrichten des Konverters aus:
 ```CMD
-PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-14316.wim
+PS C:\> .\DesktopAppConverter.ps1 -Setup -BaseImage .\BaseImage-1XXXX.wim -Verbose
 ```
 6. Wenn Sie beim Ausführen des vorherigen Befehls zum Neustarten aufgefordert werden, starten Sie den Computer neu, und führen Sie den Befehl erneut aus.
 
@@ -52,12 +80,12 @@ Der Desktop-App-Konverter verfügt über zwei Einstiegspunkte: PowerShell und Be
 ### Verwendung
 ```CMD
 DesktopAppConverter.ps1
--ExpandedBaseImage <String>
 -Installer <String> [-InstallerArguments <String>] [-InstallerValidExitCodes <Int32>]
 -Destination <String>
 -PackageName <String>
 -Publisher <String>
 -Version <Version>
+[-ExpandedBaseImage <String>]
 [-AppExecutable <String>]
 [-AppFileTypes <String>]
 [-AppId <String>]
@@ -66,7 +94,6 @@ DesktopAppConverter.ps1
 [-PackageDisplayName <String>]
 [-PackagePublisherDisplayName <String>]
 [-MakeAppx]
-[-NatSubnetPrefix <String>]
 [-LogFile <String>]
 [<CommonParameters>]  
 ```
@@ -76,9 +103,9 @@ Das folgende Beispiel veranschaulicht, wie eine Desktop-App mit dem Namen *MyApp
 
 + Führen Sie in einem PowerShell-Administratorfenster den folgenden Befehl aus:
 ```CMD
-PS C:\>.\DesktopAppConverter.ps1 -ExpandedBaseImage C:\ProgramData\Microsoft\Windows\Images\BaseImage-14316
--Installer C:\Installer\MyApp.exe -InstallerArguments "/S" -Destination C:\Output\MyApp
--PackageName "MyApp" -Publisher "CN=<publisher_name>" -Version 0.0.0.1 -MakeAppx -Verbose
+PS C:\>.\DesktopAppConverter.ps1 -Installer C:\Installer\MyApp.exe 
+-InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" 
+-Publisher "CN=<publisher_name>" -Version 0.0.0.1 -MakeAppx -Verbose
 ```
 
 ## Bereitstellen des konvertierten AppX-Pakets
@@ -111,6 +138,11 @@ Weitere Informationen zu Zertifikaten und zum Signieren finden Sie unter:
   + Registrierung: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners`
   + Dateisystem: %windir%\\SideBySide
 
+## Bekannte Probleme
+
++ Wenn Sie einen Windows-Insider-Flight auf einem Entwicklercomputer erhalten, auf dem zuvor die Desktop App Konverter Preview installiert war, erhalten Sie möglicherweise den Fehler `New-ContainerNetwork: The object already exists`, wenn Sie das neue Basisimage einrichten. Um dieses Problem zu umgehen, führen Sie den Befehl `Netsh int ipv4 reset` an einer Eingabeaufforderung mit erhöhten Rechten aus, und starten Sie den Computer dann neu. 
++ Die Installation einer mit der Buildoption „AnyCPU“ kompilierten .NET-App schlägt fehl, wenn die ausführbare Hauptdatei oder eine Abhängigkeit unter „Programme“ oder „Windows\System32“ abgelegt wurden. Um dieses Problem zu umgehen, verwenden Sie das Desktop-Installationsprogramm für Ihre Architektur (32-Bit oder 64-Bit), um ein AppX-Paket erfolgreich zu generieren.
+
 ## Telemetriedaten aus Desktop-App-Konverter  
 Desktop-App-Konverter erfasst ggf. Informationen über Sie und die Verwendung der Software, und sendet diese Informationen an Microsoft. Weitere Informationen zur Sammlung von Daten und deren Verwendung von Microsoft finden Sie in der Produktdokumentation und in den [Datenschutzbestimmungen von Microsoft](http://go.microsoft.com/fwlink/?LinkId=521839). Sie stimmen der Einhaltung aller geltenden Vorschriften der Datenschutzbestimmungen von Microsoft zu.
 
@@ -130,14 +162,15 @@ get-help .\DesktopAppConverter.ps1 -detailed
 ### Setupparameter  
 |Parameter|Beschreibung|
 |---------|-----------|
-|```-Setup [<SwitchParameter>]``` | Verwenden Sie dieses Flag zum Ausführen von DesktopAppConverter im Setupmodus. Setupmodus unterstützt die Erweiterung eines bereitgestellten Basisimages.|
+|```-Setup [<SwitchParameter>]``` | Führt DesktopAppConverter im Setupmodus aus. Setupmodus unterstützt die Erweiterung eines bereitgestellten Basisimages.|
 |```-BaseImage <String>``` | Vollständiger Pfad zu einem nicht erweiterten Basisimage. Dieser Parameter ist erforderlich, wenn -Setup angegeben wurde.|
 |```-LogFile <String>``` [optional] | Gibt eine Protokolldatei an. Wird dieser nicht angegeben, wird ein temporärer Speicherort für eine Protokolldatei erstellt.|
+|```-NatSubnetPrefix <String>``` [optional] | Präfixwert, der für die Nat-Instanz verwendet wird. In der Regel möchten Sie diesen nur ändern, wenn der Hostcomputer an den gleichen Subnetzbereich wie NetNat des Konverters angefügt ist. Sie können die aktuelle NetNat-Konfiguration des Konverters mithilfe des **Get-NetNat**-Cmdlets abrufen. |
+|```-NoRestart [<SwitchParameter>]``` | Fordern Sie nicht zum Neustart auf, wenn Sie das Setupprogramm ausführen (Neustart ist erforderlich, um das Container-Feature zu aktivieren). |
 
 ### Konvertierungsparameter  
 |Parameter|Beschreibung|
 |---------|-----------|
-|```-ExpandedBaseImage <String>``` | Vollständige Pfad zu einem bereits erweiterten Basisimage.|
 |```-Installer <String>``` | Der Pfad zum Installer für Ihre Anwendung. Muss im unbeaufsichtigten Modus bzw. automatisch ausgeführt werden können.|
 |```-InstallerArguments <String>``` [optional] | Eine durch Trennzeichen getrennte Liste oder Zeichenfolge mit Argumenten, die das unbeaufsichtigte bzw. automatische Ausführen des Installers erzwingen. Dieser Parameter ist optional, wenn der Installer eine MSI-Datei ist. Geben Sie zum Abrufen eines Protokolls vom Installer hier das Argument für die Protokollierung an, und verwenden Sie den Pfad ```<log_folder>```, ein Token, das vom Konverter mit dem entsprechenden Pfad ersetzt wird. <br><br>**Hinweis: Unbeaufsichtigte/automatische Flags und Protokollargumente können bei den verschiedenen Installationstechnologien variieren.** <br><br>Ein Verwendungsbeispiel für diesen Parameter: ```-InstallerArguments "/silent /log <log_folder>\install.log"``` Ein weiteres Beispiel, in dem keine Protokolldatei generiert wird, kann wie folgt aussehen: ```-InstallerArguments "/quiet", "/norestart"``` Alle Protokolle müssen auf den Tokenpfad ```<log_folder>``` verweisen, wenn der Konverter diese erfassen und im endgültigen Protokollordner speichern soll.|
 |```-InstallerValidExitCodes <Int32>``` [optional] | Eine durch Trennzeichen getrennte Liste mit Exitcodes, die angeben, das der Installer erfolgreich ausgeführt wurde (z. B.: 0, 1234, 5678).  Standardmäßig ist dieser 0 für Nicht-MSI-Dateien und 0, 1641, 3010 für MSI-Dateien.|
@@ -164,19 +197,36 @@ get-help .\DesktopAppConverter.ps1 -detailed
 ### Weitere Konvertierungsparameter  
 |Parameter|Beschreibung|
 |---------|-----------|
+|```-ExpandedBaseImage <String>``` [optional] | Vollständige Pfad zu einem bereits erweiterten Basisimage.|
 |```-MakeAppx [<SwitchParameter>]``` [optional] | Ein Switch, mit dem, falls vorhanden, dieses Skript zum Aufrufen von MakeAppx für die Ausgabe angewiesen wird. |
-|```-NatSubnetPrefix <String>``` [optional] | Präfixwert, der für die Nat-Instanz verwendet wird. In der Regel möchten Sie diesen nur ändern, wenn der Hostcomputer an den gleichen Subnetzbereich wie NetNat des Konverters angefügt ist. Sie können die aktuelle NetNat-Konfiguration des Konverters mithilfe des **Get-NetNat**-Cmdlets abrufen. |
 |```-LogFile <String>``` [optional] | Gibt eine Protokolldatei an. Wird dieser nicht angegeben, wird ein temporärer Speicherort für eine Protokolldatei erstellt. |
 |```<Common parameters>``` | Dieses Cmdlet unterstützt die folgenden allgemeinen Parameter: *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable* und *OutVariable*. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216). |
 
+### BereinigungsParameter
+|Parameter|Beschreibung|
+|---------|-----------|
+|```Cleanup [<Option>]``` | Führt Bereinigung für die DesktopAppConverter-Artefakte aus. Es gibt 3 gültige Optionen für den Bereinigungsmodus. |
+|```Cleanup All``` | Löscht alle erweiterten Basisimages, entfernt alle temporären Konverterdateien, entfernt das Containernetzwerk und deaktiviert die optionale Windows-Funktion. |
+|```Cleanup WorkDirectory``` | Entfernt alle temporären Konverterdateien. |
+|```Cleanup ExpandedImages``` | Löscht alle erweiterten Basisimages, die auf dem Hostcomputer installiert sind. |
+
+### x86-Paketparameter
+Die Vorschau für den Desktop-App-Konverter unterstützt jetzt die Erstellung von x86-App-Paketen, die Sie auf x86- und amd64-Computern ausführen können. Beachten Sie, dass der Desktop-App-Konverter weiterhin auf einem AMD64-Computer ausgeführt werden muss, um eine erfolgreiche Konvertierung durchzuführen.
+
+|Parameter|Beschreibung|
+|---------|-----------|
+|```-CreateX86Package[<SwitchParameter>]``` | Generiert ein 32-Bit-Paket, das auf einem 32-Bit- und 64-Bit-Hostbetriebssystem installiert und ausgeführt werden kann. Der Konverter versucht standardmäßig, Paketarchitektur aus der ausführbaren Hauptdatei der App zu erkennen oder verwendet standardmäßig 64-Bit, wenn keine ausführbare Datei gefunden wird. |
+
 ## Siehe auch
-+ [Herunterladen des Desktop-App-Konverters](http://go.microsoft.com/fwlink/?LinkId=785437)
++ [Holen Sie sich den Desktop-App-Konverter.](http://go.microsoft.com/fwlink/?LinkId=785437)
 + [Migrieren Ihrer Desktop-App zur Universellen Windows-Plattform](https://developer.microsoft.com/en-us/windows/bridges/desktop)
 + [Migrieren von Desktop-Apps zur Universellen Windows-Plattform mit dem Desktop-App-Konverter](https://channel9.msdn.com/events/Build/2016/P504)
 + [Project Centennial: Migrieren vorhandener Desktopanwendungen zur Universellen Windows-Plattform](https://channel9.msdn.com/events/Build/2016/B829)  
 + [UserVoice für Desktop-Brücke (Project Centennial)](http://aka.ms/UserVoiceDesktopToUwp)
++ [Desktop-App-Bridge zu UWP-Codebeispielen auf GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

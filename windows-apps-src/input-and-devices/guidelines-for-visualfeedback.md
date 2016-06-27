@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Zeigen Sie Benutzern mit visuellem Feedback, wenn ihre Interaktionen mit einer Windows Store-App ermittelt, interpretiert und behandelt werden.
+Description: "Zeigen Sie Benutzern mit visuellem Feedback, wenn ihre Interaktionen mit einer Windows Store-App ermittelt, interpretiert und behandelt werden."
 title: Visuelles Feedback
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: 287ec24dbc60be39c0f944c6d4a86205961fb770
+
 ---
 
 # Richtlinien für visuelles Feedback
@@ -182,6 +185,7 @@ Siehe [Hinzufügen von Flyouts und Menüs](https://msdn.microsoft.com/library/wi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Neben der Verwendung von Sprachbefehlen innerhalb von Cortana für den Zugriff auf Systemfeatures können Sie mithilfe von Sprachbefehlen über Cortana auch eine Vordergrund-App starten und eine Aktion oder einen Befehl angeben, der innerhalb der App ausgeführt wird.
+Description: "Neben der Verwendung von Sprachbefehlen innerhalb von Cortana für den Zugriff auf Systemfeatures können Sie mithilfe von Sprachbefehlen über Cortana auch eine Vordergrund-App starten und eine Aktion oder einen Befehl angeben, der innerhalb der App ausgeführt wird."
 title: Starten einer Vordergrund-App mit Sprachbefehlen in Cortana
 ms.assetid: 8D3D1F66-7D17-4DD1-B426-DCCBD534EF00
 label: Cortana-Launch a foreground app
 template: detail.hbs
+ms.sourcegitcommit: 7cbea3c4e784fe024aef953e3ea757dad6c5e3b8
+ms.openlocfilehash: aa4d71525d4a41382b8bbe123ca1fa830a4fc720
+
 ---
 
 # Aktivieren einer Vordergrund-App mit Sprachbefehlen über Cortana
@@ -40,7 +43,7 @@ Mit den Sprachbefehlen über **Cortana** kann der Benutzer stattdessen einfach s
 
 Die grundlegenden Schritte zum Hinzufügen der Sprachbefehlserkennung und zum Integrieren von Cortana in Ihre App mithilfe der Sprach- oder Tastatureingabe lauten wie folgt:
 
-1.  Erstellen einer VCD-Datei Hierbei handelt es sich um ein XML-Dokument, das alle Sprachbefehle definiert, mit denen der Benutzer Aktionen initiieren oder Befehle aufrufen kann, wenn er Ihre App aktiviert. Informationen finden Sie unter [**VCD-Elemente und -Attribute v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593).
+1.  Erstellen einer VCD-Datei Hierbei handelt es sich um ein XML-Dokument, das alle Sprachbefehle definiert, mit denen der Benutzer Aktionen initiieren oder Befehle aufrufen kann, wenn er Ihre App aktiviert. Informationen finden Sie unter [**VCD elements and attributes v1.2**](https://msdn.microsoft.com/library/windows/apps/dn706593).
 2.  Registrieren Sie die Befehlssätze in der VCD-Datei, wenn die App gestartet wird.
 3.  Verarbeiten Sie die Aktivierung per Sprachbefehl, die Navigation innerhalb der App und die Befehlsausführung.
 
@@ -102,7 +105,7 @@ Wir empfehlen, bei Zeichenfolgen-Ressourcendateien die Standardsprache (Beispiel
 ## <span id="Edit_the_VCD_file"></span><span id="edit_the_vcd_file"></span><span id="EDIT_THE_VCD_FILE"></span>Bearbeiten der VCD-Datei
 
 
-Fügen Sie ein **VoiceCommands**-Element mit einem **xmlns**-Attribut mit folgendem Verweis hinzu:
+Fügen Sie ein **VoiceCommands**-Element mit einem **xmlns**-Attribut hinzu, das auf `http://schemas.microsoft.com/voicecommands/1.2` zeigt.
 
 2. Erstellen Sie für jede von Ihrer App unterstützte Sprache ein [**CommandSet**](https://msdn.microsoft.com/library/windows/apps/dn722331)-Element, das die von Ihrer App unterstützten Sprachbefehle enthält.
 
@@ -113,7 +116,7 @@ Fügen Sie ein **VoiceCommands**-Element mit einem **xmlns**-Attribut mit folgen
 
 3. Fügen Sie ein **Command**-Element für jeden Befehl hinzu, den Sie unterstützen möchten.
 
-  Jeder in einer [**VCD**](https://msdn.microsoft.com/library/windows/apps/dn706593)-Datei deklarierte **Command** muss diese Informationen enthalten:
+  Jeder in einer [**VCD**](https://msdn.microsoft.com/library/windows/apps/dn706593)-Datei deklarierte **Command** muss diese Informationen beinhalten:
 
   - Attribut **Name**, das Ihre Anwendung verwendet, um den Sprachbefehl zur Laufzeit zu identifizieren. 
   - Element **Example**, das eine Beschreibung enthält, wie ein Benutzer den Befehl aufrufen kann. **Cortana** zeigt folgendes Beispiel an, wenn der Benutzer „Was kann ich sagen?“ oder „Hilfe“ sagt oder auf **Mehr anzeigen** tippt.    
@@ -195,7 +198,7 @@ protected async override void OnLaunched(LaunchActivatedEventArgs e)
 
   Anschließend rufen wir [**GetFileAsync**](https://msdn.microsoft.com/library/windows/apps/br227272) auf, um es mit unserer Datei „AdventureWorksCommands.xml“ zu initialisieren.
 
-  Dieses [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt wird dann an [**InstallCommandDefinitionsFromStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn708205) übergeben.    
+  Dieses [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt wird anschließend an [**InstallCommandDefinitionsFromStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/dn708205) übergeben.    
 ```csharp
 try
 {
@@ -226,7 +229,7 @@ Geben Sie an, wie Ihre App auf nachfolgende Sprachbefehlaktivierungen reagiert (
 
 1.  Bestätigen Sie, dass die App über einen Sprachbefehl aktiviert wurde.
 
-    Überschreiben Sie das [**Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Ereignis, und überprüfen Sie, ob [**IActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224727).[**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) gleich [**VoiceCommand**](https://msdn.microsoft.com/library/windows/apps/br224693) ist.
+    Überschreiben Sie das [**Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Ereignis, und überprüfen Sie, ob [**IActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224727).[**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) [**VoiceCommand**](https://msdn.microsoft.com/library/windows/apps/br224693) ist.
 
 2.  Bestimmen Sie den Namen des Befehls und die Sprachausgabe.
 
@@ -395,6 +398,7 @@ private string SemanticInterpretation(string interpretationKey, SpeechRecognitio
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

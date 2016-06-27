@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: In diesem Thema wird die neue Windows-Benutzeroberfläche für Drehungen beschrieben. Außerdem enthält das Thema Richtlinien für die Benutzeroberfläche, die Sie berücksichtigen sollten, wenn Sie diesen neuen Interaktionsmechanismus in einer Windows Store-App verwenden.
+Description: "In diesem Thema wird die neue Windows-Benutzeroberfläche für Drehungen beschrieben. Außerdem enthält das Thema Richtlinien für die Benutzeroberfläche, die Sie berücksichtigen sollten, wenn Sie diesen neuen Interaktionsmechanismus in einer Windows Store-App verwenden."
 title: Drehung
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: d91a3cf5dc5ae2e1a68e32fc64848b869f229391
+
 ---
 
 # Drehung
@@ -123,6 +126,7 @@ Windows 8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

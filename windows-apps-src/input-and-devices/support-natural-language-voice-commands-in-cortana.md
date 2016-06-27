@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Erfahren Sie, wie Sie Cortana mit flexibleren Befehlen in natürlicher Sprache erweitern, bei denen der Benutzer den App-Namen an beliebiger Stelle im Befehl verwenden kann.
-title: Unterstützen von Sprachbefehlen in natürlicher Sprache in Cortana
+Description: "Erfahren Sie, wie Sie Cortana mit flexibleren Befehlen in natürlicher Sprache erweitern, bei denen der Benutzer den App-Namen an beliebiger Stelle im Befehl verwenden kann."
+title: "Unterstützen von Sprachbefehlen in natürlicher Sprache in Cortana"
 ms.assetid: 281E068A-336A-4A8D-879A-D8715C817911
 label: Support natural language voice commands
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: c9cd6894c61f3d6cfe770d197317a97a804b4119
+
 ---
 
 # Unterstützen von Sprachbefehlen in natürlicher Sprache in Cortana
@@ -209,6 +212,7 @@ Hier sehen Sie eine VCD-Datei, die verschiedene Möglichkeiten für natürlicher
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

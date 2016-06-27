@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Hier erfahren Sie, wie ein Benutzer während der Ausführung eines Sprachbefehls über die Spracheingabe und die Canvas von Cortana mit einer Hintergrund-App interagieren kann.
+Description: "Hier erfahren Sie, wie ein Benutzer während der Ausführung eines Sprachbefehls über die Spracheingabe und die Canvas von Cortana mit einer Hintergrund-App interagieren kann."
 title: Interagieren mit einer Hintergrund-App
 ms.assetid: 6C60F03C-A242-435D-96BB-736892CC1CA6
 label: Interact with a background app
 template: detail.hbs
+ms.sourcegitcommit: 7d9f5eff0f6561b18024658fe99d1e11bbe3309f
+ms.openlocfilehash: 675553f5c3954597982360900e965b2a756d7f63
+
 ---
 
 # Interagieren mit einer Hintergrund-App in Cortana
@@ -180,7 +183,9 @@ Nachdem ein Sprachbefehl erkannt wurde, muss **Cortana** ReportSuccessAsync aufr
 
 Falls der App-Dienst ReportSuccessAsync oder eine andere VoiceCommandServiceConnection-Methode nicht aufruft, erhält der Benutzer eine Fehlermeldung, und der Aufruf des App-Diensts wird abgebrochen.
 
-Hier sehen Sie einen Übergabebildschirm für die App **Adventure Works**. In diesem Beispiel hat ein Benutzer **Cortana** nach anstehenden Reisen befragt. Der Übergabebildschirm enthält eine Meldung mit dem Namen des App-Diensts, einem Symbol und der **Feedback**-Zeichenfolge aus der VCD-Datei.
+Hier sehen Sie einen Übergabebildschirm für die App **Adventure Works**. In diesem Beispiel hat ein Benutzer **Cortana** nach anstehenden Reisen befragt. Der Übergabebildschirm enthält eine Meldung mit dem Namen des App-Diensts, einem Symbol und einer **Feedback**-Zeichenfolge. 
+
+[!NOTE] Sie eine **Feedback**-Zeichenfolge in der VCD-Datei deklarieren. Diese Zeichenfolge hat keine Auswirkungen auf den auf der Cortana-Canvas angezeigten UI-Text, sie wirkt sich nur auf den von **Cortana** gesprochenen Text aus.
 
 ![Cortana-Übergabebildschirm für Hintergrund-App](images/cortana-backgroundapp-progress-result.png)
 
@@ -472,6 +477,7 @@ var userMessage = new VoiceCommandUserMessage();
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

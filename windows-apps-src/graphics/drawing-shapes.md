@@ -2,7 +2,10 @@
 author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: Zeichnen von Formen
-description: Erfahren Sie, wie Sie Formen wie Ellipsen, Rechtecke, Polygone und Pfade zeichnen. Mithilfe der Klasse Path visualisieren Sie eine ziemlich komplexe vektorbasierte Zeichnungssprache in einer XAML-Benutzeroberfläche. Beispielsweise können Sie auf diese Weise Bézierkurven zeichnen.
+description: "Erfahren Sie, wie Sie Formen wie Ellipsen, Rechtecke, Polygone und Pfade zeichnen. Mithilfe der Klasse Path visualisieren Sie eine ziemlich komplexe vektorbasierte Zeichnungssprache in einer XAML-Benutzeroberfläche. Beispielsweise können Sie auf diese Weise Bézierkurven zeichnen."
+ms.sourcegitcommit: 04a3c2dabc4b115faf4b06aa3d3a59c5c38ab95f
+ms.openlocfilehash: 42514e5119b646d196e0a1c7d3099ebed2225c69
+
 ---
 # Zeichnen von Formen
 
@@ -184,7 +187,7 @@ The next example shows a usage of the other technique we discussed: a [**Geometr
           </Path>
 ```
 
-Ein Grund für die Verwendung von [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168) mit den verschiedenen Teilen besteht darin, dass jeder Teil die Eigenschaften **Double** und **Point** besitzt, auf die Sie potenziell für eine UI-Animation zielen können. Im Serialisierungsformat von [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) ist dies nicht möglich. Weitere Informationen finden Sie unter [Storyboardanimationen](storyboarded-animations.md).
+Durch die Verwendung von [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/BR210168) wird das Ergebnis lesbarer als durch das Ausfüllen einer [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data)-Zeichenfolge. Andererseits verwendet [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.path.data) eine Syntax, die mit Imagepfaddefinitionen für skalierbare Vektorgrafiken (SVG) kompatibel ist. Daher kann es nützlich sein, Grafiken aus SVG oder als Ausgabe von einem Tool wie etwa Blend zu portieren.
 
  
 
@@ -195,6 +198,7 @@ Ein Grund für die Verwendung von [**PathGeometry**](https://msdn.microsoft.com/
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Sie können Werbecodes für Apps oder In-App-Produkte (IAP) generieren, die Sie im Windows Store veröffentlicht haben.
+Description: "Sie können Werbecodes für Apps oder In-App-Produkte (IAP) generieren, die Sie im Windows Store veröffentlicht haben."
 title: Generieren von Werbecodes
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4001f374a80cd7c62df6230a9429dd5b5a19d2b2
+
 ---
 
 # Generieren von Werbecodes
@@ -130,6 +133,7 @@ Sie können auch eine aktive Bestellung aus dieser Tabelle herunterladen.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

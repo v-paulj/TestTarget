@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Mit den Core-Text-APIs im Windows.UI.Text.Core-Namespace kann eine UWP-App (Universelle Windows-Plattform) Texteingaben von beliebigen Textdiensten empfangen, die auf Windows-Geräten unterstützt werden.
-title: Übersicht über benutzerdefinierte Texteingabe
+Description: "Mit den Core-Text-APIs im Windows.UI.Text.Core-Namespace kann eine UWP-App (Universelle Windows-Plattform) Texteingaben von beliebigen Textdiensten empfangen, die auf Windows-Geräten unterstützt werden."
+title: "Übersicht über benutzerdefinierte Texteingabe"
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: fc2dadfbca30fc74362d7665022b1f41f23c3304
+
 ---
 
 # Benutzerdefinierte Texteingabe
@@ -68,95 +71,95 @@ Einige Bearbeitungssteuerelemente unterstützen nicht zusammenhängende Auswahle
 
 Betrachten Sie beispielsweise den folgenden Textstream:
 
-![Beispieldiagramm für einen Textstream Es gibt zwei Auswahlen: \[0, 1\] und \[6, 11\].
+![Beispieldiagramm für einen Textstream](images/coretext/stream-2.png) Es gibt zwei Auswahlen: \[0, 1\] und \[6, 11\]. Das Bearbeitungssteuerelement muss nur eine von diesen melden: \[0, 1\] oder \[6, 11\].
 
-## <span id="Working_with_text"></span><span id="working_with_text"></span><span id="WORKING_WITH_TEXT"></span>Das Bearbeitungssteuerelement muss nur eine von diesen melden: \[0, 1\] oder \[6, 11\].
+## <span id="Working_with_text"></span><span id="working_with_text"></span><span id="WORKING_WITH_TEXT"></span>Arbeiten mit Text
 
-
-Arbeiten mit Text
 
 Die [**CoreTextEditContext**](https://msdn.microsoft.com/library/windows/apps/dn958158)-Klasse ermöglicht einen Textfluss zwischen Windows und Bearbeitungssteuerelementen über das [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignis, das [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis und die [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172)-Methode.
 
 Das Bearbeitungssteuerelement empfängt Text über die [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignisse, die generiert werden, wenn Benutzer mit Texteingabemethoden wie Tastaturen, Sprache oder IMEs interagieren.
 
-Wenn Sie Text im Bearbeitungssteuerelement ändern, beispielsweise durch Einfügen von Text in das Steuerelement, müssen Sie Windows benachrichtigen, indem Sie [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) aufrufen. Wenn der Textdienst den neuen Text erfordert, wird ein [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis ausgelöst.
+Wenn Sie Text im Bearbeitungssteuerelement ändern, beispielsweise durch Einfügen von Text in das Steuerelement, müssen Sie Windows benachrichtigen, indem Sie [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) aufrufen.
 
-### <span id="Accepting_text_updates"></span><span id="accepting_text_updates"></span><span id="ACCEPTING_TEXT_UPDATES"></span>Sie müssen den neuen Text in den **TextRequested**-Ereignishandler eingeben.
+Wenn der Textdienst den neuen Text erfordert, wird ein [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis ausgelöst. Sie müssen den neuen Text in den **TextRequested**-Ereignishandler eingeben.
 
-Akzeptieren von Textupdates Ihr Bearbeitungssteuerelement sollte in der Regel Textaktualisierungsanforderungen akzeptieren, da diese den Text darstellen, den der Benutzer eingeben möchte.
+### <span id="Accepting_text_updates"></span><span id="accepting_text_updates"></span><span id="ACCEPTING_TEXT_UPDATES"></span>Akzeptieren von Textupdates
 
-1.  Im [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignishandler werden die folgenden Aktionen vom Bearbeitungssteuerelement erwartet:
-2.  Einfügen des Texts, der in [**CoreTextTextUpdatingEventArgs.Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) an der Position angegeben wurde, die in [**CoreTextTextUpdatingEventArgs.Range**](https://msdn.microsoft.com/library/windows/apps/dn958234) angegeben wurde
-3.  Platzieren der Auswahl an der in [**CoreTextTextUpdatingEventArgs.NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233) angegebenen Position
+Ihr Bearbeitungssteuerelement sollte in der Regel Textaktualisierungsanforderungen akzeptieren, da diese den Text darstellen, den der Benutzer eingeben möchte. Im [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignishandler werden die folgenden Aktionen vom Bearbeitungssteuerelement erwartet:
 
-Benachrichtigen des Systems, dass das Update erfolgreich war, indem [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) auf [**CoreTextTextUpdatingResult.Succeeded**](https://msdn.microsoft.com/library/windows/apps/dn958237) festgelegt wird Dies ist beispielsweise der Zustand eines Bearbeitungssteuerelements, bevor der Benutzer „d“ eingibt.
+1.  Einfügen des Texts, der in [**CoreTextTextUpdatingEventArgs.Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) an der Position angegeben wurde, die in [**CoreTextTextUpdatingEventArgs.Range**](https://msdn.microsoft.com/library/windows/apps/dn958234) angegeben wurde
+2.  Platzieren der Auswahl an der in [**CoreTextTextUpdatingEventArgs.NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233) angegebenen Position
+3.  Benachrichtigen des Systems, dass das Update erfolgreich war, indem [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) auf [**CoreTextTextUpdatingResult.Succeeded**](https://msdn.microsoft.com/library/windows/apps/dn958237) festgelegt wird
 
-![Die Einfügemarke befindet sich bei \[10, 10\].
+Dies ist beispielsweise der Zustand eines Bearbeitungssteuerelements, bevor der Benutzer „d“ eingibt. Die Einfügemarke befindet sich bei \[10, 10\].
 
--   Beispieldiagramm für einen Textstream
--   Wenn der Benutzer „d“ eingibt, wird ein [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignis mit den folgenden [**CoreTextTextUpdatingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn958229)-Daten ausgelöst:
+![Beispieldiagramm für einen Textstream](images/coretext/stream-3.png) Wenn der Benutzer „d“ eingibt, wird ein [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignis mit den folgenden [**CoreTextTextUpdatingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn958229)-Daten ausgelöst:
+
 -   [
               **Range**
             ](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
-
-[
+-   [
               **Text**
-            ](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d" [
+            ](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
+-   [
               **NewSelection**
             ](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
 
-![Wenden Sie in Ihrem Bearbeitungssteuerelement die angegebenen Änderungen an, und legen Sie [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) auf **Succeeded** fest.](images/coretext/stream-4.png)
-### <span id="Rejecting_text_updates"></span><span id="rejecting_text_updates"></span><span id="REJECTING_TEXT_UPDATES"></span>Hier sehen Sie den Zustand des Steuerelements, nachdem die Änderungen angewendet wurden.
+Wenden Sie in Ihrem Bearbeitungssteuerelement die angegebenen Änderungen an, und legen Sie [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) auf **Succeeded** fest. Hier sehen Sie den Zustand des Steuerelements, nachdem die Änderungen angewendet wurden.
 
-Beispieldiagramm für einen Textstream Ablehnen von Textupdates Manchmal können Textaktualisierungen nicht angewendet werden, da sich der angeforderte Bereich in einem Bereich des Bearbeitungssteuerelements befindet, der nicht geändert werden darf.
+![Beispieldiagramm für einen Textstream](images/coretext/stream-4.png)
+### <span id="Rejecting_text_updates"></span><span id="rejecting_text_updates"></span><span id="REJECTING_TEXT_UPDATES"></span>Ablehnen von Textupdates
 
-In diesem Fall sollten Sie keine Änderungen anwenden. Benachrichtigen Sie stattdessen das System, dass das Update fehlgeschlagen ist, indem Sie [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) auf [**CoreTextTextUpdatingResult.Failed**](https://msdn.microsoft.com/library/windows/apps/dn958237) festlegen.
+Manchmal können Textaktualisierungen nicht angewendet werden, da sich der angeforderte Bereich in einem Bereich des Bearbeitungssteuerelements befindet, der nicht geändert werden darf. In diesem Fall sollten Sie keine Änderungen anwenden. Benachrichtigen Sie stattdessen das System, dass die Aktualisierung fehlgeschlagen ist, indem Sie [**CoreTextTextUpdatingEventArgs.Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) auf [**CoreTextTextUpdatingResult.Failed**](https://msdn.microsoft.com/library/windows/apps/dn958237) festlegen.
 
-### <span id="Notifying_text_changes"></span><span id="notifying_text_changes"></span><span id="NOTIFYING_TEXT_CHANGES"></span>Angenommen, Sie haben ein Bearbeitungssteuerelement, das nur eine E-Mail-Adresse akzeptiert.
+Angenommen, Sie haben ein Bearbeitungssteuerelement, das nur eine E-Mail-Adresse akzeptiert. Leerzeichen sollten zurückgewiesen werden, da E-Mail-Adressen keine Leerzeichen enthalten dürfen. Wenn daher [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignisse für die Leertaste ausgelöst werden, können Sie [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) im Bearbeitungssteuerelement einfach auf **Failed** festlegen.
 
-Leerzeichen sollten zurückgewiesen werden, da E-Mail-Adressen keine Leerzeichen enthalten dürfen. Wenn daher [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignisse für die Leertaste ausgelöst werden, können Sie [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) im Bearbeitungssteuerelement einfach auf **Failed** festlegen. Benachrichtigen über Textänderungen
+### <span id="Notifying_text_changes"></span><span id="notifying_text_changes"></span><span id="NOTIFYING_TEXT_CHANGES"></span>Benachrichtigen über Textänderungen
 
 Manchmal nimmt das Bearbeitungssteuerelement Änderungen am Text vor, wenn beispielsweise Text eingefügt oder automatische korrigiert wird. In diesen Fällen müssen Sie die Textdienste über diese Änderungen benachrichtigen, indem Sie die [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172)-Methode aufrufen.
 
-![Dies ist beispielsweise der Zustand eines Bearbeitungssteuerelements, bevor der Benutzer „World“ einfügt.
+Dies ist beispielsweise der Zustand eines Bearbeitungssteuerelements, bevor der Benutzer „World“ einfügt. Die Einfügemarke befindet sich bei \[6, 6\].
 
-![Die Einfügemarke befindet sich bei \[6, 6\].
+![Beispieldiagramm für einen Textstream](images/coretext/stream-5.png) Der Benutzer führt die Einfügeaktion durch, und das Bearbeitungssteuerelement endet mit dem folgenden Text:
 
--   Beispieldiagramm für einen Textstream
--   Der Benutzer führt die Einfügeaktion durch, und das Bearbeitungssteuerelement endet mit dem folgenden Text:
--   Beispieldiagramm für einen Textstream
+![Beispieldiagramm für einen Textstream](images/coretext/stream-4.png) In diesem Fall sollten Sie [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) mit diesen Argumenten aufrufen:
 
-In diesem Fall rufen Sie [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) mit den folgenden Argumenten auf:
+-   *modifiedRange* = \[6, 6\]
+-   *newLength* = 5
+-   *newSelection* = \[11, 11\]
 
-### <span id="Overriding_text_updates"></span><span id="overriding_text_updates"></span><span id="OVERRIDING_TEXT_UPDATES"></span>*modifiedRange* = \[6, 6\]
+Es folgt mindestens ein [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis, das Sie zum Aktualisieren des Texts behandeln, mit dem die Textdienste arbeiten.
 
-*newLength* = 5
+### <span id="Overriding_text_updates"></span><span id="overriding_text_updates"></span><span id="OVERRIDING_TEXT_UPDATES"></span>Überschreiben von Textaktualisierungen
 
-*newSelection* = \[11, 11\] Es folgt mindestens ein [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis, das Sie zum Aktualisieren des Texts behandeln, mit dem die Textdienste arbeiten. Überschreiben von Textaktualisierungen
+Vielleicht möchten Sie in Ihrem Bearbeitungssteuerelement eine Textaktualisierung überschreiben, um AutoKorrektur-Funktionen bereitzustellen.
 
-![Vielleicht möchten Sie in Ihrem Bearbeitungssteuerelement eine Textaktualisierung überschreiben, um AutoKorrektur-Funktionen bereitzustellen. Angenommen, Sie haben ein Bearbeitungssteuerelement, das eine Korrekturfunktion bereitstellt, das kontrahierte Schreibweisen formalisiert. Dies ist der Zustand des Bearbeitungssteuerelements, bevor der Benutzer die Leertaste drückt, um die Korrektur auszulösen. Die Einfügemarke befindet sich bei \[3, 3\].
+Angenommen, Sie haben ein Bearbeitungssteuerelement, das eine Korrekturfunktion bereitstellt, das kontrahierte Schreibweisen formalisiert. Dies ist der Zustand des Bearbeitungssteuerelements, bevor der Benutzer die Leertaste drückt, um die Korrektur auszulösen. Die Einfügemarke befindet sich bei \[3, 3\].
 
-![Beispieldiagramm für einen Textstream Der Benutzer drückt die Leertaste, und es wird ein entsprechendes [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignis ausgelöst. Das Bearbeitungssteuerelement akzeptiert die Textaktualisierung.
+![Beispieldiagramm für einen Textstream](images/coretext/stream-6.png) Der Benutzer drückt die Leertaste, und ein entsprechendes [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignis wird ausgelöst. Das Bearbeitungssteuerelement akzeptiert die Textaktualisierung. Dies ist der Zustand des Bearbeitungssteuerelements für einen kurzen Moment, bevor die Korrektur abgeschlossen ist. Die Einfügemarke befindet sich bei \[4, 4\].
 
-![Dies ist der Zustand des Bearbeitungssteuerelements für einen kurzen Moment, bevor die Korrektur abgeschlossen ist.
+![Beispieldiagramm für einen Textstream](images/coretext/stream-7.png) Außerhalb des [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignishandlers nimmt das Bearbeitungssteuerelement die folgende Korrektur vor. Dies ist der Zustand des Bearbeitungssteuerelements nach Abschluss der Korrektur. Die Einfügemarke befindet sich bei \[5, 5\].
 
--   Die Einfügemarke befindet sich bei \[4, 4\].
--   Beispieldiagramm für einen Textstream
--   Außerhalb des [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignishandlers nimmt das Bearbeitungssteuerelement die folgende Korrektur vor.
+![Beispieldiagramm für einen Textstream](images/coretext/stream-8.png) In diesem Fall sollten Sie [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) mit diesen Argumenten aufrufen:
 
-Dies ist der Zustand des Bearbeitungssteuerelements nach Abschluss der Korrektur.
+-   *modifiedRange* = \[1, 2\]
+-   *newLength* = 2
+-   *newSelection* = \[5, 5\]
 
-### <span id="Providing_requested_text"></span><span id="providing_requested_text"></span><span id="PROVIDING_REQUESTED_TEXT"></span>Die Einfügemarke befindet sich bei \[5, 5\].
+Es folgt mindestens ein [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis, das Sie zum Aktualisieren des Texts behandeln, mit dem die Textdienste arbeiten.
 
-Beispieldiagramm für einen Textstream In diesem Fall rufen Sie [**NotifyTextChanged**](https://msdn.microsoft.com/library/windows/apps/dn958172) mit den folgenden Argumenten auf:
+### <span id="Providing_requested_text"></span><span id="providing_requested_text"></span><span id="PROVIDING_REQUESTED_TEXT"></span>Bereitstellen von angefordertem Text
 
-*modifiedRange* = \[1, 2\] *newLength* = 2 *newSelection* = \[5, 5\]
+Es ist wichtig, dass Textdienste über den richtigen Text verfügen, damit Funktionen wie AutoKorrektur oder Vorhersage bereitgestellt werden können, insbesondere bei Text, der im Bearbeitungssteuerelement bereits durch Laden eines Dokuments vorhanden war, oder bei Text, der vom Bearbeitungssteuerelement eingefügt wird, wie in den vorherigen Abschnitten erläutert. Wenn ein [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis ausgelöst wird, müssen Sie daher stets den Text bereitstellen, der sich zurzeit im Bearbeitungssteuerelement für den angegebenen Bereich befindet.
 
-## <span id="related_topics"></span>Es folgt mindestens ein [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignis, das Sie zum Aktualisieren des Texts behandeln, mit dem die Textdienste arbeiten.
+Gelegentlich gibt [**Range**](https://msdn.microsoft.com/library/windows/apps/dn958227) in [**CoreTextTextRequest**](https://msdn.microsoft.com/library/windows/apps/dn958221) einen Bereich an, den das Bearbeitungssteuerelement nicht in der Form aufnehmen kann, in der dieser vorliegt. Beispielsweise ist **Range** zum Zeitpunkt des [**TextRequested**](https://msdn.microsoft.com/library/windows/apps/dn958175)-Ereignisses größer als das Bearbeitungssteuerelement, oder das Ende von **Range** liegt außerhalb des zulässigen Bereichs. In diesen Fällen sollten Sie zu einem Bereich zurückkehren, der sinnvoll ist. In der Regel ist dies eine Untergruppe des angeforderten Bereichs.
+
+## <span id="related_topics"></span>Verwandte Artikel
 
 
-**Bereitstellen von angefordertem Text**
-* [Es ist wichtig, dass Textdienste über den richtigen Text verfügen, damit Funktionen wie AutoKorrektur oder Vorhersage bereitgestellt werden können, insbesondere bei Text, der im Bearbeitungssteuerelement bereits durch Laden eines Dokuments vorhanden war, oder bei Text, der vom Bearbeitungssteuerelement eingefügt wird, wie in den vorherigen Abschnitten erläutert.](http://go.microsoft.com/fwlink/p/?LinkID=251417)
+**Archivbeispiele**
+* [Beispiel für die XAML-Textbearbeitung](http://go.microsoft.com/fwlink/p/?LinkID=251417)
  
 
  
@@ -166,6 +169,7 @@ Beispieldiagramm für einen Textstream In diesem Fall rufen Sie [**NotifyTextCha
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

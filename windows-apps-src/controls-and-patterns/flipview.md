@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
 Description: Dient zum Anzeigen von Bildern in einer Sammlung, z. B. Fotos in einem Album oder Elementen auf einer Seite mit den Produktdetails, wobei jeweils ein Bild angezeigt wird.
-title: Richtlinien für Flip-Ansicht-Steuerelemente
+title: "Richtlinien für Flip-Ansicht-Steuerelemente"
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 7da18bd897248ecef7e1caaebff5b8bbab02e3fe
+
 ---
 # Flip-Ansicht
 
@@ -208,6 +211,7 @@ Für größere Sammlungen (10-25 Elemente) kann eine Anzeige mit mehr Kontext, z
 - [**CarouselPanel-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/hh967950)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

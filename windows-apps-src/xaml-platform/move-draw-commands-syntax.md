@@ -1,8 +1,11 @@
 ---
 author: jwmsft
-description: Informieren Sie sich über die Verschieben- und Zeichnen-Befehle (eine Minisprache), mit denen Sie Pfadgeometrien als XAML-Attributwert angeben können.
-title: Syntax für die Verschieben- und Zeichnen-Befehle
+description: "Informieren Sie sich über die Verschieben- und Zeichnen-Befehle (eine Minisprache), mit denen Sie Pfadgeometrien als XAML-Attributwert angeben können."
+title: "Syntax für die Verschieben- und Zeichnen-Befehle"
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
+ms.sourcegitcommit: e1399a25b0455c9a79dcb217c5df1a397420d1f3
+ms.openlocfilehash: 54c080183104335f4b3920cda8bc396a34298a69
+
 ---
 
 # Syntax für die Verschieben- und Zeichnen-Befehle
@@ -244,11 +247,11 @@ Anstelle von Dezimalzahlen oder Ganzzahlen können Sie die wissenschaftliche Not
 
 ## Designtools zum Erzeugen von Verschieben- und Zeichnen-Befehlen
 
-Mit dem **Pen**-Tool und anderen Zeichentools in Blend for Microsoft Visual Studio 2013 erzeugen Sie normalerweise ein [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355)-Objekt mit Verschieben- und Zeichnen-Befehlen.
+Mit dem **Pen**-Tool und anderen Zeichentools in Blend for Microsoft Visual Studio 2015 erzeugen Sie normalerweise ein [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355)-Objekt mit Verschieben- und Zeichnen-Befehlen.
 
 Möglicherweise sehen Sie vorhandene Daten für Verschieben- und Zeichnen-Befehle in einigen Steuerelementkomponenten, die in den Standardvorlagen für Steuerelemente in Windows-Runtime-XAML definiert sind. So verwenden zum Beispiel einige Steuerelemente ein [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)-Objekt, dessen Daten als Verschieben- und Zeichnen-Befehle definiert sind.
 
-Für andere häufig verwendete Vektorgrafik-Designtools, die den Vektor in XAML-Form ausgeben können, sind Exporter oder Plug-Ins verfügbar. Diese erstellen gewöhnlich [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355)-Objekte in einem Layoutcontainer mit Verschieben- und Zeichnen-Befehlen für die [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356)-Eigenschaft. XAML kann mehrere **Path**-Elemente enthalten, sodass verschiedene Pinsel angewendet werden können. Diese Exporter oder Plug-Ins wurden ursprünglich für Windows Presentation Foundation (WPF)XAML geschrieben, aber dieser Aspekt der XAML-Syntax ist mit Windows-Runtime-XAML identisch. Oft können Sie XAML-Abschnitte aus einem Exporter verwenden und direkt in eine Windows-Runtime-XAML-Seite einfügen. (Es ist aber nicht möglich, einen **RadialGradientBrush**-Pinsel zu verwenden, wenn dieser Bestandteil der konvertierten XAML war, da Windows-Runtime-XAML diesen Pinsel nicht unterstützt.)
+Für andere häufig verwendete Vektorgrafik-Designtools, die den Vektor in XAML-Form ausgeben können, sind Exporter oder Plug-Ins verfügbar. Diese erstellen gewöhnlich [**Path**](https://msdn.microsoft.com/library/windows/apps/br243355)-Objekte in einem Layoutcontainer mit Verschieben- und Zeichnen-Befehlen für die [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356)-Eigenschaft. XAML kann mehrere **Path**-Elemente enthalten, sodass verschiedene Pinsel angewendet werden können. Viele dieser Exporter oder Plug-Ins wurden ursprünglich für Windows Presentation Foundation (WPF), XAML oder Silverlight geschrieben, aber die XAML-Pfadsyntax ist mit Windows-Runtime-XAML identisch. In der Regel können Sie XAML-Abschnitte aus einem Exporter verwenden und direkt in eine Windows-Runtime-XAML-Seite einfügen. (Es ist aber nicht möglich, einen **RadialGradientBrush**-Pinsel zu verwenden, wenn dieser Bestandteil der konvertierten XAML war, da Windows-Runtime-XAML diesen Pinsel nicht unterstützt.)
 
 ## Verwandte Themen
 
@@ -259,6 +262,7 @@ Für andere häufig verwendete Vektorgrafik-Designtools, die den Vektor in XAML-
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

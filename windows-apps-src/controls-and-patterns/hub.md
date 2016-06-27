@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: Das Hub-Steuerelement verwendet ein hierarchisches Navigationsmuster, um Apps zu unterstützen, die eine relationale Informationsarchitektur erfordern.
+Description: "Das Hub-Steuerelement verwendet ein hierarchisches Navigationsmuster, um Apps zu unterstützen, die eine relationale Informationsarchitektur erfordern."
 title: Hub-Steuerelemente
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 70ce2a58b45c8514aca6641ca034caa91fb88d18
+
 ---
 # Hub-Steuerelement/-Muster
 
@@ -110,6 +113,7 @@ Auf mobilen Geräten ist jeweils ein Hub-Abschnitt sichtbar.
 - [Verwenden von Hubs](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

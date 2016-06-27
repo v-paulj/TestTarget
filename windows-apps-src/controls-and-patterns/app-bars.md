@@ -2,6 +2,9 @@
 author: Jwmsft
 label: App bars/command bars
 template: detail.hbs
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: a7abca8712d2b02eac8bfd150a9476a955e2982a
+
 ---
 
 # App-Leiste und Befehlsleiste
@@ -288,6 +291,7 @@ Ziehen Sie logische Gruppierungen für die Befehle in Erwägung. Platzieren Sie 
             ](https://msdn.microsoft.com/library/windows/apps/dn279427)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

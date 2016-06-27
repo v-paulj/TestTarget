@@ -5,6 +5,9 @@ title: Deep-Link von Cortana zu einer Hintergrund-App
 ms.assetid: BE811A87-8821-476A-90E4-2E20D37E4043
 label: Deep link to a background app
 template: detail.hbs
+ms.sourcegitcommit: 7d9f5eff0f6561b18024658fe99d1e11bbe3309f
+ms.openlocfilehash: b89aa43dffa69d092615e1b408feac77d0caa87c
+
 ---
 
 # Deep-Link von Cortana zu einer Hintergrund-App
@@ -65,11 +68,11 @@ Es gibt drei Möglichkeiten zum Bereitstellen von Deep-Links:
 
 Sie können ein Start-Argument für diesen Link bereitstellen, mit dem Ihre App in einem ähnlichen Kontext wie der App-Dienst geöffnet wird. Wenn Sie kein Start-Argument angeben, wird der Hauptbildschirm der App gestartet.
 
-In diesem Beispiel aus AdventureWorksVoiceCommandService.cs des Beispiels **AdventureWorks** übergeben wir das angegebene Ziel an die SendCompletionMessageForDestination-Methode, die alle übereinstimmenden Reisen abruft und einen Deep-Link zu der App bereitstellt.
+In diesem Beispiel aus AdventureWorksVoiceCommandService.cs des Beispiels **AdventureWorks** übergeben wir das angegebene Ziel (`destination`) an die SendCompletionMessageForDestination-Methode, die alle übereinstimmenden Reisen abruft und einen Deep-Link zu der App bereitstellt.
 
 Zunächst erstellen wir eine [**VoiceCommandUserMessage**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandusermessage.aspx) (```userMessage```), die von **Cortana** gesprochen und auf der **Cortana**-Canvas angezeigt wird. Anschließend wird ein [**VoiceCommandContentTile**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandcontenttile.aspx)-Listenobbjekt zum Anzeigen der Sammlung von Ergebniskarten auf der Canvas erstellt. 
 
-Diese beiden Objekte werden dann an die [CreateResponse](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandresponse.createresponse.aspx)-Methode des [**VoiceCommandResponse**](https://msdn.microsoft.com/library/windows/apps/dn974182)-Objekts (```response```) übergeben. Anschließend legen wir als Wert für die [**AppLaunchArgument**](https://msdn.microsoft.com/library/windows/apps/dn974183)-Eigenschaft den Wert des Ziels in dem Sprachbefehl fest.
+Diese beiden Objekte werden dann an die [CreateResponse](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.voicecommands.voicecommandresponse.createresponse.aspx)-Methode des [**VoiceCommandResponse**](https://msdn.microsoft.com/library/windows/apps/dn974182)-Objekts (`response`) übergeben. Anschließend legen wir den [**AppLaunchArgument**](https://msdn.microsoft.com/library/windows/apps/dn974183)-Eigenschaftswert des Antwortobjekts auf den Wert des Ziels (`destination`) fest, das an diese Funktion übergeben wurde. Wenn ein Benutzer in der Cortana-Canvas auf eine Inhaltskachel tippt, werden die Parameterwerte über das Antwortobjekt an die App übergeben.
 
 Abschließend rufen wir die [**ReportSuccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn706580)-Methode von [**VoiceCommandServiceConnection**](https://msdn.microsoft.com/library/windows/apps/dn974204) auf.
 
@@ -288,6 +291,7 @@ if (args.Kind == ActivationKind.Protocol)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

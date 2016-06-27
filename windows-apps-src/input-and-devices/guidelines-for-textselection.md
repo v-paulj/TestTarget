@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: In diesem Thema wird die neue Windows-Benutzeroberfläche zum Auswählen und Bearbeiten von Text, Bildern und Steuerelementen beschrieben. Außerdem finden Sie hier Richtlinien für die Benutzerumgebung, die berücksichtigt werden sollten, wenn Sie diese neuen Auswahl- und Manipulationsmechanismen in Ihrer Windows Store-App verwenden.
-title: Auswählen von Text und Bildern
+Description: "In diesem Thema wird die neue Windows-Benutzeroberfläche zum Auswählen und Bearbeiten von Text, Bildern und Steuerelementen beschrieben. Außerdem finden Sie hier Richtlinien für die Benutzerumgebung, die berücksichtigt werden sollten, wenn Sie diese neuen Auswahl- und Manipulationsmechanismen in Ihrer Windows Store-App verwenden."
+title: "Auswählen von Text und Bildern"
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
 template: detail.hbs
+ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
+ms.openlocfilehash: a47b48f9315c51505b2c487c140011e053105556
+
 ---
 
 # Auswählen von Text und Bildern
@@ -131,6 +134,7 @@ Zielelemente können wie in den folgenden Abbildungen dargestellt z. B. auch in
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

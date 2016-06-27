@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Hier erfahren Sie, wie Sie eine installierte Sprache für die Spracherkennung auswählen.
-title: Angeben der Sprache für die Spracherkennung
+Description: "Hier erfahren Sie, wie Sie eine installierte Sprache für die Spracherkennung auswählen."
+title: "Angeben der Sprache für die Spracherkennung"
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 24393ef52d72aa08f9aab2d541e65ccb5f2aceed
+
 ---
 
 # Angeben der Sprache für die Spracherkennung
@@ -28,7 +31,7 @@ Im Folgenden listen wir die auf einem System installierten Sprachen auf, ermitte
 
 Dieses Thema baut auf dem Thema [Spracherkennung](speech-recognition.md) auf.
 
-Sie sollten über Grundkenntnisse in der Spracherkennung und in Erkennungseinschränkungen verfügen.
+Sie sollten über Grundkenntnisse in den Bereichen Spracherkennung und Erkennungseinschränkungen verfügen.
 
 Wenn Sie noch keine Erfahrung mit der Entwicklung von UWP-Apps (Universelle Windows-Plattform) haben, sollten Sie sich in den folgenden Themen zunächst mit den hier besprochenen Technologien vertraut machen.
 
@@ -37,7 +40,7 @@ Wenn Sie noch keine Erfahrung mit der Entwicklung von UWP-Apps (Universelle Wind
 
 **Richtlinien für die Benutzerfreundlichkeit:  **
 
-Nützliche Tipps zum Entwerfen einer hilfreichen und ansprechenden App mit Spracherkennung finden Sie unter [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121).
+Nützliche Tipps zum Entwerfen einer hilfreichen und ansprechenden App mit Sprachfunktion finden Sie unter [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121).
 
 ## <span id="Identify_the_default_language"></span><span id="identify_the_default_language"></span><span id="IDENTIFY_THE_DEFAULT_LANGUAGE"></span>Ermitteln der Standardsprache
 
@@ -110,9 +113,15 @@ Bei einer SRGS-Grammatik handelt es sich um ein offenes XML-Standardformat, das 
 
 
 **Entwickler**
-* Sprachinteraktionen
-* Designer
-* [Entwurfsrichtlinien für die Spracherkennung](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Interaktionen mit der Spracherkennung](speech-interactions.md)
+            
+          
+            **Designer**
+* [Entwicklungsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121)
+            
+          
+            **Beispiele**
+* [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
  
@@ -122,6 +131,7 @@ Bei einer SRGS-Grammatik handelt es sich um ein offenes XML-Standardformat, das 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

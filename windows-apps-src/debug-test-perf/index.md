@@ -2,7 +2,10 @@
 author: mcleblanc
 ms.assetid: 16976d00-1564-49fe-81ad-2568e25e9e41
 title: Debugging, Tests und Leistung
-description: Debuggen und testen Sie Ihre App mit Microsoft Visual Studio. Bereiten Sie Ihre App mithilfe des Zertifizierungskits für Windows-Apps auf den Windows Store-Zertifizierungsprozess vor.
+description: "Debuggen und testen Sie Ihre App mit Microsoft Visual Studio. Bereiten Sie Ihre App mithilfe des Zertifizierungskits für Windows-Apps auf den Windows Store-Zertifizierungsprozess vor."
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 1d6187470e8e1578af833221089a76261ebad1e4
+
 ---
 # Debugging, Tests und Leistung
 
@@ -22,6 +25,7 @@ Debuggen und testen Sie Ihre App mit Microsoft Visual Studio. Bereiten Sie Ihre
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: Erfahren Sie, wie Sie Bilder in Ihre App integrieren. Dazu gehört auch die Verwendung der APIs der beiden XAML-Hauptklassen, Image und ImageBrush.
+Description: "Erfahren Sie, wie Sie Bilder in Ihre App integrieren. Dazu gehört auch die Verwendung der APIs der beiden XAML-Hauptklassen, Image und ImageBrush."
 title: Bilder und Bildpinsel
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 972480aabb6f0db3b5091bd55323f9d1946086e6
+
 ---
 # Bilder und Bildpinsel
 
@@ -143,6 +146,7 @@ Wenn Sie „Image“ oder „ImageBrush“ mit Code definieren, verwenden Sie di
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

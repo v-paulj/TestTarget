@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: In diesem Thema werden die Windows-Elemente für das Zoomen und Ändern der Größe beschrieben. Außerdem enthält das Thema Richtlinien für die Benutzeroberfläche zur Verwendung dieser Interaktionsmechanismen in Ihren Apps.
-title: Richtlinien für optischen Zoom und Größenänderung
+Description: "In diesem Thema werden die Windows-Elemente für das Zoomen und Ändern der Größe beschrieben. Außerdem enthält das Thema Richtlinien für die Benutzeroberfläche zur Verwendung dieser Interaktionsmechanismen in Ihren Apps."
+title: "Richtlinien für optischen Zoom und Größenänderung"
 ms.assetid: 51a0007c-8a5d-4c44-ac9f-bbbf092b8a00
 label: Optical zoom and resizing
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 07f9f2979a7a2c712b39bd4dc962e5991e1824ac
+
 ---
 
 # Optischer Zoom und Größenänderung
@@ -92,6 +95,7 @@ Beachten Sie die folgenden Richtlinien für Apps, die entweder Größenänderung
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

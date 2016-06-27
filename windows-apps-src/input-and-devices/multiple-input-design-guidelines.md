@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: Ebenso wie Menschen untereinander mit einer Mischung aus Sprache und Gesten kommunizieren, kann sich auch bei der Interaktion mit einer App die Verwendung mehrerer Eingabearten und -modi als hilfreich erweisen.
-title: Entwurfsrichtlinien für mehrere Eingaben
+title: "Entwurfsrichtlinien für mehrere Eingaben"
 ms.assetid: 03EB5388-080F-467C-B272-C92BE00F2C69
 label: Multiple inputs
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 20af1cbfd4d390a1128b96b24c687fd481db1f5c
+
 ---
 
 # Mehrere Eingaben
@@ -40,6 +43,7 @@ Der Benutzer wählt ein Foto, indem er dieses gedrückt hält, und sagt dann „
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

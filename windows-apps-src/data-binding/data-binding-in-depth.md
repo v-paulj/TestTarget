@@ -2,7 +2,10 @@
 author: mcleblanc
 ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Datenbindung im Detail
-description: Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Daten anzeigen und diese Daten optional synchronisieren kann.
+description: "Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Daten anzeigen und diese Daten optional synchronisieren kann."
+ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
+ms.openlocfilehash: c371ca1804d76a0ffdf812cfb933b03916654bad
+
 ---
 # Datenbindung im Detail
 
@@ -31,9 +34,9 @@ Es gibt zwei Arten von Bindungen. Diese werden in der Regel beide im Benutzerobe
 
 **Beispiel-Apps zur Veranschaulichung von {x:Bind}**
 
--   {x:Bind}-Beispiel
--   QuizGame
--   Beispiel für XAML-UI-Grundlagen
+-   [{x:Bind}-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619989).
+-   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame).
+-   [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?linkid=619992).
 
 **Beispiel-Apps zur Veranschaulichung von {Binding}**
 
@@ -205,7 +208,7 @@ Innerhalb einer [**DataTemplate**](https://msdn.microsoft.com/library/windows/ap
 
 **Schwach typisierte Objekte im Pfad**
 
-Angenommen, Sie verfügen über einen Typ mit dem Namen „SampleDataGroup“, der eine Zeichenfolgeneigenschaft mit dem Namen „Title“ implementiert. Zudem verfügen Sie über die MainPage.SampleDataGroupAsObject-Eigenschaft (Typobjekt), die jedoch tatsächlich eine Instanz von "SampleDataGroup" zurückgibt. Die `<TextBlock Text="{x:Bind SampleDataGroupAsObject.Title}"/>`-Bindung führt zu einem Kompilierungsfehler, da die Title-Eigenschaft nicht im Typobjekt gefunden wird. Die Lösung hierfür ist das Hinzufügen einer Umwandlung zur Path-Syntax: `<TextBlock Text="{x:Bind SampleDataGroupAsObject.(data:SampleDataGroup.Title)}"/>`. Hier ein weiteres Beispiel, in dem „Element“ als Objekt deklariert ist, jedoch tatsächlich ein „TextBlock“ ist: `<TextBlock Text="{x:Bind Element.Text}"/>`. Und eine Umwandlung behebt das Problem:
+Angenommen, Sie verfügen über einen Typ mit dem Namen „SampleDataGroup“, der eine Zeichenfolgeneigenschaft mit dem Namen „Title“ implementiert. Zudem verfügen Sie über die MainPage.SampleDataGroupAsObject-Eigenschaft (Typobjekt), die jedoch tatsächlich eine Instanz von "SampleDataGroup" zurückgibt. Die `<TextBlock Text="{x:Bind SampleDataGroupAsObject.Title}"/>`-Bindung führt zu einem Kompilierungsfehler, da die Title-Eigenschaft nicht im Typobjekt gefunden wird. Die Lösung hierfür ist das Hinzufügen einer Umwandlung zur Path-Syntax: `<TextBlock Text="{x:Bind SampleDataGroupAsObject.(data:SampleDataGroup.Title)}"/>`. Hier ein weiteres Beispiel, in dem "Element" als Objekt deklariert ist, jedoch tatsächlich ein "TextBlock" ist: `<TextBlock Text="{x:Bind Element.Text}"/>`. Und eine Umwandlung behebt das Problem: `<TextBlock Text="{x:Bind Element.(TextBlock.Text)}"/>`.
 
 **Wenn die Daten asynchron geladen werden**
 
@@ -637,6 +640,7 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

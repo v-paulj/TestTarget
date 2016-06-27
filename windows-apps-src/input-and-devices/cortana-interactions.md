@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Erweitern Sie die grundlegenden Funktionen von Cortana durch Sprachbefehle, die eine einzelne Aktion in einer externen Anwendung starten und ausführen.
+Description: "Erweitern Sie die grundlegenden Funktionen von Cortana durch Sprachbefehle, die eine einzelne Aktion in einer externen Anwendung starten und ausführen."
 title: Cortana-Interaktionen
 ms.assetid: 4C11A7CF-DA26-4CA1-A9B9-FE52670101F5
 label: Cortana
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: d55ece0112e5360c1de4e194c6dd326c15404f9e
+
 ---
 
 # Cortana-Interaktionen in UWP-Apps
@@ -99,6 +102,7 @@ Die Ziel-App kann abhängig von der Komplexität der Interaktion entweder im Vor
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

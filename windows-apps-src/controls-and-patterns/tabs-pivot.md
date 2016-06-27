@@ -1,10 +1,13 @@
 ---
 author: Jwmsft
-Description: Registerkarten und Pivots ermöglichen Benutzern die Navigation zwischen häufig verwendeten Inhalten.
+Description: "Registerkarten und Pivots ermöglichen Benutzern die Navigation zwischen häufig verwendeten Inhalten."
 title: Registerkarten und Pivots
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
 label: Tabs and pivots
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 6585a75f08a64b7bb8f27fd32a227fa49bb0f3f4
+
 ---
 # Pivots und Registerkarten
 
@@ -108,6 +111,7 @@ Das Steuerelement ist in zwei Modi verfügbar:
 [Navigationsdesigngrundlagen](https://msdn.microsoft.com/library/windows/apps/dn958438)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

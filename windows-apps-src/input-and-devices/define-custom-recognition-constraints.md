@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Erfahren Sie, wie Sie benutzerdefinierte Einschränkungen für die Spracherkennung definieren und verwenden können.
-title: Definieren von benutzerdefinierten Erkennungseinschränkungen
+Description: "Erfahren Sie, wie Sie benutzerdefinierte Einschränkungen für die Spracherkennung definieren und verwenden können."
+title: "Definieren von benutzerdefinierten Erkennungseinschränkungen"
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 7d91cef0955dbf8544f658369ee488c47aaef787
+
 ---
 
 # Definieren von benutzerdefinierten Erkennungseinschränkungen
@@ -242,6 +245,7 @@ Mit den Eigenschaften [**SpeechRecognizerUIOptions.AudiblePrompt**](https://msdn
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

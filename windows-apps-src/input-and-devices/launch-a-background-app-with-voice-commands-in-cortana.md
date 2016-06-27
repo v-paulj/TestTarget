@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Zusätzlich zur Verwendung von Sprachbefehlen in Cortana zum Zugreifen auf Systemfeatures können Sie Cortana auch um Features und Funktionen einer Hintergrund-App erweitern, indem Sie Sprachbefehle verwenden, mit denen die Ausführung einer Aktion oder eines Befehls in der App angegeben wird.
+Description: "Zusätzlich zur Verwendung von Sprachbefehlen in Cortana zum Zugreifen auf Systemfeatures können Sie Cortana auch um Features und Funktionen einer Hintergrund-App erweitern, indem Sie Sprachbefehle verwenden, mit denen die Ausführung einer Aktion oder eines Befehls in der App angegeben wird."
 title: Starten einer Hintergrund-App mit Sprachbefehlen in Cortana
 ms.assetid: DF5B530C-57DD-4CA5-B3BE-1A0B3695C9C6
 label: Launch a background app
 template: detail.hbs
+ms.sourcegitcommit: 7d9f5eff0f6561b18024658fe99d1e11bbe3309f
+ms.openlocfilehash: c65abdda905a390567d3c2b199a891c0c3067df1
+
 ---
 
 # Aktivieren einer Hintergrund-App mit Sprachbefehlen über Cortana
@@ -37,7 +40,7 @@ Hier sehen Sie eine Übersicht über die **Adventure Works**-App, die in die **C
 
 Zum Anzeigen einer **Adventure Works**-Reise ohne **Cortana** startet ein Benutzer die App und navigiert auf die Seite **Bevorstehende Reisen**.
 
-Mit den Sprachbefehlen über **Cortana** zum Starten Ihrer App im Hintergrund kann der Benutzer auch einfach Folgendes sagen: „Adventure Works, wann ist meine Reise nach Las Vegas?“. Ihre App verarbeitet den Befehl, und **Cortana** zeigt die Ergebnisse zusammen mit Ihrem App-Symbol und weiteren App-Informationen an, falls diese bereitgestellt wurden. Dies ist ein Beispiel für eine einfache Reiseabfrage und den Ergebnisbildschirm von **Cortana**. Darüber wird die Antwort „Ihre nächste Reise nach Las Vegas ist am 1. August“ sowohl angezeigt als auch per Sprachfunktion ausgegeben.
+Mit den Sprachbefehlen über **Cortana** zum Starten Ihrer App im Hintergrund kann der Benutzer auch einfach Folgendes sagen: „Adventure Works, wann ist meine Reise nach Las Vegas?“. Ihre App verarbeitet den Befehl, und **Cortana** zeigt die Ergebnisse zusammen mit Ihrem App-Symbol und weiteren App-Informationen an, falls diese bereitgestellt wurden. Dies ist ein Beispiel für eine einfache Reiseabfrage und den Ergebnisbildschirm von **Cortana**. Darauf wird die Antwort „Ihre nächste Reise nach Las Vegas ist am 31. Juli 2015“ sowohl angezeigt als auch per Sprachfunktion ausgegeben.
 
 ![Einfache Abfrage und Ergebnisbildschirm mit Verwendung der Adventure Works-App im Hintergrund](images/cortana-backgroundapp-result.png)
 
@@ -122,38 +125,37 @@ destinationTile.Image =
 
 <ol>
     <li>
-    Klicken Sie mit der rechten Maustaste auf den Namen Ihrer Projektmappe, und wählen Sie **Neu > Projekt** aus.
+Klicken Sie mit der rechten Maustaste auf den Namen Ihrer Projektmappe, und wählen Sie **Neu > Projekt** aus.
     </li>
     <li>
-    Wählen Sie unter **Installiert > Vorlagen > Visual C# > Windows > Universal** **Komponente für die Windows-Runtime** aus. Dies ist die Komponente, mit der der App-Dienst implementiert wird (**[Windows.ApplicationModel.AppService](https://msdn.microsoft.com/library/windows/apps/dn921731)**).
+Wählen Sie unter **Installiert > Vorlagen > Visual C# > Windows > Universal** **Komponente für die Windows-Runtime** aus. Dies ist die Komponente, mit der der App-Dienst implementiert wird (**[Windows.ApplicationModel.AppService](https://msdn.microsoft.com/library/windows/apps/dn921731)**).
     </li>
     <li>
-    Geben Sie einen Namen für das Projekt ein (z. B. „VoiceCommandService“), und klicken Sie auf **OK**.
+Geben Sie einen Namen für das Projekt ein (z. B. „VoiceCommandService“), und klicken Sie auf **OK**.
     </li>
     <li>
-    Wählen Sie im **Projektmappen-Explorer** das Projekt „VoiceCommandService“ aus, und benennen Sie die von Visual Studio generierte Datei „Class1.cs“ um. Für das Beispiel **Adventure Works** verwenden wir „AdventureWorksVoiceCommandService.cs“.
+Wählen Sie im **Projektmappen-Explorer** das Projekt „VoiceCommandService“ aus, und benennen Sie die von Visual Studio generierte Datei „Class1.cs“ um. Für das Beispiel **Adventure Works** verwenden wir „AdventureWorksVoiceCommandService.cs“.
     </li>
     <li>
-    Klicken Sie auf **Ja**, wenn Sie gefragt werden, ob Sie alle Vorkommen von „Class1.cs“ umbenennen möchten. 
+Klicken Sie auf **Ja**, wenn Sie gefragt werden, ob Sie alle Vorkommen von „Class1.cs“ umbenennen möchten. 
     </li>
     <li>
-    In der Datei „AdventureWorksVoiceCommandService.cs“:
-        <ol type="i">
+In der Datei „AdventureWorksVoiceCommandService.cs“: <ol type="i">
  <li>
- Fügen Sie Folgendes mithilfe einer Direktive hinzu.  
+Fügen Sie Folgendes mithilfe einer Direktive hinzu.  
  ```using Windows.ApplicationModel.Background;```
  </li>
  <li>
- Wenn Sie ein neues Projekt erstellen, wird der Projektname als standardmäßiger Stamm-Namespace in allen Dateien verwendet. Benennen Sie den Namespace um, um den App-Dienstcode unter dem primären Projekt zu schachteln. Beispiel: `namespace AdventureWorks.VoiceCommands`. 
+Wenn Sie ein neues Projekt erstellen, wird der Projektname als standardmäßiger Stamm-Namespace in allen Dateien verwendet. Benennen Sie den Namespace um, um den App-Dienstcode unter dem primären Projekt zu schachteln. Beispiel: `namespace AdventureWorks.VoiceCommands`. 
  </li>
  <li>
- Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das App-Dienstprojekt, und wählen Sie **Eigenschaften** aus. 
+Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das App-Dienstprojekt, und wählen Sie **Eigenschaften** aus. 
  </li>
  <li>
- Aktualisieren Sie auf der Registerkarte **Bibliothek** das Feld **Standard-Namespace** mit diesem Wert (für dieses Beispiel „AdventureWorks.VoiceCommands“). 
+Aktualisieren Sie auf der Registerkarte **Bibliothek** das Feld **Standard-Namespace** mit diesem Wert (für dieses Beispiel „AdventureWorks.VoiceCommands“). 
  </li>
  <li>
- Erstellen Sie eine neue Klasse zum Implementieren der Schnittstelle [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). Diese Klasse erfordert eine [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811)-Methode, die der Einstiegspunkt ist, wenn Cortana den Sprachbefehl erkennt. 
+Erstellen Sie eine neue Klasse zum Implementieren der Schnittstelle [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794). Diese Klasse erfordert eine [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811)-Methode, die der Einstiegspunkt ist, wenn Cortana den Sprachbefehl erkennt. 
  </li>
         </ol>
     </li>
@@ -210,36 +212,36 @@ namespace AdventureWorks.VoiceCommands
 
 <ol start="7">
     <li>
-    Deklarieren Sie Ihre Hintergrundaufgabe im App-Manifest als **AppService**.
+Deklarieren Sie Ihre Hintergrundaufgabe im App-Manifest als **AppService**.
     <ol type="i">
         <li>
-        Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Datei „Package.appxmanifest“, und wählen Sie die Option **Code anzeigen** aus. 
+Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Datei „Package.appxmanifest“, und wählen Sie die Option **Code anzeigen** aus. 
         </li>
         <li>
-        Suchen Sie das Element [**Anwendung**](https://msdn.microsoft.com/library/windows/apps/dn934738).
+Suchen Sie das Element [**Anwendung**](https://msdn.microsoft.com/library/windows/apps/dn934738).
         </li>
         <li>
-        Fügen Sie ein [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720)-Element zum [**Application**](https://msdn.microsoft.com/library/windows/apps/dn934738) hinzu.
+Fügen Sie ein [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720)-Element zum [**Application**](https://msdn.microsoft.com/library/windows/apps/dn934738) hinzu.
         </li>
         <li>
-        Fügen Sie ein [**Uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788)-Element zum [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720)-Element hinzu.
+Fügen Sie ein [**Uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788)-Element zum [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720)-Element hinzu.
         </li>
         <li>Fügen Sie ein **Category**-Attribut zum Element **uap:Extension** hinzu, und legen Sie den Wert des Attributs **Category** auf „windows.appService“ fest.
         </li>
         <li>
-        Fügen Sie ein **EntryPoint**-Attribut zum **uap:Extension**-Element hinzu, und legen Sie den Wert des **EntryPoint**-Attributs auf den Namen der Klasse fest, die [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) implementiert. In diesem Fall ist dies„AdventureWorks.VoiceCommands.AdventureWorksVoiceCommandService“.
+Fügen Sie ein **EntryPoint**-Attribut zum **uap:Extension**-Element hinzu, und legen Sie den Wert des **EntryPoint**-Attributs auf den Namen der Klasse fest, die [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) implementiert. In diesem Fall ist dies„AdventureWorks.VoiceCommands.AdventureWorksVoiceCommandService“.
         </li>
         <li>
-        Fügen Sie ein [**Uap:AppService**](https://msdn.microsoft.com/library/windows/apps/dn934779)-Element zum **Uap:Extension**-Element hinzu.
+Fügen Sie ein [**Uap:AppService**](https://msdn.microsoft.com/library/windows/apps/dn934779)-Element zum **Uap:Extension**-Element hinzu.
         </li>
         <li>
-        Fügen Sie ein **Name**-Attribut zum [**uap:AppService**](https://msdn.microsoft.com/library/windows/apps/dn934779) hinzu, und legen Sie den Wert des **Name**-Attributs auf den Namen für den App-Dienst fest. In diesem Fall ist dies „AdventureWorksVoiceCommandService“.
+Fügen Sie ein **Name**-Attribut zum [**uap:AppService**](https://msdn.microsoft.com/library/windows/apps/dn934779) hinzu, und legen Sie den Wert des **Name**-Attributs auf den Namen für den App-Dienst fest. In diesem Fall ist dies „AdventureWorksVoiceCommandService“.
         </li>
         <li>
-        Fügen Sie ein zweites [**Uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788)-Element zu [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720) hinzu.
+Fügen Sie ein zweites [**Uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788)-Element zu [**Extensions**](https://msdn.microsoft.com/library/windows/apps/dn934720) hinzu.
         </li>
         <li>
-        Fügen Sie ein **Category**-Attribut zu diesem [**uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788)-Element hinzu, und legen Sie den Wert des **Category**-Attributs auf „windows.personalAssistantLaunch“ fest.
+Fügen Sie ein **Category**-Attribut zu diesem [**uap:Extension**](https://msdn.microsoft.com/library/windows/apps/dn986788)-Element hinzu, und legen Sie den Wert des **Category**-Attributs auf „windows.personalAssistantLaunch“ fest.
         </li>
     </li> 
     </ol>
@@ -267,19 +269,19 @@ Dies ist das Manifest der Adventure Works-App:
 
 <ol start="8">
     <li>
-    Fügen Sie dieses App-Dienst-Projekt als Verweis im primären Projekt hinzu. 
+Fügen Sie dieses App-Dienst-Projekt als Verweis im primären Projekt hinzu. 
     <ol type="i">
         <li>
-        Klicken Sie mit der rechten Maustaste auf **Verweise**. 
+Klicken Sie mit der rechten Maustaste auf **Verweise**. 
         </li>
         <li>
-        Wählen Sie **Verweis hinzufügen...** aus. 
+Wählen Sie **Verweis hinzufügen...** aus. 
         </li>
         <li>
-        Erweitern Sie im Dialogfeld **Verweis-Manager** **Projekte**, und wählen Sie das App-Dienst-Projekt aus. 
+Erweitern Sie im Dialogfeld **Verweis-Manager** **Projekte**, und wählen Sie das App-Dienst-Projekt aus. 
         </li>
         <li>
-        Klicken Sie auf „OK“. 
+Klicken Sie auf „OK“. 
         </li>
     </ol>
     </li>
@@ -416,7 +418,7 @@ catch (Exception ex)
 
 Geben Sie an, wie Ihre App auf nachfolgende Sprachbefehlaktivierungen reagiert (nachdem sie mindestens einmal gestartet wurde und die Sätze mit den Sprachbefehlen installiert wurden).
 
-1.  Überprüfen Sie, ob die App über einen Sprachbefehl aktiviert wurde.
+1.  Bestätigen Sie, dass die App über einen Sprachbefehl aktiviert wurde.
 
     Überschreiben Sie das [**Application.OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Ereignis, und überprüfen Sie, ob [**IActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224727).[**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) [**VoiceCommand**](https://msdn.microsoft.com/library/windows/apps/br224693) ist.
 
@@ -432,7 +434,7 @@ In diesem Beispiel beziehen wir uns wieder auf die VCD-Datei aus Schritt 3: Bear
 
 Sobald das Spracherkennungsergebnis für den Sprachbefehl vorliegt, können wir den Befehlsnamen aus dem ersten Wert im [**RulePath**](https://msdn.microsoft.com/library/windows/apps/dn631438)-Array ableiten. Da in der VCD-Datei mehrere mögliche Sprachbefehle definiert wurden, müssen wir den Wert mit den Befehlsnamen in der VCD-Datei vergleichen und die entsprechende Aktion ausführen.
 
-Die gängigste Aktion in einer Anwendung ist das Navigieren zu einer Seite mit Inhalt, der für den Kontext des Sprachbefehls relevant ist. In diesem Beispiel navigieren wir zur Seite **TripPage** und übergeben den Wert des Sprachbefehls, wie der Befehl eingegeben wurde, und den erkannten Ziel-Begriff (wenn zutreffend). Alternativ kann die App beim Navigieren zur Seite einen Navigationsparameter an [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432) senden.
+Die gängigste Aktion in einer Anwendung ist das Navigieren zu einer Seite mit Inhalt, der für den Kontext des Sprachbefehls relevant ist. In diesem Beispiel navigieren wir zur Seite **TripPage** und übergeben den Wert des Sprachbefehls, wie der Befehl eingegeben wurde, und den erkannten Ziel-Begriff (falls zutreffend). Alternativ kann die App beim Navigieren zu der Seite einen Navigationsparameter an [**SpeechRecognitionResult**](https://msdn.microsoft.com/library/windows/apps/dn631432) senden.
 
 Sie können herausfinden, ob der Sprachbefehl, mit dem Ihre App gestartet wurde, tatsächlich gesprochen wurde oder ob er als Text eingegeben wurde. Dazu verwenden Sie das [**SpeechRecognitionSemanticInterpretation.Properties**](https://msdn.microsoft.com/library/windows/apps/dn631445)-Wörterbuch und den **commandMode**-Schlüssel. Der Wert des Schlüssels lautet „voice“ oder „text“. Ist der Wert des Schlüssels „voice“, erwägen Sie die Verwendung von Sprachsynthese ([**Windows.Media.SpeechSynthesis**](https://msdn.microsoft.com/library/windows/apps/dn278951)) in der App, um für den Benutzer gesprochenes Feedback bereitzustellen.
 
@@ -767,6 +769,7 @@ Nach dem Aktivieren hat der App-Dienst 0,5 Sekunden Zeit, [**ReportSuccessAsync
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

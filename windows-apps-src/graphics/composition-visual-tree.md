@@ -2,7 +2,10 @@
 author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
 title: Komposition visueller Strukturen
-description: Visuelle Kompositionselemente bilden die visuelle Struktur, die die Grundlage für alle anderen Features der Composition-API bildet und von diesen verwendet wird. Die API ermöglicht es Entwicklern, visuelle Objekte zu definieren und zu erstellen, die jeweils für einen einzelnen Knoten in einer visuellen Struktur stehen.
+description: "Visuelle Kompositionselemente bilden die visuelle Struktur, die die Grundlage für alle anderen Features der Composition-API bildet und von diesen verwendet wird. Die API ermöglicht es Entwicklern, visuelle Objekte zu definieren und zu erstellen, die jeweils für einen einzelnen Knoten in einer visuellen Struktur stehen."
+ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
+ms.openlocfilehash: e31d3b23871bd37cde26fb3e9414e8cfae340d3d
+
 ---
 # Visuelle Kompositionsstruktur
 
@@ -111,7 +114,7 @@ Wie die Drehung kann auch die [**Opacity**](https://msdn.microsoft.com/library/w
 
 ## Ändern der Position des visuellen Elements in der Auflistung
 
-Die Composition-API ermöglicht es, die Position eines Visual-Elements in [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection) auf vielfältige Weise zu ändern. Es kann mit [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertabove) über einem anderen Visual-Element und mit [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertbelow) darunter platziert werden. An die oberste Position wird es mit [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertattop) und an die unterste mit [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertatbottom) verschoben.
+Die Composition-API ermöglicht es, dass die Position eines visuellen Elements in [**VisualCollection**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection) auf vielfältige Weise geändert werden kann. Es kann mit [**InsertAbove**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertabove) über einem anderen visuellen Element und mit [**InsertBelow**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertbelow) darunter platziert werden. An die oberste Position wird es mit [**InsertAtTop**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertattop) und an die unterste mit [**InsertAtBottom**](https://msdn.microsoft.com/library/windows/apps/Dn706858collection_insertatbottom) verschoben.
 
 In dem Beispiel wird ein [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Objekt, auf das geklickt wurde, oben platziert:
 
@@ -518,6 +521,7 @@ namespace compositionvisual
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

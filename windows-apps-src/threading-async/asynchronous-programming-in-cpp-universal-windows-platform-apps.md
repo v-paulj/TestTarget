@@ -1,8 +1,11 @@
 ---
 author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in Visual C++-Komponentenerweiterungen (C++/CX) mithilfe der Task-Klasse beschrieben, die im Concurrency-Namespace in „ppltasks.h“ definiert wird.
+description: "In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in Visual C++-Komponentenerweiterungen (C++/CX) mithilfe der Task-Klasse beschrieben, die im Concurrency-Namespace in „ppltasks.h“ definiert wird."
 title: Asynchrone Programmierung in C++
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 560b51d5bb67f5f2611311cb78f59d189d4ea440
+
 ---
 
 # Asynchrone Programmierung in C++
@@ -15,7 +18,7 @@ In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner 
 
 Die Universelle Windows-Plattform (UWP) umfasst ein ausgearbeitetes Modell für den Aufruf asynchroner Methoden und stellt die Typen bereit, die Sie für die Verwendung dieser Methoden benötigen. Wenn Sie mit dem asynchronen UWP-Modell nicht vertraut sind, sollten Sie den Artikel [Asynchrone Programmierung][AsyncProgramming] lesen, bevor Sie mit dem Rest dieses Artikels fortfahren.
 
-Sie können zwar die asynchronen UWP-APIs direkt in C++ verwenden, es wird aber empfohlen, die [**task-Klasse**][task-class] und die zugehörigen Typen und Funktionen zu verwenden. Diese sind im [**Concurrency**][concurrencyNamespace]-Namespace enthalten und in `<ppltasks.h>` definiert. **concurrency::task** ist eine Klasse für allgemeine Zwecke. Bei Verwendung des **/ZW**-Compilerschalters, der für UWP-Apps und die entsprechenden Komponenten benötigt wird, werden jedoch die asynchronen Typen der UWP durch die Task-Klasse gekapselt, was Folgendes vereinfacht:
+Sie können zwar die asynchronen UWP-APIs direkt in C++ verwenden, es wird aber empfohlen, die [**task-Klasse**][task-class] und die zugehörigen Typen und Funktionen zu verwenden. Diese sind im [**concurrency**][concurrencyNamespace]-Namespace enthalten und in definiert `<ppltasks.h>`. **concurrency::task** ist eine Klasse für allgemeine Zwecke. Bei Verwendung des **/ZW**-Compilerschalters, der für UWP-Apps und die entsprechenden Komponenten benötigt wird, werden jedoch die asynchronen Typen der UWP durch die Task-Klasse gekapselt, was Folgendes vereinfacht:
 
 -   Verkettung mehrerer asynchroner und synchroner Vorgänge
 
@@ -25,7 +28,7 @@ Sie können zwar die asynchronen UWP-APIs direkt in C++ verwenden, es wird aber 
 
 -   Gewährleistung, dass einzelne Aufgaben im richtigen Threadkontext oder -apartment ausgeführt werden
 
-Dieser Artikel bietet einen allgemeinen Überblick über die Verwendung der **Task**-Klasse mit den asynchronen UWP-APIs. Die vollständige Dokumentation zur **Task**-Klasse und den dazugehörigen Methoden (einschließlich [**create\_task**][createTask]) finden Sie unter [Aufgabenparallelität (Concurrency Runtime)][taskParallelism]. Weitere Informationen zum Erstellen öffentlicher asynchroner Methoden für die Verwendung durch JavaScript und andere UWP-kompatible Sprachen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ für Windows-Runtime-Apps][createAsyncCpp].
+Dieser Artikel bietet einen allgemeinen Überblick über die Verwendung der **Task**-Klasse mit den asynchronen UWP-APIs. Die vollständige Dokumentation zur **Task**-Klasse und den dazugehörigen Methoden (einschließlich [**create\_task**][createTask]) finden [Sie unter Aufgabenparallelität (Concurrency Runtime)][taskParallelism]. Weitere Informationen zum Erstellen öffentlicher asynchroner Methoden für die Verwendung durch JavaScript und andere UWP-kompatible Sprachen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ für Windows-Runtime-Apps]createAsyncCpp.
 
 ## Verwendung asynchroner Vorgänge mithilfe von Aufgaben
 
@@ -100,7 +103,7 @@ void App::DeleteWithTasks(String^ fileName)
 
 Das Beispiel oben zeigt vier zentrale Aspekte:
 
--   Mit der ersten Fortsetzung wird das [**IAsyncAction^**][IAsyncAction]-Objekt in ein Element vom Typ **task<void>** konvertiert und das Element vom Typ **task** zurückgegeben.
+-   Mit der ersten Fortsetzung wird das [**IAsyncAction^**][IAsyncAction]-Objekt in ein Element vom Typ **task<void>**  konvertiert und das Element vom Typ **task** zurückgegeben.
 
 -   Die zweite Fortsetzung führt keine Fehlerbehandlung durch und verwendet daher **void** als Eingabe (und nicht **task<void>**). Es handelt sich um eine wertbasierte Fortsetzung.
 
@@ -154,7 +157,7 @@ Weitere Informationen finden Sie unter [Abbruch in der PPL](https://msdn.microso
 
 Wenn eine Fortsetzung auch dann ausgeführt werden soll, wenn die vorhergehende Aufgabe abgebrochen wurde oder eine Ausnahme ausgelöst hat, müssen Sie die Fortsetzung als aufgabenbasierte Fortsetzung anlegen. Geben Sie dafür die Eingabe für die entsprechende Lambda-Funktion als **task<TResult>** oder **task<void>** an, wenn die Lambda-Funktion der vorhergehenden Aufgabe den [**IAsyncAction^**][IAsyncAction]-Typ zurückgibt.
 
-Zur Behandlung von Fehlern und Abbrüchen in Aufgabenabfolgen müssen jedoch nicht alle Fortsetzungen aufgabenbasiert sein, und Sie müssen nicht alle Vorgänge einschließen, die in einem `try…catch`-Block ausgelöst werden können. Stattdessen können Sie am Ende der Abfolge eine aufgabenbasierte Fortsetzung hinzufügen und alle Fehler dort behandeln. Alle Ausnahmen (einschließlich [**task\_canceled**][taskCanceled]-Ausnahmen) werden entlang der Aufgabenabfolge weitergegeben, wobei wertbasierte Fortsetzungen ausgelassen werden. Auf diese Weise können Sie die Ausnahme in der aufgabenbasierten Fortsetzung für die Fehlerbehandlung verarbeiten. Das Beispiel oben kann daher mit einer aufgabenbasierten Fortsetzung für die Fehlerbehandlung umgeschrieben werden:
+Zur Behandlung von Fehlern und Abbrüchen in Aufgabenabfolgen müssen jedoch nicht alle Fortsetzungen aufgabenbasiert sein, und Sie müssen nicht alle Vorgänge einschließen, die in einem `try…catch`-Block ausgelöst werden können. Stattdessen können Sie am Ende der Abfolge eine aufgabenbasierte Fortsetzung hinzufügen und alle Fehler dort behandeln. Alle Ausnahmen (einschließlich [**task\_canceled**][taskCanceled] -Ausnahmen) werden entlang der Aufgabenabfolge weitergegeben, wobei wertbasierte Fortsetzungen ausgelassen werden. Auf diese Weise können Sie die Ausnahme in der aufgabenbasierten Fortsetzung für die Fehlerbehandlung verarbeiten. Das Beispiel oben kann daher mit einer aufgabenbasierten Fortsetzung für die Fehlerbehandlung umgeschrieben werden:
 
 ``` cpp
 #include <ppltasks.h>
@@ -217,7 +220,7 @@ void App::SetFeedText()
 }
 ```
 
-Gibt eine Aufgabe nicht [**IAsyncAction**][IAsyncAction] oder [**IAsyncOperation**][IAsyncOperation] zurück, ist sie nicht apartmentfähig, und ihre Fortsetzungen werden standardmäßig im ersten verfügbaren Hintergrundthread ausgeführt.
+Gibt eine Aufgabe nicht [**IAsyncAction**]IAsyncAction[ oder ][IAsyncOperation****IAsyncOperation] zurück, ist sie nicht apartmentfähig, und ihre Fortsetzungen werden standardmäßig im ersten verfügbaren Hintergrundthread ausgeführt.
 
 Sie können den Standardthreadkontext für beide Aufgabenarten außer Kraft setzen, indem Sie die Überladung der [**task::then**][taskThen]-Methode verwenden, die einen [**task\_continuation\_context**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749968.aspx)-Kontext verwendet. In manchen Fällen ist es zum Beispiel vorteilhaft, die Fortsetzung einer apartmentfähigen Aufgabe für einen Hintergrundthread zu planen. Dabei können Sie [**task\_continuation\_context::use\_arbitrary**][useArbitrary] übergeben, um die Vorgänge der Aufgabe für den nächsten verfügbaren Thread in einem Thread mit mehreren Apartments (Multithread-Apartment, MTA) zu planen. Dadurch wird die Leistung der Fortsetzung verbessert, da die entsprechenden Vorgänge nicht mit anderen Vorgängen im UI-Thread synchronisiert sein müssen.
 
@@ -291,30 +294,50 @@ Methoden mit Unterstützung von [**IAsyncOperationWithProgress**](https://msdn.m
 
 ## Verwandte Themen
 
-* [Erstellen von asynchronen Vorgängen in C++ für Windows Store-Apps][createAsyncCpp]
+* [Erstellen von asynchronen Vorgängen in C++ für Windows Store-Apps]
+            [createAsyncCpp]
 * [Visual C++-Programmiersprachenreferenz](http://msdn.microsoft.com/library/windows/apps/hh699871.aspx)
-* [Asynchrone Programmierung][AsyncProgramming]
-* [Aufgabenparallelität (Concurrency Runtime)][taskParallelism]
-* [Aufgabenklasse][task-class]
+* [Asynchrone Programmierung]
+            [AsyncProgramming]
+* [Aufgabenparallelität (Concurrency Runtime)]
+            [taskParallelism]
+* [Aufgabenklasse]
+            [task-class]
  
 <!-- LINKS -->
-[AsyncProgramming]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464924.aspx> "AsyncProgramming"
-[concurrencyNamespace]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492819.aspx> "Concurrency-Namespace"
-[createTask]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh913025.aspx> "CreateTask"
-[createAsyncCpp]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx> "CreateAsync"
-[deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199> "DeleteAsync"
-[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580> "IAsyncAction"
-[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598> "IAsyncOperation"
-[IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587> "IAsyncInfo"
-[IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel> "IAsyncInfoCancel"
-[taskCanceled]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750106.aspx> "TaskCancelled"
-[task-class]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx> "Aufgabenklasse"
-[taskGet]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750017.aspx> "TaskGet"
-[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx> "Task-Parallelität"
-[taskThen]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx> "TaskThen"
-[useArbitrary]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750036.aspx> "UseArbitrary"
+[AsyncProgramming]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464924.aspx>
+             "AsyncProgramming"
+[Concurrency-Namespace]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492819.aspx>
+             "Concurrency Namespace"
+[createTask]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh913025.aspx>
+             "CreateTask"
+[createAsyncCpp]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750082.aspx>
+             "CreateAsync"
+[deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199>
+             "DeleteAsync"
+[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580>
+             "IAsyncAction"
+[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598>
+             "IAsyncOperation"
+[IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587>
+             "IAsyncInfo"
+[IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel>
+             "IAsyncInfoCancel"
+[taskCanceled]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750106.aspx>
+             "TaskCancelled"
+[Aufgabenklasse]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750113.aspx>
+             "Task Class"
+[taskGet]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750017.aspx>
+             "TaskGet"
+[taskParallelism]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dd492427.aspx>
+             "Task-Parallelität"
+[taskThen]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750044.aspx>
+             "TaskThen"
+[useArbitrary]: <https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh750036.aspx>
+             "UseArbitrary"
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

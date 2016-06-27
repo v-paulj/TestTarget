@@ -1,10 +1,13 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Identifizieren Sie die Eingabegeräte, die mit einem Gerät für die universelle Windows-Plattform (UWP) verbunden sind, sowie deren Funktionen und Attribute.
-title: Identifizieren von Eingabegeräten
+Description: "Identifizieren Sie die Eingabegeräte, die mit einem Gerät für die universelle Windows-Plattform (UWP) verbunden sind, sowie deren Funktionen und Attribute."
+title: "Identifizieren von Eingabegeräten"
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
 template: detail.hbs
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: ee5935a79b10b6c4c084457049cbb518e264be0d
+
 ---
 
 # Identifizieren von Eingabegeräten
@@ -191,6 +194,7 @@ private void GetPointerDevices()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 
