@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\audio-video-camera\hardware-drm.md](https://github.com/Microsoft/windows-apps/blob/22ce05ab6f24c3ee41798732c35314b3dad87ea8/windows-apps-src/audio-video-camera/hardware-drm.md) | HandedBackFailed | [Details](#b7867317c37edf44d9edfaaf28d97a3f23b22814475)
+ [windows-apps-src\publish\microsoft-advertising-payment-process.md](https://github.com/Microsoft/windows-apps/blob/eb1a5970e83e30439108e627cc6f26f9271f5dff/windows-apps-src/publish/microsoft-advertising-payment-process.md) | HandedOffSuccess | [Details](#7916d14e58e751dc33e2d46e7e151b7943952b9d3623)
 
 ## Item Details
-##### <a name='b7867317c37edf44d9edfaaf28d97a3f23b22814475'></a> Source: [windows-apps-src\audio-video-camera\hardware-drm.md](https://github.com/Microsoft/windows-apps/blob/22ce05ab6f24c3ee41798732c35314b3dad87ea8/windows-apps-src/audio-video-camera/hardware-drm.md)
-* Status: HandedBackFailed
+##### <a name='7916d14e58e751dc33e2d46e7e151b7943952b9d3623'></a> Source: [windows-apps-src\publish\microsoft-advertising-payment-process.md](https://github.com/Microsoft/windows-apps/blob/eb1a5970e83e30439108e627cc6f26f9271f5dff/windows-apps-src/publish/microsoft-advertising-payment-process.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [hardware-drm.5fb8fda243b613ca726a5d1db43f5767da669e0e.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/21da404a522b1460a7d3efd8ae0657b0d9a47486/ol-handoff/Microsoft/windows-apps.de-de/master/hardware-drm.5fb8fda243b613ca726a5d1db43f5767da669e0e.de-de.xlf)
-* Handoff Datetime: 2016-06-29 17:43:44
+* Handoff File: [microsoft-advertising-payment-process.506091d67c351dfe6d76f5e1cbdd29e3c277dd80.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/87c7c59826fdd6669ee3adeef89817c50b44250a/ol-handoff/Microsoft/windows-apps.de-de/master/microsoft-advertising-payment-process.506091d67c351dfe6d76f5e1cbdd29e3c277dd80.de-de.xlf)
+* Handoff Datetime: 2016-06-29 18:59:35
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
