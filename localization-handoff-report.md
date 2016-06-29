@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\audio-video-camera\playready-client-sdk.md](https://github.com/Microsoft/windows-apps/blob/5cae0870142282eaf2f3db05e0e202db7e74ef26/windows-apps-src/audio-video-camera/playready-client-sdk.md) | HandedBackFailed | [Details](#eef128afc0da6f55a76b8c664f9049dc1ec48da1487)
+ [windows-apps-src\publish\usage-report.md](https://github.com/Microsoft/windows-apps/blob/6dac44032ac217969148ff73c594f99d8a733355/windows-apps-src/publish/usage-report.md) | HandedBackFailed | [Details](#0cb9d09504a024cabe66661a5c77e21752b7e2e63649)
 
 ## Item Details
-##### <a name='eef128afc0da6f55a76b8c664f9049dc1ec48da1487'></a> Source: [windows-apps-src\audio-video-camera\playready-client-sdk.md](https://github.com/Microsoft/windows-apps/blob/5cae0870142282eaf2f3db05e0e202db7e74ef26/windows-apps-src/audio-video-camera/playready-client-sdk.md)
+##### <a name='0cb9d09504a024cabe66661a5c77e21752b7e2e63649'></a> Source: [windows-apps-src\publish\usage-report.md](https://github.com/Microsoft/windows-apps/blob/6dac44032ac217969148ff73c594f99d8a733355/windows-apps-src/publish/usage-report.md)
 * Status: HandedBackFailed
 * Target File: 
-* Handoff File: [playready-client-sdk.02c7a03e7a4fdbef5841fe4bca523065a993408e.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/d47d8025915f6d98e88fab77df3b7a8d5b8af1ff/ol-handoff/Microsoft/windows-apps.de-de/master/playready-client-sdk.02c7a03e7a4fdbef5841fe4bca523065a993408e.de-de.xlf)
-* Handoff Datetime: 2016-06-29 00:44:58
+* Handoff File: [usage-report.a8db07f7d604dc3af9d06cd2b1cd055c4486237e.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/816551f3b37be6559a5220fd2f98bf27d25b1876/ol-handoff/Microsoft/windows-apps.de-de/master/usage-report.a8db07f7d604dc3af9d06cd2b1cd055c4486237e.de-de.xlf)
+* Handoff Datetime: 2016-06-29 16:24:39
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
