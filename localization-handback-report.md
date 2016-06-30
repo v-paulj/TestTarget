@@ -44,7 +44,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [how-to-activate-an-app-directx-and-cpp.8957ce9a95a2b59613583434350333da69e90c8b.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/how-to-activate-an-app-directx-and-cpp.8957ce9a95a2b59613583434350333da69e90c8b.de-de.xlf)
-* Handback Datetime: 2016-06-30 18:03:15
+* Handback Datetime: 2016-06-30 18:43:20
 * Handback Error: [handback_transform_failed](#14859d03c7af45a17772c76f8c79b3c1bc56272c2196handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -57,7 +57,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [how-to-resume-an-app-directx-and-cpp.13b59365d7659e64ad86b0bb09a4426773350ecb.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/how-to-resume-an-app-directx-and-cpp.13b59365d7659e64ad86b0bb09a4426773350ecb.de-de.xlf)
-* Handback Datetime: 2016-06-30 18:03:15
+* Handback Datetime: 2016-06-30 18:43:20
 * Handback Error: [handback_transform_failed](#d5383da7332c80d4337f0e0b3eef0a6851fcd5272197handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -70,7 +70,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [how-to-suspend-an-app-directx-and-cpp.aec0994ce57a2b97e1e8d5342ee9daf7e10e605a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/how-to-suspend-an-app-directx-and-cpp.aec0994ce57a2b97e1e8d5342ee9daf7e10e605a.de-de.xlf)
-* Handback Datetime: 2016-06-30 18:03:15
+* Handback Datetime: 2016-06-30 18:43:20
 * Handback Error: [handback_transform_failed](#38e03a4a6312c5a0521c7263944897260624aa382198handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -83,7 +83,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.de-de.xlf)
-* Handback Datetime: 2016-06-30 18:03:15
+* Handback Datetime: 2016-06-30 18:43:20
 * Handback Error: [handback_transform_failed](#929ad82ce057754ee04f1f27537e03520e95157a2238handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -96,7 +96,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.de-de.xlf)
-* Handback Datetime: 2016-06-30 18:03:15
+* Handback Datetime: 2016-06-30 18:43:20
 * Handback Error: [handback_transform_failed](#9a3058aabdc6f710149a14d8f125b66efd0760072639handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -109,7 +109,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.de-de.xlf)
-* Handback Datetime: 2016-06-30 18:03:15
+* Handback Datetime: 2016-06-30 18:43:20
 * Handback Error: [handback_transform_failed](#2b11133fda76fb42f3a850848c426cbb33fb83663478handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -122,7 +122,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [w8x-to-uwp-case-study-bookstore1.1b233633dd89418b29824ed2a8815f42db06c353.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/w8x-to-uwp-case-study-bookstore1.1b233633dd89418b29824ed2a8815f42db06c353.de-de.xlf)
-* Handback Datetime: 2016-06-30 18:03:15
+* Handback Datetime: 2016-06-30 18:43:20
 * Handback Error: [handback_transform_failed](#43536aacb37a79b3e8507896474be67423a0b9fe3549handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -135,7 +135,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [wpsl-to-uwp-case-study-bookstore1.19497291442d80478e61fcd92c5c00207526b390.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/wpsl-to-uwp-case-study-bookstore1.19497291442d80478e61fcd92c5c00207526b390.de-de.xlf)
-* Handback Datetime: 2016-06-30 18:03:15
+* Handback Datetime: 2016-06-30 18:43:20
 * Handback Error: [handback_transform_failed](#dbffb4245efece2d39b4eba8979e323fd71626d03558handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -148,7 +148,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [wpsl-to-uwp-case-study-bookstore2.f536923cc67633de1edb1fb8d3b8bde4b029fb0e.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/wpsl-to-uwp-case-study-bookstore2.f536923cc67633de1edb1fb8d3b8bde4b029fb0e.de-de.xlf)
-* Handback Datetime: 2016-06-30 18:03:15
+* Handback Datetime: 2016-06-30 18:43:20
 * Handback Error: [handback_transform_failed](#019f9ae1fc226c9aa1d921ce58cd2e5fa2424a2b3559handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -161,7 +161,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [wpsl-to-uwp-input-and-sensors.4eb085ba7226c628e7fbf287850103e3c9469153.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/wpsl-to-uwp-input-and-sensors.4eb085ba7226c628e7fbf287850103e3c9469153.de-de.xlf)
-* Handback Datetime: 2016-06-30 18:03:15
+* Handback Datetime: 2016-06-30 18:43:20
 * Handback Error: [handback_transform_failed](#6b29e741c9cad68083502b25445b965fc266ef6e3561handback_transform_failed)
 * [Back to Top](#report-top)
 
