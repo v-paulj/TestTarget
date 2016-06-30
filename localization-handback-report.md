@@ -1,7 +1,7 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 17
+ Total Files | 14
 
 ## File List
  Source File | Status | Details 
@@ -19,9 +19,6 @@
  [windows-apps-src\porting\wpsl-to-uwp-input-and-sensors.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/porting/wpsl-to-uwp-input-and-sensors.md) | InSyncHandedBackSuccess | [Details](#6b29e741c9cad68083502b25445b965fc266ef6e3561)
  [windows-apps-src\xbox-apps\disable-scaling.md](https://github.com/Microsoft/windows-apps/blob/2fcccb9a045aad268afde615d31f8faa002b8a87/windows-apps-src/xbox-apps/disable-scaling.md) | HandedBackFailed | [Details](#65416dd2b6c8656078b63c316f3972cda9c792fc3932)
  [windows-apps-src\xbox-apps\how-to-disable-mouse-mode.md](https://github.com/Microsoft/windows-apps/blob/bdf7a32d2f0673ab6c176a775b805eff2b7cf437/windows-apps-src/xbox-apps/how-to-disable-mouse-mode.md) | HandedBackFailed | [Details](#bd7780f105f86d7d292c5db2535ad40af07d6e4f3935)
- [windows-apps-src\xbox-apps\images\cpusets-lumia950cache.png](https://github.com/Microsoft/windows-apps/blob/f07627f632d0294f6daf7e08a29a2f28aa84cb05/windows-apps-src/xbox-apps/images/cpusets-lumia950cache.png) | InSyncHandedBackSuccess | [Details](#40067c66cbc577f0e3f48fb474e1c1bcf1c4fed43949)
- [windows-apps-src\xbox-apps\images\devhome_mainmenu.png](https://github.com/Microsoft/windows-apps/blob/c538f363bd4066233ebd363bb5255a6981399929/windows-apps-src/xbox-apps/images/devhome_mainmenu.png) | InSyncHandedBackSuccess | [Details](#468a5a63c57347dc1204479b758b4df640f158bf3962)
- [windows-apps-src\xbox-apps\images\windows-store-app-activation-error.jpg](https://github.com/Microsoft/windows-apps/blob/807670bc737153b77d57441461b9ca7c83a77a44/windows-apps-src/xbox-apps/images/windows-store-app-activation-error.jpg) | InSyncHandedBackSuccess | [Details](#766be26fa9692fb7d435e5b737eb73493659dead3985)
  [windows-apps-src\xbox-apps\turn-off-overscan.md](https://github.com/Microsoft/windows-apps/blob/32a875348debac9aec9f5a26bc4e7e0af2a0a5b4/windows-apps-src/xbox-apps/turn-off-overscan.md) | HandedBackFailed | [Details](#abd06e78364ff32cc10d733e33b153b854dbc4674000)
 
 ## Item Details
@@ -47,7 +44,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [how-to-activate-an-app-directx-and-cpp.8957ce9a95a2b59613583434350333da69e90c8b.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/how-to-activate-an-app-directx-and-cpp.8957ce9a95a2b59613583434350333da69e90c8b.de-de.xlf)
-* Handback Datetime: 2016-06-30 16:51:50
+* Handback Datetime: 2016-06-30 17:40:19
 * Handback Error: [handback_transform_failed](#14859d03c7af45a17772c76f8c79b3c1bc56272c2196handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -60,7 +57,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [how-to-resume-an-app-directx-and-cpp.13b59365d7659e64ad86b0bb09a4426773350ecb.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/how-to-resume-an-app-directx-and-cpp.13b59365d7659e64ad86b0bb09a4426773350ecb.de-de.xlf)
-* Handback Datetime: 2016-06-30 16:51:50
+* Handback Datetime: 2016-06-30 17:40:19
 * Handback Error: [handback_transform_failed](#d5383da7332c80d4337f0e0b3eef0a6851fcd5272197handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -73,7 +70,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [how-to-suspend-an-app-directx-and-cpp.aec0994ce57a2b97e1e8d5342ee9daf7e10e605a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/how-to-suspend-an-app-directx-and-cpp.aec0994ce57a2b97e1e8d5342ee9daf7e10e605a.de-de.xlf)
-* Handback Datetime: 2016-06-30 16:51:50
+* Handback Datetime: 2016-06-30 17:40:19
 * Handback Error: [handback_transform_failed](#38e03a4a6312c5a0521c7263944897260624aa382198handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -86,7 +83,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/plan-your-directx-port.a4eca0df1e81d68bf007196d3ad2507770109c09.de-de.xlf)
-* Handback Datetime: 2016-06-30 16:51:50
+* Handback Datetime: 2016-06-30 17:40:19
 * Handback Error: [handback_transform_failed](#929ad82ce057754ee04f1f27537e03520e95157a2238handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -99,7 +96,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/plan-your-app.96433e3c23cb6ab47cd852804f47526706d28e0c.de-de.xlf)
-* Handback Datetime: 2016-06-30 16:51:50
+* Handback Datetime: 2016-06-30 17:40:19
 * Handback Error: [handback_transform_failed](#9a3058aabdc6f710149a14d8f125b66efd0760072639handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -112,7 +109,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/getting-started-what-next.ecd0afbdc8655298b5947469bb7c882adb3b3a4a.de-de.xlf)
-* Handback Datetime: 2016-06-30 16:51:50
+* Handback Datetime: 2016-06-30 17:40:19
 * Handback Error: [handback_transform_failed](#2b11133fda76fb42f3a850848c426cbb33fb83663478handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -125,7 +122,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [w8x-to-uwp-case-study-bookstore1.1b233633dd89418b29824ed2a8815f42db06c353.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/w8x-to-uwp-case-study-bookstore1.1b233633dd89418b29824ed2a8815f42db06c353.de-de.xlf)
-* Handback Datetime: 2016-06-30 16:51:50
+* Handback Datetime: 2016-06-30 17:40:19
 * Handback Error: [handback_transform_failed](#43536aacb37a79b3e8507896474be67423a0b9fe3549handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -138,7 +135,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [wpsl-to-uwp-case-study-bookstore1.19497291442d80478e61fcd92c5c00207526b390.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/wpsl-to-uwp-case-study-bookstore1.19497291442d80478e61fcd92c5c00207526b390.de-de.xlf)
-* Handback Datetime: 2016-06-30 16:51:50
+* Handback Datetime: 2016-06-30 17:40:19
 * Handback Error: [handback_transform_failed](#dbffb4245efece2d39b4eba8979e323fd71626d03558handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -151,7 +148,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [wpsl-to-uwp-case-study-bookstore2.f536923cc67633de1edb1fb8d3b8bde4b029fb0e.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/wpsl-to-uwp-case-study-bookstore2.f536923cc67633de1edb1fb8d3b8bde4b029fb0e.de-de.xlf)
-* Handback Datetime: 2016-06-30 16:51:50
+* Handback Datetime: 2016-06-30 17:40:19
 * Handback Error: [handback_transform_failed](#019f9ae1fc226c9aa1d921ce58cd2e5fa2424a2b3559handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -164,7 +161,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [wpsl-to-uwp-input-and-sensors.4eb085ba7226c628e7fbf287850103e3c9469153.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/1c9c9003998bb686554b589e6359b74d3157482b/ol-handback/Microsoft/windows-apps.de-de/master/wpsl-to-uwp-input-and-sensors.4eb085ba7226c628e7fbf287850103e3c9469153.de-de.xlf)
-* Handback Datetime: 2016-06-30 16:51:50
+* Handback Datetime: 2016-06-30 17:40:19
 * Handback Error: [handback_transform_failed](#6b29e741c9cad68083502b25445b965fc266ef6e3561handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -192,45 +189,6 @@
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Handback Error: [handback_transform_failed](#bd7780f105f86d7d292c5db2535ad40af07d6e4f3935handback_transform_failed)
-* [Back to Top](#report-top)
-
-##### <a name='40067c66cbc577f0e3f48fb474e1c1bcf1c4fed43949'></a> Source: [windows-apps-src\xbox-apps\images\cpusets-lumia950cache.png](https://github.com/Microsoft/windows-apps/blob/f07627f632d0294f6daf7e08a29a2f28aa84cb05/windows-apps-src/xbox-apps/images/cpusets-lumia950cache.png)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\xbox-apps\images\cpusets-lumia950cache.png](https://github.com/Microsoft/windows-apps.de-de/blob/af258293c600912cdb65f0940cd2886da62cd063/windows-apps-src/xbox-apps/images/cpusets-lumia950cache.png)
-* Handoff File: [40067c66cbc577f0e3f48fb474e1c1bcf1c4fed4.png](https://github.com/Microsoft/WDG.handoff/blob/b7a81e8c6b47526dd1b42c0f7cab52d08591e87e/ol-handoff/Microsoft/windows-apps.de-de/master/40067c66cbc577f0e3f48fb474e1c1bcf1c4fed4.png)
-* Handoff Datetime: 2016-06-22 23:42:32
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\xbox-apps\cpusets-games.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [40067c66cbc577f0e3f48fb474e1c1bcf1c4fed4.png](https://github.com/Microsoft/WDG.handback/blob/f16f4222f58c37d5aec078bbc213e9090ee73adb/ol-handback/Microsoft/windows-apps.de-de/master/40067c66cbc577f0e3f48fb474e1c1bcf1c4fed4.png)
-* Handback Datetime: 2016-06-30 16:51:50
-* [Back to Top](#report-top)
-
-##### <a name='468a5a63c57347dc1204479b758b4df640f158bf3962'></a> Source: [windows-apps-src\xbox-apps\images\devhome_mainmenu.png](https://github.com/Microsoft/windows-apps/blob/c538f363bd4066233ebd363bb5255a6981399929/windows-apps-src/xbox-apps/images/devhome_mainmenu.png)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\xbox-apps\images\devhome_mainmenu.png](https://github.com/Microsoft/windows-apps.de-de/blob/af258293c600912cdb65f0940cd2886da62cd063/windows-apps-src/xbox-apps/images/devhome_mainmenu.png)
-* Handoff File: [468a5a63c57347dc1204479b758b4df640f158bf.png](https://github.com/Microsoft/WDG.handoff/blob/b7a81e8c6b47526dd1b42c0f7cab52d08591e87e/ol-handoff/Microsoft/windows-apps.de-de/master/468a5a63c57347dc1204479b758b4df640f158bf.png)
-* Handoff Datetime: 2016-06-22 23:42:32
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\xbox-apps\introduction-to-xbox-tools.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [468a5a63c57347dc1204479b758b4df640f158bf.png](https://github.com/Microsoft/WDG.handback/blob/f16f4222f58c37d5aec078bbc213e9090ee73adb/ol-handback/Microsoft/windows-apps.de-de/master/468a5a63c57347dc1204479b758b4df640f158bf.png)
-* Handback Datetime: 2016-06-30 16:51:50
-* [Back to Top](#report-top)
-
-##### <a name='766be26fa9692fb7d435e5b737eb73493659dead3985'></a> Source: [windows-apps-src\xbox-apps\images\windows-store-app-activation-error.jpg](https://github.com/Microsoft/windows-apps/blob/807670bc737153b77d57441461b9ca7c83a77a44/windows-apps-src/xbox-apps/images/windows-store-app-activation-error.jpg)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\xbox-apps\images\windows-store-app-activation-error.jpg](https://github.com/Microsoft/windows-apps.de-de/blob/af258293c600912cdb65f0940cd2886da62cd063/windows-apps-src/xbox-apps/images/windows-store-app-activation-error.jpg)
-* Handoff File: [766be26fa9692fb7d435e5b737eb73493659dead.jpg](https://github.com/Microsoft/WDG.handoff/blob/b7a81e8c6b47526dd1b42c0f7cab52d08591e87e/ol-handoff/Microsoft/windows-apps.de-de/master/766be26fa9692fb7d435e5b737eb73493659dead.jpg)
-* Handoff Datetime: 2016-06-22 23:42:32
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\xbox-apps\known-issues.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [766be26fa9692fb7d435e5b737eb73493659dead.jpg](https://github.com/Microsoft/WDG.handback/blob/f16f4222f58c37d5aec078bbc213e9090ee73adb/ol-handback/Microsoft/windows-apps.de-de/master/766be26fa9692fb7d435e5b737eb73493659dead.jpg)
-* Handback Datetime: 2016-06-30 16:51:50
 * [Back to Top](#report-top)
 
 ##### <a name='abd06e78364ff32cc10d733e33b153b854dbc4674000'></a> Source: [windows-apps-src\xbox-apps\turn-off-overscan.md](https://github.com/Microsoft/windows-apps/blob/32a875348debac9aec9f5a26bc4e7e0af2a0a5b4/windows-apps-src/xbox-apps/turn-off-overscan.md)
