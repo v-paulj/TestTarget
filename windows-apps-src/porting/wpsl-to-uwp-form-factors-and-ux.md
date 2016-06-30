@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Windows-Apps weisen auf PCs, Mobilgeräten und vielen anderen Arten von Geräten ein einheitliches Erscheinungsbild auf. Die Benutzeroberfläche, Eingabe und Interaktionsmuster sind fast identisch, und Benutzer profitieren von einer einheitlichen Umgebung auf allen Geräten.
-title: Portieren von Windows Phone Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit
+description: "Windows-Apps weisen auf PCs, Mobilgeräten und vielen anderen Arten von Geräten ein einheitliches Erscheinungsbild auf. Die Benutzeroberfläche, Eingabe und Interaktionsmuster sind fast identisch, und Benutzer profitieren von einer einheitlichen Umgebung auf allen Geräten."
+title: "Portieren von Windows Phone Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit"
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7d5f1fa969e4ddf4a695a3ca77072a0f9c21316f
+
 ---
 
 #  Portieren von Windows Phone Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit
@@ -67,6 +71,7 @@ In der Liste [Maximieren der Wiederverwendung von Markup und Code](wpsl-to-uwp-p
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

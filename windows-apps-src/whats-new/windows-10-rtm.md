@@ -1,7 +1,11 @@
 ---
 author: QuinnRadich
-Description: Windows 10 RTM und Updates für Entwicklungstools stellen weiterhin Tools, Features und Umgebungen bereit, die von der universellen Windows-Plattform unterstützt werden.
-title: Neuigkeiten in Windows 10 RTM – Juli 2015
+Description: "Windows 10 RTM und Updates für Entwicklungstools stellen weiterhin Tools, Features und Umgebungen bereit, die von der universellen Windows-Plattform unterstützt werden."
+title: "Neuigkeiten in Windows 10 RTM – Juli 2015"
+translationtype: Human Translation
+ms.sourcegitcommit: 1029eff0f21c62f8235f37516971996791051d4c
+ms.openlocfilehash: 67e5be130647e5ebeeef6e4c0dcbd822e8b84184
+
 ---
 
 # Neuigkeiten in Windows 10 RTM – Juli 2015
@@ -195,6 +199,7 @@ WebView.ClearTemporaryWebDataAsync-Methode | Wenn ein Benutzer mit Webinhalten i
 ---
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

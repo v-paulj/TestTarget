@@ -3,14 +3,18 @@ author: mcleblanc
 ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
 title: Virtualisierung von ListView- und GridView-Daten
 description: Verbessern Sie die Leistung und Startzeit von ListView und GridView durch Datenvirtualisierung.
+translationtype: Human Translation
+ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
+ms.openlocfilehash: 26faa92e98547844af2be1720c458d793ac2f3ac
+
 ---
 # Virtualisierung von „ListView“- und „GridView“-Daten
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Hinweis**  Weitere Informationen finden Sie unter der Sitzung „//build/“ [Erhebliches Erhöhen der Leistung bei der Interaktion von Benutzern mit großen Mengen von Daten in GridView und ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
+**Hinweis** Weitere Informationen finden Sie in der „//build/“-Sitzung [Dramatically Increase Performance when Users Interact with Large Amounts of Data in GridView and ListView](https://channel9.msdn.com/Events/Build/2013/3-158) (Erhebliches Erhöhen der Leistung bei der Interaktion von Benutzern mit großen Mengen von Daten in GridView und ListView).
 
-Verbessern Sie die Leistung und Startzeit von [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) durch Datenvirtualisierung. Informationen zu UI-Virtualisierung, Elementreduzierung und das progressive Aktualisieren von Elementen finden Sie unter [Optimieren der ListView- und GridView-Benutzeroberfläche](optimize-gridview-and-listview.md).
+Verbessern Sie die Leistung und Startzeit von [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) durch Datenvirtualisierung. Informationen zu UI-Virtualisierung, Elementreduzierung und die progressive Aktualisierung von Elementen finden Sie unter [Optimieren der ListView- und GridView-Benutzeroberfläche](optimize-gridview-and-listview.md).
 
 Eine Methode zur Datenvirtualisierung ist für einen Datensatz erforderlich, der so groß ist, dass er zu einem bestimmten Zeitpunkt nicht komplett im Arbeitsspeicher gespeichert werden kann oder soll. Sie laden einen ersten Teil (vom lokalen Datenträger, aus dem Netzwerk oder der Cloud) in den Arbeitsspeicher und wenden die UI-Virtualisierung auf dieses Teildataset an. Sie können die Daten später inkrementell oder bei Bedarf von beliebigen Punkten im Master-Dataset (wahlfreier Zugriff) laden. Ob die Datenvirtualisierung für Sie geeignet ist, hängt von vielen Faktoren ab.
 
@@ -84,6 +88,7 @@ Die Strategie, wann die Datenelemente geladen werden, wie viele Datenelemente ge
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

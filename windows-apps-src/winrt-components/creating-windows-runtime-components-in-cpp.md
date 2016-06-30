@@ -1,20 +1,20 @@
 ---
-author: martinekuan
-title: Erstellen von Komponenten für Windows-Runtime in C++
-description: In diesem Artikel wird beschrieben, wie Sie eine Komponente für Windows-Runtime mit C++ erstellen. Dabei handelt es sich um eine DLL, die aus einer Universellen Windows-App aufgerufen werden kann, die mit JavaScript (oder C#, Visual Basic oder C++) entwickelt wurde.
+author: msatranjr
+title: "Erstellen von Komponenten für Windows-Runtime in C++"
+description: "In diesem Artikel wird beschrieben, wie Sie eine Komponente für Windows-Runtime mit C++ erstellen. Dabei handelt es sich um eine DLL, die aus einer Universellen Windows-App aufgerufen werden kann, die mit JavaScript (oder C#, Visual Basic oder C++) entwickelt wurde."
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 1497175723738cc23ec21b280c9639b216a33ddd
+
 ---
 
 
 # Erstellen von Komponenten für Windows-Runtime in C++
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
-
-\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
-
-In diesem Artikel wird beschrieben, wie Sie eine Komponente für Windows-Runtime mit C++ erstellen. Dabei handelt es sich um eine DLL, die aus einer universellen Windows-App aufgerufen werden kann, die mit JavaScript (oder C#, Visual Basic oder C++) entwickelt wurde.
+In diesem Artikel wird beschrieben, wie Sie eine Komponente für Windows-Runtime mit C++ erstellen. Dabei handelt es sich um eine DLL, die aus einer Universellen Windows-App aufgerufen werden kann, die mit JavaScript (oder C#, Visual Basic oder C++) entwickelt wurde.
 
 Im Folgenden finden Sie einige Gründe für die Erstellung einer solchen Komponente:
 
@@ -57,7 +57,7 @@ public:
     double LogCalc(double input)
     {
         // Use C++ standard library as usual.
-        return std::log(input); 
+        return std::log(input);
     }
 
 };
@@ -97,7 +97,7 @@ public:
     double LogCalc(double input)
     {
         // Use C++ standard library as usual.
-        return std::log(input); 
+        return std::log(input);
     }
 ```
 
@@ -126,7 +126,7 @@ namespace CppComponent
     private:
         PlayerData m_player;
     public:
-        property PlayerData PlayerStats 
+        property PlayerData PlayerStats
         {
             PlayerData get(){ return m_player; }
             void set(PlayerData data) {m_player = data;}
@@ -185,7 +185,7 @@ private void GetAndSetPlayerData()
 Eine öffentliche C++-Verweisklasse kann überladene Methoden enthalten, aber JavaScript verfügt nur über begrenzte Möglichkeiten zur Unterscheidung überladener Methoden. Beispielsweise kann JavaScript den Unterschied zwischen diesen Signaturen erkennen:
 
 ```cpp
-public ref class NumberClass sealed 
+public ref class NumberClass sealed
 {
 public:
     int GetNumber(int i);
@@ -333,7 +333,7 @@ private void SortListItems()
 //#include <collection.h>
 Windows::Foundation::Collections::IMap<int, Platform::String^> ^GetMap(void)
 {    
-    Windows::Foundation::Collections::IMap<int, Platform::String^> ^ret = 
+    Windows::Foundation::Collections::IMap<int, Platform::String^> ^ret =
         ref new Platform::Collections::Map<int, Platform::String^>;
     ret->Insert(1, "One ");
     ret->Insert(2, "Two ");
@@ -383,7 +383,7 @@ public:
     property int PropertyA
     {
         int get() { return m_propertyAValue; }
-        void set(int propertyAValue) 
+        void set(int propertyAValue)
         {
             if (propertyAValue != m_propertyAValue)
             {
@@ -597,6 +597,6 @@ Wenn Sie ein C++-Komponentenprojekt für Windows-Runtime aus einer Projektmappe 
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

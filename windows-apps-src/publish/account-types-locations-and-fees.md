@@ -1,8 +1,12 @@
 ---
 author: jnHs
 ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
-title: Kontotypen, Standorte und Gebühren
-description: Wir bieten individuelle Konten für Entwickler und Unternehmenskonten für Entwickler in vielen Ländern und Regionen.
+title: "Kontotypen, Standorte und Gebühren"
+description: "Wir bieten individuelle Konten für Entwickler und Unternehmenskonten für Entwickler in vielen Ländern und Regionen."
+translationtype: Human Translation
+ms.sourcegitcommit: 93b6d952e42949917a0fff5b39f3f194f49531d5
+ms.openlocfilehash: b4707f53aa1a1bd7bd7c03c74f2d18a0f9f55b10
+
 ---
 
 # Kontotypen, Standorte und Gebühren
@@ -255,6 +259,7 @@ In der Spalte **PayPal** wird angegeben, ob PayPal als Zahlungsmethode für Ihr 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

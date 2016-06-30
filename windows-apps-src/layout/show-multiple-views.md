@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Sie können Ihren Benutzern zu mehr Produktivität verhelfen, indem Sie ihnen ermöglichen, unabhängige Teile der App in separaten Fenstern anzuzeigen.
-title: Anzeigen mehrerer Ansichten für eine App
+Description: "Sie können Ihren Benutzern zu mehr Produktivität verhelfen, indem Sie ihnen ermöglichen, unabhängige Teile der App in separaten Fenstern anzuzeigen."
+title: "Anzeigen mehrerer Ansichten für eine App"
 ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 23e999f86fb0552b96cddbd3b9d11803106bf6c2
+
 ---
 
 # Anzeigen mehrerer Ansichten für eine App
@@ -181,6 +185,7 @@ Wenn Sie [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

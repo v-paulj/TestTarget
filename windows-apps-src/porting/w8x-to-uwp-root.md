@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Bei einer universellen 8.1-App – ob für Windows 8.1, Windows Phone 8.1 oder beides – werden Sie feststellen, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows 10 portieren lassen.
+description: "Bei einer universellen 8.1-App – ob für Windows 8.1, Windows Phone 8.1 oder beides – werden Sie feststellen, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows 10 portieren lassen."
 title: Wechsel von Windows-Runtime 8.x zu UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3aa24e61482054dadd9b798063d46abf36623e9b
+
 ---
 
 # Wechsel von Windows-Runtime 8.x zu UWP
@@ -75,6 +79,7 @@ Besitzen Sie ein Windows 10-Projekt, das Sie mit Microsoft Visual Studio 2015 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

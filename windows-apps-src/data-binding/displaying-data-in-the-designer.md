@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
-title: Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
-description: Möglicherweise ist es nicht möglich oder nicht erwünscht (z. B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt.
+title: "Beispieldaten für die Entwurfsoberfläche und Prototyperstellung"
+description: "Möglicherweise ist es nicht möglich oder nicht erwünscht (z. B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt."
+translationtype: Human Translation
+ms.sourcegitcommit: 53e807c0d9de8faf2d0b5dc0e1c8e9c380e42d86
+ms.openlocfilehash: 2f7ac4b269a167c3b521fa94d77e27091fa490a8
+
 ---
 Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
 =============================================================================================
@@ -142,6 +146,7 @@ Das Feature **Neue Beispieldaten** verwendet [**DataContext**](https://msdn.micr
 ![Beispieldaten für die Prototyperstellung](images/displaying-data-in-the-designer-04.png)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

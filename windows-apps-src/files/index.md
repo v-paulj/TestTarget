@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Dateien, Ordner und Bibliotheken
-description: Hier erhalten Sie Informationen zum Lesen und Schreiben von App-Einstellungen, zur Datei- und Ordnerauswahl und zu speziellen Speicherorten im Sandkasten, wie z. B. Video-/Musikbibliothek.
+description: "Hier erhalten Sie Informationen zum Lesen und Schreiben von App-Einstellungen, zur Datei- und Ordnerauswahl und zu speziellen Speicherorten im Sandkasten, wie z. B. Video-/Musikbibliothek."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 2056a5adee0ce6e65962eeba21fccbfe976c811a
+
 ---
  # Dateien, Ordner und Bibliotheken
 
@@ -41,6 +45,7 @@ Verwenden Sie die APIs im [Windows.Storage](https://msdn.microsoft.com/library/w
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

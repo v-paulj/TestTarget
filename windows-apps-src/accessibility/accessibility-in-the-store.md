@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre App für die Universelle Windows-Plattform (UWP) im Windows Store als barrierefrei deklarieren möchten.
+Description: "Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre App für die Universelle Windows-Plattform (UWP) im Windows Store als barrierefrei deklarieren möchten."
 ms.assetid: 59FA3B87-75A6-4B30-BA7C-A0E769D68050
 title: Barrierefreiheit im Store
 label: Accessibility in the Store
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 46dfe4fba383861c704b2ba9070bdd8102b10562
+
 ---
 
 # Barrierefreiheit im Store  
@@ -42,6 +46,7 @@ Unter [Prüfliste für die Barrierefreiheit](accessibility-checklist.md) werden 
 * [Barrierefreiheit](accessibility.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

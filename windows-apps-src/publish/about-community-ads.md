@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Sie können Ihre App mit Apps von anderen Entwicklern bewerben. Dieses Feature wird Community-Anzeigen genannt.
+Description: "Sie können Ihre App mit Apps von anderen Entwicklern bewerben. Dieses Feature wird Community-Anzeigen genannt."
 title: Informationen zu Community-Anzeigen
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
+ms.sourcegitcommit: 90e63d53c68e25816fd1f7b532792d9ad6dc2cc6
+ms.openlocfilehash: 582b26d2dde6cf4f3c7dd6f6d7b182ec4b7002ea
+
 ---
 
 # Informationen zu Community-Anzeigen
@@ -13,7 +16,7 @@ Das funktioniert wie folgt:
 
 * Nachdem Sie sich für die [Teilnahme an Community-Anzeigen](#how-to-opt-in-to-community-ads) entschieden und eine [kostenlose Community-Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) erstellt haben, teilt sich Ihre App den Platz für Werbeanzeigen mit anderen Entwicklern, die sich ebenfalls für die Nutzung von Community-Anzeigen entschieden haben. In Ihrer App werden Anzeigen für Apps anderer Entwickler angezeigt, die an Community-Anzeigen teilnehmen. Im Gegenzug werden in deren Apps Anzeigen für Ihre App angezeigt.
 * Durch die Anzeige von Community-Anzeigen in Ihrer App erwerben Sie Guthaben für Werbefläche in anderen Apps. Das Guthaben wird wie folgt berechnet:
-  * Für jedes Land bzw. jede Region, in dem bzw. in der eine App verfügbar ist, die Community-Anzeigen bereitstellt, wird der jeweils aktuelle eCPM-Wert (effektive Kosten pro tausend Anzeigenaufrufe) für das Land oder die Region mit der Anzahl von Community-Anzeigenaufrufen multipliziert, die von Ihrer App im betreffenden Land oder in der betreffenden Region bereitgestellt wurden. Dieser Wert entspricht dem Guthaben, das Sie im betreffenden Land oder in der betreffenden Region für Ihre App erworben haben.
+  * Für jedes Land bzw. jede Region, in dem bzw. in der eine App verfügbar ist, die Community-Anzeigen bereitstellt, wird der jeweils aktuelle eCPM-Wert (effektive Kosten pro tausend Anzeigenaufrufe) für das Land oder die Region mit der Anzahl von Anforderungen für Community-Anzeigen multipliziert, die von Ihrer App im betreffenden Land oder in der betreffenden Region gestellt wurden. Dieser Wert entspricht dem Guthaben, das Sie im betreffenden Land oder in der betreffenden Region für Ihre App erworben haben.
   * Ihr gesamtes erworbenes Guthaben für einen bestimmten Zeitraum entspricht der Summe sämtlicher Guthaben, die mit allen Ihren Apps, die Community-Anzeigen bereitstellen, in allen Ländern oder Regionen erwirtschaftet wurden.
 * Ihr Guthaben wird gleichmäßig auf alle aktiven Community-Anzeigenkampagnen verteilt und auf der Grundlage der jeweils aktuellen eCPM-Werte der Länder, auf die Ihre Community-Anzeigenkampagnen ausgerichtet sind, in Anzeigenaufrufe für Ihre App umgewandelt.
 * Informationen zum Nachverfolgen der Performance der Community-Anzeigen in Ihrer App finden Sie im [Bericht zur Anzeigen-Performance auf Kontoebene](advertising-performance-report.md#account-level-advertising-performance-report).
@@ -35,6 +38,7 @@ So melden Sie sich für Community-Anzeigen an:
 * [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

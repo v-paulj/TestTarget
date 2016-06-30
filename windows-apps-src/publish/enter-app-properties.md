@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Auf der Seite App-Eigenschaften des App-Übermittlungsprozesses können Sie die Kategorie Ihrer App festlegen sowie Hardwareeinstellungen und weitere Deklarationen angeben.
+Description: "Auf der Seite App-Eigenschaften des App-Übermittlungsprozesses können Sie die Kategorie Ihrer App festlegen sowie Hardwareeinstellungen und weitere Deklarationen angeben."
 title: Eingeben von App-Eigenschaften
 ms.assetid: CDE4AF96-95A0-4635-9D07-A27B810CAE26
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8861c13478adbe2010a164126c56f555375e0472
+
 ---
 
 # Eingeben von App-Eigenschaften
@@ -40,6 +44,7 @@ Zusätzlich zu der hier zutreffenden Auswahl wird empfohlen, in die App Laufzeit
 Weitere Informationen finden Sie unter [App-Deklarationen](app-declarations.md).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

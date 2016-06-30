@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Einrichten des Spieleprojekts
-description: Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben.
+description: "Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
+
 ---
 
 # Einrichten des Spieleprojekts
@@ -164,6 +168,7 @@ Im nächsten Lernprogramm, [Definieren des UWP-App-Frameworks für das Spiel](tu
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

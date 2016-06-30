@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: Verwenden von Pinseln
 description: "Mit Brush-Objekten werden Innenbereiche oder Ränder von Formen, Text und Teilen von Steuerelementen gezeichnet, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a4063ee2372d69289fca74c81a4c7645909c7f37
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 4846630eb72c5fc81e01cc46f5ad362b0851292e
 
 ---
 # Verwenden von Pinseln
@@ -42,7 +42,7 @@ Die folgende Abbildung zeigt den [**SolidColorBrush**](https://msdn.microsoft.co
 
 ![Ein gerenderter SolidColorBrush](images/brushes-solidcolorbrush.jpg)
 
-Wenn Sie einen [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) mit Code anstatt mit XAML definieren, sind die einzelnen benannten Farben als statische Eigenschaftswerte der [**Colors**](https://msdn.microsoft.com/library/windows/apps/Hh673723s)-Klasse verfügbar. Wenn Sie z. B. einen [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.solidcolorbrush.color.aspx)-Wert eines **SolidColorBrush** zum Darstellen der benannten Farbe „Orchid“ deklarieren möchten, legen Sie den **Color**-Wert auf den statischen Wert [**Colors.Orchid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.orchid.aspx) fest.
+Wenn Sie einen [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962) mit Code anstatt mit XAML definieren, sind die einzelnen benannten Farben als statische Eigenschaftswerte der [**Colors**](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors)-Klasse verfügbar. Wenn Sie z. B. einen [**Color**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.solidcolorbrush.color.aspx)-Wert eines **SolidColorBrush** zum Darstellen der benannten Farbe „Orchid“ deklarieren möchten, legen Sie den **Color**-Wert auf den statischen Wert [**Colors.Orchid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.orchid.aspx) fest.
 
 ### Hexadezimale Farbwerte
 
@@ -152,7 +152,7 @@ Sie können jeden Pinsel als XAML-Ressource mit Schlüssel in einem XAML-Ressour
 
 Pinsel werden in der Regel mit XAML und nicht mit Code angegeben. Das liegt daran, dass Pinsel normalerweise als XAML-Ressourcen definiert und Pinselwerte häufig von Entwicklungstools ausgegeben werden oder Teil einer XAML-UI-Definition sind. Für die Gelegenheiten, bei denen Sie einen Pinsel mithilfe von Code definieren möchten, stehen weiterhin alle [**Pinsel**](https://msdn.microsoft.com/library/windows/apps/BR228076)-Typen für die Codeinstanziierung zur Verfügung.
 
-Verwenden Sie zum Erstellen eines [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)-Elements in Code den Konstruktor, der einen [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)-Parameter akzeptiert. Übergeben Sie einen Wert, bei dem es sich um eine statische Eigenschaft der [**Colors**](https://msdn.microsoft.com/library/windows/apps/Hh673723s)-Klasse handelt:
+Verwenden Sie zum Erstellen eines [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)-Elements in Code den Konstruktor, der einen [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)-Parameter akzeptiert. Übergeben Sie einen Wert, bei dem es sich um eine statische Eigenschaft der [**Colors**](https://msdn.microsoft.com/library/windows/apps/windows.ui.colors)-Klasse handelt:
 
 ```cs
 SolidColorBrush blueBrush = new SolidColorBrush(Windows.UI.Colors.Blue);
@@ -184,6 +184,6 @@ Codebeispiele finden Sie auf den Referenzseiten für [**WebViewBrush**](https://
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

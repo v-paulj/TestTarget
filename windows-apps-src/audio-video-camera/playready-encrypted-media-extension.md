@@ -1,8 +1,11 @@
 ---
 author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: In diesem Abschnitt wird beschrieben, wie Sie Ihre Web-App mit PlayReady ändern, um die Änderungen zu unterstützen, die gegenüber der Windows 8.1-Version in der Version für Windows 10 vorgenommen wurden.
-title: Verschlüsselte Medienerweiterung von PlayReady
+description: "In diesem Abschnitt wird beschrieben, wie Sie Ihre Web-App mit PlayReady ändern, um die Änderungen zu unterstützen, die gegenüber der Windows 8.1-Version in der Version für Windows 10 vorgenommen wurden."
+title: "Verschlüsselte Medienerweiterung von PlayReady"
+ms.sourcegitcommit: 965443672e52938d39069f14fe23b0c5dbd0ffa8
+ms.openlocfilehash: c575125f1d35f44b873fd3db46d62f89bb726b0b
+
 ---
 
 # Verschlüsselte Medienerweiterung von PlayReady
@@ -130,6 +133,7 @@ function main()
         // to set the stop state.
         //
         videoElement.removeAttribute("src");
+        videoElement.load();
 
         onEndOfStream();
     };
@@ -300,6 +304,7 @@ Weitere Informationen finden Sie in den [Beispielanwendungen](https://code.msdn.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

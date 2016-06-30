@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Sie haben die Möglichkeit, eine Anzeige zu erstellen, um eine Ihrer Apps in Ihren anderen Apps zu bewerben – und das kostenlos. Wir bezeichnen dies als Eigenwerbung.
-title: Über Eigenwerbung
+Description: "Sie haben die Möglichkeit, eine Anzeige zu erstellen, um eine Ihrer Apps in Ihren anderen Apps zu bewerben – und das kostenlos. Wir bezeichnen dies als Eigenwerbung."
+title: "Über Eigenwerbung"
 ms.assetid: C6507C8B-351B-49E7-A194-35AB05BC3358
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c9b73bb1963839640243fce4caaa7f3701b1eb45
+
 ---
 
 # Über Eigenwerbung
@@ -32,6 +36,7 @@ Wenn Eigenwerbung für App A in App B erscheint, wird der Aufruf weder in Rechnu
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

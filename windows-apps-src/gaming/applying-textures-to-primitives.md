@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Anwenden von Texturen auf Grundtypen
-description: Wir laden an dieser Stelle unformatierte Texturdaten und wenden diese auf einen 3D-Grundtyp an. Dazu verwenden wir den Würfel, den wir in „Verwenden von Tiefe und Effekten für Grundtypen“ erstellt haben.
+description: "Wir laden an dieser Stelle unformatierte Texturdaten und wenden diese auf einen 3D-Grundtyp an. Dazu verwenden wir den Würfel, den wir in „Verwenden von Tiefe und Effekten für Grundtypen“ erstellt haben."
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 56e8bf524537526d639f4d732ab228f3c0ea75da
+
 ---
 
 # Anwenden von Texturen auf Grundtypen
@@ -265,11 +269,11 @@ Wir erstellen einen Vertex, einen Index sowie konstante Puffer, die einen kreise
 
 ### 3. Erstellen von Texturen und Mustern
 
-Während im vorangehenden Beispiel [Verwenden von Tiefe und Effekten für Grundtypen](using-depth-and-effects-on-primitives.md) Farben angewendet wurden, werden hier Texturdaten auf einen Würfel angewendet.
+Während im vorangehenden Beispiel ([Verwenden von Tiefe und Effekten für Grundtypen](using-depth-and-effects-on-primitives.md)) Farben angewendet wurden, werden hier Texturdaten auf einen Würfel angewendet.
 
 Wir verwenden unformatierte Texturdaten, um die Texturen zu erstellen.
 
-**Erstellen von Texturen und Samplern**
+**Erstellen von Texturen und Mustern**
 
 1.  Wir beginnen damit, unformatierte Texturdaten aus der Datei „texturedata.bin“ auf dem Datenträger zu lesen.
 2.  Im Anschluss erstellen wir eine [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)-Struktur, die auf diese unformatierten Texturdaten verweist.
@@ -522,6 +526,7 @@ Wir haben unformatierte Textdaten geladen und diese Daten auf einen 3D-Grundtyp 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

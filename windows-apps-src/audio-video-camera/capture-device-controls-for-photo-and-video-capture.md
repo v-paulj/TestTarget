@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
-description: In diesem Artikel erfahren Sie, wie Sie Steuerelemente eines Videoaufnahmegeräts verwenden, um erweiterte Foto- und Videoaufnahmeszenarien (einschließlich optischer Bildstabilisierung und fließendem Zoom) zu ermöglichen.
-title: Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen
+description: "In diesem Artikel erfahren Sie, wie Sie Steuerelemente eines Videoaufnahmegeräts verwenden, um erweiterte Foto- und Videoaufnahmeszenarien (einschließlich optischer Bildstabilisierung und fließendem Zoom) zu ermöglichen."
+title: "Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
+
 ---
 
 # Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen
@@ -339,6 +343,7 @@ Legen Sie den Zoomfaktor auf dem Aufnahmegerät fest, indem Sie ein neues [**Zoo
 * [Aufnehmen von Fotos und Videos mit „MediaCapture“](capture-photos-and-video-with-mediacapture.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

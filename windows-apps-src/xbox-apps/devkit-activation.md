@@ -1,8 +1,12 @@
 ---
 author: Mtoepke
 title: Aktivierung des Xbox One-Entwicklermodus
-description: Dieser Artikel beschreibt das Aktivieren des Entwicklermodus, sodass Sie zwischen Einzelhandelsmodus und Entwicklermodus wechseln können.
+description: "Dieser Artikel beschreibt das Aktivieren des Entwicklermodus, sodass Sie zwischen Einzelhandelsmodus und Entwicklermodus wechseln können."
 area: Xbox
+translationtype: Human Translation
+ms.sourcegitcommit: 7d832fee5bcd3a15cee1e7d8f4c66da9b0afa5e1
+ms.openlocfilehash: 9ad9904150acb00982c96eebeaf010f7023d3320
+
 ---
 
 # Aktivierung des Xbox One-Entwicklermodus
@@ -83,6 +87,7 @@ Nachdem der Entwicklermodus auf der Konsole aktiviert wurde, können Sie mithilf
 - [UWP auf Xbox One](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

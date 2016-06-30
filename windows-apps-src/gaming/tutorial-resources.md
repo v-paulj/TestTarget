@@ -1,9 +1,14 @@
 ---
 author: mtoepke
 title: Erweitern des Spielbeispiels
-description: Herzlichen Glückwunsch! Sie sind nun mit den Schlüsselkomponenten eines einfachen dreidimensionalen DirectX-Spiels für die Universelle Windows-Plattform (UWP) vertraut.
+description: "Herzlichen Glückwunsch! Sie sind nun mit den Schlüsselkomponenten eines einfachen dreidimensionalen DirectX-Spiels für die Universelle Windows-Plattform (UWP) vertraut."
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
-keywords: ["DirectX, XAML"]
+keywords:
+- DirectX, XAML
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 02b8681c45c84e1cdd5b97dfc717a68015df1252
+
 ---
 
 # Erweitern des Spielbeispiels
@@ -1515,6 +1520,7 @@ Eine Version des Beispielspiels, die XAML für das Overlay verwendet, finden Sie
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

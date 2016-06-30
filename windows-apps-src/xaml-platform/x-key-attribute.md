@@ -3,6 +3,10 @@ author: jwmsft
 description: Dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt und referenziert werden und innerhalb eines ResourceDictionary-Elements vorhanden sind.
 title: xKey-Attribut
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 00d801dc3ebb8894f8e21ba0c1b9f3aecc981f30
+
 ---
 
 # x:Key-Attribut
@@ -65,6 +69,7 @@ Ein Element in einem Ressourcenwörterbuch kann einen Wert für **x:Key** auslas
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

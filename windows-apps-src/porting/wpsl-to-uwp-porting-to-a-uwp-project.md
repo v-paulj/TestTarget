@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Sie beginnen den Portierungsprozess, indem Sie zunächst in Visual Studio ein neues Windows 10-Projekt erstellen und Ihre Dateien in das Projekt kopieren.
+description: "Sie beginnen den Portierungsprozess, indem Sie zunächst in Visual Studio ein neues Windows 10-Projekt erstellen und Ihre Dateien in das Projekt kopieren."
 title: Portieren eines Windows Phone Silverlight-Projekts zu einem UWP-Projekt
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 74cbd9789636383e6d04798435780dcda6b897d0
+
 ---
 
 # Portieren eines Windows Phone Silverlight-Projekts zu einem UWP-Projekt
@@ -144,6 +148,7 @@ Das nächste Thema ist [Problembehandlung](wpsl-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Der Bericht „Rezensionen“ im Windows Dev Center-Dashboard gibt Aufschluss über die Kommentare, die Kunden beim Bewerten Ihrer App im Store eingegeben haben.
-title: Bericht „Rezensionen“
+Description: "Der Bericht „Rezensionen“ im Windows Dev Center-Dashboard gibt Aufschluss über die Kommentare, die Kunden beim Bewerten Ihrer App im Store eingegeben haben."
+title: "Bericht „Rezensionen“"
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7d1a768ce558718b43a4d124f7c88868e999fb93
+
 ---
 
 # Bericht „Rezensionen“
@@ -79,6 +83,7 @@ Im Folgenden finden Sie einige zusätzliche Aktionen, die Sie basierend auf den 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: 2D-Grafiken für DirectX-Spiele
+title: "2D-Grafiken für DirectX-Spiele"
 description: Hier finden Sie Informationen zum Einsatz von 2D-Bitmapgrafiken und -effekten im Allgemeinen und in Ihrem Spiel.
 ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 50782c5923f9c811f5d8e91aa9aee897876e6c24
+
 ---
 
 # 2D-Grafiken für DirectX-Spiele
@@ -67,6 +71,7 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die unive
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

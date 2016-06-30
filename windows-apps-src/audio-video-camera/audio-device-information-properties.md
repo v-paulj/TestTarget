@@ -1,14 +1,17 @@
 ---
 author: drewbatgit
 ms.assetid: 3b75d881-bdcf-402b-a330-23cd29d68e53
-description: Dieser Artikel enthält eine Liste mit den DeviceInformation-Eigenschaften für Audiogeräte.
-title: Eigenschaften für Audiogeräteinformationen
+description: "Dieser Artikel enthält eine Liste mit den DeviceInformation-Eigenschaften für Audiogeräte."
+title: "Eigenschaften für Audiogeräteinformationen"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b1bcb5b005e82303884c2e096356d5a0f542b1e1
+
 ---
 
 # Eigenschaften für Audiogeräteinformationen
 
-Dieser Artikel enthält eine Liste mit den Geräteinformationseigenschaften für Audiogeräte. Unter Windows sind jedem Hardwaregerät [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Eigenschaften mit ausführlichen Geräteinformationen zugeordnet, auf die Sie zurückgreifen können, wenn Sie bestimmte Geräteinformationen benötigen oder eine Geräteauswahl erstellen möchten. 
-Allgemeine Informationen zum Aufzählen von Geräten unter Windows finden Sie unter [**Auflisten von Geräten**](../devices-sensors/enumerate-devices.md) sowie unter [**Geräteinformationseigenschaften**](../devices-sensors/device-information-properties.md).
+Dieser Artikel enthält eine Liste mit den Geräteinformationseigenschaften für Audiogeräte. Unter Windows sind jedem Hardwaregerät [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Eigenschaften mit ausführlichen Geräteinformationen zugeordnet, auf die Sie zurückgreifen können, wenn Sie bestimmte Geräteinformationen benötigen oder eine Geräteauswahl erstellen möchten. Allgemeine Informationen zum Aufzählen von Geräten unter Windows finden Sie unter [**Auflisten von Geräten**](../devices-sensors/enumerate-devices.md) sowie unter [**Geräteinformationseigenschaften**](../devices-sensors/device-information-properties.md).
 
 
 |Name|Typ|Beschreibung|
@@ -27,6 +30,7 @@ Allgemeine Informationen zum Aufzählen von Geräten unter Windows finden Sie un
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
-title: Eröffnen eines Entwicklerkontos
-description: Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos.
+title: "Eröffnen eines Entwicklerkontos"
+description: "Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos."
+ms.sourcegitcommit: c4a753b7642354c4fe42cff721fb21337b14528f
+ms.openlocfilehash: 979df6390fef01a32fb1728956622fbfe38bafa9
+
 ---
 # Eröffnen eines Entwicklerkontos
 
@@ -37,10 +40,12 @@ Diese Übersicht zur Registrierung eines Entwicklerkontos für Windows Store und
 
 ## Zusätzliche Richtlinien für Firmenkonten
 
-Orientieren Sie sich beim Erstellen eines Unternehmenskontos an den folgenden Richtlinien (insbesondere, wenn mehrere Personen auf das Konto zugreifen):
+Beachten Sie beim Erstellen eines Unternehmenskontos die folgenden Richtlinien, wenn mehrere Personen auf das Konto zugreifen müssen und sich dazu mit dem Microsoft-Konto anmelden, mit dem das Konto erstellt wurde. 
+
+> **Wichtig** Damit mehrere Benutzer auf das Dev Center-Konto zugreifen können, wird die Verwendung von Azure Active Directory zum Zuweisen von Rollen zu einzelnen Benutzern empfohlen. Die Benutzer können auf das Konto zugreifen, indem Sie sich mit ihren persönlichen Azure AD-Anmeldeinformationen anmelden. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).
 
 -   Erstellen Sie Ihr Microsoft-Konto mit einer E-Mail-Adresse, die zur Domäne Ihrer Firma gehört, nicht jedoch einem einzelnen Benutzer. Beispiel: windowsapps@fabrikam.com.
--   Beschränken Sie den Zugriff auf das Firmenkonto auf so wenige Entwickler wie möglich.
+-   Beschränken Sie den Zugriff auf dieses Microsoft-Konto auf so wenige Entwickler wie möglich.
 -   Richten Sie eine firmeninterne E-Mail-Verteilerliste ein, die alle Personen enthält, die Zugriff auf das Entwicklerkonto benötigen, und fügen Sie diese E-Mail-Adresse Ihren Sicherheitsinformationen hinzu. So können alle Mitarbeiter auf der Liste bei Bedarf Sicherheitscodes erhalten, um die Sicherheitsinformationen Ihres Microsoft-Kontos zu verwalten. Wenn die Einrichtung einer Verteilerliste nicht realisierbar ist, muss der Besitzer des jeweiligen E-Mail-Kontos verfügbar sein, um auf den Sicherheitscode zugreifen und diesen bei entsprechender Aufforderung freigeben zu können (z. B. wenn dem Konto neue Sicherheitsinformationen hinzugefügt werden, oder wenn von einem neuen Gerät darauf zugegriffen werden muss).
 -   Fügen Sie eine geschäftliche Telefonnummer hinzu, für die keine Durchwahl erforderlich ist, und auf die wichtige Teammitglieder zugreifen können.
 -   Entwickler sollten generell vertrauenswürdige Geräte verwenden, wenn sie sich mit dem Entwicklerkonto Ihres Unternehmens anmelden. Alle wichtigen Teammitglieder müssen auf diese vertrauenswürdigen Geräte zugreifen können. So müssen beim Zugriff auf das Konto weniger Sicherheitscodes gesendet werden.
@@ -75,6 +80,7 @@ Wenn Sie Ihr Konto schließen, sollten Sie wissen, was mit Ihren im Windows Stor
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

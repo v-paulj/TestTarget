@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 0186EA01-8446-45BA-A109-C5EB4B80F368
-description: Die AdvancedPhotoCapture-Klasse ermöglicht Ihnen die Aufnahme von HDR-Fotos (High Dynamic Range).
+description: "Die AdvancedPhotoCapture-Klasse ermöglicht Ihnen die Aufnahme von HDR-Fotos (High Dynamic Range)."
 title: HDR-Fotoaufnahmen (High Dynamic Range)
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3015aa4338ddb0c0a006eb631026261a4453f376
+
 ---
 
 # HDR-Fotoaufnahmen (High Dynamic Range)
@@ -67,11 +71,10 @@ Nehmen Sie ein HDR-Foto auf, indem Sie die [**CaptureAsync**](https://msdn.micro
 Im HDR-Verfahren werden mehrere Frames aufgenommen und nach Aufnahme aller Frames zu einem einzigen Bild zusammengestellt. Durch Behandeln des [**OptionalReferencePhotoCaptured**](https://msdn.microsoft.com/library/windows/apps/mt181392)-Ereignisses können Sie auf einen Frame zugreifen, nachdem er aufgenommen wurde, aber bevor das gesamte HDR-Verfahren abgeschlossen ist. Dies ist jedoch nicht erforderlich, wenn Sie lediglich am endgültigen HDR-Fotoergebnis interessiert sind.
 
 **Wichtig**
-            
-          
             [
-              **OptionalReferencePhotoCaptured**
-            ](https://msdn.microsoft.com/library/windows/apps/mt181392) wird nicht auf Geräten ausgelöst, die Hardware HDR unterstützen und daher keine Referenzframes generieren. Ihre App sollte den Fall behandeln, in dem dieses Ereignis nicht ausgelöst wird.
+            **
+              **OptionalReferencePhotoCaptured](https://msdn.microsoft.com/library/windows/apps/mt181392)
+             wird nicht auf Geräten ausgelöst, die Hardware HDR unterstützen und daher keine Referenzframes generieren. Ihre App sollte den Fall behandeln, in dem dieses Ereignis nicht ausgelöst wird.
 
 Da der Referenzframe außerhalb des Kontexts des Aufrufs von **CaptureAsync** auftritt, steht ein Mechanismus zur Übergabe von Kontextinformationen an den **OptionalReferencePhotoCaptured**-Handler zur Verfügung. Erstellen Sie zunächst ein Objekt als Container für die Kontextinformationen. Sie können den Namen und den Inhalt dieses Objekts frei wählen. In diesem Beispiel wird ein Objekt definiert, das über Member zum Nachverfolgen des Dateinamens und der Kameraausrichtung der Aufnahme verfügt.
 
@@ -102,6 +105,7 @@ Wenn die App alle Fotos aufgenommen hat, fahren Sie vor dem Löschen des **Media
 * [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

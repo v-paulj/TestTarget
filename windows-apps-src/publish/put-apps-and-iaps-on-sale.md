@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Sie können Ihre Apps oder In-App-Produkte (IAPs) im Windows Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen.
+Description: "Sie können Ihre Apps oder In-App-Produkte (IAPs) im Windows Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen."
 title: Anbieten von Apps und IAPs
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b53d8d4ddcf3f75ffe039203377d12fd02e52f07
+
 ---
 
 # Anbieten von Apps und IAPs
@@ -65,6 +69,7 @@ Solange das Sonderangebot zum Zeitpunkt des erfolgreichen Abschluss des Zertifiz
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

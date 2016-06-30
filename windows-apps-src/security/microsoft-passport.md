@@ -1,8 +1,12 @@
 ---
-title: Microsoft Passport und Windows Hello
-description: In diesem Artikel wird die neue Microsoft Passport-Technologie beschrieben, die im Lieferumfang des Windows 10-Betriebssystems enthalten ist. Zudem wird erörtert, wie Entwickler diese Technologie implementieren, um ihre UWP (Universelle Windows-Plattform)-Apps und Back-End-Dienste zu schützen. Der Artikel hebt die spezifischen Funktionen dieser Technologien hervor, die dabei helfen, aus der Verwendung herkömmlicher Anmeldeinformationen erwachsende Bedrohungen zu mindern. Darüber hinaus bietet er eine Anleitung dazu, wie diese Technologien als Bestandteil Ihrer Windows 10-Einführung entworfen und bereitgestellt werden.
+title: "Microsoft Passport und Windows Hello"
+description: "In diesem Artikel wird die neue Microsoft Passport-Technologie beschrieben, die im Lieferumfang des Windows 10-Betriebssystems enthalten ist. Zudem wird erörtert, wie Entwickler diese Technologie implementieren, um ihre UWP (Universelle Windows-Plattform)-Apps und Back-End-Dienste zu schützen. Der Artikel hebt die spezifischen Funktionen dieser Technologien hervor, die dabei helfen, aus der Verwendung herkömmlicher Anmeldeinformationen erwachsende Bedrohungen zu mindern. Darüber hinaus bietet er eine Anleitung dazu, wie diese Technologien als Bestandteil Ihrer Windows 10-Einführung entworfen und bereitgestellt werden."
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 781866bbbef755815422d1aa5bf71010bb08630d
+
 ---
 
 # Microsoft Passport und Windows Hello
@@ -450,6 +454,7 @@ Mission erfüllt! Sie haben das Internet gerade sicherer gemacht!
 * [Microsoft Passport-Anmelde-App](microsoft-passport-login.md)
 * [Microsoft Passport-Anmeldedienst](microsoft-passport-login-auth-service.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,7 +1,11 @@
 ---
 author: QuinnRadich
-title: Neuigkeiten in Windows 10
-description: Windows 10 Anniversary SDK Preview Build und neue Entwicklungstools stellen Werkzeuge, Features und Umgebungen zur Verfügung, die durch die neue universelle Windows-Plattform unterstützt werden.
+title: "Neuigkeiten in Windows 10"
+description: "Windows 10 Anniversary SDK Preview Build und neue Entwicklungstools stellen Werkzeuge, Features und Umgebungen zur Verfügung, die durch die neue universelle Windows-Plattform unterstützt werden."
+translationtype: Human Translation
+ms.sourcegitcommit: 46b5ad404811894899810f83efb9970e338e7051
+ms.openlocfilehash: 5cce4a0fbfe85126f15cb013a9b46f058006a5e1
+
 ---
 
 # Neuigkeiten in Windows
@@ -24,6 +28,7 @@ Medien-APIs | Mit den neuen MediaBreak-APIs im Windows.Media.Playback-Namespace 
 Karten-APIs | [MapControl](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.maps.mapcontrol.aspx#_blank) wurde verbessert, sodass Entwickler einen sichtbaren Bereich in der Nähe der Kamera abrufen können, wobei Regionen in großer Entfernung und nahe dem Horizont in besonders schrägen Ansichten ausgeschlossen werden. Die [MapLocationFinder](https://msdn.microsoft.com/library/windows/apps/windows.services.maps.maplocationfinder.aspx#_blank)-Klasse wurde erweitert, sodass Entwickler den Netzwerkdatenverkehr für das umgekehrte Geocoding optimieren können, indem sie die gewünschte Genauigkeit angeben. Entwickler können nun die Vorteile des Downloads von Offlinekarten nutzen, indem sie die Methode [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx#_blank) verwenden und den Breiten- und Längengrad angeben. Weitere Informationen finden Sie unter [Starten der Windows-Karten-App](https://msdn.microsoft.com/windows/uwp/launch-resume/launch-maps-app#_blank).
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

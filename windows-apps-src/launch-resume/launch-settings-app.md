@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Starten der Einstellungs-App von Windows
-description: Erfahren Sie, wie Sie die Windows-Einstellungs-App aus Ihrer App starten können. In diesem Thema wird das ms-settings-URI-Schema beschrieben. Verwenden Sie dieses URI-Schema, um die Windows-Einstellungs-App mit bestimmten Einstellungsseiten zu starten.
+description: "Erfahren Sie, wie Sie die Windows-Einstellungs-App aus Ihrer App starten können. In diesem Thema wird das ms-settings-URI-Schema beschrieben. Verwenden Sie dieses URI-Schema, um die Windows-Einstellungs-App mit bestimmten Einstellungsseiten zu starten."
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
+ms.sourcegitcommit: 3cf9dd4ab83139a2b4b0f44a36c2e57a92900903
+ms.openlocfilehash: e52a4245e8697a68bfc5c5605dc54e5ea510c662
+
 ---
 
 # Starten der Einstellungs-App von Windows
@@ -32,7 +35,7 @@ In diesem Beispiel wird ein Hyperlink-XAML-Steuerelement verwendet, um die Daten
 
 ```xml
 <!--Set Visibility to Visible when access to the microphone is denied -->  
-<TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic" 
+<TextBlock x:Name="LocationDisabledMessage" FontStyle="Italic"
                  Visibility="Collapsed" Margin="0,15,0,0" TextWrapping="Wrap" >
           <Run Text="This app is not able to access the microphone. Go to " />
               <Hyperlink NavigateUri="ms-settings:privacy-microphone">
@@ -68,9 +71,9 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 |                    | Benachrichtigungen & Infos                | Beide           | ms-settings:notifications                 |
 |                    | Telefon                                  | nur Mobile    | ms-settings:phone                         |
 |                    | Nachrichten                              | nur Mobile    | ms-settings:messaging                     |
-|                    | Stromsparmodus                          | Beide           | ms-settings:batterysaver                  |
-|                    | Stromsparmodus/Einstellungen für Stromsparmodus | Beide           | ms-settings:batterysaver-settings         |
-|                    | Stromsparmodus/Akkunutzung            | Beide           | ms-settings:batterysaver-usagedetails     |
+|                    | Stromsparmodus                          | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z. B. Tablet    | ms-settings:batterysaver                  |
+|                    | Stromsparmodus/Einstellungen für Stromsparmodus | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z. B. Tablet | ms-settings:batterysaver-settings         |
+|                    | Stromsparmodus/Akkunutzung            | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z. B. Tablet    | ms-settings:batterysaver-usagedetails     |
 |                    | Ein/Aus/Ruhezustand                          | nur Desktop   | ms-settings:powersleep                    |
 |                    | Desktop: Info                         | Beide           | ms-settings:deviceencryption              |
 |                    |                                        |                |                                           |
@@ -124,8 +127,6 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

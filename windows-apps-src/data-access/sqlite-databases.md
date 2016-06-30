@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 5A47301A-2291-4FC8-8BA7-55DB2A5C653F
 title: SQLite-Datenbanken
-description: SQLite ist ein eingebettetes Datenbankmodul ohne Server. In diesem Artikel wird erläutert, wie die im SDK enthaltene SQLite-Bibliothek verwendet wird und wie Sie Ihre eigene SQLite-Bibliothek in einer Universellen Windows-App verpacken oder aus der Quelle erstellen können.
+description: "SQLite ist ein eingebettetes Datenbankmodul ohne Server. In diesem Artikel wird erläutert, wie die im SDK enthaltene SQLite-Bibliothek verwendet wird und wie Sie Ihre eigene SQLite-Bibliothek in einer Universellen Windows-App verpacken oder aus der Quelle erstellen können."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dd628d16b3ee230ddc0c56b47fd381a518b8af00
+
 ---
 # SQLite-Datenbanken
 
@@ -90,6 +94,7 @@ Es gibt sechs Schnittstellen zum Ausführen von Datenbankvorgängen für diese O
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

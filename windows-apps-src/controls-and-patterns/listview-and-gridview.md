@@ -1,9 +1,13 @@
 ---
 author: Jwmsft
-Description: Verwenden Sie die Listenansicht- oder Rasteransicht-Steuerelemente, um Sätze von Daten anzuzeigen und zu bearbeiten, z. B. eine Bildergalerie oder eine Reihe von E-Mail-Nachrichten.
+Description: "Verwenden Sie die Listenansicht- oder Rasteransicht-Steuerelemente, um Sätze von Daten anzuzeigen und zu bearbeiten, z. B. eine Bildergalerie oder eine Reihe von E-Mail-Nachrichten."
 title: Listenansicht und Rasteransicht
 label: List view and grid view
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e878b11bbecd4a1007f8b5f56bde5741da18c1e1
+
 ---
 # ListView und GridView
 
@@ -393,8 +397,7 @@ private void ListView1_SelectionChanged(object sender, SelectionChangedEventArgs
 
 ### Klickmodus
 
-Sie können eine Listenansicht so ändern, dass die Benutzer auf die Elemente wie auf Schaltflächen klicken, anstatt sie auszuwählen. Das bietet sich z. B. an, wenn Ihre App zu einer neuen Seite navigieren soll, wenn ein Benutzer auf ein Element in der Liste oder im Raster klickt. 
-So aktivieren Sie dieses Verhalten
+Sie können eine Listenansicht so ändern, dass die Benutzer auf die Elemente wie auf Schaltflächen klicken, anstatt sie auszuwählen. Das bietet sich z. B. an, wenn Ihre App zu einer neuen Seite navigieren soll, wenn ein Benutzer auf ein Element in der Liste oder im Raster klickt. So aktivieren Sie dieses Verhalten
 - Legen Sie **SelectionMode** auf **None** fest.
 - Legen Sie **IsItemClickEnabled** auf **true** fest.
 - Behandeln Sie das **ItemClick**-Ereignis, um eine Aktion auszuführen, wenn der Benutzer auf ein Element klickt.
@@ -504,6 +507,7 @@ private void DeselectAllButton_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

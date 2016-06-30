@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Wenn die von Ihnen bereitgestellten Pakete auf unterschiedliche Betriebssysteme ausgerichtet sind, können Sie Teile Ihrer Beschreibung für verschiedene Zielbetriebssysteme anpassen.
+Description: "Wenn die von Ihnen bereitgestellten Pakete auf unterschiedliche Betriebssysteme ausgerichtet sind, können Sie Teile Ihrer Beschreibung für verschiedene Zielbetriebssysteme anpassen."
 title: Erstellen plattformspezifischer Beschreibungen
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 00be0238af7969a84abe79f9aee3bec485fbb3e3
+
 ---
 
 # Erstellen plattformspezifischer Beschreibungen
@@ -45,6 +49,7 @@ Wenn Sie eine plattformspezifische Beschreibung erstellen und später feststelle
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Exemplarische Vorgehensweise Portieren einer einfachen Direct3D 9-App zu DirectX 11 und zur universellen Windows-Plattform (UWP)
-description: In dieser Portierungsübung wird veranschaulicht, wie Sie ein einfaches Renderingframework von Direct3D 9 auf Direct3D 11 und die universelle Windows-Plattform (UWP) umstellen.
+description: "In dieser Portierungsübung wird veranschaulicht, wie Sie ein einfaches Renderingframework von Direct3D 9 auf Direct3D 11 und die universelle Windows-Plattform (UWP) umstellen."
 ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 27c6f82e97e9eb24dedcc5d83a18e6aba6961194
+
 ---
 
 # Exemplarische Vorgehensweise Portieren einer einfachen Direct3D 9-App zu DirectX 11 und zur universellen Windows-Plattform (UWP)
@@ -93,6 +97,7 @@ Lesen Sie sich die Informationen unter [Konzepte und Aspekte der Portierung](por
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Reservierte Datei- und URI-Schemanamen
-description: Sie können URI-Zuordnungen verwenden, um Ihre App automatisch zu starten, wenn eine andere App ein bestimmtes URI-Schema startet.
+description: "Sie können URI-Zuordnungen verwenden, um Ihre App automatisch zu starten, wenn eine andere App ein bestimmtes URI-Schema startet."
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 2736267bf72b1cadd2c635b15daf6975a70937df
+
 ---
 # Reservierte Datei- und URI-Schemanamen
 
@@ -124,8 +127,6 @@ Die folgenden Dateitypen sind für das Betriebssystem reserviert:
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

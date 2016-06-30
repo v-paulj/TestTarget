@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
-title: Optimieren der ListView- und GridView-Benutzeroberfläche
+title: "Optimieren der ListView- und GridView-Benutzeroberfläche"
 description: Verbessern Sie die Leistung und Startzeit von ListView und GridView durch UI-Virtualisierung, Elementreduzierung und die progressive Aktualisierung von Elementen.
+translationtype: Human Translation
+ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
+ms.openlocfilehash: 362fbb6b733e855a2126196f12c650bdf2a7665d
+
 ---
 # Optimieren der ListView- und GridView-Benutzeroberfläche
 
@@ -321,6 +325,7 @@ Bei einer ungleichmäßigen Verteilung von Elementen, die unterschiedliche Eleme
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -5,8 +5,8 @@ title: Spracherkennung
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 6d1449ede6912add8b8f7e60760d4547c035ed60
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 66bab97e7108a1728e9659a04ea2f1ecf15f68b7
 
 ---
 
@@ -24,7 +24,7 @@ Nutzen Sie die Spracherkennung als Eingabemöglichkeit oder zum Ausführen einer
 Die Spracherkennung besteht aus einer Sprachlaufzeit, Erkennungs-APIs zum Programmieren der Laufzeit, einsatzfähiger Grammatik für das Diktieren und die Websuche und einer Standard-UI, die Benutzern das Auffinden und Verwenden der Spracherkennungsfeatures erleichtert.
 
 
-## <span id="Set_up_the_audio_feed"></span><span id="set_up_the_audio_feed"></span><span id="SET_UP_THE_AUDIO_FEED"></span>Einrichten des Audiofeeds
+## Einrichten des Audiofeeds
 
 
 Stellen Sie sicher, dass Ihr Gerät über ein Mikrofon oder Ähnliches verfügt.
@@ -33,7 +33,7 @@ Legen Sie die Gerätefunktion **Mikrofon** ([**DeviceCapability**](https://msdn.
 
 Informationen finden Sie unter [Deklaration der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
-## <span id="Recognize_speech_input"></span><span id="recognize_speech_input"></span><span id="RECOGNIZE_SPEECH_INPUT"></span>Erkennen von Spracheingabe
+## Erkennen von Spracheingabe
 
 
 Mit einer *Einschränkung* werden die Wörter und Wortgruppen (Vokabular) definiert, die eine App bei der Spracheingabe erkennt. Einschränkungen sind der Kern der Spracherkennung und verleihen Ihrer App Kontrolle über die Genauigkeit der Spracherkennung.
@@ -69,7 +69,7 @@ private static uint HResultPrivacyStatementDeclined = 0x80045509;</code></pre></
 
     We then catch any standard exceptions during recogntion and test if the [**HResult**](https://msdn.microsoft.com/library/windows/apps/br206579) value is equal to the value of the HResultPrivacyStatementDeclined variable. If so, we display a warning and call `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` to open the Settings page.
 
-    <span codelanguage="CSharp"></span>
+    
 ```    CSharp
     <colgroup>
     <col width="100%" />
@@ -146,7 +146,7 @@ private async void StartRecognizing_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <span id="Customize_the_recognition_UI"></span><span id="customize_the_recognition_ui"></span><span id="CUSTOMIZE_THE_RECOGNITION_UI"></span>Anpassen der Erkennungs-UI
+## Anpassen der Erkennungs-UI
 
 
 Wenn Ihre App die Spracherkennung durch Aufruf von [**SpeechRecognizer.RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245) zu leisten versucht, werden mehrere Bildschirme in der folgenden Reihenfolge angezeigt.
@@ -203,7 +203,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <span id="related_topics"></span>Verwandte Artikel
+## Verwandte Artikel
 
 
 **Entwickler**
@@ -226,6 +226,6 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

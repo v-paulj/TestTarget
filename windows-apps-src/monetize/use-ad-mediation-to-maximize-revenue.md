@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 772DEBF2-1578-4330-9C14-70BCC6F55005
-description: Microsoft bietet Unterstützung für eine Anzeigenvermittlung, mit der Sie Ihren Umsatz mit In-App-Werbung durch die Vermittlung von Banneranzeigenanforderungen mehrerer Anzeigennetzwerke optimieren können.
+description: "Microsoft bietet Unterstützung für eine Anzeigenvermittlung, mit der Sie Ihren Umsatz mit In-App-Werbung durch die Vermittlung von Banneranzeigenanforderungen mehrerer Anzeigennetzwerke optimieren können."
 title: Maximieren des Umsatzes mit einer Anzeigenvermittlung
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c0669e35b285ee7dfeda0c039d8455a4237960f5
+
 ---
 
 #  Maximieren des Umsatzes mit einer Anzeigenvermittlung
@@ -50,6 +54,7 @@ Wenn Sie keine Anzeigenvermittlung verwenden möchten oder der Projekttyp derzei
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Vollständiger Code für „DDSTextureLoader“
-description: Vollständiger Code für eine Klasse und Methode, die eine DDS-Textur aus dem Speicher lädt.
+title: "Vollständiger Code für „DDSTextureLoader“"
+description: "Vollständiger Code für eine Klasse und Methode, die eine DDS-Textur aus dem Speicher lädt."
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
+translationtype: Human Translation
+ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
+ms.openlocfilehash: 9a842c773ce16e1093a158426b89caf239858f05
+
 ---
 
 # Vollständiger Code für „DDSTextureLoader“
@@ -1221,6 +1225,7 @@ void CreateDDSTextureFromMemory(
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

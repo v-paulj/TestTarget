@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-Description: In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der Zugriff auf den Standort eines Benutzers erforderlich ist.
-title: Richtlinien für Apps mit Standortbestimmung
+author: msatranjr
+Description: "In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der Zugriff auf den Standort eines Benutzers erforderlich ist."
+title: "Richtlinien für Apps mit Standortbestimmung"
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
+
 ---
 
 # Richtlinien für Apps mit Standortbestimmung
@@ -89,7 +92,7 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
 
 -   Berücksichtigen Sie das Hintergrundverhalten. Falls die App inaktiv und im Hintergrund angehalten ist, empfängt sie keine Positionsupdateereignisse. Beachten Sie dies, wenn Ihre App Positionsupdates durch Protokollierung nachverfolgt. Wenn die App wieder aktiv ist, empfängt sie nur neue Ereignisse. Es werden keine Aktualisierungen abgerufen, die während ihrer Inaktivität stattfanden.
 
--   Verwenden Sie Rohdaten- und Fusionssensoren auf effiziente Art und Weise. Es gibt zwei Sensortypen: *Rohdatensensoren* und *Fusionssensoren*.
+-   Verwenden Sie Rohdaten- und Fusionssensoren auf effiziente Art und Weise. Es gibt zwei Sensortypen: *Rohsensoren* und *Fusion-Sensoren*.
 
     -   Zu den Rohdatensensoren zählen Beschleunigungsmesser, Gyrometer und Magnetfeldmesser.
     -   Zu Fusionssensoren zählen Orientierungssensoren, Neigungsmesser und Kompasse. Fusionssensoren erhalten ihre Daten aus einer Kombination aus Rohdatensensoren.
@@ -167,6 +170,7 @@ Der geografische Standort eines Benutzers gehört zu den personenbezogenen Infor
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Längere Anzeige des Begrüßungsbildschirms
-description: Verlängern Sie die Anzeige eines Begrüßungsbildschirms, indem Sie für die App einen erweiterten Begrüßungsbildschirm erstellen. Mit diesem erweiterten Bildschirm wird der beim Starten der App angezeigte Begrüßungsbildschirm imitiert. Er kann aber angepasst werden.
+author: TylerMSFT
+title: "Längere Anzeige des Begrüßungsbildschirms"
+description: "Verlängern Sie die Anzeige eines Begrüßungsbildschirms, indem Sie für die App einen erweiterten Begrüßungsbildschirm erstellen. Mit diesem erweiterten Bildschirm wird der beim Starten der App angezeigte Begrüßungsbildschirm imitiert. Er kann aber angepasst werden."
 ms.assetid: CD3053EB-7F86-4D74-9C5A-950303791AE3
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 6ad43ec4fc865c5aae439693e0cd5b37a5d2c5dc
+
 ---
 
 # Längere Anzeige des Begrüßungsbildschirms
@@ -97,7 +100,7 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
         private SplashScreen splash; // Variable to hold the splash screen object.
         internal bool dismissed = false; // Variable to track splash screen dismissal status.
         internal Frame rootFrame;
-     
+
        // Define methods and constructor
     }
     ```
@@ -131,7 +134,7 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
             PositionRing();
         }
 
-        // Create a Frame to act as the navigation context 
+        // Create a Frame to act as the navigation context
         rootFrame = new Frame();            
     }
     ```
@@ -223,11 +226,11 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
     {
         if (loadState)
         {
-             // code to load your app's state here 
+             // code to load your app's state here
         }
     }
     ```
-    
+
     Beim Ändern des Startaktivierungshandlers in „App.xaml.cs“ sollten Sie zusätzlich `loadstate` auf „true“ festlegen, wenn das vorherige [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)-Element der App **Terminated** lautete. Ist dies der Fall, stellt die `RestoreStateAsync`-Methode den vorherigen Zustand der App wieder her. Eine Übersicht über das Starten, Anhalten und Beenden einer App finden Sie unter [App-Lebenszyklus](app-lifecycle.md).
 
 ## Ändern Sie den Startaktivierungshandler
@@ -547,8 +550,6 @@ namespace SplashScreenExample
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

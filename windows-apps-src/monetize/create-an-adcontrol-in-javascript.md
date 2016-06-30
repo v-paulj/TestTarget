@@ -3,6 +3,10 @@ author: mcleanbyron
 ms.assetid: 48a1ef86-8514-4af8-9c93-81e869d36de7
 description: Hier erfahren Sie, wie Sie programmgesteuert ein **AdControl** (Anzeigensteuerelement) mit JavaScript erstellen.
 title: Erstellen eines Anzeigensteuerelements in JavaScript
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 481f9d785181ca197debdb807bb0b0c7b4168632
+
 
 ---
 
@@ -57,6 +61,7 @@ Wenn Sie diesen Code verwenden und keine Anzeigen angezeigt werden, können Sie 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

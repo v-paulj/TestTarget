@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
-title: Universelle Windows-Plattform-Komponenten und Optimierung der Interoperabilität
+title: "Universelle Windows-Plattform-Komponenten und Optimierung der Interoperabilität"
 description: Erstellen Sie UWP (Universelle Windows-Plattform)-Apps, die UWP-Komponenten verwenden, mit systemeigenen und verwalteten Typen zusammenarbeiten und gleichzeitig Probleme mit der Interopleistung vermeiden.
+translationtype: Human Translation
+ms.sourcegitcommit: 5c7a49558ed11f82b7afea1ea96271c45c2f9139
+ms.openlocfilehash: b9300b3feb1e5229951f3e1ebe454b61ba8065ae
+
 ---
 # Universelle Windows-Plattform-Komponenten und Interop-Optimierung
 
@@ -85,6 +89,7 @@ Alle Vorschläge für das Erzielen einer guten Leistung in Apps gelten auch für
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,16 +1,19 @@
 ---
 author: mtoepke
 title: Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
-description: Bei der ersten Portierungsübung beginnen wir mit den Grundlagen - Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGL ES 2.0 auf Direct3D, damit er der Vorlage DirectX 11-App (Universelle Windows-App) aus Visual Studio 2015 entspricht.
+description: "Bei der ersten Portierungsübung beginnen wir mit den Grundlagen - Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGL ES 2.0 auf Direct3D, damit er der Vorlage DirectX 11-App (Universelle Windows-App) aus Visual Studio 2015 entspricht."
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
+ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
+ms.openlocfilehash: f70d4ec46743d930f8cb45084e55cce2e60e2460
+
 ---
 
 # Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Bei der ersten Portierungsübung beginnen wir mit den Grundlagen: Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGL ES 2.0 auf Direct3D, damit er der Vorlage „DirectX 11-App (Universelle Windows-App)“ aus Visual Studio 2015 entspricht. Beim Durcharbeiten dieses Portierungsprozesses lernen Sie Folgendes:
+In dieser Portierungsübung beginnen wir mit den Grundlagen: Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGL ES 2.0 auf Direct3D, damit er der Vorlage „DirectX 11-App (Universelle Windows-App)“ aus Visual Studio 2015 entspricht. Beim Durcharbeiten dieses Portierungsprozesses lernen Sie Folgendes:
 
 -   Portieren einer einfachen Gruppe von Vertexpuffern zu Direct3D-Eingabepuffern
 -   Portieren von uniform-Elementen und Attributen zu Konstantenpuffern
@@ -141,6 +144,7 @@ Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komp
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

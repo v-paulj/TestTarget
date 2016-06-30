@@ -1,10 +1,14 @@
 ---
 author: mijacobs
 Description: Unformatierte Benachrichtigungen sind kurze, allgemeine Pushbenachrichtigungen.
-title: Übersicht über unformatierte Benachrichtigungen
+title: "Übersicht über unformatierte Benachrichtigungen"
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 4b487e44c7acd882a86c0b24dd9994092d976b06
+
 ---
 
 # Übersicht über unformatierte Benachrichtigungen
@@ -126,6 +130,7 @@ Weitere Informationen erhalten Sie, indem Sie das [Beispiel für unformatierte B
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

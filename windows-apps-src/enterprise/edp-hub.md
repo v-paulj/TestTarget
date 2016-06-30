@@ -1,10 +1,14 @@
 ---
 author: mcleblanc
-Description: 'Dies ist ein Übersichtsthema mit umfassenden Informationen zum Zusammenhang zwischen dem Unternehmensdatenschutz (Enterprise Data Protection, EDP) und Dateien, Puffern, Zwischenablage, Netzwerk, Hintergrundaufgaben und dem Schutz von Daten bei Sperre.'
-MS-HAID: 'dev\_enterprise.edp\_hub'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Dies ist ein Übersichtsthema mit umfassenden Informationen zum Zusammenhang zwischen dem Unternehmensdatenschutz (Enterprise Data Protection, EDP) und Dateien, Puffern, Zwischenablage, Netzwerk, Hintergrundaufgaben und dem Schutz von Daten bei Sperre."
+MS-HAID: dev\_enterprise.edp\_hub
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'Unternehmensdatenschutz'
+title: Unternehmensdatenschutz
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 97bdbce8360fabad63f9fe7e85e5172ccd83f403
+
 ---
 
 # Unternehmensdatenschutz
@@ -377,6 +381,7 @@ Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent("contoso.c
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

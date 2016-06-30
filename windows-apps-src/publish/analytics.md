@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Sie können für Ihre Apps detaillierte Analysen im Windows Dev Center-Dashboard anzeigen.
+Description: "Sie können für Ihre Apps detaillierte Analysen im Windows Dev Center-Dashboard anzeigen."
 title: Analyse
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
+translationtype: Human Translation
+ms.sourcegitcommit: dfaf348956b19746aa5332aeb7ad5cbc4b224e8c
+ms.openlocfilehash: 8922a53da8b1bc97bef7faf49d0e412a26127188
+
 ---
 
 # Analyse
@@ -74,6 +78,7 @@ Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zu
 Installieren Sie die [Dev Center](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)-App, um schnell Details über den Zustand und die Leistung Ihrer Apps auf Windows 10-Geräten anzuzeigen. 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

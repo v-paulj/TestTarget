@@ -1,8 +1,11 @@
 ---
 author: mcleblanc
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
-title: Bewährte Methoden für die Leistung Ihrer App beim Starten
+title: "Bewährte Methoden für die Leistung Ihrer App beim Starten"
 description: Erstellen Sie UWP-Apps (Universelle Windows-Plattform) mit optimalen Startzeiten, indem Sie die Vorgehensweise bei Start und Aktivierung optimieren.
+ms.sourcegitcommit: 5411faa3af685e1a285119ba456a440725845711
+ms.openlocfilehash: 46e78612c0f4391b9448ea9bd7a001722fb08a28
+
 ---
 # Bewährte Methoden für die Leistung Ihrer App beim Starten
 
@@ -359,6 +362,7 @@ Aus diesem Grund ist es zu empfehlen, das Zwischenspeichern von Seiten so einzus
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

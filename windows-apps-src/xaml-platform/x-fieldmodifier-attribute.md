@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Ändert das XAML-Kompilierungsverhalten, sodass Felder für Verweise auf benannte Objekte mit öffentlichem Zugriff definiert werden und nicht das private Standardverhalten aufweisen.
+description: "Ändert das XAML-Kompilierungsverhalten, sodass Felder für Verweise auf benannte Objekte mit öffentlichem Zugriff definiert werden und nicht das private Standardverhalten aufweisen."
 title: xFieldModifier-Attribut
 ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3f6c759d582d92aa33df5874186aeaa3a7c37b01
+
 ---
 
 # x:FieldModifier-Attribut
@@ -33,6 +37,7 @@ Sie können auch **NonPublic** (**internal** in C# oder C++/CX, **Friend** in Vi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

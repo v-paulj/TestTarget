@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Starten der Windows Store-App
 description: In diesem Thema wird das ms-windows-store-URI-Schema beschrieben. Ihre App kann mit diesem URI-Schema die Windows Store-App mit bestimmten Seiten des Store starten.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 9b48aeddb5ddc912fccd07149980655a06535470
+
 ---
 
 # Starten der Windows Store-App
@@ -81,7 +84,7 @@ Store-ID <p>(Empfohlen)</p>
 <td>ms-windows-store://assoc/?Protocol=ms-word </td>
 </tr>
 <tr>
-<td>Startet eine Suche nach Produkten, die mindestens einem Tag zugeordnet sind. Tags müssen durch Kommas getrennt werden. 
+<td>Startet eine Suche nach Produkten, die mindestens einem Tag zugeordnet sind. Tags müssen durch Kommas getrennt werden.
 </td>
 <td />
 <td>
@@ -91,7 +94,7 @@ Store-ID <p>(Empfohlen)</p>
 </tr>
 <tr>
 <td>
-Startet eine Suche für die angegebene Abfrage. Leerzeichen in der Abfrage sind zulässig. 
+Startet eine Suche für die angegebene Abfrage. Leerzeichen in der Abfrage sind zulässig.
 </td>
 <td />
 <td>ms-windows-store://search/?query=OneNote </td>
@@ -105,7 +108,7 @@ Startet eine Suche für die angegebene Abfrage. Leerzeichen in der Abfrage sind 
 </td>
 </tr>
 <tr>
-<td>Startet eine Suche nach Produkten eines angegebenen Herausgebers. Leerzeichen in der Abfrage sind zulässig. 
+<td>Startet eine Suche nach Produkten eines angegebenen Herausgebers. Leerzeichen in der Abfrage sind zulässig.
 </td>
 <td />
 <td>ms-windows-store://publisher/?name=Microsoft Corporation
@@ -128,8 +131,6 @@ Startet eine Suche für die angegebene Abfrage. Leerzeichen in der Abfrage sind 
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

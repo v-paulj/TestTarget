@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Vergleichen des EGL-Codes mit DXGI und Direct3D
-description: Die DirectX-Grafikschnittstelle (DXGI) und verschiedene Direct3D-APIs erfüllen die gleiche Rolle wie EGL. In diesem Thema werden die DXGI und Direct3D 11 aus Sicht von EGL erläutert.
+description: "Die DirectX-Grafikschnittstelle (DXGI) und verschiedene Direct3D-APIs erfüllen die gleiche Rolle wie EGL. In diesem Thema werden die DXGI und Direct3D 11 aus Sicht von EGL erläutert."
 ms.assetid: 90f5ecf1-dd5d-fea3-bed8-57a228898d2a
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 461983b646148c21aba7da2adb703510d95b0343
+
 ---
 
 # Vergleichen des EGL-Codes mit DXGI und Direct3D
@@ -411,6 +415,7 @@ In einer UWP-App können Sie das CoreWindow-Element mit der [**CoreWindow::Close
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

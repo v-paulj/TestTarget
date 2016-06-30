@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Nehmen Sie Zeichenfolgenressourcen für Ihre Benutzeroberfläche in Ressourcendateien auf. Sie können dann in Ihrem Code oder Markup auf diese Zeichenfolgen verweisen.
+Description: "Nehmen Sie Zeichenfolgenressourcen für Ihre Benutzeroberfläche in Ressourcendateien auf. Sie können dann in Ihrem Code oder Markup auf diese Zeichenfolgen verweisen."
 title: Aufnehmen von UI-Zeichenfolgen in Ressourcen
 ms.assetid: E420B9BB-C0F6-4EC0-BA3A-BA2875B69722
 label: Put UI strings into resources
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: b44d9235e34b8d4c75f663029d1dde3f87bd0eb7
+
 ---
 
 # Aufnehmen von UI-Zeichenfolgen in Ressourcen
@@ -244,6 +248,7 @@ Testen Sie die App für die anderen Sprachen.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

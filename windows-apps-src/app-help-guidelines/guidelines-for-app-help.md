@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
-Description: Diese Richtlinien unterstützen Sie beim Gestalten von effektiven Hilfeinhalten für Ihre App.
-title: Richtlinien für die App-Hilfe
+Description: "Diese Richtlinien unterstützen Sie beim Gestalten von effektiven Hilfeinhalten für Ihre App."
+title: "Richtlinien für die App-Hilfe"
 label: Guidelines for app help
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 1e1e5e118eb44f6b491669dbd274fae05d92685b
+
 ---
 
 # Richtlinien für die App-Hilfe
@@ -61,6 +65,7 @@ Für ausführliche Lernprogramme, erweiterte Funktionen oder Bibliotheken mit Hi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

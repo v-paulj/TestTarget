@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 159681E4-BF9E-4A57-9FEE-EC7ED0BEFFAD
 title: Tipps zu MVVM und Sprachleistung
-description: In diesem Thema werden einige Leistungsaspekte in Bezug auf die Wahl von Softwaredesignmustern und Programmiersprachen erläutert.
+description: "In diesem Thema werden einige Leistungsaspekte in Bezug auf die Wahl von Softwaredesignmustern und Programmiersprachen erläutert."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 77a162076e14b4726e1fb29673b14be65be37a16
+
 ---
 # Tipps zu MVVM und Sprachleistung
 
@@ -40,6 +44,7 @@ Es gibt mehrere konkrete Definitionen des MVVM-Musters sowie Drittanbieter-Frame
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

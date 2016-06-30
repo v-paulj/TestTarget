@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
-description: Dieses Thema enthält eine Fallstudie zum Portieren eines funktionierenden Peer-zu-Peer-Quizspiels (WinRT 8.1-Beispiel-App) zu einer UWP (Universelle Windows-Plattform)-App für Windows 10.
-title: Windows-Runtime 8.x zu universeller Windows-Plattform (UWP) – Fallstudie, QuizGame-Beispiel-App (Peer-zu-Peer)
+description: "Dieses Thema enthält eine Fallstudie zum Portieren eines funktionierenden Peer-zu-Peer-Quizspiels (WinRT 8.1-Beispiel-App) zu einer UWP (Universelle Windows-Plattform)-App für Windows 10."
+title: "Windows-Runtime 8.x zu universeller Windows-Plattform (UWP) – Fallstudie, QuizGame-Beispiel-App (Peer-zu-Peer)"
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: cd05c3edbc254cceb00c55caba698d21998f5594
+
 ---
 
 # Windows-Runtime 8.x zu universeller Windows-Plattform (UWP) – Fallstudie: QuizGame-Beispiel-App (Peer-zu-Peer)
@@ -191,6 +195,7 @@ Dank dieser letzten Optimierung verhält sich die App genauso wie vor dem Portie
 Die App, die wir im Rahmen dieser Fallstudie portiert haben, war eine relativ komplexe App mit mehrere Projekten, einer Klassenbibliothek und einer größeren Menge an Code und UI-Elementen. Trotzdem war der Portiervorgang einfach. Ein Grund für das einfache Portieren ist die große Ähnlichkeit zwischen der Windows 10-Entwicklerplattform und den Windows 8.1- und Windows Phone 8.1-Plattformen. Ein anderer Grund ist der Entwurf der ursprünglichen App, bei dem darauf geachtet wurde, dass die Modelle, Ansichtsmodelle und Ansichten separat gehalten wurden.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

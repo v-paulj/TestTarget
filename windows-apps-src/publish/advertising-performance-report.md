@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Performance-Daten für die Anzeigeneinheiten in Ihren Apps können Sie mithilfe der Berichte zur Anzeigen-Performance auf App- und Kontoebene im Windows Dev Center-Dashboard anzeigen.
+Description: "Performance-Daten für die Anzeigeneinheiten in Ihren Apps können Sie mithilfe der Berichte zur Anzeigen-Performance auf App- und Kontoebene im Windows Dev Center-Dashboard anzeigen."
 title: Bericht zur Anzeigen-Performance
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
+translationtype: Human Translation
+ms.sourcegitcommit: 93e12837aec151b0cd1fa711c9e04081d74a3962
+ms.openlocfilehash: 1617005cff264a89eb66e326e2bedf9f6641a3da
+
 ---
 
 # Bericht zur Anzeigen-Performance
@@ -90,6 +94,7 @@ Der Abschnitt **Anzeigen-Performance** auf der Seite **Dashboard-Übersicht** en
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

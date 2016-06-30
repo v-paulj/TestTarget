@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Hinzufügen eines Begrüßungsbildschirms
-description: Hier erfahren Sie, wie Sie das Bild und die Hintergrundfarbe für den Begrüßungsbildschirm der App mit Microsoft Visual Studio 2015 festlegen.
+author: TylerMSFT
+title: "Hinzufügen eines Begrüßungsbildschirms"
+description: "Hier erfahren Sie, wie Sie das Bild und die Hintergrundfarbe für den Begrüßungsbildschirm der App mit Microsoft Visual Studio 2015 festlegen."
 ms.assetid: 41F53046-8AB7-4782-9E90-964D744B7D66
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 261b52d1835e992a784aa5fa356230fdd326b8c5
+
 ---
 
 # Hinzufügen eines Begrüßungsbildschirms
@@ -73,8 +76,6 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die univer
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

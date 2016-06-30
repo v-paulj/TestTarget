@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
-title: Nachverfolgen kürzlich verwendeter Dateien und Ordner
-description: Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie sie der Liste mit den zuletzt verwendeten Elementen (MRU) der App hinzufügen.
+title: "Nachverfolgen kürzlich verwendeter Dateien und Ordner"
+description: "Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie sie der Liste mit den zuletzt verwendeten Elementen (MRU) der App hinzufügen."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 83100d1246dd18324104a63c9cd950e2ff1fce0b
+
 ---
 # Nachverfolgen kürzlich verwendeter Dateien und Ordner
 
@@ -108,6 +112,7 @@ Wenn ein Benutzer ein Element auswählt, sollten Sie es Ihrer Liste für zukünf
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

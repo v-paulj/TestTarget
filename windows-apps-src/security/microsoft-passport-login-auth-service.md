@@ -1,8 +1,12 @@
 ---
 title: Erstellen eines Microsoft Passport-Anmeldediensts
-description: Dies ist Teil 2 der umfassenden exemplarischen Vorgehensweise zum Verwenden von Microsoft Passport als Alternative zu herkömmlichen Authentifizierungssystemen mit Benutzername und Kennwort in Windows 10-Apps für die universelle Windows-Plattform (UWP).
+description: "Dies ist Teil 2 der umfassenden exemplarischen Vorgehensweise zum Verwenden von Microsoft Passport als Alternative zu herkömmlichen Authentifizierungssystemen mit Benutzername und Kennwort in Windows 10-Apps für die universelle Windows-Plattform (UWP)."
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 6fe013a69bad964dafa788efb4e26ba521b3d621
+
 ---
 
 # Erstellen eines Microsoft Passport-Anmeldediensts
@@ -1176,6 +1180,7 @@ Wir haben Ihnen in Form einer Übung die Details bereitgestellt, wie Sie die Aut
 * [Microsoft Passport und Windows Hello](microsoft-passport.md)
 * [Microsoft Passport-Anmelde-App](microsoft-passport-login.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
 title: Optimieren von Anhalten/Fortsetzen
-description: Erstellen Sie Apps für die universelle Windows-Plattform (UWP), die die Verwendung des Prozesslebensdauer-Systems optimieren und nach dem Anhalten oder Beenden effizient fortgesetzt werden.
+description: "Erstellen Sie Apps für die universelle Windows-Plattform (UWP), die die Verwendung des Prozesslebensdauer-Systems optimieren und nach dem Anhalten oder Beenden effizient fortgesetzt werden."
+translationtype: Human Translation
+ms.sourcegitcommit: e0f04c4242891b25db460d4852ab8cc070d82260
+ms.openlocfilehash: 9fee4ab9c55c1243c04c2ed5f007412751528037
+
 ---
 # Optimieren von Anhalten/Fortsetzen
 
@@ -89,6 +93,7 @@ Bei den meisten Apps ist keine Behandlung des [**Resuming**](https://msdn.micros
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

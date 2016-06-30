@@ -1,8 +1,11 @@
 ---
 author: mcleblanc
-description: Die Vorgehensweise zum Definieren einer Benutzeroberfläche in Form von deklarativem XAML-Markup lässt sich sehr gut von Windows Phone Silverlight auf Apps für die Universelle Windows-Plattform (UWP) übertragen.
+description: "Die Vorgehensweise zum Definieren einer Benutzeroberfläche in Form von deklarativem XAML-Markup lässt sich sehr gut von Windows Phone Silverlight auf Apps für die Universelle Windows-Plattform (UWP) übertragen."
 title: Portieren von Windows Phone Silverlight-XAML und -UI zu UWP
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
+ms.sourcegitcommit: de5420b45832a482d08e5e7ede436407f7dbf2af
+ms.openlocfilehash: a34133b42872ce949644dc951255e6214164adad
+
 ---
 
 #  Portieren von Windows Phone Silverlight-XAML und -UI zu UWP
@@ -151,12 +154,12 @@ Windows Phone Silverlight-App-Leisten und Schaltflächen auf diesen App-Leisten 
 
 Für bindungsbezogene Features von UWP-Apps gelten momentan die folgenden Einschränkungen:
 
--   Es gibt keine integrierte Unterstützung für die Überprüfung von Dateneingaben und die Schnittstellen [**IDataErrorInfo**](T:System.ComponentModel.IDataErrorInfo) und [**INotifyDataErrorInfo**](T:System.ComponentModel.INotifyDataErrorInfo).
+-   Es gibt keine integrierte Unterstützung für die Überprüfung von Dateneingaben und die Schnittstellen [**IDataErrorInfo**](https://msdn.microsoft.com/en-us/library/system.componentmodel.idataerrorinfo.aspx) und [**INotifyDataErrorInfo**](https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifydataerrorinfo.aspx).
 -   Die [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)-Klasse enthält nicht die erweiterten Formatierungseigenschaften, die in Windows Phone Silverlight verfügbar sind. Sie können jedoch weiterhin [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903) implementieren, um eine benutzerdefinierte Formatierung bereitzustellen.
--   Die [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903)-Methoden akzeptieren Sprachzeichenfolgen als Parameter anstelle von [**CultureInfo**](T:System.Globalization.CultureInfo)-Objekten.
+-   Die [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903)-Methoden akzeptieren Sprachzeichenfolgen als Parameter anstelle von [**CultureInfo**](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx)-Objekten.
 -   Die [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833)-Klasse bietet keine integrierte Unterstützung für Sortier- und Filtervorgänge, und das Gruppieren funktioniert anders. Weitere Informationen finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946) und im [Beispiel zur Datenbindung](http://go.microsoft.com/fwlink/p/?linkid=226854).
 
-Es werden zwar größtenteils die gleichen Bindungsfeatures unterstützt, aber Windows 10 bietet auch einen neuen und leistungsfähigeren Bindungsmechanismus. Dies sind die so genannten „kompilierten Bindungen“, für die die Markuperweiterung {x:Bind} genutzt wird. Informationen hierzu finden Sie unter [Datenbindung: Stärken der App-Performance dank neuer Verbesserungen bei der XAML-Datenbindung](http://channel9.msdn.com/Events/Build/2015/3-635) und [x:Bind-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619989).
+Es werden zwar größtenteils die gleichen Bindungsfeatures unterstützt, aber Windows 10 bietet auch einen neuen und leistungsfähigeren Bindungsmechanismus. Dies sind die so genannten „kompilierten Bindungen“, für die die Markuperweiterung {x:Bind} genutzt wird. Informationen hierzu finden Sie unter [Datenbindung: Stärken der App-Performance dank neuer Verbesserungen bei der XAML-Datenbindung](http://channel9.msdn.com/Events/Build/2015/3-635) und [x:Bind-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619989).
 
 ## Binden eines Bilds an ein Ansichtsmodell
 
@@ -196,9 +199,9 @@ Windows Phone Silverlight-Apps verwenden in den Namespaces **Microsoft.Phone.Co
 
 Weitere Informationen zu UWP-Steuerelementen finden Sie unter [Steuerelemente nach Funktion](https://msdn.microsoft.com/library/windows/apps/mt185405), [Liste der Steuerelemente](https://msdn.microsoft.com/library/windows/apps/mt185406) und [Richtlinien für Steuerelemente](https://msdn.microsoft.com/library/windows/apps/dn611856).
 
-##  Entwurfssprache in Windows 10
+##  Entwurfssprache in Windows 10
 
-Zwischen Windows Phone Silverlight-Apps und Windows 10-Apps gibt es einige Unterschiede bei der Entwurfssprache. Alle Details finden Sie unter [Design](http://dev.windows.com/design). Trotz der Änderungen bei der Entwurfssprache gelten nach wie vor dieselben Designprinzipien: Gestalten Sie Ihre App mit Liebe zum Detail, versuchen Sie aber, alles möglichst einfach zu halten, indem Sie sich auf den Inhalt, nicht auf das Chrom konzentrieren, visuelle Elemente weitgehend reduzieren und für die digitale Welt authentisch bleiben. Nutzen Sie insbesondere bei der Typografie eine visuelle Hierarchie. Entwerfen Sie Ihre App basierend auf einem Raster, und erwecken Sie Ihre Benutzeroberflächen mit flüssigen Animationen zum Leben.
+Zwischen Windows Phone Silverlight-Apps und Windows 10-Apps gibt es einige Unterschiede bei der Entwurfssprache. Alle Details finden Sie unter [Design](http://dev.windows.com/design). Trotz der Änderungen bei der Entwurfssprache gelten nach wie vor dieselben Designprinzipien: Gestalten Sie Ihre App mit Liebe zum Detail, versuchen Sie aber, alles möglichst einfach zu halten, indem Sie sich auf den Inhalt, nicht auf das Chrom konzentrieren, visuelle Elemente weitgehend reduzieren und für die digitale Welt authentisch bleiben. Nutzen Sie insbesondere bei der Typografie eine visuelle Hierarchie. Entwerfen Sie Ihre App basierend auf einem Raster, und erwecken Sie Ihre Benutzeroberflächen mit flüssigen Animationen zum Leben.
 
 ## Lokalisierung und Globalisierung
 
@@ -290,7 +293,7 @@ Weitere Informationen finden Sie unter [Navigation](https://msdn.microsoft.com/l
 
 ## Ressourcenschlüsselverweis
 
-Die Entwurfssprache für Windows 10 wurde weiterentwickelt. Daher haben sich bestimmte Systemstile geändert, und viele Systemressourcenschlüssel wurden entfernt oder umbenannt. Der XAML-Markup-Editor in Visual Studio hebt Verweise auf Ressourcenschlüssel hervor, die nicht aufgelöst werden können. Der XAML-Markup-Editor unterstreicht z. B. einen Verweis auf den Stilschlüssel `PhoneTextNormalStyle` mit einer roten Wellenlinie. Wird dieser Fehler nicht behoben, wird die App sofort beendet, wenn Sie versuchen, sie im Emulator oder auf dem Gerät bereitzustellen. Daher ist es wichtig, die Richtigkeit des XAML-Markups sicherzustellen. Sie werden feststellen, dass sich solche Fehler mit Visual Studio hervorragend abfangen lassen.
+Die Entwurfssprache für Windows 10 wurde weiterentwickelt. Daher haben sich bestimmte Systemstile geändert, und viele Systemressourcenschlüssel wurden entfernt oder umbenannt. Der XAML-Markup-Editor in Visual Studio hebt Verweise auf Ressourcenschlüssel hervor, die nicht aufgelöst werden können. Der XAML-Markup-Editor unterstreicht z. B. einen Verweis auf den Stilschlüssel `PhoneTextNormalStyle` mit einer roten Wellenlinie. Wird dieser Fehler nicht behoben, wird die App sofort beendet, wenn Sie versuchen, sie im Emulator oder auf dem Gerät bereitzustellen. Daher ist es wichtig, die Richtigkeit des XAML-Markups sicherzustellen. Sie werden feststellen, dass sich solche Fehler mit Visual Studio hervorragend abfangen lassen.
 
 Weitere Informationen finden Sie unten unter [Text](#text).
 
@@ -302,17 +305,17 @@ Die Taskleiste (festgelegt im XAML-Markup mit `shell:SystemTray.IsVisible`) hei�
 
 Der Text (bzw. die Typografie) ist ein wichtiger Aspekt einer UWP-App. Beim Portieren ist es ratsam, das grafische Design Ihrer Ansichten noch einmal darauf zu prüfen, ob es zur neuen Entwurfssprache passt. Verwenden Sie die folgenden Abbildungen, um nach verfügbaren UWP- **TextBlock**-Systemstilen zu suchen. Suchen Sie nach den Stilen, die zu den von Ihnen verwendeten Windows Phone Silverlight-Stilen passen. Alternativ können Sie eigene universelle Stile erstellen und die Eigenschaften aus den Windows Phone Silverlight-Systemstilen in diese Stile kopieren.
 
-![system textblock styles foder windows 10 apps
+![TextBlock-Systemstile für Windows 10-Apps](images/label-uwp10stylegallery.png) TextBlock-Systemstile für Windows 10-Apps
 
-TextBlock-Systemstile für Windows 10-Apps In einer Windows Phone Silverlight-App wird standardmäßig die Schriftfamilie Segoe WP verwendet. In einer Windows 10-App wird standardmäßig die Schriftfamilie Segoe UI verwendet. Daher kann die Schriftartmetrik in Ihrer App Unterschiede aufweisen. Wenn Sie die Darstellung Ihres Windows Phone Silverlight-Texts reproduzieren möchten, können Sie Ihre eigene Metrik mit Eigenschaften wie [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) und [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362) festlegen.
+In einer Windows Phone Silverlight-App wird standardmäßig die Schriftfamilie Segoe WP verwendet. In einer Windows 10-App wird standardmäßig die Schriftfamilie Segoe UI verwendet. Daher kann die Schriftartmetrik in Ihrer App Unterschiede aufweisen. Wenn Sie die Darstellung Ihres Windows Phone Silverlight-Texts reproduzieren möchten, können Sie Ihre eigene Metrik mit Eigenschaften wie [**LineHeight**](https://msdn.microsoft.com/library/windows/apps/br209671) und [**LineStackingStrategy**](https://msdn.microsoft.com/library/windows/apps/br244362) festlegen. Weitere Informationen finden Sie unter [Richtlinien für Schriftarten](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) und [Entwerfen von UWP-Apps](http://dev.windows.com/design).
 
-## Weitere Informationen finden Sie unter [Richtlinien für Schriftarten](https://msdn.microsoft.com/library/windows/apps/hh700394.aspx) und [Entwerfen von UWP-Apps](http://dev.windows.com/design).
+## Designänderungen
 
-Designänderungen Für eine Windows Phone Silverlight-App wird standardmäßig das dunkle Standarddesign verwendet. Für Windows 10-Geräte hat sich das Standarddesign geändert. Sie können das Design aber ändern, indem Sie in „App.Xaml“ ein angefordertes Design deklarieren.
+Für eine Windows Phone Silverlight-App wird standardmäßig das dunkle Standarddesign verwendet. Für Windows 10-Geräte hat sich das Standarddesign geändert. Sie können das Design aber ändern, indem Sie in „App.Xaml“ ein angefordertes Design deklarieren. Wenn Sie z. B. auf allen Geräten ein dunkles Design verwenden möchten, fügen Sie dem Stammelement der App `RequestedTheme="Dark"` hinzu.
 
-## Wenn Sie z. B. auf allen Geräten ein dunkles Design verwenden möchten, fügen Sie dem Stammelement der App `RequestedTheme="Dark"` hinzu.
+## Kacheln
 
-Kacheln Kacheln für UWP-Apps weisen ein ähnliches Verhalten wie Live-Kacheln für Windows Phone Silverlight auf. Es gibt aber einige Unterschiede. Code, der die **Microsoft.Phone.Shell.ShellTile.Create**-Methode zum Erstellen von sekundären Kacheln aufruft, sollte beispielsweise zum Aufrufen von [**SecondaryTile.RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/br230606) portiert werden.
+Kacheln für UWP-Apps weisen ein ähnliches Verhalten wie Live-Kacheln für Windows Phone Silverlight auf. Es gibt aber einige Unterschiede. Code, der die **Microsoft.Phone.Shell.ShellTile.Create**-Methode zum Erstellen von sekundären Kacheln aufruft, sollte beispielsweise zum Aufrufen von [**SecondaryTile.RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/br230606) portiert werden. Hier sehen Sie ein Vorher-Nachher-Beispiel, und zwar zuerst die Windows Phone Silverlight-Version:
 
 
 ```csharp
@@ -328,7 +331,7 @@ Kacheln Kacheln für UWP-Apps weisen ein ähnliches Verhalten wie Live-Kacheln f
     ShellTile.Create(this.selectedBookSku.NavigationUri, tileData, true);
 ```
 
-Hier sehen Sie ein Vorher-Nachher-Beispiel, und zwar zuerst die Windows Phone Silverlight-Version:
+Und hier die UWP-Entsprechung:
 
 ```csharp
     var tile = new SecondaryTile(
@@ -341,55 +344,56 @@ Hier sehen Sie ein Vorher-Nachher-Beispiel, und zwar zuerst die Windows Phone Si
     await tile.RequestCreateAsync();
 ```
 
-Und hier die UWP-Entsprechung:
+Code, der eine Kachel mit der **Microsoft.Phone.Shell.ShellTile.Update**-Methode oder der **Microsoft.Phone.Shell.ShellTileSchedule**-Klasse aktualisiert, sollte zur Verwendung der Klassen [**TileUpdateManager**](https://msdn.microsoft.com/library/windows/apps/br208622), [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628), [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) und/oder [**ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637) portiert werden.
 
-Code, der eine Kachel mit der **Microsoft.Phone.Shell.ShellTile.Update**-Methode oder der **Microsoft.Phone.Shell.ShellTileSchedule**-Klasse aktualisiert, sollte zur Verwendung der Klassen [**TileUpdateManager**](https://msdn.microsoft.com/library/windows/apps/br208622), [**TileUpdater**](https://msdn.microsoft.com/library/windows/apps/br208628), [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616) und/oder [**ScheduledTileNotification**](https://msdn.microsoft.com/library/windows/apps/hh701637) portiert werden. Weitere Informationen zu Kacheln, Popups, Signalen, Bannern und Benachrichtigungen finden Sie unter [Erstellen von Kacheln](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260) und [Verwenden von Kacheln, Signalen und Popupbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259).
+Weitere Informationen zu Kacheln, Popups, Signalen, Bannern und Benachrichtigungen finden Sie unter [Erstellen von Kacheln](https://msdn.microsoft.com/library/windows/apps/xaml/hh868260) und [Verwenden von Kacheln, Signalen und Popupbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259). Ausführliche Informationen zu den Größen von visuellen Ressourcen für UWP-Kacheln finden Sie unter [Visuelle Ressourcen für Kacheln und Popups](https://msdn.microsoft.com/library/windows/apps/hh781198).
 
-## Ausführliche Informationen zu den Größen von visuellen Ressourcen für UWP-Kacheln finden Sie unter [Visuelle Ressourcen für Kacheln und Popups](https://msdn.microsoft.com/library/windows/apps/hh781198).
+## Popups
 
-Popups Code, der ein Popup mit der **Microsoft.Phone.Shell.ShellToast**-Klasse anzeigt, sollte zur Verwendung der Klassen [**ToastNotificationManager**](https://msdn.microsoft.com/library/windows/apps/br208642), [**ToastNotifier**](https://msdn.microsoft.com/library/windows/apps/br208653), [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) und/der [**ScheduledToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208607) portiert werden.
+Code, der ein Popup mit der **Microsoft.Phone.Shell.ShellToast**-Klasse anzeigt, sollte zur Verwendung der Klassen [**ToastNotificationManager**](https://msdn.microsoft.com/library/windows/apps/br208642), [**ToastNotifier**](https://msdn.microsoft.com/library/windows/apps/br208653), [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641) und/der [**ScheduledToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208607) portiert werden. Beachten Sie, dass der verbraucherorientierte Begriff für „Popup“ auf mobilen Geräten „Banner“ lautet.
 
-Beachten Sie, dass der verbraucherorientierte Begriff für „Popup“ auf mobilen Geräten „Banner“ lautet.
+Weitere Informationen finden Sie unter [Verwenden von Kacheln, Signalen und Popupbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259).
 
-## Weitere Informationen finden Sie unter [Verwenden von Kacheln, Signalen und Popupbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/xaml/hh868259).
+## Anzeigepixel/Effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren
 
-Anzeigepixel/Effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren Windows Phone Silverlight-Apps und Windows 10-Apps unterscheiden sich darin, wie sie die Größe und das Layout von UI-Elementen gegenüber der tatsächlichen physischen Größe und Auflösung der Geräte abstrahieren. Bei einer Windows Phone Silverlight-App werden hierfür Pixel verwendet. Unter Windows 10 wurde das Konzept der Anzeigepixel verfeinert, sodass jetzt so genannte „effektive Pixel“ verwendet werden.
+Windows Phone Silverlight-Apps und Windows 10-Apps unterscheiden sich darin, wie sie die Größe und das Layout von UI-Elementen gegenüber der tatsächlichen physischen Größe und Auflösung der Geräte abstrahieren. Bei einer Windows Phone Silverlight-App werden hierfür Pixel verwendet. Unter Windows 10 wurde das Konzept der Anzeigepixel verfeinert, sodass jetzt so genannte „effektive Pixel“ verwendet werden. Unten wird dieser Begriff erklärt und beschrieben, was er bedeutet und welcher zusätzliche Nutzen damit verbunden ist.
 
-Unten wird dieser Begriff erklärt und beschrieben, was er bedeutet und welcher zusätzliche Nutzen damit verbunden ist. Der Begriff „Auflösung“ bezeichnet ein Maß für die Pixeldichte und nicht wie allgemein angenommen für die Pixelanzahl. Die „effektive Auflösung“ ist die Art und Weise, wie die physischen Pixel, aus denen sich ein Bild oder eine Glyphe zusammensetzt, je nach Abstand zum Bildschirm und physischer Pixelgröße des Geräts für das Auge des Betrachters aufgelöst werden (die Pixeldichte ist der Kehrwert der physischen Pixelgröße). Die effektive Auflösung ist benutzerorientiert und somit eine gute Metrik für die Erstellung einer Benutzeroberfläche.
+Der Begriff „Auflösung“ bezeichnet ein Maß für die Pixeldichte und nicht wie allgemein angenommen für die Pixelanzahl. Die „effektive Auflösung“ ist die Art und Weise, wie die physischen Pixel, aus denen sich ein Bild oder eine Glyphe zusammensetzt, je nach Abstand zum Bildschirm und physischer Pixelgröße des Geräts für das Auge des Betrachters aufgelöst werden (die Pixeldichte ist der Kehrwert der physischen Pixelgröße). Die effektive Auflösung ist benutzerorientiert und somit eine gute Metrik für die Erstellung einer Benutzeroberfläche. Wenn Sie diese Faktoren verstehen und die Größe von UI-Elementen entsprechend steuern, können Sie eine optimale Benutzerfreundlichkeit erreichen.
 
-Wenn Sie diese Faktoren verstehen und die Größe von UI-Elementen entsprechend steuern, können Sie eine optimale Benutzerfreundlichkeit erreichen. Für eine Windows Phone Silverlight-App sind alle Telefonbildschirme ausnahmslos genau 480 Anzeigepixel breit, unabhängig von der Anzahl physischer Pixel, der Pixeldichte oder der physischen Größe des Bildschirms.
+Für eine Windows Phone Silverlight-App sind alle Telefonbildschirme ausnahmslos genau 480 Anzeigepixel breit, unabhängig von der Anzahl physischer Pixel, der Pixeldichte oder der physischen Größe des Bildschirms. Dies bedeutet, dass ein **Image**-Element mit `Width="48"` bei jedem Telefon, auf dem die Windows Phone Silverlight-App ausgeführt werden kann, genau ein Zehntel der Bildschirmbreite belegt.
 
-Dies bedeutet, dass ein **Image**-Element mit `Width="48"` bei jedem Telefon, auf dem die Windows Phone Silverlight-App ausgeführt werden kann, genau ein Zehntel der Bildschirmbreite belegt. Für eine Windows 10-App sind *nicht* alle Gerätebildschirme eine feste Anzahl von effektiven Pixeln breit. Dies ist angesichts der Vielzahl von Geräten, auf denen eine UWP-App ausgeführt werden kann, auch einleuchtend. Unterschiedliche Geräte besitzen eine unterschiedliche effektive Breite (angegeben in der Anzahl von Pixeln) – von 320 Epx bei besonders kleinen Geräten bis hin zu 1024 Epx bei Monitoren mittlerer Größe (und weit darüber hinaus für eine noch größere Breite). Sie müssen lediglich weiterhin Elemente mit automatischer Größenanpassung und dynamische Layoutbereiche verwenden. Im bestimmten Fällen werden die Eigenschaften der UI-Elemente im XAML-Markup auf eine feste Größe festgelegt. Auf Ihre App wird abhängig davon, auf welchem Gerät sie ausgeführt wird und welche Anzeigeeinstellungen der Benutzer festgelegt hat, automatisch ein Skalierungsfaktor angewendet. Dieser Skalierungsfaktor bewirkt, dass UI-Elemente mit fester Größe trotz unterschiedlicher Bildschirmgröße als Touchziel (und Leseziel) mit mehr oder weniger konstanter Größe angezeigt werden.
+Für eine Windows 10-App sind *nicht* alle Gerätebildschirme eine feste Anzahl von effektiven Pixeln breit. Dies ist angesichts der Vielzahl von Geräten, auf denen eine UWP-App ausgeführt werden kann, auch einleuchtend. Unterschiedliche Geräte besitzen eine unterschiedliche effektive Breite (angegeben in der Anzahl von Pixeln) – von 320 Epx bei besonders kleinen Geräten bis hin zu 1024 Epx bei Monitoren mittlerer Größe (und weit darüber hinaus für eine noch größere Breite). Sie müssen lediglich weiterhin Elemente mit automatischer Größenanpassung und dynamische Layoutbereiche verwenden. Im bestimmten Fällen werden die Eigenschaften der UI-Elemente im XAML-Markup auf eine feste Größe festgelegt. Auf Ihre App wird abhängig davon, auf welchem Gerät sie ausgeführt wird und welche Anzeigeeinstellungen der Benutzer festgelegt hat, automatisch ein Skalierungsfaktor angewendet. Dieser Skalierungsfaktor bewirkt, dass UI-Elemente mit fester Größe trotz unterschiedlicher Bildschirmgröße als Touchziel (und Leseziel) mit mehr oder weniger konstanter Größe angezeigt werden. In Kombination mit dem dynamischen Layout wird Ihre Benutzeroberfläche nicht nur auf verschiedenen Geräten optisch skaliert, auch die Inhaltsmenge wird an den verfügbaren Platz angepasst.
 
-In Kombination mit dem dynamischen Layout wird Ihre Benutzeroberfläche nicht nur auf verschiedenen Geräten optisch skaliert, auch die Inhaltsmenge wird an den verfügbaren Platz angepasst.
+Da der Wert für die feste Breite der Anzeigepixel eines Telefonbildschirms bisher 480 betrug und dieser Wert bei Verwendung von effektiven Pixeln normalerweise niedriger ist, können Sie Dimensionen im Markup Ihrer Windows Phone Silverlight-App als Faustregel jeweils mit dem Faktor 0,8 multiplizieren.
 
-Da der Wert für die feste Breite der Anzeigepixel eines Telefonbildschirms bisher 480 betrug und dieser Wert bei Verwendung von effektiven Pixeln normalerweise niedriger ist, können Sie Dimensionen im Markup Ihrer Windows Phone Silverlight-App als Faustregel jeweils mit dem Faktor 0,8 multiplizieren. Damit Ihre App auf allen Displays optimal funktioniert, empfiehlt es sich, die einzelnen Bitmap-Ressourcen in verschiedenen Größen zu erstellen, die jeweils für einen bestimmten Skalierungsfaktor geeignet sind.
+Damit Ihre App auf allen Displays optimal funktioniert, empfiehlt es sich, die einzelnen Bitmap-Ressourcen in verschiedenen Größen zu erstellen, die jeweils für einen bestimmten Skalierungsfaktor geeignet sind. Durch die Bereitstellung von Ressourcen mit einer Skalierung von 100 %, 200 % und 400 % (in dieser Prioritätsreihenfolge) erhalten Sie in den meisten Fällen auch bei allen Skalierungsfaktoren dazwischen hervorragende Ergebnisse.
 
-Durch die Bereitstellung von Ressourcen mit einer Skalierung von 100 %, 200 % und 400 % (in dieser Prioritätsreihenfolge) erhalten Sie in den meisten Fällen auch bei allen Skalierungsfaktoren dazwischen hervorragende Ergebnisse. **Hinweis**  Wenn Sie aus irgendeinem Grund Ressourcen nicht in mehr als einer Größe erstellen können, erstellen Sie Ressourcen für die Skalierung von 100 %. In Microsoft Visual Studio bietet die Standardprojektvorlage für UWP-Apps Brandingressourcen (Bilder für Kacheln und Logos) in nur einer Größe, jedoch nicht mit einer Skalierung von 100 %.
+**Hinweis**  Wenn Sie aus irgendeinem Grund Ressourcen nicht in mehr als einer Größe erstellen können, erstellen Sie Ressourcen für die Skalierung von 100 %. In Microsoft Visual Studio bietet die Standardprojektvorlage für UWP-Apps Brandingressourcen (Bilder für Kacheln und Logos) in nur einer Größe, jedoch nicht mit einer Skalierung von 100 %. Befolgen Sie bei der Erstellung von Ressourcen für Ihre eigene App die Informationen in diesem Abschnitt, stellen Sie die Ressourcen mit einer Skalierung von 100 %, 200 % und 400 % bereit, und verwenden Sie Ressourcenpakete.
 
-Befolgen Sie bei der Erstellung von Ressourcen für Ihre eigene App die Informationen in diesem Abschnitt, stellen Sie die Ressourcen mit einer Skalierung von 100 %, 200 % und 400 % bereit, und verwenden Sie Ressourcenpakete. Falls Sie komplexe Grafiken verwenden, sollten Sie mehr Skalierungen bereitstellen.
+Falls Sie komplexe Grafiken verwenden, sollten Sie mehr Skalierungen bereitstellen. Wenn Sie mit Vektorgrafiken beginnen, ist es relativ einfach, qualitativ hochwertige Ressourcen für beliebige Skalierungsfaktoren zu generieren.
 
-Wenn Sie mit Vektorgrafiken beginnen, ist es relativ einfach, qualitativ hochwertige Ressourcen für beliebige Skalierungsfaktoren zu generieren. Obwohl wir davon abraten, alle Skalierungsfaktoren zu unterstützen, möchten wir Ihnen die vollständige Liste der Skalierungsfaktoren für Windows 10-Apps nicht vorenthalten: 100 %, 125 %, 150 %, 200 %, 250 %, 300 % und 400 %. Wenn Sie sie bereitstellen, wählt der Store für jedes Gerät die Ressourcen mit der passenden Größe aus, und es werden nur diese Ressourcen heruntergeladen.
+Obwohl wir davon abraten, alle Skalierungsfaktoren zu unterstützen, möchten wir Ihnen die vollständige Liste der Skalierungsfaktoren für Windows 10-Apps nicht vorenthalten: 100 %, 125 %, 150 %, 200 %, 250 %, 300 % und 400 %. Wenn Sie sie bereitstellen, wählt der Store für jedes Gerät die Ressourcen mit der passenden Größe aus, und es werden nur diese Ressourcen heruntergeladen. Die Auswahl der herunterzuladenden Ressourcen erfolgt auf Grundlage des DPI-Werts eines Geräts.
 
-Die Auswahl der herunterzuladenden Ressourcen erfolgt auf Grundlage des DPI-Werts eines Geräts.
+Weitere Informationen finden Sie unter [Reaktionsfähiges Design – Grundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958435).
 
-## Weitere Informationen finden Sie unter [Reaktionsfähiges Design – Grundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958435).
+## Fenstergröße
 
-Fenstergröße In Ihrer UWP-App können Sie eine Mindestgröße (Breite und Höhe) mit imperativem Code angeben. Die Standardmindestgröße beträgt 500 x 320 Epx. Dies ist auch die kleinste zulässige Mindestgröße.
+In Ihrer UWP-App können Sie eine Mindestgröße (Breite und Höhe) mit imperativem Code angeben. Die Standardmindestgröße beträgt 500 x 320 Epx. Dies ist auch die kleinste zulässige Mindestgröße. Die größte zulässige Mindestgröße ist 500 x 500 Epx.
 
 ```csharp
    Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize
         (new Size { Width = 500, Height = 500 });
 ```
 
-Die größte zulässige Mindestgröße ist 500 x 500 Epx.
+Das nächste Thema ist [Portieren: E/A, Gerät und App-Modell](wpsl-to-uwp-input-and-sensors.md).
 
-## Das nächste Thema ist [Portieren: E/A, Gerät und App-Modell](wpsl-to-uwp-input-and-sensors.md).
+## Verwandte Themen
 
-* [Verwandte Themen](wpsl-to-uwp-namespace-and-class-mappings.md)
+* [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,13 +1,17 @@
 ---
 author: Jwmsft
-Description: Durch Erstellen einer Steuerelementvorlage im XAML-Framework können Sie die visuelle Struktur und das visuelle Verhalten eines Steuerelements anpassen.
-MS-HAID: 'dev\_ctrl\_layout\_txt.control\_templates'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Durch Erstellen einer Steuerelementvorlage im XAML-Framework können Sie die visuelle Struktur und das visuelle Verhalten eines Steuerelements anpassen."
+MS-HAID: dev\_ctrl\_layout\_txt.control\_templates
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Steuerelementvorlagen
 ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 071ba59af02b860e9fe58133eb5f1c2a7207ed2b
+
 ---
 
 # Steuerelementvorlagen
@@ -209,6 +213,7 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die UWP-Apps schreiben. 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

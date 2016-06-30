@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Stellt einen eindeutigen Bezeichner für Markupelemente bereit. Bei UWP-XAML (Universelle Windows-Plattform) wird dieser eindeutige Bezeichner für XAML-Lokalisierungsprozesse und -tools verwendet, z. B. beim Verwenden von Ressourcen aus einer RESW-Ressourcendatei.
+description: "Stellt einen eindeutigen Bezeichner für Markupelemente bereit. Bei UWP-XAML (Universelle Windows-Plattform) wird dieser eindeutige Bezeichner für XAML-Lokalisierungsprozesse und -tools verwendet, z. B. beim Verwenden von Ressourcen aus einer RESW-Ressourcendatei."
 title: xUid-Direktive
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4f8aa553c99b6071cedc4f9d93cf8258b75eca49
+
 ---
 
 # x:Uid-Direktive
@@ -47,6 +51,7 @@ Fügen Sie **x:Uid** nicht in Eigenschaftselemente ein, da dies in Windows-Runti
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

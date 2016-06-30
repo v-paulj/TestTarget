@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Im Anschluss finden Sie einige Lösungen für verschiedene allgemeine Entwicklungsprobleme im Zusammenhang mit der Anzeigenvermittlung.
+Description: "Im Anschluss finden Sie einige Lösungen für verschiedene allgemeine Entwicklungsprobleme im Zusammenhang mit der Anzeigenvermittlung."
 title: Problembehandlung bei der Anzeigenvermittlung
 ms.assetid: 8728DE4F-E050-4217-93D3-588DD3280A3A
+translationtype: Human Translation
+ms.sourcegitcommit: 10dcf3c2b8ea530b94e9c17ada80aaa98e9418fe
+ms.openlocfilehash: f32dc28c9b199c11a1932639f49ab4c29d3e1e8f
+
 ---
 
 # Problembehandlung bei der Anzeigenvermittlung
@@ -18,7 +22,8 @@ Beim ersten Ziehen des **AdMediatorControl**-Steuerelements in den Designer in e
 Wenn Sie dem Designer das Steuerelement weiterhin nicht hinzufügen können, stellen Sie sicher, dass Ihr Projekt die geeignete Prozessorarchitektur für Ihre App aufweist (z. B. **X 86**) statt einer **beliebigen CPU**. Das Steuerelement kann dem Designer nicht hinzugefügt werden, wenn das Projekt für die Buildplattform auf eine **beliebige CPU** ausgerichtet ist.
 
 *
-              *Das AdMediatorControl-Element zeigt zur Laufzeit die Fehlermeldung „&lt;*Breite*   &gt; x &lt;*Höhe*&gt; nicht unterstützt“ an, wenn Anzeigen von Microsoft** angezeigt werden. Microsoft Advertising unterstützt nur [Anzeigen in bestimmten Größen, die vom Interactive Advertising Bureau (IAB) empfohlen wurden](add-and-use-the-ad-mediator-control.md#supported-ad-sizes-for-microsoft-advertising). In einigen Fällen verhindern Skalierungs- und Abrundungsprobleme das Einblenden einer Anzeige durch das Anzeigenvermittlungs-Framework u. U. auch dann, wenn Sie die Höhe und Breite des Ad Mediator-Steuerelements im Designer oder in Ihrer XAML auf eine dieser unterstützten Größen festgelegt haben. Um dieses Problem zu vermeiden, weisen Sie in Ihrem Code einer der unterstützten Anzeigengrößen die optionalen Parameter **Breite** und **Höhe** für Microsoft Advertising zu.
+              *Das AdMediatorControl-Element zeigt zur Laufzeit die Fehlermeldung „&lt;*width*
+            &gt; x &lt;*height*&gt; nicht unterstützt“ an, wenn Anzeigen von Microsoft angezeigt werden.** Microsoft Advertising unterstützt nur [Anzeigen in bestimmten Größen, die vom Interactive Advertising Bureau (IAB) empfohlen wurden](add-and-use-the-ad-mediator-control.md#supported-ad-sizes-for-microsoft-advertising). In einigen Fällen verhindern Skalierungs- und Abrundungsprobleme das Einblenden einer Anzeige durch das Anzeigenvermittlungs-Framework u. U. auch dann, wenn Sie die Höhe und Breite des Ad Mediator-Steuerelements im Designer oder in Ihrer XAML auf eine dieser unterstützten Größen festgelegt haben. Um dieses Problem zu vermeiden, weisen Sie in Ihrem Code einer der unterstützten Anzeigengrößen die optionalen Parameter **Width** und **Height** für Microsoft Advertising zu.
 
 Das folgende Codebeispiel zeigt, wie Sie die optionalen Parameter **Width** und **Height** für Microsoft Advertising auf 728 x 90 festlegen.
 
@@ -69,6 +74,7 @@ Wenn Sie den Wert für die **"Aktualisierungsrate"** in der Datei AdMediator.con
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Spieletechnologien für UWP-Apps
-description: Dieses Handbuch enthält Informationen über verfügbare Technologien für die Entwicklung von Spielen für die Universelle Windows-Plattform (UWP).
+title: "Spieletechnologien für UWP-Apps"
+description: "Dieses Handbuch enthält Informationen über verfügbare Technologien für die Entwicklung von Spielen für die Universelle Windows-Plattform (UWP)."
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3c7807d0b46a32bfe90c79b7eee3111039ca94ab
+
 ---
 
 # Spieletechnologien für UWP-Apps (Universelle Windows-Plattform)
@@ -351,6 +355,7 @@ Informationen zum Übermitteln Ihres Spiels an den Windows Store finden Sie unte
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

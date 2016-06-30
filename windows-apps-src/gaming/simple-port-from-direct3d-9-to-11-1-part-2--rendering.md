@@ -3,6 +3,10 @@ author: mtoepke
 title: Konvertieren des Renderingframeworks
 description: Hier wird veranschaulicht, wie Sie ein einfaches Renderingframework von Direct3D 9 in Direct3D 11 konvertieren. Sie erfahren, wie Sie Geometriepuffer portieren, HLSL-Shaderprogramme kompilieren und laden und die Renderkette in Direct3D 11 implementieren.
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5cfdce2a62f6b5761ebf820418762a307dd051bb
+
 ---
 
 # Konvertieren des Renderingframeworks
@@ -490,6 +494,7 @@ Die gerade erstellte Renderkette wird von einer Spielschleife aufgerufen, die in
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

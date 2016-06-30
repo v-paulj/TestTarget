@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Erste Schritte mit UWP für iOS-Entwickler
-title: Erste Schritte mit UWP für iOS-Entwickler
+description: "Erste Schritte mit UWP für iOS-Entwickler"
+title: "Erste Schritte mit UWP für iOS-Entwickler"
 ms.assetid: 9F67068B-E578-4C70-B3E0-DFF150FA9BDD
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3fef53e5d6c9259bf5157b1221643d07e1d8be5e
+
 ---
 
 # Erste Schritte mit UWP für iOS-Entwickler
@@ -37,6 +41,7 @@ Für die ersten Schritte bei diesen exemplarischen Vorgehensweisen benötigen Si
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

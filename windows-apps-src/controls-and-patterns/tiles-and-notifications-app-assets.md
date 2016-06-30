@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Ressourcen für App-Symbole, die in einer Vielzahl von Formen innerhalb des Windows 10-Betriebssystems vorkommen, sind die Aushängeschilder für Ihre App für die Universelle Windows-Plattform (UWP).
-title: Ressourcen für Kacheln und Symbole
+Description: "Ressourcen für App-Symbole, die in einer Vielzahl von Formen innerhalb des Windows 10-Betriebssystems vorkommen, sind die Aushängeschilder für Ihre App für die Universelle Windows-Plattform (UWP)."
+title: "Ressourcen für Kacheln und Symbole"
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 98eebc4fbf18aa2fbe4586958f666b41580cf6d9
+
 ---
 
 # Richtlinien für die Ressourcen für Kacheln und Symbole
@@ -384,6 +388,7 @@ Nachfolgend sind alle Ressourcentypen, ihre Anwendungsmöglichkeiten sowie die e
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

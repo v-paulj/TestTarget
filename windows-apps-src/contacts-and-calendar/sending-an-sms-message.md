@@ -1,9 +1,13 @@
 ---
 author: Xansky
-description: In diesem Thema erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer SMS starten, damit Benutzer eine SMS senden können. Sie können die Felder der SMS vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.
+description: "In diesem Thema erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer SMS starten, damit Benutzer eine SMS senden können. Sie können die Felder der SMS vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen."
 title: Senden einer SMS
 ms.assetid: 4D7B509B-1CF0-4852-9691-E96D8352A4D6
 keywords: contacts, SMS, send
+translationtype: Human Translation
+ms.sourcegitcommit: 1395e342bb6ad6a2d4fa347f1797aeafd7a524a6
+ms.openlocfilehash: 70dfce318d37d6790585b0fa5da50963f95495dc
+
 ---
 
 # Senden einer SMS
@@ -55,6 +59,7 @@ In diesem Thema haben Sie erfahren, wie Sie das Dialogfeld zum Verfassen einer S
 * [Auswählen von Kontakten](selecting-contacts.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: 15BAB25C-DA8C-4F13-9B8F-EA9E4270BCE9
 title: Verwenden des Lichtsensors
-description: Hier erfahren Sie, wie Sie mithilfe des Umgebungslichtsensors veränderte Lichtverhältnisse erkennen.
+description: "Hier erfahren Sie, wie Sie mithilfe des Umgebungslichtsensors veränderte Lichtverhältnisse erkennen."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 289d50ff4f45147c46bd66c526cf109d8fdf6d32
+
 ---
 # Verwenden des Lichtsensors
 
@@ -167,6 +171,7 @@ Diese neuen Werte werden in ein TextBlock-Element des XAML-Projektcodes geschrie
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

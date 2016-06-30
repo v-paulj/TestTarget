@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: 'Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten'
-description: Sie können mit der MapControl-Klasse anpassbare Karten in Ihrer App anzeigen. In diesem Thema werden auch 3D-Luftbilder und Streetside-Ansichten behandelt.
+author: msatranjr
+title: Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten
+description: "Sie können mit der MapControl-Klasse anpassbare Karten in Ihrer App anzeigen. In diesem Thema werden auch 3D-Luftbilder und Streetside-Ansichten behandelt."
 ms.assetid: 3839E00B-2C1E-4627-A45F-6DDA98D7077F
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 249503f6a43ef8c38e76ed29aed4a1bfdb26e9fb
+
 ---
 
 # Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten
@@ -235,7 +238,7 @@ So zeigen Sie eine 3D-Ansicht an
 
 1.  Überprüfen Sie mittels [**Is3DSupported**](https://msdn.microsoft.com/library/windows/apps/dn974265), ob 3D-Ansichten auf dem Gerät unterstützt werden.
 2.  Wenn 3D-Ansichten unterstützt werden, legen Sie die [**Style**](https://msdn.microsoft.com/library/windows/apps/dn637051)-Eigenschaft des Kartensteuerelements auf [**MapStyle.Aerial3DWithRoads**](https://msdn.microsoft.com/library/windows/apps/dn637127) fest.
-3.  Erstellen Sie ein [**MapScene**](https://msdn.microsoft.com/library/windows/apps/dn974329)-Objekt mithilfe einer der zahlreichen **CreateFrom**-Methoden, z. B. [**CreateFromLocationAndRadius**](https://msdn.microsoft.com/library/windows/apps/dn974336) und [**CreateFromCamera**](https://msdn.microsoft.com/library/windows/apps/dn974334).
+3.  Erstellen Sie ein [**MapScene**](https://msdn.microsoft.com/library/windows/apps/dn974329)-Objekt mithilfe einer der zahlreichen **CreateFrom**-Methoden, z. B. [**CreateFromLocationAndRadius**](https://msdn.microsoft.com/library/windows/apps/dn974336) und [**CreateFromCamera**](https://msdn.microsoft.com/library/windows/apps/dn974334).
 4.  Rufen Sie [**TrySetSceneAsync**](https://msdn.microsoft.com/library/windows/apps/dn974296) auf, um die 3D-Ansicht anzuzeigen. Darüber hinaus können Sie eine optionale Animation angeben, die beim Ändern der Ansicht angezeigt werden soll, indem Sie eine Konstante aus der Enumeration [**MapAnimationKind**](https://msdn.microsoft.com/library/windows/apps/dn637002) angeben.
 
 In diesem Beispiel wird das Anzeigen einer 3D-Ansicht gezeigt.
@@ -303,27 +306,28 @@ Sie behandeln Benutzereingabegesten auf der Karte, indem Sie die folgenden Ereig
 
 Sie stellen fest, ob die Karte geladen wird oder vollständig geladen wurde, indem Sie das [**LoadingStatusChanged**](https://msdn.microsoft.com/library/windows/apps/dn637028)-Ereignis des Steuerelements behandeln.
 
-Sie behandeln Änderungen, die durch Ändern der Karteneinstellungen durch den Benutzer oder die App entstehen, indem Sie die folgenden Ereignisse von [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) behandeln. [Richtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/dn596102) [CenterChanged](https://msdn.microsoft.com/library/windows/apps/dn596102)
+Sie behandeln Änderungen, die durch Ändern der Karteneinstellungen durch den Benutzer oder die App entstehen, indem Sie die folgenden Ereignisse von [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) behandeln. [Richtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/dn596102)
 
--   [**HeadingChanged**](https://msdn.microsoft.com/library/windows/apps/dn637006)
--   [**PitchChanged**](https://msdn.microsoft.com/library/windows/apps/dn637020)
--   [**ZoomLevelChanged**](https://msdn.microsoft.com/library/windows/apps/dn637045)
--   [**Verwandte Themen**](https://msdn.microsoft.com/library/windows/apps/dn637069)
+-   [**CenterChanged**](https://msdn.microsoft.com/library/windows/apps/dn637006)
+-   [**HeadingChanged**](https://msdn.microsoft.com/library/windows/apps/dn637020)
+-   [**PitchChanged**](https://msdn.microsoft.com/library/windows/apps/dn637045)
+-   [**ZoomLevelChanged**](https://msdn.microsoft.com/library/windows/apps/dn637069)
 
-## Bing Maps Developer Center
+## Verwandte Themen
 
-* [Beispiel für UWP-Karte](https://www.bingmapsportal.com/)
-* [Abrufen der aktuellen Position](http://go.microsoft.com/fwlink/p/?LinkId=619977)
-* [Entwurfsrichtlinien für Apps mit Standortbestimmung](get-location.md)
-* [Entwurfsrichtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/hh465148)
-* [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Beispiel für eine UWP-App mit Verkehrsinformationen](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [MapControl](http://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [Bing Maps Developer Center](https://www.bingmapsportal.com/)
+* [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [Abrufen der aktuellen Position](get-location.md)
+* [Entwurfsrichtlinien für Apps mit Standortbestimmung](https://msdn.microsoft.com/library/windows/apps/hh465148)
+* [Entwurfsrichtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/dn596102)
+* [Build 2015-Video: Nutzen von Karten und Ortung über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

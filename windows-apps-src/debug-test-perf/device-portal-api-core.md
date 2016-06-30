@@ -2,7 +2,10 @@
 author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referenz zu Kern-APIs des Device Portal
-description: Hier erhalten Sie Informationen zu den Kern-REST-APIs für das Windows Device Portal, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können.
+description: "Hier erhalten Sie Informationen zu den Kern-REST-APIs für das Windows Device Portal, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können."
+ms.sourcegitcommit: 0e36b2adbd0805d9c738de00959581417d2c1ee8
+ms.openlocfilehash: 364e19c723c6cf48a25104b5719735a533ae54a7
+
 ---
 
 # Referenz zu Kern-APIs des Geräteportals
@@ -2730,7 +2733,456 @@ HTTP-Statuscode      | Beschreibung
 * HoloLens
 * IoT
 
+---
+## DNS-SD-Tags 
+---
+### Anzeigen von Tags
 
-<!--HONumber=May16_HO2-->
+**Anforderung**
+
+Anzeigen der derzeit für das Gerät angewendeten Tags.  Diese werden über DNS-SD-TXT-Datensätze im T-Schlüssel angekündigt.  
+ 
+Methode      | Anforderungs-URI
+:------     | :-----
+GET | /api/dns-sd/tags
+<br />
+
+**URI-Parameter**
+
+- Keiner
+
+**Anforderungsheader**
+
+- Keiner
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort** Die derzeit angewendeten Tags im folgenden Format. 
+```
+ {
+    "tags": [
+        "tag1", 
+        "tag2", 
+        ...
+     ]
+}
+```
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+5XX | Serverfehler 
+
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* Xbox
+* HoloLens
+* IoT
+
+---
+### Löschen von Tags
+
+**Anforderung**
+
+Löschen aller Tags derzeit von DNS-SD angekündigten Tags.   
+ 
+Methode      | Anforderungs-URI
+:------     | :-----
+DELETE | /api/dns-sd/tags
+<br />
+
+**URI-Parameter**
+
+- Keiner
+
+**Anforderungsheader**
+
+- Keiner
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+ - Keine
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+5XX | Serverfehler 
+
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* Xbox
+* HoloLens
+* IoT
+
+---
+### Löschen eines Tags
+
+**Anforderung**
+
+Löschen eines derzeit von DNS-SD angekündigten Tags.   
+ 
+Methode      | Anforderungs-URI
+:------     | :-----
+DELETE | /api/dns-sd/tag
+<br />
+
+**URI-Parameter**
+
+URI-Parameter | Beschreibung
+:------     | :-----
+tagValue | (**Erforderlich**) Das zu entfernende Tag.
+
+**Anforderungsheader**
+
+- Keiner
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+ - Keine
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* Xbox
+* HoloLens
+* IoT
+ 
+---
+### Hinzufügen eines Tags
+
+**Anforderung**
+
+Hinzufügen eines Tags zur DNS-SD-Ankündigung.   
+ 
+Methode      | Anforderungs-URI
+:------     | :-----
+POST | /api/dns-sd/tag
+<br />
+
+**URI-Parameter**
+
+URI-Parameter | Beschreibung
+:------     | :-----
+tagValue | (**Erforderlich**) Das hinzuzufügende Tag.
+
+**Anforderungsheader**
+
+- Keiner
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+ - Keine
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+401 | Überlauf des Tagbereichs.  Tritt auf, wenn das vorgeschlagene Tag zu lang für den resultierenden DNS-SD-Dienstdatensatz ist.  
+
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* Xbox
+* HoloLens
+* IoT
+
+## App-Datei-Explorer
+
+---
+### Abrufen bekannter Ordner
+
+**Anforderung**
+
+Abrufen einer Liste zugänglicher Ordner der obersten Ebene.
+
+Methode      | Anforderungs-URI
+:------     | :-----
+GET | /api/filesystem/apps/knownfolders
+<br />
+
+**URI-Parameter**
+
+- Keiner
+
+**Anforderungsheader**
+
+- Keiner
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort** Die verfügbaren Ordner in folgendem Format: 
+```
+ {"KnownFolders": [
+    "folder0",
+    "folder1",...
+]}
+```
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | Bereitstellungsanforderung akzeptiert und wird verarbeitet
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
+
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Abrufen von Dateien
+
+**Anforderung**
+
+Abrufen einer Liste von Dateien in einem Ordner.
+
+Methode      | Anforderungs-URI
+:------     | :-----
+GET | /api/filesystem/apps/files
+<br />
+
+**URI-Parameter**
+
+URI-Parameter | Beschreibung
+:------     | :-----
+knownfolderid | (**Erforderlich**) Das Verzeichnis auf oberster Ebene, das die Liste der Dateien enthalten soll. Verwenden Sie **LocalAppData** für den Zugriff auf quergeladene Apps. 
+packagefullname | (**Erforderlich, wenn *knownfolderid* == LocalAppData**) Der vollständige Name des Pakets der App, für die Sie sich interessieren. 
+path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder Paket. 
+
+**Anforderungsheader**
+
+- Keiner
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort** Die verfügbaren Ordner in folgendem Format: 
+```
+{"Items": [
+    {
+        "CurrentDir": string (folder under the requested known folder),
+        "DateCreated": int,
+        "FileSize": int (bytes),
+        "Id": string,
+        "Name": string,
+        "SubPath": string (present if this item is a folder, this is the name of the folder),
+        "Type": int
+    },...
+]}
+```
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Abrufen von Dateien
+
+**Anforderung**
+
+Abrufen einer Liste von Dateien in einem Ordner.
+
+Methode      | Anforderungs-URI
+:------     | :-----
+GET | /api/filesystem/apps/file
+
+**URI-Parameter**
+
+URI-Parameter | Beschreibung
+:------     | :-----
+knownfolderid | (**Erforderlich**) Das Verzeichnis auf oberster Ebene, in das Sie Dateien herunterladen möchten. Verwenden Sie **LocalAppData** für den Zugriff auf quergeladene Apps. 
+filename | (**Erforderlich**) Der Name der Datei, die heruntergeladen wird. 
+packagefullname | (**Erforderlich, wenn *knownfolderid* == LocalAppData**) Der vollständige Name des Pakets, für das Sie sich interessieren. 
+path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder Paket.
+
+**Anforderungsheader**
+
+- Keiner
+
+**Anforderungstext**
+
+- Die angeforderte Datei, sofern vorhanden
+
+**Antwort**
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | Die angeforderte Datei
+404 | Datei nicht gefunden
+5XX | Fehlercodes
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Löschen einer Datei
+
+**Anforderung**
+
+Löschen einer Datei in einem Ordner.
+
+Methode      | Anforderungs-URI
+:------     | :-----
+DELETE | /api/filesystem/apps/file
+<br />
+**URI-Parameter**
+
+URI-Parameter | Beschreibung
+:------     | :-----
+knownfolderid | (**Erforderlich**) Das Verzeichnis auf oberster Ebene, in dem Sie Dateien löschen möchten. Verwenden Sie **LocalAppData** für den Zugriff auf quergeladene Apps. 
+filename | (**erforderlich**) Der Name der zu löschenden Datei. 
+packagefullname | (**Erforderlich, wenn *knownfolderid* == LocalAppData**) Der vollständige Name des Pakets der App, für die Sie sich interessieren. 
+path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder Paket.
+
+**Anforderungsheader**
+
+- Keiner
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK. Die Datei wird gelöscht.
+404 | Datei nicht gefunden
+5XX | Fehlercodes
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Hochladen einer Datei
+
+**Anforderung**
+
+Hochladen einer Datei in einen Ordner.  Dadurch wird eine vorhandene Datei mit demselben Namen überschrieben, es werden jedoch keine neuen Ordner erstellt. 
+
+Methode      | Anforderungs-URI
+:------     | :-----
+POST | /api/filesystem/apps/file
+<br />
+**URI-Parameter**
+
+URI-Parameter | Beschreibung
+:------     | :-----
+knownfolderid | (**Erforderlich**) Das Verzeichnis auf oberster Ebene, in das Sie Dateien hochladen möchten. Verwenden Sie **LocalAppData** für den Zugriff auf quergeladene Apps.
+packagefullname | (**Erforderlich, wenn *knownfolderid* == LocalAppData**) Der vollständige Name des Pakets der App, für die Sie sich interessieren. 
+path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder Paket.
+
+**Anforderungsheader**
+
+- Keiner
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK. Die Datei wird hochgeladen
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* HoloLens
+* Xbox
+* IoT
+
+
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
-description: Erfahren Sie mehr über die Installation der Microsoft Advertising-Bibliotheken.
+description: "Erfahren Sie mehr über die Installation der Microsoft Advertising-Bibliotheken."
 title: Installieren der Microsoft Advertising-Bibliotheken
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 0951818ceaf3d96543f9f97ec6993d08fdaab2b8
+
 
 ---
 
@@ -91,6 +95,7 @@ Bevor Sie eines der Anzeigensteuerelemente in Ihrem App-Code verwenden können, 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

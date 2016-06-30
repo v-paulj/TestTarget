@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-title: Durchführen der Geocodierung und umgekehrten Geocodierung
+title: "Durchführen der Geocodierung und umgekehrten Geocodierung"
 description: Sie konvertieren Adressen in geografische Standorte (Geocodierung) und geografische Standorte in Adressen (umgekehrte Geocodierung), indem Sie die Methoden der MapLocationFinder-Klasse im Windows.Services.Maps-Namespace aufrufen.
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: caf3ad6fecd6ed90c65f85477643fb42ab4787d3
+
 ---
 
 # Durchführen der Geocodierung und umgekehrten Geocodierung
@@ -25,7 +29,7 @@ Hier erfahren Sie, welchen Zusammenhang es zwischen den Klassen für Geocodierun
             **MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) enthält eine Sammlung von [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549)-Objekten. Auf diese Sammlung greifen Sie über die [**Locations**](https://msdn.microsoft.com/library/windows/apps/dn627552)-Eigenschaft von **MapLocationFinderResult** zu.
 -   Jedes [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549)-Objekt enthält ein [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533)-Objekt. Auf dieses Objekt greifen Sie über die [**Address**](https://msdn.microsoft.com/library/windows/apps/dn636929)-Eigenschaft des jeweiligen **MapLocation** zu.
 
-**Wichtig**  Sie müssen einen Kartenauthentifizierungsschlüssel angeben, bevor Sie Kartendienste verwenden können. Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](authentication-key.md).
+**Wichtig** Sie müssen einen Kartenauthentifizierungsschlüssel angeben, bevor Sie Kartendienste verwenden können. Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](authentication-key.md).
 
  
 
@@ -134,6 +138,7 @@ town = Redmond
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

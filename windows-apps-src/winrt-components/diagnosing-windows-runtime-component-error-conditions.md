@@ -1,16 +1,18 @@
 ---
-author: martinekuan
-title: Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime
-description: Dieser Artikel enthält zusätzliche Informationen zu Einschränkungen bei Komponenten für Windows-Runtime, die mit verwaltetem Code geschrieben wurden.
+author: msatranjr
+title: "Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime"
+description: "Dieser Artikel enthält zusätzliche Informationen zu Einschränkungen bei Komponenten für Windows-Runtime, die mit verwaltetem Code geschrieben wurden."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 29199b7c94c4fecd173fb96f0d8fb43692d72464
+
 ---
 
 # Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
-\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
 
 Dieser Artikel enthält zusätzliche Informationen zu Einschränkungen bei Komponenten für Windows-Runtime, die mit verwaltetem Code geschrieben wurden. Der Artikel beinhaltet Details zu den Fehlermeldungen von [Winmdexp.exe (Windows Runtime Metadata Export Tool)](https://msdn.microsoft.com/library/hh925576.aspx) und ergänzt die unter [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) aufgeführten Informationen zu Einschränkungen.
 
@@ -220,17 +222,17 @@ In der UWP werden Rückgabewerte als Ausgabeparameter betrachtet, und die Namen 
     > ```cs
     > using System.Runtime.InteropServices;
     > using System.Runtime.InteropServices.WindowsRuntime;
-    > 
+    >
     > [return: ReturnValueName("average")]
     > public int GetAverage(out int lowValue, out int highValue)
     > ```
     > ```vb
     > Imports System.Runtime.InteropServices
     > Imports System.Runtime.InteropServices.WindowsRuntime
-    > 
+    >
     > Public Function GetAverage(<Out> ByRef lowValue As Integer, _
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
-    > ``` 
+    > ```
 
 > **Hinweis**  Wenn Sie den Namen des Rückgabewerts ändern und der neue Namen mit dem Namen eines anderen Parameters in Konflikt steht, erhalten Sie die Fehlermeldung WME1091.
 
@@ -248,6 +250,7 @@ JavaScript-Code kann auf die Ausgabeparameter einer Methode, einschließlich des
 * [Winmdexp.exe (Windows Runtime Metadata Export Tool)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

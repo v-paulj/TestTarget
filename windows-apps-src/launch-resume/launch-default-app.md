@@ -3,8 +3,8 @@ author: TylerMSFT
 title: "Starten der Standard-App für einen URI"
 description: "Hier erfahren Sie, wie Sie die Standard-App für einen Uniform Resource Identifier (URI) starten. URIs ermöglichen den Start einer anderen App zum Ausführen einer bestimmten Aufgabe. Dieses Thema enthält auch eine Übersicht über die vielen in Windows integrierten URI-Schemas."
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: b593a43bc5b95dd0880af972ca1514e657bbd9e3
+ms.sourcegitcommit: 9011d2e2e1e51edc89851e815d31e13390c24f96
+ms.openlocfilehash: d454317d135e2b2b952c16fb00685e34b489865c
 
 ---
 
@@ -45,7 +45,7 @@ Im Allgemeinen kann die App nicht die App auswählen, die gestartet wird. Der Be
 
 Verwenden Sie die Methode [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476), um einen URI zu starten. Beim Aufrufen dieser Methode muss Ihre App im Vordergrund ausgeführt werden, d. h., sie muss für den Benutzer sichtbar sein. Mithilfe dieser Anforderung wird sichergestellt, dass der Benutzer zu jedem Zeitpunkt die Kontrolle behält. Verknüpfen Sie alle URI-Startvorgänge direkt mit der Benutzeroberfläche Ihrer App, um sicherzustellen, dass diese Anforderung erfüllt wird. Der Benutzer muss immer eine Aktion ausführen, um einen URI zu starten. Wenn Sie versuchen, einen URI zu starten, und Ihre App befindet sich nicht im Vordergrund, schlägt der Start fehl und Ihr Fehlerrückruf wird aufgerufen.
 
-Erstellen Sie zunächst ein [**System.Uri**](T:System.Uri)-Objekt, das den URI darstellt, und übergeben Sie es anschließend an die Methode [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476). Verwenden Sie das Ergebnis, um zu überprüfen, ob der Aufruf erfolgreich war, wie im folgenden Beispiel gezeigt.
+Erstellen Sie zunächst ein [**System.Uri**](https://msdn.microsoft.com/en-us/library/windows/apps/system.uri.aspx)-Objekt, das den URI darstellt, und übergeben Sie es anschließend an die Methode [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476). Verwenden Sie das Ergebnis, um zu überprüfen, ob der Aufruf erfolgreich war, wie im folgenden Beispiel gezeigt.
 
 ```cs
 private async void launchURI_Click(object sender, RoutedEventArgs e)
@@ -225,6 +225,6 @@ Weitere Informationen finden Sie unter [Starten der Kontakte-App](launch-people-
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

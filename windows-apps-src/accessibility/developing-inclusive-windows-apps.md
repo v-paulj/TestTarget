@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: Hier erfahren Sie, wie Sie barrierefreie UWP-Apps für Windows 10 entwickeln, die Tastaturnavigation, Farb- und Kontrasteinstellungen und Unterstützung für Hilfstechnologien enthalten.
+Description: "Hier erfahren Sie, wie Sie barrierefreie UWP-Apps für Windows 10 entwickeln, die Tastaturnavigation, Farb- und Kontrasteinstellungen und Unterstützung für Hilfstechnologien enthalten."
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: Entwickeln von barrierefreien Windows 10-Apps
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 77c401fd9686cb260e7b2d9e4bdf47a91d76802e
+
 ---
 
 # Entwickeln von barrierefreien Windows-Apps  
@@ -80,6 +84,7 @@ Weitere Details finden Sie im vollständigen Thema [Prüfliste für Barrierefrei
 * [Microsoft-Hub für die barrierefreie Entwicklung](https://msdn.microsoft.com/enable)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

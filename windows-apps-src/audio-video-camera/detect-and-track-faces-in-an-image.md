@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 84729E44-10E9-4D7D-8575-6A9D97467ECD
-description: In diesem Thema erfahren Sie, wie mit dem FaceDetector Gesichter in einem Bild erkannt werden. Der FaceTracker ist für die Verfolgung von Gesichtern im zeitlichen Verlauf einer Sequenz von Videoframes optimiert.
+description: "In diesem Thema erfahren Sie, wie mit dem FaceDetector Gesichter in einem Bild erkannt werden. Der FaceTracker ist für die Verfolgung von Gesichtern im zeitlichen Verlauf einer Sequenz von Videoframes optimiert."
 title: Erkennen von Gesichtern in Bildern oder Videos
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
+
 ---
 
 # Erkennen von Gesichtern in Bildern oder Videos
@@ -96,6 +100,7 @@ Rufen Sie [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows
 * [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

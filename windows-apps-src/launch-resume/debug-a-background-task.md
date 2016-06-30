@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Debuggen einer Hintergrundaufgabe
-description: Hier erfahren Sie, wie Sie eine Hintergrundaufgabe einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung im Windows-Ereignisprotokoll debuggen.
+description: "Hier erfahren Sie, wie Sie eine Hintergrundaufgabe einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung im Windows-Ereignisprotokoll debuggen."
 ms.assetid: 24E5AC88-1FD3-46ED-9811-C7E102E01E9C
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 1b49c3f06456eef2f3e56227ecb5af5fc991fb13
+
 ---
 
 # Debuggen einer Hintergrundaufgabe
@@ -111,8 +114,6 @@ Weitere Informationen zum Debuggen einer Hintergrundaufgabe mit VS finden Sie un
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

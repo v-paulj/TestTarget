@@ -1,8 +1,12 @@
 ---
 author: PatrickFarley
-Description: Wenden Sie bei der Verwendung von Geofencing in Ihrer App die folgenden bewährten Methoden an.
-title: Richtlinien für Geofencing-Apps
+Description: "Wenden Sie bei der Verwendung von Geofencing in Ihrer App die folgenden bewährten Methoden an."
+title: "Richtlinien für Geofencing-Apps"
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d631885eced58d360d3e0442cbb49ede7b9b86c3
+
 ---
 
 # Richtlinien für Geofencing-Apps
@@ -132,6 +136,7 @@ Falls Ihre App Geofence-Bereiche mit kleinem Radius erfordert, empfehlen Sie Ben
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
-title: Zertifizierungskit für Windows-Apps
-description: Damit Ihre App möglichst gute Chancen auf eine Veröffentlichung im Windows Store oder Windows-Zertifizierung hat, sollten Sie sie auf Ihrem Computer überprüfen und testen, bevor Sie sie zur Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen.
+title: "Zertifizierungskit für Windows-Apps"
+description: "Damit Ihre App möglichst gute Chancen auf eine Veröffentlichung im Windows Store oder Windows-Zertifizierung hat, sollten Sie sie auf Ihrem Computer überprüfen und testen, bevor Sie sie zur Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 16e116c2a92a6ad751b0e4fe58fc7b41de0455cb
+
 ---
 # Zertifizierungskit für Windows-Apps
 
@@ -95,6 +99,7 @@ Da Computer mit geringem Energieverbrauch weiterentwickelt werden, können sich 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

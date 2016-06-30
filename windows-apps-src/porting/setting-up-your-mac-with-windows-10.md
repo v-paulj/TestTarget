@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Verwenden Sie Ihren aktuellen Mac-Computer zum Entwickeln von Apps für Windows.
+description: "Verwenden Sie Ihren aktuellen Mac-Computer zum Entwickeln von Apps für Windows."
 title: Einrichten von Windows 10 auf Ihrem Mac
 ms.assetid: 6D520610-5DE0-476E-A792-AA57E002D309
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 10ebdb0a534d8f2931d15481c1bee4705268b0bb
+
 ---
 
 # Einrichten von Windows 10 auf Ihrem Mac
@@ -39,6 +43,7 @@ VirtualBox ist eine kostenlose Anwendung für die Ausführung virtueller Compute
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

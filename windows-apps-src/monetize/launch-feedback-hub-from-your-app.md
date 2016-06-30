@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Sie können Ihre Kunden dazu ermutigen, Feedback zu geben, indem Sie den Feedback-Hub über Ihre App starten.
-title: Starten des Feedback-Hubs über Ihre App
+Description: "Sie können Ihre Kunden dazu ermutigen, Feedback zu geben, indem Sie den Feedback-Hub über Ihre App starten."
+title: "Starten des Feedback-Hubs über Ihre App"
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
+translationtype: Human Translation
+ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
+ms.openlocfilehash: ccda01d9bfa4ffdff2bbce5d6c60c78e026270e5
+
 ---
 
 # Starten des Feedback-Hubs über Ihre App
@@ -73,6 +77,7 @@ Außerdem wird empfohlen, mindestens eine der folgenden Platzierungsoptionen fü
 * [Feedbackbericht](../publish/feedback-report.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

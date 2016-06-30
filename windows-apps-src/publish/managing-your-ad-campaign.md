@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Um Anzeigenkampagnen für Ihre App zu verwalten, klicken Sie auf der App-Seite im Windows Dev Center-Dashboard auf Monetisierung &gt; Bewerben Ihrer App.
+Description: "Um Anzeigenkampagnen für Ihre App zu verwalten, klicken Sie auf der App-Seite im Windows Dev Center-Dashboard auf Monetisierung &gt; Bewerben Ihrer App."
 title: Verwalten Ihrer Anzeigenkampagne
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8e6305f3e6904833245013ef7eb63809c97ec423
+
 ---
 
 # Verwalten Ihrer Anzeigenkampagne
@@ -46,6 +50,7 @@ Zum Vornehmen von Änderungen an einer Anzeigenkampagne klicken Sie auf deren Na
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

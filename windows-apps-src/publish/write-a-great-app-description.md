@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Eine aussagekräftige Beschreibung hebt Ihre App von anderen im Windows Store ab und animiert Kunden zum Download.
+Description: "Eine aussagekräftige Beschreibung hebt Ihre App von anderen im Windows Store ab und animiert Kunden zum Download."
 title: Erstellen einer interessanten App-Beschreibung
 ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
+translationtype: Human Translation
+ms.sourcegitcommit: 17e7724eaa8a33f17360eb6e24fcc22068c5d477
+ms.openlocfilehash: 56b8492fea59c9a744c948d27e728e2305388cf8
+
 ---
 
 # Erstellen einer interessanten App-Beschreibung
@@ -35,6 +39,7 @@ Hier einige Tipps für eine optimale App-Beschreibung.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

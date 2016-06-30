@@ -6,8 +6,8 @@ ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen and stylus interactions in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: 218fae32f8b63c8fe5499af7d3fe6c1f0404334c
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: e642e6ba5319dce2d78c243ab3c57a9ffcc6902f
 
 ---
 
@@ -47,7 +47,7 @@ Die Freihandplattform enthält drei Komponenten:
               **IInkD2DRenderer**
             ](https://msdn.microsoft.com/library/mt147263): Ermöglicht das Rendern von letzten Strichen im angegebenen Direct2D-Gerätekontext einer universellen Windows-App statt im standardmäßigen [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement. Dies ermöglicht die umfassende Anpassung der Freihandfunktionen.
 
-## <span id="inkcanvas"></span><span id="INKCANVAS"></span>Einfaches Freihandzeichnen mit „InkCanvas“
+## Einfaches Freihandzeichnen mit „InkCanvas“
 
 
 Platzieren Sie für einfaches Freihandzeichen einfach an einer beliebigen Stelle auf einer Seite ein [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement.
@@ -85,7 +85,7 @@ Die vom [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535
 
 Für die einfache Freihandeingabe müssen Sie sich nicht mit dem [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt befassen. Wenn Sie jedoch das Freihandverhalten des [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements anpassen und konfigurieren möchten, müssen Sie auf das entsprechende **InkPresenter**-Objekt zugreifen.
 
-## <span id="inkpresenter"></span><span id="INKPRESENTER"></span>Einfache Anpassung mit „InkPresenter“
+## Einfache Anpassung mit „InkPresenter“
 
 
 Für jedes [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement wird ein [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt instanziiert.
@@ -194,7 +194,7 @@ Diese Bilder zeigen, wie die Stifteingabe vom [**InkPresenter**](https://msdn.mi
 
 Um zusätzlich zur Freihandeingabe und zum Löschen weitere Funktionen wie etwa die Strichauswahl bereitzustellen, muss die App bestimmte Eingaben identifizieren, die vom [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt ohne Verarbeitung zur Behandlung an die App weitergegeben werden.
 
-## <span id="passthrough"></span><span id="PASSTHROUGH"></span>Weitergabe der Eingabe für die erweiterte Verarbeitung
+## Weitergabe der Eingabe für die erweiterte Verarbeitung
 
 
 Standardmäßig verarbeitet [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) sämtliche Eingaben als letzten Strich oder ausradierten Strich. Hierzu zählen auch Eingaben, die durch ein sekundäres Hardwareangebot wie etwa eine Zeichenstift-Drucktaste, eine rechte Maustaste oder ein ähnliches Element geändert werden.
@@ -420,7 +420,7 @@ public MainPage()
     }
 ```
 
-## <span id="iinkd2drenderer"></span><span id="IINKD2DRENDERER"></span>Benutzerdefiniertes Rendern von Freihandeingaben
+## Benutzerdefiniertes Rendern von Freihandeingaben
 
 
 Standardmäßig werden Freihandeingaben in einem Hintergrundthread mit geringer Wartezeit verarbeitet und während des Zeichnens „nass“ gerendert. Wenn der Strich abgeschlossen ist (der Stift oder Finger wurde angehoben oder die Maustaste losgelassen), wird er im UI-Thread verarbeitet und auf der [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Ebene „trocken“ gerendert (über dem Anwendungsinhalt, wo er die nasse Freihandeingabe ersetzt).
@@ -461,7 +461,7 @@ Ein vollständiges Beispiel für diese Funktionalität finden Sie unter [Komplex
  
 
 
-## <span id="related_topics"></span>Verwandte Artikel
+## Verwandte Artikel
 
 
 * [Behandeln von Zeigereingaben](handle-pointer-input.md)
@@ -491,6 +491,6 @@ Ein vollständiges Beispiel für diese Funktionalität finden Sie unter [Komplex
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,12 +1,15 @@
 ---
 author: mijacobs
-Description: Farben tragen dazu bei, dass sich Benutzer intuitiv in den verschiedenen Informationsebenen einer App zurechtfinden, und spielen eine wichtige Rolle für das Interaktionsmodell.
+Description: "Farben tragen dazu bei, dass sich Benutzer intuitiv in den verschiedenen Informationsebenen einer App zurechtfinden, und spielen eine wichtige Rolle für das Interaktionsmodell."
 title: Farben
 ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
-
 label: Color
 template: detail.hbs
 extraBodyClass: style-color
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 878470a7cbf44862c47a1428a1d25d332db32fdc
+
 ---
 
 # Farben
@@ -50,7 +53,7 @@ Standardmäßig werden Hyperlinks in der Akzentfarbe des Benutzers dargestellt. 
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            In XAML wird die primäre Akzentfarbe verfügbar gemacht als eine [Designressource](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx) mit dem Namen `SystemAccentColor`. Die Farbtöne stehen als `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2` und `SystemAccentColorDark3` zur Verfügung. Auch programmgesteuert verfügbar über die Enumeration[UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) und [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx).
+In XAML wird die primäre Akzentfarbe verfügbar gemacht als eine [Designressource](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx) mit dem Namen `SystemAccentColor`. Die Farbtöne stehen als `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2` und `SystemAccentColorDark3` zur Verfügung. Auch programmgesteuert verfügbar über die Enumeration[UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) und [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx).
     </div>
 </aside>
 
@@ -90,7 +93,7 @@ Zur Vereinfachung der Designentwicklung bietet Windows eine zusätzliche Farbpal
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-            Jede Farbe steht als eine XAML-[Designressource](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes) zur Verfügung und folgt der `System*Color`-Benennungskonvention (z. B.: `SystemChromeHighColor`). Sie können Ihr App-Design über [Application.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) oder [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx) steuern.
+Jede Farbe steht als eine XAML-[Designressource](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes) zur Verfügung und folgt der `System*Color`-Benennungskonvention (z. B.: `SystemChromeHighColor`). Sie können Ihr App-Design über [Application.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) oder [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx) steuern.
     </div>
 </aside>
 
@@ -99,6 +102,7 @@ Zur Vereinfachung der Designentwicklung bietet Windows eine zusätzliche Farbpal
 Unsere Palette ist für die Verwendung auf Bildschirmen optimiert. Zur optimalen Lesbarkeit von Text wird ein Mindestkontrastverhältnis gegenüber dem Hintergrund von 4,5:1 empfohlen. Es gibt viele kostenlose Tools, mit denen Sie testen können, ob Ihre Farben geeignet sind, z. B. [Kontrastverhältnis](http://leaverou.github.io/contrast-ratio/).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

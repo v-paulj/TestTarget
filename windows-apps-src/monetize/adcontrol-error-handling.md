@@ -3,6 +3,10 @@ author: mcleanbyron
 ms.assetid: 386c1ee4-a31c-4561-b193-36268bc90446
 description: Hier erfahren Sie, wie Sie mit Fehlern im Zusammenhang mit der AdControl in Ihrer App umgehen.
 title: AdControl-Fehlerbehandlung
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: a335b4b6548e910076b5a984cc6078aa6c18dc32
+
 ---
 
 # AdControl-Fehlerbehandlung
@@ -23,6 +27,7 @@ Dieser Abschnitt enthält exemplarische Vorgehensweisen, die zeigen, wie Sie Feh
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

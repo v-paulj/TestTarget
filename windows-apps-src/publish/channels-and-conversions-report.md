@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Im Bericht zu Kanälen und Konvertierungen im Windows Dev Center-Dashboard können Sie sehen, wie Kunden unter Windows 10 zu dem Eintrag Ihrer App gelangt sind.
-title: Bericht zu Kanälen und Konvertierungen
+Description: "Im Bericht zu Kanälen und Konvertierungen im Windows Dev Center-Dashboard können Sie sehen, wie Kunden unter Windows 10 zu dem Eintrag Ihrer App gelangt sind."
+title: "Bericht zu Kanälen und Konvertierungen"
 ms.assetid: C359B9FB-A17B-4A8E-B8EE-19F2F98AA4FF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e82299f156a7e4f82e9219dc9b0ef6171e72c74e
+
 ---
 
 # Bericht zu Kanälen und Konvertierungen
@@ -93,6 +97,7 @@ Bei benutzerdefinierten Kampagnen können Sie auch die Anzahl der App-Konvertier
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

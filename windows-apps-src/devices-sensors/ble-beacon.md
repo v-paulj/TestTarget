@@ -1,7 +1,10 @@
 ---
-author: DBirtolo
+author: msatranjr
 title: Bluetooth-Werbung
-description: Dieser Abschnitt enthält Artikel zur Integration von Bluetooth Low Energie-Ankündigungen (LE-Ankündigungen) in Apps für die Universelle Windows-Plattform (UWP) mithilfe der AdvertisementWatcher and AdvertisementPublisher APIs.
+description: "Dieser Abschnitt enthält Artikel zur Integration von Bluetooth Low Energie-Ankündigungen (LE-Ankündigungen) in Apps für die Universelle Windows-Plattform (UWP) mithilfe der AdvertisementWatcher and AdvertisementPublisher APIs."
+ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
+ms.openlocfilehash: a419ad04fe4f21867f2f1bd1664fbce39a7da792
+
 ---
 
 # Bluetooth-Werbung
@@ -24,6 +27,7 @@ Es gibt zwei Hauptfunktionen, die ein Entwickler mithilfe der Advertisement APIs
 Ein vollständiges Codebeispiel finden Sie unter [Beispiel für Bluetooth-Werbung](http://go.microsoft.com/fwlink/p/?LinkId=619990) bei Github.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

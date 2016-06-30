@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 1361E82A-202F-40F7-9239-56F00DFCA54B
-description: Dieser Artikel beschreibt die Schritte zum Aufnehmen von Fotos und Videos mit der MediaCapture-API sowie das Initialisieren und Herunterfahren von „MediaCapture“ und das Behandeln von Geräteausrichtungsänderungen.
-title: Aufnehmen von Fotos und Videos mit „MediaCapture“
+description: "Dieser Artikel beschreibt die Schritte zum Aufnehmen von Fotos und Videos mit der MediaCapture-API sowie das Initialisieren und Herunterfahren von „MediaCapture“ und das Behandeln von Geräteausrichtungsänderungen."
+title: "Aufnehmen von Fotos und Videos mit „MediaCapture“"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c20c735d38e6baabe2f8bc0c7c682706d3946ed9
+
 ---
 
 # Aufnehmen von Fotos und Videos mit „MediaCapture“
@@ -45,7 +49,7 @@ Um das Vorschauvideo korrekt auszurichten, erstellen Sie Membervariablen, um nac
 
 [!code-cs[PreviewVariables](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPreviewVariables)]
 
-Die folgende Beispielmethode initialisiert das Medienaufnahmeobjekt. Der Code sucht zunächst nach einem Videoaufzeichnungsgerät, das für die Medienaufnahme verwendet werden kann. Nachdem ein Gerät gefunden wurde, wird das **MediaCapture**-Objekt initialisiert, und es werden Handler für seine Ereignisse registriert. Als Nächstes wird ein [**MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/desktop/hh802710)-Objekt mit der ID des Videoaufzeichnungsgeräts erstellt. Die **MediaCapture**-Klasse wird anschließend mit einem [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598)-Aufruf initialisiert.
+Die folgende Beispielmethode initialisiert das Medienaufnahmeobjekt. Der Code sucht zunächst nach einem Videoaufzeichnungsgerät, das für die Medienaufnahme verwendet werden kann. Nachdem ein Gerät gefunden wurde, wird das **MediaCapture**-Objekt initialisiert, und es werden Handler für seine Ereignisse registriert. Als Nächstes wird ein [**MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/desktop/hh802710)-Objekt mit der ID des Videoaufzeichnungsgeräts erstellt. **MediaCapture** wird anschließend mit einem [**InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598)-Aufruf initialisiert.
 
 [!code-cs[InitializeCameraAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetInitializeCameraAsync)]
 
@@ -163,7 +167,7 @@ Das aufgenommene Foto kann schließlich codiert und gespeichert werden. Erstelle
 
 -   Durch Festlegen der „System.Photo.Orientation“-Bitmapeigenschaft wird die Ausrichtung des Fotos in den Metadaten der Datei codiert. Die eigentlichen Bilddaten werden dadurch nicht anders codiert. Weitere Informationen zum Einbetten von Metadaten in Bilddateien finden Sie unter [Bildmetadaten](image-metadata.md).
 
--   Weitere Informationen zum Arbeiten, Codieren und Decodieren von Bildern finden Sie unter [Bildverarbeitung](imaging.md).
+-   Weitere Informationen zum Arbeiten mit Bildern, u. a. zum Codieren und Decodieren von Bildern, finden Sie unter [Bildverarbeitung](imaging.md).
 
 ## Aufnehmen eines Videos
 
@@ -221,105 +225,106 @@ Sie können Handler für die Anwendungslebensdauerereignisse im Konstruktor der 
 
 Im Handler für das **Application.Suspending**-Ereignis sollten Sie die Registrierung der Handler für die Anzeige- und Geräteausrichungsereignisse aufheben und das **MediaCapture**-Objekt beenden. Das [**SystemMediaTransportControls.PropertyChanged**](https://msdn.microsoft.com/library/windows/apps/dn278720)-Ereignis, dessen Registrierung hier aufgehoben wird, wird für eine andere Aufgabe im Zusammenhang mit dem Anwendungslebenszyklus benötigt. Sie wird später in diesem Artikel beschrieben.
 
-Achtung Sie müssen das Anhalten einer Verzögerung anfordern, indem Sie [**SuspendingOperation.GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690) zu Beginn des Handlers für das Anhalteereignis aufrufen. Dadurch wird angefordert, dass das System vor dem Beenden der App auf Ihr Signal wartet, dass der Vorgang abgeschlossen wurde. Dies ist notwendig, da die **MediaCapture**-Vorgänge zum Beenden asynchron sind. Der **Application.Suspending**-Ereignishandler wurde also möglicherweise abgeschlossen, bevor die Kamera ordnungsgemäß beendet wurde.
+**Vorsicht** Sie müssen das Anhalten einer Verzögerung anfordern, indem Sie [**SuspendingOperation.GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690) zu Beginn des Handlers für das Anhalteereignis aufrufen. Dadurch wird angefordert, dass das System vor dem Beenden der App auf Ihr Signal wartet, dass der Vorgang abgeschlossen wurde. Dies ist notwendig, da die **MediaCapture**-Vorgänge zum Beenden asynchron sind. Der **Application.Suspending**-Ereignishandler wurde also möglicherweise abgeschlossen, bevor die Kamera ordnungsgemäß beendet wurde. Nachdem die erwarteten asynchronen Aufrufe abgeschlossen wurden, sollten Sie die Verzögerung freigeben, indem Sie [**SuspendingDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/br224685) aufrufen.
 
-[!code-cs[Nachdem die erwarteten asynchronen Aufrufe abgeschlossen wurden, sollten Sie die Verzögerung freigeben, indem Sie [**SuspendingDeferral.Complete**](https://msdn.microsoft.com/library/windows/apps/br224685) aufrufen.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSuspending)]
+[!code-cs[Anhalten](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSuspending)]
 
-Anhalten
+Registrieren Sie im Handler für das **Application.Resuming**-Ereignis Handler für die Anzeige- und Geräteausrichtungsereignisse, registrieren Sie das **SystemMediaTransportControls.PropertyChanged**-Ereignis, und initialisieren Sie das **MediaCapture**-Objekt.
 
-[!code-cs[Registrieren Sie im Handler für das **Application.Resuming**-Ereignis Handler für die Anzeige- und Geräteausrichtungsereignisse, registrieren Sie das **SystemMediaTransportControls.PropertyChanged**-Ereignis, und initialisieren Sie das **MediaCapture**-Objekt.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetResuming)]
+[!code-cs[Fortsetzen](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetResuming)]
 
-Fortsetzen
+Mit dem [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508)-Ereignis können Sie anfänglich Handler für die Ereignisse der Anzeige- und Geräteausrichtung registrieren und das **MediaCapture**-Objekt initialisieren.
 
-[!code-cs[Mit dem [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508)-Ereignis können Sie anfänglich Handler für die Ereignisse der Anzeige- und Geräteausrichtung registrieren und das **MediaCapture**-Objekt initialisieren.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetOnNavigatedTo)]
+[!code-cs[OnNavigatedTo](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetOnNavigatedTo)]
 
-OnNavigatedTo
+Wenn die App über mehrere Seiten verfügt, sollten Sie die Medienaufnahmeobjekte im [**OnNavigatingFrom**](https://msdn.microsoft.com/library/windows/apps/br227509)-Ereignishandler bereinigen.
 
-[!code-cs[Wenn die App über mehrere Seiten verfügt, sollten Sie die Medienaufnahmeobjekte im [**OnNavigatingFrom**](https://msdn.microsoft.com/library/windows/apps/br227509)-Ereignishandler bereinigen.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetOnNavigatingFrom)]
+[!code-cs[OnNavigatingFrom](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetOnNavigatingFrom)]
 
-OnNavigatingFrom Damit die App auf Geräten, die mehrere gleichzeitige Fenster unterstützen, korrekt ausgeführt wird, müssen Sie reagieren, wenn die App minimiert oder wiederhergestellt wird. Behandeln Sie hierfür das [**SystemMediaTransportControls.PropertyChanged**](https://msdn.microsoft.com/library/windows/apps/dn278720)-Ereignis.
+Damit die App auf Geräten, die mehrere gleichzeitige Fenster unterstützen, korrekt ausgeführt wird, müssen Sie reagieren, wenn die App minimiert oder wiederhergestellt wird. Behandeln Sie hierfür das [**SystemMediaTransportControls.PropertyChanged**](https://msdn.microsoft.com/library/windows/apps/dn278720)-Ereignis. Initialisieren Sie eine Membervariable, um einen Verweises auf das [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)-Objekt für Ihre App zu speichern.
 
-[!code-cs[Initialisieren Sie eine Membervariable, um einen Verweises auf das [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677)-Objekt für Ihre App zu speichern.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareSystemMediaTransportControls)]
+[!code-cs[DeclareSystemMediaTransportControls](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareSystemMediaTransportControls)]
 
-DeclareSystemMediaTransportControls Der Code zum Registrieren und Aufheben der Registrierung des **PropertyChanged**-Ereignisses sollte den App-Lebenszyklusereignissen hinzugefügt werden, wie in den Beispielen oben dargestellt. Überprüfen Sie im Handler für das Ereignis, ob es sich bei der Eigenschaftenänderung, die das Ereignis ausgelöst hat, um die [**SystemMediaTransportControlsProperty.SoundLevel**](https://msdn.microsoft.com/library/windows/apps/dn278721)-Eigenschaft handelt. Wenn diese Eigenschaft geändert wurde, überprüfen Sie den Wert der Eigenschaft. Wenn der Wert [**SoundLevel.Muted**](https://msdn.microsoft.com/library/windows/apps/hh700852) lautet, wurde die App minimiert. In diesem Fall sollten Sie die Medienaufnahmeressourcen entsprechend bereinigen. Andernfalls signalisiert das Ereignis, dass das App-Fenster wiederhergestellt wurde und Sie die Medienaufnahmeressourcen erneut initialisieren sollten.
+Der Code zum Registrieren und Aufheben der Registrierung des **PropertyChanged**-Ereignisses sollte den App-Lebenszyklusereignissen hinzugefügt werden, wie in den Beispielen oben dargestellt. Überprüfen Sie im Handler für das Ereignis, ob es sich bei der Eigenschaftenänderung, die das Ereignis ausgelöst hat, um die [**SystemMediaTransportControlsProperty.SoundLevel**](https://msdn.microsoft.com/library/windows/apps/dn278721)-Eigenschaft handelt. Wenn diese Eigenschaft geändert wurde, überprüfen Sie den Wert der Eigenschaft. Wenn der Wert [**SoundLevel.Muted**](https://msdn.microsoft.com/library/windows/apps/hh700852) lautet, wurde die App minimiert. In diesem Fall sollten Sie die Medienaufnahmeressourcen entsprechend bereinigen. Andernfalls signalisiert das Ereignis, dass das App-Fenster wiederhergestellt wurde und Sie die Medienaufnahmeressourcen erneut initialisieren sollten. Auf die **SoundLevel**-Eigenschaft muss im UI-Thread zugegriffen werden, damit der Code in dieser Methode in einen Aufruf von [**Dispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) eingeschlossen wird.
 
-[!code-cs[Auf die **SoundLevel**-Eigenschaft muss im UI-Thread zugegriffen werden. Der Code in dieser Methode ist daher in einen Aufruf von [**Dispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) eingeschlossen.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSystemMediaControlsPropertyChanged)]
+[!code-cs[SystemMediaControlsPropertyChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSystemMediaControlsPropertyChanged)]
 
-## SystemMediaControlsPropertyChanged
+## Weitere Überlegungen zur Benutzeroberfläche für die Medienaufzeichnung
 
-### Weitere Überlegungen zur Benutzeroberfläche für die Medienaufzeichnung
+### Festlegen der Einstellungen für die automatische Drehung
 
-Festlegen der Einstellungen für die automatische Drehung Wie im vorherigen Abschnitt zum Drehen des Vorschaustreams erwähnt, unterstützen einige Geräte das Festlegen von [**DisplayInformation.AutoRotationPreferences**](https://msdn.microsoft.com/library/windows/apps/dn264259), um zu verhindern, dass die Seite mit der [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278)-Klasse zum Anzeigen der Vorschau mit dem Gerät gedreht wird. Dies bietet eine hohes Maß an Benutzerfreundlichkeit auf Geräten, die dies unterstützen. Legen Sie diesen Wert fest, wenn Ihre App gestartet wird oder wenn Sie mit dem Anzeigen der Vorschau beginnen.
+Wie im vorherigen Abschnitt zum Drehen des Vorschaustreams erwähnt, unterstützen einige Geräte das Festlegen von [**DisplayInformation.AutoRotationPreferences**](https://msdn.microsoft.com/library/windows/apps/dn264259), um zu verhindern, dass die Seite mit der [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278)-Klasse zum Anzeigen der Vorschau mit dem Gerät gedreht wird. Dies bietet eine hohes Maß an Benutzerfreundlichkeit auf Geräten, die dies unterstützen. Legen Sie diesen Wert fest, wenn Ihre App gestartet wird oder wenn Sie mit dem Anzeigen der Vorschau beginnen. Sie sollten dennoch eine Verarbeitung der Vorschaudrehung für Geräte implementieren, die keine Einstellungen für die automatische Drehung unterstützen.
 
-[!code-cs[Sie sollten dennoch eine Verarbeitung der Vorschaudrehung für Geräte implementieren, die keine Einstellungen für die automatische Drehung unterstützen.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetAutoRotationPreferences)]
+[!code-cs[SetAutoRotationPreferences](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetAutoRotationPreferences)]
 
-### SetAutoRotationPreferences
+### Behandeln der Ausrichtung von UI-Elementen
 
-Behandeln der Ausrichtung von UI-Elementen Benutzer erwarten in der Regel, dass sich die UI-Elemente in einer Kamera-App, wie etwa die Schaltflächen für die Initiierung der Foto- oder Videoaufnahme, zusammen mit der Videovorschau drehen. Die folgende Methode veranschaulicht die Verwendung der zuvor definierten Hilfsmethoden für die Ausrichtung, damit die Schaltflächen in der Kamera-UI korrekt ausgerichtet werden. Rufen Sie diese Methode aus den Ereignishandlern [**DisplayInformation.OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) und [**SimpleOrientationSensor.OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/br206407) sowie beim ersten Starten der App auf.
+Benutzer erwarten in der Regel, dass sich die UI-Elemente in einer Kamera-App, wie etwa die Schaltflächen für die Initiierung der Foto- oder Videoaufnahme, zusammen mit der Videovorschau drehen. Die folgende Methode veranschaulicht die Verwendung der zuvor definierten Hilfsmethoden für die Ausrichtung, damit die Schaltflächen in der Kamera-UI korrekt ausgerichtet werden. Rufen Sie diese Methode aus den Ereignishandlern [**DisplayInformation.OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268) und [**SimpleOrientationSensor.OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/br206407) sowie beim ersten Starten der App auf. Ihre Implementierung kann je nach der Benutzeroberfläche der App variieren.
 
-[!code-cs[Ihre Implementierung kann je nach der Benutzeroberfläche der App variieren.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUpdateButtonOrientation)]
+[!code-cs[UpdateButtonOrientation](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUpdateButtonOrientation)]
 
-UpdateButtonOrientation
+Wenn die App beendet wird oder Sie zu einer Seite navigieren, die nicht im Zusammenhang mit der Medienaufzeichnung steht, setzen Sie die Einstellung für die automatische Drehung auf [**None**](https://msdn.microsoft.com/library/windows/apps/br226142), damit die Benutzeroberfläche normal gedreht wird.
 
-[!code-cs[Wenn die App beendet wird oder Sie zu einer Seite navigieren, die nicht im Zusammenhang mit der Medienaufzeichnung steht, setzen Sie die Einstellung für die automatische Drehung auf [**None**](https://msdn.microsoft.com/library/windows/apps/br226142), damit die Benutzeroberfläche normal gedreht wird.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRevertAutoRotationPreferences)]
+[!code-cs[RevertAutoRotationPreferences](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRevertAutoRotationPreferences)]
 
-### RevertAutoRotationPreferences
+### Unterstützen der gleichzeitigen Aufnahme von Fotos und Videos
 
-Unterstützen der gleichzeitigen Aufnahme von Fotos und Videos Mit der [**Windows.Media.Capture**](https://msdn.microsoft.com/library/windows/apps/br226738)-API können Sie gleichzeitig Fotos und Videos auf Geräten aufnehmen, die dies unterstützen. Der Kürze halber wird in diesem Beispiel mithilfe der [**ConcurrentRecordAndPhotoSupported**](https://msdn.microsoft.com/library/windows/apps/dn278843)-Eigenschaft ermittelt, ob die gleichzeitige Aufnahme von Videos und Fotos unterstützt wird. Eine robustere und empfohlene Methode hierfür ist jedoch die Verwendung von Kameraprofilen.
+Mit der [**Windows.Media.Capture**](https://msdn.microsoft.com/library/windows/apps/br226738)-API können Sie gleichzeitig Fotos und Videos auf Geräten aufnehmen, die dies unterstützen. Der Kürze halber wird in diesem Beispiel mithilfe der [**ConcurrentRecordAndPhotoSupported**](https://msdn.microsoft.com/library/windows/apps/dn278843)-Eigenschaft ermittelt, ob die gleichzeitige Aufnahme von Videos und Fotos unterstützt wird. Eine robustere und empfohlene Methode hierfür ist jedoch die Verwendung von Kameraprofilen. Weitere Informationen finden Sie unter [Kameraprofile](camera-profiles.md).
 
-Weitere Informationen finden Sie unter [Kameraprofile](camera-profiles.md). Die folgende Hilfsmethode aktualisiert die App-Steuerelemente so, dass sie dem aktuellen Aufnahmezustand der App entsprechen.
+Die folgende Hilfsmethode aktualisiert die App-Steuerelemente so, dass sie dem aktuellen Aufnahmezustand der App entsprechen. Rufen Sie diese Methode immer dann auf, wenn sich der Aufnahmezustand der App ändert, z. B. wenn die Videoaufzeichnung gestartet oder beendet wird.
 
-[!code-cs[Rufen Sie diese Methode immer dann auf, wenn sich der Aufnahmezustand der App ändert, z. B. wenn die Videoaufzeichnung gestartet oder beendet wird.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUpdateCaptureControls)]
+[!code-cs[UpdateCaptureControls](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUpdateCaptureControls)]
 
-### UpdateCaptureControls
+### Unterstützung von UI-Features für mobile Geräte
 
-Unterstützung von UI-Features für mobile Geräte Der gesamte in diesem Artikel dargestellte Code funktioniert in einer Universellen Windows-App. Mit ein paar zusätzlichen Codezeilen können Sie spezielle UI-Features nutzen, die nur auf mobilen Geräten vorhanden sind.
+Der gesamte in diesem Artikel dargestellte Code funktioniert in einer Universellen Windows-App. Mit ein paar zusätzlichen Codezeilen können Sie spezielle UI-Features nutzen, die nur auf mobilen Geräten vorhanden sind. Um diese Features zu verwenden, müssen Sie einen Verweis auf das Microsoft Mobile Extension SDK für die Universelle App-Plattform zu Ihrem Projekt hinzufügen.
 
-**Um diese Features zu verwenden, müssen Sie einen Verweis auf das Microsoft Mobile Extension SDK für die Universelle App-Plattform zu Ihrem Projekt hinzufügen.**
+**So fügen Sie einen Verweis auf das mobile Erweiterungs-SDK für die Unterstützung einer Hardwaretaste an der Kamera hinzu**
 
-1.  So fügen Sie einen Verweis auf das mobile Erweiterungs-SDK für die Unterstützung einer Hardwaretaste an der Kamera hinzu
+1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise**, und wählen Sie **Verweis hinzufügen...** aus.
 
-2.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise**, und wählen Sie **Verweis hinzufügen...** aus.
+2.  Erweitern Sie den Knoten für die **universelle Windows-App**, und wählen Sie **Erweiterungen** aus.
 
-3.  Erweitern Sie den Knoten für die **Universelle Windows-App**, und wählen Sie **Erweiterungen**aus.
+3.  Aktivieren Sie das Kontrollkästchen neben **Microsoft Mobile Extension SDK für Universelle App-Plattform**.
 
-Aktivieren Sie das Kontrollkästchen neben **Microsoft Mobile Extension SDK für Universelle App-Plattform**. Mobile Geräte verfügen über ein [**StatusBar**](https://msdn.microsoft.com/library/windows/apps/dn633864)-Steuerelement, das dem Benutzer Statusinformationen zum Gerät liefert. Dieses Steuerelement benötigt Speicherplatz auf dem Bildschirm, der die Medienaufnahme-UI beeinträchtigen kann. Sie können die Statusleiste ausblenden, indem Sie [**HideAsync**](https://msdn.microsoft.com/library/windows/apps/dn610339) aufrufen. Dieser Aufruf muss jedoch innerhalb eines Bedingungsblocks ausgeführt werden, in dem Sie die [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/dn949016)-Methode verwenden, um festzustellen, ob die API verfügbar ist. Diese Methode gibt nur „true“ auf mobilen Geräten zurück, die die Statusleiste unterstützen.
+Mobile Geräte verfügen über ein [**StatusBar**](https://msdn.microsoft.com/library/windows/apps/dn633864)-Steuerelement, das dem Benutzer Statusinformationen zum Gerät liefert. Dieses Steuerelement benötigt Speicherplatz auf dem Bildschirm, der die Medienaufnahme-UI beeinträchtigen kann. Sie können die Statusleiste ausblenden, indem Sie [**HideAsync**](https://msdn.microsoft.com/library/windows/apps/dn610339) aufrufen. Dieser Aufruf muss jedoch innerhalb eines Bedingungsblocks ausgeführt werden, in dem Sie die [**ApiInformation.IsTypePresent**](https://msdn.microsoft.com/library/windows/apps/dn949016)-Methode verwenden, um festzustellen, ob die API verfügbar ist. Diese Methode gibt nur „true“ auf mobilen Geräten zurück, die die Statusleiste unterstützen. Sie sollten die Statusleiste ausblenden, wenn die App gestartet wird oder wenn Sie die Vorschau von der Kamera beginnen.
 
-[!code-cs[Sie sollten die Statusleiste ausblenden, wenn die App gestartet wird oder wenn Sie die Vorschau von der Kamera beginnen.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHideStatusBar)]
+[!code-cs[HideStatusBar](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHideStatusBar)]
 
-HideStatusBar
+Wenn die App beendet wird oder der Benutzer die Medienaufnahmeseite der App verlässt, können Sie das Steuerelement wieder einblenden.
 
-[!code-cs[Wenn die App beendet wird oder der Benutzer die Medienaufnahmeseite der App verlässt, können Sie das Steuerelement wieder einblenden.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetShowStatusBar)]
+[!code-cs[ShowStatusBar](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetShowStatusBar)]
 
-ShowStatusBar Einige mobile Geräte verfügen über eine dedizierte Hardwaretaste für die Kamera, die einige Benutzer einem Steuerelement auf dem Bildschirm vorziehen. Um benachrichtigt zu werden, wenn die Hardwaretaste für die Kamera gedrückt wird, registrieren Sie einen Handler für das [**HardwareButtons.CameraPressed**](https://msdn.microsoft.com/library/windows/apps/dn653805)-Ereignis.
+Einige mobile Geräte verfügen über eine dedizierte Hardwaretaste für die Kamera, die einige Benutzer einem Steuerelement auf dem Bildschirm vorziehen. Um benachrichtigt zu werden, wenn die Hardwaretaste für die Kamera gedrückt wird, registrieren Sie einen Handler für das [**HardwareButtons.CameraPressed**](https://msdn.microsoft.com/library/windows/apps/dn653805)-Ereignis. Da diese API nur auf mobilen Geräten verfügbar ist, müssen Sie erneut **IsTypePresent** verwenden, um sicherzustellen, dass die API auf dem aktuellen Gerät unterstützt wird, bevor Sie versuchen, darauf zuzugreifen.
 
-[!code-cs[Da diese API nur auf mobilen Geräten verfügbar ist, müssen Sie erneut **IsTypePresent** verwenden, um sicherzustellen, dass die API auf dem aktuellen Gerät unterstützt wird, bevor Sie versuchen, darauf zuzugreifen.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPhoneUsing)]
+[!code-cs[PhoneUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPhoneUsing)]
 
-[!code-cs[PhoneUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterCameraButtonHandler)]
+[!code-cs[RegisterCameraButtonHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterCameraButtonHandler)]
 
-RegisterCameraButtonHandler
+Im Handler für das **CameraPressed**-Ereignis können Sie die Aufnahme eines Fotos initiieren.
 
-[!code-cs[Im Handler für das **CameraPressed**-Ereignis können Sie die Aufnahme eines Fotos initiieren.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCameraPressed)]
+[!code-cs[CameraPressed](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCameraPressed)]
 
-CameraPressed
+Wenn die App heruntergefahren wird oder der Benutzer die Medienaufnahmeseite der App verlässt, heben Sie die Registrierung des Hardwaretastenhandlers auf.
 
-[!code-cs[Wenn die App heruntergefahren wird oder der Benutzer die Medienaufnahmeseite der App verlässt, heben Sie die Registrierung des Hardwaretastenhandlers auf.](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUnregisterCameraButtonHandler)]
+[!code-cs[UnregisterCameraButtonHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUnregisterCameraButtonHandler)]
 
-UnregisterCameraButtonHandler **Hinweis** Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben.
+**Hinweis** Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
-## Informationen für die Entwicklung unter Windows 8.x oder Windows Phone 8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+## Verwandte Themen
 
-* [Verwandte Themen](camera-profiles.md)
-* [Kameraprofile](high-dynamic-range-hdr-photo-capture.md)
-* [HDR-Fotoaufnahmen (High Dynamic Range)](capture-device-controls-for-photo-and-video-capture.md)
-* [Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen](capture-device-controls-for-video-capture.md)
-* [Steuerelemente des Aufnahmegeräts für Videoaufnahmen](effects-for-video-capture.md)
-* [Effekte für die Videoaufnahme](scene-analysis-for-media-capture.md)
-* [Szenenanalyse für die Medienaufnahme](variable-photo-sequence.md)
-* [Variable Fotosequenz](get-a-preview-frame.md)
-* [Abrufen eines Vorschauframes](http://go.microsoft.com/fwlink/?LinkId=619479)
+* [Kameraprofile](camera-profiles.md)
+* [HDR-Fotoaufnahmen (High Dynamic Range)](high-dynamic-range-hdr-photo-capture.md)
+* [Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen](capture-device-controls-for-photo-and-video-capture.md)
+* [Steuerelemente des Aufnahmegeräts für Videoaufnahmen](capture-device-controls-for-video-capture.md)
+* [Effekte für die Videoaufnahme](effects-for-video-capture.md)
+* [Szenenanalyse für die Medienaufnahme](scene-analysis-for-media-capture.md)
+* [Variable Fotosequenz](variable-photo-sequence.md)
+* [Abrufen eines Vorschauframes](get-a-preview-frame.md)
+* [CameraStarterKit-Beispiel](http://go.microsoft.com/fwlink/?LinkId=619479)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

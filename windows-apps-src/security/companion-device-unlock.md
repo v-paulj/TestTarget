@@ -1,7 +1,11 @@
 ---
-title: Entsperren von Windows mit Begleitgeräten (IoT)
-description: Ein Begleitgerät ist ein Gerät, das in Verbindung mit dem Windows 10-Desktopgerät zur Verbesserung der Benutzerauthentifizierung verwendet werden kann. Mit dem Begleitgeräteframework kann ein Begleitgerät umfangreiche Funktionen für Microsoft Passport bereitstellen, auch wenn Windows Hello nicht verfügbar ist (beispielsweise, wenn das Windows 10-Desktopgerät über keine Kamera für die Gesichtsauthentifizierung oder über kein Fingerabdrucklesegerät verfügt).
+title: "Entsperren von Windows mit Begleitgeräten (IoT)"
+description: "Ein Begleitgerät ist ein Gerät, das in Verbindung mit dem Windows 10-Desktopgerät zur Verbesserung der Benutzerauthentifizierung verwendet werden kann. Mit dem Begleitgeräteframework kann ein Begleitgerät umfangreiche Funktionen für Microsoft Passport bereitstellen, auch wenn Windows Hello nicht verfügbar ist (beispielsweise, wenn das Windows 10-Desktopgerät über keine Kamera für die Gesichtsauthentifizierung oder über kein Fingerabdrucklesegerät verfügt)."
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: a6265ca66a1a9d729465845da1014d1aff0e7d4d
+ms.openlocfilehash: 18102d6277ff1c66ebd147b5c1fd2f2d6c91edd1
+
 ---
 # Entsperren von Windows mit Begleitgeräten (IoT)
 
@@ -676,6 +680,7 @@ Der Schlüssel für die oben aufgeführten Sicherheitsvorkehrungen liegt im Schu
 - Verfügbarkeit des Benutzeranwesenheitssignals
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Initialisieren von Direct3D 11
-description: Hier wird veranschaulicht, wie Sie Direct3D 9-Initialisierungscode in Direct3D 11 konvertieren, und Sie erfahren, wie Sie Handles zum Direct3D-Gerät und zum Gerätekontext abrufen und DXGI zum Einrichten einer Swapchain verwenden.
+title: "Initialisieren von Direct3D 11"
+description: "Hier wird veranschaulicht, wie Sie Direct3D 9-Initialisierungscode in Direct3D 11 konvertieren, und Sie erfahren, wie Sie Handles zum Direct3D-Gerät und zum Gerätekontext abrufen und DXGI zum Einrichten einer Swapchain verwenden."
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f0e25e43633d895673d640f139af338f6f0713f2
+
 ---
 
 # Initialisieren von Direct3D 11
@@ -226,6 +230,7 @@ Da wir jetzt über ein Gerätehandle und ein Vollbild-Renderziel verfügen, sind
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

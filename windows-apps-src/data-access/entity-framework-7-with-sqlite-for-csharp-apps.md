@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: BC7E8130-A28A-443C-8D7E-353E7DA33AE3
-description: Entity Framework (EF) ist eine objektrelationale Zuordnung, die Ihnen über domänenspezifische Objekte die Verwendung relationaler Daten ermöglicht.
-title: Entity Framework 7 mit SQLite für C#-Apps
+description: "Entity Framework (EF) ist eine objektrelationale Zuordnung, die Ihnen über domänenspezifische Objekte die Verwendung relationaler Daten ermöglicht."
+title: "Entity Framework 7 mit SQLite für C#-Apps"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4c9b674445e901a370f9822f8f11acdeba6061b6
+
 ---
 
 # Entity Framework 7 mit SQLite für C#-Apps
@@ -24,6 +28,7 @@ Derzeit unterstützt EF auf der UWP nur SQLite. Eine ausführliche exemplarische
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

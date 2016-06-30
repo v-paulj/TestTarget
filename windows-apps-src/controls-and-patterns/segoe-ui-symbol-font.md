@@ -1,11 +1,15 @@
 ---
 author: Jwmsft
-Description: In diesem Artikel finden Sie eine Liste der in der Schriftart „Segoe MDL2 Assets“ enthaltenen Glyphen und Hinweise zu deren Verwendung.
+Description: "In diesem Artikel finden Sie eine Liste der in der Schriftart „Segoe MDL2 Assets“ enthaltenen Glyphen und Hinweise zu deren Verwendung."
 Search.Refinement.TopicID: 184
-title: Richtlinien für Segoe MDL2-Symbole
+title: "Richtlinien für Segoe MDL2-Symbole"
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
 label: Segoe MDL2 icons
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 9071c7dfddba15738d7bad482fd14f7cbffaa1f7
+
 ---
 
 # Richtlinien für Segoe MDL2-Symbole
@@ -1611,6 +1615,7 @@ Verwenden Sie Glyphen der folgenden Liste für eine [**AppBar**](https://msdn.mi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

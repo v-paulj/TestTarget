@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: Es werden Barrierefreiheitskonzepte für UWP-Apps (Universelle Windows-Plattform) vorgestellt.
+Description: "Es werden Barrierefreiheitskonzepte für UWP-Apps (Universelle Windows-Plattform) vorgestellt."
 ms.assetid: C89D79C2-B830-493D-B020-F3FF8EB5FFDD
 title: Barrierefreiheit
 label: Accessibility
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3
+
 ---
 
 # Barrierefreiheit  
@@ -15,6 +19,7 @@ Es werden Barrierefreiheitskonzepte für UWP-Apps (Universelle Windows-Plattform
 
 Bei der Barrierefreiheit geht es darum, eine Anwendung so zu gestalten, dass sie auch von Menschen verwendet werden kann, bei denen bestimmte Beeinträchtigungen die Nutzung herkömmlicher Benutzeroberflächen verhindern oder erschweren. Für bestimmte Situationen gelten gesetzlich vorgeschriebene Vorgaben im Hinblick auf Barrierefreiheit. Es empfiehlt sich aber, dieses Thema auch unabhängig von den gesetzlichen Vorschriften zu berücksichtigen, um sicherzustellen, dass die Apps die größtmögliche Benutzergruppe erreichen. Es ist auch eine Windows Store-Deklaration zur Barrierefreiheit der App vorhanden.
 
+> [!NOTE]
 > Das Ausweisen der App als barrierefrei ist nur für den Windows Store relevant.
 
 | Artikel | Beschreibung |
@@ -38,6 +43,7 @@ Bei der Barrierefreiheit geht es darum, eine Anwendung so zu gestalten, dass sie
 * [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

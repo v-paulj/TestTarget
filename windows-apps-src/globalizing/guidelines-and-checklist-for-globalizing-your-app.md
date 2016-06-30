@@ -1,11 +1,15 @@
 ---
 author: DelfCo
-Description: Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und wenn Sie Ihre Apps für einen bestimmten Markt lokalisieren.
+Description: "Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und wenn Sie Ihre Apps für einen bestimmten Markt lokalisieren."
 Search.Refinement.TopicID: 180
-title: Richtlinien für Globalisierung und Lokalisierung
+title: "Richtlinien für Globalisierung und Lokalisierung"
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
 label: Do's and don'ts
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: bdbe6b3e319aa90a78660c664f1603bac93399ca
+
 ---
 
 # Empfohlene und nicht empfohlene Vorgehensweisen für Globalisierung und Lokalisierung
@@ -188,6 +192,7 @@ Bereiten Sie Ihre App für die einfache Anpassung an verschiedene Märkte vor, i
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

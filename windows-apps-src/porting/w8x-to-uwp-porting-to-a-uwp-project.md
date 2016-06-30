@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Sie haben zwei Möglichkeiten, wenn Sie mit dem Portierungsprozess beginnen.
+description: "Sie haben zwei Möglichkeiten, wenn Sie mit dem Portierungsprozess beginnen."
 title: Portieren eines Windows-Runtime 8.x-Projekts zu einem UWP-Projekt
 ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
+translationtype: Human Translation
+ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
+ms.openlocfilehash: 60f59c58aedc56da58350a050acd184a376b8067
+
 ---
 
 # Portieren eines Windows-Runtime 8.x-Projekts zu einem UWP-Projekt
@@ -172,6 +176,7 @@ Das nächste Thema ist [Problembehandlung](w8x-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

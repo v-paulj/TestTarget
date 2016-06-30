@@ -3,6 +3,9 @@ author: jnHs
 Description: Allgemeine Fragen zu Anzeigenkampagnen
 title: Allgemeine Fragen zu Anzeigenkampagnen
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
+ms.sourcegitcommit: 3f0664e0387e206c432ce92aa221bb5c604bb675
+ms.openlocfilehash: c61866aa6fb71d41d4c6150cfe6af449da21a1da
+
 ---
 
 # Allgemeine Fragen zu Anzeigenkampagnen
@@ -39,7 +42,9 @@ Arabisch, Chinesisch (traditionell), Chinesisch (vereinfacht), Dänisch, Deutsch
 
 ## Wann erfolgt die Abrechnung?
 
-Die Abrechnung erfolgt monatlich zu Beginn des Folgemonats.
+Ihnen werden jedes Mal, wenn auf Ihrem Konto 50 $ Gebühren anfallen (oder der entsprechende Betrag in der lokalen Währung Ihres Markts oder Ihrer Region), alle kostenpflichtigen Kampagnen für Ihr Konto in Rechnung gestellt.
+
+Wenn auf Ihrem Konto in dem Zeitraum von 30 Tagen nach dem letzten Abrechnungsdatum weniger als 50 $ Gebühren anfallen, werden Ihnen diese Gebühren zu Beginn des Folgemonats in Rechnung gestellt. Dadurch wird sichergestellt, dass auf Ihrem Konto nicht länger als einen Monat Gebühren für Anzeigenkampagnen offen bleiben.
 
 ## Wie kann ich eine Kreditkarte löschen oder die Details einer Kreditkarte bearbeiten?
 
@@ -54,6 +59,7 @@ Wechseln Sie zu <http://commerce.microsoft.com>, melden Sie sich mit den Anmelde
 * [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

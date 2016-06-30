@@ -1,7 +1,11 @@
 ---
 author: QuinnRadich
-title: Neuigkeiten in Windows 10, Version 1511 – November 2015
-description: Windows 10 (Version 1511) und neue Entwicklungstools stellen Werkzeuge, Features und Umgebungen zur Verfügung, die durch die neue universelle Windows-Plattform unterstützt werden.
+title: "Neuigkeiten in Windows 10, Version 1511 – November 2015"
+description: "Windows 10 (Version 1511) und neue Entwicklungstools stellen Werkzeuge, Features und Umgebungen zur Verfügung, die durch die neue universelle Windows-Plattform unterstützt werden."
+translationtype: Human Translation
+ms.sourcegitcommit: 1029eff0f21c62f8235f37516971996791051d4c
+ms.openlocfilehash: 07d40584e998d358c6c80bd5aec43be885a79495
+
 ---
 
 # Neuigkeiten in Windows
@@ -26,6 +30,7 @@ Zertifizierungskit für Windows-Apps | Das Zertifizierungskits für Windows-Apps
 Entwurfsvorlagen zum Herunterladen | Entdecken Sie unsere neuen UWP-App-Entwurfsvorlagen für Adobe Photoshop. Zudem haben wir unsere Microsoft PowerPoint- und Adobe Illustrator-Vorlagen aktualisiert und eine PDF-Version unserer Richtlinien zur Verfügung gestellt. [Besuchen Sie die Seite zum Herunterladen von Entwurfsvorlagen](https://developer.microsoft.com/en-us/windows/design/assets).
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

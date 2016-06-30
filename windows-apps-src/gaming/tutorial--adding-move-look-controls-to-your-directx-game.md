@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Bewegungs-/Blicksteuerungen für Spiele
-description: Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen.
+title: "Bewegungs-/Blicksteuerungen für Spiele"
+description: "Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen."
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7adbfdb77af6992be9448969f635bdebac58344b
+
 ---
 
 # <span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Bewegungs-/Blicksteuerungen für Spiele
@@ -584,6 +588,7 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die univer
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -2,7 +2,11 @@
 author: scottmill
 ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Visuelle Ebene
-description: Die Windows.UI.Composition-API ermöglicht den Zugriff auf die Kompositionsebene zwischen der Frameworkebene (XAML) und der Grafikebene (DirectX).
+description: "Die Windows.UI.Composition-API ermöglicht den Zugriff auf die Kompositionsebene zwischen der Frameworkebene (XAML) und der Grafikebene (DirectX)."
+translationtype: Human Translation
+ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
+ms.openlocfilehash: 164c01737d27451adcb685f9cda544cc00634af4
+
 ---
 # Visuelle Ebene
 
@@ -56,16 +60,18 @@ Die Composition-API kann eine visuelle Struktur von Grund auf neu erstellen und 
 
 
 **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung unter Windows 8.x oder Windows Phone 8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
 ## <span id="Additional_Resources_"></span><span id="additional_resources_"></span><span id="ADDITIONAL_RESOURCES_"></span>Weitere Ressourcen:
 
--   Lesen Sie den MSDN-Artikel von Kenny Kerr zu dieser API: [Grafiken und Animationen – das Windows-Kompositionsmodul wird 10](https://msdn.microsoft.com/magazine/mt590968)
+-   Lesen Sie Kenny Kerrs MSDN-Artikel zu dieser API: [Grafiken und Animationen – Das Windows-Kompositionsmodul wird 10](https://msdn.microsoft.com/magazine/mt590968)
 -   Kompositionsbeispiele finden Sie auf der [GitHub-Seite zum Thema „Komposition“](https://github.com/Microsoft/composition).
--   Vollständige Referenzdokumentation für die API
--   Bekannte Probleme: [Bekannte Probleme](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues)
+-   [
+              **Ausführliche Referenzdokumentation für die API**
+            ](https://msdn.microsoft.com/library/windows/apps/Dn706878).
+-   Bekannte Probleme: [Bekannte Probleme](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues).
 
  
 
@@ -76,6 +82,7 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die unive
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

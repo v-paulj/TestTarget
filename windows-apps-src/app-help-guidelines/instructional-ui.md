@@ -1,9 +1,13 @@
 ---
 author: QuinnRadich
-Description: Entwerfen Sie eine Benutzeroberfläche mit Anleitungen, damit Benutzer lernen können, wie sie Ihre Windows Store-App nutzen können.
-title: Richtlinien für das Entwerfen von Benutzeroberflächen mit Anleitungen
+Description: "Entwerfen Sie eine Benutzeroberfläche mit Anleitungen, damit Benutzer lernen können, wie sie Ihre Windows Store-App nutzen können."
+title: "Richtlinien für das Entwerfen von Benutzeroberflächen mit Anleitungen"
 label: Instructional UI
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 1c8ab97a5625243a50fa3b40ae93f5928dc7d851
+
 ---
 
 # Richtlinien für Benutzeroberflächen mit Anleitungen
@@ -44,9 +48,9 @@ Vermeiden Sie es, die Benutzererfahrung durch Ihre Benutzeroberfläche mit Anlei
 
 Unten sind einige Fälle aufgeführt, in denen eine Benutzeroberfläche mit Anleitungen für Benutzer sinnvoll ist:
 
--   **Unterstützen der Benutzer beim Kennenlernen der Interaktionen per Toucheingabe.** Der folgende Screenshot zeigt eine Benutzeroberfläche mit Anleitungen, mit deren Hilfe ein Spieler lernt, wie er im Spiel „Cut the Rope“ Fingerbewegungen verwenden kann.
+-   **Unterstützen der Benutzer beim Kennenlernen der Interaktionen per Toucheingabe.** Der folgende Screenshot zeigt eine Benutzeroberfläche mit Anleitungen, mit deren Hilfe ein Spieler lernt, wie er im Spiel „Cut the Rope“ Touchgesten verwenden kann.
 
-    ![Screenshot aus dem Spiel, der die Meldung „Slide acress to cut the rope„ (Führen Sie durch Trennen des Seils eine Ziehbewegung aus) der Benutzeroberfläche mit Anweisungen zeigt.](images/in-game-controls-3.png)
+    ![Screenshot aus dem Spiel, der die Meldung „Slide across to cut the rope“ (Führen Sie zum Trennen des Seils eine Ziehbewegung aus.) der Benutzeroberfläche mit Anweisungen zeigt.](images/in-game-controls-3.png)
 
 -   **Erzielen eines ausgezeichneten ersten Eindrucks.** Beim ersten Starten von Movie Moments wird der Benutzer mithilfe von Anleitungen auf der Benutzeroberfläche dazu aufgefordert, mit der Erstellung von Filmen zu beginnen, ohne dass seine Benutzererfahrung beeinträchtig wird.
 
@@ -67,6 +71,7 @@ Unten sind einige Fälle aufgeführt, in denen eine Benutzeroberfläche mit Anle
 * [Richtlinien für die App-Hilfe](guidelines-for-app-help.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

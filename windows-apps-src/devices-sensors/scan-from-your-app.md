@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: Scannen aus Ihrer App
-description: Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können.
+description: "Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: fe01ccf5b0b91ffcca7937842cf0152622d59f9e
+
 ---
 # Scannen aus Ihrer App
 
@@ -170,6 +174,7 @@ Benutzer können dynamisch mit der [**FolderPicker**](https://msdn.microsoft.com
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

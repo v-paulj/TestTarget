@@ -1,11 +1,15 @@
 ---
 author: mijacobs
 Description: Die Navigation in UWP-Apps (Universelle Windows-Plattform) basiert auf einem flexiblen Modell aus Navigationsstrukturen, Navigationselementen und Funktionen auf Systemebene.
-title: Navigationsdesigngrundlagen für Universal Windows Platform (UWP)-Apps
+title: "Navigationsdesigngrundlagen für Universal Windows Platform (UWP)-Apps"
 ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
 label: History and backwards navigation
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
+
 ---
 
 #  Navigationsverlauf und Rückwärtsnavigation
@@ -307,6 +311,7 @@ Wenn der Benutzer zu einer anderen App wechselt und zu Ihrer App zurückkehrt, w
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

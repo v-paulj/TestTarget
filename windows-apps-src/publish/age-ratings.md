@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Auf der Seite „Altersfreigaben“ des App-Übermittlungsprozesses können Sie Informationen zu Ihrer App bereitstellen, damit sie die entsprechenden Altersfreigaben von der International Age Ratings Coalition (IARC) erhalten kann.
+Description: "Auf der Seite „Altersfreigaben“ des App-Übermittlungsprozesses können Sie Informationen zu Ihrer App bereitstellen, damit sie die entsprechenden Altersfreigaben von der International Age Ratings Coalition (IARC) erhalten kann."
 title: Altersfreigaben
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 559842fb6740236780756018d01036b835660309
+
 ---
 
 # Altersfreigaben
@@ -45,6 +49,7 @@ Bisher haben Entwickler die Altersfreigabe für ihre App selbst angegeben, ansta
 | 18+ (geeignet für Erwachsene)            | Spiele mit dieser Altersfreigabe können intensive, grausame Gewalt oder Blut enthalten, was nur für Erwachsene geeignet ist. Alle Inhalte müssen den [Inhaltsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944) entsprechen.                                                                                                                                                            |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

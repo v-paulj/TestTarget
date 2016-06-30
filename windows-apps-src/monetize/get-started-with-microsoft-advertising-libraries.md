@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: ae45490f-3eb1-4b7f-8e18-bf82f0ca5d6d
-description: Holen Sie sich die Informationen, die Sie für den Einstieg in die Verwendung der Microsoft Advertising-Bibliotheken benötigen, um in Ihren Apps Banner und Video-Interstitialanzeigen hinzuzufügen.
+description: "Holen Sie sich die Informationen, die Sie für den Einstieg in die Verwendung der Microsoft Advertising-Bibliotheken benötigen, um in Ihren Apps Banner und Video-Interstitialanzeigen hinzuzufügen."
 title: Erste Schritte mit den Microsoft Advertising-Bibliotheken
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 08168dc15b33d99a044eedd7864848ed7a858991
+
 
 ---
 
@@ -37,6 +41,7 @@ Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

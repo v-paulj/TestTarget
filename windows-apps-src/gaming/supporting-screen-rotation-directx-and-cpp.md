@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Unterstützen der Bildschirmausrichtung (DirectX und C++)
-description: An dieser Stelle erläutern wir die bewährten Methoden zum Umgang mit der Bildschirmausrichtung in Ihrer UWP-DirectX-App, sodass die Grafikhardware der Windows 10-Geräte effizient und effektiv verwendet wird.
+title: "Unterstützen der Bildschirmausrichtung (DirectX und C++)"
+description: "An dieser Stelle erläutern wir die bewährten Methoden zum Umgang mit der Bildschirmausrichtung in Ihrer UWP-DirectX-App, sodass die Grafikhardware der Windows 10-Geräte effizient und effektiv verwendet wird."
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8da32494e0bb0bd48d485c946df1c9a5baec7fbe
+
 ---
 
 # Unterstützen der Bildschirmausrichtung (DirectX und C++)
@@ -553,6 +557,7 @@ Wenn Sie nun die Rendermethode aufrufen, wird die aktuelle Drehungsmatrix (gemä
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

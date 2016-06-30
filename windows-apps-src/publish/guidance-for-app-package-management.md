@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Erfahren Sie, wie App-Pakete für Ihre Kunden verfügbar gemacht werden und bestimmte Paketszenarien verwaltet werden.
-title: Leitfaden für die Verwaltung von App-Paketen
+Description: "Erfahren Sie, wie App-Pakete für Ihre Kunden verfügbar gemacht werden und bestimmte Paketszenarien verwaltet werden."
+title: "Leitfaden für die Verwaltung von App-Paketen"
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: ac8d150f426c7d32e8a3b61b7f08cc0b84feedb8
+
 ---
 
 # Leitfaden für die Verwaltung von App-Paketen
@@ -134,6 +138,7 @@ Hinweis: Auch wenn Sie alle Pakete entfernen, die eine bestimmte Gerätefamilie 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

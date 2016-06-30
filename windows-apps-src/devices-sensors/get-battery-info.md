@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
 title: Abrufen von Akkuinformationen
-description: Erfahren Sie, wie Sie mithilfe von APIs im Windows.Devices.Power-Namespace ausführliche Akkuinformationen erhalten
+description: "Erfahren Sie, wie Sie mithilfe von APIs im Windows.Devices.Power-Namespace ausführliche Akkuinformationen erhalten"
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 716123f7401350748c7eb81a2ca4208a74b6e4ac
+
 ---
 # Abrufen von Akkuinformationen
 
@@ -334,6 +338,7 @@ Führen Sie schließlich Folgendes aus, um diese einfache Akku-App auszuführen:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

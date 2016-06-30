@@ -2,9 +2,13 @@
 author: Jwmsft
 title: Geteilte Darstellung
 ms.assetid: E9E4537F-1160-4183-9A83-26602FCFDC9A
-description: Ein Steuerelement für die geteilte Darstellung verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich.
+description: "Ein Steuerelement für die geteilte Darstellung verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich."
 label: Split view
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 391bfdbbf09474ad707dbbf306d4997825fa8386
+
 ---
 
 # Richtlinien für das SplitView -Steuerelement
@@ -58,6 +62,7 @@ Das Steuerelement für die geteilte Darstellung ist in seiner standardmäßigen 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

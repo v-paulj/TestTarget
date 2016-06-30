@@ -1,76 +1,80 @@
 ---
-title: Cryptographic keys
-description: This article shows how to use standard key derivation functions to derive keys and how to encrypt content using symmetric and asymmetric keys.
+title: "Kryptografische Schlüssel"
+description: "In diesem Artikel wird erläutert, wie Sie mithilfe standardmäßiger Schlüsselableitungsfunktionen Schlüssel ableiten und wie Sie Inhalte mithilfe symmetrischer und asymmetrischer Schlüssel verschlüsseln können."
 ms.assetid: F35BEBDF-28C5-4F91-A94E-F7D862B6ED59
 author: awkoren
+ms.sourcegitcommit: 4c8f586f711b1a9e2d2f252cf28a5239d9d68122
+ms.openlocfilehash: c23e0ba44a5013dca9ceec94ff434a34323d53bc
+
 ---
 
-# Cryptographic keys
+# Kryptografische Schlüssel
 
 
-\[ \[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \] \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-This article shows how to use standard key derivation functions to derive keys and how to encrypt content using symmetric and asymmetric keys.
+In diesem Artikel wird erläutert, wie Sie mithilfe standardmäßiger Schlüsselableitungsfunktionen Schlüssel ableiten und wie Sie Inhalte mithilfe symmetrischer und asymmetrischer Schlüssel verschlüsseln können.
 
-## Symmetric keys
-
-
-Symmetric key encryption, also called secret key encryption, requires that the key used for encryption also be used for decryption. You can use a [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) class to specify a symmetric algorithm and create or import a key. You can use static methods on the [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490) class to encrypt and decrypt data by using the algorithm and key.
-
-Symmetric key encryption typically uses block ciphers and block cipher modes. A block cipher is a symmetric encryption function that operates on fixed size blocks. If the message you want to encrypt is longer than the block length, you must use a block cipher mode. A block cipher mode is a symmetric encryption function built by using a block cipher. It encrypts plaintext as a series of fixed size blocks. The following modes are supported for apps:
-
--   The ECB (electronic codebook) mode encrypts each block of the message separately. This is not considered a secure encryption mode.
--   The CBC (cipher block chaining) mode uses the previous ciphertext block to obfuscate the current block. You must determine what value to use for the first block. This value is called the initialization vector (IV).
--   The CCM (counter with CBC-MAC) mode combines the CBC block cipher mode with a message authentication code (MAC).
--   The GCM (Galois counter mode) mode combines the counter encryption mode with the Galois authentication mode.
-
-Some modes such as CBC require that you use an initialization vector (IV) for the first ciphertext block. The following are common initialization vectors. You specify the IV when calling [**CryptographicEngine.Encrypt**](https://msdn.microsoft.com/library/windows/apps/br241494). For most cases it is important that the IV never be reused with the same key.
-
--   Fixed uses the same IV for all messages to be encrypted. This leaks information and its use is not recommended.
--   Counter increments the IV for each block.
--   Random creates a pseudorandom IV. You can use [**CryptographicBuffer.GenerateRandom**](https://msdn.microsoft.com/library/windows/apps/br241392) to create the IV.
--   Nonce-Generated uses a unique number for each message to be encrypted. Typically, the nonce is a modified message or transaction identifier. The nonce does not have to be kept secret, but it should never be reused under the same key.
-
-Most modes require that the length of the plaintext be an exact multiple of the block size. This usually requires that you pad the plaintext to obtain the appropriate length.
-
-While block ciphers encrypt fixed size blocks of data, stream ciphers are symmetric encryption functions that combine plaintext bits with a pseudorandom bit stream (called a key stream) to generate the ciphertext. Some block cipher modes such as output feedback mode (OTF) and counter mode (CTR) effectively turn a block cipher into a stream cipher. Actual stream ciphers such as RC4, however, typically operate at higher speeds than block cipher modes are capable of achieving.
-
-The following example shows how to use the [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537) class to create a symmetric key and use it to encrypt and decrypt data.
-
-## Asymmetric keys
+## Symmetrische Schlüssel
 
 
-Asymmetric key cryptography, also called public key cryptography, uses a public key and a private key to perform encryption and decryption. The keys are different but mathematically related. Typically the private key is kept secret and is used to encrypt data while the public key is distributed to interested parties and is used to decrypt data. Asymmetric cryptography is also useful for signing data.
+Für die symmetrische Verschlüsselung, auch Verschlüsselung mit geheimem Schlüssel genannt, muss der Schlüssel, der für die Verschlüsselung verwendet wird, auch für die Entschlüsselung verwendet werden. Mit einer [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537)-Klasse können Sie einen symmetrischen Algorithmus angeben und einen Schlüssel erstellen oder importieren. Sie können statische Methoden für die [**CryptographicEngine**](https://msdn.microsoft.com/library/windows/apps/br241490)-Klasse verwenden, um Daten mit dem Algorithmus und dem Schlüssel zu ver- und entschlüsseln.
 
-Because asymmetric cryptography is much slower than symmetric cryptography, it is seldom used to encrypt large amounts of data directly. Instead, it is typically used in the following manner to encrypt keys.
+Die Verschlüsselung mit symmetrischem Schlüssel verwendet in der Regel Blockchiffren und Blockchiffremodi. Eine Blockchiffre ist eine symmetrische Verschlüsselungsfunktion, die mit Blöcken mit fester Größe arbeitet. Wenn die zu verschlüsselnde Nachricht länger als die Blocklänge ist, muss der Blockchiffremodus verwendet werden. Ein Blockchiffremodus ist eine symmetrische Verschlüsselungsfunktion, die mithilfe einer Blockchiffre erstellt wird. Er verschlüsselt Klartext als eine Reihe von Blöcken mit fester Größe. Folgende Modi werden für Apps unterstützt:
 
--   Alice requires that Bob send her only encrypted messages.
--   Alice creates a private/public key pair, keeps her private key secret and publishes her public key.
--   Bob has a message he wants to send to Alice.
--   Bob creates a symmetric key.
--   Bob uses his new symmetric key to encrypt his message to Alice.
--   Bob uses Alice’s public key to encrypt his symmetric key.
--   Bob sends the encrypted message and the encrypted symmetric key to Alice (enveloped).
--   Alice uses her private key (from the private/public pair) to decrypt Bob’s symmetric key.
--   Alice uses Bob’s symmetric key to decrypt the message.
+-   Der ECB (Electronic Codebook)-Modus verschlüsselt jeden Block der Nachricht einzeln. Er gilt nicht als sicherer Verschlüsselungsmodus.
+-   Der CBC (Cipher Block Chaining)-Modus verwendet den vorherigen Chiffretextblock, um den aktuellen Block zu verschleiern. Sie müssen festlegen, welcher Wert für den ersten Block verwendet werden soll. Der Wert wird Initialisierungsvektor (IV) genannt .
+-   Der CCM (Counter with CBC-MAC)-Modus kombiniert den CBC-Blockchiffremodus mit einem Nachrichtenauthentifizierungscode (MAC).
+-   Der GCM (Galois Counter Mode)-Modus kombiniert den Counter-Modus mit dem Galois-Authentifizierungsmodus.
 
-You can use an [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478) object to specify an asymmetric algorithm or a signing algorithm, to create or import an ephemeral key pair, or to import the public key portion of a key pair.
+Für einige Modi wie zum Beispiel CBC ist ein Initialisierungsvektor (IV) für den ersten Chiffretextblock erforderlich. Im Folgenden finden Sie einige häufig verwendete Initialisierungsvektoren. Sie können den IV angeben, indem Sie [**CryptographicEngine.Encrypt**](https://msdn.microsoft.com/library/windows/apps/br241494) aufrufen. In den meisten Fällen ist es wichtig, dass derselbe IV niemals mit demselben Schlüssel erneut verwendet wird.
 
-## Deriving keys
+-   Bei einem festen IV kommt derselbe IV für alle zu verschlüsselnden Nachrichten zum Einsatz. Dabei werden Informationen weitergegeben und die Nutzung wird nicht empfohlen.
+-   Im Counter-Modus wird der IV bei jedem Block erhöht.
+-   Im Zufallsmodus wird ein pseudozufälliger IV erzeugt. Sie können [**CryptographicBuffer.GenerateRandom**](https://msdn.microsoft.com/library/windows/apps/br241392) verwenden, um den IV zu erstellen.
+-   „Nonce-generiert“ bedeutet, dass eine eindeutige Zahl für jede zu verschlüsselnde Nachricht verwendet wird. In der Regel ist eine Nonce eine modifizierte Nachricht oder ein Transaktionsbezeichner. Die Nonce muss nicht geheim gehalten werden, sollte jedoch niemals mit demselben Schlüssel wiederverwendet werden.
+
+In den meisten Modi muss die Länge des Klartextes ein genaues Vielfaches der Blockgröße sein. Hierfür ist es normalerweise erforderlich, den Klartext aufzufüllen, um die geeignete Länge zu erhalten.
+
+Während Blockchiffren zum Verschlüsseln fester Datenblöcke dienen, sind Stromchiffren symmetrische Verschlüsselungsfunktionen, die Klartextbits mit einem pseudozufälligen Bitstrom (Schlüsselstrom genannt) kombinieren, um den Chiffretext zu generieren. Einige Blockchiffremodi wie Output Feedback Mode (OTF) und Counter Mode (CTR) machen aus einer Blockchiffre faktisch eine Stromchiffre. Echte Datenstromchiffren wie RC4 arbeiten jedoch üblicherweise mit höheren Geschwindigkeiten, als sie von Blockchiffremodi erreicht werden können.
+
+Das folgende Beispiel zeigt die Verwendung eines symmetrischen Schlüssels mithilfe der [**SymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241537)-Klasse, um Daten zu verschlüsseln und zu entschlüsseln.
+
+## Asymmetrische Schlüssel
 
 
-It is often necessary to derive additional keys from a shared secret. You can use the [**KeyDerivationAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241518) class and one of the following specialized methods in the [**KeyDerivationParameters**](https://msdn.microsoft.com/library/windows/apps/br241524) class to derive keys.
+Bei der Kryptografie für asymmetrische Schlüssel, die auch als Kryptografie für öffentliche Schlüssel bezeichnet wird, werden für Ver- und Entschlüsselung ein öffentlicher und ein privater Schlüssel verwendet. Die Schlüssel unterscheiden sich voneinander, stehen jedoch in einer mathematischen Beziehung zueinander. Normalerweise wird der private Schlüssel geheim gehalten. Mit dem privaten Schlüssel werden Daten entschlüsselt, während der öffentliche Schlüssel den betroffenen Parteien mitgeteilt wird, die damit die Daten entschlüsseln. Die asymmetrische Kryptographie ist auch hilfreich beim Signieren von Daten.
 
-| Object                                                                            | Description                                                                                                                                |
+Da die asymmetrische Kryptografie im Vergleich zur symmetrischen Kryptografie deutlich langsamer ist, werden mit ihr nur selten große Datenmengen direkt verschlüsselt. Stattdessen wird sie häufig wie folgt zur Verschlüsselung von Schlüsseln verwendet:
+
+-   Andrea möchte, dass Sven ihr ausschließlich verschlüsselte Nachrichten sendet.
+-   Andrea erstellt ein Schlüsselpaar aus privatem und öffentlichem Schlüssel, hält ihren privaten Schlüssel geheim und veröffentlicht ihren öffentlichen Schlüssel.
+-   Sven möchte Andrea eine Nachricht senden.
+-   Er erstellt einen symmetrischen Schlüssel.
+-   Mithilfe seines neuen symmetrischen Schlüssels verschlüsselt Sven seine Nachricht an Andrea.
+-   Seinen symmetrischen Schlüssel verschlüsselt Sven mit dem öffentlichen Schlüssel von Andrea.
+-   Sven sendet die verschlüsselte Nachricht und den verschlüsselten symmetrischen Schlüssel an Andrea (codiert).
+-   Andrea entschlüsselt Svens symmetrischen Schlüssel mithilfe ihres privaten Schlüssels (aus dem Schlüsselpaar mit privatem und öffentlichem Schlüssel).
+-   Andrea entschlüsselt die Nachricht mithilfe von Svens symmetrischem Schlüssel.
+
+Mit einem [**AsymmetricKeyAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241478)-Objekt können Sie einen asymmetrischen Algorithmus oder einen Signaturalgorithmus angeben, um ein kurzlebiges Schlüsselpaar zu erstellen bzw. zu importieren oder den öffentlichen Schlüssel eines Schlüsselpaares zu importieren.
+
+## Ableiten von Schlüsseln
+
+
+Es ist häufig erforderlich, zusätzliche Schlüssel von einem gemeinsamen geheimen Schlüssel abzuleiten. Sie können die [**KeyDerivationAlgorithmProvider**](https://msdn.microsoft.com/library/windows/apps/br241518)-Klasse und eine der folgenden speziellen Methoden in der Klasse [**KeyDerivationParameters**](https://msdn.microsoft.com/library/windows/apps/br241524) verwenden, um Schlüssel abzuleiten.
+
+| Objekt                                                                            | Beschreibung                                                                                                                                |
 |-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| [**BuildForPbkdf2**](https://msdn.microsoft.com/library/windows/apps/br241525)    | Creates a KeyDerivationParameters object for use in the password-based key derivation function 2 (PBKDF2).                                 |
-| [**BuildForSP800108**](https://msdn.microsoft.com/library/windows/apps/br241526)  | Creates a KeyDerivationParameters object for use in a counter mode, hash-based message authentication code (HMAC) key derivation function. |
-| [**BuildForSP80056a**](https://msdn.microsoft.com/library/windows/apps/br241527)  | Creates a KeyDerivationParameters object for use in the SP800-56A key derivation function.                                                 |
+| [**BuildForPbkdf2**](https://msdn.microsoft.com/library/windows/apps/br241525)    | Erstellt ein KeyDerivationParameters-Objekt zur Verwendung in der kennwortbasierten Funktion 2 zum Ableiten von Schlüsseln (Password-Based Key Derivation Function 2, PBKDF2).                                 |
+| [**BuildForSP800108**](https://msdn.microsoft.com/library/windows/apps/br241526)  | Erstellt ein KeyDerivationParameters-Objekt zur Verwendung in einer Funktion zum Ableiten von Schlüsseln im Zählermodus mit einem Hash-basierten Nachrichtenauthentifizierungscode (Hash-based Message Authentication Code, HMAC). |
+| [**BuildForSP80056a**](https://msdn.microsoft.com/library/windows/apps/br241527)  | Erstellt ein KeyDerivationParameters-Objekt zur Verwendung in der Funktion SP800-56A zum Ableiten von Schlüsseln.                                                 |
 
  
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

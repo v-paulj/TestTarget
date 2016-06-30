@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Laden von Ressourcen im DirectX-Spiel
-description: In den meisten Spielen werden Ressourcen und Objekte (wie Shader, Texturen, vordefinierte Gitter oder andere Grafikdaten) an bestimmten Stellen aus dem lokalen Speicher oder über einen anderen Datenstrom geladen.
+description: "In den meisten Spielen werden Ressourcen und Objekte (wie Shader, Texturen, vordefinierte Gitter oder andere Grafikdaten) an bestimmten Stellen aus dem lokalen Speicher oder über einen anderen Datenstrom geladen."
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: fd4d2162e9a0007df34b465f570820843b326d72
+
 ---
 
 # Laden von Ressourcen im DirectX-Spiel
@@ -705,6 +709,7 @@ Sie sollten jetzt mit den Methoden zum asynchronen Laden häufig verwendeter Res
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

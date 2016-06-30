@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: In diesem Thema werden die bewährten Methoden für barrierefreien Text in Apps beschrieben. Damit stellen Sie sicher, dass der Kontrast zwischen Farben und Hintergründen ausreichend hoch ist.
+Description: "In diesem Thema werden die bewährten Methoden für barrierefreien Text in Apps beschrieben. Damit stellen Sie sicher, dass der Kontrast zwischen Farben und Hintergründen ausreichend hoch ist."
 ms.assetid: BA689C76-FE68-4B5B-9E8D-1E7697F737E6
-title: Anforderungen für barrierefreien Text
+title: "Anforderungen für barrierefreien Text"
 label: Accessible text requirements
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 1307b4f70cf7ffed300f4254a7d92b67b5afd085
+
 ---
 
 # Anforderungen für barrierefreien Text  
@@ -44,7 +47,7 @@ In einer UWP-App können die folgenden Standardelemente (meist als *Textelemente
             ](https://msdn.microsoft.com/library/windows/apps/BR209683): Rolle ist [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)
 * [
               **RichTextBlock**
-            ](https://msdn.microsoft.com/library/windows/apps/BR227565) (und Überlaufklasse [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/BR227565overflow)): Rolle ist [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)
+            ](https://msdn.microsoft.com/library/windows/apps/BR227565) (und Überlaufklasse [**RichTextBlockOverflow**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.richtextblockoverflow)): Rolle ist [**Text**](https://msdn.microsoft.com/library/windows/apps/BR209182)
 * [
               **RichEditBox**
             ](https://msdn.microsoft.com/library/windows/apps/BR227548): Rolle ist [**Edit**](https://msdn.microsoft.com/library/windows/apps/BR209182)
@@ -57,7 +60,7 @@ In den Textmodellen für XAML sind zwei Elemente enthalten, die hauptsächlich f
 <span id="text_in_graphics"/>
 <span id="TEXT_IN_GRAPHICS"/>
 ## Text in Grafiken  
-Verwenden Sie nach Möglichkeit keinen Text in Grafiken. Text, den Sie der in der App als [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752)-Element angezeigten Bildquelldatei hinzufügen, ist z. B. nicht automatisch barrierefrei oder für Hilfstechnologien lesbar. Falls Sie Text in Grafiken verwenden müssen, müssen Sie sicherstellen, dass der [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Wert, den Sie als Entsprechung für „alternativen Text“ angeben, diesen Text oder eine Zusammenfassung seiner Bedeutung enthält. Gleiches gilt auch, wenn Sie Textzeichen anhand von Vektoren als Teil einer [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355)-Klasse oder mit [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921) erstellen.
+Verwenden Sie nach Möglichkeit keinen Text in Grafiken. Text, den Sie der in der App als [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752)-Element angezeigten Bildquelldatei hinzufügen, ist z. B. nicht automatisch barrierefrei oder für Hilfstechnologien lesbar. Falls Sie Text in Grafiken verwenden müssen, müssen Sie sicherstellen, dass der [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Wert, den Sie als Entsprechung für „alternativen Text“ angeben, diesen Text oder eine Zusammenfassung seiner Bedeutung enthält. Ähnliches gilt auch, wenn Sie Textzeichen anhand von Vektoren als Teil einer [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355)-Klasse oder mit [**Glyphs**](https://msdn.microsoft.com/library/windows/apps/BR209921) erstellen.
 
 <span id="Text_font_size"/>
 <span id="text_font_size"/>
@@ -72,7 +75,7 @@ Viele Benutzer haben Probleme beim Lesen eines Texts in einer App, wenn ein zu k
 <span id="text_scale_factor"/>
 <span id="TEXT_SCALE_FACTOR"/>
 ## Textskalierungsfaktor  
-Verschiedene Textelemente und Steuerelemente verfügen über eine [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/BR209652_istextscalefactorenabled)-Eigenschaft. Diese Eigenschaft weist standardmäßig den Wert **true** auf. Wenn sie den Wert **true** besitzt, bewirkt die Einstellung **Textskalierung** auf dem Smartphone (**Einstellungen &gt; Erleichterte Bedienung**) die Skalierung der Textgröße in diesem Element. Die Skalierung wirkt sich auf Text mit kleiner **FontSize** deutlicher aus als auf Text mit großer **FontSize**. Sie können diese automatische Vergrößerung jedoch deaktivieren, indem Sie die **IsTextScaleFactorEnabled**-Eigenschaft eines Elements auf **false** festlegen. Probieren Sie dieses Markup aus. Passen Sie auf dem Smartphone die Einstellung für die **Textgröße** an, und verfolgen Sie, was mit den **TextBlock**-Elementen geschieht:
+Verschiedene Textelemente und Steuerelemente verfügen über eine [**IsTextScaleFactorEnabled**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.istextscalefactorenabled)-Eigenschaft. Diese Eigenschaft weist standardmäßig den Wert **true** auf. Wenn sie den Wert **true** besitzt, bewirkt die Einstellung **Textskalierung** auf dem Smartphone (**Einstellungen &gt; Erleichterte Bedienung**) die Skalierung der Textgröße in diesem Element. Die Skalierung wirkt sich auf Text mit kleiner **FontSize** deutlicher aus als auf Text mit großer **FontSize**. Sie können diese automatische Vergrößerung jedoch deaktivieren, indem Sie die **IsTextScaleFactorEnabled**-Eigenschaft eines Elements auf **false** festlegen. Probieren Sie dieses Markup aus. Passen Sie auf dem Smartphone die Einstellung für die **Textgröße** an, und verfolgen Sie, was mit den **TextBlock**-Elementen geschieht:
 
 XAML
 ```xml
@@ -126,6 +129,7 @@ Diese Typen verfügen über eine **IsTextScaleFactorEnabled**-Eigenschaft:
 * [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

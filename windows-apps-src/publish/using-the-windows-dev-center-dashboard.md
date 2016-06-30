@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Im Windows Dev Center-Dashboard können Sie all Ihre Apps für Windows-Geräte zentral verwalten und übermitteln.
+Description: "Im Windows Dev Center-Dashboard können Sie all Ihre Apps für Windows-Geräte zentral verwalten und übermitteln."
 title: Verwenden des Windows Dev Center-Dashboards
 ms.assetid: FB63F773-71AC-464E-BDE1-21C429FB2B0B
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7478a832cea6114c7a6e7f6be5cc3e908981a64c
+
 ---
 
 # Verwenden des Windows Dev Center-Dashboards
@@ -33,6 +37,7 @@ Apps, die im vorherigen Windows Phone Dev Center und Windows Store-Dashboard mit
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

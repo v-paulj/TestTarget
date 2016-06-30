@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: CB924E17-C726-48E7-A445-364781F4CCA1
-description: In diesem Artikel wird gezeigt, wie die APIs im Windows.Media.Audio-Namespace zum Erstellen von Audiodiagrammen für Audiorouting sowie Misch- und Verarbeitungsszenarien verwendet werden.
+description: "In diesem Artikel wird gezeigt, wie die APIs im Windows.Media.Audio-Namespace zum Erstellen von Audiodiagrammen für Audiorouting sowie Misch- und Verarbeitungsszenarien verwendet werden."
 title: Audiodiagramme
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7e8df66a1fc4c95cb8b0b4be9eded8ef58b6803a
+
 ---
 
 # Audiodiagramme
@@ -64,7 +68,7 @@ Eine Geräteingabeknoten liefert Audiodaten von einem an das System angeschlosse
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-Wenn Sie ein spezielles Audioaufnahmegerät für den Geräteeingabeknoten festlegen möchten, können Sie die [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)-Klasse verwenden, um eine Liste der verfügbaren Audioaufnahmegeräte abzurufen, indem Sie [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) aufrufen und die von [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817) zurückgegebene Auswahl des Audioaufnahmegeräts übergeben. Sie können eines der zurückgegebenen **DeviceInformation**-Objekte programmgesteuert auswählen oder die Benutzeroberfläche anzeigen, damit der Benutzer ein Gerät auswählen und dieses dann an die [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)-Methode übergeben kann.
+Wenn Sie ein spezielles Audioaufnahmegerät für den Geräteeingabeknoten festlegen möchten, können Sie die [**Windows.Devices.Enumeration.DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)-Klasse verwenden, um eine Liste der verfügbaren Audioaufnahmegeräte abzurufen, indem Sie [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432) aufrufen und die von [**Windows.Media.Devices.MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/br226817) zurückgegebene Auswahl des Audioaufnahmegeräts übergeben. Sie können eines der zurückgegebenen **DeviceInformation**-Objekte programmgesteuert auswählen oder Benutzeroberfläche anzeigen, damit der Benutzer ein Gerät auswählen und dieses dann an die [**CreateDeviceInputNodeAsync**](https://msdn.microsoft.com/library/windows/apps/dn914218)-Methode übergeben kann.
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
@@ -207,6 +211,7 @@ Mit der Audiodiagramm-API können Sie Audioeffekte zu jedem Knotentyp in einem D
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

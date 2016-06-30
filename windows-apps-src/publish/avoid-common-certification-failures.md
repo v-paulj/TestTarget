@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zertifizierung von Apps verhindern oder nach der Veröffentlichung der App bei einer Stichprobenkontrolle auftreten können.
+Description: "Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zertifizierung von Apps verhindern oder nach der Veröffentlichung der App bei einer Stichprobenkontrolle auftreten können."
 title: Vermeiden allgemeiner Zertifizierungsfehler
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 6af2842eeb5eeebfc9ffc5a7a3ec98fdcebddb74
+
 ---
 
 # Vermeiden allgemeiner Zertifizierungsfehler
@@ -40,6 +44,7 @@ Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zerti
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

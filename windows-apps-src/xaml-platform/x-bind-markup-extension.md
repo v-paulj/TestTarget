@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Die xBind-Markuperweiterung ist eine Alternative zur Bindung. xBind verfügt über weniger Features als die Bindungsfunktion, wird aber in kürzerer Zeit und mit weniger Arbeitsspeicher als die Bindungsfunktion ausgeführt und unterstützt ein besseres Debuggen.
+description: "Die xBind-Markuperweiterung ist eine Alternative zur Bindung. xBind verfügt über weniger Features als die Bindungsfunktion, wird aber in kürzerer Zeit und mit weniger Arbeitsspeicher als die Bindungsfunktion ausgeführt und unterstützt ein besseres Debuggen."
 title: xBind-Markuperweiterung
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: ceb5562ae08d7cc966f80fdb7e23f12afe040430
+
 ---
 
 # {x:Bind}-Markuperweiterung
@@ -135,6 +139,7 @@ Dieser beispielhafte XAML-Code verwendet **{x:Bind}** mit einer **ListView.ItemT
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

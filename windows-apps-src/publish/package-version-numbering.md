@@ -3,6 +3,10 @@ author: jnHs
 Description: Der Windows Store-erzwingt bestimmte Regeln, die im Zusammenhang mit Versionsnummern auftreten, die in verschiedenen Betriebssystemversionen unterschiedlich funktionieren.
 title: Paketversionsnummern
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9910ca5b5a3fd5d24643a1dfc6da3644d561c617
+
 ---
 
 # Paketversionsnummern
@@ -77,6 +81,7 @@ Hier finden Sie einige Beispiele für verschiedene Versionsnummern-Aktualisierun
 > **Hinweis**  Im Gegensatz zu APPX-Paketen werden die Versionsnummern in allen XAP-Paketen beim Ermitteln der für einen gegebenen Kunden bereitzustellenden Pakete ignoriert. Um ein Kunde von einem XAP-Paket auf ein neueres zu aktualisieren, stellen Sie sicher, dass die ältere XAP-Datei in der neuen Übermittlung entfernt wird.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

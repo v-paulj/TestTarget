@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Im Folgenden werden die XML/XAML-Namespacezuordnungen (xmlns) erläutert, wie sie im Stammelement der meisten XAML-Dateien zu finden sind. Darüber hinaus wird erläutert, wie ähnliche Zuordnungen für benutzerdefinierte Typen und Assemblys erstellt werden.
+description: "Im Folgenden werden die XML/XAML-Namespacezuordnungen (xmlns) erläutert, wie sie im Stammelement der meisten XAML-Dateien zu finden sind. Darüber hinaus wird erläutert, wie ähnliche Zuordnungen für benutzerdefinierte Typen und Assemblys erstellt werden."
 title: XAML-Namespaces und Namespacezuordnung
 ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
+translationtype: Human Translation
+ms.sourcegitcommit: 3ca9492b334bf4b3d4f0fcab8fca5625f4e23fa5
+ms.openlocfilehash: fe24a66836d85e8d102ebc6b23b42c32a687c593
+
 ---
 
 # XAML-Namespaces und Namespacezuordnung
@@ -109,6 +113,7 @@ Wenn Sie auf angefügte Eigenschaften verweisen, muss der Besitzer-Typ-Teil der 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

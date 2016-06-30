@@ -2,7 +2,11 @@
 author: martinekuan
 ms.assetid: CFB3601D-3459-465F-80E2-520F57B88F62
 title: Erstellen der App Hello, world (JS)
-description: In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen Hello, world-App für die Universelle Windows-Plattform (UWP) unter Windows 10 verwenden.
+description: "In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen Hello, world-App für die Universelle Windows-Plattform (UWP) unter Windows 10 verwenden."
+translationtype: Human Translation
+ms.sourcegitcommit: f3cb50e5b0b0baa73431392a1f6854a62f3655de
+ms.openlocfilehash: 5f534169117da94cb2249c897603f567c007299b
+
 ---
 # Erstellen der App „Hello, world“ (JS)
 
@@ -98,7 +102,7 @@ Standardmäßig wird die App auf dem lokalen Computer ausgeführt. Das Menü mit
 
    Drücken Sie F5.
 
-Die App wird in einem Fenster geöffnet. Zuerst wird ein standardmäßiger Begrüßungsbildschirm angezeigt. Der Begrüßungsbildschirm setzt sich aus einem Bild (SplashScreen.png) und einer Hintergrundfarbe (in der Manifestdatei der App angegeben) zusammen.
+Die App wird in einem Fenster geöffnet, und zuerst wird ein standardmäßiger Begrüßungsbildschirm angezeigt. Der Begrüßungsbildschirm setzt sich aus einem Bild (SplashScreen.png) und einer Hintergrundfarbe (in der Manifestdatei der App angegeben) zusammen.
 
 Nach dem Ausblenden des Begrüßungsbildschirms wird Ihre App angezeigt. Sie enthält einen schwarzen Bildschirm mit dem Text „Hier Inhalt einfügen“.
 
@@ -127,14 +131,14 @@ Ihre App kann auf jedem Windows 10-Gerät ausgeführt werden. Wir sehen uns nun
 Zusätzlich zu den Optionen zum Debuggen auf einem Desktopgerät enthält Visual Studio Optionen zum Bereitstellen und Debuggen Ihrer App auf einem physischen mobilen Gerät, das an den Computer angeschlossen ist, oder in einem Emulator für mobile Geräte. Sie können zwischen Emulatoren für Geräte mit unterschiedlichen Arbeitsspeicher- und Bildschirmkonfigurationen wählen.
 
 -   **Gerät**
--   **Emulator <SDK version> WVGA 4 Zoll 512 MB**
--   **Emulator <SDK version> WVGA 4 Zoll 1 GB**
+-   **Emulator <SDK version> WVGA 4 Zoll 512 MB**
+-   **Emulator <SDK version> WVGA 4 Zoll 1 GB**
 -   usw. (verschiedene Emulatoren mit anderen Konfigurationen)
 
 Es ist ratsam, Ihre App auf einem Gerät mit kleinem Bildschirm und begrenztem Arbeitsspeicher zu testen. Wählen Sie also die Option **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
 **So beginnen Sie mit dem Debuggen in einem Emulator für mobile Geräte**
 
-1.  Wählen Sie im Menü (![Debuggen starten](images/startdebug-full.png)) des Zielgeräts in der Symbolleiste **Standard** die Option **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
+1.  Wählen Sie auf der **Standardsymbolleiste** im Menü mit den Zielgeräten (![Menü „Debuggen starten“](images/startdebug-full.png)) die Option **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
 2.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Debuggen starten** (![Schaltfläche „Debuggen starten“](images/startdebug-sm.png)).
 
    oder
@@ -142,7 +146,7 @@ Es ist ratsam, Ihre App auf einem Gerät mit kleinem Bildschirm und begrenztem A
    Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.
 
    
-Visual Studio startet den ausgewählten Emulator, stellt die App bereit und startet sie. Im Emulator für mobile Geräte sieht die App wie folgt aus.
+Visual Studio startet den ausgewählten Emulator und stellt die App bereit und startet sie. Im Emulator für mobile Geräte sieht die App wie folgt aus.
 
 ![Erster App-Bildschirm auf dem mobilen Gerät](images/helloworld-1-js-phone.png)
 
@@ -176,7 +180,7 @@ Fügen wir der Datei „default.html“ doch ein paar neue Inhalte hinzu. Gehen 
 
 **So passen Sie die Startseite an**
 
-1.  Ersetzen Sie den vorhandenen Inhalt im [**body**](https://msdn.microsoft.com/library/windows/apps/Hh453011)-Element durch eine Überschrift erster Ebene mit dem Text „Hello, world!“, einen Text zum Anfordern des Benutzernamens, ein [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271)-Element zum Akzeptieren des Benutzernamens, ein [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)- Element und ein [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)-Element. Weisen Sie IDs für **input**, **button** und **div** zu.
+1.  Ersetzen Sie den vorhandenen Inhalt im [**body**](https://msdn.microsoft.com/library/windows/apps/Hh453011)-Element durch eine Überschrift erster Ebene mit dem Text „Hello, world!“, einen Text zum Anfordern des Benutzernamens, ein [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271)-Element zum Akzeptieren des Benutzernamens sowie durch ein [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)- und ein [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)-Element. Weisen Sie IDs für **input**, **button** und **div** zu.
 
  ```html
     <body class="win-type-body">
@@ -248,7 +252,7 @@ Sehen Sie sich den restlichen Code in „default.js“ an. Er behandelt das [**a
 })();
 ```
 
-Definieren wir nun einen Ereignishandler für Ihr [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)-Element. Unser neuer Ereignishandler ruft den Namen des Benutzers aus dem `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271)-Steuerelement ab und verwendet ihn, um eine Begrüßung an das `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)-Element auszugeben, das Sie im letzten Abschnitt erstellt haben.
+Definieren wir nun einen Ereignishandler für Ihr [**button**](https://msdn.microsoft.com/library/windows/apps/Hh453017)-Element. Unser neuer Ereignishandler ruft den Namen des Benutzers aus dem `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271)-Steuerelement ab und verwendet ihn, um eine Begrüßung an das `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)-Element auszugeben, das Sie im letzten Abschnitt erstellt haben.
 
 ### Verwenden von Ereignissen für Touch-, Maus- und Stifteingaben
 
@@ -260,14 +264,14 @@ Im nächsten Schritt erstellen wir den Ereignishandler.
 
 **So erstellen Sie den Ereignishandler**
 
-1.  Erstellen Sie in „default.js“ zwischen dem [**app.oncheckpoint**](https://msdn.microsoft.com/library/windows/apps/BR229839)-Ereignishandler und dem Aufruf von [**app.start**](https://msdn.microsoft.com/library/windows/apps/BR229705) eine [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312)-Ereignishandlerfunktion namens `buttonClickHandler`, die einen einzelnen Parameter übernimmt.
+1.  Erstellen Sie in „default.js“ zwischen dem [**app.oncheckpoint**](https://msdn.microsoft.com/library/windows/apps/BR229839)-Ereignishandler und dem Aufruf von [**app.start**](https://msdn.microsoft.com/library/windows/apps/BR229705) eine [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312)-Ereignishandlerfunktion namens `buttonClickHandler` mit einem einzelnen Parameter namens `eventInfo`.
 ```javascript
     function buttonClickHandler(eventInfo) {
      
         }
 ```
 
-2.  Rufen Sie innerhalb des Ereignishandlers den Namen des Benutzers aus dem `nameInput` [**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271)-Steuerelement ab, und erstellen Sie damit eine Begrüßung. Zeigen Sie das Ergebnis mithilfe des `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)-Elements an.
+2.  Rufen Sie innerhalb des Ereignishandlers den Namen des Benutzers aus dem `nameInput`[**input**](https://msdn.microsoft.com/library/windows/apps/Hh453271)-Steuerelement ab, und erstellen Sie damit eine Begrüßung. Zeigen Sie das Ergebnis mithilfe des `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)-Elements an.
 ```javascript
     function buttonClickHandler(eventInfo) {
             var userName = document.getElementById("nameInput").value;
@@ -333,11 +337,11 @@ Anschließend wird [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/
 
 **Tipp**   Die [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975)-Funktion sucht in der Datei „default.html“ nach WinJS-Steuerelementen und initialisiert sie. Bislang haben wir noch keines dieser Steuerelemente hinzugefügt. Es empfiehlt sich aber, diesen Code zu behalten, falls Sie später noch welche hinzufügen möchten.
 
-Ein gute Position für die Registrierung von Ereignishandlern für Steuerelemente, die keine WinJS-Steuerelemente sind, ist direkt nach dem Aufruf von [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975).
+Ein guter Punkt für die Registrierung von Ereignishandlern für Steuerelemente, die keine WinJS-Steuerelemente sind, ist direkt nach dem Aufruf von [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975).
 
 **So registrieren Sie Ihren Ereignishandler**
 
--   Rufen Sie `helloButton` im [**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679)-Ereignishandler in „default.js“ ab, und registrieren Sie unseren Ereignishandler für das [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312)-Ereignis mit [**addEventListener**](https://msdn.microsoft.com/library/windows/apps/Hh441145). Fügen Sie diesen Code nach dem Aufruf von [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) hinzu.
+-   Rufen Sie im [**onactivated**](https://msdn.microsoft.com/library/windows/apps/BR212679)-Ereignishandler in „default.js“ `helloButton` ab, und registrieren Sie unseren Ereignishandler für das [**click**](https://msdn.microsoft.com/library/windows/apps/Hh441312)-Ereignis mit [**addEventListener**](https://msdn.microsoft.com/library/windows/apps/Hh441145). Fügen Sie diesen Code nach dem Aufruf von [**WinJS.UI.processAll**](https://msdn.microsoft.com/library/windows/apps/Hh440975) hinzu.
 
 ```javascript
    app.onactivated = function (args) {
@@ -415,7 +419,7 @@ Im Gegensatz zu HTML-Steuerelementen besitzen WinJS-Steuerelemente keine dedizie
 
 Nun fügen wir Ihrer App ein [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895)-Steuerelement hinzu.
 
-1.  Fügen Sie in der Datei „default.html“ hinter dem `greetingOutput` [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)-Element ein [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321)- und ein [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895)-Steuerelement hinzu.
+1.  Fügen Sie in der Datei „default.html“ hinter dem `greetingOutput`[**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)-Element ein [**label**](https://msdn.microsoft.com/library/windows/apps/Hh453321)- und ein [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895)-Steuerelement hinzu.
 
     ```html
     <body class="win-type-body">
@@ -478,7 +482,7 @@ Durch Einfügen des Codes in eine completed-Funktion und deren Übergabe an die 
     </body>
 ```
 
-2.  Erstellen Sie in der Datei „default.js“ den Ereignishandler `ratingChanged` für das Ereignis [**change**](https://msdn.microsoft.com/library/windows/apps/BR211891) des Steuerelements [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895). Der [**eventInfo**](https://msdn.microsoft.com/library/windows/apps/Hh465776)-Parameter enthält eine **detail.tentativeRating**-Eigenschaft, welche die neue Benutzerbewertung liefert. Rufen Sie diesen Wert ab, und zeigen Sie ihn im [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)-Element für die Ausgabe an.
+2.  Erstellen Sie in der Datei „default.js“ den Ereignishandler `ratingChanged` für das Ereignis [**change**](https://msdn.microsoft.com/library/windows/apps/BR211891) des Steuerelements [**Rating**](https://msdn.microsoft.com/library/windows/apps/BR211895). Der [**eventInfo**](https://msdn.microsoft.com/library/windows/apps/Hh465776)-Parameter enthält eine **detail.tentativeRating**-Eigenschaft, die die neue Benutzerbewertung liefert. Rufen Sie diesen Wert ab, und zeigen Sie ihn im [**div**](https://msdn.microsoft.com/library/windows/apps/Hh453133)-Element für die Ausgabe an.
 
 ```javascript
         function ratingChanged(eventInfo) {
@@ -551,6 +555,7 @@ Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows 10 und die univer
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

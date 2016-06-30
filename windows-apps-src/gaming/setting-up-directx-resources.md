@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Einrichten von DirectX-Ressourcen und Darstellen eines Bilds
-description: Hier zeigen wir Ihnen das Erstellen eines Direct3D-Geräts, einer Swapchain und einer Renderzielansicht sowie die Darstellung des gerenderten Bilds auf dem Bildschirm.
+description: "Hier zeigen wir Ihnen das Erstellen eines Direct3D-Geräts, einer Swapchain und einer Renderzielansicht sowie die Darstellung des gerenderten Bilds auf dem Bildschirm."
 ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f60d7c5b526fcdea8552256a6ebe4b92d5736264
+
 ---
 
 # Einrichten von DirectX-Ressourcen und Darstellen eines Bilds
@@ -36,15 +40,15 @@ Wir deklarieren Direct3D-Schnittstellenvariablen mit der [intelligenten Zeigervo
         );
 ```
 
-Wenn Sie [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) mit ComPtr deklarieren, können Sie anschließend die ComPtr-Methode **GetAddressOf** zum Abrufen der Adresse des Zeigers auf **ID3D11RenderTargetView** (\*\*ID3D11RenderTargetView) für die Übergabe an [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) verwenden. **OMSetRenderTargets** bindet das Renderziel an den [Ausgabezusammenführungsstatus](https://msdn.microsoft.com/library/windows/desktop/bb205120), um das Renderziel als Ausgabeziel anzugeben. Nachdem die Beispiel-App gestartet wurde, wird sie initialisiert und geladen. Danach kann sie ausgeführt werden.
+Wenn Sie [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) mit ComPtr deklarieren, können Sie anschließend die ComPtr-Methode **GetAddressOf** zum Abrufen der Adresse des Zeigers auf **ID3D11RenderTargetView** (\*\*ID3D11RenderTargetView) für die Übergabe an [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) verwenden. **OMSetRenderTargets** bindet das Renderziel an den [Ausgabezusammenführungsstatus](https://msdn.microsoft.com/library/windows/desktop/bb205120), um das Renderziel als Ausgabeziel anzugeben.
 
-2. Erstellen des Direct3D-Geräts
+Nachdem die Beispiel-App gestartet wurde, wird sie initialisiert und geladen. Danach kann sie ausgeführt werden.
 
-### Für die Verwendung der Direct3D-API zum Rendern einer Szene müssen wir zunächst ein Direct3D-Gerät erstellen, das die Grafikkarte darstellt.
+### 2. Erstellen des Direct3D-Geräts
 
-Zum Erstellen des Direct3D-Geräts rufen wir die [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082)-Funktion auf. Im Array der [**D3D\_FEATURE\_LEVEL**](https://msdn.microsoft.com/library/windows/desktop/ff476329)-Werte geben wir die Ebenen 9.1 bis 11.1 an. Direct3D durchläuft das Array der Reihe nach und gibt die höchste Ebene des unterstützten Features zurück. Zum Abrufen der höchsten verfügbaren Featureebene listen wir also die **D3D\_FEATURE\_LEVEL**-Arrayeinträge vom höchsten zum niedrigsten Eintrag auf. Wir übergeben das [**D3D11\_CREATE\_DEVICE\_BGRA\_SUPPORT**](https://msdn.microsoft.com/library/windows/desktop/ff476107#D3D11_CREATE_DEVICE_BGRA_SUPPORT)-Flag an den *Flags*-Parameter, damit Direct3D-Ressourcen mit Direct2D ausgeführt werden können. Bei Verwendung der Debugversion übergeben wir zudem das [**D3D11\_CREATE\_DEVICE\_DEBUG**](https://msdn.microsoft.com/library/windows/desktop/ff476107#D3D11_CREATE_DEVICE_DEBUG)-Flag. Weitere Informationen zum Debuggen von Apps finden Sie unter [Verwenden der Debugschicht zum Debuggen von Apps](https://msdn.microsoft.com/library/windows/desktop/jj200584). Wir rufen das Direct3D 11.1-Gerät ([**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575)) und den Gerätekontext ([**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)) durch Abfragen des Direct3D 11-Geräts und -Gerätekontexts ab, die von [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) zurückgegeben werden.
+Für die Verwendung der Direct3D-API zum Rendern einer Szene müssen wir zunächst ein Direct3D-Gerät erstellen, das die Grafikkarte darstellt. Zum Erstellen des Direct3D-Geräts rufen wir die [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082)-Funktion auf. Im Array der [**D3D\_FEATURE\_LEVEL**](https://msdn.microsoft.com/library/windows/desktop/ff476329)-Werte geben wir die Ebenen 9.1 bis 11.1 an. Direct3D durchläuft das Array der Reihe nach und gibt die höchste Ebene des unterstützten Features zurück. Zum Abrufen der höchsten verfügbaren Featureebene listen wir also die **D3D\_FEATURE\_LEVEL**-Arrayeinträge vom höchsten zum niedrigsten Eintrag auf. Wir übergeben das [**D3D11\_CREATE\_DEVICE\_BGRA\_SUPPORT**](https://msdn.microsoft.com/library/windows/desktop/ff476107#D3D11_CREATE_DEVICE_BGRA_SUPPORT)-Flag an den *Flags*-Parameter, damit Direct3D-Ressourcen mit Direct2D ausgeführt werden können. Bei Verwendung der Debugversion übergeben wir zudem das [**D3D11\_CREATE\_DEVICE\_DEBUG**](https://msdn.microsoft.com/library/windows/desktop/ff476107#D3D11_CREATE_DEVICE_DEBUG)-Flag. Weitere Informationen zum Debuggen von Apps finden Sie unter [Verwenden der Debugschicht zum Debuggen von Apps](https://msdn.microsoft.com/library/windows/desktop/jj200584).
 
-3. Erstellen der Swapchain
+Wir rufen das Direct3D 11.1-Gerät ([**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575)) und den Gerätekontext ([**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)) durch Abfragen des Direct3D 11-Geräts und Gerätekontexts ab, die von [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082) zurückgegeben werden.
 
 ```cpp
         // First, create the Direct3D device.
@@ -95,13 +99,13 @@ Zum Erstellen des Direct3D-Geräts rufen wir die [**D3D11CreateDevice**](https:/
             );
 ```
 
-### Im nächsten Schritt erstellen wir eine Swapchain, die von dem Gerät zum Rendern und für die Anzeige verwendet wird.
+### 3. Erstellen der Swapchain
 
-Wir deklarieren und initialisieren eine [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)-Struktur, um die Swapchain zu beschreiben. Anschließend richten wir die Swapchain als Flip-Modell ein (d. h. eine Swapchain, für die der [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077#DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL)-Wert im **SwapEffect**-Member festgelegt ist), und wir legen das **Format**-Member auf [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059#DXGI_FORMAT_B8G8R8A8_UNORM) fest. Wir legen den **Count**-Member der [**DXGI\_SAMPLE\_DESC**](https://msdn.microsoft.com/library/windows/desktop/bb173072)-Struktur, die vom **SampleDesc**-Member angegeben wird, auf 1 fest. Außerdem legen wir den **Quality**-Member von **DXGI\_SAMPLE\_DESC** auf null fest, da MSAA (Multiple Sample Antialiasing) vom Flip-Modell nicht unterstützt wird. Wir legen den **BufferCount**-Member auf 2 fest, sodass die Swapchain für die Darstellung auf dem Anzeigegerät einen Frontpuffer sowie einen Hintergrundpuffer verwenden kann, der als Renderziel dient. Wir rufen das zugrunde liegende DXGI-Gerät durch Abfragen des Direct3D 11.1-Geräts ab.
+Im nächsten Schritt erstellen wir eine Swapchain, die von dem Gerät zum Rendern und für die Anzeige verwendet wird. Wir deklarieren und initialisieren eine [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)-Struktur, um die Swapchain zu beschreiben. Anschließend richten wir die Swapchain als Flip-Modell ein (d. h. eine Swapchain, für die der [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077#DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL)-Wert im **SwapEffect**-Member festgelegt ist), und wir legen das **Format**-Member auf [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059#DXGI_FORMAT_B8G8R8A8_UNORM) fest. Wir legen den **Count**-Member der [**DXGI\_SAMPLE\_DESC**](https://msdn.microsoft.com/library/windows/desktop/bb173072)-Struktur, die vom **SampleDesc**-Member angegeben wird, auf 1 fest. Außerdem legen wir den **Quality**-Member von **DXGI\_SAMPLE\_DESC** auf null fest, da MSAA (Multiple Sample Antialiasing) vom Flip-Modell nicht unterstützt wird. Wir legen den **BufferCount**-Member auf 2 fest, sodass die Swapchain für die Darstellung auf dem Anzeigegerät einen Frontpuffer sowie einen Hintergrundpuffer verwenden kann, der als Renderziel dient.
 
-Zur Minimierung des Stromverbrauchs – einem wichtigen Aspekt für batteriebetriebene Geräte wie Laptops und Tablet-PCs – rufen wir die [**IDXGIDevice1::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/ff471334)-Methode mit dem Wert 1 auf. Dieser Wert ist die maximale Anzahl an Hintergrundpufferframes, die von DXGI in die Warteschlange verschoben werden können. Dadurch wird sichergestellt, dass die App erst nach der vertikalen Austastung gerendert wird. Für die endgültige Erstellung der Swapchain müssen wir die übergeordnete Factory vom DXGI-Gerät abrufen.
+Wir rufen das zugrunde liegende DXGI-Gerät durch Abfragen des Direct3D 11.1-Geräts ab. Zur Minimierung des Stromverbrauchs – einem wichtigen Aspekt für batteriebetriebene Geräte wie Laptops und Tablet-PCs – rufen wir die [**IDXGIDevice1::SetMaximumFrameLatency**](https://msdn.microsoft.com/library/windows/desktop/ff471334)-Methode mit dem Wert 1 auf. Dieser Wert ist die maximale Anzahl an Hintergrundpufferframes, die von DXGI in die Warteschlange verschoben werden können. Dadurch wird sichergestellt, dass die App erst nach der vertikalen Austastung gerendert wird.
 
-Zum Abrufen des Adapters für das Gerät rufen wir [**IDXGIDevice::GetAdapter**](https://msdn.microsoft.com/library/windows/desktop/bb174531) auf. Anschließend rufen wir auf dem Adapter [**IDXGIObject::GetParent**](https://msdn.microsoft.com/library/windows/desktop/bb174542) auf, um die übergeordnete Factory ([**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556)) zu erhalten. Zum Erstellen der Swapchain rufen wir [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559) mit der Swapchainbeschreibung und dem Kernfenster der App auf. 4. Erstellen der Renderziel-Ansicht
+Für die endgültige Erstellung der Swapchain müssen wir die übergeordnete Factory vom DXGI-Gerät abrufen. Zum Abrufen des Adapters für das Gerät rufen wir [**IDXGIDevice::GetAdapter**](https://msdn.microsoft.com/library/windows/desktop/bb174531) auf. Anschließend rufen wir auf dem Adapter [**IDXGIObject::GetParent**](https://msdn.microsoft.com/library/windows/desktop/bb174542) auf, um die übergeordnete Factory ([**IDXGIFactory2**](https://msdn.microsoft.com/library/windows/desktop/hh404556)) zu erhalten. Zum Erstellen der Swapchain rufen wir [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559) mit der Swapchainbeschreibung und dem Kernfenster der App auf.
 
 ```cpp
             // If the swap chain does not exist, create it.
@@ -170,9 +174,9 @@ Zum Abrufen des Adapters für das Gerät rufen wir [**IDXGIDevice::GetAdapter**]
                 );
 ```
 
-### Zum Rendern von Grafik in dem Fenster müssen wir eine Renderziel-Ansicht erstellen.
+### 4. Erstellen der Renderziel-Ansicht
 
-Wir rufen [**IDXGISwapChain::GetBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb174570) zum Abrufen des Swapchain-Hintergrundpuffers auf, der beim Erstellen der Renderziel-Ansicht verwendet werden soll. Wir geben den Hintergrundpuffer als 2D-Textur an ([**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)). Zum Erstellen der Renderziel-Ansicht rufen wir [**ID3D11Device::CreateRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476517) mit dem Hintergrundpuffer der Swapchain auf. Wir müssen das Zeichnen im gesamten Kernfenster festlegen, indem wir den Viewport ([**D3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/ff476260)) als vollständige Größe des Swapchain-Hintergrundpuffers angeben. Wir verwenden den Viewport in einem Aufruf von [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480), um den Viewport an die [Rasterprogrammstufe](https://msdn.microsoft.com/library/windows/desktop/bb205125) der Pipeline zu binden. In der Rasterprogrammstufe werden Vektorinformationen in ein Rasterbild konvertiert. In diesem Fall ist keine Konvertierung erforderlich, da wir nur eine Volltonfarbe anzeigen. 5. Darstellen des gerenderten Bilds
+Zum Rendern von Grafik in dem Fenster müssen wir eine Renderziel-Ansicht erstellen. Wir rufen [**IDXGISwapChain::GetBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb174570) zum Abrufen des Swapchain-Hintergrundpuffers auf, der beim Erstellen der Renderziel-Ansicht verwendet werden soll. Wir geben den Hintergrundpuffer als 2D-Textur an ([**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)). Zum Erstellen der Renderziel-Ansicht rufen wir [**ID3D11Device::CreateRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476517) mit dem Hintergrundpuffer der Swapchain auf. Wir müssen das Zeichnen im gesamten Kernfenster festlegen, indem wir den Viewport ([**D3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/ff476260)) als vollständige Größe des Swapchain-Hintergrundpuffers angeben. Wir verwenden den Viewport in einem Aufruf von [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480), um den Viewport an die [Rasterprogrammstufe](https://msdn.microsoft.com/library/windows/desktop/bb205125) der Pipeline zu binden. In der Rasterprogrammstufe werden Vektorinformationen in ein Rasterbild konvertiert. In diesem Fall ist keine Konvertierung erforderlich, da wir nur eine Volltonfarbe anzeigen.
 
 ```cpp
         // Once the swap chain is created, create a render target view.  This will
@@ -210,23 +214,23 @@ Wir rufen [**IDXGISwapChain::GetBuffer**](https://msdn.microsoft.com/library/win
         m_d3dDeviceContext->RSSetViewports(1, &viewport);
 ```
 
-### Wir geben eine endlose Schleife zum fortlaufenden Rendern und Anzeigen der Szene ein.
+### 5. Darstellen des gerenderten Bilds
+
+Wir geben eine endlose Schleife zum fortlaufenden Rendern und Anzeigen der Szene ein.
 
 In dieser Schleife wird Folgendes aufgerufen:
 
-[
+1.  [
               **ID3D11DeviceContext::OMSetRenderTargets**
             ](https://msdn.microsoft.com/library/windows/desktop/ff476464), um das Renderziel als Ausgabeziel anzugeben.
-
-1.  [
+2.  [
               **ID3D11DeviceContext::ClearRenderTargetView**
             ](https://msdn.microsoft.com/library/windows/desktop/ff476388), um das Renderziel mit einer Volltonfarbe anzuzeigen.
-2.  [
+3.  [
               **IDXGISwapChain::Present**
             ](https://msdn.microsoft.com/library/windows/desktop/bb174576), um das gerenderte Bild im Fenster darzustellen.
-3.  Da wir zuvor die maximale Framelatenz auf 1 festgelegt haben, reduziert Windows die Geschwindigkeit der Renderschleife generell auf die Bildschirmaktualisierungsrate, die normalerweise etwa 60 Hz beträgt.
 
-Windows reduziert die Geschwindigkeit der Renderschleife, indem die App in den Ruhezustand versetzt wird, wenn sie [**Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) aufruft. Windows versetzt die App so lange in den Ruhezustand, bis die Bildschirmanzeige aktualisiert wird. 6. Ändern der Größe des App-Fensters und des Swapchainpuffers
+Da wir zuvor die maximale Framelatenz auf 1 festgelegt haben, reduziert Windows die Geschwindigkeit der Renderschleife generell auf die Bildschirmaktualisierungsrate, die normalerweise etwa 60 Hz beträgt. Windows reduziert die Geschwindigkeit der Renderschleife, indem die App in den Ruhezustand versetzt wird, wenn sie [**Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) aufruft. Windows versetzt die App so lange in den Ruhezustand, bis die Bildschirmanzeige aktualisiert wird.
 
 ```cpp
         // Enter the render loop.  Note that Windows Store apps should never exit.
@@ -258,9 +262,9 @@ Windows reduziert die Geschwindigkeit der Renderschleife, indem die App in den R
         }
 ```
 
-### Wenn sich die Größe des App-Fensters ändert, muss die App die Größe der Swapchainpuffer ändern, die Renderziel-Ansicht neu erstellen und anschließend das gerenderte Bild in der geänderten Größe darstellen.
+### 6. Ändern der Größe des App-Fensters und des Swapchainpuffers
 
-Zum Ändern der Größe der Swapchainpuffer rufen wir [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) auf. Bei diesem Aufruf lassen wir die Anzahl und das Format der Puffer unverändert (der *BufferCount*-Parameter ist auf den Wert zwei und der *NewFormat*-Parameter ist auf [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059#DXGI_FORMAT_B8G8R8A8_UNORM) festgelegt). Wir legen für die Größe des Swapchain-Hintergrundpuffers denselben Wert wie für das Fenster mit geänderter Größe fest. Nachdem wir die Größe des Swapchainpuffers geändert haben, erstellen wir das neue Renderziel, und wir stellen das neue gerenderte Bild genauso wie beim Initialisieren der App dar. Zusammenfassung und nächste Schritte
+Wenn sich die Größe des App-Fensters ändert, muss die App die Größe der Swapchainpuffer ändern, die Renderziel-Ansicht neu erstellen und anschließend das gerenderte Bild in der geänderten Größe darstellen. Zum Ändern der Größe der Swapchainpuffer rufen wir [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) auf. Bei diesem Aufruf lassen wir die Anzahl und das Format der Puffer unverändert (der *BufferCount*-Parameter ist auf den Wert zwei und der *NewFormat*-Parameter ist auf [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059#DXGI_FORMAT_B8G8R8A8_UNORM) festgelegt). Wir legen für die Größe des Swapchain-Hintergrundpuffers denselben Wert wie für das Fenster mit geänderter Größe fest. Nachdem wir die Größe des Swapchainpuffers geändert haben, erstellen wir das neue Renderziel, und wir stellen das neue gerenderte Bild genauso wie beim Initialisieren der App dar.
 
 ```cpp
             // If the swap chain already exists, resize it.
@@ -275,14 +279,14 @@ Zum Ändern der Größe der Swapchainpuffer rufen wir [**IDXGISwapChain::ResizeB
                 );
 ```
 
-## Wir haben ein Direct3D-Gerät, eine Swapchain und eine Renderziel-Ansicht erstellt und das gerenderte Bild auf dem Bildschirm dargestellt.
+## Zusammenfassung und nächste Schritte
 
+
+Wir haben ein Direct3D-Gerät, eine Swapchain und eine Renderziel-Ansicht erstellt und das gerenderte Bild auf dem Bildschirm dargestellt.
 
 Als Nächstes zeichnen wir ein Dreieck auf dem Bildschirm.
 
-Erstellen von Shadern und Zeichnen von Primitiven
-
-[Creating shaders and drawing primitives](creating-shaders-and-drawing-primitives.md)
+[Erstellen von Shadern und Zeichnen von Primitiven](creating-shaders-and-drawing-primitives.md)
 
  
 
@@ -293,6 +297,7 @@ Erstellen von Shadern und Zeichnen von Primitiven
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

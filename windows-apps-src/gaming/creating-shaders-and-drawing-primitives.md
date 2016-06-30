@@ -3,6 +3,10 @@ author: mtoepke
 title: Erstellen von Shadern und Zeichnen von Grundtypen
 description: Im Folgenden wird das Kompilieren und Erstellen von Shadern mit HLSL-Quelldateien veranschaulicht, die zum Zeichnen von Grundtypen auf dem Bildschirm verwendet werden.
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 15b5f83b45b928baaa484c10dc6e7bfe9c27a924
+
 ---
 
 # Erstellen von Shadern und Zeichnen von Grundtypen
@@ -294,6 +298,7 @@ Als Nächstes wird ein kreisender 3D-Würfel erstellt, und Lichteffekte werden a
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: Wenn Ihre App keine barrierefreie Bedienung mit der Tastatur ermöglicht, können Benutzer, die blind oder in ihrer Beweglichkeit eingeschränkt sind, Schwierigkeiten bei der Verwendung Ihrer App haben oder Ihre App möglicherweise überhaupt nicht nutzen.
+Description: "Wenn Ihre App keine barrierefreie Bedienung mit der Tastatur ermöglicht, können Benutzer, die blind oder in ihrer Beweglichkeit eingeschränkt sind, Schwierigkeiten bei der Verwendung Ihrer App haben oder Ihre App möglicherweise überhaupt nicht nutzen."
 ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: Barrierefreiheit der Tastaturnavigation
 label: Keyboard accessibility
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: c5b5ca247e3999850d7bf9b81347c201204db7e8
+
 ---
 
 # Barrierefreiheit der Tastaturnavigation  
@@ -57,7 +60,7 @@ Unabhängig davon, ob Sie [**TabIndex**](https://msdn.microsoft.com/library/wind
 <span id="keyboard_navigation_within_a_ui_element"/>
 <span id="KEYBOARD_NAVIGATION_WITHIN_A_UI_ELEMENT"/>
 ## Navigation innerhalb eines Benutzeroberflächenelements mithilfe der Tastatur  
-Bei zusammengesetzten Elementen ist es wichtig, eine korrekte interne Navigation zwischen den enthaltenen Elementen sicherzustellen. Ein zusammengesetztes Element kann seine derzeit aktiven untergeordneten Elemente verwalten, wodurch der Mehraufwand reduziert wird, der entsteht, wenn alle untergeordneten Elemente fokussierbar sein müssen. Ein solches zusammengesetztes Element ist in der Aktivierreihenfolge enthalten und behandelt Tastaturnavigationsereignisse selbst. Viele der zusammengesetzten Steuerelemente verfügen bereits über eine in ihre Ereignisbehandlung integrierte Navigationslogik. Das Durchlaufen von Elementen mit den Pfeiltasten ist z. B. standardmäßig für die Elemente eines [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-, [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242704view)-, [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868)- und [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678)-Steuerelements aktiviert.
+Bei zusammengesetzten Elementen ist es wichtig, eine korrekte interne Navigation zwischen den enthaltenen Elementen sicherzustellen. Ein zusammengesetztes Element kann seine derzeit aktiven untergeordneten Elemente verwalten, wodurch der Mehraufwand reduziert wird, der entsteht, wenn alle untergeordneten Elemente fokussierbar sein müssen. Ein solches zusammengesetztes Element ist in der Aktivierreihenfolge enthalten und behandelt Tastaturnavigationsereignisse selbst. Viele der zusammengesetzten Steuerelemente verfügen bereits über eine in ihre Ereignisbehandlung integrierte Navigationslogik. Das Durchlaufen von Elementen mit den Pfeiltasten ist z. B. standardmäßig für die Elemente eines [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-, [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview)-, [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868)- und [**FlipView**](https://msdn.microsoft.com/library/windows/apps/BR242678)-Steuerelements aktiviert.
 
 <span id="keyboard_activation"/>
 <span id="KEYBOARD_ACTIVATION"/>
@@ -152,13 +155,13 @@ Beispielcode für das Erstellen eines Tastenereignishandlers, der eine Überprü
 ## Tastaturnavigation für benutzerdefinierte Steuerelemente  
 Wenn zwischen untergeordneten Elementen eine räumliche Beziehung besteht, empfehlen wir, die Pfeiltasten als Tastenkombinationen für die Navigation zwischen den Elementen zu verwenden. Wenn Knoten der Strukturansicht separate untergeordnete Elemente für die Verarbeitung der Erweitern/Reduzieren- und Knoten-Aktivierung aufweisen, sollten Sie die Nach-links- und die Nach-rechts-Taste verwenden, um die Erweitern/Reduzieren-Funktion über die Tastatur bereitzustellen. Für ein ausgerichtetes Steuerelement, dessen Inhalt in einer bestimmten Richtung durchlaufen werden kann, verwenden Sie die entsprechenden Pfeiltasten.
 
-Im Allgemeinen implementieren Sie die benutzerdefinierte Tastenverarbeitung für benutzerdefinierte Steuerelemente, indem Sie in der Klassenlogik eine Überschreibung der Methoden [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeydown) und [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/BR209390_onkeyup) hinzufügen.
+Im Allgemeinen implementieren Sie die benutzerdefinierte Tastenverarbeitung für benutzerdefinierte Steuerelemente, indem Sie in der Klassenlogik eine Überschreibung der Methoden [**OnKeyDown**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967982.aspx) und [**OnKeyUp**](https://msdn.microsoft.com/en-us/library/windows/apps/hh967983.aspx) hinzufügen.
 
 <span id="An_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="an_example_of_a_visual_state_for_a_focus_indicator"/>
 <span id="AN_EXAMPLE_OF_A_VISUAL_STATE_FOR_A_FOCUS_INDICATOR"/>
 ## Beispiel für einen Ansichtszustand für eine Fokusanzeige  
-Wie bereits erwählt sollte jedes benutzerdefinierte Steuerelement, mit dem Benutzer fokussieren können, über eine visuelle Fokusanzeige verfügen. In der Regel kann diese Fokusanzeige einfach durch Zeichnen eines Rechtecks direkt um das normale umgebende Rechteck des Steuerelements erzeugt werden. Das [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)-Element für visuellen Fokus ist ein Peerelement der übrigen Zusammenstellung des Steuerelements in einer Steuerelementvorlage, wird jedoch anfänglich mit dem [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992)-Wert **Collapsed** festgelegt, da das Steuerelement noch nicht fokussiert ist. Wenn das Steuerelement im Fokus steht, wird ein visueller Zustand aufgerufen, der die **Visibility** des visuellen Fokus speziell auf **Visible** festlegt. Sobald der Fokus verschoben wird, wird ein anderer visueller Zustand aufgerufen, und die **Visibility** wird zu **Collapsed**.
+Wie bereits erwählt sollte jedes benutzerdefinierte Steuerelement, mit dem Benutzer fokussieren können, über eine visuelle Fokusanzeige verfügen. In der Regel kann diese Fokusanzeige einfach durch Zeichnen eines Rechtecks direkt um das normale umgebende Rechteck des Steuerelements erzeugt werden. Das [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371)-Element für visuellen Fokus ist ein Peerelement der übrigen Zusammenstellung des Steuerelements in einer Steuerelementvorlage, wird jedoch anfänglich mit dem [**Visibility**](https://msdn.microsoft.com/library/windows/apps/BR208992)-Wert **Collapsed** festgelegt, da das Steuerelement noch nicht fokussiert ist. Wenn das Steuerelement im Fokus steht, wird ein visueller Zustand aufgerufen, der die **Visibility** des visuellen Fokus speziell auf **Visible** festlegt. Sobald der Fokus verschoben wird, wird ein anderer visueller Zustand auf gerufen, und die **Visibility** wird zu **Collapsed**.
 
 Alle standardmäßigen XAML-Steuerelemente weisen eine entsprechende visuelle Fokusanzeige auf, wenn sie im Fokus stehen (sofern dies möglich ist). Es gibt auch potenziell unterschiedliche Designs je nach ausgewähltem Design des Benutzers (insbesondere wenn der Benutzer einen hohen Kontrast verwendet). Wenn Sie die XAML-Steuerelemente in Ihrer UI verwenden und nicht die Steuerelementvorlagen ersetzen, sind für visuelle Fokusanzeigen für Steuerelemente, die korrekt funktionieren und angezeigt werden, keine weiteren Schritte erforderlich sind. Wenn Sie aber eine neue Vorlage für ein Steuerelement verwenden möchten oder sich fragen, wie XAML-Steuerelemente ihre Fokusanzeigen bereitstellen, wird im restlichen Teil dieses Abschnitts erläutert, wie Sie dies in XAML und in der Steuerelementlogik erreichen.
 
@@ -237,6 +240,7 @@ Tastenkombinationen sind für Windows Phone-Apps in der Regel nicht relevant, da
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

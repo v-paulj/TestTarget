@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Starten, Fortsetzen und Hintergrundaufgaben
 description: In diesem Abschnitt wird beschrieben, was passiert, wenn eine UWP-App (Universelle Windows-Plattform) gestartet, angehalten, fortgesetzt und beendet wird.
 ms.assetid: 75011D52-1511-4ECF-9DF6-52CBBDB15BD7
+ms.sourcegitcommit: a8e6145f7a5c75d3b37277b80b07b0b3ad739d5c
+ms.openlocfilehash: ab20c4af5b9a87dc73775d304c314c9861d989d4
+
 ---
 
 # Starten, Fortsetzen und Hintergrundaufgaben
@@ -37,7 +40,6 @@ In diesem Abschnitt wird beschrieben, was passiert, wenn eine UWP-App gestartet,
 | [Behandeln der Dateiaktivierung](handle-file-activation.md)                                            | Erfahren Sie, wie Sie Ihre App registrieren müssen, damit sie der Standardhandler für einen bestimmten Dateityp wird.                                                                                                  |
 | [Richtlinien für Dateitypen und URIs](https://msdn.microsoft.com/library/windows/apps/hh700321) | Wenn Sie den Zusammenhang zwischen Windows UWP-Apps und den Dateitypen und Protokollen verstehen, die diese unterstützen, können Sie für eine einheitlichere und elegantere Bedienung Ihrer App sorgen. |
 | [Reservierte Datei- und URI-Schemanamen](reserved-uri-scheme-names.md)                             | Dieses Thema listet die reservierten Datei- und URI-Schemanamen auf, die für Ihre App nicht verfügbar sind.                                                                                |
-| Aktivieren integrierter Apps                                                                          | Beschreibung                                                                                                                                                                |
 | [Starten der Einstellungs-App von Windows](launch-settings-app.md)                                      | Erfahren Sie, wie Sie die Einstellungs-App von Windows starten.                                                                                                                              |
 | [Starten der Windows Store-App](launch-store-app.md)                                            | Erfahren Sie, wie Sie die Windows Store-App starten.                                                                                                                                 |
 | [Starten der Windows-Karten-App](launch-maps-app.md)                                              | Erfahren Sie, wie Sie die Windows-Karten-App starten.                                                                                                                                  |
@@ -101,8 +103,6 @@ Außerdem können Sie mit der [**SplashScreen**](https://msdn.microsoft.com/libr
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

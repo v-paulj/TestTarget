@@ -3,6 +3,10 @@ author: mtoepke
 title: Verwenden von Tiefen und Effekten in Primitiven
 description: Hier zeigen wir Ihnen die Verwendung von Tiefen, Perspektiven, Farben und anderen Effekten in Primitiven.
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 47547a226a69b2631313972ed67b39b1f29de402
+
 ---
 
 # Verwenden von Tiefen und Effekten in Primitiven
@@ -19,16 +23,16 @@ Hier zeigen wir Ihnen die Verwendung von Tiefen, Perspektiven, Farben und andere
 
 Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem mit den grundlegenden Konzepten der Grafikprogrammierung vertraut sein.
 
-Weiter wird angenommen, dass Sie die Themen [Schnellstart: Einrichten von DirectX-Ressourcen und Anzeigen von Bildern](setting-up-directx-resources.md) sowie [Erstellen von Shadern und Zeichnen von Primitiven](creating-shaders-and-drawing-primitives.md) bearbeitet haben.
+Des Weiteren gehen wir davon aus, dass Sie die Themen [Schnellstart: Einrichten von DirectX-Ressourcen und Anzeigen von Bildern](setting-up-directx-resources.md) sowie [Erstellen von Shadern und Zeichnen von Primitiven](creating-shaders-and-drawing-primitives.md) bearbeitet haben.
 
-**Zeitaufwand:** 20 Minuten.
+**Zeitaufwand:** 20 Minuten.
 
 Anweisungen
 ------------
 
 ### 1. Definieren von Würfelvariablen
 
-Zunächst müssen wir die **SimpleCubeVertex**-Struktur und die **ConstantBuffer**-Struktur für den Würfel definieren. In diesen Strukturen werden die Vertexpositionen und -farben für den Würfel sowie die Darstellung des Würfels angegeben. Wir deklarieren [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) und [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) mit [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) sowie eine Instanz von **ConstantBuffer**.
+Zunächst müssen wir die **SimpleCubeVertex**-Struktur und die **ConstantBuffer**-Struktur für den Würfel definieren. In diesen Strukturen werden die Vertexpositionen und -farben für den Würfel sowie die Darstellung des Würfels angegeben. Wir deklarieren [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) und [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) mit [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) und eine Instanz von **ConstantBuffer**.
 
 ```cpp
 struct SimpleCubeVertex
@@ -60,7 +64,7 @@ private:
 
 ### 2. Erstellen einer Tiefenschablonenansicht
 
-Zusätzlich zu der Renderzielansicht erstellen wir eine Tiefenschablonenansicht. Die Tiefenschablonenansicht ermöglicht Direct3D das effiziente Rendern von sich näher an der Kamera befindlichen Objekten vor Objekten, die sich weiter weg von der Kamera befinden. Bevor wir eine Ansicht für einen Tiefenschablonenpuffer erstellen können, müssen wir den Tiefenschablonenpuffer erstellen. Dazu füllen wir eine [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) zur Beschreibung des Tiefenschablonenpuffers auf und rufen anschließend [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521) zum Erstellen des Tiefenschablonenpuffers auf. Zum Erstellen der Tiefenschablonenansicht füllen wir eine [**D3D11\_DEPTH\_STENCIL\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476112) zur Beschreibung der Tiefenschablonenansicht aus und übergeben diese Beschreibung zusammen mit dem Tiefenschablonenpuffer an [**ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507).
+Zusätzlich zu der Renderzielansicht erstellen wir eine Tiefenschablonenansicht. Die Tiefenschablonenansicht ermöglicht Direct3D das effiziente Rendern von sich näher an der Kamera befindlichen Objekten vor Objekten, die sich weiter weg von der Kamera befinden. Bevor wir eine Ansicht für einen Tiefenschablonenpuffer erstellen können, müssen wir den Tiefenschablonenpuffer erstellen. Dazu füllen wir eine [**D3D11\_TEXTURE2D\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476253) zur Beschreibung des Tiefenschablonenpuffers auf und rufen anschließend [**ID3D11Device::CreateTexture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476521) zum Erstellen des Tiefenschablonenpuffers auf. Zum Erstellen der Tiefenschablonenansicht füllen wir eine [**D3D11\_DEPTH\_STENCIL\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476112) zur Beschreibung der Tiefenschablonenansicht auf und übergeben diese Beschreibung zusammen mit dem Tiefenschablonenpuffer an [**ID3D11Device::CreateDepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476507).
 
 ```cpp
         // Once the render target view is created, create a depth stencil view.  This
@@ -107,7 +111,7 @@ Zusätzlich zu der Renderzielansicht erstellen wir eine Tiefenschablonenansicht.
 
 ### 3. Aktualisieren der Perspektive mit dem Fenster
 
-Wir aktualisieren die Perspektivenprojektionsparameter für den Konstantenpuffer gemäß den Fensterabmessungen. Wir fixieren die Parameter auf ein 70-Grad-Sichtfeld mit einem Tiefenbereich von 0,01 bis 100.
+Wir aktualisieren die Perspektivenprojektionsparameter für den Konstantenpuffer gemäß Fensterabmessungen. Wir fixieren die Parameter auf ein 70-Grad-Sichtfeld mit einem Tiefenbereich von 0,01 bis 100.
 
 ```cpp
         // Finally, update the constant buffer perspective projection parameters
@@ -453,6 +457,7 @@ Als Nächstes wenden wir Texturen auf Primitive an.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,6 +1,8 @@
-Autor: Mtoepke #XAML Beispiele für Medien-Apps. Dieses Thema enthält XAML-Beispiele für Medien-Apps auf Xbox One.
+Autor: Mtoepke
+#XAML-Beispiele für Medien-Apps
+In diesem Thema werden XAML-Beispiele für Medien-Apps auf Xbox One aufgeführt.
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

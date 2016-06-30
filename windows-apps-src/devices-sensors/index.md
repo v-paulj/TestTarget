@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 0b891f63-02fa-4c30-b307-9fbcccac5caa
-title: Geräte, Sensoren und Leistung
-description: Damit Ihren Benutzern umfangreiche Einsatzmöglichkeiten geboten werden können, ist es möglicherweise erforderlich, externe Geräte oder Sensoren in die App zu integrieren.
+title: "Geräte, Sensoren und Leistung"
+description: "Damit Ihren Benutzern umfangreiche Einsatzmöglichkeiten geboten werden können, ist es möglicherweise erforderlich, externe Geräte oder Sensoren in die App zu integrieren."
+translationtype: Human Translation
+ms.sourcegitcommit: d6757aba4be1a9e326e9e0dade16663286d24f72
+ms.openlocfilehash: ae6ab11963ed06083e581ce42f39ce483d53e0d6
+
 ---
 # Geräte, Sensoren und Leistung
 
@@ -30,6 +34,7 @@ Damit Ihren Benutzern umfangreiche Einsatzmöglichkeiten geboten werden können,
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

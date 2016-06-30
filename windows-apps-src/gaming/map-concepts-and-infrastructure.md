@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Zuordnen von OpenGL ES 2.0 zu Direct3D 11
+title: "Zuordnen von OpenGL ES 2.0 zu Direct3D 11"
 description: Machen Sie sich zu Beginn des Prozesses zur ersten Portierung Ihrer Grafikarchitektur von OpenGL ES 2.0 zu Direct3D mit den Hauptunterschieden zwischen den APIs vertraut.
 ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a058c5f669704695cc3a2ae5385feccbf6cb4bc3
+
 ---
 
 # Zuordnen von OpenGL ES 2.0 zu Direct3D 11
@@ -59,6 +63,7 @@ In diesen Themen wird die OpenGL ES 2.0-Spezifikation von Khronos mit der plat
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

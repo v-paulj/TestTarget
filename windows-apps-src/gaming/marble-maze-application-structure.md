@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Marble Maze-Anwendungsstruktur
-description: Die Struktur einer DirectX-UWP-App unterscheidet sich von der einer herkömmlichen Desktopanwendung.
+description: "Die Struktur einer DirectX-UWP-App unterscheidet sich von der einer herkömmlichen Desktopanwendung."
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e9cc290fa77471f315daf7f29f605412d2ec45cc
+
 ---
 
 # Marble Maze-Anwendungsstruktur
@@ -373,6 +377,7 @@ Informationen zu einigen der wichtigsten Vorgehensweisen, die Sie beim Verwenden
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

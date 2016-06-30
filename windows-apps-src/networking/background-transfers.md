@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: Verwenden Sie die Hintergrundübertragungs-API zum zuverlässigen Kopieren von Dateien im Netzwerk.
-title: Hintergrundübertragungen
+description: "Verwenden Sie die Hintergrundübertragungs-API zum zuverlässigen Kopieren von Dateien im Netzwerk."
+title: "Hintergrundübertragungen"
 ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 02e01be9cf726731697eb5934cb86b398431b532
+
 ---
 
 # Hintergrundübertragungen
@@ -77,9 +81,9 @@ Vor dem Erstellen einer [**UploadOperation**](https://msdn.microsoft.com/library
 
 Im vorherigen Schritt wurden die Werte *uriString* und *file* an eine Instanz von „UploadOp“ aus dem nächsten Beispiel übergeben. Dort werden sie zum Konfigurieren und Starten des neuen Uploadvorgangs verwendet. Zunächst wird *uriString* analysiert, um das erforderliche [**Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Objekt zu erstellen.
 
-Dann werden die Eigenschaften der bereitgestellten [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) (*file*) vom [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) verwendet, um den Anforderungsheader zu füllen und um der *SourceFile*-Eigenschaft das **StorageFile**-Objekt zuzuordnen. Anschließend wird die [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)-Methode aufgerufen, um den als Zeichenfolge bereitgestellten Dateinamen und die [**StorageFile.Name**](https://msdn.microsoft.com/library/windows/apps/br227220)-Eigenschaft einzufügen.
+Dann verwendet [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) die Eigenschaften der bereitgestellten [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Klasse (*file*) zum Füllen des Anforderungsheaders und Festlegen der *SourceFile*-Eigenschaft mit dem **StorageFile**-Objekt. Anschließend wird die [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br207146)-Methode aufgerufen, um den als Zeichenfolge bereitgestellten Dateinamen und die [**StorageFile.Name**](https://msdn.microsoft.com/library/windows/apps/br227220)-Eigenschaft einzufügen.
 
-Schließlich erstellt [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) die [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) (*upload*.
+Schließlich erstellt [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) die [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)-Klasse (*upload*).
 
 [!code-js[uploadFile]
             (./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_A "Erstellt und initialisiert den Uploadvorgang.")]
@@ -316,6 +320,7 @@ Bei Parameterprüfungsfehlern kann eine App den **HRESULT**-Wert aus der Ausnahm
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

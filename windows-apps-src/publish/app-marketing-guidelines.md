@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Erfahren Sie, wie Sie Ihre Apps und Inhalte im Windows Store bewerben. In diesen Richtlinien wird erläutert, wie Sie die verfügbaren Ressourcen in Kombination mit Empfehlungen für die Vermarktung von Apps in gedruckter und digitaler Werbung, in TV-Werbung und Werbung auf sozialen Plattformen verwenden.
-title: Marketingrichtlinien für Windows Store-Apps
+Description: "Erfahren Sie, wie Sie Ihre Apps und Inhalte im Windows Store bewerben. In diesen Richtlinien wird erläutert, wie Sie die verfügbaren Ressourcen in Kombination mit Empfehlungen für die Vermarktung von Apps in gedruckter und digitaler Werbung, in TV-Werbung und Werbung auf sozialen Plattformen verwenden."
+title: "Marketingrichtlinien für Windows Store-Apps"
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 64c6dd45053070096ff7d7e932bac1c560194518
+
 ---
 
 # Marketingrichtlinien für Windows Store-Apps
@@ -53,6 +57,7 @@ Microsoft ist der alleinige Eigentümer der Microsoft Marks und des damit verbun
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

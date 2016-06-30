@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Sie können angeben, ob und wie Ihre App für Volume-Käufe über den Windows Store für Unternehmen angeboten wird, indem Sie die Einstellungen auf der Seite für Verfügbarkeit und Preise einer App-Übermittlung im Abschnitt Unternehmenslizenzierung festlegen.
-title: Lizenzierungsoptionen für Unternehmen
+Description: "Sie können angeben, ob und wie Ihre App für Volume-Käufe über den Windows Store für Unternehmen angeboten wird, indem Sie die Einstellungen auf der Seite für Verfügbarkeit und Preise einer App-Übermittlung im Abschnitt Unternehmenslizenzierung festlegen."
+title: "Lizenzierungsoptionen für Unternehmen"
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
+ms.sourcegitcommit: 13603b66bd6168073b855bbe37ea92763e14a5a0
+ms.openlocfilehash: e4adbc66b4b4a88ca3787737e9bbddf0d937b604
+
 ---
 
 # Lizenzierungsoptionen für Unternehmen
@@ -29,12 +32,12 @@ Wenn Sie Ihre App Organisationen nicht für den Erwerb von Volumenlizenzen anbie
 
 Viele Unternehmen benötigen Apps, die offline lizenziert werden können. Einige Unternehmen müssen beispielsweise Apps auf Geräten bereitstellen, die nur selten oder nie mit dem Internet verbunden sind. Wenn Sie Ihre App für diese Kunden verfügbar machen möchten, aktivieren Sie das Kontrollkästchen **Getrennte (offline) Lizenzierungseinkäufe von Organisationen zulassen**.
 
-> **Hinweis**  Dieses Kontrollkästchen ist standardmäßig deaktiviert. Aktivieren Sie das Kontrollkästchen, damit wir Ihre App für geprüfte Unternehmen verfügbar machen können, die sie mit der getrennten Lizenzierung installieren.
+> **Hinweis** Dieses Kontrollkästchen ist standardmäßig deaktiviert. Aktivieren Sie das Kontrollkästchen, damit wir Ihre App für geprüfte Unternehmen verfügbar machen können, die sie mit der getrennten Lizenzierung installieren. Organisationen müssen eine zusätzliche Überprüfung durchlaufen, um kostenpflichtige Apps bei ihren Kunden auf diese Weise zu installieren.
 
-Über die Offline-Lizenzierung können Unternehmen Ihre App auf Volumenbasis erwerben, und anschließend auf den Geräten installieren, ohne auf das Lizenzierungssystem des Store zugreifen zu müssen.
-Die Organisation kann Ihr App-Paket zusammen mit einer Lizenz herunterladen, über die sie auf Geräten installiert werden kann (über ihre eigenen Verwaltungstools oder durch das Vorabladen von Apps auf Betriebssystem-Images), ohne eine Benachrichtigung an den Store senden zu müssen, wenn eine bestimmte Lizenz verwendet wurde. Durch Aktivieren dieses Szenario wird die Flexibilität bei der Bereitstellung drastisch erhöht und damit möglicherweise auch die Attraktivität Ihrer App bei diesen Kunden erheblich gesteigert.
+Über die Offlinelizenzierung können Unternehmen Ihre App auf Volumenbasis erwerben, und anschließend auf den Geräten installieren, ohne auf das Lizenzierungssystem des Store zugreifen zu müssen. Die Organisation kann Ihr App-Paket zusammen mit einer Lizenz herunterladen, über die sie auf Geräten installiert werden kann (über ihre eigenen Verwaltungstools oder durch das Vorabladen von Apps auf Betriebssystem-Images), ohne eine Benachrichtigung an den Store senden zu müssen, wenn eine bestimmte Lizenz verwendet wurde. Durch Aktivieren dieses Szenario wird die Flexibilität bei der Bereitstellung drastisch erhöht und damit möglicherweise auch die Attraktivität Ihrer App bei diesen Kunden erheblich gesteigert.
 
->**Hinweis**  Unternehmen müssen eine zusätzliche Überprüfung durchlaufen, um kostenpflichtige Apps bei ihren Kunden auf diese Weise zu installieren.
+> **Wichtig** Die Offlinelizenzierung wird für XAP-Pakete nicht unterstützt.  
+
  
 ## Unterstützung für kostenpflichtige Apps
 
@@ -83,6 +86,7 @@ Zu diesem Zeitpunkt können Entwickler in den folgenden Ländern und Regionen ü
 - USA
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

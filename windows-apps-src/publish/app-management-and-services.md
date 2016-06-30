@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Im Windows Dev Center-Dashboard können Sie Details zu einzelnen Apps anzeigen und verwalten sowie Dienste wie Pushbenachrichtigungen und Karten konfigurieren.
+Description: "Im Windows Dev Center-Dashboard können Sie Details zu einzelnen Apps anzeigen und verwalten sowie Dienste wie Pushbenachrichtigungen und Karten konfigurieren."
 title: App-Verwaltung und -Dienste
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 71077ac3f64e10734021e5fb655168f7273e3cb6
+
 ---
 
 # App-Verwaltung und -Dienste
@@ -78,6 +82,7 @@ Entwickler mit OEM-Berechtigungen können auf der Seite **Aktuelle Pakete** auß
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Toucheingabesteuerelemente für Spiele
-description: Hier erfahren Sie, wie Sie Ihrem C++-Spiel für die universelle Windows-Plattform (UWP) mit DirectX einfache touchbasierte Steuerelemente hinzufügen.
+title: "Toucheingabesteuerelemente für Spiele"
+description: "Hier erfahren Sie, wie Sie Ihrem C++-Spiel für die universelle Windows-Plattform (UWP) mit DirectX einfache touchbasierte Steuerelemente hinzufügen."
 ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a2460ba2ffcf191fe87132180b2cca7519e87141
+
 ---
 
 # Toucheingabesteuerelemente für Spiele
@@ -348,6 +352,7 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die univer
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

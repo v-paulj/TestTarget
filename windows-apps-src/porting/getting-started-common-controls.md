@@ -3,6 +3,10 @@ author: mcleblanc
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: Erste Schritte mit allgemeinen Steuerelementen
 title: Erste Schritte mit allgemeinen Steuerelementen
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9d67cf02f80b5aa9d49fe3a0c5eb47a89419991a
+
 ---
 
 # Erste Schritte: Allgemeine Steuerelemente
@@ -57,6 +61,7 @@ Unter [Steuerelementliste](https://msdn.microsoft.com/library/windows/apps/mt185
 * [Build 2014: Erstellen von zusammengeführten XAML-Apps mit Visual Studio](http://go.microsoft.com/fwlink/p/?LinkID=397876)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

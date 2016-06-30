@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Swapchainskalierung und Überlagerungen
-description: Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern.
+title: "Swapchainskalierung und Überlagerungen"
+description: "Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern."
 ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
+translationtype: Human Translation
+ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
+ms.openlocfilehash: 3380c5156072a9853261ec6b706a612b42e7ba10
+
 ---
 
 # Swapchainskalierung und Überlagerungen
@@ -324,6 +328,7 @@ Führen Sie die folgenden Schritte aus, um eine Vordergrund-Swapchain zu erstell
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
-description: Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen.
+description: "Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
 title: Abrufen von Fehlerberichtsdaten
+ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
+ms.openlocfilehash: 5b2421daf9df4ca417d5089166c0927e2b2f7436
+
 ---
 
 # Abrufen von Fehlerberichtsdaten
@@ -62,13 +65,13 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 <tbody>
 <tr class="odd">
 <td align="left">applicationId</td>
-<td align="left">string</td>
-<td align="left">Die Produkt-ID der App, für die Fehlerberichtsdaten abgerufen werden sollen. Die Produkt ID ist im Eintragungslink der App eingebettet, die auf der [Seite App-Identität](https://msdn.microsoft.com/library/windows/apps/mt148561) des Dev Center-Dashboards verfügbar ist. Ein Beispiel für eine Produkt-ID ist 9WZDNCRFJ3Q8.</td>
+<td align="left">Zeichenfolge</td>
+<td align="left">Die Store-ID der App, für die Fehlerberichtsdaten abgerufen werden sollen. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="even">
 <td align="left">startDate</td>
-<td align="left">date</td>
+<td align="left">Datum</td>
 <td align="left">Das Startdatum im Datumsbereich der Fehlerberichtsdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum.</td>
 <td align="left">Nein</td>
 </tr>
@@ -242,7 +245,7 @@ Die Liste der unterstützten Felder finden Sie in der folgenden Tabelle. Zeichen
 
 ### Anforderungsbeispiel
 
-Die folgenden Beispiele zeigen verschiedene Anforderungen für das Abrufen von Fehlerberichtsdaten. Ersetzen Sie den Wert *ApplicationId* durch die Produkt-ID Ihrer App.
+Die folgenden Beispiele zeigen verschiedene Anforderungen für das Abrufen von Fehlerberichtsdaten. Ersetzen Sie den Wert *ApplicationId* durch die Store-ID Ihrer App.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/failurehits?applicationId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -271,7 +274,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | Wert           | Typ    | Beschreibung                                                                                                                                                                                                                              |
 |-----------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date            | string  | Das erste Datum im Datumsbereich für die Kaufdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist das erste Datum in diesem Datumsbereich dieser Wert. |
-| applicationId   | string  | Die Produkt-ID der App, für die Sie IAP-Kaufdaten abrufen möchten.                                                                                                                                                           |
+| applicationId   | Zeichenfolge  | Die Store-ID der App, für die Sie IAP-Kaufdaten abrufen möchten.                                                                                                                                                           |
 | applicationName | string  | Der Anzeigename der App.                                                                                                                                                                                                             |
 | failureName     | string  | Der Name des Fehlers.                                                                                                                                                                                                                 |
 | failureHash     | string  | Der eindeutige Bezeichner des Fehlers.                                                                                                                                                                                                   |
@@ -326,6 +329,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 * [Abrufen von App-Rezensionen](get-app-reviews.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

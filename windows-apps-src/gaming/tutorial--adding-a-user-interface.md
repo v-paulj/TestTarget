@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Hinzufügen einer Benutzeroberfläche
+title: "Hinzufügen einer Benutzeroberfläche"
 description: Sie haben gesehen, wie das Beispiel das Hauptspielobjekt implementiert, und das grundlegende Renderingframework kennengelernt.
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d7af6683ab2def1af62e73be008e9189190cde95
+
 ---
 
 # Hinzufügen einer Benutzeroberfläche
@@ -1488,6 +1492,7 @@ void GameInfoOverlay::SetAction(GameInfoOverlayCommand action)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

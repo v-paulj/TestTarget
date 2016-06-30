@@ -3,8 +3,8 @@ author: jwmsft
 description: "Informieren Sie sich über die Verschieben- und Zeichnen-Befehle (eine Minisprache), mit denen Sie Pfadgeometrien als XAML-Attributwert angeben können."
 title: "Syntax für die Verschieben- und Zeichnen-Befehle"
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
-ms.sourcegitcommit: e1399a25b0455c9a79dcb217c5df1a397420d1f3
-ms.openlocfilehash: 54c080183104335f4b3920cda8bc396a34298a69
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 49c3a061c51c07677ffb43a230e0900220ba0299
 
 ---
 
@@ -119,7 +119,7 @@ Erstellt eine horizontale Linie zwischen dem aktuellen Punkt und der angegebenen
 
 | Benennung | Beschreibung |
 |------|-------------|
-| x | [**Double**](T:System.Double) <br/> Die x-Koordinate am Endpunkt der Linie |
+| x | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Die x-Koordinate am Endpunkt der Linie |
 
 **Befehl für eine vertikale Linie**
 
@@ -131,7 +131,7 @@ Erstellt eine vertikale Linie zwischen dem aktuellen Punkt und der angegebenen y
 
 | Benennung | Beschreibung |
 |------|-------------|
-| *y* | [**Double**](T:System.Double) <br/> Die y-Koordinate am Endpunkt der Linie |
+| *y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Die y-Koordinate am Endpunkt der Linie |
 
 **Befehl für eine kubische Bézierkurve**
 
@@ -208,7 +208,7 @@ Erstellt einen Ellipsenbogen zwischen dem aktuellen Punkt und dem angegebenen En
 | Benennung | Beschreibung |
 |------|-------------|
 | *size* | [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995)<br/>Der x-Radius und y-Radius des Bogens |
-| *rotationAngle* | [**Double**](T:System.Double) <br/> Die Drehung der Ellipse in Grad |
+| *rotationAngle* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Die Drehung der Ellipse in Grad |
 | *isLargeArcFlag* | Legen Sie „1“ fest, wenn der Winkel des Bogens mindestens 180 Grad entsprechen soll. Legen Sie anderenfalls „0“ fest. |
 | *sweepDirectionFlag* | Legen Sie „1“ fest, wenn der Bogen in Richtung eines positiven Winkels gezeichnet wird. Legen Sie anderenfalls „0“ fest. |
 | *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Der Punkt, zu dem die Kurve gezeichnet wird.|
@@ -232,8 +232,8 @@ Beschreibt die x-Koordinate und y-Koordinate eines Punkts. Weitere Informationen
 
 | Benennung | Beschreibung |
 |------|-------------|
-| *x* | [**Double**](T:System.Double) <br/> Die x-Koordinate des Punkts |
-| *y* | [**Double**](T:System.Double) <br/> Die y-Koordinate des Punkts |
+| *x* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Die x-Koordinate des Punkts |
+| *y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Die y-Koordinate des Punkts |
 
 **Weitere Anmerkungen**
 
@@ -263,6 +263,6 @@ Für andere häufig verwendete Vektorgrafik-Designtools, die den Vektor in XAML-
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

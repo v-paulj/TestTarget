@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Das App-Objekt und DirectX
-description: Für die Universelle Windows-Plattform (UWP) mit DirectX-Spielen werden nur wenige der UI-Elemente und -objekte der Windows-Benutzeroberfläche genutzt.
+description: "Für die Universelle Windows-Plattform (UWP) mit DirectX-Spielen werden nur wenige der UI-Elemente und -objekte der Windows-Benutzeroberfläche genutzt."
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a8c8cb8fa8ccec54af4c824d23bc26cb91db7cf7
+
 ---
 
 # Das App-Objekt und DirectX
@@ -52,7 +56,7 @@ Im Folgenden werden die grundlegenden Schritte zum Abrufen eines Fensters mit de
 
 3.  Übergeben Sie eine Instanz des Ansichtsanbieters an [**CoreApplication.Run**](https://msdn.microsoft.com/library/windows/apps/hh700469) aus **main**.
 
-Da Sie jetzt mit den Grundlagen vertraut sind, betrachten Sie nun weitere verfügbare Optionen, mit denen Sie diesen Ansatz ausweiten können.
+Da Sie sich nun mit den Grundlagen vertraut gemacht haben, betrachten Sie nun weitere verfügbare Optionen, mit denen Sie diesen Ansatz ausweiten können.
 
 ## Zentrale Benutzeroberflächentypen
 
@@ -114,7 +118,7 @@ UWP mit DirectX muss die [**CoreProcessEventsOption.ProcessAllIfPresent**](https
 
 Das App-Objekt, das die Laufzeitdarstellung Ihrer UWP- und DirectX-App definiert, verwendet das ASTA-Threadingmodell (Anwendungs-Single-Threaded-Apartment), um die UI-Ansichten der App zu hosten. Wenn Sie eine UWP- und DirectX-App entwickeln, sind Sie mit den Eigenschaften eines ASTAs vertraut, da alle Threads, die von Ihrer UWP- und DirectX-App gesendet werden, die [**Windows::System::Threading**](https://msdn.microsoft.com/library/windows/apps/br229642)-APIs oder [**CoreWindow::CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) verwenden müssen. (Sie können das [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt für das ASTA abrufen, indem Sie [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) in Ihrer App aufrufen.)
 
-Vor allem sollten Sie als Entwickler einer UWP-DirectX-App darauf achten, dass Ihr App-Thread MTA-Threads verteilen kann. Legen Sie dazu **Platform::MTAThread** auf **main()** fest.
+Vor allem sollten Sie als Entwickler einer UWP DirectX-App darauf achten, dass Ihr App-Thread MTA-Threads senden kann. Legen Sie dazu **Platform::MTAThread** auf **main()** fest.
 
 ```cpp
 [Platform::MTAThread]
@@ -126,7 +130,7 @@ int main(Platform::Array<Platform::String^>^)
 }
 ```
 
-Wenn das App-Objekt für Ihre UWP-DirectX-App aktiviert wird, erstellt es ein ASTA, das für die UI-Ansicht verwendet wird. Der neue ASTA-Thread ruft die Factory für Ihren Ansichtsanbieter auf, um den Ansichtsanbieter für Ihr App-Objekt zu erstellen. Der Code für Ihren Ansichtsanbieter wird dann in dem ASTA-Thread ausgeführt.
+Wenn das App-Objekt für Ihre UWP DirectX-App aktiviert wird, erstellt es ein ASTA, das für die UI-Ansicht verwendet wird. Der neue ASTA-Thread ruft die Factory für Ihren Ansichtsanbieter auf, um den Ansichtsanbieter für Ihr App-Objekt zu erstellen. Der Code für Ihren Ansichtsanbieter wird dann in dem ASTA-Thread ausgeführt.
 
 Alle Threads, die aus einem ASTA ausgegliedert werden, müssen sich außerdem in einem MTA befinden. Beachten Sie, dass es durch ausgelagerte MTA-Threads weiterhin zu Eintrittsinvarianzen und somit zu Sperren kommen kann.
 
@@ -155,6 +159,7 @@ Im Allgemeinen sollten Sie bei der Entwicklung Ihrer UWP-App den [**CoreDispatch
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

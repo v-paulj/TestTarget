@@ -2,7 +2,11 @@
 author: scottmill
 ms.assetid: 03dd256f-78c0-e1b1-3d9f-7b3afab29b2f
 title: Kompositionspinsel
-description: Ein Pinsel zeichnet den Bereich eines Visual-Objekts mit der zugehörigen Ausgabe. Verschiedene Pinsel haben unterschiedliche Ausgabetypen.
+description: "Ein Pinsel zeichnet den Bereich eines Visual-Objekts mit der zugehörigen Ausgabe. Verschiedene Pinsel haben unterschiedliche Ausgabetypen."
+translationtype: Human Translation
+ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
+ms.openlocfilehash: 7f466607e48bb0d553892e09c6616f0dd0539d8e
+
 ---
 # Kompositionspinsel
 
@@ -31,7 +35,7 @@ Alle Pinsel erben von [**CompositionBrush**](https://msdn.microsoft.com/library/
 
 ## Voraussetzungen
 
-In dieser Übersicht wird davon ausgegangen, dass Sie mit der Struktur einer einfachen Composition-Anwendung, wie unter [Visuelle Ebene](visual-layer.md) beschrieben, vertraut sind.
+In dieser Übersicht wird davon ausgegangen, dass Sie mit der Struktur einer einfachen Kompositionsanwendung, wie unter [Visuelle Ebene](visual-layer.md) beschrieben, vertraut sind.
 
 ## Farbgrundlagen
 
@@ -75,14 +79,14 @@ Im Gegensatz zu anderen Pinseln ist das Erstellen von [**CompositionColorBrush**
 [
             **CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) zeichnet ein visuelles Element mit einer Kompositionsoberfläche (dargestellt durch ein [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819)-Objekt). Die folgende Abbildung zeigt ein quadratisches visuelles Element, das mit einer Lakritz-Bitmap gezeichnet und mithilfe von D2D auf einer **ICompositionSurface**-Schnittstelle gerendert wird.
 
-![CompositionSurfaceBrush Im ersten Beispiel wird eine Kompositionsoberfläche für die Verwendung mit dem Pinsel initialisiert. Die Kompositionsoberfläche wird mithilfe der Hilfsmethode „LoadImage“ erstellt, die [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) und eine URL als Zeichenfolge akzeptiert. Sie lädt das Bild aus der URL, rendert das Bild auf einer [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819)-Schnittstelle und legt die Oberfläche als Inhalt von **CompositionSurfaceBrush** fest.
+![CompositionSurfaceBrush](images/composition-compositionsurfacebrush.png) Im ersten Beispiel wird eine Kompositionsoberfläche für die Verwendung mit dem Pinsel initialisiert. Die Kompositionsoberfläche wird mithilfe der Hilfsmethode „LoadImage“ erstellt, die [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) und eine URL als Zeichenfolge akzeptiert. Sie lädt das Bild aus der URL, rendert das Bild auf einer [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819)-Schnittstelle und legt die Oberfläche als Inhalt von **CompositionSurfaceBrush** fest. Beachten Sie, dass die **ICompositionSurface**-Schnittstelle nur in systemeigenen Code verfügbar ist und daher die „LoadImage“-Methode in systemeigenem Code implementiert wird.
 
 ```cs
 LoadImage(Brush,
           "ms-appx:///Assets/liqorice.png");
 ```
 
-Beachten Sie, dass die **ICompositionSurface**-Schnittstelle nur in systemeigenen Code verfügbar ist und daher die „LoadImage“-Methode in systemeigenem Code implementiert wird. Um den Oberflächenpinsel zu erstellen, rufen Sie die Compositor.[**CreateSurfaceBrush**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositor.createsurfacebrush.aspx)-Methode auf. Die Methode gibt hier ein [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)-Objekt zurück.
+Um den Oberflächenpinsel zu erstellen, rufen Sie die Compositor.[**CreateSurfaceBrush**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositor.createsurfacebrush.aspx)-Methode auf. Die Methode gibt hier ein [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415)-Objekt zurück. Der folgende Code veranschaulicht den Code, mit dem ein visuelles Element mit Inhalten eines **CompositionSurfaceBrush**-Objekts gezeichnet werden kann.
 
 ```cs
 Compositor _compositor;
@@ -95,21 +99,21 @@ LoadImage(_surfaceBrush, "ms-appx:///Assets/liqorice.png");
 visual.Brush = _surfaceBrush;
 ```
 
-## Der folgende Code veranschaulicht den Code, mit dem ein Visual-Element mit Inhalten eines **CompositionSurfaceBrush**-Objekts gezeichnet werden kann.
+## Konfigurieren von Strecken und Ausrichtung
 
-Konfigurieren von Streckung und Ausrichtung Manchmal füllt der Inhalt der [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) für [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) die Bereiche des zu zeichnenden visuellen Elements nicht vollständig.
+Manchmal füllt der Inhalt der [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) für [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) die Bereiche des zu zeichnenden visuellen Elements nicht vollständig. In diesem Fall verwendet die Composition-API die Moduseinstellungen [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) und [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) des Pinsels, um den restlichen Bereich auszufüllen.
 
--   In diesem Fall verwendet die Composition-API die Moduseinstellungen [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) und [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) des Pinsels, um den restlichen Bereich auszufüllen.
-    -   [
+-   [
               **HorizontalAlignmentRatio**
             ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) und [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) sind vom Typ „float“ und können dazu verwendet werden, um die Position des Pinsels innerhalb der visuellen Grenzen zu steuern.
     -   Der Wert 0,0 richtet die linke obere Ecke des Pinsels an der linken oberen Ecke des visuellen Elements aus.
     -   Der Wert 0,5 richtet die Mitte des Pinsels an der Mitte des visuellen Elements aus.
--   Der Wert 1,0 richtet die rechte untere Ecke des Pinselelements an der rechten unteren Ecke des visuellen Elements aus.
-    -   Die [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch)-Eigenschaft akzeptiert die folgenden Werte, die durch die [**CompositionStretch**](https://msdn.microsoft.com/library/windows/apps/Dn706786)-Aufzählung definiert werden: Keine: Das Pinsel-Element wird nicht gestreckt, um die Grenzen des visuellen Elements auszufüllen. Beachten Sie bei Verwendung der Einstellung für Strecken Folgendes: Wenn der Pinsel größer als die Grenzen des visuellen Elements ist, wird der Inhalt des Pinsels abgeschnitten.
-    -   Der Teil des Pinsels, der zum Zeichnen der visuellen Grenzen verwendet wird, kann mit den Eigenschaften [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) und [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) gesteuert werden. Uniform: Der Pinsel wird skaliert und an die Grenzen des visuellen Elements angepasst. Das Seitenverhältnis des Pinsels wird beibehalten.
-    -   Dies ist der Standardwert.
-    -   UniformToFill: Der Pinsel wird skaliert, damit es die Grenzen des visuellen Elements vollständig ausfüllt. Das Seitenverhältnis des Pinsels wird beibehalten. Fill: Der Pinsel wird skaliert und an die Grenzen des visuellen Elements angepasst. Da die Höhe und Breite des Pinsels unabhängig voneinander skaliert werden, wird das ursprüngliche Seitenverhältnis des Pinsels möglicherweise nicht beibehalten.
+    -   Der Wert 1,0 richtet die rechte untere Ecke des Pinselelements an der rechten unteren Ecke des visuellen Elements aus.
+-   Die [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch)-Eigenschaft akzeptiert die folgenden Werte, die durch die [**CompositionStretch**](https://msdn.microsoft.com/library/windows/apps/Dn706786)-Aufzählung definiert werden:
+    -   Keine: Das Pinsel-Element wird nicht gestreckt, um die Grenzen des visuellen Elements auszufüllen. Beachten Sie bei Verwendung der Einstellung für Strecken Folgendes: Wenn der Pinsel größer als die Grenzen des visuellen Elements ist, wird der Inhalt des Pinsels abgeschnitten. Der Teil des Pinsels, der zum Zeichnen der visuellen Grenzen verwendet wird, kann mit den Eigenschaften [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) und [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) gesteuert werden.
+    -   Uniform: Der Pinsel wird skaliert und an die Grenzen des visuellen Elements angepasst. Das Seitenverhältnis des Pinsels wird beibehalten. Dies ist der Standardwert.
+    -   UniformToFill: Der Pinsel wird skaliert, damit es die Grenzen des visuellen Elements vollständig ausfüllt. Das Seitenverhältnis des Pinsels wird beibehalten.
+    -   Fill: Der Pinsel wird skaliert und an die Grenzen des visuellen Elements angepasst. Da die Höhe und Breite des Pinsels unabhängig voneinander skaliert werden, wird das ursprüngliche Seitenverhältnis des Pinsels möglicherweise nicht beibehalten. Das bedeutet, dass der Pinsel eventuell verzerrt wird, um die Grenzen des visuellen Elements vollständig auszufüllen.
 
  
 
@@ -120,6 +124,7 @@ Konfigurieren von Streckung und Ausrichtung Manchmal füllt der Inhalt der [**IC
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

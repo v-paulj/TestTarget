@@ -1,13 +1,17 @@
 ---
 author: Jwmsft
-Description: 'Hier erfahren Sie, wie Sie Code für eine benutzerdefinierte Panel-Klasse schreiben. Dabei implementieren Sie die Methoden „ArrangeOverride“ und „MeasureOverride“ und verwenden die Children-Eigenschaft.'
-MS-HAID: 'dev\_ctrl\_layout\_txt.boxpanel\_example\_custom\_panel'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Hier erfahren Sie, wie Sie Code für eine benutzerdefinierte Panel-Klasse schreiben. Dabei implementieren Sie die Methoden „ArrangeOverride“ und „MeasureOverride“ und verwenden die Children-Eigenschaft."
+MS-HAID: dev\_ctrl\_layout\_txt.boxpanel\_example\_custom\_panel
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'BoxPanel, ein Beispiel für benutzerdefinierte Panels'
+title: "BoxPanel, ein Beispiel für benutzerdefinierte Panels"
 ms.assetid: 981999DB-81B1-4B9C-A786-3025B62B74D6
 label: BoxPanel, an example custom panel
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: e03a4c9d2116d779545cb1fb8e87fa86a632bca8
+
 ---
 
 # BoxPanel, ein Beispiel für benutzerdefinierte Panels
@@ -228,6 +232,7 @@ Möglicherweise fragen Sie sich, warum das Panel nicht stattdessen die Abmessung
 [Ausrichtung, Rand und Abstand](alignment-margin-padding.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

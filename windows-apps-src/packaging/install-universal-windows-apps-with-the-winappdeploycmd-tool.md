@@ -1,8 +1,12 @@
 ---
 author: msatranjr
 ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
-title: Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
-description: Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine UWP (Universelle Windows-Plattform)-App von einem Windows 10-Computer auf beliebigen Windows 10 Mobile-Geräten bereitstellen können.
+title: "Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“"
+description: "Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine UWP (Universelle Windows-Plattform)-App von einem Windows 10-Computer auf beliebigen Windows 10 Mobile-Geräten bereitstellen können."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d3135724e092495e8f937e6d53bdfbaa9e7cf450
+
 ---
 # Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
 
@@ -108,6 +112,7 @@ WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

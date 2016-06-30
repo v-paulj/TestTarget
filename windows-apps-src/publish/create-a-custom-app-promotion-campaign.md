@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Neben dem Erstellen einer Anzeigenkampagne für Ihre App, die in Windows-Apps ausgeführt wird, können Sie Ihre App auch über andere Kanäle bewerben.
-title: Erstellen einer benutzerdefinierten Werbekampagne für Apps
+Description: "Neben dem Erstellen einer Anzeigenkampagne für Ihre App, die in Windows-Apps ausgeführt wird, können Sie Ihre App auch über andere Kanäle bewerben."
+title: "Erstellen einer benutzerdefinierten Werbekampagne für Apps"
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: b6fa63727ac636d37c52e2f3247c52efb1f8b763
+
 ---
 
 # Erstellen einer benutzerdefinierten Werbekampagne für Apps
@@ -63,7 +67,7 @@ So erstellen Sie eine Windows Store-Seiten-URL für Ihre App mit einer benutzerd
 2.  Rufen Sie die Windows Store-Seiten-URL für Ihre App im HTML- oder Protokollformat ab. Die HTML-Format-URL ist auf der Seite [**App-Identität** im Dev Center-Dashboard](link-to-your-app.md) verfügbar.
     -   Verwenden Sie das HTTP-Format, wenn Sie möchten, dass Kunden in einem Browser auf die Windows Store-Seite Ihrer App navigieren (diese URL startet auch die Windows Store-App mit Ihrem App-Eintrag, wenn die Windows Store-App installiert ist). Diese URL hat das Format **`https://www.microsoft.com/store/apps/*your app name*/*your app ID*`**. Die HTTP-URL für Skype lautet beispielsweise `https://www.microsoft.com/store/apps/skype/9wzdncrfj364`.
         > **Hinweis**  URLs im HTTP-Format können zum Navigieren zum Windows Store in einem Browser auf Computern und Tablets unter Windows 7 und neueren Versionen sowie auf Smartphones mit mindestens Windows Phone 8 verwendet werden.
-    -   Verwenden Sie das Protokollformat, wenn Sie Ihre App in anderen Windows-Apps bewerben, die auf einem Gerät oder Computer mit installierter Windows Store-App ausgeführt werden, und Sie möchten, dass Kunden die Seite Ihrer App in der Windows Store-App öffnen. Diese URL hat das Format **`ms-windows-store://pdp/?PRODUCTID=*your app id*`**. Die Protokoll-URL für Skype lautet beispielsweise `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364`.
+-   Verwenden Sie das Protokollformat, wenn Sie Ihre App in anderen Windows-Apps bewerben, die auf einem Gerät oder Computer mit installierter Windows Store-App ausgeführt werden, und Sie möchten, dass Kunden die Seite Ihrer App in der Windows Store-App öffnen. Diese URL hat das Format **`ms-windows-store://pdp/?PRODUCTID=*your app id*`**. Die Protokoll-URL für Skype lautet beispielsweise `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364`.
 3.  Fügen Sie am Ende der URL für Ihre App die folgende Zeichenfolge an:
     -   Fügen Sie an eine HTTP-Format-URL **`?cid=*my custom campaign ID*`** an. Wenn Skype beispielsweise eine Kampagnen-ID mit dem Wert **custom\_campaign** einführt, würde die neue HTTP-URL einschließlich der Kampagnen-ID folgendermaßen lauten: `https://www.microsoft.com/store/apps/skype/9wzdncrfj364?cid=custom\_campaign`.
     -   Fügen Sie für eine URL im Protokoll-Format **`&cid=*my custom campaign ID*`** an. Wenn Skype beispielsweise eine Kampagnen-ID mit dem Wert **custom\_campaign** einführt, würde die neue Protokoll-URL einschließlich der Kampagnen-ID folgendermaßen lauten: `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364&cid=custom\_campaign`.
@@ -130,6 +134,7 @@ Bevor Sie eine URL für eine benutzerdefinierte Kampagnen bewerben, empfehlen wi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

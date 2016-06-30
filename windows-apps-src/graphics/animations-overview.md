@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: 0C8DEE75-FB7B-4E59-81E3-55F8D65CD982
 title: "Übersicht über Animationen"
 description: Verwenden Sie die Animationen aus der Windows-Runtime-Animationsbibliothek, um das Windows-Erscheinungsbild in Ihre App zu integrieren.
-ms.sourcegitcommit: c8ba7f6303a05b8de03aa29199aaa444abf75827
-ms.openlocfilehash: 2a70d73a5e714aaf1096fed5d08ec4844edd66a6
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: 15fa3b33bf302633ef8cd51928e1af5ea726cc01
 
 ---
 # Übersicht über Animationen
@@ -26,7 +26,7 @@ Wenn der Benutzer beispielsweise einer Liste ein Element hinzufügt und das neue
 
 Die Animationsbibliothek stellt keine Animationen für jedes mögliche Szenario bereit. Es gibt Fälle, in denen Sie es vielleicht vorziehen würden, eine benutzerdefinierte Animation in XAML zu erstellen. Weitere Informationen finden Sie unter [Storyboardanimationen](storyboarded-animations.md).
 
-Außerdem möchten Entwickler für bestimmte erweiterte Szenarien wie das Animieren eines Artikels basierend auf der Bildlaufposition eines ScrollViewer möglicherweise Interoperabilität mit visuellen Ebenen verwenden, um benutzerdefinierte Animationen zu implementieren. Weitere Informationen finden Sie unter [Visuelle Ebene](https://msdn.microsoft.com/en-us/windows/uwp/graphics/visual-layer).
+Außerdem möchten Entwickler für bestimmte erweiterte Szenarien wie das Animieren eines Artikels basierend auf der Bildlaufposition eines ScrollViewer möglicherweise Interoperabilität mit visuellen Ebenen verwenden, um benutzerdefinierte Animationen zu implementieren. Weitere Informationen finden Sie unter [Visuelle Ebene](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer).
 
 ## Arten der Animation
 
@@ -53,7 +53,7 @@ Die folgenden Animationen werden in der Animationsbibliothek bereitgestellt. Kli
 
 ### Seitenübergang
 
-Verwenden Sie Seitenübergänge zum Animieren von Navigation innerhalb einer App. Da nahezu alle Apps irgendeine Art von Navigation verwenden, sind Animationen für Seitenübergänge der am häufigsten von Apps verwendete Designanimationstyp. Weitere Informationen zu Seitenübergangs-APIs finden Sie unter [**NavigationThemeTransition**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation. Therenavigationthemetransition).
+Verwenden Sie Seitenübergänge zum Animieren von Navigation innerhalb einer App. Da nahezu alle Apps irgendeine Art von Navigation verwenden, sind Animationen für Seitenübergänge der am häufigsten von Apps verwendete Designanimationstyp. Weitere Informationen zu Seitenübergangs-APIs finden Sie unter [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition).
 
 
 
@@ -65,7 +65,7 @@ Verwenden Sie Inhaltsübergangsanimationen ([**ContentThemeTransition**](https:/
               **EntranceThemeTransition**
             ](https://msdn.microsoft.com/library/windows/apps/BR210288) steht für eine Bewegung, die auf Inhalte angewendet werden kann, wenn eine Seite oder ein großer Teil der UI zum ersten Mal geladen werden. Daher kann der erste Eindruck eines Inhalts anderes Feedback vermitteln als eine Inhaltsänderung. [
               **EntranceThemeTransition**
-            ](https://msdn.microsoft.com/library/windows/apps/BR210288) entspricht einer [**NavigationThemeTransition**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) mit den Standardparametern, kann aber außerhalb eines [**Frames**](https://msdn.microsoft.com/library/windows/apps/br242682) verwendet werden.
+            ](https://msdn.microsoft.com/library/windows/apps/BR210288) entspricht einer [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) mit den Standardparametern, kann aber außerhalb eines [**Frames**](https://msdn.microsoft.com/library/windows/apps/br242682) verwendet werden.
  
  
 
@@ -120,19 +120,19 @@ In der folgenden Tabelle werden die Animationen zusammengefasst, die zum Erstell
             ](https://msdn.microsoft.com/library/windows/apps/BR210298) und [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
 | Flyout | [
               **PopInThemeAnimation**
-            ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) und [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
+            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) und [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
 | QuickInfo | [
               **FadeInThemeAnimation**
             ](https://msdn.microsoft.com/library/windows/apps/BR210298) und [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
 | Kontextmenü | [
               **PopInThemeAnimation**
-            ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) und [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
+            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation.aspx) und [**PopOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
 | Befehlsleiste | [**EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.edgeuithemetransition.edgeuithemetransition) |
 | Aufgabenbereich oder randbasiertes Panel | [**PaneThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.panethemetransition.panethemetransition) |
 | Inhalt eines UI-Containers | [**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.contentthemetransition.contentthemetransition) |
 | Für Steuerelemente oder wenn keine andere Animation zutrifft | [
               **FadeInThemeAnimation**
-            ](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.fadeinthemeanimation.fadeinthemeanimation.aspx) und [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
+            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.fadeinthemeanimation.fadeinthemeanimation.aspx) und [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
 
  
 
@@ -297,7 +297,7 @@ Es stehen verschiedene Übergangseffekte zur Verfügung, um UI-Elemente beim Hin
 
 | API | Beschreibung |
 |-----|-------------|
-| [**NavigationThemeTransition**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) | Stellt eine Windows-Charakteranimation für die Seitennavigation in einem [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) bereit. |
+| [**NavigationThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.navigationthemetransition) | Stellt eine Windows-Charakteranimation für die Seitennavigation in einem [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) bereit. |
 | [**AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047) | Stellt animiertes Übergangsverhalten für das Hinzufügen oder Löschen von untergeordneten Objekten oder Inhalten über Steuerelemente bereit. Das betreffende Steuerelement ist dabei typischerweise ein Elementcontainer. |
 | [**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243103) | Stellt animiertes Übergangsverhalten für Änderungen der Inhalte eines Steuerelements bereit. Sie können diese Animation zusammen mit [**AddDeleteThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR243047) anwenden. |
 | [**EdgeUIThemeTransition**](https://msdn.microsoft.com/library/windows/apps/Hh702324) | Stellt das animierte Übergangsverhalten für (kleine) Rand-UI-Übergänge bereit. |
@@ -353,7 +353,7 @@ void BlankPage::Rectangle_Tapped(Object^ sender, PointerRoutedEventArgs^ e)
 
 Anders als Übergangsanimationen besitzt eine Designanimation keinen integrierten Trigger (der Übergang), der sie automatisch ausführt. Verwenden Sie ein [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490), um eine Designanimation bei Definition in XAML zu integrieren. Außerdem können Sie das Standardverhalten der Animation ändern. Sie können z. B. die Geschwindigkeit beim Ausblenden verringern, indem Sie den [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)-Zeitwert für [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) erhöhen.
 
-**Hinweis**  Zur Veranschaulichung grundlegender Animationsverfahren verwenden wir App-Code, um die Animation durch den Aufruf von [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)-Methoden zu starten. Sie können mit den **Storyboard**-Animationen [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Stop**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) und [**Resume**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) steuern, wie die **Storyboard**-Methoden ausgeführt werden. Bibliotheksanimationen werden so jedoch normalerweise nicht in Apps integriert. Integrieren Sie stattdessen Bibliotheksanimationen in die XAML-Stile und -Vorlagen für Steuerelemente oder Elemente. Vorlagen und Ansichtszustände sind etwas komplexer. Die Verwendung von Bibliotheksanimationen in Ansichtszuständen wird jedoch im Thema [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808) behandelt.
+**Hinweis**  Zur Veranschaulichung grundlegender Animationsverfahren verwenden wir App-Code, um die Animation durch den Aufruf von [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)-Methoden zu starten. Sie können mit den **Storyboard**-Animationen [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) und [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) steuern, wie die **Storyboard**-Methoden ausgeführt werden. Bibliotheksanimationen werden so jedoch normalerweise nicht in Apps integriert. Integrieren Sie stattdessen Bibliotheksanimationen in die XAML-Stile und -Vorlagen für Steuerelemente oder Elemente. Vorlagen und Ansichtszustände sind etwas komplexer. Die Verwendung von Bibliotheksanimationen in Ansichtszuständen wird jedoch im Thema [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808) behandelt.
 
  
 
@@ -373,8 +373,8 @@ Sie können noch eine Reihe weiterer Designanimationen auf UI-Elemente anwenden 
 | [**RepositionThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210421) | Vorkonfigurierte Animation für die Neupositionierung eines Objekts. |
 | [**SplitCloseThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210454) | Die vorkonfigurierte Animation, die eine Zielbenutzeroberfläche mithilfe einer Animation im Format einer [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx) verbirgt, die geöffnet und geschlossen wird. |
 | [**SplitOpenThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210472) | Die vorkonfigurierte Animation, die eine Zielbenutzeroberfläche mithilfe einer Animation im Format einer [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.combobox.aspx) anzeigt, die geöffnet und geschlossen wird. |
-| [**DrillInThemeAnimation**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.drillinthemeanimation) | Stellt eine vorkonfigurierte Animation bereit, die ausgeführt wird, wenn ein Benutzer in einer logischen Hierarchie in Vorwärtsrichtung navigiert, wie von einer Gestaltungsvorlage zu einer Detailseite. |
-| [**DrillOutThemeAnimation**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.drilloutthemeanimation.aspx) | Stellt eine vorkonfigurierte Animation bereit, die ausgeführt wird, wenn ein Benutzer in einer logischen Hierarchie in Rückwärtsrichtung navigiert, wie von einer Detailseite zu einer Gestaltungsvorlage. |
+| [**DrillInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.drillinthemeanimation) | Stellt eine vorkonfigurierte Animation bereit, die ausgeführt wird, wenn ein Benutzer in einer logischen Hierarchie in Vorwärtsrichtung navigiert, wie von einer Gestaltungsvorlage zu einer Detailseite. |
+| [**DrillOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.drilloutthemeanimation.aspx) | Stellt eine vorkonfigurierte Animation bereit, die ausgeführt wird, wenn ein Benutzer in einer logischen Hierarchie in Rückwärtsrichtung navigiert, wie von einer Detailseite zu einer Gestaltungsvorlage. |
 
  
 
@@ -396,6 +396,6 @@ Der größte Bereich einer App-UI-Definition in XAML, in dem benutzerdefinierte 
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

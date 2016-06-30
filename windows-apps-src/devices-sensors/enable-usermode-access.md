@@ -2,6 +2,9 @@
 author: JordanRh1
 title: Benutzermoduszugriff auf Windows 10 IoT Core aktivieren
 description: In diesem Lernprogramm wird der Benutzermoduszugriff auf GPIO, I2C, SPI und UART auf Windows 10 IoT Core beschrieben.
+ms.sourcegitcommit: f7d7dac79154b1a19eb646e7d29d70b2f6a15e35
+ms.openlocfilehash: eedabee593400ff0260b6d3468ac922285a034f8
+
 ---
 # Benutzermoduszugriff auf Windows 10 IoT Core aktivieren
 
@@ -340,13 +343,15 @@ Pin-Muxing erfolgt durch Zusammenarbeit mehrerer Komponenten.
 
 * Pin-Muxing-Server – Hierbei handelt es sich um Treiber, die den Pin-Muxing-Steuerblock steuern. Pin-Muxing-Server erhalten Pin-Muxing-Anfragen von Clients über Anfragen zur Reservierung von Muxing-Ressourcen (über *IRP_MJ_CREATE*) und Anfragen zum Wechsel einer Pin-Funktion (über *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*). Der Pin-Muxing-Server ist in der Regel der GPIO-Treiber, da der Muxing-Block manchmal Teil des GPIO-Blocks ist. Auch, wenn der Muxing-Block ein separates Peripheriegerät ist, ist der GPIO-Treiber ein logischer Ort für die Muxing-Funktion. 
 * Pin-Muxing-Clients – Treiber, die Pin-Muxing beanspruchen. Pin-Muxing-Clients erhalten Pin-Muxing-Ressourcen von der ACPI-Firmware. Pin-Muxing-Ressourcen sind eine Art der Verbindungsressource und werden vom Ressourcenhub verwaltet. Pin-Muxing-Clients reservieren Pin-Muxing-Ressourcen, indem sie ein Handle zur Ressource öffnen. Damit eine Änderung an der Hardware wirksam ist, müssen Clients die Konfiguration durch Senden der Anforderung *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* übernehmen. Clients geben Pin-Muxing-Ressourcen frei, indem Sie den Handel schließen. Die Muxing-Konfiguration wird dann wieder auf Standardeinstellungen zurückgesetzt. 
-* ACPI-Firmware – gibt Muxing Konfiguration mit `FunctionConfig()`-Ressourcen an. FunctionConfig-Ressourcen geben an, welche Pins in welcher Muxing-Konfiguration von einem Client benötigt werden. FunctionConfig-Ressourcen enthalten Funktionsnummer, Pull-Konfiguration und eine Liste der Pinnummern. FunctionConfig-Ressourcen werden Pin-Muxing-Clients wie Hardware-Ressourcen bereitgestellt, die von Treibern beim PrepareHardware-Rückruf entsprechend GPIO- und SPB-Verbindungsressourcen empfangen werden. Clients empfangen eine Ressourcen-Hub-ID, die verwendet werden kann, um ein Handle für die Ressource zu öffnen. 
+* ACPI-Firmware – gibt die Muxing-Konfiguration mit `MsftFunctionConfig()`-Ressourcen an. MsftFunctionConfig-Ressourcen geben an, welche Pins in welcher Muxing-Konfiguration von einem Client benötigt werden. MsftFunctionConfig-Ressourcen enthalten Funktionsnummer, Pull-Konfiguration und eine Liste der Pinnummern. MsftFunctionConfig-Ressourcen werden Pin-Muxing-Clients wie Hardwareressourcen bereitgestellt, die von Treibern beim PrepareHardware-Rückruf entsprechend GPIO- und SPB-Verbindungsressourcen empfangen werden. Clients empfangen eine Ressourcen-Hub-ID, die verwendet werden kann, um ein Handle für die Ressource zu öffnen. 
+
+> Sie müssen die Befehlszeilenoption `/MsftInternal` an `asl.exe` übergeben, um ASL-Dateien mit `MsftFunctionConfig()`-Beschreibungen zu kompilieren, da diese Deskriptoren derzeit von der ACPI-Arbeitsgruppe überprüft werden. Beispiel: `asl.exe /MsftInternal dsdt.asl`
 
 Nachfolgend finden Sie die Reihenfolge der Vorgänge des Pin-Muxing. 
 
 ![Pin-Muxing-Client-Server-Interaktion](images/usermode-access-diagram-1.png)
 
-1.  Der Client empfängt FunctionConfig-Ressourcen von der ACPI-Firmware bei seinem [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx)-Rückruf.
+1.  Der Client empfängt MsftFunctionConfig-Ressourcen von der ACPI-Firmware bei seinem [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx)-Rückruf.
 2.  Der Client verwendet die Ressourcen-Hub-Hilfsfunktion, `RESOURCE_HUB_CREATE_PATH_FROM_ID()`um einen Pfad über die Ressourcen-ID zu erstellen. Anschließend öffnet er ein Handle zum Pfad (mit [ZwCreateFile()](https://msdn.microsoft.com/library/windows/hardware/ff566424.aspx), [IoGetDeviceObjectPointer()](https://msdn.microsoft.com/library/windows/hardware/ff549198.aspx) oder [WdfIoTargetOpen()](https://msdn.microsoft.com/library/windows/hardware/ff548634.aspx)).
 3.  Der Server extrahiert die Ressourcen-Hub-ID aus dem Dateipfad mit der Ressourcen-Hub-Hilfsfunktionen `RESOURCE_HUB_ID_FROM_FILE_NAME()` und fragt dann beim Ressourcen-Hub die Beschreibung der Ressourcen ab.
 4.  Der Server führt eine Freigabevermittlung für jeden Pin in der Beschreibung durch und schließt die Anforderung IRP_MJ_CREATE ab.
@@ -362,7 +367,7 @@ In diesem Abschnitt wird beschrieben, wie ein Client die Pin-Muxing-Funktionalit
 
 ####    Analysieren von Ressourcen
 
-Ein WDF-Treiber empfängt `FunctionConfig()`-Ressourcen in seiner [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx)-Routine. FunctionConfig-Ressourcen können durch die folgenden Felder identifiziert werden:
+Ein WDF-Treiber empfängt `MsftFunctionConfig()`-Ressourcen in seiner [EvtDevicePrepareHardware()](https://msdn.microsoft.com/library/windows/hardware/ff540880.aspx)-Routine. MsftFunctionConfig-Ressourcen können durch die folgenden Felder identifiziert werden:
 
 ```cpp
 CM_PARTIAL_RESOURCE_DESCRIPTOR::Type = CmResourceTypeConnection
@@ -370,7 +375,7 @@ CM_PARTIAL_RESOURCE_DESCRIPTOR::u.Connection.Class = CM_RESOURCE_CONNECTION_CLAS
 CM_PARTIAL_RESOURCE_DESCRIPTOR::u.Connection.Type = CM_RESOURCE_CONNECTION_TYPE_FUNCTION_CONFIG
 ```
 
-Ein `EvtDevicePrepareHardware()`-Routine extrahiert FunctionConfig-Ressourcen möglicherweise wie folgt:
+Ein `EvtDevicePrepareHardware()`-Routine extrahiert MsftFunctionConfig-Ressourcen möglicherweise wie folgt:
 
 ```cpp
 EVT_WDF_DEVICE_PREPARE_HARDWARE evtDevicePrepareHardware;
@@ -424,9 +429,9 @@ evtDevicePrepareHardware (
 }
 ```
 
-####    Reservieren und übernehmen von Ressourcen
+####    Reservieren und Übernehmen von Ressourcen
 
-Wenn ein Client Mux-Pins möchte, reserviert und übernimmt er die FunctionConfig-Ressource. Das folgende Beispiel zeigt, wie ein Client FunctionConfig-Ressourcen reservieren und übernehmen kann.
+Wenn ein Client Mux-Pins möchte, reserviert und übernimmt er die MsftFunctionConfig-Ressource. Das folgende Beispiel zeigt, wie ein Client MsftFunctionConfig-Ressourcen reservieren und übernehmen kann.
 
 ```cpp
 _IRQL_requires_max_(PASSIVE_LEVEL)
@@ -511,7 +516,7 @@ In diesem Abschnitt wird erläutert, wie ein Pin-Muxing-Server seine Funktionali
 
 ####    Behandeln von IRP_MJ_CREATE-Anforderungen
 
-Clients öffnen ein Handle für eine Ressource, wenn sie eine Pin-Muxing-Ressource reservieren möchten. Ein Pin-Muxing-Server empfängt *IRP_MJ_CREATE*-Anfragen über einen Analysevorgang von der Hub-Ressource. Die nachfolgende Pfadkomponente der *IRP_MJ_CREATE*-Anforderung enthält die Ressourcen-Hub-ID, eine 64-Bit-Ganzzahl im Hexadezimalformat. Der Server sollte die Ressourcen-Hub-ID aus dem Dateinamen mit `RESOURCE_HUB_ID_FROM_FILE_NAME()` aus reshub.h extrahieren und *IOCTL_RH_QUERY_CONNECTION_PROPERTIES* an den Ressourcen-Hub zum Abrufen der `FunctionConfig()`-Beschreibung senden.
+Clients öffnen ein Handle für eine Ressource, wenn sie eine Pin-Muxing-Ressource reservieren möchten. Ein Pin-Muxing-Server empfängt *IRP_MJ_CREATE*-Anfragen über einen Analysevorgang von der Hub-Ressource. Die nachfolgende Pfadkomponente der *IRP_MJ_CREATE*-Anforderung enthält die Ressourcen-Hub-ID, eine 64-Bit-Ganzzahl im Hexadezimalformat. Der Server sollte die Ressourcen-Hub-ID aus dem Dateinamen mit `RESOURCE_HUB_ID_FROM_FILE_NAME()` aus reshub.h extrahieren und *IOCTL_RH_QUERY_CONNECTION_PROPERTIES* an den Ressourcen-Hub zum Abrufen der `MsftFunctionConfig()`-Beschreibung senden.
 
 Der Server sollte die Beschreibung überprüfen und den Freigabemodus und die Pinliste aus der Beschreibung extrahieren. Anschließend sollte er eine Freigabevermittlung für die Pins durchführen. Wenn diese erfolgreich war, sollte er die Pins als reserviert markieren, bevor er die Abfrage abschließt.
 
@@ -525,18 +530,18 @@ Die Freigabevermittlung war insgesamt erfolgreich, wenn die Freigabevermittlung 
 
 Wenn die Freigabevermittlung fehlschlägt, sollte die Anforderung mit *STATUS_GPIO_INCOMPATIBLE_CONNECT_MODE* abgeschlossen werden. Wenn Vermittlung Freigabe erfolgreich ist, sollte die Anforderung mit *STATUS_SUCCESS* abgeschlossen werden.
 
-Beachten Sie, dass der Freigabemodus der eingehenden Anforderung aus der FunctionConfig-Beschreibung entnommen werden soll, nicht aus [IrpSp -> Parameters.Create.ShareAccess](https://msdn.microsoft.com/library/windows/hardware/ff548630.aspx).
+Beachten Sie, dass der Freigabemodus der eingehenden Anforderung aus der MsftFunctionConfig-Beschreibung entnommen werden soll, nicht aus [IrpSp -> Parameters.Create.ShareAccess](https://msdn.microsoft.com/library/windows/hardware/ff548630.aspx).
 
 ####    Behandeln von IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS-Anfragen
 
-Nachdem der Client erfolgreich eine FunctionConfig-Ressource durch Öffnen eines Handle reserviert hat, kann er *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* senden, um anzufordern, dass der Server den Hardware-Muxing-Vorgang selbst durchführt. Wenn der Server für jeden Pin in der Pinliste *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* empfängt, sollte er 
+Nachdem der Client erfolgreich eine MsftFunctionConfig-Ressource durch Öffnen eines Handle reserviert hat, kann er *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* senden, um anzufordern, dass der Server den Hardware-Muxing-Vorgang selbst durchführt. Wenn der Server für jeden Pin in der Pinliste *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* empfängt, sollte er 
 
 *   den Pull-Modus, der im PinConfiguration-Element der Struktur PNP_FUNCTION_CONFIG_DESCRIPTOR in der Hardware festgelegt ist, angeben.
 *   den Pin zur Funktion muxen, die im FunctionNumber-Element der Struktur PNP_FUNCTION_CONFIG_DESCRIPTOR angegeben ist.
 
 Der Server sollte dann die Anforderung mit *STATUS_SUCCESS* abschließen.
 
-Die Bedeutung von FunctionNumber wird vom Server definiert, und es wird davon ausgegangen, dass die FunctionConfig-Beschreibung mit Kenntnissen darüber erstellt wurde, wie der Servers dieses Feld interpretiert.
+Die Bedeutung von FunctionNumber wird vom Server definiert, und es wird davon ausgegangen, dass die MsftFunctionConfig-Beschreibung mit Kenntnissen darüber erstellt wurde, wie der Servers dieses Feld interpretiert.
 
 Denken Sie daran, dass, wenn das Handle geschlossen ist, der Server die Pins in der Konfiguration wiederherstellen muss, in der sie eingegangen sind, als IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS empfangen wurde. Der Server muss den Zustand der Pins also möglicherweise speichern, bevor diese geändert werden können.
 
@@ -546,11 +551,11 @@ Wenn ein Client eine Muxing-Ressource nicht länger benötigt, wird das Handle g
 
 ### Richtlinien für das Erstellen von ACPI-Tabellen
 
-In diesem Abschnitt wird beschrieben, wie Muxing-Ressourcen Clienttreibern bereitgestellt werden. Beachten Sie, dass Sie Microsoft ASL Compiler Build 14327 oder höher zum Kompilieren von Tabellen mit `FunctionConfig()`-Ressourcen benötigen. `FunctionConfig()` Ressourcen werden den Pin-Muxing-Clients als Hardwareressourcen bereitgestellt. `FunctionConfig()` Ressourcen sollten Treibern bereitgestellt werden, die Pin-Muxing-Änderungen erfordern. Dies sind in der Regel SPB- und serielle Controllertreiber; sie sollten jedoch nicht SPB- und seriellen peripheren Gerätetreibern bereitgestellt werden, da die Controllertreiber für die Muxing-Konfiguration verantwortlich sind.
-Das `FunctionConfig()`-ACPI-Makro wird wie folgt definiert:
+In diesem Abschnitt wird beschrieben, wie Muxing-Ressourcen Clienttreibern bereitgestellt werden. Beachten Sie, dass Sie Microsoft ASL Compiler Build 14327 oder höher zum Kompilieren von Tabellen mit `MsftFunctionConfig()`-Ressourcen benötigen. `MsftFunctionConfig()` Ressourcen werden den Pin-Muxing-Clients als Hardwareressourcen bereitgestellt. `MsftFunctionConfig()` Ressourcen sollten Treibern bereitgestellt werden, die Pin-Muxing-Änderungen erfordern. Dies sind in der Regel SPB- und serielle Controllertreiber; sie sollten jedoch nicht SPB- und seriellen peripheren Gerätetreibern bereitgestellt werden, da die Controllertreiber für die Muxing-Konfiguration verantwortlich sind.
+Das `MsftFunctionConfig()`-ACPI-Makro wird wie folgt definiert:
 
 ```cpp
-  FunctionConfig(Shared/Exclusive
+  MsftFunctionConfig(Shared/Exclusive
                 PinPullConfig,
                 FunctionNumber,
                 ResourceSource,
@@ -573,7 +578,7 @@ Das `FunctionConfig()`-ACPI-Makro wird wie folgt definiert:
 * VendorData – Optional Binärdaten, deren Bedeutung vom Pin-Muxing-Server definiert wird. Dies Wert sollte in der Regel leer bleiben
 * Pinliste – eine kommagetrennte Liste der Pinnummern für die die Konfiguration gilt. Wenn der Pin-Muxing-Server ein GpioClx-Treiber ist, sind dies GPIO-Pinnummern. Sie haben dieselbe Bedeutung wie Pinnummern in einer GpioIo-Beschreibung. 
 
-Das folgende Beispiel zeigt, wie eine FunctionConfig()-Ressource an einem I2C-Controllertreiber bereitgestellt werden kann. 
+Das folgende Beispiel zeigt, wie eine MsftFunctionConfig()-Ressource an einem I2C-Controllertreiber bereitgestellt werden kann. 
 
 ```cpp
 Device(I2C1) 
@@ -591,14 +596,14 @@ Device(I2C1)
         { 
             Memory32Fixed(ReadWrite, 0x3F804000, 0x20) 
             Interrupt(ResourceConsumer, Level, ActiveHigh, Shared) { 0x55 } 
-            FunctionConfig(Exclusive, PullUp, 4, "\\_SB.GPI0", 0, ResourceConsumer, ) { 2, 3 } 
+            MsftFunctionConfig(Exclusive, PullUp, 4, "\\_SB.GPI0", 0, ResourceConsumer, ) { 2, 3 } 
         }) 
         Return(RBUF) 
     } 
 } 
 ```
 
-Zusätzlich zum Arbeitsspeicher und den Interruptressourcen, die normalerweise von einem Controllertreiber benötigt werden, wird eine `FunctionConfig()`-Ressource ebenfalls angegeben. Diese Ressource ermöglicht es dem I2C-Controllertreiber, die Pins 2 und 3 – vom Geräteknoten am \\_SB.GPIO0 verwaltet – in Funktion 4 mit aktiviertem Pull-Up-Widerstand zu verwenden. 
+Zusätzlich zum Arbeitsspeicher und den Interruptressourcen, die normalerweise von einem Controllertreiber benötigt werden, wird eine `MsftFunctionConfig()`-Ressource ebenfalls angegeben. Diese Ressource ermöglicht es dem I2C-Controllertreiber, die Pins 2 und 3 – vom Geräteknoten am \\_SB.GPIO0 verwaltet – in Funktion 4 mit aktiviertem Pull-Up-Widerstand zu verwenden. 
 
 ### Unterstützen der Muxing-Unterstützung im GpioClx-Clienttreiber 
 
@@ -611,7 +616,7 @@ Unter [GpioClx-Ereignisrückruffunktionen](https://msdn.microsoft.com/library/wi
 
 Zusätzlich zu diesen beiden neuen DDIs, sollten bestehende DDIs auf Pin-Muxing-Kompatibilität überprüft werden: 
 
-* CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins wird von GpioClx aufgerufen, damit der Miniporttreiber einen Satz Pins für die GPIO-Eingabe -Ausgabe konfiguriert. GPIO ist mit FunctionConfig gegenseitig exklusiv, d. h. ein Pin wird nie mit GPIO und FunctionConfig gleichzeitig verbunden sein. Da eine standardmäßige Pinfunktion von GPIO nicht benötigt wird, muss ein Pin nicht unbedingt an ein GPIO gemuxt werden, wenn ConnectIoPins aufgerufen wird. ConnectIoPins ist erforderlich, um alle Vorgänge auszuführen, die erforderlich sind, um den Pin bereit für GPIO zu machen, einschließlich des Muxing-Vorgangs. *CLIENT_ConnectInterrupt* sollten sich ähnlich verhalten, da Interrupts als Sonderfall von GPIO-Eingaben angesehen werden können. 
+* CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt – CLIENT_ConnectIoPins wird von GpioClx aufgerufen, damit der Miniporttreiber einen Satz Pins für die GPIO-Eingabe oder -Ausgabe konfiguriert. GPIO und MsftFunctionConfig schließen sich gegenseitig aus, d. h. ein Pin wird nie mit GPIO und MsftFunctionConfig gleichzeitig verbunden sein. Da eine standardmäßige Pinfunktion von GPIO nicht benötigt wird, muss ein Pin nicht unbedingt an ein GPIO gemuxt werden, wenn ConnectIoPins aufgerufen wird. ConnectIoPins ist erforderlich, um alle Vorgänge auszuführen, die erforderlich sind, um den Pin bereit für GPIO zu machen, einschließlich des Muxing-Vorgangs. *CLIENT_ConnectInterrupt* sollten sich ähnlich verhalten, da Interrupts als Sonderfall von GPIO-Eingaben angesehen werden können. 
 * CLIENT_DisconnectIoPins/CLIENT_DisconnectInterrupt – Diese Routine sollte Pins in den Zustand zurückversetzen, in dem sie waren, als CLIENT_ConnectIoPins/CLIENT_ConnectInterrupt aufgerufen wurde, es sei denn, das PreserveConfiguration-Flag ist angegeben. Zusätzlich zum Wiederherstellen der Richtung des Pins auf ihren Standardzustand, sollte der Miniport auch jeden Pin-Muxing-Zustand in den Zustand zurückversetzen, in dem er war, als die Routine _Connect aufgerufen wurde. 
 
 Nehmen wir beispielsweise an, dass die Muxing-Standardkonfiguration eines Pins UART ist und dass der Pin auch als GPIO verwendet werden kann. Wenn CLIENT_ConnectIoPins aufgerufen wird, um den Pin für GPIO zu verbinden, sollte der Pin auf GPIO gemuxt werden; bei CLIENT_DisconnectIoPins sollte der Pin zurück auf UART gemuxt werden. Im Allgemeinen sollten die _Disconnect-Routinen Vorgänge widerrufen, die von _Connect Routinen durchgeführt wurden. 
@@ -624,13 +629,13 @@ Das folgende Diagramm zeigt die Abhängigkeiten zwischen den einzelnen Komponent
 
 ![Pin-Muxing-Abhängigkeit](images/usermode-access-diagram-2.png)
 
-Bei Gerätinitialisierung analysieren die `SpbCx`- und `SerCx`-Frameworks alle `FunctionConfig()`-Ressourcen, die dem Gerät als Hardwareressourcen bereitgestellt werden. SpbCx/SerCx erwerben dann Pin-Muxing-Ressourcen bzw. geben diese bei Bedarf frei.
+Bei Gerätinitialisierung analysieren die `SpbCx`- und `SerCx`-Frameworks alle `MsftFunctionConfig()`-Ressourcen, die dem Gerät als Hardwareressourcen bereitgestellt werden. SpbCx/SerCx erwerben dann Pin-Muxing-Ressourcen bzw. geben diese bei Bedarf frei.
 
 `SpbCx` wendet die Pin-Muxing-Konfiguration in seinem *IRP_MJ_CREATE*-Handler direkt vor Aufruf des [EvtSpbTargetConnect()](https://msdn.microsoft.com/library/windows/hardware/hh450818.aspx)-Rückrufs des Clienttreibers an. Wenn die Muxing-Konfiguration nicht angewendet werden kann, wird der `EvtSpbTargetConnect()`-Rückruf des Controllertreibers nicht aufgerufen. Daher kann ein SPB-Controllertreiber davon ausgehen, dass Pins an die SPB-Funktion gemuxt werden, wenn `EvtSpbTargetConnect()` aufgerufen wird.
 
 `SpbCx` kehrt die Pin-Muxing-Konfiguration in seinem *IRP_MJ_CLOSE*-Handler direkt nach Aufrufen des [EvtSpbTargetDisconnect()](https://msdn.microsoft.com/library/windows/hardware/hh450820.aspx)-Rückruf des Controllertreibers um. Das Ergebnis ist, dass Pins an die SPB-Funktion gemuxt werden, sobald ein peripherer Treiber einen Handle für den SPB-Controllertreiber öffnet. Das Muxing wird entfernt, wenn der periphere Treiber seinen Handle schließt.
 
-`SerCx` verhält sich ähnlich. `SerCx` erwirbt alle `FunctionConfig()`-Ressourcen in seinem *IRP_MJ_CREATE*-Handler direkt vor Aufruf des [EvtSerCx2FileOpen()](https://msdn.microsoft.com/library/windows/hardware/dn265209.aspx)-Rückruf des Controllertreibers, und gibt alle Ressourcen im IRP_MJ_CLOSE-Handler nach dem [EvtSerCx2FileClose](https://msdn.microsoft.com/library/windows/hardware/dn265208.aspx)-Rückruf des Controllertreibers frei.
+`SerCx` verhält sich ähnlich. `SerCx` erwirbt alle `MsftFunctionConfig()`-Ressourcen in seinem *IRP_MJ_CREATE*-Handler direkt vor Aufruf des [EvtSerCx2FileOpen()](https://msdn.microsoft.com/library/windows/hardware/dn265209.aspx)-Rückruf des Controllertreibers, und gibt alle Ressourcen im IRP_MJ_CLOSE-Handler nach dem [EvtSerCx2FileClose](https://msdn.microsoft.com/library/windows/hardware/dn265208.aspx)-Rückruf des Controllertreibers frei.
 
 Die Auswirkung des dynamischen Pin-Muxing für `SerCx` und `SpbCx`-Controllertreiber besteht darin, dass sie Pins tolerieren müssen, bei denen das Muxing von der SPB-/UART-Funktion zu bestimmten Zeiten entfernt wird. Controllertreiber müssen wird davon ausgehen, dass Pins nicht gemuxt werden, bis `EvtSpbTargetConnect()` oder `EvtSerCx2FileOpen()` aufgerufen wird. Pins werden nicht zwangsläufig während der folgenden Rückrufe an eine SPB-/UART-Funktion gemuxt. Folgende Liste ist nicht vollständig, sie stellt jedoch die am häufigsten verwendeten PNP-Routinen dar, die von Controllertreibern implementiert werden.
 
@@ -717,8 +722,7 @@ Einfache Befehlszeilentools für Gpio, I2c, Spi und Serial stehen im ms-iot gith
 | GpioClx   | https://msdn.microsoft.com/library/windows/hardware/hh439508.aspx |
 | SerCx | https://msdn.microsoft.com/library/windows/hardware/ff546939.aspx |
 | MITT I2C-Tests | https://msdn.microsoft.com/library/windows/hardware/dn919852.aspx |
-| Signiant | http://windowsreleases/Playbook/Content%20Owners/Requesting%20Access%20to%20Signiant.aspx |
-| GpioTestTool | https://developer.microsoft.com/en-us/windows/iot/win10/samples/GPIOTestTool |
+| GpioTestTool | https://developer.microsoft.com/de-de/windows/iot/win10/samples/GPIOTestTool |
 | I2cTestTool   | https://developer.microsoft.com/en-us/windows/iot/win10/samples/I2cTestTool | 
 | SpiTestTool | https://developer.microsoft.com/en-us/windows/iot/win10/samples/spitesttool |
 | MinComm (Serial) |    https://github.com/ms-iot/samples/tree/develop/MinComm |
@@ -1081,26 +1085,6 @@ GpioInt(Edge, ActiveBoth, Shared, $($_.PullConfig), 0, "\\_SB.GPI0",) { $($_.Pin
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

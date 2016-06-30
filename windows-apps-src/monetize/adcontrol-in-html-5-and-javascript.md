@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
-description: Hier erfahren Sie, wie Sie die AdControl-Klasse nutzen können, um Werbebanner in einer JavaScript/HTML-App für Windows 10 (UWP), Windows 8.1 oder Windows Phone 8.1 anzuzeigen.
+description: "Hier erfahren Sie, wie Sie die AdControl-Klasse nutzen können, um Werbebanner in einer JavaScript/HTML-App für Windows 10 (UWP), Windows 8.1 oder Windows Phone 8.1 anzuzeigen."
 title: AdControl in HTML 5 und Javascript
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 6e96b085132126a2c3e7b0b0b86124aba4cd651e
+
 ---
 
 # AdControl in HTML 5 und Javascript
@@ -27,13 +31,13 @@ Ein vollständiges Beispielprojekt, das veranschaulicht, wie Sie mithilfe von C#
 
 2. Sollte in Ihrem Projekt die Zielplattform **ANYCPU** definiert sein, müssen Sie eine architekturspezifische Buildausgabe verwenden (z. B. **X86**) und das Projekt entsprechend aktualisieren. Sollte in Ihrem Projekt die Zielplattform **ANYCPU** definiert sein, können Sie bei den folgenden Schritten keinen Verweis auf die Microsoft Advertising-Bibliotheken hinzufügen. Weitere Informationen finden Sie unter [durch „Any CPU“ verursachte Verweisfehler im Projekt](known-issues-for-the-advertising-libraries.md#reference_errors).
 
-3.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise** und wählen Sie **Verweis hinzufügen...** aus.
+3.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise**, und wählen Sie **Verweis hinzufügen...** aus.
 
 4.  Wählen Sie im **Verweis-Manager** je nach Projekttyp einen der folgenden Verweise aus:
 
-    -   Für ein Projekt für die Universelle Windows-Plattform (UWP): Erweitern Sie **Universelles Windows**, klicken Sie auf **Erweiterungen** und aktivieren Sie dann das Kontrollkästchen neben **Microsoft Advertising SDK für JavaScript** (Version 10.0).
+    -   Für ein Projekt für die Universelle Windows-Plattform (UWP): Erweitern Sie **Universelles Windows**, klicken Sie auf **Erweiterungen** und aktivieren Sie anschließend das Kontrollkästchen neben **Microsoft Advertising SDK für JavaScript** (Version 10.0).
 
-    -   Für ein Windows 8.1-Projekt: Erweitern Sie **Windows 8.1**, klicken Sie auf **Erweiterungen** und aktivieren Sie dann das Kontrollkästchen neben **Microsoft Advertising SDK für Windows 8.1 Systemeigen (JS)**.
+    -   Für ein Windows 8.1-Projekt: Erweitern Sie **Windows 8.1**, klicken Sie auf **Erweiterungen** und aktivieren Sie anschließend das Kontrollkästchen neben **Microsoft Advertising SDK für Windows 8.1 Native (JS)**.
 
     -   Für ein Windows 8.1-Projekt: Erweitern Sie **Windows 8.1**, klicken Sie auf **Erweiterungen** und aktivieren Sie dann das Kontrollkästchen neben **Microsoft Advertising SDK for Windows Phone 8.1 Systemeigen (JS)**.
 
@@ -128,6 +132,7 @@ Ein vollständiges Beispielprojekt, das veranschaulicht, wie Sie mithilfe von C#
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

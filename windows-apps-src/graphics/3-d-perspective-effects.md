@@ -1,8 +1,12 @@
 ---
 author: Jwmsft
 ms.assetid: 90F07341-01F4-4205-8161-92DD2EB49860
-title: 3D-Perspektiveneffekte für XAML-UI
-description: Mithilfe der perspektivischen Transformation können Sie 3D-Effekte auf Inhalte in Ihren Windows-Runtime-Apps anwenden. Sie können z. B. wie hier gezeigt die Illusion schaffen, dass sich ein Objekt auf Sie zu oder von Ihnen wegbewegt.
+title: "3D-Perspektiveneffekte für XAML-UI"
+description: "Mithilfe der perspektivischen Transformation können Sie 3D-Effekte auf Inhalte in Ihren Windows-Runtime-Apps anwenden. Sie können z. B. wie hier gezeigt die Illusion schaffen, dass sich ein Objekt auf Sie zu oder von Ihnen wegbewegt."
+translationtype: Human Translation
+ms.sourcegitcommit: 54bcd19419f31563f910b705fce8128bca33825b
+ms.openlocfilehash: 4141d23c5102df4970ef7c4fb3659bf3ba561ccf
+
 ---
 # 3D-Perspektiveneffekte für XAML-UI
 
@@ -196,9 +200,10 @@ Sie stellen fest, dass in diesem Beispiel die Richtung des Objekts während sein
 
 ## Positionieren eines Objekts
 
-Sie können die [**Matrix3DProjection**](https://msdn.microsoft.com/library/windows/apps/BR210128) und [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/BR243266)-Typen für Semi-3D-Szenarien verwenden, die komplexer sein können als mit [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192). **Matrix3DProjection** bietet Ihnen eine komplette 3D-Transformationsmatrix, die auf ein beliebiges [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) anwendbar ist, sodass Sie beliebige Matrizen zur Modelltransformation sowie perspektivische Matrizen auf Elemente anwenden können. Beachten Sie, dass diese APIs nur im Minimalzustand vorliegen. Wenn Sie sie also nutzen möchten, müssen Sie den Code schreiben, mit dem die 3D-Transformationsmatrizen ordnungsgemäß erstellt werden. Daher ist es einfacher, für einfache 3D-Szenarien **PlaneProjection** zu verwenden. Because of this, it is easier to use <bpt id="p1">**</bpt>PlaneProjection<ept id="p1">**</ept> for simple 3D scenarios.
+Sie können den [**Matrix3DProjection**](https://msdn.microsoft.com/library/windows/apps/BR210128)-Typ und den [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/BR243266)-Typ für Semi-3D-Szenarien nutzen, die komplexer als die von [**PlaneProjection**](https://msdn.microsoft.com/library/windows/apps/BR210192) unterstützten sind. **Matrix3DProjection** bietet Ihnen eine komplette 3D-Transformationsmatrix, die auf ein beliebiges [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) angewendet werden kann. Somit können Sie Transformationsmatrizen und Perspektivmatrizen beliebiger Modelle auf Elemente anwenden. Beachten Sie, dass diese APIs nur im Minimalzustand vorliegen. Wenn Sie sie also nutzen möchten, müssen Sie den Code schreiben, mit dem die 3D-Transformationsmatrizen ordnungsgemäß erstellt werden. Daher ist es einfacher, für einfache 3D-Szenarien **PlaneProjection** zu verwenden.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

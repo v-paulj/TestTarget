@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: In diesem Artikel wird beschrieben, wie Sie mit adaptiven Kachelvorlagen eine lokale Benachrichtigung an eine primäre Kachel und an eine sekundäre Kachel senden.
+Description: "In diesem Artikel wird beschrieben, wie Sie mit adaptiven Kachelvorlagen eine lokale Benachrichtigung an eine primäre Kachel und an eine sekundäre Kachel senden."
 title: Senden einer lokalen Kachelbenachrichtigung
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: cc2f86f2a56aae5ee9e3019dafa3417a25e7d610
+
 ---
 
 # Senden einer lokalen Kachelbenachrichtigung
@@ -315,6 +319,7 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

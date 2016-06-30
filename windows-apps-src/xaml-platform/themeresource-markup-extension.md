@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource ausgewertet wird. Dabei wird zusätzliche Systemlogik genutzt, mit der unterschiedliche Ressourcen je nach derzeit aktivem Design abgerufen werden.
+description: "Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource ausgewertet wird. Dabei wird zusätzliche Systemlogik genutzt, mit der unterschiedliche Ressourcen je nach derzeit aktivem Design abgerufen werden."
 title: ThemeResource-Markuperweiterung
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
+translationtype: Human Translation
+ms.sourcegitcommit: 9c657f906e6dedb259b8a98373f56ac5a63bd845
+ms.openlocfilehash: 246c991bbdbc95e73ea8d4884cd4d617592bfc51
+
 ---
 
 # {ThemeResource}-Markuperweiterung
@@ -152,6 +156,7 @@ Sobald ein Ressourcenschlüssel als Teil einer **{ThemeResource}**-Verwendung vo
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

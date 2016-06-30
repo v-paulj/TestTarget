@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
 Description: Verwenden Sie Layoutpanels, um UI-Elemente in Ihrer App anzuordnen und zu gruppieren.
-title: Layoutpanels für UWP-Apps (Apps für die universelle Windows-Plattform)
+title: "Layoutpanels für UWP-Apps (Apps für die universelle Windows-Plattform)"
 ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
 label: Layout panels
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 70bb6e1f01fa89c7a504e0299e89153efc30de1e
+
 ---
 # Layoutpanels
 
@@ -227,6 +231,7 @@ Verwenden Sie das Canvas-Panel mit Bedacht. Es ist zwar in einigen Szenarien hil
 Es gibt verschiedene spezielle Panels, die nur als [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx) zum Anzeigen von Elementen in einem [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemscontrol.aspx)-Element verwendet werden können. Dies sind [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemsstackpanel.aspx), [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.itemswrapgrid.aspx), [**VirtualizingStackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.virtualizingstackpanel.aspx) und [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.wrapgrid.aspx). Diese Panel können nicht für das allgemeine UI-Layout verwendet werden.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

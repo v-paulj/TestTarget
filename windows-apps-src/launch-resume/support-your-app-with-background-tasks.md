@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Unterstützen Ihrer App mit Hintergrundaufgaben
-description: In den Themen in diesem Abschnitt erfahren Sie, wie Sie einfachen Code im Hintergrund ausführen, indem Sie mit Hintergrundaufgaben auf Trigger reagieren.
+author: TylerMSFT
+title: "Unterstützen Ihrer App mit Hintergrundaufgaben"
+description: "In den Themen in diesem Abschnitt erfahren Sie, wie Sie einfachen Code im Hintergrund ausführen, indem Sie mit Hintergrundaufgaben auf Trigger reagieren."
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 38942aa2a274828cc36677a93d0923beb03060dc
+
 ---
 
 # Unterstützen Ihrer App mit Hintergrundaufgaben
@@ -15,16 +18,16 @@ In den Themen in diesem Abschnitt erfahren Sie, wie Sie einfachen Code im Hinter
 
 Hintergrundaufgaben sind separate Klassen, die die [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)-Schnittstelle implementieren. Sie registrieren eine Hintergrundaufgabe mithilfe der [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Klasse. Der Klassenname wird beim Registrieren der Hintergrundaufgabe zum Angeben des Einstiegspunkts verwendet.
 
-Für einen schnelleren Einstieg in Hintergrundaufgaben lesen Sie [Erstellen und Registrieren einer Hintergrundaufgabe](create-and-register-a-background-task.md).
+Um sich den Einstieg in Hintergrundaufgaben zu erleichtern, lesen Sie [Erstellen und Registrieren einer Hintergrundaufgabe](create-and-register-a-background-task.md).
 
-**Tipp**  Ab Windows 10 müssen Sie eine App nicht mehr auf dem Sperrbildschirm platzieren, um Hintergrundaufgaben zu registrieren.
+**Tipp:** Ab Windows 10 müssen Sie eine App nicht mehr auf dem Sperrbildschirm platzieren, um Hintergrundaufgaben zu registrieren.
 
  
 
 ## Hintergrundaufgaben für Systemereignisse
 
 
-Ihre App kann auf Systemereignisse reagieren, indem mit der [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)-Klasse eine Hintergrundaufgabe registriert wird. Eine App kann jeden der folgenden Systemereignistrigger verwenden (definiert in [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839)).
+Ihre App kann auf Systemereignisse reagieren, indem mit der [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)-Klasse eine Hintergrundaufgabe registriert wird. Eine App kann jeden der folgenden Systemereignistrigger verwenden (definiert in [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839))
 
 | Auslösername                     | Beschreibung                                                                                                    |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -41,7 +44,7 @@ Weitere Informationen finden Sie unter [Reagieren auf Systemereignisse mit Hinte
 ## Bedingungen für Hintergrundaufgaben
 
 
-Über Bedingungen können Sie steuern, wann die Hintergrundaufgabe ausgeführt wird, auch nachdem sie ausgelöst wurde. Nach dem Auslösen wird die Hintergrundaufgabe erst ausgeführt, wenn alle ihre Bedingungen erfüllt sind. Sie können die folgenden Bedingungen verwenden (dargestellt durch die [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)-Enumeration).
+Über Bedingungen können Sie steuern, wann die Hintergrundaufgaben ausgeführt werden, selbst nachdem sie ausgelöst wurde. Nach dem Auslösen wird die Hintergrundaufgabe erst ausgeführt, wenn alle ihre Bedingungen erfüllt sind. Sie können die folgenden Bedingungen verwenden (dargestellt durch die [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835)-Enumeration).
 
 | Bedingungsname           | Beschreibung                       |
 |--------------------------|-----------------------------------|
@@ -56,21 +59,21 @@ Weitere Informationen finden Sie unter [Reagieren auf Systemereignisse mit Hinte
 
 Weitere Informationen finden Sie unter [Festlegen von Bedingungen für die Ausführung einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md).
 
-## Anwendungsmanifestanforderungen
+## App-Manifestanforderungen
 
 
-Damit Ihre App eine Hintergrundaufgabe registrieren kann, muss sie im Anwendungsmanifest deklariert werden. Weitere Informationen finden Sie unter [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md).
+Damit Ihre App eine Hintergrundaufgabe registrieren kann, muss sie im App-Manifest deklariert werden. Weitere Informationen finden Sie unter [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md).
 
 ## Hintergrundaufgaben
 
 
-Die folgenden Echtzeittrigger können verwendet werden, um einfachen benutzerdefinierten Code im Hintergrund auszuführen:
+Die folgenden Echtzeitauslöser können verwendet werden, um einfachen benutzerdefinierten Code im Hintergrund auszuführen:
 
 **Steuerkanal**:  Hintergrundaufgaben können eine Verbindung aufrechterhalten und Nachrichten auf dem Steuerkanal mithilfe des [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) empfangen. Wenn Ihre App ein Socket überwacht, können Sie den Socketbroker statt **ControlChannelTrigger** verwenden. Weitere Informationen zur Verwendung der Socketbroker finden Sie unter [SocketActivityTrigger](https://msdn.microsoft.com/library/windows/apps/dn806009). **ControlChannelTrigger** wird unter Windows Phone nicht unterstützt.
 
-**Timer**:  Hintergrundaufgaben können in einem Intervall von bis zu 15 Minuten ausgeführt und mithilfe von [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) auf die Ausführung zu einer bestimmten Zeit festgelegt werden. Weitere Informationen finden Sie im Thema [Ausführen einer Hintergrundaufgabe mit einem Timer](run-a-background-task-on-a-timer-.md).
+**Timer:** Hintergrundaufgaben können in einem Intervall von bis zu 15 Minuten ausgeführt und mithilfe von [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843) zu einer bestimmten Zeit ausgeführt werden. Weitere Informationen finden Sie im Thema [Ausführen einer Hintergrundaufgabe mit einem Timer](run-a-background-task-on-a-timer-.md).
 
-**Pushbenachrichtigung**:  Hintergrundaufgaben reagieren auf den [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), um unformatierte Pushbenachrichtigungen zu empfangen.
+**Pushbenachrichtigung:** Hintergrundaufgaben reagieren auf den [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), um unformatierte Pushbenachrichtigungen zu empfangen.
 
 **Hinweis**  
 
@@ -81,7 +84,7 @@ Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh7
 ## Systemereignistrigger
 
 
-> **Hinweis** Die [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839)-Enumeration umfasst die folgenden Systemereignistrigger.
+> **Hinweis:** Die [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839)-Enumeration umfasst die folgenden Systemereignistrigger:
 
 | Auslösername            | Beschreibung                                                       |
 |-------------------------|-------------------------------------------------------------------|
@@ -151,14 +154,14 @@ Hintergrundaufgaben können mit Ereignissen und lokalem Speicher Fortschritt, Be
 [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
 
 **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung unter Windows 8.x oder Windows Phone 8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, hilft Ihnen die [archivierte Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.
 
  
 
 ## Verwandte Themen
 
 
-**Konzeptionelle Richtlinien für Multitasking in Windows 10**
+**Konzeptionelle Richtlinien für Multitasking in Windows 10**
 
 * [Starten, Fortsetzen und Multitasking](index.md)
 
@@ -186,8 +189,6 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die unive
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

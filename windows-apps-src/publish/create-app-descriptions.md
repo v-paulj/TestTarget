@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Im Abschnitt „Beschreibungen“ des App-Übermittlungprozesses stellen Sie den Text und die Bilder bereit, die den Kunden im Store-Eintrag der App angezeigt werden.
+Description: "Im Abschnitt „Beschreibungen“ des App-Übermittlungprozesses stellen Sie den Text und die Bilder bereit, die den Kunden im Store-Eintrag der App angezeigt werden."
 title: Erstellen von App-Beschreibungen
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
+ms.sourcegitcommit: 447beeae917b03dea2538e74fd9cd8ef48b0f41f
+ms.openlocfilehash: ca85f55e12713903dbbee0a4e247cfb1a51c17d3
+
 ---
 
 # Erstellen von App-Beschreibungen
@@ -28,7 +31,7 @@ Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Üb
 
 > **Hinweis**  Wenn Sie eine Beschreibung in einer Sprache erstellen, die von Ihren Paketen nicht unterstützt wird, müssen Sie angeben, welche Ihrer reservierten App-Namen in dieser Beschreibung angezeigt werden sollen, da für diese Sprache kein verknüpftes Paket vorliegt, von dem der Name abgerufen werden könnte. Der Name, den Sie hier wählen, gilt nur für den Store-Eintrag für diese Sprache und wirkt sich nicht auf den Namen aus, der angezeigt wird, wenn ein Kunde die App installiert.
 
-Klicken Sie zum Bearbeiten einer Beschreibung in der Übermittlungsübersicht auf ihren Namen. Die Abschnitte der Seite **Beschreibung** werden nachstehend beschrieben.
+Klicken Sie zum Bearbeiten einer Beschreibung in der Übermittlungsübersicht auf den Namen der Sprache. Die Abschnitte der Seite **Beschreibung** werden nachstehend beschrieben.
 
 ## Standardbeschreibungsfelder
 
@@ -117,6 +120,7 @@ Wenn Ihre App über eine Datenschutzrichtlinie verfügt, geben Sie die URL hier 
 **Wichtig**  Microsoft stellt keine standardmäßigen Datenschutzrichtlinien für Ihre App bereit. Außerdem ist Ihre App nicht durch Datenschutzrichtlinien von Microsoft abgedeckt. Um festzustellen, ob Ihre App eine Datenschutzrichtlinie benötigt, lesen Sie die [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und die [Windows Store-Richtlinien](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_5_1).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

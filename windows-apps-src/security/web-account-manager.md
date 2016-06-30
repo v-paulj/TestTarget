@@ -1,7 +1,11 @@
 ---
-title: Verbinden mit Identitätsanbietern über Web Account Manager
-description: In diesem Artikel wird beschrieben, wie Sie AccountsSettingsPane verwenden, um Ihre App für die universelle Windows-Plattform (UWP) mit externen Identitätsanbietern wie Microsoft oder Facebook zu verbinden. Dazu verwenden Sie die neuen Web Account Manager-APIs in Windows 10. 
+title: "Verbinden mit Identitätsanbietern über Web Account Manager"
+description: "In diesem Artikel wird beschrieben, wie Sie AccountsSettingsPane verwenden, um Ihre App für die universelle Windows-Plattform (UWP) mit externen Identitätsanbietern wie Microsoft oder Facebook zu verbinden. Dazu verwenden Sie die neuen Web Account Manager-APIs in Windows 10."
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: c9f6a0183edc3c01566311360417c256329ef904
+ms.openlocfilehash: 6ab12d6da9c4858cf6ab16d4143cf073bb0cb275
+
 ---
 # Verbinden mit Identitätsanbietern über Web Account Manager
 
@@ -383,6 +387,7 @@ Einstellungsbefehle lassen sich grundsätzlich überall verwenden. Es wird jedoc
 [WebAccountManagement-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=620621)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

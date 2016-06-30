@@ -1,20 +1,20 @@
 ---
-author: martinekuan
-title: Verteilen einer verwalteten Komponente für Windows-Runtime
-description: Sie können Ihre Windows-Runtime-Komponente durch Kopieren der Dateien verteilen.
+author: msatranjr
+title: "Verteilen einer verwalteten Komponente für Windows-Runtime"
+description: "Sie können Ihre Windows-Runtime-Komponente durch Kopieren der Dateien verteilen."
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: 3d7a51ed13f63ca9d6070fbbe860c653c4deaf07
+
 ---
 
 
 # Verteilen einer verwalteten Komponente für Windows-Runtime
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
-
-\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
-
-Sie können Ihre Windows-Runtime-Komponente durch Kopieren der Dateien verteilen. Wenn Ihre Komponente aus vielen Dateien besteht, kann die Installation für Ihre Benutzer aber sehr mühsam sein. Außerdem verursachen Fehler beim Platzieren der Dateien oder beim Festlegen von Verweisen möglicherweise Probleme. Sie können eine komplexe Komponente als Visual Studio-Erweiterungs-SDK packen, um die Installation und Verwendung einfacher zu gestalten. Benutzer müssen nur einen Verweis für das gesamte Paket festlegen. Benutzer können Ihre Komponente mit dem Dialogfeld **Erweiterungen und Updates** problemlos suchen und installieren, wie in der MSDN Library unter [Suchen und Verwenden von Visual Studio-Erweiterungen](https://msdn.microsoft.com/library/vstudio/dd293638.aspx) beschrieben.
+Sie können Ihre Komponente für Windows-Runtime durch Kopieren der Dateien verteilen. Wenn Ihre Komponente aus vielen Dateien besteht, kann die Installation für Ihre Benutzer aber sehr mühsam sein. Außerdem verursachen Fehler beim Platzieren der Dateien oder beim Festlegen von Verweisen möglicherweise Probleme. Sie können eine komplexe Komponente als Visual Studio-Erweiterungs-SDK packen, um die Installation und Verwendung einfacher zu gestalten. Benutzer müssen nur einen Verweis für das gesamte Paket festlegen. Benutzer können Ihre Komponente mit dem Dialogfeld **Erweiterungen und Updates** problemlos suchen und installieren, wie in der MSDN Library unter [Suchen und Verwenden von Visual Studio-Erweiterungen](https://msdn.microsoft.com/library/vstudio/dd293638.aspx) beschrieben.
 
 ## Planen einer verteilbaren Komponente für Windows-Runtime
 
@@ -75,6 +75,6 @@ Eine komplexe Komponente enthält in der Regel Windows-Ressourcen, aber lesen Si
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

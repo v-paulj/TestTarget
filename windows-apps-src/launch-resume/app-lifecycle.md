@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: App-Lebenszyklus
-description: In diesem Thema wird der Lebenszyklus einer UWP-App (Universelle Windows-Plattform) von ihrer Aktivierung bis zum Schließen beschrieben.
+description: "In diesem Thema wird der Lebenszyklus einer UWP-App (Universelle Windows-Plattform) von ihrer Aktivierung bis zum Schließen beschrieben."
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
+ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
+ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
+
 ---
 
 # App-Lebenszyklus
@@ -28,7 +31,7 @@ In dieser Abbildung sind die Übergänge zwischen den App-Ausführungsstatus dar
 ## Bereitstellung
 
 
-Damit eine App aktiviert werden kann, muss sie zunächst bereitgestellt werden. Ihre App wird bereitgestellt, wenn ein Benutzer Ihre App installiert oder wenn Sie Visual Studio zum Erstellen und Ausführen der App während der Entwicklungs- und Testphase verwenden. Weitere Informationen hierzu und zu erweiterten Bereitstellungsszenarien finden Sie unter [App-Pakete und Bereitstellung](https://msdn.microsoft.com/library/windows/apps/hh464929).
+Damit eine App aktiviert werden kann, muss sie zunächst bereitgestellt werden. Ihre App wird bereitgestellt, wenn ein Benutzer Ihre App installiert oder wenn Sie Visual Studio zum Erstellen und Ausführen der App während der Entwicklungs- und Testphase verwenden. Weitere Informationen hierzu und zu erweiterten Bereitstellungsszenarien finden Sie unter [App-Pakete und -Bereitstellung](https://msdn.microsoft.com/library/windows/apps/hh464929).
 
 ## Starten einer App
 
@@ -43,12 +46,12 @@ Wenn für [**PreviousExecutionState**](https://msdn.microsoft.com/library/window
 
 Beim Start einer App zeigt Windows einen Begrüßungsbildschirm für die App an. Informationen zum Konfigurieren des Begrüßungsbildschirms finden Sie unter [Hinzufügen eines Begrüßungsbildschirms](https://msdn.microsoft.com/library/windows/apps/xaml/hh465331).
 
-Während der Begrüßungsbildschirm angezeigt wird, sollte die Benutzeroberfläche Ihrer App bereits vorbereitet sein. Die Hauptaufgaben der App sind die Registrierung von Ereignishandlern und die Einrichtung einer angepassten Benutzeroberfläche, die die App zum Laden der ersten Seite benötigt. Diese Aufgaben sollten nur einige Sekunden dauern. Wenn eine App Daten aus dem Netzwerk anfordern oder große Datenmengen von einem Datenträger abrufen muss, sollten diese Aktivitäten außerhalb der Aktivierung abgeschlossen werden. Eine App kann ihre eigene angepasste Ladebenutzeroberfläche oder einen erweiterten Begrüßungsbildschirm verwenden, während auf den Abschluss dieser Vorgänge mit langer Ausführungszeit gewartet wird. Weitere Infos finden Sie unter [Längere Anzeige des Begrüßungsbildschirms](create-a-customized-splash-screen.md) und im [Begrüßungsbildschirmbeispiel](http://go.microsoft.com/fwlink/p/?linkid=234889). Nach Abschluss der App-Aktivierung wechselt die App in den Status **Running**, und der Begrüßungsbildschirm sowie alle zugehörigen Ressourcen und Objekte werden ausgeblendet.
+Während der Begrüßungsbildschirm angezeigt wird, sollte Ihre App die Benutzeroberfläche bereithalten. Die Hauptaufgaben der App sind die Registrierung von Ereignishandlern und die Einrichtung einer angepassten Benutzeroberfläche, die die App zum Laden der ersten Seite benötigt. Diese Aufgaben sollten nur einige Sekunden dauern. Wenn eine App Daten aus dem Netzwerk anfordern oder große Datenmengen von einem Datenträger abrufen muss, sollten diese Aktivitäten außerhalb der Aktivierung abgeschlossen werden. Eine App kann ihre eigene angepasste Ladebenutzeroberfläche oder einen erweiterten Begrüßungsbildschirm verwenden, während auf den Abschluss dieser Vorgänge mit langer Ausführungszeit gewartet wird. Weitere Infos finden Sie unter [Längere Anzeige des Begrüßungsbildschirms](create-a-customized-splash-screen.md) und im [Begrüßungsbildschirmbeispiel](http://go.microsoft.com/fwlink/p/?linkid=234889). Nach Abschluss der App-Aktivierung wechselt die App in den Status **Running**, und der Begrüßungsbildschirm sowie alle zugehörigen Ressourcen und Objekte werden ausgeblendet.
 
 ## Aktivieren einer App
 
 
-Eine App kann vom Benutzer durch verschiedene Erweiterungen und Verträge wie dem Freigabe-Vertrag aktiviert werden. Eine Liste der Möglichkeiten zum Aktivieren Ihrer App finden Sie unter [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693).
+Eine App kann vom Benutzer durch verschiedene Erweiterungen und Verträge wie dem Freigabe-Vertrag aktiviert werden. Eine Liste der Methoden zum Aktivieren Ihrer App finden Sie unter [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693).
 
 Die [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Klasse definiert Methoden, die außer Kraft gesetzt werden können, um die verschiedenen Aktivierungstypen zu behandeln. Mehrere der Aktivierungstypen verfügen über eine bestimmte Methode, die Sie außer Kraft setzen können, z. B. [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336) usw. Für die anderen Aktivierungstypen setzen Sie die [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Methode außer Kraft.
 
@@ -67,8 +70,6 @@ Die [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-
  
 
 **Hinweis**
-            
-          
             *Aktuelle Benutzersitzung* basiert auf Windows-Anmeldung. Solange sich der aktuelle Benutzer nicht explizit abgemeldet oder das System heruntergefahren hat oder Windows nicht aus einem anderen Grund neu gestartet wurde, bleibt die aktuelle Benutzersitzung unabhängig von bestimmten Ereignissen – wie Sperrbildschirmauthentifizierung, Benutzerwechsel usw. – bestehen.
 
  
@@ -85,12 +86,12 @@ Weitere Informationen finden Sie unter [App-Erweiterungen](https://msdn.microsof
 
 ### **OnActivated** im Vergleich zu bestimmten Aktivierungen
 
-Die [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Methode stellt das Instrument zur Behandlung aller möglichen Aktivierungstypen dar. Üblicherweise werden die meistverwendeten Aktivierungstypen jedoch mit unterschiedlichen Methoden behandelt, und **OnActivated** wird nur als Fallbackmethode für weniger verbreitete Aktivierungstypen verwendet. Beispielsweise verfügt [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) über eine [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode, die als Rückruf aufgerufen wird, sobald [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) gleich **Launch** ist. Dies ist die typische Aktivierung für die meisten Apps. Es gibt 6 weitere **On\***-Methoden für spezifische Aktivierungen: [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806). Startvorlagen für eine XAML-App verfügen über eine Implementierung für **OnLaunched** und einen Handler für [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341).
+Die [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Methode stellt das Instrument zur Behandlung aller möglichen Aktivierungstypen dar. Üblicherweise werden die meistverwendeten Aktivierungstypen jedoch mit unterschiedlichen Methoden behandelt, und **OnActivated** wird nur als Fallbackmethode für weniger verbreitete Aktivierungstypen verwendet. Beispielsweise verfügt [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) über eine [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode, die als Rückruf aufgerufen wird, sobald [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) gleich **Launch** ist. Dies ist die typische Aktivierung für die meisten Apps. Es gibt 6 weitere **On\***-Methoden für spezifische Aktivierungen: [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806). Startvorlagen für eine XAML-App weisen eine Implementierung für **OnLaunched** und einen Handler für [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) auf.
 
 ## Anhalten einer App
 
 
-Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum Desktop bzw. Startbildschirm wechselt. Ihre App kann auch angehalten werden, wenn das Gerät in einen Energiesparmodus wechselt. Wenn der Benutzer wieder zu Ihrer App wechselt, wird die App vom System fortgesetzt. Beim Fortsetzen der App haben die Variablen und Datenstrukturen den gleichen Inhalt wie vor der Unterbrechung. Das System stellt die App exakt so wieder her, wie sie unterbrochen wurde. Dadurch entsteht für den Benutzer der Eindruck, die App wäre im Hintergrund weiter ausgeführt worden.
+Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum Desktop bzw. auf den Startbildschirm wechselt. Ihre App kann auch angehalten werden, wenn das Gerät in einen Energiesparmodus wechselt. Wenn der Benutzer wieder zu Ihrer App wechselt, wird die App vom System fortgesetzt. Beim Fortsetzen der App haben die Variablen und Datenstrukturen den gleichen Inhalt wie vor der Unterbrechung. Das System stellt die App exakt so wieder her, wie sie unterbrochen wurde. Dadurch entsteht für den Benutzer der Eindruck, die App wäre im Hintergrund weiter ausgeführt worden.
 
 Wenn der Benutzer eine App in den Hintergrund verlagert, wird von Windows einige Sekunden abgewartet, ob der Benutzer sofort wieder zurück zur App wechselt, damit der Übergang in diesem Fall sehr schnell erfolgt. Wenn der Benutzer nicht innerhalb dieses Zeitfensters zurückkehrt, wird die App von Windows angehalten.
 
@@ -104,7 +105,7 @@ Sie sollten auch exklusive Ressourcen und Dateihandles freigeben, damit andere A
 
 Im Allgemeinen sollte die App beim Behandeln des Anhalteereignisses sofort ihren Status speichern und ihre Ressourcen und Dateihandles freigeben. Außerdem sollte die Ausführung des Codes maximal eine Sekunde dauern. Wenn eine App nicht innerhalb weniger Sekunden nach dem Anhalteereignis zurückkehrt, geht Windows davon aus, dass die App nicht mehr reagiert, und beendet sie.
 
-In einigen Situationen muss eine App weiter ausgeführt werden, damit Hintergrundaufgaben abgeschlossen werden. Beispielsweise kann Ihre App weiterhin Sound im Hintergrund wiedergeben. Weitere Informationen finden Sie unter [Hintergrundaudio](https://msdn.microsoft.com/library/windows/apps/mt282140). Hintergrundübertragungen werden auch dann fortgesetzt, wenn die App angehalten oder beendet wurde. Weitere Informationen finden Sie unter [So wird's gemacht: Herunterladen einer Datei](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer).
+In einigen Situationen muss eine App weiter ausgeführt werden, damit Hintergrundaufgaben abgeschlossen werden. Beispielsweise kann Ihre App weiterhin Sound im Hintergrund wiedergeben. Weitere Informationen finden Sie unter [Hintergrundaudio](https://msdn.microsoft.com/library/windows/apps/mt282140). Hintergrundübertragungen werden auch fortgesetzt, selbst wenn die App angehalten oder beendet wurde. Weitere Informationen finden Sie unter [So wird's gemacht: Herunterladen einer Datei](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer).
 
 Entsprechende Richtlinien finden Sie unter [Richtlinien für das Anhalten und Fortsetzen von Apps](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
@@ -139,7 +140,7 @@ Entsprechende Richtlinien finden Sie unter [Richtlinien für das Anhalten und Fo
 ## Schließen einer App
 
 
-Im Allgemeinen müssen Benutzer Apps nicht schließen, sondern können deren Verwaltung Windows überlassen. Unter Windows können Benutzer Apps jedoch mit der Geste zum Schließen oder durch Drücken von ALT+F4 schließen. Unter Windows Phone werden Apps mithilfe der Aufgabenumschaltfunktion geschlossen.
+Im Allgemeinen müssen Benutzer Apps nicht schließen, sondern können die Verwaltung Windows überlassen. Unter Windows können Benutzer Apps jedoch mit der Geste zum Schließen oder durch Drücken von ALT+F4 schließen. Unter Windows Phone werden Apps mithilfe der Aufgabenumschaltfunktion geschlossen.
 
 Es gibt kein spezielles Ereignis zum Angeben, dass der Benutzer die App geschlossen hat.
 
@@ -172,7 +173,7 @@ Löscht ein Benutzer eine App, wird die App mit allen zugehörigen lokalen Daten
 
 Der grundlegende Code, der für den Lebenszyklus der App relevant ist, wird in den Visual Studio-Startprojektvorlagen bereitgestellt. Die einfache App behandelt die Startaktivierung, stellt einen Speicherort zum Wiederherstellen Ihrer App-Daten bereit und zeigt die primäre Benutzeroberfläche an, bevor Sie eigenen Code hinzugefügt haben. Weitere Informationen finden Sie unter [C#-, VB- und C++-Projektvorlagen für Apps](https://msdn.microsoft.com/library/windows/apps/hh768232).
 
-## Wichtige APIs für den Anwendungslebenszyklus
+## Wichtige APIs für den App-Lebenszyklus
 
 
 -   [
@@ -192,7 +193,7 @@ Der grundlegende Code, der für den Lebenszyklus der App relevant ist, wird in d
             ](https://msdn.microsoft.com/library/windows/apps/br209041)-Klasse (XAML)
 
 **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Informationen für die Entwicklung unter Windows 8.x oder Windows Phone 8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -211,8 +212,6 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die univer
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

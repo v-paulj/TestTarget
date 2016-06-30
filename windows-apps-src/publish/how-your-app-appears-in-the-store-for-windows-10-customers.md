@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Wenn Sie im Store bereits Apps für Windows oder Windows Phone veröffentlicht haben, werden diese Apps für Kunden auch auf Windows 10-Geräten verfügbar gemacht.
-title: Darstellung Ihrer App im Store für Windows 10-Kunden
+Description: "Wenn Sie im Store bereits Apps für Windows oder Windows Phone veröffentlicht haben, werden diese Apps für Kunden auch auf Windows 10-Geräten verfügbar gemacht."
+title: "Darstellung Ihrer App im Store für Windows 10-Kunden"
 ms.assetid: 487BB57E-F547-4764-99B1-84FE396E6D3A
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5e8d25264a17307c61f4e8b1295ded3f920ee2cf
+
 ---
 
 # Darstellung Ihrer App im Store für Windows 10-Kunden
@@ -117,6 +121,7 @@ In vielen Fällen sind neue [Kategorien und Unterkategorien](category-and-subcat
 | Spiele &gt; Rennsport           | Spiele &gt; Rennsport + Fliegen           |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

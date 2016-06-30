@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Der MediaPlayer verfügt über anpassbare XAML-Transportsteuerelemente, um die Steuerung von Audio-und Videoinhalten zu verwalten.
+Description: "Der MediaPlayer verfügt über anpassbare XAML-Transportsteuerelemente, um die Steuerung von Audio-und Videoinhalten zu verwalten."
 title: Erstellen benutzerdefinierter Medientransportsteuerelemente
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 5500f41b254b32b8d293181fba3acebbfffa90e7
+
 ---
 # Erstellen benutzerdefinierter Transportsteuerelemente
 
@@ -270,6 +274,7 @@ private void MediaElement_MediaOpened(object sender, RoutedEventArgs e)
 - [Medienwiedergabe](media-playback.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

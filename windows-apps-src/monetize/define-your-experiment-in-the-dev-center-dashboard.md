@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
-Description: Vor dem Ausführen eines Experiments in Ihrer Universellen Windows-Plattform(UWP)-App mit A/B-Test müssen Sie Ihr Experiment im Dev Center-Dashboard definieren.
+Description: "Vor dem Ausführen eines Experiments in Ihrer Universellen Windows-Plattform(UWP)-App mit A/B-Test müssen Sie Ihr Experiment im Dev Center-Dashboard definieren."
 title: Definieren des Experiments im Dev Center-Dashboard
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7462c23de58b44f897a1737d0d54913144b14f75
+
 ---
 
 # Definieren des Experiments im Dev Center-Dashboard
@@ -80,6 +84,7 @@ Nachdem Sie Ihr Experiment im Dev Center-Dashboard definiert haben, sind Sie ber
   * [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

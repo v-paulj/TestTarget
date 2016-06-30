@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Zeichnen auf den Bildschirm
-description: Schließlich wird der Code portiert, der den sich drehenden Würfel auf den Bildschirm zeichnet.
+description: "Schließlich wird der Code portiert, der den sich drehenden Würfel auf den Bildschirm zeichnet."
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 1b7431c20e25173a0aa3f8d6ee0d407be869d60a
+
 ---
 
 # Zeichnen auf den Bildschirm
@@ -68,11 +72,11 @@ Die Direct3D-Laufzeit erstellt implizit eine [**IDXGISurface1**](https://msdn.mi
 
 Für die Initialisierung und Konfiguration des Direct3D-Geräts und -Gerätekontexts sowie der Renderziele dienen die benutzerdefinierten Methoden **CreateDeviceResources** und **CreateWindowSizeDependentResources** in der Direct3D-Vorlage.
 
-Weitere Informationen zum Direct3D-Gerätekontext und seiner Beziehung zu EGL und zum EGLContext-Typ finden Sie unter [Portieren von EGL-Code zu DXGI und Direct3D](moving-from-egl-to-dxgi.md).
+Weitere Informationen zum Direct3D-Gerätekontext und dessen Beziehung zu EGL und zum EGLContext-Typ finden Sie unter [Portieren von EGL-Code zu DXGI und Direct3D](moving-from-egl-to-dxgi.md).
 
 ## Anweisungen
 
-### Schritt 1: Rendern und Anzeigen der Szene
+### Schritt 1: Rendern und Anzeigen der Szene
 
 Nach dem Aktualisieren der Würfeldaten (in diesem Fall durch eine leichte Drehung des Würfels um die y-Achse) legt die Rendermethode den Viewport auf die Dimensionen des Zeichnungskontextes (EGLContext) fest. Dieser Kontext enthält den Farbpuffer, der unter Verwendung der konfigurierten Anzeige (EGLDisplay) auf der Fensteroberfläche (EGLSurface) angezeigt wird. Dabei werden folgende Schritte ausgeführt: Die Scheitelpunktdaten-Attribute werden aktualisiert, der Indexpuffer wird erneut gebunden, der Würfel wird gezeichnet, und der von der Schattierungspipeline gezeichnete Farbpuffer wird ausgetauscht und auf der Anzeigeoberfläche dargestellt.
 
@@ -125,16 +129,16 @@ void Render(GraphicsContext *drawContext)
 Der Prozess in Direct3D 11 ist sehr ähnlich. (Es wird vorausgesetzt, dass Sie die Viewport- und Renderzielkonfiguration der Direct3D-Vorlage verwenden.)
 
 -   Aktualisieren Sie die Konstantenpuffer (in diesem Fall die Modell-Anzeige-Projizierungsmatrix) mit Aufrufen für [**ID3D11DeviceContext1::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/hh446790).
--   Legen Sie den Vertexpuffer mit [**ID3D11DeviceContext1::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) fest.
+-   Legen Sie den Scheitelpunktpuffer mit [**ID3D11DeviceContext1::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) fest.
 -   Legen Sie den Indexpuffer mit [**ID3D11DeviceContext1::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476453) fest.
 -   Legen Sie die spezifische Dreieckstopologie (eine Dreiecksliste) mit [**ID3D11DeviceContext1::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455) fest.
--   Legen Sie das Eingabelayout des Vertexpuffers mit [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) fest.
+-   Legen Sie das Eingabelayout des Scheitelpunktpuffers mit [**ID3D11DeviceContext1::IASetInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476454) fest.
 -   Binden Sie den Vertex-Shader mit [**ID3D11DeviceContext1::VSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476493).
 -   Binden Sie den Fragment-Shader mit [**ID3D11DeviceContext1::PSSetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476472).
 -   Senden Sie die indizierten Scheitelpunkte durch die Shader, und geben Sie die Farbergebnisse mit [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) an den Renderzielpuffer aus.
 -   Zeigen Sie den Renderzielpuffer mit [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797) an.
 
-Direct3D 11: Rendern eines Frames zur Anzeige
+Direct3D 11: Rendern eines Frames zur Anzeige
 
 ``` syntax
 void RenderObject::Render()
@@ -225,6 +229,7 @@ In diesem Beispiel wurden viele der komplexen Schritte beim Konfigurieren von Ge
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

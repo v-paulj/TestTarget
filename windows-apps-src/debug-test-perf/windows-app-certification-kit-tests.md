@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
-title: Tests im Zertifizierungskit für Windows-Apps
-description: Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, mit denen Sie sicherstellen können, dass eine App für die Veröffentlichung im Windows Store bereit ist.
+title: "Tests im Zertifizierungskit für Windows-Apps"
+description: "Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, mit denen Sie sicherstellen können, dass eine App für die Veröffentlichung im Windows Store bereit ist."
+translationtype: Human Translation
+ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
+ms.openlocfilehash: 816b147c91a340505348aa579c8b1540962a1df5
+
 ---
 ## Tests im Zertifizierungskit für Windows-Apps
 
@@ -84,7 +88,7 @@ Dieser Test wurde gemäß der Store-Richtlinie implementiert.
 
 ### Testdetails
 
-Für Windows Phone 8.1-Apps wird mit dem Test geprüft, ob die Gesamtzahl der APPX-Pakete im Bündel kleiner als 512 ist, ob nur ein Hauptpaket im Bündel vorhanden ist und ob die Architektur des Hauptpakets im Bündel als ARM oder neutral gekennzeichnet ist.
+Für Windows Phone 8.1-Apps wird mit dem Test geprüft, ob die Gesamtzahl der APPX-Pakete im Bündel kleiner als &lt; 512 ist, ob nur ein Hauptpaket im Bündel vorhanden ist und ob die Architektur des Hauptpakets im Bündel als ARM oder neutral gekennzeichnet ist.
 
 Für Windows 10-Apps wird mit dem Test geprüft, ob die Revisionsnummer in der Version des Bündels auf 0 festgelegt ist.
 
@@ -666,6 +670,7 @@ Aktualisieren Sie den JavaScript-Hintergrundcode so, dass „Close()” richtig 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -3,6 +3,10 @@ author: DBirtolo
 ms.assetid: 95481C7E-E905-4477-955B-90D292634E2E
 title: Drucken und Scannen
 description: In diesem Abschnitt wird das Drucken und Scannen aus Ihrer Universellen Windows-App beschrieben.
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 81a96c4c519a112551cab83425caf782b13ea9be
+
 ---
 # Drucken und Scannen
 
@@ -26,6 +30,7 @@ In diesem Abschnitt wird das Drucken und Scannen aus Ihrer Universellen Windows-
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

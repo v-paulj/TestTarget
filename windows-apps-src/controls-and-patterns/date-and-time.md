@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Mit Datums- und Uhrzeitsteuerelementen können Sie das Datum und die Uhrzeit anzeigen und festlegen. Dieser Artikel enthält Entwurfsrichtlinien und hilft Ihnen beim Auswählen des richtigen Steuerelements.
-title: Richtlinien für Datums- und Uhrzeitsteuerelemente
+Description: "Mit Datums- und Uhrzeitsteuerelementen können Sie das Datum und die Uhrzeit anzeigen und festlegen. Dieser Artikel enthält Entwurfsrichtlinien und hilft Ihnen beim Auswählen des richtigen Steuerelements."
+title: "Richtlinien für Datums- und Uhrzeitsteuerelemente"
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
 label: Calendar, date, and time controls
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e9d8d73c35e2e600e89330fbd54aea57a815aebf
+
 ---
 
 # Kalender-, Datums- und Uhrzeitsteuerelemente
@@ -111,6 +115,7 @@ Ein verwandtes Konzept ist die Calendar-Klasse, die beeinflusst, wie die Daten i
 - [**TimePicker-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn299280)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

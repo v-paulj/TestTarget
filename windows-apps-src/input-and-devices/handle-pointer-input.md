@@ -5,8 +5,8 @@ title: Behandeln von Zeigereingaben
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 8e3d0fdd97c72c2e7816fbc48738c651fb4f5bbd
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 2204e8f3ddce067cf2cbc24ce89cbdcea5b361bf
 
 ---
 
@@ -25,7 +25,7 @@ Empfangen, verarbeiten und verwalten Sie Eingabedaten von Zeigegeräten, z. B. 
 Wenn Sie eine eigene Interaktionsunterstützung implementieren, sollten Sie daran denken, dass die Benutzer eine intuitive Umgebung erwarten, die die direkte Interaktion mit den UI-Elementen der App beinhaltet. Es empfiehlt sich, die benutzerdefinierten Interaktionen auf der Basis der [Liste der Steuerelemente](https://msdn.microsoft.com/library/windows/apps/mt185406) zu modellieren, um auf diese Weise für eine konsistente und intuitive Benutzerumgebung zu sorgen. Die Plattformsteuerelemente bieten umfassende Funktionen für UWP-Benutzerinteraktionen (Universelle Windows-Plattform) wie Standardinteraktionen, animierte Physikeffekte, visuelles Feedback und Barrierefreiheit. Erstellen Sie benutzerdefinierte Interaktionen nur dann, wenn ein eindeutiger, klar umrissener Bedarf besteht und es keine Basisinteraktion gibt, die das gewünschte Szenario unterstützt.
 
 
-## <span id="Pointers"></span><span id="pointers"></span><span id="POINTERS"></span>Zeiger
+## Zeiger
 
 
 Bei vielen Interaktionsfunktionen ist der Benutzer involviert, der das Objekt identifizieren muss, mit dem er interagieren möchte, indem er mithilfe von Eingabegeräten, z. B. Toucheingabe, Maus, Zeichen-/Eingabestift und Touchpad, darauf zeigt. Da die von diesen Eingabegeräten bereitgestellten HID-Rohdaten (Human Interface Device) viele allgemeine Eigenschaften enthalten, werden die Informationen an einen einheitlichen Eingabestapel weitergeleitet und als konsolidierte geräteunabhängige Zeigerdaten verfügbar gemacht. Ihre UWP-Apps können dann diese Daten ohne Rücksicht auf das verwendete Eingabegerät verwenden.
@@ -36,7 +36,7 @@ Bei vielen Interaktionsfunktionen ist der Benutzer involviert, der das Objekt id
 
 Jeder Eingabepunkt (oder Kontakt) in dem Eingabestapel wird durch ein [**Pointer**](https://msdn.microsoft.com/library/windows/apps/br227968)-Objekt dargestellt, das über den [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076)-Parameter verfügbar gemacht wird, der von den verschiedenen Zeigerereignissen bereitgestellt wird. Bei Verwendung mehrerer Stifte oder der Mehrfingereingabe wird jeder Kontakt als separater Eingabezeiger behandelt.
 
-## <span id="Pointer_events"></span><span id="pointer_events"></span><span id="POINTER_EVENTS"></span>Zeigerereignisse
+## Zeigerereignisse
 
 
 Zeigerereignisse machen grundlegende Informationen wie Erkennungszustand (im Bereich oder bei Kontakt) und Gerätetyp sowie erweiterte Informationen wie Position, Druck und Kontaktgeometrie verfügbar. Darüber hinaus sind auch bestimmte gerätespezifische Eigenschaften verfügbar, z. B. welche Maustaste ein Benutzer gedrückt hat oder ob die Radiergummispitze des Zeichenstifts verwendet wird. Wenn die App zwischen Eingabegeräten und ihren Funktionen unterscheiden muss, finden Sie entsprechende Informationen unter [Erkennen von Eingabegeräten](identify-input-devices.md).
@@ -60,7 +60,7 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span id="PointerCanceled"></span><span id="pointercanceled"></span><span id="POINTERCANCELED"></span>[<strong>PointerCanceled</strong>](https://msdn.microsoft.com/library/windows/apps/br208964)</p></td>
+<td align="left"><p>[<strong>PointerCanceled</strong>](https://msdn.microsoft.com/library/windows/apps/br208964)</p></td>
 <td align="left"><p>Tritt auf, wenn ein Zeiger von der Plattform abgebrochen wird.</p>
 <ul>
 <li>Touchzeiger werden abgebrochen, wenn ein Zeichenstift innerhalb des Bereichs der Eingabeoberfläche erkannt wird.</li>
@@ -71,7 +71,7 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="PointerCaptureLost"></span><span id="pointercapturelost"></span><span id="POINTERCAPTURELOST"></span>[<strong>PointerCaptureLost</strong>](https://msdn.microsoft.com/library/windows/apps/br208965)</p></td>
+<td align="left"><p>[<strong>PointerCaptureLost</strong>](https://msdn.microsoft.com/library/windows/apps/br208965)</p></td>
 <td align="left"><p>Tritt auf, wenn ein anderes Benutzeroberflächenelement den Zeiger erfasst, der Zeiger freigegeben wurde oder ein anderer Zeiger programmgesteuert erfasst wurde.</p>
 <div class="alert">
 <strong>Hinweis</strong>  Es gibt kein entsprechendes Zeigererfassungsereignis.
@@ -81,7 +81,7 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="PointerEntered"></span><span id="pointerentered"></span><span id="POINTERENTERED"></span>[<strong>PointerEntered</strong>](https://msdn.microsoft.com/library/windows/apps/br208968)</p></td>
+<td align="left"><p>[<strong>PointerEntered</strong>](https://msdn.microsoft.com/library/windows/apps/br208968)</p></td>
 <td align="left"><p>Tritt auf, wenn der Zeiger in den Begrenzungsbereich eines Elements eintritt. Dies kann geringfügig anders für Touch-, Touchpad-, Maus- und Stifteingaben passieren.</p>
 <ul>
 <li>Für Toucheingaben ist zur Auslösung dieses Ereignisses eine Fingerkontakt erforderlich, entweder über eine direkte Toucheingabe oder durch Bewegen in den Begrenzungsbereich des Elements.</li>
@@ -90,7 +90,7 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="PointerExited"></span><span id="pointerexited"></span><span id="POINTEREXITED"></span>[<strong>PointerExited</strong>](https://msdn.microsoft.com/library/windows/apps/br208969)</p></td>
+<td align="left"><p>[<strong>PointerExited</strong>](https://msdn.microsoft.com/library/windows/apps/br208969)</p></td>
 <td align="left"><p>Tritt auf, wenn der Zeiger den Begrenzungsbereich eines Elements verlässt. Dies kann geringfügig anders für Touch-, Touchpad-, Maus- und Stifteingaben passieren.</p>
 <ul>
 <li>Die Toucheingabe erfordert einen Fingerkontakt und löst dieses Ereignis aus, wenn sich der Mauszeiger aus dem Begrenzungsbereich des Elements heraus bewegt.</li>
@@ -99,7 +99,7 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 </ul></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="PointerMoved"></span><span id="pointermoved"></span><span id="POINTERMOVED"></span>[<strong>PointerMoved</strong>](https://msdn.microsoft.com/library/windows/apps/br208970)</p></td>
+<td align="left"><p>[<strong>PointerMoved</strong>](https://msdn.microsoft.com/library/windows/apps/br208970)</p></td>
 <td align="left"><p>Tritt auf, wenn ein Zeiger Koordinaten, Schaltflächenzustand, Druck, Neigung oder Kontaktgeometrie (z. B. Breite und Höhe) innerhalb des Begrenzungsbereichs eines Elements ändert. Dies kann geringfügig anders für Touch-, Touchpad-, Maus- und Stifteingaben passieren.</p>
 <ul>
 <li>Die Toucheingabe erfordert einen Fingerkontakt und löst dieses Ereignis nur aus, wenn ein Kontakt innerhalb des Begrenzungsbereichs des Elements besteht.</li>
@@ -108,16 +108,16 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="PointerPressed"></span><span id="pointerpressed"></span><span id="POINTERPRESSED"></span>[<strong>PointerPressed</strong>](https://msdn.microsoft.com/library/windows/apps/br208971)</p></td>
+<td align="left"><p>[<strong>PointerPressed</strong>](https://msdn.microsoft.com/library/windows/apps/br208971)</p></td>
 <td align="left"><p>Tritt auf, wenn der Zeiger eine Drückaktion (z. B. eine Fingereingabe, gedrückte Maustaste, Stifteingabe oder gedrückte Touchpadtaste) innerhalb des Begrenzungsbereichs eines Elements angibt.</p>
 <p>[<strong>CapturePointer</strong>](https://msdn.microsoft.com/library/windows/apps/br208918) must be called from the handler for this event.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="PointerReleased"></span><span id="pointerreleased"></span><span id="POINTERRELEASED"></span>[<strong>PointerReleased</strong>](https://msdn.microsoft.com/library/windows/apps/br208972)</p></td>
+<td align="left"><p>[<strong>PointerReleased</strong>](https://msdn.microsoft.com/library/windows/apps/br208972)</p></td>
 <td align="left"><p>Tritt auf, wenn der Zeiger eine Loslass-Aktion (z. B. ein Finger bewegt sich nach oben, Maustaste, Stift oder Touchpadtaste werden losgelassen) innerhalb des Begrenzungsbereichs eines Elements anzeigt, oder wenn der Zeiger außerhalb des Begrenzungsbereichs erfasst wird.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="PointerWheelChanged"></span><span id="pointerwheelchanged"></span><span id="POINTERWHEELCHANGED"></span>[<strong>PointerWheelChanged</strong>](https://msdn.microsoft.com/library/windows/apps/br208973)</p></td>
+<td align="left"><p>[<strong>PointerWheelChanged</strong>](https://msdn.microsoft.com/library/windows/apps/br208973)</p></td>
 <td align="left"><p>Tritt auf, wenn das Mausrad gedreht wird.</p>
 <p>Die Mauseingabe wird einem einzelnen Zeiger zugeordnet, der bei der ersten Ermittlung einer Mauseingabe zugewiesen wird. Durch das Klicken auf eine Maustaste (links, Mausrad oder rechts) wird über das [<strong>PointerMoved</strong>](https://msdn.microsoft.com/library/windows/apps/br208970)-Ereignis eine zweite Zuordnung zwischen dem Zeiger und dieser Taste erstellt.</p></td>
 </tr>
@@ -126,12 +126,12 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 
  
 
-## <span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel
+## Beispiel
 
 
 Nachfolgend sehen Sie einige Codebeispiele aus einer einfachen Zeigerverfolgungs-App, in denen gezeigt wird, wie Zeigerereignisse überwacht und behandelt und verschiedene Eigenschaften für aktive Zeiger abgerufen werden.
 
-### <span id="Create_the_UI"></span><span id="create_the_ui"></span><span id="CREATE_THE_UI"></span>Erstellen der Benutzeroberfläche
+### Erstellen der Benutzeroberfläche
 
 In diesem Beispiel wird ein Rechteck (`targetContainer`) als Zielobjekt für Zeigereingaben verwendet. Die Farbe des Ziels ändert sich, wenn sich der Zeigerstatus ändert.
 
@@ -194,7 +194,7 @@ Im Folgenden ist der XAML-Code (Extensible Application Markup Language) für die
 </Page>
 ```
 
-### <span id="Listen_for_pointer_events"></span><span id="listen_for_pointer_events"></span><span id="LISTEN_FOR_POINTER_EVENTS"></span>Lauschen auf Zeigerereignisse
+### Lauschen auf Zeigerereignisse
 
 In den meisten Fällen wird empfohlen, Zeigerinformationen über die [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) des Ereignishandlers abzurufen.
 
@@ -243,7 +243,7 @@ Der folgende Code richtet das Zielobjekt ein, deklariert globale Variablen und g
 
 ```
 
-### <span id="Handle_pointer_events"></span><span id="handle_pointer_events"></span><span id="HANDLE_POINTER_EVENTS"></span>Behandeln von Zeigerereignissen
+### Behandeln von Zeigerereignissen
 
 Im nächsten Schritt wird UI-Feedback verwendet, um die Verwendung einfacher Zeigerereignishandler zu veranschaulichen.
 
@@ -561,7 +561,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
     }
 ```
 
-### <span id="Get_pointer_properties"></span><span id="get_pointer_properties"></span><span id="GET_POINTER_PROPERTIES"></span>Abrufen von Zeigereigenschaften
+### Abrufen von Zeigereigenschaften
 
 Wie bereits erwähnt, müssen Sie die erweiterten Zeigerinformationen von einem [**Windows.UI.Input.PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038)-Objekt abrufen, das über die Methoden [**GetCurrentPoint**](https://msdn.microsoft.com/library/windows/apps/hh943077) und [**GetIntermediatePoints**](https://msdn.microsoft.com/library/windows/apps/hh943078) von [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) bereitgestellt wird.
 
@@ -657,7 +657,7 @@ Wie bereits erwähnt, müssen Sie die erweiterten Zeigerinformationen von einem 
              }
 ```
 
-### <span id="Complete_example"></span><span id="complete_example"></span><span id="COMPLETE_EXAMPLE"></span>Vollständiges Beispiel
+### Vollständiges Beispiel
 
 Im Folgenden ist der C#-Code für dieses Beispiel aufgeführt. Links zu komplexeren Beispielen finden Sie weiter unten unter „Verwandte Artikel“.
 
@@ -1085,7 +1085,7 @@ namespace PointerInput
 }
 ```
 
-## <span id="related_topics"></span>Verwandte Artikel
+## Verwandte Artikel
 
 
 **Beispiele**
@@ -1111,6 +1111,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

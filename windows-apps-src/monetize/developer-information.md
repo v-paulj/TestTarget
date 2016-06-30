@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 278114aa-2a44-4d63-a1d2-d512d8aababc
-description: Allgemeine Entwicklerinformationen 체ber die Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK
-title: Entwicklerinformationen 체ber die Microsoft Advertising-Bibliotheken
+description: "Allgemeine Entwicklerinformationen 체ber die Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK"
+title: "Entwicklerinformationen 체ber die Microsoft Advertising-Bibliotheken"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: ec3b1d5c33a24da4ad2a4c5c8e4e11c71ece4828
+
 
 ---
 
@@ -34,6 +38,7 @@ Die Themen in diesem Abschnitt bieten n체tzliche Informationen f체r Entwickler �
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

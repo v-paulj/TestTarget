@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Ausführen einer Hintergrundaufgabe für einen Timer
-description: Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine regelmäßige Hintergrundaufgabe ausführen.
+author: TylerMSFT
+title: "Ausführen einer Hintergrundaufgabe für einen Timer"
+description: "Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine regelmäßige Hintergrundaufgabe ausführen."
 ms.assetid: 0B7F0BFF-535A-471E-AC87-783C740A61E9
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 3fc1e3efa742ff8ab24f78856872fe322703f152
+
 ---
 
 # Ausführen einer Hintergrundaufgabe für einen Timer
@@ -27,9 +30,9 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
 
 -   Erstellen Sie einen neuen Zeitauslöser ([**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)). Der zweite Parameter (*OneShot*) gibt an, ob die Hintergrundaufgabe einmalig oder regelmäßig ausgeführt wird. Wenn *OneShot* auf „true“ festgelegt wird, gibt der erste Parameter (*FreshnessTime*) die Anzahl der Minuten an, die gewartet werden soll, bevor eine Hintergrundaufgabe geplant wird. Wenn *OneShot* auf „false“ festgelegt wird, gibt *FreshnessTime* die Häufigkeit an, mit der die Hintergrundaufgabe ausgeführt wird.
 
-    Der integrierte Timer für UWP (Universelle Windows-Plattform)-Apps führt Hintergrundaufgaben in einem 15-Minuten-Intervall aus.
+    Der integrierte Timer für auf Desktop- oder Mobilgeräte ausgerichtete UWP-Apps führt Hintergrundaufgaben in einem 15-Minuten-Intervall aus.
 
-    -   Wenn *FreshnessTime* auf 15 Minuten und *OneShot* auf „true“ festgelegt ist, wird die Aufgabe einmalig innerhalb der ersten 15 Minuten nach dem Registrierungszeitpunkt ausgeführt.
+    -   Wenn *FreshnessTime* auf 15 Minuten und *OneShot* auf „true“ festgelegt ist, wird die Aufgabe einmalig innerhalb der ersten 15 Minuten nach dem Registrierungszeitpunkt ausgeführt.
 
     -   Wenn *FreshnessTime* auf 15 Minuten und *OneShot* auf „false“ festgelegt ist, wird die Aufgabe in den ersten 15 Minuten nach dem Registrierungszeitpunkt und dann regelmäßig alle 15 Minuten ausgeführt.
 
@@ -86,19 +89,19 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
     > ```cs
     > string entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > string taskName   = "Example hourly background task";
-    > 
+    >
     > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
     > ```cpp
     > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass";
     > String ^ taskName   = "Example hourly background task";
-    > 
+    >
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
-    
+
     > **Hinweis**  Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App Szenarien, in denen die Registrierung von Hintergrundaufgaben einen Fehler verursacht, problemlos verarbeitet.
 
-   
+
 ## Anmerkungen
 
 > **Hinweis**  Ab Windows 10 muss der Benutzer Ihre App nicht mehr zum Sperrbildschirm hinzufügen, um Hintergrundaufgaben zu nutzen. Die verschiedenen Arten von Auslösern für Hintergrundaufgaben werden unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md)erläutert.
@@ -129,8 +132,6 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

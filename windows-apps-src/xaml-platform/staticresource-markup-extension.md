@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Stellt durch Auswerten eines Verweises auf eine bereits definierte Quelle einen Wert für ein beliebiges XAML-Attribut bereit. Ressourcen sind in einem ResourceDictionary definiert, und mit der Verwendung einer StaticResource wird auf den Schlüssel dieser Ressource im ResourceDictionary verwiesen.
+description: "Stellt durch Auswerten eines Verweises auf eine bereits definierte Quelle einen Wert für ein beliebiges XAML-Attribut bereit. Ressourcen sind in einem ResourceDictionary definiert, und mit der Verwendung einer StaticResource wird auf den Schlüssel dieser Ressource im ResourceDictionary verwiesen."
 title: StaticResource-Markuperweiterung
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 3f486a8ac56e37a7401b9a87a4d560cac6b68f6f
+
 ---
 
 # {StaticResource}-Markuperweiterung
@@ -82,6 +86,7 @@ Sobald ein Ressourcenschlüssel als Teil einer **{StaticResource}**-Verwendung v
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

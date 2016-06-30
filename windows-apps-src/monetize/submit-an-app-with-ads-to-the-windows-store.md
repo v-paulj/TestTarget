@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: b307fc7d-0424-459d-8c20-e37e5cfec0d0
-description: Erfahren Sie mehr über die Anforderungen, die Apps, in denen die Microsoft Advertising-Bibliotheken verwendet werden, erfüllen müssen, bevor sie im Store veröffentlicht werden können.
-title: Übermitteln einer App mit Werbung an den Windows Store
+description: "Erfahren Sie mehr über die Anforderungen, die Apps, in denen die Microsoft Advertising-Bibliotheken verwendet werden, erfüllen müssen, bevor sie im Store veröffentlicht werden können."
+title: "Übermitteln einer App mit Werbung an den Windows Store"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: d2e6f9873b2539f9c0558abdc9ee936b938a03b1
+
 
 ---
 
@@ -25,6 +29,7 @@ Alle an den Windows Store übermittelten Apps müssen den [Windows Store-Richtli
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

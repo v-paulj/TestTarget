@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: Verwenden des Ausrichtungssensors
-description: Hier erfahren Sie, wie Sie mithilfe der Ausrichtungssensoren die Ausrichtung des Geräts ermitteln.
+description: "Hier erfahren Sie, wie Sie mithilfe der Ausrichtungssensoren die Ausrichtung des Geräts ermitteln."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 67c23795be54207c54c1e871dad045e6c0cd7c77
+
 ---
 # Verwenden des Ausrichtungssensors
 
@@ -348,6 +352,7 @@ Diese neuen Werte werden in ein TextBlock-Element des XAML-Projektcodes geschrie
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

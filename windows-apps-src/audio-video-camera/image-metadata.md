@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: D5D98044-7221-4C2A-9724-56E59F341AB0
-description: In diesem Artikel werden das Lesen und Schreiben von Eigenschaften von Bildmetadaten und das Hinzufügen von Geomarkierungen zu Dateien mithilfe der GeotagHelper-Hilfsklasse erläutert.
+description: "In diesem Artikel werden das Lesen und Schreiben von Eigenschaften von Bildmetadaten und das Hinzufügen von Geomarkierungen zu Dateien mithilfe der GeotagHelper-Hilfsklasse erläutert."
 title: Bildmetadaten
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 571d71d52931392a36c3c11030749f6ecb3cc961
+
 ---
 
 # Bildmetadaten
@@ -91,6 +95,7 @@ Erstellen Sie ein [**BitmapPropertySet**](https://msdn.microsoft.com/library/win
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

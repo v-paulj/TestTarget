@@ -3,6 +3,10 @@ author: drewbatgit
 ms.assetid: 9BA3F85A-970F-411C-ACB1-B65768B8548A
 description: Dieser Artikel beschreibt, wie Sie in einer UWP (Universelle Windows-Plattform)-App innerhalb einer XAML-Seite schnell den Kameravorschau-Stream anzeigen.
 title: Einfacher Zugriff auf die Kameravorschau
+translationtype: Human Translation
+ms.sourcegitcommit: 72abc006de1925c3c06ecd1b78665e72e2ffb816
+ms.openlocfilehash: 05e752925c07b0e3720fbdd42d785381aa08b99c
+
 ---
 
 # Einfacher Zugriff auf die Kameravorschau
@@ -26,7 +30,7 @@ Damit Ihre App auf die Kamera eines Geräts zugreifen kann, müssen Sie deklarie
 
 ## Hinzufügen eines CaptureElement zu einer Seite
 
-Verwenden Sie ein [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) zum Anzeigen des Vorschaudatenstroms innerhalb der XAML-Seite.
+Verwenden Sie ein [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278), um den Vorschaudatenstrom innerhalb der XAML-Seite anzuzeigen.
 
 [!code-xml[CaptureElement](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml#SnippetCaptureElement)]
 
@@ -46,14 +50,14 @@ Erstellen Sie eine neue Instanz der **MediaCapture**-Klasse, und rufen Sie [**In
 
 **Wichtig** Bei einigen Gerätefamilien wird dem Benutzer eine Aufforderung zur Zustimmung des Benutzers angezeigt, bevor Ihrer App der Zugriff auf die Kamera des Geräts gewährt wird. Aus diesem Grund müssen Sie nur [**MediaCapture.InitializeAsync**](https://msdn.microsoft.com/library/windows/apps/br226598) aus dem Hauptthread der Benutzeroberfläche aufrufen. Der Versuch, die Kamera von einem anderen Thread aus zu initialisieren, kann zum einem Initialisierungsfehler führen.
 
-Verbinden Sie das **MediaCapture**-Objekt mit **CaptureElement**, indem Sie die [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280)-Eigenschaft festlegen. Starten Sie schließlich die Vorschau durch Aufrufen von [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613).
+Verbinden Sie das **MediaCapture**-Objekt mit dem **CaptureElement** durch Festlegen der [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280)-Eigenschaft. Starten Sie schließlich die Vorschau durch Aufrufen von [**StartPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226613).
 
 [!code-cs[StartPreviewAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetStartPreviewAsync)]
 
 
 ## Beenden des Vorschaudatenstroms
 
-Wenn Sie mit der Verwendung des Vorschaudatenstroms fertig sind, sollten Sie den Stream immer beenden und die zugehörigen Ressourcen ordnungsgemäß löschen, um sicherzustellen, dass die Kamera für andere Apps auf dem Gerät verfügbar ist. Folgende Schritte sind zum Beenden des Vorschaudatenstroms erforderlich:
+Wenn Sie den Vorschaudatenstrom nicht mehr benötigen, sollten Sie ihn immer beenden und die dazugehörigen Ressourcen ordnungsgemäß löschen, um sicherzustellen, dass die Kamera für andere Apps auf dem Gerät verfügbar ist. Folgende Schritte sind zum Beenden des Vorschaudatenstroms erforderlich:
 
 -   Rufen Sie [**StopPreviewAsync**](https://msdn.microsoft.com/library/windows/apps/br226622) auf, um den Vorschaudatenstrom zu beenden.
 -   Setzen Sie die [**Source**](https://msdn.microsoft.com/library/windows/apps/br209280)-Eigenschaft von **CaptureElement** auf null.
@@ -80,10 +84,11 @@ Das Aufzeichnen eines Standbilds im Vorschaudatenstrom der Medienaufnahme in For
 
 ## Verwandte Themen
 
-* [Aufnehmen von Fotos und Videos mit „MediaCapture“](capture-photos-and-video-with-mediacapture.md)
+* [Aufnehmen von Fotos und Videos mit "MediaCapture"](capture-photos-and-video-with-mediacapture.md)
 * [Abrufen eines Vorschauframes](get-a-preview-frame.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

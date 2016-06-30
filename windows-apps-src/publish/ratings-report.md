@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Dem Bericht „Bewertungen“ im Windows Dev Center-Dashboard können Sie entnehmen, wie Kunden Ihre App im Windows Store bewerten.
-title: Bericht „Bewertungen“
+Description: "Dem Bericht „Bewertungen“ im Windows Dev Center-Dashboard können Sie entnehmen, wie Kunden Ihre App im Windows Store bewerten."
+title: "Bericht „Bewertungen“"
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e0258bc9402772d0a036b32563348d11acd0fdb7
+
 ---
 
 # Bericht „Bewertungen“
@@ -68,6 +72,7 @@ Standardmäßig wird der Markt mit den meisten Rezensionen zuerst angezeigt, gef
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

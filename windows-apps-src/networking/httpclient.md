@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: Verwenden Sie HttpClient und die übrige Windows.Web.Http-Namespace-API zum Senden und Empfangen von Informationen über die HTTP-Protokolle 1.1 und 2.0.
+description: "Verwenden Sie HttpClient und die übrige Windows.Web.Http-Namespace-API zum Senden und Empfangen von Informationen über die HTTP-Protokolle 1.1 und 2.0."
 title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b1908e83ffcab562c12c82cfcf7b5fe281d7ada1
+
 ---
 
 # HttpClient
@@ -128,6 +132,7 @@ Für die meisten Parameterüberprüfungsfehler wird der **HRESULT**-Wert **E\_IN
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

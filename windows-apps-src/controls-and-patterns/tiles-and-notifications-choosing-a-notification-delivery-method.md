@@ -1,10 +1,14 @@
 ---
 author: mijacobs
 Description: In diesem Artikel werden die vier Benachrichtigungsoptionen&\#8212;lokal, geplant, periodisch und Push&\#8212;behandelt, die Kachel- und Signalaktualisierungen sowie Popupbenachrichtigungsinhalte bereitstellen.
-title: Auswählen einer Methode für die Übermittlung von Benachrichtigungen
+title: "Auswählen einer Methode für die Übermittlung von Benachrichtigungen"
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: b79a6f771afe63c9a42567875db5ef8107611afc
+
 ---
 
 # Auswählen einer Methode für die Übermittlung von Benachrichtigungen
@@ -167,6 +171,7 @@ Weitere Informationen finden Sie unter:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

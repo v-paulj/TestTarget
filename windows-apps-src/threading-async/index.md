@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: beac6333-655a-4bcf-9caf-bba15f715ea5
 title: Threading und asynchrone Programmierung
-description: Mithilfe von Threading und der asynchronen Programmierung kann Ihre App Aufgaben asynchron in parallelen Threads ausführen.
+description: "Mithilfe von Threading und der asynchronen Programmierung kann Ihre App Aufgaben asynchron in parallelen Threads ausführen."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d69259d449ffb7d4dfc1824c77c16eb9e1cdb026
+
 ---
 # Threading und asynchrone Programmierung
 
@@ -37,6 +41,7 @@ Der Threadpool bietet eine höhere Effizienz beim Verwalten von Threads, da der 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Halten Sie die folgenden Richtlinien ein, wenn Sie die App-Pakete für die Übermittlung an den Windows Store vorbereiten.
+Description: "Halten Sie die folgenden Richtlinien ein, wenn Sie die App-Pakete für die Übermittlung an den Windows Store vorbereiten."
 title: App-Paketanforderungen
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 951c00f9fd2c945ac44d47bfae701049e937b98f
+
 ---
 
 # App-Paketanforderungen
@@ -80,6 +84,7 @@ Ihre App-Pakete müssen die folgenden Anforderungen erfüllen:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

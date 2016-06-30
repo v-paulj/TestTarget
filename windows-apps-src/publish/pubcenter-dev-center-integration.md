@@ -3,6 +3,10 @@ author: jnHs
 Description: Microsoft Advertising in pubCenter wurde in das Windows Dev Center integriert.
 title: pubCenter-Dev Center-Integration
 ms.assetid: C1EB51DF-7850-45F4-B565-FF5A690EBD8D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d6bf60e1dae7ec62e3cdbba8098a24c093d5deb1
+
 ---
 
 # pubCenter-Dev Center-Integration
@@ -181,6 +185,7 @@ Ja, die in pubCenter und Dev Center angezeigten Daten können sich geringfügig
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

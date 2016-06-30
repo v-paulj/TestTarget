@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Behandeln einer abgebrochenen Hintergrundaufgabe
-description: Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet.
+description: "Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet."
 ms.assetid: B7E23072-F7B0-4567-985B-737DD2A8728E
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: ab575415e5e6a091fb45dab49af21d0552834406
+
 ---
 
 # Behandeln einer abgebrochenen Hintergrundaufgabe
@@ -65,9 +68,9 @@ Die vollständige OnCanceled-Methode des [Beispiels zur Hintergrundaufgabe]( htt
 >         //
 >         // Indicate that the background task is canceled.
 >         //
-> 
+>
 >         _cancelRequested = true;
-> 
+>
 >         Debug.WriteLine("Background " + sender.Task.Name + " Cancel Requested...");
 >     }
 > ```
@@ -77,7 +80,7 @@ Die vollständige OnCanceled-Methode des [Beispiels zur Hintergrundaufgabe]( htt
 >         //
 >         // Indicate that the background task is canceled.
 >         //
-> 
+>
 >         CancelRequested = true;
 >     }
 > ```
@@ -111,7 +114,7 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 >     else
 >     {
 >         _periodicTimer.Cancel();
-> 
+>
 >         // TODO: Record whether the task completed or was cancelled.
 >     }
 > ```
@@ -124,7 +127,7 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 >     else
 >     {
 >         PeriodicTimer->Cancel();
-> 
+>
 >         // TODO: Record whether the task completed or was cancelled.
 >     }
 > ```
@@ -145,14 +148,14 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 >     else
 >     {
 >         _periodicTimer.Cancel();
-> 
+>
 >         var settings = ApplicationData.Current.LocalSettings;
 >         var key = _taskInstance.Task.TaskId.ToString();
-> 
+>
 >         //
 >         // Write to LocalSettings to indicate that this background task ran.
 >         //
-> 
+>
 >         if (_cancelRequested)
 >         {
 >             settings.Values[key] = "Canceled";
@@ -167,7 +170,7 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 >         //
 >         // Indicate that the background task has completed.
 >         //
-> 
+>
 >         _deferral.Complete();
 >     }
 > ```
@@ -215,7 +218,7 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 > public void Run(IBackgroundTaskInstance taskInstance)
 > {
 >     Debug.WriteLine("Background " + taskInstance.Task.Name + " Starting...");
-> 
+>
 >     //
 >     // Query BackgroundWorkCost
 >     // Guidance: If BackgroundWorkCost is high, then perform only the minimum amount
@@ -224,21 +227,21 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 >     var cost = BackgroundWorkCost.CurrentBackgroundWorkCost;
 >     var settings = ApplicationData.Current.LocalSettings;
 >     settings.Values["BackgroundWorkCost"] = cost.ToString();
-> 
+>
 >     //
 >     // Associate a cancellation handler with the background task.
 >     //
 >     taskInstance.Canceled += new BackgroundTaskCanceledEventHandler(OnCanceled);
-> 
+>
 >     //
 >     // Get the deferral object from the task instance, and take a reference to the taskInstance;
 >     //
 >     _deferral = taskInstance.GetDeferral();
 >     _taskInstance = taskInstance;
-> 
+>
 >     _periodicTimer = ThreadPoolTimer.CreatePeriodicTimer(new TimerElapsedHandler(PeriodicTimerCallback), TimeSpan.FromSeconds(1));
 > }
-> 
+>
 > //
 > // Simulate the background task activity.
 > //
@@ -252,16 +255,16 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 >     else
 >     {
 >         _periodicTimer.Cancel();
-> 
+>
 >         var settings = ApplicationData.Current.LocalSettings;
 >         var key = _taskInstance.Task.Name;
-> 
+>
 >         //
 >         // Write to LocalSettings to indicate that this background task ran.
 >         //
 >         settings.Values[key] = (_progress < 100) ? "Canceled with reason: " + _cancelReason.ToString() : "Completed";
 >         Debug.WriteLine("Background " + _taskInstance.Task.Name + settings.Values[key]);
-> 
+>
 >         //
 >         // Indicate that the background task has completed.
 >         //
@@ -280,18 +283,18 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 >     auto cost = BackgroundWorkCost::CurrentBackgroundWorkCost;
 >     auto settings = ApplicationData::Current->LocalSettings;
 >     settings->Values->Insert("BackgroundWorkCost", cost.ToString());
-> 
+>
 >     //
 >     // Associate a cancellation handler with the background task.
 >     //
 >     taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &SampleBackgroundTask::OnCanceled);
-> 
+>
 >     //
 >     // Get the deferral object from the task instance, and take a reference to the taskInstance.
 >     //
 >     TaskDeferral = taskInstance->GetDeferral();
 >     TaskInstance = taskInstance;
-> 
+>
 >     auto timerDelegate = [this](ThreadPoolTimer^ timer)
 >     {
 >         if ((CancelRequested == false) &&
@@ -303,21 +306,21 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 >         else
 >         {
 >             PeriodicTimer->Cancel();
-> 
+>
 >             //
 >             // Write to LocalSettings to indicate that this background task ran.
 >             //
 >             auto settings = ApplicationData::Current->LocalSettings;
 >             auto key = TaskInstance->Task->Name;
 >             settings->Values->Insert(key, (Progress < 100) ? "Canceled with reason: " + CancelReason.ToString() : "Completed");
-> 
+>
 >             //
 >             // Indicate that the background task has completed.
 >             //
 >             TaskDeferral->Complete();
 >         }
 >     };
-> 
+>
 >     TimeSpan period;
 >     period.Duration = 1000 * 10000; // 1 second
 >     PeriodicTimer = ThreadPoolTimer::CreatePeriodicTimer(ref new TimerElapsedHandler(timerDelegate), period);
@@ -344,8 +347,6 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

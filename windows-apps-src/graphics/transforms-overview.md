@@ -3,8 +3,8 @@ author: Jwmsft
 ms.assetid: F46D5E18-10A3-4F7B-AD67-76437C77E4BC
 title: "Transformationen – Übersicht"
 description: "Hier erfahren Sie, wie Sie Transformationen in der Windows-Runtime-API verwenden, indem Sie die relativen Koordinatensysteme der Elemente in der UI ändern."
-ms.sourcegitcommit: a429fa659caf6c8032ad615f1b850092545d4439
-ms.openlocfilehash: fa5e8964ab35cb33a1ff59a8a52aa384b9d115b4
+ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
+ms.openlocfilehash: f6212143a83e7423550b6529ea62e25c00728f79
 
 ---
 
@@ -67,7 +67,7 @@ Bei Treffertests reagiert ein Objekt, auf das eine Transformation angewendet wir
 
 [
               **Transform**
-            ](https://msdn.microsoft.com/library/windows/apps/BR243006)-Objekte können animiert sein. Um ein **Transform**-Element zu animieren, wenden Sie eine kompatible Animation auf die entsprechende Eigenschaft an. Normalerweise bedeutet das, dass Sie [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136)- oder [**DoubleAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR243136usingkeyframes)-Objekte zum Definieren der Animation verwenden, da alle Transformationseigenschaften vom Typ [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) sind. Animationen, die sich auf eine für einen [**UIElement.RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)-Wert verwendete Transformation auswirken, werden selbst dann nicht als abhängige Animationen betrachtet, wenn Ihre Dauer nicht Null ist. Weitere Informationen zu abhängigen Animationen finden Sie unter [Storyboardanimationen](storyboarded-animations.md).
+            ](https://msdn.microsoft.com/library/windows/apps/BR243006)-Objekte können animiert sein. Um ein **Transform**-Element zu animieren, wenden Sie eine kompatible Animation auf die entsprechende Eigenschaft an. Normalerweise bedeutet das, dass Sie [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136)- oder [**DoubleAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimationusingkeyframes)-Objekte zum Definieren der Animation verwenden, da alle Transformationseigenschaften vom Typ [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) sind. Animationen, die sich auf eine für einen [**UIElement.RenderTransform**](https://msdn.microsoft.com/library/windows/apps/BR208980)-Wert verwendete Transformation auswirken, werden selbst dann nicht als abhängige Animationen betrachtet, wenn Ihre Dauer nicht Null ist. Weitere Informationen zu abhängigen Animationen finden Sie unter [Storyboardanimationen](storyboarded-animations.md).
 
 Wenn Sie Eigenschaften animieren, um einen ähnlichen Darstellungseffekt zu erzielen wie bei einer Transformation (etwa, wenn Sie die [**Width**](https://msdn.microsoft.com/library/windows/apps/BR208751) und [**Height**](https://msdn.microsoft.com/library/windows/apps/BR208718)-Eigenschaften eines [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706)-Elements animieren, anstatt ein [**TranslateTransform**](https://msdn.microsoft.com/library/windows/apps/BR243027)-Element anzuwenden), werden diese nahezu immer als abhängige Animationen behandelt. Die Animationen müssen aktiviert werden, und bei dieser Animation können beträchtliche Leistungsprobleme auftreten, insbesondere wenn während der Animation des Objekts Benutzerinteraktionen unterstützt werden sollen. Aus diesem Grund empfiehlt sich die Verwendung einer Transformation und deren Animation anstelle der Animation einer anderen Eigenschaft, bei der die Animation als abhängige Animation behandelt werden würde.
 
@@ -154,6 +154,6 @@ In Windows 10 wurde für XAML die neue Eigenschaft [**UIElement.Transform3D**](
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Packen Ihres UWP-DirectX-Spiels (DirectX-Spiels für die universelle Windows-Plattform)
-description: Umfangreichere UWP-Spiele (Universelle Windows-Plattform) können leicht relativ groß werden. Dies gilt besonders für Spiele, bei denen mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt werden oder die über optionale HD-Ressourcen verfügen.
+title: "Packen Ihres UWP-DirectX-Spiels (DirectX-Spiels für die universelle Windows-Plattform)"
+description: "Umfangreichere UWP-Spiele (Universelle Windows-Plattform) können leicht relativ groß werden. Dies gilt besonders für Spiele, bei denen mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt werden oder die über optionale HD-Ressourcen verfügen."
 ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 14043fffc22849ca8d31f85e1035c38c07f1cdd4
+
 ---
 
 #  Packen Ihres UWP-DirectX-Spiels (DirectX-Spiels für die universelle Windows-Plattform)
@@ -46,7 +50,7 @@ Es gibt zwei grundlegende Möglichkeiten, Ressourcen für das Verpacken anzugebe
 
 -   Objektdateien weisen den gleichen Dateinamen auf, und die einzelnen Ressourcenpaketversionen werden in Verzeichnisse mit bestimmten Namen eingefügt. Diese Verzeichnisnamen werden vom System reserviert. Zum Beispiel; \\en-us, \\scale-140, \\dxfl-dx11.
 -   Objektdateien werden in Ordnern mit beliebigen Namen gespeichert. Die Dateien werden jedoch mit einer gemeinsamen Bezeichnung benannt, die mit Zeichenfolgen angehängt wird, die das System zum Angeben von Sprach- und anderen Qualifizierern reserviert. Diese Qualifiziererzeichenfolgen werden nach einem Unterstrich („\_“) an den generalisierten Dateinamen angehängt. Beispielsweise: \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds. Sie können diese Zeichenfolgen auch kombinieren. Beispielsweise: \\assets\\menu\_option1\_scale-140\_lang-en-us.png.
-    > **Hinweis**   Wenn ein Sprachqualifizierer nicht nur in einem Verzeichnisnamen, sondern in einem Dateinamen verwendet wird, muss dieser die Form „lang-“ haben,<tag>beispielsweise „lang-en-us“ wie unter [So wird’s gemacht: Benennen von Ressourcen mit Qualifizierern](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324) beschrieben.
+    > **Hinweis** Wenn ein Sprachqualifizierer in einem Dateinamen statt nur in einem Verzeichnisnamen verwendet wird, muss er im Format „lang-<tag>“, z. B. „lang-en-us“, angegeben werden. Eine Beschreibung finden Sie unter [So wird's gemacht: Benennen von Ressourcen mit Qualifizierern](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
 
      
 
@@ -224,6 +228,7 @@ Gehen Sie wie folgt vor, wenn Sie eine App konfigurieren, für die Ressourcenpak
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

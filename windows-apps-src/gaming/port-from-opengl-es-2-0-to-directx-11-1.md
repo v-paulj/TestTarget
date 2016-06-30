@@ -1,8 +1,11 @@
 ---
 author: mtoepke
-title: Portieren von OpenGL ES 2.0 zu Direct3D 11
-description: Enthält Artikel, Übersichten und exemplarische Vorgehensweisen zum Portieren einer OpenGL ES 2.0-Grafikpipeline zu Direct3D 11 und zur Windows-Runtime.
+title: "Portieren von OpenGL ES 2.0 zu Direct3D 11"
+description: "Enthält Artikel, Übersichten und exemplarische Vorgehensweisen zum Portieren einer OpenGL ES 2.0-Grafikpipeline zu Direct3D 11 und zur Windows-Runtime."
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
+ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
+ms.openlocfilehash: 40380582a9210cb705a5e7e591d4a8f37c42f8dd
+
 ---
 
 # Portieren von OpenGL ES 2.0 zu Direct3D 11
@@ -33,12 +36,12 @@ Enthält Artikel, Übersichten und exemplarische Vorgehensweisen zum Portieren e
 <td align="left"><p>Machen Sie sich zu Beginn des Prozesses zur ersten Portierung Ihrer Grafikarchitektur von OpenGL ES 2.0 zu Direct3D mit den Hauptunterschieden zwischen den APIs vertraut. Mithilfe der Themen in diesem Abschnitt können Sie die Portierungsstrategie und die API-Änderungen planen, die erforderlich sind, wenn Sie die Grafikverarbeitung auf Direct3D umstellen.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Exemplarische Vorgehensweise: Beispiele für die Portierung von OpenGL ES 2.0](walkthrough-sample-ports-from-opengl-es-2-0.md)</p></td>
-<td align="left"><p>In dieser Themengruppe werden einige unterschiedlich komplexe Portierungsszenarien für die OpenGL ES 2.0-Grafikpipeline erläutert.</p></td>
+<td align="left"><p>[So wird's gemacht: Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11.1](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)</p></td>
+<td align="left"><p>In dieser Portierungsübung beginnen wir mit den Grundlagen: Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGL ES 2.0 auf Direct3D, damit er der Vorlage „DirectX 11-App (Universelle Windows-App)“ aus Visual Studio 2015 entspricht.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[OpenGL ES 2.0 zu Direct3D 11.1 – Referenz](opengl-es-2-0-to-directx-11-1-reference.md)</p></td>
-<td align="left"><p>Verwenden Sie diese Referenzthemen zum Suchen nach der API-Zuordnung und kurzen Codebeispielen, wenn Sie die Portierung von OpenGL ES 2.0 zu Direct3D 11 durchführen.</p></td>
+<td align="left"><p>[OpenGL ES 2.0 zu Direct3D 11.1 – Referenz](opengl-es-2-0-to-directx-11-1-reference.md)</p></td>
+<td align="left"><p>Verwenden Sie diese Referenzthemen zum Suchen nach der API-Zuordnung und kurzen Codebeispielen, wenn Sie die Portierung von OpenGL ES 2.0 zu Direct3D 11 durchführen.</p></td>
 </tr>
 </tbody>
 </table>
@@ -59,6 +62,7 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die Univer
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
-description: Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem bestimmten Benutzer eine kostenlose App oder ein kostenloses In-App-Produkt (IAP) zu gewähren.
-title: Gewähren kostenloser Produkte
+description: "Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem bestimmten Benutzer eine kostenlose App oder ein kostenloses In-App-Produkt (IAP) zu gewähren."
+title: "Gewähren kostenloser Produkte"
+ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
+ms.openlocfilehash: 9bce5649fc1a9400371e1f9bb67809f1c6288ec6
+
 ---
 
 # Gewähren kostenloser Produkte
@@ -17,7 +20,7 @@ Derzeit können Sie nur kostenlose Produkte gewähren. Wenn Ihr Dienst versucht,
 
 Zur Verwendung dieser Methode benötigen Sie:
 
--   Ein Azure AD-Zugriffstoken, das mit dem Zielgruppen-URI **https://onestore.microsoft.com** erstellt wurde.
+-   Ein Azure AD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
 -   Einen Windows Store-ID-Schlüssel, der durch Aufrufen der [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675)-Methode im clientseitigen Code der App generiert wurde.
 
 Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
@@ -29,20 +32,20 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 | Methode | Anforderungs-URI                                            |
 |--------|--------------------------------------------------------|
-| POST   | https://purchase.mp.microsoft.com/v6.0/purchases/grant |
+| POST   | `https://purchase.mp.microsoft.com/v6.0/purchases/grant` |
 
- 
+<br/> 
 
 ### Anforderungsheader
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | Zeichenkette | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
-| Host           | Zeichenkette | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
+| Authorization  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
+| Host           | Zeichenfolge | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
 | Content-Type   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
- 
+<br/>
 
 ### Anforderungstext
 
@@ -53,12 +56,12 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | devOfferId     | string | Eine vom Entwickler angegebene Angebotskennung, die nach dem Kauf im Auflistungselement angezeigt wird.                                                                                                                                                                                                                                 | Nein       |
 | language       | string | Die Sprache des Benutzers.                                                                                                                                                                                                                                                                                              | Ja      |
 | market         | string | Der Markt des Benutzers.                                                                                                                                                                                                                                                                                                | Ja      |
-| orderId        | guid   | Eine für den Auftrag generierte GUID. Dieser Wert muss für den Benutzer eindeutig sein, auftragsübergreifend jedoch nicht.                                                                                                                                                                                              | Ja      |
-| productId      | string | Die Produkt-ID aus dem Windows Store-Katalog. Wenn Sie die Produkt-ID Ihres Produkts ermitteln möchten, navigieren Sie im Windows Dev Center-Dashboard zu Ihrer App, wechseln zur Seite **App-Verwaltung**&gt;**App-Identität** und rufen das Suffix der im Feld **URL für Windows 10** angezeigten Zeichenfolge ab. Beispiel für eine Produkt-ID: 9WZDNCRFJ3Q8. | Ja      |
+| orderId        | guid   | Eine für den Auftrag generierte GUID. Dieser Wert muss für den Benutzer eindeutig sein, aber nicht auftragsübergreifend.                                                                                                                                                                                              | Ja      |
+| productId      | Zeichenfolge | Die Store-ID aus dem Windows Store-Katalog. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. | Ja      |
 | quantity       | int    | Die Kaufmenge. Derzeit wird als einziger Wert 1 unterstützt. Ohne Angabe wird standardmäßig der Wert 1 verwendet.                                                                                                                                                                                                                | Nein       |
 | skuId          | string | Die SKU-ID aus dem Windows Store-Katalog. Beispiel für eine SKU-ID: 0010.                                                                                                                                                                                                                                                | Ja      |
 
- 
+<br/> 
 
 ### Anforderungsbeispiel
 
@@ -104,7 +107,7 @@ Content-Type: application/json
 | totalChargedToCsvTopOffPI | decimal                     | Bei Verwendung eines separaten Zahlungsmittels und eines gespeicherten Werts (CSV) der für CSV in Rechnung gestellte Betrag.                                                                | Ja      |
 | totalTaxAmount            | decimal                     | Die Gesamtsteuerbetrag für alle Positionen.                                                                                                              | Ja      |
 
- 
+<br/> 
 
 Das ClientContext-Objekt enthält die folgenden Parameter.
 
@@ -112,7 +115,7 @@ Das ClientContext-Objekt enthält die folgenden Parameter.
 |-----------|--------|---------------------------------------|----------|
 | client    | string | Die Client-ID, unter der der Auftrag erstellt wurde. | Nein       |
 
- 
+<br/> 
 
 Das OrderLineItemV6-Objekt enthält die folgenden Parameter.
 
@@ -144,7 +147,7 @@ Das OrderLineItemV6-Objekt enthält die folgenden Parameter.
 | Title                   | string         | Der lokalisierte Titel der Position.                                                                        | Ja      |
 | totalAmount             | decimal        | Der Gesamtkaufbetrag der Position (inklusive Steuern).                                                    | Ja      |
 
- 
+<br/> 
 
 Das IdentityV6-Objekt enthält die folgenden Parameter.
 
@@ -153,7 +156,7 @@ Das IdentityV6-Objekt enthält die folgenden Parameter.
 | identityType  | string | Enthält den Wert **"pub"**.                                                      | Ja      |
 | identityValue | string | Der Zeichenfolgenwert von *publisherUserId* aus dem angegebenen Windows Store-ID-Schlüssel. | Ja      |
 
- 
+<br/> 
 
 ### Antwortbeispiel
 
@@ -226,7 +229,7 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 | 401  | Nicht autorisiert | InconsistentClientId       | Der *clientId*-Anspruch im Windows Store-ID-Schlüssel im Anforderungstext und der *appid*-Anspruch im Azure AD-Zugriffstoken im Autorisierungsheader stimmen nicht überein.                     |
 | 400  | BadRequest   | InvalidParameter           | Die Details enthalten Informationen zum Anforderungstext und zu Feldern mit ungültigem Wert.                                                                                    |
 
- 
+<br/> 
 
 ## Verwandte Themen
 
@@ -241,8 +244,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

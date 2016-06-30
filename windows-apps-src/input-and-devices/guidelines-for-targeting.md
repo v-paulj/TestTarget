@@ -5,8 +5,8 @@ title: Zielbestimmung
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: c8244e1a103a1c57df92e54ceeaa02e9c363faa9
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 50a285b484f7e9ed7b349921c3460bd7c9c81603
 
 ---
 
@@ -24,7 +24,7 @@ Touchziele in Windows verwenden den vollständigen Kontaktbereich jedes Fingers,
 
 Dieses Thema beschreibt die Verwendung von Kontaktgeometrie zur Bestimmung von Touchzielen und enthält bewährte Methoden für Ziele in UWP-Apps.
 
-## <span id="Measurements_and_scaling"></span><span id="measurements_and_scaling"></span><span id="MEASUREMENTS_AND_SCALING"></span>Maße und Skalierung
+## Maße und Skalierung
 
 
 Um die Konsistenz bei unterschiedlichen Bildschirmgrößen und Pixeldichten zu wahren, sind alle Zielgrößen in physischen Einheiten (Millimeter) angegeben. Physische Einheiten können mit der folgenden Gleichung in Pixel konvertiert werden:
@@ -43,14 +43,14 @@ Pixel = 48 Pixel
 
 Dieses Ergebnis muss an jedes der im System definierten Skalierungsplateaus angepasst werden.
 
-## <span id="Thresholds"></span><span id="thresholds"></span><span id="THRESHOLDS"></span>Schwellenwerte
+## Schwellenwerte
 
 
 Entfernungs- und Zeitschwellenwerte können verwendet werden, um das Ergebnis einer Interaktion zu ermitteln.
 
 Wenn zum Beispiel ein Aufsetzen erkannt wird, wird ein Tippen registriert, wenn das Objekt in weniger als 2,7 mm Entfernung vom Aufsetzpunkt gezogen wird und die Berührung innerhalb von 0,1 Sekunden oder kürzer vom Aufsetzen aufgehoben wird. Wenn der Finger über den Schwellenwert von 2,7 mm hinaus bewegt wird, wird das Objekt gezogen und entweder ausgewählt oder verschoben (weitere Informationen finden Sie unter [Richtlinien für Querziehen](guidelines-for-cross-slide.md)). Wenn Sie abhängig von Ihrer App den Finger länger als 0,1 Sekunde gedrückt halten, kann dadurch die Ausführung einer Interaktion mit automatischem Einblenden durch das System ausgelöst werden (weitere Informationen finden Sie unter [Richtlinien für visuelles Feedback](guidelines-for-visualfeedback.md#selfreveal)).
 
-## <span id="Target_sizes"></span><span id="target_sizes"></span><span id="TARGET_SIZES"></span>Zielgrößen
+## Zielgrößen
 
 
 Verwenden Sie für Ihr Touchziel grundsätzlich mindestens eine Fläche von 9 x 9 mm (48 x 48-Pixel auf einem 135 PPI-Display bei einem Skalierungsplateau von 1,0). Verwenden Sie keine Touchziele mit weniger als 7 x 7 mm.
@@ -112,7 +112,7 @@ Sie können diese Empfehlungen für die Zielgröße an die Anforderungen des jew
 -   Fingereingabevisualisierungen
 -   Hardware und Fingereingabe-Digitalisierungsgeräte
 
-## <span id="Targeting_assistance"></span><span id="targeting_assistance"></span><span id="TARGETING_ASSISTANCE"></span>Unterstützung bei der Zielbestimmung
+## Unterstützung bei der Zielbestimmung
 
 
 Windows unterstützt die Zielbestimmung für Szenarien, in denen die hier genannten Empfehlungen für Mindestgröße und Abstand nicht anwendbar sind. Dies gilt beispielsweise für Hyperlinks auf einer Webseite, Kalendersteuerelemente, Dropdownlisten und Kombinationsfelder oder für eine Textauswahl.
@@ -121,7 +121,7 @@ Diese Verbesserungen der Zielbestimmungsplattform und des Verhaltens der Benutze
 
 Wenn ein berührbares Element kleiner als die empfohlene Mindestzielgröße sein muss, können Sie mit den folgenden Techniken die dadurch entstehenden Probleme bei der Zielbestimmung minimieren.
 
-## <span id="Tethering"></span><span id="tethering"></span><span id="TETHERING"></span>Anzeigen einer Verbindungslinie
+## Anzeigen einer Verbindungslinie
 
 
 Durch Anzeigen einer Verbindungslinie (zwischen einem Kontaktpunkt und dem Begrenzungsrechteck eines Objekts) können Sie Benutzer visuell darauf hinweisen, dass sie mit einem Objekt verbunden sind und mit diesem interagieren, obwohl kein direkter Kontakt zwischen Eingabekontakt und Objekt besteht. Dies ist in folgenden Situationen möglich:
@@ -131,7 +131,7 @@ Durch Anzeigen einer Verbindungslinie (zwischen einem Kontaktpunkt und dem Begre
 
 Dieses Feature wird für Entwickler von Windows Store-Apps, die JavaScript verwenden, nicht verfügbar gemacht.
 
-## <span id="scrubbing"></span><span id="SCRUBBING"></span>Scrubbing
+## Scrubbing
 
 
 Beim Scrubbing wird eine beliebige Stelle in einem Feld mit Zielen berührt, und das gewünschte Ziel wird durch Ziehen ausgewählt. Der Finger wird dabei erst gehoben, wenn er sich auf dem gewünschten Ziel befindet. Dies wird auch als "Loslassaktivierung" bezeichnet, bei der das Objekt aktiviert wird, das zuletzt berührt wurde, als der Finger vom Bildschirm gehoben wurde.
@@ -146,7 +146,7 @@ Halten Sie sich an die folgenden Richtlinien, wenn Sie Scrubbinginteraktionen en
 -   Das Anzeigen einer Verbindungslinie zu einem Scrubbingziel wird angegeben, wenn die vom Ziel ausgeführten Aktionen nicht destruktiv sind (beispielsweise das Wechseln zwischen Daten in einem Kalender).
 -   Das Anzeigen von Verbindungslinien wird in einer einzigen Richtung angegeben: horizontal oder vertikal.
 
-## <span id="related_topics"></span>Verwandte Artikel
+## Verwandte Artikel
 
 
 **Beispiele**
@@ -174,6 +174,6 @@ Halten Sie sich an die folgenden Richtlinien, wenn Sie Scrubbinginteraktionen en
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

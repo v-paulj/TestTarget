@@ -1,19 +1,19 @@
 ---
-author: martinekuan
-title: Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic
-description: Ab .NET Framework 4.5 können Sie mit verwaltetem Code eigene Windows-Runtime-Typen erstellen, die in einer Komponente für Windows-Runtime gepackt sind.
+author: msatranjr
+title: "Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic"
+description: "Ab .NET Framework 4.5 können Sie mit verwaltetem Code eigene Windows-Runtime-Typen erstellen, die in einer Komponente für Windows-Runtime gepackt sind."
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
+ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
+ms.openlocfilehash: e8fd48b99d6a05af57e67e503c7bd3058b07569c
+
 ---
 
 # Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
-
-\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
-
-Ab .NET Framework 4.5 können Sie mit verwaltetem Code eigene Windows-Runtime-Typen erstellen, die in einer Komponente für Windows-Runtime gepackt sind. Diese Komponente können Sie in UWP-Apps (Universelle Windows-Plattform) mit C++, JavaScript, Visual Basic oder C# verwenden. In diesem Artikel werden die Regeln zum Erstellen einer Komponente und einige Aspekte der .NET Framework-Unterstützung für die Windows-Runtime erläutert. Im Allgemeinen ist diese Unterstützung allen .NET Framework-Programmierern klar. Wenn Sie aber eine Komponente erstellen, die mit JavaScript oder C++ verwendet werden soll, müssen Sie auf die Unterschiede bei der Unterstützung der Windows-Runtime durch diese Sprachen achten.
+Ab .NET Framework 4.5 können Sie mit verwaltetem Code eigene Windows-Runtime-Typen erstellen, die in einer Komponente für Windows-Runtime gepackt sind. Diese Komponente können Sie in UWP-Apps (Universelle Windows-Plattform) mit C++, JavaScript, Visual Basic oder C# verwenden. In diesem Artikel werden die Regeln zum Erstellen einer Komponente und einige Aspekte der .NET Framework-Unterstützung für die Windows-Runtime erläutert. Im Allgemeinen ist diese Unterstützung allen .NET Framework-Programmierern klar. Wenn Sie aber eine Komponente erstellen, die mit JavaScript oder C++ verwendet werden soll, müssen Sie auf die Unterschiede bei der Unterstützung der Windows-Runtime durch diese Sprachen achten.
 
 Wenn Sie eine Komponente nur für die Verwendung in UWP-Apps mit Visual Basic oder C# erstellen und die Komponente keine UWP-Steuerelemente enthält, sollten Sie die Verwendung der Vorlage **Klassenbibliothek** anstelle der Vorlage **Komponente für Windows-Runtime** in Betracht ziehen. Eine einfache Klassenbibliothek weist weniger Einschränkungen auf.
 
@@ -121,11 +121,11 @@ In der Windows-Runtime können Methoden überladen werden. Wenn Sie aber mehrere
 > {
 >     return s;
 > }
-> [Windows.Foundation.Metadata.DefaultOverload()] 
+> [Windows.Foundation.Metadata.DefaultOverload()]
 > public int OverloadExample(int x)
 > {
 >     return x;
-> } 
+> }
 > ```
 > ```vb
 > Public Function OverloadExample(ByVal s As String) As String
@@ -137,7 +137,7 @@ In der Windows-Runtime können Methoden überladen werden. Wenn Sie aber mehrere
 > End Function
 > ```
 
-> **Achtung**  JavaScript ermöglicht die Übergabe beliebiger Werte an „OverloadExample“ und wandelt den Wert in den Typ um, der für den Parameter erforderlich ist. Sie können OverloadExample mit „zweiundvierzig”, „42” oder „42,3” aufrufen. Alle diese Werte werden an die Standardüberladung übergeben. Die Standardüberladung im vorherigen Beispiel gibt 0, 42 bzw. 42 zurück.
+ **Achtung**  JavaScript ermöglicht die Übergabe beliebiger Werte an „OverloadExample“ und wandelt den Wert in den Typ um, der für den Parameter erforderlich ist. Sie können OverloadExample mit „zweiundvierzig”, „42” oder „42,3” aufrufen. Alle diese Werte werden an die Standardüberladung übergeben. Die Standardüberladung im vorherigen Beispiel gibt 0, 42 bzw. 42 zurück.
 
 Das DefaultOverloadAttribute-Attribut können Sie nicht für Konstruktoren verwenden. Alle Konstruktoren in einer Klasse müssen eine unterschiedliche Anzahl von Parametern aufweisen.
 
@@ -202,7 +202,7 @@ Für asynchrone Aktionen und Vorgänge, die weder die Abbruch- noch die Fortschr
 > ```vb
 > Public Shared Function DownloadAsStringsAsync(ByVal id As String) _
 >      As IAsyncOperation(Of IList(Of String))
-> 
+>
 >     Return Task.Run(Of IList(Of String))(
 >         Async Function()
 >             Dim data = Await DownloadDataAsync(id)
@@ -241,7 +241,7 @@ Sie können die Methoden der AsyncInfo-Klasse auch verwenden, wenn Ihre asynchro
 > ```vb
 > Public Shared Function DownloadAsStringsAsync(ByVal id As String) _
 >     As IAsyncOperation(Of IList(Of String))
-> 
+>
 >     Return AsyncInfo.Run(Of IList(Of String))(
 >         Async Function()
 >             Dim data = Await DownloadDataAsync(id)
@@ -293,7 +293,6 @@ Weitere Informationen zu Visual Basic- und C#-Sprachfunktionen und zur .NET Fram
 
 
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

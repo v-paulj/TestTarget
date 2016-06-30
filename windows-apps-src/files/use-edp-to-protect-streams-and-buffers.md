@@ -1,10 +1,14 @@
 ---
 author: TylerMSFT
-Description: 'Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten EDP-Szenarien im Zusammenhang mit Datenströmen und Puffern durchgeführt werden müssen.'
-MS-HAID: 'dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten EDP-Szenarien im Zusammenhang mit Datenströmen und Puffern durchgeführt werden müssen."
+MS-HAID: dev\_files.use\_edp\_to\_protect\_streams\_and\_buffers
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'Schützen von Datenströmen und Puffern mithilfe des Unternehmensdatenschutzes (Enterprise Data Protection, EDP)'
+title: "Schützen von Datenströmen und Puffern mithilfe des Unternehmensdatenschutzes (Enterprise Data Protection, EDP)"
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: fdde4f7d2ab46b6349273f7c1c9d91cf27aa341a
+
 ---
 
 # Schützen von Datenströmen und Puffern mithilfe des Unternehmensdatenschutzes (Enterprise Data Protection, EDP)
@@ -308,6 +312,7 @@ private async void EnableUIPolicyFromProtectedBuffer(IBuffer buffer)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

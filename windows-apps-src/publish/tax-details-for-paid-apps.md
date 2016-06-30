@@ -3,6 +3,9 @@ author: jnHs
 Description: Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen auf Auszahlungen sowie zu Steuerpflichten finden Sie in der folgenden Tabelle unter dem Land bzw. der Region der Verteilung.
 title: Steuerinformationen zu kostenpflichtigen Apps
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
+ms.sourcegitcommit: a59d999ac36e04fbfa53d5b8992b235bff2d3818
+ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
+
 ---
 
 # Steuerinformationen zu kostenpflichtigen Apps
@@ -83,7 +86,7 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Georgien                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
 | Deutschland                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 19 % Steuer | Microsoft          |
 | Ghana                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
-| Griechenland                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 23 % Steuer | Microsoft          |
+| Griechenland                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 24 % Steuer | Microsoft          |
 | Grönland                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
 | Grenada                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
 | Guatemala                        | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countries-regions) | 70 % des festgelegten Preises                 | Entwickler          |
@@ -157,8 +160,8 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Philippinen                      | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countries-regions)                                                                  | 70 % des festgelegten Preises                 | Entwickler          |
 | Polen                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 23 % Steuer | Microsoft          |
 | Portugal                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 23 % Steuer | Microsoft          |
-| Puerto Rico                      | Steuern werden auf den festgelegten Preis aufgeschlagen. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countries-regions)                                                                                                     | 70 % des festgelegten Preises                 | Entwickler          |
-| Katar                            | Der festgelegte Preis ist der endgültige Verkaufspreis und beinhaltet alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
+| Puerto Rico                      | Steuern werden auf den festgelegten Preis aufgeschlagen. [Informieren Sie sich ausführlicher über die steuerlichen Aspekte für dieses Land/diese Region.](#mixed-remittance-countries-regions)                                                                                                     | 70 % des festgelegten Preises                 | Microsoft          |
+| Katar                            | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
 | Rumänien                          | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern. Steuern werden vor der Auszahlung vom Preis abgezogen.              | 70 % des festgelegten Preises abzgl. 24 % Steuer | Microsoft          |
 | Russland                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
 | Ruanda                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70 % des festgelegten Preises                 | Entwickler          |
@@ -278,6 +281,7 @@ Die einzelnen Zeilen des Berichts enthalten das Datum und die Uhrzeit der Transa
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

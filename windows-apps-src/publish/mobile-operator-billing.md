@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Der Windows Store ermöglicht die „Abrechnung über den Mobilfunkanbieter“ als Zahlungsmethode für Mobilfunkanbieter, die diese Funktion unterstützen.
-title: Abrechnung über den Mobilfunkanbieter
+Description: "Der Windows Store ermöglicht die „Abrechnung über den Mobilfunkanbieter“ als Zahlungsmethode für Mobilfunkanbieter, die diese Funktion unterstützen."
+title: "Abrechnung über den Mobilfunkanbieter"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
+ms.sourcegitcommit: 76ea880f7dd1e737b3b0640d10a138e0eb790802
+ms.openlocfilehash: d22d89523ff3089b3b56d1a85fa2c4b137389887
+
 ---
 
 # Abrechnung über den Mobilfunkanbieter
@@ -27,8 +30,9 @@ Die Windows 10-Implementierung der Abrechnung über den Mobilfunkanbieter wird d
 |----------------|------------------|
 | Finnland        | DNA, Elisa       |
 | Deutschland        | O2               |
+| Norwegen         | Telenor          |
 | Schweiz    | Swisscom         |
-| USA  | Sprint           |
+| Vereinigte Staaten  | Sprint           |
 
  
 
@@ -111,6 +115,7 @@ Diese Liste wird regelmäßig aktualisiert, wenn wir die Unterstützung für die
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

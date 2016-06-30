@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: Grundlegende Informationen zur Barrierefreiheit werden häufig in die Kategorien Name, Rolle und Wert unterteilt. In diesem Thema wird der Code beschrieben, mit dem Ihre App die grundlegenden Informationen verfügbar machen kann, die für Hilfstechnologien erforderlich sind.
+Description: "Grundlegende Informationen zur Barrierefreiheit werden häufig in die Kategorien Name, Rolle und Wert unterteilt. In diesem Thema wird der Code beschrieben, mit dem Ihre App die grundlegenden Informationen verfügbar machen kann, die für Hilfstechnologien erforderlich sind."
 ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
-title: Verfügbarmachen von grundlegenden Informationen zur Barrierefreiheit
+title: "Verfügbarmachen von grundlegenden Informationen zur Barrierefreiheit"
 label: Expose basic accessibility information
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 1c6bc8567b39357d414a46ef2b92197c78bca971
+
 ---
 
 # Verfügbarmachen von grundlegenden Informationen zur Barrierefreiheit  
@@ -23,7 +26,7 @@ In der folgenden Tabelle wird beschrieben, wie Sie für verschiedene Elementtype
 | Elementtyp      | Beschreibung |
 |-------------------|-------------|
 | Statischer Text       | Für [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) und [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565)-Elemente wird automatisch anhand des sichtbaren (inneren) Textes ein Name zur Verwendung durch Screenreader-Software bestimmt. Der gesamte Text im Element wird als Name verwendet. Siehe [Name aus innerem Text](#name_from_inner_text). |
-| Bilder            | Das XAML-Element [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) verfügt nicht über ein direktes Gegenstück zum **alt**-HTML-Attribut von **img** und ähnlichen Elementen. Verwenden Sie zum Bereitstellen eines Namens die [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Eigenschaft oder das Untertitelverfahren. Siehe [Bildnamen zur Verwendung durch Screenreader-Software](#images). |
+| Bilder            | Das XAML-Element [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) verfügt nicht über ein direktes Gegenstück zum **alt**-HTML-Attribut von **img** und ähnlichen Elementen. Verwenden Sie zum Bereitstellen eines Namens die [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Eigenschaft oder das Untertitelverfahren. Siehe [Namen zur Verwendung durch Bildschirmleseprogramme für Bilder](#images). |
 | Formularelemente     | Bei einem Formularelement sollte der Name zur Verwendung durch Screenreader-Software mit der Bezeichnung identisch sein, die für das Element angezeigt wird. Siehe [Bezeichnungen und „LabeledBy“](#labels). |
 | Schaltflächen und Links | Standardmäßig basiert der Name zur Verwendung durch Screenreader-Software einer Schaltfläche oder eines Links auf dem sichtbaren Text, wobei ebenfalls die unter [Name aus innerem Text](#name_from_inner_text) beschriebenen Regeln angewendet werden. Verwenden Sie in Fällen, in denen eine Schaltfläche nur ein Bild enthält, die [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Eigenschaft, um eine reine Textentsprechung für die Schaltflächenaktion bereitzustellen. |
 
@@ -55,7 +58,7 @@ Damit bereits in der sichtbaren Benutzeroberfläche vorhandene Zeichenfolgen lei
 * [
               **TextBlock**
             ](https://msdn.microsoft.com/library/windows/apps/BR209652), [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/BR227565), [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683) und **RichTextBlock** unterstützen den Wert der **Text**-Eigenschaft als standardmäßigen Namen zur Verwendung durch Screenreader-Software.
-* Jegliche [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/BR209365)-Unterklassen verwenden eine iterative „ToString“-Technik, um Zeichenfolgen im [**Content**](https://msdn.microsoft.com/library/windows/apps/BR209365_content)-Wert zu finden. Sie unterstützen diese Zeichenfolgen als standardmäßigen Namen für Screenreader-Programme.
+* Jegliche [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content)-Unterklassen verwenden eine iterative „ToString“-Technik, um Zeichenfolgen im [**Content**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentcontrol.content)-Wert zu finden. Sie unterstützen diese Zeichenfolgen als standardmäßigen Namen für Screenreader-Programme.
 
 > [!NOTE]
 > Von der Benutzeroberflächenautomatisierung wird vorgegeben, dass der Name für Bildschirmleseprogramme nicht länger als 2048 Zeichen sein darf. Überschreitet eine zum automatischen Bestimmen des Namens zur Verwendung durch Screenreader-Software verwendete Zeichenfolge dieses Zeichenlimit, wird der Name an der entsprechenden Stelle abgeschnitten.
@@ -111,7 +114,7 @@ Eine Beschreibung der Barrierefreiheit stellt weitere Informationen zur Barriere
 
 Die Sprachausgabe liest die Beschreibung eines Elements nur vor, wenn der Benutzer mit FESTSTELLTASTE+F weitere Informationen zum Element anfordert.
 
-Der Name zur Verwendung durch Screenreader-Software soll keine vollständige Beschreibung des Steuerelementverhaltens bereitstellen, sondern das Steuerelement identifizieren. Falls eine kurze Beschreibung für das Steuerelement nicht ausreicht, können Sie die angefügte [**AutomationProperties.HelpText**](https://msdn.microsoft.com/library/windows/apps/Hh759765)-Eigenschaft zusätzlich zur [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Eigenschaft festlegen.
+Der Name zur Verwendung durch Screenreader-Software soll keine vollständige Beschreibung des Steuerelementverhaltens bereitstellen, sondern das Steuerelement identifizieren. Falls für das Steuerelement eine kurze Beschreibung nicht ausreicht, können Sie die angefügte [**AutomationProperties.HelpText**](https://msdn.microsoft.com/library/windows/apps/Hh759765)-Eigenschaft zusätzlich zur [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Eigenschaft festlegen.
 
 <span id="Testing_accessibility_early_and_often"/>
 <span id="testing_accessibility_early_and_often"/>
@@ -119,21 +122,21 @@ Der Name zur Verwendung durch Screenreader-Software soll keine vollständige Bes
 ## Frühzeitiges und häufiges Testen der Barrierefreiheit  
 Der beste Ansatz beim Implementieren der Unterstützung der Sprachausgabe besteht letztlich darin, die App selbst mit einer Sprachausgabe zu testen. So können Sie sehen, wie sich die Sprachausgabe verhält und welche grundlegenden Barrierefreiheitsinformationen in der App fehlen. Anschließend können Sie die Benutzeroberfläche oder Eigenschaftswerte der Benutzeroberflächenautomatisierung entsprechend anpassen. Weitere Informationen finden Sie unter [Barrierefreiheitstests](accessibility-testing.md).
 
-Eines der Tools, das Sie zum Testen der Barrierefreiheit verwenden können, heißt **EH-Viewer**. Das Tool **AccScope** ist besonders nützlich, weil Sie visuelle Darstellungen Ihrer UI anzeigen können, mit denen anhand einer Automatisierungsstruktur verdeutlicht wird, wie Ihre App mit Hilfstechnologie angezeigt wird. Es ist beispielsweise ein Sprachausgabemodus vorhanden, in dem Sie sehen, wie die Sprachausgabe Text aus der App abruft und die Elemente in der UI organisiert. EH-Viewer ist so konzipiert, dass das Tool während des gesamten Entwicklungszyklus einer App verwendet werden kann und nützlich ist. Dies gilt auch für die Phase des vorläufigen Entwurfs. Weitere Informationen finden Sie unter [EH-Viewer](https://msdn.microsoft.com/library/windows/desktop/Dn433239).
+Eines der Tools, das Sie zum Testen der Barrierefreiheit verwenden können, heißt **AccScope**. Das Tool **AccScope** ist besonders nützlich, weil Sie visuelle Darstellungen Ihrer UI anzeigen können, mit denen anhand einer Automatisierungsstruktur verdeutlicht wird, wie Ihre App mit Hilfstechnologie angezeigt wird. Es ist beispielsweise ein Sprachausgabemodus vorhanden, in dem Sie sehen, wie die Sprachausgabe Text aus der App abruft und die Elemente in der UI organisiert. AccScope ist so konzipiert, dass das Tool während des gesamten Entwicklungszyklus einer App verwendet werden kann und nützlich ist. Dies gilt auch für die Phase des vorläufigen Entwurfs. Weitere Informationen finden Sie unter [AccScope](https://msdn.microsoft.com/library/windows/desktop/Dn433239).
 
 <span id="Accessible_names_from_dynamic_data"/>
 <span id="accessible_names_from_dynamic_data"/>
 <span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"/>
-## Namen zur Verwendung durch Screenreader-Software aus dynamischen Daten  
-Windows unterstützt viele Steuerelemente, mit denen durch ein als *Datenbindung* bezeichnetes Feature Werte aus einer zugeordneten Datenquelle angezeigt werden können. Wenn Sie Listen mit Datenelementen auffüllen, müssen Sie nach dem Auffüllen der anfänglichen Liste möglicherweise eine Technik verwenden, die Namen zur Verwendung durch Screenreader-Software für datengebundene Listenelemente festlegt. Weitere Informationen finden Sie unter „Szenario 4“ im [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570).
+## Namen zur Verwendung durch Bildschirmleseprogramme aus dynamischen Daten  
+Windows unterstützt viele Steuerelemente, mit denen durch ein als *Datenbindung* bezeichnetes Feature Werte aus einer zugeordneten Datenquelle angezeigt werden können. Wenn Sie Listen mit Datenelementen auffüllen, müssen Sie nach dem Auffüllen der anfänglichen Liste möglicherweise eine Technik verwenden, die Namen zur Verwendung durch Screenreader-Software für datengebundene Listenelemente festlegt. Weitere Informationen finden Sie unter „Szenario 4“ im [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570).
 
 <span id="Accessible_names_and_localization"/>
 <span id="accessible_names_and_localization"/>
 <span id="ACCESSIBLE_NAMES_AND_LOCALIZATION"/>
-## Namen zur Verwendung durch Screenreader-Software und Lokalisierung  
-Um sicherzustellen, dass der Name zur Verwendung durch Screenreader-Software auch ein lokalisiertes Element ist, sollten Sie lokalisierbare Zeichenfolgen mithilfe entsprechender Techniken als Ressourcen speichern und dann mit [x:Uid-Direktiven](https://msdn.microsoft.com/library/windows/apps/Mt204791)-Werten auf die Ressourcenverbindungen verweisen. Wenn der Name zur Verwendung durch Screenreader-Software aus einer explizit festgelegten [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Eigenschaft stammt, muss die dort angegebene Zeichenfolge ebenfalls lokalisierbar sein.
+## Namen zur Verwendung durch Bildschirmleseprogramme und Lokalisierung  
+Um sicherzustellen, dass der Name zur Verwendung durch Screenreader-Software auch ein lokalisiertes Element ist, sollten Sie lokalisierbare Zeichenfolgen mithilfe entsprechender Techniken als Ressourcen speichern und dann mit [x:Uid-Direktiven](https://msdn.microsoft.com/library/windows/apps/Mt204791) werten auf die Ressourcenverbindungen verweisen. Wenn der Name zur Verwendung durch Screenreader-Software aus einer explizit festgelegten [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Eigenschaft stammt, muss die dort angegebene Zeichenfolge ebenfalls lokalisierbar sein.
 
-Beachten Sie, dass angefügte Eigenschaften, z. B. die [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081)-Eigenschaften, eine spezielle Qualifizierungssyntax für den Ressourcennamen verwenden. Die Ressource verweist dann so auf die angefügte Eigenschaft, wie diese auf ein bestimmtes Element angewendet wurde. Der Ressourcenname für die [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Eigenschaft, die auf ein UI-Element mit dem Namen `MediumButton` angewendet wurde, lautet beispielsweise wie folgt:
+Beachten Sie, dass angefügte Eigenschaften, z. B. die [**AutomationProperties**](https://msdn.microsoft.com/library/windows/apps/BR209081)-Eigenschaften, eine spezielle Qualifizierungssyntax für den Ressourcennamen verwenden. Die Ressource verweist dann so auf die angefügte Eigenschaft, wie diese auf ein bestimmtes Element angewendet wurde. Der Ressourcenname für die [**AutomationProperties.Name**](https://msdn.microsoft.com/library/windows/apps/Hh759770)-Eigenschaft, die auf ein UI-Element mit dem Namen `MediumButton` angewendet wurde, lautet beispielsweise wie folgt: `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`.
 
 <span id="related_topics"/>
 ## Verwandte Themen  
@@ -143,6 +146,7 @@ Beachten Sie, dass angefügte Eigenschaften, z. B. die [**AutomationProperties*
 * [Barrierefreiheitstests](accessibility-testing.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

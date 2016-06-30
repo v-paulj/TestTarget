@@ -1,13 +1,17 @@
 ---
 author: Jwmsft
-Description: 'Sie können für ein XAML-Layout benutzerdefinierte Panels definieren, indem Sie eine benutzerdefinierte Klasse aus der Panel-Klasse ableiten.'
-MS-HAID: 'dev\_ctrl\_layout\_txt.xaml\_custom\_panels\_overview'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Sie können für ein XAML-Layout benutzerdefinierte Panels definieren, indem Sie eine benutzerdefinierte Klasse aus der Panel-Klasse ableiten."
+MS-HAID: dev\_ctrl\_layout\_txt.xaml\_custom\_panels\_overview
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: Übersicht über benutzerdefinierte XAML-Panels
+title: "Übersicht über benutzerdefinierte XAML-Panels"
 ms.assetid: 0CD395CD-E2AB-429D-BB49-56A71C5CC35D
 label: XAML custom panels overview
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 8fba13d28f885d89d5b115eebf1a2e75abb8c890
+
 ---
 
 # Übersicht über benutzerdefinierte XAML-Panels
@@ -209,6 +213,7 @@ Es gibt einige weitere APIs, die Teil des Layoutsystems sind, jedoch nicht durch
 [Ausrichtung, Rand und Abstand](alignment-margin-padding.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

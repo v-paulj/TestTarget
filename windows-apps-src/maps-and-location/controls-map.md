@@ -1,14 +1,17 @@
 ---
-author: PatrickFarley
-Description: Mithilfe des Kartensteuerelements können Straßenkarten und Luftansichten, Wegbeschreibungen, Suchergebnisse und Verkehr angezeigt werden.
-title: Richtlinien für Karten
+author: msatranjr
+Description: "Mithilfe des Kartensteuerelements können Straßenkarten und Luftansichten, Wegbeschreibungen, Suchergebnisse und Verkehrsinformationen angezeigt werden."
+title: "Richtlinien für Karten"
 ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: 3c1d37a119eca88ee443772292f8cfe97cb3c1ac
+
 ---
 
-# Richtlinien für Karten
+# Kartensteuerelement
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 Mithilfe des Kartensteuerelements können Straßenkarten, Luftbilder, 3D-Ansichten, Wegbeschreibungen, Suchergebnisse und Verkehr angezeigt werden. In einer Karte können Sie die Position des Benutzers, Wegbeschreibungen und interessante Orte anzeigen. Zudem kann eine Karte 3D-Luftbilder, Streetside-Ansichten, den Verkehr, öffentliche Verkehrsmittel und lokale Unternehmen enthalten.
@@ -69,6 +72,7 @@ Dieses Beispiel zeigt eine App mit einem 3D-Luftbild und einer Streetside-Ansich
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

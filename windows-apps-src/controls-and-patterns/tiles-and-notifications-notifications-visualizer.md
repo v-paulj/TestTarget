@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Notifications Visualizer ist eine neue App für die Universelle Windows-Plattform (UWP) im Store, die Entwickler dabei unterstützt, adaptive Livekacheln für Windows 10 zu entwerfen.
+Description: "Notifications Visualizer ist eine neue App für die Universelle Windows-Plattform (UWP) im Store, die Entwickler dabei unterstützt, adaptive Livekacheln für Windows 10 zu entwerfen."
 title: Notifications Visualizer
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: dcbf05669093047bd76dc01c217daf353d8fb9da
+
 ---
 
 # Notifications Visualizer
@@ -64,6 +68,7 @@ Dieser Screenshot der App zeigt den Kachel-Editor:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

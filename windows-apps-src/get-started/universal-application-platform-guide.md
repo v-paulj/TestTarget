@@ -1,8 +1,11 @@
 ---
-author: martinekuan
-title: Anleitung für Apps für die universelle Windows-Plattform (UWP)
-description: In dieser Anleitung erfahren Sie mehr über Apps für die universelle Windows-Plattform (UWP), die auf einer Vielzahl von Geräten ausgeführt werden können.
+author: TylerMSFT
+title: "Anleitung für Apps für die universelle Windows-Plattform (UWP)"
+description: "In dieser Anleitung erfahren Sie mehr über Apps für die universelle Windows-Plattform (UWP), die auf einer Vielzahl von Geräten ausgeführt werden können."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
+ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
+ms.openlocfilehash: 191a7aef1a027747379c991e17afc1580a9ec549
+
 ---
 
 # Anleitung für Apps für die universelle Windows-Plattform (UWP)
@@ -261,7 +264,7 @@ Eine vollständige Liste von Win32-APIs für UWP-Apps finden Sie unter [API-Sät
 ## Benutzerfreundlichkeit
 
 
-Apps für die universelle Windows-Plattform ermöglichen Ihnen, die spezifischen Funktionen des Geräts zu nutzen, auf dem die App ausgeführt wird. Ihre App kann die gesamten Möglichkeiten von Desktopgeräten, natürliche Interaktionen mittels direkter Manipulationen auf Tablet-PCs (einschließlich Touch- und Stifteingabe), die Mobilität und Benutzerfreundlichkeit mobiler Geräte sowie die Funktionen zur Zusammenarbeit auf [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365) nutzen.
+Eine universelle Windows-App ermöglicht Ihnen, die einzigartigen Funktionen des Geräts, auf dem die App ausgeführt wird, zu nutzen. Ihre App kann die Möglichkeiten eines Desktopgeräts optimal ausschöpfen und die natürliche Interaktion anhand der direkten Manipulation auf einem Tablet-PC (einschließlich Touch- und Stifteingabe), die Mobilität und Benutzerfreundlichkeit von mobilen Geräten sowie die Funktionen zur Zusammenarbeit auf [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365) nutzen.
 
 Zu einem guten [Design](http://go.microsoft.com/fwlink/?LinkId=258848) gehören nicht nur das gute Aussehen und die Funktionen einer App, sondern auch die Entscheidung darüber, wie Benutzer mit der App interagieren. Die Benutzerfreundlichkeit spielt eine große Rolle bei der Beurteilung, wie gerne Benutzer Ihre App verwenden. Sparen Sie daher nicht an diesem Schritt. Die [Designgrundlagen](https://dev.windows.com/en-us/design) bieten eine Einführung in das Design von Apps für die universelle Windows-Plattform. Unter [Einführung in universelle Windows-Plattform-Apps (UWP) für Designer](https://msdn.microsoft.com/library/windows/apps/dn958439) finden Sie Informationen zum Entwerfen von UWP-Apps, die Benutzer begeistern. Bevor Sie mit dem Schreiben von Code beginnen, lesen Sie die Informationen unter [Einführung der Geräte](../input-and-devices/device-primer.md). Diese helfen Ihnen dabei, die Interaktionsmöglichkeiten Ihrer App für alle in Frage kommenden Formfaktoren zu durchdenken.
 
@@ -293,6 +296,7 @@ Unter [Verwenden des einheitlichen Windows Dev Center-Dashboards](../publish/usi
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

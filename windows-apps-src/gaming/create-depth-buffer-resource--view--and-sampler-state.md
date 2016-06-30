@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Erstellen von Tiefenpuffer-Geräteressourcen
-description: Hier erfahren Sie, wie Sie die zum Unterstützen von Tiefentests für Schattenvolumen erforderlichen Direct3D-Geräteressourcen erstellen.
+title: "Erstellen von Tiefenpuffer-Geräteressourcen"
+description: "Hier erfahren Sie, wie Sie die zum Unterstützen von Tiefentests für Schattenvolumen erforderlichen Direct3D-Geräteressourcen erstellen."
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f0aedb99832ecd10da547cf73a074070008a4344
+
 ---
 
 # Erstellen von Tiefenpuffer-Geräteressourcen
@@ -260,6 +264,7 @@ Im nächsten Teil dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie die
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

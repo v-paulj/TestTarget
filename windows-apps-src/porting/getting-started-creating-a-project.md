@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 08C8F359-E8B6-4A45-8F4B-8A1962F0CE38
-description: Microsoft Visual Studio ist für Windows gleichbedeutend mit Xcode für iOS und Mac OS. In dieser exemplarischen Vorgehensweise möchten wir Ihnen helfen, sich mit der Verwendung von Visual Studio vertraut zu machen.
+description: "Microsoft Visual Studio ist für Windows gleichbedeutend mit Xcode für iOS und Mac OS. In dieser exemplarischen Vorgehensweise möchten wir Ihnen helfen, sich mit der Verwendung von Visual Studio vertraut zu machen."
 title: Erstellen eines Projekts in Visual Studio
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 23d9ed066e2909a15b3106fd19bf6ce5ab09e7a9
+
 ---
 
 # Erste Schritte: Erstellen eines Projekts
@@ -51,6 +55,7 @@ In Visual Studio können Sie ebenfalls aus einer Vielzahl von Projektvorlagen w�
 [Erste Schritte: Auswählen einer Programmiersprache](getting-started-choosing-a-programming-language.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

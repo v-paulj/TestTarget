@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Abrufen von Dateieigenschaften
-description: Es werden Eigenschaften&\#8212;oberste Ebene, grundlegend und erweitert&\#8212;für eine Datei abgerufen, die durch ein StorageFile-Objekt dargestellt wird.
+description: "Es werden Eigenschaften&\\#8212;oberste Ebene, grundlegend und erweitert&\\#8212;für eine Datei abgerufen, die durch ein StorageFile-Objekt dargestellt wird."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 56b83d2f05189b4cbb5bbc015987a4ffce8d86fd
+
 ---
 # Abrufen von Dateieigenschaften
 
@@ -136,6 +140,7 @@ foreach (Windows.Storage.StorageFile file in files)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

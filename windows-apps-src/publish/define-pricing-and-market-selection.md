@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Der Windows Store erreicht Kunden in über 200 Ländern und Regionen in aller Welt.
-title: Festlegen des Preises und Auswählen der Märkte
+Description: "Der Windows Store erreicht Kunden in über 200 Ländern und Regionen in aller Welt."
+title: "Festlegen des Preises und Auswählen der Märkte"
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
+
 ---
 
 # Festlegen des Preises und Auswählen der Märkte
@@ -550,6 +554,7 @@ Folgende Märkte sind in "Restliche Welt" für Windows 8.x enthalten:
 > **Hinweis:** Eine Liste der Länder und Regionen, in denen Sie sich für ein Entwicklerkonto registrieren können, finden Sie unter [Kontotypen, Standorte und Gebühren](https://msdn.microsoft.com/library/windows/apps/jj863494).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

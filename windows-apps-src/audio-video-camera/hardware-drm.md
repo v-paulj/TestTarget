@@ -1,18 +1,20 @@
 ---
 author: eliotcowley
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
-description: Dieses Thema enthält eine Übersicht über das Hinzufügen der hardwarebasierten Verwaltung digitaler Rechte (Digital Rights Management, DRM) mit PlayReady zu Ihrer App für die universelle Windows-Plattform (UWP).
+description: "Dieses Thema enthält eine Übersicht über das Hinzufügen der hardwarebasierten Verwaltung digitaler Rechte (Digital Rights Management, DRM) mit PlayReady zu Ihrer App für die universelle Windows-Plattform (UWP)."
 title: Hardwarebasiertes DRM
+ms.sourcegitcommit: b782d1e3d4f5c90e4cac9fbad3877c5457a27c45
+ms.openlocfilehash: ec443d26652ba6c1ff5de2b96749825890d0228a
+
 ---
 
 # Hardwarebasiertes DRM
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-
 Dieses Thema enthält eine Übersicht über das Hinzufügen der hardwarebasierten Verwaltung digitaler Rechte (Digital Rights Management, DRM) mit PlayReady zu Ihrer App für die universelle Windows-Plattform (UWP).
 
-**Hinweis**  Das hardwarebasierte DRM wird nur auf bestimmter Hardware mit einer Windows 10-Version der jeweiligen Hardwarefirmware unterstützt. Weitere Informationen zu den Garantien finden Sie unter [PlayReady-Kompatibilität und Stabilitätsregeln](http://www.microsoft.com/playready/licensing/compliance/).
+> [!NOTE] Hardwarebasierte PlayReady DRM-Funktionalität wird auf einer Vielzahl von Geräten unterstützt, sowohl auf Windows-Geräten als auch Nicht-Windows-Geräten wie Fernsehern, Telefonen und Tablets. Damit ein Windows-Gerät PlayReady Hardware-DRM unterstützt, muss auf dem Gerät Windows 10 ausgeführt werden und eine unterstützte Hardwarekonfiguration vorliegen.
 
 Inhaltsanbieter verwenden zunehmend hardwarebasierten Schutz, um die Berechtigung zur Wiedergabe vollständiger hochwertiger Inhalte in Apps zu gewähren. Aus diesem Grund wurde PlayReady stabile Unterstützung für eine Hardwareimplementierung des kryptografischen Cores hinzugefügt. Diese Unterstützung ermöglicht die sichere Wiedergabe von HD (1080p)- und Ultra-High-Definition (UHD)-Inhalten auf mehreren Geräteplattformen. Schlüsselmaterial (einschließlich privater Schlüssel, Inhaltsschlüssel und anderer Schlüsselmaterialien zum Ableiten oder Entsperren dieser Schlüssel) sowie entschlüsselte komprimierte und nicht komprimierte Videobeispiele werden durch Hardwaresicherheit geschützt.
 
@@ -26,14 +28,18 @@ Auf die Details der Windows-TEE-Implementierung gehen wir in diesem Dokument nic
 
 ## Überlegungen zur Verwendung des hardwarebasierten DRM
 
-Dieses Thema enthält eine kurze Liste der Punkte, die Sie beim Entwickeln von Apps mit Verwendung des Hardware-DRM berücksichtigen sollten.
+Dieses Thema enthält eine kurze Liste der Punkte, die Sie beim Entwickeln von Apps mit Verwendung des Hardware-DRM berücksichtigen sollten. Wie unter [PlayReady DRM](playready-client-sdk.md#output-protection) erläutert, wird bei PlayReady HWDRM für Windows 10 der gesamte Ausgabeschutz innerhalb der Windows-TEE-Implementierung erzwungen. Dies wirkt sich auf das Verhalten des Ausgabeschutzes aus:
+
+-   **Unterstützung für Ausgabeschutzebene (Output Protection Level, OPL) 270 für nicht komprimierte digitale Videos:** PlayReady HWDRM für Windows 10 unterstützt nicht die Abwärtsauflösung und erzwingt den Einsatz von HDCP. Microsoft empfiehlt, dass für HD-Inhalte für HWDRM ein OPL-Wert verwendet wird, der größer als 270 ist (obwohl dies nicht zwingend erforderlich ist). Darüber hinaus empfiehlt Microsoft die Festlegung einer HDCP-Typeinschränkung in der Lizenz (HDCP-Version 2.2 unter Windows 10).
+-   Im Gegensatz zum Software-DRM wird der Ausgabeschutz für alle Monitore basierend auf dem langsamsten Monitor erzwungen. Wenn der Benutzer beispielsweise zwei Monitore angeschlossen hat und nur einer davon HDCP unterstützt, ist die Wiedergabe nicht möglich, falls die Lizenz HDCP erfordert. Dies gilt auch dann, wenn der Inhalt nur auf dem Monitor gerendert wird, der HDCP unterstützt. Beim Software-DRM (SWDRM) wird der Inhalt wiedergegeben, solange das Rendering nur auf dem Monitor erfolgt, der HDCP unterstützt.
+-   Es ist nicht garantiert, dass das HWDRM vom Client verwendet wird und dass das Verfahren sicher ist, es sei denn, von den Inhaltsschlüsseln und -lizenzen werden die folgenden Bedingungen erfüllt:
+    -   Die für den Videoinhaltsschlüssel verwendete Lizenz muss als Mindestsicherheitsstufe 3.000 aufweisen.
+    -   Audiodaten müssen mit einem anderen Inhaltsschlüssel verschlüsselt werden als Videodaten, und für die für Audiodaten verwendete Lizenz muss als Mindestsicherheitsstufe 2.000 festgelegt werden. Alternativ können Audiodaten auch unverschlüsselt bleiben.
+    
+Darüber hinaus sollten Sie bei der Verwendung des HWDRM die folgenden Elemente berücksichtigen:
 
 -   Protected Media Process (PMP) wird nicht unterstützt.
--   Ausgabeschutzebene (Output Protection Level, OPL) 270 wird unterstützt (keine Abwärtsauflösung). Microsoft empfiehlt, dass für HD-Inhalte für das Hardware-DRM ein OPL-Wert verwendet wird, der größer als 270 ist (obwohl dies nicht zwingend erforderlich ist). Ein höherer OPL-Wert als 270 bedeutet, dass HDCP erforderlich ist. Darüber hinaus empfiehlt Microsoft, HDCP Typ 1 (Version 2.2 oder höher) zu verwenden.
--   Im Gegensatz zum DRM wird der Ausgabeschutz für alle Monitore basierend auf dem langsamsten Monitor erzwungen. Wenn der Benutzer beispielsweise zwei Monitore angeschlossen hat und nur einer davon HDCP unterstützt, ist die Wiedergabe nicht möglich, falls die Lizenz HDCP erfordert. Dies gilt auch dann, wenn der Inhalt nur auf dem Monitor gerendert wird, der HDCP unterstützt. Beim Software-DRM wird der Inhalt wiedergegeben, solange das Rendering nur auf dem Monitor erfolgt, der HDCP unterstützt.
--   Es ist nicht garantiert, dass das Hardware-DRM vom Client verwendet wird und dass das Verfahren sicher ist, es sei denn, von den Inhaltsschlüsseln und -lizenzen werden die folgenden Bedingungen erfüllt:
-    -   Die Audiodaten müssen unverschlüsselt oder mit einem anderen Inhaltsschlüssel als die Videodaten verschlüsselt sein. Microsoft empfiehlt, die Audiodaten unverschlüsselt zu lassen, um die Wiedergabeleistung zu verbessern.
-    -   Die für den Videoinhaltsschlüssel verwendete Lizenz muss die Sicherheitsstufe 3.000 aufweisen.
+-   Windows Media Video (auch bekannt als VC-1) wird nicht unterstützt (siehe [Außerkraftsetzen des Hardware-DRM](#override-hardware-drm)).
 -   Mehrere Grafikprozessoren (GPUs) werden für persistente Lizenzen nicht unterstützt.
 
 Sehen Sie sich das folgende Szenario an, bei dem es um die Behandlung von persistenten Lizenzen auf Computern mit mehreren GPUs geht:
@@ -44,11 +50,11 @@ Sehen Sie sich das folgende Szenario an, bei dem es um die Behandlung von persis
 4.  Der Kunde installiert dann eine neue Grafikkarte.
 5.  Alle Lizenzen im Datenspeicher mit Hash (HDS) sind an die integrierte Grafikkarte gebunden, aber der Kunde möchte jetzt geschützte Inhalte mit der neu installierten Grafikkarte wiedergeben.
 
-Um Fehler bei der Wiedergabe zu verhindern, weil die Lizenzen von der Hardware nicht entschlüsselt werden können, nutzt PlayReady für jede Grafikkarte, die erkannt wird, einen separaten Datenspeicher mit Hash (HDS). Daher versucht PlayReady, eine Lizenz für ein Inhaltselement zu beschaffen, für das PlayReady normalerweise bereits über eine Lizenz verfügen würde (beim Software-DRM oder in einem Fall ohne Wechsel der Hardware müsste PlayReady also nicht erneut eine Lizenz beschaffen). Falls die App eine persistente Lizenz beschafft, während Hardware-DRM genutzt wird, muss Ihre App also den Fall behandeln können, in dem diese Lizenz praktisch als „verloren“ gilt, wenn der Endbenutzer eine Grafikkarte installiert (oder deinstalliert). Da dies nicht ein häufiger Fall ist, können Sie sich auch für die Bearbeitung der Supportanfragen entscheiden, wenn Inhalte nach einem Wechsel der Hardware nicht mehr wiedergegeben werden können, anstatt nach einer Lösung für den Umgang mit einem Hardwarewechsel im Client-/Servercode zu suchen.
+Um Fehler bei der Wiedergabe zu verhindern, weil die Lizenzen von der Hardware nicht entschlüsselt werden können, nutzt PlayReady für jede erkannte Grafikkarte einen separaten HDS. Daher versucht PlayReady, eine Lizenz für ein Inhaltselement zu beschaffen, für das PlayReady normalerweise bereits über eine Lizenz verfügen würde (beim Software-DRM oder in einem Fall ohne Wechsel der Hardware müsste PlayReady also nicht erneut eine Lizenz beschaffen). Falls die App eine persistente Lizenz beschafft, während Hardware-DRM genutzt wird, muss Ihre App also den Fall behandeln können, in dem diese Lizenz praktisch als „verloren“ gilt, wenn der Endbenutzer eine Grafikkarte installiert (oder deinstalliert). Da dies nicht ein häufiger Fall ist, können Sie sich auch für die Bearbeitung der Supportanfragen entscheiden, wenn Inhalte nach einem Wechsel der Hardware nicht mehr wiedergegeben werden können, anstatt nach einer Lösung für den Umgang mit einem Hardwarewechsel im Client-/Servercode zu suchen.
 
 ## Außerkraftsetzen des Hardware-DRM
 
-In diesem Abschnitt wird beschrieben, wie Sie das Hardware-DRM außer Kraft setzen, wenn der wiederzugebende Inhalt das Hardware-DRM nicht unterstützt.
+In diesem Abschnitt wird beschrieben, wie Sie das Hardware-DRM (HWDRM) außer Kraft setzen, wenn der wiederzugebende Inhalt das Hardware-DRM nicht unterstützt.
 
 Das Hardware-DRM wird standardmäßig verwendet, wenn es vom System unterstützt wird. Manche Inhalte werden jedoch nicht vom Hardware-DRM unterstützt. Ein Beispiel hierfür sind Cocktail-Inhalte. Ein weiteres Beispiel sind Inhalte, die einen anderen Videocodec als H.264 und HEVC verwenden. HEVC-Inhalte sind ebenfalls ein Beispiel, da HEVC nicht von allen Hardware-DRM-Typen unterstützt wird. Wenn Sie einen bestimmten Inhalt wiedergeben möchten, der auf dem betreffenden System nicht vom Hardware-DRM unterstützt wird, können Sie das Hardware-DRM daher außer Kraft setzen.
 
@@ -90,6 +96,7 @@ Sie können auch die [**PlayReadyStatics.PlayReadyCertificateSecurityLevel**](ht
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

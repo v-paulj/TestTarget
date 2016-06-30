@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Dieser Abschnitt enthält Richtlinien für die Darstellung von App-Einstellungen auf der Benutzeroberfläche und das Speichern dieser Einstellungen als App-Daten.
+Description: "Dieser Abschnitt enthält Richtlinien für die Darstellung von App-Einstellungen auf der Benutzeroberfläche und das Speichern dieser Einstellungen als App-Daten."
 title: App-Einstellungen und Daten
 ms.assetid: E7F312F7-54D8-411F-8D92-92FBB95C2463
 label: App settings and data
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 4d6f57dcc9dbfe9c2e031a5fe73f24668f0dc462
+
 ---
 
 # App-Einstellungen und Daten
@@ -45,6 +49,7 @@ App-Daten werden von der App selbst erstellt und verwaltet. Sie beinhalten den L
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

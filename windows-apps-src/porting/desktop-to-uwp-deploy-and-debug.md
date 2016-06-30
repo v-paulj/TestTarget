@@ -3,6 +3,9 @@ author: awkoren
 Description: Bereitstellen und Debuggen einer unter Verwendung der Desktop-Konvertierungserweiterungen von einer Windows-Desktopanwendung (Win32, WPF und Windows Forms) konvertierten UWP-App (Universelle Windows-Plattform)
 Search.Product: eADQiWindows 10XVcnh
 title: Bereitstellen und Debuggen einer von einer Windows-Desktopanwendung konvertierten UWP-App (Universelle Windows-Plattform)
+ms.sourcegitcommit: 606d5237cb67cb4439704f81b180c3c48cc1556f
+ms.openlocfilehash: 14634c12435cd8d6d4471a65c0f8deb36e3b1c80
+
 ---
 
 # Bereitstellen und Debuggen der konvertierten UWP-App (Project Centennial)
@@ -176,6 +179,8 @@ Eine konvertierte App wird immer als interaktiver Benutzer ausgeführt. Dies ist
 
 Wenn Sie versuchen das Add-AppxPackage-Cmdlet auf einem Computer auszuführen, auf dem Sie das erstellte Zertifikat noch nicht importiert haben, tritt ein Fehler auf.
 
+Bevor Sie Ihre App bereitstellen, müssen Sie sie mit einem Zertifikat signieren. Informationen zum Erstellen eines Zertifikats finden Sie unter [Signieren des Appx-Pakets](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter#deploy-your-converted-appx). 
+
 Im Folgenden wird beschrieben, wie Sie ein Zertifikat importieren, das Sie zuvor erstellt haben. Sie können es direkt oder wie der Kunde von einem Appx-Projekt installieren, das Sie signiert haben.
 1.  Klicken Sie im Datei-Explorer mit der rechten Maustaste auf ein Appx-Projekt, das Sie mit einem Testzertifikat signiert haben, und wählen Sie im Kontextmenü **Eigenschaften** aus.
 2.  Klicken oder tippen Sie auf die Registerkarte **Digitale Signaturen**.
@@ -188,8 +193,6 @@ Im Folgenden wird beschrieben, wie Sie ein Zertifikat importieren, das Sie zuvor
 9.  Klicken oder tippen Sie auf **Durchsuchen**. Scrollen Sie im Fenster „Zertifikatspeicher auswählen“ nach unten, wählen Sie die Option **Vertrauenswürdige Personen** aus, und tippen Sie dann auf **OK**.
 10. Klicken oder tippen Sie auf **Weiter**. Ein neuer Bildschirm wird angezeigt. Klicken oder tippen Sie auf **Fertig stellen**.
 11. Ein Bestätigungsdialogfeld sollte angezeigt werden. Wenn dies der Fall ist, klicken Sie auf **OK**. Gibt ein anderes Dialogfeld an, dass ein Problem mit dem Zertifikat vorliegt, müssen Sie mögliche Zertifikatfehler behandeln.
-
-### Zusätzliche Infos
 
 Damit Windows dem Zertifikat vertraut, muss sich das Zertifikat entweder im Knoten **Zertifikate (lokaler Computer) > Vertrauenswürdige Stammzertifizierungsstellen > Zertifikate** oder **Zertifikate (lokaler Computer) > Vertrauenswürdige Personen > Zertifikate** befinden. Nur Zertifikaten, die sich in diesen Speicherorten befinden, können auf dem lokalen Computer als vertrauenswürdige Zertifikate festgelegt werden. Andernfalls wird eine Fehlermeldung angezeigt, die der folgenden ähnelt:
 ```CMD
@@ -207,7 +210,16 @@ Die App wird jedoch in einer speziellen Umgebung ausgeführt, in der alle Zugrif
 
 In einem Ordner mit dem Namen „VFS“ sehen Sie Ordner, die die DLL-Dateien enthalten, von denen die App abhängig ist. Diese DLL-Dateien werden in den Systemordnern für die klassische Desktopversion Ihrer App installiert. Bei der UWP-App sind die DLL-Dateien für Ihre App lokal gespeichert. Auf diese Weise treten bei der Installation und Deinstallation von UWP-Apps keine Versionsprobleme auf.
 
+## Siehe auch
+[Konvertieren der Desktopanwendung in eine UWP-App (Universelle Windows-Plattform)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)
 
-<!--HONumber=May16_HO2-->
+[Vorschau für den Desktop-App-Konverter (Project Centennial)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter)
+
+[Manuelles Konvertieren Ihrer Windows-Desktopanwendung in eine UWP-App (Universelle Windows-Plattform)](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-manual-conversion)
+
+[Desktop-App-Bridge zu UWP-Codebeispielen auf GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
+
+
+<!--HONumber=Jun16_HO4-->
 
 

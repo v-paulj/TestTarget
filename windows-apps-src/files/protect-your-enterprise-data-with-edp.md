@@ -1,10 +1,14 @@
 ---
 author: TylerMSFT
-Description: 'Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten, dateibezogenen EDP-Szenarien durchgeführt werden müssen.'
-MS-HAID: 'dev\_files.protect\_your\_enterprise\_data\_with\_edp'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten, dateibezogenen EDP-Szenarien durchgeführt werden müssen."
+MS-HAID: dev\_files.protect\_your\_enterprise\_data\_with\_edp
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 'Schützen von Dateien mithilfe des Unternehmensdatenschutzes (EDP)'
+title: "Schützen von Dateien mithilfe des Unternehmensdatenschutzes (EDP)"
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 2d9b1ec4e39e5c8a100030184ee9287a0d97ea24
+
 ---
 
 # Schützen von Dateien mithilfe des Unternehmensdatenschutzes (EDP)
@@ -264,6 +268,7 @@ private async void EnableUIPolicyFromFile(StorageFile storageFile)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

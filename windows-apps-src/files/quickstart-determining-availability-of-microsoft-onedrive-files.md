@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 3604524F-112A-474F-B0CA-0726DC8DB885
-title: Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien
-description: Ermitteln Sie mithilfe der StorageFile.IsAvailable-Eigenschaft, ob eine Microsoft OneDrive-Datei verfügbar ist.
+title: "Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien"
+description: "Ermitteln Sie mithilfe der StorageFile.IsAvailable-Eigenschaft, ob eine Microsoft OneDrive-Datei verfügbar ist."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 17893ac17a741f2a6220b1826547c700af0f0f33
+
 ---
 # Ermitteln der Verfügbarkeit von Microsoft OneDrive-Dateien
 
@@ -93,6 +97,7 @@ private async void CheckAvailabilityOfFilesInPicturesLibrary()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -5,8 +5,8 @@ title: Touchpad-Interaktionen
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: aa09852ff6f387b97e0f1a1bbb2d198927d5da0d
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 361df3a06faa771a81a6d63c2fe873a1aace1125
 
 ---
 
@@ -41,7 +41,7 @@ Aufgrund der Konvergenz der Interaktionsformen, die von Touchpads unterstützt w
 
 Die in diesem Thema beschriebenen Gesten und Richtlinien können dabei helfen, die Unterstützung der Touchpadeingabe nahtlos und mit minimalem Programmieraufwand in Ihre App zu integrieren.
 
-## <span id="The_touchpad_language"></span><span id="the_touchpad_language"></span><span id="THE_TOUCHPAD_LANGUAGE"></span>Sprache für Eingabe per Touchpad
+## Sprache für Eingabe per Touchpad
 
 
 Ein kompakter Satz von Touchpadinteraktionen wird durchgängig im ganzen System verwendet. Indem Sie Ihre App für die Touch- und Mauseingabe optimieren, sorgen Sie dafür, dass sich Benutzer sofort in Ihrer App zurechtfinden. So erleichtern Sie Benutzern den Einstieg und die Verwendung Ihrer App.
@@ -71,39 +71,39 @@ Im Anschluss folgen einige Beispiele für touchpadoptimierte Gesten zum Ausführ
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span id="Three-finger_tap"></span><span id="three-finger_tap"></span><span id="THREE-FINGER_TAP"></span>Tippen mit drei Fingern</p></td>
+<td align="left"><p>Tippen mit drei Fingern</p></td>
 <td align="left"><p>Benutzereinstellung für die Suche mit <strong>Cortana</strong> oder die Anzeige des Info-Centers<strong></strong>.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Three_finger_slide"></span><span id="three_finger_slide"></span><span id="THREE_FINGER_SLIDE"></span>Ziehbewegung mit drei Fingern</p></td>
+<td align="left"><p>Ziehbewegung mit drei Fingern</p></td>
 <td align="left"><p>Benutzereinstellung zum Öffnen der Aufgabenansicht des virtuellen Desktops, zum Anzeigen des Desktops oder zum Wechseln zwischen geöffneten Apps.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Single_finger_tap_for_primary_action"></span><span id="single_finger_tap_for_primary_action"></span><span id="SINGLE_FINGER_TAP_FOR_PRIMARY_ACTION"></span>Tippen mit einem Finger: Aufrufen der primären Aktion</p></td>
+<td align="left"><p>Tippen mit einem Finger: Aufrufen der primären Aktion</p></td>
 <td align="left"><p>Durch Tippen mit einem Finger auf ein Element wird dessen primäre Aktion aufgerufen (z. B. das Starten einer App oder das Ausführen eines Befehls).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Two_finger_tap_to_right-click"></span><span id="two_finger_tap_to_right-click"></span><span id="TWO_FINGER_TAP_TO_RIGHT-CLICK"></span>Tippen mit zwei Fingern: Ausführen eines Rechtsklicks</p></td>
+<td align="left"><p>Tippen mit zwei Fingern: Ausführen eines Rechtsklicks</p></td>
 <td align="left"><p>Tippen Sie mit zwei Fingern gleichzeitig auf ein Element, um es auszuwählen und Kontextbefehle anzuzeigen.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Two_finger_slide_to_pan"></span><span id="two_finger_slide_to_pan"></span><span id="TWO_FINGER_SLIDE_TO_PAN"></span>Ziehen mit zwei Fingern: Verschieben</p></td>
+<td align="left"><p>Ziehen mit zwei Fingern: Verschieben</p></td>
 <td align="left"><p>Das Ziehen wird in erster Linie für Verschiebungen verwendet, kann jedoch auch zum Schieben, Zeichnen oder Schreiben genutzt werden.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Pinch_and_stretch_to_zoom"></span><span id="pinch_and_stretch_to_zoom"></span><span id="PINCH_AND_STRETCH_TO_ZOOM"></span>Zusammendrücken/Aufziehen: Zoom</p></td>
+<td align="left"><p>Zusammendrücken/Aufziehen: Zoom</p></td>
 <td align="left"><p>Die Zusammendrück- und Aufziehbewegungen werden üblicherweise für Größenänderungen und zum Ausführen des semantischen Zooms verwendet.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Single_finger_press_and_slide_to_rearrange"></span><span id="single_finger_press_and_slide_to_rearrange"></span><span id="SINGLE_FINGER_PRESS_AND_SLIDE_TO_REARRANGE"></span>Drücken und Ziehen mit einem Finger: Neuanordnen</p></td>
+<td align="left"><p>Drücken und Ziehen mit einem Finger: Neuanordnen</p></td>
 <td align="left"><p>Ziehen eines Elements.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Single_finger_press_and_slide_to_select_text"></span><span id="single_finger_press_and_slide_to_select_text"></span><span id="SINGLE_FINGER_PRESS_AND_SLIDE_TO_SELECT_TEXT"></span>Drücken und Ziehen mit einem Finger: Textauswahl</p></td>
+<td align="left"><p>Drücken und Ziehen mit einem Finger: Textauswahl</p></td>
 <td align="left"><p>Durch Drücken und Ziehen in auswählbarem Text wird Text ausgewählt. Durch Doppeltippen wird ein einzelnes Wort ausgewählt.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Left_and_right_click_zone"></span><span id="left_and_right_click_zone"></span><span id="LEFT_AND_RIGHT_CLICK_ZONE"></span>Zonen für Links- und Rechtsklick</p></td>
+<td align="left"><p>Zonen für Links- und Rechtsklick</p></td>
 <td align="left"><p>Mit diesen Zonen emulieren Sie die Links- und Rechtsklickfunktion einer Maus.</p></td>
 </tr>
 </tbody>
@@ -111,14 +111,14 @@ Im Anschluss folgen einige Beispiele für touchpadoptimierte Gesten zum Ausführ
 
  
 
-## <span id="Hardware"></span><span id="hardware"></span><span id="HARDWARE"></span>Hardware
+## Hardware
 
 
 Fragen Sie die Funktionen des Mausgeräts ([**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)) ab, um zu ermitteln, auf welche Elemente der Benutzeroberfläche Ihrer App die Touchpad-Hardware direkt zugreifen kann. Wir empfehlen die Bereitstellung einer Benutzeroberfläche, die sowohl Touch- als auch Mauseingabe ermöglicht.
 
 Weitere Informationen zum Abfragen von Gerätefunktionen finden Sie unter [Identifizieren von Eingabegeräten](identify-input-devices.md).
 
-## <span id="Visual_feedback"></span><span id="visual_feedback"></span><span id="VISUAL_FEEDBACK"></span>Visuelles Feedback
+## Visuelles Feedback
 
 
 -   Blenden Sie die für Touchpadinteraktionen spezifische Benutzeroberfläche ein, sobald ein Touchpad-Cursor erkannt wird (durch Bewegungs- oder Zeigeereignisse), um die Funktionalität des Elements verfügbar zu machen. Wenn der Touchpad-Cursor für eine bestimmte Zeit nicht bewegt wird oder der Benutzer eine Toucheingabeinteraktion auslöst, blenden Sie die für Touchpad-Interaktionen spezifische Benutzeroberfläche schrittweise aus. Somit bleibt die Benutzeroberfläche sauber und aufgeräumt.
@@ -129,7 +129,7 @@ Weitere Informationen zum Abfragen von Gerätefunktionen finden Sie unter [Ident
 
 Allgemeine Informationen zum visuellen Feedback finden Sie unter [Richtlinien für visuelles Feedback](https://msdn.microsoft.com/library/windows/apps/hh465342).
 
-## <span id="Cursors"></span><span id="cursors"></span><span id="CURSORS"></span>Cursor
+## Cursor
 
 
 In Windows Store-Apps sind einige Standardcursor verfügbar, die als Touchpad-Zeiger verwendet werden können. Diese Cursor werden verwendet, um die primäre Aktion eines Elements anzugeben.
@@ -144,7 +144,7 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 -   Verwenden Sie die Cursor für horizontale, vertikale und diagonale Größenänderung (![Cursor für vertikale Größenänderung](images/cursor-vertical.png), ![Cursor für horizontale Größenänderung](images/cursor-horizontal.png), ![Cursor für diagonale Größenänderung (unten links, oben rechts)](images/cursor-diagonal2.png), ![Cursor für diagonale Größenänderung (oben links, unten rechts)](images/cursor-diagonal1.png)), wenn die Größe eines Objekts geändert werden kann.
 -   Verwenden Sie den Handcursor (![Handcursor (offen)](images/cursor-pan1.png), ![Handcursor (geschlossen)](images/cursor-pan2.png)) beim Verschieben von Inhalt innerhalb einer Canvas (etwa bei einer Karte).
 
-## <span id="related_topics"></span>Verwandte Artikel
+## Verwandte Artikel
 
 
 * [Behandeln von Zeigereingaben](handle-pointer-input.md)
@@ -170,6 +170,6 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

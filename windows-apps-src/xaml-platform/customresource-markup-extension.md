@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource aus einer benutzerdefinierten Ressourcennachschlage-Implementierung untersucht wird. Das Nachschlagen der Ressource erfolgt mithilfe einer Implementierung der CustomXamlResourceLoader-Klasse.
+description: "Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource aus einer benutzerdefinierten Ressourcennachschlage-Implementierung untersucht wird. Das Nachschlagen der Ressource erfolgt mithilfe einer Implementierung der CustomXamlResourceLoader-Klasse."
 title: CustomResource-Markuperweiterung
 ms.assetid: 3A59A8DE-E805-4F04-B9D9-A91E053F3642
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4758f67c7bcbc58fda47faf1e872998302086c10
+
 ---
 
 # {CustomResource}-Markuperweiterung
@@ -47,6 +51,7 @@ Eine `{CustomResource}`-Syntax funktioniert standardmäßig nicht (die Basisimpl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

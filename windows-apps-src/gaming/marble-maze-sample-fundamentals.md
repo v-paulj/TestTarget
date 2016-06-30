@@ -3,6 +3,10 @@ author: mtoepke
 title: Grundlagen am Beispiel von Marble Maze
 description: In diesem Dokument werden die fundamentalen Eigenschaften des Marble Maze-Projekts beschrieben, beispielsweise wie Visual C++ in der Windows Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5a9df995078763df73542a4101e73e147517b1eb
+
 ---
 
 # Grundlagen am Beispiel von Marble Maze
@@ -142,6 +146,7 @@ Lesen Sie die Informationen unter [Marble Maze-Anwendungsstruktur](marble-maze-a
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -2,7 +2,11 @@
 author: DBirtolo
 ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: Sensoren
-description: Mithilfe von Sensoren können Apps die Beziehung zwischen einem Gerät und der physischen Umgebung ermitteln. Sensoren können für die App die Richtung, Ausrichtung und Bewegung des Geräts erfassen.
+description: "Mithilfe von Sensoren können Apps die Beziehung zwischen einem Gerät und der physischen Umgebung ermitteln. Sensoren können für die App die Richtung, Ausrichtung und Bewegung des Geräts erfassen."
+translationtype: Human Translation
+ms.sourcegitcommit: e5f61e562f7ec464fc07815b0bdd0ac938fc2fb2
+ms.openlocfilehash: dff6228524396c5d6662313ecc808b33e9dd1998
+
 ---
 # Sensoren
 
@@ -70,7 +74,7 @@ Mit dem [**Barometer**](https://msdn.microsoft.com/library/windows/apps/Dn872405
 
 ## Kompass
 
-Mit dem [**Kompass**](https://msdn.microsoft.com/library/windows/apps/BR225705) -Sensor gibt eine 2D-Richtung unter Berücksichtigung des magnetischen Nordpols auf Grundlage der horizontalen Ebene der Erde zurück. Der Kompasssensor sollte nicht für die Bestimmung spezifischer Geräteausrichtung oder die Darstellung von Objekten im 3D-Raum verwendet werden. Geografische Objekte können eine natürliche Abweichung der Richtung verursachen, daher unterstützen einige Systeme sowohl [**HeadingMagneticNorth**](https://msdn.microsoft.com/library/windows/apps/BR225705reading_headingmagneticnorth) als auch [**HeadingTrueNorth**](https://msdn.microsoft.com/library/windows/apps/BR225705reading_headingtruenorth). Entscheiden Sie, welcher Pol von der App verwendet werden soll, aber bedenken Sie, dass nicht alle Systeme den korrekten Nordwert ausgeben. Gyrometer- und Magnetometer (ein Gerät zur Messung der magnetischen Stärke)-Sensoren vereinen ihre Daten, um die Kompassrichtung zu bestimmen, wodurch die Daten stabilisiert werden (Die magnetische Feldstärke ist aufgrund der Komponenten elektrischer Systeme sehr instabil).
+Mit dem [**Kompass**](https://msdn.microsoft.com/library/windows/apps/BR225705) -Sensor gibt eine 2D-Richtung unter Berücksichtigung des magnetischen Nordpols auf Grundlage der horizontalen Ebene der Erde zurück. Der Kompasssensor sollte nicht für die Bestimmung spezifischer Geräteausrichtung oder die Darstellung von Objekten im 3D-Raum verwendet werden. Geografische Objekte können eine natürliche Abweichung der Richtung verursachen, daher unterstützen einige Systeme sowohl [**HeadingMagneticNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingmagneticnorth.aspx) als auch [**HeadingTrueNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingtruenorth.aspx). Entscheiden Sie, welcher Pol von der App verwendet werden soll, aber bedenken Sie, dass nicht alle Systeme den korrekten Nordwert ausgeben. Gyrometer- und Magnetometer (ein Gerät zur Messung der magnetischen Stärke)-Sensoren vereinen ihre Daten, um die Kompassrichtung zu bestimmen, wodurch die Daten stabilisiert werden (Die magnetische Feldstärke ist aufgrund der Komponenten elektrischer Systeme sehr instabil).
 
 ![Kompasswerte im Hinblick auf den magnetischen Nordpol](images/compass.png)
 
@@ -114,7 +118,7 @@ Der [**Proximity**](https://msdn.microsoft.com/library/windows/apps/Dn872427)-Se
 
 ## Einfache Ausrichtung
 
-Der [**SimpleOrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR206399sensor) erkennt die aktuelle Quadrantenausrichtung des angegebenen Geräts, bzw. ob die Oberseite nach oben oder unten zeigt. Er verfügt über sechs mögliche [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)-Zustände (**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp**, **FaceDown**).
+Der [**SimpleOrientationSensor**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.simpleorientationsensor.aspx) erkennt die aktuelle Quadrantenausrichtung des angegebenen Geräts, bzw. ob die Oberseite nach oben oder unten zeigt. Er verfügt über sechs mögliche [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)-Zustände (**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp**, **FaceDown**).
 
 Eine Reader-App, bei der die Anzeige abhängig von der Ausrichtung des Geräts in Relation zum Boden geändert wird, würde die Ausrichtung des Geräts anhand von SimpleOrientationSensor-Werten bestimmen.
 
@@ -124,6 +128,7 @@ Einige Beispiele zur Verwendung verschiedener Sensoren finden Sie unter [Beispie
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

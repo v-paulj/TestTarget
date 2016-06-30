@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Ein Muster mit einem Inhalts- und einem Befehlsbereich für Apps mit einer einzelnen Ansicht oder modalen Benutzeroberflächen wie z. B. Fotoanzeige-/Fotobearbeitungs-Apps, Dokumentviewer-Apps, Karten-Apps, Zeichen-Apps oder andere Apps, die eine Ansicht mit freiem Bildlauf nutzen.
-title: Richtlinien für das Muster „Aktive Canvas“
+Description: "Ein Muster mit einem Inhalts- und einem Befehlsbereich für Apps mit einer einzelnen Ansicht oder modalen Benutzeroberflächen wie z. B. Fotoanzeige-/Fotobearbeitungs-Apps, Dokumentviewer-Apps, Karten-Apps, Zeichen-Apps oder andere Apps, die eine Ansicht mit freiem Bildlauf nutzen."
+title: "Richtlinien für das Muster „Aktive Canvas“"
 ms.assetid: 4D768472-64D6-406C-9E87-F750F6B981A0
 label: TBD
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 490c45fb8dc565e4ae0b890d26f28d698b58f255
+
 ---
 #Muster „Aktive Canvas“
 
@@ -36,6 +40,7 @@ Das Muster der aktiven Canvas besteht aus einem Inhaltsbereich und einem Befehls
 -   [**App-Leiste und Befehlsleiste**](app-bars.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

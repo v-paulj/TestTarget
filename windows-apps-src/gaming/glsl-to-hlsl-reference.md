@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: GLSL-zu-HLSL-Referenz
-description: Sie portieren Ihren OpenGL Shader Language (GLSL)-Code zu Microsoft High Level Shader Language (HLSL)-Code, wenn Sie Ihre Grafikarchitektur von OpenGL ES 2.0 zu Direct3D 11 portieren, um ein Spiel für die universelle Windows-Plattform (UWP) zu erstellen.
+description: "Sie portieren Ihren OpenGL Shader Language (GLSL)-Code zu Microsoft High Level Shader Language (HLSL)-Code, wenn Sie Ihre Grafikarchitektur von OpenGL ES 2.0 zu Direct3D 11 portieren, um ein Spiel für die universelle Windows-Plattform (UWP) zu erstellen."
 ms.assetid: 979d19f6-ef0c-64e4-89c2-a31e1c7b7692
+translationtype: Human Translation
+ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
+ms.openlocfilehash: 02a3ba1768b6fa7b09b6c9f637a72d88c0cef604
+
 ---
 
 # GLSL-zu-HLSL-Referenz
@@ -566,6 +570,7 @@ m_d3dDeviceContext->Draw(ARRAYSIZE(triangleVertices),0);
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

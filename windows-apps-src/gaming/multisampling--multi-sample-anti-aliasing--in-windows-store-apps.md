@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Multisampling in UWP-Apps (Apps für die universelle Windows-Plattform)
-description: Hier erfahren Sie, wie Sie Multisampling in UWP-Apps (Apps für die universelle Windows-Plattform) verwenden, die mit Direct3D erstellt wurden.
+title: "Multisampling in UWP-Apps (Apps für die universelle Windows-Plattform)"
+description: "Hier erfahren Sie, wie Sie Multisampling in UWP-Apps (Apps für die universelle Windows-Plattform) verwenden, die mit Direct3D erstellt wurden."
 ms.assetid: 1cd482b8-32ff-1eb0-4c91-83eb52f08484
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7b240de9ab3c7b53877d38eb9097dde25b2a40be
+
 ---
 
 # <span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Multisampling in UWP-Apps (Apps für die universelle Windows-Plattform)
@@ -205,6 +209,7 @@ Direct3D-Featureebenen stellen die Unterstützung für spezielle Mindestfunktion
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

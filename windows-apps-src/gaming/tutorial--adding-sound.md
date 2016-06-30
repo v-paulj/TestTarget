@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Hinzufügen von Sound
-description: In diesem Schritt untersuchen wir, wie das Beispielshooterspiel mit den XAudio2-APIs ein Objekt für die Soundwiedergabe erstellt.
+title: "Hinzufügen von Sound"
+description: "In diesem Schritt untersuchen wir, wie das Beispielshooterspiel mit den XAudio2-APIs ein Objekt für die Soundwiedergabe erstellt."
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f9e536e71dd7b5c94d587a8bb66df3b41cc9a4ae
+
 ---
 
 # Hinzufügen von Sound
@@ -15,9 +19,9 @@ In diesem Schritt untersuchen wir, wie das Beispielshooterspiel mit den [XAudio2
 ## Ziel
 
 
--   Hinzufügen einer Soundausgabe unter Verwendung von [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813)
+-   So fügen Sie mit [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813) eine Soundausgabe hinzu.
 
-Im beispielhaften Spiel werden die Audioobjekte und -verhaltensweisen in drei Dateien definiert:
+Im Beispielspiel sind die Audio-Objekte und -Verhalten in drei Dateien definiert:
 
 -   **Audio.h/.cpp**. Diese Codedatei definiert das **Audio**-Objekt, das die XAudio2-Ressourcen für die Soundwiedergabe enthält. Außerdem definiert sie die Methode zum Anhalten und Fortsetzen der Audiowiedergabe, wenn das Spiel angehalten oder deaktiviert wurde.
 -   **MediaReader.h/.cpp**. Dieser Code definiert die Methoden zum Lesen von WAV-Audiodateien aus einem lokalen Speicher.
@@ -203,17 +207,17 @@ Platform::Array<byte>^  MediaReader::LoadMedia(_In_ Platform::String^ filename)
 
 Diese Methode verwendet die [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)-APIs, um die WAV-Audiodatei als Pulse Code Modulation (PCM)-Puffer einzulesen.
 
-1.  Erstellt einen Medienquellenleser ([**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655)), indem sie [**MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110) aufruft.
-2.  Erstellt einen Medientyp ([**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850)) für die Decodierung der Audiodatei, indem sie [**MFCreateMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms693861) aufruft. Diese Methode legt fest, dass es sich bei der decodierten Ausgabe um PCM-Audio handelt – ein von XAudio2 unterstützter Audiotyp.
-3.  Legt den decodierten Ausgabemedientyp für den Leser fest, indem sie [**IMFSourceReader::SetCurrentMediaType**](https://msdn.microsoft.com/library/windows/desktop/bb970432) aufruft.
-4.  Erstellt einen [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799)-Puffer und kopiert die Ergebnisse eines [**IMFMediaType::MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177)-Aufrufs für das [**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850)-Objekt. Dadurch wird der Puffer formatiert, der die Audiodatei nach dem Laden enthält.
+1.  Sie erstellt einen Medienquellenleser ([**IMFSourceReader**](https://msdn.microsoft.com/library/windows/desktop/dd374655)), indem sie [**MFCreateSourceReaderFromURL**](https://msdn.microsoft.com/library/windows/desktop/dd388110) aufruft.
+2.  Sie erstellt einen Medientyp ([**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850)) für die Decodierung der Audiodatei, indem sie [**MFCreateMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms693861) aufruft. Diese Methode legt fest, dass es sich bei der decodierten Ausgabe um PCM-Audio handelt – ein von XAudio2 unterstützter Audiotyp.
+3.  Sie legt den decodierten Ausgabemedientyp für den Leser fest, indem sie [**IMFSourceReader::SetCurrentMediaType**](https://msdn.microsoft.com/library/windows/desktop/bb970432) aufruft.
+4.  Sie erstellt einen [**WAVEFORMATEX**](https://msdn.microsoft.com/library/windows/hardware/ff538799)-Puffer und kopiert die Ergebnisse eines [**IMFMediaType::MFCreateWaveFormatExFromMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms702177)-Aufrufs für das [**IMFMediaType**](https://msdn.microsoft.com/library/windows/desktop/ms704850)-Objekt. Dadurch wird der Puffer formatiert, der die Audiodatei nach dem Laden enthält.
 5.  Sie ruft die Dauer (in Sekunden) des Audiodatenstroms ab, indem sie [**IMFSourceReader::GetPresentationAttribute**](https://msdn.microsoft.com/library/windows/desktop/dd374662) aufruft, und konvertiert die Dauer dann in Bytes.
-6.  Liest die Audiodatei als Datenstrom, indem sie [**IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665) aufruft.
-7.  Kopiert den Inhalt des Audiosample-Puffers in ein von der Methode zurückgegebenes Array.
+6.  Sie liest die Audiodatei als Datenstrom, indem sie [**IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665) aufruft.
+7.  Sie kopiert den Inhalt des Audiosample-Puffers in ein von der Methode zurückgegebenes Array.
 
-Das Wichtigste bei **SoundEffect::Initialize** ist die Erstellung des Source Voice-Objekts (**m\_sourceVoice**) auf der Grundlage der Mastering Voice. Source Voice wird für die eigentliche Wiedergabe des von **MediaReader::LoadMedia** abgerufenen Sounddatenpuffers verwendet.
+Das Wichtigste bei **SoundEffect::Initialize** ist die Erstellung des Source Voice-Objekts (**m\_sourceVoice**) auf der Grundlage der Mastering Voice. Die Source Voice wird für die eigentliche Wiedergabe des von **MediaReader::LoadMedia** abgerufenen Sounddatenpuffers verwendet.
 
-Im beispielhaften Spiel wird die Methode während des Initialisierens des **SoundEffect**-Objekts wie folgt aufgerufen:
+Im Beispielspiel wird die Methode beim Initialisieren des **SoundEffect**-Objekts wie folgt aufgerufen:
 
 ```cpp
 void SoundEffect::Initialize(
@@ -298,7 +302,7 @@ void SoundEffect::PlaySound(_In_ float volume)
 }
 ```
 
-Für die Soundwiedergabe verwendet diese Methode das Source Voice-Objekt **m\_sourceVoice**, um die Wiedergabe des Sounddatenpuffers **m\_soundData** zu starten. Sie erstellt einen [**XAUDIO2\_BUFFER**](https://msdn.microsoft.com/library/windows/desktop/ee419228), für den sie einen Verweis auf den Sounddatenpuffer bereitstellt, und übermittelt ihn dann mit einem Aufruf von [**IXAudio2SourceVoice::SubmitSourceBuffer**](https://msdn.microsoft.com/library/windows/desktop/ee418473). Wenn sich die Sounddaten in der Warteschlange befinden, startet **SoundEffect::PlaySound** die Wiedergabe durch einen Aufruf von [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471).
+Für die Soundwiedergabe verwendet diese Methode das Source Voice-Objekt **m\_sourceVoice**, um die Wiedergabe des Sounddatenpuffers **m\_soundData** zu starten. Sie erstellt einen [**XAUDIO2\_BUFFER**](https://msdn.microsoft.com/library/windows/desktop/ee419228), für den sie einen Verweis auf den Sounddatenpuffer bereitstellt, und übermittelt ihn dann mit einem Aufruf von [**IXAudio2SourceVoice::SubmitSourceBuffer**](https://msdn.microsoft.com/library/windows/desktop/ee418473). Wenn die Sounddaten in die Warteschlange eingereiht sind, startet **SoundEffect::PlaySound** die Wiedergabe durch einen Aufruf von [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471).
 
 Wenn die Munition jetzt ein Ziel trifft, wird durch einen Aufruf von **SoundEffect::PlaySound** ein Geräusch wiedergegeben.
 
@@ -307,7 +311,7 @@ Wenn die Munition jetzt ein Ziel trifft, wird durch einen Aufruf von **SoundEffe
 
 Das war eine Blitzeinführung in die Entwicklung von DirectX-Spielen für die universelle Windows-Plattform (UWP). Sie sollten nun wissen, was Sie tun müssen, um selbst ein großartiges Spiel für Windows 8 zu entwickeln. Denken Sie daran, dass Ihr Spiel auf vielen unterschiedlichen Windows 8-Geräten und -Plattformen gespielt werden kann. Entwerfen Sie daher alle Komponenten – Grafik, Steuerelemente, Benutzeroberfläche und Sound – für so viele Konfigurationen wie möglich.
 
-Weitere Informationen zum Ändern des beispielhaften Spiels in diesen Dokumenten finden Sie unter [Erweitern des Beispielspiels](tutorial-resources.md).
+Weitere Informationen zum Ändern des Beispielspiels in diesen Dokumenten finden Sie unter [Erweitern des Beispielspiels](tutorial-resources.md).
 
 ## Vollständiger Beispielcode für diesen Abschnitt
 
@@ -559,6 +563,7 @@ void SoundEffect::PlaySound(_In_ float volume)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

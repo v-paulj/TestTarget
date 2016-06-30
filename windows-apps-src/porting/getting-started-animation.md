@@ -3,6 +3,10 @@ author: mcleblanc
 title: Erste Schritte mit Animationen
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: In diesem Projekt verschieben wir ein Rechteck, wenden einen Ausblendeeffekt an und blenden es wieder ein
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 6e0b92af1d3c5f61aa2341d43ca40330fcc359f4
+
 ---
 
 # Erste Schritte: Animationen
@@ -126,6 +130,7 @@ Sie können diesen XAML-Code manuell bearbeiten oder zu Blend zurückkehren, um 
 [Erste Schritte: Was kommt als Nächstes?](getting-started-what-next.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

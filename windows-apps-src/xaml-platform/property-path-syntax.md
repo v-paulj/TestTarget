@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Sie können die PropertyPath-Klasse und die Zeichenfolgensyntax verwenden, um einen PropertyPath-Wert entweder in XAML oder in Code zu instanziieren.
+description: "Sie können die PropertyPath-Klasse und die Zeichenfolgensyntax verwenden, um einen PropertyPath-Wert entweder in XAML oder in Code zu instanziieren."
 title: PropertyPath-Syntax
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0b1851bc9d19de5b678f8c6c3a255c0ba3057a85
+
 ---
 
 # PropertyPath-Syntax
@@ -116,6 +120,7 @@ Meistens ist es in XAML möglich, eine [**PropertyPath**](https://msdn.microsoft
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

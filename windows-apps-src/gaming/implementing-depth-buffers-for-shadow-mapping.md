@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Exemplarische Vorgehensweise - Implementieren von Schattenvolumen mit Tiefenpuffern in Direct3D 11
-description: In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie Schattenvolumen mit Tiefenkarten unter Verwendung von Direct3D 11 auf Geräten aller Direct3D-Funktionsebenen rendern.
+description: "In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie Schattenvolumen mit Tiefenkarten unter Verwendung von Direct3D 11 auf Geräten aller Direct3D-Funktionsebenen rendern."
 ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4bb1f5c71d83b2dc3271b5b2ceaa9a1156b00004
+
 ---
 
 # Exemplarische Vorgehensweise - Implementieren von Schattenvolumen mit Tiefenpuffern in Direct3D 11
@@ -85,6 +89,7 @@ Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die En
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

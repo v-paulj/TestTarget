@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Damit Sie Geld aus den App-Verkäufen im Windows Store erhalten, müssen Sie ein Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen.
+Description: "Damit Sie Geld aus den App-Verkäufen im Windows Store erhalten, müssen Sie ein Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen."
 title: Einrichten von Auszahlungskonten und Steuerformularen
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
+ms.sourcegitcommit: f17132514a42c50d6bfe716f6be706748c287043
+ms.openlocfilehash: 45cb4e8b65f1aeb75c049a88c143a23350d47b64
+
 ---
 
 # Einrichten von Auszahlungskonten und Steuerformularen
@@ -12,10 +15,9 @@ Damit Sie Geld aus den App-Verkäufen im Windows Store erhalten, müssen Sie ein
 
 > **Hinweis**  Seit dem 1. April 2016 werden Ihre Microsoft Advertising-Einnahmen auf das Auszahlungskonto gezahlt, das Sie im Dev Center eingerichtet haben. Weitere Informationen finden Sie unter [Konsolidierung des pubCenter- und DevCenter-Auszahlungskontos und -Steuerprofils](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 
-Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Einkäufe bereitstellen oder Microsoft Advertising verwenden möchten), brauchen Sie kein Auszahlungskonto einzurichten oder Steuerformulare auszufüllen. Falls Sie zu einem späteren Zeitpunkt beschließen, Apps (oder In-App-Produkte) zu verkaufen, können Sie Ihr Auszahlungskonto dann noch einrichten und die Steuerformulare ausfüllen. Sie können erst kostenpflichtige Apps oder IAPs übermitteln, nachdem Sie Ihr Auszahlungskonto eingerichtet und Steuerprofil ausgefüllt haben.
+Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Einkäufe bereitstellen oder Microsoft Advertising verwenden möchten), brauchen Sie kein Auszahlungskonto einzurichten oder Steuerformulare auszufüllen. Falls Sie zu einem späteren Zeitpunkt beschließen, Apps (oder In-App-Produkte) zu verkaufen, können Sie Ihr Auszahlungskonto dann noch einrichten und die Steuerformulare ausfüllen. Kostenpflichtige Apps und IAPs können erst übermittelt werden, wenn Sie Ihr Auszahlungskonto eingerichtet und Ihr Steuerprofil ausgefüllt haben.
 
-> **Hinweis**
-            [In bestimmten Märkten](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) dürfen nur kostenlose Apps gelistet werden. Wenn Ihr Konto in einem dieser Märkte registriert ist, steht die Option, ein Auszahlungskonto einzurichten, nicht zur Verfügung.
+> **Hinweis:** In [bestimmten Märkten](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) können Entwickler nur kostenlose Apps übermitteln. Wenn Ihr Konto in einem dieser Märkte registriert ist, steht die Option zum Einrichten eines Auszahlungskontos nicht zur Verfügung.
 
 
 Nach dem [Einrichten des Entwicklerkontos](opening-a-developer-account.md) müssen Sie zwei Dinge tun, bevor Sie Apps (oder IAPs) im Windows Store verkaufen können:
@@ -156,6 +158,7 @@ Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den V
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

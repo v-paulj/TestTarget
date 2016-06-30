@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Im Feedbackbericht im Windows Dev Center-Dashboard werden die Probleme, Vorschläge und Upvotes angezeigt, die Ihre Windows 10-Kunden über den Feedback-Hub übermittelt haben.
+Description: "Im Feedbackbericht im Windows Dev Center-Dashboard werden die Probleme, Vorschläge und Upvotes angezeigt, die Ihre Windows 10-Kunden über den Feedback-Hub übermittelt haben."
 title: Feedbackbericht
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
+translationtype: Human Translation
+ms.sourcegitcommit: 4e857ec7ee98459afdd0d8ec85b5ec3a761049f3
+ms.openlocfilehash: 9ad3025f7890de3677801b309b6714b1b46a0607
+
 ---
 
 # Feedbackbericht
@@ -52,6 +56,7 @@ Da das Feedback durch ein automatisches Übersetzungssystem übersetzt wird, sin
 Wie bereits erwähnt, wird empfohlen, direkt in Ihrer App einen Link zum Feedback-Hub einzufügen, um die Benutzer zu ermuntern, Feedback abzugeben. Weitere Informationen finden Sie unter [Feedback-Hub in Ihrer App starten](../monetize/launch-feedback-hub-from-your-app.md).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

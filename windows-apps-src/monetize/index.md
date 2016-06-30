@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
-description: Das Windows SDK, Microsoft Store Engagement and Monetization SDK und Windows Store bieten viele Features, durch die Sie mit Ihren Apps mehr Geld verdienen und Kunden durch Förderung der Kundenbindung gewinnen können.
+description: "Das Windows SDK, Microsoft Store Engagement and Monetization SDK und Windows Store bieten viele Features, durch die Sie mit Ihren Apps mehr Geld verdienen und Kunden durch Förderung der Kundenbindung gewinnen können."
 title: Monetisierung Ihrer App
+translationtype: Human Translation
+ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
+ms.openlocfilehash: 6d5f483b44ae4516f4969431e31f70388a66c5d9
+
 ---
 
 # Monetisierung Ihrer App und Kundenbindung
@@ -28,6 +32,7 @@ Ausführliche Informationen zu den vom Windows Store erhobenen Gebühren und zu
 | [Verwenden von Windows Store-Diensten](using-windows-store-services.md)                                    | Der Windows Store stellt mehrere Dienste bereit, die Sie über REST-APIs aufrufen können, um programmgesteuert auf bestimmte Datentypen für Apps zugreifen können, die für Ihr eigenes oder das Windows Dev Center-Konto Ihrer Organisation registriert sind.    |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

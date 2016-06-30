@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
-description: Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein In-App-Produkt (IAP) während eines bestimmten Zeitraums und andere optionale Filter abzurufen.
-title: Abrufen von IAP-Käufen
+description: "Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein In-App-Produkt (IAP) während eines bestimmten Zeitraums und andere optionale Filter abzurufen."
+title: "Abrufen von IAP-Käufen"
+ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
+ms.openlocfilehash: 21e634b1d5ab6c3ba7762c1b83c94d076d094af5
+
 ---
 
 # Abrufen von IAP-Käufen
@@ -64,14 +67,14 @@ Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufda
 <tbody>
 <tr class="odd">
 <td align="left">applicationId</td>
-<td align="left">string</td>
-<td align="left">Die Produkt-ID der App, für die Sie IAP-Kaufdaten abrufen möchten. Die Produkt ID ist im Eintragungslink der App eingebettet, die auf der [Seite App-Identität](https://msdn.microsoft.com/library/windows/apps/mt148561) des Dev Center-Dashboards verfügbar ist. Ein Beispiel für eine Produkt-ID ist 9WZDNCRFJ3Q8.</td>
+<td align="left">Zeichenfolge</td>
+<td align="left">Die Store-ID der App, für die Sie IAP-Kaufdaten abrufen möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="even">
 <td align="left">inAppProductId</td>
-<td align="left">string</td>
-<td align="left">Die Produkt-ID des IAP, für das Sie Kaufdaten abrufen möchten.</td>
+<td align="left">Zeichenfolge</td>
+<td align="left">Die Produkt-ID des IAPs, für das Sie Kaufdaten abrufen möchten.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="odd">
@@ -243,7 +246,7 @@ Die Liste der unterstützten Felder finden Sie in der folgenden Tabelle. Zeichen
 
 ### Anforderungsbeispiel
 
-Die folgenden Beispiele zeigen verschiedene Anforderungen für den Abruf von IAP-Kaufdaten für Apps. Ersetzen Sie die Werte *inAppProductId* oder *applicationId* durch die entsprechenden Produkt-IDs für Ihre App oder Ihr IAP.
+Die folgenden Beispiele zeigen verschiedene Anforderungen für den Abruf von IAP-Kaufdaten für Apps. Ersetzen Sie die Werte *inAppProductId* und *applicationId* durch die entsprechende Produkt-ID für Ihr IAP und die entsprechende Store-ID für Ihre App.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?inAppProductId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -263,7 +266,7 @@ Authorization: Bearer <your access token>
 
 | Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                                |
 |------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Value      | array  | Ein Array von Objekten, die aggregierte IAP-Kaufdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [IAP-Kaufwerte](#iap-acquisition-values).                                                                                                              |
+| Wert      | Array  | Ein Array von Objekten, die aggregierte IAP-Kaufdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [IAP-Kaufwerte](#iap-acquisition-values).                                                                                                              |
 | @nextLink  | string | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit IAP-Kaufdaten für die Abfrage gibt. |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                                                                                                                                                                                                                                 |
 
@@ -276,8 +279,8 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 |---------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date                | string  | Das erste Datum im Datumsbereich für die Kaufdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist das erste Datum in diesem Datumsbereich dieser Wert. |
 | inAppProductId      | string  | Die Produkt-ID des IAP, für das Sie Kaufdaten abrufen.                                                                                                                                                                 |
-| inAppProductName    | string  | Der Anzeigename des IAP.                                                                                                                                                                                                             |
-| applicationId       | string  | Die Produkt-ID der App, für die Sie IAP-Kaufdaten abrufen möchten.                                                                                                                                                           |
+| inAppProductName    | Zeichenfolge  | Der Anzeigename des IAPs.                                                                                                                                                                                                             |
+| applicationId       | Zeichenfolge  | Die Store-ID der App, für die Sie IAP-Kaufdaten abrufen möchten.                                                                                                                                                           |
 | applicationName     | string  | Der Anzeigename der App.                                                                                                                                                                                                             |
 | deviceType          | string  | Der Typ des Geräts, auf dem der Kauf ausgeführt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                                  |
 | orderName           | string  | Der Name der Bestellung.                                                                                                                                                                                                                   |
@@ -333,6 +336,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

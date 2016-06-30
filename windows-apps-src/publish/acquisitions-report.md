@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Im Bericht Käufe des Windows Dev Center-Dashboards können Sie sehen, wer Ihre App erworben hat. Außerdem können Sie demografische und plattformspezifische Details einsehen.
-title: Bericht „Käufe“
+Description: "Im Bericht Käufe des Windows Dev Center-Dashboards können Sie sehen, wer Ihre App erworben hat. Außerdem können Sie demografische und plattformspezifische Details einsehen."
+title: "Bericht „Käufe“"
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: bfdf4f9f2d94a31a1c159e947615c10abf556aad
+
 ---
 
 # Bericht „Käufe“
@@ -63,6 +67,7 @@ Im Diagramm **Betriebssystemversion** wird die Gesamtzahl der Käufe entsprechen
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

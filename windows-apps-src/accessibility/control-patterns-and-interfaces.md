@@ -1,10 +1,13 @@
 ---
 author: Xansky
-Description: Enthält eine Liste mit den Steuerelementmustern für die Microsoft-Benutzeroberflächenautomatisierung sowie mit den Klassen, die Clients für den Zugriff verwenden, und den Schnittstellen, die Anbieter zur Implementierung verwenden.
+Description: "Enthält eine Liste mit den Steuerelementmustern für die Microsoft-Benutzeroberflächenautomatisierung sowie mit den Klassen, die Clients für den Zugriff verwenden, und den Schnittstellen, die Anbieter zur Implementierung verwenden."
 ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: Steuerelementmuster und Schnittstellen
 label: Control patterns and interfaces
 template: detail.hbs
+ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
+ms.openlocfilehash: 9f38c3bd26ef7b409d4c743abf25a5b0a6455f20
+
 ---
 
 # Steuerelementmuster und Schnittstellen  
@@ -43,10 +46,10 @@ Beim Implementieren eines Steuerelementmusters sollten Sie auch die Dokumentatio
 | **SynchronizedInput** | [**ISynchronizedInputProvider**](https://msdn.microsoft.com/library/windows/apps/Dn279198) | Ermöglicht Benutzeroberflächenautomatisierungs-Client-Apps das Lenken der Maus- oder Tastatureingabe auf ein bestimmtes UI-Element. |
 | **Table** | [**ITableProvider**](https://msdn.microsoft.com/library/windows/apps/BR242623) | Wird für Steuerelemente verwendet, die sowohl über ein Raster als auch über Kopfzeileninformationen verfügen. Beispiel: ein Steuerelement für einen tabellarischen Kalender. |
 | **TableItem** | [**ITableItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242620) | Wird für Elemente in einer Tabelle verwendet. |
-| **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | Wird für Bearbeitungssteuerelemente und für Dokumente verwendet, in denen Informationen in Textform verfügbar gemacht werden. Siehe auch [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242634) und [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/BR2426272). |
-| **TextChild** | [**ITextChildProvider**](https://msdn.microsoft.com/library/windows/apps/Hh701839) | Wird für den Zugriff auf den nächstgelegenen Vorgänger eines Elements verwendet, der das **Text**-Steuerelementmuster unterstützt. |
+| **Text** | [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) | Wird für Bearbeitungssteuerelemente und für Dokumente verwendet, in denen Informationen in Textform verfügbar gemacht werden. Siehe auch [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) und [**ITextProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider2). |
+| **TextChild** | [**ITextChildProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextchildprovider) | Wird für den Zugriff auf den nächstgelegenen Vorgänger eines Elements verwendet, der das **Text**-Steuerelementmuster unterstützt. |
 | **TextEdit** | Keine verwaltete Klasse verfügbar | Gewährt Zugriff auf ein Steuerelement, mit dem Text geändert wird. Dies kann beispielsweise ein Steuerelement sein, mit dem die Autokorrektur durchgeführt oder mithilfe eines Input Method Editors (IME) die Komposition der Eingabe ermöglicht wird. |
-| **TextRange** | [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242634) | Bietet Zugriff auf einen Bereich mit fortlaufendem Text in einem Textcontainer, von dem [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/BR242627) implementiert wird. Siehe auch [**ITextRangeProvider2**](https://msdn.microsoft.com/library/windows/apps/BR2426342). |
+| **TextRange** | [**ITextRangeProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider) | Bietet Zugriff auf einen Bereich mit fortlaufendem Text in einem Textcontainer, von dem [**ITextProvider**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextprovider) implementiert wird. Siehe auch [**ITextRangeProvider2**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.provider.itextrangeprovider2). |
 | **Toggle** | [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) | Wird für Steuerelemente verwendet, deren Status geändert werden kann. Beispiel: aktivierbare [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/BR209316)-Steuerelemente und Menüelemente. |
 | **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Wird für Steuerelemente verwendet, deren Größe geändert werden kann und die verschoben und gedreht werden können. Gewöhnlich wird das Steuerelementmuster für Transformation in Designern, Formen, Grafikeditoren und Zeichenanwendungen verwendet. |
 | **Value** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Ermöglicht es Clients, einen Wert von Steuerelementen abzurufen, die keinen Wertebereich unterstützen, oder einen Wert dafür festzulegen. |
@@ -65,6 +68,7 @@ Beim Implementieren eines Steuerelementmusters sollten Sie auch die Dokumentatio
 * [Barrierefreiheit](accessibility.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

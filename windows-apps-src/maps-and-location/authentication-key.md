@@ -1,8 +1,11 @@
 ---
-author: PatrickFarley
-title: Anfordern eines Kartenauthentifizierungsschlüssels
+author: msatranjr
+title: "Anfordern eines Kartenauthentifizierungsschlüssels"
 description: Ihre universelle Windows-App muss authentifiziert werden, bevor sie die MapControl-Klasse und Kartendienste im Windows.Services.Maps-Namespace verwenden kann.
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
+ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
+ms.openlocfilehash: b7c981e071f70ab0a76d73333a94580b3c497b0e
+
 ---
 
 # Anfordern eines Kartenauthentifizierungsschlüssels
@@ -91,6 +94,7 @@ Um Dienste im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/win
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

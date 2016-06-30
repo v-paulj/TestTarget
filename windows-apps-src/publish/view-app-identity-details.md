@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Bei der Arbeit mit einer App im Windows Dev Center-Dashboard können Sie Details zur eindeutigen Identität der App anzeigen, die ihr im Windows Store zugewiesen wurde, und einen Link zum Eintrag Ihrer App im Store abrufen.
-title: Anzeigen von Details zur App-Identität
+Description: "Bei der Arbeit mit einer App im Windows Dev Center-Dashboard können Sie Details zur eindeutigen Identität der App anzeigen, die ihr im Windows Store zugewiesen wurde, und einen Link zum Eintrag Ihrer App im Store abrufen."
+title: "Anzeigen von Details zur App-Identität"
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
+translationtype: Human Translation
+ms.sourcegitcommit: a25d87556bb85718f818af5b586f54e6985aaaa4
+ms.openlocfilehash: f00d817616d473ef220ebc1817c2bf9207a7aea0
+
 ---
 
 # Anzeigen von Details zur App-Identität
@@ -53,6 +57,7 @@ Die **Store-ID** Ihrer App wird in diesem Abschnitt auch angezeigt. Diese Store-
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

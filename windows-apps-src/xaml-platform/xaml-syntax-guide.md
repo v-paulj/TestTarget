@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: In diesem Thema werden die XAML-Syntaxregeln und die Terminologie erläutert, mit der die in der XAML-Syntax geltenden Einschränkungen bzw. die verfügbaren Optionen beschrieben werden.
+description: "In diesem Thema werden die XAML-Syntaxregeln und die Terminologie erläutert, mit der die in der XAML-Syntax geltenden Einschränkungen bzw. die verfügbaren Optionen beschrieben werden."
 title: Anleitung zur XAML-Syntax
 ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
+translationtype: Human Translation
+ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
+ms.openlocfilehash: 8e7819b02d7a22a16cf16091d08bef0aabc8d36e
+
 ---
 
 # Anleitung zur XAML-Syntax
@@ -318,6 +322,7 @@ In den XAML-Verwendungsabschnitten werden ebenfalls verschiedene generalisierte 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

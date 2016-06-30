@@ -1,8 +1,11 @@
 ---
 author: drewbatgit
 ms.assetid: 923D8156-81D3-4A1E-9D02-DB219F600FDB
-description: In diesem Artikel wird beschrieben, wie Apps für die universelle Windows-Plattform (UWP) erstellt werden, die Audio im Hintergrund wiedergeben.
+description: "In diesem Artikel wird beschrieben, wie Apps für die universelle Windows-Plattform (UWP) erstellt werden, die Audio im Hintergrund wiedergeben."
 title: Hintergrundaudio
+ms.sourcegitcommit: 99d1ffa637fd8beca5d1e829cc7cacc18a9c21e9
+ms.openlocfilehash: 9275a194017f08692adee6de1c4d1f6deb680613
+
 ---
 
 # Hintergrundaudio
@@ -63,6 +66,9 @@ Unter Umständen möchten Sie, dass die beiden Prozesse einer Hintergrund-App mi
 Über einen einfachen Kommunikationsmechanismus werden Ereignisse sowohl im Vordergrundprozess als auch im Hintergrundprozess ausgelöst. Die Methoden [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) und [**SendMessageToBackground**](https://msdn.microsoft.com/library/windows/apps/dn652532) rufen jeweils Ereignisse in dem entsprechenden Prozess auf. Nachrichten können durch Abonnieren der Ereignisse [**MessageReceivedFromBackground**](https://msdn.microsoft.com/library/windows/apps/dn652530) und [**MessageReceivedFromForeground**](https://msdn.microsoft.com/library/windows/apps/dn652531) empfangen werden.
 
 Daten können als Argument an die Methoden zum Senden einer Nachricht übergeben werden, die dann an die „MessageReceived“-Ereignishandler übergeben werden. Übergeben Sie Daten mit der [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)-Klasse. Bei dieser Klasse handelt es sich um ein Wörterbuch, das eine Zeichenfolge als Schlüssel und andere Werttypen als Werte enthält. Sie können einfache Werttypen übergeben, z. B. ganze Zahlen, Zeichenfolgen und booleschen Werte.
+
+**Hinweis**  
+Apps sollten [**SendMessageToForeground**](https://msdn.microsoft.com/library/windows/apps/dn652533) nur aufrufen, während die Vordergrund-App ausgeführt wird. Wenn versucht wird, diese Methode aufrufen, während die Vordergrund-App nicht ausgeführt wird, wird eine Ausnahme ausgelöst. Eine App ist verantwortlich für die Kommunikation des Zustands der Vordergrund-App an den Hintergrundprozess. Dies kann mithilfe von App-Lebenszyklusereignissen, Zustandswerten im lokalen Speicher und Nachrichten zwischen Prozessen erfolgen. 
 
 ## Lebenszyklus von Hintergrundaufgaben
 
@@ -135,6 +141,7 @@ In der folgenden Tabelle ist aufgeführt, welche Richtlinie auf welchen Gerätet
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Starten der Windows-Karten-App
-description: Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können.
+description: "Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können."
 ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 0dcd15c7d04ed452f69208ad1e68a8949baf40dd
+
 ---
 
 # Starten der Windows-Karten-App
@@ -16,7 +19,6 @@ Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können. In d
 **Tipp** Um mehr über das Starten der Windows-Karten-App aus Ihrer App zu erfahren, laden Sie das [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977) aus dem Repository [Beispiele für universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.
 
 ## Einführung in URIs
-
 
 Mit URI-Schemas können Sie Apps öffnen, indem Sie auf Hyperlinks klicken (oder programmgesteuert in Ihrer App). Ebenso wie Sie eine neue E-Mail mithilfe von **mailto:** starten oder einen Webbrowser mithilfe von **http:**verwenden können, haben Sie auch die Möglichkeit, die Windows-Karten-App mithilfe von **bingmaps:**, **ms-drive-to:** und **ms-walk-to:** zu öffnen.
 
@@ -68,7 +70,7 @@ Verwenden Sie zum Steuern der Art der Ansicht die *ss* (Streetside) und *sty* (F
 
 | Beispiel-URI                                                                 | Ergebnisse                                                                                                                                                                                                   |
 |----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bingmaps:                                                                  | Öffnet die Karten-App.                                                                                                                                                                                       |
+| bingmaps:?                                                                 | Öffnet die Karten-App.                                                                                                                                                                                       |
 | bingmaps:?cp=40.726966~-74.006076                                          | Zeigt eine über New York City zentrierte Karte an.                                                                                                                                                               |
 | bingmaps:?cp=40.726966~-74.006076&lvl=10                                   | Zeigt eine über New York City zentrierte Karte mit Zoomfaktor 10 an.                                                                                                                                       |
 | bingmaps:?bb=39.719\_-74.52~41.71\_-73.5                                   | Zeigt eine Karte von New York City mit einem Begrenzungsrahmen in der Größe des Bildschirms an.                                                                                                                          |
@@ -286,7 +288,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <td align="left"><p>ss = "ss=" BIT</p>
 <p>Beispiel:</p>
 <p>ss=1</p></td>
-<td align="left"><p>Gibt an, dass bei folgendem Parameter Straßenbilder angezeigt werden: <code>ss=1</code>. Wenn der **ss**-Parameter ausgelassen wird, wird dasselbe Ergebnis wie bei folgendem Parameter zurückgegeben: <code>ss=0</code>. Verwenden Sie den Wert in Verbindung mit dem **cp**-Parameter, um die Position der Straßenansicht festzulegen.</p>
+<td align="left"><p>Gibt an, dass bei <code>ss=1</code> Straßenbilder angezeigt werden. Wenn der **ss**-Parameter ausgelassen wird, wird dasselbe Ergebnis wie bei <code>ss=0</code> zurückgegeben. Verwenden Sie den Wert in Verbindung mit dem **cp**-Parameter, um die Position der Straßenansicht festzulegen.</p>
 <div class="alert">
 > **Hinweis**  Straßenbilder sind nicht in allen Regionen verfügbar.
 </div>
@@ -300,7 +302,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <td align="left"><p>trfc = "trfc=" BIT</p>
 <p>Beispiel:</p>
 <p>trfc=1</p></td>
-<td align="left"><p>Gibt an, ob die Karte Verkehrsinformationen enthält. Wenn der trfc-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei folgendem Parameter zurückgegeben: <code>trfc=0</code>.</p>
+<td align="left"><p>Gibt an, ob die Karte Verkehrsinformationen enthält. Wenn der trfc-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei <code>trfc=0</code> zurückgegeben.</p>
 <div class="alert">
 > **Hinweis**  Verkehrsinformationen sind nicht in allen Regionen verfügbar.
 </div>
@@ -325,9 +327,9 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>rtp=adr.Mountain%20View,%20CA~adr.SFO</p>
 <p>rtp=adr.One%20Microsoft%20Way,%20Redmond,%20WA~pos.45.23423_-122.1232 _My%20Picnic%20Spot</p></td>
 <td align="left"><p>Definiert den Start- und Endpunkt einer auf der Karte dargestellten Route getrennt durch eine Tilde (**~**). Jeder Wegpunkt wird entweder durch eine Position mittels Längengrad, Breitengrad und optionalem Titel oder durch einen Adressbezeichner definiert.</p>
-<p>Eine vollständige Route enthält genau zwei Wegpunkte. Beispielsweise wird eine Route mit zwei Wegpunkten von folgendem Parameter definiert: <code>rtp="A"~"B"</code>.</p>
-<p>Außerdem ist es zulässig, eine unvollständige Route anzugeben. Beispielsweise können Sie mit folgendem Parameter nur den Startpunkt einer Route definieren: <code>rtp="A"~</code>. In diesem Fall wird die Wegbeschreibungseingabe so angezeigt, dass das Feld **Von:** den angegebenen Wegpunkt enthält und das Feld **Nach:** den Fokus hat.</p>
-<p>Wenn nur der Endpunkt der Route angegeben wird, wie bei <code>rtp=~"B"</code>, wird der Bereich für die Wegbeschreibung mit dem angegebenen Wegpunkt im Feld **Nach** angezeigt. Wenn ein genauer aktueller Standort verfügbar ist, wird die aktuelle Position automatisch im Feld **Von** ausgefüllt und hat den Fokus.</p>
+<p>Eine vollständige Route enthält genau zwei Wegpunkte. Beispielsweise wird eine Route mit zwei Wegpunkten von <code>rtp="A"~"B"</code> definiert.</p>
+<p>Außerdem ist es zulässig, eine unvollständige Route anzugeben. Beispielsweise können Sie mit <code>rtp="A"~</code> nur den Startpunkt einer Route definieren. In diesem Fall wird die Wegbeschreibungseingabe so angezeigt, dass das Feld **Von:** den angegebenen Wegpunkt enthält und das Feld **Nach:** den Fokus hat.</p>
+<p>Wenn nur der Endpunkt der Route angegeben wird, wie bei <code>rtp=~"B"</code>, wird der Bereich für die Wegbeschreibung mit dem angegebenen Wegpunkt im Feld **Nach:** angezeigt. Wenn ein genauer aktueller Standort verfügbar ist, wird die aktuelle Position automatisch im Feld **Von** ausgefüllt und hat den Fokus.</p>
 <p>Bei einer unvollständigen Route wird keine Routenlinie gezeichnet.</p>
 <p>Geben Sie dies zusammen mit dem **mode**-Parameter an, um die Transportmethode (fahren, laufen oder öffentliche Verkehrsmittel) anzugeben. Wenn **mode** nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt.</p>
 <div class="alert">
@@ -369,7 +371,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>collection=name.My%20Trip%20Stops~point.36.116584_-115.176753_Las%20Vegas~point.37.8268_-122.4798_Golden%20Gate%20Bridge</p></td>
 <td align="left"><p>Eine Sammlung von Punkten, die der Karte und Liste hinzugefügt werden sollen. Die Sammlung von Punkten kann mithilfe des Namensparameters benannt werden. Ein Punkt wird mithilfe eines Breitengrads, Längengrads und eines optionalen Titels angegeben.</p>
 <p>Trennen Sie Namen und mehrere Punkte durch Tilden (**~**).</p>
-<p>Wenn das angegebene Element eine Tilde enthält, muss die Tilde als folgender Parameter codiert sein: <code>%7E</code>. Wenn es nicht zusammen mit den Parametern für den Mittelpunkt und Zoomfaktor angegeben wird, liefert die Sammlung die beste Kartenansicht.</p>
+<p>Wenn das angegebene Element eine Tilde enthält, muss die Tilde als <code>%7E</code> codiert sein. Wenn es nicht zusammen mit den Parametern für den Mittelpunkt und Zoomfaktor angegeben wird, liefert die Sammlung die beste Kartenansicht.</p>
 
 <p>**Wichtig** Wenn das angegebene Element einen Unterstrich enthält, muss der Unterstrich als „%255F“ doppelt verschlüsselt werden.</p>
 
@@ -428,6 +430,7 @@ Die Syntax für Karten-App-spezifische Parameter für das **ms-settings:**-URI-S
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

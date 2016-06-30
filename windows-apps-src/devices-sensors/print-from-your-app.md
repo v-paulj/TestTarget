@@ -3,6 +3,10 @@ author: DBirtolo
 ms.assetid: 9A0F1852-A76B-4F43-ACFC-2CC56AAD1C03
 title: Drucken in Apps
 description: Hier erfahren Sie, wie Sie Dokumente in einer Universellen Windows-App drucken. In diesem Thema wird zudem gezeigt, wie bestimmte Seiten gedruckt werden.
+translationtype: Human Translation
+ms.sourcegitcommit: e5f61e562f7ec464fc07815b0bdd0ac938fc2fb2
+ms.openlocfilehash: 363c19cfc15a883c4b6d951c59c63187f4239dec
+
 ---
 # Drucken in Apps
 
@@ -114,7 +118,7 @@ In diesem Beispiel wird ein Druckfenster im Ereignishandler für das Klicken auf
 
 ## Formatieren der App-Inhalte
 
-Wenn **ShowPrintUIAsync** aufgerufen wird, wird das [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597)-Ereignis ausgelöst. Der in diesem Schritt gezeigte **PrintTaskRequested**-Ereignishandler erstellt eine [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436)-Klasse, indem er die [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436request_createprinttask)-Methode aufruft und den Titel für die zu druckende Seite sowie den Namen eines [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source) -Delegaten übergibt. Beachten Sie, dass **PrintTaskSourceRequestedHandler** in diesem Beispiel inline definiert wird. **PrintTaskSourceRequestedHandler** stellt den formatierten Inhalt für das Drucken bereit und wird an späterer Stelle beschrieben.
+Wenn **ShowPrintUIAsync** aufgerufen wird, wird das [**PrintTaskRequested**](https://msdn.microsoft.com/library/windows/apps/br206597)-Ereignis ausgelöst. Der in diesem Schritt gezeigte **PrintTaskRequested**-Ereignishandler erstellt eine [**PrintTask**](https://msdn.microsoft.com/library/windows/apps/BR226436)-Klasse, indem er die [**PrintTaskRequest.CreatePrintTask**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.printing.printtaskrequest.createprinttask.aspx)-Methode aufruft und den Titel für die zu druckende Seite sowie den Namen eines [**PrintTaskSourceRequestedHandler**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing.printtask.source) -Delegaten übergibt. Beachten Sie, dass **PrintTaskSourceRequestedHandler** in diesem Beispiel inline definiert wird. **PrintTaskSourceRequestedHandler** stellt den formatierten Inhalt für das Drucken bereit und wird an späterer Stelle beschrieben.
 
 In diesem Beispiel wurde außerdem ein Abschlusshandler definiert, um Fehler aufzufangen. Es empfiehlt sich, Abschlussereignisse zu behandeln, da die App den Benutzer dann über aufgetretene Fehler und mögliche Lösungen informieren kann. Die App kann das Abschlussereignis auch verwenden, um nachfolgende Schritte anzugeben, die der Benutzer nach einem erfolgreichen Druckauftrag ausführen kann.
 
@@ -378,6 +382,7 @@ Wenn nur ein Teil der Seiten gedruckt wird, gibt es mehrere Möglichkeiten, den 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

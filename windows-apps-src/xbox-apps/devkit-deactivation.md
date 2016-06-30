@@ -3,6 +3,10 @@ author: Mtoepke
 title: Deaktivierung des Xbox One-Entwicklermodus
 description: In diesem Artikel wird das Deaktivieren des Entwicklermodus beschrieben.
 area: Xbox
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0751598ba50d69e1667b20ddc03f30d65ce08002
+
 ---
 
 # Deaktivierung des Xbox One-Entwicklermodus
@@ -84,6 +88,7 @@ Wenn Sie die Xbox One-Konsole noch nicht in den Einzelhandelsmodus zurückgesetz
 - [UWP auf Xbox One](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

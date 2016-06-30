@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Hier erfahren Sie, wie Sie lokale, Roaming- und temporäre App-Daten speichern und abrufen können.
+Description: "Hier erfahren Sie, wie Sie lokale, Roaming- und temporäre App-Daten speichern und abrufen können."
 title: Speichern und Abrufen von Einstellungen und anderen App-Daten
 ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 433cda6432d1e695bacb338e68012bcc9c837eb6
+
 ---
 
 # Speichern und Abrufen von Einstellungen und anderen App-Daten
@@ -67,7 +71,7 @@ Windows.Storage.StorageFolder localFolder =
 
 ### <span id="Create_and_retrieve_a_simple_local_setting"></span><span id="create_and_retrieve_a_simple_local_setting"></span><span id="CREATE_AND_RETRIEVE_A_SIMPLE_LOCAL_SETTING"></span>Erstellen und Abrufen einer einfachen lokalen Einstellung
 
-Um eine Einstellung zu erstellen oder zu schreiben, verwenden Sie die [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615)-Eigenschaft, um auf die Einstellungen im `localSettings`-Container zuzugreifen, den wir im vorherigen Schritt abgerufen haben. In diesem Beispiel erstellen wir eine Einstellung namens
+Um eine Einstellung zu erstellen oder zu schreiben, verwenden Sie die [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615)-Eigenschaft, um auf die Einstellungen im `localSettings`-Container zuzugreifen, den wir im vorherigen Schritt abgerufen haben. In diesem Beispiel wird eine Einstellung namens `exampleSetting` erstellt.
 
 ```CSharp
 // Simple setting
@@ -237,7 +241,7 @@ Windows.Storage.ApplicationDataContainer roamingSettings =
 
 ### <span id="Create_and_retrieve_roaming_settings"></span><span id="create_and_retrieve_roaming_settings"></span><span id="CREATE_AND_RETRIEVE_ROAMING_SETTINGS"></span>Erstellen und Abrufen von Roamingeinstellungen
 
-Verwenden Sie die [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615)-Eigenschaft, um auf die Einstellungen im Container `roamingSettings` zuzugreifen, den wir im vorherigen Abschnitt abgerufen haben. In diesem Beispiel erstellen Sie eine einfache Einstellung namens `exampleSetting` und einen zusammengesetzten Wert namens
+Verwenden Sie die [**ApplicationDataContainer.Values**](https://msdn.microsoft.com/library/windows/apps/br241615)-Eigenschaft, um auf die Einstellungen im Container `roamingSettings` zuzugreifen, den wir im vorherigen Abschnitt abgerufen haben. In diesem Beispiel wird eine einfache Einstellung namens `exampleSetting` und ein zusammengesetzter Wert namens `composite` erstellt.
 
 ```CSharp
 // Simple setting
@@ -456,6 +460,7 @@ Optional können Sie die App-Daten für Ihre App mit einer Versionsnummer verseh
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

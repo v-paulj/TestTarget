@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Zugreifen auf Sensoren und Geräte von einer Hintergrundaufgabe
-description: Mit DeviceUseTrigger kann Ihre universelle Windows-App im Hintergrund auf Sensoren und Peripheriegeräte zugreifen. Dies ist selbst dann möglich, wenn die Vordergrund-App angehalten wird.
+author: dbirtolo
+title: "Zugreifen auf Sensoren und Geräte von einer Hintergrundaufgabe"
+description: "Mit DeviceUseTrigger kann Ihre universelle Windows-App im Hintergrund auf Sensoren und Peripheriegeräte zugreifen. Dies ist selbst dann möglich, wenn die Vordergrund-App angehalten wird."
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 65471f26596f94fe550c92a10e01ca7f5cef64a1
+
 ---
 
 # Zugreifen auf Sensoren und Geräte von einer Hintergrundaufgabe
@@ -196,6 +199,7 @@ Zusätzlich zu [**Unregister**](https://msdn.microsoft.com/library/windows/apps/
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Das Windows Dev Center-Dashboard bietet Ihnen die Möglichkeit, Ihre App nur für bestimmte Personen bereitzustellen. Auf diese Weise können Tester die App ausprobieren, bevor Sie sie für die Allgemeinheit anbieten.
+Description: "Das Windows Dev Center-Dashboard bietet Ihnen die Möglichkeit, Ihre App nur für bestimmte Personen bereitzustellen. Auf diese Weise können Tester die App ausprobieren, bevor Sie sie für die Allgemeinheit anbieten."
 title: Betatests und zielgerichtete Verteilung
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: a544565bf7bb82f2be1ded3e60836d5d191c6e93
+
 ---
 
 # Betatests und zielgerichtete Verteilung
@@ -81,6 +85,7 @@ Wenn Sie diese Option auswählen, beachten Sie Folgendes:
 -   Sie können den Zugriff auf die App nicht widerrufen, nachdem sie von den Testern heruntergeladen wurde. Nachdem sie die App heruntergeladen haben, können sie diese weiterhin verwenden, und sie erhalten sämtliche Updates, die Sie übermitteln.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

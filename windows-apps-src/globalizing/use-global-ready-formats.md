@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Entwickeln Sie eine für den globalen Markt geeignete App mit geeigneter Formatierung für Datumsangaben, Uhrzeiten, Zahlen und Währungen.
+Description: "Entwickeln Sie eine für den globalen Markt geeignete App mit geeigneter Formatierung für Datumsangaben, Uhrzeiten, Zahlen und Währungen."
 title: Verwenden weltweit einsetzbarer Formate
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 label: Use global-ready formats
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 77b5e7bd412936dd5d8c4bc252771631d6b884cf
+
 ---
 
 # <span id="dev_globalizing.use_global-ready_formats"></span>Verwenden weltweit einsetzbarer Formate
@@ -190,6 +194,7 @@ Zur Vereinfachung der Anpassung an neue Märkte können Sie bereits bei der App-
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

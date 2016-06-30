@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Wenn Sie Kartendienste in Apps unter Windows Phone 8.1 und früheren Versionen verwenden möchten, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihren App-Code einfügen. Sie erhalten dieses Token im Dev Center-Dashboard auf der Seite „Karten“ im Abschnitt „Dienste“.
+Description: "Wenn Sie Kartendienste in Apps unter Windows Phone 8.1 und früheren Versionen verwenden möchten, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihren App-Code einfügen. Sie erhalten dieses Token im Dev Center-Dashboard auf der Seite „Karten“ im Abschnitt „Dienste“."
 title: Verwenden von Kartendiensten
 ms.assetid: E5EE6B56-B86F-4D62-B16A-F023FE98EFAB
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0d775c67492fd6afe9f65f3e5dede865f9037342
+
 ---
 
 # Verwenden von Kartendiensten
@@ -27,6 +31,7 @@ Sie müssen auch sicherstellen, dass **ApplicationID** und **AuthenticationToken
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

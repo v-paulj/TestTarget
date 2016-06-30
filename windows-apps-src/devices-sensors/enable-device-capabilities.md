@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: 949D1CE0-DD7D-420E-904D-758FADEBE85A
-title: Aktivieren von Gerätefunktionen
-description: In diesem Lernprogramm wird beschrieben, wie Gerätefunktionen in Microsoft Visual Studio deklariert werden. Diese Funktionen bieten Ihnen die Möglichkeit, in Ihrer App Kameras, Mikrofone, Positionssensoren und andere Geräte zu verwenden.
+title: "Aktivieren von Gerätefunktionen"
+description: "In diesem Lernprogramm wird beschrieben, wie Gerätefunktionen in Microsoft Visual Studio deklariert werden. Diese Funktionen bieten Ihnen die Möglichkeit, in Ihrer App Kameras, Mikrofone, Positionssensoren und andere Geräte zu verwenden."
+translationtype: Human Translation
+ms.sourcegitcommit: 512b89027f6b707de346fffe104f165074fabcea
+ms.openlocfilehash: 01ccd8dea8b19a52867ce89ba2eb9a1fb2d2a72f
+
 ---
 # Aktivieren von Gerätefunktionen
 
@@ -72,6 +76,7 @@ In der folgende Tabelle werden einige der Funktionen mit Windows-Runtime-APIs ve
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

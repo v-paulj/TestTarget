@@ -1,8 +1,11 @@
 ---
 author: Mtoepke
-title: Einrichten der Umgebung für die UWP-Entwicklung auf Xbox
-description: Schritte zum Einrichten und Testen der Umgebung für die UWP-Entwicklung auf Xbox
+title: "Einrichten der Umgebung für die UWP-Entwicklung auf Xbox"
+description: "Schritte zum Einrichten und Testen der Umgebung für die UWP-Entwicklung auf Xbox"
 area: Xbox
+ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
+ms.openlocfilehash: d56206f990e7885af4935401356bd3a2ce2cd292
+
 ---
 
 # Einrichten der Umgebung für die UWP-Entwicklung auf Xbox
@@ -23,10 +26,14 @@ In diesem Artikel werden die Schritte zum Einrichten und Testen der Entwicklungs
 
 ## Einrichten des Windows 10 SDK
 
-Installieren Sie Windows 10 Anniversary SDK Preview Build 14295. Informationen zur Installation finden Sie unter [Insider Preview-Updates für Entwickler herunterladen](http://go.microsoft.com/fwlink/p/?LinkId=780552).
+Installieren Sie das aktuelle Windows 10 SDK Preview Build. Informationen zur Installation finden Sie unter [Insider Preview-Updates für Entwickler herunterladen](http://go.microsoft.com/fwlink/p/?LinkId=780552).
 
   > **Wichtig**
             &nbsp;&nbsp;Sie müssen das aktuelle SDK installieren, Sie müssen jedoch _nicht_ die aktuelle Windows Insider Preview-Version des Betriebssystems installieren.
+
+## Einrichten Ihrer Xbox One
+
+Bevor Sie eine App auf Ihrer Xbox One bereitstellen können, muss ein Benutzer auf der Konsole angemeldet sein. Sie können entweder ein vorhandenes Xbox Live-Konto verwenden oder ein neues Konto für Ihre Konsole im Entwicklermodus erstellen. 
 
 ## Erstellen Ihrer ersten Anwendung
 
@@ -101,6 +108,7 @@ Herzlichen Glückwunsch! Sie haben Ihre erste UWP-App auf Xbox erfolgreich erste
 ----
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

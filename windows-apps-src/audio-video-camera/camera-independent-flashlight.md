@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: D20C8E01-4E78-4115-A2E8-07BB3E67DDDC
-description: In diesem Artikel wird beschrieben, wie Sie auf die Taschenlampe eines Geräts zugreifen und diese verwenden, sofern vorhanden. Die Taschenlampenfunktion wird unabhängig von der Kamera des Geräts und der Blitzfunktion der Kamera verwaltet.
-title: Kameraunabhängige Taschenlampe
+description: "In diesem Artikel wird beschrieben, wie Sie auf die Taschenlampe eines Geräts zugreifen und diese verwenden, sofern vorhanden. Die Taschenlampenfunktion wird unabhängig von der Kamera des Geräts und der Blitzfunktion der Kamera verwaltet."
+title: "Kameraunabhängige Taschenlampe"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 022ca2848c575f545402b13e19c0854a9e3ec74a
+
 ---
 
 # Kameraunabhängige Taschenlampe
@@ -75,6 +79,7 @@ Wenn Sie die Leuchte nicht mehr verwenden, sollten Sie sie deaktivieren und [**L
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

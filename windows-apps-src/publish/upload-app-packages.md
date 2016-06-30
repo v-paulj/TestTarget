@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Auf der Seite „Pakete“ werden alle Paketdateien (XAP, APPX, APPXUPLOAD und/oder APPXBUNDLE) für die App hochgeladen, die Sie übermitteln. Sie können in diesem Schritt Pakete für jedes Betriebssystem hochladen, auf das die App ausgerichtet ist.
+Description: "Auf der Seite „Pakete“ werden alle Paketdateien (XAP, APPX, APPXUPLOAD und/oder APPXBUNDLE) für die App hochgeladen, die Sie übermitteln. Sie können in diesem Schritt Pakete für jedes Betriebssystem hochladen, auf das die App ausgerichtet ist."
 title: Hochladen von App-Paketen
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: bb89968c261cc0c14f82375d0d708bbce5da9869
+
 ---
 
 # Hochladen von App-Paketen
@@ -55,6 +59,7 @@ Es wird empfohlen, [Visual Studio Application Insights](http://go.microsoft.com/
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

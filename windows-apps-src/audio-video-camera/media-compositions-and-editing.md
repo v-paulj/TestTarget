@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: C4DB495D-1F91-40EF-A55C-5CABBF3269A2
-description: Mithilfe der APIs im Windows.Media.Editing-Namespace können Sie schnell Apps entwickeln, die Benutzern das Erstellen von Medienkompositionen aus Audio- und Videoquelldateien ermöglichen.
+description: "Mithilfe der APIs im Windows.Media.Editing-Namespace können Sie schnell Apps entwickeln, die Benutzern das Erstellen von Medienkompositionen aus Audio- und Videoquelldateien ermöglichen."
 title: Medienkompositionen und -bearbeitung
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 226ee9212f6688c48c4d4d7b3195ec5c27a3afdd
+
 ---
 
 # Medienkompositionen und -bearbeitung
@@ -151,6 +155,7 @@ Medienkompositionen können aus einer Datei deserialisiert werden, sodass der Be
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

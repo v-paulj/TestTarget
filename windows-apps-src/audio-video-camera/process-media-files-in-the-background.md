@@ -3,6 +3,10 @@ author: drewbatgit
 ms.assetid: B5E3A66D-0453-4D95-A3DB-8E650540A300
 description: In diesem Artikel wird beschrieben, wie Sie den MediaProcessingTrigger und eine Hintergrundaufgabe verwenden, um Mediendateien im Hintergrund zu verarbeiten.
 title: Verarbeiten von Mediendateien im Hintergrund
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dcf655ff80c4463a567ade0b6d1cc784b60c18be
+
 ---
 
 # Verarbeiten von Mediendateien im Hintergrund
@@ -71,7 +75,7 @@ Legen Sie in der Methode, die Sie zum Erstellen des Statusobjekts im vorherigen 
 
 [!code-cs[Progress](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetProgress)]
 
-Die **SendToastNotification**-Hilfsmethode erstellt eine neue Popupbenachrichtigung, indem ein XML-Vorlagendokument für ein Popup abgerufen wird, das nur Text enthält. Das Textelement des Popup-XML-Codes wird festgelegt. Anschließend wird ein neues [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641)-Objekt aus dem XML-Dokument erstellt. Schließlich wird das Popup durch Aufruf von [**ToastNotifier.Show**](https://msdn.microsoft.com/library/windows/apps/br208659) dem Benutzer angezeigt.
+Die **SendToastNotification**-Hilfsmethode erstellt eine neue Popupbenachrichtigung, indem ein XML-Vorlagendokument für ein Popup abgerufen wird, das nur Text enthält. Das Textelement des Popup-XML-Codes wird festgelegt. Anschließend wird ein neues [**ToastNotification**](https://msdn.microsoft.com/library/windows/apps/br208641)-Objekt aus dem XML-Dokument erstellt. Schließlich wird dem Benutzer das Popup durch Aufrufen von [**ToastNotifier.Show**](https://msdn.microsoft.com/library/windows/apps/br208659) angezeigt.
 
 [!code-cs[SendToastNotification](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetSendToastNotification)]
 
@@ -136,6 +140,7 @@ Der **OnCompleted**-Ereignishandler wird aufgerufen, wenn die Ausführung der Hi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

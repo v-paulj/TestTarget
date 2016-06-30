@@ -1,10 +1,14 @@
 ---
 author: mijacobs
-Description: Dieser Artikel beschreibt die Features, Vorteile und Anforderungen der Plattform für UWP-Apps (Universelle Windows-Plattform) aus Entwurfsperspektive. Hier erfahren Sie, welche Komponenten die Plattform kostenlos zur Verfügung stellt und welche Tools verfügbar sind.
-title: Einführung in das UWP-App-Design
+Description: "Dieser Artikel beschreibt die Features, Vorteile und Anforderungen der Plattform für UWP-Apps (Universelle Windows-Plattform) aus Entwurfsperspektive. Hier erfahren Sie, welche Komponenten die Plattform kostenlos zur Verfügung stellt und welche Tools verfügbar sind."
+title: "Einführung in das UWP-App-Design"
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 label: Intro to UWP app design
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: ec154ec64ba18badb5f81b59e76fc04e539de1a8
+
 ---
 
 #  Einführung in das UWP-App-Design 
@@ -215,6 +219,7 @@ Hier sehen Sie ein Beispiel für diese Methode, die beim Entwerfen einer Smart H
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

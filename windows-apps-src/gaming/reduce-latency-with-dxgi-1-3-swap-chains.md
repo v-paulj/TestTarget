@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Reduzieren der Latenz mit DXGI 1.3-Swapchains
+title: "Reduzieren der Latenz mit DXGI 1.3-Swapchains"
 description: Verwenden Sie DXGI 1.3 zum Reduzieren der geltenden Framelatenz, indem Sie warten, bis die Swapchain den geeigneten Zeitpunkt signalisiert, um mit dem Rendern eines neuen Frames zu beginnen.
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 174e2918d54a2b03124752d009f43f0cb0c800ca
+
 ---
 
 # Reduzieren der Latenz mit DXGI 1.3-Swapchains
@@ -158,6 +162,7 @@ Weitere Informationen zur Programmierung mit Multithreading unter Windows finden
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Netzwerkfunktionen für Spiele
+title: "Netzwerkfunktionen für Spiele"
 description: Hier erfahren Sie, wie Sie Netzwerkfeatures entwickeln und in ein DirectX-Spiel integrieren.
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 63a40f5853740d1053449e1b1839f5b0232ce28e
+
 ---
 
 # Netzwerkfunktionen für Spiele
@@ -387,6 +391,7 @@ using namespace Windows::Web::Http;
 * [Beispiel für StreamSocket](http://go.microsoft.com/fwlink/p/?linkid=243037)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

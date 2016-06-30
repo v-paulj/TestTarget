@@ -1,8 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
-description: Verwenden Sie zum programmgesteuerten Abrufen von Analysedaten für Apps, die für Ihr Windows Dev Center-Konto oder für das Konto Ihrer Organisation registriert sind, die Windows Store-Analyse-API.
-title: Zugreifen auf Analysedaten mit Windows Store-Diensten
+description: "Verwenden Sie zum programmgesteuerten Abrufen von Analysedaten für Apps, die für Ihr Windows Dev Center-Konto oder für das Konto Ihrer Organisation registriert sind, die Windows Store-Analyse-API."
+title: "Zugreifen auf Analysedaten mit Windows Store-Diensten"
+ms.sourcegitcommit: 204bace243fb082d3ca3b4259982d457f9c533da
+ms.openlocfilehash: 30388a975e9623c5511abe608aa1b21956e2c974
+
 ---
 
 # Zugreifen auf Analysedaten mit Windows Store-Diensten
@@ -35,18 +38,18 @@ Dazu müssen folgende Schritte ausgeführt werden:
 
 1.  Rufen Sie in Dev Center die **Kontoeinstellungen** auf, klicken Sie auf **Benutzer verwalten**, und ordnen Sie das Dev Center-Konto Ihrer Organisation dem Azure AD-Verzeichnis Ihrer Organisation zu. Ausführliche Anweisungen finden Sie unter [Verwalten von Kontobenutzern](https://msdn.microsoft.com/library/windows/apps/mt489008). Sie können optional andere Benutzer aus dem Azure AD-Verzeichnis Ihrer Organisation hinzufügen, damit sie ebenfalls auf das Dev Center-Konto zugreifen können.
 
-    **Hinweis**  Einer Azure Active Directory-Instanz kann nur ein Dev Center-Konto zugeordnet werden. Ebenso kann einem Dev Center-Konto auch nur eine Azure Active Directory-Instanz zugeordnet sein. Nachdem Sie diese Zuordnung festgelegt haben, können Sie sie erst nach Rücksprache mit dem Support wieder entfernen.
+    > **Hinweis**  Einer Azure Active Directory-Instanz kann nur ein Dev Center-Konto zugeordnet werden. Ebenso kann einem Dev Center-Konto auch nur eine Azure Active Directory-Instanz zugeordnet sein. Nachdem Sie diese Zuordnung festgelegt haben, können Sie sie erst nach Rücksprache mit dem Support wieder entfernen.
 
      
 
-2.  Klicken Sie auf der Seite **Benutzer verwalten** auf **Azure AD-Apps hinzufügen**, und fügen Sie die Azure AD-Anwendung hinzu, mit der Sie auf Analysedaten für Ihr Dev Center-Konto zugreifen. Weisen Sie ihr anschließend die Rolle **Manager** zu. Wenn diese Anwendung bereits in Ihrem Azure AD-Verzeichnis vorhanden ist, können Sie sie auf der Seite **Azure AD-Apps hinzufügen** auswählen, um sie Ihrem Dev Center-Konto hinzuzufügen. Andernfalls können Sie eine neue Azure AD-Anwendung auf der Seite **Azure AD-Apps hinzufügen** erstellen. Weitere Einzelheiten finden Sie im Abschnitt zum Verwalten von Azure AD-Anwendungen unter [Verwalten von Kontobenutzern](https://msdn.microsoft.com/library/windows/apps/mt489008).
+2.  Klicken Sie auf der Seite **Benutzer verwalten** auf **Azure AD-Apps hinzufügen**, und fügen Sie die Azure AD-Anwendung hinzu, welche die App oder den Dienst darstellt, mit dem Sie auf Analysedaten für Ihr Dev Center-Konto zugreifen. Weisen Sie ihr anschließend die Rolle **Manager** zu. Wenn diese Anwendung bereits in Ihrem Azure AD-Verzeichnis vorhanden ist, können Sie sie auf der Seite **Azure AD-Apps hinzufügen** auswählen, um sie Ihrem Dev Center-Konto hinzuzufügen. Andernfalls können Sie eine neue Azure AD-Anwendung auf der Seite **Azure AD-Apps hinzufügen** erstellen. Weitere Einzelheiten finden Sie im Abschnitt zum Verwalten von Azure AD-Anwendungen unter [Verwalten von Kontobenutzern](https://msdn.microsoft.com/library/windows/apps/mt489008).
 
 3.  Wechseln Sie zurück zur Seite **Benutzer verwalten**, klicken Sie auf den Namen Ihrer Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und klicken Sie auf **Add new key**. Kopieren Sie auf dem folgenden Bildschirm die Werte für **Client-ID** und **Schlüssel**. Weitere Einzelheiten finden Sie im Abschnitt zum Verwalten von Azure AD-Anwendungen unter [Verwalten von Kontobenutzern](https://msdn.microsoft.com/library/windows/apps/mt489008). Sie benötigen die Client-ID und den Schlüssel zum Anfordern eines Azure AD-Zugriffstokens, das beim Aufrufen der Windows Store-Analyse-API verwendet wird. Nach dem Verlassen der Seite können Sie nicht mehr auf diese Informationen zugreifen.
 
 
 ### Abrufen eines Azure AD-Zugriffstokens
 
-Nachdem Sie Ihrem Dev Center-Konto eine Azure AD-Anwendung zugeordnet und die Client-ID und den Schlüssel für die Anwendung abgerufen haben, können Sie mithilfe dieser Informationen ein Azure AD-Zugriffstoken abrufen. Sie benötigen ein Zugriffstoken, bevor Sie eine der Methoden in der Windows Store-Analyse-API aufrufen können.
+Nachdem Sie Ihrem Dev Center-Konto eine Azure AD-Anwendung zugeordnet und die Client-ID und den Schlüssel für die Anwendung abgerufen haben, können Sie mithilfe dieser Informationen ein Azure AD-Zugriffstoken abrufen. Sie benötigen ein Zugriffstoken, bevor Sie eine der Methoden in der Windows Store-Analyse-API aufrufen können. Nachdem Sie einen Zugriffstoken erstellt haben, haben Sie 60 Minuten Zeit, diesen zu verwenden, bevor er abläuft.
 
 Befolgen Sie zum Abrufen des Zugriffstokens die Anweisungen unter [Aufrufe zwischen Diensten mithilfe von Clientanmeldeinformationen](https://msdn.microsoft.com/library/azure/dn645543.aspx), um eine HTTP-POST-Anforderung an den nachfolgenden Azure AD-Endpunkt zu senden.
 
@@ -108,9 +111,9 @@ namespace TestAnalyticsAPI
                     clientSecret,
                     scope).Result;
 
-            // This is your app's product ID. This ID is embedded in the app's listing link
-            // on the App identity page of the Dev Center dashboard.
-            string appID = "<your app's product ID>";
+            // This is your app's Store ID. This ID is available on
+            // the App identity page of the Dev Center dashboard.
+            string appID = "<your app's Store ID>";
 
             DateTime startDate = DateTime.Parse("08-01-2015");
             DateTime endDate = DateTime.Parse("11-01-2015");
@@ -237,6 +240,7 @@ Die Windows Store-Analyse-API gibt Fehlerantworten in einem JSON-Objekt zurück,
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

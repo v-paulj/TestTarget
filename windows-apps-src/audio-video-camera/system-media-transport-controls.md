@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: EFCF84D0-2F4C-454D-97DA-249E9EAA806C
-description: Mit der SystemMediaTransportControls-Klasse kann Ihre App die Steuerelemente für den Systemmedientransport verwenden, die in Windows integriert sind, und die Metadaten aktualisieren, die die Steuerelemente zu den von der App aktuell wiedergegebenen Medien anzeigen.
-title: Steuerelemente für den Systemmedientransport
+description: "Mit der SystemMediaTransportControls-Klasse kann Ihre App die Steuerelemente für den Systemmedientransport verwenden, die in Windows integriert sind, und die Metadaten aktualisieren, die die Steuerelemente zu den von der App aktuell wiedergegebenen Medien anzeigen."
+title: "Steuerelemente für den Systemmedientransport"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5a94ce4112f7662d3fe9bf3c8a7d3f60b1569931
+
 ---
 
 # Steuerelemente für den Systemmedientransport
@@ -39,7 +43,7 @@ Fügen Sie einen Klickhandler für die Schaltfläche hinzu, der eine [**FileOpen
 
 Rufen Sie [**GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/dn278708) auf, um eine Instanz der [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) abzurufen.
 
-Legen Sie zum Aktivieren der von Ihrer App verwendeten Schaltflächen die entsprechende „IsEnabled“-Eigenschaft des **SystemMediaTransportControls**-Objekts fest, z. B. [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714), [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713), [**IsNextEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278712) und [**IsPreviousEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278715). Eine vollständige Liste der verfügbaren Steuerelemente finden Sie in der Referenzdokumentation zu **SystemMediaTransportControls**.
+Legen Sie zum Aktivieren der von Ihrer App verwendeten Schaltflächen die entsprechende "IsEnabled"-Eigenschaft des **SystemMediaTransportControls**-Objekts fest, z. B. [**IsPlayEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278714), [**IsPauseEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278713), [**IsNextEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278712) und [**IsPreviousEnabled**](https://msdn.microsoft.com/library/windows/apps/dn278715). Eine vollständige Liste der verfügbaren Steuerelemente finden Sie in der Referenzdokumentation zu **SystemMediaTransportControls**.
 
 Registrieren Sie einen Handler für das [**ButtonPressed**](https://msdn.microsoft.com/library/windows/apps/dn278706)-Ereignis, um Benachrichtigungen zu empfangen, wenn der Benutzer eine Schaltfläche betätigt.
 
@@ -126,6 +130,7 @@ Weitere Informationen zur Audiowiedergabe im Hintergrund finden Sie unter [Audio
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

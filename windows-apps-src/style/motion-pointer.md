@@ -1,10 +1,14 @@
 ---
 author: mijacobs
 Description: Verwenden Sie Zeigeranimationen, um Benutzern visuelles Feedback zu liefern, wenn diese auf ein Element tippen.
-title: Animationen für Zeigerklicks in UWP-Apps
+title: "Animationen für Zeigerklicks in UWP-Apps"
 ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
 label: Motion--Pointer animations
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 24175bb7c822ceb53af5e1ec70bf83f701fd1cce
+
 ---
 
 # Animationen für Zeigerklicks
@@ -44,6 +48,7 @@ Verwenden Sie Zeigeranimationen, um Benutzern visuelles Feedback zu liefern, wen
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

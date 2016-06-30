@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
-title: Geräteportal für Xbox
-description: Hier erfahren Sie, wie Sie das Geräteportal für Xbox One aktivieren.
+title: "Geräteportal für Xbox"
+description: "Hier erfahren Sie, wie Sie das Geräteportal für Xbox One aktivieren."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e1bfdf8e4ee4ed1f88c514acb9ef555c07fd0746
+
 ---
 # Geräteportal für Xbox
 
@@ -33,6 +37,7 @@ Device Portal für Xbox enthält einen Standardsatz der Seiten. Ausführliche Be
 - Netzwerk
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

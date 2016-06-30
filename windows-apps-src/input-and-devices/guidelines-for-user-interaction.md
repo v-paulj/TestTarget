@@ -1,10 +1,14 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Gestalten Sie die Benutzerinteraktion mit Ihren UWP-Apps (Universelle Windows-Plattform) intuitiv und unverwechselbar, und optimieren Sie diese für die Toucheingabe. Dabei sollte die Funktionalität jedoch für alle Eingabegeräte einheitlich sein.
-title: Richtlinien für die Toucheingabe
+Description: "Gestalten Sie die Benutzerinteraktion mit Ihren UWP-Apps (Universelle Windows-Plattform) intuitiv und unverwechselbar, und optimieren Sie diese für die Toucheingabe. Dabei sollte die Funktionalität jedoch für alle Eingabegeräte einheitlich sein."
+title: "Richtlinien für die Toucheingabe"
 ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
 label: Touch design guidelines
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 67b851ce854c803934c2b97dbe7519e2916383a3
+
 ---
 
 # Richtlinien für die Toucheingabe
@@ -172,6 +176,7 @@ Darüber hinaus wird Folgendes dringend empfohlen:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

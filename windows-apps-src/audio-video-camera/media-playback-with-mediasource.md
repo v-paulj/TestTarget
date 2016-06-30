@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
-description: Die MediaSource-Klasse wird allgemein zum Verweisen auf Medien aus verschiedenen Quellen (etwa lokale Dateien oder Remotedateien) sowie zum Wiedergeben dieser Medien verwendet und macht ein gemeinsames Modell für den Mediendatenzugriff verfügbar – unabhängig vom zugrunde liegenden Medienformat.
-title: Medienwiedergabe mit „MediaSource“
+description: "Die MediaSource-Klasse wird allgemein zum Verweisen auf Medien aus verschiedenen Quellen (etwa lokale Dateien oder Remotedateien) sowie zum Wiedergeben dieser Medien verwendet und macht ein gemeinsames Modell für den Mediendatenzugriff verfügbar – unabhängig vom zugrunde liegenden Medienformat."
+title: "Medienwiedergabe mit „MediaSource“"
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
+
 ---
 
 # Medienwiedergabe mit „MediaSource“
@@ -177,6 +181,7 @@ Geben Sie durch Festlegen der [**AutoRepeatEnabled**](https://msdn.microsoft.com
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

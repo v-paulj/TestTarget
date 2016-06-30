@@ -2,7 +2,11 @@
 author: martinekuan
 ms.assetid: A77DA371-C0FE-4FAE-9E77-ADC3C9314EDF
 title: Erstellen Ihrer ersten App
-description: Das Erstellen einer UWP (Universelle Windows-Plattform)-App für Windows 10 ist einfacher, als Sie denken.
+description: "Das Erstellen einer UWP (Universelle Windows-Plattform)-App für Windows 10 ist einfacher, als Sie denken."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e2ed4b9587927a2a6a765b47ff69b9cedfd9b92d
+
 ---
 # Erstellen Ihrer ersten App
 
@@ -69,6 +73,7 @@ Verfügen Sie über Erfahrung mit iOS oder Android? Im Abschnitt [Portieren von 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

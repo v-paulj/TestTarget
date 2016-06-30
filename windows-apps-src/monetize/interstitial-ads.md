@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
-description: Erfahren Sie mehr über die Verwendung von interstitiellen Anzeigen in Windows 10-, Windows 8.1- oder Windows Phone 8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK.
+description: "Erfahren Sie mehr über die Verwendung von interstitiellen Anzeigen in Windows 10-, Windows 8.1- oder Windows Phone 8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK."
 title: Interstitielle Anzeigen
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 0f159409bb584aacaf66550efe8d147cd8fddd50
+
 ---
 
 # Interstitielle Anzeigen
@@ -368,7 +372,7 @@ Weitere Informationen zur effektiven Verwendung von Interstitialanzeigen finden 
 ## Entfernen von Verweisfehlern: Ausrichtung auf eine bestimmte CPU-Plattform (XAML und HTML)
 
 
-Wenn Sie die Microsoft Advertising-Bibliotheken verwenden, können Sie in Ihrem Projekt als Ziel nicht **Any CPU** angeben. Wenn Ihr Projekt auf die Plattform **Any CPU** ausgerichtet ist, wird Ihnen in Ihrem Projekt möglicherweise eine Warnung angezeigt, wenn Sie einen Verweis auf die Microsoft Advertising-Bibliotheken hinzufügen. Um diese Warnung zu entfernen, müssen Sie eine architekturspezifische Buildausgabe verwenden (beispielsweise **x86**) und das Projekt entsprechend aktualisieren. Weitere Informationen finden Sie unter [Bekannte Probleme](known-issues-for-the-advertising-libraries.md).
+Wenn Sie die Microsoft Advertising-Bibliotheken verwenden, können Sie in Ihrem Projekt als Ziel nicht **Any CPU** angeben. Sollte in Ihrem Projekt die Zielplattform **Any CPU** definiert sein, wird in Ihrem Projekt eine Warnung ausgegeben, sobald Sie einen Verweis auf die Microsoft Advertising-Bibliotheken hinzufügen. Um diese Warnung zu entfernen, müssen Sie eine architekturspezifische Buildausgabe verwenden (beispielsweise **x86**) und das Projekt entsprechend aktualisieren. Weitere Informationen finden Sie unter [Bekannte Probleme](known-issues-for-the-advertising-libraries.md).
 
 ## Verwandte Themen
 
@@ -382,6 +386,7 @@ Wenn Sie die Microsoft Advertising-Bibliotheken verwenden, können Sie in Ihrem 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -5,8 +5,8 @@ title: "Einführung in die Interaktion"
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
-ms.sourcegitcommit: 1221928ebea4a2a926154ed1148e49bdb1e0834c
-ms.openlocfilehash: 7c2d3bd1ab2d2f4923cf84834a73fd1c58113212
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 068bb7d0c7af4b55ab10a955c563988f5123e5eb
 
 ---
 
@@ -15,13 +15,13 @@ ms.openlocfilehash: 7c2d3bd1ab2d2f4923cf84834a73fd1c58113212
 
 ![Windows-Eingabetypen](images/input-interactions/icons-inputdevices03.png)
 
-Benutzerinteraktionen in der Universellen Windows-Plattform (UWP) stellen eine Kombination von Eingabe- und Ausgabequellen dar (z. B. Maus, Tastatur, Stift, Toucheingabe, Touchpad, Spracherkennung, **Cortana**, Controller, Gesten, Mimik usw.), neben verschiedenen Modi oder Modifizierern, die erweiterte Funktionen ermöglichen (u. a. Mausrad und -tasten, Radierer- und Zeichenstift-Schaltflächen, Bildschirmtastatur sowie App-Dienste im Hintergrund). 
+Benutzerinteraktionen in der Universellen Windows-Plattform (UWP) stellen eine Kombination von Eingabe- und Ausgabequellen dar (z. B. Maus, Tastatur, Stift, Toucheingabe, Touchpad, Spracherkennung, **Cortana**, Controller, Gesten, Mimik usw.), neben verschiedenen Modi oder Modifizierern, die erweiterte Funktionen ermöglichen (u. a. Mausrad und -tasten, Radierer- und Zeichenstift-Schaltflächen, Bildschirmtastatur sowie App-Dienste im Hintergrund).
 
 Die UWP verwendet ein intelligentes, kontextbezogenes Interaktionssystem, mit dem in den meisten Fällen die von der App empfangenen eindeutigen Eingabetypen nicht individuell behandelt werden müssen. Dazu zählt das Behandeln von Toucheingabe, Touchpad, Maus und Stifteingabe als generischer Zeigertyp, um statische Gesten wie Tippen oder Gedrückthalten und Manipulationsgesten wie Ziehen zum Verschieben oder zum Rendern von Freihandeingabe zu unterstützen.
 
 Machen Sie sich mit einzelnen Typen von Eingabegeräten, dem jeweiligen Verhalten, den Möglichkeiten und Beschränkungen in Verbindung mit gewissen Formfaktoren vertraut. Dies erleichtert Ihnen die Entscheidung, ob die Steuerelemente und Angebote der Plattform für die App ausreichend sind oder ob Sie angepasste Funktionen für die Benutzerinteraktion bereitstellen müssen.
 
-## <span id="Cortana"></span><span id="cortana"></span><span id="CORTANA"></span>Cortana
+## Cortana
 
 
 In Windows 10 können Sie mit der Erweiterung von **Cortana** Sprachbefehle von einem Benutzer behandeln und die Anwendung zum Ausführen einer einzelnen Aktion starten.
@@ -44,7 +44,7 @@ Typische Nutzung Ein Sprachbefehl ist eine einzelne, in einer Sprachbefehldefini
 Weitere Informationen finden Sie unter [Cortana-Entwurfsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn974233).
  
 
-## <span id="Speech"></span><span id="speech"></span><span id="SPEECH"></span>Spracherkennung
+## Spracherkennung
 
 
 Die Spracherkennung ist eine effektive und natürliche Möglichkeit, mit Apps zu kommunizieren. Sie bietet eine unkomplizierte und präzise Möglichkeit der Kommunikation mit Apps; damit können Benutzer in einer Vielzahl von Situationen produktiv arbeiten und auf dem Laufenden bleiben.
@@ -68,19 +68,19 @@ Typische Verwendung
 
 Es gibt drei Modi der Sprachinteraktion:
 
-<span id="Natural_language"></span><span id="natural_language"></span><span id="NATURAL_LANGUAGE"></span>Natürliche Sprache  
+Natürliche Sprache  
 Mit natürlicher Sprache kommunizieren wir laufend mündlich mit anderen Personen. Unsere Sprache variiert in Abhängigkeit von der jeweiligen Person oder Situation, sie wird jedoch generell verstanden. Wenn dies nicht der Fall ist, verwenden wir häufig andere Wörter oder eine abweichende Wortreihenfolge, um die gleichen Gedanken zu vermitteln.
 
 Die Kommunikation über natürliche Sprache mit einer App verläuft ähnlich: Wir sprechen über unser Gerät mit der App wie mit einer Person und erwarten, dass sie uns versteht und entsprechend reagiert.
 
 Die natürliche Sprache ist der fortgeschrittenste Modus der Sprachinteraktion, der über **Cortana** implementiert und verfügbar gemacht wird.
 
-<span id="Command_and_control"></span><span id="command_and_control"></span><span id="COMMAND_AND_CONTROL"></span>Befehl und Steuerung  
+Befehl und Steuerung  
 Unter Befehl und Steuerung wird die Verwendung von Sprachbefehlen zum Aktivieren von Steuerelementen und Funktionen verstanden, z. B. zum Klicken auf eine Schaltfläche oder zum Auswählen eines Menüelements.
 
 Da Befehl und Steuerung entscheidend für eine erfolgreiche Benutzeroberfläche ist, wird ein einzelner Eingabetyp im Allgemeinen nicht empfohlen. Die Spracherkennung ist in der Regel eine von mehreren Eingabeoptionen für einen Benutzer, die von seinen Vorlieben und Hardwarefunktionen abhängen.
 
-<span id="Dictation"></span><span id="dictation"></span><span id="DICTATION"></span>Diktieren  
+Diktieren  
 Die einfachste Methode der Spracheingabe. Jede Äußerung wird in Text umgewandelt.
 
 Das Diktieren wird in der Regel verwendet, wenn eine App die Bedeutung oder die Absicht nicht verstehen muss.
@@ -88,7 +88,7 @@ Das Diktieren wird in der Regel verwendet, wenn eine App die Bedeutung oder die 
 Weitere Informationen finden Sie unter [Entwurfsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121).
  
 
-## <span id="Pen"></span><span id="pen"></span><span id="PEN"></span>Stift
+## Stift
 
 
 Ein (Eingabe-)Stift kann ähnlich wie eine Maus als pixelgenaues Zeigegerät verwendet werden, und er eignet sich optimal für die Freihandeingabe.
@@ -119,7 +119,7 @@ Sie müssen stiftspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unt
 Weitere Informationen finden Sie unter [Entwurfsrichtlinien für Stifte](https://msdn.microsoft.com/library/windows/apps/dn456352).
  
 
-## <span id="Touch"></span><span id="touch"></span><span id="TOUCH"></span>Toucheingabe
+## Toucheingabe
 
 
 Bei der Toucheingabe können mit einem oder mehreren Fingern ausgeführte Gesten verwendet werden, um die direkte Manipulation von UI-Elementen (wie etwa Verschieben, Drehen, Ändern der Größe oder Bewegen) zu emulieren. Außerdem können die Gesten auch als alternative Eingabemethode (ähnlich einer Maus- oder Stifteingabe) oder als ergänzende Eingabemethode (zum Modifizieren anderer Eingaben; also beispielsweise zum Verwischen eines mit einem Stift gezeichneten Freihandstrichs) verwendet werden. Diese berührungsbasierte Bedienung wird von Benutzern unter Umständen als natürlicher wahrgenommen als die symbolbasierte Interaktion auf einem Bildschirm.
@@ -150,7 +150,7 @@ Im Allgemeinen weist die Toucheingabe folgende Merkmale auf:
 Weitere Informationen finden Sie unter [Designrichtlinien für die Toucheingabe](https://msdn.microsoft.com/library/windows/apps/hh465370).
  
 
-## <span id="Touchpad"></span><span id="touchpad"></span><span id="TOUCHPAD"></span>Touchpad
+## Touchpad
 
 
 Ein Touchpad vereint die indirekte Multitoucheingabe mit der Präzisionseingabe eines Zeigergeräts (beispielsweise eine Maus). Dadurch ist das Touchpad sowohl für eine touchoptimierte Benutzeroberfläche als auch die kleineren Ziele von Produktivitäts-Apps geeignet.
@@ -170,7 +170,7 @@ Sie müssen mausspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unte
 Weitere Informationen finden Sie unter [Designrichtlinien für Touchpads](https://msdn.microsoft.com/library/windows/apps/dn456353).
  
 
-## <span id="Keyboard"></span><span id="keyboard"></span><span id="KEYBOARD"></span>Tastatur
+## Tastatur
 
 
 Eine Tastatur ist das Haupteingabegerät für Text und häufig unentbehrlich für Personen mit bestimmten körperlichen Beeinträchtigungen oder für Benutzer, die die Tastatur als schnellere und effizientere Interaktionsmethode betrachten.
@@ -208,7 +208,7 @@ Im Allgemeinen weist eine Tastatur folgende Merkmale auf:
 Weitere Informationen finden Sie unter [Designrichtlinien für Tastaturen](https://msdn.microsoft.com/library/windows/apps/hh972345).
  
 
-## <span id="Mouse"></span><span id="mouse"></span><span id="MOUSE"></span>Maus
+## Maus
 
 
 Eine Maus eignet sich am besten für Produktivitäts-Apps und Benutzeroberflächen mit hoher Dichte, bei denen Benutzerinteraktionen beim Zielen und bei der Befehlseingabe Pixelgenauigkeit erfordern.
@@ -231,7 +231,7 @@ Sie müssen mausspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unte
 Weitere Informationen finden Sie unter [Designrichtlinien für die Maus](https://msdn.microsoft.com/library/windows/apps/dn456351).
  
 
-## <span id="Gesture"></span><span id="gesture"></span><span id="GESTURE"></span>Geste
+## Geste
 
 
 Eine Geste ist jede Art von Benutzerbewegung, die als Steuerungs- oder Interaktionseingabe für eine Anwendung erkannt wird. Es gibt verschiedene Arten von Gesten – von der einfachen Geste, die dazu dient, mit der Hand etwas auf dem Bildschirm zu verwenden, über spezifische, erlernte Bewegungsmuster bis hin zu langen Bewegungsabläufen des gesamten Körpers. Beachten Sie beim Entwerfen benutzerdefinierter Gesten, dass diese in anderen Regionen/Kulturkreisen unter Umständen eine andere Bedeutung haben.
@@ -252,7 +252,7 @@ Sie müssen mausspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unte
 
  
 
-## <span id="Gamepad_Controller"></span><span id="gamepad_controller"></span><span id="GAMEPAD_CONTROLLER"></span>Gamepad/Controller
+## Gamepad/Controller
 
 
 Ein Gamepad/Controller ist ein sehr spezielles Gerät und kommt in der Regel bei Spielen zum Einsatz. Es wird jedoch auch zum Emulieren einfacher Tastatureingaben sowie für eine tastaturähnliche UI-Navigation verwendet.
@@ -272,7 +272,7 @@ Sie müssen mausspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unte
 
  
 
-## <span id="Multiple_inputs"></span><span id="multiple_inputs"></span><span id="MULTIPLE_INPUTS"></span>Mehrere Eingaben
+## Mehrere Eingaben
 
 
 Durch die Berücksichtigung einer möglichst großen Anzahl von Benutzern, Geräten und Eingabearten (Gesten, Spracherkennung, Toucheingabe, Touchpad, Maus und Tastatur) maximieren Sie die Flexibilität, Benutzerfreundlichkeit und Barrierefreiheit Ihrer Apps.
@@ -304,6 +304,6 @@ Typische Nutzung Genauso, wie Menschen durch eine Mischung aus Sprache und Geste
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

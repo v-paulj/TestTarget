@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Hinzufügen von Steuerelementen
-description: In diesem Thema befassen wir uns damit, wie im beispielhaften Spiel Bewegungs-/Blicksteuerelemente in einem 3D-Spiel implementiert und einfache Steuerelemente für Toucheingabe, Maus und Gamecontroller entwickelt werden.
+title: "Hinzufügen von Steuerelementen"
+description: "In diesem Thema befassen wir uns damit, wie im beispielhaften Spiel Bewegungs-/Blicksteuerelemente in einem 3D-Spiel implementiert und einfache Steuerelemente für Toucheingabe, Maus und Gamecontroller entwickelt werden."
 ms.assetid: f9666abb-151a-74b4-ae0b-ef88f1f252f8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b3297ffd92d9a61d73c574def7e8101dc9196a69
+
 ---
 
 # Hinzufügen von Steuerelementen
@@ -24,12 +28,12 @@ Ein gutes UWP-Spiel unterstützt viele unterschiedliche Schnittstellen. Ein pote
 
 In diesem Beispiel werden alle drei Geräte unterstützt. Es ist ein einfaches First-Person-Shooterspiel, und die für dieses Genre üblichen Bewegungs-/Blicksteuerungen lassen sich für alle drei Eingabetypen mühelos implementieren.
 
-Weitere Informationen zu Steuerelementen und speziell Bewegungs-/Blicksteuerelementen finden Sie unter [Bewegungs-/Blicksteuerelemente für Spiele](tutorial--adding-move-look-controls-to-your-directx-game.md) und [Toucheingabesteuerelemente für Spiele](tutorial--adding-touch-controls-to-your-directx-game.md).
+Weitere Informationen zu Steuerungen und speziell zu Bewegungs-/Blicksteuerungen finden Sie unter [Bewegungs-/Blicksteuerungen für Spiele](tutorial--adding-move-look-controls-to-your-directx-game.md) sowie unter [Toucheingabesteuerelemente für Spiele](tutorial--adding-touch-controls-to-your-directx-game.md).
 
-## Allgemeine Verhaltensweisen von Steuerelementen
+## Allgemeine Steuerungsverhalten
 
 
-Die Implementierung von Touchsteuerelementen und Maus-/Tastatursteuerelementen ist im Grunde sehr ähnlich. In einer UWP-App ist ein Zeiger einfach ein Punkt auf dem Bildschirm. Sie können ihn bewegen, indem Sie die Maus oder den Finger auf dem Touchscreen bewegen. Folglich können Sie einen einzelnen Satz von Ereignissen registrieren und müssen sich keine Gedanken darüber machen, ob der Spieler eine Maus oder einen Touchscreen zum Bewegen und Betätigen des Zeigers verwendet.
+Die Implementierung von Fingereingabesteuerungen und Maus-/Tastatursteuerungen ist im Grunde sehr ähnlich. In einer UWP-App ist ein Zeiger einfach ein Punkt auf dem Bildschirm. Sie können ihn bewegen, indem Sie die Maus oder den Finger auf dem Touchscreen bewegen. Folglich können Sie einen einzelnen Satz von Ereignissen registrieren und müssen sich keine Gedanken darüber machen, ob der Spieler eine Maus oder einen Touchscreen zum Bewegen und Betätigen des Zeigers verwendet.
 
 Beim Initialisieren der **MoveLookController**-Klasse im Beispielspiel werden vier zeigerspezifische Ereignisse und ein mausspezifisches Ereignis registriert:
 
@@ -205,7 +209,7 @@ Wenn der Spieler den Zeiger aus dem Hauptfenster des Spiels bewegt oder die Paus
 
 Weitere Informationen finden Sie im [vollständigen Codebeispiel für diesen Abschnitt](#code_sample).
 
-Betrachten wir nun die Implementierung der drei Steuerelementtypen im Detail.
+Jetzt wollen wir uns etwas ausführlicher mit der Implementierung der drei Steuerungstypen beschäftigen.
 
 ## Implementieren relativer Maussteuerungen
 
@@ -814,7 +818,7 @@ Jetzt wissen Sie, wie in diesem Beispiel ein kompletter Satz von Steuerungsoptio
 ## Nächste Schritte
 
 
-Bis auf eine haben wir nun jede Hauptkomponente eines UWP-DirectX-Spiels kennengelernt. Was noch fehlt, ist Audio. Musik- und Soundeffekte sind bei jedem Spiel wichtig. Befassen wir uns also mit dem [Hinzufügen von Sound](tutorial--adding-sound.md).
+Bis auf eine haben wir nun jede Hauptkomponente eines UWP-DirectX-Spiels kennengelernt. Was noch fehlt, ist Audio. Musik und Soundeffekte sind bei jedem Spiel wichtig. Befassen wir uns also mit dem [Hinzufügen von Sound](tutorial--adding-sound.md).
 
 ## Vollständiger Beispielcode für diesen Abschnitt
 
@@ -1907,7 +1911,7 @@ void MoveLookController::UpdateGameController()
 ```
 
 > **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung unter Windows 8.x oder Windows Phone 8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -1925,6 +1929,7 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die univer
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

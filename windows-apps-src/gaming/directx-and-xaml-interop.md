@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Interoperabilität von DirectX und XAML
-description: In Ihrem Spiel für die universelle Windows-Plattform (UWP) können Sie eine Kombination aus Extensible Application Markup Language (XAML) und Microsoft DirectX verwenden.
+title: "Interoperabilität von DirectX und XAML"
+description: "In Ihrem Spiel für die universelle Windows-Plattform (UWP) können Sie eine Kombination aus Extensible Application Markup Language (XAML) und Microsoft DirectX verwenden."
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 97e694ae2fb8af30a35aa9ebdb714db50a506e6c
+
 ---
 
 # Interoperabilität von DirectX und XAML
@@ -38,7 +42,7 @@ Sobald Sie festgelegt haben, wie DirectX verwendet werden soll, können Sie eine
 
 -   Wenn das Bild größer als der verfügbare Platz auf dem Bildschirm ist und es vom Benutzer geschwenkt und gezoomt werden kann, verwenden Sie die Klasse [**Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050). Dieser Typ ermöglicht die Behandlung einer DirectX-Zeichenoberfläche, die größer als der Bildschirm ist. Wie [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) wird diese Klasse für die dynamische Erstellung eines komplexen Bilds oder Steuerelements verwendet. Und wie **SurfaceImageSource** ist diese Klasse nicht gut für hochleistungsfähige Spiele geeignet. Beispielhafte XAML-Elemente, welche die Klasse **VirtualSurfaceImageSource** verwenden können, sind Kartensteuerelemente oder Viewer für große Dokumente mit hoher Bilddichte.
 
--   Wenn Sie DirectX verwenden, um Grafiken zu präsentieren, die in Echtzeit oder in regelmäßigen Intervallen mit niedriger Verzögerung aktualisiert werden müssen, verwenden Sie die Klasse [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834). So können Sie Grafiken aktualisieren, ohne dass eine Synchronisierung mit dem Aktualisierungstimer des XAML-Frameworks erforderlich ist. Mit dieser Klasse können Sie direkt auf die Swapchain ([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)) der Grafikhardware zugreifen und XAML oberhalb des Renderziels anordnen. Dieser Typ ist hervorragend für Spiele und andere DirectX-Apps mit Vollbildansicht geeignet, in denen eine XAML-basierte Benutzeroberfläche erforderlich ist. Wenn Sie diese Vorgehensweise wählen, sollten Sie sich mit DirectX sehr gut auskennen, z. B. in Bezug auf die Bereiche Microsoft DirectX Graphics Infrastructure (DXGI), Direct2D und Direct3D. Weitere Informationen finden Sie unter [Programmieranleitung für Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345).
+-   Wenn Sie DirectX verwenden, um Grafiken zu präsentieren, die in Echtzeit oder in regelmäßigen Intervallen mit niedriger Verzögerung aktualisiert werden müssen, verwenden Sie die Klasse [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834). So können Sie Grafiken aktualisieren, ohne dass eine Synchronisierung mit dem Aktualisierungstimer des XAML-Frameworks erforderlich ist. Mit dieser Klasse können Sie direkt auf die Swapchain ([**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631)) der Grafikhardware zugreifen und XAML oberhalb des Renderziels anordnen. Dieser Typ ist hervorragend für Spiele und andere DirectX-Apps mit Vollbildansicht geeignet, in denen eine XAML-basierte Benutzeroberfläche erforderlich ist. Wenn Sie diese Vorgehensweise wählen, sollten Sie sich mit DirectX sehr gut auskennen, z. B. in Bezug auf die Bereiche Microsoft DirectX Graphics Infrastructure (DXGI), Direct2D und Direct3D. Weitere Informationen finden Sie unter [Programmieranleitung für Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345).
 
 ## SurfaceImageSource
 
@@ -95,7 +99,7 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
 
      
 
-    Die Methode gibt den X-Y-Punkt-Offset für das Zielrechteck als *offset*-Parameter zurück. Anhand dieser Informationen bestimmen Sie die Stelle, an der Sie innerhalb der Schnittstelle [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) zeichnen.
+    Die Methode gibt den X-Y-Punkt-Offset für das Zielrechteck als *offset*-Parameter zurück. Anhand dieser Information bestimmen Sie die Stelle, an der Sie innerhalb der Schnittstelle [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) zeichnen.
 
     ```cpp
     ComPtr<IDXGISurface> surface;
@@ -239,7 +243,7 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
 
     1.  Stellen Sie einen Zeiger für das Objekt [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) zur Methode [**IVirtualSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) bereit, und zeichnen Sie mit DirectX in dieser Fläche. Es wird nur in dem Bereich gezeichnet, der im Parameter *updateRect* für Updates festgelegt wurde.
 
-        Wie bei [**IlSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) gibt diese Methode den X-Y-Punkt-Offset für das aktualisierte Zielrechteck im Parameter *offset* zurück. Anhand dieser Informationen bestimmen Sie die Stelle, an der Sie innerhalb der Schnittstelle [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) zeichnen.
+        Wie bei [**IlSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) gibt diese Methode den X-Y-Punkt-Offset für das aktualisierte Zielrechteck im Parameter *offset* zurück. Anhand dieser Information bestimmen Sie die Stelle, an der Sie innerhalb der Schnittstelle [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) zeichnen.
 
         > **Hinweis**   Es kann jeweils nur ein ausstehender [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323)-Vorgang pro [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527) aktiv sein.
 
@@ -277,17 +281,17 @@ Es gibt gewisse Einschränkungen für die Klasse [**SwapChainPanel**](https://ms
 -   Höhe und Breite der DirectX-Swapchain (in [**DXGI_SWAP_CHAIN_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)) müssen auf die aktuellen Abmessungen des App-Fensters festgelegt werden. Wenn Sie dies nicht vornehmen, werden die Inhalte (unter Verwendung von **DXGI\_SCALING\_STRETCH**) passend skaliert.
 -   Sie müssen den Skalierungsmodus der DirectX-Swapchain (in [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)) als **DXGI\_SCALING\_STRETCH** festlegen.
 -   Sie können den Alphamodus der DirectX-Swapchain (in [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)) nicht als **DXGI\_ALPHA\_MODE\_PREMULTIPLIED** festlegen.
--   Sie müssen die DirectX-Swapchain erstellen, indem Sie die [**IDXGIFactory2::CreateSwapChainForComposition**](https://msdn.microsoft.com/library/windows/desktop/hh404558)-Methode aufrufen.
+-   Sie müssen die DirectX-Swapchain erstellen, indem Sie die Methode [**IDXGIFactory2::CreateSwapChainForComposition**](https://msdn.microsoft.com/library/windows/desktop/hh404558) aufrufen.
 
-Die Klasse [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) wird basierend auf den Anforderungen Ihrer App aktualisiert und nicht entsprechend den Updates des XAML-Frameworks. Wenn Sie die Updates der Klasse **SwapChainPanel** mit denen des XAML-Frameworks synchronisieren möchten, registrieren Sie die Klasse für das Ereignis [**Windows::UI::Xaml::Media::CompositionTarget::Rendering**](https://msdn.microsoft.com/library/windows/apps/br228127). Andernfalls müssen Sie sämtliche threadübergreifenden Probleme berücksichtigen, wenn Sie versuchen, die XAML-Elemente über einen Thread zu aktualisieren, bei dem es sich nicht um den Thread handelt, der die **SwapChainPanel**-Klasse aktualisiert.
+Die Klasse [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) wird basierend auf den Anforderungen Ihrer App aktualisiert und nicht entsprechend den Updates des XAML-Frameworks. Wenn Sie die Updates der Klasse **SwapChainPanel** mit denen des XAML-Frameworks synchronisieren möchten, registrieren Sie die Klasse für das Ereignis [**Windows::UI::Xaml::Media::CompositionTarget::Rendering**](https://msdn.microsoft.com/library/windows/apps/br228127). Andernfalls müssen Sie sämtliche threadübergreifenden Probleme berücksichtigen, wenn Sie versuchen, die XAML-Elemente über einen Thread zu aktualisieren, bei dem es sich nicht um den Thread handelt, der die Klasse **SwapChainPanel** aktualisiert.
 
-Es gibt auch eine Reihe von bewährten Methoden für die Verwendung der [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834)-Klasse bei der App-Entwicklung.
+Es gibt auch eine Reihe von bewährten Methoden für die Verwendung der Klasse [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) bei der App-Entwicklung.
 
 -   [
               **SwapChainPanel**
             ](https://msdn.microsoft.com/library/windows/apps/dn252834) erbt von der Klasse [**Windows::UI::Xaml::Controls::Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) und unterstützt ein ähnliches Layoutverhalten. Machen Sie sich mit dem Typ **Grid** und dessen Eigenschaften vertraut.
 
--   Nachdem eine DirectX-Swapchain festgelegt wurde, arbeiten alle Eingabeereignisse, die für die Klasse [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) ausgelöst wurden, auf die gleiche Weise wie bei allen anderen XAML-Elementen. Für die **SwapChainPanel**-Klasse wird kein Hintergrundpinsel festgelegt, und Sie benötigen keine Eingabeereignisse vom [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt der App, wie es in DirectX-Apps der Fall ist, die **SwapChainPanel** nicht verwenden.
+-   Nachdem eine DirectX-Swapchain festgelegt wurde, arbeiten alle Eingabeereignisse, die für die Klasse [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) ausgelöst wurden, auf die gleiche Weise wie bei allen anderen XAML-Elementen. Für die Klasse **SwapChainPanel** wird kein Hintergrundpinsel festgelegt, und Sie benötigen keine Eingabeereignisse vom [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt der App, wie es in DirectX-Apps der Fall ist, die **SwapChainPanel** nicht verwenden.
 
 -   • Der gesamte Inhalt der visuellen XAML-Elementstruktur unter einem unmittelbar untergeordneten Element einer Klasse des Typs [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) wird auf die Layoutgröße des unmittelbar untergeordneten Elements des Objekts **SwapChainPanel** zugeschnitten. Inhalte, die außerhalb dieser Layoutgrenzen transformiert werden, werden nicht gerendert. Platzieren Sie daher alle animierten XAML-Inhalte, die Sie mit einem XAML-[**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490) animieren, in der visuellen Struktur unterhalb eines Elements, dessen Layoutgrenzen groß genug für die vollständige Darstellung der Animation sind.
 
@@ -389,6 +393,7 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

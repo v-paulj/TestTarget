@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Wir empfehlen dringend, dieses Handbuch für das Portieren vollständig zu lesen. Wir wissen aber auch, dass Sie möglichst schnell die Phase erreichen möchten, in der Ihr Projekt erstellt und ausgeführt wird.
+description: "Wir empfehlen dringend, dieses Handbuch für das Portieren vollständig zu lesen. Wir wissen aber auch, dass Sie möglichst schnell die Phase erreichen möchten, in der Ihr Projekt erstellt und ausgeführt wird."
 title: Behandeln von Problemen beim Portieren von Windows-Runtime 8.x zu UWP
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: e5758472d303f4baaf80d45d6b23b54f2a21e002
+
 ---
 
 # Behandeln von Problemen beim Portieren von Windows-Runtime 8.x zu UWP
@@ -23,7 +27,7 @@ Als letzte Möglichkeit kann eine Binärdatei aufgeteilt werden. Entfernen Sie e
 
 ## TargetPlatformVersion
 
-In diesem Abschnitt wird erläutert, was zu tun ist, wenn beim Öffnen eines Windows 10-Projekts in Visual Studio folgende Meldung angezeigt wird: „Visual Studio-Update erforderlich. Mindestens ein Projekt erfordert ein Plattform-SDK, <version> das entweder nicht installiert oder in einem zukünftigen Update von Visual Studio enthalten ist.“
+In diesem Abschnitt wird erläutert, was zu tun ist, wenn beim Öffnen eines Windows 10-Projekts in Visual Studio folgende Meldung angezeigt wird: „Visual Studio-Update erforderlich. Mindestens ein Projekt erfordert eine Plattform-SDK <version>, die entweder nicht installiert oder in einem zukünftigen Update von Visual Studio enthalten ist.“
 
 -   Ermitteln Sie zunächst die Versionsnummer des SDK für Windows 10, die Sie installiert haben. Navigieren Sie zu **C:\\Programme (x86)\\Windows Kits\\10\\Include\\<versionfoldername>**, und notieren Sie *<versionfoldername>* in der Vierernotation „Major.Minor.Build.Revision“.
 -   Öffnen Sie Ihre Projektdatei zur Bearbeitung, und suchen Sie das `TargetPlatformVersion`-Element und das `TargetPlatformMinVersion`-Element. Bearbeiten Sie sie folgendermaßen: Ersetzen Sie *<versionfoldername>* durch die Versionsnummer der Vierernotation, die Sie auf dem Datenträger gefunden haben.
@@ -49,6 +53,7 @@ Das nächste Thema ist [Portieren von XAML und UI](w8x-to-uwp-porting-xaml-and-u
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

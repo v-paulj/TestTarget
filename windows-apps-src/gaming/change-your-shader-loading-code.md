@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Vergleich der OpenGL ES 2.0-Shaderpipeline mit Direct3D
-description: Vom Konzept her ist die Direct3D 11-Shaderpipeline der in OpenGL ES 2.0 sehr ähnlich.
+title: "Vergleich der OpenGL ES 2.0-Shaderpipeline mit Direct3D"
+description: "Vom Konzept her ist die Direct3D 11-Shaderpipeline der in OpenGL ES 2.0 sehr ähnlich."
 ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: bc13df5e7f2648897be31b5cda634d23ffae8b6b
+
 ---
 
 # Vergleich der OpenGL ES 2.0-Shaderpipeline mit Direct3D
@@ -263,6 +267,7 @@ Ausführliche Informationen zur Verwendung der Semantik mit Direct3D finden Sie 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

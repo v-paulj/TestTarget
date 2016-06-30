@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Über den Windows Store für Unternehmen können Sie branchenspezifische Apps (Line-of-Business-Apps, LOB-Apps) direkt für Unternehmen veröffentlichen, damit diese Volumenlizenzen erwerben können, ohne die Apps im Store allgemein zur Verfügung zu stellen.
+Description: "Über den Windows Store für Unternehmen können Sie branchenspezifische Apps (Line-of-Business-Apps, LOB-Apps) direkt für Unternehmen veröffentlichen, damit diese Volumenlizenzen erwerben können, ohne die Apps im Store allgemein zur Verfügung zu stellen."
 title: Verteilen von branchenspezifischen Apps an Unternehmen
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
+ms.sourcegitcommit: 9ad7589344d2af986e52ae43acc3e48de6374ae6
+ms.openlocfilehash: d7551e0456ce0e59dbbfa92690ddd5ba2ebaf8b4
+
 ---
 
 # Verteilen von branchenspezifischen Apps an Unternehmen
@@ -48,9 +51,11 @@ Weitere Informationen finden Sie unter [Optionen für die Organisationslizenzier
 
 ### Unternehmensbereitstellung von branchenspezifischen Apps
 
-Wenn Sie auf **An Store übermitteln** klicken, durchläuft die App den Zertifizierungsprozess. Danach muss ein Administrator des Unternehmens die App im privaten Store des Unternehmens im Portal des Windows Store für Unternehmen hinzufügen. Das Unternehmen kann die App dann für seine Benutzer bereitstellen.
+Wenn Sie auf **An Store übermitteln** klicken, durchläuft die App den Zertifizierungsprozess. Danach muss ein Administrator des Unternehmens die App dem privaten Store des Unternehmens im Portal des Windows Store für Unternehmen hinzufügen. Das Unternehmen kann die App dann für seine Benutzer bereitstellen.
 
-Weitere Informationen finden Sie unter [Arbeiten mit LOB-Apps](http://go.microsoft.com/fwlink/p/?LinkId=698846) und [Verteilen von Apps über Ihren privaten Store](http://go.microsoft.com/fwlink/p/?LinkId=698847).
+> **Hinweis** Um Ihre branchenspezifische App zu erhalten, muss sich die Organisation in einem [unterstützten Markt](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets) befinden. Beim Übermitteln der App darf dieser Markt nicht ausgeschlossen worden sein. 
+
+Weitere Informationen finden Sie unter [Arbeiten mit Branchen-Apps](http://go.microsoft.com/fwlink/p/?LinkId=698846) und [Verteilen von Apps über den privaten Store](http://go.microsoft.com/fwlink/p/?LinkId=698847).
 
 ### Aktualisieren von branchenspezifischen Apps
 
@@ -75,6 +80,7 @@ Weitere Informationen finden Sie unter [Querladen von Branchen-Apps in Windows 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

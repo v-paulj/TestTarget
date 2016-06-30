@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
 Description: Verwenden Sie Ausrichtung, Rand und Abstand, um das Layout von Elementen auf einer Seite zu steuern.
-title: Ausrichtung, Rand und Abstand für UWP-Apps (Universelle Windows-Plattform)
+title: "Ausrichtung, Rand und Abstand für UWP-Apps (Universelle Windows-Plattform)"
 ms.assetid: 9412ABD4-3674-4865-B07D-64C7C26E4842
 label: Alignment, margin, and padding
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 86635255fbdae83fb2749e2aea7011a8b989e83f
+
 ---
 # Ausrichtung, Rand und Abstand
 
@@ -18,9 +22,9 @@ Die [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/br
             &nbsp;&nbsp;Als generelles Layoutprinzip gilt: Wenden Sie Messungen nur auf bestimmte Schlüsselelemente an und nutzen Sie für die anderen Elemente das adaptive Layoutverhalten. Dadurch wird ein flexibles Layoutverhalten für den Fall bereitgestellt, dass der Benutzer die Größe des oberen App-Fensters festlegt. Dies ist normalerweise jederzeit möglich.
 
  
-Wenn in einem adaptiven Container [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718)- und [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)-Werte vorhanden sind oder eine Beschneidung erfolgt, wird das Layout auch dann durch das Verhalten des zugehörigen Containers gesteuert, wenn **Stretch** als Ausrichtungswert festgelegt ist. In Panels wirkt sich ein **Stretch**-Wert, der durch **Height** und **Width** umgangen wurde, so aus, als würde der Wert **Center** lauten.
+Wenn in einem adaptiven Container [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718)- und [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751)-Werte vorhanden sind oder eine Beschneidung erfolgt, wird das Layout auch dann durch das Verhalten des zugehörigen Containers gesteuert, wenn **Stretch** als Ausrichtungswert festgelegt ist. In Bereichen agiert ein **Stretch**-Wert, der durch **Height** und **Width** ausgeschlossen wurde, als würde der Wert **Center** lauten.
 
-Wenn keine natürlichen oder berechneten Höhen- und Breitenwerte vorhanden sind, sind diese Abmessungswerte mathematisch als **NaN** (keine Zahl) definiert. Die Elemente warten auf die Zuweisung von Abmessungen durch den zugehörigen Layoutcontainer. Nach Ausführung des Layouts liegen für die Elemente, für die eine **Stretch**-Ausrichtung verwendet wurde, Werte für die [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707)- und [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)-Eigenschaften vor. Die **NaN**-Werte bleiben in [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) und [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) für die untergeordneten Elemente erhalten, sodass das adaptive Verhalten erneut ausgeführt werden kann. Dies kann beispielsweise der Fall sein, wenn layoutbezogene Änderungen, wie die Größenänderung des App-Fensters, einen weiteren Layoutzyklus verursachen.
+Wenn keine natürlichen oder berechneten Höhen- und Breitenwerte vorhanden sind, sind diese Abmessungswerte mathematisch **NaN** (keine Zahl). Die Elemente warten auf die Zuweisung von Abmessungen durch den zugehörigen Layoutcontainer. Nach Ausführung des Layouts liegen für die Elemente, für die eine **Stretch**-Ausrichtung verwendet wurde, Werte für die [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707)- und [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709)-Eigenschaften vor. Die **NaN**-Werte bleiben in [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718) und [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751) für die untergeordneten Elemente erhalten, sodass das adaptive Verhalten erneut ausgeführt werden kann. Dies kann beispielsweise der Fall sein, wenn layoutbezogene Änderungen, wie die Größenänderung des App-Fensters, einen weiteren Layoutzyklus verursachen.
 
 Für Textelemente wie [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) ist normalerweise keine explizit deklarierte Breite vorhanden. Sie haben jedoch eine berechnete Breite, die Sie mithilfe von [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) abfragen können. Diese Breite hebt zudem eine **Stretch**-Ausrichtung auf. (Die [**FontSize**](https://msdn.microsoft.com/library/windows/apps/br209657)-Eigenschaft und weitere Texteigenschaften sowie der Text selbst deuten bereits auf die beabsichtigte Layoutgröße hin. Text sollte normalerweise nicht gestreckt werden.) Innerhalb eines Steuerelements als Inhalt verwendeter Text hat den gleichen Effekt. Durch das Vorhandensein von Text, der dargestellt werden muss, wird eine **ActualWidth**-Berechnung verursacht. Dadurch wird zudem eine gewünschte Breite und Größe an das enthaltende Steuerelement angepasst. Textelemente verfügen auch über eine [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707), die auf der Schriftgröße pro Zeile, Zeilenumbrüchen und anderen Texteigenschaften basiert.
 
@@ -71,7 +75,7 @@ Die [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718)-Eigen
 
 ## Verwandte Themen
 
-**Referenz**
+**Referenzen**
 
 [**FrameworkElement.Height**](https://msdn.microsoft.com/library/windows/apps/br208718)
 
@@ -86,6 +90,7 @@ Die [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718)-Eigen
 [**Control.Padding**](https://msdn.microsoft.com/library/windows/apps/br209459)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

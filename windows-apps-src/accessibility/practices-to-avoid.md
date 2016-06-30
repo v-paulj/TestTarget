@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: Listet die Praktiken auf, die Sie vermeiden sollten, wenn Sie eine barrierefreie UWP-App (Universelle Windows-Plattform) erstellen möchten.
+Description: "Listet die Praktiken auf, die Sie vermeiden sollten, wenn Sie eine barrierefreie UWP-App (Universelle Windows-Plattform) erstellen möchten."
 ms.assetid: 024A9B70-9821-45BB-93F1-61C0B2ECF53E
-title: Nicht empfehlenswerte Praktiken für die Barrierefreiheit
+title: "Nicht empfehlenswerte Praktiken für die Barrierefreiheit"
 label: Accessibility practices to avoid
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: b5f5f220d5ff70d70dd797c0bf26a355bd447563
+
 ---
 # Nicht empfehlenswerte Praktiken für die Barrierefreiheit
 
@@ -32,6 +36,7 @@ Listet die Praktiken auf, die Sie vermeiden sollten, wenn Sie eine barrierefreie
 * [Prüfliste für die Barrierefreiheit](accessibility-checklist.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

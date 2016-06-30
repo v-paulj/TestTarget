@@ -1,12 +1,15 @@
 ---
 author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
-title: Device Portal für Desktop
-description: Hier erfahren Sie, wie das Windows Device Portal Diagnose und Automatisierung auf dem Windows-Desktop öffnet.
+title: "Device Portal für Desktop"
+description: "Hier erfahren Sie, wie das Windows Device Portal Diagnose und Automatisierung auf dem Windows-Desktop öffnet."
+ms.sourcegitcommit: f09f0233ec11b41989cf52da3c5e8cb37a97b607
+ms.openlocfilehash: 7be27f5fb15676c5330f22995dd044899eddfd3d
+
 ---
 # Device Portal für Desktop
 
-Ab Windows 10, Version 1604, sind weitere Entwicklerfeatures für Desktop verfügbar. Diese Features sind nur verfügbar, wenn der Entwicklermodus aktiviert ist.
+Ab Windows 10, Version 1607, sind weitere Entwicklerfeatures für Desktop verfügbar. Diese Features sind nur verfügbar, wenn der Entwicklermodus aktiviert ist.
 
 Informationen zum Aktivieren des Entwicklermodus finden Sie unter [Aktivieren Ihres Geräts für die Entwicklung](../get-started/enable-your-device-for-development.md).
 
@@ -101,6 +104,7 @@ So beheben Sie dieses Problem:
 2. Starten Sie Ihren Computer neu, um sicherzustellen, dass alle Updates angewendet wurden.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

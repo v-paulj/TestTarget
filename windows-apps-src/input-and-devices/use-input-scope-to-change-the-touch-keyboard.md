@@ -1,12 +1,16 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Um Benutzern die Eingabe von Daten mit der Bildschirmtastatur oder dem Soft Input Panel (SIP) zu erleichtern, können Sie den Eingabeumfang des Textsteuerelements an die Art der Daten anpassen, die der Benutzer vermutlich eingeben wird.
-MS-HAID: 'dev\_ctrl\_layout\_txt.use\_input\_scope\_to\_change\_the\_touch\_keyboard'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "Um Benutzern die Eingabe von Daten mit der Bildschirmtastatur oder dem Soft Input Panel (SIP) zu erleichtern, können Sie den Eingabeumfang des Textsteuerelements an die Art der Daten anpassen, die der Benutzer vermutlich eingeben wird."
+MS-HAID: dev\_ctrl\_layout\_txt.use\_input\_scope\_to\_change\_the\_touch\_keyboard
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: Verwenden des Eingabeumfangs zum Ändern der Bildschirmtastatur
+title: "Verwenden des Eingabeumfangs zum Ändern der Bildschirmtastatur"
 ms.assetid: 6E5F55D7-24D6-47CC-B457-B6231EDE2A71
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 02f06ee498b136f811b4b3b8080a9cb043693504
+
 ---
 
 # Verwenden des Eingabeumfangs zum Ändern der Bildschirmtastatur
@@ -261,6 +265,7 @@ Enthält die Taste **=**.
 |Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig aktiviert, kann deaktiviert werden</li><li>Autokorrektur: Immer deaktiviert</li><li>Automatische Großschreibung: Immer aktiviert</li><li>Textvorhersage: Immer deaktiviert</li></ul> | Verfügbarkeit von Features:<ul><li>Rechtschreibprüfung: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Autokorrektur: Standardmäßig deaktiviert, kann aktiviert werden</li><li>Automatische Großschreibung: Standardmäßig deaktiviert, kann aktiviert werden. Erster Buchstabe eines Worts wird groß geschrieben.</li><li>Textvorhersage: Standardmäßig deaktiviert, kann aktiviert werden</li></ul> |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

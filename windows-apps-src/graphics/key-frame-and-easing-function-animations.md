@@ -1,8 +1,12 @@
 ---
 author: Jwmsft
-title: Keyframeanimationen und Animationen für Beschleunigungsfunktionen
+title: "Keyframeanimationen und Animationen für Beschleunigungsfunktionen"
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
-description: Lineare Keyframe-Animationen, Keyframe-Animationen mit einem „KeySpline“-Wert und Beschleunigungsfunktionen sind drei verschiedene Techniken für etwa das gleiche Szenario.
+description: "Lineare Keyframe-Animationen, Keyframe-Animationen mit einem „KeySpline“-Wert und Beschleunigungsfunktionen sind drei verschiedene Techniken für etwa das gleiche Szenario."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: f2c6d6c0e1d11fee40440cae06d68907313f62dc
+
 ---
 # Keyframe-Animationen und Animationen für Beschleunigungsfunktionen
 
@@ -21,7 +25,7 @@ Keyframe-Animationen lassen mehr als einen Zielwert zu, der an einem gewissen Pu
 
 Für das Interpolationsverhalten steuert jeder Keyframe die Interpolation, bis die **KeyTime**-Zeit erreicht ist. **Value** wird zum selben Zeitpunkt erreicht. Folgen weitere Keyframes, wird der Wert anschließend zum Startwert für den nächsten Keyframe in einer Sequenz.
 
-Wenn beim Start der Animation kein Keyframe mit der **KeyTime** 0:0:0 vorhanden ist, ist der nicht animierte Wert der Eigenschaft der Startwert. Dies ist mit dem Verhalten einer **From**/**To**/**By**-Animation vergleichbar, wenn kein **From** vorhanden ist.
+Wenn beim Start der Animation kein Keyframe mit der **KeyTime** 0:0:0 vorhanden ist, ist der nicht animierte Wert der Eigenschaft der Startwert. Dies ist mit dem Verhalten einer **From**/**To**/**By**-Animation vergleichbar, wenn keine Angabe für **From** vorhanden ist.
 
 Die Dauer einer Keyframe-Animation entspricht implizit der Dauer des höchsten **KeyTime**-Werts, der in einem ihrer Keyframes festgelegt ist. Sie können eine explizite [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) festlegen. Achten Sie dabei jedoch darauf, dass sie nicht kürzer als eine **KeyTime** in ihren eigenen Keyframes ist, andernfalls wird ein Teil der Animation abgeschnitten.
 
@@ -154,8 +158,8 @@ Mithilfe von Beschleunigungsfunktionen können Sie benutzerdefinierte mathematis
 
 Beschleunigungsfunktionen können auf drei verschiedene Arten auf Animationen angewendet werden:
 
--   Verwendung eines Beschleunigungskeyframes in einer Keyframe-Animation, wie im vorhergehenden Abschnitt beschrieben. Verwenden Sie [**EasingColorKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210267), [**EasingDoubleKeyFrame.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.easingdoublekeyframe.easingfunction.aspx) oder [**EasingPointKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210279)
--   Durch Festlegen der Eigenschaft **EasingFunction** auf einen der **From**/**To**/**By**-Animationstypen. Verwenden Sie [**ColorAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR243075), [**DoubleAnimation.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) oder [**PointAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210354)
+-   Verwendung eines Beschleunigungskeyframes in einer Keyframe-Animation, wie im vorhergehenden Abschnitt beschrieben. Verwenden Sie [**EasingColorKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210267), [**EasingDoubleKeyFrame.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.easingdoublekeyframe.easingfunction.aspx) oder [**EasingPointKeyFrame.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210279).
+-   Durch Festlegen der Eigenschaft **EasingFunction** für einen der **From**/**To**/**By**-Animationstypen. Verwenden Sie [**ColorAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR243075), [**DoubleAnimation.EasingFunction**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx) oder [**PointAnimation.EasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR210354).
 -   Durch Festlegen von [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) als Teil einer [**VisualTransition**](https://msdn.microsoft.com/library/windows/apps/BR209034). Diese Methode wird nur zum Definieren von visuellen Zuständen für Steuerelemente verwendet. Weitere Informationen dazu finden Sie unter [**GeneratedEasingFunction**](https://msdn.microsoft.com/library/windows/apps/BR209037) oder [Storyboards für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
 
 Nachfolgend finden Sie eine Liste der Beschleunigungsfunktionen:
@@ -227,7 +231,7 @@ Wenn eine Beschleunigungsfunktion auf eine **From**/**To**/**By**-Animation ange
 
 Ein Animationstyp sollte besonders hervorgehoben werden, da er die einzige Methode darstellt, einen animierten Wert auf Eigenschaften von einem anderen Typ als [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) oder [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) anzuwenden. Hierbei handelt es sich um die Keyframe-Animation [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320). Es besteht ein Unterschied zum Animieren mithilfe von [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx)-Werten, da es keine Möglichkeit zur Interpolation der Werte zwischen den Frames gibt. Beim Erreichen der [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR210342) des Frames wird der animierte Wert sofort auf den Wert festgelegt, der im **Value** des Keyframes angegeben ist. Da keine Interpolation vorhanden ist, wird nur ein Keyframe in der Keyframe Collection **ObjectAnimationUsingKeyFrames** verwendet: [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132).
 
-Der [**Value**](https://msdn.microsoft.com/library/windows/apps/BR210344) eines [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) wird oft mithilfe der Eigenschaftselementsyntax festgelegt, da der festzulegende Objektwert häufig nicht als Zeichenfolge zum Ausfüllen des **Value** in einer Attributsyntax ausgedrückt werden kann. Wenn Sie einen Verweis wie z. B. [StaticResource](https://msdn.microsoft.com/library/windows/apps/Mt185588) verwenden, können Sie die Attributsyntax dennoch verwenden.
+Der [**Value**](https://msdn.microsoft.com/library/windows/apps/BR210344) eines [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) wird oft mithilfe der Eigenschaftselementsyntax festgelegt, da der festzulegende Objektwert häufig nicht als Zeichenfolge zum Ausfüllen des **Value** in einer Attributsyntax ausgedrückt werden kann. Wenn Sie einen Verweis wie z. B. [StaticResource](https://msdn.microsoft.com/library/windows/apps/Mt185588) verwenden, können Sie die Attributsyntax dennoch verwenden.
 
 Die Verwendung von [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320) in den Standardvorlagen erfolgt bei einem Verweis auf eine [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)-Ressource durch eine Vorlageneigenschaft. Bei diesen Ressourcen handelt es sich um [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)-Objekte, nicht nur um einen [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)-Wert. Außerdem werden Ressourcen verwendet, die als Systemthemen ([**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/BR208807)) definiert sind. Sie können direkt einem Wert mit **Brush**-Typ wie [**TextBlock.Foreground**](https://msdn.microsoft.com/library/windows/apps/BR209665) zugeordnet werden; eine indirekte Zielauswahl ist nicht erforderlich. Da **SolidColorBrush** jedoch nicht [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) oder **Color** ist, müssen Sie **ObjectAnimationUsingKeyFrames** verwenden, um die Ressource zu nutzen.
 
@@ -311,6 +315,7 @@ Sie können mehrere [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/libr
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

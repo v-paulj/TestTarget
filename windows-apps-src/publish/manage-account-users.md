@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Fügen Sie Ihrem Dev Center-Konto Benutzer hinzu, und weisen Sie diesen Rollen mit bestimmten Berechtigungen zu.
+Description: "Fügen Sie Ihrem Dev Center-Konto Benutzer hinzu, und weisen Sie diesen Rollen mit bestimmten Berechtigungen zu."
 title: Verwalten von Kontobenutzern
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
+translationtype: Human Translation
+ms.sourcegitcommit: 3cfc50e56f3fa65a9dfa2c8b4582c1a53c2b13d1
+ms.openlocfilehash: 18e25d0064652089d450eec811a7a5d24b8dc3e8
+
 ---
 
 # Verwalten von Kontobenutzern
@@ -225,6 +229,7 @@ Um einen Benutzer, eine Gruppe oder eine Azure AD-Anwendung aus Ihrem Dev Center
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

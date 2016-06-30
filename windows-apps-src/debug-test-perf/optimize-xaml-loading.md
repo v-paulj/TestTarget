@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 569E8C27-FA01-41D8-80B9-1E3E637D5B99
 title: Optimieren Ihres XAML-Markups
-description: Die Analyse von XAML-Markup zum Erstellen von Objekten im Arbeitsspeicher kann für eine komplexe Benutzeroberfläche viel Zeit in Anspruch nehmen. Hier finden Sie einige Punkte, die Sie zur Optimierung der XAML-Markupanalyse, Ladezeit und Effizienz des Arbeitsspeichers für Ihre App vornehmen können.
+description: "Die Analyse von XAML-Markup zum Erstellen von Objekten im Arbeitsspeicher kann für eine komplexe Benutzeroberfläche viel Zeit in Anspruch nehmen. Hier finden Sie einige Punkte, die Sie zur Optimierung der XAML-Markupanalyse, Ladezeit und Effizienz des Arbeitsspeichers für Ihre App vornehmen können."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c2131b084d8bb989f1f7767f54db697e1cdd8dcf
+
 ---
 # Optimieren Ihres XAML-Markups
 
@@ -125,7 +129,7 @@ Die XAML-Plattform speichert allgemein verwendete Objekte zwischen, um eine mög
 </Page> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-Suchen Sie auch nach Pinseln, die vordefinierte Farben verwenden: `"Orange"` und `"#FFFFA500"` geben dieselbe Farbe an. Definieren Sie den Pinsel als Ressource, um die Duplizierung zu beheben. Wenn Steuerelemente auf anderen Seiten denselben Pinsel verwenden, verschieben Sie diese in die Datei „App.xaml“.
+Prüfen Sie auch auf Pinsel, die vordefinierte Farben verwenden: `"Orange"` und `"#FFFFA500"` geben dieselbe Farbe an. Definieren Sie den Pinsel als Ressource, um die Duplizierung zu beheben. Wenn Steuerelemente auf anderen Seiten denselben Pinsel verwenden, verschieben Sie diese in die Datei „App.xaml“.
 
 **Effizient**
 
@@ -286,6 +290,7 @@ Wenn Sie wissen möchten, ob Sie über XBF2 verfügen, öffnen Sie Ihre App in e
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 7DBEE5E2-C3EC-4305-823D-9095C761A1CD
-description: In diesem Artikel wird erläutert, wie Sie eine variable Fotosequenz aufnehmen, um mehrere Frames von Bildern in schneller Folge aufzunehmen und jeden Frame so zu konfigurieren, dass unterschiedliche Einstellungen für Fokus, Blitz, ISO, Belichtung und Belichtungskorrektur verwendet werden.
+description: "In diesem Artikel wird erläutert, wie Sie eine variable Fotosequenz aufnehmen, um mehrere Frames von Bildern in schneller Folge aufzunehmen und jeden Frame so zu konfigurieren, dass unterschiedliche Einstellungen für Fokus, Blitz, ISO, Belichtung und Belichtungskorrektur verwendet werden."
 title: Variable Fotosequenz
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: c6be6c0ea255c38bba65550ae44c7f88c140ca0f
+
 ---
 
 # Variable Fotosequenz
@@ -96,6 +100,7 @@ Bereinigen Sie nach der Aufnahme variabler Fotosequenzen oder nach dem Anhalten 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

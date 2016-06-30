@@ -3,6 +3,10 @@ author: mtoepke
 title: Zusammensetzen des Renderingframeworks
 description: Jetzt ist es Zeit, einen Blick darauf zu werfen, wie diese Struktur und der Zustand im Beispielspiel zum Anzeigen der Grafiken verwendet werden.
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 5eb6ea7ad1a30f020c155007396383b88d10c0a8
+
 ---
 
 # Zusammensetzen des Renderingframeworks
@@ -6321,6 +6325,7 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die univer
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Auf dem Dev Center-Dashboard können Sie eine Anzeigenkampagne erstellen, um Ihre App zu bewerben und ihre Benutzerbasis zu erweitern.
-title: Erstellen einer Anzeigenkampagne für Ihre App
+Description: "Auf dem Dev Center-Dashboard können Sie eine Anzeigenkampagne erstellen, um Ihre App zu bewerben und ihre Benutzerbasis zu erweitern."
+title: "Erstellen einer Anzeigenkampagne für Ihre App"
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
+ms.sourcegitcommit: ce26f020480c3f45e3fc4130a49eb66ecbdf5ba7
+ms.openlocfilehash: 9596dd4de0c05ee6f85189e529ad18e528e954df
+
 ---
 
 # Erstellen einer Anzeigenkampagne für Ihre App
@@ -23,9 +26,9 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben Ihrer App:
 3.  Definieren Sie die allgemeinen Einstellungen für diese Kampagne auf der Seite **Neue Kampagne** im Abschnitt **Kampagnendetails**.
     -   Geben Sie Ihrer Anzeigenkampagne im Feld **Kampagnenname** einen Namen.
     -   Wählen Sie unter **Kampagnentyp** eine der folgenden Optionen aus:
-        -   **Kostenpflichtige Anzeigen:** Diese Anzeigen werden in jeder App angezeigt, die dem Zielgerät und der Zielkategorie der App entspricht.
-        -   **Kostenlose Eigenwerbung:** Diese Anzeigen werden nur in Ihren Apps angezeigt (die dem Zielgerät der beworbenen App entsprechen). Eigenwerbung ist kostenlos. Weitere Informationen finden Sie unter [Über Eigenwerbung](about-house-ads.md).
-        -   **Kostenlose Community-Anzeigen:** Diese Anzeigen werden in Apps ausgeführt, die von anderen Entwicklern veröffentlicht wurden, die ebenfalls Community-Anzeigenkampagnen erstellen. Bevor Sie diese Option auswählen können, müssen Sie auf dem Dashboard auf der Seite **Gewinnbringende Nutzung mit Anzeigen** das Kontrollkästchen **Show community ads in my app** aktivieren. Weitere Informationen finden Sie unter [Über Community-Anzeigen](about-community-ads.md).
+        -   **Kostenpflichtig**: Diese Anzeigen werden in jeder App angezeigt, die dem Zielgerät und der Zielkategorie der App entspricht.
+        -   **Community (kostenlos):** Diese Anzeigen werden in Apps ausgeführt, die von anderen Entwicklern veröffentlicht wurden, die ebenfalls Community-Anzeigenkampagnen erstellen. Bevor Sie diese Option auswählen können, müssen Sie auf dem Dashboard auf der Seite **Gewinnbringende Nutzung mit Anzeigen** das Kontrollkästchen **Show community ads in my app** aktivieren. Weitere Informationen finden Sie unter [Über Community-Anzeigen](about-community-ads.md).
+        -   **Eigenwerbung (kostenlos):** Diese Anzeigen werden nur in Ihren Apps angezeigt (die dem Zielgerät der beworbenen App entsprechen). Eigenwerbung ist kostenlos. Weitere Informationen finden Sie unter [Über Eigenwerbung](about-house-ads.md).
 
     > **Hinweis**  Wenn Ihre App noch nicht veröffentlicht wurde, wird auf der Seite **Neue Kampagne** eine Fehlermeldung angezeigt. Sie müssen warten, bis Ihre App veröffentlicht wurde, bevor Sie dafür eine Anzeigenkampagne erstellen können.
 
@@ -41,12 +44,12 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben Ihrer App:
     In diesem Abschnitt wird auch das Diagramm **Geschätzte Reichweite** angezeigt. Das Diagramm zeigt die Zielgruppe, die Sie mit Ihrer aktuellen Auswahl für die Adressierung erreichen, als Prozentsatz aller Benutzer von Windows-Apps mit Anzeigenunterstützung in den ausgewählten Märkten an.
 
 5.  Wählen Sie im Abschnitt **Anzeigenentwurf** eine der folgenden Optionen aus:
-    -   **Meine Anzeige hochladen**. Wählen Sie diese Option aus, um Ihren eigenen Anzeigenentwurf zu verwenden. Sie können verschiedene Dateien für jede der verfügbaren Anzeigengrößen hochladen. Die Dateien müssen folgenden Anforderungen und Richtlinien entsprechen:
+    -   **Use custom creatives**. Wählen Sie diese Option aus, um Ihren eigenen Anzeigenentwurf zu verwenden. Sie können verschiedene Dateien für jede der verfügbaren Anzeigengrößen hochladen. Die Dateien müssen folgenden Anforderungen und Richtlinien entsprechen:
         -   Jede Datei muss eine PNG-oder JPG-Datei mit weniger als 2 MB sein.
         -   Ihre Anzeigenentwürfe müssen die in der [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595) dargelegten Anforderungen erfüllen.
         -   Der Inhalt in Ihren Anzeigenentwürfen muss für die beworbene App relevant sein. Anzeigenentwürfe, die nicht mit der App zusammenhängen, werden nicht in anderen Apps verteilt.
         -   Alle Inhalte in Ihren Anzeigenentwürfen sollten deutlich lesbar sein. Beispielsweise sollten Inhalte nicht verschwommen, verpixelt oder gestreckt sein.
-    -   **Automatisch generierte Anzeige**. Wählen Sie diese Option aus, um Anzeigen aus einer Liste von Standardvorlagen zu verwenden. Mit den folgenden Optionen können Sie den Inhalt der Anzeigen anpassen. Während Sie Ihre Auswahl treffen, wird die Vorschau der Anzeigen automatisch aktualisiert.
+    -   **Use auto-generated creatives**. Wählen Sie diese Option aus, um Anzeigen aus einer Liste von Standardvorlagen zu verwenden. Mit den folgenden Optionen können Sie den Inhalt der Anzeigen anpassen. Während Sie Ihre Auswahl treffen, wird die Vorschau der Anzeigen automatisch aktualisiert.
         -   Aktivieren Sie das Kontrollkästchen **Bewertung meiner App anzeigen**, wenn die Bewertung der App angezeigt werden soll. Wenn Ihre App in allen ausgewählten Märkten kostenlos ist, können Sie auch **Anzeigen, dass meine App kostenlos ist** auswählen.
         -   Wählen Sie im Dropdownmenü **Sprache** die Sprache der Anzeigen aus. Der Text für den Windows Store-Badge und Ihren benutzerdefinierten Slogan-Text (sofern angegeben) werden in der von Ihnen ausgewählten Sprache angezeigt.
         -   Um Ihrer Anzeige eine zusätzliche Textzeile hinzuzufügen, geben Sie den Text im Feld **Benutzerdefinierter Slogan** ein.
@@ -54,7 +57,9 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben Ihrer App:
 
         -   Wählen Sie eine Hintergrundfarbe und ein Bild für Ihre Anzeigen aus, indem Sie **Anzeigendesign anpassen/Alle Größen anzeigen** erweitern. Es sind die Bilder verfügbar, die Sie Ihrer App im Store zugewiesen haben.
 
-6.  Wählen Sie dann die Bezahlungseinstellungen Ihrer Anzeigenkampagne im Abschnitt **Budget und Bezahlung** aus.
+6. Wenn Sie Kochava oder Tune verwenden, um Installationsanalysen für Ihre App zu messen, klicken Sie auf **Third-party install tracking URL (Kochava or Tune)**, und geben Sie Ihre Installationsverfolgungs-URL von Kochava oder Tune ein. Beim Speichern der Kampagne wird die Verfolgungs-URL überprüft, um sicherzustellen, dass sie in die Eintragsseite für Ihre App im Windows Store aufgelöst wird. Weitere Informationen zur Installationsverfolgung mit Kochava und Tune finden Sie in der [Kochava](http://support.kochava.com/)- und [Tune](https://help.tune.com/)-Dokumentation.
+
+7.  Wählen Sie dann die Bezahlungseinstellungen Ihrer Anzeigenkampagne im Abschnitt **Budget und Bezahlung** aus.
    > **Hinweis**  Wenn Sie eine Kampagne für Eigenwerbung oder Community-Anzeigen erstellen, wird der Abschnitt **Budget und Bezahlung** nicht angezeigt, da diese Kampagnen kostenlos sind.
 
     -   Legen Sie mithilfe des Schiebereglers unter **Budget** den Betrag fest, den Sie monatlich für diese Anzeige aufwenden möchten.
@@ -63,9 +68,9 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben Ihrer App:
 
     -   Legen Sie ein Zahlungsmittel für Ihre Anzeigenkampagne fest, indem Sie auf **Neues Zahlungsinstrument hinzufügen** klicken und Ihre Kontodaten eingeben.
         > **Wichtig**  Das Land/die Region der Rechnungsadresse Ihres Zahlungsmittels muss mit dem Land/der Region übereinstimmen, das bzw. die Ihrem Dev Center-Konto zugeordnet ist.
-    – Wenn Sie von Microsoft einen Gutschein für eine Anzeigenkampagne erhalten haben, klicken Sie auf **Use a coupon**, geben Sie den Gutscheincode ein, und klicken Sie auf **Übernehmen**, um den Gutschein für die Kampagne zu übernehmen.
+– Wenn Sie von Microsoft einen Gutschein für eine Anzeigenkampagne erhalten haben, klicken Sie auf **Use a coupon**, geben Sie den Gutscheincode ein, und klicken Sie auf **Übernehmen**, um den Gutschein für die Kampagne zu übernehmen.
 
-7.  Klicken Sie abschließend auf **Überprüfen**, um die Einstellungen der Anzeigenkampagne – und falls es sich um eine kostenpflichtige Kampagne handelt – das Budget und die Zahlungsinformationen zu bestätigen. Klicken Sie auf **Bestätigen**. Ihre Anzeigen werden meist nach wenigen Stunden auf Windows- oder Windows Phone-Geräten angezeigt!
+8.  Klicken Sie abschließend auf **Überprüfen**, um die Einstellungen der Anzeigenkampagne – und falls es sich um eine kostenpflichtige Kampagne handelt – das Budget und die Zahlungsinformationen zu bestätigen. Klicken Sie auf **Bestätigen**. Ihre Anzeigen werden meist nach wenigen Stunden angezeigt.
 
 ## Verwandte Themen
 
@@ -78,6 +83,7 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben Ihrer App:
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

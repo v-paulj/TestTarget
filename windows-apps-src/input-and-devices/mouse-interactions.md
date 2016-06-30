@@ -5,8 +5,8 @@ title: Mausinteraktionen
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: b381cdba2a20480bb8b4d7802d2ff490744e5f03
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 10deda7b44d4cfb5c65b425bf82ceaf6654aab95
 
 ---
 
@@ -27,7 +27,7 @@ Die Maus- und Toucheingabe unterscheiden sich dahingehend, dass bei der Touchein
 
 In diesem Thema werden Designüberlegungen für Mausinteraktionen behandelt.
 
-## <span id="The_UWP_app_mouse_language"></span><span id="the_uwp_app_mouse_language"></span><span id="THE_UWP_APP_MOUSE_LANGUAGE"></span>Die UWP-App-Sprache für Mauseingaben
+## Die UWP-App-Sprache für Mauseingaben
 
 
 Ein kompakter Satz von Mausinteraktionen wird durchgängig im ganzen System verwendet.
@@ -45,19 +45,19 @@ Ein kompakter Satz von Mausinteraktionen wird durchgängig im ganzen System verw
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span id="Hover_to_learn"></span><span id="hover_to_learn"></span><span id="HOVER_TO_LEARN"></span>Lernen durch Zeigen</p></td>
+<td align="left"><p>Lernen durch Zeigen</p></td>
 <td align="left"><p>Zeigen Sie auf ein Element, um weitere Informationen oder visuelle Hinweise (wie etwa QuickInfos) aufzurufen, ohne eine Aktion auszuführen.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Left-click_for_primary_action"></span><span id="left-click_for_primary_action"></span><span id="LEFT-CLICK_FOR_PRIMARY_ACTION"></span>Linksklick, um primäre Aktion auszuführen</p></td>
+<td align="left"><p>Linksklick, um primäre Aktion auszuführen</p></td>
 <td align="left"><p>Klicken Sie mit der linken Maustaste auf ein Element, um dessen primäre Aktion aufzurufen (z. B. das Starten einer App oder das Ausführen eines Befehls).</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Scroll_to_change_view"></span><span id="scroll_to_change_view"></span><span id="SCROLL_TO_CHANGE_VIEW"></span>Bildlauf, um Ansicht zu ändern</p></td>
+<td align="left"><p>Bildlauf, um Ansicht zu ändern</p></td>
 <td align="left"><p>Zeigen Sie Bildlaufleisten an, damit Benutzer in einem Inhaltsbereich nach oben, unten, links und rechts navigieren können. Benutzer können durch Klicken auf Bildlaufleisten oder Drehen des Mausrads einen Bildlauf durchführen. Auf Bildlaufleisten kann die Position der aktuellen Ansicht innerhalb des Inhaltsbereichs angezeigt werden (durch das Schwenken bei der Fingereingabe wird eine ähnliche Benutzeroberfläche angezeigt).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Right-click_to_select_and_command"></span><span id="right-click_to_select_and_command"></span><span id="RIGHT-CLICK_TO_SELECT_AND_COMMAND"></span>Rechtsklick, um Auswahl zu treffen und Befehl auszuwählen</p></td>
+<td align="left"><p>Rechtsklick, um Auswahl zu treffen und Befehl auszuwählen</p></td>
 <td align="left"><p>Klicken Sie mit der rechten Maustaste, um die Navigationsleiste (sofern verfügbar) und die App-Leiste mit globalen Befehlen anzuzeigen. Klicken Sie mit der rechten Maustaste auf ein Element, um es auszuwählen und die App-Leiste mit Kontextbefehlen für das ausgewählte Element anzuzeigen.</p>
 <div class="alert">
 <strong>Hinweis</strong>  Klicken Sie mit der rechten Maustaste, um ein Kontextmenü anzuzeigen, wenn die in der Auswahl oder der App-Leiste verfügbaren Befehle nicht das gewünschte Benutzeroberflächenverhalten ermöglichen. Wir empfehlen jedoch ausdrücklich, die App-Leiste für alle Befehlsverhalten zu verwenden.
@@ -67,19 +67,19 @@ Ein kompakter Satz von Mausinteraktionen wird durchgängig im ganzen System verw
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="UI_commands_to_zoom"></span><span id="ui_commands_to_zoom"></span><span id="UI_COMMANDS_TO_ZOOM"></span>Benutzeroberflächenbefehle zum Zoomen</p></td>
+<td align="left"><p>Benutzeroberflächenbefehle zum Zoomen</p></td>
 <td align="left"><p>Zeigen Sie Benutzeroberflächenbefehle auf der App-Leiste an (z. B. "+" und "-"), oder drücken Sie STRG und drehen Sie das Mausrad, um Zusammendrück- und Aufziehbewegungen zum Zoomen zu emulieren.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="UI_commands_to_rotate"></span><span id="ui_commands_to_rotate"></span><span id="UI_COMMANDS_TO_ROTATE"></span>Benutzeroberflächenbefehle zum Drehen</p></td>
+<td align="left"><p>Benutzeroberflächenbefehle zum Drehen</p></td>
 <td align="left"><p>Zeigen Sie Benutzeroberflächenbefehle auf der App-Leiste an, oder drücken Sie STRG+UMSCHALTTASTE, und drehen Sie das Mausrad, um die Drehbewegung zum Drehen zu emulieren. Drehen Sie das Gerät selbst, um den ganzen Bildschirm zu drehen.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span id="Left-click_and_drag_to_rearrange"></span><span id="left-click_and_drag_to_rearrange"></span><span id="LEFT-CLICK_AND_DRAG_TO_REARRANGE"></span>Linksklick und ziehen, um neu anzuordnen</p></td>
+<td align="left"><p>Linksklick und ziehen, um neu anzuordnen</p></td>
 <td align="left"><p>Klicken Sie mit der linken Maustaste auf ein Element, und ziehen Sie, um es zu bewegen.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span id="Left-click_and_drag_to_select_text"></span><span id="left-click_and_drag_to_select_text"></span><span id="LEFT-CLICK_AND_DRAG_TO_SELECT_TEXT"></span>Linksklick und ziehen, um Text auszuwählen</p></td>
+<td align="left"><p>Linksklick und ziehen, um Text auszuwählen</p></td>
 <td align="left"><p>Klicken Sie mit der linken Maustaste auf auswählbaren Text, und ziehen Sie, um Text auszuwählen. Doppelklicken Sie, um ein Wort auszuwählen.</p></td>
 </tr>
 </tbody>
@@ -100,7 +100,7 @@ Verwenden Sie [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br
 
 - [Eingabe: Gesten und Manipulationen mit GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
 
-## <span id="Guidelines_for_visual_feedback"></span><span id="guidelines_for_visual_feedback"></span><span id="GUIDELINES_FOR_VISUAL_FEEDBACK"></span>Richtlinien für visuelles Feedback
+## Richtlinien für visuelles Feedback
 
 
 -   Wenn eine Maus erkannt wird (durch Bewegungs- oder Daraufzeigen-Ereignisse), zeigen Sie eine für Mausinteraktionen spezifische Benutzeroberfläche an, um auf vom Element verfügbar gemachte Funktionen hinzuweisen. Wenn die Maus für eine bestimmte Zeit nicht bewegt wird oder der Benutzer eine Fingereingabeinteraktion auslöst, blenden Sie die für Mausinteraktionen spezifische Benutzeroberfläche schrittweise aus. Somit bleibt die Benutzeroberfläche sauber und aufgeräumt.
@@ -113,7 +113,7 @@ Verwenden Sie [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br
 Allgemeine Informationen zum visuellen Feedback finden Sie unter [Richtlinien für visuelles Feedback](guidelines-for-visualfeedback.md).
 
 
-## <span id="Cursors"></span><span id="cursors"></span><span id="CURSORS"></span>Cursor
+## Cursor
 
 
 Für einen Mauszeiger ist eine Reihe von Standardcursor verfügbar. Diese geben die primäre Aktion eines Elements an.
@@ -128,7 +128,7 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 -   Verwenden Sie die Cursor für horizontale, vertikale und diagonale Größenänderung (![Cursor für vertikale Größenänderung](images/cursor-vertical.png), ![Cursor für horizontale Größenänderung](images/cursor-horizontal.png), ![Cursor für diagonale Größenänderung (unten links, oben rechts)](images/cursor-diagonal2.png), ![Cursor für diagonale Größenänderung (oben links, unten rechts)](images/cursor-diagonal1.png)), wenn die Größe eines Objekts geändert werden kann.
 -   Verwenden Sie den Handcursor (![Handcursor (offen)](images/cursor-pan1.png), ![Handcursor (geschlossen)](images/cursor-pan2.png)) beim Verschieben von Inhalt innerhalb einer Canvas (etwa bei einer Karte).
 
-## <span id="related_topics"></span>Verwandte Artikel
+## Verwandte Artikel
 
 * [Behandeln von Zeigereingaben](handle-pointer-input.md)
 * [Identifizieren von Eingabegeräten](identify-input-devices.md)
@@ -155,6 +155,6 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,16 +1,20 @@
 ---
-title: Copy to and from byte arrays
-description: This example code shows how to copy to and from byte arrays in an Universal Windows Platform (UWP) app.
+title: Kopieren in und aus Bytearrays
+description: "Dieser Beispielcode zeigt, wie Sie in einer App für die universelle Windows-Plattform (UWP) in und aus Bytearrays kopieren."
 ms.assetid: C343B08C-1FA1-40FD-8CA5-7FC9B707C5E3
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
+ms.openlocfilehash: db1691421cf4e540c9593efb4bbf2a608426c0ed
+
 ---
 
-# Copy to and from byte arrays
+# Kopieren in und aus Bytearrays
 
 
-\[ Updated for UWP apps on Windows 10. For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-This example code shows how to copy to and from byte arrays in an Universal Windows Platform (UWP) app.
+Dieser Beispielcode zeigt, wie Sie in einer UWP (Universelle Windows-Plattform)-App in und aus Bytearrays kopieren können.
 
 ```cs
 public void ByteArrayCopy()
@@ -30,6 +34,7 @@ public void ByteArrayCopy()
 }
 ```
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

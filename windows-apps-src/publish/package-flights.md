@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Wenn Ihre App ein AdMediatorControl- oder ein AdControl-Element zum Anzeigen von Werbebannern verwendet, können Sie Ihre Anzeigenfüllrate und Ihren Umsatz steigern, indem Sie in Ihrer App Microsoft-Partneranzeigen anzeigen.
+Description: "Wenn Ihre App ein AdMediatorControl- oder ein AdControl-Element zum Anzeigen von Werbebannern verwendet, können Sie Ihre Anzeigenfüllrate und Ihren Umsatz steigern, indem Sie in Ihrer App Microsoft-Partneranzeigen anzeigen."
 title: Flight-Pakete
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
+ms.sourcegitcommit: 9e62a7aa18950f7e1cc26b42762e3bb937c389ac
+ms.openlocfilehash: c538da2a58f38925938b9e28ec7ca65cdb9858a3
+
 ---
 
 # Flight-Pakete
@@ -28,7 +31,7 @@ Klicken Sie auf **Gruppe erstellen**, um die Gruppe zu speichern und mit der Ein
 > **Wichtig** Vergewissern Sie sich, dass Sie alle erforderlichen Einverständniserklärungen von den Personen eingeholt haben, die Sie Ihrer Test-Flight-Gruppe hinzufügen, und dass diese Personen sich bewusst sind, dass sie andere Pakete als die aus Ihrer Übermittlung ohne Test-Flight erhalten. 
 > Sie sollten sich auch überlegen, wie die Personen in Ihrem Flight-Paket Ihnen Feedback zur App geben können. Wir empfehlen das [Hinzufügen eines Steuerelements in Ihre App, um den Feedback-Hub zu starten](../monetize/launch-feedback-hub-from-your-app.md). Kunden können auf diese Weise ihre Eingabe direkt bereitstellen. Prüfen Sie das Feedback anschließend im [Feedbackbericht](feedback-report.md)) der App.
 
-Wenn Sie Ihre Test-Flight-Gruppe später bearbeiten möchten, klicken Sie auf **Export .csv**, um die Gruppeninformationen in einer CSV-Datei zu speichern. Nehmen Sie in dieser Datei Ihre Änderungen vor, und klicken Sie dann auf **CSV importieren**, um die Gruppenmitgliedschaft mit der neuen Version zu aktualisieren. Beachten Sie, dass es bis zu 30 Minuten dauern kann, bis Änderungen an der Gruppenmitgliedschaft implementiert werden.
+Wenn Sie Ihre Test-Flight-Gruppe später bearbeiten möchten, klicken Sie auf **Export .csv**, um die Gruppeninformationen in einer CSV-Datei zu speichern. Nehmen Sie in dieser Datei Ihre Änderungen vor, und klicken Sie dann auf **CSV importieren**, um die Gruppenmitgliedschaft mit der neuen Version zu aktualisieren. Beachten Sie, dass es bis zu 30 Minuten dauern kann, bis Änderungen an der Mitgliedschaft der Test-Flight-Gruppe implementiert werden. Wenn Sie nach der Veröffentlichung des zugehörigen Flight-Pakets Personen zu einer Test-Flight-Gruppe hinzufügen, werden die Pakete für die neuen Personen automatisch bereitgestellt. Sie müssen keine neue Übermittlung für das Flight-Paket erstellen und veröffentlichen. 
 
 ## Erstellen eines neuen Flight-Pakets
 
@@ -103,6 +106,7 @@ Zum Löschen eines Flight-Pakets, das Sie nicht mehr unterstützen möchten, kli
 Wenn Sie ein Flight-Paket löschen, erhalten alle Kunden mit Paketen, die Sie in diesem Flight-Paket verteilt haben, ein App-Update, wenn es ein Paket mit einer höheren Versionsnummer gibt (oder sobald ein solches Paket verfügbar ist). Wenn Benutzer die App deinstallieren und später erneut installieren, wird dies als neuer Kauf behandelt, und die Benutzer erhalten die höchste aktuell verfügbare Version. 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

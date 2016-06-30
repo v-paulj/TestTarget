@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: Speichern einer Datei mit einer Auswahl
-description: Mithilfe von FileSavePicker können Benutzer den Namen und Speicherort zum Speichern einer Datei durch die App angeben.
+description: "Mithilfe von FileSavePicker können Benutzer den Namen und Speicherort zum Speichern einer Datei durch die App angeben."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 68c7fcedbea40541632aa0a7ae65aa77db206280
+
 ---
 
 # Speichern einer Datei mit einer Auswahl
@@ -116,6 +120,7 @@ Im Beispiel wird überprüft, ob die Datei gültig ist. Danach wird der eigene D
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

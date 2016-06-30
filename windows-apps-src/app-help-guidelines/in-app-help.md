@@ -4,6 +4,10 @@ Description: Entwerfen Sie effektive Hilfe, die reaktiv innerhalb Ihrer App ange
 title: Richtlinien zum Entwerfen von In-App-Hilfe.
 label: In-app help
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: 7edad75b1639768023eb8add1e23fe0aafb0b674
+
 ---
 
 # In-App-Hilfeseiten
@@ -52,6 +56,7 @@ In manchen Fällen kann es hilfreich sein, weitere Informationen zu einem Featur
 * [Richtlinien für die App-Hilfe](guidelines-for-app-help.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

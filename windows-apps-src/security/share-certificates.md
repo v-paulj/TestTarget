@@ -1,8 +1,12 @@
 ---
 title: Freigabe von Zertifikaten zwischen Apps
-description: UWP-Apps, die über eine Kombination aus Benutzer-ID und Kennwort hinaus eine sichere Authentifizierung benötigen, können Zertifikate für die Authentifizierung verwenden.
+description: "UWP-Apps, die über eine Kombination aus Benutzer-ID und Kennwort hinaus eine sichere Authentifizierung benötigen, können Zertifikate für die Authentifizierung verwenden."
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
+
 ---
 
 # Freigabe von Zertifikaten zwischen Apps
@@ -200,6 +204,7 @@ Falls keine Clientzertifikate verfügbar sind, muss der Benutzer dem Zertifikats
 
 Mithilfe dieser Schritte können Sie mehrere Apps erstellen, für die dasselbe Benutzerzertifikat verwendet wird, um auf dieselben oder unterschiedliche sichere Webdienste zuzugreifen.
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

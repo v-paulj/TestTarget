@@ -1,8 +1,12 @@
 ---
 author: DBirtolo
 ms.assetid: E0B9532F-1195-4927-99BE-F41565D891AD
-title: Auflisten von Geräten über ein Netzwerk
-description: Zusätzlich zum Ermitteln von lokal verbundenen Geräten können Sie mithilfe der Windows.Devices.Enumeration-APIs Geräte über Drahtlos- und Netzwerkprotokolle enumerieren.
+title: "Auflisten von Geräten über ein Netzwerk"
+description: "Zusätzlich zum Ermitteln von lokal verbundenen Geräten können Sie mithilfe der Windows.Devices.Enumeration-APIs Geräte über Drahtlos- und Netzwerkprotokolle enumerieren."
+translationtype: Human Translation
+ms.sourcegitcommit: 6eca7156c8f81a9a89e006c09a232a255f3a8725
+ms.openlocfilehash: 9d2d58f2423688f895da1de56eef6448bb42692d
+
 ---
 # Enumerieren von Geräten über ein Netzwerk
 
@@ -79,6 +83,7 @@ System.Devices.AepContainer.ProtocolIds:~~"{0e261de4-12f0-46e6-91ba-428607ccef64
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: 79CF3927-25DE-43DD-B41A-87E6768D5C35
 title: Optimieren des XAML-Layouts
-description: Das Layout kann einen aufwendigen Teil einer XAML-App darstellen, sowohl hinsichtlich der CPU-Nutzung als auch der Beanspruchung des Arbeitsspeichers. Hier sind einige einfache Schritte, mit denen Sie die Layoutleistung Ihrer XAML-App verbessern können.
+description: "Das Layout kann einen aufwendigen Teil einer XAML-App darstellen, sowohl hinsichtlich der CPU-Nutzung als auch der Beanspruchung des Arbeitsspeichers. Hier sind einige einfache Schritte, mit denen Sie die Layoutleistung Ihrer XAML-App verbessern können."
+translationtype: Human Translation
+ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
+ms.openlocfilehash: dbec176310896164ebc99c20aefca4c5b2b29ee9
+
 ---
 # Optimieren des XAML-Layouts
 
@@ -185,6 +189,7 @@ Jede XAML-Bereich ist hinsichtlich einer guten Leistung optimiert, und alle Bere
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

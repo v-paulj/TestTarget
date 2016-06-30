@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten.
+description: "Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten."
 title: Kameraprofile
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 755b2747b2250c4ad19970095aed220551389471
+
 ---
 
 # Kameraprofile
@@ -105,6 +109,7 @@ Sie können diese Abfrage einschränken und nur nach Profilen suchen, die zusät
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

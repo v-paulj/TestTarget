@@ -1,8 +1,11 @@
 ---
 author: jnHs
-Description: Die Auszahlungszusammenfassung enthält Details zu den mit Ihren Apps und In-App-Produkten erzielten Erlösen. Sie werden auch darüber informiert, wann Sie Zahlungen erhalten und wie hoch diese Zahlungen sind.
+Description: "Die Auszahlungszusammenfassung enthält Details zu den mit Ihren Apps und In-App-Produkten erzielten Erlösen. Sie werden auch darüber informiert, wann Sie Zahlungen erhalten und wie hoch diese Zahlungen sind."
 title: Auszahlungszusammenfassung
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
+ms.sourcegitcommit: c626a828f9cee6b23ec26fc2eaa60a6477870baf
+ms.openlocfilehash: 773a072f5656068eb6e0b2d792cf73a7ff1d16f0
+
 ---
 
 # Auszahlungszusammenfassung
@@ -70,8 +73,9 @@ In der folgenden Tabelle werden die Felder der CSV-Datei erläutert. Beachten Si
 | Feldname              | Beschreibung                                                                                                                              |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Umsatzquelle          | Die Quelle der Umsätze, basierend auf dem Transaktionsort (z. B. Windows Store, Windows Phone Store, Windows Store 8, Microsoft Advertising usw.). |
-| Transaktions-ID          | Eindeutige Transaktions-ID                                                                                                            |
-| Transaction Date Time (Datum/Uhrzeit der Transaktion)   | Das Datum und die Uhrzeit der Transaktion (UTC)                                                                                         |
+| Bestellnummer          |  Eindeutiger Bezeichner für die Bestellung. Anhand dieser ID können Sie kaufbezogene Transaktionen und die entsprechenden Transaktionen, die sich nicht auf Käufe beziehen (z. B. Erstattungen, Rückvergütungen usw.), ermitteln. Beide Arten von Transaktionen besitzen die gleiche Bestell-ID. Im Fall einer aufgeteilten Belastung, bei der mehrere Zahlungsmethoden für einen einzelnen Einkauf verwendet wurden, können Sie die kaufbezogenen Transaktionen verknüpfen.                                                                                                          |
+| Transaktions-ID          |       Eindeutige Transaktions-ID  |
+| Datum/Uhrzeit der Transaktion   | Das Datum und die Uhrzeit der Transaktion (UTC)                                                                                         |
 | Übergeordnete Produkt-ID       | Eindeutige übergeordnete Produkt-ID. Hinweis: Wenn für die Transaktion kein übergeordnetes Produkt vorhanden ist, lautet die ID des übergeordneten Produkts „Produkt-ID“. |
 | Produkt-ID              | Eindeutige Produkt-ID                                                                                                                |
 | Name des übergeordneten Produkts     | Name des übergeordneten Produkts Hinweis: Wenn für die Transaktion kein übergeordnetes Produkt vorhanden ist, lautet der Name des übergeordneten Produkts „Produktname“.   |
@@ -107,6 +111,7 @@ In der folgenden Tabelle werden die Felder der CSV-Datei erläutert. Beachten Si
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

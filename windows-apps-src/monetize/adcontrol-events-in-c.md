@@ -3,6 +3,10 @@ author: mcleanbyron
 ms.assetid: 2fba38c4-11be-4058-bfa3-5f979390791c
 description: Hier erfahren Sie, wie Sie mit den Ereignissen der AdControl-Klasse umgehen.
 title: AdControl-Ereignisse in C#
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: cc5dfbfacefb4be32153f3266878be41a3b923f8
+
 ---
 
 # AdControl-Ereignisse in C\# #  
@@ -47,6 +51,7 @@ private void OnAdEngagedChanged(object sender, RoutedEventArgs e) {
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

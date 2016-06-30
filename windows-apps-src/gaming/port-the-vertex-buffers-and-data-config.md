@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: Portieren der Vertexpuffer und -daten
-description: In diesem Schritt definieren Sie die Vertexpuffer für die Gitter und die Indexpuffer, mit deren Hilfe die Shader die Vertices in einer angegebenen Reihenfolge durchlaufen können.
+description: "In diesem Schritt definieren Sie die Vertexpuffer für die Gitter und die Indexpuffer, mit deren Hilfe die Shader die Vertices in einer angegebenen Reihenfolge durchlaufen können."
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9692b33303099f9d1193b93ab458a19a5d95abe3
+
 ---
 
 # Portieren der Vertexpuffer und -Daten
@@ -313,6 +317,7 @@ Fügen Sie den Code, mit dem unter [**ID3D11Device**](https://msdn.microsoft.com
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

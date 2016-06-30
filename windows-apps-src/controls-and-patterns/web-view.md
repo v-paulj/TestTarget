@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Mithilfe eines Webansichtssteuerelements betten Sie eine Ansicht in Ihre App ein, die Webinhalte mit dem Microsoft Edge-Renderingmodul rendert. In einem Webansichtssteuerelement können auch Links angezeigt und verwendet werden.
+Description: "Mithilfe eines Webansichtssteuerelements betten Sie eine Ansicht in Ihre App ein, die Webinhalte mit dem Microsoft Edge-Renderingmodul rendert. In einem Webansichtssteuerelement können auch Links angezeigt und verwendet werden."
 title: Webansicht
 ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: dd947d0b55dad56fdd6c684ae236f1c31ac8da86
+
 ---
 
 # Webansicht
@@ -60,7 +64,7 @@ Legen Sie zum Einrichten des anfänglichen Inhalts der Webansicht die [**Source*
 <WebView x:Name="webView3" Source="ms-appx-web:///help/about.html"/>
 ```
 
-Die Source-Eigenschaft kann grundsätzlich im Code festgelegt werden. In der Regel verwenden Sie jedoch eine der **Navigate**-Methoden, um Inhalt in den Code zu laden. 
+Die Source-Eigenschaft kann theoretisch im Code festgelegt werden, üblicherweise verwenden Sie jedoch eine der **Navigate**-Methoden, um Inhalt in den Code zu laden. 
 
 Verwenden Sie zum Laden des Webinhalts die [**Navigate**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigate.aspx)-Methode mit einem **Uri**, der das HTTP- oder HTTPS-Schema verwendet. 
 
@@ -232,9 +236,9 @@ private void webView_PermissionRequested(WebView sender, WebViewPermissionReques
 }
 ```
 
-Wenn Ihre App eine Benutzereingabe oder andere asynchrone Vorgänge erfordert, um auf eine Berechtigungsanforderung zu reagieren, erstellen Sie mithilfe der [**Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx)-Methode von [**WebViewPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.aspx) eine [**WebViewDeferredPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewdeferredpermissionrequest.aspx), die zu einem späteren Zeitpunkt Gegenstand einer Aktion sein kann. Weitere Informationen finden Sie unter [**WebViewPermissionRequest.Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx). 
+Wenn Ihre App eine Benutzereingabe oder andere asynchrone Vorgänge erfordert, um auf eine Berechtigungsanforderung zu reagieren, erstellen Sie mithilfe der [**Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx)-Methode von [**WebViewPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.aspx) eine [**WebViewDeferredPermissionRequest**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewdeferredpermissionrequest.aspx), die zu einem späteren Zeitpunkt Gegenstand einer Aktion sein kann. Siehe [**WebViewPermissionRequest.Defer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewpermissionrequest.defer.aspx). 
 
-Wenn sich die Benutzer sicher von einer Website in einer Webansicht gehosteten Website abmelden müssen oder in anderen Fällen, in denen Sicherheit wichtig ist, rufen Sie die statische Methode [**ClearTemporaryWebDataAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cleartemporarywebdataasync.aspx) auf, um den gesamten lokal zwischengespeicherten Inhalt aus einer Webansichtssitzung zu löschen. Dadurch werden böswillige Benutzer am Zugriff auf vertrauliche Daten gehindert. 
+Wenn sich die Benutzer sicher von einer Website abmelden müssen, die in einer Webansicht gehostet wird, oder immer dann, wenn Sicherheit Priorität hat, rufen Sie die statische Methode [**ClearTemporaryWebDataAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.cleartemporarywebdataasync.aspx) auf, um den gesamten lokal zwischengespeicherten Inhalt aus einer Webansichtssitzung zu löschen. Dadurch werden böswillige Benutzer am Zugriff auf vertrauliche Daten gehindert. 
 
 ### Interaktion mit Webansichtsinhalten
 
@@ -252,7 +256,7 @@ string returnValue = await webView1.InvokeScriptAsync("setDate", args);
 
 Sie können **InvokeScriptAsync** mit der JavaScript-Funktion **eval** verwenden, um Inhalt in die Webseite einzufügen.
 
-In diesem Fall wird der Text des XAML-Textfelds (`nameTextBox.Text`) in ein div-Element einer HTML-Seite geschrieben, die gehostet wird in 
+In diesem Fall wird der Text eines XAML-Textfeld (`nameTextBox.Text`) in ein div-Element einer in `webView1` gehosteten HTML-Seite geschrieben. 
 
 ```csharp
 private async void Button_Click(object sender, RoutedEventArgs e)
@@ -264,7 +268,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 Skripts im Webansichtsinhalt können **window.external.notify** mit einem Zeichenfolgenparameter verwenden, um Informationen zurück an Ihre App zu senden. Behandeln Sie zum Empfangen dieser Nachrichten das [**ScriptNotify**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.scriptnotify.aspx)-Ereignis. 
 
-Damit eine externe Webseite das **ScriptNotify**-Ereignis beim Aufrufen von „window.external.notify“ auslösen kann, müssen Sie den URI der Seite in den **ApplicationContentUriRules**-Abschnitt des App-Manifests einfügen. (Verwenden Sie dazu in Microsoft Visual Studio die Registerkarte „Inhalts-URIs“ im Designer „Package.appxmanifest“.) Die URIs in dieser Liste müssen HTTPS verwenden und dürfen Unterdomänenplatzhalter (z. B. `https://*.microsoft.com`) enthalten. Sie dürfen jedoch keine Domänenplatzhalter (z. B. `https://*.com` und `https://*.*`) enthalten. Die Manifestanforderung gilt nicht für Inhalte, die aus dem App-Paket stammen, einen URI des Typs „ms-local-stream:// URI“ verwenden oder mit [**NavigateToString**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetostring.aspx) geladen werden. 
+Damit eine externe Webseite das **ScriptNotify**-Ereignis beim Aufrufen von „window.external.notify“ auslösen kann, müssen Sie den URI der Seite in den **ApplicationContentUriRules**-Abschnitt des App-Manifests einfügen. (Verwenden Sie dazu in Microsoft Visual Studio die Registerkarte „Inhalts-URIs“ im Designer „Package.appxmanifest“.) Die URIs in dieser Liste müssen HTTPS verwenden und dürfen Unterdomänenplatzhalter (z. B. `https://*.microsoft.com`) enthalten. Sie dürfen jedoch keine Domänenplatzhalter (z. B. `https://*.com` und `https://*.*`) enthalten. Die Manifestanforderung gilt nicht für Inhalte, die aus dem App-Paket stammen, die einen URI vom Typ „ms-local-stream:// URI“ verwenden, oder die mit [**NavigateToString**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.navigatetostring.aspx) geladen werden. 
 
 ### Zugreifen auf die Windows-Runtime in einer Webansicht
 
@@ -340,6 +344,7 @@ Eine Webansicht, die Inhalte nicht im UI-Thread hostet, ist nicht mit übergeord
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

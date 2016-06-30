@@ -3,8 +3,8 @@ author: TylerMSFT
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
 description: "In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in Visual C++-Komponentenerweiterungen (C++/CX) mithilfe der Task-Klasse beschrieben, die im Concurrency-Namespace in „ppltasks.h“ definiert wird."
 title: Asynchrone Programmierung in C++
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 560b51d5bb67f5f2611311cb78f59d189d4ea440
+ms.sourcegitcommit: c440d0dc2719a982a6b566c788d76111c40e263e
+ms.openlocfilehash: c33c05c6ec7f36b8ba7db840613fbfb7eb394c3f
 
 ---
 
@@ -28,7 +28,7 @@ Sie können zwar die asynchronen UWP-APIs direkt in C++ verwenden, es wird aber 
 
 -   Gewährleistung, dass einzelne Aufgaben im richtigen Threadkontext oder -apartment ausgeführt werden
 
-Dieser Artikel bietet einen allgemeinen Überblick über die Verwendung der **Task**-Klasse mit den asynchronen UWP-APIs. Die vollständige Dokumentation zur **Task**-Klasse und den dazugehörigen Methoden (einschließlich [**create\_task**][createTask]) finden [Sie unter Aufgabenparallelität (Concurrency Runtime)][taskParallelism]. Weitere Informationen zum Erstellen öffentlicher asynchroner Methoden für die Verwendung durch JavaScript und andere UWP-kompatible Sprachen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ für Windows-Runtime-Apps]createAsyncCpp.
+Dieser Artikel bietet einen allgemeinen Überblick über die Verwendung der **Task**-Klasse mit den asynchronen UWP-APIs. Die vollständige Dokumentation zur **Task**-Klasse und den dazugehörigen Methoden (einschließlich [**create\_task**][createTask]) finden [Sie unter Aufgabenparallelität (Concurrency Runtime)][taskParallelism]. Weitere Informationen zum Erstellen öffentlicher asynchroner Methoden für die Verwendung durch JavaScript und andere UWP-kompatible Sprachen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ für Windows-Runtime-Apps][createAsyncCpp].
 
 ## Verwendung asynchroner Vorgänge mithilfe von Aufgaben
 
@@ -59,7 +59,7 @@ void App::TestAsync()
 
     // Call the task's .then member function, and provide
     // the lambda to be invoked when the async operation completes.
-    deviceEnumTask.then( [this] (DeviceInformationCollection^ devices ) 
+    deviceEnumTask.then( [this] (DeviceInformationCollection^ devices )
     {       
         for(int i = 0; i < devices->Size; i++)
         {
@@ -142,7 +142,7 @@ cancellation_token_source m_fileTaskTokenSource;
 m_fileTaskTokenSource.cancel();
 
 // task chain
-auto getFileTask2 = create_task(documentsFolder->GetFileAsync(fileName), 
+auto getFileTask2 = create_task(documentsFolder->GetFileAsync(fileName),
                                 m_fileTaskTokenSource.get_token());
 //getFileTask2.then ...
 ```
@@ -174,7 +174,7 @@ void App::DeleteWithTasksHandleErrors(String^ fileName)
         return storageFileSample->DeleteAsync();
     })
 
-    .then([](task<void> t) 
+    .then([](task<void> t)
     {
 
         try
@@ -213,14 +213,14 @@ void App::SetFeedText()
     SyndicationClient^ client = ref new SyndicationClient();
     auto feedOp = client->RetrieveFeedAsync(ref new Uri(url));
 
-    create_task(feedOp).then([this]  (SyndicationFeed^ feed) 
+    create_task(feedOp).then([this]  (SyndicationFeed^ feed)
     {
         m_TextBlock1->Text = feed->Title->Text;
     });
 }
 ```
 
-Gibt eine Aufgabe nicht [**IAsyncAction**]IAsyncAction[ oder ][IAsyncOperation****IAsyncOperation] zurück, ist sie nicht apartmentfähig, und ihre Fortsetzungen werden standardmäßig im ersten verfügbaren Hintergrundthread ausgeführt.
+Gibt eine Aufgabe nicht [**IAsyncAction**][IAsyncAction] oder [**IAsyncOperation**][IAsyncOperation] zurück, ist sie nicht apartmentfähig, und ihre Fortsetzungen werden standardmäßig im ersten verfügbaren Hintergrundthread ausgeführt.
 
 Sie können den Standardthreadkontext für beide Aufgabenarten außer Kraft setzen, indem Sie die Überladung der [**task::then**][taskThen]-Methode verwenden, die einen [**task\_continuation\_context**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749968.aspx)-Kontext verwendet. In manchen Fällen ist es zum Beispiel vorteilhaft, die Fortsetzung einer apartmentfähigen Aufgabe für einen Hintergrundthread zu planen. Dabei können Sie [**task\_continuation\_context::use\_arbitrary**][useArbitrary] übergeben, um die Vorgänge der Aufgabe für den nächsten verfügbaren Thread in einem Thread mit mehreren Apartments (Multithread-Apartment, MTA) zu planen. Dadurch wird die Leistung der Fortsetzung verbessert, da die entsprechenden Vorgänge nicht mit anderen Vorgängen im UI-Thread synchronisiert sein müssen.
 
@@ -236,7 +236,7 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
 
     std::for_each(std::begin(urls), std::end(urls), [=,this] (std::wstring url)
     {
-        // Create the async operation. feedOp is an 
+        // Create the async operation. feedOp is an
         // IAsyncOperationWithProgress<SyndicationFeed^, RetrievalProgress>^
         // but we don't handle progress in this example.
 
@@ -258,7 +258,7 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
         // Append the initialized FeedData object to the list
         // that is the data source for the items collection.
         // This all has to happen on the same thread.
-        // By using the use_default context, we can append 
+        // By using the use_default context, we can append
         // safely to the Vector without taking an explicit lock.
         .then([feedList] (FeedData^ fd)
         {
@@ -290,7 +290,7 @@ Geschachtelte Aufgaben, bei denen es sich um neu erstellte Aufgaben in einer For
 
 ## Behandeln von Statusaktualisierungen
 
-Methoden mit Unterstützung von [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/apps/BR206594) oder [**IAsyncActionWithProgress**](https://msdn.microsoft.com/library/windows/apps/BR206580withprogress_1) aktualisieren regelmäßig den Status eines laufenden Vorgangs, solange dieser nicht beendet ist. Der Status wird dabei unabhängig von dem Konzept von Aufgaben und Fortsetzungen gemeldet. Sie müssen nur den Delegaten für die [**Progress**](https://msdn.microsoft.com/library/windows/apps/br206594)-Eigenschaft des Objekts angeben. Eine typische Verwendung von Delegaten ist die Aktualisierung einer Statusleiste auf der Benutzeroberfläche.
+Methoden mit Unterstützung von [**IAsyncOperationWithProgress**](https://msdn.microsoft.com/library/windows/apps/br206594.aspx) oder [**IAsyncActionWithProgress**](https://msdn.microsoft.com/en-us/library/windows/apps/br206581.aspx) aktualisieren regelmäßig den Status eines laufenden Vorgangs, solange dieser nicht beendet ist. Der Status wird dabei unabhängig von dem Konzept von Aufgaben und Fortsetzungen gemeldet. Sie müssen nur den Delegaten für die [**Progress**](https://msdn.microsoft.com/library/windows/apps/br206594)-Eigenschaft des Objekts angeben. Eine typische Verwendung von Delegaten ist die Aktualisierung einer Statusleiste auf der Benutzeroberfläche.
 
 ## Verwandte Themen
 
@@ -315,7 +315,7 @@ Methoden mit Unterstützung von [**IAsyncOperationWithProgress**](https://msdn.m
              "CreateAsync"
 [deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199>
              "DeleteAsync"
-[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/BR206580>
+[IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx>
              "IAsyncAction"
 [IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598>
              "IAsyncOperation"
@@ -338,6 +338,6 @@ Methoden mit Unterstützung von [**IAsyncOperationWithProgress**](https://msdn.m
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

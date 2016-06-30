@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Handbücher zum Portieren von Spielen
+title: "Handbücher zum Portieren von Spielen"
 description: Hier finden Sie Anleitungen zum Portieren von vorhandenen Spielen zu Direct3D 11, UWP (Universelle Windows-Plattform) und Windows 10.
 ms.assetid: 1dff815b-d3bd-557e-52c1-58e40f4dd6b1
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0cf7f4e6679d362691cea8ccbd45786176715cad
+
 ---
 
 # Handbücher zum Portieren von Spielen
@@ -37,7 +41,7 @@ Hier finden Sie Anleitungen zum Portieren von vorhandenen Spielen zu Direct3D 11
 
  
 
-> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Informationen für die Entwicklung unter Windows 8.x oder Windows Phone 8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -50,6 +54,7 @@ Hier finden Sie Anleitungen zum Portieren von vorhandenen Spielen zu Direct3D 11
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

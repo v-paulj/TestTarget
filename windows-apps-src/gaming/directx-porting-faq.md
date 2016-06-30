@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: DirectX 11 – Häufig gestellte Fragen zur Portierung
-description: Antworten auf häufig gestellte Fragen zur Portierung von Spielen zur Universellen Windows-Plattform (UWP)
+title: "DirectX 11 – Häufig gestellte Fragen zur Portierung"
+description: "Antworten auf häufig gestellte Fragen zur Portierung von Spielen zur Universellen Windows-Plattform (UWP)"
 ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dc98f15d80fb70fb6e106555659d699c41fbfa0b
+
 ---
 
 # DirectX 11 – Häufig gestellte Fragen zur Portierung
@@ -137,6 +141,7 @@ Informationen hierzu finden Sie in der [Oberflächenformatzuordnung](feature-map
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

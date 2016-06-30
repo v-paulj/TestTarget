@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Grundlegendes zu 3D-Grafiken für DirectX-Spiele
-description: Im Folgenden zeigen wir Ihnen, wie Sie grundlegende Konzepte von 3D-Grafiken durch die Programmierung mit DirectX umsetzen können.
+title: "Grundlegendes zu 3D-Grafiken für DirectX-Spiele"
+description: "Im Folgenden zeigen wir Ihnen, wie Sie grundlegende Konzepte von 3D-Grafiken durch die Programmierung mit DirectX umsetzen können."
 ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 8f27c5060ffdc566c596168e54d51730c349d401
+
 ---
 
 # Grundlegendes zu 3D-Grafiken für DirectX-Spiele
@@ -63,6 +67,7 @@ Als Nächstes erstellen wir ein Direct3D-Gerät, eine Swapchain sowie eine Rende
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

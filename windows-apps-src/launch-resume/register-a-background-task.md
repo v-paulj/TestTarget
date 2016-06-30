@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Registrieren einer Hintergrundaufgabe
 description: Hier erfahren Sie, wie eine Funktion erstellt wird, die zum sicheren Registrieren der meisten Hintergrundaufgaben wiederverwendet werden kann.
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: acee438ae29b568bec20ff1225e8e801934e6c50
+
 ---
 
 # Registrieren einer Hintergrundaufgabe
@@ -37,14 +40,14 @@ Diese Methode übernimmt den Einstiegspunkt der Aufgabe, den Namen der Aufgabe, 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
->                                                 string taskEntryPoint, 
+>                                                 string taskEntryPoint,
 >                                                 string name,
 >                                                 IBackgroundTrigger trigger,
 >                                                 IBackgroundCondition condition)
 > {
 >     
 >     // We'll add code to this function in subsequent steps.
-> 
+>
 > }
 > ```
 > ```cpp
@@ -56,7 +59,7 @@ Diese Methode übernimmt den Einstiegspunkt der Aufgabe, den Namen der Aufgabe, 
 > {
 >     
 >     // We'll add code to this function in subsequent steps.
-> 
+>
 > }
 > ```
 
@@ -74,7 +77,7 @@ Der folgende Code registriert eine Hintergrundaufgabe mit dem im vorigen Schritt
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
->                                                 string taskEntryPoint, 
+>                                                 string taskEntryPoint,
 >                                                 string name,
 >                                                 IBackgroundTrigger trigger,
 >                                                 IBackgroundCondition condition)
@@ -82,16 +85,16 @@ Der folgende Code registriert eine Hintergrundaufgabe mit dem im vorigen Schritt
 >     //
 >     // Check for existing registrations of this background task.
 >     //
-> 
+>
 >     foreach (var cur in BackgroundTaskRegistration.AllTasks)
 >     {
-> 
+>
 >         if (cur.Value.Name == name)
 >         {
->             // 
+>             //
 >             // The task is already registered.
->             // 
-> 
+>             //
+>
 >             return (BackgroundTaskRegistration)(cur.Value);
 >         }
 >     }
@@ -119,9 +122,9 @@ Der folgende Code registriert eine Hintergrundaufgabe mit dem im vorigen Schritt
 >         
 >         if(cur->Name == name)
 >         {
->             // 
+>             //
 >             // The task is registered.
->             // 
+>             //
 >             
 >             return (BackgroundTaskRegistration ^)(cur);
 >         }
@@ -147,7 +150,7 @@ Im folgenden Beispiel wird entweder die vorhandene Aufgabe zurückgegeben, oder 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
 > public static BackgroundTaskRegistration RegisterBackgroundTask(
->                                                 string taskEntryPoint, 
+>                                                 string taskEntryPoint,
 >                                                 string name,
 >                                                 IBackgroundTrigger trigger,
 >                                                 IBackgroundCondition condition)
@@ -155,16 +158,16 @@ Im folgenden Beispiel wird entweder die vorhandene Aufgabe zurückgegeben, oder 
 >     //
 >     // Check for existing registrations of this background task.
 >     //
-> 
+>
 >     foreach (var cur in BackgroundTaskRegistration.AllTasks)
 >     {
-> 
+>
 >         if (cur.Value.Name == taskName)
 >         {
->             // 
+>             //
 >             // The task is already registered.
->             // 
-> 
+>             //
+>
 >             return (BackgroundTaskRegistration)(cur.Value);
 >         }
 >     }
@@ -172,21 +175,21 @@ Im folgenden Beispiel wird entweder die vorhandene Aufgabe zurückgegeben, oder 
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     var builder = new BackgroundTaskBuilder();
-> 
+>
 >     builder.Name = name;
 >     builder.TaskEntryPoint = taskEntryPoint;
 >     builder.SetTrigger(trigger);
-> 
+>
 >     if (condition != null)
 >     {
-> 
+>
 >         builder.AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration task = builder.Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -197,7 +200,7 @@ Im folgenden Beispiel wird entweder die vorhandene Aufgabe zurückgegeben, oder 
 >                                              IBackgroundTrigger ^ trigger,
 >                                              IBackgroundCondition ^ condition)
 > {
-> 
+>
 >     //
 >     // Check for existing registrations of this background task.
 >     //
@@ -211,9 +214,9 @@ Im folgenden Beispiel wird entweder die vorhandene Aufgabe zurückgegeben, oder 
 >         
 >         if(cur->Name == name)
 >         {
->             // 
+>             //
 >             // The task is registered.
->             // 
+>             //
 >             
 >             return (BackgroundTaskRegistration ^)(cur);
 >         }
@@ -224,20 +227,20 @@ Im folgenden Beispiel wird entweder die vorhandene Aufgabe zurückgegeben, oder 
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     auto builder = ref new BackgroundTaskBuilder();
-> 
+>
 >     builder->Name = name;
 >     builder->TaskEntryPoint = taskEntryPoint;
 >     builder->SetTrigger(trigger);
-> 
+>
 >     if (condition != nullptr) {
 >         
 >         builder->AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration ^ task = builder->Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -266,16 +269,16 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 >     //
 >     // Check for existing registrations of this background task.
 >     //
-> 
+>
 >     foreach (var cur in BackgroundTaskRegistration.AllTasks)
 >     {
-> 
+>
 >         if (cur.Value.Name == taskName)
 >         {
->             // 
+>             //
 >             // The task is already registered.
->             // 
-> 
+>             //
+>
 >             return (BackgroundTaskRegistration)(cur.Value);
 >         }
 >     }
@@ -283,21 +286,21 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     var builder = new BackgroundTaskBuilder();
-> 
+>
 >     builder.Name = taskName;
 >     builder.TaskEntryPoint = taskEntryPoint;
 >     builder.SetTrigger(trigger);
-> 
+>
 >     if (condition != null)
 >     {
-> 
+>
 >         builder.AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration task = builder.Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -316,7 +319,7 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 >                                                              IBackgroundTrigger ^ trigger,
 >                                                              IBackgroundCondition ^ condition)
 > {
-> 
+>
 >     //
 >     // Check for existing registrations of this background task.
 >     //
@@ -330,34 +333,34 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 >         
 >         if(cur->Name == name)
 >         {
->             // 
+>             //
 >             // The task is registered.
->             // 
+>             //
 >             
 >             return (BackgroundTaskRegistration ^)(cur);
 >         }
 >         
 >         hascur = iter->MoveNext();
 >     }
-> 
-> 
+>
+>
 >     //
 >     // Register the background task.
 >     //
-> 
+>
 >     auto builder = ref new BackgroundTaskBuilder();
-> 
+>
 >     builder->Name = name;
 >     builder->TaskEntryPoint = taskEntryPoint;
 >     builder->SetTrigger(trigger);
-> 
+>
 >     if (condition != nullptr) {
 >         
 >         builder->AddCondition(condition);
 >     }
-> 
+>
 >     BackgroundTaskRegistration ^ task = builder->Register();
-> 
+>
 >     return task;
 > }
 > ```
@@ -392,8 +395,6 @@ Dieses Beispiel zeigt die Hilfsfunktion zur Registrierung der abgeschlossenen Hi
 
 
 
-
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 

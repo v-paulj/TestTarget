@@ -1,8 +1,11 @@
 ---
 author: jwmsft
-description: Listet Unterstützung auf Sprachebene in XAML für die Windows-Runtime für bestimmte Datentypen in der Common Language Runtime (CLR) und in anderen Programmiersprachen wie C++ auf.
+description: "Listet Unterstützung auf Sprachebene in XAML für die Windows-Runtime für bestimmte Datentypen in der Common Language Runtime (CLR) und in anderen Programmiersprachen wie C++ auf."
 title: Systeminterne XAML-Datentypen
 ms.assetid: D50E6127-395D-4E27-BAA2-2FE627F4B711
+ms.sourcegitcommit: 60e328ca8652baeb226e78f5a9d99fbf8c4f5208
+ms.openlocfilehash: 479b900ca14497712f25a7825fde6775a3c1ab60
+
 ---
 
 # Systeminterne XAML-Datentypen
@@ -13,11 +16,16 @@ XAML für die Windows-Runtime stellt auf Sprachebene Unterstützung für mehrere
 
 Am häufigsten finden Sie die Verwendung systeminterner XAML-Datentypen, wenn Ressourcen in einem XAML-Ressourcenwörterbuch definiert werden. Sie können in diesem Wörterbuch Konstanten definieren, z. B. Zahlen, die Sie für mehrere Werte verwenden. Sie können auch eine Storyboardanimation verwenden, um eine Animation mithilfe eines Zeichenfolgen- oder booleschen Werts zu erreichen. Sie benötigen dann ein XAML-Objektelement, das die Zeichenfolge oder den booleschen Wert darstellt, um den Keyframe der [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320)-Definition aufzufüllen. Die Windows-Runtime-XAML-Standardvorlagen verwenden beide Techniken.
 
-XAML für die Windows-Runtime bietet auf Sprachebene Unterstützung für diese Typen:
+XAML für die Windows-Runtime bietet Unterstützung auf Sprachebene für diese Typen:
 
-| XAML-Grundtyp | Beschreibung | | **x:Boolean**  | Entspricht für CLR-Unterstützung [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx). XAML analysiert Werte für **x:Boolean** ohne Berücksichtigung der Groß-/Kleinschreibung. Beachten Sie, dass "x:Bool" keine akzeptierte Alternative ist. | | **x:String**   | Entspricht für CLR-Unterstützung [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx). Die Codierung für die Zeichenfolge wird standardmäßig auf die umgebende XML-Codierung festgelegt. | | **x:Double**   | Entspricht für CLR-Unterstützung [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Zusätzlich zu den numerischen Werten lässt die Textsyntax für **x:Double** das Token "NaN" zu. So kann "Auto" für das Layoutverhalten als Ressourcenwert gespeichert werden. Die Token werden unter Berücksichtigung der Groß-/Kleinschreibung behandelt. Sie können die wissenschaftliche Notation verwenden, z. B. "1+E06" für `1,000,000`. | | **x:Int32**    | Entspricht für CLR-Unterstützung [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx). **x:Int32** wird als Zahl mit Vorzeichen behandelt. Sie können das Minuszeichen („-“) für eine negative ganze Zahl verwenden. In XAML wird das Fehlen eines Vorzeichens in der Textsyntax als positiver Wert mit Vorzeichen interpretiert. |
+| XAML-Grundtyp | Beschreibung |
+|-------|-------------|
+| **x:Boolean**  | Für die CLR-Unterstützung: [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx). XAML analysiert Werte für **x:Boolean** ohne Berücksichtigung der Groß-/Kleinschreibung. „x:Bool“ ist keine zulässige Alternative. |
+| **x:String**   | Für die CLR-Unterstützung: [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx). Die Codierung für die Zeichenfolge wird standardmäßig auf die umgebende XML-Codierung festgelegt. |
+| **x:Double**   | Für die CLR-Unterstützung: [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Zusätzlich zu den numerischen Werten lässt die Textsyntax für **x:Double** das Token „NaN“ zu. So kann „Auto“ für das Layoutverhalten als Ressourcenwert gespeichert werden. Bei den Token wird die Groß-/Kleinschreibung berücksichtigt. Sie können die wissenschaftliche Schreibweise verwenden (also beispielsweise „1+E06“ für `1,000,000`). |
+| **x:Int32**    | Für die CLR-Unterstützung: [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx). **x:Int32** wird als Zahl mit Vorzeichen behandelt. Sie können das Minuszeichen („-“) für eine negative ganze Zahl verwenden. In XAML wird das Fehlen eines Zeichens in der Textsyntax als positiver signierter Wert impliziert. |
 
-Diese Grundtypen der Programmiersprache XAML sind im Allgemeinen die einzigen Fälle, in denen Sie ein Objektelement definieren, das das Präfix **x:** in XAML verwendet. Alle anderen XAML-Sprachfeatures werden in der Regel in Attributform oder als Markuperweiterung verwendet.
+Diese XAML-Sprachgrundtypen sind im Allgemeinen die einzigen Fälle, in denen Sie ein Objektelement definieren, das das Präfix **x:** in XAML verwendet. Alle anderen XAML-Sprachfeatures werden in der Regel in Attributform oder als Markuperweiterung verwendet.
 
 **Hinweis**  Üblicherweise werden die Sprachgrundtypen für XAML und alle anderen XAML-Sprachelemente mit dem Präfix „x:“ angezeigt. So werden XAML-Sprachelemente in der Regel im echten Markup verwendet. Diese Konvention wird in der Dokumentation für XAML und auch in der XAML-Spezifikation befolgt.
 
@@ -36,6 +44,7 @@ In der XAML 2009-Spezifikation werden weitere XAML-Grundtypen auf Sprachebene au
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

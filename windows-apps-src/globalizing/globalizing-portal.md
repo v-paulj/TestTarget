@@ -1,11 +1,15 @@
 ---
 author: DelfCo
-Description: Globalisierung beschreibt den Entwurf und die Entwicklung der App für verschiedene globale Märkte, ohne dass Änderungen oder Anpassungen erforderlich sind.
+Description: "Globalisierung beschreibt den Entwurf und die Entwicklung der App für verschiedene globale Märkte, ohne dass Änderungen oder Anpassungen erforderlich sind."
 Search.SourceType: Video
 title: Globalisierung und Lokalisierung
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 1fc82ff462a5c0af6b10e7dc8455adc215558b4e
+
 ---
 
 # Globalisierung und Lokalisierung
@@ -30,7 +34,7 @@ Beispiel:
 -   Übersetzen von Text und Beschriftungen der App für den neuen Markt und Erstellen separater Ressourcen für die jeweilige Sprache
 -   Ändern kulturspezifischer Bilder nach Bedarf und Platzieren der Bilder in separaten Ressourcen
 
-Das folgende Video enthält eine kurze Einführung dazu, wie Sie Ihre App für die weltweite Verbreitung vorbereiten: [Einführung in die Globalisierung und Lokalisierung](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization)
+Das folgende Video enthält eine kurze Einführung dazu, wie Sie Ihre App für die weltweite Verbreitung vorbereiten: [Einführung in die Globalisierung und Lokalisierung](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization).
 
 ## Artikel
 <table>
@@ -47,7 +51,7 @@ Das folgende Video enthält eine kurze Einführung dazu, wie Sie Ihre App für d
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Empfohlene und nicht empfohlene Vorgehensweisen](guidelines-and-checklist-for-globalizing-your-app.md)</p></td>
-<td align="left"><p>Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und wenn Sie Ihre Apps für einen bestimmten Markt lokalisieren.</p></td>
+<td align="left"><p>Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und beim Lokalisieren Ihrer Apps für einen bestimmten Markt.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Verwenden weltweit einsetzbarer Formate](use-global-ready-formats.md)</p></td>
@@ -94,6 +98,7 @@ Weitere Informationen finden Sie in der ursprünglich für Windows 8.x erstellt
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

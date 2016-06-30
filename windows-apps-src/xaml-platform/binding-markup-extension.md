@@ -3,6 +3,10 @@ author: jwmsft
 description: Die Binding-Markuperweiterung wird beim Laden von XAML in eine Instanz der Binding-Klasse konvertiert.
 title: Binding-Markuperweiterung
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 740110809845220d919c6ba3c90b1393dbc8ae94
+
 ---
 
 # {Binding}-Markuperweiterung
@@ -130,6 +134,7 @@ Mit Microsoft IntelliSense in Microsoft Visual Studio werden die Eigenschaften d
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

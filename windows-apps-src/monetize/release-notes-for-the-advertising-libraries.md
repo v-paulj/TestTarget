@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: ca92bed1-ad9e-4947-ad91-87d12de727c0
-description: Überprüfen Sie die Versionshinweise für die Microsoft Advertising-Bibliotheken im „Microsoft Store Engagement and Monetization“-SDK.
-title: Versionshinweise für die Microsoft Advertising-Bibliotheken
+description: "Überprüfen Sie die Versionshinweise für die Microsoft Advertising-Bibliotheken im „Microsoft Store Engagement and Monetization“-SDK."
+title: "Versionshinweise für die Microsoft Advertising-Bibliotheken"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 8e2114e969b27d579f62195f026cfcfd9672a94a
+
 ---
 
 # Versionshinweise für die Microsoft Advertising-Bibliotheken
@@ -52,6 +56,7 @@ Lesen Sie die Endbenutzer-Lizenzbedingungen vollständig durch. Weitere Informat
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

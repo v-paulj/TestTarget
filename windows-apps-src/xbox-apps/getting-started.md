@@ -1,8 +1,11 @@
 ---
 author: Mtoepke
 title: Erste Schritte bei der Entwicklung von UWP-Apps auf Xbox One
-description: Einrichten des Computers und der Xbox One für die UWP-Entwicklung
+description: "Einrichten des Computers und der Xbox One für die UWP-Entwicklung"
 area: Xbox
+ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
+ms.openlocfilehash: b070b6bec350c3c893f934e212b1de743b349861
+
 ---
 
 #Erste Schritte bei der Entwicklung von UWP-Apps auf Xbox One
@@ -13,17 +16,17 @@ Führen Sie die folgenden Schritte **sorgfältig** aus, um Ihren PC und die Xbox
 Bevor Sie beginnen, müssen Sie die folgenden Schritte ausführen:
 -   Erstellen Sie ein [Windows Dev Center](https://dev.windows.com)-Konto.
 -   Nehmen Sie am [Windows-Insider-Programm](https://insider.windows.com/) teil. Dies ist erforderlich, um das Preview Windows SDK zu erhalten.
--   Richten Sie einen Windows 10-PC für diese Vorschau ein (jede Version ist geeignet, einschließlich des aktuellen Test-Flights für Windows 10-Insider). Für unsere Entwicklungstools muss Windows 10 ausgeführt werden. 
--   Verbinden Sie Ihre Xbox One-Konsole mit einem drahtgebundenen Netzwerk (ein drahtloses Netzwerk ist auch möglich, allerdings ist die Leistung bei einem drahtgebundenen Netzwerk derzeit deutlich besser).
-- Sorgen Sie für mindestens 30 GB freien Speicherplatz auf Ihrer Xbox One-Konsole.
+-   Richten Sie einen Windows 10-PC für diese Vorschau ein (jede Version ist geeignet, einschließlich des aktuellen Test-Flights für Windows 10-Insider). Für unsere Entwicklungstools muss Windows 10 ausgeführt werden. 
+-   Verbinden Sie Ihre Xbox One-Konsole mit einem Netzwerk. Verwenden Sie für eine optimale Leistung eine Kabelverbindung.
+- Sorgen Sie für mindestens 5 GB freien Speicherplatz auf Ihrer Xbox One-Konsole.
 
-## Einrichten des Entwicklungscomputers
+## Einrichten des Entwicklungs-PCs
 1.  Installieren Sie Visual Studio 2015 Update 2. Wählen Sie die **benutzerdefinierte** Installation aus, und aktivieren Sie das Kontrollkästchen **Entwicklungstools für universelle Windows-Apps** (dieses gehört nicht zur standardmäßigen Installation). Weitere Informationen finden Sie unter [Einrichtung der Entwicklungsumgebung](development-environment-setup.md) (als C++-Entwickler sollten Sie außerdem darauf achten, die benutzerdefinierte Installation sowie C++ auszuwählen).
 
-2.  Installieren Sie Windows 10 SDK Preview Build 14295. Diese Version erhalten Sie über das [Windows-Insider-Programm](http://go.microsoft.com/fwlink/p/?LinkId=780552).
+2.  Installieren Sie das aktuelle Windows 10 SDK Preview Build. Diese Version erhalten Sie über das [Windows-Insider-Programm](http://go.microsoft.com/fwlink/p/?LinkId=780552).
   
   > **Wichtig**
-            &nbsp;&nbsp;Nach der Installation dieses Preview SDKs auf Ihrem PC können Sie Apps, die auf diesem PC erstellt werden, nicht mehr an den Store übermitteln. Daher sollten Sie diesen Schritt nicht auf Ihrem Entwicklungscomputer für die Produktion ausführen. 
+            &nbsp;&nbsp;Nach der Installation dieses Preview SDK auf Ihrem PC können Sie Apps, die auf diesem PC erstellt werden, nicht mehr an den Store übermitteln. Daher sollten Sie diesen Schritt nicht auf Ihrem Entwicklungscomputer für die Produktion ausführen. 
 
 ## Einrichten Ihrer Xbox One-Konsole
 1.  Aktivieren Sie den Entwicklermodus auf der Xbox One. Laden Sie die App herunter, und geben Sie den erhaltenen Aktivierungscode im Dev Center-Konto auf der xboxactivate-Seite ein. Weitere Informationen finden Sie unter [Aktivieren des Entwicklermodus auf Xbox One](devkit-activation.md). 
@@ -34,6 +37,9 @@ Bevor Sie beginnen, müssen Sie die folgenden Schritte ausführen:
   
   > **Hinweis**
             &nbsp;&nbsp;Ihre Einzelhandelsspiele und -Apps werden im Entwicklermodus nicht ausgeführt, aber die von Ihnen erstellten Apps oder Spiele werden ausgeführt. Wechseln Sie zurück in den Einzelhandelsmodus, um Ihre Lieblingsspiele und -Apps auszuführen.
+  
+  > **Hinweis**
+            &nbsp;&nbsp;Damit Sie eine App auf der Xbox One-Konsole im Entwicklermodus bereitstellen können, muss ein Benutzer bei der Konsole angemeldet sein. Sie können entweder ein vorhandenes Xbox Live-Konto verwenden oder ein neues Konto für Ihre Konsole im Entwicklermodus erstellen. 
 
 ## Erstellen Ihres ersten Projekts in Visual Studio 2015
 
@@ -61,6 +67,7 @@ Ausführliche Informationen finden Sie unter [Einrichtung der Entwicklungsumgebu
 - [UWP auf Xbox One](index.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

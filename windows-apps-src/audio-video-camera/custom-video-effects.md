@@ -1,10 +1,14 @@
 ---
 author: drewbatgit
-Description: 'In diesem Artikel wird beschrieben, wie Sie eine Windows-Runtime-Komponente erstellen, die die IBasicVideoEffect-Schnittstelle implementiert, mit der Sie benutzerdefinierte Effekte für Videostreams erstellen können.'
-MS-HAID: 'dev\_audio\_vid\_camera.custom\_video\_effects'
-MSHAttr: 'PreferredLib:/library/windows/apps'
+Description: "In diesem Artikel wird beschrieben, wie Sie eine Windows-Runtime-Komponente erstellen, die die IBasicVideoEffect-Schnittstelle implementiert, mit der Sie benutzerdefinierte Effekte für Videostreams erstellen können."
+MS-HAID: dev\_audio\_vid\_camera.custom\_video\_effects
+MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Benutzerdefinierte Videoeffekte
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
+
 ---
 
 # Benutzerdefinierte Videoeffekte
@@ -246,6 +250,7 @@ Allgemeine Informationen zum Erstellen von Medienkompositionen von Videoclips fi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

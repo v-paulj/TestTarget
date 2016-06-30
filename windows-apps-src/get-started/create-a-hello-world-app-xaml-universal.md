@@ -1,8 +1,12 @@
 ---
 author: martinekuan
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
-title: Erstellen der App „Hello, world“ (XAML)
-description: In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows 10 abzielt.
+title: "Erstellen der App „Hello, world“ (XAML)"
+description: "In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows 10 abzielt."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 0d6b6421b4f5ebc01c865e80db96d1158b9bd825
+
 ---
 
 # Erstellen der App „Hello, world“ (XAML)
@@ -204,8 +208,8 @@ Ihre App kann auf jedem Windows 10-Gerät ausgeführt werden. Wir sehen uns nun
 Zusätzlich zu den Optionen zum Debuggen auf einem Desktopgerät enthält Visual Studio Optionen zum Bereitstellen und Debuggen Ihrer App auf einem physischen mobilen Gerät, das an den Computer angeschlossen ist, oder in einem Emulator für mobile Geräte. Sie können zwischen Emulatoren für Geräte mit unterschiedlichen Arbeitsspeicher- und Bildschirmkonfigurationen wählen.
 
 -   **Gerät**
--   **Emulator <SDK version> WVGA 4 Zoll 512 MB**
--   **Emulator <SDK version> WVGA 4 Zoll 1 GB**
+-   **Emulator <SDK version> WVGA 4 Zoll 512 MB**
+-   **Emulator <SDK version> WVGA 4 Zoll 1 GB**
 -   usw. (verschiedene Emulatoren mit anderen Konfigurationen)
 
 Es ist ratsam, Ihre App auf einem Gerät mit kleinem Bildschirm und begrenztem Arbeitsspeicher zu testen. Wählen Sie also die Option **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
@@ -318,6 +322,7 @@ Das zweite [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR2
 Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows 10 und die UWP erstellt!
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

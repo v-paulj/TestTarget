@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
-title: Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe
-description: Erfahren Sie, wie Bedingungen festgelegt werden, die steuern, wann die Hintergrundaufgabe ausgeführt wird.
+author: TylerMSFT
+title: "Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe"
+description: "Erfahren Sie, wie Bedingungen festgelegt werden, die steuern, wann die Hintergrundaufgabe ausgeführt wird."
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: 0f95bdcb197f472b743f81c0d941196d5e53f60a
+
 ---
 
 # Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe
@@ -184,6 +187,7 @@ Der folgende Ausschnitt zeigt mehrere Bedingungen im Kontext der Erstellung und 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

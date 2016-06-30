@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 527660fb-8e32-41b4-89cb-d422ed48c69b
-description: Verwenden Sie die exemplarischen Vorgehensweisen in diesem Abschnitt, um zu erfahren, wie Sie Apps Werbebanner und Video-Interstitialanzeigen mithilfe der Microsoft Advertising-Bibliotheken hinzufügen.
-title: Exemplarische Vorgehensweisen für Entwickler für die Microsoft Advertising-Bibliotheken
+description: "Verwenden Sie die exemplarischen Vorgehensweisen in diesem Abschnitt, um zu erfahren, wie Sie Apps Werbebanner und Video-Interstitialanzeigen mithilfe der Microsoft Advertising-Bibliotheken hinzufügen."
+title: "Exemplarische Vorgehensweisen für Entwickler für die Microsoft Advertising-Bibliotheken"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: b36b5d5ba747fbb71c988033ddd0cdb4cee0ed8b
+
 ---
 
 # Exemplarische Vorgehensweisen für Entwickler für die Microsoft Advertising-Bibliotheken
@@ -30,6 +34,7 @@ Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

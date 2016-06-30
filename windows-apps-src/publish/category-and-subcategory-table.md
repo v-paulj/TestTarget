@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Das Zuweisen der richtigen Kategorie und Unterkategorie trägt dazu bei, dass Kunden Ihre App leichter finden und mehr Informationen dazu erhalten.
+Description: "Das Zuweisen der richtigen Kategorie und Unterkategorie trägt dazu bei, dass Kunden Ihre App leichter finden und mehr Informationen dazu erhalten."
 title: Kategorie- und Unterkategorietabelle
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9f9f5da100109af5dc38f7ffbc3cadca842b1214
+
 ---
 
 # Kategorie- und Unterkategorietabelle
@@ -59,6 +63,7 @@ Unterkategorien sind nur für einige Kategorien vorhanden. Denken Sie daran, das
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Während der Texteingabe und -bearbeitung wird der Benutzer durch die Rechtschreibprüfung darauf aufmerksam gemacht, dass ein Wort falsch geschrieben ist, indem das Wort mit einer Wellenlinie unterstrichen wird und dem Benutzer eine Korrekturoption angeboten wird.
-title: Rechtschreibprüfung und Textvorhersage
+Description: "Während der Texteingabe und -bearbeitung wird der Benutzer durch die Rechtschreibprüfung darauf aufmerksam gemacht, dass ein Wort falsch geschrieben ist, indem das Wort mit einer Wellenlinie unterstrichen wird und dem Benutzer eine Korrekturoption angeboten wird."
+title: "Rechtschreibprüfung und Textvorhersage"
 ms.assetid: B867C956-5AB2-4207-A8DE-179CE7871180
 label: Spell checking and text prediction
 template: detail.hbs
+redirect_url: text-controls
+ms.sourcegitcommit: 08f982f5c54d596a7624fe63528f91375e7761ca
+ms.openlocfilehash: 8954b14a84241686a7c784c3d250f197bed7c8b6
+
 ---
 
 # Richtlinien für die Rechtschreibprüfung
@@ -66,6 +70,7 @@ Für XAML-TextBox-Steuerelemente ist die Rechtschreibprüfung standardmäßig de
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

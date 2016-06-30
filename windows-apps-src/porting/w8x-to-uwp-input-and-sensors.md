@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
-description: Code, der in das Gerät selbst integriert und auf dessen Sensoren abgestimmt ist, umfasst auch Eingaben vom und Ausgaben an den Benutzer.
-title: Portieren von Windows-Runtime 8.x zu UWP für E/A, Gerät und App-Modell
+description: "Code, der in das Gerät selbst integriert und auf dessen Sensoren abgestimmt ist, umfasst auch Eingaben vom und Ausgaben an den Benutzer."
+title: "Portieren von Windows-Runtime 8.x zu UWP für E/A, Gerät und App-Modell"
 ms.assetid: bb13fb8f-bdec-46f5-8640-57fb0dd2d85b
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: e5e560ca4f40496edf9d11c3eef546fdc4c3b079
+
 ---
 
 # Portieren von Windows-Runtime 8.x zu UWP für E/A, Gerät und App-Modell
@@ -73,6 +77,7 @@ Wenn eine App, für die im App-Paketmanifest die Positionsfunktion deklariert wi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

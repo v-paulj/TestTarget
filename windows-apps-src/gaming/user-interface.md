@@ -1,8 +1,12 @@
 ---
 author: mtoepke
 title: DirectX-Spielprojektvorlagen
-description: Hier erhalten Sie Informationen zu den Vorlagen zum Erstellen eines DirectX-Spiels für die Universelle Windows-Plattform (UWP).
+description: "Hier erhalten Sie Informationen zu den Vorlagen zum Erstellen eines DirectX-Spiels für die Universelle Windows-Plattform (UWP)."
 ms.assetid: 41b6cd76-5c9a-e2b7-ef6f-bfbf6ef7331d
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: b7d01fda0bc8dbafebb7485ec01acb5c7431a815
+
 ---
 
 # DirectX-Spielprojektvorlagen
@@ -85,6 +89,7 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die univer
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

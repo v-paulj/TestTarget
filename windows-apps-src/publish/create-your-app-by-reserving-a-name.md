@@ -1,9 +1,13 @@
 ---
 author: jnHs
-Description: Der erste Schritt beim Erstellen einer neuen App im Windows Dev Center-Dashboard besteht darin, einen App-Namen zu reservieren. In diesem Thema wird erläutert, wie Sie App-Namen reservieren. Es enthält einige Vorschläge zur Wahl aussagekräftiger App-Namen.
+Description: "Der erste Schritt beim Erstellen einer neuen App im Windows Dev Center-Dashboard besteht darin, einen App-Namen zu reservieren. In diesem Thema wird erläutert, wie Sie App-Namen reservieren. Es enthält einige Vorschläge zur Wahl aussagekräftiger App-Namen."
 title: App-Erstellung durch Reservierung eines Namens
-keywords:
+keywords: 
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
+translationtype: Human Translation
+ms.sourcegitcommit: 3b65bbaf2498dde7484c055ff86ed09e89bf3405
+ms.openlocfilehash: 5e4933be456bc76eb5923f5c081e8376c43c118b
+
 ---
 
 # App-Erstellung durch Reservierung eines Namens
@@ -60,6 +64,7 @@ Weitere Informationen finden Sie unter [Verwalten von App-Namen](manage-app-name
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

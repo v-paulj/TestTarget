@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: fcebd659-438b-4d03-bc73-6b662ed6f1f3
-description: Hier wird die Entwicklung und Veröffentlichung einer App mit Anzeigen vollständig erläutert.
-title: Workflows für das Erstellen von Apps mit Anzeigen
+description: "Hier wird die Entwicklung und Veröffentlichung einer App mit Anzeigen vollständig erläutert."
+title: "Workflows für das Erstellen von Apps mit Anzeigen"
+translationtype: Human Translation
+ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
+ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
+
 
 ---
 
@@ -61,6 +65,7 @@ Nachdem die App veröffentlicht wurde und im Windows Store verfügbar ist, könn
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

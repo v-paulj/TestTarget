@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Bereiten Sie Ihre App für die Lokalisierung vor, um sie an andere Märkte, Sprachen oder Regionen anzupassen.
-title: Vorbereiten Ihrer App für die Lokalisierung
+Description: "Bereiten Sie Ihre App für die Lokalisierung vor, um sie an andere Märkte, Sprachen oder Regionen anzupassen."
+title: "Vorbereiten Ihrer App für die Lokalisierung"
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 label: Prepare your app for localization
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: e52a5322767677859e32ccbecf4951745c49f36f
+
 ---
 
 # Vorbereiten Ihrer App für die Lokalisierung
@@ -187,6 +191,7 @@ Die Sortierung folgt dem **regionalen Format der Systemsteuerung**:
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

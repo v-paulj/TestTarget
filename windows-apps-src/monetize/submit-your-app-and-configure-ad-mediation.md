@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 69E05E56-B5F0-4D4C-A1FF-B6EAFF5D0E28
-description: Während der Übermittlung können Sie das gewünschte Verhalten der Anzeigenvermittlung konfigurieren. Dieses können Sie später anpassen, ohne dazu Codeänderungen vorzunehmen oder neue Pakete zu übermitteln.
-title: Übermitteln der App und Konfigurieren der Anzeigenvermittlung
+description: "Während der Übermittlung können Sie das gewünschte Verhalten der Anzeigenvermittlung konfigurieren. Dieses können Sie später anpassen, ohne dazu Codeänderungen vorzunehmen oder neue Pakete zu übermitteln."
+title: "Übermitteln der App und Konfigurieren der Anzeigenvermittlung"
+translationtype: Human Translation
+ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
+ms.openlocfilehash: 13dd6a9c38d85ead29a43f470b7c0f63d025d612
+
 ---
 
 # Übermitteln der App und Konfigurieren der Anzeigenvermittlung
@@ -164,6 +168,7 @@ Sie möchten Microsoft Advertising und Inneractive gleichermaßen verwenden, sod
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

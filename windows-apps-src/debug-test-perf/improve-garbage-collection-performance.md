@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
 title: Verbessern der Leistung bei der Garbage Collection
-description: In C# und Visual Basic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NET Garbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten des .NET Garbage Collectors sowie über die bewährten Methoden zur Leistungssteigerung für den Garbage Collector in UWP-Apps.
+description: "In C# und Visual Basic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NET Garbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten des .NET Garbage Collectors sowie über die bewährten Methoden zur Leistungssteigerung für den Garbage Collector in UWP-Apps."
+translationtype: Human Translation
+ms.sourcegitcommit: 5f9626c644315884ea8605a4e69e7e580a44010b
+ms.openlocfilehash: 3fb6a0469a0e7488c40fc03bce8c90780b524656
+
 ---
 # Verbessern der Leistung bei der Garbage Collection
 
@@ -79,6 +83,7 @@ Das Ersetzen von Objektverweisen durch Indizes kann sich für Ihre App als kompl
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

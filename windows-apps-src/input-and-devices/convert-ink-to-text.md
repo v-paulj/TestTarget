@@ -6,8 +6,8 @@ ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, handwriting recognition
-ms.sourcegitcommit: 1722fc00de000d07ed30cfb0ae12080708c30b76
-ms.openlocfilehash: c2c43052a1a4a96d7c0a95578b7b3fa3a2fd8a74
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: ac07ca76df874c670e7e38698e89de6620f73cc4
 
 ---
 
@@ -25,7 +25,7 @@ Die Schrifterkennung ist in die Windows-Freihandplattform integriert und unterst
 
 Fügen Sie bei allen hier aufgeführten Beispielen die für die Freihandfunktion benötigten Namespaceverweise hinzu. Hierzu gehört „Windows.UI.Input.Inking“.
 
-## <span id="Basic_handwriting_recognition"></span><span id="basic_handwriting_recognition"></span><span id="BASIC_HANDWRITING_RECOGNITION"></span>Grundlegende Schrifterkennung
+## Grundlegende Schrifterkennung
 
 
 Hier wird veranschaulicht, wie mit dem Schrifterkennungsmodul in Verbindung mit dem standardmäßig installierten Sprachpaket, ein Satz von Freihandstrichen in einer [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse interpretiert wird.
@@ -202,7 +202,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="International_recognition"></span><span id="international_recognition"></span><span id="INTERNATIONAL_RECOGNITION"></span>Internationale Erkennung
+## Internationale Erkennung
 
 
 Für die Schrifterkennung können viele der durch Windows unterstützten Sprachen verwendet werden.
@@ -447,7 +447,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="Dynamic_handwriting_recognition"></span><span id="dynamic_handwriting_recognition"></span><span id="DYNAMIC_HANDWRITING_RECOGNITION"></span>Dynamische Schrifterkennung
+## Dynamische Schrifterkennung
 
 
 In den beiden vorherigen Beispielen musste der Benutzer auf eine Schaltfläche klicken, um die Erkennung zu starten. Wenn die Freihandstricheingabe mit einer einfachen Timing-Funktion kombiniert wird, kann die App auch eine dynamische Erkennung ausführen.
@@ -524,13 +524,13 @@ public MainPage()
 
 2.  Dies sind die Handler für die drei Ereignisse, die im ersten Schritt hinzugefügt wurden.
 
-    <span id="StrokesCollected"></span><span id="strokescollected"></span><span id="STROKESCOLLECTED"></span>[**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
+    [**StrokesCollected**](https://msdn.microsoft.com/library/windows/apps/dn922024)  
     Starten Sie den Timer für die Erkennung, wenn der Benutzer die Freihandeingabe beendet, indem er den Stift oder Finger anhebt oder die Maustaste loslässt. Nach einer Sekunde ohne Freihandeingabe wird die Spracherkennung initiiert.
 
-    <span id="StrokeStarted"></span><span id="strokestarted"></span><span id="STROKESTARTED"></span>[**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
+    [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702)  
     Wenn ein neuer Freihandstrich vor dem nächsten Tick-Ereignis des Timers beginnt, wird der Timer beendet, da es sich bei dem neuen Freihandstrich wahrscheinlich um die Fortsetzung der vorherigen Handschrifteingabe handelt.
 
-    <span id="Tick"></span><span id="tick"></span><span id="TICK"></span>[**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)  
+    [**Tick**](https://msdn.microsoft.com/library/windows/apps/br244256)  
     Rufen Sie die Funktion für die Erkennung nach einer Sekunde ohne Freihandeingaben auf.
 ```    CSharp
 // Handler for the timer tick event calls the recognition function.
@@ -659,7 +659,7 @@ string str = "Recognition result\n";
     }
 ```
 
-## <span id="related_topics"></span>Verwandte Artikel
+## Verwandte Artikel
 
 * [Zeichen- und Eingabestiftinteraktionen](pen-and-stylus-interactions.md)
 
@@ -673,6 +673,6 @@ string str = "Recognition result\n";
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

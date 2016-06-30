@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Sie können direkt auf Rezensionen Ihrer App reagieren, um Kunden zu signalisieren, dass Sie ihr Feedback ernst nehmen.
+Description: "Sie können direkt auf Rezensionen Ihrer App reagieren, um Kunden zu signalisieren, dass Sie ihr Feedback ernst nehmen."
 title: Reagieren auf Kundenrezensionen
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 06228d7816f371f669ad4e6db7310e903f5f0683
+
 ---
 
 # Reagieren auf Kundenrezensionen
@@ -47,6 +51,7 @@ Sie alleine sind für die Kommunikation mit Ihren Kunden verantwortlich. Microso
 Ihren Kunden zuzuhören und auf sie einzugehen, ist erst der Anfang. Entscheidend ist es, das Feedback praktisch umzusetzen. Wenn Sie an Ihrer App erhebliche Verbesserungen vornehmen, sollten Sie diese unbedingt im Store veröffentlichen, indem Sie eine [neue Einreichung erstellen](app-submissions.md), um Ihre App zu aktualisieren.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

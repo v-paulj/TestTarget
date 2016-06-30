@@ -3,6 +3,10 @@ author: Jwmsft
 ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
 label: Text box
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
+ms.openlocfilehash: 873ca8f869f4303f8fc4a9a7ff08f81df29d367d
+
 ---
 # Textfeld
 Mit dem TextBox-Steuerelement können Benutzer Text in eine App eingeben. Es wird üblicherweise verwendet, um eine einzelne Textzeile einzugeben, kann jedoch auch so konfiguriert werden, dass eine mehrzeilige Texteingabe möglich ist. Der Text wird auf dem Bildschirm in einem einfachen, einheitlichen Klartext angezeigt.
@@ -79,8 +83,7 @@ Sie können ein Textfeld auf schreibgeschützt festlegen, indem Sie die [IsReadO
 
 Sie können ein TextBox-Element auf schreibgeschützt festlegen, indem Sie die IsReadOnly-Eigenschaft auf true festlegen. Sie können z. B. ein Textfeld bereitstellen, in das Benutzer Kommentare eingeben können und das nur unter bestimmten Bedingungen aktiviert wird. Sie können das Textfeld als schreibgeschützt festlegen, bis die Bedingungen erfüllt sind. Wenn Text nur angezeigt werden soll, ziehen Sie stattdessen die Verwendung eines TextBlock- oder RichtTextBlock-Elements in Erwägung.
 
-Ein schreibgeschütztes Textfeld sieht genauso aus wie ein Textfeld zum Lesen/Schreiben, was auf Benutzer verwirrend wirken könnte. 
-Ein Benutzer kann Text auswählen und kopieren.
+Ein schreibgeschütztes Textfeld sieht genauso aus wie ein Textfeld zum Lesen/Schreiben, was auf Benutzer verwirrend wirken könnte. Ein Benutzer kann Text auswählen und kopieren.
 IsEnabled
 
 
@@ -279,6 +282,7 @@ Weitere Informationen und Beispiele finden Sie unter [Verwenden des Eingabeumfan
 - [StringLength-Eigenschaft](https://msdn.microsoft.com/library/system.string.length(v=vs.110).aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

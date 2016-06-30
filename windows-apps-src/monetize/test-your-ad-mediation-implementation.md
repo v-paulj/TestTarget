@@ -1,8 +1,12 @@
 ---
 author: mcleanbyron
 ms.assetid: 54ECD653-7FC2-4A95-AC5A-972C4FB5A54B
-description: Vor dem Übermitteln Ihrer App empfehlen wir, die Implementierung der Anzeigenvermittlung zu testen.
+description: "Vor dem Übermitteln Ihrer App empfehlen wir, die Implementierung der Anzeigenvermittlung zu testen."
 title: Testen der Implementierung der Anzeigenvermittlung
+translationtype: Human Translation
+ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
+ms.openlocfilehash: 0805ed5462a4b100b837ed9c11ec2d9e7caabc34
+
 ---
 
 # Testen der Implementierung der Anzeigenvermittlung
@@ -49,6 +53,7 @@ Beim Übermitteln Ihres App-Pakets an das Windows Dev Center-Dashboard werden di
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

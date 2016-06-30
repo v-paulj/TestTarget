@@ -1,8 +1,12 @@
 ---
 author: drewbatgit
 ms.assetid: 40B97E0C-EB1B-40C2-A022-1AB95DFB085E
-description: In diesem Artikel wird beschrieben, wie Sie Medien von einer universellen Windows-App für Remotegeräte umwandeln.
+description: "In diesem Artikel wird beschrieben, wie Sie Medien von einer universellen Windows-App für Remotegeräte umwandeln."
 title: Medienumwandlung
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9c8d549c9b770af351894f2a19dd035a43d70264
+
 ---
 
 # Medienumwandlung
@@ -151,6 +155,7 @@ Implementieren Sie zum Schluss den Handler für die Schaltfläche zum Trennen. B
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

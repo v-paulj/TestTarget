@@ -3,6 +3,10 @@ author: PatrickFarley
 title: Einrichten von Geofence-Bereichen
 description: Richten Sie einen Geofence-Bereich in Ihrer App ein, und erfahren Sie, wie Sie Benachrichtigungen im Vordergrund und Hintergrund behandeln.
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: e161e478b1b306f5d8d77b7649aeecd80e21b5be
+
 ---
 
 # Einrichten von Geofence-Bereichen
@@ -303,10 +307,10 @@ So lauschen Sie auf ein Geofence-Ereignis im Hintergrund
 
 ### Schritt 1: Durchführen der Registrierung für Ereignisse zur Änderung des Geofence-Zustands
 
-Fügen Sie im App-Manifest auf der Registerkarte **Deklarationen** eine Deklaration für eine Hintergrundaufgabe zur Position hinzu. Gehen Sie wie folgt vor:
+Fügen Sie im App-Manifest auf der Registerkarte **Deklarationen** eine Deklaration für eine Hintergrundaufgabe zum Standort hinzu. Gehen Sie wie folgt vor:
 
 -   Fügen Sie eine Deklaration vom Typ **Hintergrundaufgaben** hinzu.
--   Legen Sie den Eigenschaftenaufgabentyp **Position** fest.
+-   Legen Sie den Eigenschaftenaufgabentyp **Standort** fest.
 -   Legen Sie einen Einstiegspunkt für die App fest, der aufgerufen wird, wenn das Ereignis ausgelöst wird.
 
 ### Schritt 2: Registrieren der Hintergrundaufgabe
@@ -363,7 +367,7 @@ async private void RegisterBackgroundTask(object sender, RoutedEventArgs e)
 
 ### Schritt 3: Behandeln der Hintergrundbenachrichtigung
 
-Die Aktion, die Sie zum Benachrichtigen der Benutzer durchführen, richtet sich nach dem Verwendungszweck der App. Sie können aber z. B. eine Popupbenachrichtigung anzeigen, Audiosound wiedergeben oder eine Live-Kachel aktualisieren. Der Code in diesem Schritt dient zum Behandeln der Benachrichtigung.
+Die Aktion, die Sie zum Benachrichtigen der Benutzer durchführen, richtet sich nach dem Verwendungszweck der App. Sie können aber z. B. eine Popupbenachrichtigung anzeigen, einen Ton wiedergeben oder eine Live-Kachel aktualisieren. Der Code in diesem Schritt dient zum Behandeln der Benachrichtigung.
 
 ```csharp
 async private void OnCompleted(IBackgroundTaskRegistration sender, BackgroundTaskCompletedEventArgs e)
@@ -478,6 +482,7 @@ Bevor Ihre App auf Positionsdaten zugreifen kann, muss **Position** auf dem Ger�
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

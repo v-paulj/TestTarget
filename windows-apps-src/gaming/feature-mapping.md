@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Zuordnung von DirectX 9-Funktionen zu DirectX 11-APIs
-description: Erfahren Sie, wie die Features Ihres Direct3D 9-Spiels zu Direct3D 11 und zur Universellen Windows-Plattform (UWP) zugeordnet werden.
+title: "Zuordnung von DirectX 9-Funktionen zu DirectX 11-APIs"
+description: "Erfahren Sie, wie die Features Ihres Direct3D 9-Spiels zu Direct3D 11 und zur Universellen Windows-Plattform (UWP) zugeordnet werden."
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 3a9e9c32ed2d892674592f32d0f067fed668d9d1
+
 ---
 
 # Zuordnung von DirectX 9-Funktionen zu DirectX 11-APIs
@@ -669,6 +673,7 @@ Ziehen Sie beim Konvertieren von Direct3D 9-Formaten in DXGI-Formate die folgen
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Ein Flyout ist ein kleines Popupmenü, das vorübergehend UI zu aktuellen Benutzeraktionen anzeigt.
-title: Kontextmenüs und Dialogfelder
+Description: "Ein Flyout ist ein kleines Popupmenü, das vorübergehend UI zu aktuellen Benutzeraktionen anzeigt."
+title: "Kontextmenüs und Dialogfelder"
 ms.assetid: 7CA2600C-A1DB-46AE-8F72-24C25E224417
 label: Menus, dialogs, and popups
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
+
 ---
 # Menüs, Dialogfelder, Flyouts und Popups
 
@@ -179,6 +183,7 @@ Um ein Kontextmenü oder Flyout als Reaktion auf einen der oben genannten Schrit
 - [**ContentDialog-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

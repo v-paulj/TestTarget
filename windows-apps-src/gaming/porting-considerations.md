@@ -1,8 +1,12 @@
 ---
 author: mtoepke
-title: Wechseln von DirectX 9 zu DirectX 11 und zur Universellen Windows-Plattform (UWP)
-description: Dieser Abschnitt enthält eine Anleitung zum Portieren eines DirectX 9-Desktopspiels zu DirectX 11 und zur Universellen Windows-Plattform (UWP).
+title: "Wechseln von DirectX 9 zu DirectX 11 und zur Universellen Windows-Plattform (UWP)"
+description: "Dieser Abschnitt enthält eine Anleitung zum Portieren eines DirectX 9-Desktopspiels zu DirectX 11 und zur Universellen Windows-Plattform (UWP)."
 ms.assetid: 7a3f8ddf-d5b2-1c05-b532-70459befda4e
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 0f27f9e9219fca10798a09e6f934b72ad7b1b5a8
+
 ---
 
 # Wechseln von DirectX 9 zu DirectX 11 und zur Universellen Windows-Plattform (UWP)
@@ -50,6 +54,7 @@ Dieser Abschnitt enthält eine Anleitung zum Portieren eines DirectX 9-Desktopsp
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,8 +1,12 @@
 ---
 author: jnHs
-Description: Zeigen Sie die Namen an, die Sie für Ihre App reserviert haben, reservieren Sie zusätzliche Namen (für andere Sprachen oder um den Namen Ihrer App zu ändern), und löschen Sie reservierte Namen, die Sie nicht mehr benötigen.
+Description: "Zeigen Sie die Namen an, die Sie für Ihre App reserviert haben, reservieren Sie zusätzliche Namen (für andere Sprachen oder um den Namen Ihrer App zu ändern), und löschen Sie reservierte Namen, die Sie nicht mehr benötigen."
 title: Verwalten von App-Namen
 ms.assetid: D95A6227-746E-4729-AE55-648A7102401C
+translationtype: Human Translation
+ms.sourcegitcommit: 48952b5d4f2565d06ec79475f88fbabf93fd0f70
+ms.openlocfilehash: e03e99b5de2142c2bcf46ee2aad4a76bb87ee4e5
+
 ---
 
 # Verwalten von App-Namen
@@ -43,6 +47,7 @@ Nachdem Ihre App unter dem neuen Namen veröffentlicht wurde, können Sie den al
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

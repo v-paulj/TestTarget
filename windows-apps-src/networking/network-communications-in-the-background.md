@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: Apps halten die Kommunikation mithilfe von Hintergrundaufgaben und zwei wichtigen Mechanismen aufrecht, während sie nicht im Vordergrund ausgeführt werden.
+description: "Apps halten die Kommunikation mithilfe von Hintergrundaufgaben und zwei wichtigen Mechanismen aufrecht, während sie nicht im Vordergrund ausgeführt werden."
 title: Netzwerkkommunikation im Hintergrund
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 4ab9ca2a1cd337bd0af8fbbfcf44d8fc6e6dda3e
+
 ---
 
 # Netzwerkkommunikation im Hintergrund
@@ -56,9 +60,9 @@ Damit die App Daten, die auf einem Socket empfangen werden, während die App nic
 
     Eine App überträgt den Besitz eines Sockets an einen Socketbroker und übergibt die ID für die Hintergrundaufgabe mit der entsprechenden Methode:
 
-    -   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256)-Methoden für einen [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)
-    -   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433)-Methoden für einen [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)
-    -   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407)-Methoden für einen [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)
+    -   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256)-Methoden für einen [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319).
+    -   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433)-Methoden für einen [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882).
+    -   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407)-Methoden für einen [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906).
 
 ```csharp
     private void TransferOwnership(StreamSocketListener tcpListener) 
@@ -427,15 +431,13 @@ async Task<bool> RegisterWithCCTHelper(string serverUri)
 }
 ```
 
-Weitere Informationen zur Verwendung von [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) oder [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) finden Sie im [Beispiel für einen ControlChannelTrigger-StreamWebSocket](http://go.microsoft.com/fwlink/p/?linkid=251232).
+Weitere Informationen zur Verwendung von [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) oder [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) finden Sie im [Beispiel für einen ControlChannelTrigger-StreamSocket](http://go.microsoft.com/fwlink/p/?linkid=251232).
 
 ## ControlChannelTrigger mit HttpClient
 
 Bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) müssen einige besondere Punkte berücksichtigt werden. Bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit **ControlChannelTrigger** sollten Sie sich an einige transportspezifische Verwendungsmuster und bewährte Methoden halten. Diese Aspekte beeinflussen, wie Anforderungen für den Paketempfang in der [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)-Klasse verarbeitet werden.
 
 **Hinweis**
-            
-          
             [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) in Verbindung mit SSL wird derzeit bei Verwendung des Netzwerktriggerfeatures und von [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) nicht unterstützt.
 
  
@@ -488,7 +490,7 @@ private void SetupHttpRequestAndSendToHttpServer()
 }
 ```
 
-Für die Behandlung von Anforderungen zum Senden von HTTP-Anforderungen über [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637), um den Antwortempfang zu initiieren, müssen einige besondere Punkte berücksichtigt werden. Insbesondere muss die App bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) Sendevorgänge mithilfe einer Aufgabe statt des **await**-Modells behandeln.
+Für die Behandlung von Anforderungen zum Senden von HTTP-Anforderungen über [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) zur Initiierung des Antwortempfangs müssen einige besondere Punkte berücksichtigt werden. Insbesondere muss die App bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) Sendevorgänge mithilfe einer Aufgabe statt des **await**-Modells behandeln.
 
 Bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) erfolgt keine Synchronisierung der [**IBackgroundTask.Run**](https://msdn.microsoft.com/library/windows/apps/br224811)-Methode der Hintergrundaufgabe für [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) mit der Rückgabe des Empfangsabschlussrückrufs. Die App kann daher nur das „HttpResponseMessage“-Blockierverfahren für die **Run**-Methode verwenden und auf den Empfang der vollständigen Antwort warten.
 
@@ -596,6 +598,7 @@ Weitere Informationen zur Verwendung von [**IXMLHTTPRequest2**](https://msdn.mic
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

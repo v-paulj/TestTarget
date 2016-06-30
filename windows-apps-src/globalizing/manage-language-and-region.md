@@ -1,10 +1,14 @@
 ---
 author: DelfCo
-Description: Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App steuern.
+Description: "Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App steuern."
 title: Verwalten von Sprache und Region
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 label: Manage language and region
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 294f087fffeefda67ddacd09636915144bf18ff4
+
 ---
 
 # Verwalten von Sprache und Region
@@ -225,6 +229,7 @@ Die folgende Tabelle enthält Beispiele für die Elemente, die dem Benutzer unte
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

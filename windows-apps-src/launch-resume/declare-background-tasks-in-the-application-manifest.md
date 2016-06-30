@@ -1,8 +1,11 @@
 ---
-author: mcleblanc
+author: TylerMSFT
 title: Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
-description: Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren.
+description: "Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren."
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
+ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
+ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
+
 ---
 
 # Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
@@ -149,6 +152,7 @@ Das folgende Beispiel zeigt das vollständige "Application"-Element aus dem [Hin
 * [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

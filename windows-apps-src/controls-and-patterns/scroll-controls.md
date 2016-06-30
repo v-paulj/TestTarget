@@ -1,10 +1,14 @@
 ---
 author: Jwmsft
-Description: Mittels Verschiebung und Bildlauf können Benutzer Inhalte erreichen, die sich jenseits der Bildschirmgrenzen befinden.
-title: Richtlinien für Bildlaufleisten
+Description: "Mittels Verschiebung und Bildlauf können Benutzer Inhalte erreichen, die sich jenseits der Bildschirmgrenzen befinden."
+title: "Richtlinien für Bildlaufleisten"
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scroll bars
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
+ms.openlocfilehash: b390f8a2cbabf243bd4d73c16122648e3d4a0586
+
 ---
 # Bildlaufleisten
 
@@ -91,6 +95,7 @@ In Fällen, in denen ein ScrollViewer explizit in Ihrem XAML-Code vorhanden ist,
 * [**ScrollViewer-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209527)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

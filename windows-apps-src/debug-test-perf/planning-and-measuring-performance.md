@@ -2,7 +2,11 @@
 author: mcleblanc
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: Planen der Leistung
-description: Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen.
+description: "Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen."
+translationtype: Human Translation
+ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
+ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
+
 ---
 # Planen der Leistung
 
@@ -189,6 +193,7 @@ Optimieren Sie nur die leistungskritischen Codepfade in Ihrer App. Dies sind die
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
