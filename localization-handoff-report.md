@@ -6,15 +6,15 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://github.com/Microsoft/windows-apps/blob/ed459b373e43a30bf661c1e4eafd249d1f8efc1d/windows-apps-src/porting/desktop-to-uwp-extensions.md) | HandedOffSuccess | [Details](#1188accc6e651861b59994581a7a5a5037a469c93469)
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/a0d3b087c750ccfaed9639a263db503d23a72a33/windows-apps-src/TOC.md) | OutofSyncHandedBackSuccess | [Details](#673a0aea769605085d59d022e795af1d75c455893875)
+ [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://github.com/Microsoft/windows-apps/blob/66a2371008d3c8ec01027968d75d934d6c64576a/windows-apps-src/porting/desktop-to-uwp-extensions.md) | HandedOffSuccess | [Details](#48118f3a375440d8578df5c23d543c628e9332553469)
+ [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/45b9170ed311e6f17d1c51c0b7d1d288e07184a9/windows-apps-src/porting/desktop-to-uwp-root.md) | OutofSyncHandedBackSuccess | [Details](#c5ffb1e912c2953d5f813f099e036d2d7b395b693471)
 
 ## Item Details
-##### <a name='1188accc6e651861b59994581a7a5a5037a469c93469'></a> Source: [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://github.com/Microsoft/windows-apps/blob/ed459b373e43a30bf661c1e4eafd249d1f8efc1d/windows-apps-src/porting/desktop-to-uwp-extensions.md)
+##### <a name='48118f3a375440d8578df5c23d543c628e9332553469'></a> Source: [windows-apps-src\porting\desktop-to-uwp-extensions.md](https://github.com/Microsoft/windows-apps/blob/66a2371008d3c8ec01027968d75d934d6c64576a/windows-apps-src/porting/desktop-to-uwp-extensions.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/daa5b4b6d4b14fec91be415126297271ef53d7cd/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.de-de.xlf)
-* Handoff Datetime: 2016-07-01 00:45:17
+* Handoff File: [desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/2ea03fd178a7b6c43a9a2bfb594a89d1a9440944/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-extensions.b85d42a8c8cdbc820d413ec030cc4afe93550f53.de-de.xlf)
+* Handoff Datetime: 2016-07-01 01:25:39
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -22,19 +22,19 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='673a0aea769605085d59d022e795af1d75c455893875'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/a0d3b087c750ccfaed9639a263db503d23a72a33/windows-apps-src/TOC.md)
+##### <a name='c5ffb1e912c2953d5f813f099e036d2d7b395b693471'></a> Source: [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/45b9170ed311e6f17d1c51c0b7d1d288e07184a9/windows-apps-src/porting/desktop-to-uwp-root.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/daa5b4b6d4b14fec91be415126297271ef53d7cd/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
-* Handoff Datetime: 2016-07-01 00:45:17
+* Handoff File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/2ea03fd178a7b6c43a9a2bfb594a89d1a9440944/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf)
+* Handoff Datetime: 2016-07-01 01:25:39
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.de-de/blob/f23f7352e85523c2080e4548d15487ba1fd78516/windows-apps-src/TOC.md)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/e787585e48f709968be1ca604abad8e25307473d/ol-handback/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
-* Current Handback Datetime: 2016-06-21 15:01:10
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-root.md](https://github.com/Microsoft/windows-apps.de-de/blob/00769f0027b16b5bd96e3cf6e0a22190fdd13b87/windows-apps-src/porting/desktop-to-uwp-root.md)
+* Current Handback File: [desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/0ad1e8e3dad7ed3e70f2e3544b81806709ee15b6/ol-handback/Microsoft/windows-apps.de-de/master/desktop-to-uwp-root.7513f52e089e9b95deeb36130fca887605ce1b3a.de-de.xlf)
+* Current Handback Datetime: 2016-06-30 16:01:43
 * [Back to Top](#report-top)
 
 
