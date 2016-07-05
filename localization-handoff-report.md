@@ -1,37 +1,36 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 4
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/75436a950cbd2fca1f9387bd021dcc998c0071d7/windows-apps-src/launch-resume/create-and-register-a-background-task.md) | OutofSyncHandedBackSuccess | [Details](#f86886cb55f05218e9d834f6a37c9ee8c1525cd43009)
- [windows-apps-src\launch-resume\monitor-background-task-progress-and-completion.md](https://github.com/Microsoft/windows-apps/blob/26773acec62a6922599dec8c6eba9f6c6a78394a/windows-apps-src/launch-resume/monitor-background-task-progress-and-completion.md) | OutofSyncHandedBackSuccess | [Details](#7798c327a67315f67aaf63f1917e77d3daf760203041)
- [windows-apps-src\porting\hwa-create-windows.md](https://github.com/Microsoft/windows-apps/blob/60fae326dcfa5f5e71a5ab0fda04e5151f11fc61/windows-apps-src/porting/hwa-create-windows.md) | HandedOffSuccess | [Details](#152cfd8aaa43ee7c63418d699e8bcce07722383e3485)
- [windows-apps-src\porting\hwa-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/7fe6e240e4ef221b49f9b103cf30192449ce4502/windows-apps-src/porting/hwa-to-uwp-root.md) | HandedOffSuccess | [Details](#491665558f713dcbaae7ea20739ed72c61a12cd23486)
+ [windows-apps-src\devices-sensors\bluetooth.md](https://github.com/Microsoft/windows-apps/blob/ca5f533f89438a3cade2cf5326e51b84a883f5f3/windows-apps-src/devices-sensors/bluetooth.md) | OutofSyncHandedBackSuccess | [Details](#195d0d55f19eccd545a4de79384d05b1aec4669a2062)
+ [windows-apps-src\launch-resume\monitor-background-task-progress-and-completion.md](https://github.com/Microsoft/windows-apps/blob/6e6e28bc339364e70282a9db84593188c70a59c4/windows-apps-src/launch-resume/monitor-background-task-progress-and-completion.md) | OutofSyncHandedBackSuccess | [Details](#153895a3ce41e5f4d22067e33cb5e874e89c60693041)
+ [windows-apps-src\xbox-apps\how-to-disable-mouse-mode.md](https://github.com/Microsoft/windows-apps/blob/979aa1634671b5baf194ce9cda0a6f966cdd2274/windows-apps-src/xbox-apps/how-to-disable-mouse-mode.md) | HandedBackFailed | [Details](#c19a74f9be4e08e297248ad1a36d78551f5bc9903955)
 
 ## Item Details
-##### <a name='f86886cb55f05218e9d834f6a37c9ee8c1525cd43009'></a> Source: [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/75436a950cbd2fca1f9387bd021dcc998c0071d7/windows-apps-src/launch-resume/create-and-register-a-background-task.md)
+##### <a name='195d0d55f19eccd545a4de79384d05b1aec4669a2062'></a> Source: [windows-apps-src\devices-sensors\bluetooth.md](https://github.com/Microsoft/windows-apps/blob/ca5f533f89438a3cade2cf5326e51b84a883f5f3/windows-apps-src/devices-sensors/bluetooth.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/af4b69904f80cbbc0d04c5b696c7a7d429741fa1/ol-handoff/Microsoft/windows-apps.de-de/master/create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.de-de.xlf)
-* Handoff Datetime: 2016-07-05 18:53:22
+* Handoff File: [bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/daff9b8d5fd042219944a6f23e46374a7fe79328/ol-handoff/Microsoft/windows-apps.de-de/master/bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.de-de.xlf)
+* Handoff Datetime: 2016-07-05 19:24:41
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps.de-de/blob/00769f0027b16b5bd96e3cf6e0a22190fdd13b87/windows-apps-src/launch-resume/create-and-register-a-background-task.md)
-* Current Handback File: [create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/0ad1e8e3dad7ed3e70f2e3544b81806709ee15b6/ol-handback/Microsoft/windows-apps.de-de/master/create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.de-de.xlf)
+* Current Target File: [windows-apps-src\devices-sensors\bluetooth.md](https://github.com/Microsoft/windows-apps.de-de/blob/00769f0027b16b5bd96e3cf6e0a22190fdd13b87/windows-apps-src/devices-sensors/bluetooth.md)
+* Current Handback File: [bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/0ad1e8e3dad7ed3e70f2e3544b81806709ee15b6/ol-handback/Microsoft/windows-apps.de-de/master/bluetooth.309edfda5c51b0b2e0a503b2068683a876f60e7f.de-de.xlf)
 * Current Handback Datetime: 2016-06-30 16:01:43
 * [Back to Top](#report-top)
 
-##### <a name='7798c327a67315f67aaf63f1917e77d3daf760203041'></a> Source: [windows-apps-src\launch-resume\monitor-background-task-progress-and-completion.md](https://github.com/Microsoft/windows-apps/blob/26773acec62a6922599dec8c6eba9f6c6a78394a/windows-apps-src/launch-resume/monitor-background-task-progress-and-completion.md)
+##### <a name='153895a3ce41e5f4d22067e33cb5e874e89c60693041'></a> Source: [windows-apps-src\launch-resume\monitor-background-task-progress-and-completion.md](https://github.com/Microsoft/windows-apps/blob/6e6e28bc339364e70282a9db84593188c70a59c4/windows-apps-src/launch-resume/monitor-background-task-progress-and-completion.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [monitor-background-task-progress-and-completion.7059a6515dd27e1f47a1cba4deb98a0dc69aa62c.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/af4b69904f80cbbc0d04c5b696c7a7d429741fa1/ol-handoff/Microsoft/windows-apps.de-de/master/monitor-background-task-progress-and-completion.7059a6515dd27e1f47a1cba4deb98a0dc69aa62c.de-de.xlf)
-* Handoff Datetime: 2016-07-05 18:53:22
+* Handoff File: [monitor-background-task-progress-and-completion.7059a6515dd27e1f47a1cba4deb98a0dc69aa62c.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/daff9b8d5fd042219944a6f23e46374a7fe79328/ol-handoff/Microsoft/windows-apps.de-de/master/monitor-background-task-progress-and-completion.7059a6515dd27e1f47a1cba4deb98a0dc69aa62c.de-de.xlf)
+* Handoff Datetime: 2016-07-05 19:24:41
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -42,23 +41,11 @@
 * Current Handback Datetime: 2016-06-30 16:01:43
 * [Back to Top](#report-top)
 
-##### <a name='152cfd8aaa43ee7c63418d699e8bcce07722383e3485'></a> Source: [windows-apps-src\porting\hwa-create-windows.md](https://github.com/Microsoft/windows-apps/blob/60fae326dcfa5f5e71a5ab0fda04e5151f11fc61/windows-apps-src/porting/hwa-create-windows.md)
-* Status: HandedOffSuccess
+##### <a name='c19a74f9be4e08e297248ad1a36d78551f5bc9903955'></a> Source: [windows-apps-src\xbox-apps\how-to-disable-mouse-mode.md](https://github.com/Microsoft/windows-apps/blob/979aa1634671b5baf194ce9cda0a6f966cdd2274/windows-apps-src/xbox-apps/how-to-disable-mouse-mode.md)
+* Status: HandedBackFailed
 * Target File: 
-* Handoff File: [hwa-create-windows.681dd65bdcffe52b7e3512fdb828e18db356d05e.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/af4b69904f80cbbc0d04c5b696c7a7d429741fa1/ol-handoff/Microsoft/windows-apps.de-de/master/hwa-create-windows.681dd65bdcffe52b7e3512fdb828e18db356d05e.de-de.xlf)
-* Handoff Datetime: 2016-07-05 18:53:22
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='491665558f713dcbaae7ea20739ed72c61a12cd23486'></a> Source: [windows-apps-src\porting\hwa-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/7fe6e240e4ef221b49f9b103cf30192449ce4502/windows-apps-src/porting/hwa-to-uwp-root.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [hwa-to-uwp-root.d70cf6ef7c83e8f53dd394d1c57b18f7cb40f0b4.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/af4b69904f80cbbc0d04c5b696c7a7d429741fa1/ol-handoff/Microsoft/windows-apps.de-de/master/hwa-to-uwp-root.d70cf6ef7c83e8f53dd394d1c57b18f7cb40f0b4.de-de.xlf)
-* Handoff Datetime: 2016-07-05 18:53:22
+* Handoff File: [how-to-disable-mouse-mode.6c622ccf73f4b0c8c4dacc5395199bcf39c5d9f7.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/daff9b8d5fd042219944a6f23e46374a7fe79328/ol-handoff/Microsoft/windows-apps.de-de/master/how-to-disable-mouse-mode.6c622ccf73f4b0c8c4dacc5395199bcf39c5d9f7.de-de.xlf)
+* Handoff Datetime: 2016-07-05 19:24:41
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
