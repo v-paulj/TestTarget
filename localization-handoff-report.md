@@ -6,16 +6,31 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\design-downloads\index.md](https://github.com/Microsoft/windows-apps/blob/1370af75dcd45d52d0d31f57acb958d366f9bee5/windows-apps-src/design-downloads/index.md) | HandedOffSuccess | [Details](#4ac5db9da4cd9ba0edff5b08dfff6ed6473ab4e32057)
- [windows-apps-src\input-and-devices\index.md](https://github.com/Microsoft/windows-apps/blob/5370dd078db81de606b7a4bbfcf6dd36b2280a17/windows-apps-src/input-and-devices/index.md) | HandedOffSuccess | [Details](#def2efd8d424bc79c4ff7a89784d0bc1219a287a2982)
- [windows-apps-src\usability\index.md](https://github.com/Microsoft/windows-apps/blob/5370dd078db81de606b7a4bbfcf6dd36b2280a17/windows-apps-src/usability/index.md) | HandedOffSuccess | [Details](#457ddacd80b3f9308b2eb66ce0ac2d448bb59ed23894)
+ [windows-apps-src\graphics\visual-layer.md](https://github.com/Microsoft/windows-apps/blob/a46ca260f918d27b8d9b69be6d73216100df79fc/windows-apps-src/graphics/visual-layer.md) | OutofSyncHandedBackSuccess | [Details](#fd6f6cf3b537b060cb81a8645f9c2fb23485bdab2695)
+ [windows-apps-src\porting\hwa-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/3173208fb67ba650a670edccf6d1430af42c1f87/windows-apps-src/porting/hwa-to-uwp-root.md) | HandedOffSuccess | [Details](#13680470ccefe221209de8d963757370ae0daff43486)
+ [windows-apps-src\xbox-apps\disable-scaling.md](https://github.com/Microsoft/windows-apps/blob/192de32bf3afd11cd375655ad92d194ccb09dae1/windows-apps-src/xbox-apps/disable-scaling.md) | HandedBackFailed | [Details](#307606bc290e9c5268fc5a37b72770d6b1ada4da3952)
 
 ## Item Details
-##### <a name='4ac5db9da4cd9ba0edff5b08dfff6ed6473ab4e32057'></a> Source: [windows-apps-src\design-downloads\index.md](https://github.com/Microsoft/windows-apps/blob/1370af75dcd45d52d0d31f57acb958d366f9bee5/windows-apps-src/design-downloads/index.md)
+##### <a name='fd6f6cf3b537b060cb81a8645f9c2fb23485bdab2695'></a> Source: [windows-apps-src\graphics\visual-layer.md](https://github.com/Microsoft/windows-apps/blob/a46ca260f918d27b8d9b69be6d73216100df79fc/windows-apps-src/graphics/visual-layer.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [visual-layer.a2f2c9e67ecfb717da6cd6d4151969c5de739247.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/a994496fb6f3a2d6834937a4bd8a9355f8db82a4/ol-handoff/Microsoft/windows-apps.de-de/master/visual-layer.a2f2c9e67ecfb717da6cd6d4151969c5de739247.de-de.xlf)
+* Handoff Datetime: 2016-07-05 22:23:39
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\graphics\visual-layer.md](https://github.com/Microsoft/windows-apps.de-de/blob/00769f0027b16b5bd96e3cf6e0a22190fdd13b87/windows-apps-src/graphics/visual-layer.md)
+* Current Handback File: [visual-layer.a2f2c9e67ecfb717da6cd6d4151969c5de739247.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/0ad1e8e3dad7ed3e70f2e3544b81806709ee15b6/ol-handback/Microsoft/windows-apps.de-de/master/visual-layer.a2f2c9e67ecfb717da6cd6d4151969c5de739247.de-de.xlf)
+* Current Handback Datetime: 2016-06-30 16:01:43
+* [Back to Top](#report-top)
+
+##### <a name='13680470ccefe221209de8d963757370ae0daff43486'></a> Source: [windows-apps-src\porting\hwa-to-uwp-root.md](https://github.com/Microsoft/windows-apps/blob/3173208fb67ba650a670edccf6d1430af42c1f87/windows-apps-src/porting/hwa-to-uwp-root.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [index.720b23fbbbd23ed59c43b430a6e93f1a7cd31f11.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/9c4e5ae049f500043397baffdc8d8fe3c02c92f5/ol-handoff/Microsoft/windows-apps.de-de/master/index.720b23fbbbd23ed59c43b430a6e93f1a7cd31f11.de-de.xlf)
-* Handoff Datetime: 2016-07-05 21:52:37
+* Handoff File: [hwa-to-uwp-root.d70cf6ef7c83e8f53dd394d1c57b18f7cb40f0b4.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/a994496fb6f3a2d6834937a4bd8a9355f8db82a4/ol-handoff/Microsoft/windows-apps.de-de/master/hwa-to-uwp-root.d70cf6ef7c83e8f53dd394d1c57b18f7cb40f0b4.de-de.xlf)
+* Handoff Datetime: 2016-07-05 22:23:39
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -23,23 +38,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='def2efd8d424bc79c4ff7a89784d0bc1219a287a2982'></a> Source: [windows-apps-src\input-and-devices\index.md](https://github.com/Microsoft/windows-apps/blob/5370dd078db81de606b7a4bbfcf6dd36b2280a17/windows-apps-src/input-and-devices/index.md)
-* Status: HandedOffSuccess
+##### <a name='307606bc290e9c5268fc5a37b72770d6b1ada4da3952'></a> Source: [windows-apps-src\xbox-apps\disable-scaling.md](https://github.com/Microsoft/windows-apps/blob/192de32bf3afd11cd375655ad92d194ccb09dae1/windows-apps-src/xbox-apps/disable-scaling.md)
+* Status: HandedBackFailed
 * Target File: 
-* Handoff File: [index.2fdb039b9798a6e880a403bb237c054940ed7561.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/9c4e5ae049f500043397baffdc8d8fe3c02c92f5/ol-handoff/Microsoft/windows-apps.de-de/master/index.2fdb039b9798a6e880a403bb237c054940ed7561.de-de.xlf)
-* Handoff Datetime: 2016-07-05 21:52:37
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='457ddacd80b3f9308b2eb66ce0ac2d448bb59ed23894'></a> Source: [windows-apps-src\usability\index.md](https://github.com/Microsoft/windows-apps/blob/5370dd078db81de606b7a4bbfcf6dd36b2280a17/windows-apps-src/usability/index.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [index.0c16b7fc8370a239b356dfc48f6ddd11d226b6af.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/9c4e5ae049f500043397baffdc8d8fe3c02c92f5/ol-handoff/Microsoft/windows-apps.de-de/master/index.0c16b7fc8370a239b356dfc48f6ddd11d226b6af.de-de.xlf)
-* Handoff Datetime: 2016-07-05 21:52:37
+* Handoff File: [disable-scaling.e15cb47939c5d48140b46f21d46e37fd97a4bd35.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/a994496fb6f3a2d6834937a4bd8a9355f8db82a4/ol-handoff/Microsoft/windows-apps.de-de/master/disable-scaling.e15cb47939c5d48140b46f21d46e37fd97a4bd35.de-de.xlf)
+* Handoff Datetime: 2016-07-05 22:23:39
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
