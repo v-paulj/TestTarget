@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\input-and-devices\input-primer.md](https://github.com/Microsoft/windows-apps/blob/56b72eba3297d3e4368ed0f719ea0b83790a4136/windows-apps-src/input-and-devices/input-primer.md) | OutofSyncHandedBackSuccess | [Details](#4cbad2284c6bb7ee2a03236fc554d588804b167e2983)
+ [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps/blob/5d4410cf2c00d729502cffb00ba5828e0b091a12/windows-apps-src/debug-test-perf/device-portal-api-core.md) | OutofSyncHandedBackSuccess | [Details](#c808b7561da2c47a305a5319ddb347f095b1aa371972)
 
 ## Item Details
-##### <a name='4cbad2284c6bb7ee2a03236fc554d588804b167e2983'></a> Source: [windows-apps-src\input-and-devices\input-primer.md](https://github.com/Microsoft/windows-apps/blob/56b72eba3297d3e4368ed0f719ea0b83790a4136/windows-apps-src/input-and-devices/input-primer.md)
+##### <a name='c808b7561da2c47a305a5319ddb347f095b1aa371972'></a> Source: [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps/blob/5d4410cf2c00d729502cffb00ba5828e0b091a12/windows-apps-src/debug-test-perf/device-portal-api-core.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [input-primer.5342c7c3046580ba53971943f93ff8467cc4bd6e.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/08ebbd32191db9eb7b5f6654b6a4becacaba2f90/ol-handoff/Microsoft/windows-apps.de-de/master/input-primer.5342c7c3046580ba53971943f93ff8467cc4bd6e.de-de.xlf)
-* Handoff Datetime: 2016-07-06 02:22:17
+* Handoff File: [device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ed924e473035c700a1af64b157679409cd7b3083/ol-handoff/Microsoft/windows-apps.de-de/master/device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.de-de.xlf)
+* Handoff Datetime: 2016-07-06 15:38:05
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\input-and-devices\input-primer.md](https://github.com/Microsoft/windows-apps.de-de/blob/00769f0027b16b5bd96e3cf6e0a22190fdd13b87/windows-apps-src/input-and-devices/input-primer.md)
-* Current Handback File: [input-primer.5342c7c3046580ba53971943f93ff8467cc4bd6e.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/0ad1e8e3dad7ed3e70f2e3544b81806709ee15b6/ol-handback/Microsoft/windows-apps.de-de/master/input-primer.5342c7c3046580ba53971943f93ff8467cc4bd6e.de-de.xlf)
+* Current Target File: [windows-apps-src\debug-test-perf\device-portal-api-core.md](https://github.com/Microsoft/windows-apps.de-de/blob/00769f0027b16b5bd96e3cf6e0a22190fdd13b87/windows-apps-src/debug-test-perf/device-portal-api-core.md)
+* Current Handback File: [device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/0ad1e8e3dad7ed3e70f2e3544b81806709ee15b6/ol-handback/Microsoft/windows-apps.de-de/master/device-portal-api-core.1b4ac62250e906748be1a77845b5033a7f6d3fa4.de-de.xlf)
 * Current Handback Datetime: 2016-06-30 16:01:43
 * [Back to Top](#report-top)
 
