@@ -1,9 +1,16 @@
 ---
-author: mcleanbyron description: Sie können In-App-Käufe von konsumierbaren Produkten – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um den Kunden beim Kauf Stabilität und Zuverlässigkeit zu bieten.
-title: Aktivieren konsumierbarer In-App-Produktkäufe ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4 Schlüsselwörter: In-App-Angebot Schlüsselwörter: konsumierbar Schlüsselwörter: In-App-Einkauf Schlüsselwörter: In-App-Produkt Schlüsselwörter: Unterstützen von In-App Schlüsselwörter: Codebeispiel für In-App-Einkauf Schlüsselwörter: Codebeispiel für In-App-Angebot
+author: mcleanbyron
+Description: "Sie können konsumierbare In-App-Produkte – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um Ihren Kunden eine robuste und zuverlässige Kaufumgebung bereitzustellen."
+title: "Käufe konsumierbarer In-App-Produkte aktivieren"
+ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
+keywords: in-app offer code sample
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 25f09e043d61f1705f9f0a4fa34114fd06166fa4
+
 ---
 
-# Unterstützen von Käufen konsumierbarer In-App-Produkte
+# Käufe konsumierbarer In-App-Produkte aktivieren
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
@@ -107,7 +114,7 @@ private async void GetUnfulfilledConsumables()
 
 ## Verwandte Themen
 
-* [Unterstützen von In-App-Produktkäufen](enable-in-app-product-purchases.md)
+* [Unterstützen von Käufen von In-App-Produkten](enable-in-app-product-purchases.md)
 * [Store-Beispiel (zeigt Testversionen und In-App-Käufe)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
 * [**Windows.ApplicationModel.Store**](https://msdn.microsoft.com/library/windows/apps/br225197)
  
@@ -119,6 +126,7 @@ private async void GetUnfulfilledConsumables()
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

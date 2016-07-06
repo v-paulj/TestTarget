@@ -28,6 +28,6 @@ Ein vollständiges Codebeispiel finden Sie unter [Beispiel für Bluetooth-Werbun
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

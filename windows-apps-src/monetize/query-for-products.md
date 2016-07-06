@@ -44,7 +44,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | Authorization  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
 | Host           | Zeichenfolge | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
-| Content-Type   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
+| Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
  <br/>
 
@@ -77,7 +77,7 @@ Das ProductSkuId-Objekt enthält die folgenden Parameter.
 
 | Parameter | Typ   | Beschreibung                                                                                                                                                                                                                                                                                                            | Erforderlich |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| productId | string | Die Store-ID aus dem Windows Store-Katalog. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. | Ja      |
+| Produkt-ID | string | Die Store-ID aus dem Windows Store-Katalog. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. | Ja      |
 | skuID     | string | Die SKU-ID aus dem Windows Store-Katalog. Beispiel für eine SKU-ID: 0010.                                                                                                                                                                                                                                                | Ja      |
 
 <br/> 
@@ -142,8 +142,8 @@ Das CollectionItemContractV6-Objekt enthält die folgenden Parameter.
 | orderId              | string             | Die Auftrags-ID, mit der dieser Artikel erworben wurde (sofern angegeben).                                                                                          | Nein       |
 | orderLineItemId      | string             | Die Position des Auftrags, für den dieser Artikel erworben wurde (sofern vorhanden).                                                                | Nein       |
 | ownershipType        | string             | Die Zeichenfolge „OwnedByBeneficiary“.                                                                                                                   | Ja      |
-| productId            | string             | Die Store-ID für die App aus dem Windows Store-Katalog. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.                                                            | Ja      |
-| productType          | string             | Einer der folgenden Produkttypen: **Application**, **Durable** oder **UnmanagedConsumable**.                                                     | Ja      |
+| Produkt-ID            | string             | Die Store-ID für die App aus dem Windows Store-Katalog. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.                                                            | Ja      |
+| Produkttyp          | string             | Einer der folgenden Produkttypen: **Application**, **Durable** oder **UnmanagedConsumable**.                                                     | Ja      |
 | purchasedCountry     | string             | N/V                                                                                                                                               | Nein       |
 | purchaser            | IdentityContractV6 | Die Identität des Artikelkäufers (sofern vorhanden). Details zu diesem Objekt finden Sie weiter unten.                                      | Nein       |
 | Quantity             | number             | Die Artikelmenge. Derzeit beträgt die Menge immer 1.                                                                                        | Nein       |
@@ -216,6 +216,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

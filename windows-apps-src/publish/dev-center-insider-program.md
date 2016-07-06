@@ -2,8 +2,8 @@
 title: Dev Center-Insider-Programm
 description: "Testen Sie die neuen Dev Center-Features, bevor sie für alle Entwickler verfügbar sind, und teilen Sie uns Ihre Meinung mit."
 author: JnHs
-ms.sourcegitcommit: 836ffd3f1bc3a9d9be4fa510d5188b565972c130
-ms.openlocfilehash: 64b9327258d6116922d3e4cc097ed3dda08b541b
+ms.sourcegitcommit: b6c86bc1458f177e44058ac36d97d650bae36008
+ms.openlocfilehash: 715d2027114726cf7c9bf0a38d1841f9e83d58e6
 
 ---
 
@@ -19,8 +19,8 @@ Hier sind einige der Features, die wir für exklusiv für Mitglieder des Dev Cen
 
 | Dev Center-Insider-Programm-Feature   | So können es Dev Center-Insider testen | Hinzugefügt am |
 |--------------------------------------|------------------------------------|------------|
+|**Massenverwalten von IAPs**: Ändern Sie mehrere IAPs auf einmal, anstatt jedes Update einzeln anzuwenden. | Klicken Sie in einer App-Übersicht oder einer IAP-Seite auf **Massenverwalten von IAPs**. |Juni 2016|
 |**Aktualisierung des Verwendungsberichts**: Der verbesserte Bericht zeigt jetzt Verwendungsdaten von Windows 10-Kunden für alle Apps, ohne dass Visual Studio Application Insights verwendet werden muss.|Zeigen Sie die Informationen in dem Bericht **Verwendung** einer App an. |Juni 2016|
-|**Zielgerichtete Pushbenachrichtigungen**: Erstellen Sie benutzerdefinierte Benachrichtigungen, um sie an die Kunden Ihrer App zu senden – an alle oder nur ein ausgewähltes Segment, basierend auf bestimmten Kriterien, die Sie definieren.|Wechseln Sie zur Seite mit den Pushbenachrichtigen (unter „Services“) für eine App. Klicken Sie auf **Neue Benachrichtigung**, um die Benachrichtigung zu erstellen und zu planen. Sie können sie an alle Benutzer Ihrer App senden, oder durch Klicken auf **Create new customer group** ein bestimmtes Segment der Kunden Ihre App definieren. [Weitere Informationen](http://go.microsoft.com/fwlink/p/?LinkId=718017)|Juni 2016|
 |**Verfügbarkeit von Gerätefamilien**: Verwalten Sie die Verfügbarkeit von Gerätefamilien für Ihre App, und erfahren Sie, welche Pakete bestimmten Windows 10-Gerätefamilien (und früheren Betriebssystemversionen, falls zutreffend) angeboten werden.|Zeigen Sie diese Informationen an, und treffen Sie Ihre Auswahl auf der Seite **Pakete** einer App-Einreichung.|Mai 2016|
 |**Ihr übermitteltes Feedback anzeigen**: Zeigen Sie jedes Feedback an, das Sie an Dev Center übermittelt haben, und erhalten Sie Benachrichtigungen, wenn wir basierend auf Ihrem Feedback Änderungen vorgenommen haben.|Klicken Sie unter **Kontoeinstellungen** im linken Navigationsbereich auf **Submitted feedback**.|April 2016|
 |**Bisherige Kaufdaten**: Nun können Sie die kumulativen Gesamtkäufe für Ihre Apps und IAPs anzeigen.|Zeigen Sie diese Informationen im Bericht **Käufe** und im Bericht **IAP-Käufe** einer App an.|April 2016|
@@ -34,6 +34,6 @@ Hier sind einige der Features, die wir für exklusiv für Mitglieder des Dev Cen
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

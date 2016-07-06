@@ -19,7 +19,7 @@ Benutzerinteraktionen in der Universellen Windows-Plattform (UWP) stellen eine K
 
 Die UWP verwendet ein intelligentes, kontextbezogenes Interaktionssystem, mit dem in den meisten Fällen die von der App empfangenen eindeutigen Eingabetypen nicht individuell behandelt werden müssen. Dazu zählt das Behandeln von Toucheingabe, Touchpad, Maus und Stifteingabe als generischer Zeigertyp, um statische Gesten wie Tippen oder Gedrückthalten und Manipulationsgesten wie Ziehen zum Verschieben oder zum Rendern von Freihandeingabe zu unterstützen.
 
-Machen Sie sich mit einzelnen Typen von Eingabegeräten, dem jeweiligen Verhalten, den Möglichkeiten und Beschränkungen in Verbindung mit gewissen Formfaktoren vertraut. Dies erleichtert Ihnen die Entscheidung, ob die Steuerelemente und Angebote der Plattform für die App ausreichend sind oder ob Sie angepasste Funktionen für die Benutzerinteraktion bereitstellen müssen.
+Machen Sie sich mit den verschiedenen Arten von Eingabegeräten sowie ihren Verhaltensweisen, Möglichkeiten und Einschränkungen in Verbindung mit bestimmten Formfaktoren vertraut. Dies erleichtert Ihnen die Entscheidung, ob die Steuerelemente und Angebote der Plattform für die App ausreichend sind oder ob Sie angepasste Funktionen für die Benutzerinteraktion bereitstellen müssen.
 
 ## Cortana
 
@@ -108,7 +108,7 @@ Unterstützung von Geräten
 -   Surface Hub
 -   IoT
 
-![Zeichenstift](images/input-interactions/icons-pen01.png)
+![Stift](images/input-interactions/icons-pen01.png)
 
 Typische Nutzung In Kombination mit einem Stift ermöglicht die Windows-Freihandplattform die natürliche Erstellung handschriftlicher Notizen, Zeichnungen und Anmerkungen. Die Plattform unterstützt das Erfassen von Freihanddaten aus einem Eingabedigitalisierungsgerät, das Generieren von Freihanddaten, das Ausgeben von Daten und das Rendern von Freihandstrichen auf dem Ausgabegerät sowie das Verwalten von Daten und das Ausführen einer Schrifterkennung. Ihre App kann nicht nur die räumlichen Bewegungen des Stifts beim Schreiben oder Zeichnen erfassen. Sie kann auch Informationen zu Druck, Form, Farbe und Deckkraft sammeln und ermöglicht so eine Arbeitsweise, die der Verwendung eines Stifts, Bleistifts oder Pinsels auf Papier schon sehr nahe kommt.
 
@@ -153,7 +153,7 @@ Weitere Informationen finden Sie unter [Designrichtlinien für die Toucheingabe]
 ## Touchpad
 
 
-Ein Touchpad vereint die indirekte Multitoucheingabe mit der Präzisionseingabe eines Zeigergeräts (beispielsweise eine Maus). Dadurch ist das Touchpad sowohl für eine touchoptimierte Benutzeroberfläche als auch die kleineren Ziele von Produktivitäts-Apps geeignet.
+Ein Touchpad vereint die indirekte Multitoucheingabe mit der Präzisionseingabe eines Zeigergeräts (beispielsweise eine Maus). Durch diese Kombination ist das Touchpad sowohl für eine toucheingabeoptimierte Benutzeroberfläche als auch für die kleineren Ziele von Produktivitäts-Apps geeignet.
 
 Unterstützung von Geräten
 -   PCs und Laptops
@@ -272,7 +272,7 @@ Sie müssen mausspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unte
 
  
 
-## Mehrere Eingaben
+## Mehrfacheingaben
 
 
 Durch die Berücksichtigung einer möglichst großen Anzahl von Benutzern, Geräten und Eingabearten (Gesten, Spracherkennung, Toucheingabe, Touchpad, Maus und Tastatur) maximieren Sie die Flexibilität, Benutzerfreundlichkeit und Barrierefreiheit Ihrer Apps.
@@ -286,7 +286,7 @@ Unterstützung von Geräten
 -   Xbox
 -   HoloLens
 
-![Mehrere Eingaben](images/input-interactions/icons-inputdevices03-vertical.png)
+![Mehrfacheingaben](images/input-interactions/icons-inputdevices03-vertical.png)
 
 Typische Nutzung Genauso, wie Menschen durch eine Mischung aus Sprache und Gesten kommunizieren, können verschiedene Eingabearten und -modi bei der Interaktion mit einer App nützlich sein. Diese kombinierten Interaktionen müssen jedoch möglichst intuitiv und natürlich gestaltet sein, da sie andernfalls zu Verwirrung führen können.
 
@@ -304,6 +304,6 @@ Typische Nutzung Genauso, wie Menschen durch eine Mischung aus Sprache und Geste
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

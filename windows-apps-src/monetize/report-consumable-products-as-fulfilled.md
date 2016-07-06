@@ -48,7 +48,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | Authorization  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
 | Host           | Zeichenfolge | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
-| Content-Type   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
+| Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
 <br/> 
 
@@ -59,7 +59,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | beneficiary   | UserIdentity | Der Benutzer, für den dieser Artikel genutzt wird.                                                                                                                                                                                                                                                                 | Ja      |
 | itemId        | String       | Der von einer [Produktabfrage](query-for-products.md) zurückgegebene „itemId“-Wert. Verwenden Sie diesen Parameter mit „trackingId“.                                                                                                                                                                                                  | Nein       |
 | trackingId    | GUID         | Eine eindeutige, vom Entwickler angegebene Tracking-ID. Verwenden Sie diesen Parameter mit „itemId“.                                                                                                                                                                                                                                     | Nein       |
-| productId     | String       | Der von einer [Produktabfrage](query-for-products.md) zurückgegebene „productId“-Wert. Verwenden Sie diesen Parameter mit „transactionId“.                                                                                                                                                                                            | Nein       |
+| Produkt-ID     | String       | Der von einer [Produktabfrage](query-for-products.md) zurückgegebene „productId“-Wert. Verwenden Sie diesen Parameter mit „transactionId“.                                                                                                                                                                                            | Nein       |
 | transactionId | GUID         | Ein Transaktions-ID-Wert, der aus einer der folgenden Quellen abgerufen wird:                                                                                                                                                                                                                                      | Nein       |
 |               |              | * Der [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396)-Eigenschaft der [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392)-Klasse.   |        |
 |               |              | * Dem von [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) oder [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) zurückgegebenen App- oder Produktbeleg.   |        |
@@ -160,6 +160,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

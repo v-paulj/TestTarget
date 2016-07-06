@@ -159,7 +159,7 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 
 URI-Parameter | Beschreibung
 :---          | :---
-required   | (**Erforderlich**) Bestimmt, ob für das Geräteportal HTTPS erforderlich ist. Die möglichen Werte lauten **yes**, **no** und **default**.
+Erforderlich   | (**Erforderlich**) Bestimmt, ob für das Geräteportal HTTPS erforderlich ist. Die möglichen Werte lauten **yes**, **no** und **default**.
 
 **Anforderungsheader**
 

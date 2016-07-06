@@ -13,7 +13,7 @@ ms.openlocfilehash: 9de90236d94522f1b80309c3fec51ce59aee0319
 # Tastaturinteraktionen
 
 
-Die Tastatureingabe ist ein wichtiger Teil des Gesamteindrucks, den Benutzer bei der Interaktion mit Apps haben. Die Tastatur ist unentbehrlich für Personen mit bestimmten körperlichen Beeinträchtigungen oder für Benutzer, die die Tastatur als effizienteste Methode ansehen, um mit einer App zu interagieren. Benutzer sollten beispielsweise in der Lage sein, mit der TAB-Taste und den Pfeiltasten in der App zu navigieren, mit der LEERTASTE und der EINGABETASTE UI-Elemente zu aktivieren und mit Tastenkombinationen auf Befehle zuzugreifen.
+Die Tastatureingabe ist ein wichtiger Teil der Erfahrung, die Benutzer bei der Interaktion mit Apps machen. Die Tastatur ist unentbehrlich für Personen mit bestimmten körperlichen Beeinträchtigungen oder für Benutzer, die die Tastatur als effizienteste Methode ansehen, um mit einer App zu interagieren. Benutzer sollten beispielsweise in der Lage sein, mit der TAB-Taste und den Pfeiltasten in der App zu navigieren, mit der LEERTASTE und der EINGABETASTE UI-Elemente zu aktivieren und mit Tastenkombinationen auf Befehle zuzugreifen.
 ![Tastaturfavoritenbild](images/input-patterns/input-keyboard-small.jpg)
 
 
@@ -708,6 +708,6 @@ Benutzer können Daten in Ihre App schneller und einfacher eingeben, indem Sie d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

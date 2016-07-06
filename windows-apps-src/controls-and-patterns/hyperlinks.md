@@ -5,19 +5,19 @@ title: Hyperlinks
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 81cb45dd1f7887fef2d8851c839905117c048460
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: 1d19cfa9c272ee511fbaf89ac0076697ede470b9
 
 ---
 # Hyperlinks
 
-Über Hyperlinks können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten. Sie haben zwei Möglichkeiten, einer XAML-App einen Link hinzuzufügen: über das **Link**textelement oder das **HyperlinkButton**-Steuerelement.
+Über Hyperlinks können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten. Sie haben zwei Möglichkeiten, einer XAML-App einen Link hinzuzufügen: über das Textelement **Link** oder das Steuerelement **HyperlinkButton**.
 
 ![Eine Linkschaltfläche](images/controls/hyperlink-button.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
 
--   [**Linktextelement**](https://msdn.microsoft.com/library/windows/apps/dn279356)
+
+-   [**Ein Linktextelement**](https://msdn.microsoft.com/library/windows/apps/dn279356)
 -   [**HyperlinkButton-Steuerelement**](https://msdn.microsoft.com/library/windows/apps/br242739)
 
 ## Ist dies das richtige Steuerelement?
@@ -139,7 +139,7 @@ Die Standardfarbe des Links ist die Akzentfarbe des Systems. Dieses Verhalten k�
 ## Empfehlungen
 
 -   Verwenden Sie Links nur für die Navigation. Verwenden Sie sie nicht für andere Aktionen.
--   Verwenden Sie den Textstil aus dem Typenverlauf für textbasierte Links. Informieren Sie sich über [**Schriftarten und den Windows 10-Typenverlauf**](text-controls.md).
+-   Verwenden Sie den Textstil aus dem Typenverlauf für textbasierte Links. Informieren Sie sich über [**Schriftarten und den Windows 10-Typenverlauf**](fonts.md).
 -   Separate Links sollten weit genug voneinander platziert werden, damit der Benutzer zwischen ihnen unterscheiden kann und sie mühelos einzeln auswählen kann.
 -   Fügen Sie Hyperlinks QuickInfos hinzu, die dem Benutzer anzeigen, wohin er umgeleitet wird. Wenn der Benutzer zu einer externen Website weitergeleitet werden soll, schließen Sie den Namen der Domäne der obersten Ebene in die QuickInfo ein und formatieren den Text mit einer zweiten Schriftfarbe.
 
@@ -156,6 +156,6 @@ Die Standardfarbe des Links ist die Akzentfarbe des Systems. Dieses Verhalten k�
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

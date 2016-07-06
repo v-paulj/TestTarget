@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-Description: "Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und wenn Sie Ihre Apps für einen bestimmten Markt lokalisieren."
+Description: "Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und beim Lokalisieren Ihrer Apps für einen bestimmten Markt."
 Search.Refinement.TopicID: 180
 title: "Richtlinien für Globalisierung und Lokalisierung"
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
@@ -26,7 +26,7 @@ ms.openlocfilehash: bdbe6b3e319aa90a78660c664f1603bac93399ca
 -   [**Resources**](https://msdn.microsoft.com/library/windows/apps/br206022)
 -   [**Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)
 
-Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und wenn Sie Ihre Apps für einen bestimmten Markt lokalisieren.
+Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und beim Lokalisieren Ihrer Apps für einen bestimmten Markt.
 
 
 

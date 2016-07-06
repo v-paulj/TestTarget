@@ -1,6 +1,13 @@
 ---
-author: martinekuan ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD title: Aktivieren Sie Ihr Gerät für die Entwicklung description: Bei Windows 10-Geräten wird ein anderer Entwicklungsansatz verfolgt.
-Schlüsselwörter: Erste Schritte Schlüsselwörter: Entwicklerlizenz Schlüsselwörter: Visual Studio, Entwicklerlizenz Schlüsselwörter: Gerät aktivieren
+author: martinekuan
+ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
+title: "Aktivieren Ihres Geräts für die Entwicklung"
+description: "Bei Windows 10-Geräten wird ein anderer Entwicklungsansatz verfolgt."
+keywords: enable device
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 4c890d6202a3151e8fc0cf03b3ff33b98cd6a863
+
 ---
 # Aktivieren Ihres Geräts für die Entwicklung
 
@@ -172,6 +179,7 @@ Fehler : DEP0700 : Registrierung der App fehlgeschlagen.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

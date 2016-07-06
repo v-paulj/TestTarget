@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Erläutert das Konzept einer angefügten Eigenschaft in XAML und bietet einige Beispiele.
-title: Übersicht über angefügte Eigenschaften
+description: "Erläutert das Konzept einer angefügten Eigenschaft in XAML und bietet einige Beispiele."
+title: "Übersicht über angefügte Eigenschaften"
 ms.assetid: 098C1DE0-D640-48B1-9961-D0ADF33266E2
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: b676110274bacc8aeacb2527099534cf0e26fa6b
+
 ---
 
 # Übersicht über angefügte Eigenschaften
@@ -65,7 +69,7 @@ Wenn Sie den Wert einer angefügten Eigenschaft im Code abrufen möchten, rufen 
 
 Ein XAML-Prozessor muss Werte von angefügten Eigenschaften festlegen können, wenn XAML in einer Objektstruktur analysiert wird. Der Besitzertyp der angefügten Eigenschaft muss dedizierte Accessormethoden in Form von **Get***PropertyName* und **Set***PropertyName* implementieren. Diese dedizierten Accessormethoden stellen auch eine Möglichkeit dar, die angefügte Eigenschaft in Code abzurufen oder festzulegen. Im Hinblick auf den Code ähnelt eine angefügte Eigenschaft einem Sicherungsfeld, das anstelle von Eigenschaftenaccessoren über Methodenaccessoren verfügt, und dieses Sicherungsfeld kann für jedes Objekt vorhanden sein und muss nicht speziell definiert werden.
 
-Im folgenden Beispiel ist dargestellt, wie Sie über die XAML-Accessor-API eine angefügte Eigenschaft in Code festlegen können. In diesem Beispiel ist `myCheckBox` eine Instanz der [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)-Klasse. Die letzte Zeile ist der Code, der den Wert tatsächlich festlegt. Mit den Zeilen davor werden nur die Instanzen und ihre Beziehungen der untergeordneten Elemente eingerichtet. Die unkommentierte letzte Zeile ist die Syntax, wenn Sie das Eigenschaftensystem verwenden. Die kommentierte letzte Zeile ist die Syntax, die Sie für das XAML-Accessormuster verwenden.
+Im folgenden Beispiel ist dargestellt, wie Sie über die XAML-Accessor-API eine angefügte Eigenschaft in Code festlegen können. In diesem Beispiel ist `myCheckBox` eine Instanz der [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)-Klasse. Die letzte Zeile ist der Code, der den Wert tatsächlich festlegt. Mit den Zeilen davor werden nur die Instanzen und ihre Beziehungen der untergeordneten Elemente eingerichtet. Die unkommentierte letzte Zeile ist die Syntax, wenn Sie das Eigenschaftensystem verwenden. Die kommentierte letzte Zeile ist die Syntax, wenn Sie das XAML-Accessormuster verwenden.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -105,7 +109,7 @@ Der Punkt im Namen einer angefügten Eigenschaft ist ein wichtiger Teil des Iden
 
 **Achtung**  Eine Einschränkung bei der XAML-Implementierung der Windows-Runtime besteht darin, dass Sie eine benutzerdefinierte angefügte Eigenschaft nicht animieren können.
  
-- Wenn Sie eine angefügte Eigenschaft als Zieleigenschaft für einen Ressourcenverweis aus einer Ressourcendatei zu **x:Uid** angeben möchten, verwenden Sie eine spezielle Syntax, die eine vollqualifizierte **using:**-Deklaration in eckigen Klammern („\[\]“) im Codestil einfügt, um einen absichtlichen Umfangsumbruch zu erstellen. Beispiel: Nehmen wir an, es ist ein „<TextBlock x:Uid="Title" />“-Element vorhanden. In diesem Fall lautet der Ressourcenschlüssel in der Ressourcendatei zum Erreichen des **Canvas.Top**-Werts für diese Instanz „Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top“. Weitere Informationen zu Ressourcendateien und XAML finden Sie unter [Schnellstart: Übersetzen von UI-Ressourcen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
+- Wenn Sie eine angefügte Eigenschaft als Zieleigenschaft für einen Ressourcenverweis aus einer Ressourcendatei zu **x:Uid** angeben möchten, verwenden Sie eine spezielle Syntax, die eine vollqualifizierte **using:**-Deklaration in eckigen Klammern („\[\]“) im Codestil einfügt, um einen absichtlichen Umfangsumbruch zu erstellen. Angenommen, es ist beispielsweise ein Element '<TextBlock x:Uid="Title" />' vorhanden, dann lautet der Ressourcenschlüssel in der Ressourcendatei zum Erreichen des **Canvas.Top**-Werts für diese Instanz „Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top“. Weitere Informationen zu Ressourcendateien und XAML finden Sie unter [Schnellstart: Übersetzen von UI-Ressourcen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
 ## Verwandte Themen
 
@@ -118,6 +122,7 @@ Der Punkt im Namen einer angefügten Eigenschaft ist ein wichtiger Teil des Iden
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

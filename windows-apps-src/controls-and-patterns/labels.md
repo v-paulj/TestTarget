@@ -1,7 +1,7 @@
 ---
 author: Jwmsft
 Description: "Verwenden Sie ein Label, um den Benutzer darauf hinzuweisen, was er in ein benachbartes Steuerelement eingeben soll. Sie können auch eine Gruppe verwandter Steuerelemente beschriften oder in der Nähe davon Anweisungstexte anzeigen."
-title: Labels
+title: Beschriftungen
 ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
 template: detail.hbs
@@ -11,7 +11,7 @@ ms.openlocfilehash: fbb186b6f8b7bfba47fb05155a227224a1bd595e
 
 ---
 
-# Labels
+# Beschriftungen
 
 Ein Label ist der Name bzw. Titel eines Steuerelements oder einer Gruppe verwandter Steuerelemente.
 

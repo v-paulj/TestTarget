@@ -5,8 +5,8 @@ title: "Richtlinien für Flip-Ansicht-Steuerelemente"
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 7da18bd897248ecef7e1caaebff5b8bbab02e3fe
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: ecb46c0d42821d833e8232780b553754f8f097c5
 
 ---
 # Flip-Ansicht
@@ -14,7 +14,7 @@ ms.openlocfilehash: 7da18bd897248ecef7e1caaebff5b8bbab02e3fe
 Verwenden Sie eine Flip-Ansicht zum Durchsuchen von Bildern oder anderen Elementen in einer Sammlung, z. B. von Fotos in einem Album oder von Elementen auf einer Seite mit Produktdetails, wobei jeweils ein Bild gescannt wird. Bei Geräten mit Touchscreen erfolgt die Navigation durch die Sammlung mit einer Wischbewegung über ein Element. Bei Verwendung mit einer Maus werden beim Zeigen mit der Maus Navigationsschaltflächen angezeigt. Bei Verwendung einer Tastatur erfolgt die Navigation durch die Sammlung mithilfe der Pfeiltasten.
 
 
-<span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
+
 
 -   [**FlipView-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flipview.aspx)
 -   [**ItemsSource-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemssource.aspx)
@@ -198,7 +198,7 @@ Für größere Sammlungen (10-25 Elemente) kann eine Anzeige mit mehr Kontext, z
 
 <table>
 <tr>
-<th>Aspekte der Bidirektionalität</th><td>Verwenden Sie die standardmäßige Spiegelung für Rechts-nach-links-Sprachen. Die Zurück- und Vor-Steuerelemente sollten auf der Richtung der Sprache beruhen. Bei Rechts-nach-links-Sprachen sollte daher die rechte Schaltfläche die Rückwärtsnavigation und die linke Schaltfläche die Vorwärtsnavigation ermöglichen.</td>
+<th>Aspekte der Bidirektionalität</th><td>Verwenden Sie die standardmäßige Spiegelung für Rechts-nach-links-Sprachen. Die Steuerelemente „Zurück“ und „Vorwärts“ sollten auf der Richtung der Schrift beruhen. Bei Rechts-nach-links-Schriften sollte daher die rechte Schaltfläche die Rückwärtsnavigation und die linke Schaltfläche die Vorwärtsnavigation ermöglichen.</td>
 </tr>
 
 </table>
@@ -206,12 +206,11 @@ Für größere Sammlungen (10-25 Elemente) kann eine Anzeige mit mehr Kontext, z
 
 ## Verwandte Artikel
 
-- [Richtlinien für Listen](https://msdn.microsoft.com/library/windows/apps/mt186889)
-- [**FlipView-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/br242678)
-- [**CarouselPanel-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/hh967950)
+- [Richtlinien für Listen](lists.md)
+- [**FlipView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242678)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -68,7 +68,7 @@ Unten sind einige Fälle aufgeführt, in denen eine Benutzeroberfläche mit Anle
 
 ## <span id="related_topics"></span>Verwandte Artikel
 
-* [Richtlinien für die App-Hilfe](guidelines-for-app-help.md)
+* [Anleitungen für die App-Hilfe](guidelines-for-app-help.md)
 
 
 

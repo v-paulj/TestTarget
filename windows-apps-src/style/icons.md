@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-Description: "Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und geben einfach und schnell nur die erforderlichen Informationen weiter."
+Description: "Gute Symbole harmonieren mit der Typografie und der übrigen Designsprache. Sie mischen keine Metaphern und geben so einfach und schnell wie möglich lediglich die erforderlichen Informationen weiter."
 title: Symbole
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
@@ -13,7 +13,7 @@ ms.openlocfilehash: e5e601bf3ff9d0b1518c86130a5b0fefbb86a773
 
 # Symbole für UWP-Apps
 
-Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und geben einfach und schnell nur die erforderlichen Informationen weiter. 
+Gute Symbole harmonieren mit der Typografie und der übrigen Designsprache. Sie mischen keine Metaphern und geben so einfach und schnell wie möglich lediglich die erforderlichen Informationen weiter. 
 
 ## Größenabstufungen für lineare Skalierungen 
 

@@ -50,12 +50,12 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
     > TimeTrigger ^ hourlyTrigger = ref new TimeTrigger(60, false);
     > ```
 
-## (Optional) Hinzufügen einer Bedingung
+## [!div class="tabbedCodeSnippets"]
 
 
--   Erstellen Sie bei Bedarf eine Bedingung für die Hintergrundaufgabe, um zu steuern, wann die Aufgabe ausgeführt wird. Eine Bedingung sorgt dafür, dass die Hintergrundaufgabe erst ausgeführt wird, wenn die Bedingung erfüllt ist. Weitere Informationen finden Sie unter [Festlegen von Bedingungen für die Ausführung einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md).
+-   (Optional) Hinzufügen einer Bedingung Erstellen Sie bei Bedarf eine Bedingung für die Hintergrundaufgabe, um zu steuern, wann die Aufgabe ausgeführt wird.
 
-    In diesem Beispiel ist die Bedingung auf **UserPresent** festgelegt, damit die ausgelöste Aufgabe nur ausgeführt wird, wenn der Benutzer aktiv ist. Eine Liste mit möglichen Bedingungen finden Sie in [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
+    Eine Bedingung sorgt dafür, dass die Hintergrundaufgabe erst ausgeführt wird, wenn die Bedingung erfüllt ist. Weitere Informationen finden Sie unter [Festlegen von Bedingungen für die Ausführung einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md). In diesem Beispiel ist die Bedingung auf **UserPresent** festgelegt, damit die ausgelöste Aufgabe nur ausgeführt wird, wenn der Benutzer aktiv ist.
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -65,10 +65,10 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
     > SystemCondition ^ userCondition = ref new SystemCondition(SystemConditionType::UserPresent)
     > ```
 
-##  Aufrufen von RequestAccessAsync()
+##  Eine Liste mit möglichen Bedingungen finden Sie in [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
 
 
--   Bevor Sie versuchen, die [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)-Hintergrundaufgabe zu registrieren, rufen Sie [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494) auf.
+-   [!div class="tabbedCodeSnippets"]
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -78,12 +78,12 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
     > BackgroundExecutionManager::RequestAccessAsync();
     > ```
 
-## Registrieren der Hintergrundaufgabe
+## Aufrufen von RequestAccessAsync()
 
 
--   Registrieren Sie die Hintergrundaufgabe, indem Sie die Funktion zum Registrieren der Hintergrundaufgabe aufrufen. Weitere Informationen zum Registrieren von Hintergrundaufgaben finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md).
+-   Bevor Sie versuchen, die [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843)-Hintergrundaufgabe zu registrieren, rufen Sie [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494) auf. [!div class="tabbedCodeSnippets"]
 
-    Der folgende Code registriert die Hintergrundaufgabe:
+    Registrieren der Hintergrundaufgabe
 
     > > [!div class="tabbedCodeSnippets"]
     > ```cs
@@ -99,39 +99,39 @@ Hier erfahren Sie, wie Sie eine einmalige Hintergrundaufgabe planen oder eine re
     > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, hourlyTrigger, userCondition);
     > ```
 
-    > **Hinweis**  Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App Szenarien, in denen die Registrierung von Hintergrundaufgaben einen Fehler verursacht, problemlos verarbeitet.
+    > Registrieren Sie die Hintergrundaufgabe, indem Sie die Funktion zum Registrieren der Hintergrundaufgabe aufrufen. Weitere Informationen zum Registrieren von Hintergrundaufgaben finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md). Der folgende Code registriert die Hintergrundaufgabe:
 
 
-## Anmerkungen
+## [!div class="tabbedCodeSnippets"]
 
-> **Hinweis**  Ab Windows 10 muss der Benutzer Ihre App nicht mehr zum Sperrbildschirm hinzufügen, um Hintergrundaufgaben zu nutzen. Die verschiedenen Arten von Auslösern für Hintergrundaufgaben werden unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md)erläutert.
+> **Hinweis**  Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben.
 
-> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform(UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
-
-## Verwandte Themen
+> Stellen Sie sicher, dass Ihre App Szenarien, in denen die Registrierung von Hintergrundaufgaben einen Fehler verursacht, problemlos verarbeitet. Anmerkungen
 
 
-* [Erstellen und Registrieren einer Hintergrundaufgabe](create-and-register-a-background-task.md)
-* [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
-* [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)
-* [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
-* [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
-* [Reagieren auf Systemereignisse mit Hintergrundaufgaben](respond-to-system-events-with-background-tasks.md)
-* [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)
-* [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](update-a-live-tile-from-a-background-task.md)
-* [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)
-* [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
+## **Hinweis**  Ab Windows 10 muss der Benutzer Ihre App nicht mehr zum Sperrbildschirm hinzufügen, um Hintergrundaufgaben zu nutzen.
 
-* [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
-* [So wird's gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in Windows Store-Apps (beim Debuggen)](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
- 
+* [Die verschiedenen Arten von Auslösern für Hintergrundaufgaben werden unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md)erläutert.](create-and-register-a-background-task.md)
+* [**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform(UWP) schreiben.](declare-background-tasks-in-the-application-manifest.md)
+* [Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
+* [Verwandte Themen](monitor-background-task-progress-and-completion.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
+* [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](respond-to-system-events-with-background-tasks.md)
+* [Behandeln einer abgebrochenen Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)
+* [Überwachen des Status und Abschlusses von Hintergrundaufgaben](update-a-live-tile-from-a-background-task.md)
+* [Registrieren einer Hintergrundaufgabe](use-a-maintenance-trigger.md)
+* [Reagieren auf Systemereignisse mit Hintergrundaufgaben](guidelines-for-background-tasks.md)
+
+* [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](debug-a-background-task.md)
+* [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
+ 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

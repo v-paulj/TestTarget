@@ -29,7 +29,7 @@ Im Abschnitt **Additional description languages** können sie auf **Manage addit
 
 Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren.
 
-> **Hinweis**  Wenn Sie eine Beschreibung in einer Sprache erstellen, die von Ihren Paketen nicht unterstützt wird, müssen Sie angeben, welche Ihrer reservierten App-Namen in dieser Beschreibung angezeigt werden sollen, da für diese Sprache kein verknüpftes Paket vorliegt, von dem der Name abgerufen werden könnte. Der Name, den Sie hier wählen, gilt nur für den Store-Eintrag für diese Sprache und wirkt sich nicht auf den Namen aus, der angezeigt wird, wenn ein Kunde die App installiert.
+> **Hinweis** Wenn Sie eine Beschreibung in einer Sprache erstellen, die von Ihren Paketen nicht unterstützt wird, müssen Sie angeben, welche Ihrer reservierten App-Namen in dieser Beschreibung angezeigt werden sollen, da für diese Sprache kein verknüpftes Paket vorliegt, von dem der Name abgerufen werden könnte. Der Name, den Sie hier wählen, gilt nur für den Store-Eintrag für diese Sprache und wirkt sich nicht auf den Namen aus, der angezeigt wird, wenn ein Kunde die App installiert.
 
 Klicken Sie zum Bearbeiten einer Beschreibung in der Übermittlungsübersicht auf den Namen der Sprache. Die Abschnitte der Seite **Beschreibung** werden nachstehend beschrieben.
 
@@ -121,6 +121,6 @@ Wenn Ihre App über eine Datenschutzrichtlinie verfügt, geben Sie die URL hier 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

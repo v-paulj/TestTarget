@@ -225,6 +225,6 @@ Weitere Informationen finden Sie unter [Starten der Kontakte-App](launch-people-
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

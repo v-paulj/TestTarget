@@ -19,7 +19,7 @@ ms.openlocfilehash: bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b
 
 ![Windows-Geräte](images/device-primer/1894834-hig-device-primer-01-500.png)
 
-Wenn Sie sich mit den Geräten vertraut machen, die UWP-Apps (Universelle Windows-Plattform) unterstützen, können Sie für jeden Formfaktor die bestmögliche Benutzerfreundlichkeit bieten. Beim Entwickeln für ein bestimmtes Gerät sind die wichtigsten zu berücksichtigenden Punkte die Darstellung der App auf dem Gerät, wo, wann und wie die App auf dem Gerät genutzt wird und wie Benutzer mit dem Gerät interagieren.
+Wenn Sie sich mit den Geräten vertraut machen, die UWP-Apps (Universelle Windows-Plattform) unterstützen, können Sie für jeden Formfaktor die bestmögliche Benutzerfreundlichkeit bieten. Beim Entwickeln für ein bestimmtes Gerät sind die wichtigsten zu berücksichtigenden Punkte die Darstellung der App auf dem Gerät; wo, wann und wie die App auf dem Gerät genutzt wird; und die Art der Interaktion der Benutzer mit dem Gerät.
 
 ## <span id="Phones_and_phablets"></span><span id="phones_and_phablets"></span><span id="PHONES_AND_PHABLETS"></span>Smartphones und Phablets
 

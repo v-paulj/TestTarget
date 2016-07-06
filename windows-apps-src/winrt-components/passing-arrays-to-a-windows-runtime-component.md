@@ -44,26 +44,26 @@ Wenn eine Methode ein Array für die Eingabe akzeptieren soll, ändern Sie den A
 > End Function
 > ```
 
-Wir empfehlen, dass Sie sofort eine Kopie des Eingabearrays anlegen und die Kopie bearbeiten. Dadurch wird sichergestellt, dass die Methode sich identisch verhält, unabhängig davon, ob die Komponente von .NET Framework-Code aufgerufen wird oder nicht.
+[!div class="tabbedCodeSnippets"] Wir empfehlen, dass Sie sofort eine Kopie des Eingabearrays anlegen und die Kopie bearbeiten.
 
-## Verwenden von Komponenten aus verwaltetem und nicht verwaltetem Code
-
-
-Parameter mit dem Attribut „ReadOnlyArrayAttribute” oder „WriteOnlyArrayAttribute” verhalten sich anders, je nachdem, ob der Aufrufer in systemeigenem oder verwaltetem Code geschrieben wurde. Wenn der Aufrufer systemeigener Code (JavaScript oder Visual C++-Komponentenerweiterungen) ist, wird der Arrayinhalt wie folgt behandelt:
-
--   ReadOnlyArrayAttribute: Das Array wird kopiert, wenn der Aufruf die Grenze der binären Anwendungsschnittstelle (ABI) überschreitet. Elemente werden bei Bedarf konvertiert. Daher sind versehentliche Änderungen, die die Methode an einem nur für die Eingabe bestimmten Array vornimmt, nicht für den Aufrufer sichtbar.
--   WriteOnlyArrayAttribute: Die aufgerufene Methode kann keine Annahmen über den Inhalt des ursprünglichen Arrays treffen. Zum Beispiel könnte das Array, das die Methode erhält, möglicherweise nicht initialisiert werden oder Standardwerte enthalten. Von der Methode wird erwartet, die Werte aller Elemente im Array festzulegen.
-
-Ist der Aufrufer in verwaltetem Code geschrieben, ist das ursprüngliche Array für die aufgerufene Methode genauso wie in einem Methodenaufruf in .NET Framework verfügbar. Arrayinhalt ist in .NET Framework-Code änderbar, sodass alle Änderungen, die die Methode an dem Array vornimmt, für den Aufrufer sichtbar sind. Dies ist wichtig, da es Komponententests für eine Komponente für Windows-Runtime betrifft. Wenn die Tests in verwaltetem Code geschrieben sind, erscheint der Inhalt eines Arrays während der Testphase als änderbar.
-
-## Verwandte Themen
-
-* [ReadOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.readonlyarrayattribute.aspx)
-* [WriteOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute.aspx)
-* [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+## Dadurch wird sichergestellt, dass die Methode sich identisch verhält, unabhängig davon, ob die Komponente von .NET Framework-Code aufgerufen wird oder nicht.
 
 
+Verwenden von Komponenten aus verwaltetem und nicht verwaltetem Code Parameter mit dem Attribut „ReadOnlyArrayAttribute” oder „WriteOnlyArrayAttribute” verhalten sich anders, je nachdem, ob der Aufrufer in systemeigenem oder verwaltetem Code geschrieben wurde.
 
-<!--HONumber=Jun16_HO4-->
+-   Wenn der Aufrufer systemeigener Code (JavaScript oder Visual C++-Komponentenerweiterungen) ist, wird der Arrayinhalt wie folgt behandelt: ReadOnlyArrayAttribute: Das Array wird kopiert, wenn der Aufruf die Grenze der binären Anwendungsschnittstelle (ABI) überschreitet. Elemente werden bei Bedarf konvertiert.
+-   Daher sind versehentliche Änderungen, die die Methode an einem nur für die Eingabe bestimmten Array vornimmt, nicht für den Aufrufer sichtbar. WriteOnlyArrayAttribute: Die aufgerufene Methode kann keine Annahmen über den Inhalt des ursprünglichen Arrays treffen. Zum Beispiel könnte das Array, das die Methode erhält, möglicherweise nicht initialisiert werden oder Standardwerte enthalten.
+
+Von der Methode wird erwartet, die Werte aller Elemente im Array festzulegen. Ist der Aufrufer in verwaltetem Code geschrieben, ist das ursprüngliche Array für die aufgerufene Methode genauso wie in einem Methodenaufruf in .NET Framework verfügbar. Arrayinhalt ist in .NET Framework-Code änderbar, sodass alle Änderungen, die die Methode an dem Array vornimmt, für den Aufrufer sichtbar sind. Dies ist wichtig, da es Komponententests für eine Komponente für Windows-Runtime betrifft.
+
+## Wenn die Tests in verwaltetem Code geschrieben sind, erscheint der Inhalt eines Arrays während der Testphase als änderbar.
+
+* [Verwandte Themen](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.readonlyarrayattribute.aspx)
+* [ReadOnlyArrayAttribute](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.writeonlyarrayattribute.aspx)
+* [WriteOnlyArrayAttribute](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+
+
+
+<!--HONumber=Jun16_HO5-->
 
 

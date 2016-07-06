@@ -3,8 +3,8 @@ author: jwmsft
 description: "Hier wird erläutert, wie Sie benutzerdefinierte Abhängigkeitseigenschaften für eine Windows-Runtime-App mit C++, C# oder Visual Basic definieren und implementieren können."
 title: "Benutzerdefinierte Abhängigkeitseigenschaften"
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 63301870ab53f4061cac9b9ad87a5fb75e8c48da
+ms.sourcegitcommit: d50b73fcf78c28157cff7003dc3e180de9d69f70
+ms.openlocfilehash: 80a42040887818a0c6a66ed32327144bed586dc2
 
 ---
 
@@ -249,7 +249,7 @@ private static void OnLabelChanged(DependencyObject d, DependencyPropertyChanged
     String s = e.NewValue as String; //null checks omitted
     if (s == String.Empty)
     {
-        iwlc.HasLabelValue = false;
+        iwlc.HasLabelValue = false;s
     } else {
         iwlc.HasLabelValue = true;
     }
@@ -274,7 +274,7 @@ static void OnLabelChanged(DependencyObject^ d, DependencyPropertyChangedEventAr
     if (s->IsEmpty()) {
         iwlc->HasLabelValue=false;
     }
-}
+}s
 ```
 
 ### Verhalten mit geänderter Eigenschaft für Strukturen und Enumerationen
@@ -335,7 +335,7 @@ Abhängigkeitseigenschaften des Sammlungstyps sind in der Windows-Runtime-API ve
 -   Sie animieren für gewöhnlich keine Sammlung.
 -   Sie füllen die Elemente einer Sammlung für gewöhnlich nicht vorher mit Stilen oder einer Vorlage aus.
 -   Obwohl das Binden an Sammlungen ein wichtiges Szenario ist, muss die Sammlung keine Abhängigkeitseigenschaft sein, um eine Bindungsquelle darzustellen. Im Fall von Bindungszielen werden in der Regel Unterklassen von [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/br242803) oder [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) verwendet, um Sammlungselemente zu unterstützen oder Modellanzeigemuster zu verwenden. Weitere Informationen zur Bindung zu und von Sammlungen finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
--   Benachrichtigungen zu Sammlungsänderungen sollten besser durch Schnittstellen wie **INotifyPropertyChanged** oder **INotifyCollectionChanged** oder durch Ableiten des Sammlungstyps von [**ObservableCollection**](T:System.Collections.ObjectModel.ObservableCollection%601) behandelt werden.
+-   Benachrichtigungen zu Sammlungsänderungen sollten besser durch Schnittstellen wie **INotifyPropertyChanged** oder **INotifyCollectionChanged** oder durch Ableiten des Sammlungstyps von [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx) behandelt werden.
 
 Dennoch gibt es Szenarien für Abhängigkeitseigenschaften des Sammlungstyps. In den nächsten drei Abschnitten finden Sie Informationen zur Implementierung einer Abhängigkeitseigenschaft vom Typ "Sammlung".
 
@@ -374,6 +374,6 @@ Die Implementierung für das Registrieren einer Eigenschaft in C++/CX ist schwie
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

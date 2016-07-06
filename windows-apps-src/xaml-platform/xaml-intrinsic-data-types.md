@@ -45,6 +45,6 @@ In der XAML 2009-Spezifikation werden weitere XAML-Grundtypen auf Sprachebene au
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

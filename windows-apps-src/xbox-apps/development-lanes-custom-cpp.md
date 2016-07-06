@@ -17,6 +17,6 @@ Informieren Sie sich zum Einstieg über [Spiele und DirectX](https://msdn.micros
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

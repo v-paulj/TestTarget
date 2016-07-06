@@ -3,8 +3,8 @@ author: Mtoepke
 title: "Einführung in Xbox One-Tools"
 description: Xbox One-spezifisches Tool Dev Home (unter Verwendung des Windows Device Portal).
 area: Xbox
-ms.sourcegitcommit: 4872ac9587b3e2e14860cb152bf33536faccc48d
-ms.openlocfilehash: c975cb07aa9b7f0d30a9905cbceba11e89c8f7df
+ms.sourcegitcommit: 914a1b76c6b502415bee36865af009a8dfe9bb53
+ms.openlocfilehash: e2f87cdeb8ce3371a34bb989e5fa29ef63d18621
 
 ---
 
@@ -57,9 +57,14 @@ Dev Home wird rechts angedockt. Sie können den Kontext umschalten, indem Sie wi
 | [Windows Device Portal](#windows-device-portal) | Ermöglicht WDP (browserbasiertes Tool zur Geräteverwaltung) im Kit. |
 | Xbox Live-Status | Enthält den aktuellen Status des Xbox Live-Diensts. |
 
+### Verwalten der Größe der Entwicklerspeicherzuteilung
+
+Um den Festplattenplatz zu vergrößern oder zu verkleinern, der für den Entwicklerspeicher verwendet wird, wählen Sie im Hauptmenü **Dev-Speicher verwalten** aus. Ändern Sie den Wert der Leiste **Dev-Speicher**, und wählen Sie dann **Speichern und neu starten** aus, um die Konsole neu zu starten.
+  ![Verwalten der Entwicklerspeicherzuteilung](images/devhome_storage.png)
+
 ### Anpassen von Dev Home
 
-Dev Home ist anpassbar und personalisierbar. Sie können ein Hintergrundbild und eine Designfarbe wählen, um Dev Home zu personalisieren. Diese Optionen finden Sie im Hauptmenü.
+Dev Home kann angepasst und personalisiert werden. Sie können ein Hintergrundbild und eine Designfarbe wählen, um Dev Home zu personalisieren. Diese Optionen finden Sie im Hauptmenü.
 
 #### Ändern der Größe und Neuanordnen von Tools
 Um die Größe oder Position eines Tools zu ändern, verwenden Sie die Kontextmenüschaltfläche (Schaltfläche **Anzeigen** auf dem Controller), während der Titel im Fokus steht. Wählen Sie im Kontextmenü **Verschieben** oder **Größe ändern**.
@@ -110,7 +115,7 @@ So aktivieren Sie WDP auf Ihrer Xbox One-Konsole:
   ![Sicherheitszertifikat-Warnung](images/security_cert_warning.jpg)
 
 ## Siehe auch
-- [Microsoft-Entwicklertechnologien: Windows Device Portal](https://ms-iot.github.io/content/en-US/win10/tools/DevicePortal.htm)
+- [Microsoft-Entwicklertechnologien: Windows Device Portal](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-xbox)
 - [UWP auf Xbox One](index.md)
 
 
@@ -119,6 +124,6 @@ So aktivieren Sie WDP auf Ihrer Xbox One-Konsole:
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

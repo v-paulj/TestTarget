@@ -1,10 +1,17 @@
 ---
-Autor: martinekuan ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676 title: Was kommt als Nächstes? description: Da Sie nun Ihre erste App erstellt haben, sollten Sie sich das restliche Dev Center ansehen. Hier finden Sie eine Einführung in die verschiedenen Bereiche.
-keywords: Dev Center, tour keywords: Dev Center, erste Schritte
+author: martinekuan
+ms.assetid: 4288E511-581C-49DC-A2F2-1CB832C4A676
+title: "Nächste Schritte"
+description: "Nachdem Sie Ihre erste App erstellt haben, sollten Sie sich mit dem Rest des Dev Center vertraut machen. Hier finden Sie eine Einführung in die verschiedenen Bereiche."
+keywords: Dev Center, Getting started
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: cb77a32f99bc6e27cfe87af16d6cd4e08855d7b6
+
 ---
 # Nächste Schritte
 
-Nachdem Sie Ihre erste App erstellt haben, sollten Sie sich mit dem Rest des Dev Centers vertraut machen. Hier finden Sie eine Einführung in die verschiedenen Bereiche.
+Nachdem Sie Ihre erste App erstellt haben, sollten Sie sich mit dem Rest des Dev Center vertraut machen. Hier finden Sie eine Einführung in die verschiedenen Bereiche.
 
 ## Entwerfen von UWP-Apps
 
@@ -64,6 +71,7 @@ Wechseln Sie zu [Entwickeln von IoT-Apps](http://go.microsoft.com/fwlink/p/?Link
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

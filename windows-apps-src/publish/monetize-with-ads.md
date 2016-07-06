@@ -1,7 +1,7 @@
 ---
 author: jnHs
 Description: Wenn Ihre App die Anzeigenvermittlung verwendet oder Banner- bzw. Videointerstitialanzeigen aus Microsoft Advertising anzeigt, verwalten Sie die Verwendung Ihrer Anzeigen auf der Seite Monetisierung &gt; Gewinnbringende Nutzung mit Anzeigen.
-title: Monetisierung durch Werbeanzeigen
+title: Monetarisierung durch Anzeigen
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
@@ -9,7 +9,7 @@ ms.openlocfilehash: 97eeeedb9e73b6c67abe6e2ff8cadbc744a6a7c4
 
 ---
 
-# Monetisierung durch Werbeanzeigen
+# Monetarisierung durch Anzeigen
 
 
 Wenn Ihre App ein **AdMediatorControl**-, **AdControl**- oder **InterstitialAd**-Steuerelement zum Anzeigen von Banner- oder Videointerstitialanzeigen verwendet, verwalten Sie die Verwendung Ihrer Anzeigen auf der Seite **Monetisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen**.

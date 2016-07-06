@@ -2,7 +2,11 @@
 author: TylerMSFT
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: Senden einer Arbeitsaufgabe an den Threadpool
-description: Hier erfahren Sie, wie Sie Arbeit in einem separaten Thread erledigen können, indem Sie eine Arbeitsaufgabe an den Threadpool übermitteln.
+description: "Hier erfahren Sie, wie Sie Arbeit in einem separaten Thread erledigen können, indem Sie eine Arbeitsaufgabe an den Threadpool übermitteln."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: afb6d8b1b1ee5eeb99ba68e8b842436bd58619d0
+
 ---
 # Senden einer Arbeitsaufgabe an den Threadpool
 
@@ -23,7 +27,7 @@ Drei Versionen von [**RunAsync**](https://msdn.microsoft.com/library/windows/app
 
 **Hinweis**  Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und den Fortschritt der Arbeitsaufgabe anzuzeigen.
 
-Im folgenden Beispiel wird eine Arbeitsaufgabe erstellt und ein Lambda-Ausdruck für die Arbeit angegeben:
+Im folgenden Beispiel werden eine Arbeitsaufgabe erstellt und ein Lambda für die Verarbeitung angegeben:
 
 > [!div class="tabbedCodeSnippets"]
 ``` cpp
@@ -187,7 +191,7 @@ IAsyncAction asyncAction = Windows.System.Threading.ThreadPool.RunAsync(
 m_workItem = asyncAction;
 ```
 
-Die Arbeitsaufgabe folgt dem Aufruf an [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) und wird vom Threadpool in einer Warteschlange platziert. Wenn ein Thread verfügbar wird, wird die Arbeitsaufgabe ausgeführt. Arbeitsaufgaben im Threadpool werden asynchron und in einer beliebigen Reihenfolge ausgeführt. Stellen Sie daher sicher, dass Ihre Arbeitsaufgaben über eine unabhängige Funktionsweise funktionieren.
+Nach dem Aufruf von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) wird die Arbeitsaufgabe vom Threadpool in eine Warteschlange eingereiht und ausgeführt, wenn ein Thread verfügbar wird. Arbeitsaufgaben im Threadpool werden asynchron und in einer beliebigen Reihenfolge ausgeführt. Stellen Sie daher sicher, dass Ihre Arbeitsaufgaben über eine unabhängige Funktionsweise funktionieren.
 
 Beachten Sie, dass von der Arbeitsaufgabe die [**IAsyncInfo.Status**](https://msdn.microsoft.com/library/windows/apps/BR206593)-Eigenschaft überprüft und bei einem Abbruch der Arbeitsaufgabe beendet wird.
 
@@ -195,7 +199,7 @@ Beachten Sie, dass von der Arbeitsaufgabe die [**IAsyncInfo.Status**](https://ms
 
 Stellen Sie einen Vervollständigungshandler zur Verfügung, indem Sie die [**IAsyncAction.Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.foundation.iasyncaction.completed.aspx)-Eigenschaft der Arbeitsaufgabe festlegen. Geben Sie einen Delegaten an (Sie können eine Lambda-Funktion oder Delegatfunktion nutzen), mit dem die Arbeitsaufgabe durchgeführt wird. Verwenden Sie z. B. [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und das Ergebnis anzuzeigen.
 
-Im folgenden Beispiel wird die Benutzeroberfläche mit dem Ergebnis der in Schritt 1 gesendeten Arbeitsaufgabe aktualisiert:
+Im folgenden Beispiel wird die Benutzeroberfläche mit dem Ergebnis der in Schritt 1 übermittelten Arbeitsaufgabe aktualisiert:
 
 > [!div class="tabbedCodeSnippets"]
 ``` cpp
@@ -258,6 +262,7 @@ Weitere Informationen erhalten Sie durch das Herunterladen des Codes in dieser S
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

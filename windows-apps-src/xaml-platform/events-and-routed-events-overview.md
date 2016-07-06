@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: Das Programmierkonzept von Ereignissen in einer Windows-Runtime-App bei Verwendung von C#-, Visual Basic- oder Visual C++-Komponentenerweiterungen (C++/CX) als Programmiersprache und XAML für die UI-Definition wird beschrieben
-title: Übersicht über Ereignisse und Routingereignisse
+description: "Das Programmierkonzept von Ereignissen in einer Windows-Runtime-App bei Verwendung von C#-, Visual Basic- oder Visual C++-Komponentenerweiterungen (C++/CX) als Programmiersprache und XAML für die UI-Definition wird beschrieben"
+title: "Übersicht über Ereignisse und Routingereignisse"
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: 4e4e21789dd76ad691f3828d23c73adcfc31efdf
+
 ---
 
 # Übersicht über Ereignisse und Routingereignisse
@@ -295,6 +299,7 @@ Das Definieren eines benutzerdefinierten Ereignisses erfolgt in der Regel im Rah
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

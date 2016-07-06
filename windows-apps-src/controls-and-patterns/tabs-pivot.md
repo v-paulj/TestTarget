@@ -5,45 +5,44 @@ title: Registerkarten und Pivots
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
 label: Tabs and pivots
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 6585a75f08a64b7bb8f27fd32a227fa49bb0f3f4
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: 8737ce16d98952f24f9651d30d49ffa85b8d306b
 
 ---
-# Pivots und Registerkarten
+# Pivot und Registerkarten
 
-Pivotsteuerelemente und Registerkarten werden für die Navigation zwischen häufig genutzten verschiedenen Inhaltskategorien verwendet. Das Registerkarten/Pivots bestehen aus zwei oder mehr Inhaltsbereichen mit entsprechenden Kategorieheadern. Die Header werden dauerhaft auf dem Bildschirm angezeigt und verfügen über einen eindeutigen Auswahlstatus, damit Benutzer stets direkt erkennen, in welcher Kategorie sie sich befinden.
-![Beispiele für Registerkarten](images/HIGSecOne_Tabs.png)
+Das Pivot-Steuerelement und das verwandte Registerkartenmuster werden für die Navigation zwischen häufig genutzten verschiedenen Inhaltskategorien verwendet. Pivots ermöglichen die Navigation zwischen mindestens zwei Inhaltsbereichen und nutzen Textheader, um die verschiedenen Inhaltsabschnitte zu gliedern.
 
-Registerkarten sind eine visuelle Pivotvariante und werden mit dem [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx)-Steuerelement erstellt. [
-              Ein **Codebeispiel**
-            ](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlPivot) für ein benutzerdefiniertes Pivot ist auf GitHub verfügbar.
+![Beispiel für Registerkarten](images/pivot_Hero_main.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
+Registerkarten stellen eine visuelle Variante eines Pivots dar, die eine Kombination aus Symbolen und Text oder nur Symbole verwenden, um Abschnittsinhalte zu gliedern. Registerkarten werden mit dem [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx)-Steuerelement erstellt. Das [**Pivotbeispiel**](http://go.microsoft.com/fwlink/p/?LinkId=619903) zeigt, wie das Pivot-Steuerelement an das Registerkartenmuster angepasst wird.
+
+
 
 -   [**Pivot-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn608241)
 
-## Das Registerkarten-/Pivotmuster
+## Pivotmuster
 
-Wenn Sie eine App mit dem Registerkarten-/Pivotmuster erstellen, sind einige wichtige Designelemente zu berücksichtigen.
+Wenn Sie eine App mit dem Pivot erstellen, sind einige wichtige Designelemente zu berücksichtigen.
 
-- **Headerbeschriftungen.**  Header können ein Symbol mit Text oder nur Text enthalten.
+- **Headerbeschriftungen.**  Header können über ein Symbol mit Text, nur über ein Symbol oder nur über Text verfügen.
 - **Headerausrichtung.**  Header können links ausgerichtet oder zentriert werden.
-- **Navigation auf oberster oder auf einer untergeordneten Ebene.**  Registerkarten/Pivots können für eine der Navigationsebenen verwendet werden. Optional kann der [Navigationsbereich](nav-pane.md) als primäre Ebene dienen und Registerkarten/Pivots als sekundäre.
-- **Unterstützung für Touchgesten**  Für Geräte, die Touchgesten unterstützen, können Sie für die Navigation zwischen Inhaltskategorien einen von zwei Interaktionssätzen verwenden:
+- **Navigation auf oberster oder auf einer untergeordneten Ebene.**  Pivots können für eine der Navigationsebenen verwendet werden. Optional kann der [Navigationsbereich](nav-pane.md) als primäre Ebene dienen und das Pivot als sekundäre.
+- **Unterstützung für Touchbewegungen.**  Für Geräte, die Touchbewegungen unterstützen, können Sie zur Navigation zwischen Inhaltskategorien eine von zwei Interaktionen verwenden:
     1. Tippen Sie auf einen Registerkarten-/Pivotheader, um zur gewünschten Kategorie zu navigieren.
     2. Wischen Sie über dem Inhaltsbereich nach links oder rechts, um zur benachbarten Kategorie zu navigieren.
 
 ## Beispiele
 
-Standardmäßig Pivotsteuerelement in Cortana-Erinnerungen.
+Pivot-Steuerelement auf dem Handy
 
-![Ein Pivot-Beispiel in Cortana-Erinnerungen](images/pivot_cortana-reminders.png)
+![Beispiel für ein Pivot](images/pivot_example.png)
 
 Registerkartenmuster in der App „Alarm & Uhr“
 
-![Ein Beispiel für Registerkarten im „Alarm & Uhr“](images/tabs_alarms-and-clock.png)
+![Beispiel für ein Registerkartenmuster in „Alarm & Uhr“](images/tabs_alarms-and-clock.png)
 
-## Erstellen eines Pivotsteuerelements
+## Erstellen eines Pivot-Steuerelements
 
 Das [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx)-Steuerelement enthält die in diesem Abschnitt beschriebenen grundlegenden Funktionen.
 
@@ -83,19 +82,35 @@ Das Steuerelement erkennt die folgenden Touchgesteninteraktionen:
 -   Durch Tippen auf den Header eines Pivotelements wird zum Abschnittsinhalt dieses Headers navigiert.
 -   Durch Wischen nach links oder rechts auf dem Header eines Pivotelements wird zum benachbarten Abschnitt navigiert.
 -   Durch Wischen nach links oder rechts auf einem Abschnittsinhalt wird zum benachbarten Abschnitt navigiert.
+![Beispiel für eine Wischbewegung nach links auf dem Abschnittsinhalt](images/pivot_w_hand.png)
 
 Das Steuerelement ist in zwei Modi verfügbar:
 
-**Fest**
+**Stationär**
 
 -   Pivots werden nicht verschoben, wenn alle Pivotheader in den zulässigen Bereich passen.
 -   Durch Tippen auf eine Pivotbeschriftung wird zur entsprechenden Seite navigiert. Das Pivot selbst wird jedoch nicht verschoben. Das aktive Pivot wird hervorgehoben.
+
+{{> aside-internal content = "
+-   Es wird dringen davon abgeraten, Elemente in einer 10-Fuß-Umgebung im Karussellmodus zu verwenden. Legen Sie die neue `IsHeaderItemsCarouselEnabled`-Eigenschaft auf „False“ fest, wenn Ihre App auf der Xbox ausgeführt wird.
+"}}
 
 **Karussell**
 
 -   Falls nicht alle Pivotheader in den verfügbaren Bereich passen, werden Pivots in einer Karussellansicht dargestellt.
 -   Durch Tippen auf eine Pivotbeschriftung wird die entsprechende Seite aufgerufen, und die aktive Pivotbeschriftung rückt an die erste Position.
 -   Pivotelemente in einer Karussellschleife wechseln vom letzten zum ersten Pivotabschnitt.
+
+{{> aside-internal content = "
+### Pivotfokus
+
+Der Tastaturfokus wird bei einem Pivotheader standardmäßig mit einem Unterstrich dargestellt.
+
+![Standardfokus als Unterstrich des ausgewählten Headers](images/pivot_focus_selectedHeader.png)
+
+Apps, die über ein benutzerdefiniertes Pivot verfügen und den Unterstrich in visuelle Objekte zur Headerauswahl integrieren, können die neue `HeaderFocusVisualPlacement`-Eigenschaft verwenden, um den Standardwert zu ändern. Wenn `HeaderFocusVisualPlacement=\"ItemHeaders\"` lautet, wird der Fokus um den gesamten Headerbereich gezeichnet.
+
+![Bei der ItemsHeader-Option wird das Fokusrechteck um alle Pivotheader gezeichnet](images/pivot_focus_headers.png) "}}.
 
 ## Empfehlungen
 
@@ -108,10 +123,12 @@ Das Steuerelement ist in zwei Modi verfügbar:
 
 ## Verwandte Themen
 
-[Navigationsdesigngrundlagen](https://msdn.microsoft.com/library/windows/apps/dn958438)
+- [Navigationsdesigngrundlagen](../layout/navigation-basics.md)
+
+- [**Pivotbeispiel**](http://go.microsoft.com/fwlink/p/?LinkId=619903)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

@@ -73,6 +73,6 @@ Dieses Beispiel zeigt eine App mit einem 3D-Luftbild und einer Streetside-Ansich
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

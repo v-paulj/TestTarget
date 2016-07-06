@@ -43,7 +43,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | Authorization  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
 | Host           | Zeichenfolge | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
-| Content-Type   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
+| Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
 <br/>
 
@@ -57,7 +57,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | language       | string | Die Sprache des Benutzers.                                                                                                                                                                                                                                                                                              | Ja      |
 | market         | string | Der Markt des Benutzers.                                                                                                                                                                                                                                                                                                | Ja      |
 | orderId        | guid   | Eine für den Auftrag generierte GUID. Dieser Wert muss für den Benutzer eindeutig sein, aber nicht auftragsübergreifend.                                                                                                                                                                                              | Ja      |
-| productId      | Zeichenfolge | Die Store-ID aus dem Windows Store-Katalog. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. | Ja      |
+| Produkt-ID      | Zeichenfolge | Die Store-ID aus dem Windows Store-Katalog. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. | Ja      |
 | quantity       | int    | Die Kaufmenge. Derzeit wird als einziger Wert 1 unterstützt. Ohne Angabe wird standardmäßig der Wert 1 verwendet.                                                                                                                                                                                                                | Nein       |
 | skuId          | string | Die SKU-ID aus dem Windows Store-Katalog. Beispiel für eine SKU-ID: 0010.                                                                                                                                                                                                                                                | Ja      |
 
@@ -136,8 +136,8 @@ Das OrderLineItemV6-Objekt enthält die folgenden Parameter.
 | legacyBillingOrderId    | string         | Die alte Abrechnungs-ID.                                                                                       | Nein       |
 | lineItemId              | string         | Die Positions-ID für den Artikel in diesem Auftrag.                                                                 | Ja      |
 | listPrice               | decimal        | Der Listenpreis des Artikels in diesem Auftrag.                                                                    | Ja      |
-| productId               | string         | Die Windows Store-Produkt-ID der Position.                                                               | Ja      |
-| productType             | string         | Die Art des Produkts. Die unterstützten Werte sind **Durable**, **Application** und **UnmanagedConsumable**. | Ja      |
+| Produkt-ID               | string         | Die Windows Store-Produkt-ID der Position.                                                               | Ja      |
+| Produkttyp             | string         | Die Art des Produkts. Die unterstützten Werte sind **Durable**, **Application** und **UnmanagedConsumable**. | Ja      |
 | Quantity                | int            | Die Menge des bestellten Artikels.                                                                            | Ja      |
 | retailPrice             | decimal        | Der Einzelhandelspreis des bestellten Artikels.                                                                        | Ja      |
 | revenueRecognitionState | string         | Der Zustand der Umsatzrealisierung.                                                                               | Ja      |
@@ -244,6 +244,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

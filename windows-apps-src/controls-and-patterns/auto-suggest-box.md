@@ -6,16 +6,16 @@ ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 2900aa542a7986cac408051159f013e10dd3a5aa
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: bc3337101f0f2e8449d052743f7b3ce8d2dac516
 
 ---
 # Feld mit automatischen Vorschlägen
-Verwenden Sie ein AutoSuggestBox-Element, um eine Liste mit Vorschlägen bereitzustellen, aus der Benutzer bei der Eingabe auswählen können.
+Verwenden Sie ein AutoSuggestBox-Element, um eine Liste mit Vorschlägen bereitzustellen, aus der Benutzer während der Eingabe auswählen können.
 
 ![Ein Feld mit automatischen Vorschlägen](images/controls/auto-suggest-box-open.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
+
 
 -   [**AutoSuggestBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
 -   [**TextChanged-Ereignis**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.textchanged.aspx)
@@ -76,9 +76,9 @@ Das QuerySubmitted-Ereignis tritt ein, wenn ein Benutzer eine Abfragezeichenfolg
 - Mit dem Fokus auf dem Textfeld EINGABETASTE drücken oder auf das Abfragesymbol klicken. Die [ChosenSuggestion](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.chosensuggestion.aspx)-Eigenschaft für die Ereignisargumente lautet **null**.
 - Mit dem Fokus auf der Vorschlagsliste EINGABETASTE drücken oder auf ein Element klicken oder tippen. Die ChosenSuggestion-Eigenschaft für die Ereignisargumente enthält das Element, das in der Liste ausgewählt wurde.
 
-In allen Fällen enthält die [QueryText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext.aspx)-Eigenschaft für die Ereignisargumente den Text aus dem Textfeld. 
+In allen Fällen enthält die [QueryText](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestboxquerysubmittedeventargs.querytext.aspx)-Eigenschaft für die Ereignisargumente den Text aus dem Textfeld.
 
-### Verwenden von AutoSuggestBox für die Suche
+## Verwenden von AutoSuggestBox für die Suche
 
 Verwenden Sie ein AutoSuggestBox-Element, um eine Liste mit Vorschlägen bereitzustellen, aus der Benutzer während der Eingabe auswählen können.
 
@@ -94,7 +94,7 @@ Hier ist ein AutoSuggestBox-Element mit einem Suchsymbol dargestellt.
 
 ## Beispiele
 
-Ein vollständiges funktionierendes Beispiel für AutoSuggestBox finden Sie unter [Beispiel für AutoSuggestBox-Migration](http://go.microsoft.com/fwlink/p/?LinkId=619996) und [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?LinkId=619992).
+Ein vollständiges, funktionierendes Beispiel für AutoSuggestBox finden Sie unter [Beispiel für AutoSuggestBox-Migration](http://go.microsoft.com/fwlink/p/?LinkId=619996) und [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?LinkId=619992).
 
 Dies ist ein einfaches AutoSuggestBox-Element mit den erforderlichen Ereignishandlern.
 
@@ -108,8 +108,8 @@ Dies ist ein einfaches AutoSuggestBox-Element mit den erforderlichen Ereignishan
 ```csharp
 private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
 {
-    // Only get results when it was a user typing, 
-    // otherwise assume the value got filled in by TextMemberPath 
+    // Only get results when it was a user typing,
+    // otherwise assume the value got filled in by TextMemberPath
     // or the handler for SuggestionChosen.
     if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
     {
@@ -140,10 +140,22 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
 ## Empfohlene und nicht empfohlene Vorgehensweisen
 
--   Zeigen Sie, wenn Sie das Feld mit automatischen Vorschlägen zum Durchführen von Suchen verwenden und keine Suchergebnisse für den eingegebenen Text vorhanden sind, die einzeilige Meldung „Keine Ergebnisse” an, damit Benutzer wissen, dass ihre Suchanfrage ausgeführt wurde:
+-   Zeigen Sie die einzeilige Meldung „Keine Ergebnisse” an, wenn Sie das Feld mit automatischen Vorschlägen zum Durchführen von Suchen verwenden und keine Suchergebnisse für den eingegebenen Text vorhanden sind, damit Benutzer wissen, dass ihre Suchanfrage ausgeführt wurde:
 
     ![Beispiel für ein Feld mit automatischen Vorschlägen ohne Suchergebnisse](images/controls_autosuggest_noresults.png)
 
+{{> aside-internal content = "
+## Prüfliste für Globalisierung und Lokalisierung
+
+<table>
+<tr>
+<th>Vertikaler Abstand</th><td>Verwenden Sie nicht lateinische Zeichen für den vertikalen Abstand, um sicherzustellen, dass nicht lateinische Schriften richtig angezeigt werden, einschließlich Zahlen.</td>
+</tr>
+<tr>
+<th>Bildlauf</th><td>Wenn automatisch vorgeschlagener Text ausgewählt wird, sollten Benutzer einen Bildlauf bis zum Ende der Zeichenfolge ausführen können.</td>
+</tr>
+</table>
+"}}
 
 ## Verwandte Artikel
 
@@ -156,6 +168,6 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

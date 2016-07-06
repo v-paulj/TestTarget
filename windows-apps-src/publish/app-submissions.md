@@ -1,12 +1,19 @@
 ---
-author: jnHs Description: Nachdem Sie Ihre App durch Reservierung eines Namens erstellt haben, können Sie mit der Veröffentlichung beginnen. Der erste Schritt ist die Übermittlung der App.
-title: App-Übermittlungen ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4 keywords: Übermitteln von Apps keywords: erforderliche Informationen keywords: erforderliche Felder keywords: Prüfliste
+author: jnHs
+Description: "Nachdem Sie Ihre App durch Reservierung eines Namens erstellt haben, können Sie mit der Veröffentlichung beginnen. Der erste Schritt besteht darin, eine Übermittlung zu erstellen."
+title: "App-Übermittlungen"
+ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
+keywords: checklist
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 59f41b74ca264606b4668addf44a07c82e173579
+
 ---
 
 # App-Übermittlungen
 
 
-Nachdem Sie Ihre [App durch Reservierung eines Namens erstellt haben](create-your-app-by-reserving-a-name.md), können Sie mit der Veröffentlichung beginnen. Der erste Schritt ist die **Einreichung** der App.
+Nachdem Sie Ihre [App durch Reservierung eines Namens erstellt haben](create-your-app-by-reserving-a-name.md), können Sie mit der Veröffentlichung beginnen. Der erste Schritt besteht darin, eine ***Übermittlung** zu erstellen.
 
 Sie beginnen mit der Einreichung, sobald Ihre App fertig und bereit für die Veröffentlichung ist. Sie können mit der Eingabe von Infos beginnen, noch bevor Sie eine einzige Codezeile programmiert haben. Die Einreichung wird in Ihrem Dashboard gespeichert, sodass Sie zu einem beliebigen Zeitpunkt damit arbeiten können.
 
@@ -92,6 +99,7 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 **Hinweis**  Informationen zum Veröffentlichen von branchenspezifischen Apps direkt für Unternehmen finden Sie unter [Verteilen von branchenspezifischen Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -28,7 +28,7 @@ Sie können zwar die asynchronen UWP-APIs direkt in C++ verwenden, es wird aber 
 
 -   Gewährleistung, dass einzelne Aufgaben im richtigen Threadkontext oder -apartment ausgeführt werden
 
-Dieser Artikel bietet einen allgemeinen Überblick über die Verwendung der **Task**-Klasse mit den asynchronen UWP-APIs. Die vollständige Dokumentation zur **Task**-Klasse und den dazugehörigen Methoden (einschließlich [**create\_task**][createTask]) finden [Sie unter Aufgabenparallelität (Concurrency Runtime)][taskParallelism]. Weitere Informationen zum Erstellen öffentlicher asynchroner Methoden für die Verwendung durch JavaScript und andere UWP-kompatible Sprachen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ für Windows-Runtime-Apps][createAsyncCpp].
+Dieser Artikel bietet einen allgemeinen Überblick über die Verwendung der **Task**-Klasse mit den asynchronen UWP-APIs. Die vollständige Dokumentation zur **Task**-Klasse und den dazugehörigen Methoden (einschließlich [**create\_task**][createTask]) finden [Sie unter Aufgabenparallelität (Concurrency Runtime)][taskParallelism]. Weitere Informationen zum Erstellen öffentlicher asynchroner Methoden für die Verwendung durch JavaScript und andere UWP-kompatible Sprachen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ für Windows-Runtime-Apps]createAsyncCpp[.
 
 ## Verwendung asynchroner Vorgänge mithilfe von Aufgaben
 
@@ -220,7 +220,7 @@ void App::SetFeedText()
 }
 ```
 
-Gibt eine Aufgabe nicht [**IAsyncAction**][IAsyncAction] oder [**IAsyncOperation**][IAsyncOperation] zurück, ist sie nicht apartmentfähig, und ihre Fortsetzungen werden standardmäßig im ersten verfügbaren Hintergrundthread ausgeführt.
+Gibt eine Aufgabe nicht [**IAsyncAction**]IAsyncAction[ oder ][IAsyncOperation****IAsyncOperation] zurück, ist sie nicht apartmentfähig, und ihre Fortsetzungen werden standardmäßig im ersten verfügbaren Hintergrundthread ausgeführt.
 
 Sie können den Standardthreadkontext für beide Aufgabenarten außer Kraft setzen, indem Sie die Überladung der [**task::then**][taskThen]-Methode verwenden, die einen [**task\_continuation\_context**](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh749968.aspx)-Kontext verwendet. In manchen Fällen ist es zum Beispiel vorteilhaft, die Fortsetzung einer apartmentfähigen Aufgabe für einen Hintergrundthread zu planen. Dabei können Sie [**task\_continuation\_context::use\_arbitrary**][useArbitrary] übergeben, um die Vorgänge der Aufgabe für den nächsten verfügbaren Thread in einem Thread mit mehreren Apartments (Multithread-Apartment, MTA) zu planen. Dadurch wird die Leistung der Fortsetzung verbessert, da die entsprechenden Vorgänge nicht mit anderen Vorgängen im UI-Thread synchronisiert sein müssen.
 
@@ -338,6 +338,6 @@ Methoden mit Unterstützung von [**IAsyncOperationWithProgress**](https://msdn.m
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

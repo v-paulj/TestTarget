@@ -1,8 +1,12 @@
 ---
 author: DelfCo
-description: WebSockets stellt einen Mechanismus für die schnelle und sichere bidirektionale Webkommunikation zwischen einem Client und einem Server mithilfe von HTTP(S) bereit.
+description: "WebSockets stellt einen Mechanismus für die schnelle und sichere bidirektionale Webkommunikation zwischen einem Client und einem Server mithilfe von HTTP(S) bereit."
 title: WebSockets
 ms.assetid: EAA9CB3E-6A3A-4C13-9636-CCD3DE46E7E2
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 7e9ee140914718ce71357ba8ecaf10116949b87b
+
 ---
 
 # WebSockets
@@ -38,7 +42,7 @@ Mit dem [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/b
 
 Der Code in diesem Abschnitt erstellt ein neues [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)-Element, stellt eine Verbindung mit einem WebSocket-Server her und sendet Daten an den Server. Nachdem erfolgreich eine Verbindung hergestellt wurde, wartet die App auf das Auslösen des [**MessageWebSocket.MessageReceived**](https://msdn.microsoft.com/library/windows/apps/br241358)-Ereignisses, das angibt, dass Daten empfangen wurden.
 
-Dieses Beispiel verwendet den WebSocket.org-Echoserver, einen Dienst, der Zeichenfolgen zurück an den Absender sendet. Mithilfe des wss:-Protokollspezifizierers verwendet dieses Beispiel eine sichere Verbindung zum Senden und Empfangen von Nachrichten.
+Dieses Beispiel verwendet den WebSocket.org-Echoserver, einen Dienst, der Zeichenfolgen zurück an den Absender sendet. Mithilfe des „wss:" Protokoll-Spezifizierers“ verwendet dieses Beispiel eine sichere Verbindung zum Senden und Empfangen von Nachrichten.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cpp
@@ -353,6 +357,7 @@ Das folgende Beispiel erstellt eine Aufgabe, die nach der angegebenen Verzögeru
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

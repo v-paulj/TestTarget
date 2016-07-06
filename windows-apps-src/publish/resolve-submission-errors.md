@@ -1,24 +1,24 @@
 ---
 author: jnHs
-Description: Wenn nach der Übermittlung Ihrer App an den Store Fehler auftreten, müssen Sie diese beheben, bevor Sie den Zertifizierungsprozess fortsetzen können.
-title: Übermittlungsfehler beheben
+Description: "Wenn nach der Übermittlung Ihrer App an den Store Fehler auftreten, müssen Sie diese beheben, bevor Sie den Zertifizierungsprozess fortsetzen können."
+title: "Übermittlungsfehler beheben"
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
+ms.sourcegitcommit: e295011db20d151f54e2581f8c67014b30261eb6
+ms.openlocfilehash: cd0e1011bd1f857d8c859428ae0ff7e755db842e
+
 ---
 
 # Übermittlungsfehler beheben
 
-
 Wenn nach der Übermittlung Ihrer App an den Store Fehler auftreten, müssen Sie diese beheben, bevor Sie den [Zertifizierungsprozess](the-app-certification-process.md) fortsetzen können. Die Fehlermeldung weist darauf hin, worin das Problem besteht und was eventuell erforderlich ist, um das Problem zu beheben. Nachfolgend sind einige zusätzliche Informationen aufgeführt, die Ihnen beim Beheben dieser Fehler helfen können.
 
 ## UWP-Apps
-
 
 Wenn Sie eine UWP-App einreichen, wird während der Vorverarbeitung möglicherweise ein Fehler angezeigt, wenn die Paketdatei keine von Visual Studio für den Store generierte „.appxupload“-Datei ist. Achten Sie darauf, dass Sie die Schritte in [Verpacken universeller Windows-Apps für Windows 10](../packaging/packaging-uwp-apps.md) beim Erstellen der Paketdatei der App befolgen und nur die „.appxupload“-Datei auf der Seite [Pakete](upload-app-packages.md) der Übermittlung hochladen, keine „appx“- oder „.appxbundle“-Datei.
 
 Wenn ein Kompilierungsfehler angezeigt wird, stellen Sie sicher, dass Sie die Anwendung erfolgreich im Releasemodus erstellen können. Weitere Informationen finden Sie unter [Systemeigene .NET-Compilerfehler](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
 ## Windows Phone-Apps
-
 
 Wenn während der Vorverarbeitung Probleme mit Windows Phone-Paketen auftreten, wird möglicherweise **Fehler 2001** angezeigt. In den meisten Fällen müssen Sie das Paket Ihrer App neu erstellen, um den Fehler zu beheben. Sobald Sie damit fertig sind, ersetzen Sie auf der Seite [Pakete](upload-app-packages.md) der Einreichung das alte durch das neue Paket, bevor Sie erneut auf **An Store einreichen** klicken.
 
@@ -32,15 +32,25 @@ Es gibt eine Reihe von Problemen, die diesen Fehler verursachen können. Überpr
 
 Ein weiterer Fehler, der möglicherweise nach dem Einreichen Ihrer App angezeigt wird, ist **Fehler 1300**. Dieser Fehler tritt auf, wenn mindestens eine Assembly (oder das gesamte Paket) bereits vorkompiliert ist. Um dieses Problem zu beheben, erstellen Sie das App-Paket in Microsoft Visual Studio neu und reichen dann das neu generierte Paket ein.
 
- 
+## Fehler für Name/Identität
+
+Möglicherweise wird Ihnen der folgende Fehler angezeigt: **Der Name des Pakets stimmt mit keinem der von Ihnen reservierten App-Namen überein. Reservieren Sie den App-Namen, und/oder aktualisieren Sie das Paket mit dem korrekten App-Namen für diese Sprache.**. Dies bedeutet, dass Sie einen falschen Namen für das Paket eingegeben haben. Dieser Fehler kann auch auftreten, wenn Sie einen App-Namen verwenden, den Sie im Dev Center nicht reserviert haben. In der Regel können Sie diesen Fehler beheben, indem Sie folgende Schritte ausführen:
+
+- Wechseln Sie zur Seite [App-Identität](view-app-identity-details.md) für Ihre App (unter **App-Verwaltung**), um zu überprüfen, ob Ihrer App eine Identität zugewiesen wurde. Wenn dies nicht der Fall ist, wird Ihnen die Option für das Erstellen von Identitäten angezeigt. Sie müssen einen Namen für Ihre App reservieren, um die Identität zu erstellen. Stellen Sie sicher, dass dies der Name ist, den Sie in Ihrem Paket verwendet haben.
+- Wenn Ihre App bereits über eine Identität verfügt, müssen Sie möglicherweise dennoch den Namen reservieren, den Sie in Ihrem Paket verwenden möchten. Klicken Sie unter **App-Verwaltung** auf [App-Namen verwalten](manage-app-names.md). Geben Sie den Namen ein, den Sie reservieren möchten, und klicken Sie auf **App-Namen reservieren**.
+
+> **Wichtig** Wenn der Name, den Sie verwenden möchten, nicht verfügbar ist, wurde dieser möglicherweise bereits für eine andere App reserviert. Wenn Ihre App bereits unter diesem Namen veröffentlicht wurde, oder wenn Sie der Meinung nach zur Verwendung dieses Namens berechtigt sind, [wenden Sie sich an den Support](https://go.microsoft.com/fwlink/p/?LinkId=331509).  
 
  
 
+ 
 
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
 
 

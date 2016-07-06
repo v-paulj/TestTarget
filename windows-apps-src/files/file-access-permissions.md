@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
-title: Berechtigungen für den Dateizugriff
-description: Apps können standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen. Apps können darüber hinaus mithilfe der Dateiauswahl oder über die Deklaration von Funktionen auf weitere Speicherorte zugreifen.
+title: "Berechtigungen für den Dateizugriff"
+description: "Apps können standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen. Apps können darüber hinaus mithilfe der Dateiauswahl oder über die Deklaration von Funktionen auf weitere Speicherorte zugreifen."
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
+
 ---
 # Berechtigungen für den Dateizugriff
 
@@ -68,11 +72,11 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
         var localFolder = Windows.Storage.ApplicationData.current.localFolder;
         ```
  
-        Wenn Sie auf den servergespeicherten oder temporären Ordner Ihrer Anwendung zugreifen möchten, verwenden Sie die [**RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623)- oder [**TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629)-Eigenschaft.
+        Wenn Sie auf den servergespeicherten oder temporären Ordner Ihrer Anwendung zugreifen möchten, verwenden Sie stattdessen die [**RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623)- oder [**TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629)-Eigenschaft.
 
         Nach dem Aufrufen des [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230), der den Dateispeicherort der Anwendung darstellt, können Sie auf Dateien und Ordner im Verzeichnis mithilfe der **StorageFolder**-Methode zugreifen. Im Beispiel werden diese **StorageFolder**-Objekte in der `localFolder`-Variablen gespeichert. Weitere Informationen zum Verwenden der Speicherorte von App-Daten finden Sie unter [Verwalten von Anwendungsdaten](https://msdn.microsoft.com/library/windows/apps/hh465109). Sie können auch das [Beispiel für Anwendungsdaten](http://go.microsoft.com/fwlink/p/?linkid=231478) für Windows 8.1 herunterladen und dessen Quellcode in Ihrer Windows 10-App wiederverwenden.
 
-    2.  Sie können eine Datei zum Beispiel direkt aus dem lokalen Ordner Ihrer Anwendung mithilfe der Anwendungs-URI wie folgt aufrufen:
+    2.  Sie können eine Datei zum Beispiel mithilfe der Anwendungs-URI direkt aus dem lokalen Ordner Ihrer Anwendung wie folgt aufrufen:
         > [!div class="tabbedCodeSnippets"]
         ```csharp
         using Windows.Storage;
@@ -86,7 +90,7 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
         );
         ```
 
-        Nach vollständiger Ausführung von [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) wird ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) zurückgegeben, das die Datei *file.txt* im lokalen Ordner der Anwendung darstellt (`file` im Beispiel).
+        Nach vollständiger Ausführung von [**GetFileFromApplicationUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701741) wird ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) zurückgegeben, das die Datei *file.txt* im lokalen Ordner der App darstellt (`file` im Beispiel).
 
         Das Präfix „ms-appdata:///local/“ in der URI bezieht sich auf den lokalen Ordner der Anwendung. Für den Zugriff auf Dateien in servergespeicherten oder temporären Ordnern verwenden Sie „ms-appdata:///roaming/“ oder „ms-appdata:///temporary/“. Weitere Informationen zur Verwendung von Anwendungs-URIs finden Sie in [So wird's gemacht: Laden von Dateiressourcen](https://msdn.microsoft.com/library/windows/apps/hh781229).
 
@@ -142,7 +146,7 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
  
         [
               **DownloadsFolder**
-            ](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) ist überladen, sodass Sie festlegen können, was das System im Falle eines bereits bestehenden gleichnamigen Unterordners im Ordner "Downloads" des Benutzers tun sollte. Nach vollständiger Ausführung dieser Methoden wird ein [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) zurückgegeben, der den erstellten Unterordner darstellt. Diese Datei wird im Beispiel `newFolder` genannt.
+            ](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) ist überladen, sodass Sie festlegen können, was das System im Falle eines bereits vorhandenen gleichnamigen Unterordners im Ordner "Downloads" des Benutzers tun sollte. Nach vollständiger Ausführung dieser Methoden wird ein [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) zurückgegeben, der den erstellten Unterordner darstellt. Diese Datei wird im Beispiel `newFolder` genannt.
 
     Wenn Sie eine Datei oder einen Ordner im Downloadordner erstellen, empfehlen wir, die Datei oder den Ordner der [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) Ihrer App hinzuzufügen, sodass zukünftig leicht auf dieses Element zugegriffen werden kann.
 
@@ -165,6 +169,7 @@ In der folgenden Tabelle sind weitere Speicherorte aufgeführt, auf die Sie durc
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

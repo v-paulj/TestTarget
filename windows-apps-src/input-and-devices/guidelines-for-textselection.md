@@ -12,7 +12,7 @@ ms.openlocfilehash: 6533e76981d815c2d62008c17e2320fc770dfcc9
 
 # Auswählen von Text und Bildern
 
-In diesem Artikel wird das Auswählen und Bearbeiten von Text, Bildern und Steuerelementen beschrieben. Außerdem enthält er Richtlinien für die Benutzeroberfläche, die bei Verwendung dieser Mechanismen in Ihren Apps berücksichtigt werden sollten.
+In diesem Artikel wird das Auswählen und Bearbeiten von Text, Bildern und Steuerelementen beschrieben. Außerdem enthält er Richtlinien für die Benutzeroberfläche, die Sie bei Verwendung dieser Mechanismen in Ihren Apps berücksichtigen sollten.
 
 
 
@@ -135,6 +135,6 @@ Zielelemente können wie in den folgenden Abbildungen dargestellt z. B. auch in
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -47,12 +47,12 @@ Der folgende Code erstellt ein [**SystemCondition**](https://msdn.microsoft.com/
 > SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionType::InternetAvailable);
 > ```
 
-## Hinzufügen des SystemCondition-Objekts zur Hintergrundaufgabe
+## [!div class="tabbedCodeSnippets"]
 
+
+Hinzufügen des SystemCondition-Objekts zur Hintergrundaufgabe
 
 Um die Bedingung hinzuzufügen, rufen Sie die [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769)-Methode für das [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Objekt auf, und übergeben Sie das [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834)-Objekt an die Methode.
-
-Der folgende Code registriert die InternetAvailable-Bedingung für Hintergrundaufgaben beim TaskBuilder:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -62,12 +62,12 @@ Der folgende Code registriert die InternetAvailable-Bedingung für Hintergrundau
 > taskBuilder->AddCondition(internetCondition);
 > ```
 
-## Registrieren Sie die Hintergrundaufgabe.
+## Der folgende Code registriert die InternetAvailable-Bedingung für Hintergrundaufgaben beim TaskBuilder:
 
 
-Sie können Ihre Hintergrundaufgabe jetzt mit der [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772)-Methode registrieren. Die Hintergrundaufgabe wird erst gestartet, wenn die angegebene Bedingung erfüllt ist.
+[!div class="tabbedCodeSnippets"]
 
-Der folgende Code registriert die Aufgabe und speichert das resultierende BackgroundTaskRegistration-Objekt:
+Registrieren Sie die Hintergrundaufgabe.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -77,20 +77,20 @@ Der folgende Code registriert die Aufgabe und speichert das resultierende Backgr
 > BackgroundTaskRegistration ^ task = taskBuilder->Register();
 > ```
 
-> **Hinweis**  Universelle Windows-Apps müssen vor der Registrierung von Hintergrundtrigger-Typen [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen.
+> Sie können Ihre Hintergrundaufgabe jetzt mit der [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772)-Methode registrieren. Die Hintergrundaufgabe wird erst gestartet, wenn die angegebene Bedingung erfüllt ist.
 
-Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) und anschließend [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) auf, wenn die App nach der Aktualisierung gestartet wird, um sicherzustellen, dass Ihre universelle Windows-App nach der Veröffentlichung eines Updates weiterhin ordnungsgemäß ausgeführt wird. Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md).
+Der folgende Code registriert die Aufgabe und speichert das resultierende BackgroundTaskRegistration-Objekt: [!div class="tabbedCodeSnippets"]
 
-> **Hinweis**  Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App Szenarien, in denen die Registrierung von Hintergrundaufgaben einen Fehler verursacht, problemlos verarbeitet.
+> **Hinweis**  Universelle Windows-Apps müssen vor der Registrierung von Hintergrundtrigger-Typen [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen. Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) und anschließend [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) auf, wenn die App nach der Aktualisierung gestartet wird, um sicherzustellen, dass Ihre universelle Windows-App nach der Veröffentlichung eines Updates weiterhin ordnungsgemäß ausgeführt wird. Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md).
 
-## Einfügen mehrerer Bedingungen für die Hintergrundaufgabe
+## **Hinweis**  Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft.
 
-Zum Hinzufügen mehrerer Bedingungen ruft Ihre App die [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) -Methode mehrmals auf. Diese Aufrufe müssen stattfinden, bevor die Aufgabenregistrierung wirksam wird.
+Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App Szenarien, in denen die Registrierung von Hintergrundaufgaben einen Fehler verursacht, problemlos verarbeitet.
 
-> **Hinweis**  Achten Sie darauf, einer Hintergrundaufgabe keine in Konflikt stehenden Bedingungen hinzuzufügen.
+> Einfügen mehrerer Bedingungen für die Hintergrundaufgabe
  
 
-Der folgende Ausschnitt zeigt mehrere Bedingungen im Kontext der Erstellung und Registrierung einer Hintergrundaufgabe:
+Zum Hinzufügen mehrerer Bedingungen ruft Ihre App die [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769) -Methode mehrmals auf.
 
 > [!div class="tabbedCodeSnippets"]
 ```cs
@@ -152,35 +152,35 @@ Der folgende Ausschnitt zeigt mehrere Bedingungen im Kontext der Erstellung und 
 > BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ```
 
-## Hinweise
+## Diese Aufrufe müssen stattfinden, bevor die Aufgabenregistrierung wirksam wird.
 
 
-> **Hinweis**  Wählen Sie die richtigen Bedingungen für Ihre Hintergrundaufgabe aus, damit sie nur bei Bedarf ausgeführt wird und nicht dann, wenn es nicht funktioniert. Unter [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) finden Sie Beschreibungen der verschiedenen Bedingungen für Hintergrundaufgaben.
+> **Hinweis**  Achten Sie darauf, einer Hintergrundaufgabe keine in Konflikt stehenden Bedingungen hinzuzufügen. Der folgende Ausschnitt zeigt mehrere Bedingungen im Kontext der Erstellung und Registrierung einer Hintergrundaufgabe:
 
-> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> [!div class="tabbedCodeSnippets"] Anmerkungen
 
  
 
-## Verwandte Themen
+## **Hinweis**  Wählen Sie die richtigen Bedingungen für Ihre Hintergrundaufgabe aus, damit sie nur bei Bedarf ausgeführt wird und nicht dann, wenn es nicht funktioniert.
 
 
 ****
 
-* [Erstellen und Registrieren einer Hintergrundaufgabe](create-and-register-a-background-task.md)
-* [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
-* [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)
-* [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
-* [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
-* [Reagieren auf Systemereignisse mit Hintergrundaufgaben](respond-to-system-events-with-background-tasks.md)
-* [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](update-a-live-tile-from-a-background-task.md)
-* [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)
-* [Ausführen einer Hintergrundaufgabe für einen Timer](run-a-background-task-on-a-timer-.md)
-* [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
+* [Unter [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) finden Sie Beschreibungen der verschiedenen Bedingungen für Hintergrundaufgaben.](create-and-register-a-background-task.md)
+* [**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben.](declare-background-tasks-in-the-application-manifest.md)
+* [Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
+* [Verwandte Themen](monitor-background-task-progress-and-completion.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
+* [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](respond-to-system-events-with-background-tasks.md)
+* [Behandeln einer abgebrochenen Hintergrundaufgabe](update-a-live-tile-from-a-background-task.md)
+* [Überwachen des Status und Abschlusses von Hintergrundaufgaben](use-a-maintenance-trigger.md)
+* [Registrieren einer Hintergrundaufgabe](run-a-background-task-on-a-timer-.md)
+* [Reagieren auf Systemereignisse mit Hintergrundaufgaben](guidelines-for-background-tasks.md)
 
 ****
 
-* [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
-* [So wird's gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in Windows Store-Apps (beim Debuggen)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](debug-a-background-task.md)
+* [Verwenden eines Wartungsauslösers](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
@@ -188,6 +188,6 @@ Der folgende Ausschnitt zeigt mehrere Bedingungen im Kontext der Erstellung und 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

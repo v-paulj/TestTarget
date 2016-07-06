@@ -263,6 +263,6 @@ Für andere häufig verwendete Vektorgrafik-Designtools, die den Vektor in XAML-
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

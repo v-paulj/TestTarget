@@ -2,7 +2,10 @@
 author: GrantMeStrength
 Description: Vergleichen Sie Plattformfunktionen zwischen iOS, Android und Windows 10.
 Search.Product: eADQiWindows 10XVcnh
-title: Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler
+title: "Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler"
+ms.sourcegitcommit: de5420b45832a482d08e5e7ede436407f7dbf2af
+ms.openlocfilehash: 074a71bf3d037004ca376c11b58d17c906f804a5
+
 ---
 
 #Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler
@@ -40,7 +43,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <td align="left"><strong>Markupsprache für die Benutzeroberfläche.</strong> <br><br>Eine Markupsprache, mit der die Benutzeroberfläche und ihre Komponenten gerendert und beschrieben werden. Jede Plattform bietet einen Editor für die visuelle Bearbeitung und Markupbearbeitung.<br/></td>
 <td align="left"><strong>XML-Layouts</strong>, mit <strong>Android Studio</strong> oder <strong>Eclipse</strong> bearbeitet.</td>
 <td align="left"><strong>XIB</strong> und <strong>Storyboards</strong> mit <strong>Interface Builder</strong> in Xcode bearbeitet.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt185595.aspx">XAML</a></strong>, mit <strong><a href="https://www.visualstudio.com/">Microsoft Visual Studio</a></strong> und <strong><a href="https://msdn.microsoft.com/library/jj171012.aspx">Blend für Visual Studio </a></strong> bearbeitet.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228259.aspx">XAML-Plattform</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228349.aspx">Erstellen einer Benutzeroberfläche mit XAML</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228350.aspx">Definieren von Layouts mit XAML</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt185595.aspx">XAML</a></strong>, mit <strong><a href="https://www.visualstudio.com/">Microsoft Visual Studio</a></strong> und <strong><a href="https://msdn.microsoft.com/library/jj171012.aspx">Blend für Visual Studio</a></strong> bearbeitet.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228259.aspx">XAML-Plattform</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228349.aspx">Erstellen einer Benutzeroberfläche mit XAML</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/xaml/mt228350.aspx">Definieren von Layouts mit XAML</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Integrierte Steuerelemente der Benutzeroberfläche.</strong> <br><br>Von der Plattform bereitgestellte wiederverwendbare UI-Elemente, z. B. Schaltflächen, Listensteuerelemente und Textsteuerelemente.</td>
@@ -137,7 +140,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <td align="left"><strong>Begrüßungsbildschirm.</strong> <br><br>Das Anzeigen eines Bilds beim Starten der App, hauptsächlich für Branding verwendet.</td>
 <td align="left">Begrüßungsbildschirme werden nicht standardmäßig bereitgestellt und werden durch Bearbeiten des ersten <strong>Designhintergrunds</strong> für Aktivitäten implementiert.</td>
 <td align="left">Apps müssen über ein <strong>statisches Startbild</strong> oder eine <strong>XIB-/Storyboard-Startdatei</strong> verfügen.</td>
-<td align="left">Sie erstellen einen Begrüßungsbildschirm mithilfe eines <strong>Bilds</strong> und farbigen Hintergrunds. <a href="https://msdn.microsoft.com/library/windows/apps/mt187309.aspx">Die Anzeige eines Begrüßungsbildschirms kann verlängert werden</a>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187306.aspx">Hinzufügen eines Begrüßungsbildschirms</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/hh465338.aspx">Richtlinien für Begrüßungsbildschirme</a></td>
+<td align="left">Sie erstellen einen Begrüßungsbildschirm mithilfe eines <strong>Bilds</strong> und eines farbigen Hintergrunds. <a href="https://msdn.microsoft.com/library/windows/apps/mt187309.aspx">Die Anzeige eines Begrüßungsbildschirms kann verlängert werden</a>.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187306.aspx">Hinzufügen eines Begrüßungsbildschirms</a></td>
 </tr>
 </tbody>
 </table>
@@ -660,6 +663,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 </table>
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

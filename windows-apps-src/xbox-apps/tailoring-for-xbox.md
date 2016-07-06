@@ -24,6 +24,6 @@ Standardmäßig wird die Anwendung auf 200 Prozent (XAML) bzw. auf 150 Prozent
 Informationen zu Designprinzipien finden Sie im Thema [Entwerfen für Xbox und Fernsehgeräte](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

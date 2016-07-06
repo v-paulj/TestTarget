@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 Description: "Diese Richtlinien unterstützen Sie beim Gestalten von effektiven Hilfeinhalten für Ihre App."
-title: "Richtlinien für die App-Hilfe"
+title: "Anleitungen für die App-Hilfe"
 label: Guidelines for app help
 template: detail.hbs
 ms.sourcegitcommit: 0aa2db498ab7ec25839da259dd0026b0a7cd2b13
@@ -9,11 +9,11 @@ ms.openlocfilehash: f2522afa91abe26303a85cbfbabd5ec5b3dba59c
 
 ---
 
-# Richtlinien für die App-Hilfe
+# Anleitungen für die App-Hilfe
 
 \ [Aktualisiert für Apps für die universelle Windows-Plattform (UWP) unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
-Anwendungen können sehr komplex sein, und Sie können die Erfahrung für die Benutzer durch Bereitstellen einer effektiven Hilfe erheblich verbessern. Nicht alle Anwendungen müssen Hilfe für ihre Benutzer bereitstellen, und welche Art von Hilfe bereitgestellt wird, kann je nach Anwendung und Verwendung durch Benutzer variieren.
+Anwendungen können sehr komplex sein. Sie können die Erfahrung für die Benutzer durch die Bereitstellung einer effektiven Hilfe erheblich verbessern. Nicht alle Anwendungen müssen Hilfe für ihre Benutzer bereitstellen, und welche Art von Hilfe bereitgestellt wird, kann je nach Anwendung und Verwendung durch Benutzer variieren.
 
 Wenn Sie Hilfe bereitstellen möchten, berücksichtigen Sie die hier aufgeführten Richtlinien. Und bedenken Sie, dass Hilfe, die nicht nützlich ist, schlimmer sein kann als gar keine Hilfe.
 
@@ -65,6 +65,6 @@ Für ausführliche Lernprogramme, erweiterte Funktionen oder Bibliotheken mit Hi
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

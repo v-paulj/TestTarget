@@ -110,8 +110,8 @@ switch (result)
 
 ## Verwandte Themen
 
-* [Unterstützen von In-App-Produktkäufen](enable-in-app-product-purchases.md)
-* [Unterstützen von Käufen konsumierbarer In-App-Produkte](enable-consumable-in-app-product-purchases.md)
+* [Unterstützen von Käufen von In-App-Produkten](enable-in-app-product-purchases.md)
+* [Käufe konsumierbarer In-App-Produkte aktivieren](enable-consumable-in-app-product-purchases.md)
 * [Store-Beispiel (zeigt Testversionen und In-App-Einkäufe)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
 * [**RequestProductPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/dn263382)
 * [**ProductPurchaseDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/dn263384)

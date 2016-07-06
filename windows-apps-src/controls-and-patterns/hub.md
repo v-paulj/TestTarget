@@ -5,8 +5,8 @@ title: Hub-Steuerelemente
 ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 70ce2a58b45c8514aca6641ca034caa91fb88d18
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: fdff043aa92842adb6ac2d572794bf02fdd5c6b3
 
 ---
 # Hub-Steuerelement/-Muster
@@ -16,7 +16,15 @@ Mit einem Hub-Steuerelement können Sie App-Inhalte in unterschiedlichen, jedoch
 
 ![Beispiel für einen Hub](images/hub_example_tablet.png)
 
-Inhalte in einem Hub können in einer stabilen horizontal verschiebbaren Ansicht dargestellt werden, die Benutzern einen schnellen Überblick über Neuigkeiten sowie verfügbare und wichtige Inhalte bietet. Hubs verfügen in der Regel über eine Kopfzeile, während mehrere Inhaltsabschnitte jeweils eine Abschnittsüberschrift aufweisen.
+Inhalte in einem Hub können in einer Panoramaansicht dargestellt werden, die Benutzern einen schnellen Überblick über Neuigkeiten sowie verfügbare und wichtige Inhalte bietet. Hubs verfügen in der Regel über eine Seitenüberschrift. Die einzelnen Inhaltsabschnitte erhalten jeweils eine Abschnittsüberschrift.
+
+
+-   [**Hub-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn251843)
+-   [**HubSection-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn251845)
+
+## Ist dies das richtige Steuerelement?
+
+Das Hub-Steuerelement eignet sich gut zum Anzeigen großer Mengen von Inhalten, die in einer Hierarchie angeordnet sind. Hubs wenden beim Durchsuchen und Entdecken neuer Inhalte eine Priorität an und sind daher nützlich zum Anzeigen von Elementen in einem Store oder einer Mediensammlung.
 
 Das Hub-Steuerelement verfügt über verschiedene Funktionen, durch die es gut für die Erstellung eines Inhaltsnavigationsmustern geeignet ist.
 
@@ -34,24 +42,13 @@ Das Hub-Steuerelement verfügt über verschiedene Funktionen, durch die es gut f
 
 -   **Variable Breite für Seiten und Inhalte**
 
-    Da es sich um ein Panoramamodell handelt, ermöglicht der Hub variable Abschnittsbreiten. Dadurch eignet sich das Modell ideal für Inhalte unterschiedlicher Tiefen und ermöglicht die konsistente Formatierung weniger, aber auch zahlreicher Elemente.
+    Da es sich um ein Panoramamodell handelt, ermöglicht der Hub variable Abschnittsbreiten. Dies ist ideal für Inhalte mit unterschiedlichen Tiefen oder Mengen.
 
 -   **Flexible Architektur**
 
-    Wenn Sie Ihre flache App-Architektur beibehalten möchten, können Sie alle Kanalinhalte in eine Hub-Abschnittszusammenfassung einfügen.
+    Wenn Sie eine flache App-Architektur beibehalten möchten, können Sie alle Kanalinhalte in eine Hub-Abschnittszusammenfassung einfügen.
 
-<span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
-
--   [**Hub-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn251843)
--   [**HubSection-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn251845)
--   [**Hub-Objekt (HTML)**](https://msdn.microsoft.com/library/windows/apps/dn255137)
-
-
-## Ist dies das richtige Steuerelement?
-
-Das Hub-Steuerelement eignet sich gut zum Anzeigen großer Mengen von Inhalten, die in einer Hierarchie angeordnet sind. Hubs wenden beim Durchsuchen und Entdecken neuer Inhalte eine Priorität an und sind daher nützlich zum Anzeigen von Elementen in einem Store oder einer Mediensammlung.
-
-Ein Hub ist nur eines von mehreren Navigationselementen, die Ihnen zur Verfügung stehen. Weitere Informationen zu Navigationsmustern und anderen Navigationselementen finden Sie unter [Navigationsdesigngrundlagen für UWP-Apps (Universelle Windows-Plattform)](https://msdn.microsoft.com/library/windows/apps/dn958438).
+Ein Hub ist nur eines von mehreren Navigationselementen, die Ihnen zur Verfügung stehen. Weitere Informationen zu Navigationsmustern und anderen Navigationselementen finden Sie unter [Navigationsdesigngrundlagen für UWP-Apps (Universelle Windows-Plattform)](../layout/navigation-basics.md).
 
 ## Hub-Architektur
 
@@ -107,13 +104,13 @@ Auf mobilen Geräten ist jeweils ein Hub-Abschnitt sichtbar.
 
 ## Verwandte Artikel
 
-- [Navigationsgrundlagen](https://msdn.microsoft.com/library/windows/apps/dn958438)
-- [**Hub-Klasse „Windows.UI.Xaml.Controls“**](https://msdn.microsoft.com/library/windows/apps/dn251843)
-- [Beispiel für ein XAML-Hub-Steuerelement](http://go.microsoft.com/fwlink/p/?LinkID=310072)
+- [Hub-Klasse](https://msdn.microsoft.com/library/windows/apps/dn251843)
+- [Navigationsgrundlagen](../layout/navigation-basics.md)
 - [Verwenden von Hubs](https://msdn.microsoft.com/library/windows/apps/xaml/dn308518)
+- [Beispiel für ein XAML-Hub-Steuerelement](http://go.microsoft.com/fwlink/p/?LinkID=310072)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

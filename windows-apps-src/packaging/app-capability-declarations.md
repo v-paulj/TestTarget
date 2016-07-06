@@ -168,6 +168,6 @@ Dieser Artikel ist für Windows 10-Entwickler gedacht, die UWP-Apps schreiben. 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

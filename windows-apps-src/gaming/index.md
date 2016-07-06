@@ -3,8 +3,8 @@ author: mtoepke
 title: Spiele und DirectX
 description: "Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen, Verteilen und Monetisieren von Spielen. Hier erhalten Sie Informationen zum Starten eines neuen Spiels oder Portieren eines vorhandenen Spiels."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b690fa9a97898da49646e39c982465a4a41adb7a
+ms.sourcegitcommit: 41ee0d2a45408b5b1a0dbc0b102f1b59843814b2
+ms.openlocfilehash: e5447f6238ece768513d160579e1c7e89b04e509
 
 ---
 
@@ -37,7 +37,9 @@ Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen
 | [Multisampling in UWP-Apps](multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md) | Hier erfahren Sie, wie Sie das Multisampling in UWP-Apps verwenden, die mit Direct3D erstellt wurden. |
 | [Behandeln von Szenarien mit entfernten Geräten in Direct3D 11](handling-device-lost-scenarios.md) | In diesem Thema wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird. |
 | [Asynchrone Programmierung für Spiele](asynchronous-programming-directx-and-cpp.md) | Dieses Thema behandelt verschiedene Aspekte, die Sie beim Verwenden der asynchronen Programmierung und des Threadings mit DirectX berücksichtigen sollten. |
-| [Netzwerkfunktionen für Spiele](work-with-networking-in-your-directx-game.md) | Hier erfahren Sie, wie Sie Netzwerkfeatures entwickeln und in ein DirectX-Spiel integrieren. |
+| [Netzwerkfunktionen für Spiele](work-with-networking-in-your-directx-game.md) | Erfahren Sie, wie Sie Netzwerkfeatures entwickeln und in ein DirectX-Spiel integrieren. |
+| [Barrierefreiheit von Spielen](accessibility-for-games.md) | Erfahren Sie, wie Sie die Barrierefreiheit von Spielen verbessern. |
+| [Cloud für Spiele](cloud-for-games.md) | Erfahren Sie, wie Sie Cloudtechnologien für die Entwicklung von Spielen nutzen können. |
 | [Interoperabilität von DirectX und XAML](directx-and-xaml-interop.md) | In Ihrem UWP-Spiel können Sie eine Kombination aus Extensible Application Markup Language (XAML) und Microsoft DirectX verwenden. |
 | [Packen Ihres Spiels](package-your-windows-store-directx-game.md) | Umfangreichere UWP-Spiele können leicht relativ groß werden. Dies gilt besonders für Spiele, bei denen mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt werden oder die über optionale HD-Ressourcen verfügen. In diesem Thema erfahren Sie, wie Sie App-Pakete und App-Bündel zum Anpassen der App verwenden, damit Kunden nur die wirklich benötigten Ressourcen erhalten. |
 | [Handbücher zum Portieren von Spielen](porting-guides.md) | Hier finden Sie Anleitungen zum Portieren von vorhandenen Spielen zu Direct3D 11, UWP und Windows 10. |
@@ -67,6 +69,6 @@ Damit Sie die Übersichten und Lernprogramme zur Spieleentwicklung optimal nutze
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

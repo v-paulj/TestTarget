@@ -84,6 +84,6 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben Ihrer App:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

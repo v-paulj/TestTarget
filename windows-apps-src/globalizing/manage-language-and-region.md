@@ -1,6 +1,6 @@
 ---
 author: DelfCo
-Description: "Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App steuern."
+Description: "Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App durch Windows steuern."
 title: Verwalten von Sprache und Region
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 label: Manage language and region
@@ -23,7 +23,7 @@ ms.openlocfilehash: 294f087fffeefda67ddacd09636915144bf18ff4
 -   [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022)
 -   [**WinJS.Resources-Namespace**](https://msdn.microsoft.com/library/windows/apps/br229779)
 
-Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App steuern.
+Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App durch Windows steuern.
 
 ## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>Einführung
 

@@ -5,8 +5,8 @@ title: Listen
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 96fd7c2af74ec609a6cfbb41a14b6f4086747813
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
 
 ---
 # Listen
@@ -22,9 +22,9 @@ Für jedes Listenmuster sind Entwurfsrichtlinien, Features und Beispiele aufgef�
 
 ## Wichtige APIs
 
--   [**ListView-Klasse **](https://msdn.microsoft.com/library/windows/apps/br242878)
--   [**GridView-Klasse **](https://msdn.microsoft.com/library/windows/apps/br242705)
--   [**ComboBox-Klasse **](https://msdn.microsoft.com/library/windows/apps/br209348)
+-   [**ListView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242878)
+-   [**GridView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242705)
+-   [**ComboBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209348)
 
 
 ## Listenansichten
@@ -85,37 +85,41 @@ Eine Rasteransicht eignet sich ideal für eine Inhaltsbibliothek, die häufig ve
 
 ## Dropdownlisten
 
-Dropdownlisten, auch als Kombinationsfelder bezeichnet, werden in einem kompakten Zustand gestartet und erweitert, um eine Liste mit auswählbaren Elementen anzuzeigen. Eine Dropdownliste unterstützt die Einzelauswahl oder die Mehrfachauswahl. Das ausgewählte Element ist immer sichtbar, und nicht sichtbare Elemente können eingeblendet werden, wenn der Benutzer auf das ausgewählte Element tippt.
+Dropdownlisten, auch als Kombinationsfelder bezeichnet, werden in einem kompakten Zustand gestartet und erweitert, um eine Liste mit auswählbaren Elementen anzuzeigen. Das ausgewählte Element ist stets sichtbar. Nicht sichtbare Elemente können eingeblendet werden, wenn der Benutzer auf das Kombinationsfeld tippt, um es zu erweitern.
 
 ### Ist dies das richtige Steuerelement?
 
 -   Mit einer Dropdownliste können Benutzer einen einzelnen Wert aus einer Reihe von Elementen auswählen, die mit einzelnen Textzeilen angemessen dargestellt werden können.
--   Verwenden Sie eine Liste oder eine Rasteransicht anstelle einer Dropdownliste, um Elemente anzuzeigen, die mehrere Textzeilen oder Bilder enthalten.
+-   Verwenden Sie eine Liste oder eine Rasteransicht anstelle eines Kombinationsfelds, um Elemente anzuzeigen, die mehrere Textzeilen oder Bilder enthalten.
 -   Wenn weniger als fünf Elemente vorhanden sind, können Sie stattdessen die Verwendung von [Optionsfeldern](radio-button.md) (wenn nur ein Element ausgewählt werden kann) oder [Kontrollkästchen](checkbox.md) (wenn mehrere Elemente ausgewählt werden können) in Betracht ziehen.
--   Verwenden Sie eine Dropdownliste, wenn die Auswahlelemente für den Fluss der App von sekundärer Bedeutung sind. Wenn die Standardoption für die meisten Benutzer in den meisten Situationen empfohlen wird, kann die Anzeige aller Elemente in einem Listenfeld mehr Aufmerksamkeit auf die Optionen ziehen als nötig. Sie können Platz sparen und Ablenkungen reduzieren, indem Sie eine Dropdownliste verwenden.
+-   Verwenden Sie ein Kombinationsfeld, wenn die Auswahlelemente für den Fluss der App weniger wichtig sind. Wenn für die Mehrzahl der Benutzer in der Mehrzahl der Situationen die Standardoption empfohlen wird, kann die Anzeige aller Elemente in einer Listenansicht mehr Aufmerksamkeit auf die Optionen ziehen als nötig. Sie können Platz sparen und Ablenkungen reduzieren, indem Sie ein Kombinationsfeld verwenden.
 
 ### Beispiele
 
-Eine Dropdownliste in ihrem kompakten Zustand kann einen Header anzeigen.
+Ein Kombinationsfeld im kompakten Zustand kann eine Kopfzeile anzeigen.
 
-![Beispiel für eine Dropdownliste in ihrem kompakten Zustand](images/combo_box_collapsed.png)
+![Beispiel für eine Dropdownliste im kompakten Zustand](images/combo_box_collapsed.png)
 
-Obwohl Dropdownlisten erweitert werden, um längere Zeichenfolgen zu unterstützen, sollten Sie extrem lange Zeichenfolgen vermeiden, die nur schwer lesbar sind.
+Obwohl Kombinationsfelder erweitert werden, um längere Zeichenfolgen zu unterstützen, sollten Sie extrem lange Zeichenfolgen vermeiden, die nur schwer lesbar sind.
 
 ![Beispiel einer Dropdownliste mit einer langen Textzeichenfolge](images/combo_box_listitemstate.png)
 
-Wenn die Sammlung in einer Dropdownliste lang genug ist, wird dafür eine Scrollleiste angezeigt. Gruppieren Sie die Elemente in der Liste logisch.
+Wenn die Liste in einem Kombinationsfeld lang genug ist, wird eine Bildlaufleiste angezeigt. Gruppieren Sie die Elemente in der Liste logisch.
 
-![Beispiel einer Scrollleiste in einer Dropdownliste](images/combo_box_scroll.png)
+![Beispiel einer Bildlaufleiste in einer Dropdownliste](images/combo_box_scroll.png)
 
 ### Empfehlungen
 
--   Beschränken Sie den Text von Dropdownlistenelementen auf eine einzelne Zeile.
--   Sortieren Sie die Elemente in einer Dropdownliste in der logischsten Reihenfolge. Gruppieren Sie verwandte Optionen, platzieren Sie die am häufigsten verwendeten Optionen oben, und sortieren Sie Elemente alphabetisch. Sortieren Sie Namen in alphabetischer Reihenfolge, Nummern in numerischer Reihenfolge und Datumsangaben in chronologischer Reihenfolge.
+-   Schränken Sie den Textinhalt von Kombinationsfeldelementen auf eine einzelne Zeile ein.
+-   Sortieren Sie die Elemente in einem Kombinationsfeld in der logischsten Reihenfolge. Gruppieren Sie verwandte Optionen, und platzieren Sie die am häufigsten verwendeten Optionen oben in der Liste. Sortieren Sie Namen in alphabetischer Reihenfolge, Nummern in numerischer Reihenfolge und Datumsangaben in chronologischer Reihenfolge.
+
+### Textsuche
+
+Kombinationsfelder unterstützen automatisch die Suche in ihren Sammlungen. Wenn ein Benutzer über eine physische Tastatur Zeichen eingibt, während sich der Fokus auf einem geöffneten oder geschlossenen Kombinationsfeld befindet, werden Vorschläge angezeigt, die der vom Benutzer eingegebenen Zeichenfolge entsprechen. Diese Funktionalität ist besonders bei der Navigation durch eine lange Liste nützlich. Beispielsweise können Benutzer bei der Interaktion mit einer Dropdownliste, die eine Liste von Bundesstaaten enthält, die Taste „w“ drücken, um „Washington“ anzuzeigen und diesen Bundesstaat schnell auswählen zu können. 
 
 ## Listenfelder
 
-Mit einem Listenfeld kann der Benutzer ein einzelnes Element oder mehrere Elemente aus einer Auflistung auswählen. Listenfelder ähneln Dropdownlisten, abgesehen davon, dass Listenfelder immer geöffnet sind; für ein Listenfeld gibt es keinen kompakten Zustand (nicht erweitert). Elemente in einem Listenfeld können gescrollt werden, wenn der Platz nicht ausreicht, um alle Elemente anzuzeigen.
+In einem Listenfeld kann der Benutzer ein einzelnes Element oder mehrere Elemente aus einer Auflistung auswählen. Listenfelder ähneln Dropdownlisten, abgesehen davon, dass Listenfelder immer geöffnet sind; für ein Listenfeld gibt es keinen kompakten Zustand (nicht erweitert). Elemente in einem Listenfeld können gescrollt werden, wenn der Platz nicht ausreicht, um alle Elemente anzuzeigen.
 
 ### Ist dies das richtige Steuerelement?
 
@@ -188,11 +192,9 @@ Empfehlungen für die Befehlsleiste finden Sie unter [Richtlinien für Befehlsle
 - [**GridView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242705)
 - [**ComboBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209348)
 - [**ListBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242868)
-- [Hinzufügen von Kombinationsfeldern und Listenfeldern](https://msdn.microsoft.com/library/windows/apps/xaml/hh780616)
 
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

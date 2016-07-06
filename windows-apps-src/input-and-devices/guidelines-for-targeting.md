@@ -12,7 +12,7 @@ ms.openlocfilehash: 50a285b484f7e9ed7b349921c3460bd7c9c81603
 
 # Richtlinien für die Zielbestimmung
 
-Touchziele in Windows verwenden den vollständigen Kontaktbereich jedes Fingers, der durch einen Touchdigitalisierer erkannt wird. Die größere und komplexere Menge an Eingabedaten, die vom Digitalisierer gemeldet wird, wird verwendet, um die Genauigkeit bei der Ermittlung des durch den Benutzer (höchstwahrscheinlich) beabsichtigten Ziels zu erhöhen.
+Die Touchzielbestimmung in Windows verwendet den vollständigen Kontaktbereich jedes Fingers, der durch ein Touchdigitalisierungsgerät erkannt wird. Die größere und komplexere Menge an Eingabedaten, die vom Digitalisierungsgerät gemeldet wird, wird verwendet, um die Präzision bei der Ermittlung des durch den Benutzer (höchstwahrscheinlich) beabsichtigten Ziels zu erhöhen.
 
 **Wichtige APIs**
 
@@ -174,6 +174,6 @@ Halten Sie sich an die folgenden Richtlinien, wenn Sie Scrubbinginteraktionen en
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

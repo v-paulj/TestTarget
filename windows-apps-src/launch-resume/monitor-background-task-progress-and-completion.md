@@ -45,11 +45,12 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
 >  };
 >  ```
 
-2.  Fügen Sie dem Ereignishandler Code zum Behandeln des Abschlusses der Hintergrundaufgabe hinzu.
+2.  [!div class="tabbedCodeSnippets"]
 
-    Das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) aktualisiert z. B. die Benutzeroberfläche.
+    Fügen Sie dem Ereignishandler Code zum Behandeln des Abschlusses der Hintergrundaufgabe hinzu.
 
-    > [!div class="tabbedCodeSnippets"] ```cs
+    > [!div class="tabbedCodeSnippets"]
+    >     ```cs
     >     private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
     >     {
     >         UpdateUI();
@@ -62,14 +63,26 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
     >     };
     >     ```
 
-## Erstellen einer Ereignishandlerfunktion zum Behandeln des Hintergrundaufgabenfortschritts
+## Das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) aktualisiert z. B. die Benutzeroberfläche.
 
 
-1.  Erstellen Sie eine Ereignishandlerfunktion zum Behandeln abgeschlossener Hintergrundaufgaben. Dieser Code muss einem bestimmten Profil entsprechen und ein [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803)-Objekt sowie ein [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Objekt enthalten:
+1.  [!div class="tabbedCodeSnippets"] ```cs
+    private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
+    {
+        UpdateUI();
+    }
+    ```
+    ```cpp
+    auto completed = [this](BackgroundTaskRegistration^ task, BackgroundTaskCompletedEventArgs^ args)
+    {    
+        UpdateUI();
+    };
+    ``` Erstellen einer Ereignishandlerfunktion zum Behandeln des Hintergrundaufgabenfortschritts
 
-    Verwenden Sie das folgende Profil für die Ereignishandlermethode für die OnProgress-Hintergrundaufgabe:
+    Erstellen Sie eine Ereignishandlerfunktion zum Behandeln abgeschlossener Hintergrundaufgaben.
 
-    > [!div class="tabbedCodeSnippets"] ```cs
+    > [!div class="tabbedCodeSnippets"]
+    >     ```cs
     >     private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)
     >     {
     >         // TODO: Add code that deals with background task progress.
@@ -82,11 +95,23 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
     >     };
     >     ```
 
-2.  Fügen Sie dem Ereignishandler Code zum Behandeln des Abschlusses der Hintergrundaufgabe hinzu.
+2.  Dieser Code muss einem bestimmten Profil entsprechen und ein [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803)-Objekt sowie ein [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Objekt enthalten:
 
-    So aktualisiert beispielsweise das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) die Benutzeroberfläche mit dem Fortschrittsstatus, der mithilfe des *args*-Parameters übergeben wird:
+    Verwenden Sie das folgende Profil für die Ereignishandlermethode für die OnProgress-Hintergrundaufgabe:
 
-    > [!div class="tabbedCodeSnippets"]     ```cs     private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)     {         var progress = "Progress: " + args.Progress + "%";         BackgroundTaskSample.SampleBackgroundTaskProgress = progress;
+    > [!div class="tabbedCodeSnippets"]
+    >     [!div class="tabbedCodeSnippets"] ```cs
+    >     private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)
+    >     {
+    >         // TODO: Add code that deals with background task progress.
+    >     }
+    ```
+    ```cpp
+    auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressEventArgs^ args)
+    {
+        // TODO: Add code that deals with background task progress.
+    };
+    ```
     >
     >         UpdateUI();
     >     }
@@ -101,22 +126,22 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
     >     };
     >     ```
 
-## Registrieren Sie die Ereignishandlerfunktionen mit neuen und vorhandenen Hintergrundaufgaben.
+## Fügen Sie dem Ereignishandler Code zum Behandeln des Abschlusses der Hintergrundaufgabe hinzu.
 
 
-1.  Wenn die App erstmals eine Hintergrundaufgabe registriert, muss sie sich für den Empfang von Status- und Abschlussupdates registrieren, falls die Aufgabe ausgeführt wird, während die App im Vordergrund noch aktiv ist.
+1.  So aktualisiert beispielsweise das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) die Benutzeroberfläche mit dem Fortschrittsstatus, der mithilfe des *args*-Parameters übergeben wird:
 
-    So ruft beispielsweise das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) für jede Hintergrundaufgabe, die es registriert, die folgende Funktion auf:
+    [!div class="tabbedCodeSnippets"]     ```cs     private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)     {         var progress = "Progress: " + args.Progress + "%";         BackgroundTaskSample.SampleBackgroundTaskProgress = progress;
 
-    > [!div class="tabbedCodeSnippets"] ```cs
+    > [!div class="tabbedCodeSnippets"]
+    >     ```cs
     >     private void AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration task)
     >     {
     >         task.Progress += new BackgroundTaskProgressEventHandler(OnProgress);
     >         task.Completed += new BackgroundTaskCompletedEventHandler(OnCompleted);
     >     }
     >     ```
-    >     ```cpp     void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration^ task)     {         auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressEventArgs^ args)
-    >                   {             auto progress = "Progress: " + args->Progress + "%";             BackgroundTaskSample::SampleBackgroundTaskProgress = progress;             UpdateUI();         };
+    >     Registrieren Sie die Ereignishandlerfunktionen mit neuen und vorhandenen Hintergrundaufgaben.
     >
     >         task->Progress += ref new BackgroundTaskProgressEventHandler(progress);
     >         
@@ -130,11 +155,20 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
     >     }
     >     ```
 
-2.  Wenn die App startet oder zu einer neuen Seite navigiert, für die der Hintergrundaufgabenstatus relevant ist, muss sie eine Liste mit den derzeit registrierten Hintergrundaufgaben abrufen und diese den Status- und Abschlussereignishandlerfunktionen zuordnen. Die Liste mit den derzeit von der Anwendung registrierten Hintergrundaufgaben ist in der [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).[**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787)-Eigenschaft gespeichert.
+2.  Wenn die App erstmals eine Hintergrundaufgabe registriert, muss sie sich für den Empfang von Status- und Abschlussupdates registrieren, falls die Aufgabe ausgeführt wird, während die App im Vordergrund noch aktiv ist. So ruft beispielsweise das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) für jede Hintergrundaufgabe, die es registriert, die folgende Funktion auf:
 
-    So verwendet beispielsweise das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) den folgenden Code, um Ereignishandler anzufügen, wenn zur Seite „SampleBackgroundTask“ navigiert wird:
+    [!div class="tabbedCodeSnippets"] ```cs
+    private void AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration task)
+    {
+        task.Progress += new BackgroundTaskProgressEventHandler(OnProgress);
+        task.Completed += new BackgroundTaskCompletedEventHandler(OnCompleted);
+    }
+    ```
+    ```cpp     void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration^ task)     {         auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressEventArgs^ args)
+                  {             auto progress = "Progress: " + args->Progress + "%";             BackgroundTaskSample::SampleBackgroundTaskProgress = progress;             UpdateUI();         };
 
-    > [!div class="tabbedCodeSnippets"]     ```cs     protected override void OnNavigatedTo(NavigationEventArgs e)     {         foreach (var task in BackgroundTaskRegistration.AllTasks)         {             if (task.Value.Name == BackgroundTaskSample.SampleBackgroundTaskName)             {                 AttachProgressAndCompletedHandlers(task.Value);                 BackgroundTaskSample.UpdateBackgroundTaskStatus(BackgroundTaskSample.SampleBackgroundTaskName, true);             }         }
+    > [!div class="tabbedCodeSnippets"]
+    >     Wenn die App startet oder zu einer neuen Seite navigiert, für die der Hintergrundaufgabenstatus relevant ist, muss sie eine Liste mit den derzeit registrierten Hintergrundaufgaben abrufen und diese den Status- und Abschlussereignishandlerfunktionen zuordnen.
     >
     >         UpdateUI();
     >     }
@@ -168,26 +202,26 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
     >     }
     >     ```
 
-## Verwandte Themen
+## Die Liste mit den derzeit von der Anwendung registrierten Hintergrundaufgaben ist in der [**BackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224786).[**AllTasks**](https://msdn.microsoft.com/library/windows/apps/br224787)-Eigenschaft gespeichert.
 
 
 ****
 
-* [Erstellen und Registrieren einer Hintergrundaufgabe](create-and-register-a-background-task.md)
-* [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
-* [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)
-* [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
-* [Reagieren auf Systemereignisse mit Hintergrundaufgaben](respond-to-system-events-with-background-tasks.md)
-* [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)
-* [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](update-a-live-tile-from-a-background-task.md)
-* [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)
-* [Ausführen einer Hintergrundaufgabe für einen Timer](run-a-background-task-on-a-timer-.md)
-* [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
+* [So verwendet beispielsweise das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) den folgenden Code, um Ereignishandler anzufügen, wenn zur Seite „SampleBackgroundTask“ navigiert wird:](create-and-register-a-background-task.md)
+* [[!div class="tabbedCodeSnippets"]     ```cs     protected override void OnNavigatedTo(NavigationEventArgs e)     {         foreach (var task in BackgroundTaskRegistration.AllTasks)         {             if (task.Value.Name == BackgroundTaskSample.SampleBackgroundTaskName)             {                 AttachProgressAndCompletedHandlers(task.Value);                 BackgroundTaskSample.UpdateBackgroundTaskStatus(BackgroundTaskSample.SampleBackgroundTaskName, true);             }         }](declare-background-tasks-in-the-application-manifest.md)
+* [Verwandte Themen](handle-a-cancelled-background-task.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
+* [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](respond-to-system-events-with-background-tasks.md)
+* [Behandeln einer abgebrochenen Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)
+* [Registrieren einer Hintergrundaufgabe](update-a-live-tile-from-a-background-task.md)
+* [Reagieren auf Systemereignisse mit Hintergrundaufgaben](use-a-maintenance-trigger.md)
+* [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](run-a-background-task-on-a-timer-.md)
+* [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](guidelines-for-background-tasks.md)
 
 ****
 
-* [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
-* [So wird's gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in Windows Store-Apps (beim Debuggen)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Verwenden eines Wartungsauslösers](debug-a-background-task.md)
+* [Ausführen einer Hintergrundaufgabe für einen Timer](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
  
 
@@ -195,6 +229,6 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -220,6 +220,6 @@ In einem Ordner mit dem Namen „VFS“ sehen Sie Ordner, die die DLL-Dateien en
 [Desktop-App-Bridge zu UWP-Codebeispielen auf GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

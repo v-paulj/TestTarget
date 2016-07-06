@@ -24,6 +24,6 @@ Dieser Abschnitt enthält Artikel zur Bluetooth-Integration in UWP-Apps (Univers
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

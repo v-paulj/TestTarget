@@ -44,7 +44,7 @@ CombiningCharacter::= none
 -   Der Unicode-Zeichenbereich wird nicht unterstützt.
 -   Ein Name darf nicht mit einer Ziffer beginnen. Einige Toolimplementierungen stellen einer Zeichenfolge einen Unterstrich (\_) voran, wenn der Benutzer als erstes Zeichen eine Ziffer angibt, oder das Tool generiert automatisch **x:Name**-Werte auf Grundlage anderer Werte, die Ziffern enthalten.
 
-## Hinweise
+## Anmerkungen
 
 Das angegebene **x:Name**-Attribut wird zum Namen eines Felds, das bei der XAML-Verarbeitung im zugrunde liegenden Code erstellt wird. Dieses Feld enthält einen Verweis auf das Objekt. Die Erstellung dieses Felds erfolgt im Rahmen der MSBuild-Zielschritte. Im Rahmen dieser Schritte erfolgt auch der Beitritt zu den partiellen Klassen für eine XAML-Datei und das zugehörige CodeBehind. Dieses Verhalten ist nicht zwingend XAML-bedingt. Ausschlaggebend ist vielmehr die jeweilige Implementierung, die von der UWP-Programmierung (Universelle Windows-Plattform) für XAML angewendet wird, um **x:Name** in den entsprechenden Programmier- und Anwendungsmodellen zu verwenden.
 

@@ -21,7 +21,7 @@ Optimieren Sie das Design Ihrer UWP-Apps für die Toucheingabe, und freuen Sie s
 
 
 
-Die Mauseingabe eignet sich am besten für Benutzerinteraktionen, die exaktes Zeigen und Klicken erfordern. Die Benutzeroberfläche von Windows unterstützt selbstverständlich diese Genauigkeit, ist aber zugleich für die ungenauere Toucheingabe optimiert.
+Die Mauseingabe eignet sich am besten für Benutzerinteraktionen, die Präzision beim Zeigen und Klicken erfordern. Naturgemäß unterstützt die Benutzeroberfläche von Windows diese Präzision, auch wenn sie für die ungenaue Toucheingabe optimiert wurde.
 
 Die Maus- und Toucheingabe unterscheiden sich dahingehend, dass bei der Toucheingabe die direkte Manipulation von UI-Elementen auf dem Bildschirm durch physische Gesten für diese Objekte (z. B. Streifen, Ziehen, Drehen usw.) emuliert werden kann. Manipulationen mit der Maus erfordern in der Regel einigen UI-Aufwand, wie z. B. die Verwendung von Handles für das Anpassen der Größe oder Drehen eines Objekts.
 
@@ -155,6 +155,6 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

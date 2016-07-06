@@ -3,6 +3,9 @@ author: jnHs
 Description: Ihre App muss verschiedene Logos, Screenshots und Bilder enthalten.
 title: App-Screenshots und -Bilder
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
+ms.sourcegitcommit: ecb030b7c529f765eded46e4e3e9db99ad0c27e8
+ms.openlocfilehash: 9eac5658e2ac04b2abc1bf06abf5c73b16260bc7
+
 ---
 
 # App-Screenshots und -Bilder
@@ -12,7 +15,7 @@ Ihre App muss verschiedene Logos, Screenshots und Bilder enthalten. Einige diese
 
 Während der [App-Einreichung](app-submissions.md) geben Sie Ihre [Screenshots](#screenshots) und [Werbebilder](#promotional-artwork) im Schritt [Beschreibungen](create-app-descriptions.md) an. Diese Bilder werden verwendet, um Ihre App im Store zu präsentieren.
 
-Der Store verwendet außerdem Ihre App-Kachel und andere Bilder, die Sie in Ihr App-Paket einschließen. Führen Sie das [Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt186449) aus, um zu ermitteln, ob erforderliche Bilder fehlen.
+Der Store verwendet außerdem Ihre App-Kachel und andere Bilder, die Sie in Ihr App-Paket einschließen. Führen Sie das [Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt186449) aus, um zu ermitteln, ob erforderliche Bilder fehlen. Anleitungen und Empfehlungen zu diesen Bildern finden Sie unter [Ressourcen für Kacheln und Symbole](../controls-and-patterns/tiles-and-notifications-app-assets.md).
 
 > **Hinweis**  Es hängt vom Betriebssystem des Kunden und weiteren Faktoren ab, wie Bilder im Store, auf dem Startbildschirm des Kunden und in der App selbst angezeigt werden.
 
@@ -102,6 +105,7 @@ Im Store unter Windows Phone 8.1 und früheren Versionen können zwei Bildgrö
 Im Store unter Windows 8.1 und früheren Versionen wird für Werbelayouts möglicherweise ein Bild in der Pixelgröße 414 x 180 verwendet. Wenn Ihre App unter Windows 8.1 oder früheren Versionen ausgeführt wird, wird das Bereitstellen eines Bilds in dieser Größe empfohlen, damit sie für Werbung in Frage kommt.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

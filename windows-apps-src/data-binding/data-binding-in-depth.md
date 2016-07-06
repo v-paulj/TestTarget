@@ -3,8 +3,8 @@ author: mcleblanc
 ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Datenbindung im Detail
 description: "Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Daten anzeigen und diese Daten optional synchronisieren kann."
-ms.sourcegitcommit: d76ef6a87d6afad577f5f7bf5e8f18a8b0776094
-ms.openlocfilehash: c371ca1804d76a0ffdf812cfb933b03916654bad
+ms.sourcegitcommit: ca92d44cc8e3fb7eaed5a522435efe9cb4796560
+ms.openlocfilehash: d12f8d6bd44323cf1c19bff1ac080070ba0e8ed2
 
 ---
 # Datenbindung im Detail
@@ -12,15 +12,15 @@ ms.openlocfilehash: c371ca1804d76a0ffdf812cfb933b03916654bad
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-** Wichtige APIs **
+**Wichtige APIs**
 
 -   [**Binding-Klasse**](https://msdn.microsoft.com/library/windows/apps/BR209820)
 -   [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)
 -   [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)
 
-**Hinweis**  In diesem Thema werden die Datenbindungsfeatures ausführlich beschrieben. Eine kurze und praktische Einführung finden Sie unter [Übersicht „Datenbindung“](data-binding-quickstart.md).
+> **Hinweis**
+            &nbsp;&nbsp;In diesem Thema werden die Datenbindungsfeatures detailliert beschrieben. Eine kurze und praktische Einführung finden Sie unter [Übersicht „Datenbindung“](data-binding-quickstart.md).
 
- 
 
 Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Daten anzeigen und diese Daten optional synchronisieren kann. Mit der Datenbindung können Sie Datenaspekte von Benutzeroberflächenaspekten trennen, was zu einem einfacheren konzeptionellen Modell und besserer Lesbarkeit, Testbarkeit und Wartung Ihrer App führt.
 
@@ -77,7 +77,7 @@ Eine einfachere Möglichkeit, eine Klasse feststellbar zu machen – und eine No
 
 **Hinweis**  Im Fall von C++/CX implementieren Sie [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899). Die Bindungsquellenklasse muss entweder über das [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) verfügen oder [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) implementieren.
 
-``` csharp
+```csharp
 public class HostViewModel : INotifyPropertyChanged
 {
     private string nextButtonText;
@@ -111,7 +111,7 @@ Die **NextButtonText**-Eigenschaft ist jetzt feststellbar. Wenn Sie eine uni- od
 
 Damit Sie das oben gezeigte Muster nicht mehrmals implementieren müssen, können Sie einfach eine Ableitung von der **BindableBase**-Basisklasse vornehmen, die im [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)-Beispiel (im Ordner „Common“) enthalten ist. Dies ist ein Beispiel hierfür.
 
-``` csharp
+```csharp
 public class HostViewModel : BindableBase
 {
     private string nextButtonText;
@@ -151,11 +151,11 @@ Sie können mithilfe von inkrementellem Laden Listensteuerelemente an beliebig g
 In den folgenden beiden Beispielen ist die **Button.Content**-Eigenschaft das Bindungsziel. Ihr Wert ist auf eine Markuperweiterung festgelegt, die das Bindungsobjekt deklariert. Es wird zuerst [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) angezeigt, dann [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Das Deklarieren von Bindungen im Markup wird häufig verwendet (es ist praktisch, lesbar und toolfreundlich). Sie können Markups jedoch auch vermeiden und eine Instanz der [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820)-Klasse stattdessen auch bei Bedarf imperativ (programmgesteuert) erstellen.
 
 <!-- XAML lang specifier not yet supported in OP. Using XML for now. -->
-``` xml
+```xml
 <Button Content="{x:Bind ...}" ... />
 ```
 
-``` xml
+```xml
 <Button Content="{Binding ...}" ... />
 ```
 
@@ -163,7 +163,7 @@ In den folgenden beiden Beispielen ist die **Button.Content**-Eigenschaft das Bi
 
 Vor dem Erstellen des [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)-Markups müssen wir jedoch noch einen Schritt durchführen. Wir müssen die Bindungsquellenklasse aus der Klasse verfügbar machen, die die Markupseite darstellt. Hierzu fügen wir eine Eigenschaft (in diesem Fall des Typs **HostViewModel**) zur **HostView**-Seitenklasse hinzu.
 
-``` csharp
+```csharp
 namespace QuizGame.View
 {
     public sealed partial class HostView : Page
@@ -181,7 +181,7 @@ namespace QuizGame.View
 
 Wenn dies erledigt ist, können wir uns das Markup, das das Bindungsobjekt deklariert, genauer ansehen. Das unten aufgeführte Beispiel verwendet das gleiche **Button.Content**-Bindungsziel, das wir weiter oben im Abschnitt „Bindungsziel“ verwendet haben, und zeigt seine Bindung an die **HostViewModel.NextButtonText**-Eigenschaft.
 
-``` xml
+```xml
 <Page x:Class="QuizGame.View.HostView" ... >
     <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
 </Page>
@@ -197,7 +197,7 @@ Die [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.d
 
 Innerhalb einer [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) (ob Elementvorlage, Inhaltsvorlage oder Kopfzeilenvorlage) wird der Wert von **Path** nicht im Kontext der Seite, sondern des Datenobjekts interpretiert, das als Vorlage verwendet werden soll. Damit die Bindungen zum Zeitpunkt des Kompilierens überprüft (und effizienter Code für sie generiert wird) werden können, muss ein **DataTemplate** den Typ des Datenobjekts mithilfe von **x:DataType** deklarieren. Das unten aufgeführte Beispiel kann als **ItemTemplate** eines Elementsteuerelements verwendet werden, das an eine Sammlung von **SampleDataGroup**-Objekten gebunden ist.
 
-``` xml
+```xml
 <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{x:Bind Title}"/>
@@ -222,7 +222,7 @@ Code zur Unterstützung von **{X:Bind}** wird während der Kompilierung in den p
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) geht standardmäßig davon aus, dass Sie eine Bindung an den [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) der Markupseite vornehmen. Daher legen wir den **DataContext** der Seite als eine Instanz der Bindungsquellenklasse fest (in diesem Fall des Typs **HostViewModel**). Das folgende Beispiel zeigt das Markup, mit dem das Bindungsobjekt deklariert wird. Wir verwenden das gleiche **Button.Content**-Bindungsziel, das wir bereits weiter oben im Abschnitt „Bindungsziel“ verwendet haben, und führen eine Bindung an die **HostViewModel.NextButtonText**-Eigenschaft vor.
 
-``` xml
+```xml
 <Page xmlns:viewmodel="using:QuizGame.ViewModel" ... >
     <Page.DataContext>
         <viewmodel:HostViewModel/>
@@ -240,7 +240,7 @@ Ein Bindungsobjekt verfügt über eine **Source**-Eigenschaft, für die standard
 
 Innerhalb von [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) wird der [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) auf das Datenobjekt festgelegt, das als Vorlage verwendet werden soll. Das unten aufgeführte Beispiel kann als **ItemTemplate** eines Elementsteuerelements verwendet werden, das eine Sammlung eines beliebigen Typs gebunden ist, der über Zeichenfolgeneigenschaften mit dem Namen **Title** und **Description** verfügt.
 
-``` xml
+```xml
 <DataTemplate x:Key="SimpleItemTemplate">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{Binding Title}"/>
@@ -259,7 +259,7 @@ Wenn Sie die Sichtbarkeit eines Benutzeroberflächenelements basierend auf dem W
 
 Nachfolgend ist ein Wertkonverter dargestellt, der sich für eine einmalige oder eine unidirektionale Bindung eignet und der einen [**DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx)-Wert in einen Zeichenfolgenwert mit dem Monat konvertiert. Die Klasse implementiert [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
 
-``` csharp
+```csharp
 public class DateToStringConverter : IValueConverter
 {
     // Define the Convert method to convert a DateTime value to 
@@ -296,7 +296,7 @@ public class DateToStringConverter : IValueConverter
 }
 ```
 
-``` vbnet
+```vbnet
 Public Class DateToStringConverter
     Implements IValueConverter
 
@@ -338,7 +338,7 @@ End Class
 
 Hier sehen Sie, wie Sie diesen Wertkonverter im Bindungsobjektmarkup nutzen.
 
-``` xml
+```xml
 <UserControl.Resources>
   <local:DateToStringConverter x:Key="Converter1"/>
 </UserControl.Resources>
@@ -368,7 +368,7 @@ Die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps
 
 TemplatesResourceDictionary.xaml
 
-``` xml
+```xml
 <ResourceDictionary
     x:Class="ExampleNamespace.TemplatesResourceDictionary"
     .....
@@ -384,7 +384,7 @@ TemplatesResourceDictionary.xaml
 
 TemplatesResourceDictionary.xaml.cs
 
-``` csharp
+```csharp
 using Windows.UI.Xaml.Data;
  
 namespace ExampleNamespace
@@ -401,7 +401,7 @@ namespace ExampleNamespace
 
 MainPage.xaml
 
-``` xml
+```xml
 <Page x:Class="ExampleNamespace.MainPage"
     ....
     xmlns:examplenamespace="using:ExampleNamespace">
@@ -421,7 +421,7 @@ MainPage.xaml
 
 [{b:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) unterstützt ein Feature namens „Ereignisbindung“. Mit diesem Feature können Sie den Handler für ein Ereignis mit einer Bindung angeben, wobei es sich zusätzlich zum Behandeln von Ereignissen mit einer Methode in der CodeBehind-Datei um eine weitere Option handelt. Angenommen, Sie haben eine **RootFrame**-Eigenschaft für Ihre **MainPage**-Klasse.
 
-``` csharp
+```csharp
     public sealed partial class MainPage : Page
     {
         ....    
@@ -431,7 +431,7 @@ MainPage.xaml
 
 Anschließend können Sie das **Click**-Ereignis einer Schaltfläche an das **Frame**-Objekt binden, das von der **RootFrame**-Eigenschaft zurückgegeben wird, wie hier gezeigt. Beachten Sie, dass die **IsEnabled**-Eigenschaft der Schaltfläche auch an einen anderen Member des gleichen **Frame** gebunden wird.
 
-``` xml
+```xml
     <AppBarButton Icon="Forward" IsCompact="True"
     IsEnabled="{x:Bind RootFrame.CanGoForward, Mode=OneWay}"
     Click="{x:Bind RootFrame.GoForward}"/>
@@ -441,13 +441,14 @@ Anschließend können Sie das **Click**-Ereignis einer Schaltfläche an das **Fr
               **Frame.GoBack**
             ](https://msdn.microsoft.com/library/windows/apps/Dn996568) ist jedoch überladen, sodass wir diese Methode nicht mit diesem Verfahren verwenden können.
 
-Das Verfahren zu Ereignisbindung ist ähnlich der Implementierung und Nutzung von Befehlen (ein Befehl ist eine Eigenschaft, die ein Objekt zurückgibt, das die [**ICommand**](T:System.Windows.Input.ICommand)-Schnittstelle implementiert). Sowohl [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) als auch [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) kann mit Befehlen verwendet werden. Damit Sie das Befehlsmuster nicht mehrmals implementieren müssen, können Sie die **DelegateCommand**-Hilfsklasse verwenden, die Sie im [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)-Beispiel (im Ordner „Common“) finden.
+Das Verfahren zu Ereignisbindung ist ähnlich der Implementierung und Nutzung von Befehlen (ein Befehl ist eine Eigenschaft, die ein Objekt zurückgibt, das die [**ICommand**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.icommand.aspx)-Schnittstelle implementiert). Sowohl [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) als auch [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) kann mit Befehlen verwendet werden. Damit Sie das Befehlsmuster nicht mehrmals implementieren müssen, können Sie die **DelegateCommand**-Hilfsklasse verwenden, die Sie im [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame)-Beispiel (im Ordner „Common“) finden.
+
 
 ## Binden an eine Sammlung von Dateien oder Ordnern
 
 Sie können die APIs im [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346)-Namespace verwenden, um Ordner- und Dateidaten abzurufen. Die verschiedenen **GetFilesAsync**-, **GetFoldersAsync**- und **GetItemsAsync**-Methoden geben jedoch keine Werte zurück, die zur Bindung an Listensteuerelemente geeignet sind. Stattdessen müssen Sie die Bindung an die Rückgabewerte der [**GetVirtualizedFilesVector**](https://msdn.microsoft.com/library/windows/apps/Hh701422)-, [**GetVirtualizedFoldersVector**](https://msdn.microsoft.com/library/windows/apps/Hh701428)-, und [**GetVirtualizedItemsVector**](https://msdn.microsoft.com/library/windows/apps/Hh701430)-Methoden der [**FileInformationFactory**](https://msdn.microsoft.com/library/windows/apps/BR207501)-Klasse vornehmen. Das folgende Codebeispiel aus dem [Beispiel für StorageDataSource und GetVirtualizedFilesVector](http://go.microsoft.com/fwlink/p/?linkid=228621) veranschaulicht das typische Verwendungsmuster. Vergessen Sie nicht, die **picturesLibrary**-Funktion im App-Paketmanifest zu deklarieren, und bestätigen Sie, dass Bilder im Bildbibliotheksordner vorhanden sind.
 
-``` csharp
+```csharp
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var library = Windows.Storage.KnownFolders.PicturesLibrary;
@@ -486,7 +487,7 @@ Um die Gruppierungsfunktion einer [**CollectionViewSource**](https://msdn.micros
 
 Das folgende Beispiel veranschaulicht das Muster „has-a-group“. Die Seitenklasse verfügt über eine Eigenschaft namens [**ViewModel**](https://msdn.microsoft.com/library/windows/apps/BR208713), die eine Instanz des Ansichtsmodells zurückgibt. Die [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) bindet an die **Authors**-Eigenschaft des Ansichtsmodells (**Authors** ist die Sammlung von Gruppenobjekten) und gibt darüber hinaus an, dass die **Author.BookSkus**-Eigenschaft die gruppierten Elemente enthält. Zuletzt wird [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) an die **CollectionViewSource** gebunden und erhält eine Definition des Gruppenstils, damit die Ansicht die Elemente in den Gruppen rendern kann.
 
-``` csharp
+```csharp
     <Page.Resources>
         <CollectionViewSource
         x:Name="AuthorHasACollectionOfBookSku"
@@ -511,7 +512,7 @@ Sie haben zwei Möglichkeiten zum Implementieren des Musters „is-a-group“. E
 
 Das folgende Beispiel veranschaulicht das Muster „is-a-group“ unter Verwendung von [LINQ](http://msdn.microsoft.com/library/bb397926.aspx). Dieses Mal werden die Bücher nach Genre gruppiert, wobei der Name des Genres in der Gruppenkopfzeile angezeigt wird. Dies wird durch den „Key“-Eigenschaftspfad als Verweis auf den [**Key**](https://msdn.microsoft.com/library/windows/apps/bb343251.aspx)-Wert der Gruppe angezeigt.
 
-``` csharp
+```csharp
     using System.Linq;
 
     ...
@@ -535,7 +536,7 @@ Das folgende Beispiel veranschaulicht das Muster „is-a-group“ unter Verwendu
 
 Vergessen Sie nicht, dass Sie bei der Verwendung von [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) mit Datenvorlagen den Typ angeben müssen, an den die Bindung erfolgt, indem Sie einen **x:DataType**-Wert festlegen. Wenn es sich um einen generischen Typ handelt, können wir dies nicht im Markup ausdrücken. Daher müssen wir stattdessen [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) in der Gruppenstil-Kopfzeilenvorlage verwenden.
 
-``` xml
+```xml
     <Grid.Resources>
         <CollectionViewSource x:Name="GenreIsACollectionOfBookSku"
         Source="{Binding Genres}"
@@ -581,7 +582,7 @@ Sie können darüber hinaus Benutzeroberflächenelemente mit Daten verbinden, in
 
 Im folgenden Beispiel wird gezeigt, wie Sie eine Bindung im Code implementieren.
 
-``` xml
+```xml
 <TextBox x:Name="MyTextBox" Text="Text"/>
 ```
 
@@ -601,7 +602,7 @@ Binding binding = new Binding() { Path = new PropertyPath("Brush1") };
 MyTextBox.SetBinding(TextBox.ForegroundProperty, binding);
 ```
 
-``` vbnet
+```vbnet
 ' Create an instance of the MyColors class 
 ' that implements INotifyPropertyChanged. 
 Dim textcolor As New MyColors()
@@ -641,6 +642,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

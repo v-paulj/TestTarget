@@ -25,7 +25,7 @@ ms.openlocfilehash: 3f6c759d582d92aa33df5874186aeaa3a7c37b01
 
 [x:Name-Attribut](x-name-attribute.md) muss in demselben Element ebenfalls bereitgestellt werden.
 
-## Hinweise
+## Anmerkungen
 
 Der Wert für das **x:FieldModifier**-Attribut variiert je nach Programmiersprache. Welche Zeichenfolge verwendet wird, hängt davon ab, wie eine Sprache ihren **CodeDomProvider** implementiert und welche Typkonverter zurückgegeben werden, um die Bedeutungen für **TypeAttributes.Public** und **TypeAttributes.NotPublic** zu definieren. Für C#-, Microsoft Visual Basic- oder Visual C++-Komponentenerweiterungen (C++/CX) können Sie den Zeichenfolgenwert „public“ oder „Public“ angeben. Vom Parser wird die Groß-/Kleinschreibung für diesen Attributwert nicht berücksichtigt.
 

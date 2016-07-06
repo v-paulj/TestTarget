@@ -21,7 +21,7 @@ Gibt im XAML-Markup einen **NULL**-Wert für eine Eigenschaft an.
 <object property="{x:Null}" .../>
 ```
 
-## Hinweise
+## Anmerkungen
 
 **null** ist das Nullverweis-Schlüsselwort für C# und C++. Das Microsoft Visual Basic-Schlüsselwort für einen Nullverweis lautet **Nothing**.
 

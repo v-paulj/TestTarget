@@ -110,49 +110,49 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
     > **Note**  When launched via File Contract, make sure that Back button takes the user back to the screen that launched the app and not to the app's previous content.
 
-Apps sollten für jedes Aktivierungsereignis, durch das eine neue Seite geöffnet wird, einen neuen XAML-Frame erstellen. So enthält der Navigationsbackstack für den neuen XAML-Frame keinen vorherigen Inhalt, der beim Anhalten der App im aktuellen Fenster angezeigt wurde. Apps, für die ein einziger XAML-Frame für Start- und Dateiverträge verwendet wird, sollten vor dem Navigieren zu einer neuen Seite die Seiten im Navigationsjournal des Frames löschen.
+[!div class="tabbedCodeSnippets"] Apps sollten für jedes Aktivierungsereignis, durch das eine neue Seite geöffnet wird, einen neuen XAML-Frame erstellen. So enthält der Navigationsbackstack für den neuen XAML-Frame keinen vorherigen Inhalt, der beim Anhalten der App im aktuellen Fenster angezeigt wurde.
 
-Per Dateiaktivierung gestartete Apps sollten ggf. eine Benutzeroberfläche enthalten, über die der Benutzer zur ersten Seite der App zurückkehren kann.
+Apps, für die ein einziger XAML-Frame für Start- und Dateiverträge verwendet wird, sollten vor dem Navigieren zu einer neuen Seite die Seiten im Navigationsjournal des Frames löschen.
 
-## Anmerkungen
+## Per Dateiaktivierung gestartete Apps sollten ggf. eine Benutzeroberfläche enthalten, über die der Benutzer zur ersten Seite der App zurückkehren kann.
 
 
-Die empfangenen Dateien stammen unter Umständen aus einer nicht vertrauenswürdigen Quelle. Wir empfehlen, den Inhalt einer Datei zu überprüfen, bevor Sie sie weiter verarbeiten. Weitere Informationen zur Eingabeüberprüfung finden Sie unter [Schreiben von sicherem Code](http://go.microsoft.com/fwlink/p/?LinkID=142053).
+Anmerkungen Die empfangenen Dateien stammen unter Umständen aus einer nicht vertrauenswürdigen Quelle. Wir empfehlen, den Inhalt einer Datei zu überprüfen, bevor Sie sie weiter verarbeiten.
 
-> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Apps für die universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
-## Verwandte Themen
-
-**Vollständiges Beispiel**
-
-* [Beispiel für Assoziationsstart](http://go.microsoft.com/fwlink/p/?LinkID=231484)
-
-**Konzepte**
-
-* [Standardprogramme](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [Dateityp- und Protokollzuordnungsmodell](https://msdn.microsoft.com/library/windows/desktop/hh848047)
-
-**Aufgaben**
-
-* [Starten der Standard-App für eine Datei](launch-the-default-app-for-a-file.md)
-* [Behandeln der URI-Aktivierung](handle-uri-activation.md)
-
-**Richtlinien**
-
-* [Richtlinien für Dateitypen und URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
-
-**Referenz**
-* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
-* [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
+> Weitere Informationen zur Eingabeüberprüfung finden Sie unter [Schreiben von sicherem Code](http://go.microsoft.com/fwlink/p/?LinkID=142053). **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Apps für die universelle Windows-Plattform) schreiben.
 
  
 
+## Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+**Verwandte Themen**
+
+* [Vollständiges Beispiel](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+
+**Beispiel für Assoziationsstart**
+
+* [Konzepte](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+* [Standardprogramme](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+
+**Dateityp- und Protokollzuordnungsmodell**
+
+* [Aufgaben](launch-the-default-app-for-a-file.md)
+* [Starten der Standard-App für eine Datei](handle-uri-activation.md)
+
+**Behandeln der URI-Aktivierung**
+
+* [Anleitungen](https://msdn.microsoft.com/library/windows/apps/hh700321)
+
+**Richtlinien für Dateitypen und URIs**
+* [**Referenz**](https://msdn.microsoft.com/library/windows/apps/br224716)
+* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br242331)
+
+ 
+
  
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

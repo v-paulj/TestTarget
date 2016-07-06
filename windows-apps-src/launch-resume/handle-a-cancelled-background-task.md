@@ -46,7 +46,7 @@ Die OnCanceled-Methode muss wie folgt aussehen:
 >    }
 > ```
 
-Fügen Sie der Hintergrundaufgabenklasse eine Kennzeichenvariable mit dem Namen **\_CancelRequested** hinzu. Diese Variable wird verwendet, um anzuzeigen, ob eine Abbruchanforderung erfolgt ist.
+[!div class="tabbedCodeSnippets"] Fügen Sie der Hintergrundaufgabenklasse eine Kennzeichenvariable mit dem Namen **\_CancelRequested** hinzu.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -57,9 +57,9 @@ Fügen Sie der Hintergrundaufgabenklasse eine Kennzeichenvariable mit dem Namen 
 >     volatile bool CancelRequested;
 > ```
 
-Legen Sie in der OnCanceled-Methode, die Sie in Schritt 1 erstellt haben, die Kennzeichenvariable **\_CancelRequested** auf **true** fest.
+Diese Variable wird verwendet, um anzuzeigen, ob eine Abbruchanforderung erfolgt ist.
 
-Die vollständige OnCanceled-Methode des [Beispiels zur Hintergrundaufgabe]( http://go.microsoft.com/fwlink/p/?linkid=227509) legt **\_CancelRequested** auf **true** fest und gibt eine möglicherweise hilfreiche Debugmeldung aus:
+[!div class="tabbedCodeSnippets"]
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -85,7 +85,7 @@ Die vollständige OnCanceled-Methode des [Beispiels zur Hintergrundaufgabe]( htt
 >     }
 > ```
 
-Registrieren Sie in der Run-Methode der Hintergrundaufgabe die OnCanceled-Ereignishandlermethode, bevor Sie mit der Arbeit beginnen. Verwenden Sie z. B. folgende Codezeile:
+Legen Sie in der OnCanceled-Methode, die Sie in Schritt 1 erstellt haben, die Kennzeichenvariable **\_CancelRequested** auf **true** fest. Die vollständige OnCanceled-Methode des [Beispiels zur Hintergrundaufgabe]( http://go.microsoft.com/fwlink/p/?linkid=227509) legt **\_CancelRequested** auf **true** fest und gibt eine möglicherweise hilfreiche Debugmeldung aus:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -95,14 +95,14 @@ Registrieren Sie in der Run-Methode der Hintergrundaufgabe die OnCanceled-Ereign
 >     taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &SampleBackgroundTask::OnCanceled);
 > ```
 
-## Behandeln des Abbruchs durch Verlassen der Run-Methode
+## [!div class="tabbedCodeSnippets"]
 
 
-Wenn eine Abbruchanforderung empfangen wird, muss die Run-Methode angehalten und verlassen werden, indem erkannt wird, dass **\_cancelRequested** auf **true** festgelegt wurde.
+Registrieren Sie in der Run-Methode der Hintergrundaufgabe die OnCanceled-Ereignishandlermethode, bevor Sie mit der Arbeit beginnen.
 
-Ändern Sie den Code der Hintergrundaufgabenklasse, um die Kennzeichenvariable zu überprüfen, während die Hintergrundaufgabe ausgeführt wird. Wenn **\_cancelRequested** auf „true“ festgelegt ist, halten Sie die Fortsetzung der Arbeit an.
+Verwenden Sie z. B. folgende Codezeile: [!div class="tabbedCodeSnippets"]
 
-Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) enthält eine Überprüfung, die den regelmäßigen Zeitgeberrückruf anhält, wenn die Hintergrundaufgabe abgebrochen wird:
+Behandeln des Abbruchs durch Verlassen der Run-Methode
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -132,11 +132,11 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 >     }
 > ```
 
-> **Hinweis**  Das oben gezeigte Codebeispiel verwendet die Eigenschaft [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800), mit der der Fortschritt der Hintergrundaufgabe aufgezeichnet wird. Der Fortschritt wird der App mithilfe der [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Klasse gemeldet.
+> Wenn eine Abbruchanforderung empfangen wird, muss die Run-Methode angehalten und verlassen werden, indem erkannt wird, dass **\_cancelRequested** auf **true** festgelegt wurde. Ändern Sie den Code der Hintergrundaufgabenklasse, um die Kennzeichenvariable zu überprüfen, während die Hintergrundaufgabe ausgeführt wird.
 
-Ändern Sie die Run-Methode, damit sie nach dem Anhalten der Arbeit aufzeichnet, ob die Aufgabe ausgeführt oder abgebrochen wurde.
+Wenn **\_cancelRequested** auf „true“ festgelegt ist, halten Sie die Fortsetzung der Arbeit an.
 
-Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) zeichnet den Status in „LocalSettings“ auf:
+Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) enthält eine Überprüfung, die den regelmäßigen Zeitgeberrückruf anhält, wenn die Hintergrundaufgabe abgebrochen wird:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -200,15 +200,15 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 >     }
 > ```
 
-## Anmerkungen
+## [!div class="tabbedCodeSnippets"]
 
-Sie können das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunterladen, um diese Codebeispiele im Kontext von Methoden anzuzeigen.
+**Hinweis**  Das oben gezeigte Codebeispiel verwendet die Eigenschaft [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800), mit der der Fortschritt der Hintergrundaufgabe aufgezeichnet wird.
 
-Zu Demonstrationszwecken enthält der Beispielcode nur Teile der Run-Methode (und des Rückruftimers) aus dem [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+Der Fortschritt wird der App mithilfe der [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Klasse gemeldet.
 
-## Beispiel der Run-Methode
+## Ändern Sie die Run-Methode, damit sie nach dem Anhalten der Arbeit aufzeichnet, ob die Aufgabe ausgeführt oder abgebrochen wurde.
 
-Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus dem [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) aufgeführt:
+Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) zeichnet den Status in „LocalSettings“ auf:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -327,26 +327,26 @@ Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus d
 > }
 > ```
 
-> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Apps für die universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> [!div class="tabbedCodeSnippets"] Anmerkungen
 
-## Verwandte Themen
+## Sie können das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunterladen, um diese Codebeispiele im Kontext von Methoden anzuzeigen.
 
-* [Erstellen und Registrieren einer Hintergrundaufgabe](create-and-register-a-background-task.md)
-* [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
-* [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
-* [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
-* [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
-* [Reagieren auf Systemereignisse mit Hintergrundaufgaben](respond-to-system-events-with-background-tasks.md)
-* [Ausführen einer Hintergrundaufgabe für einen Timer](run-a-background-task-on-a-timer-.md)
-* [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)
-* [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](update-a-live-tile-from-a-background-task.md)
-* [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)
+* [Zu Demonstrationszwecken enthält der Beispielcode nur Teile der Run-Methode (und des Rückruftimers) aus dem [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666).](create-and-register-a-background-task.md)
+* [Beispiel der Run-Methode](declare-background-tasks-in-the-application-manifest.md)
+* [Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus dem [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) aufgeführt:](guidelines-for-background-tasks.md)
+* [[!div class="tabbedCodeSnippets"]](monitor-background-task-progress-and-completion.md)
+* [**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Apps für die universelle Windows-Plattform) schreiben.](register-a-background-task.md)
+* [Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).](respond-to-system-events-with-background-tasks.md)
+* [Verwandte Themen](run-a-background-task-on-a-timer-.md)
+* [Erstellen und Registrieren einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)
+* [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](update-a-live-tile-from-a-background-task.md)
+* [Richtlinien für Hintergrundaufgaben](use-a-maintenance-trigger.md)
 
-* [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
-* [So wird's gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in Windows Store-Apps (beim Debuggen)](http://go.microsoft.com/fwlink/p/?linkid=254345)
+* [Überwachen des Status und Abschlusses von Hintergrundaufgaben](debug-a-background-task.md)
+* [Registrieren einer Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?linkid=254345)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

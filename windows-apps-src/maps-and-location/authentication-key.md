@@ -95,6 +95,6 @@ Um Dienste im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/win
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

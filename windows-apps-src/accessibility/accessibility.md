@@ -20,7 +20,7 @@ Es werden Barrierefreiheitskonzepte für UWP-Apps (Universelle Windows-Plattform
 Bei der Barrierefreiheit geht es darum, eine Anwendung so zu gestalten, dass sie auch von Menschen verwendet werden kann, bei denen bestimmte Beeinträchtigungen die Nutzung herkömmlicher Benutzeroberflächen verhindern oder erschweren. Für bestimmte Situationen gelten gesetzlich vorgeschriebene Vorgaben im Hinblick auf Barrierefreiheit. Es empfiehlt sich aber, dieses Thema auch unabhängig von den gesetzlichen Vorschriften zu berücksichtigen, um sicherzustellen, dass die Apps die größtmögliche Benutzergruppe erreichen. Es ist auch eine Windows Store-Deklaration zur Barrierefreiheit der App vorhanden.
 
 > [!NOTE]
-> Das Ausweisen der App als barrierefrei ist nur für den Windows Store relevant.
+> Das Deklarieren der App als barrierefrei ist nur für den Windows Store relevant.
 
 | Artikel | Beschreibung |
 |---------|-------------|

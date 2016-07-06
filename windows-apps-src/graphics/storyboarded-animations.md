@@ -297,47 +297,47 @@ myStoryboard->Begin();
 myStoryBoard.Begin()
 ```
 
-Sie können das [**Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.timeline.completed.aspx)-Ereignis behandeln, wenn Sie andere Logik ausführen möchten, nachdem die Animation das Anwenden von Werten abgeschlossen hat. Für die Problembehandlung bei Eigenschaftssystem-/Animationsinteraktionen kann auch die [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/BR242358)-Methode hilfreich sein.
+[!div class="tabbedCodeSnippets"] Sie können das [**Completed**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.media.animation.timeline.completed.aspx)-Ereignis behandeln, wenn Sie andere Logik ausführen möchten, nachdem die Animation das Anwenden von Werten abgeschlossen hat.
 
-**Tipp**  Wenn Sie den Code für ein App-Szenario erstellen, bei dem Sie eine Animation aus dem App-Code starten, sollten Sie noch einmal überprüfen, ob in der Animationsbibliothek für Ihr UI-Szenario nicht bereits eine Animation oder ein Übergang enthalten ist. Die Bibliotheksanimationen ermöglichen eine einheitlichere UI-Erfahrung in allen Windows-Runtime-Apps und sind einfacher zu verwenden.
-
- 
-
-### Animationen für visuelle Zustände
-
-Das Ausführungsverhalten für ein [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490), das zum Definieren des visuellen Zustands eines Steuerelements verwendet wird, unterscheidet sich davon, wie eine App ein Storyboard ggf. direkt ausführt. Bei der Anwendung auf eine Definition des visuellen Zustands in XAML ist das **Storyboard** ein Element eines enthaltenden [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)-Elements, und der gesamte Zustand wird mithilfe der [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager)-API gesteuert. Alle enthaltenen Animationen werden gemäß ihren Animationswerten und [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517)-Eigenschaften ausgeführt, wenn das enthaltende **VisualState**-Element von einem Steuerelement verwendet wird. Weitere Informationen finden Sie unter [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808). Für visuelle Zustände unterscheidet sich das [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209)-Element. Wenn ein visueller Zustand in einen anderen Zustand geändert wird, werden alle auf den vorherigen visuellen Zustand angewendeten Eigenschaftsänderungen und die zugehörigen Animationen abgebrochen – auch dann, wenn der neue visuelle Zustand nicht ausdrücklich eine neue Animation auf eine Eigenschaft anwendet.
-
-### **Storyboard** und **EventTrigger**
-
-Es gibt eine Möglichkeit zum Starten einer Animation, bei der die Deklaration vollständig in XAML durchgeführt werden kann. Dieses Verfahren wird jedoch nicht mehr häufig angewendet. Es handelt sich um alte Syntax aus WPF und frühen Versionen von Silverlight, bevor die Unterstützung für [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager) hinzugefügt wurde. Diese [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390)-Syntax funktioniert aus Import- und Kompatibilitätsgründen in Windows-Runtime-XAML noch. Dies gilt jedoch nur für ein Auslöserverhalten basierend auf dem [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723)-Ereignis. Falls versucht wird, andere Ereignisse auszulösen, werden Ausnahmen ausgelöst, oder die Kompilierung schlägt fehl. Weitere Informationen finden Sie unter [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) oder [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053).
-
-## Animieren von angefügten XAML-Eigenschaften
-
-Auch wenn es sich nicht um ein gängiges Szenario handelt, können Sie einen animierten Wert auf eine angefügte XAML-Eigenschaft anwenden. Weitere Informationen zu angefügten Eigenschaften und ihrer Funktionsweise finden Sie unter [Übersicht über angefügte Eigenschaften](https://msdn.microsoft.com/library/windows/apps/Mt185579). Für die Zielbestimmung einer angefügten Eigenschaft benötigen Sie eine [Property-path-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586), bei der der Eigenschaftenname in Klammern gesetzt ist. Sie können die integrierten angefügten Eigenschaften wie beispielsweise [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/Hh759773) animieren, indem Sie ein [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)-Element verwenden, das diskrete Ganzzahlwerte anwendet. Allerdings sieht eine bestehende Einschränkung der XAML-Implementierung der Windows-Runtime vor, dass Sie eine benutzerdefinierte angefügte Eigenschaft nicht animieren können.
-
-## Weitere Animationstypen und nächste Schritte zum Erlernen der UI-Animation
-
-Bisher wurden die benutzerdefinierten Animationen vorgestellt, bei denen die Animation zwischen zwei Werten erfolgt und diese Werte während der Ausführung der Animation dann je nach Bedarf linear interpoliert werden. Diese Animationen werden als **From**/**To**/**By**-Animationen bezeichnet. Es gibt jedoch noch einen anderen Animationstyp, bei dem Sie Zwischenwerte deklarieren können, die zwischen dem Start- und Endwert liegen. Diese Animationen werden als *Keyframeanimationen* bezeichnet. Außerdem kann die Interpolationslogik für eine **From**/**To**/**By**-Animation oder eine Keyframeanimation geändert werden. Dazu muss eine Beschleunigungsfunktion angewendet werden. Weitere Informationen zu diesen Konzepten finden Sie unter [Keyframeanimationen und Animationen für Beschleunigungsfunktionen](key-frame-and-easing-function-animations.md).
-
-## Verwandte Themen
-
-* [Property-path-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586)
-* [Übersicht über Abhängigkeitseigenschaften](https://msdn.microsoft.com/library/windows/apps/Mt185583)
-* [Keyframeanimationen und Animationen für Beschleunigungsfunktionen](key-frame-and-easing-function-animations.md)
-* [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
-* [Steuerelementvorlagen](https://msdn.microsoft.com/library/windows/apps/Mt210948)
-* [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)
-* [**Storyboard.TargetProperty**](https://msdn.microsoft.com/library/windows/apps/Hh759824)
- 
+Für die Problembehandlung bei Eigenschaftssystem-/Animationsinteraktionen kann auch die [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/BR242358)-Methode hilfreich sein. **Tipp**  Wenn Sie den Code für ein App-Szenario erstellen, bei dem Sie eine Animation aus dem App-Code starten, sollten Sie noch einmal überprüfen, ob in der Animationsbibliothek für Ihr UI-Szenario nicht bereits eine Animation oder ein Übergang enthalten ist.
 
  
 
+### Die Bibliotheksanimationen ermöglichen eine einheitlichere UI-Erfahrung in allen Windows-Runtime-Apps und sind einfacher zu verwenden.
+
+Animationen für visuelle Zustände Das Ausführungsverhalten für ein [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490), das zum Definieren des visuellen Zustands eines Steuerelements verwendet wird, unterscheidet sich davon, wie eine App ein Storyboard ggf. direkt ausführt. Bei der Anwendung auf eine Definition des visuellen Zustands in XAML ist das **Storyboard** ein Element eines enthaltenden [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)-Elements, und der gesamte Zustand wird mithilfe der [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager)-API gesteuert. Alle enthaltenen Animationen werden gemäß ihren Animationswerten und [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517)-Eigenschaften ausgeführt, wenn das enthaltende **VisualState**-Element von einem Steuerelement verwendet wird. Weitere Informationen finden Sie unter [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808). Für visuelle Zustände unterscheidet sich das [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209)-Element.
+
+### Wenn ein visueller Zustand in einen anderen Zustand geändert wird, werden alle auf den vorherigen visuellen Zustand angewendeten Eigenschaftsänderungen und die zugehörigen Animationen abgebrochen – auch dann, wenn der neue visuelle Zustand nicht ausdrücklich eine neue Animation auf eine Eigenschaft anwendet.
+
+**Storyboard** und **EventTrigger** Es gibt eine Möglichkeit zum Starten einer Animation, bei der die Deklaration vollständig in XAML durchgeführt werden kann. Dieses Verfahren wird jedoch nicht mehr häufig angewendet. Es handelt sich um alte Syntax aus WPF und frühen Versionen von Silverlight, bevor die Unterstützung für [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager) hinzugefügt wurde. Diese [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390)-Syntax funktioniert aus Import- und Kompatibilitätsgründen in Windows-Runtime-XAML noch. Dies gilt jedoch nur für ein Auslöserverhalten basierend auf dem [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723)-Ereignis. Falls versucht wird, andere Ereignisse auszulösen, werden Ausnahmen ausgelöst, oder die Kompilierung schlägt fehl.
+
+## Weitere Informationen finden Sie unter [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) oder [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053).
+
+Animieren von angefügten XAML-Eigenschaften Auch wenn es sich nicht um ein gängiges Szenario handelt, können Sie einen animierten Wert auf eine angefügte XAML-Eigenschaft anwenden. Weitere Informationen zu angefügten Eigenschaften und ihrer Funktionsweise finden Sie unter [Übersicht über angefügte Eigenschaften](https://msdn.microsoft.com/library/windows/apps/Mt185579). Für die Zielbestimmung einer angefügten Eigenschaft benötigen Sie eine [Property-path-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586), bei der der Eigenschaftenname in Klammern gesetzt ist. Sie können die integrierten angefügten Eigenschaften wie beispielsweise [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/Hh759773) animieren, indem Sie ein [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)-Element verwenden, das diskrete Ganzzahlwerte anwendet.
+
+## Allerdings sieht eine bestehende Einschränkung der XAML-Implementierung der Windows-Runtime vor, dass Sie eine benutzerdefinierte angefügte Eigenschaft nicht animieren können.
+
+Weitere Animationstypen und nächste Schritte zum Erlernen der UI-Animation Bisher wurden die benutzerdefinierten Animationen vorgestellt, bei denen die Animation zwischen zwei Werten erfolgt und diese Werte während der Ausführung der Animation dann je nach Bedarf linear interpoliert werden. Diese Animationen werden als **From**/**To**/**By**-Animationen bezeichnet. Es gibt jedoch noch einen anderen Animationstyp, bei dem Sie Zwischenwerte deklarieren können, die zwischen dem Start- und Endwert liegen. Diese Animationen werden als *Keyframeanimationen* bezeichnet. Außerdem kann die Interpolationslogik für eine **From**/**To**/**By**-Animation oder eine Keyframeanimation geändert werden. Dazu muss eine Beschleunigungsfunktion angewendet werden.
+
+## Weitere Informationen zu diesen Konzepten finden Sie unter [Keyframeanimationen und Animationen für Beschleunigungsfunktionen](key-frame-and-easing-function-animations.md).
+
+* [Verwandte Themen](https://msdn.microsoft.com/library/windows/apps/Mt185586)
+* [Property-path-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185583)
+* [Übersicht über Abhängigkeitseigenschaften](key-frame-and-easing-function-animations.md)
+* [Keyframeanimationen und Animationen für Beschleunigungsfunktionen](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808)
+* [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/Mt210948)
+* [**Steuerelementvorlagen**](https://msdn.microsoft.com/library/windows/apps/BR210490)
+* [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/Hh759824)
+ 
+
+ 
 
 
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 

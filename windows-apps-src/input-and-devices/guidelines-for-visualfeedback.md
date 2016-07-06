@@ -5,14 +5,14 @@ title: Visuelles Feedback
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
-ms.sourcegitcommit: 077fcc6ff462a771ed56f875d960e46e6f4420fc
-ms.openlocfilehash: 287ec24dbc60be39c0f944c6d4a86205961fb770
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: 2bf873f35192c20f15c6cb445b6be6436354c8c2
 
 ---
 
 # Richtlinien für visuelles Feedback
 
-Zeigen Sie Benutzern mit visuellem Feedback, wenn ihre Interaktionen ermittelt, interpretiert und behandelt werden. Visuelles Feedback ist hilfreich für Benutzer und kann sie zur Interaktion ermutigen. Es weist auf erfolgreiche Interaktionen hin, was für den Benutzer das Gefühl der Kontrolle verstärkt. Darüber hinaus informiert es über den Systemstatus und verringert Fehler.
+Zeigen Sie Benutzern durch visuelles Feedback, wenn ihre Interaktionen ermittelt, interpretiert und behandelt werden. Visuelles Feedback ist hilfreich für Benutzer und kann sie zur Interaktion ermutigen. Es weist auf erfolgreiche Interaktionen hin, was für den Benutzer das Gefühl der Kontrolle verstärkt. Darüber hinaus informiert es über den Systemstatus und verringert die Fehlerzahl.
 
 **Wichtige APIs**
 
@@ -20,37 +20,24 @@ Zeigen Sie Benutzern mit visuellem Feedback, wenn ihre Interaktionen ermittelt, 
 -   [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)
 -   [**Windows.UI.Core**](https://msdn.microsoft.com/library/windows/apps/br208383)
 
+## Empfehlungen
 
-## <span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Empfohlene und nicht empfohlene Vorgehensweisen
+-   Versuchen Sie, so eng wie möglich an der ursprünglichen Steuerelementvorlage zu bleiben, um eine optimale Steuerung und Leistung der Anwendung sicherzustellen.
+-   Verwenden Sie keine Toucheingabevisualisierungen in Situationen, in denen diese die Verwendung der App beeinträchtigen könnten. Weitere Informationen finden Sie unter [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
+-   Zeigen Sie nur dann Feedback an, wenn dies absolut notwendig ist. Sorgen Sie dafür, dass die Benutzeroberfläche übersichtlich bleibt. Zeigen Sie nur dann visuelles Feedback an, wenn die darin enthaltenen Informationen sonst nirgends verfügbar sind.
+-   Versuchen Sie, die Verhaltensweisen der integrierten Windows-Gesten für visuelles Feedback nicht in erheblichem Umfang anzupassen, da dies eine inkonsistente und verwirrende Benutzerumgebung zur Folge haben kann.
 
--   Stellen Sie unabhängig von der Kürze der Berührung immer ein visuelles Feedback bereit. So kann der Benutzer:
-    -   Sicher sein, dass der Touchscreen funktioniert.
-    -   Feststellen, welches Ziel die Fingereingabe unterstützt oder reagiert.
-    -   Sehen, ob er das gewünschte Ziel verfehlt hat.
--   Zeigen Sie für alle Interaktionsereignisse Feedback sofort an.
--   Stellen Sie Feedback bereit, das unaufdringliche, intuitive Hinweise liefert, ohne den Benutzer abzulenken.
--   Stellen Sie sicher, dass Fingereingabeziele während jeder Manipulation an der Fingerspitze "haften bleiben".
--   Ermöglichen Sie die Auswahl von Elementen mit der Streifbewegung, wenn das Verschieben auf eine Richtung beschränkt ist.
--   Verwenden Sie keine Fingereingabevisualisierungen, wenn diese die Verwendung der App behindern können. Weitere Informationen finden Sie unter [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969).
--   Zeigen Sie nur dann Feedback an, wenn dies absolut notwendig ist. Sorgen Sie dafür, dass die Benutzeroberfläche übersichtlich bleibt. Zeigen Sie nur dann visuelles Feedback an, wenn die darin enthaltenen Informationen sonst nirgends verfügbar sind. Zeigen Sie niemals QuickInfos an, die bereits sichtbaren Text wiederholen. QuickInfos sollten bestimmten Situationen vorbehalten sein, z. B. abgeschnittener Text (Text mit Auslassungspunkten), der nicht angezeigt wird, wenn das Element ausgewählt ist, oder Fälle, in denen zusätzliche Informationen für das Verständnis oder die Verwendung Ihrer App erforderlich sind.
--   Verwenden Sie die Gedrückthaltebewegung nur für die Informationsbenutzeroberfläche.  
-    **Wichtig**  Drücken und Halten kann für die Auswahl verwendet werden, wenn sowohl horizontales als auch vertikales Verschieben aktiviert ist.    
--   Passen Sie das visuelle Feedbackverhalten der integrierten Windows 8-Gesten nicht an. Eine uneinheitliche Handhabung kann die Benutzerfreundlichkeit beeinträchtigen.
--   Zeigen Sie beim Verschieben oder Ziehen kein visuelles Feedback an. Die tatsächliche Verschiebung des Objekts auf dem Bildschirm ist ausreichend. Wenn der Inhaltsbereich jedoch nicht verschoben oder kein Bildlauf durchgeführt werden kann, sollten Sie mit Visualisierungen darauf hinweisen. Weitere Informationen finden Sie unter [Richtlinien für Verschiebung](guidelines-for-panning.md).
--   Zeigen Sie kein Feedback für ein Steuerelement an, das nicht als Ziel ausgewählt wurde. Visuelles Feedback ist wichtig, wenn die Fingereingabe für Aktivitäten verwendet wird, bei denen Positionsgenauigkeit gefragt ist. Wenn Sie bei jeder erkannten Toucheingabe Feedback anzeigen, können Benutzer die spezielle Auswahlheuristik Ihrer App und die zugehörigen Steuerelemente besser verstehen.
--   Verwenden Sie das für einen Eingabetyp vorgesehene Feedbackverhalten nicht für einen anderen Eingabetyp. Beispiel: Tastaturfokusrechtecke sollten nur für die Tastatur- und nicht für die Toucheingabe verwendet werden.
+## Weitere Hinweise zur Verwendung
 
-## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Weitere Hinweise zur Verwendung
+Kontaktvisualisierungen sind besonders für Touchinteraktionen wichtig, bei denen Genauigkeit und Präzision gefragt sind. Ihre App sollte beispielsweise die Position, auf die getippt wurde, genau anzeigen, damit der Benutzer erkennen kann, ob er das Ziel verfehlt hat, wie weit er danebenliegt und welche Korrekturen erforderlich sind.
 
-Kontaktvisualisierungen sind gerade für Interaktionen per Fingereingabe wichtig, bei denen Genauigkeit und Präzision gefragt sind. Ihre App sollte eine Position, auf die getippt wurde, z. B. genau anzeigen, damit der Benutzer erkennen kann, ob er das Ziel verfehlt hat, wie weit er danebenliegt und welche Korrekturen erforderlich sind.
-
-Mit den Plattformsteuerelementen der Sprachframeworks für Windows Store-Apps (Windows Store-Apps mit JavaScript und Windows Store-Apps mit C++, C# oder Visual Basic) können Sie Windows 8-Visualisierungen kostenlos nutzen. Falls Ihre App benutzerdefinierte Interaktionen beinhaltet, die angepasstes Feedback erfordern, müssen Sie sicherstellen, dass sich das Feedback für die jeweiligen Zwecke eignet, für alle unterstützten Eingabegeräte verfügbar ist und den Benutzer nicht von seiner eigentlichen Arbeit ablenkt. Dies kann insbesondere bei Spiel- oder Zeichnungs-Apps ein Problem sein, bei denen das visuelle Feedback mit wichtigen UI-Elementen kollidieren oder diese verdecken kann.
+Durch die Verwendung der Standardsteuerelemente für die XAML-Plattform stellen Sie sicher, dass Ihre App auf allen Geräten und in allen Eingabesituationen ordnungsgemäß funktioniert. Wenn Ihre App benutzerdefinierte Interaktionen enthält, die angepasstes Feedback erfordern, müssen Sie sicherstellen, dass sich das Feedback für die jeweiligen Zwecke eignet, für alle unterstützten Eingabegeräte verfügbar ist und den Benutzer nicht von seiner eigentlichen Arbeit ablenkt. Dies kann insbesondere bei Spiel- oder Zeichnungs-Apps ein Problem sein, bei denen das visuelle Feedback mit wichtigen UI-Elementen kollidieren oder diese verdecken kann.
 
 [!IMPORTANT] Das Interaktionsverhalten der integrierten Gesten sollte nicht geändert werden. 
 
-### <span id="Feedback_UI"></span><span id="feedback_ui"></span><span id="FEEDBACK_UI"></span>Feedback-UI
+**Feedback auf allen Geräten**
 
-Die Feedback-UI hängt im Allgemeinen vom Eingabegerät ab (Toucheingabe, Touchpad, Maus, Zeichen-/Eingabestift, Tastatur usw.). Das integrierte Feedback für die Maus z. B. beinhaltet normalerweise eine Bewegung und Änderung des Cursors, während für Touch- und Stifteingabe Berührungsvisualisierungen erforderlich sind und für die Eingabe und Navigation per Tastatur Fokusrechtecke und Hervorhebung verwendet werden.
+Das visuelle Feedback ist im Allgemeinen vom Eingabegerät abhängig (Toucheingabe, Touchpad, Maus, Stift, Tastatur usw.). Das integrierte Feedback für die Maus z. B. beinhaltet normalerweise eine Bewegung und Änderung des Cursors, während für Touch- und Stifteingabe Berührungsvisualisierungen erforderlich sind und für die Eingabe und Navigation per Tastatur Fokusrechtecke und Hervorhebung verwendet werden.
 
 Verwenden Sie [**ShowGestureFeedback**](https://msdn.microsoft.com/library/windows/apps/br241969), um das Feedbackverhalten für die Plattformgesten festzulegen.
 
@@ -58,105 +45,64 @@ Wenn Sie Anpassungen an der Feedback-UI vornehmen, muss das Feedback alle Eingab
 
 Im Folgenden finden Sie einige Beispiele für integrierte Kontaktvisualisierungen in Windows.
 
-| ![Screenshot mit einer Touchvisualisierung](images/feedback-touch-cursor.png) | ![Screenshot mit einer Mausvisualisierung](images/feedback-mouse-cursor2.png) | ![Screenshot mit einer Stiftvisualisierung](images/feedback-pen-cursor3.png) | ![Screenshot mit einer Tastaturvisualisierung](images/feedback-keyboard-cursor.png) | 
+| ![Touchfeedback](images/TouchFeedback.png) | ![Mausfeedback](images/MouseFeedback.png) | ![Stiftfeedback](images/PenFeedback.png) | ![Tastaturfeedback](images/KeyboardFeedback.png) |
 | --- | --- | --- | --- |
 | Touchvisualisierung | Maus-/Touchpadvisualisierung | Stiftvisualisierung | Tastaturvisualisierung |
 
-### <span id="Informational_UI"></span><span id="informational_ui"></span><span id="INFORMATIONAL_UI"></span>Informations-UI (Popups)
+## Visuelle Fokuselemente mit hoher Sichtbarkeit
 
-Eine der wichtigsten Formen des visuellen Feedbacks ist die Informations-UI (oder Mehrdeutigkeitsvermeidungs-UI). Die Informations-UI enthält Informationen zu einem Objekt, eine Beschreibung seiner Funktion, Anweisungen für den Zugriff auf das Objekt und ggf. weitere Anleitungen.
+Alle Windows-Apps zeigen ein stärker definiertes visuelles Fokuselement um interaktive Steuerelemente innerhalb der Anwendung herum. Diese neuen visuellen Fokuselemente können vollständig angepasst und auch gelöscht werden, wenn nötig.
 
-Dies sind die unterschiedlichen Informations-UI-Typen, die von Windows Store-Apps unterstützt werden.
+## Farbbranding und -anpassung
 
--   QuickInfos
--   Umfangreiche QuickInfos
--   Menüs
--   Meldungsdialogfelder
--   Flyouts
+**Rahmeneigenschaften**
 
-Mit Informations-UI können Sie verhindern, dass UI-Elemente durch Finger verdeckt (behindert) werden, und Toucheingabeinteraktionen mit Ihrer App verbessern. Sie verfügt sogar über eine integrierte Geste: Gedrückthalten.
+Es gibt zwei Elemente bei den visuellen Fokuselementen mit hoher Sichtbarkeit: der primäre und der sekundäre Rahmen. Der primäre Rahmen ist **2 Pixel** breit und verläuft an der *Außenseite* des sekundären Rahmens. Der sekundäre Rahmen ist **1 Pixel** breit und verläuft an der *Innenseite* des primären Rahmens.
+![Redlines visueller Fokuselemente mit hoher Sichtbarkeit](images/FocusRectRedlines.png)
 
-Das Gedrückthalten ist eine zeitgesteuerte Interaktion – ein Interaktionstyp, von dem in Windows 8 normalerweise abgeraten wird. Eine zeitgesteuerte Interaktion ist in diesem Fall akzeptabel, da sie für ein Tool dient, mit dem der Benutzer Zugriff auf weitere Informationen erhält. Die empfohlene Dauer hängt vom Typ der Informationsbenutzeroberfläche ab. Die folgende Tabelle enthält die empfohlenen Zeitschwellenwerte.
+Um die Breite der beiden Rahmentypen (primär oder sekundär) zu ändern, verwenden Sie **FocusVisualPrimaryThickness** bzw. **FocusVisualSecondaryThickness**:
+```XAML
+<Slider Width="200" FocusVisualPrimaryThickness="5" FocusVisualSecondaryThickness="2"/>
+```
+![Randbreiten visueller Fokuselemente mit hoher Sichtbarkeit](images/FocusMargin.png)
 
-| Informations-UI-Typ | Zeitliche Steuerung | Aktivierung | Verwendung |
-| --- | --- | --- | --- |
-| Okklusions-QuickInfo (für Scrubbing und kleine Ziele) | 0 ms | Ja | Für die schnelle Erläuterung von Aktionen. Wird in der Regel für Befehle verwendet. |
-| Okklusions-QuickInfo (für Aktionen) | 200 ms | Ja | |
-| Umfangreiche QuickInfo | ~2000 ms | Nein | Für langsameres, bewussteres Anzeigen zusätzlicher Informationen. Wird in der Regel für Auflistungselemente verwendet. |
-| Interaktion mit automatischem Einblenden | ~2000 ms | Nein | |
-| Kontextmenü | ~2000 ms | Nein | Macht einen begrenzten Satz von Befehlen im Zusammenhang mit dem ausgewählten Objekt verfügbar. |
-| Flyouts | ~2000 ms | Nein | Macht einen begrenzten Satz von Befehlen im Zusammenhang mit dem ausgewählten Objekt verfügbar. |
+Der Rand ist eine Eigenschaft des Typs [**Thickness**](https://msdn.microsoft.com/library/system.windows.thickness) und kann daher so angepasst werden, dass er nur an bestimmten Seiten des Steuerelements angezeigt wird. Weitere Informationen siehe unten: ![Randbreite visueller Fokuselemente mit hoher Sichtbarkeit nur unten](images/FocusThicknessSide.png)
 
-Weitere Informationen zum Bereitstellen von Informations-UI finden Sie unter [Gestalten der Benutzeroberfläche](https://msdn.microsoft.com/library/windows/apps/hh465304) und [Anzeigen von Popups](https://msdn.microsoft.com/library/windows/apps/hh738362).
+Der Rand ist der Abstand zwischen den visuellen Grenzen des Steuerelements und dem Beginn des *sekundären Rahmens* der visuellen Fokuselemente. Der standardmäßige Rand hat eine Breite von **1 Pixel** außerhalb der Grenzen des Steuerelements. Sie können diesen Rand pro Steuerelement bearbeiten, indem Sie die Eigenschaft **FocusVisualMargin** ändern:
+```XAML
+<Slider Width="200" FocusVisualMargin="-5"/>
+```
+![Randunterschiede visueller Fokuselemente mit hoher Sichtbarkeit](images/FocusPlusMinusMargin.png)
 
-### <span id="Tooltips"></span><span id="tooltips"></span><span id="TOOLTIPS"></span>QuickInfos
+*Ein negativer Rand verschiebt den Rahmen weiter weg von der Mitte des Steuerelements. Ein positiver Rand verschiebt den Rahmen näher zur Mitte des Steuerelements.*
 
-Verwenden Sie QuickInfos, um weitere Informationen zu einem Steuerelement anzuzeigen, bevor der Benutzer zum Ausführen einer Aktion aufgefordert wird.
+Um die visuellen Fokuselemente für ein Steuerelement vollständig zu deaktivieren, deaktivieren Sie einfach **UseSystemFocusVisuals**:
+```XAML
+<Slider Width="200" UseSystemFocusVisuals="False"/>
+```
 
-QuickInfos ([**Tooltip**](https://msdn.microsoft.com/library/windows/apps/br229763)) werden automatisch angezeigt, wenn der Benutzer eine Gedrückthaltebewegung für ein Steuerelement oder Objekt ausführt (oder Daraufzeigen erkannt wird). Die QuickInfo verschwindet, wenn der Kontakt gelöst oder der Cursor vom Steuerelement bzw. Objekt wegbewegt wird. Eine QuickInfo kann Text und Bilder enthalten, ist aber nicht interaktiv.
+Die Breite, der Rand oder die vollständige Entfernung der visuellen Fokuselemente durch den App-Entwickler werden pro Steuerelement festgelegt.
 
-### <span id="Occlusion_tooltips_small"></span><span id="occlusion_tooltips_small"></span><span id="OCCLUSION_TOOLTIPS_SMALL"></span>Okklusions-QuickInfos für kleine Ziele
+**Farbeigenschaften**
 
-Okklusions-QuickInfos beschreiben das verdeckte Ziel. Diese QuickInfos sind beim Auswählen und Aktivieren von Zielen hilfreich, die kleiner als die Standardgröße für Fingereingabeziele sind, z. B. Hyperlinks auf einer Webseite.
+Es gibt nur zwei Farbeigenschaften für die visuellen Fokuselemente; die primäre Rahmenfarbe und die sekundäre Rahmenfarbe. Diese Rahmenfarben für visuelle Fokuselemente können pro Steuerelement auf Seitenebene und global auf App-Ebene geändert werden:
 
-Sie können diese QuickInfos nach Verstreichen eines bestimmten Zeitschwellenwerts durch ein Informationspopup ersetzen. Verwenden Sie z. B. eine Okklusions-QuickInfo, um den verdeckten Text des Links anzuzeigen, und ersetzen Sie die QuickInfo dann durch ein Popup mit der URL.
+Um App-weites Branding visueller Fokuselemente durchzuführen, überschreiben Sie die Systempinsel:
+```XAML
+<SolidColorBrush x:Key="SystemControlFocusVisualPrimaryBrush" Color="DarkRed"/>
+<SolidColorBrush x:Key="SystemControlFocusVisualSecondaryBrush" Color="Pink"/>
+```
+![Änderungen der Farbe visueller Fokuselemente mit hoher Sichtbarkeit](images/FocusRectColorChanges.png)
 
-### <span id="Occlusion_tooltips_actions"></span><span id="occlusion_tooltips_actions"></span><span id="OCCLUSION_TOOLTIPS_ACTIONS"></span>Okklusions-QuickInfos für Aktionen und Befehle
+Um die Farben pro Steuerelement zu ändern, bearbeiten Sie einfach die Eigenschaften der visuellen Fokuselemente für das gewünschte Steuerelement:
+```XAML
+<Slider Width="200" FocusVisualPrimaryBrush="DarkRed" FocusVisualSecondaryBrush="Pink"/>
+```
 
-Diese QuickInfos beschreiben die Aktion oder den Befehl, die bzw. der ausgeführt wird, wenn der Benutzer den Finger von einem Element nimmt. Diese QuickInfos sind beim Auswählen und Aktivieren von Schaltflächen oder ähnlichen Steuerelementen hilfreich.
-
-Nach einer QuickInfo für ein kleines Ziel kann nach einem bestimmten Zeitschwellenwert eine Aktions-QuickInfo angezeigt. In diesem Fall sollte die QuickInfo für das kleine Ziel so erweitert werden, dass sie die zusätzlichen Informationen aus der Aktions-QuickInfo enthält.
-
-### <span id="Rich_tooltip"></span><span id="rich_tooltip"></span><span id="RICH_TOOLTIP"></span>Umfangreiche QuickInfo
-
-Diese QuickInfos zeigen sekundäre Informationen zu einem Element an. Bei einer umfangreichen QuickInfo kann es sich z. B. um eine Textbeschreibung eines Bilds, den vollständigen Text eines abgeschnittenen Titels oder andere für das Ziel relevante Infos handeln.
-
-Umfange QuickInfos enthalten normalerweise Informationen, die nicht sofort verfügbar gemacht werden müssen und in manchen Fällen ablenken können, wenn sie zu schnell angezeigt werden. Bei einem längeren Zeitschwellenwert rufen Benutzer die Informationen bewusster ab.
-
-Nach der Anzeige einer umfangreichen QuickInfo ist das Objekt nicht mehr aktiviert, wenn der Benutzer den Finger abhebt. Der Grund hierfür ist, dass die der QuickInfo entnommenen Informationen den Benutzer veranlassen können, dass Element nicht zu aktivieren.
-
-Umfangreiche QuickInfos sollten sich sowohl hinsichtlich des Designs als auch des Informationsumfangs deutlich von Standard-QuickInfos unterscheiden.
-
-### <span id="Context_menu"></span><span id="context_menu"></span><span id="CONTEXT_MENU"></span>Kontextmenü
-
-Das Kontextmenü ([**PopupMenu**](https://msdn.microsoft.com/library/windows/apps/br208693)) ist ein kompaktes Menü, über das Benutzer direkt auf Aktionen (z. B. Zwischenablagebefehle) für Text oder UI-Objekte in Windows Store-Apps zugreifen können.
-
-Das für Toucheingabe optimierte Kontextmenü besteht aus zwei Teilen. Als Ergebnis einer Halteinteraktion wird ein visueller Hinweis angezeigt. Das Kontextmenü selbst wird dann angezeigt, nachdem der Hinweis ausgeblendet und der Finger abgehoben wurde.
-
-Die folgenden Abbildungen zeigen, wie Sie das Standardkontextmenü aufrufen, indem Sie in eine Auswahl oder auf ein Ziehelement tippen (Gedrückthalten kann auch verwendet werden).
-
-![Tippen (oder drücken und halten) Sie in die Auswahl oder auf ein Ziehelement, um das Kontextmenü aufzurufen.](images/textselection-show-context.png)
-
-Siehe [Hinzufügen von Kontextmenüs](https://msdn.microsoft.com/library/windows/apps/hh465300).
-
-### <span id="Message_dialog"></span><span id="message_dialog"></span><span id="MESSAGE_DIALOG"></span>Meldungsdialogfeld
-
-Verwenden Sie Meldungsdialogfelder ([**MessageDialog**](https://msdn.microsoft.com/library/windows/apps/br208674)), um den Benutzer basierend auf der Benutzeraktion oder dem App-Status zu einer Eingabe aufzufordern, bevor der jeweilige Vorgang fortgesetzt wird. Es ist eine explizite Benutzerinteraktion erforderlich, und Eingaben in der App sind blockiert, bis der Benutzer reagiert.
-
-![Meldungsdialogfeld für eine Fehlermeldung](images/messagedialog.png)
-
-Die folgende Liste enthält einige typische Gründe für die Verwendung eines Meldungsdialogfelds.
-
--   Anzeigen wichtiger Informationen
--   Stellen einer Frage vor dem Fortsetzen der Ausführung
--   Fehlermeldungen anzeigen
-
-Siehe [Hinzufügen von Meldungsdialogfeldern](https://msdn.microsoft.com/library/windows/apps/hh738361).
-
-### <span id="Flyout"></span><span id="flyout"></span><span id="FLYOUT"></span>Flyout
-
-Ein Flyout ([**Flyout**](https://msdn.microsoft.com/library/windows/apps/br211726)) ist ein kleines UI-Panel, das durch Tippen, Klicken oder eine andere Aktivierung aufgerufen wird, um Informationen, Fragen oder ein spezifisches Optionsmenü für die aktuelle Aktivität des Benutzers anzuzeigen. Es kann leicht ausgeblendet werden, d. h. es verschwindet, wenn der Benutzer an einer Stelle außerhalb des Flyoutpanels tippt oder klickt oder die ESC-Taste drückt. Mit anderen Worten: Ein Flyout kann ignoriert werden.
-
-Anders als QuickInfos unterstützen Flyouts Eingaben. Anders als bei einem Meldungsdialogfeld ist die App weiterhin aktiv und nimmt Eingaben an.
-
-![Flyout mit Bestätigung](images/flyout.png)
-
-Siehe [Hinzufügen von Flyouts und Menüs](https://msdn.microsoft.com/library/windows/apps/hh465325).
-
-## <span id="related_topics"></span>Verwandte Artikel
+## Verwandte Artikel
 
 **Für Designer**
-* [Richtlinien für das Verschieben](guidelines-for-panning.md)
+* [Anleitungen für das Verschieben](guidelines-for-panning.md)
 
 **Für Entwickler**
 * [Benutzerdefinierte Benutzerinteraktionen](https://msdn.microsoft.com/library/windows/apps/mt185599)
@@ -182,10 +128,6 @@ Siehe [Hinzufügen von Flyouts und Menüs](https://msdn.microsoft.com/library/wi
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

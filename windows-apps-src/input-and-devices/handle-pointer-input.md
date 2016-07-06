@@ -1,6 +1,6 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Empfangen, verarbeiten und verwalten Sie Eingabedaten von Zeigegeräten, z. B. Touch, Maus, Zeichen-/Eingabestift und Touchpad, in Apps für die universelle Windows-Plattform (UWP)."
+Description: "Empfangen, verarbeiten und verwalten Sie Eingabedaten von Zeigegeräten wie Toucheingabe, Maus, Stift und Touchpad in Apps für die universelle Windows-Plattform (UWP)."
 title: Behandeln von Zeigereingaben
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
@@ -12,7 +12,7 @@ ms.openlocfilehash: 2204e8f3ddce067cf2cbc24ce89cbdcea5b361bf
 
 # Behandeln von Zeigereingaben
 
-Empfangen, verarbeiten und verwalten Sie Eingabedaten von Zeigegeräten, z. B. Touch, Maus, Zeichen-/Eingabestift und Touchpad, in Apps für die universelle Windows-Plattform (UWP).
+Empfangen, verarbeiten und verwalten Sie Eingabedaten von Zeigegeräten wie Toucheingabe, Maus, Stift und Touchpad in Apps für die universelle Windows-Plattform (UWP).
 
 **Wichtige APIs**
 
@@ -1111,6 +1111,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

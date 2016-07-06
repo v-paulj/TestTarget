@@ -3,8 +3,8 @@ author: jnHs
 Description: "Sie können Werbecodes für Apps oder In-App-Produkte (IAP) generieren, die Sie im Windows Store veröffentlicht haben."
 title: Generieren von Werbecodes
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4001f374a80cd7c62df6230a9429dd5b5a19d2b2
+ms.sourcegitcommit: df994a3bbda9f6d4df0ee2dd6c2cb646d91a0bfc
+ms.openlocfilehash: bfea802fb4a6efcfe34121802ce49f20a9b0305e
 
 ---
 
@@ -31,8 +31,8 @@ Auf dem Windows Dev Center-Dashboard können Sie folgende Aktionen ausführen:
 Beachten Sie die folgenden Richtlinien für Werbecodes:
 
 -   Werbecodes können für alle über den Windows Store veröffentlichten Apps oder IAPs generiert werden. Benutzer können die Codes auf allen Versionen von Windows einlösen, die von Ihren Apps oder IAPs unterstützt werden.
--   Werbecodes laufen sechs Monate nach dem Datum der Bestellung ab.
--   Sie können für alle Apps oder IAPs alle sechs Monate bis zu 250 Werbecodes generieren. Der Zeitraum von sechs Monaten beginnt mit der Übermittlung der ersten Werbecodebestellung.
+-   Werbecodes laufen 6 Monate nach dem Datum der Bestellung ab.
+-   Sie können für alle Apps oder IAPs alle 6 Monate bis zu 500 Werbecodes generieren. Der Zeitraum von 6 Monaten beginnt mit der Übermittlung der ersten Werbecodebestellung.
 -   Sie müssen die in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) definierten Anforderungen erfüllen, einschließlich Abschnitt **3k. Werbecodes**.
 
 ## Bestellen von Werbecodes
@@ -48,8 +48,10 @@ So bestellen Sie Werbecodes für Apps oder IAPs, die Sie im Windows Store veröf
     -   Wählen Sie Apps oder IAPs, für die Sie Codes generieren möchten.
     -   Geben Sie einen Namen für die Bestellung an. Anhand dieses Namens können Sie beim Überprüfen der Werbecode-Nutzungsdaten zwischen verschiedenen Codebestellungen unterscheiden.
     -   Geben Sie die zu bestellenden Codemenge an.
+    -   Geben Sie an, wann die Werbecodes aktiv werden sollen. Um ein spezifisches Startdatum und eine spezifische Startuhrzeit zu wählen, entfernen Sie die Markierung für das Kontrollkästchen **Codes werden umgehend aktiv**.
+    -   Geben Sie an, wann die Werbecodes ablaufen sollen. Um ein spezifisches Startdatum und eine spezifische Startuhrzeit zu wählen, entfernen Sie die Markierung für das Kontrollkästchen **Codes laufen nach 6 Monaten ab**.
 
-3.  Klicken Sie auf **Codes bestellen**. Die Bestellung wird übermittelt, und das Dashboard leitet Sie zur Seite **Werbecodes** weiter, auf der die neue Bestellung als **Ausstehend** in der Zusammenfassungstabelle der Werbecodebestellungen aufgeführt wird.
+3.  Klicken Sie auf **Codes bestellen**. Die Bestellung wird übermittelt, und das Dashboard leitet Sie zur Seite **Werbecodes** weiter, auf der die neue Bestellung in der Zusammenfassungstabelle der Werbecodebestellungen als **Ausstehend** aufgeführt wird.
 
 Werbecodes stehen in der Regel innerhalb von 60 Minuten nach Übermittlung der Bestellung zum Download zur Verfügung, wobei dies in einigen Fällen länger dauern kann. Wenn Ihre Bestellung erfüllt wurde und die Codes zum Download zur Verfügung stehen, wechselt der Bestellungsstatus zu **Verfügbar**.
 
@@ -74,11 +76,13 @@ So laden Sie erfüllte Werbecodebestellungen herunter und verteilen die Codes an
 
         https://account.microsoft.com/billing/redeem?mstoken=&lt;promotional_code>
 
-    -   **Datum der Bestellung**: Das Datum, an dem Sie die Bestellung für diesen Code übermittelt haben.
+    -   **Startdatum**: Das Datum, an dem dieser Code gültig wird.
     -   **Ablaufdatum**: Das Datum, an dem dieser Code abläuft.
     -   **Code-ID**: Eine eindeutige ID für diesen Code.
     -   **Bestellungs-ID**: Eine eindeutige ID für die Bestellung, in der dieser Code erfüllt wurde.
     -   **Ausgegeben an**: Ein leeres Feld, in das Sie einen Wert eintragen können, der den Benutzer identifiziert, an den Sie den Code verteilt haben.
+    -   **Verfügbar**: Die Anzahl der Codes, die noch eingelöst werden können.
+    -   **Eingelöst**: Die Anzahl der Codes, die eingelöst wurden.
 
 4.  Sie können die einlösbaren URLs in einem beliebigen, von Ihnen bevorzugten Kommunikationsformat verteilen (z. B. E-Mail, SMS-Nachricht oder gedruckte Karten). Die Kommunikation sollte Folgendes enthalten:
     -   Eine Erklärung, für welche App bzw. welches IAP der Werbecode vorgesehen ist, und optional eine Beschreibung, warum der Benutzer den Code erhält.
@@ -134,6 +138,6 @@ Sie können auch eine aktive Bestellung aus dieser Tabelle herunterladen.
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

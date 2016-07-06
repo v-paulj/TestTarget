@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 9322B3A3-8F06-4329-AFCB-BE0C260C332C
 description: "Dieser Artikel führt Sie Schritt für Schritt durch die Ausrichtung Ihrer Apps auf verschiedene Bereitstellungs- und Debugziele."
 title: Bereitstellen und Debuggen von UWP (Universelle Windows-Plattform)-Apps
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: eb639e78bf144572dfbfd2d65514bb4eff7c7be1
+translationtype: Human Translation
+ms.sourcegitcommit: 14f6684541716034735fbff7896348073fa55f85
+ms.openlocfilehash: e2209e90080c7346bb363304b1a28f6446300332
 
 ---
 
@@ -28,7 +29,19 @@ Zur Auswahl eines Ziels navigieren Sie zur Dropdownliste mit Debugzielen neben d
 -   Bei einem **Emulator**-Ziel wird die Anwendung in einem Emulator gestartet und bereitgestellt, wobei die Konfiguration im Namen angegeben ist. Emulatoren sind nur auf Hyper-V-fähigen Computern verfügbar, auf denen Windows 8.1 oder eine höhere Version ausgeführt wird.
 -   Über **Remotecomputer** können Sie ein Remoteziel angeben, auf dem die Anwendung bereitgestellt werden soll. Weitere Informationen zur Bereitstellung auf einem Remotecomputer finden Sie unter [Angeben eines Remotegeräts](#specifying-a-remote-device).
 
-## Angeben eines Remotegeräts
+## Debuggen von bereitgestellten Apps
+Visual Studio kann über den Menübefehl **Debuggen**, **An Prozess anhängen** an alle ausgeführten Prozesse in einer UWP-App angehängt werden. Für das Anhängen an einen laufenden Prozess ist das ursprüngliche Visual Studio-Projekt nicht erforderlich. Das Laden der [Symbole](#symbols) des Prozesses hilft beim Debuggen eines Prozesses ohne den ursprünglichen Code erheblich.  
+  
+Darüber hinaus kann über den Menübefehl **Debuggen**, **Andere**, **Installierte App-Pakete debuggen** jedes installierten App-Paket angehängt und debuggt werden.   
+ 
+![Dialogfeld „Installiertes App-Paket debuggen"](images/gs-debug-uwp-apps-002.png)  
+
+Bei der Auswahl von **Eigenen Code zunächst nicht starten, sondern debuggen** wird der Visual Studio-Debugger an Ihre UWP-App angehängt, sobald Sie ihn starten. Dies bietet eine effektive Möglichkeit zum Debuggen von Steuerelementpfaden über [verschiedene Startmethoden](../xbox-apps/automate-launching-uwp-apps.md) (z. B. die Protokollaktivierung mit benutzerdefinierten Parametern).  
+
+UWP-Apps können unter Windows 8.1 oder höher entwickelt und kompiliert werden. Sie müssen jedoch unter Windows 10 ausgeführt werden. Wenn Sie eine UWP-App auf einem PC unter Windows 8.1 entwickeln, können Sie eine auf einem anderen Windows 10-Gerät ausgeführte UWP-App remote debuggen. Der Host und der Zielcomputer müssen sich im selben LAN befinden. Laden Sie hierzu auf beiden Computern die [Remotetools für Visual Studio](http://aka.ms/remotedebugger) herunter, und installieren Sie sie. Die installierte Version muss der installierten Version von Visual Studio entsprechen. Die ausgewählte Architektur der Auswahl (x86, x64) muss mit der Architektur der Zielanwendung übereinstimmen.   
+  
+
+## Festlegen eines Remotegeräts
 
 ### C# und Microsoft Visual Basic
 
@@ -85,10 +98,51 @@ So konfigurieren Sie die Bereitstellung für das automatische Starten einer Debu
 -   Aktivieren Sie auf der Eigenschaftenseite **Debuggen** für C# und Visual Basic das Kontrollkästchen **Eigenen Code zunächst nicht starten, sondern debuggen**.
 -   Legen Sie den Wert **Anwendung starten** auf der Eigenschaftenseite **Debuggen** für JavaSCript und C++ auf **Ja** fest.
 
+## Symbole
+
+Symboldateien enthalten eine Vielzahl von Daten, die sehr hilfreich beim Debuggen von Code sind (z. B. Variablen, Funktionsnamen und Adressen von Einsprungspunkten). Mit diesen Daten können Sie die Ausnahmen und Ausführungsreihenfolge von Aufruflisten besser überblicken. Über den [Microsoft-Symbolserver](http://msdl.microsoft.com/download/symbols) stehen Symbole für die meisten Windows-Varianten zur Verfügung. Für schnellere Offline-Lookups können Sie jedoch auch unter [Herunterladen von Windows-Symbolpaketen](http://aka.ms/winsymbols) heruntergeladen werden.
+
+Wählen Sie zum Festlegen von Symboloptionen für Visual Studio **Extras > Optionen** aus, und navigieren Sie im Dialogfeld zu **Debuggen > Symbole**.
+
+**Abbildung 4. Dialogfeld „Optionen“. **
+            
+![Dialogfeld „Optionen“](images/gs-debug-uwp-apps-004.png)
+
+Legen Sie die **Sympath**-Variable auf dem Speicherort des Symbolpakets fest, um die Symbole in einer Debugsitzung mit [WinDbg](#windbg) zu laden. Der folgende Befehl lädt beispielsweise Symbole vom Microsoft-Symbolserver und speichert sie dann im Verzeichnis C:\Symbols zwischen:
+
+```
+.sympath SRV*C:\Symbols*http://msdl.microsoft.com/download/symbols
+.reload
+```
+
+Mit dem „;“ als Trennzeichen oder dem `.sympath+`-Befehl können Sie mehrere Pfade hinzufügen. Mehr zu erweiterten Symbolvorgängen mit WinDbg finden Sie unter [Öffentliche und private Symbole](https://msdn.microsoft.com/library/windows/hardware/ff553493).
+
+## WinDbg
+
+WinDbg ist ein leistungsstarker Debugger, der als Teil der Debugtools für Windows bereitgestellt wird (Letzteres ist des [Windows SDK](http://go.microsoft.com/fwlink/p?LinkID=271979)). Die Windows-SDK-Installation ermöglicht die Installation der Debugtools für Windows als eigenständiges Produkt. WinDbg ist beim Debuggen von systemeigenem Code sehr hilfreich. Es wird jedoch nicht für Apps empfohlen, die in verwaltetem Code oder in HTML5 geschrieben wurden. 
+
+Um WinDbg mit UWP-Apps zu verwenden, müssen Sie zuerst, wie im vorherigen Abschnitt beschrieben, über PLMDebug PLM für Ihr App-Paket deaktivieren. 
+
+```
+plmdebug /enableDebug [PackageFullName] "\"C:\Program Files\Debugging Tools for Windows (x64)\WinDbg.exe\" -server npipe:pipe=test"
+```
+
+Im Gegensatz zu Visual Studio arbeitet der Großteil der Kernfunktionen von WinDbg mit Befehlen im Befehlsfenster. Mit den Befehlen können Sie den Ausführungszustand anzeigen, Benutzermodus-Speicherabbilder prüfen und in verschiedensten Modi debuggen. 
+
+Einer der am häufigsten in WinDbg verwendeten Befehle ist `!analyze -v`. Er wird verwendet, um ausführliche Informationen zur aktuellen Ausnahme abzurufen. Diese Informationen umfassen unter anderem:
+
+- FAULTING_IP: Anweisungszeiger zum Zeitpunkt des Fehlers
+- EXCEPTION_RECORD: Adresse, Code und Flags der aktuellen Ausnahme
+- STACK_TEXT: Stapelüberwachung vor der Ausnahme
+
+Eine vollständige Liste aller WinDbg-Befehle finden Sie unter [Debuggerbefehle](https://msdn.microsoft.com/library/ff540507).
+
+## Verwandte Themen
+- [Testen und Debuggen von Tools für die Prozesslebensdauer-Verwaltung (Process Lifetime Management, PLM)](testing-debugging-plm.md)
+- [Debugging, Tests und Leistung](index.md)
 
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

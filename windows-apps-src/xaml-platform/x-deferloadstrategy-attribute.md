@@ -21,7 +21,7 @@ ms.openlocfilehash: b989a31439444f06dacb86adb186f853d1637f6c
 <object x:DeferLoadStrategy="Lazy" .../>
 ```
 
-## Hinweise
+## Anmerkungen
 
 Die Einschränkungen für die Verwendung von **x:DeferLoadStrategy** sind:
 

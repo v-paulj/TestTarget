@@ -112,6 +112,6 @@ In der folgenden Tabelle werden die Felder der CSV-Datei erläutert. Beachten Si
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

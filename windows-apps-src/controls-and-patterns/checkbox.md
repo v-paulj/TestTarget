@@ -5,8 +5,8 @@ title: "Kontrollkästchen"
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: dcf9ca0757fdef78b71ae665772b980b08641d34
+ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
+ms.openlocfilehash: b1532ef10a284cbb6e28694ab1598c08b8619773
 
 ---
 # Kontrollkästchen
@@ -15,7 +15,7 @@ Ein Kontrollkästchen dient zum Aktivieren oder Deaktivieren von Aktionselemente
 
 ![Bespiel für Kontrollkästchenzustände](images/templates-checkbox-states-default.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
+
 -   [**CheckBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209316)
 -   [**Checked-Ereignis**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.checked.aspx)
 -   [**IsChecked-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.togglebutton.ischecked.aspx) 
@@ -26,7 +26,7 @@ Verwenden Sie ein **einzelnes Kontrollkästchen** für eine binäre Ja/Nein-Ausw
 
 ![Ein einzelnes Kontrollkästchen für eine einzelne Auswahl](images/checkbox1.png)
 
-Bei einer binären Auswahl besteht der Hauptunterschied zwischen einem **Kontrollkästchen** und einem **Umschalter** darin, dass das Kontrollkästchen für einen Zustand und der Umschalter für eine Aktion verwendet wird. Sie können das Commit einer Kontrollkästcheninteraktion (etwa im Rahmen der Übermittlung eines Formulars) verzögern, während für die Interaktion eines Umschalters sofort ein Commit ausgeführt werden muss. Eine Mehrfachauswahl ist nur mit Kontrollkästchen möglich.
+Bei einer binären Auswahl besteht der Hauptunterschied zwischen einem **Kontrollkästchen** und einem [**Umschalter**](toggles.md) darin, dass das Kontrollkästchen für einen Zustand und der Umschalter für eine Aktion verwendet wird. Sie können das Commit einer Kontrollkästcheninteraktion (etwa im Rahmen der Übermittlung eines Formulars) verzögern, während für die Interaktion eines Umschalters sofort ein Commit ausgeführt werden muss. Eine Mehrfachauswahl ist nur mit Kontrollkästchen möglich.
 
 Verwenden Sie **mehrere Kontrollkästchen** für Mehrfachauswahlszenarien, in denen der Benutzer einzelne oder mehrere Elemente aus einer Gruppe von Optionen auswählt, die sich nicht gegenseitig ausschließen.
 
@@ -287,11 +287,13 @@ private void SetCheckedState()
 ## Verwandte Artikel
 
 -   [**CheckBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209316) 
+-   [Optionsfelder](radio-button.md)
+-   [Umschalter](toggles.md)
 
 
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

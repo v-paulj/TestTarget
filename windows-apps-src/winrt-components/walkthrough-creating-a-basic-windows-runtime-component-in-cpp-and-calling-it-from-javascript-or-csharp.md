@@ -634,6 +634,6 @@ Wenn Sie ein C++-Komponentenprojekt für Windows-Runtime aus einer Projektmappe 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

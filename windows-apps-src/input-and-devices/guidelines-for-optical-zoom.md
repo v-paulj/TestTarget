@@ -12,7 +12,7 @@ ms.openlocfilehash: 38feedfe857f8ce2fc638cf55465f1e719108583
 
 # Optischer Zoom und Größenänderung
 
-In diesem Artikel werden die Windows-Elemente für das Zoomen und Ändern der Größe beschrieben. Außerdem enthält das Thema Richtlinien für die Benutzeroberfläche zur Verwendung dieser Interaktionsmechanismen in Ihren Apps.
+In diesem Artikel werden die Windows-Elemente für das Zoomen und die Größenänderung beschrieben. Außerdem enthält das Thema Richtlinien für die Benutzeroberfläche, um diese Interaktionsmechanismen in Ihren Apps zu verwenden.
 
 **Wichtige APIs**
 
@@ -96,6 +96,6 @@ Beachten Sie die folgenden Richtlinien für Apps, die entweder Größenänderung
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

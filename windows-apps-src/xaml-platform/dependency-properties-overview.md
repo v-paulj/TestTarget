@@ -1,8 +1,12 @@
 ---
 author: jwmsft
-description: In diesem Thema wird das Abhängigkeitseigenschaftensystem erläutert, das Ihnen beim Entwickeln einer Windows-Runtime-App mit C++, C# oder Visual Basic und XAML-Definitionen für die UI zur Verfügung steht.
-title: Übersicht über Abhängigkeitseigenschaften
+description: "In diesem Thema wird das Abhängigkeitseigenschaftensystem erläutert, das Ihnen beim Entwickeln einer Windows-Runtime-App mit C++, C# oder Visual Basic und XAML-Definitionen für die UI zur Verfügung steht."
+title: "Übersicht über Abhängigkeitseigenschaften"
 ms.assetid: AD649E66-F71C-4DAA-9994-617C886FDA7E
+translationtype: Human Translation
+ms.sourcegitcommit: 2791b5b80bf1405d3efdce5d81824dbe6d347b4f
+ms.openlocfilehash: 5c61d4ff2f1efc6d4ce0ed292f2f856b23e53c91
+
 ---
 
 # Übersicht über Abhängigkeitseigenschaften
@@ -165,15 +169,15 @@ Werte, die aus Stilen oder Vorlagen stammen, sind zurückgestellte Werte (ähnli
 
 Sie können den Wert einer Abhängigkeitseigenschaft mithilfe von Storyboardanimationen animieren. Storyboardanimationen in der Windows-Runtime dienen nicht nur reinen Dekorationszwecken. Stellen Sie sich Animationen eher als Zustandsautomatverfahren vor, mit dem die Werte einzelner Eigenschaften oder aller Eigenschaften und visuellen Elemente eines Steuerelements festgelegt und im Laufe der Zeit geändert werden können.
 
-Die Zieleigenschaft einer Animation muss eine Abhängigkeitseigenschaft sein, um animiert werden zu können. Zudem muss der Wert einer Zieleigenschaft von einem der von der vorhandenen Klasse [**Timeline**](https://msdn.microsoft.com/library/windows/apps/br210517) abgeleiteten Animationstypen unterstützt werden. Werte von [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723), [**Double**](T:System.Double) und [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) können entweder mit Interpolations- oder Keyframeverfahren animiert werden. Die meisten anderen Werte können mithilfe von diskreten **Object**-Keyframes animiert werden.
+Die Zieleigenschaft einer Animation muss eine Abhängigkeitseigenschaft sein, um animiert werden zu können. Zudem muss der Wert einer Zieleigenschaft von einem der von der vorhandenen Klasse [**Timeline**](https://msdn.microsoft.com/library/windows/apps/br210517) abgeleiteten Animationstypen unterstützt werden. Werte von [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723), [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) und [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) können entweder mit Interpolations- oder Keyframeverfahren animiert werden. Die meisten anderen Werte können mithilfe von diskreten **Object**-Keyframes animiert werden.
 
 Wenn eine Animation angewendet wurde und ausgeführt wird, verfügt der animierte Wert über eine höhere Priorität in der Rangfolge als alle anderen Werte (z. B. ein lokaler Wert), die der Eigenschaft sonst noch zugeordnet sind. Animationen können optional ein [**HoldEnd**](https://msdn.microsoft.com/library/windows/apps/br210306)-Verhalten aufweisen, das dazu führen kann, dass Animationen Eigenschaftswerte anwenden, obwohl die Animation augenscheinlich gestoppt wurde.
 
-Das Prinzip des Zustandsautomaten liegt der Verwendung von Storyboardanimationen als Teil des [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021)-Zustandsmodells für Steuerelemente zugrunde. Weitere Informationen zu Storyboardanimationen finden Sie unter [Storyboardanimationen](https://msdn.microsoft.com/library/windows/apps/mt187354). Weitere Informationen zu **VisualStateManager** und zur Definition von Ansichtszuständen für Steuerelemente finden Sie unter [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808) oder [Schnellstart: Steuerelementvorlagen](https://msdn.microsoft.com/library/windows/apps/xaml/hh465374).
+Das Prinzip des Zustandsautomaten liegt der Verwendung von Storyboardanimationen als Teil des [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/br209021)-Zustandsmodells für Steuerelemente zugrunde. Weitere Informationen zu Storyboardanimationen finden Sie unter [Storyboardanimationen](https://msdn.microsoft.com/library/windows/apps/mt187354). Weitere Informationen zu **VisualStateManager** und zur Definition von Ansichtszuständen für Steuerelemente finden Sie unter [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808) oder [Steuerelementvorlagen](../controls-and-patterns/control-templates.md).
 
-### Verhalten bei "PropertyChanged"-Ereignis
+### Verhalten bei „PropertyChanged“-Ereignis
 
-Aufgrund des Verhaltens bei einem "PropertyChanged"-Ereignis wird eine Abhängigkeitseigenschaft überhaupt erst Abhängigkeitseigenschaft genannt. Die Erhaltung der Gültigkeit von Eigenschaftswerten in Konstellationen, in denen andere Eigenschaften den Wert der ersten Eigenschaft beeinflussen können, ist bei vielen Frameworks eine komplexe Herausforderung bei der Entwicklung. Im Windows-Runtime-Eigenschaftensystem kann jede Abhängigkeitseigenschaft ein Callback festlegen, das aufgerufen wird, sobald sich der Eigenschaftswert ändert. Mit diesem Callback können zugehörige Eigenschaften in der Regel synchron benachrichtigt oder deren Werte geändert werden. Viele bestehende Abhängigkeitseigenschaften haben ein Verhalten bei einem "PropertyChanged"-Ereignis. Sie können auch ein ähnliches Callback-Verhalten für Abhängigkeitseigenschaften festlegen und Ihre eigenen PropertyChanged-Callbacks implementieren. Unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md) finden Sie ein entsprechendes Beispiel.
+Aufgrund des Verhaltens bei einem „PropertyChanged“-Ereignis wird eine Abhängigkeitseigenschaft überhaupt erst Abhängigkeitseigenschaft genannt. Die Erhaltung der Gültigkeit von Eigenschaftswerten in Konstellationen, in denen andere Eigenschaften den Wert der ersten Eigenschaft beeinflussen können, ist bei vielen Frameworks eine komplexe Herausforderung bei der Entwicklung. Im Windows-Runtime-Eigenschaftensystem kann jede Abhängigkeitseigenschaft ein Callback festlegen, das aufgerufen wird, sobald sich der Eigenschaftswert ändert. Mit diesem Callback können zugehörige Eigenschaften in der Regel synchron benachrichtigt oder deren Werte geändert werden. Viele bestehende Abhängigkeitseigenschaften haben ein Verhalten bei einem "PropertyChanged"-Ereignis. Sie können auch ein ähnliches Callback-Verhalten für Abhängigkeitseigenschaften festlegen und Ihre eigenen PropertyChanged-Callbacks implementieren. Unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md) finden Sie ein entsprechendes Beispiel.
 
 ### Standardwert und **ClearValue**
 
@@ -204,6 +208,7 @@ Die Threadingmerkmale von [**DependencyObject**](https://msdn.microsoft.com/libr
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,14 +1,21 @@
 ---
-author: mcleanbyron Description: Wenn Sie Kunden die kostenlose Nutzung Ihrer App während eines Testzeitraums ermöglichen möchten, können Sie Ihre Kunden dazu bringen, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features während des Testzeitraums beschränken oder ausschließen.
-title: Ausschließen oder Beschränken von Features in einer Testversion ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056 keywords: kostenlose Testversion keywords: kostenloser Testzeitraum keywords: kostenlose Testversion, Codebeispiel keywords: kostenlose Testversion, Beispielcode
+author: mcleanbyron
+Description: "Wenn Sie Kunden die kostenlose Nutzung Ihrer App während eines Testzeitraums ermöglichen möchten, können Sie Ihre Kunden motivieren, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features während des Testzeitraums einschränken oder ausschließen."
+title: "Ausschließen oder Einschränken von Features in einer Testversion"
+ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
+keywords: free trial code sample
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9c38784325f4dc51052f70a819012508f2a0bdbb
+
 ---
 
-# Ausschließen oder Beschränken von Features in einer Testversion
+# Ausschließen oder Einschränken von Features in einer Testversion
 
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Wenn Sie Kunden die kostenlose Nutzung Ihrer App während eines Testzeitraums ermöglichen möchten, können Sie Ihre Kunden dazu bringen, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features während des Testzeitraums beschränken oder ausschließen. Bestimmen Sie die einzuschränkenden Features, bevor Sie mit dem Codieren beginnen, und stellen Sie dann sicher, dass diese nur beim Erwerb einer Lizenz für die Vollversion der App verfügbar sind. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
+Wenn Sie Kunden die kostenlose Nutzung Ihrer App während eines Testzeitraums ermöglichen möchten, können Sie Ihre Kunden motivieren, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features während des Testzeitraums einschränken oder ausschließen. Bestimmen Sie die einzuschränkenden Features, bevor Sie mit dem Codieren beginnen, und stellen Sie dann sicher, dass diese nur beim Erwerb einer Lizenz für die Vollversion der App verfügbar sind. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
 
 Hier finden Sie Informationen dazu, wie Sie dies Ihrer App hinzufügen.
 
@@ -230,6 +237,7 @@ Weitere Informationen zum Beschreiben Ihrer App finden Sie unter [Erstellen von 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

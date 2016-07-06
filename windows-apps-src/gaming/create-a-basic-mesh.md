@@ -16,7 +16,7 @@ ms.openlocfilehash: c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada2
 
 In 3D-Spielen für die universelle Windows-Plattform (UWP) werden Spielobjekte und Oberflächen in der Regel durch Polygone dargestellt. Die Liste der Vertizes, die die Struktur dieser polygonalen Objekte und Oberflächen darstellen, werden als Gitter bezeichnet. Hier erstellen wir ein einfaches Gitter für ein Würfelobjekt und stellen es zum Rendern und Anzeigen für die Shader-Pipeline bereit.
 
-> **Wichtig:**  Der hier enthaltene Beispielcode verwendet Typen (wie etwa „DirectX::XMFLOAT3“ und „DirectX::XMFLOAT4X4“) und Inlinemethoden, die in „DirectXMath.h“ deklariert werden. Wenn Sie diesen Code ausschneiden und einfügen, nehmen Sie auch &lt;DirectXMath.h&gt; in Ihr Projekt auf.
+> **Wichtig:** Der hier enthaltene Beispielcode verwendet Typen (wie etwa „DirectX::XMFLOAT3“ und „DirectX::XMFLOAT4X4“) und Inlinemethoden, die in „DirectXMath.h“ deklariert werden. Wenn Sie diesen Code ausschneiden und einfügen, nehmen Sie auch &lt;DirectXMath.h&gt; in Ihr Projekt auf.
 
  
 
@@ -193,7 +193,7 @@ Konstante Puffer werden von der HLSL-Syntax nicht geändert. Sie können sie än
 
 Dieses Beispiel enthält nur eine Art von Daten, die sich nie ändern: die DirectX::XMFLOAT4X4-Daten für die drei Matrizen.
 
-> **Hinweis:**  In dem hier dargestellten Beispielcode werden spaltenweise absteigende Matrizen (column-major) verwendet. Sie können stattdessen zeilenweise absteigende Matrizen (row-major) verwenden, indem Sie das **row\_major**-Schlüsselwort in HLSL angeben und sicherstellen, dass die Quellmatrixdaten ebenfalls zeilenweise absteigend angeordnet sind. „DirectXMath“ verwendet zeilenweise absteigende Matrizen und kann direkt mit HLSL-Matrizen verwendet werden, die mit dem **row\_major**-Schlüsselwort definiert werden.
+> **Hinweis:** In dem hier dargestellten Beispielcode werden spaltenweise absteigende Matrizen (column-major) verwendet. Sie können stattdessen zeilenweise absteigende Matrizen (row-major) verwenden, indem Sie das **row\_major**-Schlüsselwort in HLSL angeben und sicherstellen, dass die Quellmatrixdaten ebenfalls zeilenweise absteigend angeordnet sind. „DirectXMath“ verwendet zeilenweise absteigende Matrizen und kann direkt mit HLSL-Matrizen verwendet werden, die mit dem **row\_major**-Schlüsselwort definiert werden.
 
  
 

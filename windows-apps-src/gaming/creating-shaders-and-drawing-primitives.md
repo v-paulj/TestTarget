@@ -18,7 +18,7 @@ Im Folgenden wird das Kompilieren und Erstellen von Shadern mit HLSL-Quelldateie
 
 Ein gelbes Dreieck wird mit Vertex- und Pixelshadern erstellt. Nach dem Erstellen des Direct3D-Geräts, der Swapchain und der Renderingzielansicht werden Daten aus Binärshaderobjektdateien auf dem Datenträger gelesen.
 
-**Ziel:**  Shader erstellen und Grundtypen zeichnen.
+**Ziel:** Shader erstellen und Grundtypen zeichnen.
 
 ## Voraussetzungen
 

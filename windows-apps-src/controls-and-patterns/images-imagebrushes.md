@@ -5,15 +5,15 @@ title: Bilder und Bildpinsel
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 972480aabb6f0db3b5091bd55323f9d1946086e6
+ms.sourcegitcommit: 485f3069ff92995082550366839f14be50f674a5
+ms.openlocfilehash: f37f609d87b48a39b958a8e32470488689a3e68c
 
 ---
 # Bilder und Bildpinsel
 
-Sie können zum Anzeigen von Bildern das **Image**-Objekt oder das **ImageBrush**-Objekt verwenden. Ein Image-Objekt rendert ein Bild, und ein ImageBrush-Objekt zeichnet ein anderes Objekt mit einem Bild. 
+Sie können zum Anzeigen von Bildern das **Image**-Objekt oder das **ImageBrush**-Objekt verwenden. Ein Image-Objekt rendert ein Bild. Ein ImageBrush-Objekt zeichnet ein anderes Objekt mit einem Bild. 
 
-<span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
+
 
 -   [**Image-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
 -   [**Source-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)
@@ -25,13 +25,10 @@ Verwenden Sie ein **Image**-Element, um ein eigenständiges Bild in Ihrer App an
 
 Verwenden Sie **ImageBrush**, um ein Image auf ein anderes Objekt anzuwenden. „ImageBrush“ kann u. a. für dekorative Effekte für Text oder unterteilte Hintergründe für Steuerelemente oder Layoutcontainer verwendet werden. Sie können steuern, wie das Bild gestreckt, ausgerichtet und unterteilt wird, um Muster und andere Effekte zu erzeugen. 
 
-## Beispiele
-
-
 
 ## Erstellen eines Bilds
 
-### Image
+### Bild
 In diesem Beispiel wird veranschaulicht, wie ein Bild mit dem [**Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)-Objekt erstellt wird.
 
 
@@ -144,9 +141,13 @@ Wenn Sie „Image“ oder „ImageBrush“ mit Code definieren, verwenden Sie di
 > **Hinweis**
             &nbsp;&nbsp;Wenn Sie Bilder mithilfe von Code festlegen, können Sie die automatische Behandlung für den Zugriff auf nicht qualifizierte Ressourcen mit den aktuellen Skalierungs- und Kulturqualifizierern verwenden. Alternativ können Sie auch [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) und [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) mit Qualifizierern für Kultur und Skalierung verwenden, um die Ressourcen direkt abzurufen. Weitere Informationen finden Sie unter [Ressourcenverwaltungssystem](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
 
+## Verwandte Artikel
+
+-   [Audio, Video und Kamera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/index)
+-   [**Image-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
+-   [**ImageBrush-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)
 
 
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO5-->
 
 

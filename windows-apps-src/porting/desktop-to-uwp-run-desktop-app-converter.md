@@ -3,8 +3,8 @@ author: awkoren
 Description: "Führen Sie die Desktop-Konverter-App zum Konvertieren einer Windows-Desktopanwendung (z. B. Win32, WPF und Windows Forms) in eine UWP-App (Universelle Windows-Plattform)."
 Search.Product: eADQiWindows 10XVcnh
 title: "Vorschau für den Desktop-App-Konverter (Project Centennial)"
-ms.sourcegitcommit: 6d1c6e836d666972641320c73896459490f45924
-ms.openlocfilehash: 874b6452386526d66062a27a5b520cb1a232ae64
+ms.sourcegitcommit: 07016fabb8b49e57dd0ae4ef68447451d31aa2dc
+ms.openlocfilehash: bc28197cccc0559f57abc8cb81e23bf241ca3716
 
 ---
 
@@ -21,6 +21,11 @@ Der Konverter führt den Desktop-Installer in einer isolierten Windows-Umgebung 
 ## Das ist neu:
 
 In diesem Abschnitt werden Änderungen zwischen Versionen des Desktop-App-Konverters hervorgehoben. 
+
+### 16.06.2016
+
+* Der Desktop-App-Konverter (v0.1.20) behebt Probleme, die eine erfolgreiche Konvertierung auf die neuesten Windows 10 Insider Preview-Builds blockieren. 
+* ```–CreateX86Package``` wurde durch ```–PackageArch``` ersetzt. Dies ermöglicht das Angeben der Architektur für das generierte Paket. 
 
 ### 08.06.2016
 
@@ -210,15 +215,15 @@ get-help .\DesktopAppConverter.ps1 -detailed
 |```Cleanup WorkDirectory``` | Entfernt alle temporären Konverterdateien. |
 |```Cleanup ExpandedImages``` | Löscht alle erweiterten Basisimages, die auf dem Hostcomputer installiert sind. |
 
-### x86-Paketparameter
-Die Vorschau für den Desktop-App-Konverter unterstützt jetzt die Erstellung von x86-App-Paketen, die Sie auf x86- und amd64-Computern ausführen können. Beachten Sie, dass der Desktop-App-Konverter weiterhin auf einem AMD64-Computer ausgeführt werden muss, um eine erfolgreiche Konvertierung durchzuführen.
+### Paketarchitektur
+Die Vorschau für den Desktop-App-Konverter unterstützt jetzt die Erstellung von x86- und x64-App-Paketen, die Sie auf x86- und amd64-Computern ausführen können. Beachten Sie, dass der Desktop-App-Konverter weiterhin auf einem AMD64-Computer ausgeführt werden muss, um eine erfolgreiche Konvertierung durchzuführen.
 
 |Parameter|Beschreibung|
 |---------|-----------|
-|```-CreateX86Package[<SwitchParameter>]``` | Generiert ein 32-Bit-Paket, das auf einem 32-Bit- und 64-Bit-Hostbetriebssystem installiert und ausgeführt werden kann. Der Konverter versucht standardmäßig, Paketarchitektur aus der ausführbaren Hauptdatei der App zu erkennen oder verwendet standardmäßig 64-Bit, wenn keine ausführbare Datei gefunden wird. |
+|```-PackageArch <String>``` | Generiert ein Paket mit der angegebenen Architektur. Gültige Optionen sind „x86“ und „x64“ (Beispiel: -PackageArch x86). Dieser Parameter ist optional. Falls nicht angegeben, versucht der DesktopAppConverter die Paketarchitektur automatisch zu erkennen. Wenn die automatische Erkennung fehlschlägt, wird standardmäßig ein x64-Paket erstellt. |
 
 ## Siehe auch
-+ [Holen Sie sich den Desktop-App-Konverter.](http://go.microsoft.com/fwlink/?LinkId=785437)
++ [Holen Sie sich den Desktop-App-Konverter](http://go.microsoft.com/fwlink/?LinkId=785437)
 + [Migrieren Ihrer Desktop-App zur Universellen Windows-Plattform](https://developer.microsoft.com/en-us/windows/bridges/desktop)
 + [Migrieren von Desktop-Apps zur Universellen Windows-Plattform mit dem Desktop-App-Konverter](https://channel9.msdn.com/events/Build/2016/P504)
 + [Project Centennial: Migrieren vorhandener Desktopanwendungen zur Universellen Windows-Plattform](https://channel9.msdn.com/events/Build/2016/B829)  
@@ -227,6 +232,6 @@ Die Vorschau für den Desktop-App-Konverter unterstützt jetzt die Erstellung vo
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

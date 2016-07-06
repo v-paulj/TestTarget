@@ -394,6 +394,6 @@ Das nächste Thema ist [Portieren: E/A, Gerät und App-Modell](wpsl-to-uwp-input
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

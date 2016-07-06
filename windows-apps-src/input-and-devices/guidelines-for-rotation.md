@@ -12,7 +12,7 @@ ms.openlocfilehash: a43bdd27ff7b79f561789a14d1a8e6caed08dc89
 
 # Drehung
 
-In diesem Artikel wird die neue Windows-Benutzeroberfläche für Drehungen beschrieben. Außerdem enthält das Thema Richtlinien für die Benutzeroberfläche, die Sie berücksichtigen sollten, wenn Sie diesen neuen Interaktionsmechanismus in einer UWP-App verwenden.
+In diesem Artikel wird die neue Windows-Benutzeroberfläche beschrieben, die Drehungen unterstützt. Außerdem enthält das Thema Richtlinien für die Benutzeroberfläche, die Sie berücksichtigen sollten, wenn Sie diesen neuen Interaktionsmechanismus in einer UWP-App verwenden.
 
 **Wichtige APIs**
 
@@ -127,6 +127,6 @@ Windows 8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

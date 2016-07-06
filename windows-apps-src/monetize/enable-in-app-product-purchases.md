@@ -1,15 +1,21 @@
 ---
-author: mcleanbyron description: Sie können unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, Inhalte, andere Apps oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen. Hier zeigen wir Ihnen, wie Sie diese Produkte in Ihrer App aktivieren können.
-title: Aktivieren konsumierbarer In-App-Produktkäufe ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B Schlüsselwörter: In-App-Angebot Schlüsselwörter: konsumierbar Schlüsselwörter: In-App-Einkauf Schlüsselwörter: In-App-Produkt Schlüsselwörter: Unterstützen von In-App Schlüsselwörter: Codebeispiel für In-App-Einkauf Schlüsselwörter: Codebeispiel für In-App-Angebot
+author: mcleanbyron
+Description: "Sie können unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, Inhalte, andere Apps oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen. Hier zeigen wir Ihnen, wie Sie diese Produkte in Ihrer App aktivieren können."
+title: "Unterstützen von Käufen von In-App-Produkten"
+ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
+keywords: in-app offer code sample
+ms.sourcegitcommit: bb28828463b14130deede9f7cf796c6e32fcb48b
+ms.openlocfilehash: 2e9a011a248e4c7e1d3f06064a7f82e308f07131
+
 ---
 
-# Unterstützen von In-App-Produktkäufen
+# Unterstützen von Käufen von In-App-Produkten
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Sie können unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, Inhalte, andere Apps oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen. Hier zeigen wir Ihnen, wie Sie diese Produkte in Ihrer App aktivieren können.
 
-**Hinweis**  In-App-Produkte können nicht in einer Testversion einer App angeboten werden. Kunden, die eine Testversion Ihrer App verwenden, können nur dann In-App-Produkte kaufen, wenn sie eine Vollversion der App kaufen.
+> **Hinweis**  In-App-Produkte können nicht in einer Testversion einer App angeboten werden. Kunden, die eine Testversion Ihrer App verwenden, können nur dann In-App-Produkte kaufen, wenn sie eine Vollversion der App kaufen.
 
 ## Voraussetzungen
 
@@ -41,15 +47,17 @@ void AppInit()
 
 Erstellen Sie für jedes Feature, das über ein In-App-Produkt zur Verfügung stehen soll, ein Angebot in der App, und fügen Sie es Ihrer App hinzu.
 
-**Wichtig**  Sie müssen Ihrer App alle In-App-Produkte hinzufügen, die Sie Ihren Kunden zur Verfügung stellen möchten, bevor Sie diese an den Store übermitteln. Wenn Sie zu einem späteren Zeitpunkt neue In-App-Produkte hinzufügen möchten, müssen Sie die App aktualisieren und eine neue Version übermitteln.
+> **Wichtig**  Sie müssen Ihrer App alle In-App-Produkte hinzufügen, die Sie Ihren Kunden zur Verfügung stellen möchten, bevor Sie diese an den Store übermitteln. Wenn Sie zu einem späteren Zeitpunkt neue In-App-Produkte hinzufügen möchten, müssen Sie die App aktualisieren und eine neue Version übermitteln.
 
 1.  **Erstellen Sie ein Token für In-App-Angebote**
 
     Sie identifizieren die einzelnen In-App-Produkte Ihrer App durch Token. Bei diesem Token handelt es sich um eine Zeichenfolge, die Sie festlegen und in Ihrer App und im Store verwenden, um ein bestimmtes In-App-Produkt zu identifizieren. Geben Sie ihm einen (für Ihre App) eindeutigen und aussagekräftigen Namen, sodass Sie beim Schreiben des Codes schnell das richtige Feature ermitteln können, für das es steht. Im Folgenden finden Sie einige Beispiele für Namen:
 
     -   "SpaceMissionLevel4"
+    
     -   "ContosoCloudSave"
-    -   "RainbowThemePack".
+    
+    -   "RainbowThemePack"
 
 2.  **Schreiben Sie den Code für das Feature in einem Bedingungsblock.**
 
@@ -59,13 +67,13 @@ Erstellen Sie für jedes Feature, das über ein In-App-Produkt zur Verfügung st
 
     ```    CSharp
     if (licenseInformation.ProductLicenses["featureName"].IsActive) 
-        {
-            // the customer can access this feature
-        } 
-        else
-        {
-            // the customer can' t access this feature
-        }
+    {
+        // the customer can access this feature
+    } 
+    else
+    {
+        // the customer can' t access this feature
+    }
     ```
 
 3.  **Fügen Sie die Kauf-UI für dieses Feature hinzu.**
@@ -75,28 +83,29 @@ Erstellen Sie für jedes Feature, das über ein In-App-Produkt zur Verfügung st
     Hier finden Sie ein Beispiel dafür, wie Sie testen, ob der Kunde bereits ein In-App-Produkt besitzt. Es veranschaulicht außerdem, wie das Kaufdialogfeld angezeigt wird, sodass der Kunde es ggf. erwerben kann. Ersetzen Sie den Kommentar „show the purchase dialog“ durch den benutzerdefinierten Code für das Kaufdialogfeld (z. B. ein Fenster mit der Schaltfläche „Diese App kaufen“) .
 
     ```    CSharp
-    void BuyFeature1() {
-            if (!licenseInformation.ProductLicenses["featureName"].IsActive)
+    void BuyFeature1() 
+    {
+        if (!licenseInformation.ProductLicenses["featureName"].IsActive)
+        {
+            try
             {
-                try
-                    {
-                    // The customer doesn't own this feature, so 
-                    // show the purchase dialog.
-                                    
-                    await CurrentAppSimulator.RequestProductPurchaseAsync("featureName", false);
-                    //Check the license state to determine if the in-app purchase was successful.
-                }
-                catch (Exception)
-                {
-                    // The in-app purchase was not completed because 
-                    // an error occurred.
-                }
-            } 
-            else
-            {
-                // The customer already owns this feature.
+                // The customer doesn't own this feature, so 
+                // show the purchase dialog.
+                await CurrentAppSimulator.RequestProductPurchaseAsync("featureName", false);
+        
+                //Check the license state to determine if the in-app purchase was successful.
             }
+            catch (Exception)
+            {
+                // The in-app purchase was not completed because 
+                // an error occurred.
+            }
+        } 
+        else
+        {
+            // The customer already owns this feature.
         }
+    }
     ```
 
 ## Schritt 3: Ändern Sie den Testcode für die endgültigen Aufrufe.
@@ -116,19 +125,17 @@ Wenn Sie anhand von Belegen überprüfen möchten, ob ein Kunde einen In-App-Ein
 ## Verwandte Themen
 
 
-* [Unterstützen von Käufen konsumierbarer In-App-Produkte](enable-consumable-in-app-product-purchases.md)
+* [Käufe konsumierbarer In-App-Produkte aktivieren](enable-consumable-in-app-product-purchases.md)
 * [Verwalten eines großen Katalogs mit In-App-Produkten](manage-a-large-catalog-of-in-app-products.md)
 * [Überprüfen von Produktkäufen anhand von Belegen](use-receipts-to-verify-product-purchases.md)
 * [Store-Beispiel (zeigt Testversionen und In-App-Einkäufe)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
- 
-
- 
 
 
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

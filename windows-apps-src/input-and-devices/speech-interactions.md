@@ -1,12 +1,12 @@
 ---
 author: Karl-Bridge-Microsoft
-description: Verwenden Sie Cortana-Sprachbefehle, Spracherkennung und Sprachsynthese zum Integrieren von Sprache in Ihre Apps.
+Description: Verwenden Sie Cortana-Sprachbefehle, Spracherkennung und Sprachsynthese zum Integrieren von Sprache in Ihre Apps.
 title: Interaktionen mit der Spracherkennung
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
 template: detail.hbs
-ms.sourcegitcommit: bcc401c515cdba899fb2202ddddf5bd98b64aecd
-ms.openlocfilehash: bdcced680b69ce6ff9caf3ac860cb139fdfdaeff
+ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
+ms.openlocfilehash: ecd002e6f3a92702459426858693dd7547b0ca02
 
 ---
 
@@ -25,13 +25,14 @@ Integrieren Sie Spracherkennung und Text-zu-Sprache, auch als Text-to-Speech (TT
 
 **TTS:  **Verwendet ein Sprachsynthesemodul (Sprache), um eine Textzeichenfolge in gesprochene Wörter zu konvertieren. Bei der Eingabezeichenfolge kann es sich um einfachen, schlichten Text oder komplexere Speech Synthesis Markup Language (SSML) handeln. SSML stellt eine Standardmethode zum Steuern der Eigenschaften der Sprachausgabe bereit, z. B. Aussprache, Lautstärke, Stimmlage, Rate bzw. Geschwindigkeit und Betonung.
 
-> [!NOTE] Mit **Cortana** und angepassten Sprachbefehlen kann Ihre App im Vordergrund gestartet (die App erhält wie beim Starten über das Startmenü den Fokus) oder als Hintergrunddienst aktiviert werden (**Cortana** behält den Fokus, es werden aber Ergebnisse aus der App angezeigt). 
-> Befehle, die zusätzlichen Kontext oder Benutzereingaben erfordern (z. B. das Senden einer Nachricht an einen bestimmten Kontakt), lassen sich am besten in einer Vordergrund-App verarbeiten, während einfache Befehle in **Cortana** durch eine Hintergrund-App behandelt werden können.
-> Falls Sie Funktionen als Hintergrunddienst über Sprachbefehle in der **Cortana**-UI verfügbar machen, finden Sie in den [Cortana-Entwurfsrichtlinien](cortana-design-guidelines.md) weitere Informationen.
+**Hinweis** Mit **Cortana** und angepassten Sprachbefehlen kann Ihre App im Vordergrund gestartet (die App erhält wie beim Starten über das Startmenü den Fokus) oder als Hintergrunddienst aktiviert werden (der Fokus bleibt auf **Cortana**, es werden aber Ergebnisse aus der App angezeigt). Befehle, die zusätzlichen Kontext oder Benutzereingaben erfordern (z. B. das Senden einer Nachricht an einen bestimmten Kontakt), lassen sich am besten in einer Vordergrund-App verarbeiten, während einfache Befehle in **Cortana** durch eine Hintergrund-App behandelt werden können.
+Falls Sie Funktionen als Hintergrunddienst über Sprachbefehle in der **Cortana**-UI verfügbar machen, finden Sie in den [Cortana-Entwurfsrichtlinien](cortana-design-guidelines.md) weitere Informationen.
+
+ 
 
 Wenn die Sprachkomponenten sorgfältig entworfen und implementiert werden, können sie den Benutzern eine stabile und angenehme Möglichkeit zur Interaktion mit Ihrer App bieten und zudem die Interaktion per Tastatur, Maus, Toucheingabe und Gesten ergänzen oder sogar ersetzen.
 
-## <span id="Speech_interaction_design"></span><span id="speech_interaction_design"></span><span id="SPEECH_INTERACTION_DESIGN"></span>Integrieren der Spracherkennung
+## Integrieren der Spracherkennung
 
 
 Diese Richtlinien und Empfehlungen beschreiben, wie Sie Spracherkennung und TTS am besten in die Interaktionsfunktion Ihrer App integrieren.
@@ -48,7 +49,7 @@ Beachten Sie Folgendes, wenn Sie Sprachinteraktionen in Ihrer App unterstützen 
 -   Ist für den Kontext Ihrer App benutzerdefiniertes oder eingeschränktes Vokabular erforderlich (z. B. medizinisches, wissenschaftliches oder gebietsspezifisches Vokabular)?
 -   Ist Netzwerkkonnektivität erforderlich?
 
-## <span id="Text_input"></span><span id="text_input"></span><span id="TEXT_INPUT"></span>Texteingabe
+## Texteingabe
 
 
 Bei der Sprache für die Texteingabe kann es sich um Kurzformen (einzelne Wörter oder Ausdrücke) oder Langformen (fortlaufendes Diktat) handeln. Die Eingabe in Kurzform darf maximal zehn Sekunden dauern, während eine Sitzung zur Eingabe in Langform bis zu zwei Minuten lang sein kann. (Die Eingabe in Langform kann ohne Eingreifen des Benutzers neu gestartet werden, damit der Eindruck eines fortlaufenden Diktats entsteht.)
@@ -65,7 +66,7 @@ Legen Sie die Dauer fest, nach der das Ausbleiben einer Spracheingabe als Beendi
 
 Deaktivieren Sie die gesamte fortlaufende Erkennungs-UI, und beenden Sie die Erkennungssitzung, wenn keine Netzwerkverbindung verfügbar ist. Die fortlaufende Erkennung erfordert eine Netzwerkverbindung.
 
-## <span id="Commanding"></span><span id="commanding"></span><span id="COMMANDING"></span>Befehle
+## Befehle
 
 
 Durch Spracheingabe können Aktionen initiiert, Befehle aufgerufen und Aufgaben ausgeführt werden.
@@ -110,14 +111,14 @@ Hier sehen Sie ein Beispiel für den Ablauf der integrierten Erkennungsfunktion 
 
 ![final Erkennung screen for a constraint based on a sgrs grammar file](images/speech/speech-listening-complete.png)
 
-## <span id="Always_listening"></span><span id="always_listening"></span><span id="ALWAYS_LISTENING"></span>Immer im Spracherkennungsmodus
+## Immer im Spracherkennungsmodus
 
 
 Sobald sie gestartet wurde, kann Ihre App ohne Eingreifen des Benutzers auf Spracheingaben lauschen und diese erkennen.
 
 Die Grammatikeinschränkungen sollten basierend auf dem App-Kontext angepasst werden. Dies sorgt für eine zielgerichtete und für die aktuelle Aufgabe relevante Spracherkennung und minimiert Fehler.
 
-## <span id="What_can_I_say_"></span><span id="what_can_i_say_"></span><span id="WHAT_CAN_I_SAY_"></span>Was kann ich sagen?
+## Was kann ich sagen?
 
 
 Wenn die Spracheingabe aktiviert ist, muss der Benutzer herausfinden können, welche Wörter und Ausdrücke verstanden und welche Aktionen ausgeführt werden können.
@@ -126,7 +127,7 @@ Wenn die Spracherkennung vom Benutzer aktiviert wird, können Sie mithilfe der B
 
 Wenn die Spracherkennung immer aktiviert ist, können Sie ggf. den Ausdruck "Was kann ich sagen?" auf jeder Seite hinzufügen. Sagt der Benutzer diesen Ausdruck, werden alle im aktuellen Kontext unterstützten Wörter und Ausdrücke angezeigt. Die Verwendung dieses Ausdrucks bietet dem Benutzer die Möglichkeit, die Sprachfunktionen im gesamten System auf einheitliche Art und Weise zu erkunden.
 
-## <span id="Recognition_failures"></span><span id="recognition_failures"></span><span id="RECOGNITION_FAILURES"></span>Spracherkennungsfehler
+## Spracherkennungsfehler
 
 
 Die Spracherkennung funktioniert nicht immer. Fehler treten auf, wenn die Audioqualität schlecht ist, nur ein Teil eines Ausdrucks erkannt wird oder überhaupt keine Eingabe erkannt wird.
@@ -145,23 +146,25 @@ Verwenden Sie die integrierte Sprechererkennungsfunktion. Sie enthält Bildschir
 
 Achten Sie auf Probleme mit der Audioeingabe, und versuchen Sie, diese zu beheben. Die Spracherkennung kann Probleme mit der Audioqualität erkennen, die die Genauigkeit der Spracherkennung beeinträchtigen. Sie können die von der Spracherkennung bereitgestellten Informationen verwenden, um den Benutzer über das Problem zu informieren und ihm die Möglichkeit zu bieten, Korrekturen vorzunehmen. Ist die Lautstärkeeinstellung des Mikrofons z. B. zu niedrig, können Sie den Benutzer auffordern, lauter zu sprechen oder die Lautstärke zu erhöhen.
 
-## <span id="Constraints"></span><span id="constraints"></span><span id="CONSTRAINTS"></span>Einschränkungen
+## Einschränkungen
 
 
 Einschränkungen oder Grammatiken definieren die gesprochenen Wörter und Ausdrücke, die von der Spracherkennung abgeglichen werden können. Sie können eine der vordefinierten Webdienstgrammatiken festlegen oder eine benutzerdefinierte Grammatik erstellen, die mit Ihrer App installiert wird.
 
-### <span id="Predefined_grammars"></span><span id="predefined_grammars"></span><span id="PREDEFINED_GRAMMARS"></span>Vordefinierte Grammatiken
+### Vordefinierte Grammatiken
 
 Mit vordefinierten Diktier- und Websuchgrammatiken können Sie eine Spracherkennung für Ihre App bereitstellen, ohne eine Grammatik erstellen zu müssen. Bei Verwendung dieser Grammatiken wird die Spracherkennung von einem Remotewebdienst durchgeführt, und die Ergebnisse werden an das Gerät zurückgegeben.
 
 -   Die Standardgrammatik der Freitext-Diktierfunktion erkennt die meisten Wörter und Ausdrücke, die Benutzer in einer bestimmten Sprache sagen können, und ist für die Erkennung kurzer Ausdrücke optimiert. Die Freitext-Diktierfunktion ist nützlich, wenn Sie nicht einschränken möchten, was Benutzer sagen können. Typische Verwendungsmöglichkeiten sind das Erstellen von Notizen oder das Diktieren eines Nachrichtentexts.
 -   Die Grammatik für die Websuche enthält wie die Diktiergrammatik eine große Anzahl von Wörtern und Ausdrücken, die Benutzer sagen können. Sie ist allerdings für die Erkennung von Begriffen optimiert, die beim Suchen im Web häufig verwendet werden.
 
-> [!NOTE] Da vordefinierte Diktier- und Websuchgrammatiken sehr umfangreich sein können und online bereitgestellt werden (nicht auf dem Gerät), kann die Leistung schlechter sein als bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.
+**Hinweis**  Da vordefinierte Diktier- und Websuchgrammatiken sehr umfangreich sein können und online bereitgestellt werden (nicht auf dem Gerät), kann die Leistung schlechter sein als bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.
+
+ 
 
 Diese vordefinierten Grammatiken können zum Erkennen von bis zu zehn Sekunden Spracheingabe verwendet werden. Sie müssen dazu keinen Code selbst erstellen. Sie erfordern jedoch eine Netzwerkverbindung.
 
-### <span id="Custom_grammars"></span><span id="custom_grammars"></span><span id="CUSTOM_GRAMMARS"></span>Benutzerdefinierte Grammatiken
+### Benutzerdefinierte Grammatiken
 
 Eine benutzerdefinierte Grammatik ist eine von Ihnen entworfene und erstellte Grammatik, die mit Ihrer App installiert wird. Die Spracherkennung anhand einer benutzerdefinierten Einschränkung wird auf dem Gerät ausgeführt.
 
@@ -175,12 +178,13 @@ Eine benutzerdefinierte Grammatik ist eine von Ihnen entworfene und erstellte Gr
     -   Entwerfen Sie jede Grammatik so, dass der Benutzer einen Befehl auf verschiedene Arten sprechen kann. Sie können z. B. die **GARBAGE**-Regel verwenden, um Spracheingaben abzugleichen, die in Ihrer Grammatik nicht definiert sind. So kann der Benutzer zusätzliche Wörter verwenden, die für Ihre App keine Bedeutung haben, beispielsweise "gib mir", "und", "äähm", "vielleicht" usw.
     -   Verwenden Sie das [sapi:subset](http://msdn.microsoft.com/library/windowsphone/design/jj572474.aspx)-Element, um den Vergleich von Spracheingaben zu erleichtern. Dies ist eine Microsoft-Erweiterung der SRGS-Spezifikation, die den Abgleich von Teilausdrücken ermöglicht.
     -   Definieren Sie in Ihrer Grammatik nach Möglichkeit keine einsilbigen Ausdrücke. Die Erkennung funktioniert bei Ausdrücken mit zwei oder mehr Silben meist genauer.
-    -   Vermeiden Sie Ausdrücke, die ähnlich klingen. Ausdrücke wie „Geld“, „Held“ und „fällt“ können das Erkennungsmodul z. B. verwirren und zu einer schlechten Erkennungsgenauigkeit führen.
+    -   Vermeiden Sie Ausdrücke, die ähnlich klingen. Ausdrücke wie „Geld“, „Held“ und „fällt“ können das Erkennungsmodul z. B. verwirren und zu einer schlechten Erkennungsgenauigkeit führen.
 
-> [!NOTE]
-> Der von Ihnen verwendete Einschränkungstyp richtet sich nach der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
+**Hinweis**  Der von Ihnen verwendete Einschränkungstyp richtet sich nach der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
 
-### <span id="Custom_pronunciations"></span><span id="custom_pronunciations"></span><span id="CUSTOM_PRONUNCIATIONS"></span>Benutzerdefinierte Aussprache
+ 
+
+### Benutzerdefinierte Aussprache
 
 Wenn Ihre App Spezialvokabular mit ungewöhnlichen oder fiktiven Wörtern oder Wörter mit ungewöhnlicher Aussprache enthält, können Sie die Erkennungsleistung für diese Wörter verbessern, indem Sie eine benutzerdefinierte Aussprache definieren.
 
@@ -188,14 +192,14 @@ Für eine kleine Liste von Wörtern und Ausdrücken oder eine Liste selten verwe
 
 Für größere Listen von Wörtern und Ausdrücken oder häufig verwendete Wörter und Ausdrücke können Sie separate Dokumente mit Aussprachewörterbüchern erstellen. Weitere Informationen dazu finden Sie unter [Info zu Lexika und phonetischen Alphabeten](http://msdn.microsoft.com/library/windowsphone/design/hh361646.aspx).
 
-## <span id="Testing"></span><span id="testing"></span><span id="TESTING"></span>Testen
+## Testen
 
 
 Testen Sie die Genauigkeit der Spracherkennung und jede UI, die die Spracherkennung unterstützt, mit der Zielgruppe Ihrer App. So können Sie am besten herausfinden, wie effektiv die Sprachinteraktionsfunktion in Ihrer App ist. Erhalten Benutzer z. B. schlechte Erkennungsergebnisse, weil Ihre App nicht auf einen gängigen Ausdruck lauscht?
 
 Ändern Sie die Grammatik entweder so, dass der Ausdruck unterstützt wird, oder stellen Sie eine Liste der unterstützten Ausdrücke für den Benutzer bereit. Falls Sie bereits eine Liste der unterstützten Begriffe verwenden, stellen Sie sicher, dass sie leicht zu finden ist.
 
-## <span id="Text-to-speech__TTS_"></span><span id="text-to-speech__tts_"></span><span id="TEXT-TO-SPEECH__TTS_"></span>Text-zu-Sprache (Text-To-Speech, TTS)
+## Text-zu-Sprache (Text-To-Speech, TTS)
 
 
 TTS generiert Sprachausgabe aus Nur-Text oder SSML.
@@ -213,7 +217,7 @@ Hören Sie sich alle TTS-Zeichenfolgen an, um sicherzustellen, dass sie verstän
 
 Beide Probleme können durch Verwendung von SSML anstelle von Nur-Text als Synthesizereingabe behoben werden. Weitere Informationen zu SSML finden Sie unter [Steuerung der synthetischen Sprachausgabe mit SSML](http://msdn.microsoft.com/library/windowsphone/design/hh378454.aspx) und [Referenz für Speech Synthesis Markup Language](http://msdn.microsoft.com/library/windowsphone/design/hh378377.aspx).
 
-## <span id="Other_articles"></span><span id="other_articles"></span><span id="OTHER_ARTICLES"></span>Andere Artikel in diesem Abschnitt 
+## Andere Artikel in diesem Abschnitt 
 | Thema | Beschreibung |
 | --- | --- |
 | [Spracherkennung](speech-recognition.md) | Nutzen Sie die Spracherkennung als Eingabemöglichkeit oder zum Ausführen einer Aktion, eines Befehls oder einer Aufgabe. |
@@ -223,7 +227,7 @@ Beide Probleme können durch Verwendung von SSML anstelle von Nur-Text als Synth
 | [Verwalten von Problemen bei der Audioeingabe](manage-issues-with-audio-input.md) | Hier erfahren Sie, wie Sie Probleme mit der Genauigkeit der Spracherkennung behandeln, die auf die Qualität der Audioeingabe zurückzuführen sind. |
 | [Festlegen von Timeouts für die Spracherkennung](set-speech-recognition-timeouts.md) | Legen Sie fest, wie lange eine Spracherkennung Stille oder nicht erkennbare Geräusche (Störgeräusche) ignoriert und weiterhin auf Spracheingabe wartet. |
 
-## <span id="related_topics"></span>Verwandte Artikel
+## Verwandte Artikel
 
 * [Sprachinteraktionen](https://msdn.microsoft.com/library/windows/apps/mt185614)
 * [Cortana-Interaktionen](https://msdn.microsoft.com/library/windows/apps/mt185598)
@@ -240,6 +244,6 @@ Beide Probleme können durch Verwendung von SSML anstelle von Nur-Text als Synth
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

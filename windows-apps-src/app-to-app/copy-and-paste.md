@@ -3,8 +3,8 @@ description: "In diesem Artikel wird erläutert, wie in Apps für die universell
 title: "Kopieren und Einfügen"
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: awkoren
-ms.sourcegitcommit: bf081c07f8235790b99b3c1037751f24a86bbc1f
-ms.openlocfilehash: ed1dc1ca0f34f0efafd14aa1cfd1e4b75351882c
+ms.sourcegitcommit: 9a8fd6d34c4b89dae1ec4be2db69498b5d458b5a
+ms.openlocfilehash: 3e3ba8811f4fac283164143aad88913aaabbee49
 
 ---
 #Kopieren und Einfügen
@@ -53,7 +53,7 @@ Clipboard.SetContent(dataPackage);
 ```
 ## Einfügen
 
-Rufen Sie zum Abrufen des Inhalts der Zwischenablage die statische [**GetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.GetContent)-Methode auf. Die Methode gibt ein [**DataPackageView**][DataPackageView]-Objekt mit dem Inhalt zurück. Dieses Objekt ist mit dem [**DataPackage**][DataPackage]-Objekt nahezu identisch, nur dass der Inhalt schreibgeschützt ist. Anhand dieses Objekts können Sie dann entweder mit der [**AvailableFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.AvailableFormats)-Methode oder mit der [**Contains**]-Methode ermitteln, welche Formate verfügbar sind. Rufen Sie anschließend die entsprechende **DataPackageView**-Methode auf, um die Daten abzurufen.
+Rufen Sie zum Abrufen des Inhalts der Zwischenablage die statische [**GetContent**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.Clipboard.GetContent)-Methode auf. Die Methode gibt eine [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView) mit dem Inhalt zurück. Dieses Objekt ist mit dem [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)-Objekt nahezu identisch, der Inhalt ist allerdings schreibgeschützt. Anhand dieses Objekts können Sie dann entweder mit der [**AvailableFormats**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.AvailableFormats)-Methode oder mit der [**Contains**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView.Contains(System.String))-Methode ermitteln, welche Formate verfügbar sind. Rufen Sie anschließend die entsprechende [**DataPackageView**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackageView)-Methode auf, um die Daten zu erhalten.
 
 ```cs
 DataPackageView dataPackageView = Clipboard.GetContent();
@@ -103,6 +103,6 @@ Clipboard.ContentChanged += (s, e) =>
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

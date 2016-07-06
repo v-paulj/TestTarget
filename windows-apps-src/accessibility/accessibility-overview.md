@@ -1,10 +1,14 @@
 ---
 author: Xansky
-Description: Dieser Artikel bietet eine Übersicht über die Konzepte und Technologien in Barrierefreiheitsszenarien für Apps der universellen Windows-Plattform (UWP).
+Description: "Dieser Artikel bietet eine Übersicht über die Konzepte und Technologien in Barrierefreiheitsszenarien für Apps der universellen Windows-Plattform (UWP)."
 ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
-title: Übersicht über die Barrierefreiheit
+title: "Übersicht über die Barrierefreiheit"
 label: Accessibility overview
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
+ms.openlocfilehash: 430484a9243abc644de75d35c03bb11cf47960c0
+
 ---
 
 # Übersicht über die Barrierefreiheit  
@@ -153,7 +157,8 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 ## Überprüfung und Veröffentlichung  
 Weitere Informationen zum Ausweis der Barrierefreiheit und zum Veröffentlichen Ihrer App finden Sie unter [Barrierefreiheit im Store](accessibility-in-the-store.md).
 
-> [!NOTE]  Das Ausweisen der App als barrierefrei ist nur für den Windows Store relevant.
+> [!NOTE]
+> Das Deklarieren der App als barrierefrei ist nur für den Windows Store relevant.
 
 <span id="Assistive_technology_support_in_custom_controls"/>
 <span id="assistive_technology_support_in_custom_controls"/>
@@ -174,6 +179,7 @@ Auf in einer XAML-Benutzeroberfläche gehostete Microsoft DirectX-Inhalte (mit [
 * [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

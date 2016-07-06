@@ -1,8 +1,12 @@
 ---
 title: Sicherheit
-description: Dieser Abschnitt enthält Artikel zum Erstellen sicherer UWP (Universelle Windows-Plattform)-Apps für Windows 10.
+description: "Dieser Abschnitt enthält Artikel zum Erstellen sicherer Apps für die universelle Windows-Plattform (UWP) für Windows 10."
 ms.assetid: 41E2EEFB-E8A9-4592-814C-72B703CD952C
 author: awkoren
+translationtype: Human Translation
+ms.sourcegitcommit: a178f992ddd39b5609ce6d15b7e3560e157b9afb
+ms.openlocfilehash: 23897e7e78f3391fbee60a5f7cdf93615401247d
+
 ---
 
 # Sicherheit
@@ -10,11 +14,15 @@ author: awkoren
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Dieser Abschnitt enthält Artikel zum Erstellen sicherer UWP (Universelle Windows-Plattform)-Apps für Windows 10.
+Dieser Abschnitt enthält Artikel zum Erstellen sicherer Apps für die universelle Windows-Plattform (UWP) für Windows 10.
 
-Wenn Sie noch keine Erfahrung mit der Windows- oder UWP-Entwicklung haben, beginnen Sie mit der [inführung in die Entwicklung sicherer Windows-Apps](web-authentication-broker.md). Dieser einführende Artikel enthält eine Übersicht über Sicherheitsaspekte für Apps und die verschiedenen unter Windows 10 verfügbaren Features.
+## Einführung 
 
-Der [Authentifizierungsabschnitt](authentication-and-user-identity.md) enthält exemplarische Vorgehensweisen für Szenarien, die mit der Benutzeranmeldung und -identität zusammenhängen. Apps verfügen über mehrere Optionen für die Benutzerauthentifizierung, angefangen beim einfachen einmaligen Anmelden (Single Sign On, SSO) mit dem [Webauthentifizierungsbroker](web-authentication-broker.md) bis hin zur sicheren zweistufigen Authentifizierung.
+Wenn Sie noch keine Erfahrung mit der Windows- oder UWP-Entwicklung haben, beginnen Sie mit der [Einführung in die Entwicklung sicherer Windows-Apps](web-authentication-broker.md). Dieser einführende Artikel enthält eine Übersicht über Sicherheitsaspekte in Bezug auf Apps und die verschiedenen unter Windows 10 verfügbaren Features.
+
+## Authentifizierung und Benutzeridentität
+
+Der [Abschnitt zu Authentifizierung und Benutzeridentität](authentication-and-user-identity.md) enthält exemplarische Vorgehensweisen für Szenarien im Zusammenhang mit Benutzeranmeldung und -identität. Apps verfügen über mehrere Optionen für die Benutzerauthentifizierung, angefangen beim einfachen einmaligen Anmelden (Single Sign On, SSO) mit dem [Webauthentifizierungsbroker](web-authentication-broker.md) bis hin zur sicheren zweistufigen Authentifizierung.
 
 <table>
 <tr><th>Thema</th><th>Beschreibung</th></tr>
@@ -31,8 +39,9 @@ Der [Authentifizierungsabschnitt](authentication-and-user-identity.md) enthält 
 <tr><td>[Webauthentifizierungsbroker](web-authentication-broker.md)</td><td>In diesem Artikel wird erläutert, wie Ihre App eine Verbindung mit einem Onlineidentitätsanbieter herstellen kann, der Authentifizierungsprotokolle wie OpenID oder OAuth verwendet, wie Twitter, Facebook, Flickr, Instagram usw. Die [AuthenticateAsync](https://msdn.microsoft.com/library/windows/apps/br212066)-Methode sendet eine Anforderung an den Onlineidentitätsanbieter und erhält als Antwort ein Zugriffstoken, das die für die App zugänglichen Anbieterressourcen beschreibt.</td></tr>
 </table>
 
+## Kryptografie 
 
-Der Kryptografieabschnitt enthält Informationen zu komplexeren, verwandten Themen rund um Kryptografie.
+Der Kryptografieabschnitt enthält Informationen zu komplexeren verwandten Themen rund um Kryptografie. 
 
 | Thema                                                                         | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,6 +53,7 @@ Der Kryptografieabschnitt enthält Informationen zu komplexeren, verwandten Them
 | [Allgemeine Kryptografieaufgaben](common-cryptography-tasks.md)                     | Die folgenden Artikel enthalten Beispielcode für allgemeine Kryptografieaufgaben, z. B. Erstellen zufälliger Zahlen, Vergleichen von Puffern, Konvertieren zwischen Zeichenfolgen und binären Daten, Kopieren in und aus Bytearrays sowie Codieren und Decodieren von Daten.                                                                                                                                                                                                                                                                                    |
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

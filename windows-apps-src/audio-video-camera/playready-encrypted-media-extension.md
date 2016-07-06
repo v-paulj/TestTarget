@@ -305,6 +305,6 @@ Weitere Informationen finden Sie in den [Beispielanwendungen](https://code.msdn.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

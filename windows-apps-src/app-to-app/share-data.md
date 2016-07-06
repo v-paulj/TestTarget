@@ -3,8 +3,8 @@ description: "In diesem Artikel wird erläutert, wie der Freigabe-Vertrag in ein
 title: Freigeben von Daten
 ms.assetid: 32287F5E-EB86-4B98-97FF-8F6228D06782
 author: awkoren
-ms.sourcegitcommit: 03b9943d9bf76343bfbbe714f681a2b398d1a9ad
-ms.openlocfilehash: de9d4e88cfc00d5e428b8ddb8a27cc4ffd619e85
+ms.sourcegitcommit: 9a8fd6d34c4b89dae1ec4be2db69498b5d458b5a
+ms.openlocfilehash: a91f0eb8b62a860809f8ffb63278be1eff31a2f3
 
 ---
 
@@ -51,13 +51,13 @@ Alle Eigenschaften mit Ausnahme des Titels sind optional. Die title-Eigenschaft 
 
 ## Starten der Benutzeroberfläche für das Freigeben
 
-Eine Benutzeroberfläche für das Freigeben wird vom System bereitgestellt. Zum Starten rufen Sie die [**ShowShareUI**][ShowShareUi]-Methode auf.
+Eine Benutzeroberfläche für das Freigeben wird vom System bereitgestellt. Zum Starten rufen Sie die [**ShowShareUI**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataTransferManager.ShowShareUI)-Methode auf.
 
 [!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
 
 ## Behandeln von Fehlern
 
-In den meisten Fällen ist das Freigeben von Inhalten ein einfacher Prozess. Es besteht jedoch immer die Möglichkeit, dass unerwartet ein Problem auftritt. So kann in der App etwa vorgesehen sein, dass der Benutzer etwas zum Teilen auswählt, der Benutzer hat aber nichts ausgewählt. Verwenden Sie zur Behandlung solcher Situationen die [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String)-Methode, die dem Benutzer eine Meldung anzeigt, wenn ein Fehler auftritt.
+In den meisten Fällen ist das Freigeben von Inhalten ein einfacher Prozess. Es besteht jedoch immer die Möglichkeit, dass unerwartet ein Problem auftritt. Es kann z. B. sein, dass die App voraussetzt, dass Inhalt ausgewählt wird, der Benutzer aber nichts ausgewählt hat. Um diese Situationen zu behandeln, verwenden Sie die [**FailWithDisplayText**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest.FailWithDisplayText(System.String))-Methode, die dem Benutzer eine Meldung anzeigt, wenn ein Fehler auftritt.
 
 ## Verzögern der Freigabe mit Delegaten
 
@@ -104,6 +104,6 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

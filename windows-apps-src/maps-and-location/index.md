@@ -84,6 +84,6 @@ Ihre App kann die Windows-Karten-App starten, wie hier veranschaulicht, um besti
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

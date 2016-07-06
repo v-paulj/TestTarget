@@ -39,7 +39,7 @@ Externe Hilfeseiten sind ideal, um für die Benutzer Lernprogramme und exemplari
 
 ## <span id="related_topics"></span>Verwandte Artikel
 
-* [Richtlinien für die App-Hilfe](guidelines-for-app-help.md)
+* [Anleitungen für die App-Hilfe](guidelines-for-app-help.md)
 
 
 

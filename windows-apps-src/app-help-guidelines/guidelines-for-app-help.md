@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 Description: "Diese Richtlinien unterstützen Sie beim Gestalten von effektiven Hilfeinhalten für Ihre App."
-title: "Richtlinien für die App-Hilfe"
+title: "Anleitungen für die App-Hilfe"
 label: Guidelines for app help
 template: detail.hbs
 translationtype: Human Translation
@@ -10,11 +10,11 @@ ms.openlocfilehash: 1e1e5e118eb44f6b491669dbd274fae05d92685b
 
 ---
 
-# Richtlinien für die App-Hilfe
+# Anleitungen für die App-Hilfe
 
 
 
-Anwendungen können sehr komplex sein, und Sie können die Erfahrung für die Benutzer durch Bereitstellen einer effektiven Hilfe erheblich verbessern. Nicht alle Anwendungen müssen Hilfe für ihre Benutzer bereitstellen, und welche Art von Hilfe bereitgestellt werden sollte, kann je nach Anwendung unterschiedlich sein.
+Anwendungen können sehr komplex sein. Sie können die Erfahrung für die Benutzer durch die Bereitstellung einer effektiven Hilfe erheblich verbessern. Nicht alle Anwendungen müssen Hilfe für ihre Benutzer bereitstellen, und welche Art von Hilfe bereitgestellt werden sollte, kann je nach Anwendung unterschiedlich sein.
 
 Wenn Sie Hilfe bereitstellen möchten, befolgen Sie diese Richtlinien beim Erstellen. Hilfe, die nicht nützlich ist, kann schlimmer sein als gar keine Hilfe.
 

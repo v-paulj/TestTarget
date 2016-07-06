@@ -1,8 +1,12 @@
 ---
 author: mcleblanc
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
-title: Testen mit dem Emulator für Microsoft Windows 10 Mobile
-description: Mit den Tools des Emulators für Microsoft Windows 10 Mobile können Sie die praktische Interaktion mit einem Gerät simulieren und die Features Ihrer App testen.
+title: "Testen mit dem Emulator für Microsoft Windows 10 Mobile"
+description: "Mit den Tools des Emulators für Microsoft Windows 10 Mobile können Sie die praktische Interaktion mit einem Gerät simulieren und die Features Ihrer App testen."
+translationtype: Human Translation
+ms.sourcegitcommit: 9a33710315486c23a204a528d3d87421c6990b85
+ms.openlocfilehash: c53bda2329cd984e3a03d4a166e7353097e62cef
+
 ---
 # Testen mit dem Emulator für Microsoft Windows 10 Mobile
 
@@ -625,7 +629,7 @@ Der Microsoft-Emulator enthält „XDECleanup.exe“ – ein Tool, das alle VMs,
 
 Wenn Sie den Emulator installieren, wird ein VHD-Image mit Windows 10 Mobile installiert. Dieses erhält einen eigenen Eintrag in der Liste **Programme und Features** in der Systemsteuerung. Wenn Sie das Image deinstallieren möchten, suchen Sie in der Liste mit den installierten Programmen nach **Windows 10 Mobile Image – <version>**, klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Deinstallieren** aus.
 
-In der aktuellen Version müssen Sie die VHD-Datei für den Emulator manuell löschen. Wenn Sie den Emulator unter dem Standardpfad installiert haben, befindet sich die VHD-Datei unter C:\\Programme (x86)\\Windows Kits\\10\\Emulation\\Mobile\\<version>\\flash.vhd.
+In der aktuellen Version müssen Sie die VHD-Datei für den Emulator manuell löschen. Wenn Sie den Emulator unter dem Standardpfad installiert haben, befindet sich die VHD-Datei unter „C:\\Programme (x86)\\Windows Kits\\10\\Emulation\\Mobile\\<version>\\flash.vhd“.
 
 ###So deaktivieren sie hardwarebeschleunigte Grafiken
 
@@ -654,6 +658,7 @@ Antworten und Problemlösungen für die Windows 10-Tools finden Sie im [Forum f
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

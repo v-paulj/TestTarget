@@ -1,8 +1,8 @@
 ---
 title: HTML-Spieleentwicklung auf Xbox
 author: JordanEllis6809
-ms.sourcegitcommit: 8d057ac245cd3d1cf343590b3832d3bf36cd99ed
-ms.openlocfilehash: 8329e72e84d3068305908141019aeb4cd0c93f09
+ms.sourcegitcommit: 4996662d044315b878eb05eb6b82a17ce5eef2a7
+ms.openlocfilehash: a7b891cf8373e989a0a3bebb0f40be9026ce42b4
 
 ---
 
@@ -14,10 +14,10 @@ HTML-Spiele sind mit jedem anderen Typ von Spiel vergleichbar. Entwickler könne
 
 Xbox One ist eine UWP-Plattform, und das bedeutet, dass sie wie andere Microsoft-Geräte gehostete Web-Apps unterstützt. Hierbei handelt es sich um Apps, die vollständig von einem Server stammen. [Weitere Informationen](http://microsoftedge.github.io/WebAppsDocs/en-US/win10/HWA.htm)
 
-Laden Sie zunächst die Engine Ihrer Wahl herunter, und suchen Sie nach Anweisungen für Windows 10-Apps. Außerdem sollten Sie den (Leitfaden für erste Schritte)[https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index] lesen. Dort finden Sie Informationen dazu, wie Sie die Konsole in ein Development Kit verwandeln und von Visual Studio bereitstellen.
+Laden Sie zunächst die Engine Ihrer Wahl herunter, und suchen Sie nach Anweisungen für Windows 10-Apps. Lesen Sie außerdem den [Erste Schritte-Leitfaden](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index) mit Informationen zum Aktivieren der Konsole in einem Development-Kit und zum Bereitstellen von Visual Studio.
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

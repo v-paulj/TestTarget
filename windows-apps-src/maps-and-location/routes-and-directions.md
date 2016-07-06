@@ -194,6 +194,6 @@ Dieses Beispiel zeigt Folgendes in einem [**MapControl**](https://msdn.microsoft
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

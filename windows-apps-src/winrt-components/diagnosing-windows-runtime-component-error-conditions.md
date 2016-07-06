@@ -234,23 +234,23 @@ In der UWP werden Rückgabewerte als Ausgabeparameter betrachtet, und die Namen 
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> **Hinweis**  Wenn Sie den Namen des Rückgabewerts ändern und der neue Namen mit dem Namen eines anderen Parameters in Konflikt steht, erhalten Sie die Fehlermeldung WME1091.
+> [!div class="tabbedCodeSnippets"]
 
-JavaScript-Code kann auf die Ausgabeparameter einer Methode, einschließlich des Rückgabewerts, über den Namen zugreifen. Ein Beispiel finden Sie unter [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx).
+**Hinweis**  Wenn Sie den Namen des Rückgabewerts ändern und der neue Namen mit dem Namen eines anderen Parameters in Konflikt steht, erhalten Sie die Fehlermeldung WME1091. JavaScript-Code kann auf die Ausgabeparameter einer Methode, einschließlich des Rückgabewerts, über den Namen zugreifen.
 
-| Fehlernummer | Meldungstext |
+| Ein Beispiel finden Sie unter [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx). | Fehlernummer |
 |---------------|------------|
-| WME1091 | Die Methode '\{0}' weist den Rückgabewert mit dem Namen '\{1}' auf, bei dem es sich um denselben Namen wie der Parametername handelt. Methodenparameter und Rückgabewerte müssen für Windows-Runtime eindeutige Namen aufweisen. |
-| WME1092 | Die Methode '\{0}' weist einen Parameter mit dem Namen '\{1}' auf, der mit dem Standardnamen des Rückgabewerts identisch ist. Verwenden Sie ggf. einen anderen Namen für den Parameter, oder verwenden Sie das System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute, um den Namen des Rückgabewerts explizit anzugeben.<br/>**Hinweis**  Der Standardname lautet „returnValue" für Eigenschaftenaccessoren und „Value" für alle anderen Methoden. |
+| Meldungstext | WME1091 Die Methode '\{0}' weist den Rückgabewert mit dem Namen '\{1}' auf, bei dem es sich um denselben Namen wie der Parametername handelt. |
+| Methodenparameter und Rückgabewerte müssen für Windows-Runtime eindeutige Namen aufweisen. | WME1092 Die Methode '\{0}' weist einen Parameter mit dem Namen '\{1}' auf, der mit dem Standardnamen des Rückgabewerts identisch ist.<br/>Verwenden Sie ggf. einen anderen Namen für den Parameter, oder verwenden Sie das System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute, um den Namen des Rückgabewerts explizit anzugeben. |
  
 
-## Verwandte Themen
+## **Hinweis**  Der Standardname lautet „returnValue" für Eigenschaftenaccessoren und „Value" für alle anderen Methoden.
 
-* [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-* [Winmdexp.exe (Windows Runtime Metadata Export Tool)](https://msdn.microsoft.com/library/hh925576.aspx)
+* [Verwandte Themen](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

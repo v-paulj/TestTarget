@@ -52,6 +52,6 @@ Um diese falsch formatierten Binärdateien zu korrigieren, stellen Sie sicher, d
 - [SignTool.exe (Signaturtool)](https://msdn.microsoft.com/library/8s9b9yaz(v=vs.110).aspx)
 - [Signieren eines App-Pakets mithilfe von SignTool](https://msdn.microsoft.com/en-us/library/windows/desktop/jj835835(v=vs.85).aspx)
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

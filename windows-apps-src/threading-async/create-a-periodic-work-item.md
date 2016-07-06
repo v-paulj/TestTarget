@@ -1,8 +1,12 @@
 ---
 author: TylerMSFT
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
-title: Erstellen einer regelmäßigen Arbeitsaufgabe
-description: Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die regelmäßig wiederholt wird.
+title: "Erstellen einer regelmäßigen Arbeitsaufgabe"
+description: "Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die regelmäßig wiederholt wird."
+translationtype: Human Translation
+ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
+ms.openlocfilehash: f5b16c62b591481c52cfa4bb7e1ddb162bf18f42
+
 ---
 # Erstellen einer regelmäßigen Arbeitsaufgabe
 
@@ -81,7 +85,7 @@ Das folgende Beispiel erstellt eine Arbeitsaufgabe, die alle 60 Sekunden ausgef
 
 ## Behandeln des Abbruchs der regelmäßigen Arbeitsaufgabe (optional)
 
-Bei Bedarf können Sie den Abbruch des regelmäßigen Timers mit einem [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)-Element behandeln. Stellen Sie mithilfe der [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915)-Überladung eine zusätzliche Lambda-Funktion bereit, die den Abbruch der regelmäßigen Arbeitsaufgabe behandelt.
+Bei Bedarf können Sie den Abbruch des regelmäßigen Timers mit einem [**TimerDestroyedHandler**](https://msdn.microsoft.com/library/windows/apps/Hh967926)-Element verarbeiten. Stellen Sie mithilfe der [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967915)-Überladung eine zusätzliche Lambda-Funktion bereit, die den Abbruch der regelmäßigen Arbeitsaufgabe behandelt.
 
 Das folgende Beispiel erstellt eine regelmäßige Arbeitsaufgabe, die alle 60 Sekunden wiederholt wird, und stellt außerdem einen Abbruchhandler bereit:
 
@@ -190,7 +194,7 @@ Rufen Sie ggf. die [**Cancel**](https://msdn.microsoft.com/en-us/library/windows
 > PeriodicTimer->Cancel();
 > ```
 
-## Anmerkungen
+## Hinweise
 
 Informationen zu einmaligen Timern finden Sie unter [Senden einer Arbeitsaufgabe mithilfe eines Timers](use-a-timer-to-submit-a-work-item.md).
 
@@ -203,6 +207,7 @@ Informationen zu einmaligen Timern finden Sie unter [Senden einer Arbeitsaufgabe
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -16,7 +16,7 @@ Microsoft bietet verschiedene Tools zur Verbesserung der Leistung Ihrer App für
 
 **Tool „XAML-UI-Reaktionsfähigkeit“ in Visual Studio 2015**. Eines der besten Tools zum Ermitteln der Leistungsauswirkungen innerhalb Ihrer App ist das Tool „XAML-UI-Reaktionsfähigkeit“. Die im Lieferumfang enthaltene Version wurde [für Visual Studio 2015 aktualisiert](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) und unterstützt nun noch mehr Szenarien.
 
-Weitere Informationen:
+Siehe auch:
 
 |           |             |
 |-----------|-------------|

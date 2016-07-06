@@ -59,6 +59,6 @@ Das System bietet eine Standardbenutzeroberfläche für Drag & Drop. Sie könn
 * [Drop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.drop.aspx)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 
