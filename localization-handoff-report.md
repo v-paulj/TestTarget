@@ -1,55 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 3
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/6a362b7c1570362ec3e033c809441c2153e9341f/windows-apps-src/input-and-devices/designing-for-tv.md) | OutofSyncHandedBackSuccess | [Details](#b8a35b4cb9b3dba5ad7b0df2089b693dc1a1cda62714)
- [windows-apps-src\xbox-apps\how-to-disable-mouse-mode.md](https://github.com/Microsoft/windows-apps/blob/6f4719c98d490cdcac8c799c4c68af55b217cbc5/windows-apps-src/xbox-apps/how-to-disable-mouse-mode.md) | HandedBackFailed | [Details](#d1ee946693b9f9714b8d570b8ae3718469d2c10d3959)
- [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/d64033e595f0156e0628dc0e20ef73923ec923c3/windows-apps-src/xbox-apps/known-issues.md) | OutofSyncHandedBackSuccess | [Details](#439736d066e7f7e568fd219371a1ea98563aa11c4018)
+ [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/84f7e25b8222719bf529b6727dcef62bc3d9f73f/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md) | OutofSyncHandedBackSuccess | [Details](#87b92fe8477ada3aadb915bceca5722c675c4da93475)
 
 ## Item Details
-##### <a name='b8a35b4cb9b3dba5ad7b0df2089b693dc1a1cda62714'></a> Source: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps/blob/6a362b7c1570362ec3e033c809441c2153e9341f/windows-apps-src/input-and-devices/designing-for-tv.md)
+##### <a name='87b92fe8477ada3aadb915bceca5722c675c4da93475'></a> Source: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/84f7e25b8222719bf529b6727dcef62bc3d9f73f/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ec43bb3989bf5b4639dc95739c819bdf6f900cd2/ol-handoff/Microsoft/windows-apps.de-de/master/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.de-de.xlf)
-* Handoff Datetime: 2016-07-07 05:22:10
+* Handoff File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/25f2283c3e67ead5756608b79e44dabbacad32c7/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf)
+* Handoff Datetime: 2016-07-07 19:13:13
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\input-and-devices\designing-for-tv.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/input-and-devices/designing-for-tv.md)
-* Current Handback File: [designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/designing-for-tv.ebcfeb21893a2cb83ca725bf72e3392606de4620.de-de.xlf)
-* Current Handback Datetime: 2016-07-06 16:08:36
-* [Back to Top](#report-top)
-
-##### <a name='d1ee946693b9f9714b8d570b8ae3718469d2c10d3959'></a> Source: [windows-apps-src\xbox-apps\how-to-disable-mouse-mode.md](https://github.com/Microsoft/windows-apps/blob/6f4719c98d490cdcac8c799c4c68af55b217cbc5/windows-apps-src/xbox-apps/how-to-disable-mouse-mode.md)
-* Status: HandedBackFailed
-* Target File: 
-* Handoff File: [how-to-disable-mouse-mode.6c622ccf73f4b0c8c4dacc5395199bcf39c5d9f7.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ec43bb3989bf5b4639dc95739c819bdf6f900cd2/ol-handoff/Microsoft/windows-apps.de-de/master/how-to-disable-mouse-mode.6c622ccf73f4b0c8c4dacc5395199bcf39c5d9f7.de-de.xlf)
-* Handoff Datetime: 2016-07-07 05:22:10
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='439736d066e7f7e568fd219371a1ea98563aa11c4018'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/d64033e595f0156e0628dc0e20ef73923ec923c3/windows-apps-src/xbox-apps/known-issues.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ec43bb3989bf5b4639dc95739c819bdf6f900cd2/ol-handoff/Microsoft/windows-apps.de-de/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf)
-* Handoff Datetime: 2016-07-07 05:22:10
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/xbox-apps/known-issues.md)
-* Current Handback File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf)
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
+* Current Handback File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf)
 * Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
