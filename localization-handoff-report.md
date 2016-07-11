@@ -1,56 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 3
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\debug-test-perf\device-portal.md](https://github.com/Microsoft/windows-apps/blob/01e83c14304891ff5eaa895e98bbebac33ee7614/windows-apps-src/debug-test-perf/device-portal.md) | OutofSyncHandedBackSuccess | [Details](#55cbdc077f839166f32605bbada8e0cc707cf5b31978)
- [windows-apps-src\debug-test-perf\images\device-portal\mob-device-portal-AppFileExplorer.png](https://github.com/Microsoft/windows-apps/blob/e04e221c6c86330832cccc8d339c5cacd9377c05/windows-apps-src/debug-test-perf/images/device-portal/mob-device-portal-AppFileExplorer.png) | HandedOffSuccess | [Details](#f03b706a38df9c3a872317fed72169c9dff6fea01988)
- [windows-apps-src\networking\background-transfers.md](https://github.com/Microsoft/windows-apps/blob/b15d01ec4fd41a8f03345a4416b4795455928533/windows-apps-src/networking/background-transfers.md) | OutofSyncHandedBackSuccess | [Details](#cbb8308a3390634f0068f72041803989201e23453446)
+ [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/ee75eb3ee3bff61666513dcf57384675a07c56ee/windows-apps-src/publish/dev-center-insider-program.md) | OutofSyncHandedBackSuccess | [Details](#b889769f6a23c2830274a72bc392a4409377c1423622)
 
 ## Item Details
-##### <a name='55cbdc077f839166f32605bbada8e0cc707cf5b31978'></a> Source: [windows-apps-src\debug-test-perf\device-portal.md](https://github.com/Microsoft/windows-apps/blob/01e83c14304891ff5eaa895e98bbebac33ee7614/windows-apps-src/debug-test-perf/device-portal.md)
+##### <a name='b889769f6a23c2830274a72bc392a4409377c1423622'></a> Source: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps/blob/ee75eb3ee3bff61666513dcf57384675a07c56ee/windows-apps-src/publish/dev-center-insider-program.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/c6c3415eb98a78e45ad283ce7755aff171e94e82/ol-handoff/Microsoft/windows-apps.de-de/master/device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.de-de.xlf)
-* Handoff Datetime: 2016-07-11 21:47:57
+* Handoff File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/b0dda91ef50c329bb0708a001a9137344b25aac2/ol-handoff/Microsoft/windows-apps.de-de/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.de-de.xlf)
+* Handoff Datetime: 2016-07-11 22:47:35
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\debug-test-perf\device-portal.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/debug-test-perf/device-portal.md)
-* Current Handback File: [device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/device-portal.42fc9b6666795a143b3fca2c18dcbbe09f5edd1d.de-de.xlf)
-* Current Handback Datetime: 2016-07-06 16:08:36
-* [Back to Top](#report-top)
-
-##### <a name='f03b706a38df9c3a872317fed72169c9dff6fea01988'></a> Source: [windows-apps-src\debug-test-perf\images\device-portal\mob-device-portal-AppFileExplorer.png](https://github.com/Microsoft/windows-apps/blob/e04e221c6c86330832cccc8d339c5cacd9377c05/windows-apps-src/debug-test-perf/images/device-portal/mob-device-portal-AppFileExplorer.png)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [f03b706a38df9c3a872317fed72169c9dff6fea0.png](https://github.com/Microsoft/WDG.handoff/blob/c6c3415eb98a78e45ad283ce7755aff171e94e82/ol-handoff/Microsoft/windows-apps.de-de/master/f03b706a38df9c3a872317fed72169c9dff6fea0.png)
-* Handoff Datetime: 2016-07-11 21:47:57
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\debug-test-perf\device-portal.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='cbb8308a3390634f0068f72041803989201e23453446'></a> Source: [windows-apps-src\networking\background-transfers.md](https://github.com/Microsoft/windows-apps/blob/b15d01ec4fd41a8f03345a4416b4795455928533/windows-apps-src/networking/background-transfers.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [background-transfers.8f132649565224b7b83365be03e3ebfe42dc6211.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/c6c3415eb98a78e45ad283ce7755aff171e94e82/ol-handoff/Microsoft/windows-apps.de-de/master/background-transfers.8f132649565224b7b83365be03e3ebfe42dc6211.de-de.xlf)
-* Handoff Datetime: 2016-07-11 21:47:57
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\networking\background-transfers.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/networking/background-transfers.md)
-* Current Handback File: [background-transfers.8f132649565224b7b83365be03e3ebfe42dc6211.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/background-transfers.8f132649565224b7b83365be03e3ebfe42dc6211.de-de.xlf)
+* Current Target File: [windows-apps-src\publish\dev-center-insider-program.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/publish/dev-center-insider-program.md)
+* Current Handback File: [dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/dev-center-insider-program.54de90971e5b8fc4d5a14386bc36fd7d20fcdc7b.de-de.xlf)
 * Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
