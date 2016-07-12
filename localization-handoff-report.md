@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\getting-started.md](https://github.com/Microsoft/windows-apps/blob/5f050eee9430dc7aaa2738a4610a2c4f5083839d/windows-apps-src/xbox-apps/getting-started.md) | OutofSyncHandedBackSuccess | [Details](#92a9cc54c6257c35b1e7ae19838b01c8452c4b365342)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/f1468c20d694780a9a6a9c5976f93c062e8f1bff/windows-apps-src/TOC.md) | OutofSyncHandedBackSuccess | [Details](#cb726df42929c2e0f032a49a291f0a0d1a4a87aa5280)
 
 ## Item Details
-##### <a name='92a9cc54c6257c35b1e7ae19838b01c8452c4b365342'></a> Source: [windows-apps-src\xbox-apps\getting-started.md](https://github.com/Microsoft/windows-apps/blob/5f050eee9430dc7aaa2738a4610a2c4f5083839d/windows-apps-src/xbox-apps/getting-started.md)
+##### <a name='cb726df42929c2e0f032a49a291f0a0d1a4a87aa5280'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/f1468c20d694780a9a6a9c5976f93c062e8f1bff/windows-apps-src/TOC.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [getting-started.e4f343d7b5d7d1d1af63a09965ea9cc6ef148b08.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8d601e39dd2651331ac7ab534d7b0c7e7f864661/ol-handoff/Microsoft/windows-apps.de-de/master/getting-started.e4f343d7b5d7d1d1af63a09965ea9cc6ef148b08.de-de.xlf)
-* Handoff Datetime: 2016-07-12 18:49:30
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/3caf791a2b83c2271a58e932855526dbee79dd0a/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Handoff Datetime: 2016-07-12 19:49:40
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\xbox-apps\getting-started.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/xbox-apps/getting-started.md)
-* Current Handback File: [getting-started.e4f343d7b5d7d1d1af63a09965ea9cc6ef148b08.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/getting-started.e4f343d7b5d7d1d1af63a09965ea9cc6ef148b08.de-de.xlf)
+* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/TOC.md)
+* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
 * Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
