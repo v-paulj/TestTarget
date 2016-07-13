@@ -6722,6 +6722,9 @@
   "c7dd765c432a08653c2ff1abcbb2accab2993874": [
     "windows-apps-src\\xbox-apps\\wdp-smb-api.md"
   ],
+  "e8609c16c4b260f14a7cd7843d2ea60a4d17f3ae": [
+    "windows-apps-src\\xbox-apps\\wdp-xboxsettings-api.md"
+  ],
   "e3637f5a8481c0800af42c011fb811b908b946b1": [
     "windows-apps-src\\xbox-apps\\wdp-xboxsettings-api.md"
   ],
