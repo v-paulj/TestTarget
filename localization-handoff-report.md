@@ -1,42 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/b292a55159b18e37acf49e709ae55b2ee3be7652/windows-apps-src/get-started/universal-application-platform-guide.md) | OutofSyncHandedBackSuccess | [Details](#257a41be19ea48b4e8222bcf33a4fa18c392b1c72657)
- [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/27d9f3dd5849a8ffc6783afeb26538f3e31cb267/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md) | OutofSyncHandedBackSuccess | [Details](#600c56a97d600446c2f3538431d009d48295e05d3363)
+ [windows-apps-src\accessibility\high-contrast-themes.md](https://github.com/Microsoft/windows-apps/blob/270fcbc064f363cc6d238590682f9b1a3447648f/windows-apps-src/accessibility/high-contrast-themes.md) | OutofSyncHandedBackSuccess | [Details](#ed1f942ead13b39e2d398c067ed3a94a11a937e317)
 
 ## Item Details
-##### <a name='257a41be19ea48b4e8222bcf33a4fa18c392b1c72657'></a> Source: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/b292a55159b18e37acf49e709ae55b2ee3be7652/windows-apps-src/get-started/universal-application-platform-guide.md)
+##### <a name='ed1f942ead13b39e2d398c067ed3a94a11a937e317'></a> Source: [windows-apps-src\accessibility\high-contrast-themes.md](https://github.com/Microsoft/windows-apps/blob/270fcbc064f363cc6d238590682f9b1a3447648f/windows-apps-src/accessibility/high-contrast-themes.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/b4ad05a02c32d21b406cdaa0abc1ebd8c10506d2/ol-handoff/Microsoft/windows-apps.de-de/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf)
-* Handoff Datetime: 2016-07-14 17:49:45
+* Handoff File: [high-contrast-themes.48ba9338c4156c9023e5f696133f2b776c3bd1dc.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/75fdc0ae95e9b349c25b9ca4c4df3aad732e73d2/ol-handoff/Microsoft/windows-apps.de-de/master/high-contrast-themes.48ba9338c4156c9023e5f696133f2b776c3bd1dc.de-de.xlf)
+* Handoff Datetime: 2016-07-14 18:20:57
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/get-started/universal-application-platform-guide.md)
-* Current Handback File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf)
-* Current Handback Datetime: 2016-07-06 16:08:36
-* [Back to Top](#report-top)
-
-##### <a name='600c56a97d600446c2f3538431d009d48295e05d3363'></a> Source: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/27d9f3dd5849a8ffc6783afeb26538f3e31cb267/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/b4ad05a02c32d21b406cdaa0abc1ebd8c10506d2/ol-handoff/Microsoft/windows-apps.de-de/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf)
-* Handoff Datetime: 2016-07-14 17:49:45
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
-* Current Handback File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf)
+* Current Target File: [windows-apps-src\accessibility\high-contrast-themes.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/accessibility/high-contrast-themes.md)
+* Current Handback File: [high-contrast-themes.48ba9338c4156c9023e5f696133f2b776c3bd1dc.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/high-contrast-themes.48ba9338c4156c9023e5f696133f2b776c3bd1dc.de-de.xlf)
 * Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
