@@ -1,26 +1,42 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\package-flights.md](https://github.com/Microsoft/windows-apps/blob/2d89198b8c375a50eb38dee2e19bd1f72c9645ca/windows-apps-src/publish/package-flights.md) | OutofSyncHandedBackSuccess | [Details](#57cc7a6935a5b0faa4de8d538f9273e649e1a5983681)
+ [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/b9d84bf6b98c2f34914a8f4dd1e2b7e2132f5778/windows-apps-src/xbox-apps/known-issues.md) | OutofSyncHandedBackSuccess | [Details](#5dc2ad2b7c1d3793065f96e3300069dea078ce6a5430)
+ [windows-apps-src\xbox-apps\tailoring-for-xbox.md](https://github.com/Microsoft/windows-apps/blob/b9d84bf6b98c2f34914a8f4dd1e2b7e2132f5778/windows-apps-src/xbox-apps/tailoring-for-xbox.md) | OutofSyncHandedBackSuccess | [Details](#acb7b92fe65abd99e5263ffcf1c339bb62015afe5437)
 
 ## Item Details
-##### <a name='57cc7a6935a5b0faa4de8d538f9273e649e1a5983681'></a> Source: [windows-apps-src\publish\package-flights.md](https://github.com/Microsoft/windows-apps/blob/2d89198b8c375a50eb38dee2e19bd1f72c9645ca/windows-apps-src/publish/package-flights.md)
+##### <a name='5dc2ad2b7c1d3793065f96e3300069dea078ce6a5430'></a> Source: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps/blob/b9d84bf6b98c2f34914a8f4dd1e2b7e2132f5778/windows-apps-src/xbox-apps/known-issues.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [package-flights.01f17a418d82f23d1aa9d2df8fc583f11c6c61bf.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/f765acdac64169072240f2935863d075d4472fa4/ol-handoff/Microsoft/windows-apps.de-de/master/package-flights.01f17a418d82f23d1aa9d2df8fc583f11c6c61bf.de-de.xlf)
-* Handoff Datetime: 2016-07-19 01:19:10
+* Handoff File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/4b4c80ee377949e2c82f060baa1a647a5a5fb8bf/ol-handoff/Microsoft/windows-apps.de-de/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf)
+* Handoff Datetime: 2016-07-19 18:05:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\package-flights.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/publish/package-flights.md)
-* Current Handback File: [package-flights.01f17a418d82f23d1aa9d2df8fc583f11c6c61bf.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/package-flights.01f17a418d82f23d1aa9d2df8fc583f11c6c61bf.de-de.xlf)
+* Current Target File: [windows-apps-src\xbox-apps\known-issues.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/xbox-apps/known-issues.md)
+* Current Handback File: [known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/known-issues.83c75815621268c5c51534a658527cef71ffe8bd.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
+* [Back to Top](#report-top)
+
+##### <a name='acb7b92fe65abd99e5263ffcf1c339bb62015afe5437'></a> Source: [windows-apps-src\xbox-apps\tailoring-for-xbox.md](https://github.com/Microsoft/windows-apps/blob/b9d84bf6b98c2f34914a8f4dd1e2b7e2132f5778/windows-apps-src/xbox-apps/tailoring-for-xbox.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [tailoring-for-xbox.bacdeb3e45dfd5c8fe0387ee2d4a2903bd006a24.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/4b4c80ee377949e2c82f060baa1a647a5a5fb8bf/ol-handoff/Microsoft/windows-apps.de-de/master/tailoring-for-xbox.bacdeb3e45dfd5c8fe0387ee2d4a2903bd006a24.de-de.xlf)
+* Handoff Datetime: 2016-07-19 18:05:08
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\xbox-apps\tailoring-for-xbox.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/xbox-apps/tailoring-for-xbox.md)
+* Current Handback File: [tailoring-for-xbox.bacdeb3e45dfd5c8fe0387ee2d4a2903bd006a24.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/tailoring-for-xbox.bacdeb3e45dfd5c8fe0387ee2d4a2903bd006a24.de-de.xlf)
 * Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
