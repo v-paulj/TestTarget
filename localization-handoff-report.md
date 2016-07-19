@@ -1,20 +1,36 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\get-set-up.md](https://github.com/Microsoft/windows-apps/blob/09ecf35075de44b9f6e10f2011863015a5480689/windows-apps-src/get-started/get-set-up.md) | OutofSyncHandedBackSuccess | [Details](#db6874f3876330b646a19980aa6e122acc79f9762312)
- [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/09ecf35075de44b9f6e10f2011863015a5480689/windows-apps-src/get-started/universal-application-platform-guide.md) | OutofSyncHandedBackSuccess | [Details](#f3200f297049bdfcbcdf28a48656fa3a111277ea2672)
+ [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps/blob/12b406b5ac377c6cd1c87e575208a01ac5239023/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md) | OutofSyncHandedBackSuccess | [Details](#fd5847388fceaa0a9f72dcef08bae37b6f73f7342310)
+ [windows-apps-src\get-started\get-set-up.md](https://github.com/Microsoft/windows-apps/blob/12b406b5ac377c6cd1c87e575208a01ac5239023/windows-apps-src/get-started/get-set-up.md) | OutofSyncHandedBackSuccess | [Details](#a832cc8c491957d2e69826a91bc2ac19086d01aa2312)
+ [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/12b406b5ac377c6cd1c87e575208a01ac5239023/windows-apps-src/get-started/universal-application-platform-guide.md) | OutofSyncHandedBackSuccess | [Details](#cad44ec75a44b2547b816c1d51db84f314adbc3b2672)
 
 ## Item Details
-##### <a name='db6874f3876330b646a19980aa6e122acc79f9762312'></a> Source: [windows-apps-src\get-started\get-set-up.md](https://github.com/Microsoft/windows-apps/blob/09ecf35075de44b9f6e10f2011863015a5480689/windows-apps-src/get-started/get-set-up.md)
+##### <a name='fd5847388fceaa0a9f72dcef08bae37b6f73f7342310'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps/blob/12b406b5ac377c6cd1c87e575208a01ac5239023/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/b3e1c974c5a72ec1e661369eb9306c57b2c98493/ol-handoff/Microsoft/windows-apps.de-de/master/get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.de-de.xlf)
-* Handoff Datetime: 2016-07-19 21:33:06
+* Handoff File: [create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/3bf7a116d7057191a1a9ad5a2ec1b455f8c9d5c3/ol-handoff/Microsoft/windows-apps.de-de/master/create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.de-de.xlf)
+* Handoff Datetime: 2016-07-19 23:05:24
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md)
+* Current Handback File: [create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
+* [Back to Top](#report-top)
+
+##### <a name='a832cc8c491957d2e69826a91bc2ac19086d01aa2312'></a> Source: [windows-apps-src\get-started\get-set-up.md](https://github.com/Microsoft/windows-apps/blob/12b406b5ac377c6cd1c87e575208a01ac5239023/windows-apps-src/get-started/get-set-up.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/3bf7a116d7057191a1a9ad5a2ec1b455f8c9d5c3/ol-handoff/Microsoft/windows-apps.de-de/master/get-set-up.89608c408c7faac67f7e4228f8651faa15edffae.de-de.xlf)
+* Handoff Datetime: 2016-07-19 23:05:24
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -25,11 +41,11 @@
 * Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
-##### <a name='f3200f297049bdfcbcdf28a48656fa3a111277ea2672'></a> Source: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/09ecf35075de44b9f6e10f2011863015a5480689/windows-apps-src/get-started/universal-application-platform-guide.md)
+##### <a name='cad44ec75a44b2547b816c1d51db84f314adbc3b2672'></a> Source: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/12b406b5ac377c6cd1c87e575208a01ac5239023/windows-apps-src/get-started/universal-application-platform-guide.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/b3e1c974c5a72ec1e661369eb9306c57b2c98493/ol-handoff/Microsoft/windows-apps.de-de/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf)
-* Handoff Datetime: 2016-07-19 21:33:06
+* Handoff File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/3bf7a116d7057191a1a9ad5a2ec1b455f8c9d5c3/ol-handoff/Microsoft/windows-apps.de-de/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf)
+* Handoff Datetime: 2016-07-19 23:05:24
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
