@@ -4,13 +4,13 @@ ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
 title: Abrufen von Akkuinformationen
 description: "Erfahren Sie, wie Sie mithilfe von APIs im Windows.Devices.Power-Namespace ausführliche Akkuinformationen erhalten"
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 716123f7401350748c7eb81a2ca4208a74b6e4ac
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 9b1394c28b25b8b1b7401fcc794659dcf38fed6f
 
 ---
 # Abrufen von Akkuinformationen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
@@ -24,7 +24,8 @@ Erfahren Sie, wie Sie mithilfe von APIs im [**Windows.Devices.Power**](https://m
 
 Einige Geräte verfügen über mehr als einen Akku, und es ist nicht immer eindeutig, in welcher Form die einzelnen Akkus zur gesamten Energiekapazität des Geräts beitragen. An dieser Stelle wird die [**AggregateBattery**](https://msdn.microsoft.com/library/windows/apps/Dn895011)-Klasse verwendet. *AggregateBattery* repräsentiert alle Akkucontroller, die mit dem Gerät verbunden sind. Damit kann ein zusammengefasstes [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)-Objekt bereitgestellt werden.
 
-**Hinweis**  Eine [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004)-Klasse entspricht einem Akkucontroller. Je nach Gerät kann der Controller auch am physischen Akku angeschlossen sein, und es kommt auch vor, dass er am Gehäuse des Geräts angeschlossen ist. So kann auch dann ein Akkuobjekt erstellt werden, wenn keine Akkus vorhanden sind. In anderen Fällen kann für das Akkuobjekt **null** gelten.
+
+              **Hinweis**  Eine [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004)-Klasse entspricht einem Akkucontroller. Je nach Gerät kann der Controller auch am physischen Akku angeschlossen sein, und es kommt auch vor, dass er am Gehäuse des Geräts angeschlossen ist. So kann auch dann ein Akkuobjekt erstellt werden, wenn keine Akkus vorhanden sind. In anderen Fällen kann für das Akkuobjekt **null** gelten.
 
 Wenn Sie über ein zusammengefasstes Akkuobjekt verfügen, rufen Sie [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport) auf, um den entsprechenden [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) abzurufen.
 
@@ -44,7 +45,7 @@ private void RequestAggregateBatteryReport()
 
 ## Abrufen von individuellen Akkuberichten
 
-Sie können auch ein [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)-Objekt für individuelle Akkus erstellen. Verwenden Sie [**GetDeviceSelector**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.power.battery.getdeviceselector.aspx) mit der [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/BR225432)-Methode zum Abrufen einer Sammlung mit [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekten, die alle mit dem Gerät verbundenen Akkucontroller repräsentieren. Erstellen Sie anschließend mit der **Id**-Eigenschaft des gewünschten **DeviceInformation**-Objekts ein entsprechendes [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004)-Element mit der Methode [**FromIdAsync**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.power.battery.fromidasync.aspx). Rufen Sie zuletzt [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport) auf, um den individuellen Akkubericht abzurufen.
+Sie können auch ein [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)-Objekt für individuelle Akkus erstellen. Verwenden Sie [**GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getdeviceselector.aspx) mit der [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/BR225432)-Methode zum Abrufen einer Sammlung mit [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekten, die alle mit dem Gerät verbundenen Akkucontroller repräsentieren. Erstellen Sie anschließend mit der **Id**-Eigenschaft des gewünschten **DeviceInformation**-Objekts ein entsprechendes [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004)-Element mit der Methode [**FromIdAsync**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.fromidasync.aspx). Rufen Sie zuletzt [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport) auf, um den individuellen Akkubericht abzurufen.
 
 Dieses Beispiel zeigt, wie Sie einen Akkubericht für alle Akkus erstellen, die mit dem Gerät verbunden sind.
 
@@ -73,7 +74,7 @@ async private void RequestIndividualBatteryReports()
 
 ## Zugreifen auf Berichtdetails
 
-Das [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)-Objekt liefert zahlreiche Akkuinformationen. Weitere Informationen finden Sie in der API-Referenz für die Eigenschaften: **Status** (eine [**BatteryStatus**](https://msdn.microsoft.com/library/windows/apps/Dn818458)-Enumerierung), [**ChargeRateInMilliwatts**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.power.batteryreport.chargerateinmilliwatts.aspx), [**DesignCapacityInMilliwattHours**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.power.batteryreport.designcapacityinmilliwatthours.aspx), [**FullChargeCapacityInMilliwattHours**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.power.batteryreport.fullchargecapacityinmilliwatthours.aspx) und [**RemainingCapacityInMilliwattHours**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.remainingcapacityinmilliwatthours). Dieses Beispiel enthält einige Eigenschaften des Akkuberichts, die von der einfachen Akku-App verwendet werden. Die App wird weiter unten in diesem Thema bereitgestellt.
+Das [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)-Objekt liefert zahlreiche Akkuinformationen. Weitere Informationen finden Sie in der API-Referenz für die Eigenschaften: **Status** (eine [**BatteryStatus**](https://msdn.microsoft.com/library/windows/apps/Dn818458)-Enumerierung), [**ChargeRateInMilliwatts**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.chargerateinmilliwatts.aspx), [**DesignCapacityInMilliwattHours**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.designcapacityinmilliwatthours.aspx), [**FullChargeCapacityInMilliwattHours**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.fullchargecapacityinmilliwatthours.aspx) und [**RemainingCapacityInMilliwattHours**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.batteryreport.remainingcapacityinmilliwatthours). Dieses Beispiel enthält einige Eigenschaften des Akkuberichts, die von der einfachen Akku-App verwendet werden. Die App wird weiter unten in diesem Thema bereitgestellt.
 
 ```csharp
 ...
@@ -158,7 +159,7 @@ Testen Sie diese APIs, indem Sie die folgende einfache Akku-App in Microsoft Vis
 </Page>
 ```
 
-Wenn Ihre App nicht den Namen **App1** hat, müssen Sie den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen. Wenn Sie z. B. ein Projekt mit dem Namen **BasicBatteryApp** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="BasicBatteryApp.MainPage"`. Außerdem sollten Sie `xmlns:local="using:App1"` durch `xmlns:local="using:BasicBatteryApp"` ersetzen.
+Wenn Ihre App nicht den Namen **App1** hat, müssen Sie den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen. Wenn Sie z.B. ein Projekt mit dem Namen **BasicBatteryApp** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="BasicBatteryApp.MainPage"`. Außerdem sollten Sie `xmlns:local="using:App1"` durch `xmlns:local="using:BasicBatteryApp"` ersetzen.
 
 Öffnen Sie als Nächstes die Datei **MainPage.xaml.cs** des Projekts, und ersetzen Sie den vorhandenen Code durch Folgendes.
 
@@ -328,17 +329,18 @@ namespace App1
 }
 ```
 
-Wenn Ihre App nicht den Namen **App1** hat, müssen Sie den Namespace im vorherigen Beispiel durch den Namen ersetzen, den Sie für Ihr Projekt vergeben haben. Wenn Sie z. B. ein Projekt mit dem Namen **BasicBatteryApp** erstellt haben, ersetzen Sie den Namespace `App1` durch den Namespace `BasicBatteryApp`.
+Wenn Ihre App nicht den Namen **App1** hat, müssen Sie den Namespace im vorherigen Beispiel durch den Namen ersetzen, den Sie für Ihr Projekt vergeben haben. Wenn Sie z.B. ein Projekt mit dem Namen **BasicBatteryApp** erstellt haben, ersetzen Sie den Namespace `App1` durch den Namespace `BasicBatteryApp`.
 
 Führen Sie schließlich Folgendes aus, um diese einfache Akku-App auszuführen: Klicken Sie im Menü **Debuggen** auf **Debuggen starten**, um die Projektmappe zu testen.
 
-**Tipp**  Um numerische Werte über das [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)-Objekt zu erhalten, debuggen Sie Ihre App auf dem **lokalen Computer** oder einem externen **Gerät** (z. B. einem Windows Phone). Beim Debuggen mit einem Geräteemulator gibt das **BatteryReport**-Objekt für die Kapazitäts- und Rateneigenschaften **null** zurück.
+
+              **Tipp**  Um numerische Werte über das [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)-Objekt zu erhalten, debuggen Sie Ihre App auf dem **lokalen Computer** oder einem externen **Gerät** (z.B. einem Windows Phone). Beim Debuggen mit einem Geräteemulator gibt das **BatteryReport**-Objekt für die Kapazitäts- und Rateneigenschaften **null** zurück.
 
  
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

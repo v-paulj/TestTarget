@@ -6,8 +6,9 @@ ms.assetid: 1F608477-F795-4F33-92FA-F200CC243B6B
 dev.assetid: 54F8DB8A-120A-4D79-8B5A-9315A3764C2F
 label: Auto-suggest box
 template: detail.hbs
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: bc3337101f0f2e8449d052743f7b3ce8d2dac516
+translationtype: Human Translation
+ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
+ms.openlocfilehash: 12f5905fce642a10656864e41325c8f4bd56c025
 
 ---
 # Feld mit automatischen Vorschlägen
@@ -140,22 +141,10 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
 ## Empfohlene und nicht empfohlene Vorgehensweisen
 
--   Zeigen Sie die einzeilige Meldung „Keine Ergebnisse” an, wenn Sie das Feld mit automatischen Vorschlägen zum Durchführen von Suchen verwenden und keine Suchergebnisse für den eingegebenen Text vorhanden sind, damit Benutzer wissen, dass ihre Suchanfrage ausgeführt wurde:
+-   Zeigen Sie, wenn Sie das Feld mit automatischen Vorschlägen zum Durchführen von Suchen verwenden und keine Suchergebnisse für den eingegebenen Text vorhanden sind, die einzeilige Meldung „Keine Ergebnisse” an, damit Benutzer wissen, dass ihre Suchanfrage ausgeführt wurde:
 
     ![Beispiel für ein Feld mit automatischen Vorschlägen ohne Suchergebnisse](images/controls_autosuggest_noresults.png)
 
-{{> aside-internal content = "
-## Prüfliste für Globalisierung und Lokalisierung
-
-<table>
-<tr>
-<th>Vertikaler Abstand</th><td>Verwenden Sie nicht lateinische Zeichen für den vertikalen Abstand, um sicherzustellen, dass nicht lateinische Schriften richtig angezeigt werden, einschließlich Zahlen.</td>
-</tr>
-<tr>
-<th>Bildlauf</th><td>Wenn automatisch vorgeschlagener Text ausgewählt wird, sollten Benutzer einen Bildlauf bis zum Ende der Zeichenfolge ausführen können.</td>
-</tr>
-</table>
-"}}
 
 ## Verwandte Artikel
 
@@ -168,6 +157,6 @@ private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBox
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -5,8 +5,9 @@ title: Registerkarten und Pivots
 ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
 label: Tabs and pivots
 template: detail.hbs
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: 8737ce16d98952f24f9651d30d49ffa85b8d306b
+translationtype: Human Translation
+ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
+ms.openlocfilehash: b6cf34346ad557ce53d3009afe8bc83bc7ed21aa
 
 ---
 # Pivot und Registerkarten
@@ -91,9 +92,6 @@ Das Steuerelement ist in zwei Modi verfügbar:
 -   Pivots werden nicht verschoben, wenn alle Pivotheader in den zulässigen Bereich passen.
 -   Durch Tippen auf eine Pivotbeschriftung wird zur entsprechenden Seite navigiert. Das Pivot selbst wird jedoch nicht verschoben. Das aktive Pivot wird hervorgehoben.
 
-{{> aside-internal content = "
--   Es wird dringen davon abgeraten, Elemente in einer 10-Fuß-Umgebung im Karussellmodus zu verwenden. Legen Sie die neue `IsHeaderItemsCarouselEnabled`-Eigenschaft auf „False“ fest, wenn Ihre App auf der Xbox ausgeführt wird.
-"}}
 
 **Karussell**
 
@@ -101,16 +99,6 @@ Das Steuerelement ist in zwei Modi verfügbar:
 -   Durch Tippen auf eine Pivotbeschriftung wird die entsprechende Seite aufgerufen, und die aktive Pivotbeschriftung rückt an die erste Position.
 -   Pivotelemente in einer Karussellschleife wechseln vom letzten zum ersten Pivotabschnitt.
 
-{{> aside-internal content = "
-### Pivotfokus
-
-Der Tastaturfokus wird bei einem Pivotheader standardmäßig mit einem Unterstrich dargestellt.
-
-![Standardfokus als Unterstrich des ausgewählten Headers](images/pivot_focus_selectedHeader.png)
-
-Apps, die über ein benutzerdefiniertes Pivot verfügen und den Unterstrich in visuelle Objekte zur Headerauswahl integrieren, können die neue `HeaderFocusVisualPlacement`-Eigenschaft verwenden, um den Standardwert zu ändern. Wenn `HeaderFocusVisualPlacement=\"ItemHeaders\"` lautet, wird der Fokus um den gesamten Headerbereich gezeichnet.
-
-![Bei der ItemsHeader-Option wird das Fokusrechteck um alle Pivotheader gezeichnet](images/pivot_focus_headers.png) "}}.
 
 ## Empfehlungen
 
@@ -129,6 +117,6 @@ Apps, die über ein benutzerdefiniertes Pivot verfügen und den Unterstrich in v
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -3,8 +3,9 @@ author: joannaleecy
 title: "Nutzen von Clouddiensten für UWP-Spiele"
 description: "Erfahren Sie mehr über die Implementierung der Cloud als Back-End für Ihre UWP-Spiele."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
-ms.sourcegitcommit: b25f02dc4ebcf960882e64f66f0306a8e584ebbd
-ms.openlocfilehash: d9b252783213f0c6a82944729f98c84e21d56535
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 8bf42e9c2c2e074240eb8e7b94efdfbca65cc7f9
 
 ---
 #  Nutzen von Clouddiensten für UWP-Spiele
@@ -47,14 +48,15 @@ Hier erfahren Sie, wie andere Entwickler Cloudlösungen in ihre Spiele implement
     </tr>
     <tr>
         <td>[343 Industries](https://www.halowaypoint.com/)</td>
-        <td>_Halo 5: Guardians_ implementierte mit Microsoft Azure DocumentDB [Halo: Spartan Companies](https://www.halowaypoint.com/spartan-companies) als Social-Gaming-Plattform. Microsoft Azure DocumentDB wurde aufgrund der schnellen und flexiblen Funktionalitäten für die automatische Indizierung ausgewählt.</td>
+        <td>
+              _Halo 5: Guardians_ implementierte [Halo: Spartan Companies](https://www.halowaypoint.com/spartan-companies) mithilfe von Microsoft Azure DocumentDB als Social-Gaming-Plattform. Microsoft Azure DocumentDB wurde aufgrund der schnellen und flexiblen Funktionen für die automatische Indizierung ausgewählt.</td>
         <td>
             <ul>
                 <li>Skalierbare Datenebene zur Verarbeitung der Erstellung und Verwaltung von Gruppen beim Multiplayer-Gameplay <li>Integration des Spiels mit sozialen Medien <li>Echtzeit-Datenabfragen über mehrere Attribute <li>Synchronisierung von Erfolgen und Statistiken im Spiel </ul>
         </td>
         <td>
             <ul>
-                <li>[Social-Gaming-Implementierung über Azure DocumentDB](https://azure.microsoft.com/en-us/blog/how-halo-5-guardians-implemented-social-gameplay-using-azure-documentdb/)</td>
+                <li>[Social-Gaming-Implementierung über Azure DocumentDB](https://azure.microsoft.com/blog/how-halo-5-guardians-implemented-social-gameplay-using-azure-documentdb/)</td>
             </ul>
     </tr>
     <tr>
@@ -87,7 +89,8 @@ Hier erfahren Sie, wie andere Entwickler Cloudlösungen in ihre Spiele implement
     </tr>
     </td>
         <td>[Pixel Squad](http://www.crimecoast.com/)</td>
-        <td>Pixel Squad entwickelte mit der Unity-Engine und Azure das Spiel _Crime Coast_. _Crime Coast_ ist ein Social-Strategiespiel für Android, iOS und die Windows-Plattformen. Für das Spiel wurden Azure Blob Speicher, Managed Azure Redis Cache und mehrere IIS-VMs mit Lastenausgleich sowie der Microsoft Notification-Hub eingesetzt. Erfahren Sie, wie die Skalierung und Handhabung der Spieler bei 5.000 gleichzeitigen Spielern möglich ist.
+        <td>Pixel Squad entwickelte mit der Unity-Engine und Azure das Spiel _Crime Coast_. 
+              _Crime Coast_ ist ein Social-Strategiespiel für Android, iOS und Windows. Für das Spiel wurden Azure Blob Speicher, Managed Azure Redis Cache und mehrere IIS-VMs mit Lastenausgleich sowie der Microsoft Notification-Hub eingesetzt. Erfahren Sie, wie die Skalierung und Handhabung der Spieler bei 5.000 gleichzeitigen Spielern möglich ist.
         </td>
         <td>
             <ul>
@@ -115,18 +118,18 @@ Schon während die Spieldesigner und Produzenten über die erforderlichen Featur
 ### Schritt-für-Schritt-Lernanleitungen
 
 * [Build 2016-Codelabs: Einsatz von Microsoft Azure App Service und Microsoft SQL Azure als Back-End zur Speicherung von Spielständen](https://github.com/Microsoft-Build-2016/CodeLabs-GameDev-6-Azure)
-* [Entwerfen der Mobilstrategie für Ihr Spiel](https://azure.microsoft.com/en-us/documentation/articles/mobile-engagement-gaming-scenario/)
-* [Nutzung von Azure Mobile Engagement für die iOS-Bereitstellung mit Unity](https://azure.microsoft.com/en-us/documentation/articles/mobile-engagement-unity-ios-get-started/)
+* [Entwerfen der Mobilstrategie für Ihr Spiel](https://azure.microsoft.com/documentation/articles/mobile-engagement-gaming-scenario/)
+* [Nutzung von Azure Mobile Engagement für die iOS-Bereitstellung mit Unity](https://azure.microsoft.com/documentation/articles/mobile-engagement-unity-ios-get-started/)
 
 ### Grundlegendes zu IaaS, PaaS und SaaS
 
 Zunächst müssen Sie entscheiden, welche Dienstform für Spiel am besten geeignet ist. Um einen Ansatz zur Erstellung Ihres Back-Ends auswählen zu können, sollten Sie die Unterschiede der drei Dienstformen kennen.
 
-* [Infrastructure-as-a-Service (IaaS)](https://azure.microsoft.com/en-us/overview/what-is-iaas/)
+* [Infrastructure-as-a-Service (IaaS)](https://azure.microsoft.com/overview/what-is-iaas/)
 
     IaaS stellt eine direkt verfügbare Computing-Infrastruktur dar, die über das Internet bereitgestellt und verwaltet wird. Stellen Sie sich vor, welche Möglichkeiten sich Ihnen eröffnen, wenn Sie mithilfe vieler Computer je nach Bedarf nach oben und unten skalieren können. Mit IaaS vermeiden Sie die Kosten und die Komplexität der Anschaffung und Verwaltung Ihrer eigenen Server und anderer Elemente einer Datacenter-Infrastruktur.
 
-* [Platform-as-a-Service (PaaS)](https://azure.microsoft.com/en-us/overview/what-is-paas/)
+* [Platform-as-a-Service (PaaS)](https://azure.microsoft.com/overview/what-is-paas/)
 
     Ein PaaS-Dienst ist ähnlich wie ein IaaS-Dienst. Er umfasst jedoch auch die Verwaltung der Infrastruktur (z. B. Server, Storage und Netzwerk). Sie müssen also nicht nur keine physischen Server und die Datacenter-Infrastruktur anschaffen, sondern auch keine Softwarelizenzen kaufen und verwalten. Gleiches gilt für die zugrunde liegende Anwendungsstruktur, die Middleware, die Entwicklungstools und andere Ressourcen.
 
@@ -169,7 +172,7 @@ In diesem Abschnitt lernen Sie Möglichkeiten zur Nutzung der Azure Cloudangebot
     
 * [ID@Xbox](http://www.xbox.com/Developers/id)
 
-    Wenn Sie Xbox Live-Features wie Multiplayer-Gameplay, die plattformübergreifende Spielersuche, den Gamerscore, Erfolge und Bestenlisten für Ihr Spiel unter Windows 10 nutzen möchten, melden Sie sich bei ID@Xbox an. Dort erhalten Sie die Tools und die Unterstützung, die Sie für eine erfolgreiche Implementierung benötigen. Registrieren Sie vor der Bewerbung bei ID@Xbox zunächst ein Entwicklerkonto im [Windows Dev Center](https://developer.microsoft.com/windows/programs/join).
+    Wenn Sie Xbox Live-Features wie Multiplayer-Gameplay, die plattformübergreifende Spielersuche, den Gamerscore, Erfolge und Bestenlisten für Ihr Spiel unter Windows10 nutzen möchten, melden Sie sich bei ID@Xbox an. Dort erhalten Sie die Tools und die Unterstützung, die Sie für eine erfolgreiche Implementierung benötigen. Registrieren Sie vor der Bewerbung bei ID@Xbox zunächst ein Entwicklerkonto im [Windows Dev Center](https://developer.microsoft.com/windows/programs/join).
 
 ## Software-as-a Service für Game-Back-Ends
 
@@ -201,6 +204,6 @@ Dieser Abschnitt stellt einige Unternehmen vor, die Cloud-Back-Ends über wichti
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -4,14 +4,14 @@ ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: "Technologien für den Zugriff auf das Netzwerk und Webdienste."
 title: Netzwerk und Webdienste
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: df62edbf63777a8fcec4ab08c1fb56ab76ea6624
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: b4e291c0948a7734b8ba188bc060dfba2e9a83d1
 
 ---
 
 # Netzwerk und Webdienste
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Die folgenden Netzwerk- und Webdiensttechnologien sind für Entwickler von UWP (Universelle Windows-Plattform)-Apps verfügbar.
 
@@ -20,7 +20,7 @@ Die folgenden Netzwerk- und Webdiensttechnologien sind für Entwickler von UWP (
 | [Grundlagen zum Netzwerk](networking-basics.md)                                               | Aktionen, die Sie für eine netzwerkfähige App ausführen müssen.                     |
 | [Welche Netzwerktechnologie?](which-networking-technology.md)                          | Eine kurze Übersicht über die Netzwerktechnologien, die für UWP-Entwickler zur Verfügung stehen, mit Vorschlägen zum Auswählen der Technologien, die für Ihre App geeignet sind.               |
 | [Netzwerkkommunikation im Hintergrund](network-communications-in-the-background.md) | Apps verwenden Hintergrundaufgaben und zwei Hauptmechanismen, um die Kommunikation aufrechtzuerhalten, während sie nicht im Vordergrund ausgeführt werden: den Socketbroker und Steuerkanaltrigger.                  |
-| [Sockets](sockets.md)                                                                   | Sie können als UWP-App-Entwickler [Windows.Networking.Sockets](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/windows.networking.sockets.aspx) und [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523) zur Kommunikation mit anderen Geräten verwenden. In diesem Thema finden Sie umfassende Anleitungen zur Verwendung des Windows.Networking.Sockets-Namespace, um Netzwerkvorgänge durchzuführen. |
+| [Sockets](sockets.md)                                                                   | Sie können als UWP-App-Entwickler [Windows.Networking.Sockets](https://msdn.microsoft.com/library/windows/apps/xaml/windows.networking.sockets.aspx) und [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523) zur Kommunikation mit anderen Geräten verwenden. In diesem Thema finden Sie umfassende Anleitungen zur Verwendung des Windows.Networking.Sockets-Namespace, um Netzwerkvorgänge durchzuführen. |
 | [WebSockets](websockets.md)                                                             | WebSockets stellt einen Mechanismus für die schnelle und sichere bidirektionale Kommunikation zwischen einem Client und einem Server über das Web mithilfe von HTTP(S) bereit.                 |
 | [HttpClient](httpclient.md)                                                             | Verwenden Sie die [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace-API zum Senden und Empfangen von Informationen über das HTTP-Protokoll 1.1 und 2.0.             |
 | [RSS/Atom-Feeds](web-feeds.md)                                                          | Mithilfe von Fremdanbieterfeeds, die entsprechend den RSS- und Atom-Standards mit Features im [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632)-Namespace generiert werden, können Sie die aktuellsten und beliebtesten Webinhalte abrufen oder erstellen.                   |
@@ -29,6 +29,6 @@ Die folgenden Netzwerk- und Webdiensttechnologien sind für Entwickler von UWP (
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

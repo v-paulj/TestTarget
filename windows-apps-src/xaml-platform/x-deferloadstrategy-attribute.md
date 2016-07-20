@@ -4,16 +4,17 @@ title: xDeferLoadStrategy-Attribut
 description: "„xDeferLoadStrategy“ verzögert die Erstellung eines Elements und seiner untergeordneten Elemente, verkürzt die Startzeit, erhöht aber leicht die Arbeitsspeicherauslastung. Jedes betroffene Element erhöht die Arbeitsspeicherauslastung um ca. 600 Bytes."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 translationtype: Human Translation
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: b989a31439444f06dacb86adb186f853d1637f6c
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a5230a92ad919fc52c40c19646ff799453e64fa4
 
 ---
 
 # x:DeferLoadStrategy-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**x:DeferLoadStrategy="Lazy"** verzögert die Erstellung eines Elements und seiner untergeordneten Elemente, verkürzt die Startzeit, erhöht aber leicht die Arbeitsspeicherauslastung. Jedes betroffene Element erhöht die Arbeitsspeicherauslastung um ca. 600 Bytes. Je größer die verzögerte Elementstruktur, desto mehr Startzeit sparen Sie – aber auf Kosten eines größeren Arbeitsspeicherbedarfs. Daher ist es möglich, dass durch eine übermäßige Verwendung dieses Attributs die Leistung beeinträchtigt wird.
+
+              **x:DeferLoadStrategy="Lazy"** verzögert die Erstellung eines Elements und seiner untergeordneten Elemente und verkürzt die Startzeit, erhöht jedoch die Arbeitsspeicherauslastung etwas. Jedes betroffene Element erhöht die Arbeitsspeicherauslastung um ca. 600 Bytes. Je größer die verzögerte Elementstruktur, desto mehr Startzeit sparen Sie – aber auf Kosten eines größeren Arbeitsspeicherbedarfs. Daher ist es möglich, dass durch eine übermäßige Verwendung dieses Attributs die Leistung beeinträchtigt wird.
 
 ## XAML-Attributsyntax
 
@@ -27,7 +28,7 @@ Die Einschränkungen für die Verwendung von **x:DeferLoadStrategy** sind:
 
 -   Erfordert eine Definition von [x:Name](x-name-attribute.md) , da es eine Methode geben muss, um das Element später zu suchen.
 -   Nur ein [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) kann als verzögert markiert werden, mit Ausnahme der von [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249) abgeleiteten Typen.
--   Stammelemente können in [**Page**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.usercontrol) oder [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) nicht verzögert werden.
+-   Stammelemente können in [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) oder [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) nicht verzögert werden.
 -   Elemente in einem [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) können nicht verzögert werden.
 -   Funktioniert nicht mit lose mit [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048) geladenem XAML-Code.
 -   Durch das Verschieben eines übergeordneten Elements werden alle Elemente gelöscht, die nicht erkannt wurden.
@@ -88,6 +89,6 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

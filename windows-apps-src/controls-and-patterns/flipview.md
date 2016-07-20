@@ -5,6 +5,7 @@ title: "Richtlinien für Flip-Ansicht-Steuerelemente"
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: ecb46c0d42821d833e8232780b553754f8f097c5
 
@@ -105,7 +106,8 @@ Hier wird die ItemsSource an eine [**CollectionViewSource**](https://msdn.micros
           ItemsSource="{Binding Source={StaticResource itemsViewSource}}"/>
 ```
 
->**Hinweis**
+>
+            **Hinweis**
             &nbsp;&nbsp;Sie können eine Flip-Ansicht auffüllen, indem Sie entweder der Items-Sammlung Elemente hinzufügen oder die ItemsSource-Eigenschaft festlegen. Die beiden Methoden können jedoch nicht gleichzeitig verwendet werden. Wenn Sie die ItemsSource-Eigenschaft festlegen und dann ein Element in XAML hinzufügen, wird das hinzugefügte Element ignoriert. Wenn Sie die ItemsSource-Eigenschaft festlegen und der Items-Sammlung ein Element in Code hinzufügen, wird eine Ausnahme ausgelöst.
 
 ### Festlegen der Darstellung der Elemente
@@ -211,6 +213,6 @@ Für größere Sammlungen (10-25 Elemente) kann eine Anzeige mit mehr Kontext, z
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

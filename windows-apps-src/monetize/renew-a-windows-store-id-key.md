@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: "Verwenden Sie diese Methode zum Verlängern eines Windows Store-Schlüssels."
 title: "Verlängern eines Windows Store-ID-Schlüssels"
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: 6255346c568ed24e17c795834ab182f73707c4de
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: a3cef13e84c5bb06be4f3e3d4b2db4e02650df62
 
 ---
 
@@ -20,8 +21,8 @@ Verwenden Sie diese Methode zum Verlängern eines Windows Store-Schlüssels. Wen
 
 Zur Verwendung dieser Methode benötigen Sie:
 
--   Ein Azure AD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
--   Einen abgelaufenen Windows Store-ID-Schlüssel, der durch Aufrufen der [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674)-Methode oder [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675)-Methode im clientseitigen Code der App generiert wurde.
+-   Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
+-   Einen abgelaufenen WindowsStore-ID-Schlüssel, der durch Aufrufen der [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674)-Methode oder [**GetCustomerPurchaseIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608675)-Methode im clientseitigen Code der App generiert wurde.
 
 Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
@@ -32,10 +33,10 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 | Schlüsseltyp    | Methode | Anforderungs-URI                                              |
 |-------------|--------|----------------------------------------------------------|
-| Sammlungen | POST   | `https://collections.mp.microsoft.com/v6.0/b2b/keys/renew` |
-| Einkauf    | POST   | `https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew`    |
+| Sammlungen | POST   | ```https://collections.mp.microsoft.com/v6.0/b2b/keys/renew``` |
+| Einkauf    | POST   | ```https://purchase.mp.microsoft.com/v6.0/b2b/keys/renew```    |
 
-<br/> 
+<span/>
 
 ### Anforderungsheader
 
@@ -45,7 +46,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
 | Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
-<br/> 
+<span/>
 
 ### Anforderungstext
 
@@ -54,7 +55,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | serviceTicket | string | Das Azure AD-Zugriffstoken.        | Ja      |
 | key           | string | Der abgelaufene Windows Store-ID-Schlüssel. | Nein       |
 
-<br/> 
+<span/> 
 
 ### Anforderungsbeispiel
 
@@ -79,7 +80,7 @@ Host: collections.mp.microsoft.com
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
 | key       | string | Der aktualisierte Windows Store-Schlüssel kann dann für zukünftige Aufrufe der Sammlungs- oder Einkaufs-API von Windows Store verwendet werden. | Nein       |
 
-<br/> 
+<span/>
 
 ### Antwortbeispiel
 
@@ -106,7 +107,7 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 | 401  | Nicht autorisiert | AuthenticationTokenInvalid | Das Azure AD-Zugriffstoken ist ungültig. In einigen Fällen enthalten die Details zu ServiceError weitere Informationen, z. B. wenn das Token abgelaufen ist oder der *appid*-Anspruch fehlt. |
 | 401  | Nicht autorisiert | InconsistentClientId       | Der *clientId*-Anspruch im Windows Store-ID-Schlüssel und der *appid*-Anspruch im Azure AD-Zugriffstoken stimmen nicht überein.                                                                     |
 
-<br/> 
+<span/>
 
 ## Verwandte Themen
 
@@ -118,6 +119,6 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

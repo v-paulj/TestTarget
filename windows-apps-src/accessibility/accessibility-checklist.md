@@ -6,8 +6,8 @@ title: "Prüfliste für die Barrierefreiheit"
 label: Accessibility checklist
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 9580ccc0716b7e9f4ee32ce241b0ac3ee9bf319d
+ms.sourcegitcommit: 6ac5430a3e18a02d5f2fc82829631b7649ea547d
+ms.openlocfilehash: 2d632c524de8299378d8cc059d1c522080a2df2e
 
 ---
 
@@ -68,6 +68,6 @@ Hier finden Sie eine Prüfliste, die Sie verwenden können, um den Zugriff auf I
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -1,10 +1,11 @@
 ---
-description: "Die folgenden Artikel unterstützen Sie beim Entwerfen und Codieren einer benutzerfreundlichen UWP-App, die auf einer Vielzahl von Geräten und Bildschirmgrößen hervorragend aussieht."
-title: "UWP-Formatanleitungen – Entwickeln von Windows-Apps"
+description: "Erfahren Sie, wie Sie Farbe, Typografie und Bewegung verwenden, um den Charakter Ihrer UWP-App mithilfe der Windows Dev Center-Formatanleitungen für UWP zu definieren."
+keywords: uwp style guide, design guidance, typography, motion, sound, motion, app development
+title: "UWP-Formatanleitungen – Entwicklung von Windows-Apps"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: 3948b1ea3b108d613fe1e3a0351903d2d2f8ffe9
+ms.sourcegitcommit: 0a7f655a6f122787873adac76ac4dec9d775a154
+ms.openlocfilehash: d55aab04696441dbbcba0cbda61fd599fdacec67
 
 ---
 
@@ -20,7 +21,7 @@ ms.openlocfilehash: 3948b1ea3b108d613fe1e3a0351903d2d2f8ffe9
   <p>Entwerfen Sie Anleitungen und Codebeispiele, die Ihnen zeigen, wie Sie den Charakter Ihrer UWP-App mithilfe von Farben, Typografie und Bewegung definieren können.</p>
   </div>
   <div class="side-by-side-content-right">
-    ![Color, icon, motion, sound, and typography guidelines](images/style-header-v2.png)
+    ![Richtlinien für Farben, Symbole, Bewegungen, Audio und Typografie](images/style-header-v2.png)
   </div>
 </div>
 </div>
@@ -29,7 +30,7 @@ ms.openlocfilehash: 3948b1ea3b108d613fe1e3a0351903d2d2f8ffe9
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-   <p><b>[Farbe](color.md)</b><br/>
+   <p><b>[Farben](color.md)</b><br/>
 Farben tragen dazu bei, dass sich Benutzer intuitiv in den verschiedenen Informationsebenen einer App zurechtfinden, und spielen eine wichtige Rolle für das Interaktionsmodell.</p>
   </div>
   <div class="side-by-side-content-right">
@@ -56,8 +57,16 @@ Sound vervollständigt die Benutzerumgebung einer Anwendung und trägt zur Vermi
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
    <p><b>[Typografie](typography.md)</b><br/>
-Die Typografie muss übersichtlich sein, da sie der visuellen Darstellung von Sprache dient. Ihr Stil darf diesem Ziel nie im Wege stehen. Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit des Designs aus.</p>
+Die Typografie muss übersichtlich sein, da sie der visuellen Darstellung von Sprache dient. Ihr Stil darf diesem Ziel nie im Wege stehen. Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit dieses Designs aus.</p>
+   <div class="uwpd-no-bullet-list">
+   <ul>
+    <li>[Schriftarten](fonts.md)</li>
+    <li>[Segoe MDL2-Symbole](segoe-ui-symbol-font.md)</li>
+   </ul>
+   </div>
   </div>
+  
+  
   <div class="side-by-side-content-right">
    <p><b>[Formatieren von Steuerelementen](../controls-and-patterns/styling-controls.md)</b><br/>
 Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darstellung. Sie können mit Formaten die Steuerelementeigenschaften festlegen und diese Einstellungen dann für andere Steuerelemente wiederverwenden, um ein einheitliches Erscheinungsbild zu erzielen.</p>
@@ -68,6 +77,6 @@ Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darst
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

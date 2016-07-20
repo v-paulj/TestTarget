@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
 title: Abrufen von Fehlerberichtsdaten
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: 5b2421daf9df4ca417d5089166c0927e2b2f7436
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 682f727a21d74f5cea8fddc4886c873d537e1cfb
 
 ---
 
@@ -20,7 +21,7 @@ Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte F
 
 Sie benötigen Folgendes, um diese Methode verwenden zu können:
 
--   Ordnen Sie die Azure AD-Anwendung, die Sie zum Aufrufen dieser Methode verwenden, Ihrem Dev Center-Konto zu.
+-   Ordnen Sie die AzureAD-Anwendung, die Sie zum Aufrufen dieser Methode verwenden, Ihrem Dev Center-Konto zu.
 
 -   Rufen Sie ein Azure AD-Zugriffstoken für Ihre Anwendung ab.
 
@@ -33,19 +34,19 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 
 | Methode | Anforderungs-URI                                                          |
 |--------|----------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/failurehits |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/failurehits``` |
 
- 
+<span/> 
 
 ### Anforderungsheader
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;. |
+| Autorisierung | Zeichenfolge | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;. |
 
- 
+<span/> 
 
-### Anforderungstext
+### Anforderungsparameter
 
 <table>
 <colgroup>
@@ -66,7 +67,7 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">Zeichenfolge</td>
-<td align="left">Die Store-ID der App, für die Fehlerberichtsdaten abgerufen werden sollen. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
+<td align="left">Die Store-ID der App, für die Fehlerberichtsdaten abgerufen werden sollen. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="even">
@@ -90,7 +91,7 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 <tr class="odd">
 <td align="left">skip</td>
 <td align="left">int</td>
-<td align="left">Die Anzahl der Zeilen, die in der Abfrage übersprungen werden sollen. Verwenden Sie diesen Parameter, um große Datensätze durchzublättern. Beispielsweise rufen „top=10000“ und „skip=0“ die ersten 10.000 Datenzeilen ab, „top=10000“ und „skip=10000“ die nächsten 10.000 Datenzeilen usw.</td>
+<td align="left">Die Anzahl der Zeilen, die in der Abfrage übersprungen werden sollen. Verwenden Sie diesen Parameter, um große Datensätze durchzublättern. Beispielsweise rufen „top=10000“ und „skip=0“ die ersten 10.000Datenzeilen ab, „top=10000“ und „skip=10000“ die nächsten 10.000Datenzeilen usw.</td>
 <td align="left">Nein</td>
 </tr>
 <tr class="even">
@@ -148,16 +149,17 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 <li><strong>packageVersion</strong></li>
 </ul>
 <p>Der Parameter <em>order</em> ist optional und kann <strong>asc</strong> oder <strong>desc</strong> sein, um die auf- oder absteigende Anordnung der einzelnen Felder anzugeben. Der Standard ist <strong>asc</strong>.</p>
-<p>Dies ist eine Beispielzeichenfolge für <em>orderby</em> : <em>orderby=date,market</em></p></td>
+<p>Dies ist eine Beispielzeichenfolge für <em>orderby</em>: <em>orderby=date,market</em></p></td>
 <td align="left">Nein</td>
 </tr>
 </tbody>
 </table>
 
+<span/>
  
 ### Filterfelder
 
-Der Parameter *Filter* des Anforderungstexts enthält mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält ein Feld und einen Wert, das/der mit den Operatoren **eq** oder **ne** verknüpft ist. Anweisungen können mit **and** oder **or** kombiniert werden. Dies sind einige Beispielparameter für *Filter*:
+Der Parameter *Filter* der Anforderung enthält mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält ein Feld und einen Wert, das/der mit den Operatoren **eq** oder **ne** verknüpft ist. Anweisungen können mit **and** oder **or** kombiniert werden. Dies sind einige Beispielparameter für *Filter*:
 
 -   *filter=market eq 'US' and gender eq 'm'*
 -   *filter=(market ne 'US') and (gender ne 'Unknown') and (gender ne 'm') and (market ne 'NO') and (ageGroup ne 'greater than 55' or ageGroup ne ‘less than 13’)*
@@ -196,9 +198,9 @@ Die Liste der unterstützten Felder finden Sie in der folgenden Tabelle. Zeichen
 <li><strong>Windows Phone 8</strong></li>
 <li><strong>Windows Phone 8.1</strong></li>
 <li><strong>Windows Phone 10</strong></li>
-<li><strong>Windows 8</strong></li>
+<li><strong>Windows8</strong></li>
 <li><strong>Windows 8.1</strong></li>
-<li><strong>Windows 10</strong></li>
+<li><strong>Windows10</strong></li>
 <li><strong>Unbekannt</strong></li>
 </ul></td>
 </tr>
@@ -241,7 +243,7 @@ Die Liste der unterstützten Felder finden Sie in der folgenden Tabelle. Zeichen
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### Anforderungsbeispiel
 
@@ -266,7 +268,8 @@ Authorization: Bearer <your access token>
 | @nextLink  | string  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Fehlern für die Abfrage gibt. |
 | TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                                                                                                                                                                                                                     |
 
- 
+<span/>
+
 ### Fehlerwerte
 
 Elemente im Array *Value* enthalten die folgenden Werte.
@@ -288,7 +291,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | eventCount      | inumber | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.                                                                                                                                            |
 | deviceCount     | inumber | Die Anzahl der eindeutigen Geräte, die diesem Fehler für die angegebene Aggregationsebene entsprechen.                                                                                                                                        |
 
- 
+<span/> 
 
 ### Antwortbeispiel
 
@@ -330,6 +333,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

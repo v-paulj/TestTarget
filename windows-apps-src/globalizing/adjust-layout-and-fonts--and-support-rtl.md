@@ -6,8 +6,8 @@ ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 989d810724c925a5bcbebf5f7fb301636905fff9
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a1b271360b84e670f0b28557ffc499436487ad5f
 
 ---
 
@@ -17,12 +17,12 @@ ms.openlocfilehash: 989d810724c925a5bcbebf5f7fb301636905fff9
 
 
 
-Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden – also beispielsweise auch die Flussrichtung von rechts nach links (right-to-left, RTL).
+Entwickeln Sie Ihre App so, dass die Layouts und Schriftarten mehrerer Sprachen unterstützt werden –also beispielsweise auch die Flussrichtung von rechts nach links (right-to-left, RTL).
 
 ## <span id="Layout_guidelines"></span><span id="layout_guidelines"></span><span id="LAYOUT_GUIDELINES"></span>Layoutrichtlinien
 
 
-Einige Sprachen, darunter Deutsch und Finnisch, benötigen für den Text mehr Raum als Englisch. Für die Schriftarten einiger Sprachen, z. B. Japanisch, wird eine größere Höhe benötigt. Und bei Sprachen wie Arabisch und Hebräisch muss die Leserichtung des Text- und des App-Layouts von rechts nach links verlaufen.
+Einige Sprachen, darunter Deutsch und Finnisch, benötigen für den Text mehr Raum als Englisch. Für die Schriftarten einiger Sprachen, z.B. Japanisch, wird eine größere Höhe benötigt. Und bei Sprachen wie Arabisch und Hebräisch muss die Leserichtung des Text- und des App-Layouts von rechts nach links verlaufen.
 
 Verwenden Sie flexible Layoutmechanismen anstelle einer absoluten Positionierung oder fester Breiten und Höhen. Bestimmte UI-Elemente können abhängig von der Sprache geändert werden.
 
@@ -50,7 +50,7 @@ Stellen Sie sicher, dass die **ResW**-Datei der App eine Ressource für MainPage
 
 ### <span id="HTML"></span><span id="html"></span>HTML
 
-Verwenden Sie für Windows Store-Apps mit JavaScript [Cascading Style Sheets (CSS)](https://msdn.microsoft.com/library/ms531209)-Layoutmechanismen wie [-ms-grid](https://msdn.microsoft.com/en-us/library/windows/apps/hh465453.aspx#g_section) und [-ms-box](https://msdn.microsoft.com/en-us/library/windows/apps/hh465453.aspx#f_section). Verwenden Sie symmetrische Abstände und Ränder, um die Lokalisierung für verschiedene Layoutrichtungen zu ermöglichen.
+Verwenden Sie für Windows Store-Apps mit JavaScript [Cascading Style Sheets (CSS)](https://msdn.microsoft.com/library/ms531209)-Layoutmechanismen wie [-ms-grid](https://msdn.microsoft.com/library/windows/apps/hh465453.aspx#g_section) und [-ms-box](https://msdn.microsoft.com/library/windows/apps/hh465453.aspx#f_section). Verwenden Sie symmetrische Abstände und Ränder, um die Lokalisierung für verschiedene Layoutrichtungen zu ermöglichen.
 
 Sie können auch den Pseudoklassenselektor [**:-ms-lang()**](https://msdn.microsoft.com/library/cc848867) verwenden, um CSS-Eigenschaften wie die Breite für bestimmte Elemente basierend auf der Sprache der App anzupassen. Dazu muss der App-Host das **lang**-Attribut des Stammelements auf die App-Sprache festlegen.
 
@@ -97,12 +97,14 @@ Wenn Ihre App Bilder enthält, die für Rechts-nach-links-Sprachen gespiegelt we
 .mirrorable { transform: scaleX(-1); }
 ```
 
-**Für XAML und HTML:** Wenn die App ein anderes Bild benötigt, damit das Bild richtig umgedreht werden kann, können Sie das Ressourcenverwaltungssystem mit dem [layoutdir-Qualifizierer](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324) verwenden. Das System wählt ein Bild mit dem Namen „file.layoutdir-rtl.png“ aus, wenn die [App-Sprache](manage-language-and-region.md) auf eine Rechts-nach-links-Sprache festgelegt wird. Diese Vorgehensweise ist möglicherweise nötig, wenn nicht alle Teile des Bilds umgedreht werden.
+
+              **Für XAML und HTML:** Wenn die App ein anderes Bild benötigt, damit das Bild richtig umgedreht werden kann, können Sie das Ressourcenverwaltungssystem mit dem [layoutdir-Qualifizierer](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324) verwenden. Das System wählt ein Bild mit dem Namen „file.layoutdir-rtl.png“ aus, wenn die [App-Sprache](manage-language-and-region.md) auf eine Rechts-nach-links-Sprache festgelegt wird. Diese Vorgehensweise ist möglicherweise nötig, wenn nicht alle Teile des Bilds umgedreht werden.
 
 ## <span id="Fonts"></span><span id="fonts"></span><span id="FONTS"></span>Schriftarten
 
 
-**Für XAML und HTML:** Verwenden Sie die [**LanguageFont**](https://msdn.microsoft.com/library/windows/apps/br206864)-Schriftartenersetzungs-APIs für den programmgesteuerten Zugriff auf die empfohlene Familie sowie den Grad, die Breite und den Schnitt der Schriftart für eine spezielle Sprache. Das **LanguageFont**-Objekt ermöglicht den Zugriff auf die richtigen Schriftartinformationen für verschiedene Inhaltskategorien: UI-Kopfzeilen, Benachrichtigungen, Textkörper und Schriftarten für den Textkörper, die vom Benutzer bearbeitet werden können.
+
+              **Für XAML und HTML:** Verwenden Sie die [**LanguageFont**](https://msdn.microsoft.com/library/windows/apps/br206864)-Schriftartenersetzungs-APIs für den programmgesteuerten Zugriff auf die empfohlene Familie sowie den Grad, die Breite und den Schnitt der Schriftart für eine spezielle Sprache. Das **LanguageFont**-Objekt ermöglicht den Zugriff auf die richtigen Schriftartinformationen für verschiedene Inhaltskategorien: UI-Kopfzeilen, Benachrichtigungen, Textkörper und Schriftarten für den Textkörper, die vom Benutzer bearbeitet werden können.
 
 ### <span id="HTML"></span><span id="html"></span>HTML
 
@@ -119,6 +121,6 @@ Bei Apps, die mehrere Sprachen auf einer einzigen Seite anzeigen, sollte das **l
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

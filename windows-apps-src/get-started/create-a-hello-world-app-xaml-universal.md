@@ -2,22 +2,23 @@
 author: martinekuan
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Erstellen der App „Hello, world“ (XAML)"
-description: "In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows 10 abzielt."
+description: "In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows10 abzielt."
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 0d6b6421b4f5ebc01c865e80db96d1158b9bd825
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 0a524d51f713c37ce2069b4e750bf3ed20fe19ab
 
 ---
 
 # Erstellen der App „Hello, world“ (XAML)
 
-In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows 10 abzielt. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows 10 ausgeführt werden kann. In diesem Thema geht es um die Erstellung einer App, die für Desktops und mobile Geräte gleichermaßen gut geeignet ist.
+In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows10 abzielt. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows10 ausgeführt werden kann. In diesem Thema geht es um die Erstellung einer App, die für Desktops und mobile Geräte gleichermaßen gut geeignet ist.
 
-**Wichtig**   Dieses Lernprogramm ist für Microsoft Visual Studio 2015 und Windows 10 konzipiert. Die korrekte Funktionsweise mit früheren Versionen ist nicht sichergestellt.
+
+              **Wichtig:** Dieses Lernprogramm ist für Microsoft Visual Studio2015 und Windows10 konzipiert. Die korrekte Funktionsweise mit früheren Versionen ist nicht sichergestellt.
 
 Hier erfahren Sie Folgendes:
 
--   Erstellen Sie ein neues Visual Studio-Projekt für Windows 10 und die UWP.
+-   Erstellen Sie ein neues Visual Studio-Projekt für Windows10 und die UWP.
 -   Hinzufügen von XAML-Inhalt zu Ihrer Startseite
 -   Behandeln von Touch-, Stift- und Mauseingaben
 -   Ausführen des Projekts auf dem lokalen Desktop und auf dem Smartphone-Emulator in Visual Studio
@@ -26,7 +27,7 @@ Hier erfahren Sie Folgendes:
 ## Vorbereitung
 
 
--   Wir beginnen direkt mit den Schritten zum Erstellen einer einfachen universellen App. Daher empfehlen wir Ihnen dringend, sich die Informationen unter [Neues in Windows 10](https://dev.windows.com/whats-new-windows-10-dev-preview) und [Was ist eine universelle Windows-App](whats-a-uwp.md) gründlich durchzulesen, bevor Sie sich diesem Lernprogramm widmen.
+-   Wir beginnen direkt mit den Schritten zum Erstellen einer einfachen universellen App. Daher empfehlen wir Ihnen dringend, sich die Informationen unter [Neues in Windows10](https://dev.windows.com/whats-new-windows-10-dev-preview) und [Was ist eine universelle Windows-App](whats-a-uwp.md) gründlich durchzulesen, bevor Sie sich diesem Lernprogramm widmen.
 -   Zum Durcharbeiten dieses Lernprogramms benötigen Sie Windows 10 und Visual Studio 2015. Weitere Informationen finden Sie unter [Vorbereiten](get-set-up.md) .
 -   Es wird davon ausgegangen, dass Sie über Grundkenntnisse in XAML verfügen und mit den Konzepten in der [XAML-Übersicht](https://msdn.microsoft.com/library/windows/apps/Mt185595) vertraut sind.
 -   Außerdem wird davon ausgegangen, dass Sie das Standardfensterlayout in Visual Studio verwenden. Wenn Sie das Standardlayout ändern, können Sie es im Menü **Fenster** mit dem Befehl **Fensterlayout zurücksetzen** wiederherstellen.
@@ -45,6 +46,8 @@ Hier erfahren Sie Folgendes:
 3.  Erweitern Sie im linken Bereich die Option **Installiert > Vorlagen > Visual C# > Windows**, und wählen Sie anschließend die Vorlagengruppe **Universal**. Im mittleren Bereich des Dialogfelds sehen Sie eine Liste mit Projektvorlagen für Apps der universellen Windows-Plattform (UWP).
 
    ![Das Fenster „Neues Projekt“ ](images/newproject-cs.png)
+   
+   (Sollten diese Optionen nicht angezeigt werden, vergewissern Sie sich, dass die Entwicklungstools für universelle Windows-Apps installiert sind. Weitere Informationen finden Sie unter [Vorbereiten](get-set-up.md).)
 
 4.  Wählen Sie im mittleren Bereich die Projektvorlage **Leere App (universelle Windows-App)** aus.
 
@@ -68,7 +71,7 @@ Hier erfahren Sie Folgendes:
 
 Diese Dateien werden für alle UWP-Apps mit C# benötigt. Sie sind Teil jedes Projekts, das Sie mit Visual Studio erstellen.
 
-## Schritt 2: Anpassen der Startseite
+## Schritt2: Anpassen der Startseite
 
 
 ### Inhalt der Dateien
@@ -151,7 +154,7 @@ Lassen Sie uns nun der App einige Inhalte hinzufügen.
 
     The controls that you added in the XAML editor show up in the design view.
 
-## Schritt 3: Starten der App
+## Schritt3: Starten der App
 
 
 Sie haben nun eine sehr einfache App erstellt. Dies ist eine guter Zeitpunkt zum Erstellen, Bereitstellen und Starten Ihrer App, um sie in Aktion zu sehen. Sie können Ihre App auf dem lokalen Computer, in einem Simulator oder Emulator oder auf einem Remotegerät debuggen. Dies ist das Zielgerätmenü in Visual Studio.
@@ -203,16 +206,18 @@ Viel zu bieten hat die App zwar noch nicht, aber trotzdem: Herzlichen Glückwuns
 
 ### Starten der App in einem Emulator für mobile Geräte
 
-Ihre App kann auf jedem Windows 10-Gerät ausgeführt werden. Wir sehen uns nun an, wie sie auf einem Windows Phone dargestellt wird.
+Ihre App kann auf jedem Windows10-Gerät ausgeführt werden. Wir sehen uns nun an, wie sie auf einem Windows Phone dargestellt wird.
 
 Zusätzlich zu den Optionen zum Debuggen auf einem Desktopgerät enthält Visual Studio Optionen zum Bereitstellen und Debuggen Ihrer App auf einem physischen mobilen Gerät, das an den Computer angeschlossen ist, oder in einem Emulator für mobile Geräte. Sie können zwischen Emulatoren für Geräte mit unterschiedlichen Arbeitsspeicher- und Bildschirmkonfigurationen wählen.
 
 -   **Gerät**
--   **Emulator <SDK version> WVGA 4 Zoll 512 MB**
--   **Emulator <SDK version> WVGA 4 Zoll 1 GB**
+-   **Emulator <SDK version> WVGA 4Zoll 512MB**
+-   **Emulator <SDK version> WVGA 4Zoll 1GB**
 -   usw. (verschiedene Emulatoren mit anderen Konfigurationen)
 
-Es ist ratsam, Ihre App auf einem Gerät mit kleinem Bildschirm und begrenztem Arbeitsspeicher zu testen. Wählen Sie also die Option **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
+(Sollten diese Emulatoren nicht angezeigt werden, vergewissern Sie sich, dass die Entwicklungstools für universelle Windows-Apps installiert sind. Weitere Informationen finden Sie unter [Vorbereiten](get-set-up.md).)
+
+Es empfiehlt sich, Ihre App auf einem Gerät mit kleinem Bildschirm und begrenztem Arbeitsspeicher zu testen. Wählen Sie also die Option **Emulator 10.0.10240.0 WVGA 4Zoll 512MB** aus
 **So beginnen Sie mit dem Debuggen in einem Emulator für mobile Geräte**
 
 1.  Wählen Sie auf der **Standardsymbolleiste** im Menü mit den Zielgeräten (![Menü „Debuggen starten“](images/startdebug-full.png)) die Option **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
@@ -234,7 +239,7 @@ Als Erstes Ihnen auffallen, dass die Schaltfläche vom kleineren Bildschirms ein
 
 Sie merken vielleicht auch, dass Sie Text im [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Element eingeben können. Wenn Sie jetzt jedoch auf [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) klicken oder tippen, passiert noch nichts. In den nächsten Schritten erstellen Sie einen Ereignishandler für das [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737)-Ereignis der Schaltfläche, um eine personalisierte Begrüßung einzublenden. Sie fügen den Code für den Ereignishandler der Datei „MainPage.xaml.cs“ hinzu.
 
-## Schritt 4: Erstellen eines Ereignishandlers
+## Schritt4: Erstellen eines Ereignishandlers
 
 
 XAML-Elemente können Meldungen senden, wenn bestimmte Ereignisse eintreten. Dank dieser Ereignismeldungen können Sie mit einer Aktion auf das Ereignis reagieren. Sie fügen Ihren Code zum Reagieren auf das Ereignis in eine Ereignishandlermethode ein. Eines der am häufigsten auftretenden Ereignisse in vielen Apps ist das Klicken eines Benutzers auf ein [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)-Element.
@@ -243,7 +248,7 @@ Wir definieren nun einen Ereignishandler für das [**Click**](https://msdn.micro
 
 ### Verwenden von Ereignissen für Touch-, Maus- und Stifteingaben
 
-Welche Ereignisse sollten behandelt werden? Windows Store-Apps können auf unterschiedlichsten Geräten ausgeführt werden. Berücksichtigen Sie bei der App-Gestaltung also auch die Nutzung der Toucheingabe. Ihre App muss zudem mit Maus- und Stifteingaben zurechtkommen. Praktischerweise sind Ereignisse wie [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) und [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/BR208922) aber geräteunabhängig. Wenn Sie mit der Programmierung für Microsoft .NET vertraut sind, sind Ihnen möglicherweise separate Ereignisse für Maus-, Touch- und Stifteingaben (wie **MouseMove**, **TouchMove** und **StylusMove**) geläufig. Bei Windows Store-Apps werden diese separaten Ereignisse durch ein einzelnes [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/BR208970)-Ereignis ersetzt, das gleichzeitig für Touch-, Maus- und Stifteingaben verwendet werden kann.
+Welche Ereignisse sollten behandelt werden? Windows Store-Apps können auf unterschiedlichsten Geräten ausgeführt werden. Berücksichtigen Sie bei der App-Gestaltung also auch die Nutzung der Toucheingabe. Ihre App muss zudem mit Maus- und Stifteingaben zurechtkommen. Praktischerweise sind Ereignisse wie [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) und [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/BR208922) aber geräteunabhängig. Wenn Sie mit der Programmierung für Microsoft .NET vertraut sind, sind Ihnen möglicherweise separate Ereignisse für Maus-, Touch- und Stifteingaben (wie **MouseMove**, **TouchMove** und **StylusMove**) geläufig. Bei WindowsStore-Apps werden diese separaten Ereignisse durch ein einzelnes [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/BR208970)-Ereignis ersetzt, das gleichzeitig für Touch-, Maus- und Stifteingaben verwendet werden kann.
 
 **So fügen Sie einen Ereignishandler hinzu**
 
@@ -272,7 +277,7 @@ Welche Ereignisse sollten behandelt werden? Windows Store-Apps können auf unter
 
 6.  Debuggen Sie die App auf dem lokalen Computer. Wenn Sie Ihren Namen in das Textfeld eingeben und anschließend auf die Schaltfläche klicken, zeigt die App eine personalisierte Begrüßung an.
 
-## Schritt 5: Anpassen der UI an verschiedene Fenstergrößen
+## Schritt5: Anpassen der UI an verschiedene Fenstergrößen
 
 
 Als Nächstes sorgen wir dafür, dass sich die UI verschiedenen Bildschirmgrößen anpasst, damit sie auch auf mobilen Geräten gut aussieht. Dazu fügen Sie ein [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)-Element hinzu und legen Eigenschaften fest, die für die unterschiedlichen Ansichtszustände angewendet werden.
@@ -302,19 +307,19 @@ Als Nächstes sorgen wir dafür, dass sich die UI verschiedenen Bildschirmgröß
     </VisualStateManager.VisualStateGroups>
 ```    
 
-2.  Debuggen Sie die App auf dem lokalen Computer. Sie sehen, dass die UI genauso wie vorher aussieht, es sei denn, die Fensterbreite sinkt unter 641 Pixel.
+2.  Debuggen Sie die App auf dem lokalen Computer. Sie sehen, dass die UI genauso wie vorher aussieht, es sei denn, die Fensterbreite sinkt unter 641Pixel.
 3.  Debuggen Sie die App auf dem Emulator für mobile Geräte. Beachten Sie, dass für die UI die Eigenschaften verwendet werden, die Sie unter `narrowState` definiert haben, und dass die Benutzeroberfläche auf dem kleinen Bildschirm korrekt angezeigt wird.
 
 ![Bildschirm der mobilen App](images/helloworld-2-cs-phone.png)
 
 Wenn Sie bereits in früheren Versionen von XAML ein [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)-Element genutzt haben, fällt Ihnen vielleicht auf, dass für den XAML-Code hier eine vereinfachte Syntax verwendet wird.
 
-Das [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)-Element mit dem Namen `wideState` verfügt über ein [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)-Element, für das die [**MinWindowWidth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth)-Eigenschaft auf den Wert 641 festgelegt ist. Dies bedeutet, dass der Zustand nur angewendet wird, wenn die Fensterbreite nicht kleiner als die Mindestgröße von 641 Pixeln ist. Da Sie keine [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817)-Objekte für diesen Zustand definieren, werden die Layouteigenschaften verwendet, die Sie im XAML-Code für den Seiteninhalt festgelegt haben.
+Das [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)-Element mit dem Namen `wideState` verfügt über ein [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)-Element, für das die [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth)-Eigenschaft auf den Wert641 festgelegt ist. Dies bedeutet, dass der Zustand nur angewendet wird, wenn die Fensterbreite nicht kleiner als die Mindestgröße von 641Pixeln ist. Da Sie keine [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817)-Objekte für diesen Zustand definieren, werden die Layouteigenschaften verwendet, die Sie im XAML-Code für den Seiteninhalt festgelegt haben.
 
-Das zweite [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)-Element `narrowState` verfügt über ein [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)-Element, für das die [**MinWindowWidth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth)-Eigenschaft auf 0 festgelegt ist. Dieser Zustand wird angewendet, wenn die Fensterbreite größer als 0 und kleiner als 641 Pixel ist. (Bei 641 Pixeln wird `wideState` angewendet.) In diesem Zustand definieren Sie einige [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817)-Objekte, um die Layouteigenschaften der Steuerelemente in der UI zu ändern:
+Das zweite [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)-Element `narrowState` verfügt über ein [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)-Element, für das die [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth)-Eigenschaft auf0 festgelegt ist. Dieser Zustand wird angewendet, wenn die Fensterbreite größer als 0 und kleiner als 641Pixel ist. (Bei 641Pixeln wird `wideState` angewendet.) In diesem Zustand definieren Sie einige [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817)-Objekte, um die Layouteigenschaften der Steuerelemente in der UI zu ändern:
 
 -   Ändern Sie das [**Orientation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.orientation)-Element des `inputPanel`-Elements von **Horizontal** in **Vertical**.
--   Sie fügen dem `inputButton`-Element einen oberen Rand mit einer Breite von 4 DIP hinzu.
+-   Sie fügen dem `inputButton`-Element einen oberen Rand mit einer Breite von 4DIP hinzu.
 
 ## Zusammenfassung
 
@@ -323,6 +328,6 @@ Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows 10 und die UWP er
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

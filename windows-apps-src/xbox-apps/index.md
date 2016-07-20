@@ -1,30 +1,31 @@
 ---
 author: Mtoepke
-title: "UWP auf Xbox One"
+title: UWP auf XboxOne
 description: "Informationen zum Erstellen von Apps für die Universelle Windows-Plattform (UWP) auf Xbox One."
 area: Xbox
-ms.sourcegitcommit: b94df28172a0ffa33e69e7d20c83c715a1bfdb52
-ms.openlocfilehash: d50602cf6ba7041d34200e8bc93a14188038b5ae
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: b615eaab90ef43026baedd0113ad28f43bede343
 
 ---
 
-# UWP auf Xbox One
+# UWP auf XboxOne
 
 Erste Schritte beim Erstellen von Apps für die Universelle Windows-Plattform (UWP) auf Xbox One.
 
-In dieser Vorschauversion wird die Entwicklung von Apps und Spielen unterstützt. Sie müssen kein [ID@Xbox](http://www.xbox.com/en-us/Developers/id)-Entwickler sein, um Spiele oder Apps auf Xbox zu erstellen, zu testen und mit diesen zu experimentieren, Sie müssen sich jedoch bei [ID@Xbox](http://www.xbox.com/en-us/Developers/id) registrieren, wenn Sie ein Spiel auf Xbox One veröffentlichen und verkaufen möchten oder von den Vorteilen von Xbox Live unter Windows 10 zu profitieren. Registrieren Sie sich bei [ID@Xbox](http://www.xbox.com/en-us/Developers/id), um unserer Community aus freiwilligen Entwicklern und begeisterten Benutzern beizutreten. 
+In dieser Vorschauversion wird die Entwicklung von Apps und Spielen unterstützt. Sie müssen kein [ID@Xbox](http://www.xbox.com/Developers/id)-Entwickler sein, um Spiele oder Apps auf Xbox zu erstellen, zu testen und mit diesen zu experimentieren, Sie müssen sich jedoch bei [ID@Xbox](http://www.xbox.com/Developers/id) registrieren, wenn Sie ein Spiel auf Xbox One veröffentlichen und verkaufen möchten oder von den Vorteilen von Xbox Live unter Windows 10 zu profitieren. Registrieren Sie sich bei [ID@Xbox](http://www.xbox.com/Developers/id), um unserer Community aus freiwilligen Entwicklern und begeisterten Benutzern beizutreten. 
 
-Dieser Abschnitt enthält die Schritte bei der Einrichtung, Informationen zum Authentifizierungsprozess, zur Installation der erforderlichen Version von Visual Studio und Windows 10-Tools sowie zum Einrichten, Ausführen und Debuggen einer einfachen ersten Anwendung. 
+Dieser Abschnitt enthält die Schritte bei der Einrichtung, Informationen zum Authentifizierungsprozess, zur Installation der erforderlichen Version von Visual Studio und Windows10-Tools sowie zum Einrichten, Ausführen und Debuggen einer einfachen ersten Anwendung. 
 
 | Thema      | Beschreibung |
 |------------|-------------|
 |[Erste Schritte](getting-started.md)| Leitfaden für erste Schritte bei der UWP-Entwicklung auf Xbox One. |
 |[Neuigkeiten](whats-new.md)| Hier werden neue Features in UWP auf Xbox One Developer Preview vorgestellt. |
 |[Bekannte Probleme](known-issues.md)| Bekannte Probleme mit UWP auf Xbox One Developer Preview. |
-|[Häufig gestellte Fragen](frequently-asked-questions.md)| Im Zusammenhang mit UWP auf Xbox One häufig gestellte Fragen. |
+|[FAQ](frequently-asked-questions.md)| Im Zusammenhang mit UWP auf Xbox One häufig gestellte Fragen. |
 |[Aktivierung des Xbox One-Entwicklermodus](devkit-activation.md)| Erläutert, wie Sie den Entwicklermodus auf Xbox One aktivieren. |
-|[Einführung in Xbox One-Tools](introduction-to-xbox-tools.md)| Beschreibt das Xbox One-Tool _Dev Home_, die Verwendung des Windows Device Portal, die Einrichtung von Visual Studio für die Entwicklung und enthält eine Anleitung zum Entwickeln einer ersten Xbox UWP-Anwendung für neue Entwickler. |
-|[Einrichten der Umgebung für die UWP-Entwicklung auf Xbox](development-environment-setup.md)| Beschreibt die Schritte zum Einrichten und Testen der Xbox One-Entwicklungsumgebung. |
+|[Tools](introduction-to-xbox-tools.md)| Beschreibt das Xbox One-spezifische Tool _Dev Home_, die Verwendung des Windows Device Portal und die Einrichtung von Visual Studio für die Entwicklung. In diesem Abschnitt werden neue Entwickler auch durch ihre erste UWP-Anwendung für Xbox geführt und die Verwendung des Fiddler-Tools zur Anzeige des Netzwerkdatenverkehrs erklärt. |
+|[Einrichten der UWP-Entwicklungsumgebung auf Xbox](development-environment-setup.md)| Beschreibt die Schritte zum Einrichten und Testen der Xbox One-Entwicklungsumgebung. |
 |[Bewährte Verfahren](tailoring-for-xbox.md)| Hier wird erläutert, wie Sie den Mausmodus deaktivieren, bis zu den Rändern des Bildschirms zeichnen und die Skalierung deaktivieren. |
 |[Systemressourcen für UWP-Apps und -Spiele auf Xbox One](system-resource-allocation.md)| Beschreibt die verfügbaren Ressourcen für die Anwendung, wenn sie auf Xbox One ausgeführt wird. | 
 |[Entwerfen für Xbox und Fernsehgeräte](http://go.microsoft.com/fwlink/?LinkID=760736)| Beschreibt bewährte Methoden für das Entwerfen einer App, die auf einem Fernsehgerät wiedergegeben wird und für die ein Controller für die Eingabe verwendet wird. |  
@@ -42,6 +43,6 @@ Dieser Abschnitt enthält die Schritte bei der Einrichtung, Informationen zum Au
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

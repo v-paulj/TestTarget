@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 2967C757-9D8A-4B37-8AA4-A325F7A060C5
 description: "Mittels dieser Methode in der Windows Store-Analyse-API können Sie Rezensionsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
 title: Abrufen von App-Rezensionen
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: bb0f912bd3380e21e04fa44f2c75244c6585f03a
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 6e7e8c6a1b870031fb7055bf09c8ebbaa7dc13a5
 
 ---
 
@@ -20,7 +21,7 @@ Mittels dieser Methode in der Windows Store-Analyse-API können Sie Rezensionsda
 
 Sie benötigen Folgendes, um diese Methode verwenden zu können:
 
--   Ordnen Sie die Azure AD-Anwendung, die Sie zum Aufrufen dieser Methode verwenden, Ihrem Dev Center-Konto zu.
+-   Ordnen Sie die AzureAD-Anwendung, die Sie zum Aufrufen dieser Methode verwenden, Ihrem Dev Center-Konto zu.
 
 -   Rufen Sie ein Azure AD-Zugriffstoken für Ihre Anwendung ab.
 
@@ -33,19 +34,19 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 
 | Methode | Anforderungs-URI                                                      |
 |--------|------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/reviews``` |
 
- 
+<span/> 
 
 ### Anforderungsheader
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;. |
+| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;. |
 
- 
+<span/> 
 
-### Anforderungstext
+### Anforderungsparameter
 
 <table>
 <colgroup>
@@ -65,8 +66,8 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 <tbody>
 <tr class="odd">
 <td align="left">applicationId</td>
-<td align="left">Zeichenfolge</td>
-<td align="left">Die Store-ID der App, für die Sie Rezensionsdaten abrufen möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
+<td align="left">string</td>
+<td align="left">Die Store-ID der App, für die Sie Rezensionsdaten abrufen möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="even">
@@ -90,7 +91,7 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 <tr class="odd">
 <td align="left">skip</td>
 <td align="left">int</td>
-<td align="left">Die Anzahl der Zeilen, die in der Abfrage übersprungen werden sollen. Verwenden Sie diesen Parameter, um große Datensätze durchzublättern. Beispielsweise rufen „top=10000“ und „skip=0“ die ersten 10.000 Datenzeilen ab, „top=10000“ und „skip=10000“ die nächsten 10.000 Datenzeilen usw.</td>
+<td align="left">Die Anzahl der Zeilen, die in der Abfrage übersprungen werden sollen. Verwenden Sie diesen Parameter, um große Datensätze durchzublättern. Beispielsweise rufen „top=10000“ und „skip=0“ die ersten 10.000Datenzeilen ab, „top=10000“ und „skip=10000“ die nächsten 10.000Datenzeilen usw.</td>
 <td align="left">Nein</td>
 </tr>
 <tr class="even">
@@ -126,16 +127,17 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 <li><strong>rating</strong></li>
 </ul>
 <p>Der Parameter <em>order</em> ist optional und kann <strong>asc</strong> oder <strong>desc</strong> sein, um die auf- oder absteigende Anordnung der einzelnen Felder anzugeben. Der Standard ist <strong>asc</strong>.</p>
-<p>Dies ist eine Beispielzeichenfolge für <em>orderby</em> : <em>orderby=date,market</em></p></td>
+<p>Dies ist eine Beispielzeichenfolge für <em>orderby</em>: <em>orderby=date,market</em></p></td>
 <td align="left">Nein</td>
 </tr>
 </tbody>
 </table>
 
+<span/>
  
 ### Filterfelder
 
-Der Parameter *Filter* des Anforderungstexts enthält mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält ein Feld und einen Wert, das/der mit den Operatoren **eq** oder **ne** verknüpft ist. Einige Felder unterstützen darüber hinaus die Operatoren **contains**, **gt**, **lt**, **ge** und **le**. Anweisungen können mittels **and** oder **or** kombiniert werden.
+Der Parameter *Filter* der Anforderung enthält mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält ein Feld und einen Wert, das/der mit den Operatoren **eq** oder **ne** verknüpft ist. Einige Felder unterstützen darüber hinaus die Operatoren **contains**, **gt**, **lt**, **ge** und **le**. Anweisungen können mittels **and** oder **or** kombiniert werden.
 
 Dies ist eine Beispielzeichenfolge für *filter*: *filter=contains(reviewText,'great') and contains(reviewText,'ads') and deviceRAM lt 2048 and market eq 'US'*
 
@@ -169,9 +171,9 @@ Eine Liste der unterstützten Felder und Operatoren für die einzelnen Felder fi
 <li><strong>Windows Phone 8</strong></li>
 <li><strong>Windows Phone 8.1</strong></li>
 <li><strong>Windows Phone 10</strong></li>
-<li><strong>Windows 8</strong></li>
+<li><strong>Windows8</strong></li>
 <li><strong>Windows 8.1</strong></li>
-<li><strong>Windows 10</strong></li>
+<li><strong>Windows10</strong></li>
 <li><strong>Unknown</strong></li>
 </ul></td>
 </tr>
@@ -282,7 +284,7 @@ Eine Liste der unterstützten Felder und Operatoren für die einzelnen Felder fi
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### Anforderungsbeispiel
 
@@ -307,6 +309,7 @@ Authorization: Bearer <your access token>
 | @nextLink  | string | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Kaufdaten für die Abfrage gibt. |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                                                                                                                                                                                                                             |
 
+<span/>
  
 ### Rezensionswerte
 
@@ -315,7 +318,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | Wert                  | Typ    | Beschreibung                                                                                                                                                                                                                          |
 |------------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date                   | string  | Das erste Datum im Datumsbereich für die Bewertungsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist das erste Datum in diesem Datumsbereich dieser Wert. |
-| applicationId          | Zeichenfolge  | Die Store-ID der App, für die Sie Bewertungsdaten abrufen.                                                                                                                                                                 |
+| applicationId          | string  | Die Store-ID der App, für die Sie Bewertungsdaten abrufen.                                                                                                                                                                 |
 | applicationName        | string  | Der Anzeigename der App.                                                                                                                                                                                                         |
 | market                 | string  | Die ISO 3166-Ländervorwahl für den Markt, in dem die Bewertung übermittelt wurde.                                                                                                                                                              |
 | osVersion              | string  | Die Version des Betriebssystems, auf dem die Bewertung übermittelt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                               |
@@ -337,7 +340,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | deviceStorageCapacity  | number  | Die Kapazität des primären Datenspeichers in GB.                                                                                                                                                                                     |
 | rating                 | number  | Die App-Bewertung in Sternen.                                                                                                                                                                                                            |
 
- 
+<span/> 
 
 ### Antwortbeispiel
 
@@ -386,6 +389,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

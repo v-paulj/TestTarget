@@ -1,16 +1,17 @@
 ---
-description: "Passen Sie Ihre UWP-App für bestimmte Arten von Eingaben und Geräten an."
-title: "Eingabe und Gerätedesign – Entwicklung von Windows-Apps"
+description: "Passen Sie Ihre UWP-App für bestimmte Arten von Eingaben und Geräten an. Nutzen Sie die Vorteile von Touch- und Sprachbefehlen. Führen Sie Ihre Apps auf Xbox, Telefonen und sogar dem Fernseher aus."
+title: "Entwerfen von UWP-Apps für Eingabe- und Gerätearten – Entwicklung von Windows-Apps"
 author: mijacobs
+keywords: device primer, app inputs, customize UWP application
 translationtype: Human Translation
-ms.sourcegitcommit: fa1567d3ff80dc9c9376736c7d25c2bb06e79cc9
-ms.openlocfilehash: f2055318fe67a0af2bcc009c6f9782029f9032f1
+ms.sourcegitcommit: 350de23331f7fe951304ba877c40e07feb424adc
+ms.openlocfilehash: 2d3f0588b56b26e125652c12eeca3028bfe6573e
 
 ---
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Eingabe und Geräte
+# Eingaben und Geräte
 
 UWP-Apps verarbeiten automatisch eine Vielzahl von Eingaben und können auf zahlreichen Geräten ausgeführt werden. Sie müssen daher keine zusätzlichen Schritte zum Aktivieren der Toucheingabe oder zum Ausführen der App auf einem Smartphone ausführen. 
 
@@ -137,7 +138,7 @@ Die Design- und Codierungsanweisungen in diesem Abschnitt unterstützen Sie beim
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[Behandeln von Zeigereingaben](handle-pointer-input.md)</b><br/>Empfangen, verarbeiten und verwalten Sie Eingabedaten von Zeigegeräten wie Toucheingabe, Maus, Stift und Touchpad in Apps für die universelle Windows-Plattform (UWP).
+<p><b>[Behandeln von Zeigereingaben](handle-pointer-input.md)</b><br/>Empfangen, verarbeiten und verwalten Sie Eingabedaten von Zeigegeräten wie Toucheingabe, Maus, Stift und Touchpad in Apps für die Universelle Windows-Plattform (UWP).
 </p>
   </div>
   <div class="side-by-side-content-right">

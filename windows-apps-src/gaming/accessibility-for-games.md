@@ -3,6 +3,7 @@ author: joannaleecy
 title: Erstellen barrierefreier Spiele
 description: Erfahren Sie, wie Sie barrierefreie Spiele erstellen. Verwenden Sie das inklusive Spielentwurfsprinzip, um ein barrierefreies Spiel zu entwickeln.
 ms.assetid: f5ba1e60-0d7c-11e6-91ec-0002a5d5c51b
+translationtype: Human Translation
 ms.sourcegitcommit: 2492ff5c8b3ba0331e831234943a1db124f8fa4f
 ms.openlocfilehash: 2b78d767a7ac75e27f759c0eb06953e6158fb88b
 
@@ -19,7 +20,7 @@ Grundsätzlich betrachtet, ist es nicht schwierig, die Entwicklung barrierefreie
 
 Sie multiplizieren die Zahl der Benutzer, die Ihr Spiel spielen können, mit der Qualität Ihres Spiels und erhalten so die Verkaufszahlen für Ihr Spiel.
 
-Wenn Sie ein beeindruckendes Spiel entwickelt haben, das so kompliziert oder komplex ist, dass es nur von sehr wenigen Menschen gespielt werden kann, begrenzen Sie Ihre Verkaufszahlen. Und wenn Sie ein Spiel entwickeln, das von Menschen mit physischen, sensorischen oder kognitiven Behinderungen nicht gespielt werden kann, entgehen Ihnen ebenfalls mögliche Umsätze. Angesichts der Tatsache, dass [19 % der Bevölkerung der Vereinigten Staaten über eine Art von Behinderung verfügen](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), kann dies potenziell einen großen Einfluss auf den Umsatz haben, den Sie mit Ihrem Spiel erzielen können. 
+Wenn Sie ein beeindruckendes Spiel entwickelt haben, das so kompliziert oder komplex ist, dass es nur von sehr wenigen Menschen gespielt werden kann, begrenzen Sie Ihre Verkaufszahlen. Und wenn Sie ein Spiel entwickeln, das von Menschen mit physischen, sensorischen oder kognitiven Behinderungen nicht gespielt werden kann, entgehen Ihnen ebenfalls mögliche Umsätze. Angesichts der Tatsache, dass [19% der Bevölkerung der Vereinigten Staaten über eine Art von Behinderung verfügen](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), kann dies potenziell einen großen Einfluss auf den Umsatz haben, den Sie mit Ihrem Spiel erzielen können. 
 
 Weitere geschäftliche Begründungen finden Sie unter [Erstellen barrierefreier Videospiele](https://msdn.microsoft.com/library/windows/desktop/ee415219).
 
@@ -86,7 +87,7 @@ Behinderungen werden als „fehlende Übereinstimmung zwischen den Bedürfnissen
 
 Das inklusive Design konzentriert sich auf das Erstellen von Produkten und Diensten, die für ein breiteres Spektrum von Verbrauchern besser zugänglich sind, darunter auch Menschen mit Behinderungen.
 
-Um erfolgreich zu sein, müssen die Spieledesigner von heute über die Entwicklung von unterhaltsamen Spielen für eine kleine, ausgewählte Zielgruppe hinaus denken. Spieledesigner müssen die Auswirkungen ihrer Designentscheidungen auf die allgemeine Barrierefreiheit des Spiels berücksichtigen, d. h. die Spielbarkeit des Spiels für ihre potenzielle Zielgruppe insgesamt, einschließlich Menschen mit Behinderungen.
+Um erfolgreich zu sein, müssen die Spieledesigner von heute über die Entwicklung von unterhaltsamen Spielen für eine kleine, ausgewählte Zielgruppe hinaus denken. Spieledesigner müssen die Auswirkungen ihrer Designentscheidungen auf die allgemeine Barrierefreiheit des Spiels berücksichtigen, d.h. die Spielbarkeit des Spiels für ihre potenzielle Zielgruppe insgesamt, einschließlich Menschen mit Behinderungen.
 
 Es muss daher ein Paradigmenwechsel vom herkömmlichen Spieledesign hin zum inklusiven Konzept für das Design von Spielen stattfinden. Das inklusive Spieledesign geht über das einfache Spieledesign hinaus, das der Zielgruppe Unterhaltung bietet. Es bedeutet, zusätzliche oder geänderte Personas zu entwickeln, um eine breitere Zielgruppe anzusprechen. 
 
@@ -164,7 +165,7 @@ Audio- oder Soundeffekte bieten dem Spieler Feedback, zusätzlich zum visuellen 
 
 ### Vollständig zuordbare Steuerelemente
 
-Es gibt Unternehmen und Organisationen wie z. B. [Special Effect](http://www.specialeffect.org.uk/), die benutzerdefinierte Steuergeräte für Spiele entwickeln, die mit verschiedenen Gamingsystemen wie Windows und Xbox One verwendet werden können. Diese Anpassung ermöglicht Benutzern mit unterschiedlichen Arten von Behinderungen, Spiele zu spielen, die sie andernfalls möglicherweise nicht spielen könnten. Weitere Informationen zu Personen, die nun mithilfe angepasster Steuergeräte eigenständig Spiele spielen können, finden Sie unter [Unterstützte Personen](http://www.specialeffect.org.uk/who-we-helped).
+Es gibt Unternehmen und Organisationen wie z.B. [Special Effect](http://www.specialeffect.org.uk/), die benutzerdefinierte Steuergeräte für Spiele entwickeln, die mit verschiedenen Gamingsystemen wie Windows und Xbox One verwendet werden können. Diese Anpassung ermöglicht Benutzern mit unterschiedlichen Arten von Behinderungen, Spiele zu spielen, die sie andernfalls möglicherweise nicht spielen könnten. Weitere Informationen zu Personen, die nun mithilfe angepasster Steuergeräte eigenständig Spiele spielen können, finden Sie unter [Unterstützte Personen](http://www.specialeffect.org.uk/who-we-helped).
 
 Als Spieleentwickler können Sie die Barrierefreiheit Ihres Spiels verbessern, indem Sie die vollständige Zuordbarkeit von Steuerelemente ermöglichen, damit Spieler ihre benutzerdefinierten Steuergeräte anschließen und die Tasten entsprechend ihren Bedürfnissen zuordnen können.
 
@@ -184,7 +185,7 @@ Es gibt viele Faktoren, die beim Spielen von Videospielen eine lichtempfindliche
 
 Als Entwickler finden Sie hier einige Tipps für das Entwerfen eines Spiels, das auch von Spielern gespielt werden kann, die zur Lichtempfindlichkeitsepilepsie neigen:
 
-*   Vermeiden Sie Licht, das mit einer Frequenz von 5 bis 30 Blitzen pro Sekunde (Hertz) aufblitzt, da blitzendes Licht in diesem Bereich am wahrscheinlichsten Anfälle auslöst.
+*   Vermeiden Sie Licht, das mit einer Frequenz von 5 bis 30Blitzen pro Sekunde (Hertz) aufblitzt, da blitzendes Licht in diesem Bereich am wahrscheinlichsten Anfälle auslöst.
 *   Verwenden Sie ein automatisiertes System, um das Spiel auf Reize zu überprüfen, die einen Anfall von Lichtempfindlichkeitsepilepsie auslösen können. (Beispiel: [Harding Flash and Pattern Analyzer (FPA) G2](http://www.hardingfpa.com/harding-fpa-for-games/) von Cambridge Research System Ltd und Professor Graham Harding.) 
 *   Planen Sie Pausen zwischen Spiellevels ein, damit Spieler nicht ohne Unterbrechung spielen.
 
@@ -216,6 +217,6 @@ Im Folgenden finden Sie einige externe Websites, die zusätzliche Informationen 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

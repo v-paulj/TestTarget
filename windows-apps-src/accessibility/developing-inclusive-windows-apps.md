@@ -6,8 +6,8 @@ title: Entwickeln von barrierefreien Windows 10-Apps
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 77c401fd9686cb260e7b2d9e4bdf47a91d76802e
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 826c6984962ecbe3b49ba3753e9cc795344f5057
 
 ---
 
@@ -44,7 +44,7 @@ Dem Benutzer soll dadurch ein Verständnis darüber vermittelt werden, wie die B
 
 Weitere Informationen zur Navigation zwischen Benutzeroberflächenelementen mithilfe der Tastatur finden Sie unter [Tastaturzugriff](keyboard-accessibility.md).  
 
-Darüber hinaus enthält das E-Book [Engineering-Software für Eingabehilfen](https://www.microsoft.com/en-us/download/details.aspx?id=19262) ein hervorragendes Kapitel zu diesem Thema mit dem Titel _Designing the Logical Hierarchy_ (Entwerfen der logischen Hierarchie).
+Darüber hinaus enthält das E-Book [Engineering-Software für Eingabehilfen](https://www.microsoft.com/download/details.aspx?id=19262) ein hervorragendes Kapitel zu diesem Thema mit dem Titel _Designing the Logical Hierarchy_ (Entwerfen der logischen Hierarchie).
 
 ## Farbe und Kontrast  
 Eine integrierte Eingabehilfe in Windows ist der Modus mit hohem Kontrast, der den Farbkontrast von Texten und Bildern auf dem Bildschirm erhöht. Bei manchen Personen führt ein erhöhter Farbkontrast zu einer Reduzierung der Belastung für die Augen und einer besseren Lesbarkeit. Wenn Sie Ihre Benutzeroberfläche mit hohem Kontrast überprüfen, dann stellen Sie sicher, dass die Steuerelemente konsistent und mit Systemfarben (nicht mit hartcodierten Farben) codiert wurden, um zu gewährleisten, dass alle Steuerelemente auf dem Bildschirm angezeigt werden, die ein Benutzer sehen würde, der den hohen Kontrast nicht verwendet.  
@@ -53,7 +53,7 @@ XAML
 ```xml
 <Button Background="{ThemeResource ButtonBackgroundThemeBrush}">OK</Button>
 ```
-Weitere Informationen zur Verwendung von Systemfarben und Ressourcen finden Sie unter [XAML-Designressourcen](https://msdn.microsoft.com/en-us/windows/uwp/controls-and-patterns/xaml-theme-resources).
+Weitere Informationen zur Verwendung von Systemfarben und Ressourcen finden Sie unter [XAML-Designressourcen](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources).
 
 Sofern Sie Systemfarben nicht außer Kraft gesetzt haben, unterstützt eine UWP-App Designs mit hohem Kontrast standardmäßig. Wenn sich ein Benutzer für die Verwendung eines Designs mit hohem Kontrast aus den Systemeinstellungen oder Tools für die Barrierefreiheit entscheidet, werden vom Framework automatisch Farben und Stileinstellungen verwendet, mit denen für Steuerelemente und Komponenten auf der Benutzeroberfläche ein Layout und Rendering mit hohem Kontrast entsteht.   
 
@@ -61,9 +61,11 @@ Weitere Informationen finden Sie unter [Designs mit hohem Kontrast](high-contras
 
 Beachten Sie diese Richtlinien, wenn Sie sich entschieden haben, Ihr eigenes Farbdesign anstelle von Systemfarben zu verwenden:  
 
-**Farbkontrastverhältnis** – Der aktualisierte Abschnitt 508 des Gesetzes für Amerikaner mit Behinderung (Americans with Disability Act) sowie andere Rechtsvorschriften erfordern, dass der standardmäßige Farbkontrast zwischen Text und Hintergrund das Verhältnis 5:1 aufweisen muss. Für großen Text (Schriftgröße 18 oder 14 fett markiert) beträgt das erforderliche Kontrastverhältnis 3:1.  
 
-**Farbkombinationen** – Etwa 7 Prozent des Männer (und weniger als 1 Prozent der Frauen) weisen ein Farbdefizit auf. Benutzer mit Farbenblindheit haben Probleme bei der Unterscheidung zwischen bestimmten Farben. Es ist daher wichtig, dass niemals nur Farben verwendet werden, um Status oder Bedeutung in einer Anwendung zu vermitteln. Für dekorative Bilder (wie Symbole oder Hintergründe) sollten Farbkombinationen so gewählt werden, dass die Wahrnehmung des Bilds durch den farbenblinden Benutzer maximiert wird.  
+              **Farbkontrastverhältnis:** Der aktualisierte Abschnitt508 des Gesetzes für Amerikaner mit Behinderung (Americans with Disability Act) sowie andere Rechtsvorschriften erfordern, dass der standardmäßige Farbkontrast zwischen Text und Hintergrund ein Verhältnis von5:1 besitzt. Für großen Text (Schriftgröße 18 oder 14 fett markiert) beträgt das erforderliche Kontrastverhältnis 3:1.  
+
+
+              **Farbkombinationen:** Bei etwa sieben Prozent der Männer (und weniger als einem Prozent der Frauen) liegt eine Form von Farbwahrnehmungsstörung vor. Benutzer mit Farbenblindheit haben Probleme bei der Unterscheidung zwischen bestimmten Farben. Es ist daher wichtig, dass niemals nur Farben verwendet werden, um Status oder Bedeutung in einer Anwendung zu vermitteln. Für dekorative Bilder (wie Symbole oder Hintergründe) sollten Farbkombinationen so gewählt werden, dass die Wahrnehmung des Bilds durch den farbenblinden Benutzer maximiert wird.  
 
 ## Prüfliste für die Barrierefreiheit  
 Es folgt nun eine gekürzte Version der Prüfliste für die Barrierefreiheit:  
@@ -80,11 +82,11 @@ Weitere Details finden Sie im vollständigen Thema [Prüfliste für Barrierefrei
 * [Entwerfen von inklusiver Software](designing-inclusive-software.md)  
 * [Inklusives Design](http://design.microsoft.com/inclusive)
 * [Nicht empfehlenswerte Praktiken für die Barrierefreiheit](practices-to-avoid.md)
-* [Entwickeln von barrierefreier Software](https://www.microsoft.com/en-us/download/details.aspx?id=19262)
+* [Entwickeln von barrierefreier Software](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft-Hub für die barrierefreie Entwicklung](https://msdn.microsoft.com/enable)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

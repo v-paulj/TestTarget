@@ -1,10 +1,11 @@
 ---
-description: "Design- und UI-bezogene Downloads für UWP-Apps."
+description: "Erhalten Sie die neuesten Downloads und Tools für das Benutzeroberflächenlayout und Steuerelementdesign für UWP-Apps."
+keywords: uwp app layout, UI, user interface designs, downloads, uwp tools
 title: "Designdownloads für UWP-Apps – Entwicklung von Windows-Apps"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: 4101b60c0f640fd54d67a8e57f0a06622c6ec85c
+ms.sourcegitcommit: 1370af75dcd45d52d0d31f57acb958d366f9bee5
+ms.openlocfilehash: 4ac5db9da4cd9ba0edff5b08dfff6ed6473ab4e3
 
 ---
 
@@ -108,6 +109,6 @@ In diesem Beispiel werden Windows-Features in eine intelligente Gebäudeautomati
 <b>Sie möchten mehr Code?</b> Auf der Windows-Beispielseite finden Sie eine vollständige Liste aller UWP-App-Beispiele. [Portal mit Beispielen aufrufen](https://developer.microsoft.com/samples)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

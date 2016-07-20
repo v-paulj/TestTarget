@@ -3,8 +3,9 @@ author: Mtoepke
 title: "Einführung in Xbox One-Tools"
 description: Xbox One-spezifisches Tool Dev Home (unter Verwendung des Windows Device Portal).
 area: Xbox
-ms.sourcegitcommit: 914a1b76c6b502415bee36865af009a8dfe9bb53
-ms.openlocfilehash: e2f87cdeb8ce3371a34bb989e5fa29ef63d18621
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 4414677e942818506020888fa15e7e16ecaf4733
 
 ---
 
@@ -14,7 +15,8 @@ In diesem Abschnitt wird das Xbox One-spezifische Tool _Dev Home_ unter Verwendu
 
 ## Dev Home
 
-_Dev Home_ ist ein Tool im Xbox One Development Kit, das die Produktivität von Entwicklern unterstützen soll. Dev Home bietet Funktionen zum Verwalten und Konfigurieren Ihres Dev Kit.
+
+              _Dev Home_ ist ein Tool im Xbox One Development Kit, das die Produktivität von Entwicklern unterstützen soll. Dev Home bietet Funktionen zum Verwalten und Konfigurieren Ihres Dev Kit.
 
 Wählen Sie zum Öffnen von Dev Home die Kachel **Dev Home** im Startbildschirm. Ist keine Kachel vorhanden, befindet sich die Konsole nicht im Entwicklermodus.
 
@@ -89,8 +91,8 @@ Bei der Kommunikation mit der Konsole von Ihrem Entwicklungs-PC können Sie eine
 
 Um einen Hostnamen für ein Dev Kit zu definieren, navigieren Sie zum Tool für die Konsoleneinstellungen und geben im Feld __Hostname__ den Hostnamen ein.  
 
-  > **Hinweis**
-            &nbsp;&nbsp;Eindeutigkeit wird beim Erstellen des Hostnamens nicht erzwungen. Vermeiden Sie doppelte Namen. Eine Möglichkeit ist, den Hostnamen vom Namen Ihres Entwicklungscomputers abzuleiten, der in der Regel eindeutig in einer Organisation ist.
+  > 
+              **Hinweis**&nbsp;&nbsp;Die Eindeutigkeit des Namens wird beim Erstellen des Hostnamens nicht erzwungen. Vermeiden Sie doppelte Namen. Eine Möglichkeit ist, den Hostnamen vom Namen Ihres Entwicklungscomputers abzuleiten, der in der Regel eindeutig in einer Organisation ist.
 
 ## Windows Device Portal
 Das Windows Device Portal (WDP) ist ein OneCore-Tool zur Geräteverwaltung, das eine browserbasierte Geräteverwaltung ermöglicht.
@@ -112,11 +114,12 @@ So aktivieren Sie WDP auf Ihrer Xbox One-Konsole:
 7. Geben Sie die URL in Ihrem Browser ein, und melden Sie sich mit den Anmeldeinformationen an, die Sie konfiguriert haben.
 8. Sie erhalten eine Warnung zum Zertifikat, das bereitgestellt wurde, ähnlich wie folgender Screenshot, dass das von Ihrer Xbox One-Konsole signierte Sicherheitszertifikat nicht als bekannter vertrauenswürdiger Herausgeber betrachtet wird. Klicken Sie auf **Laden dieser Website fortsetzen**, um auf das Windows Device Portal zuzugreifen.
 
-  ![Sicherheitszertifikat-Warnung](images/security_cert_warning.jpg)
+  ![Sicherheitszertifikatwarnung](images/security_cert_warning.jpg)
 
 ## Siehe auch
-- [Microsoft-Entwicklertechnologien: Windows Device Portal](https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-xbox)
-- [UWP auf Xbox One](index.md)
+- [Verwendung von Fiddler mit Xbox One bei der Entwicklung für UWP](uwp-fiddler.md)
+- [Microsoft-Entwicklertechnologien: Windows Device Portal](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-xbox)
+- [UWP auf XboxOne](index.md)
 
 
 
@@ -124,6 +127,6 @@ So aktivieren Sie WDP auf Ihrer Xbox One-Konsole:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

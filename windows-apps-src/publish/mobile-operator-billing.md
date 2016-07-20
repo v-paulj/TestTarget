@@ -3,8 +3,9 @@ author: jnHs
 Description: "Der Windows Store ermöglicht die „Abrechnung über den Mobilfunkanbieter“ als Zahlungsmethode für Mobilfunkanbieter, die diese Funktion unterstützen."
 title: "Abrechnung über den Mobilfunkanbieter"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
-ms.sourcegitcommit: 76ea880f7dd1e737b3b0640d10a138e0eb790802
-ms.openlocfilehash: d22d89523ff3089b3b56d1a85fa2c4b137389887
+translationtype: Human Translation
+ms.sourcegitcommit: 80a20f4f87ce2ef40ce4ff7c6551d74ac375da1c
+ms.openlocfilehash: bd70a3c5990909351f04ca4200f4ea522989d1e9
 
 ---
 
@@ -13,7 +14,8 @@ ms.openlocfilehash: d22d89523ff3089b3b56d1a85fa2c4b137389887
 
 Der Windows Store ermöglicht die „Abrechnung über den Mobilfunkanbieter“ als Zahlungsmethode für Mobilfunkanbieter, die diese Funktion unterstützen. Wenn der Mobilfunkanbieter eines Kunden diese Funktion unterstützt, kann der Kunde Store-Käufe über sein Mobilfunkkonto tätigen.
 
-> **Hinweis**  Wenn der Mobilfunkanbieter eines Kunden die Abrechnung über das Mobilfunkkonto anbietet, diese Option auf dem Gerät des Kunden aber nicht verfügbar ist, finden Sie hier [Schritte zur Problembehandlung](http://go.microsoft.com/fwlink/p/?LinkId=523993).
+> 
+            **Hinweis**  Wenn der Mobilfunkanbieter eines Kunden die Abrechnung über das Mobilfunkkonto anbietet, diese Option auf dem Gerät des Kunden aber nicht verfügbar ist, finden Sie hier [Schritte zur Problembehandlung](http://go.microsoft.com/fwlink/p/?LinkId=523993).
 
  
 
@@ -30,6 +32,7 @@ Die Windows 10-Implementierung der Abrechnung über den Mobilfunkanbieter wird d
 |----------------|------------------|
 | Finnland        | DNA, Elisa       |
 | Deutschland        | O2               |
+| Italien          | Wind             |
 | Norwegen         | Telenor          |
 | Schweiz    | Swisscom         |
 | Vereinigte Staaten  | Sprint           |
@@ -39,7 +42,7 @@ Die Windows 10-Implementierung der Abrechnung über den Mobilfunkanbieter wird d
 ## Abrechnung über den Mobilfunkanbieter für Geräte mit Windows Phone 8.x und Windows 10 Mobile
 
 
-Eine Legacyimplementierung der Abrechnung über den Mobilfunkanbieter ist für Windows Phone 8.x-Geräte verfügbar. Einige Mobilfunkanbieter bieten diese Implementierung ggf. auf Smartphones an, die für Windows 10 Mobile ausgelegt sind. Auf Geräten mit dieser Implementierung wird die Abrechnung über den Mobilfunkanbieter Benutzern automatisch als Zahlungsoption angeboten.
+Eine Legacyimplementierung der Abrechnung über den Mobilfunkanbieter ist für Windows Phone8.x-Geräte verfügbar. Einige Mobilfunkanbieter bieten diese Implementierung ggf. auf Smartphones an, die für Windows 10 Mobile ausgelegt sind. Auf Geräten mit dieser Implementierung wird die Abrechnung über den Mobilfunkanbieter Benutzern automatisch als Zahlungsoption angeboten.
 
 Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von den folgenden Mobilfunkanbietern unterstützt:
 
@@ -99,7 +102,7 @@ Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von de
 | Thailand             | DTAC                                                               |
 | Vereinigte Arabische Emirate | Etisalat, Du                                                       |
 | Vereinigtes Königreich       | Everything Everywhere (T-Mobile), Telefonica (O2), Three, Vodafone |
-| USA        | AT&T, Sprint, T-Mobile, Verizon                                    |
+| Vereinigte Staaten        | AT&T, Sprint, T-Mobile, Verizon                                    |
 | Vietnam              | Viettel, Vietnamobile, Vinaphone, Mobifone                         |
 
  
@@ -116,6 +119,6 @@ Diese Liste wird regelmäßig aktualisiert, wenn wir die Unterstützung für die
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

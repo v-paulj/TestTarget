@@ -6,8 +6,8 @@ ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 label: Prepare your app for localization
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: e52a5322767677859e32ccbecf4951745c49f36f
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 4f9bc1d14db7c348e2b4dc9db2440f94d44ab4a5
 
 ---
 
@@ -31,7 +31,8 @@ Geben Sie Bilddateien oder andere Dateiressourcen in deren Datei oder Ordner mit
 
 Fügen Sie den Ressourcendateien Ihrer App Lokalisierungskommentare hinzu. Die Kommentare können vom Lokalisierer gelesen werden und sollten Informationen zum Kontext enthalten, die als Hilfestellung für eine präzise Übersetzung der Ressourcen dienen. Die Kommentare sollten auch ausreichend auf Beschränkungen hinweisen, sodass die Übersetzung die Funktionalität der Software nicht beeinträchtigt. Optional können die Kommentare auch mit dem Tool "Makepri.exe" protokolliert werden.
 
-**XAML:** RESW-Dateien (in Visual Studio mithilfe von XAML erstellte App-Ressourcen) verfügen über ein Kommentarelement. Beispiel:
+
+              **XAML:** RESW-Dateien (in Visual Studio mithilfe von XAML erstellte App-Ressourcen) verfügen über ein Kommentarelement. Beispiel:
 
 ```XML
 <data name="String1">
@@ -40,7 +41,8 @@ Fügen Sie den Ressourcendateien Ihrer App Lokalisierungskommentare hinzu. Die K
 </data>
 ```
 
-**HTML:** RESJSON-Dateien (in Visual Studio mithilfe von HTML erstellte App-Ressourcen) ermöglichen die Aufnahme von Metadaten in Felder, die mit einem Unterstrich beginnen, wie z. B. Kommentare:
+
+              **HTML:** RESJSON-Dateien (in Visual Studio mithilfe von HTML erstellte App-Ressourcen) ermöglichen die Aufnahme von Metadaten in Felder, die mit einem Unterstrich beginnen, z.B. Kommentare:
 
 ```json
 {
@@ -121,20 +123,20 @@ Nachdem die Zeichenfolgen in Ressourcendateien untergliedert wurden, können sie
 Erwägen Sie folgende Optionen:
 
 -   **Die Ressourcendateien können zum Übersetzen direkt im Projekt geöffnet werden.** Dieser Ansatz funktioniert gut für ein Projekt mit wenigen Zeichenfolgen, die in zwei oder drei Sprachen übersetzt werden müssen. Er könnte sich für Szenarien eignen, in denen ein Entwickler mehrere Sprachen spricht und die Übersetzung übernehmen kann. Dieser Ansatz ist schnell, erfordert keine Tools und minimiert das Risiko von falschen Übersetzungen. Er ist aber nicht skalierbar. Insbesondere kann es passieren, das die Ressourcen in verschiedenen Sprachen nicht mehr synchron sind, was eine mangelnde Benutzerfreundlichkeit und Verwaltungsprobleme zur Folge haben kann.
--   **Die Zeichenfolgenressourcendateien werden im XML- oder ResJSON-Textformat erstellt und können somit zur Übersetzung mit einem Texteditor übergeben werden. Die übersetzten Dateien würde dann wieder in das Projekt kopiert werden.** Bei diesem Ansatz besteht die Gefahr, dass Übersetzer versehentlich die XML-Tags bearbeiten. Andererseits besteht die Möglichkeit, Übersetzungen außerhalb des Microsoft Visual Studio-Projekts durchzuführen. Dieser Ansatz eignet sich gut für Projekte, die nur in wenige Sprachen übersetzt werden. Das XLIFF-Format ist ein XML-Format, das speziell für die Lokalisierung vorgesehen ist. Es sollte zudem von einigen Lokalisierungsanbietern oder -tools unterstützt werden. Sie können mit dem [Multilingual App Toolkit](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx) XLIFF-Dateien aus anderen Ressourcendateien wie „.resw“ oder „.resjson“ generieren.
+-   **Die Zeichenfolgenressourcendateien werden im XML- oder ResJSON-Textformat erstellt und können somit zur Übersetzung mit einem Texteditor übergeben werden. Die übersetzten Dateien würde dann wieder in das Projekt kopiert werden.** Bei diesem Ansatz besteht die Gefahr, dass Übersetzer versehentlich die XML-Tags bearbeiten. Andererseits besteht die Möglichkeit, Übersetzungen außerhalb des Microsoft Visual Studio-Projekts durchzuführen. Dieser Ansatz eignet sich gut für Projekte, die nur in wenige Sprachen übersetzt werden. Das XLIFF-Format ist ein XML-Format, das speziell für die Lokalisierung vorgesehen ist. Es sollte zudem von einigen Lokalisierungsanbietern oder -tools unterstützt werden. Sie können mit dem [Multilingual App Toolkit](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370.aspx) XLIFF-Dateien aus anderen Ressourcendateien wie „.resw“ oder „.resjson“ generieren.
 
 Lokalisierern müssen möglicherweise noch andere Dateien übergeben werden, wie Bild- oder Audiodateien. In der Regel wird davon abgeraten, Dateien mit kulturellem Bezug zu erstellen, da diese schwer zu lokalisieren sind.
 
 Berücksichtigen Sie auch die folgenden Vorschläge:
 
--   **Verwenden Sie ein Lokalisierungstool.** Es gibt eine Reihe von Lokalisierungstools, mit denen Ressourcendateien analysiert werden können und die nur die Bearbeitung von übersetzbaren Zeichenfolgen für den Übersetzer zulassen. Das Risiko, dass ein Übersetzer versehentlich XML-Tags bearbeitet, ist somit geringer. Der Nachteil ist aber, dass neue Tools und Prozesse in den Lokalisierungsprozess eingebunden werden müssen. Ein Lokalisierungstool eignet sich für Projekte mit vielen Zeichenfolgen, aber wenigen Sprachen. Weitere Informationen finden Sie unter [Verwenden des Multilingual App Toolkit](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj572370.aspx).
+-   **Verwenden Sie ein Lokalisierungstool.** Es gibt eine Reihe von Lokalisierungstools, mit denen Ressourcendateien analysiert werden können und die nur die Bearbeitung von übersetzbaren Zeichenfolgen für den Übersetzer zulassen. Das Risiko, dass ein Übersetzer versehentlich XML-Tags bearbeitet, ist somit geringer. Der Nachteil ist aber, dass neue Tools und Prozesse in den Lokalisierungsprozess eingebunden werden müssen. Ein Lokalisierungstool eignet sich für Projekte mit vielen Zeichenfolgen, aber wenigen Sprachen. Weitere Informationen finden Sie unter [Verwenden des Multilingual App Toolkit](https://msdn.microsoft.com/library/windows/apps/xaml/jj572370.aspx).
 -   **Verwenden Sie einen Lokalisierungsanbieter.** Wenden Sie sich an einen Lokalisierungsanbieter, wenn des Projekt viele Zeichenfolgen enthält und in viele Sprachen übersetzt werden muss. Ein Lokalisierungsanbieter kann Sie hinsichtlich der Tools und Prozesse beraten sowie die Ressourcendateien übersetzen. Diese Lösung ist ideal, stellt allerdings auch die teuerste Option dar und kann die Bearbeitungszeit für den übersetzten Inhalt verlängern.
 -   **Halten Sie die Lokalisierer informiert.** Informieren Sie Lokalisierer bezüglich Zeichenfolgen, die als Substantiv oder Verb betrachtet werden können. Erklären Sie konstruierte Wörter mithilfe von Terminologietools. Halten Sie die Zeichenfolgen grammatikalisch korrekt, eindeutig und allgemein verständlich, um Missverständnisse zu vermeiden.
 
 ## <span id="keep_access_keys_and_labels_consistent."></span><span id="KEEP_ACCESS_KEYS_AND_LABELS_CONSISTENT."></span>Verwenden Sie Zugriffstasten und Bezeichnungen konsistent.
 
 
-Die „Synchronisierung“ der für die Barrierefreiheit verwendeten Zugriffstasten mit der Anzeige der lokalisierten Zugriffstasten stellt eine besondere Herausforderung dar, da beide Zeichenfolgenressourcen in getrennten Abschnitten kategorisiert sind. Stellen Sie für die Bezeichnungszeichenfolge unbedingt Kommentare bereit wie: `Make sure that the emphasized shortcut key  is synchronized with the access key.`
+Die „Synchronisierung“ der für die Barrierefreiheit verwendeten Zugriffstasten mit der Anzeige der lokalisierten Zugriffstasten stellt eine besondere Herausforderung dar, da beide Zeichenfolgenressourcen in getrennten Abschnitten kategorisiert sind. Stellen Sie für die Bezeichnungszeichenfolge unbedingt Kommentare bereit wie:  `Make sure that the emphasized shortcut key  is synchronized with the access key.`
 
 **HTML:**
 
@@ -192,6 +194,6 @@ Die Sortierung folgt dem **regionalen Format der Systemsteuerung**:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

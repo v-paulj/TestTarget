@@ -5,6 +5,7 @@ label: Sound
 title: Sound
 template: detail.hbs
 ms.assetid: 9fa77494-2525-4491-8f26-dc733b6a18f6
+translationtype: Human Translation
 ms.sourcegitcommit: 7bb23094d569bb29c7227ccd628abd0989b575a4
 ms.openlocfilehash: e6dab48935cd5345ee734e6fda7e6fd4d333bb90
 
@@ -126,7 +127,7 @@ ElementSoundPlayer.Play(ElementSoundKind.GoBack);
 
 Der **Focus**-Sound ist der einzige implizite Sound in unserem System. Das heißt, dass ein Benutzer nicht mit irgendetwas direkt interagiert, jedoch trotzdem einen Sound hört.
 
-Das Fokussieren geschieht, wenn ein Benutzer durch eine App navigiert – dies kann mit dem Gamepad, der Tastatur, der Fernbedienung oder mit Kinect geschehen. In der Regel wird der **Focus**-Sound *bei PointerEntered- oder Mauszeigeereignissen nicht wiedergegeben*.
+Das Fokussieren geschieht, wenn ein Benutzer durch eine App navigiert– dies kann mit dem Gamepad, der Tastatur, der Fernbedienung oder mit Kinect geschehen. In der Regel wird der **Focus**-Sound *bei PointerEntered- oder Mauszeigeereignissen nicht wiedergegeben*.
 
 Um ein Steuerelement zur Wiedergabe des **Focus**-Sounds einzurichten, wenn Ihr Steuerelement den Fokus erhält, rufen Sie auf:
 
@@ -147,6 +148,6 @@ Diese Wechselfunktion soll verhindern, dass die Focus-Sounds monoton werden und 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -4,13 +4,13 @@ ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: "Berechtigungen für den Dateizugriff"
 description: "Apps können standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen. Apps können darüber hinaus mithilfe der Dateiauswahl oder über die Deklaration von Funktionen auf weitere Speicherorte zugreifen."
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 91f97f1ba245b0cf6cac1cff7971cace5ca3b5a0
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: abcd6c1747566c7f8464016fadcb5a0441652afb
 
 ---
 # Berechtigungen für den Dateizugriff
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 Apps können standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen. Apps können darüber hinaus mithilfe der Dateiauswahl oder über die Deklaration von Funktionen auf weitere Speicherorte zugreifen.
@@ -19,7 +19,8 @@ Apps können standardmäßig auf bestimmte Dateisystemspeicherorte zugreifen. Ap
 
 Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisystemspeicherorte zugreifen:
 
--   **Installationsverzeichnis von Anwendungen** Der Ordner, in welchem Ihre Anwendung im System des Benutzers installiert ist.
+-   
+              **Installationsverzeichnis von Anwendungen** Der Ordner, in welchem Ihre Anwendung im System des Benutzers installiert ist.
 
     Es gibt im Wesentlichen zwei Möglichkeiten, auf Dateien und Ordner im Installationsverzeichnis Ihrer App zuzugreifen.
 
@@ -32,7 +33,7 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
         var installDirectory = Windows.ApplicationModel.Package.current.installedLocation;
         ```
 
-       Sie können anschließend mithilfe von [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Methoden auf Dateien und Ordner im Verzeichnis zugreifen. Im Beispiel wird dieser **StorageFolder** in der `installDirectory`-Variablen gespeichert. Sie können das [Informationsbeispiel des Anwendungspakets](http://go.microsoft.com/fwlink/p/?linkid=231526) für Windows 8.1 herunterladen und dessen Quellcode in Ihrer Windows 10-App wiederverwenden, um mehr über die Arbeit mit dem App-Paket und Installationsverzeichnis zu erfahren.
+       Sie können anschließend mithilfe von [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Methoden auf Dateien und Ordner im Verzeichnis zugreifen. Im Beispiel wird dieser **StorageFolder** in der `installDirectory`-Variablen gespeichert. Sie können das [Informationsbeispiel des Anwendungspakets](http://go.microsoft.com/fwlink/p/?linkid=231526) für Windows8.1 herunterladen und dessen Quellcode in Ihrer Windows10-App wiederverwenden, um mehr über die Arbeit mit dem App-Paket und Installationsverzeichnis zu erfahren.
 
     2.  Sie können eine Datei direkt aus dem Installationsverzeichnis Ihrer Anwendung mithilfe der Anwendungs-URI wie folgt aufrufen:
         > [!div class="tabbedCodeSnippets"]
@@ -74,7 +75,7 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
  
         Wenn Sie auf den servergespeicherten oder temporären Ordner Ihrer Anwendung zugreifen möchten, verwenden Sie stattdessen die [**RoamingFolder**](https://msdn.microsoft.com/library/windows/apps/br241623)- oder [**TemporaryFolder**](https://msdn.microsoft.com/library/windows/apps/br241629)-Eigenschaft.
 
-        Nach dem Aufrufen des [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230), der den Dateispeicherort der Anwendung darstellt, können Sie auf Dateien und Ordner im Verzeichnis mithilfe der **StorageFolder**-Methode zugreifen. Im Beispiel werden diese **StorageFolder**-Objekte in der `localFolder`-Variablen gespeichert. Weitere Informationen zum Verwenden der Speicherorte von App-Daten finden Sie unter [Verwalten von Anwendungsdaten](https://msdn.microsoft.com/library/windows/apps/hh465109). Sie können auch das [Beispiel für Anwendungsdaten](http://go.microsoft.com/fwlink/p/?linkid=231478) für Windows 8.1 herunterladen und dessen Quellcode in Ihrer Windows 10-App wiederverwenden.
+        Nach dem Aufrufen des [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230), der den Dateispeicherort der Anwendung darstellt, können Sie auf Dateien und Ordner im Verzeichnis mithilfe der **StorageFolder**-Methode zugreifen. Im Beispiel werden diese **StorageFolder**-Objekte in der `localFolder`-Variablen gespeichert. Weitere Informationen zum Verwenden der Speicherorte von App-Daten finden Sie unter [Verwalten von Anwendungsdaten](https://msdn.microsoft.com/library/windows/apps/hh465109). Sie können auch das [Beispiel für Anwendungsdaten](http://go.microsoft.com/fwlink/p/?linkid=231478) für Windows8.1 herunterladen und dessen Quellcode in Ihrer Windows10-App wiederverwenden.
 
     2.  Sie können eine Datei zum Beispiel mithilfe der Anwendungs-URI direkt aus dem lokalen Ordner Ihrer Anwendung wie folgt aufrufen:
         > [!div class="tabbedCodeSnippets"]
@@ -98,11 +99,12 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
 
     Sie können nicht über die Dateiauswahl auf lokale, servergespeicherte oder temporäre Ordner zugreifen.
 
--   **Wechselmedien.** Darüber hinaus kann Ihre App standardmäßig auf einige der Dateien auf verbundenen Geräten zugreifen. Diese Möglichkeit besteht, wenn Ihre App die [Erweiterung für die automatische Wiedergabe](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh464906.aspx#autoplay) verwendet, die automatisch gestartet wird, sobald Benutzer ein Gerät, wie eine Kamera oder einen USB-Speicherstick, an Ihr System anschließen. Die Dateien, auf welche Ihre App zugreifen kann, sind auf bestimmte Dateitypen begrenzt, die über Deklarationen von Dateitypzuordnungen in Ihrem App-Manifest festgelegt sind.
+-   **Wechselmedien.** Darüber hinaus kann Ihre App standardmäßig auf einige der Dateien auf verbundenen Geräten zugreifen. Diese Möglichkeit besteht, wenn Ihre App die [Erweiterung für die automatische Wiedergabe](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay) verwendet, die automatisch gestartet wird, sobald Benutzer ein Gerät, wie eine Kamera oder einen USB-Speicherstick, an Ihr System anschließen. Die Dateien, auf welche Ihre App zugreifen kann, sind auf bestimmte Dateitypen begrenzt, die über Deklarationen von Dateitypzuordnungen in Ihrem App-Manifest festgelegt sind.
 
     Sie können natürlich auch auf Dateien und Ordner auf einem Wechselmedium mithilfe der Dateiauswahl zugreifen (unter Verwendung von [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847) und [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881)) und den Benutzer die Dateien und Ordner auswählen lassen, auf welche Ihre App Zugriff haben soll. Weitere Informationen zur Verwendung der Dateiauswahl finden Sie unter [Öffnen von Dateien und Ordnern mit einer Auswahl](quickstart-using-file-and-folder-pickers.md).
 
-    **Hinweis**  Weitere Informationen zum Zugriff auf eine SD-Karte aus einer mobilen App finden Sie unter [Zugreifen auf die SD-Karte](access-the-sd-card.md).
+    
+              **Hinweis**  Weitere Informationen zum Zugriff auf eine SD-Karte aus einer mobilen App finden Sie unter [Zugreifen auf die SD-Karte](access-the-sd-card.md).
 
      
 
@@ -126,9 +128,9 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
         );
         ```
  
-        [
-              **DownloadsFolder**
-            ](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) ist überladen, sodass Sie festlegen können, was das System im Falle einer bereits vorhandenen gleichnamigen Datei im Downloadordner des Benutzers tun sollte. Nach vollständiger Ausführung dieser Methoden wird ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) zurückgegeben, das die erstellte Datei darstellt. Diese Datei wird im Beispiel `newFile` genannt.
+        
+              [
+              **DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh996761) wird überladen, sodass Sie festlegen können, was das System im Fall einer bereits vorhandenen gleichnamigen Datei im Downloadordner des Benutzers tun sollte. Nach vollständiger Ausführung dieser Methoden wird ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171) zurückgegeben, das die erstellte Datei darstellt. Diese Datei wird im Beispiel `newFile` genannt.
 
     -   Sie können im Downloadordner des Benutzers wie folgt einen Unterordner erstellen:
         > [!div class="tabbedCodeSnippets"]
@@ -144,9 +146,9 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
         );
         ```
  
-        [
-              **DownloadsFolder**
-            ](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) ist überladen, sodass Sie festlegen können, was das System im Falle eines bereits vorhandenen gleichnamigen Unterordners im Ordner "Downloads" des Benutzers tun sollte. Nach vollständiger Ausführung dieser Methoden wird ein [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) zurückgegeben, der den erstellten Unterordner darstellt. Diese Datei wird im Beispiel `newFolder` genannt.
+        
+              [
+              **DownloadsFolder**](https://msdn.microsoft.com/library/windows/apps/br241632).[**CreateFolderAsync**](https://msdn.microsoft.com/library/windows/apps/hh996763) wird überladen, sodass Sie festlegen können, was das System im Fall eines bereits vorhandenen gleichnamigen Unterordners im Ordner „Downloads“ des Benutzers tun sollte. Nach vollständiger Ausführung dieser Methoden wird ein [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) zurückgegeben, der den erstellten Unterordner darstellt. Diese Datei wird im Beispiel `newFolder` genannt.
 
     Wenn Sie eine Datei oder einen Ordner im Downloadordner erstellen, empfehlen wir, die Datei oder den Ordner der [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) Ihrer App hinzuzufügen, sodass zukünftig leicht auf dieses Element zugegriffen werden kann.
 
@@ -170,6 +172,6 @@ In der folgenden Tabelle sind weitere Speicherorte aufgeführt, auf die Sie durc
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

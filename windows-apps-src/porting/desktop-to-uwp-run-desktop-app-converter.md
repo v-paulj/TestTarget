@@ -3,8 +3,9 @@ author: awkoren
 Description: "Führen Sie die Desktop-Konverter-App zum Konvertieren einer Windows-Desktopanwendung (z. B. Win32, WPF und Windows Forms) in eine UWP-App (Universelle Windows-Plattform)."
 Search.Product: eADQiWindows 10XVcnh
 title: "Vorschau für den Desktop-App-Konverter (Project Centennial)"
-ms.sourcegitcommit: 07016fabb8b49e57dd0ae4ef68447451d31aa2dc
-ms.openlocfilehash: bc28197cccc0559f57abc8cb81e23bf241ca3716
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 8a22285467005722ad6ee5bf4f129a7dfdea944c
 
 ---
 
@@ -20,11 +21,16 @@ Der Konverter führt den Desktop-Installer in einer isolierten Windows-Umgebung 
 
 ## Das ist neu:
 
-In diesem Abschnitt werden Änderungen zwischen Versionen des Desktop-App-Konverters hervorgehoben. 
+In diesem Abschnitt werden Änderungen zwischen Versionen des Desktop-App-Konverters behandelt. 
 
-### 16.06.2016
+### 07.07.2016 (v0.1.22)
 
-* Der Desktop-App-Konverter (v0.1.20) behebt Probleme, die eine erfolgreiche Konvertierung auf die neuesten Windows 10 Insider Preview-Builds blockieren. 
+* Unterstützung für die automatische Erkennung von Shellerweiterungen in Ihrer Desktopanwendung und für die Deklaration der Erweiterungen in der APPXMANIFEST-Datei Ihres UWP-Pakets wurde hinzugefügt. Weitere Informationen zu den Desktoperweiterungen finden Sie unter [**Erweiterungen für konvertierte Desktop-Apps**](desktop-to-uwp-extensions.md). 
+* Die AppExecutable-Erkennung bei einer großen Menge von Apps wurde verbessert. 
+
+### 16.06.2016 (v0.1.20)
+
+* Probleme beim Konvertieren für die neuesten Windows10 Insider Preview-Builds wurden behoben. 
 * ```–CreateX86Package``` wurde durch ```–PackageArch``` ersetzt. Dies ermöglicht das Angeben der Architektur für das generierte Paket. 
 
 ### 08.06.2016
@@ -61,7 +67,7 @@ Der Computer muss die folgenden Mindestfunktionen aufweisen:
 + Adressübersetzung der zweiten Ebene (Second Level Address Translation, SLAT)
 
 ### Empfohlene Ressourcen
-+ [Windows Software Development Kit (SDK) für Windows 10](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk)
++ [Windows Software Development Kit (SDK) für Windows10](http://go.microsoft.com/fwlink/?LinkId=615097)
 
 ## Einrichten des Desktop-App-Konverters   
 Der Desktop-App-Konverter basiert auf Windows 10-Features mit Test-Flight als Bestandteil des Windows-Insider Preview-Builds. Stellen Sie sicher, dass Sie den aktuellen Build für die Verwendung des Konverters nutzen.
@@ -114,7 +120,7 @@ PS C:\>.\DesktopAppConverter.ps1 -Installer C:\Installer\MyApp.exe
 ```
 
 ## Bereitstellen des konvertierten AppX-Pakets
-Verwenden Sie das [Add-AppxPackage](https://technet.microsoft.com/en-us/library/hh856048.aspx)-Cmdlet in PowerShell zum Bereitstellen eines signierten App-Pakets (.appx) für ein Benutzerkonto. Informationen zum Signieren Ihrer Appx-Pakets finden Sie im Abschnitt „Signieren des Appx-Pakets“. Sie können auch den *Register*-Parameter des Cmdlets hinzufügen, um eine Installation von einem Ordner mit nicht gepackten Dateien während des Entwicklungsprozesses vorzunehmen. Weitere Informationen finden Sie unter [Bereitstellen und Debuggen der konvertierten UWP-App](desktop-to-uwp-deploy-and-debug.md).
+Verwenden Sie das [Add-AppxPackage](https://technet.microsoft.com/library/hh856048.aspx)-Cmdlet in PowerShell zum Bereitstellen eines signierten App-Pakets (.appx) für ein Benutzerkonto. Informationen zum Signieren Ihrer Appx-Pakets finden Sie im Abschnitt „Signieren des Appx-Pakets“. Sie können auch den *Register*-Parameter des Cmdlets hinzufügen, um eine Installation von einem Ordner mit nicht gepackten Dateien während des Entwicklungsprozesses vorzunehmen. Weitere Informationen finden Sie unter [Bereitstellen und Debuggen der konvertierten UWP-App](desktop-to-uwp-deploy-and-debug.md).
 
 ## Signieren des Appx-Pakets
 
@@ -126,7 +132,8 @@ C:\> MakeCert.exe -r -h 0 -n "CN=<publisher_name>" -eku 1.3.6.1.5.5.7.3.3 -pe -s
 C:\> pvk2pfx.exe -pvk <my.pvk> -spc <my.cer> -pfx <my.pfx>
 C:\> signtool.exe sign -f <my.pfx> -fd SHA256 -v .\<outputAppX>.appx
 ```
-**Hinweis:** Wenn Sie beim Ausführen von MakeCert.exe zum Eingeben eines Kennworts aufgefordert werden, wählen Sie **Kein**.
+
+              **Hinweis:** Wenn Sie beim Ausführen von „MakeCert.exe“ zum Eingeben eines Kennworts aufgefordert werden, wählen Sie **Kein**.
 
 Weitere Informationen zu Zertifikaten und zum Signieren finden Sie unter:
 
@@ -191,8 +198,8 @@ get-help .\DesktopAppConverter.ps1 -detailed
 ### Optionale Appx-Manifestparameter  
 |Parameter|Beschreibung|
 |---------|-----------|
-|```-AppExecutable <String>``` [optional] | Der vollständige Pfad zur ausführbaren Hauptdatei der Anwendung, wenn diese installiert werden soll (falls nicht erforderlich), z. B. „C:\Programme (x86)\MyApp\MyApp.exe“.|
-|```-AppFileTypes <String>``` [optional] | Eine durch Trennzeichen getrennte Liste von Dateitypen, denen die Anwendung zugeordnet wird (z. B. „txt, .doc“, ohne die Anführungszeichen).|
+|```-AppExecutable <String>``` [optional] | Der vollständige Pfad zur ausführbaren Hauptdatei der Anwendung, wenn diese installiert werden soll (falls nicht erforderlich), z.B. „C:\Programme (x86)\MyApp\MyApp.exe“.|
+|```-AppFileTypes <String>``` [optional] | Eine durch Trennzeichen getrennte Liste von Dateitypen, denen die Anwendung zugeordnet wird (z.B. „txt, .doc“, ohne die Anführungszeichen).|
 |```-AppId <String>``` [optional] | Gibt einen Wert fest, auf den die Anwendungs-ID im appx-Manifest festgelegt wird. Wird kein Wert angegeben, wird diese auf den für *PackageName* übergebenen Wert festgelegt.|
 |```-AppDisplayName <String>``` [optional] | Gibt einen Wert fest, auf den der Anzeigename der Anwendung im appx-Manifest festgelegt wird. Wird kein Wert angegeben, wird dieser auf den für *PackageName* übergebenen Wert festgelegt. |
 |```-AppDescription <String>``` [optional] | Gibt einen Wert fest, auf den die Anwendungsbeschreibung im appx-Manifest festgelegt wird. Wird kein Wert angegeben, wird diese auf den für *PackageName* übergebenen Wert festgelegt.|
@@ -224,7 +231,7 @@ Die Vorschau für den Desktop-App-Konverter unterstützt jetzt die Erstellung vo
 
 ## Siehe auch
 + [Holen Sie sich den Desktop-App-Konverter](http://go.microsoft.com/fwlink/?LinkId=785437)
-+ [Migrieren Ihrer Desktop-App zur Universellen Windows-Plattform](https://developer.microsoft.com/en-us/windows/bridges/desktop)
++ [Migrieren Ihrer Desktop-App zur Universellen Windows-Plattform](https://developer.microsoft.com/windows/bridges/desktop)
 + [Migrieren von Desktop-Apps zur Universellen Windows-Plattform mit dem Desktop-App-Konverter](https://channel9.msdn.com/events/Build/2016/P504)
 + [Project Centennial: Migrieren vorhandener Desktopanwendungen zur Universellen Windows-Plattform](https://channel9.msdn.com/events/Build/2016/B829)  
 + [UserVoice für Desktop-Brücke (Project Centennial)](http://aka.ms/UserVoiceDesktopToUwp)
@@ -232,6 +239,6 @@ Die Vorschau für den Desktop-App-Konverter unterstützt jetzt die Erstellung vo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -3,8 +3,9 @@ author: TylerMSFT
 title: App-Lebenszyklus
 description: "In diesem Thema wird der Lebenszyklus einer UWP-App (Universelle Windows-Plattform) von ihrer Aktivierung bis zum Schließen beschrieben."
 ms.assetid: 6C469E77-F1E3-4859-A27B-C326F9616D10
-ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
-ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: c35f3c4bbc33d7202769badd7a0bcdc91f39bc84
 
 ---
 
@@ -19,7 +20,7 @@ ms.openlocfilehash: 8451942c05d5d44cafba243f7cbebceedbe86fc0
 -   [**Windows.UI.Xaml.Application-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242324)
 -   [**Windows.ApplicationModel.Activation-Namespace**](https://msdn.microsoft.com/library/windows/apps/br224766)
 
-In diesem Thema wird der Lebenszyklus einer UWP-App (Universelle Windows-Plattform) von ihrer Aktivierung bis zum Schließen beschrieben. Viele Benutzer verteilen ihre Arbeit und verwenden dabei mehrere Geräte und Apps. Benutzer erwarten jetzt von Ihrer App, dass sie den entsprechenden Status beim Multitasking auf dem Gerät speichert. Sie erwarten z. B., dass auf der Seite an dieselbe Position navigiert wird und sich alle Steuerelemente in demselben Zustand wie zuvor befinden. Wenn Sie den Lebenszyklus der App in Bezug auf das Starten, Anhalten und Fortsetzen verstehen, können Sie diese Art von reibungslosem Verhalten bereitstellen.
+In diesem Thema wird der Lebenszyklus einer UWP-App (Universelle Windows-Plattform) von ihrer Aktivierung bis zum Schließen beschrieben. Viele Benutzer verteilen ihre Arbeit und verwenden dabei mehrere Geräte und Apps. Benutzer erwarten jetzt von Ihrer App, dass sie den entsprechenden Status beim Multitasking auf dem Gerät speichert. Sie erwarten z.B., dass auf der Seite an dieselbe Position navigiert wird und sich alle Steuerelemente in demselben Zustand wie zuvor befinden. Wenn Sie den Lebenszyklus der App in Bezug auf das Starten, Anhalten und Fortsetzen verstehen, können Sie diese Art von reibungslosem Verhalten bereitstellen.
 
 ## App-Ausführungsstatus
 
@@ -69,14 +70,14 @@ Die [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-
 
  
 
-**Hinweis**
-            *Aktuelle Benutzersitzung* basiert auf Windows-Anmeldung. Solange sich der aktuelle Benutzer nicht explizit abgemeldet oder das System heruntergefahren hat oder Windows nicht aus einem anderen Grund neu gestartet wurde, bleibt die aktuelle Benutzersitzung unabhängig von bestimmten Ereignissen – wie Sperrbildschirmauthentifizierung, Benutzerwechsel usw. – bestehen.
+
+              **Hinweis:** *Aktuelle Benutzersitzung* basiert auf der Windows-Anmeldung. Solange sich der aktuelle Benutzer nicht explizit abgemeldet oder das System heruntergefahren hat oder Windows nicht aus einem anderen Grund neu gestartet wurde, bleibt die aktuelle Benutzersitzung unabhängig von bestimmten Ereignissen – wie Sperrbildschirmauthentifizierung, Benutzerwechsel usw. – bestehen.
 
  
 
-[
-              **PreviousExecutionState**
-            ](https://msdn.microsoft.com/library/windows/apps/br224729) könnte auch den Wert **Running** oder **Suspended** besitzen. In diesen Fällen wurde die App zuvor jedoch nicht beendet, und Sie müssen keine Daten wiederherstellen, da sich bereits alle Daten im Arbeitsspeicher befinden.
+
+              [
+              **PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) könnte auch den Wert **Running** oder **Suspended** besitzen. In diesen Fällen wurde die App zuvor jedoch nicht beendet, und Sie müssen keine Daten wiederherstellen, da sich bereits alle Daten im Arbeitsspeicher befinden.
 
 **Hinweis**  
 
@@ -84,7 +85,8 @@ Wenn Sie sich mit dem Administratorkonto des Computers anmelden, können Sie kei
 
 Weitere Informationen finden Sie unter [App-Erweiterungen](https://msdn.microsoft.com/library/windows/apps/hh464906).
 
-### **OnActivated** im Vergleich zu bestimmten Aktivierungen
+### 
+              **OnActivated** im Vergleich zu bestimmten Aktivierungen
 
 Die [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Methode stellt das Instrument zur Behandlung aller möglichen Aktivierungstypen dar. Üblicherweise werden die meistverwendeten Aktivierungstypen jedoch mit unterschiedlichen Methoden behandelt, und **OnActivated** wird nur als Fallbackmethode für weniger verbreitete Aktivierungstypen verwendet. Beispielsweise verfügt [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) über eine [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode, die als Rückruf aufgerufen wird, sobald [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) gleich **Launch** ist. Dies ist die typische Aktivierung für die meisten Apps. Es gibt 6 weitere **On\***-Methoden für spezifische Aktivierungen: [**OnCachedFileUpdaterActivated**](https://msdn.microsoft.com/library/windows/apps/hh701797), [**OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331), [**OnFileOpenPickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701799), [**OnFileSavePickerActivated**](https://msdn.microsoft.com/library/windows/apps/hh701801), [**OnSearchActivated**](https://msdn.microsoft.com/library/windows/apps/br242336), [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/hh701806). Startvorlagen für eine XAML-App weisen eine Implementierung für **OnLaunched** und einen Handler für [**Suspending**](https://msdn.microsoft.com/library/windows/apps/br242341) auf.
 
@@ -105,11 +107,12 @@ Sie sollten auch exklusive Ressourcen und Dateihandles freigeben, damit andere A
 
 Im Allgemeinen sollte die App beim Behandeln des Anhalteereignisses sofort ihren Status speichern und ihre Ressourcen und Dateihandles freigeben. Außerdem sollte die Ausführung des Codes maximal eine Sekunde dauern. Wenn eine App nicht innerhalb weniger Sekunden nach dem Anhalteereignis zurückkehrt, geht Windows davon aus, dass die App nicht mehr reagiert, und beendet sie.
 
-In einigen Situationen muss eine App weiter ausgeführt werden, damit Hintergrundaufgaben abgeschlossen werden. Beispielsweise kann Ihre App weiterhin Sound im Hintergrund wiedergeben. Weitere Informationen finden Sie unter [Hintergrundaudio](https://msdn.microsoft.com/library/windows/apps/mt282140). Hintergrundübertragungen werden auch fortgesetzt, selbst wenn die App angehalten oder beendet wurde. Weitere Informationen finden Sie unter [So wird's gemacht: Herunterladen einer Datei](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer).
+In einigen Situationen muss eine App weiter ausgeführt werden, damit Hintergrundaufgaben abgeschlossen werden. Beispielsweise kann Ihre App weiterhin Sound im Hintergrund wiedergeben. Weitere Informationen finden Sie unter [Hintergrundaudio](https://msdn.microsoft.com/library/windows/apps/mt282140). Hintergrundübertragungen werden auch fortgesetzt, selbst wenn die App angehalten oder beendet wurde. Weitere Informationen finden Sie unter [So wird's gemacht: Herunterladen einer Datei](https://msdn.microsoft.com/library/windows/apps/xaml/jj152726.aspx#downloading_a_file_using_background_transfer).
 
 Entsprechende Richtlinien finden Sie unter [Richtlinien für das Anhalten und Fortsetzen von Apps](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
-**Hinweis zum Debuggen mit Visual Studio:  **Visual Studio verhindert, dass in Windows eine an den Debugger angeschlossene App angehalten wird. Dies hat den Zweck, dem Benutzer das Anzeigen der Debugging-Benutzeroberfläche von Visual Studio zu ermöglichen, während die App ausgeführt wird. Beim Debuggen einer App können Sie mit Visual Studio ein Anhalteereignis an die App senden. Stellen Sie sicher, dass die Symbolleiste **Debugspeicherort** angezeigt wird, und klicken Sie dann auf das Symbol **Anhalten**.
+
+              **Hinweis zum Debuggen mit Visual Studio:** Visual Studio verhindert, dass in Windows eine an den Debugger angefügte App angehalten wird. Dies hat den Zweck, dem Benutzer das Anzeigen der Debugging-Benutzeroberfläche von Visual Studio zu ermöglichen, während die App ausgeführt wird. Beim Debuggen einer App können Sie mit VisualStudio ein Anhalteereignis an die App senden. Stellen Sie sicher, dass die Symbolleiste **Debugspeicherort** angezeigt wird, und klicken Sie dann auf das Symbol **Anhalten**.
 
 ## Sichtbarkeit einer App
 
@@ -131,7 +134,8 @@ Wenn eine angehaltene App für die Teilnahme an einem App-Vertrag oder einer Erw
 
 Angehaltene Apps empfangen keine Netzwerkereignisse, für deren Empfang sie registriert sind. Diese Netzwerkereignisse werden nicht in die Warteschlange gestellt, sondern einfach verpasst. Apps sollten beim Fortsetzen daher den Netzwerkstatus prüfen.
 
-**Hinweis**  Da das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis nicht vom UI-Thread ausgelöst wird, muss ein Dispatcher verwendet werden, wenn der Code im Resume-Handler mit der Benutzeroberfläche kommuniziert.
+
+              **Hinweis:** Da das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis nicht vom UI-Thread ausgelöst wird, muss ein Dispatcher verwendet werden, wenn der Code im Resume-Handler mit der Benutzeroberfläche kommuniziert.
 
  
 
@@ -150,7 +154,8 @@ In Windows 8.1 und höher wird eine App nach dem Schließen durch den Benutzer v
 
 Wenn eine App einen Ereignishandler für das **Suspending**-Ereignis registriert hat, wird dieses aufgerufen, sobald die App angehalten wird. Sie können relevante Anwendungs- und Benutzerdaten mithilfe dieses Ereignishandlers im beständigen Speicher speichern.
 
-**Verhalten nach dem Schließen:  **Wenn sich die App nach dem Schließen durch den Benutzer anders verhalten soll als nach dem Schließen durch Windows, können Sie mithilfe des Aktivierungsereignishandlers ermitteln, ob die App durch den Benutzer oder Windows beendet wurde. Beschreibungen zu den Status **ClosedByUser** und **Terminated** finden Sie in der Referenz für die [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)-Enumeration.
+
+              **Verhalten nach dem Schließen:** Wenn sich die App nach dem Schließen durch den Benutzer anders verhalten soll als nach dem Schließen durch Windows, können Sie mithilfe des Aktivierungsereignishandlers ermitteln, ob die App durch den Benutzer oder durch Windows beendet wurde. Beschreibungen zu den Status **ClosedByUser** und **Terminated** finden Sie in der Referenz für die [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)-Enumeration.
 
 Wir raten dazu, dass Apps sich selbst nur dann programmgesteuert schließen sollten, wenn dies absolut erforderlich ist. Wenn eine App beispielsweise einen Speicherverlust erkennt, kann sie sich selbst schließen, um die Sicherheit der persönlichen Daten des Benutzers zu wahren. Wenn Sie eine App programmgesteuert schließen, wird dies vom System wie ein Absturz der App behandelt.
 
@@ -166,7 +171,7 @@ Wenn der Benutzer eine App nach einem Absturz aktiviert, empfängt ihr Ereignish
 ## Entfernen einer App
 
 
-Löscht ein Benutzer eine App, wird die App mit allen zugehörigen lokalen Daten entfernt. Das Entfernen von Apps hat keine Folgen für die Benutzerdaten, die an allgemeinen Speicherorten, z. B. in den Dokument- oder Bildbibliotheken, gespeichert wurden.
+Löscht ein Benutzer eine App, wird die App mit allen zugehörigen lokalen Daten entfernt. Das Entfernen von Apps hat keine Folgen für die Benutzerdaten, die an allgemeinen Speicherorten, z.B. in den Dokument- oder Bildbibliotheken, gespeichert wurden.
 
 ## App-Lebenszyklus und Visual Studio-Projektvorlagen
 
@@ -176,21 +181,21 @@ Der grundlegende Code, der für den Lebenszyklus der App relevant ist, wird in d
 ## Wichtige APIs für den App-Lebenszyklus
 
 
--   [
-              **Windows.ApplicationModel**
-            ](https://msdn.microsoft.com/library/windows/apps/br224691)-Namespace
--   [
-              **Windows.ApplicationModel.Activation**
-            ](https://msdn.microsoft.com/library/windows/apps/br224766)-Namespace
--   [
-              **Windows.ApplicationModel.Core**
-            ](https://msdn.microsoft.com/library/windows/apps/br205865)-Namespace
--   [
-              **Windows.UI.Xaml.Application**
-            ](https://msdn.microsoft.com/library/windows/apps/br242324)-Klasse (XAML)
--   [
-              **Windows.UI.Xaml.Window**
-            ](https://msdn.microsoft.com/library/windows/apps/br209041)-Klasse (XAML)
+-   
+              [
+              **Windows.ApplicationModel**](https://msdn.microsoft.com/library/windows/apps/br224691)-Namespace
+-   
+              [
+              **Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)-Namespace
+-   
+              [
+              **Windows.ApplicationModel.Core**](https://msdn.microsoft.com/library/windows/apps/br205865)-Namespace
+-   
+              [
+              **Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Klasse (XAML)
+-   
+              [
+              **Windows.UI.Xaml.Window**](https://msdn.microsoft.com/library/windows/apps/br209041)-Klasse (XAML)
 
 **Hinweis**  
 Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
@@ -212,6 +217,6 @@ Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die univer
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -3,6 +3,7 @@ author: v-angraf
 title: "UWP auf Xbox One – API-Referenz"
 description: "API-Referenz für UWP auf Xbox One."
 area: Xbox
+translationtype: Human Translation
 ms.sourcegitcommit: 1a8dc5bcfc619756696dd9892ca63d3ad92c3c16
 ms.openlocfilehash: 3e857501687f74eacbe863889d61d33fcdbcd086
 
@@ -24,10 +25,10 @@ Dieser Abschnitt enthält Referenzthemen für die APIs für UWP auf Xbox One.
 
 ## Siehe auch
 
-- [UWP auf Xbox One](index.md)
+- [UWP auf XboxOne](index.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

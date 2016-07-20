@@ -3,20 +3,27 @@ author: v-angraf
 title: "Neuigkeiten für UWP auf Xbox One"
 description: "Vorstellung neuer Features für UWP-Apps auf Xbox One."
 area: Xbox
-ms.sourcegitcommit: 59019f209729b56e02ebdbdfd53a8fbf835c69f7
-ms.openlocfilehash: dfa94ad42a79d0f6b3f72fbf2efe9ce043532c56
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: edc9a914f200c643b1133cf07778e2ca3931d0d9
 
 ---
 
-# Neuigkeiten in der Developer Preview vom Juni 2016 für UWP auf Xbox One
+# Neuigkeiten in der Developer Preview vom Juli2016 für UWP auf Xbox One
 
-Die Developer Preview-Version vom Juni 2016 der universellen Windows-Plattform (UWP) auf Xbox One enthält die folgenden neuen Features, Featureupdates und Fehlerkorrekturen:
+Die Developer Preview-Version vom Juli2016 für die Universelle Windows-Plattform (UWP) auf Xbox One enthält die folgenden neuen Features, Featureupdates und Fehlerkorrekturen.
 
-## Der Mausmodus ist jetzt standardmäßig aktiviert.
-Der Mausmodus ist jetzt standardmäßig für XAML und gehostete Web-Apps aktiviert.
-Es wird dringend empfohlen, diese Option zu deaktivieren und die Navigation über einen Controller zu optimieren.
+## Netzwerke auf der Basis von TCP/UDP-Sockets sind jetzt verfügbar  
+Der ein- und ausgehende Netzwerkzugriff von Konsolen, die herkömmliche TCP/UDP-Sockets (WinSock, Windows.Networking.Sockets) verwenden, ist nun verfügbar.
+
+## Fiddler-Unterstützung
+Sie können nun Fiddler als Proxy für eine Konsole aktivieren, für die die Universelle Windows Plattform (UWP) auf Xbox One aktiviert ist. Fiddler ermöglicht Ihnen die Anmeldung und Überprüfung des gesamten HTTP-/HTTPS-Datenverkehrs zu und von Xbox-Diensten und Webdiensten vertrauender Parteien. Weitere Informationen finden Sie unter [Verwendung von Fiddler mit Xbox One bei der Entwicklung für UWP](uwp-fiddler.md).
+
+## Mausmodus nun standardmäßig aktiviert
+Der Mausmodus ist jetzt standardmäßig für XAML- und gehostete Web-Apps aktiviert.
+Es wird nachdrücklich empfohlen, diese Option zu deaktivieren und die direktionale Navigation über den Controller zu optimieren.
 Informationen zum Deaktivieren des Mausmodus finden Sie unter [So wird's gemacht: Deaktivieren des Mausmodus](how-to-disable-mouse-mode.md).
-Weitere Informationen dazu, wie Sie großartige Apps für die Xbox entwerfen, finden Sie unter [Entwerfen für Xbox und Fernsehgeräte](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode).
+Weitere Informationen dazu, wie Sie großartige Apps für die Xbox entwerfen, finden Sie unter [Entwerfen für Xbox und Fernsehgeräte](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode).
 
 ## Der erweiterte UWP-API-Oberflächenbereich ist jetzt in der Konsole verwendungsbereit.
 Zusätzliche UWP-APIs sind jetzt in der Xbox-Konsole verwendungsbereit. Weitere Informationen zur UWP-API-Unterstützung finden Sie unter [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/?LinkID=760755). 
@@ -42,11 +49,11 @@ Am WDP (Windows Device Portal)-Tool für Xbox wurden folgende Verbesserungen vor
  - Sie können auf Entwicklerdateien auf der Konsole über einen Datei-Explorer auf Ihrem Entwicklungscomputer zugreifen. Weitere Informationen zum Zugreifen auf Dateien über einen Datei-Explorer finden Sie im Referenzthema [/ext/smb/developerfolder](wdp-smb-api.md).
 
 ## Siehe auch
-- [UWP auf Xbox One](index.md)
+- [UWP auf XboxOne](index.md)
 - [Bekannte Probleme](known-issues.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
 description: "Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein In-App-Produkt (IAP) während eines bestimmten Zeitraums und andere optionale Filter abzurufen."
 title: "Abrufen von IAP-Käufen"
-ms.sourcegitcommit: 02131e641cdaa76256845b38bcc50aa42d718601
-ms.openlocfilehash: 21e634b1d5ab6c3ba7762c1b83c94d076d094af5
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: bff5eb8ecf5a11067a590393d443343dc6ed94bc
 
 ---
 
@@ -20,7 +21,7 @@ Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierte
 
 Sie benötigen Folgendes, um diese Methode verwenden zu können:
 
--   Ordnen Sie die Azure AD-Anwendung, die Sie zum Aufrufen dieser Methode verwenden, Ihrem Dev Center-Konto zu.
+-   Ordnen Sie die AzureAD-Anwendung, die Sie zum Aufrufen dieser Methode verwenden, Ihrem Dev Center-Konto zu.
 
 -   Rufen Sie ein Azure AD-Zugriffstoken für Ihre Anwendung ab.
 
@@ -33,19 +34,19 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 
 | Methode | Anforderungs-URI                                                                |
 |--------|----------------------------------------------------------------------------|
-| GET    | https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions``` |
 
- 
+<span/> 
 
 ### Anforderungsheader
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;. |
+| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;. |
 
- 
+<span/> 
 
-### Anforderungstext
+### Anforderungsparameter
 
 Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufdaten für alle für die App registrierten IAPs abzurufen, geben Sie den Parameter *applicationId* an. Um Kaufdaten für ein einzelnes für die App registriertes IAP abzurufen, geben Sie den Parameter *inAppProductId* an. Wenn Sie beide Parameter angeben, wird der Parameter *inAppProductId* ignoriert.
 
@@ -67,13 +68,13 @@ Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufda
 <tbody>
 <tr class="odd">
 <td align="left">applicationId</td>
-<td align="left">Zeichenfolge</td>
-<td align="left">Die Store-ID der App, für die Sie IAP-Kaufdaten abrufen möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
+<td align="left">string</td>
+<td align="left">Die Store-ID der App, für die Sie IAP-Kaufdaten abrufen möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="even">
 <td align="left">inAppProductId</td>
-<td align="left">Zeichenfolge</td>
+<td align="left">string</td>
 <td align="left">Die Produkt-ID des IAPs, für das Sie Kaufdaten abrufen möchten.</td>
 <td align="left">Ja</td>
 </tr>
@@ -98,7 +99,7 @@ Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufda
 <tr class="even">
 <td align="left">skip</td>
 <td align="left">int</td>
-<td align="left">Die Anzahl der Zeilen, die in der Abfrage übersprungen werden sollen. Verwenden Sie diesen Parameter, um große Datensätze durchzublättern. Beispielsweise rufen „top=10000“ und „skip=0“ die ersten 10.000 Datenzeilen ab, „top=10000“ und „skip=10000“ die nächsten 10.000 Datenzeilen usw.</td>
+<td align="left">Die Anzahl der Zeilen, die in der Abfrage übersprungen werden sollen. Verwenden Sie diesen Parameter, um große Datensätze durchzublättern. Beispielsweise rufen „top=10000“ und „skip=0“ die ersten 10.000Datenzeilen ab, „top=10000“ und „skip=10000“ die nächsten 10.000Datenzeilen usw.</td>
 <td align="left">Nein</td>
 </tr>
 <tr class="odd">
@@ -129,17 +130,17 @@ Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufda
 <li><strong>orderName</strong></li>
 </ul>
 <p>Der Parameter <em>order</em> ist optional und kann <strong>asc</strong> oder <strong>desc</strong> sein, um die auf- oder absteigende Anordnung der einzelnen Felder anzugeben. Der Standard ist <strong>asc</strong>.</p>
-<p>Dies ist eine Beispielzeichenfolge für <em>orderby</em> : <em>orderby=date,market</em></p></td>
+<p>Dies ist eine Beispielzeichenfolge für <em>orderby</em>: <em>orderby=date,market</em></p></td>
 <td align="left">Nein</td>
 </tr>
 </tbody>
 </table>
 
- 
+<span/>
 
 ### Filterfelder
 
-Der Parameter *Filter* des Anforderungstexts enthält mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält ein Feld und einen Wert, das/der mit den Operatoren **eq** oder **ne** verknüpft ist. Anweisungen können mit **and** oder **or** kombiniert werden. Dies sind einige Beispielparameter für *Filter*:
+Der Parameter *Filter* der Anforderung enthält mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält ein Feld und einen Wert, das/der mit den Operatoren **eq** oder **ne** verknüpft ist. Anweisungen können mit **and** oder **or** kombiniert werden. Dies sind einige Beispielparameter für *Filter*:
 
 -   *filter=market eq 'US' and gender eq 'm'*
 -   *filter=(market ne 'US') and (gender ne 'Unknown') and (gender ne 'm') and (market ne 'NO') and (ageGroup ne 'greater than 55' or ageGroup ne ‘less than 13’)*
@@ -215,9 +216,9 @@ Die Liste der unterstützten Felder finden Sie in der folgenden Tabelle. Zeichen
 <li><strong>Windows Phone 8</strong></li>
 <li><strong>Windows Phone 8.1</strong></li>
 <li><strong>Windows Phone 10</strong></li>
-<li><strong>Windows 8</strong></li>
+<li><strong>Windows8</strong></li>
 <li><strong>Windows 8.1</strong></li>
-<li><strong>Windows 10</strong></li>
+<li><strong>Windows10</strong></li>
 <li><strong>Unknown</strong></li>
 </ul></td>
 </tr>
@@ -242,7 +243,7 @@ Die Liste der unterstützten Felder finden Sie in der folgenden Tabelle. Zeichen
 </tbody>
 </table>
 
- 
+<span/> 
 
 ### Anforderungsbeispiel
 
@@ -270,6 +271,7 @@ Authorization: Bearer <your access token>
 | @nextLink  | string | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit IAP-Kaufdaten für die Abfrage gibt. |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                                                                                                                                                                                                                                 |
 
+<span/>
 
 ### IAP-Kaufwerte
 
@@ -279,8 +281,8 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 |---------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | date                | string  | Das erste Datum im Datumsbereich für die Kaufdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist das erste Datum in diesem Datumsbereich dieser Wert. |
 | inAppProductId      | string  | Die Produkt-ID des IAP, für das Sie Kaufdaten abrufen.                                                                                                                                                                 |
-| inAppProductName    | Zeichenfolge  | Der Anzeigename des IAPs.                                                                                                                                                                                                             |
-| applicationId       | Zeichenfolge  | Die Store-ID der App, für die Sie IAP-Kaufdaten abrufen möchten.                                                                                                                                                           |
+| inAppProductName    | string  | Der Anzeigename des IAPs.                                                                                                                                                                                                             |
+| applicationId       | string  | Die Store-ID der App, für die Sie IAP-Kaufdaten abrufen möchten.                                                                                                                                                           |
 | applicationName     | string  | Der Anzeigename der App.                                                                                                                                                                                                             |
 | deviceType          | string  | Der Typ des Geräts, auf dem der Kauf ausgeführt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                                  |
 | orderName           | string  | Der Name der Bestellung.                                                                                                                                                                                                                   |
@@ -292,7 +294,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | acquisitionType     | string  | Der Typ des Kaufs (kostenlos, kostenpflichtig usw.). Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                                    |
 | acquisitionQuantity | inumber | Die Anzahl der Käufe, die ausgeführt wurden.                                                                                                                                                                                                |
 
- 
+<span/> 
 
 ### Antwortbeispiel
 
@@ -337,6 +339,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

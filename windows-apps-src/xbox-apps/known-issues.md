@@ -3,8 +3,9 @@ author: Mtoepke
 title: Bekannte Probleme mit UWP auf Xbox One Developer Preview
 description: 
 area: Xbox
-ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
-ms.openlocfilehash: 9a9180f8d6fcd51808310a7f8fbac986ca9c3817
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: e016be20af9a0d7a67fa383cbdc93083d12a1113
 
 ---
 
@@ -21,7 +22,8 @@ Für Entwickler bedeutet dies, dass nicht alle Entwickler-Tools und -APIs wie er
 
 In der folgenden Liste werden einige bekannte Probleme aufgelistet, die in dieser Version auftreten können. Diese Liste ist jedoch nicht vollständig. 
 
-**Wir möchten gerne Ihr Feedback erhalten.** Melden Sie daher alle festgestellten Probleme im Forum für das [Entwickeln von universellen Windows-Apps](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop). 
+
+              **Wir möchten gerne Ihr Feedback erhalten.** Melden Sie daher alle festgestellten Probleme im Forum für das [Entwickeln von universellen Windows-Apps](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop). 
 
 Wenn Sie Probleme haben, lesen Sie die Informationen in diesem Thema, informieren Sie sich in den [häufig gestellten Fragen](frequently-asked-questions.md), und nutzen Sie die Foren, um Hilfe zu erhalten.
 
@@ -34,7 +36,7 @@ Ab dieser Preview-Version ist der _Mausmodus_ standardmäßig für XAML- und geh
 
 **Entwicklern wird dringend empfohlen, den Mausmodus zu deaktivieren und die Navigation per Controller (X-Y) zu optimieren.**
 
-Halten Sie sich beim Deaktivieren des Mausmodus in XAML an das folgende Beispiel:
+Befolgen Sie für das Deaktivieren des Mausmodus in XAML folgendes Beispiel:
 
 ```code
 public App() {
@@ -44,17 +46,19 @@ public App() {
 }
 ```
 
-Halten Sie sich beim Deaktivieren des Mausmodus in einer HTML-/Javascript-App an folgendes Beispiel:
+Befolgen Sie für das Deaktivieren des Mausmodus in einer HTML-/JavaScript-App folgendes Beispiel:
 
 ```code
 // Turn off mouse mode
 navigator.gamepadInputEmulation = "keyboard";
 ```
 
-> **Hinweis**
-            &nbsp;&nbsp;Wenn der Mausmodus aktiviert ist, kann in dieser Developer Preview die Konsole bei der Verschiebung mit dem rechten Joystick am Controller hängen. Wenn dieses Problem auftritt, müssen Sie die Konsole neu starten.
+Weitere Informationen einschließlich Informationen zum Aktivieren der direktionalen Navigation in einer HTML/JavaScript-App finden Sie unter [Deaktivieren des Mausmodus](how-to-disable-mouse-mode.md#html).
 
-Weitere Informationen zur Unterstützung des Mausmodus finden Sie im Thema [Entwerfen für Xbox und Fernsehgeräte](https://msdn.microsoft.com/en-us/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode). Dieses Thema enthält Informationen zum Aktivieren und Deaktivieren des Mausmodus, sodass Sie das richtige Verhalten für Ihre App auswählen können.
+> 
+              **Hinweis**&nbsp;&nbsp;Wenn der Mausmodus aktiviert ist, kann in dieser Developer Preview die Konsole bei der Verschiebung mit dem rechten Joystick am Controller einfrieren. Wenn dieses Problem auftritt, müssen Sie die Konsole neu starten.
+
+Weitere Informationen zur Unterstützung des Mausmodus finden Sie im Thema [Entwerfen für Xbox und Fernsehgeräte](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode). Dieses Thema enthält Informationen zum Aktivieren und Deaktivieren des Mausmodus, sodass Sie das richtige Verhalten für Ihre App auswählen können.
 
 ## Ein Benutzer muss angemeldet sein, damit Sie eine App bereitstellen können (Fehler 0x87e10008).
 
@@ -66,9 +70,9 @@ Um dieses Problem zu umgehen, melden Sie sich vor dem Bereitstellen Ihrer App al
  
 ## Speicherlimits für Hintergrund-Apps werden noch nicht erzwungen.
  
-Das Limit von 128 MB für im Hintergrund ausgeführte Apps wird in dieser Preview-Version nicht erzwungen. Wenn Ihre App bei ihrer Ausführung im Hintergrund 128 MB überschreitet, kann sie dennoch Speicher zuweisen.
+Das Limit von 128MB für im Hintergrund ausgeführte Apps wird in dieser Preview-Version nicht erzwungen. Wenn Ihre App bei ihrer Ausführung im Hintergrund 128MB überschreitet, kann sie dennoch Speicher zuweisen.
  
-Zurzeit kann dieses Problem nicht umgangen werden. Legen Sie entsprechende Richtlinien für die Speichernutzung fest. In einer künftigen Preview-Version werden für Ihre App Speicherzuweisungsfehler ausgegeben, wenn sie das Limit von 128 MB überschreitet.
+Zurzeit kann dieses Problem nicht umgangen werden. Legen Sie entsprechende Richtlinien für die Speichernutzung fest. In einer künftigen Preview-Version werden für Ihre App Speicherzuweisungsfehler ausgegeben, wenn sie das Limit von 128MB überschreitet.
  
 ## Fehler bei der Bereitstellung aus VS bei aktiviertem Jugendschutz
 
@@ -110,7 +114,7 @@ Please use the forum to report any issues you see.-->
 
 ## DirectX 12-Unterstützung
 
-UWP auf Xbox One unterstützt die DirectX 11-Featureebene 10. DirectX 12 wird derzeit nicht unterstützt. Xbox One ist wie alle herkömmlichen Spielekonsolen ein spezielles Hardwaregerät, das ein spezielles SDK erfordert, um das Potenzial vollständig nutzen zu können. Wenn Sie an einem Spiel arbeiten, das Zugriff auf das maximale Potenzial der Xbox One-Hardware benötigt, können Sie sich beim [ID@XBOX](http://www.xbox.com/en-us/Developers/id)-Programm registrieren, um Zugriff auf das SDK zu erhalten, das DirectX 12-Unterstützung enthält.
+UWP auf Xbox One unterstützt die DirectX11-Featureebene10. DirectX12 wird derzeit nicht unterstützt. Xbox One ist wie alle herkömmlichen Spielekonsolen ein spezielles Hardwaregerät, das ein spezielles SDK erfordert, um das Potenzial vollständig nutzen zu können. Wenn Sie an einem Spiel arbeiten, das Zugriff auf das maximale Potenzial der Xbox One-Hardware benötigt, können Sie sich beim [ID@XBOX](http://www.xbox.com/Developers/id)-Programm registrieren, um Zugriff auf das SDK zu erhalten, das DirectX 12-Unterstützung enthält.
 
 <!-- ### Xbox One Developer Preview disables game streaming to Windows 10
 
@@ -121,8 +125,8 @@ To restore the game streaming feature, you must leave the developer preview. -->
 
 Standardmäßig sollte der Anzeigebereich für UWP-Apps auf Xbox durch den sicheren TV-Bereich abgesenkt werden. Die Xbox One Developer Preview enthält jedoch ein bekanntes Problem, das dazu führt, dass der sichere TV-Bereich bei [0, 0] und nicht bei [_offset_, _offset_] beginnt.
 
-> **Hinweis**
-            &nbsp;&nbsp;Dies gilt nur für UWP-Apps mit Javascript.
+> 
+              **Hinweis**&nbsp;&nbsp;Dies gilt nur für UWP-Apps, die Javascript verwenden.
 
 Die einfachste Möglichkeit, dieses Problem zu umgehen, besteht darin, den sicheren TV-Bereich zu deaktivieren, wie im folgenden JavaScript-Beispiel gezeigt.
 
@@ -138,15 +142,17 @@ UWP apps and games running on Xbox One share resources with the system and other
 If you are running into memory or performance issues, this may be why. 
 For more details, see [System resources for UWP apps and games on Xbox One](system-resource-allocation.md).-->
 
+<!--
+## Networking using traditional sockets
 
-## Netzwerke mit herkömmlichen Sockets
-
-In dieser Developer Preview ist eingehender und ausgehender Netzwerkzugriff von der Konsole, die herkömmliche TCP/UDP-Sockets (WinSock, Windows.Networking.Sockets) verwendet, nicht verfügbar. Entwickler können weiterhin HTTP und WebSockets verwenden. 
+In this developer preview, inbound and outbound network access from the console that uses traditional TCP/UDP sockets (WinSock, Windows.Networking.Sockets) is not available. 
+Developers can still use HTTP and WebSockets.
+--> 
 
 
 ## UWP-API-Abdeckung
 
-Nicht alle UWP-APIs werden für Xbox unterstützt. Unter [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/p/?LinkId=760755) finden Sie eine Liste der APIs, von denen bekannt ist, dass sie nicht funktionieren. Wenn Probleme mit anderen APIs auftreten, melden Sie dies bitte in den Foren. 
+Nicht alle UWP-APIs werden auf Xbox unterstützt. Unter [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/p/?LinkId=760755) finden Sie eine Liste der APIs, von denen bekannt ist, dass sie nicht funktionieren. Wenn Probleme mit anderen APIs auftreten, melden Sie dies bitte in den Foren. 
 
 <!--## XAML controls do not look like or behave like the controls in the Xbox One shell
 
@@ -226,10 +232,10 @@ This is caused by a failure in the WDP infrastructure on the console and can be 
 
 ## Siehe auch
 - [Häufig gestellte Fragen](frequently-asked-questions.md)
-- [UWP auf Xbox One](index.md)
+- [UWP auf XboxOne](index.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

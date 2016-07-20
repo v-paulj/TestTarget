@@ -5,8 +5,9 @@ ms.assetid: A6393A57-53F2-4F06-89AF-0D806FD76DB0
 title: Entwerfen inklusiver Software unter Windows 10
 label: Designing inclusive software
 template: detail.hbs
-ms.sourcegitcommit: ea4d413e0b2ade1429d255afbc6a1a73ea308051
-ms.openlocfilehash: 6f1c0663034f81bb0ddfe42c04fbe60562b45c1c
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: cdd41595ee2727c0eeefab7b041c1adfefc15dfa
 
 ---
 
@@ -18,20 +19,24 @@ Microsoft entwickelt seine Designprinzipien und -verfahren kontinuierlich weiter
 
 Diese neue Designphilosophie heißt inklusives Design. Unser Ziel ist es, Software von Grund auf für alle Arten von Benutzern zu entwickeln. Dies steht im Gegensatz zu der Auffassung, dass Eingabehilfen erst am Ende des Entwicklungsprozesses erstellt werden, um die Anforderungen einer kleinen Gruppe von Benutzern zu erfüllen.
 
-„Wir definieren eine Behinderung als den Konflikt zwischen den Anforderungen einer einzelnen Person und dem angebotenen Dienst, dem angebotenen Produkt oder der angebotenen Umgebung. Jeder Benutzer kann eine Behinderung erleiden. Es ist eine allgemeine menschliche Erfahrung, ausgeschlossen zu werden.“  \ aus dem [Inclusive](https://www.microsoft.com/en-us/design/inclusive)-Video  
+„Wir definieren eine Behinderung als den Konflikt zwischen den Anforderungen einer einzelnen Person und dem angebotenen Dienst, dem angebotenen Produkt oder der angebotenen Umgebung. Jeder Benutzer kann eine Behinderung erleiden. Es ist eine allgemeine menschliche Erfahrung, ausgeschlossen zu werden.“  \ aus dem [Inclusive](https://www.microsoft.com/design/inclusive)-Video  
 
 Mithilfe des inklusiven Designs werden bessere Produkte für alle erstellt. Es geht darum, die gesamte Bandbreite der menschlichen Vielfalt zu berücksichtigen. Denken Sie an die Bordsteinabsenkungen, die Sie jetzt in den Kreuzungsbereichen der meisten Bürgersteige finden. Diese sind eindeutig zur Verwendung durch Rollstuhlfahrer bestimmt. Aber jetzt werden sie von fast jedem verwendet, einschließlich Personen mit Kinderwägen, Radfahrern und Skateboardern. Sogar Fußgänger verwenden oft Bordsteinabsenkungen, da sie einfach vorhanden und komfortabel sind. Fernbedienungen könnten als Hilfstechnologie (Assistive Technology, AT) für Personen mit körperlichen Einschränkungen betrachtet werden. Es ist heute jedoch fast unmöglich, einen Fernseher ohne Fernbedienung zu kaufen. Bevor Kinder lernen, ihre Schuhe zuzubinden, können sie Schuhe zum Reinschlüpfen oder leicht zu schließende Schuhe tragen. Schuhe, die leicht an- und auszuziehen sind, werden häufig in Kulturen bevorzugt, in denen Schuhe vor dem Betreten eines Hauses ausgezogen werden. Sie sind auch besser für Personen mit Bewegungseinschränkungen an den Händen geeignet, etwa Personen mit Arthritis oder einem vorübergehend gebrochenen Handgelenk.
 
 ## Grundlagen des inklusiven Designs  
 Die folgenden 4 Grundsätze gelten für den Wechsel von Microsoft zum inklusiven Design:
 
-**Think Universal (Universalität)**: Wir konzentrieren uns auf das, was Menschen verbindet – menschliche Motivationen, Beziehungen und Fähigkeiten. Dies spornt uns an, an die breiteren sozialen Auswirkungen unserer Arbeit zu denken. Das Ergebnis ist eine Umgebung, die zahlreiche Möglichkeiten bietet, damit alle Menschen teilnehmen können.
 
-**Make it personal (Personalisierung)**: Als Nächstes stellen wir uns der Herausforderung, emotionale Verbindungen herzustellen. Zwischenmenschliche Interaktionen können bessere Interaktionen zwischen Menschen und Technologien inspirieren. Die einzigartigen Umstände eines Menschen können ein Design für alle Menschen verbessern. Das Ergebnis ist eine Umgebung, die wirkt, als wäre sie nur für eine einzige Person entwickelt worden.
+              **Think Universal (Universalität)**: Wir konzentrieren uns auf das, was Menschen verbindet – menschliche Motivationen, Beziehungen und Fähigkeiten. Dies spornt uns an, an die breiteren sozialen Auswirkungen unserer Arbeit zu denken. Das Ergebnis ist eine Umgebung, die zahlreiche Möglichkeiten bietet, damit alle Menschen teilnehmen können.
 
-**Keep it simple (Einfachheit)**: Einfachheit ist das alles verbindende Element. Wenn wir die Umgebung übersichtlicher gestalten, wissen Menschen, was sie als Nächstes tun müssen. Sie sind inspiriert, sich Bereiche zu erschließen, die aufgeräumt, hell und offen sind. Das Ergebnis ist eine ehrliche und zeitlose Umgebung.
 
-**Create delight (Begeisterung)**: Begeisternde Umgebungen rufen Staunen und Entdeckertum hervor. Manchmal ist es Magie. Manchmal ist es ein Detail, das einfach nur richtig ist. Wir entwerfen diese Momente, damit sie sich wie willkommene Änderungen des Tempos anfühlen. Das Ergebnis ist eine Umgebung, die Dynamik und Fluss besitzt.
+              **Make it personal (Personalisierung)**: Als Nächstes stellen wir uns der Herausforderung, emotionale Verbindungen herzustellen. Zwischenmenschliche Interaktionen können bessere Interaktionen zwischen Menschen und Technologien inspirieren. Die einzigartigen Umstände eines Menschen können ein Design für alle Menschen verbessern. Das Ergebnis ist eine Umgebung, die wirkt, als wäre sie nur für eine einzige Person entwickelt worden.
+
+
+              **Keep it simple (Einfachheit)**: Einfachheit ist das alles verbindende Element. Wenn wir die Umgebung übersichtlicher gestalten, wissen Menschen, was sie als Nächstes tun müssen. Sie sind inspiriert, sich Bereiche zu erschließen, die aufgeräumt, hell und offen sind. Das Ergebnis ist eine ehrliche und zeitlose Umgebung.
+
+
+              **Create delight (Begeisterung)**: Begeisternde Umgebungen rufen Staunen und Entdeckertum hervor. Manchmal ist es Magie. Manchmal ist es ein Detail, das einfach nur richtig ist. Wir entwerfen diese Momente, damit sie sich wie willkommene Änderungen des Tempos anfühlen. Das Ergebnis ist eine Umgebung, die Dynamik und Fluss besitzt.
 
 ## Benutzer des inklusiven Designs  
 Es gibt im Wesentlichen zwei Arten von Benutzern von Hilfstechnologien (Assistive Technologies, AT):
@@ -39,9 +44,9 @@ Es gibt im Wesentlichen zwei Arten von Benutzern von Hilfstechnologien (Assistiv
 1. Personen, die diese aufgrund von Behinderungen oder Beeinträchtigungen, altersbezogenen Umständen oder vorübergehenden Umständen (beispielsweise aufgrund eines gebrochenen Arms oder Beins) benötigen  
 2. Personen, die diese aus Präferenzgründen verwenden, da sie ein komfortableres oder bequemeres Computererlebnis bieten
 
-Die Mehrzahl der Computerbenutzer (54 Prozent) kennen irgendeine Art von Hilfstechnologie, und 44 Prozent der Computerbenutzer verwenden Hilfstechnologien. Viele von diesen verwenden jedoch keine Hilfstechnologien, die ihnen Vorteile bieten würden (Forrester 2004).  
+Die Mehrzahl der Computerbenutzer (54Prozent) kennen irgendeine Art von Hilfstechnologie, und 44Prozent der Computerbenutzer verwenden Hilfstechnologien. Viele von diesen verwenden jedoch keine Hilfstechnologien, die ihnen Vorteile bieten würden (Forrester2004).  
 
-Eine von Forrester Research im Auftrag von Microsoft 2003-2004 durchgeführte Studie kam zu dem Ergebnis, dass mehr als die Hälfte – 57 Prozent – der Computerbenutzer zwischen 18 und 64 Jahren in den Vereinigten Staaten von Hilfstechnologien profitieren könnten. Die Mehrzahl dieser Benutzer gab zwar keine Behinderungen oder Beeinträchtigungen, jedoch bestimmte aufgabenbezogene Schwierigkeiten oder Beeinträchtigungen bei der Verwendung von Computern an. Forrester (2003) ermittelte darüber hinaus die folgenden Zahlen für Benutzer mit spezifischen Schwierigkeiten: Einer von vier Benutzern hat Schwierigkeiten beim Sehen. Einer von vier Benutzern hat Schmerzen in Handgelenken oder Händen. Einer von fünf Benutzern hat Schwierigkeiten beim Hören.  
+Eine von Forrester Research im Auftrag von Microsoft 2003-2004 durchgeführte Studie kam zu dem Ergebnis, dass mehr als die Hälfte – 57Prozent – der Computerbenutzer zwischen 18 und 64Jahren in den Vereinigten Staaten von Hilfstechnologien profitieren könnten. Die Mehrzahl dieser Benutzer gab zwar keine Behinderungen oder Beeinträchtigungen, jedoch bestimmte aufgabenbezogene Schwierigkeiten oder Beeinträchtigungen bei der Verwendung von Computern an. Forrester (2003) ermittelte darüber hinaus die folgenden Zahlen für Benutzer mit spezifischen Schwierigkeiten: Einer von vier Benutzern hat Schwierigkeiten beim Sehen. Einer von vier Benutzern hat Schmerzen in Handgelenken oder Händen. Einer von fünf Benutzern hat Schwierigkeiten beim Hören.  
 
 Abgesehen von permanenten Behinderungen können Schwere und Art der Schwierigkeiten, die eine Person hat, während ihres Lebens unterschiedlich sein. Es gibt keine „normalen“ Menschen. Unsere Fähigkeiten unterliegen ständigen Veränderungen. Margaret Meade sagte einmal: „Wir sind alle einzigartig. Diese Einzigartigkeit ist uns allen gemeinsam.“  
 
@@ -57,7 +62,7 @@ Definieren Sie die potenziellen Benutzer Ihrer App. Denken Sie an all die unters
 Treffen Sie sich mit potenziellen Benutzern, die unterschiedliche Merkmale aufweisen. Stellen Sie sicher, dass Sie all ihre Bedürfnisse berücksichtigen, wenn Sie Ihre App entwerfen. Microsoft hat beispielsweise festgestellt, dass gehörlose Benutzer die Popupbenachrichtigungen auf ihren Xbox-Konsolen deaktivieren. Als wir gehörlose Benutzer dazu befragten, erfuhren wir, dass die Popupbenachrichtigungen einen Untertitelungsabschnitt verdecken. Dies wurde behoben, indem die Popups etwas weiter oben im Bildschirm angezeigt werden. Dies ist eine einfache Lösung, die auf der Basis der Telemetriedaten, die das Verhalten ursprünglich anzeigten, nicht notwendigerweise offensichtlich war.  
 
 ### Wählen Sie das Entwicklungsframework überlegt aus  
-In der Entwurfsphase ist das von Ihnen verwendete Entwicklungsframework (d. h. UWP, Win32, Web) von kritischer Bedeutung für die Entwicklung Ihres Produkts. Wenn Sie das Framework auswählen können, denken Sie darüber nach, wie viel Aufwand das Erstellen Ihrer Steuerelemente innerhalb des Frameworks verursachen wird. Welche standardmäßigen oder integrierten Eigenschaften in Bezug auf Barrierefreiheit stellt das Framework bereit? Welche Steuerelemente müssen Sie anpassen? Bei der Wahl Ihres Frameworks entscheiden Sie im Wesentlichen darüber, wie viele der für eine barrierefreie App benötigten Steuerelemente Sie ohne Aufwand erhalten (d. h., wie viele dieser Steuerelemente bereits integriert sind), und wie viele Steuerelemente aufgrund von Steuerelementanpassungen zusätzlichen Entwicklungsaufwand erfordern.   
+In der Entwurfsphase ist das von Ihnen verwendete Entwicklungsframework (d.h. UWP, Win32, Web) von kritischer Bedeutung für die Entwicklung Ihres Produkts. Wenn Sie das Framework auswählen können, denken Sie darüber nach, wie viel Aufwand das Erstellen Ihrer Steuerelemente innerhalb des Frameworks verursachen wird. Welche standardmäßigen oder integrierten Eigenschaften in Bezug auf Barrierefreiheit stellt das Framework bereit? Welche Steuerelemente müssen Sie anpassen? Bei der Wahl Ihres Frameworks entscheiden Sie im Wesentlichen darüber, wie viele der für eine barrierefreie App benötigten Steuerelemente Sie ohne Aufwand erhalten (d.h., wie viele dieser Steuerelemente bereits integriert sind), und wie viele Steuerelemente aufgrund von Steuerelementanpassungen zusätzlichen Entwicklungsaufwand erfordern.   
 
 Verwenden Sie Windows-Standardsteuerelemente, wann immer möglich. Diese Steuerelemente verfügen bereits über die Technologie, die für die Schnittstellenbildung mit Hilfstechnologien erforderlich ist.
 
@@ -68,7 +73,7 @@ Wenn Sie das Framework ausgewählt haben, sollten Sie eine logische Hierarchie e
 2.  Um klare Grenzen zwischen benutzerdefinierten Steuerelementen und Standardsteuerelemente in der Benutzeroberfläche festzulegen  
 3.  Um zu bestimmen, wie die Teile der Benutzeroberfläche miteinander interagieren  
 
-Eine logische Hierarchie ist eine hervorragende Möglichkeit, potenzielle Bedienungsprobleme zu behandeln. Wenn Sie die Benutzeroberfläche nicht auf eine relativ einfache Weise strukturieren können, haben Scherweise Probleme mit der Bedienbarkeit. Die logische Darstellung eines einfaches Dialogfelds sollte nicht zu mehreren Seiten mit Diagrammen führen. Wenn logische Hierarchien zu detailliert oder umfassend werden, müssen Sie Ihre Benutzeroberfläche möglicherweise neu entwerfen. Um weitere Informationen zu erhalten, laden Sie das E-Book [Engineering Software for Accessibility](https://www.microsoft.com/en-us/download/details.aspx?id=19262) (Entwickeln von barrierefreier Software) herunter.  
+Eine logische Hierarchie ist eine hervorragende Möglichkeit, potenzielle Bedienungsprobleme zu behandeln. Wenn Sie die Benutzeroberfläche nicht auf eine relativ einfache Weise strukturieren können, haben Scherweise Probleme mit der Bedienbarkeit. Die logische Darstellung eines einfaches Dialogfelds sollte nicht zu mehreren Seiten mit Diagrammen führen. Wenn logische Hierarchien zu detailliert oder umfassend werden, müssen Sie Ihre Benutzeroberfläche möglicherweise neu entwerfen. Um weitere Informationen zu erhalten, laden Sie das E-Book [Engineering Software for Accessibility](https://www.microsoft.com/download/details.aspx?id=19262) (Entwickeln von barrierefreier Software) herunter.  
 
 ### Entwerfen Sie geeignete Einstellungen für die visuelle Benutzeroberfläche  
 Stellen Sie während des Entwerfen der visuellen Benutzeroberfläche sicher, dass Ihr Produkt über eine Einstellung für hohen Kontrast verfügt, die Standard-Systemschriftarten und -Glättungsoptionen verwendet, auf die korrekten DPI-Bildschirmeinstellungen skaliert, über Standardtext mit einem Kontrastverhältnis von mindestens 5:1 zum Hintergrund verfügt und Farbkombination verwendet, die von Benutzern mit Farbsehschwächen leicht zu unterscheiden sind.  
@@ -83,29 +88,29 @@ Um die Lesbarkeit sicherzustellen und unerwartete Verzerrungen des Texts zu mini
 Für Benutzer mit Sehschwächen ist es wichtig, dass die Benutzeroberfläche skalierbar ist. In Benutzeroberflächen, die bei hohen DPI-Auflösungen (dots per inch, Punkte pro Zoll) nicht ordnungsgemäß skaliert werden, überschneiden sich wichtige Komponenten möglicherweise oder überdecken andere Komponenten, sodass auf diese nicht mehr zugegriffen werden kann.  
 
 #### Farbkontrastverhältnis  
-Die aktualisierte Fassung des Abschnitts 508 des Americans with Disability Act (ADA) und andere Gesetze erfordern, dass das Farbkontrastverhältnis zwischen Text und Hintergrund mindestens 5:1 betragen muss. Für großen Text (Schriftgrößen mit 18 Punkt oder 14 Punkt und fett) beträgt das erforderliche Kontrastverhältnis 3:1.  
+Die aktualisierte Fassung des Abschnitts508 des Americans with Disability Act (ADA) und andere Gesetze erfordern, dass das Farbkontrastverhältnis zwischen Text und Hintergrund mindestens 5:1 betragen muss. Für großen Text (Schriftgrößen mit 18Punkt oder 14Punkt und fett) beträgt das erforderliche Kontrastverhältnis 3:1.  
 
 #### Farbkombinationen  
-Ungefähr 7 Prozent der Männer (und weniger als 1 Prozent der Frauen) weisen eine Farbsehschwäche auf. Benutzer mit Farbenblindheit haben Probleme bei der Unterscheidung zwischen bestimmten Farben. Es ist daher wichtig, dass niemals nur Farben verwendet werden, um Status oder Bedeutung in einer Anwendung zu vermitteln. Für dekorative Bilder (wie Symbole oder Hintergründe) sollten Farbkombinationen so gewählt werden, dass die Wahrnehmung des Bilds durch den farbenblinden Benutzer maximiert wird. Wenn Sie Ihre Benutzeroberfläche von Anfang an unter Berücksichtigung dieser Empfehlungen zur Farbgestaltung entwerfen, macht Ihre App bereits wichtige Fortschritte in Richtung eines inklusiven Designs.  
+Ungefähr 7Prozent der Männer (und weniger als 1Prozent der Frauen) weisen eine Farbsehschwäche auf. Benutzer mit Farbenblindheit haben Probleme bei der Unterscheidung zwischen bestimmten Farben. Es ist daher wichtig, dass niemals nur Farben verwendet werden, um Status oder Bedeutung in einer Anwendung zu vermitteln. Für dekorative Bilder (wie Symbole oder Hintergründe) sollten Farbkombinationen so gewählt werden, dass die Wahrnehmung des Bilds durch den farbenblinden Benutzer maximiert wird. Wenn Sie Ihre Benutzeroberfläche von Anfang an unter Berücksichtigung dieser Empfehlungen zur Farbgestaltung entwerfen, macht Ihre App bereits wichtige Fortschritte in Richtung eines inklusiven Designs.  
 
 ## Übersicht: sieben Schritte zum inklusiven Design  
 Befolgen Sie diese sieben Schritte, um sicherzustellen, dass Ihre Software inklusiv ist.  
 1.  Entscheiden Sie zunächst, ob ein inklusives Design ein wichtiger Aspekt Ihrer Software ist. Wenn dies der Fall ist, informieren Sie sich darüber, wie sie Benutzern in der Praxis helfen kann, zu leben, zu arbeiten und zu spielen, um Anleitungen für Ihr Design zu erhalten.  
-2.  Verwenden Sie wenn möglich die Steuerelemente, die Ihr Framework Ihnen bereitstellt (d. h. Standardsteuerelemente), während Sie Lösungen für Ihre Anforderungen entwickeln, und vermeiden Sie unnötigen Aufwand und unnötige Kosten, um benutzerdefinierte Steuerelemente zu entwickeln.  
+2.  Verwenden Sie wenn möglich die Steuerelemente, die Ihr Framework Ihnen bereitstellt (d.h. Standardsteuerelemente), während Sie Lösungen für Ihre Anforderungen entwickeln, und vermeiden Sie unnötigen Aufwand und unnötige Kosten, um benutzerdefinierte Steuerelemente zu entwickeln.  
 3.  Entwerfen Sie eine logische Hierarchie für Ihr Produkt, und legen Sie fest, an welchen Stellen sich Standardsteuerelemente, mögliche benutzerdefinierte Steuerelemente und der Tastaturfokus in der Benutzeroberfläche befinden.  
-4.  Integrieren Sie nützliche Systemeinstellungen (z. B. Tastaturnavigation, hohen Kontrast und hohe DPI-Auflösung) in Ihr Produkt.  
-5.  Implementieren Sie Ihr Design unter Nutzung des [Microsoft-Hubs für die barrierefreie Entwicklung](https://developer.microsoft.com/en-us/windows/accessible-apps) und der Spezifikationen Ihres Frameworks in Bezug auf Barrierefreiheit als Referenzpunkten.  
+4.  Integrieren Sie nützliche Systemeinstellungen (z.B. Tastaturnavigation, hohen Kontrast und hohe DPI-Auflösung) in Ihr Produkt.  
+5.  Implementieren Sie Ihr Design unter Nutzung des [Microsoft-Hubs für die barrierefreie Entwicklung](https://developer.microsoft.com/windows/accessible-apps) und der Spezifikationen Ihres Frameworks in Bezug auf Barrierefreiheit als Referenzpunkten.  
 6.  Testen Sie Ihr Produkt mit Benutzern mit speziellen Bedürfnissen, um sicherzustellen, dass diese das von Ihnen implementierte inklusive Design nutzen können.  
 7.  Stellen Sie das fertige Produkt bereit, und dokumentieren Sie Ihre Implementierung für Personen, die möglicherweise nach Ihnen am Projekt arbeiten.  
 
 ## Verwandte Themen  
 * [Inklusives Design](http://design.microsoft.com/inclusive)
-* [Entwickeln von barrierefreier Software](https://www.microsoft.com/en-us/download/details.aspx?id=19262)
-* [Microsoft-Hub für die barrierefreie Entwicklung](https://developer.microsoft.com/en-us/windows/accessible-apps)
+* [Entwickeln von barrierefreier Software](https://www.microsoft.com/download/details.aspx?id=19262)
+* [Microsoft-Hub für die barrierefreie Entwicklung](https://developer.microsoft.com/windows/accessible-apps)
 * [Entwickeln von barrierefreien Windows-Apps](developing-inclusive-windows-apps.md)  
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

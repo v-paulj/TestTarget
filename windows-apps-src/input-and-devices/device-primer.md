@@ -6,8 +6,8 @@ ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b
+ms.sourcegitcommit: 0501d59108c5f01b3cefd3d038f3c7d320c862eb
+ms.openlocfilehash: 3461d5cd399682e0c26a7a6864c916bda21eec43
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: bb23e8cc85544d4b5f0717b0c2d2ebad1447cb8b
 
 Wenn Sie sich mit den Geräten vertraut machen, die UWP-Apps (Universelle Windows-Plattform) unterstützen, können Sie für jeden Formfaktor die bestmögliche Benutzerfreundlichkeit bieten. Beim Entwickeln für ein bestimmtes Gerät sind die wichtigsten zu berücksichtigenden Punkte die Darstellung der App auf dem Gerät; wo, wann und wie die App auf dem Gerät genutzt wird; und die Art der Interaktion der Benutzer mit dem Gerät.
 
-## <span id="Phones_and_phablets"></span><span id="phones_and_phablets"></span><span id="PHONES_AND_PHABLETS"></span>Smartphones und Phablets
+## Smartphones und Phablets
 
 
 Smartphones sind mittlerweile die am häufigsten genutzten Geräte und bieten auch bei begrenzter Bildschirmfläche und eingeschränkten Eingabeverfahren viele Möglichkeiten. Smartphones sind in zahlreichen verschiedenen Größen verfügbar. Größere Handys werden als Phablets bezeichnet. App-Benutzeroberflächen auf Phablets ähneln den Benutzeroberflächen auf Smartphones, aber die größere Bildschirmfläche von Phablets ermöglicht einige wichtige Änderungen bei der Nutzung von Inhalten.
@@ -61,7 +61,7 @@ Typische Gerätefunktionen
 
  
 
-## <span id="Tablets"></span><span id="tablets"></span><span id="TABLETS"></span>Tablets
+## Tablets
 
 
 Extrem leichte Tablet PCs sind mit Touchscreens, Kameras, Mikrofonen und Beschleunigungsmessern ausgestattet. Die Größe der Bildschirme von Tablets reicht normalerweise von 7 bis 13,3 Zoll.
@@ -96,7 +96,7 @@ Typische Gerätefunktionen
 
  
 
-## <span id="PCs_and_laptops"></span><span id="pcs_and_laptops"></span><span id="PCS_AND_LAPTOPS"></span>PCs und Laptops
+## PCs und Laptops
 
 
 Mit PCs und Laptops von Windows wird eine breite Palette von Geräten und Bildschirmgrößen abgedeckt. Im Allgemeinen können auf PCs und Laptops mehr Informationen als auf Smartphones oder Tablets angezeigt werden.
@@ -120,7 +120,7 @@ Eingabemöglichkeiten
 -   Maus
 -   Tastatur
 -   Toucheingabe auf Laptops und All-in-One-Desktops.
--   Es werden auch Gamepads verwendet, z. B. der Xbox-Controller.
+-   Es werden auch Gamepads verwendet, z.B. der Xbox-Controller.
 
 Typische Gerätefunktionen
 -   Kamera
@@ -128,7 +128,7 @@ Typische Gerätefunktionen
 
  
 
-## <span id="Surface_Hub_devices"></span><span id="surface_hub_devices"></span><span id="SURFACE_HUB_DEVICES"></span>Surface Hub-Geräte
+## SurfaceHub-Geräte
 
 
 Der Microsoft Surface Hub ist ein Gerät für die Zusammenarbeit mit großem Bildschirm, der für die gleichzeitige Verwendung durch mehrere Benutzer konzipiert ist.
@@ -161,10 +161,10 @@ Typische Gerätefunktionen
 
  
 
-## <span id="Windows_IoT_devices"></span><span id="windows_iot_devices"></span><span id="WINDOWS_IOT_DEVICES"></span>Windows IoT-Geräte
+## WindowsIoT-Geräte
 
 
-Bei Windows IoT-Geräten handelt es sich um eine neue Klasse von Geräten, bei denen das Einbetten von kleinen elektronischen Geräten, Sensoren und Verbindungen in physische Objekte im Mittelpunkt steht. Diese Geräte sind in der Regel über ein Netzwerk oder das Internet verbunden, um die erfassten realen Daten zu melden und in manchen Fällen auf diese Daten zu reagieren. Geräte können entweder keinen Bildschirm besitzen („monitorlose“ Geräte) oder an einen kleinen Bildschirm mit maximal 3,5 Zoll angeschlossen sein (Geräte mit Monitor).
+Bei WindowsIoT-Geräten handelt es sich um eine neue Klasse von Geräten, bei denen das Einbetten von kleinen elektronischen Geräten, Sensoren und Verbindungen in physische Objekte im Mittelpunkt steht. Diese Geräte sind in der Regel über ein Netzwerk oder das Internet verbunden, um die erfassten realen Daten zu melden und in manchen Fällen auf diese Daten zu reagieren. Geräte können entweder keinen Bildschirm besitzen („monitorlose“ Geräte) oder an einen kleinen Bildschirm mit maximal 3,5 Zoll angeschlossen sein (Geräte mit Monitor).
 
 Bildschirmgrößen
 -   3,5 Zoll oder kleiner
@@ -199,6 +199,6 @@ Typische Gerätefunktionen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

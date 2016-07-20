@@ -5,6 +5,7 @@ title: Listen
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
 
@@ -151,7 +152,7 @@ Es gibt drei verschiedene Auswahlmodi:
 
 -   Einzeln: Dabei kann der Benutzer jeweils nur ein Element auswählen.
 -   Mehrfach: Der Benutzer kann mehrere Elemente ohne Modifizierer auswählen.
--   Erweitert: Dabei kann der Benutzer mit Zusatztasten mehrere Elemente auswählen, z. B. durch Gedrückthalten der UMSCHALTTASTE.
+-   Erweitert: Dabei kann der Benutzer mit Zusatztasten mehrere Elemente auswählen, z.B. durch Gedrückthalten der UMSCHALTTASTE.
 
 Durch Tippen auf ein Element wird es ausgewählt. Das Tippen auf die Aktion auf der Befehlsleiste wirkt sich auf alle ausgewählten Elemente aus. Wenn kein Element ausgewählt ist, sind die Aktionen auf der Befehlsleiste mit Ausnahme von „Alle auswählen“ in der Regel inaktiv.
 
@@ -195,6 +196,6 @@ Empfehlungen für die Befehlsleiste finden Sie unter [Richtlinien für Befehlsle
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

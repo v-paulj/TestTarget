@@ -4,16 +4,17 @@ Description: "Dies ist ein Übersichtsthema mit umfassenden Informationen zum Zu
 MS-HAID: dev\_enterprise.edp\_hub
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: Unternehmensdatenschutz
+title: Unternehmensdatenschutz (Enterprise Data Protection, EDP)
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 97bdbce8360fabad63f9fe7e85e5172ccd83f403
+ms.sourcegitcommit: 235a0d96c0cf86fdb16a0a6b933fc0f2bbed99f0
+ms.openlocfilehash: 2cae64ff234a4fb85fd6a3e50ade3b91480b36c8
 
 ---
 
-# Unternehmensdatenschutz
+# Unternehmensdatenschutz (Enterprise Data Protection, EDP)
 
-__Hinweis__ EDP-Richtlinien (Enterprise Data Protection, Unternehmensdatenschutz) können nicht unter Windows 10 (Version 1511, Build 10586 oder älter) verwendet werden.
+> [!NOTE]
+> Die Richtlinie für den Unternehmensdatenschutz (Enterprise Data Protection, EDP) kann nicht auf Windows10, Version1511 (Build 10586) oder frühere Versionen angewendet werden.
 
 Dies ist ein Übersichtsthema mit umfassenden Informationen zum Zusammenhang zwischen dem Unternehmensdatenschutz (Enterprise Data Protection, EDP) und Dateien, Puffern, Zwischenablage, Netzwerk, Hintergrundaufgaben und dem Schutz von Daten bei Sperre.
 
@@ -56,12 +57,13 @@ Die nächste Aufgabe besteht darin, eine App zu erstellen, die die verwaltete Id
 
 Nachdem Ihre App der Liste der zulässigen Apps hinzugefügt wurde, kann sie geschützte Daten lesen. Außerdem werden standardmäßig alle Datenausgaben Ihrer App automatisch durch das System geschützt. Dieser automatische Schutz ist darauf zurückzuführen, dass das verwaltende Unternehmen auf irgendeine Weise sicherstellen muss, dass die Unternehmensdaten immer unter seiner Kontrolle bleiben. Die App so stark einzuschränken, ist aber nur das Standardverfahren hierfür. Eine bessere Möglichkeit besteht darin, zu erreichen, dass das System Ihnen ausreichend vertraut und mehr Möglichkeiten und Flexibilität bereitstellt. Hierfür müssen Sie Ihre App intelligenter machen. Dies bedeutet, einen Schritt weiter zu gehen, als die App in die Liste der zulässigen Apps aufzunehmen. Die App muss für Unternehmen optimiert und dementsprechend deklariert werden.
 
-Ihre App ist optimiert, wenn sie mithilfe der im Folgenden beschriebenen Verfahren selbst für den Schutz von Unternehmensdaten sorgt, unabhängig davon, ob die Daten nur gespeichert, verwendet oder übertragen werden. Die optimierte App erkennt Datenquellen im Unternehmen sowie Unternehmensdaten und schützt diese, wenn sie in Ihrer App eingehen. Die Optimierung bedeutet auch, dass EDP-Richtlinien erkannt und eingehalten werden, wenn Unternehmensdaten die App verlassen. Hierzu gehört es, zu verhindern, dass Inhalte an einen Endpunkt außerhalb des Unternehmens gesendet werden, die Daten vor dem Zulassen des Roamings in einem portablen verschlüsselten Format zu umschließen und ggf. (abhängig von Richtlinieneinstellungen) den Benutzer zur Zustimmung aufzufordern, bevor Unternehmensdaten in einer App eingefügt werden, die nicht in der Liste der zulässigen Apps enthalten ist. Nachdem Sie Ihre App optimiert haben, teilt sie dies dem System mit, indem die eingeschränkte **enterpriseDataPolicy**-Funktion deklariert wird. Weitere Informationen zum Arbeiten mit eingeschränkten Funktionen finden Sie unter [Spezielle und eingeschränkte Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968#special_and_restricted_capabilities).
+Ihre App ist optimiert, wenn sie mithilfe der im Folgenden beschriebenen Verfahren selbst für den Schutz von Unternehmensdaten sorgt, unabhängig davon, ob die Daten nur gespeichert, verwendet oder übertragen werden. Die optimierte App erkennt Datenquellen im Unternehmen sowie Unternehmensdaten und schützt diese, wenn sie in Ihrer App eingehen. Die Optimierung bedeutet auch, dass EDP-Richtlinien erkannt und eingehalten werden, wenn Unternehmensdaten die App verlassen. Hierzu gehört es, zu verhindern, dass Inhalte an einen Endpunkt außerhalb des Unternehmens gesendet werden, die Daten vor dem Zulassen des Roamings in einem portablen verschlüsselten Format zu umschließen und ggf. (abhängig von Richtlinieneinstellungen) den Benutzer zur Zustimmung aufzufordern, bevor Unternehmensdaten in einer App eingefügt werden, die nicht in der Liste der zulässigen Apps enthalten ist. Nachdem Sie Ihre App optimiert haben, teilt sie dies dem System mit, indem die eingeschränkte **enterpriseDataPolicy**-Funktion deklariert wird. Weitere Informationen zum Arbeiten mit eingeschränkten Funktionen finden Sie unter [Spezielle und eingeschränkte Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968#special-and-restricted-capabilities).
 
 Im Idealfall sind alle Unternehmensdaten geschützte Daten, sowohl im gespeicherten Zustand als auch während der Übertragung. Zwangsläufig muss es allerdings einen kurzen Zeitraum zwischen dem ersten Erstellen der Unternehmensdaten und ihrem Schutz geben. Und in einigen Fällen können Unternehmensdaten auf dem Endpunkt eines Unternehmensnetzwerks vorhanden sein, ohne verschlüsselt zu werden. Eine optimierte App kann solche Daten selbst schützen. Für zulässige Apps, die jedoch nicht optimiert wurden, muss der Schutz durch das System erfolgen.
 
 Dies liegt daran, dass eine nicht optimierte App immer im Unternehmensmodus ausgeführt wird. Dies wird vom System sichergestellt. Eine optimierte App kann jedoch frei zwischen dem Unternehmensmodus und dem privaten Modus wechseln, abhängig von den Daten, mit denen die App jeweils arbeitet. Es ist für eine optimierte App auch wichtig, private Daten zu erkennen und sie nicht als Unternehmensdaten zu kennzeichnen. Eine optimierte App kann gleichzeitig sowohl Unternehmensdaten als auch private Daten verarbeiten, solange diese Voraussetzungen erfüllt werden. Im nächsten Abschnitt wird veranschaulicht, wie die Modi im Code gewechselt werden.
 
+<span id="confirming-an-identity-is-managed"/>
 ## Bestätigen der Identität als verwaltet und Bestimmen der Erzwingungsstufe für die Schutzrichtlinie
 
 Ihre App ruft eine Unternehmensidentität in der Regel aus einer externen Ressource ab, z. B. aus einer E-Mail-Postfachadresse, einer verwalteten Domäne oder einem URI-Hostnamen. Sie können [**ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync**](https://msdn.microsoft.com/library/windows/apps/dn706027) aufrufen, um die verwaltete Identität des Hostnamens eines Netzwerkendpunkts abzurufen, falls vorhanden.
@@ -97,17 +99,17 @@ else
 
 Wie gezeigt, bestimmen Sie zunächst, ob eine EDP-Richtlinie für die Identität des Unternehmens festgelegt wurde. Der Begriff „verwaltet“ ist die Kurzform von „durch eine EDP-Richtlinie verwaltet“. Wenn für eine bestimmte Identität eine EDP-Richtlinie festgelegt wurde, gibt [**ProtectionPolicyManager.IsIdentityManaged**](https://msdn.microsoft.com/library/windows/apps/dn705171) für diese Identität „true“ zurück. Dies ist für Sie der Hinweis darauf, EDP-APIs mit dieser Identität zu verwenden. Auch wenn die Datei- und Puffer-APIs in der Hinsicht außergewöhnlich sind, dass sie auch bei einer nicht verwalteten Identität erwartungsgemäß funktionieren, ist dieses Szenario nicht sinnvoll. Wenn ein Gerät verwaltet ist, wird es für eine Unternehmensidentität verwaltet. Wenn eine Identität nicht verwaltet ist, ist das Schützen von Daten für diese Identität ohne Bedeutung.
 
-Im nächsten Schritt müssen Sie die Erzwingungsstufe für die Richtlinie bestimmen und implementieren. Rufen Sie zum Bestimmen der Erzwingungsstufe für die Richtlinie die [**GetEnforcementLevel**](https://msdn.microsoft.com/library/windows/apps/mt608406)-Methode auf. Wenn eine Unternehmensrichtlinie für die Identität erzwungen wird, muss die optimierte App das System beim Erzwingen der Richtlinie unterstützen, indem [**ProtectionPolicyManager**](https://msdn.microsoft.com/library/windows/apps/dn705170)-APIs während UI-Aktivitäten oder Netzwerkzugriffen aufgerufen werden, um sicherzustellen, dass das System Datenübertragungen ggf. mit dieser Identität kennzeichnet. Weitere Informationen dazu, wie Sie die Erzwingungsstufe interpretieren und umsetzen, finden Sie in diesem Handbuch. Im Codebeispiel wird auch gezeigt, wie Sie in den Unternehmensmodus wechseln und zum privaten Modus zurückkehren, indem Sie den Wert von [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) auf die Unternehmensidentität bzw. die leere Zeichenfolge festlegen. Beachten Sie auch hier, dass das Wechseln in den und aus dem Unternehmensmodus nur bei einer verwalteten Identität sinnvoll ist.
+Im nächsten Schritt müssen Sie die Erzwingungsstufe für die Richtlinie bestimmen und implementieren. Rufen Sie zum Bestimmen der Erzwingungsstufe für die Richtlinie die [**GetEnforcementLevel**](https://msdn.microsoft.com/library/windows/apps/mt608406)-Methode auf. Wenn eine Unternehmensrichtlinie für die Identität erzwungen wird, muss die optimierte App das System beim Erzwingen der Richtlinie unterstützen, indem [**ProtectionPolicyManager**](https://msdn.microsoft.com/library/windows/apps/dn705170)-APIs während UI-Aktivitäten oder Netzwerkzugriffen aufgerufen werden, um sicherzustellen, dass das System Datenübertragungen ggf. mit dieser Identität kennzeichnet. Weitere Informationen dazu, wie Sie die Erzwingungsstufe interpretieren und umsetzen, finden Sie in diesem Handbuch. Im Codebeispiel wird auch gezeigt, wie Sie in den Unternehmensmodus wechseln und zum privaten Modus zurückkehren, indem Sie den Wert von [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785) auf die Unternehmensidentität bzw. die leere Zeichenfolge festlegen. Beachten Sie auch hier, dass das Wechseln in den und aus dem Unternehmensmodus nur für eine verwaltete Identität sinnvoll ist.
 
 ## EDP-Features auf einen Blick
 
 
-**Schutz von Dateien und Puffern.**
+**Schutz von Dateien und Puffern**
 
 -   Ihre App kann einer Unternehmensidentität zugeordnete Daten schützen, zurücksetzen und in einem Container zusammenfassen.
 -   Die Verwaltung der Schlüssel wird von Windows behandelt. Windows verwendet die RMS-Schlüssel des Unternehmens, wenn diese auf dem Gerät verfügbar sind. Andernfalls greift Windows auf lokalen Schutz durch selektive Zurücksetzung zurück.
 
-**Geräterichtlinienverwaltung.**
+**Geräterichtlinienverwaltung**
 
 -   Ihre App kann die Identität (Unternehmen oder Organisation) abfragen, die das Gerät verwaltet.
 -   Ihre App kann Benutzer vor einer unbeabsichtigten Offenlegung von Daten schützen, indem den betreffenden Daten eine Identität zugeordnet wird.
@@ -134,7 +136,7 @@ Siehe [Markieren von Netzwerkverbindungen mit EDP-Identität](../networking/tagg
 
 ## Schutz von Daten bei Sperre (Data Protection Under Lock, DPL) und Hintergrundaufgaben
 
-Unter Umständen verwendet die Organisation eine sichere Richtlinie vom Typ DPL (Data Protection Under Lock, Schutz von Daten bei Sperre), durch die Entschlüsselungsschlüssel, die für den Zugriff auf geschützte Ressourcen erforderlich sind, bei der Sperrung des Geräts vorübergehend aus dem Arbeitsspeicher entfernt werden. Informationen zum Vorbereiten Ihrer App auf diesen Fall finden Sie in diesem Artikel im Abschnitt [Behandeln von Gerätesperrereignissen und Vermeiden von nicht geschützten Inhalten im Arbeitsspeicher](#handle_lock_events). Wenn Ihre App über eine Hintergrundaufgabe verfügt, die Dateien schützen muss, finden Sie weitere Informationen unter [Schutz von Unternehmensdaten in einer neuen Datei (für eine Hintergrundaufgabe)](../files/protect-your-enterprise-data-with-edp.md#protect_data_new_file_bg).
+Unter Umständen verwendet die Organisation eine sichere Richtlinie vom Typ DPL (Data Protection Under Lock, Schutz von Daten bei Sperre), durch die Entschlüsselungsschlüssel, die für den Zugriff auf geschützte Ressourcen erforderlich sind, bei der Sperrung des Geräts vorübergehend aus dem Arbeitsspeicher entfernt werden. Informationen zum Vorbereiten Ihrer App auf diesen Fall finden Sie in diesem Artikel im Abschnitt [Behandeln von Gerätesperrereignissen und Vermeiden von nicht geschützten Inhalten im Arbeitsspeicher](#handle-lock-events). Wenn Ihre App über eine Hintergrundaufgabe verfügt, die Dateien schützen muss, finden Sie weitere Informationen unter [Schutz von Unternehmensdaten in einer neuen Datei (für eine Hintergrundaufgabe)](../files/protect-your-enterprise-data-with-edp.md#protect-data-new-file-bg).
 
 ## Erzwingen von UI-Richtlinien
 
@@ -172,15 +174,17 @@ private void SwitchMailbox(Mailbox targetMailbox)
     }
 }
 ```
-
+<span id="handle-lock-events"/>
 ## Behandeln von Gerätesperrereignissen und Vermeiden von nicht geschützten Inhalten im Arbeitsspeicher
 
 
 In diesem Szenario wird das Beispiel einer optimierten E-Mail-App betrachtet, die für die Verwaltung von Unternehmens- und privaten E-Mails konzipiert wurde. Wenn die App in einer Organisation ausgeführt wird, in der eine DPL-Richtlinie (Data Protection Under Lock, Schutz von Daten bei Sperre) verwaltet wird, muss die App alle vertraulichen Daten aus dem Arbeitsspeicher entfernen, während das Gerät gesperrt ist. Hierzu registriert sie sich für das [**ProtectionPolicyManager.ProtectedAccessSuspending**](https://msdn.microsoft.com/library/windows/apps/dn705787)-Ereignis und das [**ProtectionPolicyManager.ProtectedAccessResumed**](https://msdn.microsoft.com/library/windows/apps/dn705786)-Ereignis, damit eine Benachrichtigung erfolgt, wenn das Gerät gesperrt und entsperrt wird (für den Fall, dass DPL aktiv ist).
 
-[
+
+            [
               **ProtectedAccessSuspending**
-            ](https://msdn.microsoft.com/library/windows/apps/dn705787) wird ausgelöst, bevor auf dem Gerät bereitgestellte Datenschutzschlüssel vorübergehend entfernt werden. Diese Schlüssel werden entfernt, wenn das Gerät gesperrt ist, um sicherzustellen, dass kein nicht autorisierter Zugriff auf verschlüsselte Daten erfolgen kann, während das Gerät gesperrt ist und möglicherweise nicht von seinem Besitzer verwendet wird. [
+            ](https://msdn.microsoft.com/library/windows/apps/dn705787) wird ausgelöst, bevor auf dem Gerät bereitgestellte Datenschutzschlüssel vorübergehend entfernt werden. Diese Schlüssel werden entfernt, wenn das Gerät gesperrt ist, um sicherzustellen, dass kein nicht autorisierter Zugriff auf verschlüsselte Daten erfolgen kann, während das Gerät gesperrt ist und möglicherweise nicht von seinem Besitzer verwendet wird. 
+            [
               **ProtectedAccessResumed**
             ](https://msdn.microsoft.com/library/windows/apps/dn705786) wird ausgelöst, wenn die Schlüssel nach dem Entsperren des Geräts wieder verfügbar sind.
 
@@ -382,6 +386,6 @@ Windows.Security.EnterpriseData.ProtectionPolicyManager.RevokeContent("contoso.c
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

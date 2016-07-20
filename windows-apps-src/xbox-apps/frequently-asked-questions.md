@@ -3,8 +3,9 @@ author: Mtoepke
 title: "Häufig gestellte Fragen"
 description: "Häufig gestellte Fragen zu UWP auf Xbox."
 area: Xbox
-ms.sourcegitcommit: bdf7a32d2f0673ab6c176a775b805eff2b7cf437
-ms.openlocfilehash: 34e186049039d5a8366f34e985ad7250ef664f00
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 01173aeabb74d6d703597a9bd7a48c179c688c07
 
 ---
 
@@ -20,8 +21,8 @@ Wenn Ihre Spiele und Apps nicht funktionieren oder Sie keinen Zugriff auf den St
 
 Vergewissern Sie sich zunächst, dass der Entwicklermodus und nicht der Einzelhandelsmodus aktiviert ist. Im Einzelhandelsmodus können Sie keine Verbindung mit der Xbox One herstellen. Dies können Sie einfach überprüfen, indem Sie auf die Schaltfläche **Home** klicken und auf der rechten Seite des Bildschirms nach der Dev Home-Kachel suchen. Wenn die Kachel nicht vorhanden ist und stattdessen Gold-/Live-Inhalte angezeigt werden, befinden Sie sich im Einzelhandelsmodus. Sie müssen die DevMode-Aktivierungs-App ausführen, um in den Entwicklermodus zu wechseln.
 
-> **Hinweis**
-            &nbsp;&nbsp;Damit Sie eine App bereitstellen können, muss ein Benutzer angemeldet sein.
+> 
+              **Hinweis**&nbsp;&nbsp;Damit Sie eine App bereitstellen können, muss ein Benutzer angemeldet sein.
 
 Weitere Informationen finden Sie unter [Beheben von Bereitstellungsfehlern](frequently-asked-questions.md#fixing-deployment-failures) weiter unten auf dieser Seite.
 
@@ -64,9 +65,11 @@ Das Veröffentlichen von Apps wird später in diesem Jahr über Dev Center mögl
 
 ### Kann ich mein Spiel veröffentlichen?
 
-Sie können UWP und die Xbox One im Entwicklermodus verwenden, um Ihre Spiele auf der Xbox One zu erstellen und zu testen. Um UWP-Spiele veröffentlichen zu können, müssen Sie sich bei [ID@XBOX](http://www.xbox.com/en-us/Developers/id) registrieren. 
-[ID@Xbox](http://www.xbox.com/en-us/Developers/id) bietet Entwicklern den vollständigen Zugriff auf Xbox Live-APIs für ihre Spiele, einschließlich von Gamerscore und Erfolgen, sowie der Möglichkeit, Multiplayer zwischen Geräten, Cloudspeicherung und alle Features von Xbox Live auf Xbox One zu nutzen. 
-[ID@Xbox](http://www.xbox.com/en-us/Developers/id) kann darüber hinaus den Zugriff auf Xbox One-Entwicklungskits für Spiele bereitstellen, die das maximale Potenzial der Xbox One Hardware benötigen.
+Sie können UWP und die Xbox One im Entwicklermodus verwenden, um Ihre Spiele auf der Xbox One zu erstellen und zu testen. Um UWP-Spiele veröffentlichen zu können, müssen Sie sich bei [ID@XBOX](http://www.xbox.com/Developers/id) registrieren. 
+
+              [ID@Xbox](http://www.xbox.com/Developers/id) bietet Entwicklern den vollständigen Zugriff auf Xbox Live-APIs für ihre Spiele, einschließlich Gamerscore und Erfolgen sowie der Möglichkeit, Multiplayer über Geräte, Cloudspeicherung und alle Features von Xbox Live auf Xbox One hinweg zu nutzen. 
+
+              [ID@XBOX](http://www.xbox.com/Developers/id) kann darüber hinaus den Zugriff auf Xbox One-Entwicklungskits für Spiele bereitstellen, die das maximale Potenzial der Xbox One Hardware benötigen.
 
 ### Können die standardmäßigen Spielengines verwendet werden?
 
@@ -88,8 +91,8 @@ Informationen hierzu finden Sie auf der Seite [Bekannte Probleme](known-issues.m
 
 Wenn die Bereitstellung Ihrer App in Visual Studio fehlschlägt, können Ihnen die folgenden Schritte beim Beheben des Problems helfen. Wenn Sie nicht vorankommen, bitten Sie im Forum um Hilfe.
 
-> **Hinweis**
-            &nbsp;&nbsp;Damit Sie eine App bereitstellen können, muss ein Benutzer angemeldet sein. Wenn Sie eine 0x87e10008-Fehlermeldung erhalten, vergewissern Sie sich, dass ein Benutzer angemeldet ist, und versuchen Sie es noch einmal.
+> 
+              **Hinweis**&nbsp;&nbsp;Damit Sie eine App bereitstellen können, muss ein Benutzer angemeldet sein. Wenn Sie eine 0x87e10008-Fehlermeldung erhalten, vergewissern Sie sich, dass ein Benutzer angemeldet ist, und versuchen Sie es noch einmal.
 
 Wenn Visual Studio keine Verbindung mit Ihrer Xbox One herstellen kann:
 
@@ -99,8 +102,8 @@ Wenn Visual Studio keine Verbindung mit Ihrer Xbox One herstellen kann:
 3. Ist dies nicht der Fall, lesen Sie sich das Thema zur [Einrichtung der Entwicklungsumgebung](development-environment-setup.md) und das Thema zur [Einführung in Xbox One-Tools](introduction-to-xbox-tools.md) durch.
 
 4. Vergewissern Sie sich, dass Sie von Ihrem Entwicklungscomputer aus einen Pingbefehl an die IP-Adresse Ihrer Konsole senden können.
-> **Hinweis**
-            &nbsp;&nbsp;Es wird empfohlen, eine Kabelverbindung mit Ihrer Konsole zu verwenden, um die bestmögliche Leistung bei der Bereitstellung zu erzielen.
+> 
+              **Hinweis**&nbsp;&nbsp;Es wird empfohlen, eine Kabelverbindung mit Ihrer Konsole zu verwenden, um die bestmögliche Leistung bei der Bereitstellung zu erzielen.
 
 5. Stellen Sie sicher, dass in der Dropdownliste für die Authentifizierung auf der Registerkarte **Debuggen** die Option „Universell (unverschlüsseltes Protokoll)“ ausgewählt ist. Weitere Informationen finden Sie unter [Einrichtung der Entwicklungsumgebung](development-environment-setup.md).
 
@@ -137,6 +140,6 @@ Weitere Informationen finden Sie im Projekt [TVHelpers](https://github.com/Micro
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

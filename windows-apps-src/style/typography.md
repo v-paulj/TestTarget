@@ -8,8 +8,8 @@ template: detail.hbs
 extraBodyClass: style-typography
 brief: "As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design."
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 02d5149f945bb631e385e45a295fdfe08bd98fb0
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 7ec2c80fd571de98060282d2b321d1895e2b3dc8
 
 ---
 
@@ -19,9 +19,9 @@ Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprach
 
 ## Schriftart
 
-Wir haben uns dafür entschieden, für alle digitalen Microsoft-Designs „Segoe UI“ zu verwenden. „Segoe UI“ bietet eine breite Palette von Zeichen und zeichnet sich durch optimale Lesbarkeit bei unterschiedlichsten Größen und Pixeldichten aus. Die klare, ansprechende und offene Ästhetik passt perfekt zum Inhalt des Systems.
+Wir haben uns dafür entschieden, für alle digitalen Microsoft-Designs „SegoeUI“ zu verwenden. „SegoeUI“ bietet eine breite Palette von Zeichen und zeichnet sich durch optimale Lesbarkeit bei unterschiedlichsten Größen und Pixeldichten aus. Die klare, ansprechende und offene Ästhetik passt perfekt zum Inhalt des Systems.
 
-![Beispieltext für die Schriftart „Segoe UI“](images/segoe-sample.png)
+![Beispieltext für die Schriftart „SegoeUI“](images/segoe-sample.png)
 
 ## Breiten
 
@@ -31,15 +31,15 @@ Bei der Typografie legen wir unter anderem Wert auf Schlichtheit und Effizienz. 
 
 ## Zeilenabstand
 
-![Beispiel für einen Zeilenabstand von 125 Prozent](images/line-spacing.png)
+![Beispiel für einen Zeilenabstand von 125Prozent](images/line-spacing.png)
 
-Der Zeilenabstand muss mit 125 Prozent des Schriftgrads berechnet und bei Bedarf auf das nächste Vielfache von Vier gerundet werden. Bei Segoe UI mit 15px wären 125 Prozent beispielsweise 18,75px. Wir empfehlen, den Wert aufzurunden und den Zeilenabstand auf 20px festzulegen, um dem 4px-Raster zu entsprechen. Dadurch wird eine gute Lesbarkeit gewährleistet, und es steht ausreichend Platz für diakritische Zeichen zur Verfügung. Spezifische Beispiele finden Sie weiter unten im Abschnitt „Typhierarchie“.
+Der Zeilenabstand muss mit 125Prozent des Schriftgrads berechnet und bei Bedarf auf das nächste Vielfache von Vier gerundet werden. Bei SegoeUI mit 15px wären 125Prozent beispielsweise 18,75px. Wir empfehlen, den Wert aufzurunden und den Zeilenabstand auf 20px festzulegen, um dem 4px-Raster zu entsprechen. Dadurch wird eine gute Lesbarkeit gewährleistet, und es steht ausreichend Platz für diakritische Zeichen zur Verfügung. Spezifische Beispiele finden Sie weiter unten im Abschnitt „Typhierarchie“.
 
 Wird sich größere Schrift über kleinerer Schrift befindet, muss der Abstand zwischen der letzten Grundlinie der größeren Schrift und der ersten Grundlinie der kleineren Schrift dem Zeilenabstand der größeren Schrift entsprechen.
 
 ![Große Schrift über kleinerer Schrift](images/line-height-stacking.png)
 
-Im XAML-Code wird dies durch Stapeln zweier [TextBlock](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)-Elemente sowie durch Festlegen des entsprechenden Rands erreicht.
+Im XAML-Code wird dies durch Stapeln zweier [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)-Elemente sowie durch Festlegen des entsprechenden Rands erreicht.
 
 ```xaml
 <StackPanel Width="200">
@@ -67,7 +67,7 @@ Im XAML-Code wird dies durch Stapeln zweier [TextBlock](https://msdn.microsoft.c
 
 Segoe ist eine humanistische Schriftart mit weicher, ansprechender Optik und organischen, offenen Formen, die von handschriftlichen Texten inspiriert sind. Um eine optimale Lesbarkeit zu gewährleisten und den humanistischen Charakter zu bewahren, müssen für Kerning und Laufweite bestimmte Werte verwendet werden.
 
-Kerning muss auf „Metrik“ und die Laufweite auf „0“ festgelegt werden.
+Kerning muss auf „Metrik“ und die Laufweite auf„0“ festgelegt werden.
 
 <img src="images/kerning-tracking.png" alt="Shows the difference between kerning and tracking" />
 
@@ -75,7 +75,7 @@ Kerning muss auf „Metrik“ und die Laufweite auf „0“ festgelegt werden.
 
 Ähnlich wie bei Kerning und Laufweite werden auch beim Wort- und Zeichenabstand bestimmte Einstellungen verwendet, um eine optimale Lesbarkeit und die Wahrung des humanistischen Charakters zu gewährleisten.
 
-Der Wortabstand beträgt standardmäßig immer 100 Prozent. Der Zeichenabstand muss auf „0“ festgelegt werden.
+Der Wortabstand beträgt standardmäßig immer 100Prozent. Der Zeichenabstand muss auf„0“ festgelegt werden.
 
 <img src="images/word-letter.png" alt="Shows the difference between word and letter spacing" />
 
@@ -83,7 +83,7 @@ Der Wortabstand beträgt standardmäßig immer 100 Prozent. Der Zeichenabstand 
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-Verwenden Sie in einem XAML-Textsteuerelement [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx), um das Kerning zu steuern, und [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx). um die Nachverfolgung zu steuern. Typography.Kerning ist standardmäßig auf „true“ und FontStretch ist standardmäßig auf „Normal“ festgelegt. Dies sind die empfohlenen Werte.
+Verwenden Sie in einem XAML-Textsteuerelement [Typogrphy.Kerning](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx), um das Kerning zu steuern, und [FontStretch](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx). um die Nachverfolgung zu steuern. Typography.Kerning ist standardmäßig auf „true“ und FontStretch ist standardmäßig auf „Normal“ festgelegt. Dies sind die empfohlenen Werte.
     </div>
 </aside>
 
@@ -109,7 +109,7 @@ Absätze müssen als übersprungene Zeile ohne Einzug dargestellt werden, um auf
 
 ## Zeichenanzahl
 
-Ist eine Zeile zu kurz, muss das Auge zu oft hin und her bewegt werden, was den Lesefluss stört. Verwenden Sie daher möglichst 50 bis 60 Wörter pro Zeile. Dies bietet den höchsten Lesekomfort.
+Ist eine Zeile zu kurz, muss das Auge zu oft hin und her bewegt werden, was den Lesefluss stört. Verwenden Sie daher möglichst50 bis 60Wörter pro Zeile. Dies bietet den höchsten Lesekomfort.
 
 Segoe bietet eine breite Palette von Zeichen und zeichnet sich durch optimale Lesbarkeit bei unterschiedlichen Größen und Pixeldichten aus. Eine optimale Anzahl von Buchstaben in einer Textspaltenzeile erhöht den Lesekomfort in einer Anwendung.
 
@@ -129,7 +129,7 @@ Sobald die Höhe des Texts die Höhe des Symbols übersteigt, muss die erste Tex
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-Die XAML-Eigenschaft [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) stellt den Zugriff auf die Höhe von Großbuchstaben und die Basisschriftartmetrik bereit. Sie kann verwendet werden, um visuell vertikal zu zentrieren oder oben ausgerichtet einzugeben.
+Die XAML-Eigenschaft [TextBlock.TextLineBounds](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) stellt den Zugriff auf die Höhe von Großbuchstaben und die Basisschriftartmetrik bereit. Sie kann verwendet werden, um visuell vertikal zu zentrieren oder oben ausgerichtet einzugeben.
     </div>
 </aside>
 
@@ -137,13 +137,13 @@ Die XAML-Eigenschaft [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us
 
 Nutzen Sie standardmäßig das Beschnittkonzept, und gehen Sie davon aus, dass der Text umgebrochen wird – es sei denn, es ist etwas anderes angegeben. Bei Verwendung von nicht umgebrochenem Text empfiehlt es sich, anstelle von Ellipsen den Beschnitt zu verwenden. Der Beschnitt kann am Rand des Containers, am Rand des Geräts, am Rand der Bildlaufleiste usw. erfolgen.
 
-Ausnahme: Bei Containern, die nicht klar definiert sind (also sich etwa nicht durch eine andere Hintergrundfarbe abheben), kann eine Ellipse (...) verwendet werden.
+Ausnahme: Bei Containern, die nicht klar definiert sind (also sich etwa nicht durch eine andere Hintergrundfarbe abheben), kann eine Ellipse(...) verwendet werden.
 
 ![Gerät mit abgeschnittenem Text](images/clipping.png)
 
 # Typhierarchie
 
-Mithilfe unterschiedlicher Größen von „Segoe UI“ muss eine Typhierarchie erstellt werden. Diese Hierarchie bildet eine Struktur, die Benutzern die Navigation durch schriftliche Kommunikation erleichtert.
+Mithilfe unterschiedlicher Größen von „SegoeUI“ muss eine Typhierarchie erstellt werden. Diese Hierarchie bildet eine Struktur, die Benutzern die Navigation durch schriftliche Kommunikation erleichtert.
 
 <figure class="figure-img" >
     <img src="images/type-ramp.png" alt="Shows the type ramp"  />
@@ -154,19 +154,19 @@ Mithilfe unterschiedlicher Größen von „Segoe UI“ muss eine Typhierarchie 
     <div class="aside-dev-title">
     </div>
     <div class="aside-dev-content">
-Die meisten Ebenen der Typhierarchie sind in XAML als [statische Ressourcen](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) verfügbar, die der `*TextBlockStyle`-Benennungskonvention folgen (z. B.: `HeaderTextBlockStyle`). 
+Die meisten Ebenen der Typhierarchie sind in XAML als [statische Ressourcen](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) verfügbar, die der `*TextBlockStyle`-Benennungskonvention folgen (z.B.: `HeaderTextBlockStyle`). 
     </div>
 </aside>
 
 
 ## Primärer und sekundärer Text
 
-Zur Erweiterung der Typhierarchie kann die Deckkraft des sekundären Texts auf 60 Prozent festgelegt werden. In der [Farbschemapalette](color.md#color-themes) wird dafür „BaseMedium“ verwendet. Der primäre Text muss immer eine Deckkraft von 100 Prozent (BaseHigh) besitzen.
+Zur Erweiterung der Typhierarchie kann die Deckkraft des sekundären Texts auf 60Prozent festgelegt werden. In der [Farbschemapalette](color.md#color-themes) wird dafür „BaseMedium“ verwendet. Der primäre Text muss immer eine Deckkraft von 100Prozent (BaseHigh) besitzen.
 
 
 ## Titel in Großbuchstaben
 
-Bestimmte Seitentitel sollten in GROSSBUCHSTABEN angegeben werden, um die Hierarchie um eine weitere Dimension zu erweitern. Diese Titel müssen „BaseAlt“ und einen Zeichenabstand von 0,075 em verwenden. Dies kann auch bei der App-Navigation hilfreich sein.
+Bestimmte Seitentitel sollten in GROSSBUCHSTABEN angegeben werden, um die Hierarchie um eine weitere Dimension zu erweitern. Diese Titel müssen „BaseAlt“ und einen Zeichenabstand von 0,075em verwenden. Dies kann auch bei der App-Navigation hilfreich sein.
 
 In bestimmten Sprachen ändert sich durch eine Großschreibung jedoch die Bedeutung von Eigennamen. Daher dürfen auf Namen oder Benutzereingaben basierende Seitentitel *nicht* in Großbuchstaben umgewandelt werden.
 
@@ -185,6 +185,6 @@ In bestimmten Sprachen ändert sich durch eine Großschreibung jedoch die Bedeut
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

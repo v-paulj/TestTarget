@@ -4,8 +4,8 @@ ms.assetid: 415F4107-0612-4235-9722-0F5E4E26F957
 title: Sensoren
 description: "Mithilfe von Sensoren können Apps die Beziehung zwischen einem Gerät und der physischen Umgebung ermitteln. Sensoren können für die App die Richtung, Ausrichtung und Bewegung des Geräts erfassen."
 translationtype: Human Translation
-ms.sourcegitcommit: e5f61e562f7ec464fc07815b0bdd0ac938fc2fb2
-ms.openlocfilehash: dff6228524396c5d6662313ecc808b33e9dd1998
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 15f9fbdc48d43feb02f46313cea4001392d7f0fe
 
 ---
 # Sensoren
@@ -13,7 +13,7 @@ ms.openlocfilehash: dff6228524396c5d6662313ecc808b33e9dd1998
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Mithilfe von Sensoren können Apps die Beziehung zwischen einem Gerät und der physischen Umgebung ermitteln. Sensoren können für die App die Richtung, Ausrichtung und Bewegung des Geräts erfassen. Diese Sensoren können Ihre Spiel-, Augmented Reality- oder Dienstprogramm-App hilfreicher und interaktiver machen, indem sie eine spezielle Eingabeform bereitstellen. So können z. B. durch Bewegen des Geräts die Zeichen auf dem Bildschirm angepasst werden, oder das Gerät kann als virtuelles Lenkrad verwendet werden.
+Mithilfe von Sensoren können Apps die Beziehung zwischen einem Gerät und der physischen Umgebung ermitteln. Sensoren können für die App die Richtung, Ausrichtung und Bewegung des Geräts erfassen. Diese Sensoren können Ihre Spiel-, Augmented Reality- oder Dienstprogramm-App hilfreicher und interaktiver machen, indem sie eine spezielle Eingabeform bereitstellen. So können z.B. durch Bewegen des Geräts die Zeichen auf dem Bildschirm angepasst werden, oder das Gerät kann als virtuelles Lenkrad verwendet werden.
 
 Im Allgemeinen sollten Sie im Vorfeld entscheiden, ob die App ausschließlich auf Sensorsteuerung beruhen soll oder ob mit den Sensoren lediglich ein zusätzlicher Steuermechanismus bereitgestellt wird. Ein Rennspiel, bei dem ein Gerät als virtuelles Lenkrad genutzt wird, kann beispielsweise auch über eine GUI auf dem Bildschirm gesteuert werden. Die App funktioniert dann unabhängig von den Sensoren, die für das System zur Verfügung stehen. Andererseits könnte ein Murmel-Kipplabyrinth ausschließlich für die Funktion mit Systemen mit entsprechenden Sensoren geschrieben werden. Sie müssen die strategische Entscheidung treffen, ob ausschließlich Sensoren verwendet werden sollen. Dabei ist zu beachten, dass ein Ansatz mit Steuerung per Maus oder Touchfunktion eine bessere Kontrolle ermöglicht, was jedoch zu Lasten des Immersionseffekts geht.
 
@@ -42,13 +42,13 @@ Der wichtigste Vorteil der Sensorbatchverarbeitung besteht in der längeren Akku
 
 Sie können durch Anpassen der Wartezeit beeinflussen, wie oft der Sensor Batches sendet. Beispiel: Der [**Beschleunigungsmesser**](https://msdn.microsoft.com/library/windows/apps/BR225687)-Sensor verfügt über die [**ReportLatency**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportlatency)-Eigenschaft. Wenn diese Eigenschaft für eine Anwendung festgelegt ist, sendet der Sensor Daten nach Ablauf der angegebenen Zeit. Sie können mithilfe der [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportinterval)-Eigenschaft steuern, wie viele Daten über einen bestimmten Zeitraum gesammelt werden.
 
-Beim Festlegen der Wartezeit müssen mehrere Punkte berücksichtigt werden. Beispielsweise gilt für jeden Sensor eine [**MaxBatchSize**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.accelerometer.maxbatchsize.aspx), die basierend auf dem Sensor unterstützt wird. Dabei handelt es sich um die Anzahl der Ereignisse, die der Sensor zwischenspeichern kann, bevor er gezwungen ist, sie zu senden. Wenn Sie **MaxBatchSize** mit [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportinterval) multiplizieren, ergibt das den Höchstwert für [**ReportLatency**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportlatency). Wenn Sie einen höheren Wert als diesen angeben, wird die maximale Wartezeit verwendet, damit keine Daten verloren gehen. Darüber hinaus können mehrere Anwendungen eine gewünschte Wartezeit festlegen. Um die Anforderungen aller Anwendungen zu erfüllen, wird die kürzeste Wartezeit verwendet. Aufgrund dieser Tatsachen kann die in Ihrer Anwendung festgelegte Wartezeit von der beobachteten Wartezeit abweichen.
+Beim Festlegen der Wartezeit müssen mehrere Punkte berücksichtigt werden. Beispielsweise gilt für jeden Sensor eine [**MaxBatchSize**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.maxbatchsize.aspx), die basierend auf dem Sensor unterstützt wird. Dabei handelt es sich um die Anzahl der Ereignisse, die der Sensor zwischenspeichern kann, bevor er gezwungen ist, sie zu senden. Wenn Sie **MaxBatchSize** mit [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportinterval) multiplizieren, ergibt das den Höchstwert für [**ReportLatency**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.reportlatency). Wenn Sie einen höheren Wert als diesen angeben, wird die maximale Wartezeit verwendet, damit keine Daten verloren gehen. Darüber hinaus können mehrere Anwendungen eine gewünschte Wartezeit festlegen. Um die Anforderungen aller Anwendungen zu erfüllen, wird die kürzeste Wartezeit verwendet. Aufgrund dieser Tatsachen kann die in Ihrer Anwendung festgelegte Wartezeit von der beobachteten Wartezeit abweichen.
 
 Falls ein Sensor die Batchberichterstellung verwendet, wird durch Aufruf von [**GetCurrentReading**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.accelerometer.getcurrentreading) der aktuelle Datenbatch gelöscht und eine neue Wartezeit gestartet.
 
 ## Beschleunigungsmesser
 
-Mit dem [**Beschleunigungsmesser**](https://msdn.microsoft.com/library/windows/apps/BR225687) -Sensor werden Schwerkraftwerte entlang der X-, Y- und Z-Achse des Geräts gemessen. Er eignet sich gut für einfache Anwendungen, die auf Bewegung basieren. Beachten Sie, dass für die Beschleunigungskraftwerte die Schwerkraft berücksichtigt wird. Wenn das Gerät für das **FaceUp**-Element den Wert [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) auf einem Tisch aufweist, ermittelt der Beschleunigungsmesser für die Z-Achse den Wert -1 G. Mit Beschleunigungsmessern wird also nicht unbedingt nur die Koordinatenbeschleunigung (Veränderung der Geschwindigkeit) gemessen. Bei Verwendung eines Beschleunigungsmessers sollten Sie zwischen dem schwerkraftbezogenen Vektor der Schwerkraft und dem linearen Beschleunigungsvektor für die Bewegung unterscheiden. Beachten Sie, dass der Gravitationsvektor für ein stationäres Gerät auf den Wert 1 normalisiert werden sollte.
+Mit dem [**Beschleunigungsmesser**](https://msdn.microsoft.com/library/windows/apps/BR225687) -Sensor werden Schwerkraftwerte entlang der X-, Y- und Z-Achse des Geräts gemessen. Er eignet sich gut für einfache Anwendungen, die auf Bewegung basieren. Beachten Sie, dass für die Beschleunigungskraftwerte die Schwerkraft berücksichtigt wird. Wenn das Gerät für das **FaceUp**-Element den Wert [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399) auf einem Tisch aufweist, ermittelt der Beschleunigungsmesser für die Z-Achse den Wert -1 G. Mit Beschleunigungsmessern wird also nicht unbedingt nur die Koordinatenbeschleunigung (Veränderung der Geschwindigkeit) gemessen. Bei Verwendung eines Beschleunigungsmessers sollten Sie zwischen dem schwerkraftbezogenen Vektor der Schwerkraft und dem linearen Beschleunigungsvektor für die Bewegung unterscheiden. Beachten Sie, dass der Gravitationsvektor für ein stationäres Gerät auf den Wert1 normalisiert werden sollte.
 
 Die folgenden Diagramme veranschaulichen Folgendes:
 
@@ -74,7 +74,7 @@ Mit dem [**Barometer**](https://msdn.microsoft.com/library/windows/apps/Dn872405
 
 ## Kompass
 
-Mit dem [**Kompass**](https://msdn.microsoft.com/library/windows/apps/BR225705) -Sensor gibt eine 2D-Richtung unter Berücksichtigung des magnetischen Nordpols auf Grundlage der horizontalen Ebene der Erde zurück. Der Kompasssensor sollte nicht für die Bestimmung spezifischer Geräteausrichtung oder die Darstellung von Objekten im 3D-Raum verwendet werden. Geografische Objekte können eine natürliche Abweichung der Richtung verursachen, daher unterstützen einige Systeme sowohl [**HeadingMagneticNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingmagneticnorth.aspx) als auch [**HeadingTrueNorth**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.compassreading.headingtruenorth.aspx). Entscheiden Sie, welcher Pol von der App verwendet werden soll, aber bedenken Sie, dass nicht alle Systeme den korrekten Nordwert ausgeben. Gyrometer- und Magnetometer (ein Gerät zur Messung der magnetischen Stärke)-Sensoren vereinen ihre Daten, um die Kompassrichtung zu bestimmen, wodurch die Daten stabilisiert werden (Die magnetische Feldstärke ist aufgrund der Komponenten elektrischer Systeme sehr instabil).
+Mit dem [**Kompass**](https://msdn.microsoft.com/library/windows/apps/BR225705) -Sensor gibt eine 2D-Richtung unter Berücksichtigung des magnetischen Nordpols auf Grundlage der horizontalen Ebene der Erde zurück. Der Kompasssensor sollte nicht für die Bestimmung spezifischer Geräteausrichtung oder die Darstellung von Objekten im 3D-Raum verwendet werden. Geografische Objekte können eine natürliche Abweichung der Richtung verursachen, daher unterstützen einige Systeme sowohl [**HeadingMagneticNorth**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.compassreading.headingmagneticnorth.aspx) als auch [**HeadingTrueNorth**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.compassreading.headingtruenorth.aspx). Entscheiden Sie, welcher Pol von der App verwendet werden soll, aber bedenken Sie, dass nicht alle Systeme den korrekten Nordwert ausgeben. Gyrometer- und Magnetometer (ein Gerät zur Messung der magnetischen Stärke)-Sensoren vereinen ihre Daten, um die Kompassrichtung zu bestimmen, wodurch die Daten stabilisiert werden (Die magnetische Feldstärke ist aufgrund der Komponenten elektrischer Systeme sehr instabil).
 
 ![Kompasswerte im Hinblick auf den magnetischen Nordpol](images/compass.png)
 
@@ -118,7 +118,7 @@ Der [**Proximity**](https://msdn.microsoft.com/library/windows/apps/Dn872427)-Se
 
 ## Einfache Ausrichtung
 
-Der [**SimpleOrientationSensor**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.sensors.simpleorientationsensor.aspx) erkennt die aktuelle Quadrantenausrichtung des angegebenen Geräts, bzw. ob die Oberseite nach oben oder unten zeigt. Er verfügt über sechs mögliche [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)-Zustände (**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp**, **FaceDown**).
+Der [**SimpleOrientationSensor**](https://msdn.microsoft.com/library/windows/apps/windows.devices.sensors.simpleorientationsensor.aspx) erkennt die aktuelle Quadrantenausrichtung des angegebenen Geräts, bzw. ob die Oberseite nach oben oder unten zeigt. Er verfügt über sechs mögliche [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR206399)-Zustände (**NotRotated**, **Rotated90**, **Rotated180**, **Rotated270**, **FaceUp**, **FaceDown**).
 
 Eine Reader-App, bei der die Anzeige abhängig von der Ausrichtung des Geräts in Relation zum Boden geändert wird, würde die Ausrichtung des Geräts anhand von SimpleOrientationSensor-Werten bestimmen.
 
@@ -129,6 +129,6 @@ Einige Beispiele zur Verwendung verschiedener Sensoren finden Sie unter [Beispie
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -5,6 +5,7 @@ title: "Kontrollkästchen"
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: b1532ef10a284cbb6e28694ab1598c08b8619773
 
@@ -42,13 +43,13 @@ Benutzer können sowohl über **Kontrollkästchen** als auch über **Optionsfeld
 
 ## Beispiele
 
-Ein Kontrollkästchen in einem Dialogfeld im Microsoft Edge-Browser:
+Ein Kontrollkästchen in einem Dialogfeld im MicrosoftEdge-Browser:
 
-![Kontrollkästchen in einem Dialogfeld im Microsoft Edge-Browser](images/control-examples/check-box-edge.png)
+![Kontrollkästchen in einem Dialogfeld im MicrosoftEdge-Browser](images/control-examples/check-box-edge.png)
 
-Kontrollkästchen in der Alarm & Uhr-App in Windows:
+Kontrollkästchen in der Alarm&Uhr-App in Windows:
 
-![Kontrollkästchen in der Alarm & Uhr-App in Windows](images/control-examples/check-box-alarm.png)
+![Kontrollkästchen in der Alarm&Uhr-App in Windows](images/control-examples/check-box-alarm.png)
 
 ## Erstellen eines Kontrollkästchens
 
@@ -294,6 +295,6 @@ private void SetCheckedState()
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

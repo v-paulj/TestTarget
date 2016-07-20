@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: "Verwenden Sie diese Methode in der Windows Store-Sammlungs-API, um alle Produkte, die sich im Besitz eines Kunden befinden, für Apps abzurufen, die Ihrer Azure AD-Client-ID zugeordnet sind. Sie können die Abfrage auf ein bestimmtes Produkt beschränken oder weitere Filter verwenden."
 title: Produktabfrage
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: b8661d73487dde61b207159d11a0583700fa22bc
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 93ed2b850de22d562b16f3f10f4ca409054910d3
 
 ---
 
@@ -22,8 +23,8 @@ Diese Methode ist so konzipiert, dass sie von Ihrem Dienst als Reaktion auf eine
 
 Zur Verwendung dieser Methode benötigen Sie:
 
--   Ein Azure AD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
--   Einen Windows Store-ID-Schlüssel, der durch Aufrufen der [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674)-Methode im clientseitigen Code der App generiert wurde.
+-   Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
+-   Einen WindowsStore-ID-Schlüssel, der durch Aufrufen der [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674)-Methode im clientseitigen Code der App generiert wurde.
 
 Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
@@ -33,20 +34,20 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 | Methode | Anforderungs-URI                                                 |
 |--------|-------------------------------------------------------------|
-| POST   | `https://collections.mp.microsoft.com/v6.0/collections/query` |
+| POST   | ```https://collections.mp.microsoft.com/v6.0/collections/query``` |
 
-<br/>
+<span/>
  
 ### Anforderungsheader
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
+| Autorisierung  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
 | Host           | Zeichenfolge | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
 | Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
- <br/>
+<span/>
 
 ### Anforderungstext
 
@@ -61,7 +62,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | productTypes      | string       | Falls angegeben, gibt der Dienst nur Produkte zurück, die den angegebenen Produkttypen entsprechen. Unterstützte Produkttypen sind **Application**, **Durable** und **UnmanagedConsumable**.                                                                                       | Nein       |
 | validityType      | string       | Bei Festlegung auf **Alle** werden alle Produkte für einen Benutzer, einschließlich abgelaufener Elemente, zurückgegeben. Bei Festlegung auf **Valid** werden nur Produkte zurückgegeben, die zum aktuellen Zeitpunkt gültig sind (aktiver Status, Startdatum &lt; Istdatum und Enddatum &gt; Istdatum). | Nein       |
 
-<br/> 
+<span/>
 
 Das UserIdentity-Objekt enthält die folgenden Parameter.
 
@@ -71,16 +72,16 @@ Das UserIdentity-Objekt enthält die folgenden Parameter.
 | identityValue        | string | Zeichenfolgenwert des Windows Store-ID-Schlüssels.                                                                                                                                                                                    | Ja      |
 | localTicketReference | string | Angeforderter Bezeichner für die zurückgegebenen Produkte. Die zurückgegebenen Elemente im Antworttext verfügen über ein übereinstimmendes *localTicketReference*-Element. Es wird empfohlen, denselben Wert als *userId*-Anspruch im Windows Store-ID-Schlüssel zu verwenden. | Ja      |
 
-<br/> 
+<span/> 
 
 Das ProductSkuId-Objekt enthält die folgenden Parameter.
 
 | Parameter | Typ   | Beschreibung                                                                                                                                                                                                                                                                                                            | Erforderlich |
 |-----------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| Produkt-ID | string | Die Store-ID aus dem Windows Store-Katalog. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des Dev Center-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. | Ja      |
-| skuID     | string | Die SKU-ID aus dem Windows Store-Katalog. Beispiel für eine SKU-ID: 0010.                                                                                                                                                                                                                                                | Ja      |
+| Produkt-ID | string | Die Store-ID aus dem WindowsStore-Katalog. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. | Ja      |
+| skuID     | string | Die SKU-ID aus dem WindowsStore-Katalog. Beispiel für eine SKU-ID: 0010.                                                                                                                                                                                                                                                | Ja      |
 
-<br/> 
+<span/>
 
 ### Anforderungsbeispiel
 
@@ -124,7 +125,7 @@ Content-Type: application/json
 | continuationToken | string                   | Bei mehreren Produktgruppen wird dieses Token zurückgegeben, sobald das Seitenlimit erreicht ist. Sie können dieses Fortsetzungstoken in nachfolgenden Aufrufen angeben, um verbleibende Produkte abzurufen. | Nein       |
 | Items             | CollectionItemContractV6 | Ein Array von Produkten für den angegebenen Benutzer.                                                                                                                                               | Nein       |
 
-<br/> 
+<span/> 
 
 Das CollectionItemContractV6-Objekt enthält die folgenden Parameter.
 
@@ -142,7 +143,7 @@ Das CollectionItemContractV6-Objekt enthält die folgenden Parameter.
 | orderId              | string             | Die Auftrags-ID, mit der dieser Artikel erworben wurde (sofern angegeben).                                                                                          | Nein       |
 | orderLineItemId      | string             | Die Position des Auftrags, für den dieser Artikel erworben wurde (sofern vorhanden).                                                                | Nein       |
 | ownershipType        | string             | Die Zeichenfolge „OwnedByBeneficiary“.                                                                                                                   | Ja      |
-| Produkt-ID            | string             | Die Store-ID für die App aus dem Windows Store-Katalog. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.                                                            | Ja      |
+| Produkt-ID            | string             | Die Store-ID für die App aus dem WindowsStore-Katalog. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.                                                            | Ja      |
 | Produkttyp          | string             | Einer der folgenden Produkttypen: **Application**, **Durable** oder **UnmanagedConsumable**.                                                     | Ja      |
 | purchasedCountry     | string             | N/V                                                                                                                                               | Nein       |
 | purchaser            | IdentityContractV6 | Die Identität des Artikelkäufers (sofern vorhanden). Details zu diesem Objekt finden Sie weiter unten.                                      | Nein       |
@@ -154,7 +155,7 @@ Das CollectionItemContractV6-Objekt enthält die folgenden Parameter.
 | Tags                 | string             | N/V                                                                                                                                                | Ja      |
 | transactionId        | guid               | Die aus dem Artikelkauf resultierende Transaktions-ID. Kann verwendet werden, um zu melden, dass der Artikelkauf abgewickelt wurde.                                       | Ja      |
 
-<br/> 
+<span/> 
 
 Das IdentityContractV6-Objekt enthält die folgenden Parameter.
 
@@ -163,7 +164,7 @@ Das IdentityContractV6-Objekt enthält die folgenden Parameter.
 | identityType  | string | Enthält den Wert **"pub"**.                                                      | Ja      |
 | identityValue | string | Der Zeichenfolgenwert von *publisherUserId* aus dem angegebenen Windows Store-ID-Schlüssel. | Ja      |
 
-<br/> 
+<span/> 
 
 ### Antwortbeispiel
 
@@ -216,6 +217,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

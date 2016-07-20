@@ -2,7 +2,7 @@
 author: martinekuan
 ms.assetid: C9787269-B54F-4FFA-A884-D4A3BF28F80D
 title: Was ist eine App der universellen Windows-Plattform (UWP)?
-description: "Hier werden die verschiedenen App-Typen vorgestellt, die wir als universelle Windows-Apps bezeichnen - Windows Store-Apps, Windows Phone Store-Apps und Windows-Runtime-Apps."
+description: Hier werden die verschiedenen App-Typen vorgestellt, die wir als universelle Windows-Apps bezeichnen - WindowsStore-Apps, WindowsPhone Store-Apps und Windows-Runtime-Apps.
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: f02851d848a82af7104a6038c5d8850d5362c832
@@ -44,7 +44,7 @@ Was ist das Besondere an einer UWP-App? Hier sind einige der Merkmale, die UWP-A
 
 -   Adaptive Steuerelemente und Eingaben
 
-    Benutzeroberflächenelemente verwenden *effektive Pixel* (siehe [Reaktionsfähiges Design – Grundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Dn958435)), sodass sie sich selbst basierend auf der Anzahl der auf dem Gerät verfügbaren Pixel automatisch anpassen. Sie funktionieren außerdem mit mehreren Arten von Eingaben, z. B. Tastatur, Maus, Touch, Stift und Xbox One-Controller. Wenn Sie die Benutzeroberfläche auf eine bestimmte Bildschirmgröße oder ein bestimmtes Gerät anpassen müssen, helfen Ihnen neue Layoutbereiche und Tools dabei, die Benutzeroberfläche auf die Geräte anzupassen, auf denen Ihre App möglicherweise ausgeführt wird.
+    Benutzeroberflächenelemente verwenden *effektive Pixel* (siehe [Reaktionsfähiges Design – Grundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Dn958435)), sodass sie sich selbst basierend auf der Anzahl der auf dem Gerät verfügbaren Pixel automatisch anpassen. Sie funktionieren außerdem mit mehreren Arten von Eingaben, z.B. Tastatur, Maus, Touch, Stift und Xbox One-Controller. Wenn Sie die Benutzeroberfläche auf eine bestimmte Bildschirmgröße oder ein bestimmtes Gerät anpassen müssen, helfen Ihnen neue Layoutbereiche und Tools dabei, die Benutzeroberfläche auf die Geräte anzupassen, auf denen Ihre App möglicherweise ausgeführt wird.
 
 Eine ausführlichere Betrachtung der UWP finden Sie unter [Anleitung für Universal Windows Platform-Apps](universal-application-platform-guide.md).
 

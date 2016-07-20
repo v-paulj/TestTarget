@@ -1,22 +1,22 @@
 ---
-description: "Die Design- und Codierungsanweisungen in diesem Abschnitt unterstützen Sie beim Anpassen Ihrer UWP-App für bestimmte Eingabe- und Gerätearten."
+description: "Erfahren Sie, wie Sie Ihre App inklusiv entwickeln und für Personen auf der ganzen Welt zugänglich machen."
+keywords: uwp app accessibility, globalization, design inclusive apps, accessibility app requirements
 title: "Benutzerfreundlichkeit in UWP-Apps – Entwicklung von Windows-Apps"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: f02713dfee278866af53c6dd529d2faa3e9f625c
+ms.sourcegitcommit: 5370dd078db81de606b7a4bbfcf6dd36b2280a17
+ms.openlocfilehash: 457ddacd80b3f9308b2eb66ce0ac2d448bb59ed2
 
 ---
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Benutzerfreundlichkeit für UWP-Apps
+# Benutzerfreundlichkeit in UWP-Apps
 
-UWP-Apps verarbeiten automatisch eine Vielzahl von Eingaben und können auf zahlreichen Geräten ausgeführt werden. Sie müssen daher keine zusätzlichen Schritte zum Aktivieren der Toucheingabe oder zum Ausführen der App auf einem Smartphone ausführen. 
+Es sind die Kleinigkeiten und Details, die eine gute Benutzerumgebung zu einer wirklich inklusiven Benutzerumgebung machen, die die Anforderungen von Benutzern auf der ganzen Welt erfüllt.
 
-Unter Umständen möchten Sie jedoch Ihre App für bestimmte Eingabe- oder Gerätearten optimieren. Beim Erstellen einer Zeichen-App möchten Sie vielleicht die Behandlung der Stifteingabe anpassen. 
+Mit den Design- und Codierungsanweisungen in diesem Abschnitt können Sie Ihre UWP-App inklusiver gestalten, indem Sie Features für Barrierefreiheit hinzufügen, Globalisierung und Lokalisierung ermöglichen, das Anpassen der Benutzeroberfläche durch die Benutzer zulassen und im Bedarfsfall Hilfe für Benutzer bereitstellen.
 
-Die Design- und Codierungsanweisungen in diesem Abschnitt unterstützen Sie beim Anpassen Ihrer UWP-App für bestimmte Eingabe- und Gerätearten. 
 
 ## Barrierefreiheit
 
@@ -47,7 +47,7 @@ Bei der Barrierefreiheit geht es darum, die App so zu gestalten, dass sie auch v
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[Barrierefreiheit im Store](../accessibility/accessibility-in-the-store.md)</b><br/>Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre UWP-App im Windows Store als barrierefrei deklarieren möchten.</p>
+<p><b>[Barrierefreiheit im Store](../accessibility/accessibility-in-the-store.md)</b><br/>Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre UWP-App im WindowsStore als barrierefrei deklarieren möchten.</p>
   </div>
   <div class="side-by-side-content-right">
 <p><b>[Prüfliste für die Barrierefreiheit](../accessibility/accessibility-checklist.md)</b><br/>Enthält eine Prüfliste, mit der Sie sicherstellen können, dass Ihre UWP-App barrierefrei ist.</p>
@@ -177,7 +177,7 @@ Unabhängig davon, wie optimal Sie Ihre App gestaltet haben, werden einige Benut
 </p>
   </div>
   <div class="side-by-side-content-right">
-<p><b>[Benutzeroberfläche mit Anleitungen](../app-help-guidelines/instructional-ui.md)</b><br/>Manchmal kann es hilfreich sein, Anleitungen bereitzustellen, um Benutzern Funktionen in Ihrer App zu zeigen, die möglicherweise nicht offensichtlich sind, z. B. bestimmte Touchinteraktionen. In diesen Fällen müssen Sie Anleitungen auf der Benutzeroberfläche für die Benutzer bereitstellen, damit sie diese Funktionen, die sie möglicherweise übersehen haben, finden und nutzen können.</p>
+<p><b>[Benutzeroberfläche mit Anleitungen](../app-help-guidelines/instructional-ui.md)</b><br/>Manchmal kann es hilfreich sein, Anleitungen bereitzustellen, um Benutzern Funktionen in Ihrer App zu zeigen, die möglicherweise nicht offensichtlich sind, z.B. bestimmte Touchinteraktionen. In diesen Fällen müssen Sie Anleitungen auf der Benutzeroberfläche für die Benutzer bereitstellen, damit sie diese Funktionen, die sie möglicherweise übersehen haben, finden und nutzen können.</p>
   </div>
 </div>
 </div>
@@ -198,6 +198,6 @@ Unabhängig davon, wie optimal Sie Ihre App gestaltet haben, werden einige Benut
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

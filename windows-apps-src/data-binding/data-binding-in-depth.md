@@ -3,6 +3,7 @@ author: mcleblanc
 ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Datenbindung im Detail
 description: "Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Daten anzeigen und diese Daten optional synchronisieren kann."
+translationtype: Human Translation
 ms.sourcegitcommit: ca92d44cc8e3fb7eaed5a522435efe9cb4796560
 ms.openlocfilehash: d12f8d6bd44323cf1c19bff1ac080070ba0e8ed2
 
@@ -18,7 +19,8 @@ ms.openlocfilehash: d12f8d6bd44323cf1c19bff1ac080070ba0e8ed2
 -   [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)
 -   [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;In diesem Thema werden die Datenbindungsfeatures detailliert beschrieben. Eine kurze und praktische Einführung finden Sie unter [Übersicht „Datenbindung“](data-binding-quickstart.md).
 
 
@@ -30,13 +32,16 @@ Sie können die Datenbindung einfach verwenden, um nur Werte aus einer Datenquel
 -   Sie können die unidirektionale Bindung verwenden, um ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-Objekt an eine Sammlung von Nachrichtenartikeln in Echtzeit nach Zeitungsteil gruppiert zu binden.
 -   Sie könnten eine bidirektionale Bindung verwenden, um ein [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Objekt an den Namen eines Kunden in einem Formular zu binden.
 
-Es gibt zwei Arten von Bindungen. Diese werden in der Regel beide im Benutzeroberflächenmarkup deklariert. Sie können entweder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) oder die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden. Sie können sogar eine Mischung aus den beiden in derselben App verwenden – sogar im gleichen Benutzeroberflächenelement. {x:Bind} ist neu in Windows 10 und bietet eine bessere Leistung. {Binding} bietet mehr Features. Alle in diesem Thema beschriebenen Details gelten für beide Arten von Bindungen, es sei denn, es wird ausdrücklich auf eine Abweichung hingewiesen.
+Es gibt zwei Arten von Bindungen. Diese werden in der Regel beide im Benutzeroberflächenmarkup deklariert. Sie können entweder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) oder die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden. Sie können sogar eine Mischung aus den beiden in derselben App verwenden – sogar im gleichen Benutzeroberflächenelement. {x:Bind} ist neu in Windows10 und bietet eine bessere Leistung. {Binding} bietet mehr Features. Alle in diesem Thema beschriebenen Details gelten für beide Arten von Bindungen, es sei denn, es wird ausdrücklich auf eine Abweichung hingewiesen.
 
 **Beispiel-Apps zur Veranschaulichung von {x:Bind}**
 
--   [{x:Bind}-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619989).
--   [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame).
--   [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?linkid=619992).
+-   
+            [{x:Bind}-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619989).
+-   
+            [QuizGame](https://github.com/Microsoft/Windows-appsample-quizgame).
+-   
+            [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?linkid=619992).
 
 **Beispiel-Apps zur Veranschaulichung von {Binding}**
 
@@ -55,7 +60,8 @@ In den folgenden Abschnitten betrachten wird die Bindungsquelle, das Bindungszie
 
 Nachfolgend wird eine sehr einfache Implementierung einer Klasse gezeigt, die wir als Bindungsquelle verwenden könnten.
 
-**Hinweis**  Bei Verwendung von [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) mit Komponentenerweiterungen für Visual C++ (C++/CX) müssen Sie das [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872)-Attribut zur Bindungsquellklasse hinzufügen. Bei Verwendung von [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) ist dieses Attribut nicht erforderlich. Unter [Hinzufügen einer Detailansicht](data-binding-quickstart.md#adding-a-details-view) finden Sie einen Codeausschnitt.
+
+            **Hinweis**  Bei Verwendung von [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) mit Komponentenerweiterungen für Visual C++ (C++/CX) müssen Sie das [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872)-Attribut zur Bindungsquellklasse hinzufügen. Bei Verwendung von [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) ist dieses Attribut nicht erforderlich. Unter [Hinzufügen einer Detailansicht](data-binding-quickstart.md#adding-a-details-view) finden Sie einen Codeausschnitt.
 
 ```csharp
 public class HostViewModel
@@ -71,11 +77,13 @@ public class HostViewModel
 
 Diese Implementierung der **HostViewModel**-Klasse und der zugehörigen **NextButtonText**-Eigenschaft ist nur für eine einmalige Bindung geeignet. Unidirektionale und bidirektionale Bindungen sind jedoch sehr häufig, und bei diesen Arten von Bindungen wird die Benutzeroberfläche als Reaktion auf Änderungen bei den Datenwerten der Bindungsquelle automatisch aktualisiert. Damit diese Bindungen ordnungsgemäß funktionieren, muss die Bindungsquelle für das Bindungsobjekt „feststellbar“ sein. Wenn wir in unserem Beispiel also eine unidirektionale oder bidirektionale Bindung an die **NextButtonText**-Eigenschaft anwenden möchten, müssen alle Änderungen, die zur Laufzeit am Wert dieser Eigenschaft vorgenommen werden, für das Bindungsobjekt feststellbar sein.
 
-Eine Möglichkeit für die Umsetzung besteht darin, die Klasse, die die Bindungsquelle darstellt, von [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/BR242356) abzuleiten und einen Datenwert über eine [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362) verfügbar zu machen. Auf diese Weise wird ein [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) feststellbar. **FrameworkElements** sind gute Bindungsquellen, die sofort verwendet werden können.
+Eine Möglichkeit für die Umsetzung besteht darin, die Klasse, die die Bindungsquelle darstellt, von [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/BR242356) abzuleiten und einen Datenwert über eine [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362) verfügbar zu machen. Auf diese Weise wird ein [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706) feststellbar. 
+            **FrameworkElements** sind gute Bindungsquellen, die sofort verwendet werden können.
 
 Eine einfachere Möglichkeit, eine Klasse feststellbar zu machen – und eine Notwendigkeit für Klassen, die bereits über eine Basisklasse verfügen – besteht in der Implementierung von [**System.ComponentModel.INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx). Hierzu muss lediglich ein einzelnes Ereignis mit dem Namen **PropertyChanged** implementiert werden. Weiter unten finden Sie ein Beispiel für die Verwendung von **HostViewModel**.
 
-**Hinweis**  Im Fall von C++/CX implementieren Sie [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899). Die Bindungsquellenklasse muss entweder über das [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) verfügen oder [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) implementieren.
+
+            **Hinweis**  Im Fall von C++/CX implementieren Sie [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899). Die Bindungsquellenklasse muss entweder über das [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) verfügen oder [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) implementieren.
 
 ```csharp
 public class HostViewModel : INotifyPropertyChanged
@@ -191,7 +199,8 @@ Beachten Sie den Wert, den wir für **Path** angeben. Dieser Wert wird im Kontex
 
 Die [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path)-Eigenschaft unterstützt eine Vielzahl von Syntaxoptionen zum Binden geschachtelter Eigenschaften, angefügter Eigenschaften sowie von Ganzzahl- und Zeichenfolgenindexern. Weitere Informationen finden Sie unter [Property-path-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586). Die Bindung an Zeichenfolgenindexer hat dieselbe Wirkung wie die Bindung an dynamische Eigenschaften, ohne [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) implementieren zu müssen. Informationen zu weiteren Einstellungen finden Sie unter [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783).
 
-**Hinweis**  Änderungen an [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) werden an eine bidirektionale Bindungsquelle gesendet, wenn das [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Element den Fokus verliert, und nicht nach jedem Tastaturanschlag des Benutzers.
+
+            **Hinweis**  Änderungen an [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) werden an eine bidirektionale Bindungsquelle gesendet, wenn das [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Element den Fokus verliert, und nicht nach jedem Tastaturanschlag des Benutzers.
 
 **DataTemplate und x:DataType**
 
@@ -212,15 +221,19 @@ Angenommen, Sie verfügen über einen Typ mit dem Namen „SampleDataGroup“, d
 
 **Wenn die Daten asynchron geladen werden**
 
-Code zur Unterstützung von **{X:Bind}** wird während der Kompilierung in den partiellen Klassen für Ihre Seiten generiert. Diese Dateien befinden sich in Ihrem `obj`-Ordner und weisen Namen wie `<view name>.g.cs` auf (für C#). Der generierte Code enthält einen Handler für das [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706)-Ereignis der Seite, der die **Initialize**-Methode für eine generierte Klasse aufruft, die die Bindungen Ihrer Seite darstellt. **Initialize** im Gegenzug ruft **Update** auf, um Daten zwischen der Bindungsquelle und dem Ziel zu verschieben. **Loading** wird genau vor dem ersten Messdurchlauf der Seite oder des Benutzersteuerelements ausgelöst. Wenn Ihre Daten asynchron geladen werden, sind sie zum Zeitpunkt des Aufrufs von **Initialize** möglicherweise nicht bereit. Nachdem Sie die Daten geladen haben, können Sie daher durch den Aufruf von `this->Bindings->Update();`einmalige Bindungen erzwingen. Wenn Sie einmalige Bindungen nur für asynchron geladene Daten benötigen, ist es sehr viel kostengünstiger, sie auf diese Weise zu initialisieren, anstatt unidirektionale Bindungen zu verwenden und Änderungen zu überwachen. Wenn Ihre Daten keinen differenzierteren Änderungen unterliegen und wahrscheinlich im Rahmen einer bestimmten Aktion aktualisiert werden, können Sie einmalige Bindungen erstellen und durch Aufrufen von **Update** jederzeit ein manuelles Update erzwingen.
+Code zur Unterstützung von **{X:Bind}** wird während der Kompilierung in den partiellen Klassen für Ihre Seiten generiert. Diese Dateien befinden sich in Ihrem `obj`-Ordner und weisen Namen wie `<view name>.g.cs` auf (für C#). Der generierte Code enthält einen Handler für das [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706)-Ereignis der Seite, der die **Initialize**-Methode für eine generierte Klasse aufruft, die die Bindungen Ihrer Seite darstellt. 
+            **Initialize** im Gegenzug ruft **Update** auf, um Daten zwischen der Bindungsquelle und dem Ziel zu verschieben. 
+            **Loading** wird genau vor dem ersten Messdurchlauf der Seite oder des Benutzersteuerelements ausgelöst. Wenn Ihre Daten asynchron geladen werden, sind sie zum Zeitpunkt des Aufrufs von **Initialize** möglicherweise nicht bereit. Nachdem Sie die Daten geladen haben, können Sie daher durch den Aufruf von `this->Bindings->Update();`einmalige Bindungen erzwingen. Wenn Sie einmalige Bindungen nur für asynchron geladene Daten benötigen, ist es sehr viel kostengünstiger, sie auf diese Weise zu initialisieren, anstatt unidirektionale Bindungen zu verwenden und Änderungen zu überwachen. Wenn Ihre Daten keinen differenzierteren Änderungen unterliegen und wahrscheinlich im Rahmen einer bestimmten Aktion aktualisiert werden, können Sie einmalige Bindungen erstellen und durch Aufrufen von **Update** jederzeit ein manuelles Update erzwingen.
 
 **Einschränkungen**
 
-**{x:Bind}** eignet sich weder für spät gebundene Szenarien, z. B. das Navigieren in der Wörterbuchstruktur eines JSON-Objekts, noch Duck-Typing, was eine schwache Form der Eingabe basierend auf lexikalischen Übereinstimmungen von Eigenschaftennamen („Wenn ich einen Vogel sehe, der wie eine Ente läuft, wie eine Ente schwimmt und wie eine Ente schnattert, dann nenne ich diesen Vogel eine Ente.“) ist. Im Fall von Duck-Typing könnte eine Bindung zur Alter-Eigenschaft auch mit einem Objekt vom Typ „Person“ oder „Wein“ erfüllt werden. Verwenden Sie für diese Szenarien **{Binding}**.
+
+            **{x:Bind}** eignet sich weder für spät gebundene Szenarien, z. B. das Navigieren in der Wörterbuchstruktur eines JSON-Objekts, noch Duck-Typing, was eine schwache Form der Eingabe basierend auf lexikalischen Übereinstimmungen von Eigenschaftennamen („Wenn ich einen Vogel sehe, der wie eine Ente läuft, wie eine Ente schwimmt und wie eine Ente schnattert, dann nenne ich diesen Vogel eine Ente.“) ist. Im Fall von Duck-Typing könnte eine Bindung zur Alter-Eigenschaft auch mit einem Objekt vom Typ „Person“ oder „Wein“ erfüllt werden. Verwenden Sie für diese Szenarien **{Binding}**.
 
 ### Mit {Binding} deklariertes Bindungsobjekt
 
-[{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) geht standardmäßig davon aus, dass Sie eine Bindung an den [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) der Markupseite vornehmen. Daher legen wir den **DataContext** der Seite als eine Instanz der Bindungsquellenklasse fest (in diesem Fall des Typs **HostViewModel**). Das folgende Beispiel zeigt das Markup, mit dem das Bindungsobjekt deklariert wird. Wir verwenden das gleiche **Button.Content**-Bindungsziel, das wir bereits weiter oben im Abschnitt „Bindungsziel“ verwendet haben, und führen eine Bindung an die **HostViewModel.NextButtonText**-Eigenschaft vor.
+
+            [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) geht standardmäßig davon aus, dass Sie eine Bindung an den [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) der Markupseite vornehmen. Daher legen wir den **DataContext** der Seite als eine Instanz der Bindungsquellenklasse fest (in diesem Fall des Typs **HostViewModel**). Das folgende Beispiel zeigt das Markup, mit dem das Bindungsobjekt deklariert wird. Wir verwenden das gleiche **Button.Content**-Bindungsziel, das wir bereits weiter oben im Abschnitt „Bindungsziel“ verwendet haben, und führen eine Bindung an die **HostViewModel.NextButtonText**-Eigenschaft vor.
 
 ```xml
 <Page xmlns:viewmodel="using:QuizGame.ViewModel" ... >
@@ -249,7 +262,8 @@ Innerhalb von [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps
   </DataTemplate>
 ```
 
-**Hinweis**  Standardmäßig werden Änderungen an [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) an eine bidirektionale Bindungsquelle gesendet, wenn das [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Element den Fokus verliert. Damit Änderungen nach jedem Tastaturanschlag des Benutzers gesendet werden, legen Sie **UpdateSourceTrigger** auf **PropertyChanged** für die Bindung im Markup fest. Sie können auch vollständig steuern, wann Änderungen an die Quelle gesendet werden, indem Sie **UpdateSourceTrigger** auf **Explicit** festlegen. Sie behandeln dann Ereignisse für das Textfeld (in der Regel [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), rufen [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) am Ziel auf, um ein [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx)-Objekt abzurufen, und rufen zum Schluss [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) auf, um die Datenquelle programmgesteuert zu aktualisieren.
+
+            **Hinweis**  Standardmäßig werden Änderungen an [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) an eine bidirektionale Bindungsquelle gesendet, wenn das [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Element den Fokus verliert. Damit Änderungen nach jedem Tastaturanschlag des Benutzers gesendet werden, legen Sie **UpdateSourceTrigger** auf **PropertyChanged** für die Bindung im Markup fest. Sie können auch vollständig steuern, wann Änderungen an die Quelle gesendet werden, indem Sie **UpdateSourceTrigger** auf **Explicit** festlegen. Sie behandeln dann Ereignisse für das Textfeld (in der Regel [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), rufen [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) am Ziel auf, um ein [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx)-Objekt abzurufen, und rufen zum Schluss [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) auf, um die Datenquelle programmgesteuert zu aktualisieren.
 
 Die [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path)-Eigenschaft unterstützt eine Vielzahl von Syntaxoptionen zum Binden geschachtelter Eigenschaften, angefügter Eigenschaften sowie von Ganzzahl- und Zeichenfolgenindexern. Weitere Informationen finden Sie unter [Property-path-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586). Die Bindung an Zeichenfolgenindexer hat dieselbe Wirkung wie die Bindung an dynamische Eigenschaften, ohne [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) implementieren zu müssen. Die [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname)-Eigenschaft ist hilfreich für eine Element-an-Element-Bindung. Die [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource)-Eigenschaft hat mehrere Funktionen. Eine davon ist, dass sie eine leistungsfähigere Alternative zur Vorlagenbindung innerhalb von [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391) ist. Informationen zu anderen Einstellungen finden Sie unter [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) und der [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820)-Klasse.
 
@@ -356,7 +370,8 @@ Das Bindungsmodul ruft die Methoden [**Convert**](https://msdn.microsoft.com/lib
 
 Der Konverter verfügt auch über optionale Parameter: [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterlanguage) ermöglicht das Angeben der für die Konvertierung zu verwendenden Sprache und [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterparameter) ermöglicht das Übergeben eines Parameters für die Konvertierungslogik. Ein Beispiel, in dem ein Konverterparameter verwendet wird, finden Sie unter [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
 
-**Hinweis**  Wenn bei der Konvertierung ein Fehler auftritt, lösen Sie keine Ausnahme aus. Geben Sie stattdessen [**DependencyProperty.UnsetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.unsetvalue) zurück, wodurch die Datenübertragung beendet wird.
+
+            **Hinweis**  Wenn bei der Konvertierung ein Fehler auftritt, lösen Sie keine Ausnahme aus. Geben Sie stattdessen [**DependencyProperty.UnsetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.unsetvalue) zurück, wodurch die Datenübertragung beendet wird.
 
 Um immer dann einen Standardwert anzuzeigen, wenn die Bindungsquelle nicht aufgelöst werden kann, legen Sie die **FallbackValue** -Eigenschaft für das Bindungsobjekt im Markup fest. Dies ist hilfreich bei der Behandlung von Konvertierungs- und Formatierungsfehlern. Außerdem ist es nützlich zum Binden an Quelleigenschaften, die in einer gebundenen Auflistung von heterogenen Typen ggf. nicht für alle Objekte vorhanden sind.
 
@@ -419,7 +434,8 @@ MainPage.xaml
 
 ## Ereignisbindung und ICommand
 
-[{b:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) unterstützt ein Feature namens „Ereignisbindung“. Mit diesem Feature können Sie den Handler für ein Ereignis mit einer Bindung angeben, wobei es sich zusätzlich zum Behandeln von Ereignissen mit einer Methode in der CodeBehind-Datei um eine weitere Option handelt. Angenommen, Sie haben eine **RootFrame**-Eigenschaft für Ihre **MainPage**-Klasse.
+
+            [{b:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) unterstützt ein Feature namens „Ereignisbindung“. Mit diesem Feature können Sie den Handler für ein Ereignis mit einer Bindung angeben, wobei es sich zusätzlich zum Behandeln von Ereignissen mit einer Methode in der CodeBehind-Datei um eine weitere Option handelt. Angenommen, Sie haben eine **RootFrame**-Eigenschaft für Ihre **MainPage**-Klasse.
 
 ```csharp
     public sealed partial class MainPage : Page
@@ -437,7 +453,8 @@ Anschließend können Sie das **Click**-Ereignis einer Schaltfläche an das **Fr
     Click="{x:Bind RootFrame.GoForward}"/>
 ```
 
-Überladene Methoden können nicht verwendet werden, um ein Ereignis mit diesem Verfahren zu behandeln. Wenn die Methode, die das Ereignis behandelt, darüber hinaus über Parameter verfügt, müssen diese alle von den Typen aller Ereignisparameter zugeordnet werden können. In diesem Fall ist [**Frame.GoForward**](https://msdn.microsoft.com/library/windows/apps/BR242693) nicht überladen und hat keine Parameter (wäre aber weiterhin gültig, auch wenn es zwei **object**-Parameter verwendet). [
+Überladene Methoden können nicht verwendet werden, um ein Ereignis mit diesem Verfahren zu behandeln. Wenn die Methode, die das Ereignis behandelt, darüber hinaus über Parameter verfügt, müssen diese alle von den Typen aller Ereignisparameter zugeordnet werden können. In diesem Fall ist [**Frame.GoForward**](https://msdn.microsoft.com/library/windows/apps/BR242693) nicht überladen und hat keine Parameter (wäre aber weiterhin gültig, auch wenn es zwei **object**-Parameter verwendet). 
+            [
               **Frame.GoBack**
             ](https://msdn.microsoft.com/library/windows/apps/Dn996568) ist jedoch überladen, sodass wir diese Methode nicht mit diesem Verfahren verwenden können.
 
@@ -572,11 +589,13 @@ Ihr Bindungsmarkup enthält die Namen der Eigenschaften (und für C# manchmal Fe
 
 Die von [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) und [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) erstellten Bindungsobjekte sind von der Funktionsweise her größtenteils identisch. {x:Bind} verfügt jedoch über Typinformationen für die Bindungsquelle und generiert zum Zeitpunkt der Kompilierung Quellcode. Bei Verwendung von {x:Bind} erhalten Sie die gleiche Art von Problemerkennung wie bei dem restlichen Code. Dazu gehört die Überprüfung von Bindungsausdrücken während des Kompilierens sowie das Debuggen durch Setzen von Haltepunkten im Quellcode, der als Teilklasse für die Seite erstellt wird. Diese Klassen befinden sich in den Dateien in Ihrem `obj`-Ordner und weisen Namen wie `<view name>.g.cs` auf (in C#). Wenn bei einer Bindung ein Problem auftritt, aktivieren Sie im Microsoft Visual Studio-Debugger die Option **Bei nicht behandelten Ausnahmen unterbrechen**. Der Debugger unterbricht die Ausführung an dieser Stelle, und Sie können den Fehler dann debuggen. Der von {x:Bind} generierte Code folgt für jeden Teil des Bindungsquellenknoten-Diagramms dem gleichen Muster. Anhand der Informationen im Fenster für die **Aufrufliste** können Sie die Reihenfolge der Aufrufe bis zum Auftreten des Problems ermitteln.
 
-[{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verfügt nicht über Typinformation für die Bindungsquelle. Wenn Sie jedoch die App mit angefügtem Debugger ausführen, werden alle Bindungsfehler in Visual Studio im Fenster **Ausgabe** angezeigt.
+
+            [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verfügt nicht über Typinformation für die Bindungsquelle. Wenn Sie jedoch die App mit angefügtem Debugger ausführen, werden alle Bindungsfehler in Visual Studio im Fenster **Ausgabe** angezeigt.
 
 ## Erstellen von Bindungen im Code
 
-**Hinweis**  Dieser Abschnitt gilt nur für [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), da Sie [{X:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)-Bindungen nicht im Code erstellen können. Allerdings können einige der Vorteile von {x:Bind} auch mit [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx) erzielt werden, das Ihnen die Registrierung von Änderungsbenachrichtigungen für Abhängigkeitseigenschaften ermöglicht.
+
+            **Hinweis**  Dieser Abschnitt gilt nur für [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782), da Sie [{X:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)-Bindungen nicht im Code erstellen können. Allerdings können einige der Vorteile von {x:Bind} auch mit [**DependencyObject.RegisterPropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyobject.registerpropertychangedcallback.aspx) erzielt werden, das Ihnen die Registrierung von Änderungsbenachrichtigungen für Abhängigkeitseigenschaften ermöglicht.
 
 Sie können darüber hinaus Benutzeroberflächenelemente mit Daten verbinden, indem Sie anstelle von XAML prozeduralen Code verwenden. Erstellen Sie hierzu ein neues [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820)-Objekt, legen Sie die entsprechenden Eigenschaften fest, und rufen Sie anschließend [**FrameworkElement.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257.aspx) oder [**BindingOperations.SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244376.aspx) auf. Die programmgesteuerte Erstellung von Bindungen ist nützlich, wenn Sie die Bindungseigenschaftswerte zur Laufzeit auswählen oder eine einzelne Bindung für mehrere Steuerelemente gemeinsam verwenden möchten. Beachten Sie jedoch, dass Sie die Bindungseigenschaftswerte nach dem Aufrufen von **SetBinding** nicht mehr ändern können.
 
@@ -642,6 +661,6 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

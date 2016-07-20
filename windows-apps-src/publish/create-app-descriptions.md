@@ -3,8 +3,9 @@ author: jnHs
 Description: "Im Abschnitt „Beschreibungen“ des App-Übermittlungprozesses stellen Sie den Text und die Bilder bereit, die den Kunden im Store-Eintrag der App angezeigt werden."
 title: Erstellen von App-Beschreibungen
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
-ms.sourcegitcommit: 447beeae917b03dea2538e74fd9cd8ef48b0f41f
-ms.openlocfilehash: ca85f55e12713903dbbee0a4e247cfb1a51c17d3
+translationtype: Human Translation
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: bd10b94cdb3e16e8a6165610fb77adcdaca5b0a4
 
 ---
 
@@ -29,14 +30,15 @@ Im Abschnitt **Additional description languages** können sie auf **Manage addit
 
 Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren.
 
-> **Hinweis** Wenn Sie eine Beschreibung in einer Sprache erstellen, die von Ihren Paketen nicht unterstützt wird, müssen Sie angeben, welche Ihrer reservierten App-Namen in dieser Beschreibung angezeigt werden sollen, da für diese Sprache kein verknüpftes Paket vorliegt, von dem der Name abgerufen werden könnte. Der Name, den Sie hier wählen, gilt nur für den Store-Eintrag für diese Sprache und wirkt sich nicht auf den Namen aus, der angezeigt wird, wenn ein Kunde die App installiert.
+> 
+              **Hinweis:** Wenn Sie eine Beschreibung in einer Sprache erstellen, die von Ihren Paketen nicht unterstützt wird, müssen Sie angeben, welcher Ihrer reservierten App-Namen in dieser Beschreibung angezeigt werden soll, da für diese Sprache kein verknüpftes Paket vorliegt, von dem der Name abgerufen werden könnte. Der Name, den Sie hier wählen, gilt nur für den Store-Eintrag für diese Sprache und wirkt sich nicht auf den Namen aus, der angezeigt wird, wenn ein Kunde die App installiert.
 
 Klicken Sie zum Bearbeiten einer Beschreibung in der Übermittlungsübersicht auf den Namen der Sprache. Die Abschnitte der Seite **Beschreibung** werden nachstehend beschrieben.
 
 ## Standardbeschreibungsfelder
 
 
-Oben auf der Seite **Beschreibung** sehen Sie die Felder, die der **Standardbeschreibung** zugeordnet sind. Diese Felder sind für alle Kunden sichtbar, sofern Sie keine [plattformspezifischen Beschreibungen erstellt](create-platform-specific-descriptions.md) haben. Sie sehen Sie diese Felder dann wiederholt unter Abschnittsüberschriften für jedes Zielbetriebssystem, für das Sie eine plattformspezifische Beschreibung erstellt haben, unter Ihrer **Standardbeschreibung** (die Kunden unter Windows 10 oder anderen von Ihrer App unterstützten Betriebssystemen angezeigt wird, für die Sie noch keine benutzerdefinierte Beschreibung erstellt haben). Stellen Sie sicher, dass jedes Feld in der **Standardbeschreibung** alle Informationen enthält, die den App-Kunden angezeigt werden sollen (auch wenn einige dieser Felder dieselben Informationen für mehrere Betriebssysteme aufweisen).
+Oben auf der Seite **Beschreibung** sehen Sie die Felder, die der **Standardbeschreibung** zugeordnet sind. Diese Felder sind für alle Kunden sichtbar, sofern Sie keine [plattformspezifischen Beschreibungen erstellt](create-platform-specific-descriptions.md) haben. Sie sehen Sie diese Felder dann wiederholt unter Abschnittsüberschriften für jedes Zielbetriebssystem, für das Sie eine plattformspezifische Beschreibung erstellt haben, unter Ihrer **Standardbeschreibung** (die Kunden unter Windows10 oder anderen von Ihrer App unterstützten Betriebssystemen angezeigt wird, für die Sie noch keine benutzerdefinierte Beschreibung erstellt haben). Stellen Sie sicher, dass jedes Feld in der **Standardbeschreibung** alle Informationen enthält, die den App-Kunden angezeigt werden sollen (auch wenn einige dieser Felder dieselben Informationen für mehrere Betriebssysteme aufweisen).
 
 Weitere Informationen finden Sie unter [Erstellen plattformspezifischer Beschreibungen](create-platform-specific-descriptions.md).
 
@@ -58,13 +60,14 @@ Weitere Informationen finden Sie unter [App-Screenshots und -Bilder](app-screens
 
 ### Symbol für App-Kachel
 
-Das Symbol für die App-Kachel wird verwendet, wenn der App-Eintrag Kunden mit Windows Phone 8.1 und früheren Versionen angezeigt wird (und wird im App-Eintrag für Windows 10-Kunden angezeigt, wenn Ihre Pakete ausschließlich auf Windows Phone 8.1 oder frühere Versionen ausgerichtet sind). Sie müssen eine PNG-Datei mit 300 x 300 Pixel bereitstellen.
+Das Symbol für die App-Kachel wird verwendet, wenn der App-Eintrag Kunden mit Windows Phone8.1 und früheren Versionen angezeigt wird (und wird im App-Eintrag für Windows10-Kunden angezeigt, wenn Ihre Pakete ausschließlich auf Windows Phone8.1 oder frühere Versionen ausgerichtet sind). Sie müssen eine PNG-Datei mit 300 x 300 Pixel bereitstellen.
 
 ### App-Features
 
 Hierbei handelt es sich um kurze Zusammenfassungen der wichtigsten App-Features. Diese werden dem Kunden neben der Beschreibung als Aufzählung im App-Eintrag angezeigt. Die Beschreibung sollte pro Feature nur wenige Wörter (und nicht mehr als 200 Zeichen) enthalten. Sie können bis zu 20 Features hinzufügen.
 
-**Hinweis**  Diese werden im Eintrag mit Aufzählungszeichen versehen, fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
+
+              **Hinweis:** Diese werden im Eintrag mit Aufzählungszeichen versehen. Fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
 
  
 
@@ -72,7 +75,8 @@ Hierbei handelt es sich um kurze Zusammenfassungen der wichtigsten App-Features.
 
 Beschreiben Sie die Hardwarekonfigurationen, die für die ordnungsgemäße Funktionsweise der App erforderlich sind. Dies ist besonders wichtig, wenn Ihre App Hardware benötigt, die u. U. nicht auf jedem Computer vorhanden ist. Diese werden dem Kunden im App-Eintrag als Aufzählung angezeigt. Die Beschreibung sollte pro Element nur wenige Wörter (und nicht mehr als 200 Zeichen) enthalten. Sie können bis zu 11 Elemente hinzufügen.
 
-**Hinweis**  Diese werden im Eintrag mit Aufzählungszeichen versehen, fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
+
+              **Hinweis:** Diese werden im Eintrag mit Aufzählungszeichen versehen. Fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
 
  
 
@@ -109,7 +113,8 @@ Geben Sie die URL der Webseite für Ihre App ein. Diese URL muss auf eine Seite 
 
 Geben Sie die URL der Webseite ein, auf der Ihre Kunden Support für die App erhalten, oder eine E-Mail-Adresse, unter der Kunden den Support erreichen können.
 
-**Wichtig**  Microsoft bietet keinen App-Support für Ihre Kunden.
+
+              **Wichtig:** Microsoft bietet keinen App-Support für Ihre Kunden.
 
  
 
@@ -117,10 +122,11 @@ Geben Sie die URL der Webseite ein, auf der Ihre Kunden Support für die App erh
 
 Wenn Ihre App über eine Datenschutzrichtlinie verfügt, geben Sie die URL hier ein. Sie müssen sicherstellen, dass die geltenden Datenschutzgesetze eingehalten werden und müssen bei Bedarf eine Datenschutzrichtlinie bereitstellen.
 
-**Wichtig**  Microsoft stellt keine standardmäßigen Datenschutzrichtlinien für Ihre App bereit. Außerdem ist Ihre App nicht durch Datenschutzrichtlinien von Microsoft abgedeckt. Um festzustellen, ob Ihre App eine Datenschutzrichtlinie benötigt, lesen Sie die [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und die [Windows Store-Richtlinien](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_5_1).
+
+              **Wichtig:** Microsoft stellt keine standardmäßigen Datenschutzrichtlinien für Ihre App bereit. Außerdem ist Ihre App nicht durch Datenschutzrichtlinien von Microsoft abgedeckt. Um festzustellen, ob Ihre App eine Datenschutzrichtlinie benötigt, lesen Sie die [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und die [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO2-->
 
 

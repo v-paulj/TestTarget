@@ -3,13 +3,14 @@ author: scottmill
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: Kompositionsanimationen
 description: "Viele Eigenschaften von Kompositionsobjekten und Effekten können mit Keyframeanimationen und Ausdrucksanimationen animiert werden. Dadurch können sich Eigenschaften eines UI-Elements im Laufe der Zeit oder auf der Grundlage einer Berechnung verändern."
+translationtype: Human Translation
 ms.sourcegitcommit: 62f0ea80940ff862d26feaa063414d95b048f685
 ms.openlocfilehash: e0088692b9de10c188f15b85b1f20b98cc113517
 
 ---
 # Kompositionsanimationen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Mit der Windows.UI.Composition WinRT-API können Sie Kompositorobjekte in einer einheitlichen API-Ebene erstellen, animieren, umwandeln und bearbeiten. Kompositionsanimationen bieten eine leistungsstarke und effiziente Möglichkeit, Animationen auf der Benutzeroberfläche Ihrer Anwendung auszuführen. Sie wurden von Grund auf neu entwickelt, um sicherzustellen, dass Ihre Animationen mit 60 F/s unabhängig vom UI-Thread ausgeführt werden, und um Ihnen die Flexibilität zu bieten, tolle Funktionen zu erstellen, die zur Steuerung von Animationen nicht nur Zeit, sondern auch Eingaben und andere Eigenschaften verwenden.
 Dieses Thema bietet eine Übersicht über die verfügbaren Funktionen, mit denen Sie Eigenschaften des Kompositionsobjekts animieren können.
@@ -19,13 +20,15 @@ In diesem Dokument wird davon ausgegangen, dass Sie mit den Grundlagen der Struk
    
  
 ##Typen von Kompositionsanimationen
-**Keyframeanimationen** bieten die herkömmlichen zeitgesteuerten *Frame-für-Frame*-Animationsfunktionen. Entwickler können explizit *Kontrollpunkte* definieren, die Werte dafür definieren, wann eine Animationseigenschaft an bestimmten Punkten in der Animationszeitachse sein muss. Was noch wichtiger ist, Sie können Beschleunigungsfunktionen (andernfalls Interpolatoren genannt) verwenden, um den Übergang zwischen diesen Kontrollpunkten zu beschreiben.  
 
-**Ausdrucksanimationen** sind eine neue Art von Animation, die in der visuellen Ebene mit dem Windows 10 November-Update (Build 10586) eingeführt wurde. Mit Ausdrucksanimationen soll ein Entwickler mathematischen Beziehungen zwischen visuellen Eigenschaften und einzelnen Werten erstellen können, die für jeden Frame ausgewertet und aktualisiert werden. Entwickler können auf Eigenschaften auf Kompositionsobjekten oder Eigenschaftensätzen verweisen, mathematische Funktionshilfsbefehle verwenden und sogar auf Eingaben verweisen, um diese mathematischen Beziehungen abzuleiten. Ausdrücke machen Funktionen wie Parallax und „Sticky Headers“ und deren reibungslose Einbindung in die Windows-Plattform möglich.  
+            **Keyframeanimationen** bieten die herkömmlichen zeitgesteuerten *Frame-für-Frame*-Animationsfunktionen. Entwickler können explizit *Kontrollpunkte* definieren, die Werte dafür definieren, wann eine Animationseigenschaft an bestimmten Punkten in der Animationszeitachse sein muss. Was noch wichtiger ist, Sie können Beschleunigungsfunktionen (andernfalls Interpolatoren genannt) verwenden, um den Übergang zwischen diesen Kontrollpunkten zu beschreiben.  
+
+
+            **Ausdrucksanimationen** sind eine neue Art von Animation, die in der visuellen Ebene mit dem Windows 10 November-Update (Build 10586) eingeführt wurde. Mit Ausdrucksanimationen soll ein Entwickler mathematischen Beziehungen zwischen visuellen Eigenschaften und einzelnen Werten erstellen können, die für jeden Frame ausgewertet und aktualisiert werden. Entwickler können auf Eigenschaften auf Kompositionsobjekten oder Eigenschaftensätzen verweisen, mathematische Funktionshilfsbefehle verwenden und sogar auf Eingaben verweisen, um diese mathematischen Beziehungen abzuleiten. Ausdrücke machen Funktionen wie Parallax und „Sticky Headers“ und deren reibungslose Einbindung in die Windows-Plattform möglich.  
 
 ##Gründe, die für Kompositionsanimationen sprechen
 **Leistung**  
- Bei der Erstellung von universellen Windows-Anwendungen wird der meiste Entwicklercode im UI-Thread ausgeführt. Damit die Animationen flüssig in den verschiedenen Gerätekategorien angezeigt werden, führt das System daher die Animationsberechnungen und-arbeiten auf einem unabhängigen Thread aus, um 60 F/s aufrechtzuerhalten. Dies bedeutet, dass sich Entwickler darauf verlassen können, dass das System flüssige Animationen bereitstellt, während ihre Anwendungen andere komplexe Vorgänge für erweiterte Benutzeroberflächen durchführen.    
+ Bei der Erstellung von universellen Windows-Anwendungen wird der meiste Entwicklercode im UI-Thread ausgeführt. Damit die Animationen flüssig in den verschiedenen Gerätekategorien angezeigt werden, führt das System daher die Animationsberechnungen und-arbeiten auf einem unabhängigen Thread aus, um 60F/s aufrechtzuerhalten. Dies bedeutet, dass sich Entwickler darauf verlassen können, dass das System flüssige Animationen bereitstellt, während ihre Anwendungen andere komplexe Vorgänge für erweiterte Benutzeroberflächen durchführen.    
  
 **Möglichkeiten**  
 Das Ziel für Kompositionsanimationen in der visuellen Ebene ist es, eine ansprechende Benutzeroberfläche zu ermöglichen. Wir möchten Entwicklern Flexibilität und verschiedene Arten von Animationen bieten, damit sie ihre tollen Ideen umsetzen und die Möglichkeiten von UWP voll ausschöpfen können
@@ -152,7 +155,8 @@ Ein Beispiel, bei dem ein Keyframe in der Mitte der Animation eingefügt wird:
 animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f));
 ```
 
-**Hinweis:** Beim Animieren von Farbe mit Keyframeanimationen müssen ein paar weitere Dinge beachtet werden:
+
+            **Hinweis:** Beim Animieren von Farbe mit Keyframeanimationen müssen ein paar weitere Dinge beachtet werden:
 1.  Sie fügen StartAnimation an die Visual.Brush an, anstatt an das Visual-Objekt, wobei **Farbe** als der Eigenschaftsparameter verwendet wird, den Sie animieren möchten.
 2.  Die Komponente „Value“ des Keyframes wird durch das Farben-Objekt aus dem Windows.UI-Namespace definiert.
 3.  Sie haben die Möglichkeit, das Farbspektrum zu definieren, das die Interpolation durchläuft, indem Sie die Eigenschaft „InterpolationColorSpace“ festlegen. Mögliche Werte umfassen: a.  CompositionColorSpace.Rgb b.  CompositionColorSpace.Hsl
@@ -193,7 +197,8 @@ animation.InsertKeyFrame(0.5f, new Vector3(50.0f, 80.0f, 0.0f), easeIn);
 
 ##Starten und Beenden von Keyframeanimationen
 Nachdem Sie Ihre Animation und Keyframes definiert haben, können Sie Ihre Animation einbinden. Wenn Sie die Animation starten, geben Sie das visuelle Objekt an, das animiert werden soll, die Zieleigenschaft, die animiert werden soll, sowie einen Verweis auf die Animation. Dazu rufen Sie die StartAnimation()-Funktion auf. Bedenken Sie, dass durch das Aufrufen von StartAnimation() für eine Eigenschaft alle zuvor ausgeführten Animationen getrennt und entfernt werden.  
-**Hinweis:** Der Verweis auf die Eigenschaft, die Sie animieren möchten, weist die Form einer Zeichenfolge auf.  
+
+            **Hinweis:** Der Verweis auf die Eigenschaft, die Sie animieren möchten, weist die Form einer Zeichenfolge auf.  
 
 Ein Beispiel, bei dem eine Animation für die Offset-Eigenschaft eines visuellen Objekts festgelegt und gestartet wird:  
 ```cs
@@ -290,7 +295,8 @@ Ausdrucksanimationen sind eine neue Art von Animation, die vom Kompositionsteam 
 
 **Warum sind Ausdrucksanimationen hilfreich?** Der wahre Vorteil von Ausdrucksanimationen liegt in deren Fähigkeit, eine mathematische Beziehung zu erstellen, die Verweise auf Parameter oder Eigenschaften auf anderen Objekten enthält. Dies bedeutet, dass Sie eine Formel haben können, die auf Werte von Eigenschaften auf anderen Kompositionsobjekten, lokale Variablen oder auch gemeinsam genutzte Werte in Kompositionseigenschaftensätzen verweist. Aufgrund dieses Referenzmodells und der Tatsache, dass die Formel für jeden Frame ausgewertet wird, ändert sich die Ausgabe der Formel, wenn sich die Werte ändern, die eine Formel definieren. Dies eröffnet mehr Möglichkeiten, die über herkömmliche Keyframeanimationen hinausgehen, bei denen Werte separat und vordefiniert sein müssen. So können z. B. Funktionen wie Sticky Headers und Parallax problemlos mit Ausdrucksanimationen beschrieben werden.
 
-**Hinweis:** Wir verwenden die Begriffe „Ausdruck“ oder „Ausdruckszeichenfolge“ im Bezug auf Ihre mathematische Formel, die Ihr Ausdrucksanimationsobjekt definiert.
+
+            **Hinweis:** Wir verwenden die Begriffe „Ausdruck“ oder „Ausdruckszeichenfolge“ im Bezug auf Ihre mathematische Formel, die Ihr Ausdrucksanimationsobjekt definiert.
 
 ##Erstellen und Anfügen Ihrer Ausdrucksanimation
 Bevor wir näher auf die Syntax für das Erstellen von Ausdrucksanimationen eingeben, müssen einige wesentliche Prinzipien erwähnt werden:  
@@ -667,6 +673,6 @@ _target.StartAnimation(“Opacity”, exp);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -1,25 +1,25 @@
 ---
-Description: "Hier finden Sie die Informationen, die Sie zum Erstellen einer Universellen Windows-App benötigen, die auf jedem Windows 10-basierten Gerät ausgeführt werden kann, darunter Smartphones, Tablets und PCs."
-title: "Anleitungen für Windows 10-Apps – Entwicklung von Windows-Apps"
+Description: "Hier finden Sie die Informationen, die Sie zum Erstellen einer Universellen Windows-App benötigen, die auf jedem Windows10-basierten Gerät ausgeführt werden kann, darunter Smartphones, Tablets und PCs."
+title: "Anleitungen für Windows10-Apps – Entwicklung von Windows-Apps"
 ms.assetid: 2A39F3D8-85AD-4315-A69B-2B79242780E3
-redirect_url: https://developer.microsoft.com/en-us/windows/develop
+redirect_url: https://developer.microsoft.com/windows/develop
 translationtype: Human Translation
-ms.sourcegitcommit: 9be74892a98765a8a45482ce3f5cc5151ab772b1
-ms.openlocfilehash: 5d0cca643c26458165c388215d34eec76dfe8cf6
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: 654eac5df1bd3309714348dcfc511850234bb0ae
 
 ---
 
 
-# Anleitungen für Windows 10-Apps
+# Anleitungen für Windows10-Apps
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Hier finden Sie die Informationen, die Sie zum Erstellen einer universellen Windows-App benötigen, die auf jedem Windows 10-basierten Gerät ausgeführt werden kann, darunter Smartphones, Tablets und PCs. Dieser Abschnitt enthält Anweisungen und Codebeispiele, die nach der Art der Aufgabe sortiert sind, die Sie ausführen möchten.
+Hier finden Sie die Informationen, die Sie zum Erstellen einer universellen Windows-App benötigen, die auf jedem Windows10-basierten Gerät ausgeführt werden kann, darunter Smartphones, Tablets und PCs. Dieser Abschnitt enthält Anweisungen und Codebeispiele, die nach der Art der Aufgabe sortiert sind, die Sie ausführen möchten.
 
 In den folgenden Artikeln finden Sie eine Einführung in die universelle Windows-Plattform (UWP) und wie Sie damit denselben Code verwenden können, um entsprechend maßgeschneiderte Oberflächen für mehrere Windows-Gerätetypen entwickeln können:
 
 -   Erstellen Ihrer ersten universellen Windows-App
--   Anleitung für universelle Windows-Plattform-Apps (UWP)
+-   Anleitung für Apps für die Universelle Windows-Plattform (UWP)
 -   Was ist eine universelle Windows-App?
 
 | Thema | Beschreibung |
@@ -31,9 +31,9 @@ In den folgenden Artikeln finden Sie eine Einführung in die universelle Windows
 | [Datenbindung](data-binding/index.md) | Synchronisieren Sie die UI-Elemente Ihrer universellen Windows-App mit verschiedenen Datenquellen, einschließlich Datenquellen, Dateien und internen Objekten, um eine datengesteuerte Benutzererfahrung bereitzustellen. |
 | [Debugging, Tests und Leistung](debug-test-perf/index.md) | Erfahren Sie mehr über den Test- und Debugzyklus und die zugehörigen Tools, die mit Microsoft Visual Studio bereitgestellt werden oder als separater Download verfügbar sind. Stellen Sie sicher, dass Ihre universelle Windows-App die gewünschte Erfahrung bietet und für die Veröffentlichung im Windows Store bereit ist. |
 | [Geräte, Sensoren und Leistung](devices-sensors\index.md) | Integrieren Sie verschiedene Geräte wie Drucker, Kameras und Sensoren in Ihre universelle Windows-App, um eine stabile und flexible verbundene Gerätefunktion für Ihre Benutzer bereitzustellen. | 
-| [Enterprise](enterprise/index.md) | Erfahren Sie mehr über die wichtigsten Unternehmensfeatures für universelle Windows-Plattform-Apps (UWP) von Windows 10. |
+| [Enterprise](enterprise/index.md) | Erfahren Sie mehr über die wichtigsten Unternehmensfeatures für universelle Windows-Plattform-Apps (UWP) von Windows10. |
 | [Dateien, Ordner und Bibliotheken](files/index.md) | Erfahren Sie, wie Sie Text und andere Datenformate in Dateien lesen und schreiben und Dateien und Ordner verwalten können. Außerdem finden Sie dort Informationen zum Lesen und Schreiben von App-Einstellungen, zur Datei- und Ordnerauswahl und zu speziellen Speicherorten im Sandkasten, wie z. B. Video-/Musikbibliothek. |
-| [Spiele und DirectX](https://msdn.microsoft.com/en-us/library/windows/apps/mt228375.aspx) | Hier erhalten Sie Informationen zu den Grundlagen der Spielerstellung für die neue universelle Windows-Plattform (UWP). |
+| [Spiele und DirectX](https://msdn.microsoft.com/library/windows/apps/mt228375.aspx) | Hier erhalten Sie Informationen zu den Grundlagen der Spielerstellung für die neue universelle Windows-Plattform (UWP). |
 | [Grafiken und Animationen](graphics/index.md) | Optimieren Sie Ihre universelle Windows-App mit UI-Grafiken und Animationen, die für Benutzer visuell ansprechend sind und ihr Interesse an der Benutzererfahrung wahren. |
 | [Starten, Fortsetzen und Hintergrundaufgaben](launch-resume/index.md) | Erstellen Sie Hintergrundaufgaben, und registrieren Sie sich für Systemereignisse, um Funktionen bereitzustellen, selbst wenn Ihre universelle Windows-App angehalten oder nicht ausgeführt wird. |
 | [Karten und Position](maps-and-location/index.md) | Erfahren Sie, wie Ihre universelle Windows-App den Bing Maps-Dienst nutzen kann und genaue visuelle Objekte erzeugen kann, die jetzt auch 3D-Luftaufnahmen und Straßenansichten umfassen. |
@@ -48,6 +48,6 @@ In den folgenden Artikeln finden Sie eine Einführung in die universelle Windows
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

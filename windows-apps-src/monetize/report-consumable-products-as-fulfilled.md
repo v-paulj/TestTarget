@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: E9BEB2D2-155F-45F6-95F8-6B36C3E81649
 description: "Verwenden Sie diese Methode aus der Windows Store Collection-API, um den Kauf eines Verbrauchsprodukt für einen bestimmten Kunden als abgewickelt zu melden. Damit ein Benutzer ein Verbrauchsprodukt erneut erwerben kann, muss Ihre App oder Ihr Dienst das Verbrauchsprodukt für den betreffenden Benutzer als abgewickelt melden."
 title: Melden von Verbrauchsprodukten als abgewickelt
-ms.sourcegitcommit: 2f4351d6f9bdc0b9a131ad5ead10ffba7e76c437
-ms.openlocfilehash: b099bdc26565ef218eaf1f73c5bb3ec9c24065c3
+translationtype: Human Translation
+ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
+ms.openlocfilehash: 5bd85c6ec9728a0dc08ab8ef4f586b0017510a74
 
 ---
 
@@ -25,8 +26,8 @@ Sie können diese Methode auf zwei Weisen verwenden, um ein Verbrauchsprodukt al
 
 Zur Verwendung dieser Methode benötigen Sie:
 
--   Ein Azure AD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
--   Einen Windows Store-ID-Schlüssel, der durch Aufrufen der [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674)-Methode im clientseitigen Code der App generiert wurde.
+-   Ein AzureAD-Zugriffstoken, das mit dem Zielgruppen-URI `https://onestore.microsoft.com` erstellt wurde.
+-   Einen WindowsStore-ID-Schlüssel, der durch Aufrufen der [**GetCustomerCollectionsIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt608674)-Methode im clientseitigen Code der App generiert wurde.
 
 Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
@@ -37,20 +38,20 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 | Methode | Anforderungs-URI                                                   |
 |--------|---------------------------------------------------------------|
-| POST   | `https://collections.mp.microsoft.com/v6.0/collections/consume` |
+| POST   | ```https://collections.mp.microsoft.com/v6.0/collections/consume``` |
 
-<br/> 
+<span/> 
 
 ### Anforderungsheader
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Authorization  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
-| Host           | Zeichenfolge | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
+| Autorisierung  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
+| Host           | string | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
 | Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
-<br/> 
+<span/>
 
 ### Anforderungstext
 
@@ -60,13 +61,10 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | itemId        | String       | Der von einer [Produktabfrage](query-for-products.md) zurückgegebene „itemId“-Wert. Verwenden Sie diesen Parameter mit „trackingId“.                                                                                                                                                                                                  | Nein       |
 | trackingId    | GUID         | Eine eindeutige, vom Entwickler angegebene Tracking-ID. Verwenden Sie diesen Parameter mit „itemId“.                                                                                                                                                                                                                                     | Nein       |
 | Produkt-ID     | String       | Der von einer [Produktabfrage](query-for-products.md) zurückgegebene „productId“-Wert. Verwenden Sie diesen Parameter mit „transactionId“.                                                                                                                                                                                            | Nein       |
-| transactionId | GUID         | Ein Transaktions-ID-Wert, der aus einer der folgenden Quellen abgerufen wird:                                                                                                                                                                                                                                      | Nein       |
-|               |              | * Der [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396)-Eigenschaft der [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392)-Klasse.   |        |
-|               |              | * Dem von [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) oder [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) zurückgegebenen App- oder Produktbeleg.   |        |
-|               |              | * Dem von einer [Produktabfrage](query-for-products.md)zurückgegebenen „transactionId“-Parameter.   |        |        
-|               |              | Verwenden Sie diesen Parameter mit „productId“.   |        |
+| transactionId | GUID         | Ein Transaktions-ID-Wert, der aus einer der folgenden Quellen abgerufen wird. Verwenden Sie diesen Parameter mit „productId“.  <br/><br/><ul><li>Die [TransactionID](https://msdn.microsoft.com/library/windows/apps/dn263396)-Eigenschaft der [PurchaseResults](https://msdn.microsoft.com/library/windows/apps/dn263392)-Klasse.</li><li>Der von [RequestProductPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/dn263381), [RequestAppPurchaseAsync](https://msdn.microsoft.com/library/windows/apps/hh967813) oder [GetAppReceiptAsync](https://msdn.microsoft.com/library/windows/apps/hh967811) zurückgegebene App- oder Produktbeleg.</li><li>Der von einer [Produktabfrage](query-for-products.md)zurückgegebene transactionId-Parameter.</li></ul>                                                                                                                                                                                                                                   | Nein       |
+
  
-<br/>
+<span/>
 
 Das UserIdentity-Objekt enthält die folgenden Parameter.
 
@@ -76,7 +74,7 @@ Das UserIdentity-Objekt enthält die folgenden Parameter.
 | identityValue        | string | Zeichenfolgenwert des Windows Store-ID-Schlüssels.                                                                                                   | Ja      |
 | localTicketReference | string | Angeforderter Bezeichner für die zurückgegebene Antwort. Es wird empfohlen, denselben Wert als *userId*-Anspruch im Windows Store-ID-Schlüssel zu verwenden. | Ja      |
 
-<br/> 
+<span/> 
 
 ### Anforderungsbeispiele
 
@@ -146,7 +144,7 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 | 401  | Nicht autorisiert | PartnerAadTicketRequired   | An den Dienst wurde im Autorisierungsheader kein Azure AD-Zugriffstoken übergeben.                                                                                                   |
 | 401  | Nicht autorisiert | InconsistentClientId       | Der *clientId*-Anspruch im Windows Store-ID-Schlüssel im Anforderungstext und der *appid*-Anspruch im Azure AD-Zugriffstoken im Autorisierungsheader stimmen nicht überein.                     |
 
-<br/> 
+<span/> 
 
 ## Verwandte Themen
 
@@ -160,6 +158,6 @@ Date: Tue, 22 Sep 2015 20:40:55 GMT
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

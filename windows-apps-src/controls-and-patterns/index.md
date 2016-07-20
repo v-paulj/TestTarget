@@ -1,10 +1,11 @@
 ---
-description: "Hier finden Sie einen Designleitfaden und Codierungsanweisungen für das Hinzufügen von Steuerelementen und Mustern zu Ihrer UWP-App."
-title: "Steuerelemente und Muster – Entwicklung von Windows-Apps"
+description: "Hier finden Sie einen Designleitfaden und Codierungsanweisungen für das Hinzufügen von Steuerelementen und Mustern zu Ihrer UWP-App. Sie finden mehr als 45leistungsstarke Steuerelemente für die Verwendung mit Ihrer App."
+title: "UWP-Steuerelemente und -Muster – Entwicklung von Windows-Apps"
 author: mijacobs
+keywords: uwp controls, user interface, app controls
 translationtype: Human Translation
-ms.sourcegitcommit: 9f75c39d26bd0c8858f404ab4fcd3d23562ea033
-ms.openlocfilehash: 0562e3df0c2abbb0808df5f75ff4fe0b96eb6d7e
+ms.sourcegitcommit: 7c45a464be250e210df48d3fdef35f00d77e16d5
+ms.openlocfilehash: 23fdd3513d11a0fa0171e50fe71d49c8e3db7376
 
 ---
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
@@ -12,7 +13,7 @@ ms.openlocfilehash: 0562e3df0c2abbb0808df5f75ff4fe0b96eb6d7e
 
 # Steuerelemente und Muster für UWP-Apps
 
-In der UWP-App-Entwicklung ist ein <i>Steuerelement</i> ein UI-Element, das Inhalte anzeigt oder Interaktionen ermöglicht. Steuerelemente sind die Bausteine der Benutzeroberfläche. Wir bieten mehr als 45 Steuerelemente, angefangen bei einfachen Schaltflächen bis hin zu leistungsstarken Datensteuerelementen wie der Rasteransicht. Ein <i>Muster</i> ist eine Anleitung zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen.
+In der UWP-App-Entwicklung ist ein <i>Steuerelement</i> ein UI-Element, das Inhalte anzeigt oder Interaktionen ermöglicht. Steuerelemente sind die Bausteine der Benutzeroberfläche. Wir stellen Ihnen mehr als 45Steuerelemente bereit, angefangen bei einfachen Schaltflächen bis hin zu leistungsstarken Datensteuerelementen wie der Rasteransicht. Ein <i>Muster</i> ist eine Anleitung zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen.
 
 Die Artikel in diesem Abschnitt enthalten Designrichtlinien und Codierungsanweisungen für das Hinzufügen von Steuerelementen und Mustern zu Ihrer UWP-App. 
 
@@ -43,8 +44,6 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 
 <div class="uwpd-list-of-links">
 <ul>
-
-<li>[Aktiver Zeichenbereich](active-canvas.md)</li>
 
 <li>[Feld mit automatischen Vorschlägen](auto-suggest-box.md)</li>
 
@@ -80,11 +79,15 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 
 <li>[Listen](lists.md)</li>
 
+<li>[Kartensteuerelement](../maps-and-location/controls-map.md)</li>
+
 <li>[Master/Details](master-details.md)</li>
 
-<li>[Medienwiedergabe](media-playback.md)</li>
-
+<li>[Medienwiedergabe](media-playback.md)
+<ul>
 <li>[Benutzerdefinierte Transportsteuerelemente](custom-transport-controls.md)</li>
+</ul>
+</li>
 
 <li>[Navigationsbereich](nav-pane.md)</li>
 
@@ -102,12 +105,11 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 
 <li>[Geteilte Ansicht](split-view.md)</li>
 
-<li>[Registerkarten und Pivotbereiche](tabs-pivot.md)</li>
+<li>[Registerkarten und Pivots](tabs-pivot.md)</li>
 
 <li>[Textsteuerelemente](text-controls.md)
 <ul>
 
-<li>[Schriftarten](fonts.md)</li>
 <li>[Beschriftungen](labels.md)</li>
 
 <li>[Kennwortfelder](password-box.md)</li>
@@ -115,8 +117,6 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 <li>[Rich-Edit-Felder](rich-edit-box.md)</li>
 
 <li>[Rich-Text-Blöcke](rich-text-block.md)</li>
-
-<li>[Segoe MDL2-Symbole](segoe-ui-symbol-font.md)</li>
 
 <li>[Rechtschreibprüfung und Vorhersage](spell-checking-and-prediction.md)</li>
 
@@ -128,7 +128,7 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 
 
 
-<li>[Kacheln, Signale und Benachrichtigungen](tiles-badges-notifications.md)
+<li>[Kacheln, Badges und Benachrichtigungen](tiles-badges-notifications.md)
 <ul>
 
 <li>[Kacheln](tiles-and-notifications-creating-tiles.md)</li>
@@ -167,6 +167,6 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

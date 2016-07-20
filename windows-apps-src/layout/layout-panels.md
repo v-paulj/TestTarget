@@ -1,13 +1,13 @@
 ---
 author: Jwmsft
 Description: Verwenden Sie Layoutpanels, um UI-Elemente in Ihrer App anzuordnen und zu gruppieren.
-title: "Layoutpanels für UWP-Apps (Apps für die universelle Windows-Plattform)"
+title: "Layoutpanels für UWP-Apps (Apps für die Universelle Windows-Plattform)"
 ms.assetid: 07A7E022-EEE9-4C81-AF07-F80868665994
 label: Layout panels
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 70bb6e1f01fa89c7a504e0299e89153efc30de1e
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: a8abaf9e272af3e9563ddb48a1a53993a762c675
 
 ---
 # Layoutpanels
@@ -25,7 +25,7 @@ Bei der Wahl eines Layoutpanels müssen mehrere Dinge berücksichtigt werden:
 
 Die meisten XAML-Layoutpanels verwenden angefügte Eigenschaften, mit denen die untergeordneten Elemente das übergeordnete Panel darüber informieren, wie sie in der Benutzeroberfläche positioniert werden sollen. Angefügte Eigenschaften verwenden die Syntax *AttachedPropertyProvider.PropertyName*. Wenn in anderen Panels geschachtelte Panels vorhanden sind, werden angefügte Eigenschaften von UI-Elementen, die Layoutmerkmale für ein übergeordnetes Element angeben, nur vom direkt übergeordneten Panel interpretiert.
 
-Hier sehen Sie ein Beispiel für das Festlegen der angefügten Eigenschaft [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.left.aspx) auf einem Schaltflächen-Steuerelement in XAML. Hiermit wird das übergeordnete Canvas-Element darüber informiert, dass das Button-Element 50 effektive Pixel vom linken Rand des Canvas-Elements entfernt positioniert werden soll.
+Hier sehen Sie ein Beispiel für das Festlegen der angefügten Eigenschaft [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.left.aspx) auf einem Schaltflächen-Steuerelement in XAML. Hiermit wird das übergeordnete Canvas-Element darüber informiert, dass das Button-Element 50effektive Pixel vom linken Rand des Canvas-Elements entfernt positioniert werden soll.
 
 ```xaml
 <Canvas>
@@ -35,8 +35,8 @@ Hier sehen Sie ein Beispiel für das Festlegen der angefügten Eigenschaft [**Ca
 
 Weitere Informationen zu angefügten Eigenschaften finden Sie unter [Übersicht über angefügte Eigenschaften](../xaml-platform/attached-properties-overview.md).
 
-> **Note**
-            &nbsp;&nbsp;Eine angefügte Eigenschaft ist ein XAML-Konzept, das spezielle Syntax zum Abrufen aus oder Festlegen in Code erfordert. Informationen zur Verwendung angefügter Eigenschaften in Code finden Sie im Abschnitt *Angefügte Eigenschaften in Code* des Artikels *Übersicht über angefügte Eigenschaften*.
+> 
+              **Hinweis**&nbsp;&nbsp;Eine angefügte Eigenschaft ist ein XAML-Konzept, das eine spezielle Syntax zum Abrufen oder Festlegen aus Code erfordert. Informationen zur Verwendung angefügter Eigenschaften in Code finden Sie im Abschnitt *Angefügte Eigenschaften in Code* des Artikels *Übersicht über angefügte Eigenschaften*.
 
 **Panelrahmen**
 
@@ -52,13 +52,13 @@ Hier sehen Sie ein Beispiel für das Festlegen von Rahmeneigenschaften für ein 
 
 ![Ein Raster mit Rahmen](images/layout-panel-grid-border.png)
 
-Durch Verwendung der integrierten Rahmeneigenschaften kann die Anzahl der XAML-Elemente reduziert und dadurch die UI-Leistung Ihrer App verbessert werden. Weitere Informationen zu Layoutpanels und zur UI-Leistung finden Sie unter [Optimieren des XAML-Layouts](https://msdn.microsoft.com/en-us/library/windows/apps/mt404609.aspx).
+Durch Verwendung der integrierten Rahmeneigenschaften kann die Anzahl der XAML-Elemente reduziert und dadurch die UI-Leistung Ihrer App verbessert werden. Weitere Informationen zu Layoutpanels und zur UI-Leistung finden Sie unter [Optimieren des XAML-Layouts](https://msdn.microsoft.com/library/windows/apps/mt404609.aspx).
 
 ## RelativePanel
 
-[
-              **RelativePanel**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) ermöglicht Ihnen das Layout von UI-Elementen, indem Sie angeben, an welcher Position sie relativ zu anderen Elementen und dem Panel platziert werden sollen. Standardmäßig wird ein Element in der oberen linken Ecke des Panels positioniert. Sie können [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) und [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) verwenden, um die Benutzeroberfläche für unterschiedliche Fenstergrößen neu anzuordnen.
+
+              [
+              **RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) ermöglicht Ihnen das Layout von UI-Elementen, indem Sie angeben, an welcher Position sie relativ zu anderen Elementen und zum Panel platziert werden sollen. Standardmäßig wird ein Element in der oberen linken Ecke des Panels positioniert. Sie können [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) und [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) verwenden, um die Benutzeroberfläche für unterschiedliche Fenstergrößen neu anzuordnen.
 
 Die folgende Tabelle zeigt die angefügten Eigenschaften, mit denen Sie ein Element auf die Kante oder die Mitte des Panels ausrichten und in Bezug auf andere Elemente ausrichten und positionieren können.
 
@@ -105,9 +105,9 @@ Die folgenden Aspekte müssen in Bezug auf das Ändern der Rechtecksgrößen bea
 
 ## StackPanel
 
-[
-              **StackPanel**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) ist ein einfaches Layoutpanel, das seine untergeordneten Elemente in einer einzelnen Zeile anordnet. Die Zeile kann horizontal oder vertikal ausgerichtet werden. StackPanel-Steuerelemente werden i. d. R. verwendet, wenn Sie nur einen kleinen Teil der UI auf der Seite anordnen möchten.
+
+              [
+              **StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) ist ein einfaches Layoutpanel, dessen untergeordnete Elemente in einer einzelnen Zeile angeordnet sind. Die Zeile kann horizontal oder vertikal ausgerichtet werden. StackPanel-Steuerelemente werden i.d.R. verwendet, wenn Sie nur einen kleinen Teil der UI auf der Seite anordnen möchten.
 
 Mit der [**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.orientation.aspx)-Eigenschaft können Sie die Richtung der untergeordneten Elemente angeben. Die Standardausrichtung ist [**Vertikal**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.orientation.aspx).
 
@@ -163,16 +163,16 @@ Das Ergebnis sieht wie folgt aus.
 
 In diesem Beispiel funktioniert die Festlegung der Größe wie folgt: 
 - Die zweite Zeile weist eine explizite Höhe von 44 effektiven Pixel auf. Standardmäßig füllt die Höhe der ersten Zeile den gesamten verbleibenden Platz.
-- Die Breite der ersten Spalte ist auf **Auto** festgelegt, d. h. sie ist so breit, wie dies für ihre untergeordneten Elemente erforderlich ist. In diesem Fall ist die Spalte 44 effektive Pixel breit, um der Breite des roten Rechtecks zu entsprechen.
+- Die Breite der ersten Spalte ist auf **Auto** festgelegt, d.h. sie ist so breit, wie dies für ihre untergeordneten Elemente erforderlich ist. In diesem Fall ist die Spalte 44 effektive Pixel breit, um der Breite des roten Rechtecks zu entsprechen.
 - Es sind keine anderen Größeneinschränkungen für die Rechtecke festgelegt, daher wird jedes gestreckt, um die Rasterzelle ausfüllen, in der es sich befindet.
 
 ## VariableSizedWrapGrid
 
-[
-              **VariableSizedWrapGrid**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) stellt ein Layoutpanel im Rasterstil zur Verfügung, in dem Elemente in Zeilen oder Spalten angeordnet werden, die automatisch in eine neue Zeile oder Spalte umbrochen werden, wenn der [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx)-Wert erreicht wird. 
 
-Mit der [**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.orientation.aspx)-Eigenschaft wird angegeben, ob Elemente im Raster vor dem Umbrechen in Zeilen oder Spalten hinzugefügt werden. Die Standardausrichtung ist **Vertikal**, d. h., das Raster fügt Elemente von oben nach unten hinzu, bis eine Spalte voll ist, dann erfolgt ein Umbruch in eine neue Spalte. Wenn der Wert **Horizontal** lautet, fügt das Raster Elemente von links nach rechts hinzu und fügt dann einen Umbruch in eine neue Zeile ein.
+              [
+              **VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) stellt ein Layoutpanel im Rasterstil zur Verfügung, in dem Elemente in Zeilen oder Spalten angeordnet werden, die automatisch in eine neue Zeile oder Spalte umbrochen werden, wenn der [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx)-Wert erreicht wird. 
+
+Mit der [**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.orientation.aspx)-Eigenschaft wird angegeben, ob Elemente im Raster vor dem Umbrechen in Zeilen oder Spalten hinzugefügt werden. Die Standardausrichtung ist **Vertikal**, d.h., das Raster fügt Elemente von oben nach unten hinzu, bis eine Spalte voll ist, dann erfolgt ein Umbruch in eine neue Spalte. Wenn der Wert **Horizontal** lautet, fügt das Raster Elemente von links nach rechts hinzu und fügt dann einen Umbruch in eine neue Zeile ein.
 
 Zellenabmessungen werden mit den Eigenschaften [**ItemHeight**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.itemheight.aspx) und [**ItemWidth**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.itemwidth.aspx) angegeben. Jede Zelle hat die gleiche Größe. Wenn „ItemHeight“ oder „ItemWidth“ nicht angegeben wird, wird die Größe der erste Zelle ihrem Inhalt entsprechend festgelegt, und alle anderen Zellen haben die Größe der ersten Zelle.
 
@@ -204,7 +204,7 @@ In diesem Beispiel beträgt die maximale Anzahl von Zeilen in jeder Spalte 3. Di
 
 Das [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx)-Panel positioniert seine untergeordneten Elemente mithilfe von festen Koordinatenpunkten. Sie geben die Punkte in den einzelnen untergeordneten Elementen an, indem Sie für jedes Element die angefügten Eigenschaften [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.left.aspx) und [**Canvas.Top**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.top.aspx) festlegen. Beim Erstellen des Layouts liest das übergeordnete Canvas-Element die Werte dieser angefügten Eigenschaften und verwendet diese Werte dann während der [Arrange](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.arrange.aspx)-Phase der Layouterstellung.
 
-Objekte in einem Canvas-Panel können sich überlappen, wobei ein Objekt über einem anderen Objekt gezeichnet wird. Standardmäßig rendert das Canvas-Element untergeordnete Objekte in der Reihenfolge, in der sie deklariert werden, d. h., das letzte untergeordnete Element wird im Vordergrund gerendert (jedes Element verfügt über einen standardmäßigen Z-Index von 0). Dies ist genauso wie bei anderen integrierten Panels. Canvas unterstützt jedoch auch die angefügte Eigenschaft [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.zindex.aspx), die Sie für die einzelnen untergeordneten Elemente festlegen können. Sie können diese Eigenschaft im Code festlegen, um die Zeichnungsreihenfolge von Elementen zur Laufzeit zu ändern. Das Element mit dem höchsten Canvas.ZIndex-Wert wird zuletzt gezeichnet, also über allen anderen Elementen, die sich im gleichen Raum befinden oder sich auf irgendeine Weise überlappen. Beachten Sie, dass der Alpha-Wert (Transparenz) berücksichtigt wird. Auch wenn sich Elemente überlappen, werden die Inhalte in Überlappungsbereichen also ggf. vermischt, wenn das obere Element über einen Alpha-Wert verfügt, der nicht dem Maximalwert entspricht.
+Objekte in einem Canvas-Panel können sich überlappen, wobei ein Objekt über einem anderen Objekt gezeichnet wird. Standardmäßig rendert das Canvas-Element untergeordnete Objekte in der Reihenfolge, in der sie deklariert werden, d.h., das letzte untergeordnete Element wird im Vordergrund gerendert (jedes Element verfügt über einen standardmäßigen Z-Index von 0). Dies ist genauso wie bei anderen integrierten Panels. Canvas unterstützt jedoch auch die angefügte Eigenschaft [**Canvas.ZIndex**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.zindex.aspx), die Sie für die einzelnen untergeordneten Elemente festlegen können. Sie können diese Eigenschaft im Code festlegen, um die Zeichnungsreihenfolge von Elementen zur Laufzeit zu ändern. Das Element mit dem höchsten Canvas.ZIndex-Wert wird zuletzt gezeichnet, also über allen anderen Elementen, die sich im gleichen Raum befinden oder sich auf irgendeine Weise überlappen. Beachten Sie, dass der Alpha-Wert (Transparenz) berücksichtigt wird. Auch wenn sich Elemente überlappen, werden die Inhalte in Überlappungsbereichen also ggf. vermischt, wenn das obere Element über einen Alpha-Wert verfügt, der nicht dem Maximalwert entspricht.
 
 Das Canvas-Element legt die Größe seiner untergeordneten Elemente nicht fest. Jedes Element muss seine Größe selbst angeben.
 
@@ -232,6 +232,6 @@ Es gibt verschiedene spezielle Panels, die nur als [**ItemsPanel**](https://msdn
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

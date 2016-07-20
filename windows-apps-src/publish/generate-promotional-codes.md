@@ -3,6 +3,7 @@ author: jnHs
 Description: "Sie können Werbecodes für Apps oder In-App-Produkte (IAP) generieren, die Sie im Windows Store veröffentlicht haben."
 title: Generieren von Werbecodes
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
+translationtype: Human Translation
 ms.sourcegitcommit: df994a3bbda9f6d4df0ee2dd6c2cb646d91a0bfc
 ms.openlocfilehash: bfea802fb4a6efcfe34121802ce49f20a9b0305e
 
@@ -11,7 +12,7 @@ ms.openlocfilehash: bfea802fb4a6efcfe34121802ce49f20a9b0305e
 # Generieren von Werbecodes
 
 
-Sie können Werbecodes für Apps oder In-App-Produkte (IAP) generieren, die Sie im Windows Store veröffentlicht haben. Werbecodes sind eine einfache Möglichkeit, einflussreichen Benutzern kostenlosen Zugriff auf Ihre App oder Ihr IAP zu ermöglichen. Sie können Werbecodes auch in Kundendienstszenarien verwenden, indem Sie Benutzern kostenlosen Zugriff auf Ihre App oder Ihr IAP gewähren, oder für [Betatests](beta-testing-and-targeted-distribution.md) mit Windows 10.
+Sie können Werbecodes für Apps oder In-App-Produkte (IAP) generieren, die Sie im Windows Store veröffentlicht haben. Werbecodes sind eine einfache Möglichkeit, einflussreichen Benutzern kostenlosen Zugriff auf Ihre App oder Ihr IAP zu ermöglichen. Sie können Werbecodes auch in Kundendienstszenarien verwenden, indem Sie Benutzern kostenlosen Zugriff auf Ihre App oder Ihr IAP gewähren, oder für [Betatests](beta-testing-and-targeted-distribution.md) mit Windows10.
 
 Jeder Werbecode hat eine entsprechende eindeutige einlösbare URL, die Sie an einen Benutzer verteilen können. Der Benutzer muss einfach auf die URL klicken, um den Code einzulösen und Ihre App oder Ihr IAP über den Windows Store zu installieren.
 
@@ -19,11 +20,12 @@ Auf dem Windows Dev Center-Dashboard können Sie folgende Aktionen ausführen:
 
 -   Bestellen von Werbecodes für Ihre App
 -   Herunterladen einer erfüllten Werbecodebestellung
--   Überprüfen der Werbecodenutzung für Ihre Apps, u. a.:
+-   Überprüfen der Werbecodenutzung für Ihre Apps, u.a.:
     -   Zusammenfassungen der Werbecodebestellungen für alle Ihre Apps (auf der Seite **Dashboard-Übersicht**) und für jede einzelne App (auf der Seite **App-Übersicht** für jede App).
     -   Eine ausführliche Zusammenfassung der Werbecodebestellungen für jede App (auf der Seite **Werbecodes** für jede App).
 
-> **Hinweis**  Sie können Werbecodes auch dann generieren, wenn Sie auf der Dashboardseite [Preise und Verfügbarkeit](set-app-pricing-and-availability.md) für Ihre App die Option **Diese App ausblenden und den Erwerb verhindern. Kunden mit einem Werbecode können die App auf Windows 10-Geräten weiterhin herunterladen** ausgewählt haben. Ihre App muss die abschließende Veröffentlichungsphase des [App-Zertifizierungsprozesses](the-app-certification-process.md) bestehen, bevor Benutzer einen Werbecode zur Installation einlösen können.
+> 
+            **Hinweis**  Sie können Werbecodes auch dann generieren, wenn Sie auf der Dashboardseite [Preise und Verfügbarkeit](set-app-pricing-and-availability.md) für Ihre App die Option **Diese App ausblenden und den Erwerb verhindern. Kunden mit einem Werbecode können die App auf Windows10-Geräten weiterhin herunterladen** ausgewählt haben. Ihre App muss die abschließende Veröffentlichungsphase des [App-Zertifizierungsprozesses](the-app-certification-process.md) bestehen, bevor Benutzer einen Werbecode zur Installation einlösen können.
 
 ## Richtlinien für Werbecodes
 
@@ -31,8 +33,8 @@ Auf dem Windows Dev Center-Dashboard können Sie folgende Aktionen ausführen:
 Beachten Sie die folgenden Richtlinien für Werbecodes:
 
 -   Werbecodes können für alle über den Windows Store veröffentlichten Apps oder IAPs generiert werden. Benutzer können die Codes auf allen Versionen von Windows einlösen, die von Ihren Apps oder IAPs unterstützt werden.
--   Werbecodes laufen 6 Monate nach dem Datum der Bestellung ab.
--   Sie können für alle Apps oder IAPs alle 6 Monate bis zu 500 Werbecodes generieren. Der Zeitraum von 6 Monaten beginnt mit der Übermittlung der ersten Werbecodebestellung.
+-   Werbecodes laufen 6Monate nach dem Datum der Bestellung ab.
+-   Sie können für alle Apps oder IAPs alle 6Monate bis zu 500Werbecodes generieren. Der Zeitraum von 6Monaten beginnt mit der Übermittlung der ersten Werbecodebestellung.
 -   Sie müssen die in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) definierten Anforderungen erfüllen, einschließlich Abschnitt **3k. Werbecodes**.
 
 ## Bestellen von Werbecodes
@@ -62,29 +64,40 @@ So laden Sie erfüllte Werbecodebestellungen herunter und verteilen die Codes an
 
 1.  Kehren Sie auf dem Windows Dev Center-Dashboard zur Seite **Werbecodes** für Ihre App zurück (erweitern Sie **Monetarisierung**, und klicken Sie auf **Werbecodes**).
 2.  Vergewissern Sie sich, dass die Bestellung den Status **Verfügbar** aufweist. Klicken Sie auf den Link zum **Herunterladen** Ihrer Bestellung, und speichern Sie die bereitgestellte Datei auf Ihrem Computer. Diese Datei enthält Informationen zu Ihrer Werbecodebestellung im TSV-Format (Tabulatorgetrennte Werte).
-3.  Öffnen Sie die TSV-Datei im Editor Ihrer Wahl. Öffnen Sie für ein optimales Ergebnis die TSV-Datei in einer Anwendung, die Daten in tabellarischer Struktur anzeigen kann, z. B. Microsoft Excel. Allerdings können Sie die Datei auch in einem Text-Editor öffnen.
+3.  Öffnen Sie die TSV-Datei im Editor Ihrer Wahl. Öffnen Sie für ein optimales Ergebnis die TSV-Datei in einer Anwendung, die Daten in tabellarischer Struktur anzeigen kann, z.B. Microsoft Excel. Allerdings können Sie die Datei auch in einem Text-Editor öffnen.
 
     Die Datei enthält Spalten mit den folgenden Daten für jeden Code:
 
-    -   **Produktname**: Der Name der App oder des IAP, dem der Code zugeordnet ist.
-    -   **Bestellungsname**: Der Name der Bestellung, in der dieser Code erfüllt wurde.
-    -   **Werbecode**: Der Code selbst. Dies ist eine 5x5-Zeichenfolge von alphanumerischen Zeichen, die durch Bindestriche getrennt sind. Beispiel:
+    -   
+            **Produktname**: Der Name der App oder des IAP, dem der Code zugeordnet ist.
+    -   
+            **Bestellungsname**: Der Name der Bestellung, in der dieser Code erfüllt wurde.
+    -   
+            **Werbecode**: Der Code selbst. Dies ist eine 5x5-Zeichenfolge von alphanumerischen Zeichen, die durch Bindestriche getrennt sind. Beispiel:
 
         DM3GY-M2GYM-6YMW6-4QHHT-23W2Z
 
-    -   **Einlösbare URL**: Die URL, mit der ein Benutzer den Code einlösen und die App bzw. das IAP installieren kann. Die URL weist das folgende Format auf:
+    -   
+            **Einlösbare URL**: Die URL, mit der ein Benutzer den Code einlösen und die App bzw. das IAP installieren kann. Die URL weist das folgende Format auf:
 
         https://account.microsoft.com/billing/redeem?mstoken=&lt;promotional_code>
 
-    -   **Startdatum**: Das Datum, an dem dieser Code gültig wird.
-    -   **Ablaufdatum**: Das Datum, an dem dieser Code abläuft.
-    -   **Code-ID**: Eine eindeutige ID für diesen Code.
-    -   **Bestellungs-ID**: Eine eindeutige ID für die Bestellung, in der dieser Code erfüllt wurde.
-    -   **Ausgegeben an**: Ein leeres Feld, in das Sie einen Wert eintragen können, der den Benutzer identifiziert, an den Sie den Code verteilt haben.
-    -   **Verfügbar**: Die Anzahl der Codes, die noch eingelöst werden können.
-    -   **Eingelöst**: Die Anzahl der Codes, die eingelöst wurden.
+    -   
+            **Startdatum**: Das Datum, an dem dieser Code gültig wird.
+    -   
+            **Ablaufdatum**: Das Datum, an dem dieser Code abläuft.
+    -   
+            **Code-ID**: Eine eindeutige ID für diesen Code.
+    -   
+            **Bestellungs-ID**: Eine eindeutige ID für die Bestellung, in der dieser Code erfüllt wurde.
+    -   
+            **Ausgegeben an**: Ein leeres Feld, in das Sie einen Wert eintragen können, der den Benutzer identifiziert, an den Sie den Code verteilt haben.
+    -   
+            **Verfügbar**: Die Anzahl der Codes, die noch eingelöst werden können.
+    -   
+            **Eingelöst**: Die Anzahl der Codes, die eingelöst wurden.
 
-4.  Sie können die einlösbaren URLs in einem beliebigen, von Ihnen bevorzugten Kommunikationsformat verteilen (z. B. E-Mail, SMS-Nachricht oder gedruckte Karten). Die Kommunikation sollte Folgendes enthalten:
+4.  Sie können die einlösbaren URLs in einem beliebigen, von Ihnen bevorzugten Kommunikationsformat verteilen (z.B. E-Mail, SMS-Nachricht oder gedruckte Karten). Die Kommunikation sollte Folgendes enthalten:
     -   Eine Erklärung, für welche App bzw. welches IAP der Werbecode vorgesehen ist, und optional eine Beschreibung, warum der Benutzer den Code erhält.
     -   Die einlösbare URL für den Code.
     -   Anweisungen zum Aufrufen der einlösbaren URL, Anmelden mit dem Microsoft-Konto und Befolgen der Anweisungen zum Herunterladen und Installieren Ihrer App.
@@ -102,15 +115,17 @@ Wenn Sie eine einlösbare URL verteilt haben, wird in den folgenden Schritten di
 
     Der Browser navigiert zur Seite **Danke** mit dem Link **Abrufen*****&lt;Name Ihrer App&gt;***.
 
-    > **Hinweis**  Benutzern wird bei diesem Schritt eine Fehlermeldung angezeigt, wenn Ihre App noch nicht veröffentlicht wurde.
+    > 
+            **Hinweis**  Benutzern wird bei diesem Schritt eine Fehlermeldung angezeigt, wenn Ihre App noch nicht veröffentlicht wurde.
 
 3.  Der Benutzer klickt auf **Abrufen*****&lt;Name Ihrer App&gt;***.
 
-4.  Wenn sich der Benutzer an einem Computer mit Windows Store für Windows 10 oder Windows 8.1 befindet, wird die Übersichtsseite für die App im Windows Store geöffnet. Der Benutzer kann dann zum kostenlosen Installieren der App auf **Installieren** klicken.
+4.  Wenn sich der Benutzer an einem Computer mit Windows Store für Windows10 oder Windows8.1 befindet, wird die Übersichtsseite für die App im Windows Store geöffnet. Der Benutzer kann dann zum kostenlosen Installieren der App auf **Installieren** klicken.
 
     Wenn sich der Benutzer an einem Computer oder einem Gerät befindet, auf dem Windows Store nicht installiert ist, wird im Browser die Windows Store-Webseite für die App geöffnet. Der Benutzer kann zum kostenlosen Installieren der App auf **Installieren** klicken.
 
-    > **Hinweis**  In einigen Fällen wird auf der App-Seite die Schaltfläche **Kaufen** anstelle der Schaltfläche **Installieren** angezeigt, obwohl die App erfolgreich über den Werbecode eingelöst wurde. Der Benutzer kann dann zum kostenlosen Installieren der App auf **Kaufen** klicken.
+    > 
+            **Hinweis**  In einigen Fällen wird auf der App-Seite die Schaltfläche **Kaufen** anstelle der Schaltfläche **Installieren** angezeigt, obwohl die App erfolgreich über den Werbecode eingelöst wurde. Der Benutzer kann dann zum kostenlosen Installieren der App auf **Kaufen** klicken.
 
 ## Überprüfen der Werbecodes
 
@@ -138,6 +153,6 @@ Sie können auch eine aktive Bestellung aus dieser Tabelle herunterladen.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -4,8 +4,8 @@ Description: "Auf der Seite „Pakete“ werden alle Paketdateien (XAP, APPX, AP
 title: Hochladen von App-Paketen
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: bb89968c261cc0c14f82375d0d708bbce5da9869
+ms.sourcegitcommit: 7f1a40f33a3137e4e0ded674b5bfdf35f11135dc
+ms.openlocfilehash: f628820747f51f7200e2748c2c3f41b58455b2fa
 
 ---
 
@@ -23,7 +23,8 @@ Um Pakete hochzuladen, ziehen Sie sie in das Uploadfeld oder klicken, um Ihre Da
 
 Falls Sie [Flight-Pakete](package-flights.md) für Ihre App erstellt haben, wird eine Dropdownliste mit der Option zum Kopieren von Paketen aus einem Ihrer Flight-Pakete angezeigt. Wählen Sie das Flight-Paket mit den Paketen aus, die Sie übertragen möchten. Anschließend können Sie einige oder alle der Pakete auswählen, um sie in diese Übermittlung aufzunehmen.
 
-> **Wichtig**  Für Windows 10 muss immer die APPXUPLOAD-Datei (nicht die APPX- oder die APPXBUNDLE-Datei) hochgeladen werden. Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter [Verpacken universeller Windows-Apps für Windows 10](../packaging/packaging-uwp-apps.md).
+> 
+            **Wichtig**  Für Windows10 muss immer die APPXUPLOAD-Datei (nicht die APPX- oder die APPXBUNDLE-Datei) hochgeladen werden. Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter [Verpacken universeller Windows-Apps für Windows10](../packaging/packaging-uwp-apps.md).
 
 Wenn beim Überprüfen Ihrer Pakete Probleme erkannt werden, müssen Sie das Paket entfernen, das Problem beheben, und dann erneut versuchen, es hochzuladen. Weitere Informationen finden Sie unter [Beheben von Paketuploadfehlern](resolve-package-upload-errors.md).
 
@@ -43,14 +44,8 @@ Wenn Sie ein Paket aus der Einsendung entfernen müssen, klicken Sie dazu im Abs
 
 Wenn wir feststellen, dass mindestens eines Ihrer Pakete redundant ist, wird eine Warnung mit dem Vorschlag angezeigt, die redundanten Pakete aus dieser Übermittlung zu entfernen. Dieser Fehler tritt häufig auf, wenn Sie über zuvor hochgeladene Pakete verfügen und nun Pakete mit einer höheren Versionsnummer bereitstellen, die die gleiche Kundengruppe unterstützen. In diesem Fall würde das redundante Paket keinem Kunde bereitgestellt, weil nun ein besseres Paket (mit einer höheren Versionsnummer) verfügbar ist, um diese Kunden zu unterstützen.
 
-Wenn wir feststellen, dass redundante Pakete vorhanden sind, wird eine Option bereitgestellt, um die redundanten Pakete aus dieser Übermittlung zu entfernen. Sie können die Pakete aber auch einzeln aus der Übermittlung entfernen.
+Wenn wir feststellen, dass redundante Pakete vorhanden sind, wird eine Option bereitgestellt, um die redundanten Pakete aus dieser Übermittlung zu entfernen. Sie können die Pakete jedoch auch einzeln aus der Übermittlung entfernen.
 
-## Pakete mit Visual Studio Application Insights
-
-
-Es wird empfohlen, [Visual Studio Application Insights](http://go.microsoft.com/fwlink/?LinkId=615086) in Paketen zu verwenden (oder durch Aktivieren des Kontrollkästchens „Telemetrie im Windows Dev Center anzeigen“ beim Erstellen des Pakets zu aktivieren), damit [Telemetriedaten zur App-Nutzung](usage-report.md) bereitgestellt werden können. Wenn Sie Application Insights in Microsoft Visual Studio nicht konfiguriert haben und wir feststellen, dass es nicht in einem Paket enthalten ist, werden Sie durch eine Meldung darauf hingewiesen, dass Sie sich durch Einreichen Ihres Pakets mit dem Aktivieren der Telemetrie zur App-Nutzung für Ihr Entwicklerkonto einverstanden erklären. Sie können die App-Nutzungstelemetrie jederzeit in den **Kontoeinstellungen** deaktivieren.
-
- 
 
  
 
@@ -60,6 +55,6 @@ Es wird empfohlen, [Visual Studio Application Insights](http://go.microsoft.com/
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jun16_HO5-->
 
 

@@ -5,6 +5,7 @@ title: Kalenderdatumsauswahl
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
 label: Calendar date picker
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
 ms.openlocfilehash: 7ae444d9e096834daa2eef71c691b9bb8b86d7c4
 
@@ -68,7 +69,8 @@ Wenn SIe das Datum in Code festlegen, wird der Wert durch die Eigenschaften [**M
 
 Mithilfe des [**DateChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.calendardatepicker.datechanged.aspx)-Ereignisses können Sie sich bei Änderungen am „Date“-Wert benachrichtigen lassen.
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
 
 ### Festlegen von Kopfzeilen- und Platzhaltertext
@@ -92,6 +94,6 @@ Als Standardtext für den Platzhalter wird „Datum auswählen“ angezeigt. Sie
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

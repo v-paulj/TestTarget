@@ -1,10 +1,11 @@
 ---
 author: Xansky
-Description: "Beschreibt die Schritte, mit denen Sie die Verwendbarkeit Ihrer UWP-App (App für die universelle Windows-Plattform) sicherstellen können, wenn ein Design mit hohem Kontrast aktiviert ist."
+Description: "Beschreibt die Schritte, mit denen Sie die Verwendbarkeit Ihrer UWP-App (App für die Universelle Windows-Plattform) sicherstellen können, wenn ein Design mit hohem Kontrast aktiviert ist."
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: Designs mit hohem Kontrast
 label: High-contrast themes
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
 ms.openlocfilehash: 4201f5a0b08f1fc8d691218da0803ee04ab2c86a
 
@@ -12,7 +13,7 @@ ms.openlocfilehash: 4201f5a0b08f1fc8d691218da0803ee04ab2c86a
 
 # Designs mit hohem Kontrast  
 
-Beschreibt die Schritte, mit denen Sie die Verwendbarkeit Ihrer UWP-App (App für die universelle Windows-Plattform) sicherstellen können, wenn ein Design mit hohem Kontrast aktiviert ist.
+Beschreibt die Schritte, mit denen Sie die Verwendbarkeit Ihrer UWP-App (App für die Universelle Windows-Plattform) sicherstellen können, wenn ein Design mit hohem Kontrast aktiviert ist.
 
 Eine UWP-App unterstützt standardmäßig Designs mit hohem Kontrast. Wenn sich ein Benutzer für die Verwendung eines Designs mit hohem Kontrast aus den Systemeinstellungen oder Tools für die Barrierefreiheit entscheidet, werden vom Framework automatisch Farben und Stileinstellungen verwendet, mit denen für Steuerelemente und Komponenten auf der Benutzeroberfläche ein Layout und Rendering mit hohem Kontrast entsteht.
 
@@ -43,7 +44,8 @@ Wenn Sie die Systemstandardfarbe ändern oder Bilder wie etwa ein Hintergrundbil
 </Application.Resources
 ```
 
-* **HighContrast** ist nicht der einzige verfügbare Schlüsselname. Es gibt auch noch **HighContrastBlack**, **HighContrastWhite** und **HighContrastCustom**. In den meisten Fällen ist **HighContrast** ausreichend.
+* 
+            **HighContrast** ist nicht der einzige verfügbare Schlüsselname. Es gibt auch noch **HighContrastBlack**, **HighContrastWhite** und **HighContrastCustom**. In den meisten Fällen ist **HighContrast** ausreichend.
 * Erstellen Sie unter **Default** den gewünschten [**Brush**](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx)-Typ (in der Regel **SolidColorBrush**). Vergeben Sie einen **x:Key**-Namen, der für die Verwendung spezifisch ist:<br/>
     `<SolidColorBrush x:Key="BrandedPageBackground" />`
 * Weisen Sie das gewünschte **Color**-Element zu:<br/>
@@ -83,7 +85,7 @@ _Einstellungen für hohen Kontrast_
 ![Ressourcen mit hohem Kontrast](images/high-contrast-resources.png)<br/>
 _Ressourcen mit hohem Kontrast_
 
-Wenn Sie den oben gekennzeichneten Namen das Präfix _SystemColor_ und das Postfix _Color_ hinzufügen, z. B. **SystemColorWindowTextColor**, werden sie automatisch aktualisiert, um der Benutzerangabe zu entsprechen. Dadurch müssen Sie keine bestimmte Farbe für den hohen Kontrast auswählen. Wählen Sie stattdessen eine Systemressource aus, die dem Verwendungszweck der Farbe entspricht. Im oben genannten Beispiel haben wir für die Hintergrundfarbe einer Seite **SolidColorBrushBrandedPageBackground** festgelegt. Da diese Einstellung für einen Hintergrund verwendet wird, können wir sie **SystemColorWindowColor** im Modus mit hohem Kontrast zuordnen:
+Wenn Sie den oben gekennzeichneten Namen das Präfix _SystemColor_ und das Postfix _Color_ hinzufügen, z.B. **SystemColorWindowTextColor**, werden sie automatisch aktualisiert, um der Benutzerangabe zu entsprechen. Dadurch müssen Sie keine bestimmte Farbe für den hohen Kontrast auswählen. Wählen Sie stattdessen eine Systemressource aus, die dem Verwendungszweck der Farbe entspricht. Im oben genannten Beispiel haben wir für die Hintergrundfarbe einer Seite **SolidColorBrushBrandedPageBackground** festgelegt. Da diese Einstellung für einen Hintergrund verwendet wird, können wir sie **SystemColorWindowColor** im Modus mit hohem Kontrast zuordnen:
 
 ``` xaml
 <Application.Resources>
@@ -161,7 +163,8 @@ Wenn ein UI-Element standardmäßig über einen Rahmen _verfügt_, behalten Sie 
 Falls Hintergrundfarben mit hohem Kontrast dazu verwendet werden, überlappende UI-Elemente voneinander abzuheben, kann der Kontrast zwischen diesen Elementen nur durch Rahmen gewährleistet werden.
 
 ## Ermitteln, wann ein Design mit hohem Kontrast aktiviert ist  
-Verwenden Sie Member der [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)-Klasse, um die aktuellen Einstellungen für Designs mit hohem Kontrast zu ermitteln. Mit der [**HighContrast**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrast)-Eigenschaft wird ermittelt, ob derzeit ein Design mit hohem Kontrast ausgewählt ist. Falls **true** für **HighContrast** festgelegt ist, besteht der nächste Schritt in der Überprüfung des Werts der [**HighContrastScheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrastscheme)-Eigenschaft, um den Namen des verwendeten Designs mit hohem Kontrast abzurufen. „Hoher Kontrast (Weiß)“ und „Hoher Kontrast (Schwarz)“ sind typische Werte für **HighContrastScheme**, auf die Ihr Code reagieren sollte. XAML-definierte [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794)-Schlüssel dürfen keine Leerstellen enthalten. Daher lauten die Schlüssel für diese Designs in einem Ressourcenwörterbuch in der Regel „HighContrastWhite“ und „HighContrastBlack“. Darüber hinaus müssen Sie Fallback-Logik für ein Standarddesign mit hohem Kontrast aufnehmen, falls als Wert eine andere Zeichenfolge angegeben ist. Im [XAML-Beispiel für hohen Kontrast](http://go.microsoft.com/fwlink/p/?linkid=254993) wird die Logik hierfür gezeigt.
+Verwenden Sie Member der [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)-Klasse, um die aktuellen Einstellungen für Designs mit hohem Kontrast zu ermitteln. Mit der [**HighContrast**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrast)-Eigenschaft wird ermittelt, ob derzeit ein Design mit hohem Kontrast ausgewählt ist. Falls **true** für **HighContrast** festgelegt ist, besteht der nächste Schritt in der Überprüfung des Werts der [**HighContrastScheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrastscheme)-Eigenschaft, um den Namen des verwendeten Designs mit hohem Kontrast abzurufen. „Hoher Kontrast (Weiß)“ und „Hoher Kontrast (Schwarz)“ sind typische Werte für **HighContrastScheme**, auf die Ihr Code reagieren sollte. XAML-definierte [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794)-Schlüssel dürfen keine Leerstellen enthalten. Daher lauten die Schlüssel für diese Designs in einem Ressourcenwörterbuch in der Regel „HighContrastWhite“ und „HighContrastBlack“. Darüber hinaus müssen Sie Fallback-Logik für ein Standarddesign mit hohem Kontrast aufnehmen, falls als Wert eine andere Zeichenfolge angegeben ist. 
+            Im [XAML-Beispiel für hohen Kontrast](http://go.microsoft.com/fwlink/p/?linkid=254993) wird die Logik hierfür gezeigt.
 
 > [!NOTE]
 > Achten Sie darauf, dass Sie den [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)-Konstruktor aus einem Bereich aufrufen, in dem die App initialisiert ist und bereits Inhalte anzeigt.
@@ -177,6 +180,6 @@ Apps können während ihrer Ausführung zur Verwendung von Ressourcenwerten mit 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

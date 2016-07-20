@@ -3,8 +3,9 @@ author: dbirtolo
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referenz zu Kern-APIs des Device Portal
 description: "Hier erhalten Sie Informationen zu den Kern-REST-APIs für das Windows Device Portal, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können."
-ms.sourcegitcommit: 0e36b2adbd0805d9c738de00959581417d2c1ee8
-ms.openlocfilehash: 364e19c723c6cf48a25104b5719735a533ae54a7
+translationtype: Human Translation
+ms.sourcegitcommit: 30aeffcf090c881f84331ced4f7199fd0092b676
+ms.openlocfilehash: 0fa515d28431d4256b977ee3c3c41169661f129f
 
 ---
 
@@ -894,7 +895,8 @@ Diese Befehle werden vom Client an den Server gesendet.
 
 Befehl | Beschreibung
 :----- | :-----
-Anbieter *{guid}* aktivieren *{level}* | Den durch *{guid}* (ohne Klammern) markierten Anbieter auf der angegebenen Ebene aktivieren. *{level}* ist ein **int** von 1 (am wenigsten detailliert) bis 5 (ausführlich).
+Anbieter *{guid}* aktivieren *{level}* | Den durch *{guid}* (ohne Klammern) markierten Anbieter auf der angegebenen Ebene aktivieren. 
+              *{level}* ist ein **int** zwischen 1 (am wenigsten detailliert) und 5 (ausführlich).
 Anbieter *{guid}* deaktivieren | Den durch *{guid}* (ohne Klammern) markierten Anbieter deaktivieren.
 
 Diese Antworten werden vom Server an den Client gesendet. Diese werden als Text gesendet, und erhalten Sie das folgende Format durch eine JSON-Analyse.
@@ -1137,6 +1139,60 @@ HTTP-Statuscode      | Beschreibung
 4XX | Fehlercodes
 5XX | Fehlercodes
 <br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* Xbox
+* HoloLens
+* IoT
+
+---
+### Abrufen der Gerätefamilie 
+
+**Anforderung**
+
+Mit dem folgenden Anforderungsformat können Sie die Gerätefamilie (Xbox, Smartphone, Desktop usw.) abrufen.
+ 
+Methode      | Anforderungs-URI
+:------     | :-----
+GET | /api/os/devicefamily
+<br />
+
+**URI-Parameter**
+
+- Keine
+
+**Anforderungsheader**
+
+- Keine
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+
+Die Antwort enthält die Gerätefamilie (SKU – Desktop, Xbox, usw.).
+
+```
+{
+   "DeviceType" : string
+}
+```
+
+„DeviceType“ sieht wie folgt aus: „Windows.Xbox“, „Windows.Desktop“ usw. 
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
@@ -2662,11 +2718,12 @@ GET | /api/wpr/trace
 
 **Antwort**
 
-- Gibt die ETL-Ablaufverfolgungsdatei zurück.
+- Keine.  
+              **Hinweis:** Hierbei handelt es sich um einen Vorgang mit langer Ausführungsdauer.  Er wird wieder verfügbar, wenn der ETL-Schreibvorgang auf der Festplatte abgeschlossen ist.  
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -2734,6 +2791,161 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
+### Aufführen abgeschlossener Ablaufverfolgungssitzungen (ETLs)
+
+**Anforderung**
+
+Mit dem folgenden Anforderungsformat können Sie eine Liste mit ETL-Ablaufverfolgungen für das Gerät abrufen. 
+
+Methode      | Anforderungs-URI
+:------     | :-----
+GET | /api/wpr/tracefiles
+<br />
+
+**URI-Parameter**
+
+- Keine
+
+**Anforderungsheader**
+
+- Keine
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+
+Die Liste mit den abgeschlossenen Ablaufverfolgungssitzungen wird im folgenden Format bereitgestellt:
+
+```
+{"Items": [{
+    "CurrentDir": string (filepath),
+    "DateCreated": int (File CreationTime),
+    "FileSize": int (bytes),
+    "Id": string (filename),
+    "Name": string (filename),
+    "SubPath": string (filepath),
+    "Type": int
+}]}
+```
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* HoloLens
+* IoT
+
+---
+### Herunterladen einer Ablaufverfolgungssitzung (ETL)
+
+**Anforderung**
+
+Mit dem folgenden Anforderungsformat können Sie eine Ablaufverfolgungsdatei (Systemstart- oder Benutzermodus-Ablaufverfolgung) herunterladen. 
+
+Methode      | Anforderungs-URI
+:------     | :-----
+GET | /api/wpr/tracefile
+<br />
+
+**URI-Parameter**
+
+Im Anforderungs-URI kann der folgende zusätzliche Parameter angegeben werden:
+
+URI-Parameter | Beschreibung
+:---          | :---
+filename   | (**erforderlich**) Der Name der herunterzuladenden ETL-Ablaufverfolgung.  Diese befinden sich unter „/api/wpr/tracefiles“.
+
+**Anforderungsheader**
+
+- Keine
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+
+- Gibt die ETL-Ablaufverfolgungsdatei zurück.
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes.
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* HoloLens
+* IoT
+
+---
+### Löschen einer Ablaufverfolgungssitzung (ETL)
+
+**Anforderung**
+
+Mit dem folgenden Anforderungsformat können Sie eine Ablaufverfolgungsdatei (Systemstart- oder Benutzermodus-Ablaufverfolgung) löschen. 
+
+Methode      | Anforderungs-URI
+:------     | :-----
+DELETE | /api/wpr/tracefile
+<br />
+
+**URI-Parameter**
+
+Im Anforderungs-URI kann der folgende zusätzliche Parameter angegeben werden:
+
+URI-Parameter | Beschreibung
+:---          | :---
+filename   | (**erforderlich**) Der Name der zu löschenden ETL-Ablaufverfolgung.  Diese befinden sich unter „/api/wpr/tracefiles“.
+
+**Anforderungsheader**
+
+- Keine
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+
+- Gibt die ETL-Ablaufverfolgungsdatei zurück.
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes.
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK
+4XX | Fehlercodes
+5XX | Fehlercodes
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
+* Windows-Desktop
+* HoloLens
+* IoT
+
+---
 ## DNS-SD-Tags 
 ---
 ### Anzeigen von Tags
@@ -2759,7 +2971,8 @@ GET | /api/dns-sd/tags
 
 - Keiner
 
-**Antwort** Die derzeit angewendeten Tags im folgenden Format. 
+
+              **Antwort** Die derzeit angewendeten Tags im folgenden Format: 
 ```
  {
     "tags": [
@@ -2952,7 +3165,8 @@ GET | /api/filesystem/apps/knownfolders
 
 - Keiner
 
-**Antwort** Die verfügbaren Ordner in folgendem Format: 
+
+              **Antwort** Die verfügbaren Ordner im folgenden Format: 
 ```
  {"KnownFolders": [
     "folder0",
@@ -3006,7 +3220,8 @@ path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder P
 
 - Keiner
 
-**Antwort** Die verfügbaren Ordner in folgendem Format: 
+
+              **Antwort** Die verfügbaren Ordner im folgenden Format: 
 ```
 {"Items": [
     {
@@ -3039,11 +3254,11 @@ HTTP-Statuscode      | Beschreibung
 * IoT
 
 ---
-### Abrufen von Dateien
+### Herunterladen einer Datei
 
 **Anforderung**
 
-Abrufen einer Liste von Dateien in einem Ordner.
+Abrufen einer Datei aus einem bekannten Ordner oder aus „appLocalData“
 
 Methode      | Anforderungs-URI
 :------     | :-----
@@ -3183,6 +3398,6 @@ HTTP-Statuscode      | Beschreibung
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

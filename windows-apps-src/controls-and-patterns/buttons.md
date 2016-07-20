@@ -3,8 +3,8 @@ author: Jwmsft
 label: Buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 91399060e129df18acd38e18d98cad848667a5ad
+ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
+ms.openlocfilehash: de5af77435b34b8f28005351a7de125f211ca522
 
 ---
 # Schaltflächen
@@ -29,7 +29,7 @@ Schaltflächen sollten nicht verwendet werden, um zu anderen Seiten zu navigiere
 
 ## Beispiel
 
-In diesem Beispiel werden zwei Schaltflächen („Alle schließen“ und „Abbrechen“) in einem Dialogfeld des Microsoft Edge-Browsers verwendet. 
+In diesem Beispiel werden zwei Schaltflächen („Alle schließen“ und „Abbrechen“) in einem Dialogfeld des MicrosoftEdge-Browsers verwendet. 
 
 ![Beispiel für Schaltflächen in einem Dialogfeld](images/control-examples/buttons-edge.png)
 
@@ -71,7 +71,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 Wenn Sie mit einem Finger oder Stift auf eine Schaltfläche tippen oder mit der linken Maustaste darauf klicken, löst die Schaltfläche das [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignis aus. Bei einer Schaltfläche mit Tastaturfokus wird das Click-Ereignis auch durch Drücken der Eingabe- oder Leertaste ausgelöst.
 
-Sie können für Schaltflächen generell keine [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx)-Ereignisse auf niedriger Ebene verarbeiten, da diese stattdessen mit dem Click-Verhalten konfiguriert sind. Weitere Informationen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/en-us/library/windows/apps/mt185584.aspx).
+Sie können für Schaltflächen generell keine [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx)-Ereignisse auf niedriger Ebene verarbeiten, da diese stattdessen mit dem Click-Verhalten konfiguriert sind. Weitere Informationen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx).
 
 Sie können durch Ändern der [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx)-Eigenschaft festlegen, wie eine Schaltfläche das Click-Ereignis auslöst. Der ClickMode-Standardwert lautet **Release**. Wenn als ClickMode-Wert **Hover** festgelegt ist, kann das Click-Event nicht über die Tastatur oder durch Berührung ausgelöst werden. 
 
@@ -100,8 +100,7 @@ Die Schaltfläche sieht wie folgt aus.
 
 ## Erstellen einer Wiederholungsschaltfläche
 
-[
-            **RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx) ist eine Schaltfläche, die [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignisse auslöst, die andauern, solange die Schaltfläche betätigt wird. Legen Sie mit der [**Delay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.delay.aspx)-Eigenschaft fest, wie lange „RepeatButton“ nach dem Betätigen der Schaltfläche wartet, bis die Klickaktion wiederholt wird. Legen Sie mit der [**Interval**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.interval.aspx)-Eigenschaft das Intervall zwischen Wiederholungen der Klickaktion fest. Die Zeiten beider Eigenschaften werden in Millisekunden angegeben.
+[**RepeatButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx) ist eine Schaltfläche, die [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignisse auslöst, die andauern, solange die Schaltfläche betätigt wird. Legen Sie mit der [**Delay**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.delay.aspx)-Eigenschaft fest, wie lange „RepeatButton“ nach dem Betätigen der Schaltfläche wartet, bis die Klickaktion wiederholt wird. Legen Sie mit der [**Interval**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.interval.aspx)-Eigenschaft das Intervall zwischen Wiederholungen der Klickaktion fest. Die Zeiten beider Eigenschaften werden in Millisekunden angegeben.
 
 Das folgende Beispiel zeigt zwei „RepeatButton“-Steuerelemente. Ihre jeweiligen Click-Ereignisse dienen dazu, den Wert in einem Textblock zu erhöhen oder zu verringern.
 
@@ -146,7 +145,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   Stellen Sie sicher, dass sich, sobald der Benutzer eine Schaltfläche betätigt, der Status und das Erscheinungsbild der Schaltfläche ändern, um dem Benutzer ein Rückmeldung zu geben. „Normal“, „pressed“ und „disabled“ sind Beispiele von Schaltflächenstatus.
 -   Lösen Sie die Aktion der Schaltfläche aus, wenn der Benutzer auf die Schaltfläche tippt oder drückt. Die Aktion wird für gewöhnlich ausgelöst, wenn der Benutzer die Schaltfläche loslässt. Sie können aber auch festlegen, dass die Aktion einer Schaltfläche durch Berühren mit dem Finger ausgelöst wird.
 -   Verwenden Sie keine Befehlsschaltfläche zum Festlegen des Status.
--   Ändern Sie den Schaltflächentext nicht, während die App ausgeführt wird (z. B. den Text einer Schaltfläche „Weiter” in „Fortsetzen”).
+-   Ändern Sie den Schaltflächentext nicht, während die App ausgeführt wird (z.B. den Text einer Schaltfläche „Weiter” in „Fortsetzen”).
 -   Tauschen Sie nicht die standardmäßigen Stile „submit“, „reset“ und „button“.
 -   Überfrachten Sie eine Schaltfläche nicht mit Inhalt. Inhalte von Steuerelementen sollten kurz und prägnant sein (nicht mehr als ein Bild und ein kurzer Text).
 
@@ -205,7 +204,8 @@ Surface Hub ![Zurück-Funktion des Systems auf einem Surface Hub](images/nav-bac
 
     Der In-App-Seitennavigationsverlauf wird beibehalten, die Rückwärtsnavigation von App zu App wird nicht unterstützt.
 
-    **Hinweis**  Im Tablet-Modus wird die Titelleiste angezeigt, wenn ein Benutzer vom oberen Rand des Geräts nach unten wischt oder den Mauszeiger an den oberen Rand des Geräts bewegt. Um eine Duplizierung und Missverständnisse zu vermeiden, wird die Zurück-Schaltfläche für die Titelleiste im Tablet-Modus nicht angezeigt.
+    
+              **Hinweis:** Im Tablet-Modus wird die Titelleiste angezeigt, wenn ein Benutzer vom oberen Rand des Geräts nach unten wischt oder den Mauszeiger an den oberen Rand des Geräts bewegt. Um eine Duplizierung und Missverständnisse zu vermeiden, wird die Zurück-Schaltfläche für die Titelleiste im Tablet-Modus nicht angezeigt.
 
      
 
@@ -230,6 +230,6 @@ Surface Hub ![Zurück-Funktion des Systems auf einem Surface Hub](images/nav-bac
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

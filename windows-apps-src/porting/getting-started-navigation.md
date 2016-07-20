@@ -11,7 +11,7 @@ ms.openlocfilehash: c542faa6365c8558988162bee12f266d67474461
 
 # Erste Schritte: Navigation
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Hinzufügen von Navigation
 
@@ -78,7 +78,8 @@ Sie können auch die [**CacheSize**](https://msdn.microsoft.com/library/windows/
 
 Weitere Informationen zur Navigation finden Sie unter [Navigation](https://msdn.microsoft.com/library/windows/apps/mt187344) und unter [XAML-Beispiel für Charakteranimationen](http://go.microsoft.com/fwlink/p/?LinkID=242401).
 
-**Hinweis**  Informationen zur Navigation für Windows Store-Apps mit JavaScript und HTML finden Sie unter [Schnellstart: Verwenden der Einzelseitennavigation](https://msdn.microsoft.com/library/windows/apps/hh452768).
+
+            **Hinweis**  Informationen zur Navigation für WindowsStore-Apps mit JavaScript und HTML finden Sie unter [Schnellstart: Verwenden der Einzelseitennavigation](https://msdn.microsoft.com/library/windows/apps/hh452768).
  
 ### Nächster Schritt
 
