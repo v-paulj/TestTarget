@@ -1,92 +1,125 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 6
+ Total Files | 8
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\accessibility\accessibility-testing.md](https://github.com/Microsoft/windows-apps/blob/6baf122491374dcaeee48440fad0af3431e39e70/windows-apps-src/accessibility/accessibility-testing.md) | OutofSyncHandedBackSuccess | [Details](#748845ac4da7805d824b22c173058a9e1c81599a9)
- [windows-apps-src\xbox-apps\wdp-folder-upload.md](https://github.com/Microsoft/windows-apps/blob/fdc25fa4bd7bd5bfa598b993f23cd0ae9783dd0e/windows-apps-src/xbox-apps/wdp-folder-upload.md) | OutofSyncHandedBackSuccess | [Details](#942ddc13b0deba382ad7758bc30bd9a5b0cceb115444)
- [windows-apps-src\xbox-apps\wdp-loose-folder-register-api.md](https://github.com/Microsoft/windows-apps/blob/ef0f1339b77a8d1f60a677b2ff19a63b68f0d6cd/windows-apps-src/xbox-apps/wdp-loose-folder-register-api.md) | OutofSyncHandedBackSuccess | [Details](#41e4cc67120b9e32fac34404ca918edcf58ba2675445)
- [windows-apps-src\xbox-apps\wdp-sandbox-api.md](https://github.com/Microsoft/windows-apps/blob/a857ba338a971e651653193ff2149f08b1665a36/windows-apps-src/xbox-apps/wdp-sandbox-api.md) | OutofSyncHandedBackSuccess | [Details](#c1671db55dcb05ab7a126fad271a5e49146fe9ac5447)
- [windows-apps-src\xbox-apps\wdp-smb-api.md](https://github.com/Microsoft/windows-apps/blob/3d76bf181baa9dfd973467d43241230fddf2daf7/windows-apps-src/xbox-apps/wdp-smb-api.md) | OutofSyncHandedBackSuccess | [Details](#5efe2af3524d97e6014c4d6be2a8f1aef22f2e665448)
- [windows-apps-src\xbox-apps\wdp-user-management.md](https://github.com/Microsoft/windows-apps/blob/67f158b1d3d5ece14c36483a2513a2db2f478660/windows-apps-src/xbox-apps/wdp-user-management.md) | OutofSyncHandedBackSuccess | [Details](#ad01d4daf089c61fc50c7927cfbf123d7d7ee4df5449)
+ [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md) | OutofSyncHandedBackSuccess | [Details](#1be32db7ead8dcd13ad97612b0a5a7a7cf4926e02309)
+ [windows-apps-src\get-started\images\helloworld-1-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-1-winjs.png) | HandedOffSuccess | [Details](#7d454561ba2ee740e60507bdff23b04034e17dae2374)
+ [windows-apps-src\get-started\images\helloworld-1-winjs-phone.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-1-winjs-phone.png) | HandedOffSuccess | [Details](#cfbebab4779647d7f1d21dc2dcfcfa0debf2be8d2373)
+ [windows-apps-src\get-started\images\helloworld-2-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-2-winjs.png) | HandedOffSuccess | [Details](#92ce4917228a76e66c938b0eeafd5312ec74a97b2378)
+ [windows-apps-src\get-started\images\helloworld-4-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-4-winjs.png) | HandedOffSuccess | [Details](#b9e05771e8b326c5ff77e09a486704dca06b54d82382)
+ [windows-apps-src\get-started\images\helloworld-5-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-5-winjs.png) | HandedOffSuccess | [Details](#fcbc93ff210aba5a4f6a6575272efee9a37e18082385)
+ [windows-apps-src\get-started\images\winjs-tut-helloworld.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/winjs-tut-helloworld.png) | HandedOffSuccess | [Details](#a9cab92f705faf0677e5dec0dedb45a5aa59e14f2584)
+ [windows-apps-src\get-started\images\winjs-tut-newproject.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/winjs-tut-newproject.png) | HandedOffSuccess | [Details](#147a0a48f77c0a5679dff07cf8927969806165c82585)
 
 ## Item Details
-##### <a name='748845ac4da7805d824b22c173058a9e1c81599a9'></a> Source: [windows-apps-src\accessibility\accessibility-testing.md](https://github.com/Microsoft/windows-apps/blob/6baf122491374dcaeee48440fad0af3431e39e70/windows-apps-src/accessibility/accessibility-testing.md)
+##### <a name='1be32db7ead8dcd13ad97612b0a5a7a7cf4926e02309'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [accessibility-testing.19ca6daf735ac109c169a1cf5bceb7a3d0765571.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/bea9426e73f2bf76f6830b0c2462bf3673abcb11/ol-handoff/Microsoft/windows-apps.de-de/master/accessibility-testing.19ca6daf735ac109c169a1cf5bceb7a3d0765571.de-de.xlf)
-* Handoff Datetime: 2016-07-20 22:59:04
+* Handoff File: [create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/f8c5a27687a12450c63a461ecc21fea7546b9ae7/ol-handoff/Microsoft/windows-apps.de-de/master/create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.de-de.xlf)
+* Handoff Datetime: 2016-07-21 00:01:18
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\accessibility\accessibility-testing.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/accessibility/accessibility-testing.md)
-* Current Handback File: [accessibility-testing.19ca6daf735ac109c169a1cf5bceb7a3d0765571.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/accessibility-testing.19ca6daf735ac109c169a1cf5bceb7a3d0765571.de-de.xlf)
-* Current Handback Datetime: 2016-07-06 16:08:36
+* Current Target File: [windows-apps-src\get-started\create-a-hello-world-app-js-universal.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/get-started/create-a-hello-world-app-js-universal.md)
+* Current Handback File: [create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/create-a-hello-world-app-js-universal.2d56a0012bf9cca72899334ef9aa7ec422ac9663.de-de.xlf)
+* Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
-##### <a name='942ddc13b0deba382ad7758bc30bd9a5b0cceb115444'></a> Source: [windows-apps-src\xbox-apps\wdp-folder-upload.md](https://github.com/Microsoft/windows-apps/blob/fdc25fa4bd7bd5bfa598b993f23cd0ae9783dd0e/windows-apps-src/xbox-apps/wdp-folder-upload.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [windows-apps-src\xbox-apps\wdp-folder-upload.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/xbox-apps/wdp-folder-upload.md)
-* Handoff File: [wdp-folder-upload.5a958b060417513b6f150d690e497269027b45f4.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/bea9426e73f2bf76f6830b0c2462bf3673abcb11/ol-handoff/Microsoft/windows-apps.de-de/master/wdp-folder-upload.5a958b060417513b6f150d690e497269027b45f4.de-de.xlf)
-* Handoff Datetime: 2016-07-20 22:59:04
-* Handoff Reason: Include
+##### <a name='7d454561ba2ee740e60507bdff23b04034e17dae2374'></a> Source: [windows-apps-src\get-started\images\helloworld-1-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-1-winjs.png)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [7d454561ba2ee740e60507bdff23b04034e17dae.png](https://github.com/Microsoft/WDG.handoff/blob/f8c5a27687a12450c63a461ecc21fea7546b9ae7/ol-handoff/Microsoft/windows-apps.de-de/master/7d454561ba2ee740e60507bdff23b04034e17dae.png)
+* Handoff Datetime: 2016-07-21 00:01:18
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [wdp-folder-upload.5a958b060417513b6f150d690e497269027b45f4.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/wdp-folder-upload.5a958b060417513b6f150d690e497269027b45f4.de-de.xlf)
-* Handback Datetime: 2016-07-20 16:33:49
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='41e4cc67120b9e32fac34404ca918edcf58ba2675445'></a> Source: [windows-apps-src\xbox-apps\wdp-loose-folder-register-api.md](https://github.com/Microsoft/windows-apps/blob/ef0f1339b77a8d1f60a677b2ff19a63b68f0d6cd/windows-apps-src/xbox-apps/wdp-loose-folder-register-api.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [windows-apps-src\xbox-apps\wdp-loose-folder-register-api.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/xbox-apps/wdp-loose-folder-register-api.md)
-* Handoff File: [wdp-loose-folder-register-api.d46e763622e143cf7d74c4be06d7707057bc2134.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/bea9426e73f2bf76f6830b0c2462bf3673abcb11/ol-handoff/Microsoft/windows-apps.de-de/master/wdp-loose-folder-register-api.d46e763622e143cf7d74c4be06d7707057bc2134.de-de.xlf)
-* Handoff Datetime: 2016-07-20 22:59:04
-* Handoff Reason: Include
+##### <a name='cfbebab4779647d7f1d21dc2dcfcfa0debf2be8d2373'></a> Source: [windows-apps-src\get-started\images\helloworld-1-winjs-phone.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-1-winjs-phone.png)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [cfbebab4779647d7f1d21dc2dcfcfa0debf2be8d.png](https://github.com/Microsoft/WDG.handoff/blob/f8c5a27687a12450c63a461ecc21fea7546b9ae7/ol-handoff/Microsoft/windows-apps.de-de/master/cfbebab4779647d7f1d21dc2dcfcfa0debf2be8d.png)
+* Handoff Datetime: 2016-07-21 00:01:18
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [wdp-loose-folder-register-api.d46e763622e143cf7d74c4be06d7707057bc2134.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/wdp-loose-folder-register-api.d46e763622e143cf7d74c4be06d7707057bc2134.de-de.xlf)
-* Handback Datetime: 2016-07-20 16:33:49
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c1671db55dcb05ab7a126fad271a5e49146fe9ac5447'></a> Source: [windows-apps-src\xbox-apps\wdp-sandbox-api.md](https://github.com/Microsoft/windows-apps/blob/a857ba338a971e651653193ff2149f08b1665a36/windows-apps-src/xbox-apps/wdp-sandbox-api.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [windows-apps-src\xbox-apps\wdp-sandbox-api.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/xbox-apps/wdp-sandbox-api.md)
-* Handoff File: [wdp-sandbox-api.a29c98e0aa057cb09485d178ec8bbfe0fe4a3994.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/bea9426e73f2bf76f6830b0c2462bf3673abcb11/ol-handoff/Microsoft/windows-apps.de-de/master/wdp-sandbox-api.a29c98e0aa057cb09485d178ec8bbfe0fe4a3994.de-de.xlf)
-* Handoff Datetime: 2016-07-20 22:59:04
-* Handoff Reason: Include
+##### <a name='92ce4917228a76e66c938b0eeafd5312ec74a97b2378'></a> Source: [windows-apps-src\get-started\images\helloworld-2-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-2-winjs.png)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [92ce4917228a76e66c938b0eeafd5312ec74a97b.png](https://github.com/Microsoft/WDG.handoff/blob/f8c5a27687a12450c63a461ecc21fea7546b9ae7/ol-handoff/Microsoft/windows-apps.de-de/master/92ce4917228a76e66c938b0eeafd5312ec74a97b.png)
+* Handoff Datetime: 2016-07-21 00:01:18
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [wdp-sandbox-api.a29c98e0aa057cb09485d178ec8bbfe0fe4a3994.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/wdp-sandbox-api.a29c98e0aa057cb09485d178ec8bbfe0fe4a3994.de-de.xlf)
-* Handback Datetime: 2016-07-20 16:33:49
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='5efe2af3524d97e6014c4d6be2a8f1aef22f2e665448'></a> Source: [windows-apps-src\xbox-apps\wdp-smb-api.md](https://github.com/Microsoft/windows-apps/blob/3d76bf181baa9dfd973467d43241230fddf2daf7/windows-apps-src/xbox-apps/wdp-smb-api.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [windows-apps-src\xbox-apps\wdp-smb-api.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/xbox-apps/wdp-smb-api.md)
-* Handoff File: [wdp-smb-api.08bc95b72815e67bdb9cf7c3ad75d1a63d9cbca2.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/bea9426e73f2bf76f6830b0c2462bf3673abcb11/ol-handoff/Microsoft/windows-apps.de-de/master/wdp-smb-api.08bc95b72815e67bdb9cf7c3ad75d1a63d9cbca2.de-de.xlf)
-* Handoff Datetime: 2016-07-20 22:59:04
-* Handoff Reason: Include
+##### <a name='b9e05771e8b326c5ff77e09a486704dca06b54d82382'></a> Source: [windows-apps-src\get-started\images\helloworld-4-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-4-winjs.png)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [b9e05771e8b326c5ff77e09a486704dca06b54d8.png](https://github.com/Microsoft/WDG.handoff/blob/f8c5a27687a12450c63a461ecc21fea7546b9ae7/ol-handoff/Microsoft/windows-apps.de-de/master/b9e05771e8b326c5ff77e09a486704dca06b54d8.png)
+* Handoff Datetime: 2016-07-21 00:01:18
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [wdp-smb-api.08bc95b72815e67bdb9cf7c3ad75d1a63d9cbca2.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/wdp-smb-api.08bc95b72815e67bdb9cf7c3ad75d1a63d9cbca2.de-de.xlf)
-* Handback Datetime: 2016-07-20 16:33:49
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ad01d4daf089c61fc50c7927cfbf123d7d7ee4df5449'></a> Source: [windows-apps-src\xbox-apps\wdp-user-management.md](https://github.com/Microsoft/windows-apps/blob/67f158b1d3d5ece14c36483a2513a2db2f478660/windows-apps-src/xbox-apps/wdp-user-management.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [windows-apps-src\xbox-apps\wdp-user-management.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/xbox-apps/wdp-user-management.md)
-* Handoff File: [wdp-user-management.15fe408141746fcb5f48a4210dc6edd7bfcb55f1.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/bea9426e73f2bf76f6830b0c2462bf3673abcb11/ol-handoff/Microsoft/windows-apps.de-de/master/wdp-user-management.15fe408141746fcb5f48a4210dc6edd7bfcb55f1.de-de.xlf)
-* Handoff Datetime: 2016-07-20 22:59:04
-* Handoff Reason: Include
+##### <a name='fcbc93ff210aba5a4f6a6575272efee9a37e18082385'></a> Source: [windows-apps-src\get-started\images\helloworld-5-winjs.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/helloworld-5-winjs.png)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [fcbc93ff210aba5a4f6a6575272efee9a37e1808.png](https://github.com/Microsoft/WDG.handoff/blob/f8c5a27687a12450c63a461ecc21fea7546b9ae7/ol-handoff/Microsoft/windows-apps.de-de/master/fcbc93ff210aba5a4f6a6575272efee9a37e1808.png)
+* Handoff Datetime: 2016-07-21 00:01:18
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [wdp-user-management.15fe408141746fcb5f48a4210dc6edd7bfcb55f1.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/wdp-user-management.15fe408141746fcb5f48a4210dc6edd7bfcb55f1.de-de.xlf)
-* Handback Datetime: 2016-07-20 16:33:49
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='a9cab92f705faf0677e5dec0dedb45a5aa59e14f2584'></a> Source: [windows-apps-src\get-started\images\winjs-tut-helloworld.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/winjs-tut-helloworld.png)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [a9cab92f705faf0677e5dec0dedb45a5aa59e14f.png](https://github.com/Microsoft/WDG.handoff/blob/f8c5a27687a12450c63a461ecc21fea7546b9ae7/ol-handoff/Microsoft/windows-apps.de-de/master/a9cab92f705faf0677e5dec0dedb45a5aa59e14f.png)
+* Handoff Datetime: 2016-07-21 00:01:18
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='147a0a48f77c0a5679dff07cf8927969806165c82585'></a> Source: [windows-apps-src\get-started\images\winjs-tut-newproject.png](https://github.com/Microsoft/windows-apps/blob/e02616b3d272316cd8f3218955b2573b1916ec11/windows-apps-src/get-started/images/winjs-tut-newproject.png)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [147a0a48f77c0a5679dff07cf8927969806165c8.png](https://github.com/Microsoft/WDG.handoff/blob/f8c5a27687a12450c63a461ecc21fea7546b9ae7/ol-handoff/Microsoft/windows-apps.de-de/master/147a0a48f77c0a5679dff07cf8927969806165c8.png)
+* Handoff Datetime: 2016-07-21 00:01:18
+* Handoff Reason: IsDependency
+* Dependency From: windows-apps-src\get-started\create-a-hello-world-app-js-universal.md
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 
