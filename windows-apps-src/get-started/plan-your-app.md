@@ -1,13 +1,17 @@
 ---
 author: martinekuan
-title: Planen einer App für die Universelle Windows-Plattform (UWP)
-description: Die Microsoft-Designteams unterteilen den Prozess der App-Erstellung in fünf einzelne Phasen: Konzept, Struktur, Dynamik, Darstellung und Prototyp. Wir möchten Sie dazu ermutigen, einen ähnlichen Prozess anzuwenden, um der Welt neue und ansprechende Erfahrungen zu vermitteln.
+title: "Planen einer App für die Universelle Windows-Plattform (UWP)"
+description: "Die Microsoft-Designteams unterteilen den Prozess der App-Erstellung in fünf einzelne Phasen - Konzept, Struktur, Dynamik, Darstellung und Prototyp. Wir möchten Sie dazu ermutigen, einen ähnlichen Prozess anzuwenden, um der Welt neue und ansprechende Erfahrungen zu vermitteln."
 ms.assetid: 9A5189CD-3B97-4967-8E7D-36D25F04F244
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: 9a3058aabdc6f710149a14d8f125b66efd076007
+
 ---
 
 #  Planen einer App für die Universelle Windows-Plattform (UWP)
 
-Die Microsoft-Designteams unterteilen den Prozess der App-Erstellung in fünf einzelne Phasen: Konzept, Struktur, Dynamik, Darstellung und Prototyp. Wir möchten Sie dazu ermutigen, einen ähnlichen Prozess anzuwenden, um der Welt neue und ansprechende Erfahrungen zu vermitteln.
+Die Microsoft-Designteams unterteilen den Prozess der App-Erstellung in fünf einzelne Phasen - Konzept, Struktur, Dynamik, Darstellung und Prototyp. Wir möchten Sie dazu ermutigen, einen ähnlichen Prozess anzuwenden, um der Welt neue und ansprechende Erfahrungen zu vermitteln.
 
 ## Konzept
 
@@ -46,7 +50,8 @@ Dies sind die besonderen Stärken der App. Sie können bei der Entscheidungsfind
 
 Wenn Ihnen eine Idee gefällt, ist es sehr verlockend, sofort mit der Entwicklung zu beginnen und sogar schon die Produktion anzustreben. Es kann jedoch sein, dass Sie dies tun und Ihnen später eine andere interessante Idee einfällt. Dann ist die Wahrscheinlichkeit hoch, dass sie bei der Idee bleiben, in die Sie bereits investiert haben – unabhängig davon, welche relativen Vorteile die beiden Ideen jeweils bieten. Wenn Ihnen die zweite Idee nur zu einem früheren Zeitpunkt des Prozesses eingefallen wäre! Der so genannte "Designtrichter" ist ein Verfahren, das Sie dabei unterstützt, die besten Ideen so früh wie möglich zu entwickeln.
 
-Der Ausdruck "Trichter" beruht auf der Form. Am breiten Ende des Trichters werden viele Ideen hineingefüllt, und jede Idee wird nur als grobes Designartefakt festgehalten (ggf. in Form einer Skizze oder als Textabsatz). Wenn sich diese Ideensammlung dann in Richtung des schmalen Endes des Trichters bewegt, wird die Anzahl von Ideen reduziert, während Qualität und Umfang der Artefakte zu den Ideen sich erhöhen. Für jedes Artefakt sollten nur die Informationen erfasst werden, die zum Vergleichen der Ideen oder zum Beantworten einer bestimmten Frage wie „Ist dies benutzerfreundlich oder intuitiv?“ erforderlich sind. *Investieren Sie dafür weder weitere Zeit noch Arbeit*. Einige Ideen fallen beim Testen heraus, was kein Problem ist, weil Sie lediglich den Aufwand investiert haben, der zum Einschätzen der Idee nötig war. Ideen, die sich für den weiteren Weg durch den Trichter qualifizieren, werden nach und nach eingehender behandelt. Am Ende steht ein einzelnes Designartefakt, das die Idee repräsentiert, die als Gewinner aus dem Prozess hervorgegangen ist. Die Idee hat gewonnen, weil sie mit den meisten Vorteilen verbunden ist, und nicht nur, weil sie Ihnen zuerst eingefallen ist. So entwerfen Sie die bestmögliche App.
+Der Ausdruck "Trichter" beruht auf der Form. Am breiten Ende des Trichters werden viele Ideen hineingefüllt, und jede Idee wird nur als grobes Designartefakt festgehalten (ggf. in Form einer Skizze oder als Textabsatz). Wenn sich diese Ideensammlung dann in Richtung des schmalen Endes des Trichters bewegt, wird die Anzahl von Ideen reduziert, während Qualität und Umfang der Artefakte zu den Ideen sich erhöhen. Für jedes Artefakt sollten nur die Informationen erfasst werden, die zum Vergleichen der Ideen oder zum Beantworten einer bestimmten Frage wie „Ist dies benutzerfreundlich oder intuitiv?“ erforderlich sind. 
+            *Investieren Sie dafür weder weitere Zeit noch Arbeit*. Einige Ideen fallen beim Testen heraus, was kein Problem ist, weil Sie lediglich den Aufwand investiert haben, der zum Einschätzen der Idee nötig war. Ideen, die sich für den weiteren Weg durch den Trichter qualifizieren, werden nach und nach eingehender behandelt. Am Ende steht ein einzelnes Designartefakt, das die Idee repräsentiert, die als Gewinner aus dem Prozess hervorgegangen ist. Die Idee hat gewonnen, weil sie mit den meisten Vorteilen verbunden ist, und nicht nur, weil sie Ihnen zuerst eingefallen ist. So entwerfen Sie die bestmögliche App.
 
 ## Struktur
 
@@ -114,48 +119,66 @@ Allgemeine Methoden:
 -   Assoziationsdiagramme: Verbinden Sie Ihre Flüsse mit Features.
 -   Prototyp: Testen Sie die Features, um sicherzustellen, dass sie wie gewünscht funktionieren.
 
-**App-Verträge**  Ihre App kann an App-Verträgen teilnehmen, die umfassende, App- und funktionsübergreifende Benutzerflüsse ermöglichen.
 
--   **Teilen**  Ermöglichen Sie Benutzern das Teilen von App-Inhalten mit Freunden über andere Apps sowie das Empfangen freigabefähiger Inhalte von anderen Benutzern und Apps.
--   **Wiedergeben auf**  Ermöglichen Sie Benutzern das Streamen von Audio, Video und Bildern von Ihrer App auf andere Geräte im Heimnetzwerk.
--   **Dateiauswahl und Dateiauswahlerweiterungen**   Ermöglichen Sie Benutzern das Laden und Speichern ihrer Dateien im lokalen Dateisystem, auf angeschlossenen Speichergeräten, in Heimnetzgruppen und sogar in anderen Apps. Außerdem können Sie eine Dateiauswahlerweiterung bereitstellen, sodass andere Apps den Inhalt Ihrer App laden können.
+            **App-Verträge**  Ihre App kann an App-Verträgen teilnehmen, die umfassende, App- und funktionsübergreifende Benutzerflüsse ermöglichen.
+
+-   
+            **Teilen**  Ermöglichen Sie Benutzern das Teilen von App-Inhalten mit Freunden über andere Apps sowie das Empfangen freigabefähiger Inhalte von anderen Benutzern und Apps.
+-   
+            **Wiedergeben auf**  Ermöglichen Sie Benutzern das Streamen von Audio, Video und Bildern von Ihrer App auf andere Geräte im Heimnetzwerk.
+-   
+            **Dateiauswahl und Dateiauswahlerweiterungen**   Ermöglichen Sie Benutzern das Laden und Speichern ihrer Dateien im lokalen Dateisystem, auf angeschlossenen Speichergeräten, in Heimnetzgruppen und sogar in anderen Apps. Außerdem können Sie eine Dateiauswahlerweiterung bereitstellen, sodass andere Apps den Inhalt Ihrer App laden können.
 
 Weitere Informationen finden Sie unter [App-Verträge und Erweiterungen](https://msdn.microsoft.com/library/windows/apps/hh464906).
 <!-- Win 8 page. Should have replacement. -->
 
-**Verschiedene Ansichten, Formfaktoren und Hardwarekonfigurationen**  Windows überlässt die Kontrolle dem Benutzer und rückt die App in den Vordergrund. Ihre App-UI soll auf jedem Gerät, mit jeder Eingabemethode, in jeder Ausrichtung, mit allen Hardwarekonfigurationen und unter allen Umständen überzeugen.
 
-**Toucheingabe**  Windows bietet eine einzigartige und charakteristische Toucheingabe, die mehr kann, als nur die Funktionen einer Maus zu emulieren.
+            **Verschiedene Ansichten, Formfaktoren und Hardwarekonfigurationen**  Windows überlässt die Kontrolle dem Benutzer und rückt die App in den Vordergrund. Ihre App-UI soll auf jedem Gerät, mit jeder Eingabemethode, in jeder Ausrichtung, mit allen Hardwarekonfigurationen und unter allen Umständen überzeugen.
+
+
+            **Toucheingabe**  Windows bietet eine einzigartige und charakteristische Toucheingabe, die mehr kann, als nur die Funktionen einer Maus zu emulieren.
 
 Der semantische Zoom beispielsweise stellt eine für Touchscreens optimierte Methode zum Navigieren in umfangreichen Inhalten dar. Benutzer können Inhaltskategorien schwenken oder einen Bildlauf darin durchführen und dann Kategorien vergrößern, um weitere ausführlichere Informationen anzuzeigen. Damit können Sie Ihre Inhalte auf besser fühlbare, bildlichere und aussagekräftigere Art und Weise darstellen als mit traditionellen Navigations- und Layoutmustern wie Registerkarten.
 
 Selbstverständlich können Sie eine Reihe von Interaktionen für Touchscreens wie Drehen, Schwenken, Wischen usw. nutzen. Erfahren Sie mehr über [Toucheingaben und andere Benutzerinteraktionen](../input-and-devices/input-primer.md).
 
-**Interessant und aktuell**  Mit dem folgenden Standardverhalten stellen Sie sicher, dass Ihre App interessant ist und die Aufmerksamkeit der Benutzer erregt:
 
--   **Animationen**  Verwenden Sie Animationen aus unserer Bibliothek, um Benutzern eine schnelle und fließende App-Bedienung zu ermöglichen. Helfen Sie Benutzern dabei, Kontextänderungen zu verstehen, und verbinden Sie Interaktionen mit visuellen Übergängen. Weitere Informationen zum [Animieren der UI](../graphics/animations-overview.md).
--   **Popupbenachrichtigungen**  Erinnern Sie Benutzer mithilfe von Popupbenachrichtigungen an Termine oder persönlich relevante Inhalte. Sie können sie damit auch zur Verwendung der App animieren, selbst wenn diese geschlossen ist. Weitere Informationen zu [Kacheln, Infoanzeigen und Popupbenachrichtigungen](../controls-and-patterns/tiles-badges-notifications.md).
--   **App-Kacheln**  Stellen Sie aktuelle und relevante Updates bereit, damit Benutzer Ihre App erneut aufrufen. Weitere Informationen hierzu erhalten Sie im nächsten Abschnitt. Weitere Informationen finden Sie unter [App-Kacheln](../controls-and-patterns/tiles-and-notifications-creating-tiles.md).
+            **Interessant und aktuell**  Mit dem folgenden Standardverhalten stellen Sie sicher, dass Ihre App interessant ist und die Aufmerksamkeit der Benutzer erregt:
+
+-   
+            **Animationen**  Verwenden Sie Animationen aus unserer Bibliothek, um Benutzern eine schnelle und fließende App-Bedienung zu ermöglichen. Helfen Sie Benutzern, Kontextänderungen zu verstehen, und verbinden Sie Interaktionen mit visuellen Übergängen. Weitere Informationen zum [Animieren der UI](../graphics/animations-overview.md).
+-   
+            **Popupbenachrichtigungen**  Erinnern Sie Benutzer mithilfe von Popupbenachrichtigungen an Termine oder persönlich relevante Inhalte. Sie können sie damit auch zur Verwendung der App animieren, selbst wenn diese geschlossen ist. Weitere Informationen zu [Kacheln, Infoanzeigen und Popupbenachrichtigungen](../controls-and-patterns/tiles-badges-notifications.md).
+-   
+            **App-Kacheln**  Stellen Sie aktuelle und relevante Updates bereit, damit Benutzer Ihre App erneut aufrufen. Weitere Informationen hierzu erhalten Sie im nächsten Abschnitt. Weitere Informationen finden Sie unter [App-Kacheln](../controls-and-patterns/tiles-and-notifications-creating-tiles.md).
 
 **Personalisierung**
 
--   **Einstellungen**  Ermöglichen Sie es den Benutzern, die App durch Speichern von Einstellungen an ihre Anforderungen anzupassen. Fassen Sie alle Einstellungen der App auf einem Bildschirm zusammen, und ermöglichen Sie Benutzern die Konfiguration der App mithilfe gängiger Methoden. Weitere Informationen zum [Hinzufügen von App-Einstellungen](../app-settings/app-settings-and-data.md).
--   **Roamingbetrieb**  Sorgen Sie mittels Datenroaming für eine konsistente geräteübergreifende Umgebung, sodass Benutzer Aufgaben in ihrer bevorzugten Umgebung an der Stelle fortsetzen können, an der sie diese unterbrochen haben – und zwar unabhängig vom jeweils verwendeten Gerät. Erleichtern Sie Benutzern die Nutzung Ihrer App auf allen Geräten, z. B. auf dem Familien-PC im Wohnzimmer, dem Arbeits-PC und auf dem eigenen Tablet und anderen Formfaktoren. Einstellungen und App-Status werden mittels Roaming beibehalten. Weitere Informationen finden Sie unter [Verwalten von App-Daten](../app-settings/store-and-retrieve-app-data.md) und [Richtlinien für das Roaming von Anwendungsdaten](https://msdn.microsoft.com/library/windows/apps/hh465094).
--   **Benutzerkacheln**   Gestalten Sie die App für Benutzer persönlicher, indem Sie deren Benutzerkachelbild laden. Sie können ihnen auch die Möglichkeit bieten, Inhalte aus der App als persönliche Kachel in Windows festzulegen.
+-   
+            **Einstellungen**  Ermöglichen Sie es den Benutzern, die App durch Speichern von Einstellungen an ihre Anforderungen anzupassen. Fassen Sie alle Einstellungen der App auf einem Bildschirm zusammen, und ermöglichen Sie Benutzern die Konfiguration der App mithilfe gängiger Methoden. Weitere Informationen zum [Hinzufügen von App-Einstellungen](../app-settings/app-settings-and-data.md).
+-   
+            **Roamingbetrieb**  Sorgen Sie mittels Datenroaming für eine konsistente geräteübergreifende Umgebung, sodass Benutzer Aufgaben in ihrer bevorzugten Umgebung an der Stelle fortsetzen können, an der sie diese unterbrochen haben – und zwar unabhängig vom jeweils verwendeten Gerät. Erleichtern Sie Benutzern die Nutzung Ihrer App auf allen Geräten, z. B. auf dem Familien-PC im Wohnzimmer, dem Arbeits-PC und auf dem eigenen Tablet und anderen Formfaktoren. Einstellungen und App-Status werden mittels Roaming beibehalten. Weitere Informationen finden Sie unter [Verwalten von App-Daten](../app-settings/store-and-retrieve-app-data.md) und [Richtlinien für das Roaming von Anwendungsdaten](https://msdn.microsoft.com/library/windows/apps/hh465094).
+-   
+            **Benutzerkacheln**   Gestalten Sie die App für Benutzer persönlicher, indem Sie deren Benutzerkachelbild laden. Sie können ihnen auch die Möglichkeit bieten, Inhalte aus der App als persönliche Kachel in Windows festzulegen.
 
-**Gerätefunktionen**  Stellen Sie sicher, dass Ihre App in vollem Umfang von den Funktionen moderner Geräte profitiert.
 
--   **Näherungsgesten**  Ermöglichen Sie, dass ein Benutzer mit seinem Gerät eine Verbindung mit Geräten anderer Benutzer herstellt, die physisch in der Nähe sind, indem er mit seinem Gerät die Geräte der anderen Benutzer berührt (beispielsweise für Multiplayer-Spiele). Weitere Informationen hierzu finden Sie unter [Näherung und Kopplung](https://msdn.microsoft.com/library/windows/apps/hh465229).
--   **Kameras und externe Speichergeräte**  Sorgen Sie für Verbindungen zwischen den Benutzer und ihren integrierten oder angeschlossenen Kameras, damit sie chatten, Konferenzen durchführen, Vlogs oder Profilbilder aufnehmen, die Welt um sich herum dokumentieren oder sonstige Aktivitäten ausführen können, für die Ihre App geeignet ist. Weitere Informationen zum [Zugreifen auf Inhalte auf Wechselspeichermedien](https://msdn.microsoft.com/library/windows/apps/hh465189).
--   **Beschleunigungssensoren und andere Sensoren**     Heutzutage sind Geräte mit einer Reihe von Sensoren ausgestattet. Ihre App kann die Bildschirmhelligkeit basierend auf der Umgebungshelligkeit erhöhen oder verringern, die UI bei Drehung des Bildschirms anpassen oder auf physische Bewegungen reagieren. Weitere Informationen zu [Sensoren](../devices-sensors/sensors.md).
--   **Geolocation**  Verwenden Sie Standortinformationen in Standardwebdaten oder von Standortsensoren, damit Benutzer sich besser zurechtfinden, ihre Position auf einer Karte ermitteln oder Benachrichtigungen über Personen, Aktivitäten und Zielorte in der Nähe erhalten können. Weitere Informationen zum [geografischen Standort](https://msdn.microsoft.com/library/windows/apps/hh465139).
+            **Gerätefunktionen**  Stellen Sie sicher, dass Ihre App in vollem Umfang von den Funktionen moderner Geräte profitiert.
+
+-   
+            **Näherungsgesten**  Ermöglichen Sie, dass ein Benutzer mit seinem Gerät eine Verbindung mit Geräten anderer Benutzer herstellt, die physisch in der Nähe sind, indem er mit seinem Gerät die Geräte der anderen Benutzer berührt (beispielsweise für Multiplayer-Spiele). Weitere Informationen hierzu finden Sie unter [Näherung und Kopplung](https://msdn.microsoft.com/library/windows/apps/hh465229).
+-   
+            **Kameras und externe Speichergeräte**  Sorgen Sie für Verbindungen zwischen den Benutzer und ihren integrierten oder angeschlossenen Kameras, damit sie chatten, Konferenzen durchführen, Vlogs oder Profilbilder aufnehmen, die Welt um sich herum dokumentieren oder sonstige Aktivitäten ausführen können, für die Ihre App geeignet ist. Weitere Informationen zum [Zugreifen auf Inhalte auf Wechselspeichermedien](https://msdn.microsoft.com/library/windows/apps/hh465189).
+-   
+            **Beschleunigungssensoren und andere Sensoren**     Heutzutage sind Geräte mit einer Reihe von Sensoren ausgestattet. Ihre App kann die Bildschirmhelligkeit basierend auf der Umgebungshelligkeit erhöhen oder verringern, die UI bei Drehung des Bildschirms anpassen oder auf physische Bewegungen reagieren. Weitere Informationen zu [Sensoren](../devices-sensors/sensors.md).
+-   
+            **Geolocation**  Verwenden Sie Standortinformationen in Standardwebdaten oder von Standortsensoren, damit Benutzer sich besser zurechtfinden, ihre Position auf einer Karte ermitteln oder Benachrichtigungen über Personen, Aktivitäten und Zielorte in der Nähe erhalten können. Weitere Informationen zum [geografischen Standort](https://msdn.microsoft.com/library/windows/apps/hh465139).
 
 Betrachten Sie noch einmal das Beispiel der Reise-App. Damit sich die App besonders dadurch auszeichnet, dass sie Freunde beim gemeinsamen Erstellen von Reiserouten für Gruppenreisen unterstützt, könnten Sie einige der folgenden Features nutzen:
 
 -   Teilen: Benutzer teilen anstehende Reisen und ihre Reiserouten – und damit ihre Vorfreude auf die Reise – mit Freunden und Familie in zahlreichen sozialen Netzwerken.
 -   Suchen: Benutzer suchen und finden Aktivitäten oder Reiseziele in geteilten oder öffentlichen Reiserouten anderer Benutzer, die sie in ihre eigenen Reisen einbeziehen können.
 -   Benachrichtigungen: Benutzer werden benachrichtigt, wenn andere Reisende ihre Reiserouten aktualisieren.
--   Einstellungen: Benutzer konfigurieren die App wunschgemäß, z. B. für welche Reise Benachrichtigungen angezeigt werden sollen oder welche sozialen Gruppen die Reiserouten der Benutzer durchsuchen dürfen.
+-   Einstellungen: Benutzer konfigurieren die App wunschgemäß, z.B. für welche Reise Benachrichtigungen angezeigt werden sollen oder welche sozialen Gruppen die Reiserouten der Benutzer durchsuchen dürfen.
 -   Semantischer Zoom: Benutzer navigieren im Zeitplan ihrer Reise und vergrößern Bereiche, um ausführlichere Details der langen Liste mit geplanten Aktivitäten anzuzeigen.
 -   Benutzerkacheln: Benutzer wählen das Bild aus, das angezeigt werden soll, wenn sie ihre Reise mit Freunden teilen.
 
@@ -169,7 +192,7 @@ Hier geht es darum, die Grundlagen richtig festzulegen. Sie wissen nun, wodurch 
 
 **Wie sollten UI-Inhalte organisiert werden?**   Die meisten App-Inhalte können in Gruppen oder Hierarchien gegliedert werden. Das Element, das Sie als Gruppierung auf oberster Ebene des Inhalts auswählen, sollte mit den besonderen Stärken übereinstimmen.
 
-Im Beispiel der Reise-App stehen mehrere Methoden zum Gruppieren von Reiserouten zur Verfügung. Liegt der Fokus der App auf dem Entdecken interessanter Reiseziele, können Sie diese beispielsweise basierend auf dem jeweiligen Interessengebiet gruppieren, z. B. Abenteuer, Spaß in der Sonne oder romantische Ausflüge. Da der Fokus der App jedoch auf dem Planen von Reisen mit Freunden liegt, ist es sinnvoller, Reiserouten basierend auf sozialen Kreisen (z. B. Familie, Freunde oder Arbeit) zu gliedern.
+Im Beispiel der Reise-App stehen mehrere Methoden zum Gruppieren von Reiserouten zur Verfügung. Liegt der Fokus der App auf dem Entdecken interessanter Reiseziele, können Sie diese beispielsweise basierend auf dem jeweiligen Interessengebiet gruppieren, z. B. Abenteuer, Spaß in der Sonne oder romantische Ausflüge. Da der Fokus der App jedoch auf dem Planen von Reisen mit Freunden liegt, ist es sinnvoller, Reiserouten basierend auf sozialen Kreisen (z.B. Familie, Freunde oder Arbeit) zu gliedern.
 
 Die Auswahl der Gliederung für Inhalte hilft Ihnen bei der Entscheidung, welche Seiten oder Anzeigen Ihre App benötigt. Weitere Informationen finden Sie in den UI-Grundlagen.
 
@@ -206,7 +229,7 @@ Ausführlichere Informationen zur Verwendung der unterschiedlichen Oberflächen 
 
     -   Auf der [Befehlsleiste](https://msdn.microsoft.com/library/windows/apps/hh465302): Platzieren Sie die Mehrzahl der Befehle auf der Befehlsleiste. Diese bleibt in der Regel ausgeblendet, bis der Benutzer sie durch eine Tippbewegung einblendet.
     -   Auf der App-Canvas: Befindet sich der Benutzer auf einer Seite oder in einer Ansicht mit nur einem Zweck, können Sie Befehle für diesen Zweck direkt auf der Canvas bereitstellen. Es sollte nur sehr wenige dieser Befehle geben.
-    -   In einem [Kontextmenü](https://msdn.microsoft.com/library/windows/apps/hh465308): Sie können Kontextmenüs für Zwischenablageaktionen (z. B. Ausschneiden, Kopieren und Einfügen) oder für Befehle verwenden, die auf Inhalte angewendet werden, die nicht ausgewählt werden können (z. B. Hinzufügen einer Stecknadel zu einem Standort auf einer Karte).
+    -   In einem [Kontextmenü](https://msdn.microsoft.com/library/windows/apps/hh465308): Sie können Kontextmenüs für Zwischenablageaktionen (z.B. Ausschneiden, Kopieren und Einfügen) oder für Befehle verwenden, die auf Inhalte angewendet werden, die nicht ausgewählt werden können (z.B. Hinzufügen einer Stecknadel zu einem Standort auf einer Karte).
 
 **Entscheiden Sie, welches Layout Ihre App in den einzelnen Ansichten erhält.**  Entscheiden Sie, welches Layout Ihre App in den einzelnen Ansichten erhält. Windows unterstützt Hoch- und Querformatansichten sowie das Ändern der App-Größe auf eine beliebige Breite zwischen Vollbild und Mindestbreite. Ihre App soll in jeder Größe, auf jedem Bildschirm und in jeder Ausrichtung richtig angezeigt werden und funktionieren. Dazu müssen Sie das Layout der UI-Elements für unterschiedliche Größen und Ansichten planen. In diesem Fall passt sich die App-UI einfach an die Anforderungen und Einstellungen der Benutzer an.
 
@@ -218,13 +241,17 @@ Weitere Informationen zur Berücksichtigung unterschiedlicher Bildschirmgrößen
 
 Überlegen Sie, was Benutzer denken, fühlen oder tun sollen, wenn sie Ihre App zum ersten Mal starten. Berücksichtigen Sie dabei ihre besonderen Stärken. Auch wenn Sie keine Gelegenheit dazu haben, den Benutzern persönlich mitzuteilen, wodurch sich Ihre App besonders auszeichnet, können Sie ihnen diese Botschaft vermitteln, wenn Sie einen ersten Eindruck hinterlassen. Nutzen Sie dazu Folgendes:
 
-**Kacheln und Benachrichtigungen**    Die Kachel ist das Gesicht Ihrer App. Was bewegt Benutzer dazu, unter allen anderen Apps auf dem Startbildschirm genau Ihre App zu starten? Stellen Sie sicher, dass die Kachel die Marke der App hervorhebt und zeigt, wodurch sich die App besonders auszeichnet. Nutzen Sie Kachelbenachrichtigungen, sodass Ihre App immer aktuell und relevant wirkt und Benutzer sie immer wieder aufrufen.
 
-**Begrüßungsbildschirm**  Der Begrüßungsbildschirm sollte so schnell wie möglich geladen werden und nur bis zur Initialisierung des App-Status sichtbar bleiben. Die optische Gestaltung des Begrüßungsbildschirms sollte dem Charakter Ihrer App entsprechen.
+            **Kacheln und Benachrichtigungen**    Die Kachel ist das Gesicht Ihrer App. Was bewegt Benutzer dazu, unter allen anderen Apps auf dem Startbildschirm genau Ihre App zu starten? Stellen Sie sicher, dass die Kachel die Marke der App hervorhebt und zeigt, wodurch sich die App besonders auszeichnet. Nutzen Sie Kachelbenachrichtigungen, sodass Ihre App immer aktuell und relevant wirkt und Benutzer sie immer wieder aufrufen.
 
-**Erster Start**  Was sehen Benutzer, bevor sie sich für Ihren Dienst registrieren, sich bei ihrem Konto anmelden oder eigene Inhalte hinzufügen? Demonstrieren Sie den Wert Ihrer App, bevor Sie Benutzer um Informationen bitten. Stellen Sie ggf. Beispielinhalte zum Ausprobieren für Benutzer bereit. So wird der Zweck Ihrer App verständlich, bevor Benutzer sich festlegen müssen.
 
-**Startseite**  Die Startseite ist die Seite, die nach dem Start der App angezeigt wird. Der Inhalt auf dieser Seite sollte klar definiert sein und sofort deutlich machen, wozu Ihre App dient. Heben Sie einen Bereich der App auf dieser Seite hervor, um dafür zu sorgen, dass Benutzer die restlichen Funktionen dann selbst entdecken möchten. Gestalten Sie die Startseite übersichtlich und ohne überflüssige Elemente, damit Benutzer nicht abgelenkt werden.
+            **Begrüßungsbildschirm**  Der Begrüßungsbildschirm sollte so schnell wie möglich geladen werden und nur bis zur Initialisierung des App-Status sichtbar bleiben. Die optische Gestaltung des Begrüßungsbildschirms sollte dem Charakter Ihrer App entsprechen.
+
+
+            **Erster Start**  Was sehen Benutzer, bevor sie sich für Ihren Dienst registrieren, sich bei ihrem Konto anmelden oder eigene Inhalte hinzufügen? Demonstrieren Sie den Wert Ihrer App, bevor Sie Benutzer um Informationen bitten. Stellen Sie ggf. Beispielinhalte zum Ausprobieren für Benutzer bereit. So wird der Zweck Ihrer App verständlich, bevor Benutzer sich festlegen müssen.
+
+
+            **Startseite**  Die Startseite ist die Seite, die nach dem Start der App angezeigt wird. Der Inhalt auf dieser Seite sollte klar definiert sein und sofort deutlich machen, wozu Ihre App dient. Heben Sie einen Bereich der App auf dieser Seite hervor, um dafür zu sorgen, dass Benutzer die restlichen Funktionen dann selbst entdecken möchten. Gestalten Sie die Startseite übersichtlich und ohne überflüssige Elemente, damit Benutzer nicht abgelenkt werden.
 
 ## Überprüfen des Entwurfs
 
@@ -233,6 +260,7 @@ Bevor Sie sich der Entwicklung der App widmen, sollten Sie das Design oder den P
 Mithilfe der [detaillierten UX-Richtlinien für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/hh465424) behalten Sie die wichtigen Features der App im Blick. Analysieren Sie die Leistung der einzelnen Szenarien der App mit [Visual Studio-Leistungstools](https://msdn.microsoft.com/library/windows/apps/hh696636.aspx).
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

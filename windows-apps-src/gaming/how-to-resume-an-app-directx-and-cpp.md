@@ -1,16 +1,20 @@
 ---
 author: mtoepke
-title: So wird's gemacht: Reaktivieren einer App (DirectX und C++)
-description: In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) fortsetzt.
+title: So wird's gemacht - Reaktivieren einer App (DirectX und C++)
+description: "In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die Universelle Windows-Plattform (UWP) fortsetzt."
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: d5383da7332c80d4337f0e0b3eef0a6851fcd527
+
 ---
 
-# So wird's gemacht: Reaktivieren einer App (DirectX und C++)
+# So wird's gemacht - Reaktivieren einer App (DirectX und C++)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) fortsetzt.
+In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die Universelle Windows-Plattform (UWP) fortsetzt.
 
 ## Registrieren des resuming-Ereignishandlers
 
@@ -95,6 +99,7 @@ Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum De
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

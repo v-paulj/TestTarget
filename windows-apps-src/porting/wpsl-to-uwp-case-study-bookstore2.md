@@ -1,23 +1,30 @@
 ---
 author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: Diese Fallstudie baut auf den Informationen aus Bookstore auf und beginnt mit einer Windows Phone Silverlight-App, die gruppierte Daten in einem LongListSelector-Element anzeigt.
-title: Windows Phone Silverlight zu UWP – Fallstudie: Bookstore2
+description: Diese Fallstudie baut auf den Informationen aus Bookstore auf und beginnt mit einer WindowsPhone Silverlight-App, die gruppierte Daten in einem LongListSelector-Element anzeigt.
+title: "Windows Phone Silverlight zu UWP – Fallstudie, Bookstore2"
+translationtype: Human Translation
+ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
+ms.openlocfilehash: 019f9ae1fc226c9aa1d921ce58cd2e5fa2424a2b
+
 ---
 
-# Windows Phone Silverlight zu UWP – Fallstudie: Bookstore2
+# Windows Phone Silverlight zu UWP – Fallstudie, Bookstore2
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Diese Fallstudie baut auf den Informationen aus [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) auf und beginnt mit einer Windows Phone Silverlight-App, die gruppierte Daten in einem **LongListSelector**-Element anzeigt. Im Ansichtsmodell stellt jede Instanz der **Author**-Klasse die Gruppe der vom betreffenden Autor verfassten Titel dar. In **LongListSelector** können wir dann entweder die Bücherliste nach Autoren gruppiert anzeigen oder die Liste verkleinern, um eine Sprungliste der Autoren zu erhalten. Die Sprungliste ermöglicht eine wesentlich schnellere Navigation im Vergleich zum Blättern in der Bücherliste. Wir führen Sie durch die Schritte zum Portieren der App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10.
+Diese Fallstudie baut auf den Informationen aus [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) auf und beginnt mit einer WindowsPhone Silverlight-App, die gruppierte Daten in einem **LongListSelector**-Element anzeigt. Im Ansichtsmodell stellt jede Instanz der **Author**-Klasse die Gruppe der vom betreffenden Autor verfassten Titel dar. In **LongListSelector** können wir dann entweder die Bücherliste nach Autoren gruppiert anzeigen oder die Liste verkleinern, um eine Sprungliste der Autoren zu erhalten. Die Sprungliste ermöglicht eine wesentlich schnellere Navigation im Vergleich zum Blättern in der Bücherliste. Wir führen Sie durch die Schritte zum Portieren der App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10.
 
-**Hinweis**   Wenn beim Öffnen von „Bookstore2Universal\_10“ in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
+
+            **Hinweis**   Wenn beim Öffnen von „Bookstore2Universal\_10“ in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
 
 ## Downloads
 
-[Laden Sie die Windows Phone Silverlight-App „Bookstore2WPSL8“ herunter](http://go.microsoft.com/fwlink/p/?linkid=522601).
 
-[Laden Sie die Windows 10-App „Bookstore2Universal\_10“ herunter](http://go.microsoft.com/fwlink/?linkid=532952).
+            [Laden Sie die Windows Phone Silverlight-App „Bookstore2WPSL8“ herunter](http://go.microsoft.com/fwlink/p/?linkid=522601).
+
+
+            [Laden Sie die Windows10-App „Bookstore2Universal\_10“ herunter](http://go.microsoft.com/fwlink/?linkid=532952).
 
 ##  Die Windows Phone Silverlight-App
 
@@ -55,7 +62,7 @@ In „MainPage.xaml“ müssen Sie die folgenden anfänglichen Portierungsänder
 -   Ersetzen Sie wie zuvor bei [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) alle Verweise auf den `PhoneTextExtraLargeStyle` **TextBlock**-Stil durch einen Verweis auf `SubtitleTextBlockStyle`, und ersetzen Sie `PhoneTextSubtleStyle` durch `SubtitleTextBlockStyle`, `PhoneTextNormalStyle` durch `CaptionTextBlockStyle` und `PhoneTextTitle1Style` durch `HeaderTextBlockStyle`.
 -   Einzige Ausnahme ist `BookTemplate`. Der Stil des zweiten **TextBlock**-Elements sollte auf `CaptionTextBlockStyle` verweisen.
 -   Entfernen Sie das FontFamily-Attribut aus **TextBlock** innerhalb von `AuthorGroupHeaderTemplate`, und legen Sie den Hintergrund von **Border** so fest, dass nicht auf `PhoneAccentBrush` verwiesen wird, sondern auf `SystemControlBackgroundAccentBrush`.
--   Überprüfen Sie aufgrund von [Änderungen im Zusammenhang mit Anzeigepixeln](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels) das Markup, und multiplizieren Sie alle Dimensionen mit fester Größe (Ränder, Breite, Höhe usw.) mit 0,8.
+-   Überprüfen Sie aufgrund von [Änderungen im Zusammenhang mit Anzeigepixeln](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels) das Markup, und multiplizieren Sie alle Dimensionen mit fester Größe (Ränder, Breite, Höhe usw.) mit0,8.
 
 ## Ersetzen von „LongListSelector“
 
@@ -96,7 +103,7 @@ Als Nächstes ersetzen Sie `phone:LongListSelector` durch das folgende Markup. D
 
 Den flachen Listen und Sprunglisten von **LongListSelector** stehen die vergrößerten und verkleinerten Ansichten von **SemanticZoom** gegenüber. Die vergrößerte Ansicht ist eine Eigenschaft, die Sie auf eine Instanz von **ListView** festlegen. In diesem Fall ist die verkleinerte Ansicht auch auf **ListView** festgelegt, und beide **ListView**-Steuerelemente sind an **CollectionViewSource** gebunden. Die vergrößerte Ansicht verwendet die gleiche Elementvorlage, Gruppenkopfvorlage und **HideEmptyGroups**-Einstellung (dann allerdings mit dem Namen **HidesIfEmpty**) wie die flache Liste von **LongListSelector**. Darüber hinaus verwendet die verkleinerte Ansicht eine Elementvorlage, die weitestgehend der Vorlage im Sprunglistenstil (`AuthorNameJumpListStyle`) von **LongListSelector** entspricht. Beachten Sie auch, dass die verkleinerte Ansicht an eine bestimmte **CollectionViewSource**-Eigenschaft namens **CollectionGroups** gebunden wird. Dabei handelt es sich um eine Auflistung, die anstelle der Elemente Gruppen enthält.
 
-`AuthorNameJumpListStyle` wird größtenteils nicht mehr benötigt. Wir benötigen nur die Datenvorlage für die Gruppen in der verkleinerten Ansicht (d. h. die Autoren in dieser App). Hierzu löschen wir den `AuthorNameJumpListStyle`-Stil und ersetzen ihn durch die folgende Datenvorlage.
+`AuthorNameJumpListStyle` wird größtenteils nicht mehr benötigt. Wir benötigen nur die Datenvorlage für die Gruppen in der verkleinerten Ansicht (d.h. die Autoren in dieser App). Hierzu löschen wir den `AuthorNameJumpListStyle`-Stil und ersetzen ihn durch die folgende Datenvorlage.
 
 ```xml
    <DataTemplate x:Key="ZoomedOutAuthorTemplate">
@@ -131,7 +138,7 @@ Da wir mit einer Telefon-App begonnen haben, ist es nicht überraschend, dass da
 
 Wir können dazu auch das adaptive Visual State-Manager-Feature verwenden. Wir werden Eigenschaften für visuelle Elemente festlegen, damit für die Benutzeroberfläche mit den Vorlagen, die wir derzeit verwenden, standardmäßig der schmale Zustand genutzt wird. Dann werden wir erkennen, wann das Fenster der App breiter als eine bestimmte Größe ist bzw. dieser entspricht (gemessen in der Einheit [effektive Pixel](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels)), und als Reaktion darauf die Eigenschaften der visuelle Elemente so ändern, dass wir ein größeres und breiteres Layout erhalten. Wir versetzen diese Eigenschaftsänderungen in einen visuellen Zustand und verwenden einen adaptiven Auslöser, um fortlaufend zu überwachen und zu bestimmen, ob der visuelle Zustand abhängig von der Breite des Fensters in effektiven Pixeln angewendet werden soll. Die Auslösung erfolgt hierbei anhand der Fensterbreite, aber sie kann auch anhand der Fensterhöhe erfolgen.
 
-Eine minimale Fensterbreite von 548 Epx eignet sich in diesem Anwendungsfall, da dies der Größe des kleinsten Geräts entspricht, auf dem wir das breite Layout anzeigen können. Telefone sind in der Regel kleiner als 548 Epx, sodass wir auf solch einem kleinen Gerät das schmale Layout erhalten würden. Auf einem PC wird das Fenster standardmäßig breit genug gestartet, um den Wechsel zum breiten Zustand auszulösen, in dem Elemente der Größe 250 x 250 angezeigt werden. Dort können Sie das Fenster so schmal machen, dass mindestens zwei Spalten für Elemente der Größe 250 x 250 angezeigt werden können. Ist es schmaler, wird der Auslöser deaktiviert, der breite Ansichtszustand wird gelöscht, und das schmale Standardlayout wird aktiviert.
+Eine minimale Fensterbreite von 548Epx eignet sich in diesem Anwendungsfall, da dies der Größe des kleinsten Geräts entspricht, auf dem wir das breite Layout anzeigen können. Telefone sind in der Regel kleiner als 548Epx, sodass wir auf solch einem kleinen Gerät das schmale Layout erhalten würden. Auf einem PC wird das Fenster standardmäßig breit genug gestartet, um den Wechsel zum breiten Zustand auszulösen, in dem Elemente der Größe 250x250 angezeigt werden. Dort können Sie das Fenster so schmal machen, dass mindestens zwei Spalten für Elemente der Größe 250x250 angezeigt werden können. Ist es schmaler, wird der Auslöser deaktiviert, der breite Ansichtszustand wird gelöscht, und das schmale Standardlayout wird aktiviert.
 
 Bevor wir das Problem mit dem adaptiven Visual State-Manager angehen, müssen wir zuerst den breiten Zustand entwerfen. Dies bedeutet, dass wir unserem Markup einige neue visuelle Elemente und Vorlagen hinzufügen müssen. Die entsprechende Vorgehensweise wird in den folgenden Schritten beschrieben. Mit Benennungskonventionen für visuelle Elemente und Vorlagen fügen wir das Wort „wide“ (breit) in den Namen aller Elemente oder Vorlagen für den breiten Zustand ein. Wenn ein Element oder eine Vorlage nicht das Wort „wide“ enthält, können Sie davon ausgehen, dass es für den schmalen Zustand bestimmt ist. Dies ist der Standardzustand, und die Eigenschaftswerte werden als lokale Werte der visuellen Elemente einer Seite festgelegt. Nur die Eigenschaftswerte für den breiten Zustand werden im Markup über einen tatsächlichen visuellen Zustand festgelegt.
 
@@ -244,7 +251,7 @@ Nun müssen wir nur noch einige abschließende Formatierungsoptimierungen vorneh
 
 Nach den letzten Formatierungsvorgängen sieht die App folgendermaßen aus.
 
-![Die portierte Windows 10-App auf einem Desktopgerät, vergrößerte Ansicht, zwei Fenstergrößen](images/w8x-to-uwp-case-studies/c02-07-desk10-zi-ported.png)
+![Die portierte Windows10-App auf einem Desktopgerät, vergrößerte Ansicht, zwei Fenstergrößen](images/w8x-to-uwp-case-studies/c02-07-desk10-zi-ported.png)
 
 Die portierte Windows 10-App auf einem Desktopgerät, vergrößerte Ansicht, zwei Fenstergrößen  
 ![die portierte Windows 10-App auf einem Desktopgerät, verkleinerte Ansicht, zwei Fenstergrößen](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
@@ -261,7 +268,7 @@ Die portierte Windows 10-App auf einem mobilen Gerät, verkleinerte Ansicht
 
 ## Entwickeln eines flexibleren Ansichtsmodells
 
-In diesem Abschnitt wird demonstriert, welche Möglichkeiten sich durch das Verschieben unserer App und die Verwendung der UWP ergeben. Hier erläutern wir optionale Schritte, mit denen Sie Ihr Ansichtsmodell flexibler gestalten können, wenn über **CollectionViewSource** darauf zugegriffen wird. Das Ansichtsmodell (mit der Quelldatei in „ViewModel\\BookstoreViewModel.cs“), das wir aus der Windows Phone Silverlight-App „Bookstore2WPSL8“ portiert haben, enthält eine von **List&lt;T&gt;** abgeleitete Klasse namens „Author“. Dabei steht **T** für „BookSku“. Dies bedeutet, dass die Author-Klasse einer Gruppe von BookSku-Objekten *entspricht*.
+In diesem Abschnitt wird demonstriert, welche Möglichkeiten sich durch das Verschieben unserer App und die Verwendung der UWP ergeben. Hier erläutern wir optionale Schritte, mit denen Sie Ihr Ansichtsmodell flexibler gestalten können, wenn über **CollectionViewSource** darauf zugegriffen wird. Das Ansichtsmodell (mit der Quelldatei in „ViewModel\\BookstoreViewModel.cs“), das wir aus der WindowsPhone Silverlight-App „Bookstore2WPSL8“ portiert haben, enthält eine von **List&lt;T&gt;** abgeleitete Klasse namens „Author“. Dabei steht **T** für „BookSku“. Dies bedeutet, dass die Author-Klasse einer Gruppe von BookSku-Objekten *entspricht*.
 
 Wenn wir **CollectionViewSource.Source** an „Authors“ binden, zeigen wir dadurch lediglich an, dass jeder Autor in „Authors“ eine Gruppe von *etwas* ist. Wir überlassen es **CollectionViewSource** zu bestimmen, dass „Author“ in diesem Fall eine BookSku-Gruppe ist. Diese Lösung funktioniert zwar, ist jedoch nicht sehr flexibel. Was wäre, wenn „Author“ *beides* sein soll, eine Gruppe von BookSku-Objekten *und* eine Gruppe der Adressen, unter denen der Autor gewohnt hat? „Author“ kann *nicht* beide dieser Gruppen darstellen. „Author“ *kann* jedoch eine beliebige Anzahl von Gruppen enthalten. Unsere Lösung sieht also wie folgt aus: Verwenden Sie das *has-a-group*-Muster anstelle oder zusätzlich zum aktuell verwendeten *is-a-group*-Muster. Gehen Sie wie folgt vor:
 
@@ -294,9 +301,10 @@ Jetzt können wir `ItemsPath="BookSkus"` entfernen, ohne dass sich das Verhalten
 
 ## Fazit
 
-In dieser Fallstudie haben wir es mit einer aufwändigeren Benutzeroberfläche als im vorherigen Beispiel zu tun. Alle Funktionen und Konzepte des Windows Phone Silverlight-Steuerelements  **LongListSelector** – und vieles mehr – sind in einer UWP-App in Form von **SemanticZoom**, **ListView**, **GridView** und **CollectionViewSource** verfügbar. Sie haben erfahren, wie Sie sowohl imperativen Code als auch Markup in einer UWP-App wiederverwenden oder kopieren und bearbeiten, um Funktionen, Benutzeroberflächenelemente und Interaktionen speziell für die schmalsten und breitesten Formfaktoren von Windows-Geräten und alle Größen dazwischen umzusetzen.
+In dieser Fallstudie haben wir es mit einer aufwändigeren Benutzeroberfläche als im vorherigen Beispiel zu tun. Alle Funktionen und Konzepte des WindowsPhone Silverlight-Steuerelements  **LongListSelector** – und vieles mehr – sind in einer UWP-App in Form von **SemanticZoom**, **ListView**, **GridView** und **CollectionViewSource** verfügbar. Sie haben erfahren, wie Sie sowohl imperativen Code als auch Markup in einer UWP-App wiederverwenden oder kopieren und bearbeiten, um Funktionen, Benutzeroberflächenelemente und Interaktionen speziell für die schmalsten und breitesten Formfaktoren von Windows-Geräten und alle Größen dazwischen umzusetzen.
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
