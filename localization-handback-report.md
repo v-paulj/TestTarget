@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\gaming\setting-up-directx-resources.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/setting-up-directx-resources.md) | InSyncHandedBackSuccess | [Details](#f60d7c5b526fcdea8552256a6ebe4b92d57362642282)
 
 ## Item Details
+##### <a name='f60d7c5b526fcdea8552256a6ebe4b92d57362642282'></a> Source: [windows-apps-src\gaming\setting-up-directx-resources.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/setting-up-directx-resources.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\gaming\setting-up-directx-resources.md](https://github.com/Microsoft/windows-apps.de-de/blob/efc95f97d2d0d06d85c9c42e5a0c8e4ca3379c6f/windows-apps-src/gaming/setting-up-directx-resources.md)
+* Handoff File: [setting-up-directx-resources.612041e3f9e9f32666d536347035cb2b56d55e26.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/11d14311204843d2a8494d31b6d3e2d4d53f369c/ol-handoff/Microsoft/windows-apps.de-de/master/setting-up-directx-resources.612041e3f9e9f32666d536347035cb2b56d55e26.de-de.xlf)
+* Handoff Datetime: 2016-06-27 17:53:11
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [setting-up-directx-resources.612041e3f9e9f32666d536347035cb2b56d55e26.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/c0d6d138d702ec473c7d99e22bc8d0cc97928179/ol-handback/Microsoft/windows-apps.de-de/master/setting-up-directx-resources.612041e3f9e9f32666d536347035cb2b56d55e26.de-de.xlf)
+* Handback Datetime: 2016-07-23 05:27:01
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
