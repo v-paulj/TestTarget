@@ -12,18 +12,20 @@ ms.openlocfilehash: f60d7c5b526fcdea8552256a6ebe4b92d5736264
 # Einrichten von DirectX-Ressourcen und Darstellen eines Bilds
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Hier zeigen wir Ihnen das Erstellen eines Direct3D-Geräts, einer Swapchain und einer Renderziel-Ansicht sowie die Darstellung des gerenderten Bilds auf dem Bildschirm.
 
-**Ziel:** Sie richten DirectX-Ressourcen in einer UWP-App (Universelle Windows-Plattform) mit C++ ein und zeigen eine Volltonfarbe an.
+
+            **Ziel:** Sie richten DirectX-Ressourcen in einer UWP-App (Universelle Windows-Plattform) mit C++ ein und zeigen eine Volltonfarbe an.
 
 ## Voraussetzungen
 
 
 Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem mit den grundlegenden Konzepten der Grafikprogrammierung vertraut sein.
 
-**Zeitaufwand:** 20 Minuten.
+
+            **Zeitaufwand:** 20 Minuten.
 
 ## Anweisungen
 
@@ -40,7 +42,8 @@ Wir deklarieren Direct3D-Schnittstellenvariablen mit der [intelligenten Zeigervo
         );
 ```
 
-Wenn Sie [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) mit ComPtr deklarieren, können Sie anschließend die ComPtr-Methode **GetAddressOf** zum Abrufen der Adresse des Zeigers auf **ID3D11RenderTargetView** (\*\*ID3D11RenderTargetView) für die Übergabe an [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) verwenden. **OMSetRenderTargets** bindet das Renderziel an den [Ausgabezusammenführungsstatus](https://msdn.microsoft.com/library/windows/desktop/bb205120), um das Renderziel als Ausgabeziel anzugeben.
+Wenn Sie [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) mit ComPtr deklarieren, können Sie anschließend die ComPtr-Methode **GetAddressOf** zum Abrufen der Adresse des Zeigers auf **ID3D11RenderTargetView** (\*\*ID3D11RenderTargetView) für die Übergabe an [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) verwenden. 
+            **OMSetRenderTargets** bindet das Renderziel an den [Ausgabezusammenführungsstatus](https://msdn.microsoft.com/library/windows/desktop/bb205120), um das Renderziel als Ausgabeziel anzugeben.
 
 Nachdem die Beispiel-App gestartet wurde, wird sie initialisiert und geladen. Danach kann sie ausgeführt werden.
 
@@ -220,15 +223,9 @@ Wir geben eine endlose Schleife zum fortlaufenden Rendern und Anzeigen der Szene
 
 In dieser Schleife wird Folgendes aufgerufen:
 
-1.  [
-              **ID3D11DeviceContext::OMSetRenderTargets**
-            ](https://msdn.microsoft.com/library/windows/desktop/ff476464), um das Renderziel als Ausgabeziel anzugeben.
-2.  [
-              **ID3D11DeviceContext::ClearRenderTargetView**
-            ](https://msdn.microsoft.com/library/windows/desktop/ff476388), um das Renderziel mit einer Volltonfarbe anzuzeigen.
-3.  [
-              **IDXGISwapChain::Present**
-            ](https://msdn.microsoft.com/library/windows/desktop/bb174576), um das gerenderte Bild im Fenster darzustellen.
+1.  [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464), um das Renderziel als Ausgabeziel anzugeben.
+2.  [**ID3D11DeviceContext::ClearRenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476388), um das Renderziel mit einer Volltonfarbe anzuzeigen.
+3.  [**IDXGISwapChain::Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576), um das gerenderte Bild im Fenster darzustellen.
 
 Da wir zuvor die maximale Framelatenz auf 1 festgelegt haben, reduziert Windows die Geschwindigkeit der Renderschleife generell auf die Bildschirmaktualisierungsrate, die normalerweise etwa 60 Hz beträgt. Windows reduziert die Geschwindigkeit der Renderschleife, indem die App in den Ruhezustand versetzt wird, wenn sie [**Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) aufruft. Windows versetzt die App so lange in den Ruhezustand, bis die Bildschirmanzeige aktualisiert wird.
 
