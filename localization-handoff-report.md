@@ -6,22 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/2d0b43d7e83d9876ae980416d44a1f933b743448/windows-apps-src/packaging/app-capability-declarations.md) | OutofSyncHandedBackSuccess | [Details](#35ee9144f302b1cb612f7bb8fa8f2bc69f27f08e3508)
+ [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/2c0620fd3b1bb1cfb4b7ec1470a855e08da05f1d/windows-apps-src/get-started/enable-your-device-for-development.md) | OutofSyncHandedBackSuccess | [Details](#9ca48ec9b23603b7c7dc7d50bc6d6bb19791e7cc2311)
 
 ## Item Details
-##### <a name='35ee9144f302b1cb612f7bb8fa8f2bc69f27f08e3508'></a> Source: [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/2d0b43d7e83d9876ae980416d44a1f933b743448/windows-apps-src/packaging/app-capability-declarations.md)
+##### <a name='9ca48ec9b23603b7c7dc7d50bc6d6bb19791e7cc2311'></a> Source: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/2c0620fd3b1bb1cfb4b7ec1470a855e08da05f1d/windows-apps-src/get-started/enable-your-device-for-development.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/38605aa152719f99ac2e1597b72a89a0f4a473a0/ol-handoff/Microsoft/windows-apps.de-de/master/app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf)
-* Handoff Datetime: 2016-07-25 16:41:35
+* Handoff File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/1ce61396b2fdf8864c340e4dae61b8f9c947464e/ol-handoff/Microsoft/windows-apps.de-de/master/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.de-de.xlf)
+* Handoff Datetime: 2016-07-25 17:10:54
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/packaging/app-capability-declarations.md)
-* Current Handback File: [app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf)
-* Current Handback Datetime: 2016-07-20 16:33:49
+* Current Target File: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/get-started/enable-your-device-for-development.md)
+* Current Handback File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
 
