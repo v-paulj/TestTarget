@@ -6,22 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/d0aeeb1a2ad42f23ca294bdd581aa8915b493870/windows-apps-src/packaging/app-capability-declarations.md) | OutofSyncHandedBackSuccess | [Details](#15297eaab55215f3c0fb7cc1927500c26d17b8573508)
+ [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/469e47bcc5a3a6b9fcc8ef2e291d97ad74817fa3/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md) | OutofSyncHandedBackSuccess | [Details](#b18ccc1aa353e8234958d4ba665711fe7e6d354b3396)
 
 ## Item Details
-##### <a name='15297eaab55215f3c0fb7cc1927500c26d17b8573508'></a> Source: [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps/blob/d0aeeb1a2ad42f23ca294bdd581aa8915b493870/windows-apps-src/packaging/app-capability-declarations.md)
+##### <a name='b18ccc1aa353e8234958d4ba665711fe7e6d354b3396'></a> Source: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/469e47bcc5a3a6b9fcc8ef2e291d97ad74817fa3/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/920a84e06322c50ebf413f303f5721242aa86dce/ol-handoff/Microsoft/windows-apps.de-de/master/app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf)
-* Handoff Datetime: 2016-07-28 17:12:42
+* Handoff File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/c8d5c58039209b794e7d6d4c7e30666225a4d5ed/ol-handoff/Microsoft/windows-apps.de-de/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf)
+* Handoff Datetime: 2016-07-28 17:42:55
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\packaging\app-capability-declarations.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/packaging/app-capability-declarations.md)
-* Current Handback File: [app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/app-capability-declarations.c1be49045a94593bb6dd91c3e9a479397dc4d939.de-de.xlf)
-* Current Handback Datetime: 2016-07-20 16:33:49
+* Current Target File: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
+* Current Handback File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
 
