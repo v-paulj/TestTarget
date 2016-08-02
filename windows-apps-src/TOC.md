@@ -812,7 +812,3 @@
 ### [Verhaltensregeln für Entwickler](https://msdn.microsoft.com/library/windows/apps/dn764941.aspx)
 
 
-
-<!--HONumber=Jul16_HO5-->
-
-
