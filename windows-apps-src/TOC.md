@@ -1,4 +1,4 @@
-# [Erste Schritte mit der universellen Windows-Plattform](https://developer.microsoft.com/windows/getstarted)
+﻿# [Erste Schritte mit der universellen Windows-Plattform](https://developer.microsoft.com/windows/getstarted)
 ## [Was ist eine UWP-App?](get-started/whats-a-uwp.md)
 ## [Anleitung für Apps für die universelle Windows-Plattform (UWP)](get-started/universal-application-platform-guide.md)
 ## [Vorbereitung](get-started/get-set-up.md)
