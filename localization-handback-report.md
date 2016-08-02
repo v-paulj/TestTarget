@@ -1,11 +1,45 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\whats-new\windows-10-rtm.md](https://github.com/Microsoft/windows-apps/blob/02f47376d99f3bd044dfcb5b4b43beaf523bbc93/windows-apps-src/whats-new/windows-10-rtm.md) | OutofSyncHandedBackSuccess | [Details](#ebb696cce37b0201601dcfb9ab68b3328cd15abb7939)
+ [windows-apps-src\whats-new\windows-10-version-1511.md](https://github.com/Microsoft/windows-apps/blob/02f47376d99f3bd044dfcb5b4b43beaf523bbc93/windows-apps-src/whats-new/windows-10-version-1511.md) | OutofSyncHandedBackSuccess | [Details](#d1b038c7b1c1bf04fbbc81cef959b7339cbfa8a17941)
 
 ## Item Details
+##### <a name='ebb696cce37b0201601dcfb9ab68b3328cd15abb7939'></a> Source: [windows-apps-src\whats-new\windows-10-rtm.md](https://github.com/Microsoft/windows-apps/blob/02f47376d99f3bd044dfcb5b4b43beaf523bbc93/windows-apps-src/whats-new/windows-10-rtm.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [windows-10-rtm.fb3dc10bb6f6c028f23bddf954b8b95f8752d3d7.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/861cbcfce515c9fd7f9049b58617b79a2ef172b2/ol-handoff/Microsoft/windows-apps.de-de/master/windows-10-rtm.fb3dc10bb6f6c028f23bddf954b8b95f8752d3d7.de-de.xlf)
+* Handoff Datetime: 2016-08-01 21:51:33
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\whats-new\windows-10-rtm.md](https://github.com/Microsoft/windows-apps.de-de/blob/435f0e05429fd9fb5103a320e7bf88a07a8c19f0/windows-apps-src/whats-new/windows-10-rtm.md)
+* Current Handback File: [windows-10-rtm.fb3dc10bb6f6c028f23bddf954b8b95f8752d3d7.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/18388a208459f0fe56dfdd8da48d4b60360ff738/ol-handback/Microsoft/windows-apps.de-de/master/windows-10-rtm.fb3dc10bb6f6c028f23bddf954b8b95f8752d3d7.de-de.xlf)
+* Current Handback Datetime: 2016-08-02 13:34:01
+* [Back to Top](#report-top)
+
+##### <a name='d1b038c7b1c1bf04fbbc81cef959b7339cbfa8a17941'></a> Source: [windows-apps-src\whats-new\windows-10-version-1511.md](https://github.com/Microsoft/windows-apps/blob/02f47376d99f3bd044dfcb5b4b43beaf523bbc93/windows-apps-src/whats-new/windows-10-version-1511.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/861cbcfce515c9fd7f9049b58617b79a2ef172b2/ol-handoff/Microsoft/windows-apps.de-de/master/windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf)
+* Handoff Datetime: 2016-08-01 21:51:33
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\whats-new\windows-10-version-1511.md](https://github.com/Microsoft/windows-apps.de-de/blob/435f0e05429fd9fb5103a320e7bf88a07a8c19f0/windows-apps-src/whats-new/windows-10-version-1511.md)
+* Current Handback File: [windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/18388a208459f0fe56dfdd8da48d4b60360ff738/ol-handback/Microsoft/windows-apps.de-de/master/windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf)
+* Current Handback Datetime: 2016-08-02 13:34:01
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
