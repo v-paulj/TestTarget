@@ -19,9 +19,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\whats-new\windows-10-version-1511.md](https://github.com/Microsoft/windows-apps.de-de/blob/95694bf5af460bee2137330dae76ec1ae547f856/windows-apps-src/whats-new/windows-10-version-1511.md)
-* Current Handback File: [windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/a3096ba23027dab6a1c0ecaf713cea76f666b4fe/ol-handback/Microsoft/windows-apps.de-de/master/windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf)
-* Current Handback Datetime: 2016-08-02 11:03:57
+* Current Target File: [windows-apps-src\whats-new\windows-10-version-1511.md](https://github.com/Microsoft/windows-apps.de-de/blob/cedfddcd29a6640ca64a135bc78df77df2ecf77f/windows-apps-src/whats-new/windows-10-version-1511.md)
+* Current Handback File: [windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/cc0dc11667b9e3dfbd571e5f069a95efc7c122f5/ol-handback/Microsoft/windows-apps.de-de/master/windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf)
+* Current Handback Datetime: 2016-08-02 11:35:38
 * [Back to Top](#report-top)
 
 
