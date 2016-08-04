@@ -1,26 +1,42 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/a7fd122f4bfba830e05992efdc7b23c5666bbd8c/windows-apps-src/get-started/enable-your-device-for-development.md) | OutofSyncHandedBackSuccess | [Details](#03afb9e82ddfaa6360968ad102ea96844cee23683551)
+ [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/ed02fcae43c52df8f6a4c9dc75f711122ad70112/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md) | OutofSyncHandedBackSuccess | [Details](#8e85a0d58f87d53627af9f928adef858deda79994845)
+ [windows-apps-src\porting\desktop-to-uwp-signing.md](https://github.com/Microsoft/windows-apps/blob/dbe099e7a3a33684494000d5d5bf2615124d2740/windows-apps-src/porting/desktop-to-uwp-signing.md) | OutofSyncHandedBackSuccess | [Details](#e846fe262d7983cc6216922620b872d03677b2754846)
 
 ## Item Details
-##### <a name='03afb9e82ddfaa6360968ad102ea96844cee23683551'></a> Source: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps/blob/a7fd122f4bfba830e05992efdc7b23c5666bbd8c/windows-apps-src/get-started/enable-your-device-for-development.md)
+##### <a name='8e85a0d58f87d53627af9f928adef858deda79994845'></a> Source: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/ed02fcae43c52df8f6a4c9dc75f711122ad70112/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/251897ff957685c7816dc126883e0442c761ca27/ol-handoff/Microsoft/windows-apps.de-de/master/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.de-de.xlf)
-* Handoff Datetime: 2016-08-04 20:34:58
+* Handoff File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7220122d5462b0406aa1b2e3279373560009702d/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf)
+* Handoff Datetime: 2016-08-04 21:07:06
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\enable-your-device-for-development.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/get-started/enable-your-device-for-development.md)
-* Current Handback File: [enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/enable-your-device-for-development.e920a727ccc1fc364c6c44e8138c1a619fa0b67d.de-de.xlf)
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
+* Current Handback File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf)
+* Current Handback Datetime: 2016-07-20 16:33:49
+* [Back to Top](#report-top)
+
+##### <a name='e846fe262d7983cc6216922620b872d03677b2754846'></a> Source: [windows-apps-src\porting\desktop-to-uwp-signing.md](https://github.com/Microsoft/windows-apps/blob/dbe099e7a3a33684494000d5d5bf2615124d2740/windows-apps-src/porting/desktop-to-uwp-signing.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [desktop-to-uwp-signing.8d6b96e6fd97cf0e14ba93fd01681c522709a3b4.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7220122d5462b0406aa1b2e3279373560009702d/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-signing.8d6b96e6fd97cf0e14ba93fd01681c522709a3b4.de-de.xlf)
+* Handoff Datetime: 2016-08-04 21:07:06
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-signing.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/porting/desktop-to-uwp-signing.md)
+* Current Handback File: [desktop-to-uwp-signing.8d6b96e6fd97cf0e14ba93fd01681c522709a3b4.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/desktop-to-uwp-signing.8d6b96e6fd97cf0e14ba93fd01681c522709a3b4.de-de.xlf)
 * Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
