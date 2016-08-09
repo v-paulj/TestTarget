@@ -1,27 +1,75 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 4
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\introduction-to-xbox-tools.md](https://github.com/Microsoft/windows-apps/blob/52839b39869407246253b938108135080805228d/windows-apps-src/xbox-apps/introduction-to-xbox-tools.md) | HandedOffSuccess | [Details](#d0fc63f2e0aea3f3761d61d97bddf73c0d24e46e8049)
+ [windows-apps-src\xbox-apps\multi-user-applications.md](https://github.com/Microsoft/windows-apps/blob/c10c00c4e1282630f7447cb443121c479ddc4f4d/windows-apps-src/xbox-apps/multi-user-applications.md) | HandedOffSuccess | [Details](#031d64168092ef2a62df27b30d7c9a119adc51dc8051)
+ [windows-apps-src\xbox-apps\samples.md](https://github.com/Microsoft/windows-apps/blob/cee28021caddaf017b32e9bbce3fa31f3f77f4f7/windows-apps-src/xbox-apps/samples.md) | HandedOffSuccess | [Details](#21aeb9ed928d0a0e9676245e86617cd24d5e32578055)
+ [windows-apps-src\xbox-apps\samples-xaml-dev.md](https://github.com/Microsoft/windows-apps/blob/0c1ba9b0180570195e53da3aaa88745a68fad0cd/windows-apps-src/xbox-apps/samples-xaml-dev.md) | HandedOffSuccess | [Details](#aa98a820c22a0a31568aa68358f51c414516e83d8053)
+ [windows-apps-src\xbox-apps\samples-xaml-media.md](https://github.com/Microsoft/windows-apps/blob/a53e39e14ff497b0b0e914a2df6a8cb8217b27c6/windows-apps-src/xbox-apps/samples-xaml-media.md) | HandedOffSuccess | [Details](#387732c923f67fec75ce3944cc05d39224892db48054)
 
 ## Item Details
-##### <a name='d0fc63f2e0aea3f3761d61d97bddf73c0d24e46e8049'></a> Source: [windows-apps-src\xbox-apps\introduction-to-xbox-tools.md](https://github.com/Microsoft/windows-apps/blob/52839b39869407246253b938108135080805228d/windows-apps-src/xbox-apps/introduction-to-xbox-tools.md)
+##### <a name='031d64168092ef2a62df27b30d7c9a119adc51dc8051'></a> Source: [windows-apps-src\xbox-apps\multi-user-applications.md](https://github.com/Microsoft/windows-apps/blob/c10c00c4e1282630f7447cb443121c479ddc4f4d/windows-apps-src/xbox-apps/multi-user-applications.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [introduction-to-xbox-tools.e6092d01461c66e8709cbe17d816b0e0c0ad42fc.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/6a27a3d12623f47dbd357a2b7022ea7f2e75372a/ol-handoff/Microsoft/windows-apps.de-de/master/introduction-to-xbox-tools.e6092d01461c66e8709cbe17d816b0e0c0ad42fc.de-de.xlf)
-* Handoff Datetime: 2016-08-09 16:47:07
+* Handoff File: [multi-user-applications.97809b3b26d2830393fd92b4d9676f9963a2786c.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7c810c457931d6b16d213ba326e899ddd4493299/ol-handoff/Microsoft/windows-apps.de-de/master/multi-user-applications.97809b3b26d2830393fd92b4d9676f9963a2786c.de-de.xlf)
+* Handoff Datetime: 2016-08-09 17:18:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\xbox-apps\introduction-to-xbox-tools.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/xbox-apps/introduction-to-xbox-tools.md)
-* Current Handback File: [introduction-to-xbox-tools.e6092d01461c66e8709cbe17d816b0e0c0ad42fc.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/introduction-to-xbox-tools.e6092d01461c66e8709cbe17d816b0e0c0ad42fc.de-de.xlf)
-* Current Handback Datetime: 2016-07-20 16:33:49
+* Current Target File: [windows-apps-src\xbox-apps\multi-user-applications.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/xbox-apps/multi-user-applications.md)
+* Current Handback File: [multi-user-applications.97809b3b26d2830393fd92b4d9676f9963a2786c.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/multi-user-applications.97809b3b26d2830393fd92b4d9676f9963a2786c.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
+* [Back to Top](#report-top)
+
+##### <a name='21aeb9ed928d0a0e9676245e86617cd24d5e32578055'></a> Source: [windows-apps-src\xbox-apps\samples.md](https://github.com/Microsoft/windows-apps/blob/cee28021caddaf017b32e9bbce3fa31f3f77f4f7/windows-apps-src/xbox-apps/samples.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [samples.056115dee4683cc17215f8c28c7e85077378007e.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7c810c457931d6b16d213ba326e899ddd4493299/ol-handoff/Microsoft/windows-apps.de-de/master/samples.056115dee4683cc17215f8c28c7e85077378007e.de-de.xlf)
+* Handoff Datetime: 2016-08-09 17:18:04
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\xbox-apps\samples.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/xbox-apps/samples.md)
+* Current Handback File: [samples.056115dee4683cc17215f8c28c7e85077378007e.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/samples.056115dee4683cc17215f8c28c7e85077378007e.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
+* [Back to Top](#report-top)
+
+##### <a name='aa98a820c22a0a31568aa68358f51c414516e83d8053'></a> Source: [windows-apps-src\xbox-apps\samples-xaml-dev.md](https://github.com/Microsoft/windows-apps/blob/0c1ba9b0180570195e53da3aaa88745a68fad0cd/windows-apps-src/xbox-apps/samples-xaml-dev.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [samples-xaml-dev.2fc54a6cdb962bcd0775c02c293d8cefe012291d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7c810c457931d6b16d213ba326e899ddd4493299/ol-handoff/Microsoft/windows-apps.de-de/master/samples-xaml-dev.2fc54a6cdb962bcd0775c02c293d8cefe012291d.de-de.xlf)
+* Handoff Datetime: 2016-08-09 17:18:04
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\xbox-apps\samples-xaml-dev.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/xbox-apps/samples-xaml-dev.md)
+* Current Handback File: [samples-xaml-dev.2fc54a6cdb962bcd0775c02c293d8cefe012291d.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/samples-xaml-dev.2fc54a6cdb962bcd0775c02c293d8cefe012291d.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
+* [Back to Top](#report-top)
+
+##### <a name='387732c923f67fec75ce3944cc05d39224892db48054'></a> Source: [windows-apps-src\xbox-apps\samples-xaml-media.md](https://github.com/Microsoft/windows-apps/blob/a53e39e14ff497b0b0e914a2df6a8cb8217b27c6/windows-apps-src/xbox-apps/samples-xaml-media.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [samples-xaml-media.dc79cf8379f13a1916181cb9dae07c5ba487720c.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/7c810c457931d6b16d213ba326e899ddd4493299/ol-handoff/Microsoft/windows-apps.de-de/master/samples-xaml-media.dc79cf8379f13a1916181cb9dae07c5ba487720c.de-de.xlf)
+* Handoff Datetime: 2016-08-09 17:18:04
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\xbox-apps\samples-xaml-media.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/xbox-apps/samples-xaml-media.md)
+* Current Handback File: [samples-xaml-media.dc79cf8379f13a1916181cb9dae07c5ba487720c.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/samples-xaml-media.dc79cf8379f13a1916181cb9dae07c5ba487720c.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
 
