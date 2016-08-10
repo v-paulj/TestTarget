@@ -48,7 +48,7 @@ Sie haben zwei Möglichkeiten zum Herstellen einer Verbindung mit Device Portal:
 
 Für die Authentifizierung und sichere Kommunikation ist HTTPS erforderlich.
 
-Sie können die Authentifizierung deaktivieren, wenn Sie Device Portal in einer geschützten Umgebung verwenden, z. B. in einem Testlabor, in dem Sie allen im lokalen Netzwerk vertrauen, keine persönlichen Informationen auf dem Gerät gespeichert haben und in dem spezielle Anforderungen bestehen. Dies ermöglicht eine unverschlüsselte Kommunikation, und jeder, der die IP-Adresse Ihres Computers kennt, kann es steuern.
+Sie können die Authentifizierung deaktivieren, wenn Sie Device Portal in einer geschützten Umgebung verwenden, z.B. in einem Testlabor, in dem Sie allen im lokalen Netzwerk vertrauen, keine persönlichen Informationen auf dem Gerät gespeichert haben und in dem spezielle Anforderungen bestehen. Dies ermöglicht eine unverschlüsselte Kommunikation, und jeder, der die IP-Adresse Ihres Computers kennt, kann es steuern.
 
 ## Seiten von Device Portal
 
@@ -78,7 +78,7 @@ In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzw
 
 ### Das Paket konnte nicht gefunden werden
 
-"Developer Mode package couldn’t be located in Windows Update. Error Code 0x001234 Learn more"   
+„Das Entwicklermoduspaket wurde in Windows Update nicht gefunden. Fehlercode 0x001234. Weitere Informationen“   
 
 Dieser Fehler kann aufgrund eines Netzwerkverbindungsproblems, aufgrund von Enterprise-Einstellungen oder weil das Paket nicht vorhanden ist, auftreten. 
 
@@ -94,7 +94,7 @@ Nachdem Sie einen der oben genannten Schritte durchgeführt haben, deaktivieren 
 
 ### Fehler beim Installieren des Pakets
 
-"Developer Mode package failed to install. Error code 0x001234  Learn more"
+„Fehler beim Installieren des Entwicklermoduspakets. Fehlercode 0x001234. Weitere Informationen“
 
 Dieser Fehler kann aufgrund von Inkompatibilitäten zwischen dem Build von Windows und dem Entwicklermoduspaket auftreten. 
 
