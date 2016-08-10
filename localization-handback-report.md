@@ -1,11 +1,45 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://github.com/Microsoft/windows-apps/blob/f09f0233ec11b41989cf52da3c5e8cb37a97b607/windows-apps-src/debug-test-perf/device-portal-desktop.md) | HandedOffSuccess | [Details](#3ccc805d0132330b23e41129684546068f8fe1df3231)
+ [windows-apps-src\whats-new\windows-10-version-1511.md](https://github.com/Microsoft/windows-apps/blob/02f47376d99f3bd044dfcb5b4b43beaf523bbc93/windows-apps-src/whats-new/windows-10-version-1511.md) | HandedOffSuccess | [Details](#d1b038c7b1c1bf04fbbc81cef959b7339cbfa8a17931)
 
 ## Item Details
+##### <a name='3ccc805d0132330b23e41129684546068f8fe1df3231'></a> Source: [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://github.com/Microsoft/windows-apps/blob/f09f0233ec11b41989cf52da3c5e8cb37a97b607/windows-apps-src/debug-test-perf/device-portal-desktop.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/a8fde46d4351e932e7174e6052ef2ddae1c1d209/ol-handoff/Microsoft/windows-apps.de-de/master/device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.de-de.xlf)
+* Handoff Datetime: 2016-08-02 17:15:53
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\debug-test-perf\device-portal-desktop.md](https://github.com/Microsoft/windows-apps.de-de/blob/7561e34643a6fc8d0374ad7b6f21bfd18783f515/windows-apps-src/debug-test-perf/device-portal-desktop.md)
+* Current Handback File: [device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/27120a09469c79b92cfc135797786a3e44b2a4b2/ol-handback/Microsoft/windows-apps.de-de/master/device-portal-desktop.fd7534db4bc282ba12485780a908bce2871720e5.de-de.xlf)
+* Current Handback Datetime: 2016-08-10 16:19:29
+* [Back to Top](#report-top)
+
+##### <a name='d1b038c7b1c1bf04fbbc81cef959b7339cbfa8a17931'></a> Source: [windows-apps-src\whats-new\windows-10-version-1511.md](https://github.com/Microsoft/windows-apps/blob/02f47376d99f3bd044dfcb5b4b43beaf523bbc93/windows-apps-src/whats-new/windows-10-version-1511.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/861cbcfce515c9fd7f9049b58617b79a2ef172b2/ol-handoff/Microsoft/windows-apps.de-de/master/windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf)
+* Handoff Datetime: 2016-08-01 21:51:33
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\whats-new\windows-10-version-1511.md](https://github.com/Microsoft/windows-apps.de-de/blob/7561e34643a6fc8d0374ad7b6f21bfd18783f515/windows-apps-src/whats-new/windows-10-version-1511.md)
+* Current Handback File: [windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/27120a09469c79b92cfc135797786a3e44b2a4b2/ol-handback/Microsoft/windows-apps.de-de/master/windows-10-version-1511.fc06c1eacb1e898a1d60813b8437b6c8c16843e8.de-de.xlf)
+* Current Handback Datetime: 2016-08-10 16:19:29
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
