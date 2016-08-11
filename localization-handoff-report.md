@@ -1,27 +1,40 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\audio-video-camera\index.md](https://github.com/Microsoft/windows-apps/blob/18e97dd5e607960c1c1fd640fe6fe6ae5e9f9085/windows-apps-src/audio-video-camera/index.md) | HandedOffSuccess | [Details](#1914690b6417a5ae382e74ec76b54d9db411c2131638)
+ [windows-apps-src\audio-video-camera\adaptive-streaming-with-playready.md](https://github.com/Microsoft/windows-apps/blob/8534598b1f3cf49b15a73d03f6f19e67877b25d0/windows-apps-src/audio-video-camera/adaptive-streaming-with-playready.md) | HandedOffSuccess | [Details](#22e430fd6dafe49fb3bf599fec91a9ab3dbd6b95157)
+ [windows-apps-src\audio-video-camera\camera.md](https://github.com/Microsoft/windows-apps/blob/f9f85359bd24e0a642bf9cbe3c76f6bfac7866f8/windows-apps-src/audio-video-camera/camera.md) | HandedOffSuccess | [Details](#8759a7cdb1d516f9c88f866887861c2f28085b5b167)
 
 ## Item Details
-##### <a name='1914690b6417a5ae382e74ec76b54d9db411c2131638'></a> Source: [windows-apps-src\audio-video-camera\index.md](https://github.com/Microsoft/windows-apps/blob/18e97dd5e607960c1c1fd640fe6fe6ae5e9f9085/windows-apps-src/audio-video-camera/index.md)
+##### <a name='22e430fd6dafe49fb3bf599fec91a9ab3dbd6b95157'></a> Source: [windows-apps-src\audio-video-camera\adaptive-streaming-with-playready.md](https://github.com/Microsoft/windows-apps/blob/8534598b1f3cf49b15a73d03f6f19e67877b25d0/windows-apps-src/audio-video-camera/adaptive-streaming-with-playready.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [index.1af33ca226923082600a63b53881b7dd68963b62.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ac359383e182641f8c381f024e5c25edc9d554f8/ol-handoff/Microsoft/windows-apps.de-de/master/index.1af33ca226923082600a63b53881b7dd68963b62.de-de.xlf)
-* Handoff Datetime: 2016-08-11 18:47:47
+* Handoff File: [adaptive-streaming-with-playready.fc985ed1b1d3c9fa50b477f463313823801d7872.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/06edf73f7dea11f97b16eac6c34ca76d1cb6630d/ol-handoff/Microsoft/windows-apps.de-de/master/adaptive-streaming-with-playready.fc985ed1b1d3c9fa50b477f463313823801d7872.de-de.xlf)
+* Handoff Datetime: 2016-08-11 19:19:58
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\audio-video-camera\index.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/audio-video-camera/index.md)
-* Current Handback File: [index.1af33ca226923082600a63b53881b7dd68963b62.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/index.1af33ca226923082600a63b53881b7dd68963b62.de-de.xlf)
+* Current Target File: [windows-apps-src\audio-video-camera\adaptive-streaming-with-playready.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/audio-video-camera/adaptive-streaming-with-playready.md)
+* Current Handback File: [adaptive-streaming-with-playready.fc985ed1b1d3c9fa50b477f463313823801d7872.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/adaptive-streaming-with-playready.fc985ed1b1d3c9fa50b477f463313823801d7872.de-de.xlf)
 * Current Handback Datetime: 2016-07-06 16:08:36
+* [Back to Top](#report-top)
+
+##### <a name='8759a7cdb1d516f9c88f866887861c2f28085b5b167'></a> Source: [windows-apps-src\audio-video-camera\camera.md](https://github.com/Microsoft/windows-apps/blob/f9f85359bd24e0a642bf9cbe3c76f6bfac7866f8/windows-apps-src/audio-video-camera/camera.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [camera.ac9ab97d83ee667acbc68c7d381aee56cfdd2368.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/06edf73f7dea11f97b16eac6c34ca76d1cb6630d/ol-handoff/Microsoft/windows-apps.de-de/master/camera.ac9ab97d83ee667acbc68c7d381aee56cfdd2368.de-de.xlf)
+* Handoff Datetime: 2016-08-11 19:19:58
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 
