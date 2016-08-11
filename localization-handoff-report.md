@@ -1,43 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\launch-resume\launch-default-app.md](https://github.com/Microsoft/windows-apps/blob/a3d49d0812d4c33583a97b31c378030fb8986a20/windows-apps-src/launch-resume/launch-default-app.md) | HandedOffSuccess | [Details](#90d2696d20b0e4242df664f9f68fa48259d072e64398)
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/a3d49d0812d4c33583a97b31c378030fb8986a20/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#04614e609d015ddcea477b394d53d08a6434de697937)
+ [windows-apps-src\audio-video-camera\index.md](https://github.com/Microsoft/windows-apps/blob/18e97dd5e607960c1c1fd640fe6fe6ae5e9f9085/windows-apps-src/audio-video-camera/index.md) | HandedOffSuccess | [Details](#1914690b6417a5ae382e74ec76b54d9db411c2131638)
 
 ## Item Details
-##### <a name='90d2696d20b0e4242df664f9f68fa48259d072e64398'></a> Source: [windows-apps-src\launch-resume\launch-default-app.md](https://github.com/Microsoft/windows-apps/blob/a3d49d0812d4c33583a97b31c378030fb8986a20/windows-apps-src/launch-resume/launch-default-app.md)
+##### <a name='1914690b6417a5ae382e74ec76b54d9db411c2131638'></a> Source: [windows-apps-src\audio-video-camera\index.md](https://github.com/Microsoft/windows-apps/blob/18e97dd5e607960c1c1fd640fe6fe6ae5e9f9085/windows-apps-src/audio-video-camera/index.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [launch-default-app.d37aa1f24a6608cec389d989c4107b26b2481513.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/452ff55ad9e4467b6795272727f137cbf08230ba/ol-handoff/Microsoft/windows-apps.de-de/master/launch-default-app.d37aa1f24a6608cec389d989c4107b26b2481513.de-de.xlf)
-* Handoff Datetime: 2016-08-11 18:18:42
+* Handoff File: [index.1af33ca226923082600a63b53881b7dd68963b62.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ac359383e182641f8c381f024e5c25edc9d554f8/ol-handoff/Microsoft/windows-apps.de-de/master/index.1af33ca226923082600a63b53881b7dd68963b62.de-de.xlf)
+* Handoff Datetime: 2016-08-11 18:47:47
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\launch-resume\launch-default-app.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/launch-resume/launch-default-app.md)
-* Current Handback File: [launch-default-app.d37aa1f24a6608cec389d989c4107b26b2481513.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/launch-default-app.d37aa1f24a6608cec389d989c4107b26b2481513.de-de.xlf)
-* Current Handback Datetime: 2016-07-20 16:33:49
-* [Back to Top](#report-top)
-
-##### <a name='04614e609d015ddcea477b394d53d08a6434de697937'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/a3d49d0812d4c33583a97b31c378030fb8986a20/windows-apps-src/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/452ff55ad9e4467b6795272727f137cbf08230ba/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
-* Handoff Datetime: 2016-08-11 18:18:42
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/TOC.md)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
-* Current Handback Datetime: 2016-07-20 16:33:49
+* Current Target File: [windows-apps-src\audio-video-camera\index.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/audio-video-camera/index.md)
+* Current Handback File: [index.1af33ca226923082600a63b53881b7dd68963b62.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/index.1af33ca226923082600a63b53881b7dd68963b62.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
 
