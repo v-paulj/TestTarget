@@ -1,19 +1,35 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\package-version-numbering.md](https://github.com/Microsoft/windows-apps/blob/4d2e9888917a7037d3eb51a9306935f20e23358f/windows-apps-src/publish/package-version-numbering.md) | HandedOffSuccess | [Details](#cc31e2f8b39cc014334c9ae97b2b932b02f010355027)
+ [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/00fd1109a47e66cde418746c5ef19e5195516617/windows-apps-src/get-started/learn-more.md) | HandedOffSuccess | [Details](#a541072435775d1e23ecb3cb22b2a55c817481073923)
+ [windows-apps-src\publish\package-version-numbering.md](https://github.com/Microsoft/windows-apps/blob/ca273ab6d881b350c2f5a48eafee38c74ac0f36a/windows-apps-src/publish/package-version-numbering.md) | HandedOffSuccess | [Details](#2668152ba471986e00831bdcf46e5a2feba54dcd5027)
 
 ## Item Details
-##### <a name='cc31e2f8b39cc014334c9ae97b2b932b02f010355027'></a> Source: [windows-apps-src\publish\package-version-numbering.md](https://github.com/Microsoft/windows-apps/blob/4d2e9888917a7037d3eb51a9306935f20e23358f/windows-apps-src/publish/package-version-numbering.md)
+##### <a name='a541072435775d1e23ecb3cb22b2a55c817481073923'></a> Source: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/00fd1109a47e66cde418746c5ef19e5195516617/windows-apps-src/get-started/learn-more.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/3709d9449af92a32388a3f33f373d352be9a4c91/ol-handoff/Microsoft/windows-apps.de-de/master/package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.de-de.xlf)
-* Handoff Datetime: 2016-08-15 02:50:39
+* Handoff File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8af1cb22b6599c691a6754cff9219fa26d1279e7/ol-handoff/Microsoft/windows-apps.de-de/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf)
+* Handoff Datetime: 2016-08-15 16:50:08
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/get-started/learn-more.md)
+* Current Handback File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf)
+* Current Handback Datetime: 2016-07-20 16:33:49
+* [Back to Top](#report-top)
+
+##### <a name='2668152ba471986e00831bdcf46e5a2feba54dcd5027'></a> Source: [windows-apps-src\publish\package-version-numbering.md](https://github.com/Microsoft/windows-apps/blob/ca273ab6d881b350c2f5a48eafee38c74ac0f36a/windows-apps-src/publish/package-version-numbering.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8af1cb22b6599c691a6754cff9219fa26d1279e7/ol-handoff/Microsoft/windows-apps.de-de/master/package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.de-de.xlf)
+* Handoff Datetime: 2016-08-15 16:50:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
