@@ -1,42 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\audio-video-camera\capture-photos-and-video-with-mediacapture.md](https://github.com/Microsoft/windows-apps/blob/c97fb440d0f9432b84fc572869103b678dbc8447/windows-apps-src/audio-video-camera/capture-photos-and-video-with-mediacapture.md) | HandedOffSuccess | [Details](#f60152ea846ccd7031f804b45f66dd31e6b4b832162)
- [windows-apps-src\audio-video-camera\custom-video-effects.md](https://github.com/Microsoft/windows-apps/blob/2d10a9a3732612cff8da81ee1921eaed0e838099/windows-apps-src/audio-video-camera/custom-video-effects.md) | HandedOffSuccess | [Details](#57908ff3329968bba2eea3d8d51cb0277a2afba51620)
+ [windows-apps-src\publish\package-version-numbering.md](https://github.com/Microsoft/windows-apps/blob/4d2e9888917a7037d3eb51a9306935f20e23358f/windows-apps-src/publish/package-version-numbering.md) | HandedOffSuccess | [Details](#cc31e2f8b39cc014334c9ae97b2b932b02f010355027)
 
 ## Item Details
-##### <a name='f60152ea846ccd7031f804b45f66dd31e6b4b832162'></a> Source: [windows-apps-src\audio-video-camera\capture-photos-and-video-with-mediacapture.md](https://github.com/Microsoft/windows-apps/blob/c97fb440d0f9432b84fc572869103b678dbc8447/windows-apps-src/audio-video-camera/capture-photos-and-video-with-mediacapture.md)
+##### <a name='cc31e2f8b39cc014334c9ae97b2b932b02f010355027'></a> Source: [windows-apps-src\publish\package-version-numbering.md](https://github.com/Microsoft/windows-apps/blob/4d2e9888917a7037d3eb51a9306935f20e23358f/windows-apps-src/publish/package-version-numbering.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [capture-photos-and-video-with-mediacapture.d8e382ecfb63a19bedd8f76740ef7f04d2b0173e.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/a89541f13f7c23c113396d612212cffe88ea7006/ol-handoff/Microsoft/windows-apps.de-de/master/capture-photos-and-video-with-mediacapture.d8e382ecfb63a19bedd8f76740ef7f04d2b0173e.de-de.xlf)
-* Handoff Datetime: 2016-08-12 22:48:13
+* Handoff File: [package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/3709d9449af92a32388a3f33f373d352be9a4c91/ol-handoff/Microsoft/windows-apps.de-de/master/package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.de-de.xlf)
+* Handoff Datetime: 2016-08-15 02:50:39
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\audio-video-camera\capture-photos-and-video-with-mediacapture.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/audio-video-camera/capture-photos-and-video-with-mediacapture.md)
-* Current Handback File: [capture-photos-and-video-with-mediacapture.d8e382ecfb63a19bedd8f76740ef7f04d2b0173e.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/capture-photos-and-video-with-mediacapture.d8e382ecfb63a19bedd8f76740ef7f04d2b0173e.de-de.xlf)
-* Current Handback Datetime: 2016-07-06 16:08:36
-* [Back to Top](#report-top)
-
-##### <a name='57908ff3329968bba2eea3d8d51cb0277a2afba51620'></a> Source: [windows-apps-src\audio-video-camera\custom-video-effects.md](https://github.com/Microsoft/windows-apps/blob/2d10a9a3732612cff8da81ee1921eaed0e838099/windows-apps-src/audio-video-camera/custom-video-effects.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [custom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/a89541f13f7c23c113396d612212cffe88ea7006/ol-handoff/Microsoft/windows-apps.de-de/master/custom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.de-de.xlf)
-* Handoff Datetime: 2016-08-12 22:48:13
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\audio-video-camera\custom-video-effects.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/audio-video-camera/custom-video-effects.md)
-* Current Handback File: [custom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/custom-video-effects.1bd057b1f63255f934b8823c25bdcbf98a602221.de-de.xlf)
+* Current Target File: [windows-apps-src\publish\package-version-numbering.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/publish/package-version-numbering.md)
+* Current Handback File: [package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/package-version-numbering.d96c46cce07bde4de60c6fdd94923f98f423e4cd.de-de.xlf)
 * Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
