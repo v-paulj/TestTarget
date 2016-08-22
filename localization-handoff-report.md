@@ -1,27 +1,40 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/e7573e222d93d59bab5f55f4585e5c829f2fafa9/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#0f0f231d25383a46e4c951067cb62df958c40aeb7935)
+ [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/6e27c815768d016af86fff618561037cd3144e66/windows-apps-src/get-started/application-development-for-windows-as-a-service.md) | HandedOffSuccess | [Details](#175467ac450831e13ab81f065c8f0125b870769b3545)
+ [windows-apps-src\publish\beta-testing-and-targeted-distribution.md](https://github.com/Microsoft/windows-apps/blob/9b58f825518908a6b3942b2a80391234c7a4507c/windows-apps-src/publish/beta-testing-and-targeted-distribution.md) | HandedOffSuccess | [Details](#a7b582dd6f38e24c80300c48317e8242cd73176e4983)
 
 ## Item Details
-##### <a name='0f0f231d25383a46e4c951067cb62df958c40aeb7935'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/e7573e222d93d59bab5f55f4585e5c829f2fafa9/windows-apps-src/TOC.md)
+##### <a name='175467ac450831e13ab81f065c8f0125b870769b3545'></a> Source: [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/6e27c815768d016af86fff618561037cd3144e66/windows-apps-src/get-started/application-development-for-windows-as-a-service.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ef9f256fc978640bb54a9f54efae0662b95e9e81/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
-* Handoff Datetime: 2016-08-22 18:50:22
+* Handoff File: [application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8f2361cd95f37c9c9ceff58696afa9d712fe5585/ol-handoff/Microsoft/windows-apps.de-de/master/application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.de-de.xlf)
+* Handoff Datetime: 2016-08-22 19:21:52
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/TOC.md)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
-* Current Handback Datetime: 2016-07-20 16:33:49
+* [Back to Top](#report-top)
+
+##### <a name='a7b582dd6f38e24c80300c48317e8242cd73176e4983'></a> Source: [windows-apps-src\publish\beta-testing-and-targeted-distribution.md](https://github.com/Microsoft/windows-apps/blob/9b58f825518908a6b3942b2a80391234c7a4507c/windows-apps-src/publish/beta-testing-and-targeted-distribution.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [beta-testing-and-targeted-distribution.c67e1e6f8bc384fde280a22078ae75eedc4d25c5.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8f2361cd95f37c9c9ceff58696afa9d712fe5585/ol-handoff/Microsoft/windows-apps.de-de/master/beta-testing-and-targeted-distribution.c67e1e6f8bc384fde280a22078ae75eedc4d25c5.de-de.xlf)
+* Handoff Datetime: 2016-08-22 19:21:52
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\publish\beta-testing-and-targeted-distribution.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/publish/beta-testing-and-targeted-distribution.md)
+* Current Handback File: [beta-testing-and-targeted-distribution.c67e1e6f8bc384fde280a22078ae75eedc4d25c5.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/beta-testing-and-targeted-distribution.c67e1e6f8bc384fde280a22078ae75eedc4d25c5.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
 
