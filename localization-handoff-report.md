@@ -1,27 +1,40 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\launch-resume\launch-settings-app.md](https://github.com/Microsoft/windows-apps/blob/f90ba930db60f338ee0ebcc80934281363de01ee/windows-apps-src/launch-resume/launch-settings-app.md) | HandedOffSuccess | [Details](#249e485f74364475ff96a8256ee88bdb797492594396)
+ [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/0ffeee0644f1482d683e79b8b0df9aaeafb43096/windows-apps-src/get-started/application-development-for-windows-as-a-service.md) | HandedOffSuccess | [Details](#a1e04eab743ef11544ed18544710767608d7c3613545)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/0ffeee0644f1482d683e79b8b0df9aaeafb43096/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#6df086cca293bcdd73a9be0e04b3d6696e62d11e7935)
 
 ## Item Details
-##### <a name='249e485f74364475ff96a8256ee88bdb797492594396'></a> Source: [windows-apps-src\launch-resume\launch-settings-app.md](https://github.com/Microsoft/windows-apps/blob/f90ba930db60f338ee0ebcc80934281363de01ee/windows-apps-src/launch-resume/launch-settings-app.md)
+##### <a name='a1e04eab743ef11544ed18544710767608d7c3613545'></a> Source: [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/0ffeee0644f1482d683e79b8b0df9aaeafb43096/windows-apps-src/get-started/application-development-for-windows-as-a-service.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/360c3d4b24fa9ee59a9798c227566b98b96c0515/ol-handoff/Microsoft/windows-apps.de-de/master/launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.de-de.xlf)
-* Handoff Datetime: 2016-08-22 17:20:22
+* Handoff File: [application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/bb144ae0381672c72872ad6f8c277ae1e1fa0700/ol-handoff/Microsoft/windows-apps.de-de/master/application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.de-de.xlf)
+* Handoff Datetime: 2016-08-22 18:22:16
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\launch-resume\launch-settings-app.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/launch-resume/launch-settings-app.md)
-* Current Handback File: [launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/launch-settings-app.213d22fb9304d43ac7c72f50022c39923445e2be.de-de.xlf)
-* Current Handback Datetime: 2016-07-06 16:08:36
+* [Back to Top](#report-top)
+
+##### <a name='6df086cca293bcdd73a9be0e04b3d6696e62d11e7935'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/0ffeee0644f1482d683e79b8b0df9aaeafb43096/windows-apps-src/TOC.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/bb144ae0381672c72872ad6f8c277ae1e1fa0700/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Handoff Datetime: 2016-08-22 18:22:16
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/TOC.md)
+* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
 
