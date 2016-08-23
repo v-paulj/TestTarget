@@ -1,39 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\choose-a-uwp-version.md](https://github.com/Microsoft/windows-apps/blob/92752e7bbdb7e4e121dcc72d1daf645b390d1c0c/windows-apps-src/get-started/choose-a-uwp-version.md) | HandedOffSuccess | [Details](#808714e2c0b5682feac81e8024c35512c345b0a83546)
- [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/92752e7bbdb7e4e121dcc72d1daf645b390d1c0c/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#55e06a0fab7f5998fd1a0b813f306eb1b4737ed87937)
+ [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/91b49f919e90c5c873bc22b7747b0f776ca8362e/windows-apps-src/get-started/learn-more.md) | HandedOffSuccess | [Details](#1a43ebe62c2c9462c36c821134e2a08308bd32663925)
 
 ## Item Details
-##### <a name='808714e2c0b5682feac81e8024c35512c345b0a83546'></a> Source: [windows-apps-src\get-started\choose-a-uwp-version.md](https://github.com/Microsoft/windows-apps/blob/92752e7bbdb7e4e121dcc72d1daf645b390d1c0c/windows-apps-src/get-started/choose-a-uwp-version.md)
+##### <a name='1a43ebe62c2c9462c36c821134e2a08308bd32663925'></a> Source: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/91b49f919e90c5c873bc22b7747b0f776ca8362e/windows-apps-src/get-started/learn-more.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [choose-a-uwp-version.3e04a4e68384e4599efd9bed16f6938d5e8f669f.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8ddfea2feb10cba0c0be3e5c417bc630c03767d8/ol-handoff/Microsoft/windows-apps.de-de/master/choose-a-uwp-version.3e04a4e68384e4599efd9bed16f6938d5e8f669f.de-de.xlf)
-* Handoff Datetime: 2016-08-23 21:21:53
+* Handoff File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/625477290e59be94c91a9d4c0457ea9d7900f37e/ol-handoff/Microsoft/windows-apps.de-de/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf)
+* Handoff Datetime: 2016-08-23 22:21:16
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='55e06a0fab7f5998fd1a0b813f306eb1b4737ed87937'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/92752e7bbdb7e4e121dcc72d1daf645b390d1c0c/windows-apps-src/TOC.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8ddfea2feb10cba0c0be3e5c417bc630c03767d8/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
-* Handoff Datetime: 2016-08-23 21:21:53
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/TOC.md)
-* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Current Target File: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/get-started/learn-more.md)
+* Current Handback File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf)
 * Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
