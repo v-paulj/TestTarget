@@ -1,43 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\images\vs-2015-community-setup.png](https://github.com/Microsoft/windows-apps/blob/a528d7e48f858250d2cbe779eb2babcf5d492318/windows-apps-src/get-started/images/vs-2015-community-setup.png) | HandedOffSuccess | [Details](#ec3c2f27223c35a423a5e5a5ff189e39b179f8d83773)
- [windows-apps-src\publish\payout-summary.md](https://github.com/Microsoft/windows-apps/blob/7ce6e9f1226eda94ab11fc1de5402ace91b40be2/windows-apps-src/publish/payout-summary.md) | HandedOffSuccess | [Details](#0c6d15a9bf5d8e4bf1fe22738af7ac3470e4dc855033)
+ [windows-apps-src\files\file-access-permissions.md](https://github.com/Microsoft/windows-apps/blob/ef8d0e7ad9063fa57a9db7c3cbdcb6846d3b1133/windows-apps-src/files/file-access-permissions.md) | HandedOffSuccess | [Details](#e58cdce7f803cd15b66371e3b03c4405cbdeb3ff3417)
 
 ## Item Details
-##### <a name='ec3c2f27223c35a423a5e5a5ff189e39b179f8d83773'></a> Source: [windows-apps-src\get-started\images\vs-2015-community-setup.png](https://github.com/Microsoft/windows-apps/blob/a528d7e48f858250d2cbe779eb2babcf5d492318/windows-apps-src/get-started/images/vs-2015-community-setup.png)
+##### <a name='e58cdce7f803cd15b66371e3b03c4405cbdeb3ff3417'></a> Source: [windows-apps-src\files\file-access-permissions.md](https://github.com/Microsoft/windows-apps/blob/ef8d0e7ad9063fa57a9db7c3cbdcb6846d3b1133/windows-apps-src/files/file-access-permissions.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [ec3c2f27223c35a423a5e5a5ff189e39b179f8d8.png](https://github.com/Microsoft/WDG.handoff/blob/883e17a1e10967d10be68743bd4933fc14bc0197/ol-handoff/Microsoft/windows-apps.de-de/master/ec3c2f27223c35a423a5e5a5ff189e39b179f8d8.png)
-* Handoff Datetime: 2016-08-24 19:50:58
-* Handoff Reason: IsDependency
-* Dependency From: windows-apps-src\get-started\get-set-up.md
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\images\vs-2015-community-setup.png](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/get-started/images/vs-2015-community-setup.png)
-* Current Handback File: [c76ac5f735c5dc93e5f5014b77181a2e862386a1.png](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/c76ac5f735c5dc93e5f5014b77181a2e862386a1.png)
-* Current Handback Datetime: 2016-07-20 16:33:49
-* [Back to Top](#report-top)
-
-##### <a name='0c6d15a9bf5d8e4bf1fe22738af7ac3470e4dc855033'></a> Source: [windows-apps-src\publish\payout-summary.md](https://github.com/Microsoft/windows-apps/blob/7ce6e9f1226eda94ab11fc1de5402ace91b40be2/windows-apps-src/publish/payout-summary.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/883e17a1e10967d10be68743bd4933fc14bc0197/ol-handoff/Microsoft/windows-apps.de-de/master/payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.de-de.xlf)
-* Handoff Datetime: 2016-08-24 19:50:58
+* Handoff File: [file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/df5e5c0683b133a7324de09391346f8b4bfc1e7b/ol-handoff/Microsoft/windows-apps.de-de/master/file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.de-de.xlf)
+* Handoff Datetime: 2016-08-24 22:20:14
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\payout-summary.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/publish/payout-summary.md)
-* Current Handback File: [payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/payout-summary.5a5a0b9114e3e212c351a9a539a00f45d27f154f.de-de.xlf)
+* Current Target File: [windows-apps-src\files\file-access-permissions.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/files/file-access-permissions.md)
+* Current Handback File: [file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.de-de.xlf)
 * Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
