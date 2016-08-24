@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\files\file-access-permissions.md](https://github.com/Microsoft/windows-apps/blob/ef8d0e7ad9063fa57a9db7c3cbdcb6846d3b1133/windows-apps-src/files/file-access-permissions.md) | HandedOffSuccess | [Details](#e58cdce7f803cd15b66371e3b03c4405cbdeb3ff3417)
+ [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/95c34f70e9610907897cfe9a2bf82aaac408e486/windows-apps-src/launch-resume/create-and-register-a-background-task.md) | HandedOffSuccess | [Details](#4eb67f8f63134ab33df79b0b98b252b2b27b2dda4366)
 
 ## Item Details
-##### <a name='e58cdce7f803cd15b66371e3b03c4405cbdeb3ff3417'></a> Source: [windows-apps-src\files\file-access-permissions.md](https://github.com/Microsoft/windows-apps/blob/ef8d0e7ad9063fa57a9db7c3cbdcb6846d3b1133/windows-apps-src/files/file-access-permissions.md)
+##### <a name='4eb67f8f63134ab33df79b0b98b252b2b27b2dda4366'></a> Source: [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps/blob/95c34f70e9610907897cfe9a2bf82aaac408e486/windows-apps-src/launch-resume/create-and-register-a-background-task.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/df5e5c0683b133a7324de09391346f8b4bfc1e7b/ol-handoff/Microsoft/windows-apps.de-de/master/file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.de-de.xlf)
-* Handoff Datetime: 2016-08-24 22:20:14
+* Handoff File: [create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/aedfda31e8d761c1302056ef44027bc5a3a15315/ol-handoff/Microsoft/windows-apps.de-de/master/create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.de-de.xlf)
+* Handoff Datetime: 2016-08-24 23:19:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\files\file-access-permissions.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/files/file-access-permissions.md)
-* Current Handback File: [file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/file-access-permissions.91945535f7ae65936b154a1b5949cd4f7a05f221.de-de.xlf)
+* Current Target File: [windows-apps-src\launch-resume\create-and-register-a-background-task.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/launch-resume/create-and-register-a-background-task.md)
+* Current Handback File: [create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/create-and-register-a-background-task.01f0ee74be60336ec8767af43d9f081f567f6796.de-de.xlf)
 * Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
