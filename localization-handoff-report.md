@@ -6,22 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\xbox-apps\index.md](https://github.com/Microsoft/windows-apps/blob/7a53a7a9e786ebe04963a827bdfbc5beb69819eb/windows-apps-src/xbox-apps/index.md) | HandedOffSuccess | [Details](#d46add99bccd41b4d278e58f79b356714fa4a0388059)
+ [windows-apps-src\launch-resume\index.md](https://github.com/Microsoft/windows-apps/blob/5d0fffc46b1fc4ca2fba1422f2094bd411a65058/windows-apps-src/launch-resume/index.md) | HandedOffSuccess | [Details](#6950f2f4eeee947eb2f7e8b37f72de7c03f53b014393)
 
 ## Item Details
-##### <a name='d46add99bccd41b4d278e58f79b356714fa4a0388059'></a> Source: [windows-apps-src\xbox-apps\index.md](https://github.com/Microsoft/windows-apps/blob/7a53a7a9e786ebe04963a827bdfbc5beb69819eb/windows-apps-src/xbox-apps/index.md)
+##### <a name='6950f2f4eeee947eb2f7e8b37f72de7c03f53b014393'></a> Source: [windows-apps-src\launch-resume\index.md](https://github.com/Microsoft/windows-apps/blob/5d0fffc46b1fc4ca2fba1422f2094bd411a65058/windows-apps-src/launch-resume/index.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [index.d16e2a2199b17d4f07cbc6956844a04c9911bc85.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8abe1b24c4170a6c3f96d842eccdc1a733d82f3d/ol-handoff/Microsoft/windows-apps.de-de/master/index.d16e2a2199b17d4f07cbc6956844a04c9911bc85.de-de.xlf)
-* Handoff Datetime: 2016-08-26 22:46:21
+* Handoff File: [index.7f38ebfeadef5946145c54c9dd9fb44894d2175a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/170bb6237a0b4a8e9a6e3376252a93eb028cc488/ol-handoff/Microsoft/windows-apps.de-de/master/index.7f38ebfeadef5946145c54c9dd9fb44894d2175a.de-de.xlf)
+* Handoff Datetime: 2016-08-26 23:15:12
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\xbox-apps\index.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/xbox-apps/index.md)
-* Current Handback File: [index.d16e2a2199b17d4f07cbc6956844a04c9911bc85.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/index.d16e2a2199b17d4f07cbc6956844a04c9911bc85.de-de.xlf)
-* Current Handback Datetime: 2016-07-20 16:33:49
+* Current Target File: [windows-apps-src\launch-resume\index.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/launch-resume/index.md)
+* Current Handback File: [index.7f38ebfeadef5946145c54c9dd9fb44894d2175a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/index.7f38ebfeadef5946145c54c9dd9fb44894d2175a.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
 
