@@ -6,37 +6,37 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/40e0c4a796e58dfa5503f43f21b7bc5feff785d8/windows-apps-src/devices-sensors/3d-printing.md) | HandedOffSuccess | [Details](#adf247b4b2ed13f8c6fb112b0f929d5ed9a3657f3316)
- [windows-apps-src\launch-resume\handle-app-prelaunch.md](https://github.com/Microsoft/windows-apps/blob/ea9aa37e15dbb6c977b0c0be4f91f77f3879e622/windows-apps-src/launch-resume/handle-app-prelaunch.md) | HandedOffSuccess | [Details](#cf7cb9f81207f4f25eb8e78283079df27f83d7dc4373)
+ [windows-apps-src\porting\desktop-to-uwp-deploy-and-debug.md](https://github.com/Microsoft/windows-apps/blob/14fedeeb7206f2557b8a581704321abccfbd77df/windows-apps-src/porting/desktop-to-uwp-deploy-and-debug.md) | HandedOffSuccess | [Details](#b037e9949ea3c69a44dad9c4812ee517fe173d0e4844)
+ [windows-apps-src\porting\desktop-to-uwp-signing.md](https://github.com/Microsoft/windows-apps/blob/4b172d98e600a4b8d40c918cf5563663fb9df654/windows-apps-src/porting/desktop-to-uwp-signing.md) | HandedOffSuccess | [Details](#4c18c54cdd7739cf37c15c59bad9e1aa0e4342534849)
 
 ## Item Details
-##### <a name='adf247b4b2ed13f8c6fb112b0f929d5ed9a3657f3316'></a> Source: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps/blob/40e0c4a796e58dfa5503f43f21b7bc5feff785d8/windows-apps-src/devices-sensors/3d-printing.md)
+##### <a name='b037e9949ea3c69a44dad9c4812ee517fe173d0e4844'></a> Source: [windows-apps-src\porting\desktop-to-uwp-deploy-and-debug.md](https://github.com/Microsoft/windows-apps/blob/14fedeeb7206f2557b8a581704321abccfbd77df/windows-apps-src/porting/desktop-to-uwp-deploy-and-debug.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/386c116c4c9ec1b1dc327d130397cec3d03c0154/ol-handoff/Microsoft/windows-apps.de-de/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.de-de.xlf)
-* Handoff Datetime: 2016-08-26 21:16:12
+* Handoff File: [desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/9618d948f2c45bdf37cd91e6b31661a34584773f/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.de-de.xlf)
+* Handoff Datetime: 2016-08-26 21:46:14
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\devices-sensors\3d-printing.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/devices-sensors/3d-printing.md)
-* Current Handback File: [3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/3d-printing.adf86954646feee9da323de5646d5946f8e3fd72.de-de.xlf)
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-deploy-and-debug.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/porting/desktop-to-uwp-deploy-and-debug.md)
+* Current Handback File: [desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/desktop-to-uwp-deploy-and-debug.c373301a747650050efa3006e6e6a31b8f2cf9a1.de-de.xlf)
 * Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
-##### <a name='cf7cb9f81207f4f25eb8e78283079df27f83d7dc4373'></a> Source: [windows-apps-src\launch-resume\handle-app-prelaunch.md](https://github.com/Microsoft/windows-apps/blob/ea9aa37e15dbb6c977b0c0be4f91f77f3879e622/windows-apps-src/launch-resume/handle-app-prelaunch.md)
+##### <a name='4c18c54cdd7739cf37c15c59bad9e1aa0e4342534849'></a> Source: [windows-apps-src\porting\desktop-to-uwp-signing.md](https://github.com/Microsoft/windows-apps/blob/4b172d98e600a4b8d40c918cf5563663fb9df654/windows-apps-src/porting/desktop-to-uwp-signing.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [handle-app-prelaunch.190c562dc29d917606fd3934bde86bc8b2eeeafa.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/386c116c4c9ec1b1dc327d130397cec3d03c0154/ol-handoff/Microsoft/windows-apps.de-de/master/handle-app-prelaunch.190c562dc29d917606fd3934bde86bc8b2eeeafa.de-de.xlf)
-* Handoff Datetime: 2016-08-26 21:16:12
+* Handoff File: [desktop-to-uwp-signing.8d6b96e6fd97cf0e14ba93fd01681c522709a3b4.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/9618d948f2c45bdf37cd91e6b31661a34584773f/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-signing.8d6b96e6fd97cf0e14ba93fd01681c522709a3b4.de-de.xlf)
+* Handoff Datetime: 2016-08-26 21:46:14
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\launch-resume\handle-app-prelaunch.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/launch-resume/handle-app-prelaunch.md)
-* Current Handback File: [handle-app-prelaunch.190c562dc29d917606fd3934bde86bc8b2eeeafa.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/handle-app-prelaunch.190c562dc29d917606fd3934bde86bc8b2eeeafa.de-de.xlf)
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-signing.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/porting/desktop-to-uwp-signing.md)
+* Current Handback File: [desktop-to-uwp-signing.8d6b96e6fd97cf0e14ba93fd01681c522709a3b4.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/desktop-to-uwp-signing.8d6b96e6fd97cf0e14ba93fd01681c522709a3b4.de-de.xlf)
 * Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
