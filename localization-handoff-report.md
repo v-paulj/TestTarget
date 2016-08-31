@@ -6,19 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\create-and-manage-submissions-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/bffd084d65b34053e384b88072c19427c8faed49/windows-apps-src/monetize/create-and-manage-submissions-using-windows-store-services.md) | HandedOffSuccess | [Details](#ef471a8bb10d506117839f31a397aa98298f7c304741)
+ [windows-apps-src\xbox-apps\frequently-asked-questions.md](https://github.com/Microsoft/windows-apps/blob/07e7ec6a5816d4b8d33322b2b1af05ffc3e1b820/windows-apps-src/xbox-apps/frequently-asked-questions.md) | HandedOffSuccess | [Details](#38e5d48b2b0303b5f7d13fdaf6f71e1b3fa569788054)
 
 ## Item Details
-##### <a name='ef471a8bb10d506117839f31a397aa98298f7c304741'></a> Source: [windows-apps-src\monetize\create-and-manage-submissions-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/bffd084d65b34053e384b88072c19427c8faed49/windows-apps-src/monetize/create-and-manage-submissions-using-windows-store-services.md)
+##### <a name='38e5d48b2b0303b5f7d13fdaf6f71e1b3fa569788054'></a> Source: [windows-apps-src\xbox-apps\frequently-asked-questions.md](https://github.com/Microsoft/windows-apps/blob/07e7ec6a5816d4b8d33322b2b1af05ffc3e1b820/windows-apps-src/xbox-apps/frequently-asked-questions.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [create-and-manage-submissions-using-windows-store-services.d17cd67e3f06021e1bcff183a35fea407e0be645.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/d51ee4eb1b52597bc015dfef9099f1d8ece3023c/ol-handoff/Microsoft/windows-apps.de-de/master/create-and-manage-submissions-using-windows-store-services.d17cd67e3f06021e1bcff183a35fea407e0be645.de-de.xlf)
-* Handoff Datetime: 2016-08-30 23:08:57
+* Handoff File: [frequently-asked-questions.49aa0704cf8127dd0b088146bf6643b88aa0ce3c.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/49f0d9247778f7456856ce85e84d1865e48bd755/ol-handoff/Microsoft/windows-apps.de-de/master/frequently-asked-questions.49aa0704cf8127dd0b088146bf6643b88aa0ce3c.de-de.xlf)
+* Handoff Datetime: 2016-08-31 16:06:56
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\xbox-apps\frequently-asked-questions.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/xbox-apps/frequently-asked-questions.md)
+* Current Handback File: [frequently-asked-questions.49aa0704cf8127dd0b088146bf6643b88aa0ce3c.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/frequently-asked-questions.49aa0704cf8127dd0b088146bf6643b88aa0ce3c.de-de.xlf)
+* Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
 
