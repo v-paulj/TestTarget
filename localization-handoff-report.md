@@ -6,17 +6,17 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\create-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/create-an-app-submission.md) | HandedOffSuccess | [Details](#4857e0a9d7eec1d4f862ba61d39d2c0dcb138bd84740)
- [windows-apps-src\monetize\get-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/get-an-app-submission.md) | HandedOffSuccess | [Details](#c845b59919a3a487949bc8926f7261992dac60ae4769)
- [windows-apps-src\monetize\manage-app-submissions.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/manage-app-submissions.md) | HandedOffSuccess | [Details](#448eafbdadb21476da43e7408bb8bad354ba486d4829)
- [windows-apps-src\monetize\update-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/update-an-app-submission.md) | HandedOffSuccess | [Details](#ad1c565f1ec84127b2ac689cc7cb23d2b39764ef4855)
+ [windows-apps-src\launch-resume\connected-apps-and-devices.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/connected-apps-and-devices.md) | HandedOffSuccess | [Details](#4f49acfd7efcb10d99f9d23884d20c0fc51e5a4a4368)
+ [windows-apps-src\launch-resume\discover-remote-devices.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/discover-remote-devices.md) | HandedOffSuccess | [Details](#cb1f9cf6915378203919fdf63bcebc935af74a304376)
+ [windows-apps-src\launch-resume\launch-a-remote-app.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/launch-a-remote-app.md) | HandedOffSuccess | [Details](#d8c3783d68a1b3b216058790d84255a7fb4b612c4400)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#7795cb65f01fc9e9013c6ad8a7330a34972622c47989)
 
 ## Item Details
-##### <a name='4857e0a9d7eec1d4f862ba61d39d2c0dcb138bd84740'></a> Source: [windows-apps-src\monetize\create-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/create-an-app-submission.md)
+##### <a name='4f49acfd7efcb10d99f9d23884d20c0fc51e5a4a4368'></a> Source: [windows-apps-src\launch-resume\connected-apps-and-devices.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/connected-apps-and-devices.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [create-an-app-submission.d6d0c3588ca5d2a377e551d71b2d30a9df87ec2a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/d96e0421c93012ae64d405b1d51721aaf53bad38/ol-handoff/Microsoft/windows-apps.de-de/master/create-an-app-submission.d6d0c3588ca5d2a377e551d71b2d30a9df87ec2a.de-de.xlf)
-* Handoff Datetime: 2016-08-31 18:06:59
+* Handoff File: [connected-apps-and-devices.bc37f58754b7bcb70f7340552b803a3428d1f746.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/5f88345443fb8860e0a9de3ad1fa0555945a8df1/ol-handoff/Microsoft/windows-apps.de-de/master/connected-apps-and-devices.bc37f58754b7bcb70f7340552b803a3428d1f746.de-de.xlf)
+* Handoff Datetime: 2016-08-31 20:37:54
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -24,11 +24,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c845b59919a3a487949bc8926f7261992dac60ae4769'></a> Source: [windows-apps-src\monetize\get-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/get-an-app-submission.md)
+##### <a name='cb1f9cf6915378203919fdf63bcebc935af74a304376'></a> Source: [windows-apps-src\launch-resume\discover-remote-devices.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/discover-remote-devices.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [get-an-app-submission.e4d89c99211d2c2eb6f962fed154ea5ebaecbc0e.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/d96e0421c93012ae64d405b1d51721aaf53bad38/ol-handoff/Microsoft/windows-apps.de-de/master/get-an-app-submission.e4d89c99211d2c2eb6f962fed154ea5ebaecbc0e.de-de.xlf)
-* Handoff Datetime: 2016-08-31 18:06:59
+* Handoff File: [discover-remote-devices.b9a8dea8347a056b561eb5c7222bb1dff78a3acd.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/5f88345443fb8860e0a9de3ad1fa0555945a8df1/ol-handoff/Microsoft/windows-apps.de-de/master/discover-remote-devices.b9a8dea8347a056b561eb5c7222bb1dff78a3acd.de-de.xlf)
+* Handoff Datetime: 2016-08-31 20:37:54
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -36,11 +36,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='448eafbdadb21476da43e7408bb8bad354ba486d4829'></a> Source: [windows-apps-src\monetize\manage-app-submissions.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/manage-app-submissions.md)
+##### <a name='d8c3783d68a1b3b216058790d84255a7fb4b612c4400'></a> Source: [windows-apps-src\launch-resume\launch-a-remote-app.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/launch-resume/launch-a-remote-app.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [manage-app-submissions.289b450373e235be4b37005d83b6cc18ffe2de1f.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/d96e0421c93012ae64d405b1d51721aaf53bad38/ol-handoff/Microsoft/windows-apps.de-de/master/manage-app-submissions.289b450373e235be4b37005d83b6cc18ffe2de1f.de-de.xlf)
-* Handoff Datetime: 2016-08-31 18:06:59
+* Handoff File: [launch-a-remote-app.ca9376133d84e80a1e47cffe465fc9586a55369d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/5f88345443fb8860e0a9de3ad1fa0555945a8df1/ol-handoff/Microsoft/windows-apps.de-de/master/launch-a-remote-app.ca9376133d84e80a1e47cffe465fc9586a55369d.de-de.xlf)
+* Handoff Datetime: 2016-08-31 20:37:54
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -48,16 +48,19 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ad1c565f1ec84127b2ac689cc7cb23d2b39764ef4855'></a> Source: [windows-apps-src\monetize\update-an-app-submission.md](https://github.com/Microsoft/windows-apps/blob/178b70db1583790c174d65e060c8bce6e4f69243/windows-apps-src/monetize/update-an-app-submission.md)
+##### <a name='7795cb65f01fc9e9013c6ad8a7330a34972622c47989'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/ff8e16d0e376d502157ae42b9cdae11875008554/windows-apps-src/TOC.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [update-an-app-submission.9431ea5b6d437b2ac8c568f5f86b672ece34606f.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/d96e0421c93012ae64d405b1d51721aaf53bad38/ol-handoff/Microsoft/windows-apps.de-de/master/update-an-app-submission.9431ea5b6d437b2ac8c568f5f86b672ece34606f.de-de.xlf)
-* Handoff Datetime: 2016-08-31 18:06:59
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/5f88345443fb8860e0a9de3ad1fa0555945a8df1/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Handoff Datetime: 2016-08-31 20:37:54
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/TOC.md)
+* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
 
