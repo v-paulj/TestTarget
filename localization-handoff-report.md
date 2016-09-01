@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps/blob/9a6b72d17004615c02edf7235fd9327abb0c8ff8/windows-apps-src/publish/manage-account-users.md) | HandedOffSuccess | [Details](#b10e80eb833ae0a772d72951ca3c3b1076a8b1715071)
+ [windows-apps-src\publish\distribute-lob-apps-to-enterprises.md](https://github.com/Microsoft/windows-apps/blob/44485b32a7c5580e1a7a0ca9ca7c642e0b9b29d2/windows-apps-src/publish/distribute-lob-apps-to-enterprises.md) | HandedOffSuccess | [Details](#76fc4e5cfa70d06d6f378409ecd9f331f64c08035050)
 
 ## Item Details
-##### <a name='b10e80eb833ae0a772d72951ca3c3b1076a8b1715071'></a> Source: [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps/blob/9a6b72d17004615c02edf7235fd9327abb0c8ff8/windows-apps-src/publish/manage-account-users.md)
+##### <a name='76fc4e5cfa70d06d6f378409ecd9f331f64c08035050'></a> Source: [windows-apps-src\publish\distribute-lob-apps-to-enterprises.md](https://github.com/Microsoft/windows-apps/blob/44485b32a7c5580e1a7a0ca9ca7c642e0b9b29d2/windows-apps-src/publish/distribute-lob-apps-to-enterprises.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/5074b845b78fd4878f6f512045c86b1282848df2/ol-handoff/Microsoft/windows-apps.de-de/master/manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.de-de.xlf)
-* Handoff Datetime: 2016-09-01 16:37:58
+* Handoff File: [distribute-lob-apps-to-enterprises.0b587ccf3d72dde21acfcdb2eded5841e0f9ffea.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/bd03a498223945b1f8e38d54f834d1a03896f268/ol-handoff/Microsoft/windows-apps.de-de/master/distribute-lob-apps-to-enterprises.0b587ccf3d72dde21acfcdb2eded5841e0f9ffea.de-de.xlf)
+* Handoff Datetime: 2016-09-01 17:37:47
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\manage-account-users.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/publish/manage-account-users.md)
-* Current Handback File: [manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/manage-account-users.b7052883acae7cf5a19d5cd03e6c2038ce41f0c3.de-de.xlf)
+* Current Target File: [windows-apps-src\publish\distribute-lob-apps-to-enterprises.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/publish/distribute-lob-apps-to-enterprises.md)
+* Current Handback File: [distribute-lob-apps-to-enterprises.0b587ccf3d72dde21acfcdb2eded5841e0f9ffea.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/distribute-lob-apps-to-enterprises.0b587ccf3d72dde21acfcdb2eded5841e0f9ffea.de-de.xlf)
 * Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
