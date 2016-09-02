@@ -6,30 +6,30 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps/blob/ee934bbfdaf7f5f55c7a21b08fab3d78e69c22f5/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md) | HandedOffSuccess | [Details](#85a1451d1c46e4abfc42e5d46b4e6a08a02f90023550)
- [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://github.com/Microsoft/windows-apps/blob/f37df6720da10b6f5bb44b99d41ee63c5ead9ec7/windows-apps-src/whats-new/windows-10-version-1607-api-diff.md) | HandedOffSuccess | [Details](#4027fa8018a1e43095c53ae04b222156e84371b87998)
+ [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/47e0ac11178af98589e75cc562631c6904b40da4/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md) | HandedOffSuccess | [Details](#1293bb5beb927425928d832f887129263db5a8954719)
+ [windows-apps-src\monetize\create-and-manage-submissions-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/47e0ac11178af98589e75cc562631c6904b40da4/windows-apps-src/monetize/create-and-manage-submissions-using-windows-store-services.md) | HandedOffSuccess | [Details](#0a566dfee8f7fe08c06ce4963435a70c30b1650d4743)
 
 ## Item Details
-##### <a name='85a1451d1c46e4abfc42e5d46b4e6a08a02f90023550'></a> Source: [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps/blob/ee934bbfdaf7f5f55c7a21b08fab3d78e69c22f5/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md)
+##### <a name='1293bb5beb927425928d832f887129263db5a8954719'></a> Source: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/47e0ac11178af98589e75cc562631c6904b40da4/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/e2576ca2f2b54c8f98d9ea400aa79dc653d578a7/ol-handoff/Microsoft/windows-apps.de-de/master/create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.de-de.xlf)
-* Handoff Datetime: 2016-09-02 21:36:55
+* Handoff File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/fff8dce378966a5516eb1a4d833ac8d69706a416/ol-handoff/Microsoft/windows-apps.de-de/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf)
+* Handoff Datetime: 2016-09-02 22:38:07
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\create-a-hello-world-app-xaml-universal.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/get-started/create-a-hello-world-app-xaml-universal.md)
-* Current Handback File: [create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/create-a-hello-world-app-xaml-universal.0ff2b4f45789a6f10860e075fbcf61c857c43034.de-de.xlf)
-* Current Handback Datetime: 2016-07-20 16:33:49
+* Current Target File: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
+* Current Handback File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
-##### <a name='4027fa8018a1e43095c53ae04b222156e84371b87998'></a> Source: [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://github.com/Microsoft/windows-apps/blob/f37df6720da10b6f5bb44b99d41ee63c5ead9ec7/windows-apps-src/whats-new/windows-10-version-1607-api-diff.md)
+##### <a name='0a566dfee8f7fe08c06ce4963435a70c30b1650d4743'></a> Source: [windows-apps-src\monetize\create-and-manage-submissions-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/47e0ac11178af98589e75cc562631c6904b40da4/windows-apps-src/monetize/create-and-manage-submissions-using-windows-store-services.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/e2576ca2f2b54c8f98d9ea400aa79dc653d578a7/ol-handoff/Microsoft/windows-apps.de-de/master/windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.de-de.xlf)
-* Handoff Datetime: 2016-09-02 21:36:55
+* Handoff File: [create-and-manage-submissions-using-windows-store-services.d17cd67e3f06021e1bcff183a35fea407e0be645.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/fff8dce378966a5516eb1a4d833ac8d69706a416/ol-handoff/Microsoft/windows-apps.de-de/master/create-and-manage-submissions-using-windows-store-services.d17cd67e3f06021e1bcff183a35fea407e0be645.de-de.xlf)
+* Handoff Datetime: 2016-09-02 22:38:07
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
