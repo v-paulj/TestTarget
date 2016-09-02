@@ -1,35 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/47e0ac11178af98589e75cc562631c6904b40da4/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md) | HandedOffSuccess | [Details](#1293bb5beb927425928d832f887129263db5a8954719)
- [windows-apps-src\monetize\create-and-manage-submissions-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/47e0ac11178af98589e75cc562631c6904b40da4/windows-apps-src/monetize/create-and-manage-submissions-using-windows-store-services.md) | HandedOffSuccess | [Details](#0a566dfee8f7fe08c06ce4963435a70c30b1650d4743)
+ [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://github.com/Microsoft/windows-apps/blob/9744ad0720baf7abdacf439249c18742a5e6d34b/windows-apps-src/whats-new/windows-10-version-1607-api-diff.md) | HandedOffSuccess | [Details](#9d3d69899c6a3762330f5f4ef8b44250a38be0377998)
 
 ## Item Details
-##### <a name='1293bb5beb927425928d832f887129263db5a8954719'></a> Source: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/47e0ac11178af98589e75cc562631c6904b40da4/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
+##### <a name='9d3d69899c6a3762330f5f4ef8b44250a38be0377998'></a> Source: [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://github.com/Microsoft/windows-apps/blob/9744ad0720baf7abdacf439249c18742a5e6d34b/windows-apps-src/whats-new/windows-10-version-1607-api-diff.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/fff8dce378966a5516eb1a4d833ac8d69706a416/ol-handoff/Microsoft/windows-apps.de-de/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf)
-* Handoff Datetime: 2016-09-02 22:38:07
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\monetize\access-analytics-data-using-windows-store-services.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/monetize/access-analytics-data-using-windows-store-services.md)
-* Current Handback File: [access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/access-analytics-data-using-windows-store-services.828b860af9092ad75eb025c00b3645739b166f59.de-de.xlf)
-* Current Handback Datetime: 2016-07-06 16:08:36
-* [Back to Top](#report-top)
-
-##### <a name='0a566dfee8f7fe08c06ce4963435a70c30b1650d4743'></a> Source: [windows-apps-src\monetize\create-and-manage-submissions-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/47e0ac11178af98589e75cc562631c6904b40da4/windows-apps-src/monetize/create-and-manage-submissions-using-windows-store-services.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [create-and-manage-submissions-using-windows-store-services.d17cd67e3f06021e1bcff183a35fea407e0be645.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/fff8dce378966a5516eb1a4d833ac8d69706a416/ol-handoff/Microsoft/windows-apps.de-de/master/create-and-manage-submissions-using-windows-store-services.d17cd67e3f06021e1bcff183a35fea407e0be645.de-de.xlf)
-* Handoff Datetime: 2016-09-02 22:38:07
+* Handoff File: [windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/061119b604c950b587ada7dc39b34f9474262bdd/ol-handoff/Microsoft/windows-apps.de-de/master/windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.de-de.xlf)
+* Handoff Datetime: 2016-09-02 23:06:55
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
