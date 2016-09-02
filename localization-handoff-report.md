@@ -1,53 +1,75 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 3
+ Total Files | 4
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\create-and-manage-submissions-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/e213453c41cadd32ebfde6829a658256c24ba669/windows-apps-src/monetize/create-and-manage-submissions-using-windows-store-services.md) | HandedOffSuccess | [Details](#148e22f0b18f094b3dc25113b564e2f276ab4eab4743)
- [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/6e52d7e485b9057774188595e89cd2289e6b2f1b/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md) | HandedOffSuccess | [Details](#4ed7fca1cc5125d7df1a80c6ece20ec378fc07b44897)
- [windows-apps-src\porting\desktop-to-uwp-supported-api.md](https://github.com/Microsoft/windows-apps/blob/3e8a09fcbbca130f0519aac2172e4b345959068a/windows-apps-src/porting/desktop-to-uwp-supported-api.md) | HandedOffSuccess | [Details](#b2500ea797329277c0f866294bcc04292238d18a4899)
+ [windows-apps-src\monetize\code-your-experiment-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/29a94fd14d11256ade28463c04abfec81287cf39/windows-apps-src/monetize/code-your-experiment-in-your-app.md) | HandedOffSuccess | [Details](#e5de32dcc7b0694e72d9686b3b9a64de17a022774732)
+ [windows-apps-src\monetize\create-and-run-your-first-experiment-with-a-b-testing.md](https://github.com/Microsoft/windows-apps/blob/002248e3fd4d397c23c50a40cef018a95c27592d/windows-apps-src/monetize/create-and-run-your-first-experiment-with-a-b-testing.md) | HandedOffSuccess | [Details](#b2095f2101a6b4b62d06e8394981f8c2c5e3c1974744)
+ [windows-apps-src\monetize\interstitial-ads.md](https://github.com/Microsoft/windows-apps/blob/34b63429fa79a3edcc594dba7259bad17c81f173/windows-apps-src/monetize/interstitial-ads.md) | HandedOffSuccess | [Details](#64254ee6bd266cbc39207999fde5fcc8caf1e1f44824)
+ [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/29a94fd14d11256ade28463c04abfec81287cf39/windows-apps-src/monetize/launch-feedback-hub-from-your-app.md) | HandedOffSuccess | [Details](#b927758d77ea77cba4682b1db3bcf430821231a64827)
 
 ## Item Details
-##### <a name='148e22f0b18f094b3dc25113b564e2f276ab4eab4743'></a> Source: [windows-apps-src\monetize\create-and-manage-submissions-using-windows-store-services.md](https://github.com/Microsoft/windows-apps/blob/e213453c41cadd32ebfde6829a658256c24ba669/windows-apps-src/monetize/create-and-manage-submissions-using-windows-store-services.md)
+##### <a name='e5de32dcc7b0694e72d9686b3b9a64de17a022774732'></a> Source: [windows-apps-src\monetize\code-your-experiment-in-your-app.md](https://github.com/Microsoft/windows-apps/blob/29a94fd14d11256ade28463c04abfec81287cf39/windows-apps-src/monetize/code-your-experiment-in-your-app.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [create-and-manage-submissions-using-windows-store-services.d17cd67e3f06021e1bcff183a35fea407e0be645.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/d1b9512f831e8564ed00a7abeb7eb0058822ed27/ol-handoff/Microsoft/windows-apps.de-de/master/create-and-manage-submissions-using-windows-store-services.d17cd67e3f06021e1bcff183a35fea407e0be645.de-de.xlf)
-* Handoff Datetime: 2016-09-02 17:06:49
+* Handoff File: [code-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ded5d5abe79b3fe1e4c1b38ee3e935f21fb2e2e1/ol-handoff/Microsoft/windows-apps.de-de/master/code-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.de-de.xlf)
+* Handoff Datetime: 2016-09-02 20:08:42
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\code-your-experiment-in-your-app.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/monetize/code-your-experiment-in-your-app.md)
+* Current Handback File: [code-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/code-your-experiment-in-your-app.ecef6b7f13ebf77fb7057ec2b2c647f02eb5c098.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
-##### <a name='4ed7fca1cc5125d7df1a80c6ece20ec378fc07b44897'></a> Source: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/6e52d7e485b9057774188595e89cd2289e6b2f1b/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
+##### <a name='b2095f2101a6b4b62d06e8394981f8c2c5e3c1974744'></a> Source: [windows-apps-src\monetize\create-and-run-your-first-experiment-with-a-b-testing.md](https://github.com/Microsoft/windows-apps/blob/002248e3fd4d397c23c50a40cef018a95c27592d/windows-apps-src/monetize/create-and-run-your-first-experiment-with-a-b-testing.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/d1b9512f831e8564ed00a7abeb7eb0058822ed27/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf)
-* Handoff Datetime: 2016-09-02 17:06:49
+* Handoff File: [create-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ded5d5abe79b3fe1e4c1b38ee3e935f21fb2e2e1/ol-handoff/Microsoft/windows-apps.de-de/master/create-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.de-de.xlf)
+* Handoff Datetime: 2016-09-02 20:08:42
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
-* Current Handback File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf)
-* Current Handback Datetime: 2016-07-20 16:33:49
+* Current Target File: [windows-apps-src\monetize\create-and-run-your-first-experiment-with-a-b-testing.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/monetize/create-and-run-your-first-experiment-with-a-b-testing.md)
+* Current Handback File: [create-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/create-and-run-your-first-experiment-with-a-b-testing.8b39dd5321e7b83486bcfd31970accb68eca1c33.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
-##### <a name='b2500ea797329277c0f866294bcc04292238d18a4899'></a> Source: [windows-apps-src\porting\desktop-to-uwp-supported-api.md](https://github.com/Microsoft/windows-apps/blob/3e8a09fcbbca130f0519aac2172e4b345959068a/windows-apps-src/porting/desktop-to-uwp-supported-api.md)
+##### <a name='64254ee6bd266cbc39207999fde5fcc8caf1e1f44824'></a> Source: [windows-apps-src\monetize\interstitial-ads.md](https://github.com/Microsoft/windows-apps/blob/34b63429fa79a3edcc594dba7259bad17c81f173/windows-apps-src/monetize/interstitial-ads.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [desktop-to-uwp-supported-api.220ba582d79150eb52605ad0af9b424c0fb476ad.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/d1b9512f831e8564ed00a7abeb7eb0058822ed27/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-supported-api.220ba582d79150eb52605ad0af9b424c0fb476ad.de-de.xlf)
-* Handoff Datetime: 2016-09-02 17:06:49
+* Handoff File: [interstitial-ads.f65c2dbd211201be96d357d5eb3692d1bcc91c0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ded5d5abe79b3fe1e4c1b38ee3e935f21fb2e2e1/ol-handoff/Microsoft/windows-apps.de-de/master/interstitial-ads.f65c2dbd211201be96d357d5eb3692d1bcc91c0a.de-de.xlf)
+* Handoff Datetime: 2016-09-02 20:08:42
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\interstitial-ads.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/monetize/interstitial-ads.md)
+* Current Handback File: [interstitial-ads.f65c2dbd211201be96d357d5eb3692d1bcc91c0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/interstitial-ads.f65c2dbd211201be96d357d5eb3692d1bcc91c0a.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
+* [Back to Top](#report-top)
+
+##### <a name='b927758d77ea77cba4682b1db3bcf430821231a64827'></a> Source: [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://github.com/Microsoft/windows-apps/blob/29a94fd14d11256ade28463c04abfec81287cf39/windows-apps-src/monetize/launch-feedback-hub-from-your-app.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/ded5d5abe79b3fe1e4c1b38ee3e935f21fb2e2e1/ol-handoff/Microsoft/windows-apps.de-de/master/launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.de-de.xlf)
+* Handoff Datetime: 2016-09-02 20:08:42
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\monetize\launch-feedback-hub-from-your-app.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/monetize/launch-feedback-hub-from-your-app.md)
+* Current Handback File: [launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/launch-feedback-hub-from-your-app.adb9d4633668667defe2db33668d7915b1b359a9.de-de.xlf)
+* Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
 
