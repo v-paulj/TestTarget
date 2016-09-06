@@ -1,19 +1,35 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\monetize\microsoft-store-services-sdk.md](https://github.com/Microsoft/windows-apps/blob/a336ad8c56c5b0e27409745aa4b47eb8121cc07c/windows-apps-src/monetize/microsoft-store-services-sdk.md) | HandedOffSuccess | [Details](#a156fe516f2d29bc894de1430e3196a5bacb44844835)
+ [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/8935c0792c1bafbbde907a3eb228c9b3761c8a68/windows-apps-src/get-started/learn-more.md) | HandedOffSuccess | [Details](#399c931ad1d8a4b803478ece137f64c455d5667a3933)
+ [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://github.com/Microsoft/windows-apps/blob/8935c0792c1bafbbde907a3eb228c9b3761c8a68/windows-apps-src/whats-new/windows-10-version-1607-api-diff.md) | HandedOffSuccess | [Details](#e897c68c97b4cdeb5cdf2a4df454d40d774cbc907998)
 
 ## Item Details
-##### <a name='a156fe516f2d29bc894de1430e3196a5bacb44844835'></a> Source: [windows-apps-src\monetize\microsoft-store-services-sdk.md](https://github.com/Microsoft/windows-apps/blob/a336ad8c56c5b0e27409745aa4b47eb8121cc07c/windows-apps-src/monetize/microsoft-store-services-sdk.md)
+##### <a name='399c931ad1d8a4b803478ece137f64c455d5667a3933'></a> Source: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps/blob/8935c0792c1bafbbde907a3eb228c9b3761c8a68/windows-apps-src/get-started/learn-more.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [microsoft-store-services-sdk.d3b62fc3b977619643ceecfd26fc7b191dbe8895.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/69299da7d40068fb69bcee19c51d57bcbd7e3104/ol-handoff/Microsoft/windows-apps.de-de/master/microsoft-store-services-sdk.d3b62fc3b977619643ceecfd26fc7b191dbe8895.de-de.xlf)
-* Handoff Datetime: 2016-09-06 22:08:43
+* Handoff File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/73d2c71ca2aabdd03369249c949cc47f2c2637ec/ol-handoff/Microsoft/windows-apps.de-de/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf)
+* Handoff Datetime: 2016-09-06 23:37:14
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\get-started\learn-more.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/get-started/learn-more.md)
+* Current Handback File: [learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/learn-more.83ab93a8bbd1d37afdb4633865d6d04bfbdbe5ee.de-de.xlf)
+* Current Handback Datetime: 2016-07-20 16:33:49
+* [Back to Top](#report-top)
+
+##### <a name='e897c68c97b4cdeb5cdf2a4df454d40d774cbc907998'></a> Source: [windows-apps-src\whats-new\windows-10-version-1607-api-diff.md](https://github.com/Microsoft/windows-apps/blob/8935c0792c1bafbbde907a3eb228c9b3761c8a68/windows-apps-src/whats-new/windows-10-version-1607-api-diff.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/73d2c71ca2aabdd03369249c949cc47f2c2637ec/ol-handoff/Microsoft/windows-apps.de-de/master/windows-10-version-1607-api-diff.3f27db6e828e403f589951962a160d763082dafe.de-de.xlf)
+* Handoff Datetime: 2016-09-06 23:37:14
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
