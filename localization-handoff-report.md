@@ -1,48 +1,35 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 3
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\your-first-app.md](https://github.com/Microsoft/windows-apps/blob/b57a461cf9859be26ed69d12b08259d15201403a/windows-apps-src/get-started/your-first-app.md) | HandedOffSuccess | [Details](#16adf9c9c8de2ca4596f0fcbe503f570971e74a13950)
- [windows-apps-src\updates-and-versions\choose-a-uwp-version.md](https://github.com/Microsoft/windows-apps/blob/2fe7cfba048bfa11e32b23cbc88c920c6d7741f3/windows-apps-src/updates-and-versions/choose-a-uwp-version.md) | HandedOffSuccess | [Details](#3b6c7e0c17e0364c50ef7c8c397d958d3fec629d8005)
- [windows-apps-src\whats-new\windows-10-version-1607.md](https://github.com/Microsoft/windows-apps/blob/2fe7cfba048bfa11e32b23cbc88c920c6d7741f3/windows-apps-src/whats-new/windows-10-version-1607.md) | HandedOffSuccess | [Details](#e41047f29ba08d83c8ffa5885a310ef04350133b8011)
+ [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps/blob/c1188f00b38e6bfadd57d24fe579f70049b2ca81/windows-apps-src/get-started/whats-a-uwp.md) | HandedOffSuccess | [Details](#7f216cebc0c52f792d1c71ad096f312749a59e5d3949)
+ [windows-apps-src\updates-and-versions\choose-a-uwp-version.md](https://github.com/Microsoft/windows-apps/blob/46852d305b2c19b46a904cabf928978c6c9f1606/windows-apps-src/updates-and-versions/choose-a-uwp-version.md) | HandedOffSuccess | [Details](#249bba67b844585b590294a456e3d0e74c392c958005)
 
 ## Item Details
-##### <a name='16adf9c9c8de2ca4596f0fcbe503f570971e74a13950'></a> Source: [windows-apps-src\get-started\your-first-app.md](https://github.com/Microsoft/windows-apps/blob/b57a461cf9859be26ed69d12b08259d15201403a/windows-apps-src/get-started/your-first-app.md)
+##### <a name='7f216cebc0c52f792d1c71ad096f312749a59e5d3949'></a> Source: [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps/blob/c1188f00b38e6bfadd57d24fe579f70049b2ca81/windows-apps-src/get-started/whats-a-uwp.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/212708da1e1702c9aba0e242c35d01bb08e2b1e4/ol-handoff/Microsoft/windows-apps.de-de/master/your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.de-de.xlf)
-* Handoff Datetime: 2016-09-09 22:09:28
+* Handoff File: [whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/05f71bc4c505e22c06ac8c161840405f5570c6b0/ol-handoff/Microsoft/windows-apps.de-de/master/whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.de-de.xlf)
+* Handoff Datetime: 2016-09-09 22:38:51
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\your-first-app.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/get-started/your-first-app.md)
-* Current Handback File: [your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/your-first-app.19ca9c0c35670e18229e0b580d71fcd038654594.de-de.xlf)
-* Current Handback Datetime: 2016-07-06 16:08:36
+* Current Target File: [windows-apps-src\get-started\whats-a-uwp.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/get-started/whats-a-uwp.md)
+* Current Handback File: [whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/whats-a-uwp.2407afdd4d00b61c6f3405995b6e0e11a0507a9d.de-de.xlf)
+* Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
-##### <a name='3b6c7e0c17e0364c50ef7c8c397d958d3fec629d8005'></a> Source: [windows-apps-src\updates-and-versions\choose-a-uwp-version.md](https://github.com/Microsoft/windows-apps/blob/2fe7cfba048bfa11e32b23cbc88c920c6d7741f3/windows-apps-src/updates-and-versions/choose-a-uwp-version.md)
+##### <a name='249bba67b844585b590294a456e3d0e74c392c958005'></a> Source: [windows-apps-src\updates-and-versions\choose-a-uwp-version.md](https://github.com/Microsoft/windows-apps/blob/46852d305b2c19b46a904cabf928978c6c9f1606/windows-apps-src/updates-and-versions/choose-a-uwp-version.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [choose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/212708da1e1702c9aba0e242c35d01bb08e2b1e4/ol-handoff/Microsoft/windows-apps.de-de/master/choose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.de-de.xlf)
-* Handoff Datetime: 2016-09-09 22:09:28
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='e41047f29ba08d83c8ffa5885a310ef04350133b8011'></a> Source: [windows-apps-src\whats-new\windows-10-version-1607.md](https://github.com/Microsoft/windows-apps/blob/2fe7cfba048bfa11e32b23cbc88c920c6d7741f3/windows-apps-src/whats-new/windows-10-version-1607.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [windows-10-version-1607.6bb58601464d15df4974464e6781e2d2b478becb.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/212708da1e1702c9aba0e242c35d01bb08e2b1e4/ol-handoff/Microsoft/windows-apps.de-de/master/windows-10-version-1607.6bb58601464d15df4974464e6781e2d2b478becb.de-de.xlf)
-* Handoff Datetime: 2016-09-09 22:09:28
+* Handoff File: [choose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/05f71bc4c505e22c06ac8c161840405f5570c6b0/ol-handoff/Microsoft/windows-apps.de-de/master/choose-a-uwp-version.c1c43ace41ea3582b1b4f1d84d1a97ecb72b53b7.de-de.xlf)
+* Handoff Datetime: 2016-09-09 22:38:51
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
