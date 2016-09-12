@@ -1,40 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\input-and-devices\ink-toolbar.md](https://github.com/Microsoft/windows-apps/blob/71b73605bab71dad36977d0506c090c34359a3e2/windows-apps-src/input-and-devices/ink-toolbar.md) | HandedOffSuccess | [Details](#c4a5b0ae2893fda7697457b9e7449a996707de4b4297)
- [windows-apps-src\launch-resume\run-a-background-task-on-a-timer-.md](https://github.com/Microsoft/windows-apps/blob/16202eeb37421acf75a9032dfc1eec397d23ce4f/windows-apps-src/launch-resume/run-a-background-task-on-a-timer-.md) | HandedOffSuccess | [Details](#dd0d0fe0081eac112ce22e8a035b4bb70be3bef04428)
+ [windows-apps-src\monetize\get-in-app-acquisitions.md](https://github.com/Microsoft/windows-apps/blob/ecb0f5263b7f7f470484e9bd579b7bdb6efcdfa4/windows-apps-src/monetize/get-in-app-acquisitions.md) | HandedOffSuccess | [Details](#9d895200e6d1bc823ebcb52e0b034883f5a059e04792)
 
 ## Item Details
-##### <a name='c4a5b0ae2893fda7697457b9e7449a996707de4b4297'></a> Source: [windows-apps-src\input-and-devices\ink-toolbar.md](https://github.com/Microsoft/windows-apps/blob/71b73605bab71dad36977d0506c090c34359a3e2/windows-apps-src/input-and-devices/ink-toolbar.md)
+##### <a name='9d895200e6d1bc823ebcb52e0b034883f5a059e04792'></a> Source: [windows-apps-src\monetize\get-in-app-acquisitions.md](https://github.com/Microsoft/windows-apps/blob/ecb0f5263b7f7f470484e9bd579b7bdb6efcdfa4/windows-apps-src/monetize/get-in-app-acquisitions.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [ink-toolbar.170e398d5be743c69a0ff308127388f211d2b7ee.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/acccb1518b54f6f6b3c60eb1bd714f59db1c6a5b/ol-handoff/Microsoft/windows-apps.de-de/master/ink-toolbar.170e398d5be743c69a0ff308127388f211d2b7ee.de-de.xlf)
-* Handoff Datetime: 2016-09-12 21:07:14
+* Handoff File: [get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/57967b63f59d90e0a96d275efa5eac7bf9a38a9f/ol-handoff/Microsoft/windows-apps.de-de/master/get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.de-de.xlf)
+* Handoff Datetime: 2016-09-12 23:37:47
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='dd0d0fe0081eac112ce22e8a035b4bb70be3bef04428'></a> Source: [windows-apps-src\launch-resume\run-a-background-task-on-a-timer-.md](https://github.com/Microsoft/windows-apps/blob/16202eeb37421acf75a9032dfc1eec397d23ce4f/windows-apps-src/launch-resume/run-a-background-task-on-a-timer-.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [run-a-background-task-on-a-timer-.74793caebe05484a93ae5597485e677d9e6b1d5f.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/acccb1518b54f6f6b3c60eb1bd714f59db1c6a5b/ol-handoff/Microsoft/windows-apps.de-de/master/run-a-background-task-on-a-timer-.74793caebe05484a93ae5597485e677d9e6b1d5f.de-de.xlf)
-* Handoff Datetime: 2016-09-12 21:07:14
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\launch-resume\run-a-background-task-on-a-timer-.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/launch-resume/run-a-background-task-on-a-timer-.md)
-* Current Handback File: [run-a-background-task-on-a-timer-.74793caebe05484a93ae5597485e677d9e6b1d5f.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/run-a-background-task-on-a-timer-.74793caebe05484a93ae5597485e677d9e6b1d5f.de-de.xlf)
-* Current Handback Datetime: 2016-07-06 16:08:36
+* Current Target File: [windows-apps-src\monetize\get-in-app-acquisitions.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/monetize/get-in-app-acquisitions.md)
+* Current Handback File: [get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/get-in-app-acquisitions.fcb7e186f3708c32617a611f4226f5a83e6f41a5.de-de.xlf)
+* Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
 
