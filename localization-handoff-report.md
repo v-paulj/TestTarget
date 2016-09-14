@@ -1,26 +1,39 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\winrt-components\brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md](https://github.com/Microsoft/windows-apps/blob/700eeb0416ba73a761030e15df8c7c6d8d212785/windows-apps-src/winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md) | HandedOffSuccess | [Details](#f1d9c4f782ddd0933ee82d766bf9c70acde4dc198012)
+ [windows-apps-src\devices-sensors\point-of-service.md](https://github.com/Microsoft/windows-apps/blob/e28134c21654c957c9d9b70fa7edef49419998b9/windows-apps-src/devices-sensors/point-of-service.md) | HandedOffSuccess | [Details](#0db6e9dbc8b2c1a7ab01e65cb750b47c278ce1c03401)
+ [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/e28134c21654c957c9d9b70fa7edef49419998b9/windows-apps-src/TOC.md) | HandedOffSuccess | [Details](#cd48affc280f2a18ea3cb04600b7709218c4b5038004)
 
 ## Item Details
-##### <a name='f1d9c4f782ddd0933ee82d766bf9c70acde4dc198012'></a> Source: [windows-apps-src\winrt-components\brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md](https://github.com/Microsoft/windows-apps/blob/700eeb0416ba73a761030e15df8c7c6d8d212785/windows-apps-src/winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md)
+##### <a name='0db6e9dbc8b2c1a7ab01e65cb750b47c278ce1c03401'></a> Source: [windows-apps-src\devices-sensors\point-of-service.md](https://github.com/Microsoft/windows-apps/blob/e28134c21654c957c9d9b70fa7edef49419998b9/windows-apps-src/devices-sensors/point-of-service.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [brokered-windows-runtime-components-for-side-loaded-windows-store-apps.55ac70b0596c54a60c1d03f25ca7482d0090ce24.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/5482253476e5177a197bdedc9eea7d8b513ef4ae/ol-handoff/Microsoft/windows-apps.de-de/master/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.55ac70b0596c54a60c1d03f25ca7482d0090ce24.de-de.xlf)
-* Handoff Datetime: 2016-09-14 19:38:54
+* Handoff File: [point-of-service.3e0a7abf540bfdb3b589ce5caf9b2ffcd7eff3f8.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/649e9bad5a7ed7f3da526e29724e2eb69df0e798/ol-handoff/Microsoft/windows-apps.de-de/master/point-of-service.3e0a7abf540bfdb3b589ce5caf9b2ffcd7eff3f8.de-de.xlf)
+* Handoff Datetime: 2016-09-14 20:38:07
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\winrt-components\brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/winrt-components/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.md)
-* Current Handback File: [brokered-windows-runtime-components-for-side-loaded-windows-store-apps.55ac70b0596c54a60c1d03f25ca7482d0090ce24.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/brokered-windows-runtime-components-for-side-loaded-windows-store-apps.55ac70b0596c54a60c1d03f25ca7482d0090ce24.de-de.xlf)
+* [Back to Top](#report-top)
+
+##### <a name='cd48affc280f2a18ea3cb04600b7709218c4b5038004'></a> Source: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps/blob/e28134c21654c957c9d9b70fa7edef49419998b9/windows-apps-src/TOC.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/649e9bad5a7ed7f3da526e29724e2eb69df0e798/ol-handoff/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
+* Handoff Datetime: 2016-09-14 20:38:07
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [windows-apps-src\TOC.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/TOC.md)
+* Current Handback File: [TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/TOC.350f1fabd525c277c15320fda16caad6a319dd0a.de-de.xlf)
 * Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
