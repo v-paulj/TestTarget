@@ -620,9 +620,7 @@ Alle hier erwähnten Zeiger-, Gestik- und Manipulationsereignisse werden als *Ro
 
 * [Behandeln von Zeigereingaben](handle-pointer-input.md)
 * [Identifizieren von Eingabegeräten](identify-input-devices.md)
-            
-          
-            **Beispiele**
+**Beispiele**
 * [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
