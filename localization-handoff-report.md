@@ -1,43 +1,24 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\publish\pubcenter-dev-center-integration.md](https://github.com/Microsoft/windows-apps/blob/b2aaf232567ea0910d83208ef77df127592afb0c/windows-apps-src/publish/pubcenter-dev-center-integration.md) | HandedOffSuccess | [Details](#7f841b27e736206c89bb3ad035f497991a01fc745100)
- [windows-apps-src\publish\pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md](https://github.com/Microsoft/windows-apps/blob/bcb57cd9418ae5bd5d7779a1b442d9a236d3eae6/windows-apps-src/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md) | HandedOffSuccess | [Details](#9b97ab818fdc14d0354e5e9ba4809ac3401d60535101)
+ [windows-apps-src\whats-new\windows-10-version-1607.md](https://github.com/Microsoft/windows-apps/blob/fabe73cf75db4ce4b27805c7a4cf1c820be1b43e/windows-apps-src/whats-new/windows-10-version-1607.md) | HandedOffSuccess | [Details](#e9e381f3d01e2c0acc5c4ad55937fce3120a32498012)
 
 ## Item Details
-##### <a name='7f841b27e736206c89bb3ad035f497991a01fc745100'></a> Source: [windows-apps-src\publish\pubcenter-dev-center-integration.md](https://github.com/Microsoft/windows-apps/blob/b2aaf232567ea0910d83208ef77df127592afb0c/windows-apps-src/publish/pubcenter-dev-center-integration.md)
+##### <a name='e9e381f3d01e2c0acc5c4ad55937fce3120a32498012'></a> Source: [windows-apps-src\whats-new\windows-10-version-1607.md](https://github.com/Microsoft/windows-apps/blob/fabe73cf75db4ce4b27805c7a4cf1c820be1b43e/windows-apps-src/whats-new/windows-10-version-1607.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8946a3757c88b32a1dbb7e8e918d310461e5d5f6/ol-handoff/Microsoft/windows-apps.de-de/master/pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.de-de.xlf)
-* Handoff Datetime: 2016-09-19 19:42:26
+* Handoff File: [windows-10-version-1607.6bb58601464d15df4974464e6781e2d2b478becb.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/94c07719c318cde24a3d512c5d5cab3467546b54/ol-handoff/Microsoft/windows-apps.de-de/master/windows-10-version-1607.6bb58601464d15df4974464e6781e2d2b478becb.de-de.xlf)
+* Handoff Datetime: 2016-09-19 20:07:56
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\pubcenter-dev-center-integration.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/publish/pubcenter-dev-center-integration.md)
-* Current Handback File: [pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/pubcenter-dev-center-integration.2fbdc0127a3badf8294e0fe159809d48b2bf9fbc.de-de.xlf)
-* Current Handback Datetime: 2016-07-06 16:08:36
-* [Back to Top](#report-top)
-
-##### <a name='9b97ab818fdc14d0354e5e9ba4809ac3401d60535101'></a> Source: [windows-apps-src\publish\pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md](https://github.com/Microsoft/windows-apps/blob/bcb57cd9418ae5bd5d7779a1b442d9a236d3eae6/windows-apps-src/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/8946a3757c88b32a1dbb7e8e918d310461e5d5f6/ol-handoff/Microsoft/windows-apps.de-de/master/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.de-de.xlf)
-* Handoff Datetime: 2016-09-19 19:42:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\publish\pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md](https://github.com/Microsoft/windows-apps.de-de/blob/7a3dc4d5efb7b5518f9623c0a3ebf46436d26e72/windows-apps-src/publish/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md)
-* Current Handback File: [pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b6880abfd65d38457dda3929c963d918f070774a/ol-handback/Microsoft/windows-apps.de-de/master/pubcenter-devcenter-payout-account-and-tax-profile-consolidation.f640d4baee811687fb33824d7d8ea2d611b135fd.de-de.xlf)
-* Current Handback Datetime: 2016-07-06 16:08:36
 * [Back to Top](#report-top)
 
 
