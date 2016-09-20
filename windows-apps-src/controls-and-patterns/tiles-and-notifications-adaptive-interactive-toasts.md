@@ -5,7 +5,6 @@ title: Adaptive und interaktive Popupbenachrichtigungen
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
 
@@ -25,7 +24,8 @@ Beim adaptiven und interaktiven Popupbenachrichtigungsmodell haben diese Updates
 -   Drei verschiedene Aktivierungstypen für die wichtigste Popupbenachrichtigung und für jede Aktion.
 -   Die Option zum Erstellen von Benachrichtigungen für bestimmte Szenarios wie Alarme, Erinnerungen und eingehende Anrufe.
 
-**Hinweis**  Die Legacyvorlagen von Windows 8.1 und Windows Phone 8.1 finden Sie im [Legacy-Popupvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761494).
+
+            **Hinweis**  Die Legacyvorlagen von Windows 8.1 und Windows Phone 8.1 finden Sie im [Legacy-Popupvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761494).
 
  
 
@@ -34,7 +34,7 @@ Beim adaptiven und interaktiven Popupbenachrichtigungsmodell haben diese Updates
 
 Popupbenachrichtigungen werden mit XML erstellt und enthalten in der Regel diese wichtigen Elemente:
 
--   &lt;visual&gt; umfasst den Inhalt, den Benutzer visuell wahrnehmen können, z. B. Text und Bilder
+-   &lt;visual&gt; umfasst den Inhalt, den Benutzer visuell wahrnehmen können, z.B. Text und Bilder
 -   &lt;actions&gt; enthält Schaltflächen/Eingaben, die der Entwickler innerhalb der Benachrichtigung hinzufügen möchte
 -   &lt;audio&gt; legt den Ton beim Anzeigen der Benachrichtigung fest
 
@@ -67,7 +67,7 @@ Innerhalb des visuellen Elements benötigen Sie exakt ein Bindungselement, das d
 
 Kachelbenachrichtigungen in Apps für die Universelle Windows-Plattform (UWP) unterstützen mehrere Vorlagen, die auf unterschiedlichen Kachelgrößen basieren. Popupbenachrichtigungen haben jedoch nur einen Vorlagennamen: **ToastGeneric**. Mit nur einer Vorlage profitieren Sie mehrfach:
 
--   Sie können den Popupinhalt ändern, indem Sie z. B. eine weitere Textzeile bzw. ein Inlinebild hinzufügen oder die Anzeige der Miniaturansicht so ändern, dass statt des App-Symbols etwas anderes angezeigt wird. Dabei müssen Sie weder die gesamte Vorlage ändern noch eine ungültige Nutzlast aufgrund einer Nichtübereinstimmung zwischen dem Vorlagennamen und dem Inhalt riskieren.
+-   Sie können den Popupinhalt ändern, indem Sie z.B. eine weitere Textzeile bzw. ein Inlinebild hinzufügen oder die Anzeige der Miniaturansicht so ändern, dass statt des App-Symbols etwas anderes angezeigt wird. Dabei müssen Sie weder die gesamte Vorlage ändern noch eine ungültige Nutzlast aufgrund einer Nichtübereinstimmung zwischen dem Vorlagennamen und dem Inhalt riskieren.
 -   Sie können denselben Code verwenden, um die gleiche Nutzlast für die **Popupbenachrichtigung** an verschiedene Arten von Microsoft Windows-Geräten wie Smartphones, Tablets, PCs und Xbox zu schaffen. Diese Geräte akzeptieren die Benachrichtigung und zeigt sie dem Benutzer gemäß ihren UI-Richtlinien mit den entsprechenden visuellen Angeboten und Interaktionsmodellen an.
 
 Alle Attribute, die im Abschnitt „Visuelle Elemente“ und dessen untergeordneten Elemente unterstützt werden, finden Sie im Abschnitt mit den Schemas. Weitere Beispiele finden Sie unten im Abschnitt mit den XML-Beispielen.
@@ -77,9 +77,9 @@ Alle Attribute, die im Abschnitt „Visuelle Elemente“ und dessen untergeordne
 In UWP-Apps können Sie Ihren Popupbenachrichtigungen Schaltflächen und andere Eingaben hinzufügen, um Benutzern mehr Aktionen außerhalb der App zu ermöglichen. Diese Aktionen werden unter dem Element &lt;actions&gt; angegeben. Davon können Sie zwei Arten angeben:
 
 -   &lt;action&gt; wird als Schaltfläche auf Desktops und mobilen Geräten angezeigt. Sie können bis zu fünf benutzerdefinierte Aktionen oder Systemaktionen innerhalb einer Popupbenachrichtigung angeben.
--   &lt;input&gt; ermöglicht Benutzereingaben, z. B. schnelles Beantworten einer Nachricht oder Auswählen einer Option aus einem Dropdown-Menü.
+-   &lt;input&gt; ermöglicht Benutzereingaben, z.B. schnelles Beantworten einer Nachricht oder Auswählen einer Option aus einem Dropdown-Menü.
 
-Sowohl &lt;action&gt; als auch &lt;input&gt; gelten für die Windows-Gerätefamilie. Bei mobilen Geräten oder Desktop-Geräten stellt &lt;action&gt; beispielsweise eine Schaltfläche dar, auf die Benutzer tippen/klicken können. &lt;input&gt; für Text ist ein Feld, in dem Benutzer über eine physische Tastatur oder eine Bildschirmtastatur Text eingeben können. Diese Elemente passen sich auch an zukünftige Interaktionsszenarios an, z. B. eine per Sprachansage angekündigte Aktion oder eine Texteingabe per Diktat.
+Sowohl &lt;action&gt; als auch &lt;input&gt; gelten für die Windows-Gerätefamilie. Bei mobilen Geräten oder Desktop-Geräten stellt &lt;action&gt; beispielsweise eine Schaltfläche dar, auf die Benutzer tippen/klicken können. &lt;input&gt; für Text ist ein Feld, in dem Benutzer über eine physische Tastatur oder eine Bildschirmtastatur Text eingeben können. Diese Elemente passen sich auch an zukünftige Interaktionsszenarios an, z.B. eine per Sprachansage angekündigte Aktion oder eine Texteingabe per Diktat.
 
 Wenn vom Benutzer eine Aktion ausgeführt wird, können Sie eine der folgenden Aktionen ausführen, indem Sie das Attribut [**ActivationType**](https://msdn.microsoft.com/library/windows/desktop/dn408447) im &lt;action&gt;-Element angeben:
 
@@ -111,7 +111,8 @@ Sie können Popupbenachrichtigungen für Alarme, Erinnerungen und eingehende Anr
 ## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>XML-Beispiele
 
 
-**Hinweis**  Die Screenshots für diese Beispiele zu Popupbenachrichtigungen stammen aus einer Desktop-App. Auf mobilen Geräten wird die Popupbenachrichtigung möglicherweise reduziert angezeigt. Über einen Ziehpunkt am unteren Rand des Popups kann sie vergrößert werden.
+
+            **Hinweis**  Die Screenshots für diese Beispiele zu Popupbenachrichtigungen stammen aus einer Desktop-App. Auf mobilen Geräten wird die Popupbenachrichtigung möglicherweise reduziert angezeigt. Über einen Ziehpunkt am unteren Rand des Popups kann sie vergrößert werden.
 
  
 
@@ -137,7 +138,7 @@ Dieses Beispiel zeigt, wie Sie mehrere Textzeilen, ein optionales kleines Bild z
 
  
 
-**Benachrichtigung mit Aktionen, Beispiel 1**
+**Benachrichtigung mit Aktionen, Beispiel1**
 
 Dieses Beispiel zeigt Folgendes:
 
@@ -157,11 +158,11 @@ Dieses Beispiel zeigt Folgendes:
 </toast>
 ```
 
-![Benachrichtigung mit Aktionen, Beispiel 1](images/adaptivetoasts-xmlsample02.png)
+![Benachrichtigung mit Aktionen, Beispiel1](images/adaptivetoasts-xmlsample02.png)
 
  
 
-**Benachrichtigung mit Aktionen, Beispiel 2**
+**Benachrichtigung mit Aktionen, Beispiel2**
 
 Dieses Beispiel zeigt Folgendes:
 
@@ -182,11 +183,11 @@ Dieses Beispiel zeigt Folgendes:
 </toast>
 ```
 
-![Benachrichtigung mit Aktionen, Beispiel 2](images/adaptivetoasts-xmlsample03.png)
+![Benachrichtigung mit Aktionen, Beispiel2](images/adaptivetoasts-xmlsample03.png)
 
  
 
-**Benachrichtigung mit Texteingabe und Aktionen, Beispiel 1**
+**Benachrichtigung mit Texteingabe und Aktionen, Beispiel1**
 
 Dieses Beispiel zeigt Folgendes:
 
@@ -211,7 +212,7 @@ Dieses Beispiel zeigt Folgendes:
 
  
 
-**Benachrichtigung mit Texteingabe und Aktionen, Beispiel 2**
+**Benachrichtigung mit Texteingabe und Aktionen, Beispiel2**
 
 Dieses Beispiel zeigt Folgendes:
 
@@ -299,7 +300,7 @@ Wie oben erwähnt, können über den Text und die Aktionen des Popups Apps auf u
 
 In diesem Szenario verwendet eine App eine Vordergrundaktivierung, um auf eine Aktion innerhalb einer relevanten Popupbenachrichtigung zu reagieren. Sie startet die App und navigiert zum richtigen Inhalt.
 
-Die Aktivierung von Popupbenachrichtigungen wird zum Aufrufen von „OnLaunched()“ verwendet. In Windows 10 verfügt das Popup über eine eigene Aktivierungsart und ruft „OnActivated()“ auf.
+Die Aktivierung von Popupbenachrichtigungen wird zum Aufrufen von „OnLaunched()“ verwendet. In Windows10 verfügt das Popup über eine eigene Aktivierungsart und ruft „OnActivated()“ auf.
 
 ```
 async protected override void OnActivated(IActivatedEventArgs args)

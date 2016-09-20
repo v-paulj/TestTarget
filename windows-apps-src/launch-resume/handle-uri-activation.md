@@ -11,7 +11,7 @@ ms.openlocfilehash: ac65b46ea06e64b3b431326db365ce23505c1096
 # Behandeln der URI-Aktivierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 **Wichtige APIs**
@@ -25,7 +25,8 @@ Wir empfehlen, die Registrierung für einen URI-Schemanamen nur durchzuführen, 
 
 Die folgenden Schritte zeigen, wie Sie den benutzerdefinierten Schemanamen „.alsdk://“ registrieren und Ihre App aktivieren, wenn der Benutzer einen URI vom Typ „.alsdk://“ startet.
 
-> **Hinweis**  In UWP-Apps sind bestimmte URIs und Dateierweiterungen für die Verwendung durch vorinstallierte Apps und das Betriebssystem reserviert. Versuche, die App mit einem reservierten URI oder einer reservierten Dateierweiterung zu registrieren, werden ignoriert. Eine alphabetische Liste der URI-Schemas, die Sie nicht für Ihre UWP-Apps registrieren können, da diese entweder reserviert oder verboten sind, finden Sie unter [Reservierte URI-Schemanamen und Dateitypen](reserved-uri-scheme-names.md).
+> 
+            **Hinweis**  In UWP-Apps sind bestimmte URIs und Dateierweiterungen für die Verwendung durch vorinstallierte Apps und das Betriebssystem reserviert. Versuche, die App mit einem reservierten URI oder einer reservierten Dateierweiterung zu registrieren, werden ignoriert. Eine alphabetische Liste der URI-Schemas, die Sie nicht für Ihre UWP-Apps registrieren können, da diese entweder reserviert oder verboten sind, finden Sie unter [Reservierte URI-Schemanamen und Dateitypen](reserved-uri-scheme-names.md).
 
 ## Schritt 1: Angeben des Erweiterungspunkts im Paketmanifest
 
@@ -41,13 +42,18 @@ Die App empfängt nur für die im Paketmanifest angegebenen URI-Schemanamen Akti
 | **Logo** | Geben Sie das Logo zur Identifikation des URI-Schemanamens in der **Systemsteuerung** unter [Standardprogramme festlegen](https://msdn.microsoft.com/library/windows/desktop/cc144154) an. Wenn kein Logo angegeben wird, wird das kleine Logo für die App verwendet. |
 | **Anzeigename** | Geben Sie den Anzeigenamen zur Identifikation des URI-Schemanamens in der **Systemsteuerung** unter [Standardprogramme festlegen](https://msdn.microsoft.com/library/windows/desktop/cc144154) an. |
 | **Name** | Wählen Sie einen Namen für das URI-Schema aus. |
-|  | **Hinweis**  Der Name darf nur aus Kleinbuchstaben bestehen. |
-|  | **Reservierte und verbotene Dateitypen** Eine alphabetische Liste der URI-Schemas, die Sie nicht für Ihre UWP-Apps registrieren können, da diese entweder reserviert oder verboten sind, finden Sie unter [Reservierte URI-Schemanamen und Dateitypen](reserved-uri-scheme-names.md). |
+|  | 
+            **Hinweis**  Der Name darf nur aus Kleinbuchstaben bestehen. |
+|  | 
+            **Reservierte und verbotene Dateitypen** Eine alphabetische Liste der URI-Schemas, die Sie nicht für Ihre UWP-Apps registrieren können, da diese entweder reserviert oder verboten sind, finden Sie unter [Reservierte URI-Schemanamen und Dateitypen](reserved-uri-scheme-names.md). |
 | **Ausführbare Datei** | Gibt die standardmäßige ausführbare Datei für den Start des Protokolls an. Wenn keine Datei angegeben wird, wird die ausführbare Datei der App verwendet. Wenn angegeben, muss die Zeichenfolge zwischen 1 und 256 Zeichen lang sein und mit „.exe“ enden. Sie darf die folgenden Zeichen nicht enthalten: &gt;, &lt;, :, ", &#124;, ? oder \*. Bei Angabe einer Datei wird auch der **Einstiegspunkt** verwendet. Wenn der **Einstiegspunkt** nicht angegeben wird, wird der für die App definierte Einstiegspunkt verwendet. |
 | **Einstiegspunkt** | Gibt die Aufgabe an, die die Protokollerweiterung behandelt. Dies ist normalerweise der vollständig qualifizierte Namespacename eines Windows-Runtime-Typs. Wenn keine Angabe erfolgt, wird der Einstiegspunkt für die App verwendet. |
 | **Startseite** | Die Webseite, die den Erweiterungspunkt behandelt. |
 | **Ressourcengruppe** | Eine Markierung, die Sie zum Gruppieren von Erweiterungsaktivierungen zu Zwecken der Ressourcenverwaltung verwenden können. |
-| **Gewünschte Ansicht** (nur Windows) | Verwenden Sie das Feld **Gewünschte Ansicht**, um anzugeben, wie viel Platz für das Fenster der App benötigt wird, wenn sie für den URI-Schemanamen gestartet wird. Die möglichen Werte für **Gewünschte Ansicht** sind **Default**, **UseLess**, **UseHalf**, **UseMore** oder **UseMinimum**. <br/>**Hinweis**  Windows bestimmt die endgültige Fenstergröße einer Ziel-App anhand mehrerer Faktoren, z. B. der Einstellung der Quell-App, der Anzahl der Apps auf dem Bildschirm, der Bildschirmausrichtung usw. Das Festlegen von **Gewünschte Ansicht** ist keine Garantie, dass das Fenster für die Ziel-App auch wirklich so angezeigt wird.<br/> **Mobilgerätfamilie: Gewünschte Ansicht** wird für die Mobilgerätfamilie nicht unterstützt. |
+| 
+            **Gewünschte Ansicht** (nur Windows) | Verwenden Sie das Feld **Gewünschte Ansicht**, um anzugeben, wie viel Platz für das Fenster der App benötigt wird, wenn sie für den URI-Schemanamen gestartet wird. Die möglichen Werte für **Gewünschte Ansicht** sind **Default**, **UseLess**, **UseHalf**, **UseMore** oder **UseMinimum**. <br/>
+            **Hinweis**  Windows bestimmt die endgültige Fenstergröße einer Ziel-App anhand mehrerer Faktoren, z.B. der Einstellung der Quell-App, der Anzahl der Apps auf dem Bildschirm, der Bildschirmausrichtung usw. Das Festlegen von **Gewünschte Ansicht** ist keine Garantie, dass das Fenster für die Ziel-App auch wirklich so angezeigt wird.<br/> 
+            **Mobilgerätfamilie: Gewünschte Ansicht** wird für die Mobilgerätfamilie nicht unterstützt. |
 2.  Geben Sie `images\Icon.png` als **Logo** ein.
 3.  Geben Sie `SDK Sample URI Scheme` als **Anzeigenamen** ein.
 4.  Geben Sie `alsdk` in das Feld **Name** ein.
@@ -69,7 +75,7 @@ Die App empfängt nur für die im Paketmanifest angegebenen URI-Schemanamen Akti
 ## Schritt 2: Hinzufügen der geeigneten Symbole
 
 
-Die Symbole von Apps, die für einen URI-Schemanamen zum Standard werden, werden an verschiedenen Stellen innerhalb des Systems angezeigt, z. B. in der Systemsteuerung unter "Standardprogramme".
+Die Symbole von Apps, die für einen URI-Schemanamen zum Standard werden, werden an verschiedenen Stellen innerhalb des Systems angezeigt, z.B. in der Systemsteuerung unter "Standardprogramme".
 
 Wir empfehlen, die richtigen Symbole in das Projekt aufzunehmen, damit Ihr Logo an allen diesen Stellen gut aussieht. Stimmen Sie das Erscheinungsbild des Logos der App-Kachel ab, und verwenden Sie die Hintergrundfarbe der App, anstatt das Symbol transparent darzustellen. Erweitern Sie das Logo bis zum Rand, ohne eine Auffüllung vorzunehmen. Testen Sie Ihre Symbole auf weißem Hintergrund. Beispielsymbole finden Sie unter [Beispiel für Assoziationsstart](http://go.microsoft.com/fwlink/p/?LinkID=620490).
 
@@ -121,7 +127,8 @@ Der [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-
 
 > [!div class="tabbedCodeSnippets"]
 
-**Hinweis**  Stellen Sie sicher, dass beim Start über einen Protokollvertrag der Benutzer über die Schaltfläche „Zurück“ zu dem Bildschirm zurückkehrt, von dem aus die App gestartet wurde, und nicht zu den vorherigen Inhalten der App. Apps sollten für jedes Aktivierungsereignis, durch das eine neue Seite geöffnet wird, einen neuen XAML-[**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) erstellen. So enthält der Navigationsbackstack für den neuen XAML-**Frame** keinen vorherigen Inhalt, der beim Anhalten der App im aktuellen Fenster angezeigt wurde.
+
+            **Hinweis**  Stellen Sie sicher, dass beim Start über einen Protokollvertrag der Benutzer über die Schaltfläche „Zurück“ zu dem Bildschirm zurückkehrt, von dem aus die App gestartet wurde, und nicht zu den vorherigen Inhalten der App. Apps sollten für jedes Aktivierungsereignis, durch das eine neue Seite geöffnet wird, einen neuen XAML-[**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) erstellen. So enthält der Navigationsbackstack für den neuen XAML-**Frame** keinen vorherigen Inhalt, der beim Anhalten der App im aktuellen Fenster angezeigt wurde.
 
 Apps, für die ein einziger XAML-**Frame** für Start- und Dateiverträge verwendet wird, sollten vor dem Navigieren zu einer neuen Seite die Seiten im **Frame**-Navigationsjournal löschen.
 
@@ -130,19 +137,22 @@ Apps, für die ein einziger XAML-**Frame** für Start- und Dateiverträge verwen
 
 Anmerkungen Ihr URI-Schemaname kann von jeder App oder Website verwendet werden, auch von schädlichen. Alle im URI empfangenen Daten könnten daher von einer nicht vertrauenswürdigen Quelle stammen. Wir empfehlen, niemals eine endgültige Aktion auf Grundlage der Parameter auszuführen, die Sie im URI erhalten.
 
-> URI-Parameter können z. B. zum Starten der App mit der Kontoseite eines Benutzers, aber nicht zum direkten Ändern des Kontos des Benutzers verwendet werden. **Hinweis**  Wenn Sie für Ihre App einen neuen URI-Schemanamen erstellen, ist es wichtig, dass Sie die Anleitungen in [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550) befolgen.
+> URI-Parameter können z.B. zum Starten der App mit der Kontoseite eines Benutzers, aber nicht zum direkten Ändern des Kontos des Benutzers verwendet werden. 
+            **Hinweis**  Wenn Sie für Ihre App einen neuen URI-Schemanamen erstellen, ist es wichtig, dass Sie die Anleitungen in [RFC 4395](http://go.microsoft.com/fwlink/p/?LinkID=266550) befolgen.
 
 > Damit wird sichergestellt, dass der Name die Standards für URI-Schemas erfüllt.
 
-**Hinweis**  Stellen Sie sicher, dass beim Start über einen Protokollvertrag der Benutzer über die Schaltfläche „Zurück“ zu dem Bildschirm zurückkehrt, von dem aus die App gestartet wurde, und nicht zu den vorherigen Inhalten der App. Apps sollten für jedes Aktivierungsereignis, durch das ein neues URI-Ziel geöffnet wird, einen neuen XAML-[**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) erstellen.
+
+            **Hinweis**  Stellen Sie sicher, dass beim Start über einen Protokollvertrag der Benutzer über die Schaltfläche „Zurück“ zu dem Bildschirm zurückkehrt, von dem aus die App gestartet wurde, und nicht zu den vorherigen Inhalten der App. Apps sollten für jedes Aktivierungsereignis, durch das ein neues URI-Ziel geöffnet wird, einen neuen XAML-[**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) erstellen.
 
 So enthält der Navigationsbackstack für den neuen XAML-**Frame** keinen vorherigen Inhalt, der beim Anhalten der App im aktuellen Fenster angezeigt wurde. Falls Ihre Apps für Start- und Protokollverträge einen einzelnen XAML-[**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) verwenden sollen, müssen vor dem Navigieren zu einer neuen Seite die Seiten im **Frame**-Navigationsjournal gelöscht werden.
 
-> Über den Protokollvertrag gestartete Apps sollten ggf. eine Benutzeroberfläche enthalten, über die der Benutzer zum Anfang der App zurückkehren kann. **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Apps für die universelle Windows-Plattform) schreiben.
+> Über den Protokollvertrag gestartete Apps sollten ggf. eine Benutzeroberfläche enthalten, über die der Benutzer zum Anfang der App zurückkehren kann. 
+            **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Apps für die universelle Windows-Plattform) schreiben.
 
  
 
-## Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+## Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
 **Verwandte Themen**
@@ -161,7 +171,7 @@ So enthält der Navigationsbackstack für den neuen XAML-**Frame** keinen vorher
 
 **Behandeln der Dateiaktivierung**
 
-* [Anleitungen](https://msdn.microsoft.com/library/windows/apps/hh700321)
+* [Richtlinien](https://msdn.microsoft.com/library/windows/apps/hh700321)
 
 **Richtlinien für Dateitypen und URIs**
 

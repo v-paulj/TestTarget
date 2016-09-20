@@ -1,11 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: F87DBE2F-77DB-4573-8172-29E11ABEFD34
 title: "Öffnen von Dateien und Ordnern mit einer Auswahl"
 description: "Greifen Sie auf Dateien und Ordner zu, indem Sie Benutzern die Interaktion mit einer Auswahl ermöglichen. Mithilfe der FileOpenPicker- und der FileSavePicker-Klasse können Sie auf Dateien und mithilfe der FolderPicker-Klasse auf einen Ordner zugreifen."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 387529636eb44206a23356b0a8bb2748d7c10748
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: 91128639cea8948579ec128e4cd695bdfeb5fe86
 
 ---
 
@@ -23,8 +23,7 @@ ms.openlocfilehash: 387529636eb44206a23356b0a8bb2748d7c10748
 
 Greifen Sie auf Dateien und Ordner zu, indem Sie Benutzern die Interaktion mit einer Auswahl ermöglichen. Mithilfe der [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)- und der [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)-Klasse können Sie auf Dateien und mithilfe der [**FolderPicker**](https://msdn.microsoft.com/library/windows/apps/br207881)-Klasse auf einen Ordner zugreifen.
 
-
-              **Hinweis:**  Weitere Informationen finden Sie im [Beispiel zur Dateiauswahl](http://go.microsoft.com/fwlink/p/?linkid=619994).
+**Hinweis**  Weitere Informationen finden Sie im [Beispiel zur Dateiauswahl](http://go.microsoft.com/fwlink/p/?linkid=619994).
 
  
 
@@ -71,7 +70,7 @@ Beispielsweise können Sie die Dateiauswahl in Ihrer App aufrufen und dem Benutz
 ```CSharp
 var picker = new Windows.Storage.Pickers.FileOpenPicker();
 picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-picker.SuggestedStartLocation = 
+picker.SuggestedStartLocation =
     Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
 picker.FileTypeFilter.Add(".jpg");
 picker.FileTypeFilter.Add(".jpeg");
@@ -101,7 +100,7 @@ Das Verwenden der Dateiauswahl umfasst das Erstellen und Anpassen eines Dateiaus
 ```CSharp
 var picker = new Windows.Storage.Pickers.FileOpenPicker();
     picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-    picker.SuggestedStartLocation = 
+    picker.SuggestedStartLocation =
         Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
     picker.FileTypeFilter.Add(".jpg");
     picker.FileTypeFilter.Add(".jpeg");
@@ -178,21 +177,16 @@ else
 }
 ```
 
-
-              **Tipp**  Fügen Sie die Datei oder den Ordner für die bessere Nachverfolgbarkeit zur [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) oder zur [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458) der App hinzu, wenn Ihre App über eine Dateiauswahl auf eine Datei oder einen Ordner zugreift. Weitere Informationen zur Verwendung dieser Listen finden Sie in [So wird's gemacht: Nachverfolgen kürzlich verwendeter Dateien und Ordner](how-to-track-recently-used-files-and-folders.md).
-
- 
+**Tipp**  Fügen Sie die Datei oder den Ordner zur Verbesserung der Nachverfolgbarkeit zur [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457) oder zur [**MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458) der App hinzu, wenn Ihre App über eine Dateiauswahl auf eine Datei oder einen Ordner zugreift. Weitere Informationen zur Verwendung dieser Listen finden Sie in [So wird's gemacht: Nachverfolgen kürzlich verwendeter Dateien und Ordner](how-to-track-recently-used-files-and-folders.md).
 
  
 
  
 
+ 
 
 
 
-
-
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

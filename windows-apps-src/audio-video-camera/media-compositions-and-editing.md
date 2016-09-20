@@ -5,13 +5,13 @@ description: "Mithilfe der APIs im Windows.Media.Editing-Namespace können Sie s
 title: Medienkompositionen und -bearbeitung
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 226ee9212f6688c48c4d4d7b3195ec5c27a3afdd
+ms.openlocfilehash: ee46b6d4ad116034cd84f062e7bf710ff8600479
 
 ---
 
 # Medienkompositionen und -bearbeitung
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird beschrieben, wie Sie mithilfe der APIs im [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565)-Namespace schnell Apps entwickeln, die Benutzern das Erstellen von Medienkompositionen aus Audio- und Videoquelldateien ermöglichen. Zu den Features des Frameworks zählen die Möglichkeit, programmgesteuert mehrere Videoclips zusammen anzufügen, Video- und Bildüberlagerungen sowie Hintergrundaudio hinzuzufügen und Audio- und Videoeffekte anzuwenden. Nach der Erstellung können Medienkompositionen zur Wiedergabe oder Freigabe in eine Medienflatfile gerendert werden; alternativ können sie auch auf einen Datenträger serialisiert und von diesem deserialisiert werden, sodass die Benutzer Kompositionen laden und ändern können, die sie zuvor erstellt haben. Alle diese Funktionen werden in einer benutzerfreundlichen Windows-Runtime-Schnittstelle bereitgestellt, die den Umfang und die Komplexität des zum Ausführen dieser Aufgaben erforderlichen Codes im Vergleich zur [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) -Low-Level-API erheblich verringert.
@@ -86,8 +86,7 @@ Nachdem Sie dem Benutzer die Auswahl einer Ausgabedatei mit einem [**FileSavePic
 
 [!code-cs[RenderCompositionToFile](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetRenderCompositionToFile)]
 
--   [
-            **MediaTrimmingPreference**](https://msdn.microsoft.com/library/windows/apps/dn640561) ermöglicht es Ihnen, der Geschwindigkeit des Transcodierungvorgangs Vorrang vor der Genauigkeit der Kürzung benachbarter Medienclips zu geben. **Fast** bewirkt eine schnellere Transcodierung mit weniger genauer Kürzung, **Precise** bewirkt eine langsamere Transcodierung mit genauerer Kürzung.
+-   [**MediaTrimmingPreference**](https://msdn.microsoft.com/library/windows/apps/dn640561) ermöglicht es Ihnen, der Geschwindigkeit des Transcodierungvorgangs Vorrang vor der Genauigkeit der Kürzung benachbarter Medienclips zu geben. **Fast** bewirkt eine schnellere Transcodierung mit weniger genauer Kürzung, **Precise** bewirkt eine langsamere Transcodierung mit genauerer Kürzung.
 
 ## Kürzen eines Videoclips
 
@@ -156,6 +155,6 @@ Medienkompositionen können aus einer Datei deserialisiert werden, sodass der Be
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

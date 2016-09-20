@@ -3,7 +3,6 @@ author: jwmsft
 description: "Informationen zu von XAML verwendeten Regeln für die Leerzeichenverarbeitung."
 title: XAML und Leerzeichen
 ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 408c9c7f79f5db81bdf7810a6c71cf25c1c8ec51
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: 408c9c7f79f5db81bdf7810a6c71cf25c1c8ec51
 
 # XAML und Leerzeichen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Informationen zu von XAML verwendeten Regeln für die Leerzeichenverarbeitung.
 
@@ -24,7 +23,8 @@ In XAML werden genau wie in XML Leerstellen, Zeilenvorschub und Tabulator als Le
 -   Alle aufeinanderfolgenden Leerstellen werden gelöscht und durch eine einzelne Leerstelle ersetzt.
 -   Direkt auf das Starttag folgende Leerstellen werden gelöscht.
 -   Leerstellen, die sich direkt vor dem Endtag befinden, werden gelöscht.
--   Mit *ostasiatischen Zeichen* sind die Unicode-Zeichenbereiche „U+20000 bis U+2FFFD“ und „U+30000 bis U+3FFFD“ gemeint. Diese Teilmenge wird gelegentlich auch als *CJK-Ideogramm* bezeichnet. Weitere Informationen finden Sie unter http://www.unicode.org.
+-   
+            Mit *ostasiatischen Zeichen* sind die Unicode-Zeichenbereiche „U+20000 bis U+2FFFD“ und „U+30000 bis U+3FFFD“ gemeint. Diese Teilmenge wird gelegentlich auch als *CJK-Ideogramm* bezeichnet. Weitere Informationen finden Sie unter http://www.unicode.org.
 
 "Default" entspricht dem Zustand, der durch den Standardwert des **xml:space**-Attributs angegeben wird.
 

@@ -1,27 +1,31 @@
 ---
 author: normesta
-description: 'Shows how to add your app next to actions in a contact card'
-MSHAttr: 'PreferredLib:/library/windows/apps'
-title: 'Connect your app to actions on a contact card'
+description: "Veranschaulicht das Hinzufügen Ihrer App neben Aktionen in einer Visitenkarte"
+MSHAttr: PreferredLib:/library/windows/apps
+title: Verbinden der App mit Aktionen auf einer Visitenkarte
+translationtype: Human Translation
+ms.sourcegitcommit: 5c0f6ef1f1a346a66ca554a415d9f24c8a314ae1
+ms.openlocfilehash: 034dc2b7be69763416192014abe24b9bf924c443
+
 ---
 
-# Connect your app to actions on a contact card
+# Verbinden der App mit Aktionen auf einer Visitenkarte
 
-Your app can appear next to actions on a contact card or mini contact card. Users can choose your app to perform an action such as open a profile page, place a call, or send a message.
+Ihre App kann neben Aktionen auf einer Visitenkarte oder kleinen Kontaktkarte angezeigt werden. Benutzer können Ihre App auswählen, um eine Aktion auszuführen, z. B. eine Profilseite zu öffnen, einen Anruf zu tätigen oder eine Nachricht zu senden.
 
-![Contact card and mini contact card](images/all-contact-cards.png)
+![Visitenkarte und kleine Kontaktkarte](images/all-contact-cards.png)
 
-To get started, find existing contacts or create new ones. Next, create an *annotation* and a few package manifest entries to describe which actions your app supports. Then, write code that perform the actions.
+Suchen Sie zunächst vorhandene Kontakte oder erstellen Sie neue. Erstellen Sie dann eine *Anmerkung* und einige Paketmanifesteinträge, die beschreiben, welche Aktionen die App unterstützt. Anschließend schreiben Sie Code, der die Aktionen ausführt.
 
-For a more complete sample, see [Contact Card Integration Sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration).
+Ein ausführlicheres Beispiel finden Sie unter [Beispiel für die Visitenkarte-Integration](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration).
 
-## Find or create a contact
+## Suchen oder Erstellen eines Kontakts
 
-If your app helps people connect with others, search Windows for contacts and then annotate them. If your app manages contacts, you can add them to a Windows contact list and then annotate them.
+Wenn Ihre App den Kontakt mit anderen Personen unterstützt, durchsuchen Sie Windows nach Kontakten, und versehen Sie sie mit Anmerkungen. Wenn Ihre App Kontakte verwaltet, können Sie sie einer Windows-Kontaktliste hinzufügen und mit Anmerkungen versehen.
 
-### Find a contact
+### Suchen nach einem Kontakt
 
-Find contacts by using a name, email address, or phone number.
+Suchen Sie Kontakte über Namen, E-Mail-Adresse oder Telefonnummer.
 
 ```cs
 ContactStore contactStore = await ContactManager.RequestStoreAsync();
@@ -33,9 +37,9 @@ contacts = await contactStore.FindContactsAsync(emailAddress);
 Contact contact = contacts[0];
 ```
 
-### Create a contact
+### Erstellen eines Kontakts
 
-If your app is more like an address book, create contacts and then add them to a contact list.
+Wenn Ihre App eher wie ein Adressbuch konzipiert ist, erstellen Sie Kontakte und fügen Sie sie dann einer Kontaktliste zu.
 
 ```cs
 Contact contact = new Contact();
@@ -67,11 +71,11 @@ await contactList.SaveContactAsync(contact);
 
 ```
 
-## Tag each contact with an annotation
+## Kennzeichnen von Kontakten mit einer Anmerkung
 
-Tag each contact with a list of actions (operations) that your app can perform (for example: video calls and messaging).
+Kennzeichnen Sie alle Kontakte mit einer Liste von Aktionen (Vorgänge), die Ihre App ausführen kann (Beispiel: Videoanrufe und Messaging).
 
-Then, associate the ID of a contact to an ID that your app uses internally to identify that user.
+Ordnen Sie anschließend die ID der Kontakte einer ID zu, anhand derer Ihre App den Benutzer intern identifizieren kann.
 
 ```cs
 ContactAnnotationStore annotationStore = await
@@ -97,11 +101,11 @@ annotation.SupportedOperations = ContactAnnotationOperations.Message |
 await annotationList.TrySaveAnnotationAsync(annotation);
 ```
 
-## Register for each operation
+## Registrieren der Vorgänge
 
-In your package manifest, register for each operation that you listed in your annotation.
+Registrieren Sie in Ihrem Paketmanifest alle Vorgänge, die Sie in der Anmerkung aufgeführt haben.
 
-Register by adding protocol handlers to the ``Extensions`` element of the manifest.
+Registrieren Sie die Vorgänge, indem Sie dem ``Extensions``-Element des Manifests Protokollhandler hinzufügen.
 
 ```xml
 <Extensions>
@@ -127,25 +131,25 @@ Register by adding protocol handlers to the ``Extensions`` element of the manife
   </uap:Extension>
 </Extensions>
 ```
-You can also add these in the **Declarations** tab of the manifest designer in Visual Studio.
+Sie können diese auch in der Registerkarte **Deklarationen** im Manifest-Designer in Visual Studio hinzufügen.
 
-![Declarations tab of the manifest designer](images/manifest-designer-protocols.png)
+![Registerkarte „Deklarationen“ im Manifest-Designer](images/manifest-designer-protocols.png)
 
-## Find your app next to actions in a contact card
+## Anzeigen Ihrer App neben Aktionen in einer Visitenkarte
 
-Open the People app. Your app appears next to each action (operation) that you specified in your annotation and package manifest.
+Öffnen Sie die Kontakte-App. Ihre App wird neben den Aktionen (Operationen) angezeigt, die Sie in Ihrer Anmerkung und dem Paketmanifest angegeben haben.
 
-![Contact Card](images/a-contact-card.png)
+![Visitenkarte](images/a-contact-card.png)
 
-If users choose your app for an action, it appears as the default app for that action the next time users open a contact card.
+Wenn Benutzer Ihre App für eine Aktion auswählen, wird diese App, wenn ein Benutzer das nächste Mal eine Visitenkarte öffnet, als Standard-App für diese Aktion angezeigt.
 
-## Find your app next to actions in a mini contact card
+## Anzeigen Ihrer App neben Aktionen in einer kleinen Kontaktkarte
 
-In mini contact cards, your app appears in tabs that represent actions.
+In kleinen Kontaktkarten wird Ihre App in Registerkarten angezeigt, die Aktionen darstellen.
 
-![Mini Contact Card](images/mini-contact-card.png)
+![Kleine Kontaktkarte](images/mini-contact-card.png)
 
-Apps such as the **Mail** app open mini contact cards. Your app can open them too. This code shows you how to do that.
+Apps wie **Mail** können kleine Kontaktkarten öffnen. Ihre App kann sie auch öffnen. Dieser Code zeigt, wie dies geht:
 
 ```cs
 public async void OpenContactCard(object sender, RoutedEventArgs e)
@@ -166,21 +170,21 @@ public async void OpenContactCard(object sender, RoutedEventArgs e)
 }
 ```
 
-To see more examples with mini contact cards, see [Contact cards sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCards).
+Weitere Beispiele mit kleinen Kontaktkarten finden Sie unter [Visitenkartenbeispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCards).
 
-Just like the contact card, each tab remembers the app that the user last used so it's easy for them to return to your app.
+Genau wie die Visitenkarte wird für jede Registerkarte die App vermerkt, die der Benutzer zuletzt verwendet hat, damit sie problemlos zu Ihrer App zurückkehren können.
 
-## Perform operations when users select your app in a contact card
+## Ausführen von Vorgängen, wenn Benutzer Ihre App in einer Visitenkarte auswählen
 
-Override the [Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330) method  in your **App.cs** file and navigate users to a page in your app. The [Contact Card Integration Sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration) shows one way to do that.
+Überschreiben Sie die [Application.OnActivated](https://msdn.microsoft.com/library/windows/apps/br242330)-Methode in Ihrer **App.cs**-Datei, und leiten Sie Benutzer zu einer Seite in Ihrer App. Das [Beispiel für die Integration von Visitenkarten](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration) zeigt eine Möglichkeit, das zu tun.
 
-In the code behind file of the page, override the [Page.OnNavigatedTo](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page.onnavigatedto.aspx) method. The contact card passes this method the name of operation and the ID of the user.
+Überschreiben Sie in dem Code für die Datei der Seite, die [Page.OnNavigatedTo](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page.onnavigatedto.aspx)-Methode. Die Visitenkarte übergibt dieser Methode den Namen des Vorgangs und die ID des Benutzers.
 
-To start a video or audio call, see this sample: [VoIP sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP). You'll find the complete API in the [WIndows.ApplicationModel.Calls](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.calls.aspx) namespace.
+Informationen zum Starten eines Video- oder Audioanrufs finden Sie in dem [VoIP-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP). Sie finden die vollständige API im Namespace [Windows.ApplicationModel.Calls](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.calls.aspx).
 
-To facilitate messaging, see the [Windows.ApplicationModel.Chat](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.chat.aspx) namespace.
+Informationen zur Vereinfachung des Messaging finden Sie im Namespace [Windows.ApplicationModel.Chat](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.chat.aspx).
 
-You can also start another app. That's what this code does.
+Sie können auch eine andere App starten. Dieser Code führt folgende Aktionen aus:
 
 ```cs
 protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -204,4 +208,10 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
-The ```args.uri.scheme``` property contains the name of the operation, and the ```args.uri.Query``` property contains the ID of the user.
+Die ```args.uri.scheme```-Eigenschaft enthält den Namen des Vorgangs, und die ```args.uri.Query```-Eigenschaft enthält die ID des Benutzers.
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

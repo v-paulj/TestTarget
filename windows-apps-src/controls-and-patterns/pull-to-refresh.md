@@ -1,51 +1,55 @@
 ---
 author: Jwmsft
-Description: Use the pull-to-refresh pattern with a list view.
-title: Pull-to-refresh
+Description: "Verwenden Sie das Muster „Aktualisierung durch Ziehen“ mit einer Listenansicht."
+title: Aktualisierung durch Ziehen
 label: Pull-to-refresh
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
+ms.openlocfilehash: ef5773f9885a5286ac7ca7c256e6a83167316389
+
 ---
+# Aktualisierung durch Ziehen
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Pull to refresh
+Dank des Musters „Aktualisierung durch Ziehen“ können Benutzer aktuelle Daten in einer Liste durch das Ausführen einer Ziehbewegung von oben nach unten auf der Liste abrufen. Die Aktualisierung durch Ziehen wird häufig in mobilen Apps verwendet, eignet sich jedoch für alle Geräte mit Touchscreen. Durch die Behandlung von [Manipulationsereignissen](../input-and-devices/touch-interactions.md#manipulation-events) können Sie die Aktualisierung durch Ziehen in eine App implementieren.
 
-The pull-to-refresh pattern lets a user pull down on a list of data using touch in order to retrieve more data. Pull-to-refresh is widely used on mobile apps, but is useful on any device with a touch screen. You can handle [manipulation events]() to implement pull-to-refresh in your app.
+Im [Beispiel für die Aktualisierung durch Ziehen](http://go.microsoft.com/fwlink/p/?LinkId=620635) wird die Erweiterung eines [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx)-Steuerelements zur Unterstützung dieses Musters dargestellt. In diesem Artikel werden mithilfe dieses Beispiels die wichtigsten Aspekte der Implementierung des „Aktualisierung durch Ziehen“-Musters erläutert.
 
-The [pull-to-refresh sample](http://go.microsoft.com/fwlink/p/?LinkId=620635) shows how to extend a [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) control to support this pattern. In this article, we use this sample to explain the key points of implementing pull-to-refresh.
+![Beispiel für die Aktualisierung durch Ziehen](images/ptr-phone-1.png)
 
-![pull-to-refresh sample](images/ptr-phone-1.png)
+## Für welche Szenarien eignet sich dieses Muster?
 
-## Is this the right pattern?
+Das „Aktualisierung durch Ziehen“-Muster eignet sich für Datenlisten oder -raster, die vom Benutzer regelmäßig aktualisiert werden, vor allem, wenn die App hauptsächlich auf mobilen Geräten mit Touchscreen ausgeführt werden soll.
 
-Use the pull-to-refresh pattern when you have a list or grid of data that the user might want to refresh regularly, and your app is likely to be running on mobile, touch-first devices.
+## Implementieren von Aktualisierung durch Ziehen
 
-## Implement pull-to-refresh
+Für die Implementierung der Aktualisierung durch Ziehen ist die Behandlung von Manipulationsereignissen erforderlich, um zu ermitteln, wann der Benutzer die Liste nach unten zieht, visuelles Feedback bereitzustellen und die Daten zu aktualisieren. Wie dies funktioniert, wird in diesem [Beispiel für die Aktualisierung durch Ziehen](http://go.microsoft.com/fwlink/p/?LinkId=620635) gezeigt. Für eine vollständige Darstellung des Codes laden Sie das Beispiel herunter, oder zeigen Sie den Code auf GitHub an.
 
-To implement pull-to-refresh, you need to handle manipulation events to detect when a user has pulled the list down, provide visual feedback, and refresh the data. Here, we look at how this is done in the [pull-to-refresh sample](http://go.microsoft.com/fwlink/p/?LinkId=620635). We don't show all the code here, so you should download the sample or view the code on GitHub.
+Im Beispiel für die Aktualisierung durch Ziehen wird ein benutzerdefiniertes Steuerelement namens `RefreshableListView` als Erweiterung des **ListView**-Steuerelements erstellt. Dieses Steuerelement behandelt die Manipulationsereignisse in der internen Bildlaufanzeige der Listenansicht und liefert visuelles Feedback mithilfe einer Aktualisierungsanzeige. Durch zwei zusätzliche Ereignisse werden Sie zudem informiert, wenn die Liste gezogen wird und die Daten aktualisiert werden müssen. RefreshableListView bietet lediglich die Benachrichtigung, dass Daten zu aktualisieren sind. Die Aktualisierung der Daten erfordert eine Behandlung des Ereignisses in Ihrer App. Der entsprechende Code hierfür unterscheidet sich je nach App.
 
-The pull-to-refresh sample creates a custom control called `RefreshableListView` that extends the **ListView** control. This control adds a refresh indicator to provide visual feedback and handles the manipulation events on the list view's internal scroll viewer. It also adds 2 events to notify you when the list is pulled and when the data should be refreshed. RefreshableListView only provides notification that the data should be refreshed. You need to handle the event in your app to update the data, and that code will be different for every app.
+RefreshableListView verfügt über einen automatischen Aktualisierungsmodus, mit dem der Zeitpunkt der Aktualisierungsanforderung und die Ausblendung der Aktualisierungsanzeige bestimmt werden können. Die automatische Aktualisierung kann aktiviert oder deaktiviert werden.
+- Deaktiviert: Eine Aktualisierung wird nur dann angefordert, wenn die Liste bei Überschreitung von `PullThreshold` losgelassen wird. Wenn der Benutzer den Scroller loslässt, wird die Anzeige ausgeblendet. Die Statusleisten-Anzeige wird bei Verfügbarkeit angezeigt (gilt für Smartphone).
+- Aktiviert: Die Aktualisierung wird, unabhängig vom Loslassen, bei Überschreitung von `PullThreshold` angefordert. Die Anzeige wird erst nach abgeschlossenem Abruf der Daten ausgeblendet. Zur Benachrichtigung der App über den abgeschlossenen Abruf der Daten wird eine **Verzögerung** eingesetzt.
 
-RefreshableListView provides an 'auto refresh' mode that determines when the refresh is requested and how the refresh indicator goes out of view. Auto refresh can be on or off.
-- Off: A refresh is requested only if the list is released while the `PullThreshold` is exceded. The indicator animates out of view when the user releases the scroller. The status bar indicator is shown if it's available (on phone).
-- On: A refresh is requested as soon as the `PullThreshold` is exceded, whether released or not. The indicator remains in view until the new data is retrieved, then animates out of view. A **Deferral** is used to notify the app when fetching the data is complete.
+> **Hinweis**&nbsp;&nbsp;Der im Beispiel dargestellte Code lässt sich auch auf [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx) anwenden. Zum Ändern von GridView leiten Sie die benutzerdefinierte Klasse von GridView anstelle von ListView ab und nehmen Änderungen an der GridView-Standardvorlage vor.
 
-> **Note**&nbsp;&nbsp;The code in sample is also applicable to a [**GridView**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridview.aspx). To modify a GridView, derive the custom class from GridView instead of ListView and modify the default GridView template.
+## Hinzufügen einer Aktualisierungsanzeige
 
-## Add a refresh indicator
+Es ist wichtig, den Benutzern durch visuelles Feedback mitzuteilen, dass Ihre App die Aktualisierung durch Ziehen unterstützt. RefreshableListView verfügt über eine `RefreshIndicatorContent` -Eigenschaft, mit der Sie die Ansicht der Anzeige in Ihrer XAML festlegen können. RefreshableListView beinhaltet auch eine Standardtextanzeige für den Fall, dass Sie die `RefreshIndicatorContent`-Eigenschaft nicht festlegen.
 
-It's important to provide visual feedback to the user so they know that your app supports pull-to-refresh. RefreshableListView has a `RefreshIndicatorContent` property that lets you set the indicator visual in your XAML. It also includes a default text indicator that it falls back to if you don't set the `RefreshIndicatorContent`.
+Im Folgenden finden Sie empfohlene Richtlinien für die Aktualisierungsanzeige.
 
-Here are recommended guidelines for the refresh indicator.
+![Rote Markierungen der Aktualisierungsanzeige](images/ptr-redlines-1.png)
 
-![refresh indicator redlines](images/ptr-redlines-1.png)
+**Ändern der Vorlage für die Listenansicht**
 
-**Modify the list view template**
+Im Beispiel für die Aktualisierung durch Ziehen erweitert die `RefreshableListView`-Steuerelementvorlage die standardmäßige **ListView**-Vorlage um eine Aktualisierungsanzeige. Die Aktualisierungsanzeige befindet sich in einem [**Raster**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) oberhalb des [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx), der die Listenelemente anzeigt.
 
-In the pull-to-refresh sample, the `RefreshableListView` control template modifies the standard **ListView** template by adding a refresh indicator. The refresh indicator is placed in a [**Grid**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) above the [**ItemsPresenter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemspresenter.aspx), which is the part that shows the list items.
+> **Hinweis**&nbsp;&nbsp;Das `DefaultRefreshIndicatorContent`-Textfeld stellt eine Standardtextanzeige bereit, die nur bei fehlender Festlegung der `RefreshIndicatorContent` -Eigenschaft angezeigt wird.
 
-> **Note**&nbsp;&nbsp;The `DefaultRefreshIndicatorContent` text box provides a text fallback indicator that is shown only if the `RefreshIndicatorContent` property is not set.
-
-Here's the part of the control template that's modified from the default ListView template.
+Im Folgenden finden Sie den Teil der Steuerelementvorlage, die auf Grundlage der ListView-Standardvorlage erstellt wird:
 
 **XAML**
 ```xaml
@@ -75,9 +79,9 @@ Here's the part of the control template that's modified from the default ListVie
 </Grid>
 ```
 
-**Set the content in XAML**
+**Inhalt in XAML festlegen**
 
-You set the content of the refresh indicator in the XAML for your list view. The XAML content you set is displayed by the refresh indicator's [ContentPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentpresenter.aspx) (`<ContentPresenter Content="{TemplateBinding RefreshIndicatorContent}">`). If you don't set this content, the default text indicator is shown instead.
+Der Inhalt der Aktualisierungsanzeige wird in der XAML für Ihre Listenansicht festgelegt. Die von Ihnen festgelegten XAML-Inhalte werden über den [ContentPresenter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentpresenter.aspx) (`<ContentPresenter Content="{TemplateBinding RefreshIndicatorContent}">`) der Aktualisierungsanzeige angezeigt. Wenn Sie diese Inhalte nicht festlegen, wird stattdessen die Standardtextanzeige eingeblendet.
 
 **XAML**
 ```xaml
@@ -111,9 +115,9 @@ You set the content of the refresh indicator in the XAML for your list view. The
 </c:RefreshableListView>
 ```
 
-**Animate the spinner**
+**Animieren des Drehfelds**
 
-When the list is pulled down, RefreshableListView's `PullProgressChanged` event occurs. You handle this event in your app to control the refresh indicator. In the sample, this storyboard is started to animate the indicator's [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx) and spin the refresh indicator. 
+Wird die Liste nach unten gezogen, wird das `PullProgressChanged` -Ereignis von RefreshableListView ausgelöst. Sie können dieses Ereignis in Ihrer App behandeln, um die Aktualisierungsanzeige zu steuern. Im Beispiel wird durch dieses Storyboard das [**RotateTransform**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.rotatetransform.aspx) -Element animiert und die Aktualisierungsanzeige gedreht. 
 
 **XAML**
 ```xaml
@@ -130,31 +134,31 @@ When the list is pulled down, RefreshableListView's `PullProgressChanged` event 
 </Storyboard>
 ```
 
-## Handle scroll viewer manipulation events
+## Behandeln von Manipulationsereignissen der Bildlaufanzeige
 
-The list view control template includes a built-in [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) that lets a user scroll through the list items. To implement pull-to-refresh, you have to handle the manipulation events on the built-in scroll viewer, as well as several related events. For more info about manipulation events, see [Touch interactions](../input-and-devices/touch-interactions.md).
+Die Steuerelementvorlage der Listenansicht enthält einen integrierten [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx), mit dem der Benutzer durch die Listenelemente scrollen kann. Zum Implementieren der Aktualisierung durch Ziehen müssen sowohl die Manipulationsereignisse in der integrierten Bildlaufanzeige als auch mehrere verwandte Ereignisse behandelt werden. Weitere Informationen zu Manipulationsereignissen finden Sie unter [Toucheingabe-Interaktionen](../input-and-devices/touch-interactions.md).
 
 ** OnApplyTemplate**
 
-To get access to the scroll viewer and other template parts so that you can add event handlers and call them later in your code, you must override the [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx) method. In OnApplyTemplate, you call [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx) to get a reference to a named part in the control template, which you can save to use later in your code.
+Um auf die Bildlaufanzeige und andere Bereiche der Vorlage zuzugreifen sowie Ereignishandler hinzufügen und später im Code aufrufen zu können, müssen Sie die [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.onapplytemplate.aspx)-Methode überschreiben. In OnApplyTemplate rufen Sie [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.gettemplatechild.aspx) auf, um einen Verweis auf einen benannten Teil der Steuerelementvorlage zu erhalten, den Sie speichern und später im Code verwenden können.
 
-In the sample, the variables used to store the template parts are declared in the Private Variables region. After they are retrieved in the OnApplyTemplate method, event handlers are added for the [**DirectManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [**DirectManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [**ViewChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx), and [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) events.
+Im Beispiel werden die zum Speichern der Vorlagenteile verwendeten Variablen im Bereich „Private Variables“ deklariert. Nachdem sie in der OnApplyTemplate-Methode abgerufen wurden, werden Handler für die Ereignisse [**DirectManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationstarted.aspx), [**DirectManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.directmanipulationcompleted.aspx), [**ViewChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.viewchanged.aspx), und [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx) hinzugefügt.
 
 **DirectManipulationStarted**
 
-In order to initiate a pull-to-refresh action, the content has to be scrolled to the top of the scroll viewer when the user starts to pull down. Otherwise, it's assumed that the user is pulling in order to pan up in the list. The code in this handler determines whether the manipulation started with the content at the top of the scroll viewer, and can result in the list being refreshed. The control's 'refreshable' status is set accordingly. 
+Zum Initiieren einer „Aktualisierung durch Ziehen“-Aktion muss der Inhalt an das obere Ende der Bildlaufanzeige gescrollt sein, wenn der Benutzer den Finger auf dem Bildschirm nach unten zieht. Andernfalls wird davon ausgegangen, dass der Benutzer über den Touchscreen auf der Liste nach oben scrollt. Der Code in diesem Handler bestimmt, ob die Manipulation am oberen Rand der Bildlaufanzeige beginnt, und kann die Aktualisierung der Liste auslösen. Der Status der Aktualisierbarkeit des Steuerelements wird entsprechend festgelegt. 
 
-If the control can be refreshed, event handlers for animations are also added.
+Wenn eine Aktualisierung des Steuerelements möglich ist, werden die Ereignishandler für Animationen ebenfalls hinzugefügt.
 
 **DirectManipulationCompleted**
 
-When the user stops pulling the list down, the code in this handler checks whether a refresh was activated during the manipulation. If a refresh was activated, the `RefreshRequested` event is raised and the `RefreshCommand` command is executed.
+Sobald der Benutzer das Ziehen der Liste nach unten beendet, prüft der Code dieses Handlers, ob während der Manipulation eine Aktualisierung aktiviert wurde. Ist dies der Fall, wird das `RefreshRequested` -Ereignis ausgelöst und der `RefreshCommand` Befehl ausgeführt.
 
-The event handlers for animations are also removed.
+Die Ereignishandler für Animationen werden ebenfalls entfernt.
 
-Based on the value of the `AutoRefresh` property, the list can animate back up immediately, or wait until the refresh is complete and then animate back up. A [**Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx) object is used to to mark the completion of the refresh. At that point the refresh indicator UI is hidden.
+Basierend auf dem Wert der `AutoRefresh` -Eigenschaft kann die Liste per Animation entweder sofort oder erst nach abgeschlossener Aktualisierung an ihren Anfang zurückgeblättert werden. Zur Kennzeichnung der abgeschlossenen Aktualisierung wird ein [**Verzögerungs**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx)-Objekt verwendet. An diesem Punkt ist die Aktualisierungsanzeige ausgeblendet.
 
-This part of the DirectManipulationCompleted event handler raises the `RefreshRequested` event and get's the Deferral if needed.
+Dieser Teil des „DirectManipulationCompleted“-Ereignishandlers löst das `RefreshRequested`-Ereignis aus und ruft bei Bedarf die Verzögerung ab.
 
 **C#**
 ```csharp
@@ -178,27 +182,27 @@ if (this.RefreshRequested != null)
 
 **ViewChanged**
 
-Two cases are handled in the ViewChanged event handler.
+Im „ViewChanged“-Ereignishandler werden zwei Fälle behandelt.
 
-First, if the view changed due to the scroll viewer zooming, the control's 'refreshable' status is canceled.
+Erstens wird im Fall einer durch die Zoombildlaufanzeige geänderten Ansicht der Status der Aktualisierbarkeit des Steuerelements widerrufen.
 
-Second, if the content finished animating up at the end of an auto refresh, the padding rectangles are hidden, touch interactions with the scroll viewer are re-anabled, the [VerticalOffset](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.verticaloffset.aspx) is set to 0.
+Zweitens werden, sobald sich der Inhalt am Ende einer automatischen Aktualisierung wieder nach oben bewegt hat, die Rechtecke für den Abstand ausgeblendet, Touchinteraktionen mit der Bildlaufanzeige wieder aktiviert und der [VerticalOffset](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.verticaloffset.aspx) auf 0 festgelegt.
 
 **PointerPressed**
 
-Pull-to-refresh happens only when the list is pulled down by a touch manipulation. In the PointerPressed event handler, the code checks what kind of pointer caused the event and sets a variable (`m_pointerPressed`) to indicate whether it was a touch pointer. This variable is used in the DirectManipulationStarted handler. If the pointer is not a touch pointer, the DirectManipulationStarted handler returns without doing anything.
+Die Aktualisierung durch Ziehen wird nur dann ausgelöst, wenn die Liste durch eine Touchmanipulation nach unten gezogen wird. Mit dem Code des „PointerPressed“-Ereignishandlers wird überprüft, welche Art von Zeiger das Ereignis ausgelöst hat und eine Variable (`m_pointerPressed`) zur Indikation eines Touchzeigers festgelegt. Diese Variable wird im „DirectManipulationStarted“-Handler verwendet. Wenn der Zeiger kein Touchzeiger ist, wird der „DirectManipulationStarted“-Handler ohne Ausführung einer Aktion zurückgegeben.
 
-## Add pull and refresh events
+## Hinzufügen von „Aktualisierung durch Ziehen“-Ereignissen
 
-'RefreshableListView' adds 2 events that you can handle in your app to refresh the data and manage the refresh indicator.
+„RefreshableListView“ fügt zwei Ereignisse hinzu, die Sie in Ihrer App behandeln können. Mit diesen lassen sich die Daten aktualisieren und die Aktualisierungsanzeige verwalten.
 
-For more info about events, see [Events and routed events overview](https://msdn.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
+Weitere Informationen zu Ereignissen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
 
 **RefreshRequested**
 
-The 'RefreshRequested' event notifies your app that the user has pulled the list to refresh it. You handle this event to fetch new data and update your list.
+Das „RefreshRequested“-Ereignis benachrichtigt Ihre App, wenn der Benutzer die Liste für eine Aktualisierung nach unten zieht. Sie behandeln dieses Ereignis zum Abrufen neuer Daten und zum Aktualisieren der Liste.
 
-Here's the event handler from the sample. The important thing to notice is that it check's the list view's `AutoRefresh` property and get's a Deferral if it's **true**. With a Deferral, the refresh indicator is not stopped and hidden until the refresh is complete.
+Hier sehen Sie den Ereignishandler aus dem Beispiel. Entscheidend ist, dass die `AutoRefresh`-Eigenschaft der Listenansicht überprüft und eine Verzögerung abgerufen wird, wenn die Eigenschaft auf **true** festgelegt ist. Durch eine Verzögerung wird die Aktualisierungsanzeige weiterhin angezeigt, bis die Aktualisierung abgeschlossen ist.
 
 **C#**
 ```csharp
@@ -218,18 +222,23 @@ private async void listView_RefreshRequested(object sender, RefreshableListView.
 
 **PullProgressChanged**
 
-In the sample, content for the refresh indicator is provided and controlled by the app. The 'PullProgressChanged' event notifies your app when the use is pulling the list so that you can start, stop, and reset the refresh indicator. 
+In diesem Beispiel werden Inhalte für die Aktualisierungsanzeige bereitgestellt und durch die App gesteuert. Das „PullProgressChanged“-Ereignis benachrichtigt Ihre App, wenn der Benutzer die Liste herunterzieht. So kann die Aktualisierungsanzeige gestartet, beendet und zurückgesetzt werden. 
 
-## Composition animations
+## Kompositionsanimationen
 
-By default, content in a scroll viewer stops when the scrollbar reaches the top. To let the user continue to pull the list down, you need to access the visual layer and animate the list content. The sample uses [composition animations](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation) for this; specifically, [expression animations](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations).
+Standardmäßig wird die Scrollbewegung des Inhalts in einer Bildlaufanzeige beim Erreichen des oberen Endes der Scrollleiste beendet. Um dem Benutzer das Herunterziehen der Liste zu ermöglichen, muss auf die visuelle Ebene zugegriffen und der Listeninhalt animiert werden. Im Beispiel werden hierfür [Kompositionsanimationen](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation), genauer [Ausdrucksanimationen](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations), verwendet.
 
-In the sample, this work is done primarily in the `CompositionTarget_Rendering` event handler and the `UpdateCompositionAnimations` method.
+Diese Vorgänge werden im Beispiel hauptsächlich mit dem `CompositionTarget_Rendering` -Ereignishandler und der `UpdateCompositionAnimations` -Methode ausgeführt.
 
-## Related articles
+## Verwandte Artikel
 
-- [Styling controls](styling-controls.md)
-- [Touch interactions](../input-and-devices/touch-interactions.md)
-- [List view and grid view](listview-and-gridview.md)
-- [List view item templates](listview-item-templates.md)
-- [Expression animations](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)
+- [Formatieren von Steuerelementen](styling-controls.md)
+- [Toucheingabe-Interaktionen](../input-and-devices/touch-interactions.md)
+- [Listenansicht und Rasteransicht](listview-and-gridview.md)
+- [Vorlagen für Listenansichtselemente](listview-item-templates.md)
+- [Ausdrucksanimationen](https://msdn.microsoft.com/windows/uwp/graphics/composition-animation#expression-animations)
+
+
+<!--HONumber=Aug16_HO3-->
+
+

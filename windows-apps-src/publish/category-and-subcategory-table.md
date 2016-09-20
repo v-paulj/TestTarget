@@ -3,7 +3,6 @@ author: jnHs
 Description: "Das Zuweisen der richtigen Kategorie und Unterkategorie trägt dazu bei, dass Kunden Ihre App leichter finden und mehr Informationen dazu erhalten."
 title: Kategorie- und Unterkategorietabelle
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 9f9f5da100109af5dc38f7ffbc3cadca842b1214
 
@@ -16,7 +15,8 @@ Das Zuweisen der richtigen Kategorie und Unterkategorie trägt dazu bei, dass Ku
 
 Wählen Sie die Kategorie aus, die Ihre App am besten beschreibt. Wählen Sie dann, falls verfügbar, eine Unterkategorie aus.
 
-> **Note**  Wenn Sie **Spiele** als Kategorie auswählen, ist eine Unterkategorie erforderlich.
+> 
+            **Note**  Wenn Sie **Spiele** als Kategorie auswählen, ist eine Unterkategorie erforderlich.
 
  
 
@@ -59,7 +59,8 @@ Unterkategorien sind nur für einige Kategorien vorhanden. Denken Sie daran, das
 | Dienstprogramme + Tools           | Sichern + Verwalten <br> Datei-Manager                |
  
 
-> **Hinweis**  Informationen zu den Kategorien, die in Windows Store für Windows 8.1 und früheren Versionen verwendet wurden, sowie die Kategorien im Windows Phone Store und wie diese mit der vorangehenden Kategorieliste zusammenhängen, finden Sie unter [Kategorieänderungen für Windows Phone-Apps](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
+> 
+            **Hinweis**  Informationen zu den Kategorien, die in Windows Store für Windows8.1 und früheren Versionen verwendet wurden, sowie die Kategorien im Windows Phone Store und wie diese mit der vorangehenden Kategorieliste zusammenhängen, finden Sie unter [Kategorieänderungen für Windows Phone-Apps](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
 
 
 

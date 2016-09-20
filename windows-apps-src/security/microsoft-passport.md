@@ -1,9 +1,8 @@
 ---
-title: "Microsoft Passport und Windows Hello"
-description: "In diesem Artikel wird die neue Microsoft Passport-Technologie beschrieben, die im Lieferumfang des Windows 10-Betriebssystems enthalten ist. Zudem wird erörtert, wie Entwickler diese Technologie implementieren, um ihre UWP (Universelle Windows-Plattform)-Apps und Back-End-Dienste zu schützen. Der Artikel hebt die spezifischen Funktionen dieser Technologien hervor, die dabei helfen, aus der Verwendung herkömmlicher Anmeldeinformationen erwachsende Bedrohungen zu mindern. Darüber hinaus bietet er eine Anleitung dazu, wie diese Technologien als Bestandteil Ihrer Windows 10-Einführung entworfen und bereitgestellt werden."
+title: MicrosoftPassport und WindowsHello
+description: "In diesem Artikel wird die neue Microsoft Passport-Technologie beschrieben, die im Lieferumfang des Windows10-Betriebssystems enthalten ist. Zudem wird erörtert, wie Entwickler diese Technologie implementieren, um ihre UWP (Universelle Windows-Plattform)-Apps und Back-End-Dienste zu schützen. Der Artikel hebt die spezifischen Funktionen dieser Technologien hervor, die dabei helfen, aus der Verwendung herkömmlicher Anmeldeinformationen erwachsende Bedrohungen zu mindern. Darüber hinaus bietet er eine Anleitung dazu, wie diese Technologien als Bestandteil Ihrer Windows 10-Einführung entworfen und bereitgestellt werden."
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 781866bbbef755815422d1aa5bf71010bb08630d
 
@@ -15,7 +14,7 @@ ms.openlocfilehash: 781866bbbef755815422d1aa5bf71010bb08630d
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-In diesem Artikel wird die neue Microsoft Passport-Technologie beschrieben, die im Lieferumfang des Windows 10-Betriebssystems enthalten ist. Zudem wird erörtert, wie Entwickler diese Technologie implementieren, um ihre UWP (Universelle Windows-Plattform)-Apps und Back-End-Dienste zu schützen. Der Artikel hebt die spezifischen Funktionen dieser Technologien hervor, die dabei helfen, aus der Verwendung herkömmlicher Anmeldeinformationen erwachsende Bedrohungen zu mindern. Darüber hinaus bietet er eine Anleitung dazu, wie diese Technologien als Bestandteil Ihrer Windows 10-Einführung entworfen und bereitgestellt werden.
+In diesem Artikel wird die neue Microsoft Passport-Technologie beschrieben, die im Lieferumfang des Windows 10-Betriebssystems enthalten ist. Zudem wird erörtert, wie Entwickler diese Technologie implementieren, um ihre UWP (Universelle Windows-Plattform)-Apps und Back-End-Dienste zu schützen. Der Artikel hebt die spezifischen Funktionen dieser Technologien hervor, die dabei helfen, aus der Verwendung herkömmlicher Anmeldeinformationen erwachsende Bedrohungen zu mindern. Darüber hinaus bietet er eine Anleitung dazu, wie diese Technologien als Bestandteil Ihrer Windows10-Einführung entworfen und bereitgestellt werden.
 
 Beachten Sie, dass der Schwerpunkt dieses Artikels auf der App-Entwicklung liegt. Weitere Informationen zu den Architektur- und Implementierungsdetails von Microsoft Passport und Windows Hello finden Sie unter [Microsoft Passport-Anleitung auf TechNet](https://technet.microsoft.com/library/mt589441.aspx).
 
@@ -60,23 +59,23 @@ Microsoft Passport ersetzt Kennwörter durch eine sichere zweistufige Authentifi
 ## 2.1 Was ist Windows Hello?
 
 
-Windows Hello ist der Name des neuen in Windows 10 integrierten biometrischen Anmeldesystems von Microsoft. Da es direkt im Betriebssystem integriert ist, ermöglicht Windows Hello die Gesichts- oder Fingerabdruckidentifikation zum Entsperren von Benutzergeräten. Die Authentifizierung erfolgt, wenn der Benutzer seine eindeutige biometrische ID übermittelt, um auf die gerätespezifischen Microsoft Passport-Anmeldeinformationen zuzugreifen. Demzufolge kann sich ein Angreifer, der das Gerät gestohlen hat, nicht anmelden, es sei denn, der Angreifer verfügt über die PIN. Der sichere Windows-Anmeldeinformationsspeicher schützt die biometrischen Daten auf dem Gerät. Durch das Verwenden von Windows Hello zum Entsperren eines Geräts erhält autorisierte Benutzer Zugriff auf seine sämtlichen Windows-Funktionen, -Apps, -Daten, -Websites und -Dienste.
+Windows Hello ist der Name des neuen in Windows10 integrierten biometrischen Anmeldesystems von Microsoft. Da es direkt im Betriebssystem integriert ist, ermöglicht Windows Hello die Gesichts- oder Fingerabdruckidentifikation zum Entsperren von Benutzergeräten. Die Authentifizierung erfolgt, wenn der Benutzer seine eindeutige biometrische ID übermittelt, um auf die gerätespezifischen Microsoft Passport-Anmeldeinformationen zuzugreifen. Demzufolge kann sich ein Angreifer, der das Gerät gestohlen hat, nicht anmelden, es sei denn, der Angreifer verfügt über die PIN. Der sichere Windows-Anmeldeinformationsspeicher schützt die biometrischen Daten auf dem Gerät. Durch das Verwenden von Windows Hello zum Entsperren eines Geräts erhält autorisierte Benutzer Zugriff auf seine sämtlichen Windows-Funktionen, -Apps, -Daten, -Websites und -Dienste.
 
 Der Windows Hello-Authentifikator wird auch als Hello bezeichnet. Ein Hello ist für die Kombination aus einem einzelnen Gerät und einem bestimmten Benutzer eindeutig. Es wird nicht auf mehreren Geräten verwendet, nicht für einen Server oder eine aufrufende App freigegeben und kann von einem Gerät nicht einfach extrahiert werden. Wenn mehrere Benutzer ein Gerät gemeinsam verwenden, muss jeder Benutzer ein eigenes Konto einrichten. Jedes Konto erhält ein eindeutiges Hello für dieses Gerät. Sie können sich ein Hello als Token vorstellen, das Sie zum Entsperren (oder Freigeben) von gespeicherten Anmeldeinformationen verwenden können. Mit dem Hello an sich werden Sie nicht für eine App oder einen Dienst authentifiziert, es gibt jedoch die dafür benötigten Anmeldeinformationen frei. Anders ausgedrückt, handelt es sich beim Hello nicht um Benutzeranmeldeinformationen, sondern um einen zweiten Faktor für die Microsoft Passport-Anmeldung.
 
 ## 2.2 Was ist Microsoft Passport?
 
 
-Windows Hello bietet Geräten eine zuverlässige Möglichkeit, einzelne Benutzer zu erkennen. Dies betrifft den ersten Teil des Wegs zwischen einem Benutzer und einem angeforderten Dienst- oder Datenelement. Nachdem das Gerät den Benutzer erkannt hat, muss es den Benutzer jedoch erst noch authentifizieren, bevor es entscheidet, ob er auf die angeforderte Ressource zugreifen darf. Microsoft Passport bietet die sichere 2FA, die vollständig in Windows integriert ist, und ersetzt wiederverwendbare Kennwörter durch eine Kombination aus einem bestimmten Gerät und einer biometrischen Geste oder PIN.
+Windows Hello bietet Geräten eine zuverlässige Möglichkeit, einzelne Benutzer zu erkennen. Dies betrifft den ersten Teil des Wegs zwischen einem Benutzer und einem angeforderten Dienst- oder Datenelement. Nachdem das Gerät den Benutzer erkannt hat, muss es den Benutzer jedoch erst noch authentifizieren, bevor es entscheidet, ob er auf die angeforderte Ressource zugreifen darf. MicrosoftPassport bietet die sichere 2FA, die vollständig in Windows integriert ist, und ersetzt wiederverwendbare Kennwörter durch eine Kombination aus einem bestimmten Gerät und einer biometrischen Geste oder PIN.
 
-Bei Microsoft Passport handelt es sich jedoch nicht um einen bloßen Ersatz für herkömmliche 2FA-Systeme. Konzeptionell gesehen ähnelt es Smartcards. Die Authentifizierung wird mithilfe von kryptografischen Primitiven ausgeführt, anstelle Zeichenfolgen zu vergleichen. Zudem sind die Schlüssel des Benutzers in der vor Manipulationen geschützten Hardware sicher. Microsoft Passport erfordert auch keine zusätzlichen Infrastrukturkomponenten für die Smartcard-Bereitstellung. Insbesondere benötigen Sie keine Public Key-Infrastruktur (PKI) zum Verwalten von Zertifikaten, wenn Sie derzeit keine haben. Microsoft Passport kombiniert die wichtigsten Vorteile von Smartcards – Flexibilität bei der Bereitstellung virtueller Smartcards und zuverlässige Sicherheit für physische Smartcards – und birgt keinen ihrer Nachteile.
+Bei MicrosoftPassport handelt es sich jedoch nicht um einen bloßen Ersatz für herkömmliche 2FA-Systeme. Konzeptionell gesehen ähnelt es Smartcards. Die Authentifizierung wird mithilfe von kryptografischen Primitiven ausgeführt, anstelle Zeichenfolgen zu vergleichen. Zudem sind die Schlüssel des Benutzers in der vor Manipulationen geschützten Hardware sicher. Microsoft Passport erfordert auch keine zusätzlichen Infrastrukturkomponenten für die Smartcard-Bereitstellung. Insbesondere benötigen Sie keine Public Key-Infrastruktur (PKI) zum Verwalten von Zertifikaten, wenn Sie derzeit keine haben. MicrosoftPassport kombiniert die wichtigsten Vorteile von Smartcards– Flexibilität bei der Bereitstellung virtueller Smartcards und zuverlässige Sicherheit für physische Smartcards– und birgt keinen ihrer Nachteile.
 
 ## 2.3 Funktionsweise von Microsoft Passport
 
 
 Wenn der Benutzer Microsoft Passport auf seinem Computer einrichtet, generiert Microsoft Passport ein neues Schlüsselpaar bestehend aus öffentlichem und privatem Schlüssel auf dem Gerät. Das TPM generiert und schützt diesen privaten Schlüssel. Wenn das Gerät nicht über ein TPM verfügt, wird der private Schlüssel verschlüsselt und durch Software geschützt. Zudem generieren TPM-fähige Geräte einen Datenblock, mit dem bestätigt werden kann, dass ein Schlüssel an ein TPM gebunden ist. Die Nachweisinformationen können in Ihrer Lösung verwendet werden, um z. B. zu entscheiden, ob dem Benutzer eine andere Autorisierungsstufe gewährt wird.
 
-Zum Aktivieren von Microsoft Passport auf einem Gerät muss der Benutzer entweder sein Azure Active Directory-Konto oder sein Microsoft-Konto in den Windows-Einstellungen verbinden.
+Zum Aktivieren von MicrosoftPassport auf einem Gerät muss der Benutzer entweder sein AzureActiveDirectory-Konto oder sein Microsoft-Konto in den Windows-Einstellungen verbinden.
 
 ## 2.3.1 Schutz von Schlüsseln
 
@@ -95,29 +94,29 @@ Eine Anwendung kann niemals die Schlüssel einer anderen Anwendung bzw. ein Benu
 ## 2.4 Vorbereitung auf die Implementierung von Passport
 
 
-Nachdem wir nun wissen, wie Microsoft Passport und Windows Hello grundsätzlich funktionieren, befassen wir uns damit, wie wir sie in unseren eigenen Anwendungen implementieren. Zuvor noch eine Klarstellung: Wenn wir von APIs reden, sind in der Regel Microsoft Passport-APIs gemeint. Derzeit sind keine APIs für Windows Hello verfügbar.
+Nachdem wir nun wissen, wie MicrosoftPassport und WindowsHello grundsätzlich funktionieren, befassen wir uns damit, wie wir sie in unseren eigenen Anwendungen implementieren. Zuvor noch eine Klarstellung: Wenn wir von APIs reden, sind in der Regel Microsoft Passport-APIs gemeint. Derzeit sind keine APIs für WindowsHello verfügbar.
 
-Es gibt verschiedene Szenarien, die mithilfe von Microsoft Passport implementiert werden können. Beispielsweise die Anmeldung bei der App auf einem Gerät. Das andere häufige Szenario wäre dagegen die Authentifizierung bei einem Dienst. Anstelle von Benutzernamen und Kennwort verwenden Sie Microsoft Passport. In den folgenden Kapiteln besprechen wir die Implementierung einiger verschiedener Szenarien, z. B. die Authentifizierung gegenüber Diensten mit Microsoft Passport und der Umwandlung eines vorhandenen Benutzername-/Kennwortsystems in ein Microsoft Passport-System.
+Es gibt verschiedene Szenarien, die mithilfe von Microsoft Passport implementiert werden können. Beispielsweise die Anmeldung bei der App auf einem Gerät. Das andere häufige Szenario wäre dagegen die Authentifizierung bei einem Dienst. Anstelle von Benutzernamen und Kennwort verwenden Sie Microsoft Passport. In den folgenden Kapiteln besprechen wir die Implementierung einiger verschiedener Szenarien, z.B. die Authentifizierung gegenüber Diensten mit MicrosoftPassport und der Umwandlung eines vorhandenen Benutzername-/Kennwortsystems in ein MicrosoftPassport-System.
 
-Beachten Sie schließlich, dass die Microsoft Passport-APIs die Verwendung des Windows 10-SDKs erfordert, die dem Betriebssystem entspricht, unter dem die App verwendet wird. Mit anderen Worten: Das Windows-SDK 10.0.10240 muss für Apps verwendet werden, die unter Windows 10 bereitgestellt werden, und 10.0.10586 muss für Apps verwendet werden, die für Windows 10, Version 1511 bereitgestellt werden.
+Beachten Sie schließlich, dass die MicrosoftPassport-APIs die Verwendung des Windows10-SDKs erfordert, die dem Betriebssystem entspricht, unter dem die App verwendet wird. Mit anderen Worten: Das Windows-SDK10.0.10240 muss für Apps verwendet werden, die unter Windows10 bereitgestellt werden, und 10.0.10586 muss für Apps verwendet werden, die für Windows10, Version1511 bereitgestellt werden.
 
 ## 3 Implementieren von Microsoft Passport
 
 
-In diesem Kapitel wir beginnen mit einem „frischen“ Szenario ohne vorhandenes Authentifizierungssystem und erläutern die Implementierung von Microsoft Passport.
+In diesem Kapitel wir beginnen mit einem „frischen“ Szenario ohne vorhandenes Authentifizierungssystem und erläutern die Implementierung von MicrosoftPassport.
 
 Im nächsten Abschnitt wird die Migration von einem System mit vorhandenem Benutzernamen/Kennwort behandelt. Auch wenn Sie am nächsten Kapitel mehr interessiert sind, sollten Sie sich dieses ansehen, um ein grundlegendes Verständnis des Prozesses und des erforderlichen Codes zu erhalten.
 
 ## 3.1 Registrieren neuer Benutzer
 
 
-Wir beginnen mit einem völlig neuen Dienst, der Microsoft Passport verwendet, und einem hypothetischen neuen Benutzer, der zur Registrierung auf einem neuen Gerät bereit ist.
+Wir beginnen mit einem völlig neuen Dienst, der MicrosoftPassport verwendet, und einem hypothetischen neuen Benutzer, der zur Registrierung auf einem neuen Gerät bereit ist.
 
 Im ersten Schritt wird sichergestellt, dass Benutzer Passport verwenden kann. Die App überprüft die Benutzereinstellungen und Computerfunktionen, um sicherzustellen, dass Benutzer-ID-Schlüssel erstellt werden können. Wenn die App ermittelt, dass der Benutzer Microsoft Passport noch nicht aktiviert hat, fordert sie ihn dazu auf, Passport vor der Verwendung der App einzurichten.
 
-Zum Aktivieren von Microsoft Passport muss der Benutzer lediglich eine PIN in Windows-Einstellungen einrichten, es sei denn, der Benutzer hat diese bereits auf der Willkommensseite (Out of Box Experience, OOBE) eingerichtet.
+Zum Aktivieren von MicrosoftPassport muss der Benutzer lediglich eine PIN in Windows-Einstellungen einrichten, es sei denn, der Benutzer hat diese bereits auf der Willkommensseite (Out of Box Experience, OOBE) eingerichtet.
 
-Die folgenden Codezeilen zeigen eine einfache Methode zum Überprüfen, ob der Benutzer Passport eingerichtet hat.
+Die folgenden Codezeilen zeigen eine einfache Methode zum Überprüfen, ob der BenutzerPassport eingerichtet hat.
 
 ```cs
 var keyCredentialAvailable = await KeyCredentialManager.IsSupportedAsync();
@@ -141,10 +140,9 @@ var keyCreationResult = await KeyCredentialManager
     .RequestCreateAsync(AccountId, KeyCredentialCreationOption.ReplaceExisting);
 ```
 
-[
-            **RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048) ist der Teil, durch den öffentlicher und privater Schlüssel erstellt werden. Wenn das Gerät über den richtigen TPM-Chip verfügt, fordern die APIs den TPM-Chip zum Erstellen des privaten und öffentlichen Schlüssels an und speichern das Ergebnis. Wenn kein TPM-Chip verfügbar ist, erstellt das Betriebssystem das Schlüsselpaar im Code. Die App hat keine Möglichkeit, direkt auf die erstellten privaten Schlüssel zuzugreifen. Bei der Erstellung von Schlüsselpaaren geht es auch um die resultierenden Nachweisinformationen. (Weitere Informationen zu Nachweisen finden Sie im nächsten Abschnitt.)
+[**RequestCreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn973048) ist der Teil, durch den öffentlicher und privater Schlüssel erstellt werden. Wenn das Gerät über den richtigen TPM-Chip verfügt, fordern die APIs den TPM-Chip zum Erstellen des privaten und öffentlichen Schlüssels an und speichern das Ergebnis. Wenn kein TPM-Chip verfügbar ist, erstellt das Betriebssystem das Schlüsselpaar im Code. Die App hat keine Möglichkeit, direkt auf die erstellten privaten Schlüssel zuzugreifen. Bei der Erstellung von Schlüsselpaaren geht es auch um die resultierenden Nachweisinformationen. (Weitere Informationen zu Nachweisen finden Sie im nächsten Abschnitt.)
 
-Nachdem das Schlüsselpaar und die Nachweisinformationen auf dem Gerät erstellt wurden, müssen der öffentliche Schlüssel, die optionalen Nachweisinformationen und der eindeutige Bezeichner (z. B. die E-Mail-Adresse) an den Back-End-Registrierungsdienst gesendet und im Back-End gespeichert werden.
+Nachdem das Schlüsselpaar und die Nachweisinformationen auf dem Gerät erstellt wurden, müssen der öffentliche Schlüssel, die optionalen Nachweisinformationen und der eindeutige Bezeichner (z.B. die E-Mail-Adresse) an den Back-End-Registrierungsdienst gesendet und im Back-End gespeichert werden.
 
 Damit der Benutzer über mehrere Geräte auf die App zugreifen kann, muss der Back-End-Dienst mehrere Schlüssel für denselben Benutzer speichern können. Jeder Schlüssel ist für jedes Gerät eindeutig. Deshalb werden alle Schüssel gespeichert, die demselben Benutzer zugeordnet sind. Ein Gerätebezeichner dient zur Optimierung der Serverseite bei der Benutzerauthentifizierung. Darauf gehen wir im nächsten Kapitel genauer ein.
 
@@ -156,7 +154,7 @@ Die Registrierungslogik kann wie folgt aussehen:
 
 ![Registrierungslogik für Passport](images/passport-registration.png)
 
-Die von Ihnen erfassten Registrierungsinformationen umfassen natürlich viel mehr Identifikationsinformationen, als wir in dieses einfache Szenario einbinden. Wenn Ihre App beispielsweise auf einen gesicherten Dienst – z. B. Onlinebanking – zugreift, müssen Sie beim Anmeldevorgang einen Identitätsnachweis und andere Dinge anfordern. Nachdem alle Bedingungen erfüllt wurden, wird der öffentliche Schlüssel dieses Benutzers im Back-End gespeichert und für Überprüfungszwecke verwendet, wenn der Benutzer den Dienst das nächste Mal verwendet.
+Die von Ihnen erfassten Registrierungsinformationen umfassen natürlich viel mehr Identifikationsinformationen, als wir in dieses einfache Szenario einbinden. Wenn Ihre App beispielsweise auf einen gesicherten Dienst – z.B. Onlinebanking– zugreift, müssen Sie beim Anmeldevorgang einen Identitätsnachweis und andere Dinge anfordern. Nachdem alle Bedingungen erfüllt wurden, wird der öffentliche Schlüssel dieses Benutzers im Back-End gespeichert und für Überprüfungszwecke verwendet, wenn der Benutzer den Dienst das nächste Mal verwendet.
 
 ```cs
 using System;
@@ -257,11 +255,11 @@ Natürlich können Sie auch den Abfrage-/Rückmeldungsmechanismus verwenden, bei
 ## 3.4 Authentifizierung im Back-End
 
 
-Wenn eine App versucht, auf einen geschützten Back-End-Dienst zuzugreifen, sendet dieser eine Abfrage an die App. Die App verwendet den privaten Schlüssel des Benutzers, um die Abfrage zu signieren, und sendet sie an den Server zurück. Da der Server den öffentlichen Schlüssel für diesen Benutzer gespeichert hat, stellt er anhand standardmäßiger Krypto-APIs sicher, dass die Nachricht tatsächlich mit dem richtigen privaten Schlüssel signiert wurde. Auf dem Client erfolgt die Signierung mithilfe der Microsoft Passport-APIs; der Entwickler selbst erhält niemals Zugriff auf den privaten Schlüssel eines Benutzers.
+Wenn eine App versucht, auf einen geschützten Back-End-Dienst zuzugreifen, sendet dieser eine Abfrage an die App. Die App verwendet den privaten Schlüssel des Benutzers, um die Abfrage zu signieren, und sendet sie an den Server zurück. Da der Server den öffentlichen Schlüssel für diesen Benutzer gespeichert hat, stellt er anhand standardmäßiger Krypto-APIs sicher, dass die Nachricht tatsächlich mit dem richtigen privaten Schlüssel signiert wurde. Auf dem Client erfolgt die Signierung mithilfe der MicrosoftPassport-APIs; der Entwickler selbst erhält niemals Zugriff auf den privaten Schlüssel eines Benutzers.
 
 Neben der Schlüsselüberprüfung kann der Dienst auch den Schlüsselnachweis überprüfen, um festzustellen, ob Beschränkungen hinsichtlich der Speicherung der Schlüssel auf dem Gerät bestehen. Wenn das Gerät beispielsweise TPM zum Schützen der Schlüssel verwendet, ist die Sicherheit höher als bei Geräten, auf denen Schlüssel ohne TPM gespeichert werden. Die Back-End-Logik könnte z. B. festlegen, dass der Benutzer Geld nur bis zu einer bestimmten Höhe überweisen darf, wenn kein TPM zur Risikominderung eingesetzt wird.
 
-Ein Nachweis ist nur für Geräte mit einem TPM-Chip der Version 2.0 oder höher verfügbar. Daher müssen Sie berücksichtigen, dass diese Informationen nicht immer auf jedem Gerät zur Verfügung stehen.
+Ein Nachweis ist nur für Geräte mit einem TPM-Chip der Version2.0 oder höher verfügbar. Daher müssen Sie berücksichtigen, dass diese Informationen nicht immer auf jedem Gerät zur Verfügung stehen.
 
 Der Clientworkflow sieht ggf. wie das folgende Diagramm aus:
 
@@ -359,13 +357,13 @@ Die Implementierung des richtigen Abfrage-/Rückmeldungsmechanismus wird in dies
 ## 3.5 Registrieren eines anderen Geräts
 
 
-Heutzutage ist es üblich, dass Benutzer über mehrere Geräte verfügen, auf denen die gleichen Apps installiert sind. Wie funktioniert dies bei der Verwendung von Microsoft Passport mit mehreren Geräten?
+Heutzutage ist es üblich, dass Benutzer über mehrere Geräte verfügen, auf denen die gleichen Apps installiert sind. Wie funktioniert dies bei der Verwendung von MicrosoftPassport mit mehreren Geräten?
 
 Bei Verwendung von Microsoft Passport erstellt jedes Gerät eine eindeutige Kombination bestehend aus einem privaten und einem öffentlichen Schlüssel. Wenn ein Benutzer in der Lage sein soll, mehrere Geräte zu verwenden, müssen im Back-End folglich mehrere öffentliche Schlüssel dieses Benutzers gespeichert werden können. Im Datenbankdiagramm in Abschnitt 2.1 finden Sie ein Beispiel für die Tabellenstruktur.
 
 Die Registrierung eines weiteren Geräts funktioniert fast genauso wie die erstmalige Registrierung eines Benutzers. Sie müssen weiterhin sicherstellen, dass es sich bei dem Benutzer, der sich für dieses neue Gerät registriert, tatsächlich um den Benutzer handelt, der er zu sein vorgibt. Sie können dazu einen beliebigen aktuellen Mechanismus für die zweistufige Authentifizierung verwenden. Es gibt mehrere Möglichkeiten zur sicheren Umsetzung dieses Schritts. Die Vorgehensweise hängt vom jeweiligen Szenario ab.
 
-Wenn Sie z. B. immer noch Anmeldenamen und Kennwort verwenden, können Sie den Benutzer darüber authentifizieren und ihn zur Verwendung einer seiner Überprüfungsmethoden wie SMS oder E-Mail auffordern. Wenn Sie keinen Benutzernamen und kein Kennwort besitzen, können Sie auch eines der bereits registrierten Geräte verwenden, um eine Benachrichtigung an die App auf dem Gerät zu senden. Ein Beispiel dafür ist die MSA-Authentifikator-App. Kurz gesagt: Sie sollten einen gängigen 2FA-Mechanismus verwenden, um zusätzliche Geräte für den Benutzer zu registrieren.
+Wenn Sie z.B. immer noch Anmeldenamen und Kennwort verwenden, können Sie den Benutzer darüber authentifizieren und ihn zur Verwendung einer seiner Überprüfungsmethoden wie SMS oder E-Mail auffordern. Wenn Sie keinen Benutzernamen und kein Kennwort besitzen, können Sie auch eines der bereits registrierten Geräte verwenden, um eine Benachrichtigung an die App auf dem Gerät zu senden. Ein Beispiel dafür ist die MSA-Authentifikator-App. Kurz gesagt: Sie sollten einen gängigen 2FA-Mechanismus verwenden, um zusätzliche Geräte für den Benutzer zu registrieren.
 
 Der Code zum Registrieren des neuen Geräts entspricht daher genau dem Code, der für die erstmalige Registrierung des Benutzers (innerhalb der App) verwendet wird.
 
@@ -379,7 +377,7 @@ Damit der Benutzer einfacher erkennen kann, welche Geräte registriert sind, kö
 ## 3.6 Verwenden mehrerer Konten in der App
 
 
-Neben der Unterstützung von mehreren Geräten für ein Konto ist es auch gängig, mehrere Konten in einer App zu unterstützen. Ein Beispiel dafür ist die Anmeldung an mehreren Twitter-Konten innerhalb Ihrer App. Mit Microsoft Passport können Sie mehrere Schlüsselpaare erstellen und mehrere Konten in Ihrer App unterstützen.
+Neben der Unterstützung von mehreren Geräten für ein Konto ist es auch gängig, mehrere Konten in einer App zu unterstützen. Ein Beispiel dafür ist die Anmeldung an mehreren Twitter-Konten innerhalb Ihrer App. Mit MicrosoftPassport können Sie mehrere Schlüsselpaare erstellen und mehrere Konten in Ihrer App unterstützen.
 
 Eine Möglichkeit besteht darin, den im vorherigen Kapitel beschriebenen Benutzernamen oder eindeutigen Bezeichner in einem isolierten Speicher zu speichern. Daher wird jedes Mal, wenn Sie ein neues Konto erstellen, die Konto-ID im isolierten Speicher abgelegt.
 
@@ -398,7 +396,7 @@ In diesem kurzen Abschnitt gehen wir davon aus, dass eine UWP (Universelle Windo
 
 In diesem Abschnitt wird beschrieben, welche Elemente geändert oder ersetzt werden müssen, damit Microsoft Passport funktioniert.
 
-Die meisten der Verfahren haben wir bereits in den vorhergehenden Kapiteln behandelt. Das Hinzufügen von Microsoft Passport zu Ihrem vorhandenen System beinhaltet das Hinzufügen einiger verschiedener Workflows im Registrierungs- und Authentifizierungsteil Ihres Codes.
+Die meisten der Verfahren haben wir bereits in den vorhergehenden Kapiteln behandelt. Das Hinzufügen von MicrosoftPassport zu Ihrem vorhandenen System beinhaltet das Hinzufügen einiger verschiedener Workflows im Registrierungs- und Authentifizierungsteil Ihres Codes.
 
 Ein Ansatz hierfür ist, den Benutzer entscheiden zu lassen, wann das Upgrade durchgeführt wird. Wenn Sie nach der Anmeldung des Benutzers bei der App erkennen, dass Microsoft Passport von der App und dem Betriebssystem unterstützt wird, können Sie den Benutzer fragen, ob er seine Anmeldeinformationen auf dieses moderne und sicherheitsoptimierte System umstellen möchte. Anhand des folgenden Codes können Sie überprüfen, ob der Benutzer Microsoft Passport verwenden kann.
 
@@ -421,7 +419,7 @@ Der letzte Schritt bei der Migration zu einem vollständigen Microsoft Passport-
 
 Mit Windows 10 wird eine höhere Sicherheitsebene eingeführt, die außerdem einfach umzusetzen ist. Windows Hello bietet ein neues biometrisches Anmeldesystem, das den Benutzer erkennt und alle Versuche, die Identifizierung zu umgehen, aktiv verhindert. Zusammen mit Windows Hello stellt Microsoft Passport mehrere Schlüssel- und Zertifikatebenen bereit, die außerhalb des TPMs (Trusted Platform Module) niemals aufgedeckt oder verwendet werden können. Eine weitere Sicherheitsebene wird außerdem durch die optionale Verwendung von Attestation Identity Keys (AIK) und Zertifikaten bereitgestellt.
 
-Dieser Leitfaden enthält Informationen zum Entwurf und zur Bereitstellung dieser Technologien. Damit können Sie als Entwickler Ihre Windows 10-Rollouts im Handumdrehen mit sicherer Authentifizierung ausstatten, die den Schutz von Apps und Back-End-Diensten gewährleistet. Der erforderliche Code ist überschaubar und leicht verständlich. Die eigentliche Arbeit überlassen Sie einfach Windows 10.
+Dieser Leitfaden enthält Informationen zum Entwurf und zur Bereitstellung dieser Technologien. Damit können Sie als Entwickler Ihre Windows 10-Rollouts im Handumdrehen mit sicherer Authentifizierung ausstatten, die den Schutz von Apps und Back-End-Diensten gewährleistet. Der erforderliche Code ist überschaubar und leicht verständlich. Die eigentliche Arbeit überlassen Sie einfach Windows10.
 
 Flexible Implementierungsoptionen ermöglichen Microsoft Passport und Windows Hello, das vorhandene Authentifizierungssystem zu ersetzen oder es einzubinden. Der Bereitstellung erfolgt schnell und kosteneffizient. Zur Bereitstellung von Windows 10-Sicherheit ist keine zusätzliche Infrastruktur erforderlich. Durch die Integration von Microsoft Passport und Microsoft Hello in das Betriebssystem ist Windows 10 die sicherste Antwort auf Authentifizierungsprobleme, mit denen Entwickler heute konfrontiert sind.
 
@@ -432,8 +430,8 @@ Mission erfüllt! Sie haben das Internet gerade sicherer gemacht!
 
 ### 6.1 Artikel und Beispielcode
 
--   [Übersicht über Windows Hello](http://windows.microsoft.com/windows-10/getstarted-what-is-hello)
--   [Implementierungsdetails für Microsoft Passport und Windows Hello](https://msdn.microsoft.com/library/mt589441)
+-   [Übersicht über WindowsHello](http://windows.microsoft.com/windows-10/getstarted-what-is-hello)
+-   [Implementierungsdetails für MicrosoftPassport und WindowsHello](https://msdn.microsoft.com/library/mt589441)
 -   [Microsoft Passport-Codebeispiel auf GitHub](http://go.microsoft.com/fwlink/?LinkID=717812)
 
 ### 6.2 Terminologie

@@ -3,7 +3,6 @@ author: mtoepke
 title: "Hinzufügen von visuellem Inhalt zum Marble Maze-Beispiel"
 description: "In diesem Dokument wird beschrieben, wie das Spiel Marble Maze Direct3D und Direct2D in der App-Umgebung der universellen Windows Plattform verwendet wird, sodass Sie die Muster erlernen und anpassen können, wenn Sie mit Ihrem eigenen Spielinhalt arbeiten."
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 16eb493595bbac4f15ed0e755258104693dfba05
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 16eb493595bbac4f15ed0e755258104693dfba05
 # Hinzufügen von visuellem Inhalt zum Marble Maze-Beispiel
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Dokument wird beschrieben, wie das Spiel Marble Maze Direct3D und Direct2D in der UWP-App-Umgebung (Universelle Windows-Plattform) verwendet, sodass Sie die Muster erlernen und anpassen können, wenn Sie mit Ihrem eigenen Spielinhalt arbeiten. Informationen dazu, wie visuelle Spielkomponenten in die Anwendungsgesamtstruktur von Marble Maze passen, finden Sie unter [Marble Maze-Anwendungsstruktur](marble-maze-application-structure.md).
@@ -29,7 +28,8 @@ Ferner haben wir uns darauf konzentriert, erst die 3-D-Objekte und dann die 2-D-
 
 Darüber hinaus mussten wir einige dieser Schritte während des Entwicklungsprozesses mehrmals durchlaufen. Beim Vornehmen von Änderungen an den Gitter- und Labyrinthmodellen mussten wir beispielsweise auch einen Teil des Shader-Codes ändern, der diese Modelle unterstützt.
 
-> **Hinweis**  Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> 
+            **Hinweis**  Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 Es folgen einige wichtige Punkte, die in diesem Dokument erläutert werden und die beim Arbeiten mit DirectX und visuellen Spielinhalten relevant sind, und zwar beim Initialisieren der DirectX-Grafikbibliotheken, beim Laden von Szenenressourcen und beim Aktualisieren und Rendern der Szene:
@@ -46,20 +46,24 @@ Es folgen einige wichtige Punkte, die in diesem Dokument erläutert werden und d
 ## Erste Schritte mit DirectX-Grafiken
 
 
-Bei der Planung des Spiels für die universelle Windows-Plattform (UWP) – Marble Maze – haben wir uns für C++ und Direct3D 11.1 entschieden, da dies jeweils die beste Wahl zum Erstellen von 3D-Spielen ist, die maximale Kontrolle über das Rendern und hohe Leistung erfordern. DirectX 11.1 unterstützt Hardware von DirectX 9 bis DirectX 11 und kann Sie daher dabei unterstützen, mehr Kunden auf effizientere Art und Weise zu erreichen, da Sie so den Code für frühere DirectX-Versionen nicht neu schreiben müssen.
+Bei der Planung des Spiels für die universelle Windows-Plattform (UWP)– Marble Maze– haben wir uns für C++ und Direct3D 11.1 entschieden, da dies jeweils die beste Wahl zum Erstellen von 3D-Spielen ist, die maximale Kontrolle über das Rendern und hohe Leistung erfordern. DirectX 11.1 unterstützt Hardware von DirectX 9 bis DirectX 11 und kann Sie daher dabei unterstützen, mehr Kunden auf effizientere Art und Weise zu erreichen, da Sie so den Code für frühere DirectX-Versionen nicht neu schreiben müssen.
 
 Marble Maze verwendet Direct3D 11.1 zum Rendern der 3-D-Spielobjekte, und zwar für die Murmel und das Labyrinth. Marble Maze nutzt zudem Direct2D, DirectWrite und die Windows-Bilderstellungskomponente (Windows Imaging Component, WIC) zum Zeichnen der 2-D-Spielobjekte, beispielsweise der Menüs und des Timers. Zuletzt nutzt Marble Maze XAML-Code, um eine App-Leiste bereitzustellen, und Sie können XAML-Steuerelemente hinzufügen.
 
 Die Entwicklung eines Spiels erfordert Planung. Wenn Sie sich noch nicht mit der DirectX-Grafik auskennen, empfehlen wir das Lesen des Themas "Erstellen eines DirectX-Spiels", um sich mit den Grundkonzepten der Erstellung eines UWP-DirectX-Spiels vertraut zu machen. Beim Durchlesen dieses Dokuments und Durchgehen des Marble Maze-Quellcodes können Sie sich auf die folgenden Ressourcen beziehen, um detailliertere Informationen zu DirectX-Grafiken zu erhalten.
 
--   [Direct3D 11-Grafiken](https://msdn.microsoft.com/library/windows/desktop/ff476080) Beschreibt Direct3D 11, eine leistungsstarke, hardwarebeschleunigte 3D-Grafik-API zum Rendern von 3D-Geometrien auf der Windows-Plattform.
--   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) Beschreibt Direct2D, eine hardwarebeschleunigte 2D-Grafik-API, die das Rendern mit hoher Leistung und in hoher Qualität für 2D-Geometrien, Bitmaps und Text bereitstellt.
--   [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) Enthält eine Beschreibung von DirectWrite, womit das Rendern von Text in hoher Qualität unterstützt wird.
--   [Windows-Bilderstellungskomponente](https://msdn.microsoft.com/library/windows/desktop/ee719902) Beschreibt WIC, eine erweiterbare Plattform, die eine untergeordnete API für digitale Bilder bereitstellt.
+-   
+            [Direct3D 11-Grafiken](https://msdn.microsoft.com/library/windows/desktop/ff476080) Beschreibt Direct3D 11, eine leistungsstarke, hardwarebeschleunigte 3D-Grafik-API zum Rendern von 3D-Geometrien auf der Windows-Plattform.
+-   
+            [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) Beschreibt Direct2D, eine hardwarebeschleunigte 2D-Grafik-API, die das Rendern mit hoher Leistung und in hoher Qualität für 2D-Geometrien, Bitmaps und Text bereitstellt.
+-   
+            [DirectWrite](https://msdn.microsoft.com/library/windows/desktop/dd368038) Enthält eine Beschreibung von DirectWrite, womit das Rendern von Text in hoher Qualität unterstützt wird.
+-   
+            [Windows-Bilderstellungskomponente](https://msdn.microsoft.com/library/windows/desktop/ee719902) Beschreibt WIC, eine erweiterbare Plattform, die eine untergeordnete API für digitale Bilder bereitstellt.
 
 ### Featureebenen
 
-In Direct3D 11 wird ein Paradigma mit der Bezeichnung Featureebenen eingeführt. Eine Featureebene ist ein klar definierter Satz mit GPU-Funktionen. Mithilfe von Featureebenen können Sie Ihr Spiel für die Ausführung mit früheren Versionen von Direct3D-Hardware vorsehen. Marble Maze unterstützt die Featureebene 9.1, da keine erweiterten Features von den höheren Ebenen erforderlich sind. Es wird empfohlen, einen möglichst großen Hardwarebereich zu unterstützen und den Spielinhalt zu skalieren, sodass all Ihre Kunden von einem großartigen Spielerlebnis profitieren können – ganz gleich, ob Sie einen normalen Computer oder Highend-Computer besitzen. Weitere Informationen zu Featureebenen finden Sie unter [Direct3D 11 unter kompatibler Hardware](https://msdn.microsoft.com/library/windows/desktop/ff476872).
+In Direct3D 11 wird ein Paradigma mit der Bezeichnung Featureebenen eingeführt. Eine Featureebene ist ein klar definierter Satz mit GPU-Funktionen. Mithilfe von Featureebenen können Sie Ihr Spiel für die Ausführung mit früheren Versionen von Direct3D-Hardware vorsehen. Marble Maze unterstützt die Featureebene 9.1, da keine erweiterten Features von den höheren Ebenen erforderlich sind. Es wird empfohlen, einen möglichst großen Hardwarebereich zu unterstützen und den Spielinhalt zu skalieren, sodass all Ihre Kunden von einem großartigen Spielerlebnis profitieren können – ganz gleich, ob Sie einen normalen Computer oder Highend-Computer besitzen. Weitere Informationen zu Featureebenen finden Sie unter [Direct3D11 unter kompatibler Hardware](https://msdn.microsoft.com/library/windows/desktop/ff476872).
 
 ## Initialisieren von Direct3D und Direct2D
 
@@ -247,7 +251,8 @@ DX::ThrowIfFailed(
 
 Die **DeviceResources::CreateWindowSizeDependentResources**-Methode initialisiert die Grafikressourcen anhand einer Vorgehensweise, die für die meisten Spiele geeignet ist.
 
-> **Hinweis**  Der Begriff *Ansicht* hat in der Windows-Runtime eine andere Bedeutung als in Direct3D. In der Windows-Runtime bezieht sich eine Ansicht auf die Sammlung von Einstellungen zur Benutzeroberfläche für eine App. Dazu gehören auch der Anzeigebereich und das Eingabeverhalten sowie der zum Verarbeiten verwendete Thread. Die benötigte Konfiguration und die benötigten Einstellungen geben Sie beim Erstellen einer Ansicht an. Der Einrichtungsprozess der App-Ansicht wird unter [Marble Maze-Anwendungsstruktur](marble-maze-application-structure.md) beschrieben. In Direct3D hat der Begriff "Ansicht" mehrere Bedeutungen. Zunächst werden anhand einer Ressourcenansicht die Unterressourcen definiert, auf die eine Ressource zugreifen kann. Wenn beispielsweise ein Texturobjekt einer Shader-Ressourcenansicht zugeordnet wird, kann dieser Shader später auf die Textur zugreifen. Ein Vorteil einer Ressourcenansicht besteht darin, dass Daten auf unterschiedliche Art und Weise in verschiedenen Stufen der Rendering-Pipeline interpretiert werden können. Weitere Informationen zu Ressourcenansichten finden Sie unter [Texturansichten (Direct3D 10)](https://msdn.microsoft.com/library/windows/desktop/bb205128). Bei der Verwendung im Kontext einer Ansichtstransformation oder Ansichtstransformationsmatrix bezieht sich der Begriff Ansicht auf den Standort und die Ausrichtung der Kamera. Bei einer Ansichtstransformation werden Objekte in der Welt um die Position und Ausrichtung der Kamera herum neu angeordnet. Weitere Informationen zu Ansichtstransformationen finden Sie unter [Ansichtstransformation (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb206342). Die Verwendung von Ressourcen- und Matrixansichten in Marble Maze werden in diesem Thema detaillierter beschrieben.
+> 
+            **Hinweis**  Der Begriff *Ansicht* hat in der Windows-Runtime eine andere Bedeutung als in Direct3D. In der Windows-Runtime bezieht sich eine Ansicht auf die Sammlung von Einstellungen zur Benutzeroberfläche für eine App. Dazu gehören auch der Anzeigebereich und das Eingabeverhalten sowie der zum Verarbeiten verwendete Thread. Die benötigte Konfiguration und die benötigten Einstellungen geben Sie beim Erstellen einer Ansicht an. Der Einrichtungsprozess der App-Ansicht wird unter [Marble Maze-Anwendungsstruktur](marble-maze-application-structure.md) beschrieben. In Direct3D hat der Begriff "Ansicht" mehrere Bedeutungen. Zunächst werden anhand einer Ressourcenansicht die Unterressourcen definiert, auf die eine Ressource zugreifen kann. Wenn beispielsweise ein Texturobjekt einer Shader-Ressourcenansicht zugeordnet wird, kann dieser Shader später auf die Textur zugreifen. Ein Vorteil einer Ressourcenansicht besteht darin, dass Daten auf unterschiedliche Art und Weise in verschiedenen Stufen der Rendering-Pipeline interpretiert werden können. Weitere Informationen zu Ressourcenansichten finden Sie unter [Texturansichten (Direct3D10)](https://msdn.microsoft.com/library/windows/desktop/bb205128). Bei der Verwendung im Kontext einer Ansichtstransformation oder Ansichtstransformationsmatrix bezieht sich der Begriff Ansicht auf den Standort und die Ausrichtung der Kamera. Bei einer Ansichtstransformation werden Objekte in der Welt um die Position und Ausrichtung der Kamera herum neu angeordnet. Weitere Informationen zu Ansichtstransformationen finden Sie unter [Ansichtstransformation (Direct3D9)](https://msdn.microsoft.com/library/windows/desktop/bb206342). Die Verwendung von Ressourcen- und Matrixansichten in Marble Maze werden in diesem Thema detaillierter beschrieben.
 
  
 
@@ -304,7 +309,8 @@ protected:
 
 Durch die Bereitstellung einer allgemeinen Basisklasse für UI-Elemente muss die **UserInterface**-Klasse, mit der die Benutzeroberfläche verwaltet wird, lediglich eine Sammlung von **ElementBase**-Objekten enthalten. Dadurch werden die UI-Verwaltung vereinfacht und ein wiederverwendbarer Benutzeroberflächenmanager bereitgestellt. Marble Maze definiert Typen, die aus **ElementBase** abgeleitet werden und spielspezifische Verhalten implementieren. **HighScoreTable** definiert beispielsweise das Verhalten für die Highscore-Tabelle. Informationen zu diesen Typen finden Sie im Quellcode.
 
-> **Hinweis**  Da Ihnen XAML eine einfachere Erstellung komplexer Benutzeroberflächen ermöglicht, wie sie beispielsweise in Simulations- und Strategiespielen vorkommen, denken Sie darüber nach, für die Definition Ihrer Benutzeroberfläche XAML zu verwenden. Informationen zum Entwickeln einer Benutzeroberfläche in XAML in einem UWP-Spiel finden Sie unter [Erweitern des Beispielspiels (Windows)](tutorial-resources.md). Dieses Dokument bezieht sich auf ein Beispiel für einen DirectX-3D-Shooter.
+> 
+            **Hinweis**  Da Ihnen XAML eine einfachere Erstellung komplexer Benutzeroberflächen ermöglicht, wie sie beispielsweise in Simulations- und Strategiespielen vorkommen, denken Sie darüber nach, für die Definition Ihrer Benutzeroberfläche XAML zu verwenden. Informationen zum Entwickeln einer Benutzeroberfläche in XAML in einem UWP-Spiel finden Sie unter [Erweitern des Beispielspiels (Windows)](tutorial-resources.md). Dieses Dokument bezieht sich auf ein Beispiel für einen DirectX-3D-Shooter.
 
  
 
@@ -376,7 +382,8 @@ float4 main(sPSInput input) : SV_TARGET
 }
 ```
 
-> **Achtung**  Der kompilierte Pixel-Shader enthält 32 arithmetische Anweisungen und 1 Texturanweisung. Dieser Shader sollte auf Desktopcomputern und Tablets im Highend-Bereich gute Ergebnisse liefern. Ein normaler Computer kann diesen Shader jedoch möglicherweise nicht verarbeiten und weiterhin eine interaktive Framerate bereitstellen. Ziehen Sie die typische Hardware Ihrer Zielgruppe in Erwägung, und entwickeln Sie die Shader so, dass sie zu den Hardwarefunktionen passen.
+> 
+            **Achtung**  Der kompilierte Pixel-Shader enthält 32 arithmetische Anweisungen und 1 Texturanweisung. Dieser Shader sollte auf Desktopcomputern und Tablets im Highend-Bereich gute Ergebnisse liefern. Ein normaler Computer kann diesen Shader jedoch möglicherweise nicht verarbeiten und weiterhin eine interaktive Framerate bereitstellen. Ziehen Sie die typische Hardware Ihrer Zielgruppe in Erwägung, und entwickeln Sie die Shader so, dass sie zu den Hardwarefunktionen passen.
 
  
 
@@ -440,7 +447,8 @@ sPSInput main(sVSInput input)
 
 Im Dokument [Semantik](https://msdn.microsoft.com/library/windows/desktop/bb509647) werden alle verfügbaren Semantiken detaillierter beschrieben.
 
-> **Hinweis**  In einem Layout können Sie zusätzliche Komponenten angeben, die nicht dazu verwendet werden, mehreren Shadern die gemeinsame Verwendung desselben Layouts zu ermöglichen. Beispielsweise wird das **TANGENT**-Element nicht vom Shader verwendet. Sie können das **TANGENT**-Element verwenden, wenn Sie mit Techniken wie der Normalzuordnung experimentieren möchten. Mithilfe der Normalzuordnung, die auch als Bumpmapping bezeichnet wird, können Sie auf den Oberflächen von Objekten den Bumpeffekt erzeugen. Weitere Informationen zum Bumpmapping finden Sie unter [Bumpmapping (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb172379).
+> 
+            **Hinweis**  In einem Layout können Sie zusätzliche Komponenten angeben, die nicht dazu verwendet werden, mehreren Shadern die gemeinsame Verwendung desselben Layouts zu ermöglichen. Beispielsweise wird das **TANGENT**-Element nicht vom Shader verwendet. Sie können das **TANGENT**-Element verwenden, wenn Sie mit Techniken wie der Normalzuordnung experimentieren möchten. Mithilfe der Normalzuordnung, die auch als Bumpmapping bezeichnet wird, können Sie auf den Oberflächen von Objekten den Bumpeffekt erzeugen. Weitere Informationen zum Bumpmapping finden Sie unter [Bumpmapping (Direct3D 9)](https://msdn.microsoft.com/library/windows/desktop/bb172379).
 
  
 
@@ -514,9 +522,11 @@ Marble Maze verwendet SDK-Mesh als Laufzeitformat, da dieses Format eine grundle
 
 Die **MarbleMaze::LoadDeferredResources**-Methode lädt die Gitterdaten nach dem Laden der Vertex- und Pixel-Shader. Bei einem Gitter handelt es sich um eine Sammlung von Vertex-Daten, die oftmals Informationen wie Positionen, Normale, Farben, Materialien und Texturkoordinaten enthält. Gitter werden normalerweise in 3-D-Erstellungssoftware erstellt und in Dateien verwaltet, die vom Anwendungscode separiert sind. Die Kugel und das Labyrinth sind zwei Beispiele für Gitter, die im Spiel verwendet werden.
 
-Marble Maze verwendet die **SDKMesh**-Klasse zum Verwalten von Gittern. Diese Klasse wird in "SDKMesh.h" deklariert. **SDKMesh** stellt Methoden zum Laden, Rendern und Löschen von Gitterdaten bereit.
+Marble Maze verwendet die **SDKMesh**-Klasse zum Verwalten von Gittern. Diese Klasse wird in "SDKMesh.h" deklariert. 
+            **SDKMesh** stellt Methoden zum Laden, Rendern und Löschen von Gitterdaten bereit.
 
-> **Wichtig**  Marble Maze verwendet das SDK-Mesh-Format, und die Bereitstellung der **SDKMesh**-Klasse dient nur der Veranschaulichung. Obwohl das SDK-Mesh-Format hilfreich zum Lernen und Erstellen von Prototypen ist, handelt es sich dabei um ein sehr einfaches Format, das die Anforderungen der meisten Spielentwicklungen möglicherweise nicht erfüllt. Es wird empfohlen, ein Gitterformat zu verwenden, das die spezifischen Anforderungen Ihres Spiels erfüllt.
+> 
+            **Wichtig**  Marble Maze verwendet das SDK-Mesh-Format, und die Bereitstellung der **SDKMesh**-Klasse dient nur der Veranschaulichung. Obwohl das SDK-Mesh-Format hilfreich zum Lernen und Erstellen von Prototypen ist, handelt es sich dabei um ein sehr einfaches Format, das die Anforderungen der meisten Spielentwicklungen möglicherweise nicht erfüllt. Es wird empfohlen, ein Gitterformat zu verwenden, das die spezifischen Anforderungen Ihres Spiels erfüllt.
 
  
 
@@ -731,7 +741,8 @@ Führen Sie vor dem Rendern der Szenenobjekte die folgenden Schritte aus, um die
 2.  Legen Sie die Vertex und Pixel-Shader als aktuelle Shader fest.
 3.  Aktualisieren Sie die Konstantenpuffer mit Daten, die Sie an die Shader übergeben müssen.
 
-> **Wichtig**  Marble Maze verwendet für alle 3-D-Objekte ein Paar Vertex- und Pixel-Shader. Wenn für Ihr Spiel mehrere Shader-Paare verwendet werden, müssen Sie diese Schritte immer dann ausführen, wenn Sie Objekte zeichnen, für die verschiedene Shader verwendet werden. Zur Reduzierung des Aufwands bezüglich der Änderung des Shader-Zustands wird empfohlen, die Renderaufrufe für alle Objekte zu gruppieren, die dieselben Shader verwenden.
+> 
+            **Wichtig**  Marble Maze verwendet für alle 3-D-Objekte ein Paar Vertex- und Pixel-Shader. Wenn für Ihr Spiel mehrere Shader-Paare verwendet werden, müssen Sie diese Schritte immer dann ausführen, wenn Sie Objekte zeichnen, für die verschiedene Shader verwendet werden. Zur Reduzierung des Aufwands bezüglich der Änderung des Shader-Zustands wird empfohlen, die Renderaufrufe für alle Objekte zu gruppieren, die dieselben Shader verwenden.
 
  
 

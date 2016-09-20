@@ -5,18 +5,18 @@ title: Tastaturinteraktionen
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
-ms.sourcegitcommit: d65e1315e83fef5e53771adad0943c9cb59d9139
-ms.openlocfilehash: 9de90236d94522f1b80309c3fec51ce59aee0319
+translationtype: Human Translation
+ms.sourcegitcommit: f9c475a90c270270217999c5a7289e29e7fef208
+ms.openlocfilehash: a1d97c5a66db1b799ccc16769ff18130155743b8
 
 ---
 
 # Tastaturinteraktionen
 
 
-Die Tastatureingabe ist ein wichtiger Teil der Erfahrung, die Benutzer bei der Interaktion mit Apps machen. Die Tastatur ist unentbehrlich für Personen mit bestimmten körperlichen Beeinträchtigungen oder für Benutzer, die die Tastatur als effizienteste Methode ansehen, um mit einer App zu interagieren. Benutzer sollten beispielsweise in der Lage sein, mit der TAB-Taste und den Pfeiltasten in der App zu navigieren, mit der LEERTASTE und der EINGABETASTE UI-Elemente zu aktivieren und mit Tastenkombinationen auf Befehle zuzugreifen.
+Die Tastatureingabe ist ein wichtiger Teil der Erfahrung, die Benutzer bei der Interaktion mit Apps machen. Die Tastatur ist unentbehrlich für Personen mit bestimmten körperlichen Beeinträchtigungen oder für Benutzer, die die Tastatur als effizienteste Methode ansehen, um mit einer App zu interagieren. Benutzer sollten beispielsweise in der Lage sein, mit der TAB-Taste und den Pfeiltasten in der App zu navigieren, mit der LEERTASTE und der EINGABETASTE UI-Elemente zu aktivieren und mit Tastenkombinationen auf Befehle zuzugreifen.  
+
 ![Tastaturfavoritenbild](images/input-patterns/input-keyboard-small.jpg)
-
-
 
 **Wichtige APIs**
 
@@ -25,7 +25,7 @@ Die Tastatureingabe ist ein wichtiger Teil der Erfahrung, die Benutzer bei der I
 -   [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072)
 
 
-Eine gut durchdachte Tastatur-UI ist ein wichtiger Aspekt für die Barrierefreiheit von Software. Sie ermöglicht es Benutzern mit einer Sehbeeinträchtigung oder mit bestimmten motorischen Einschränkungen, in einer App zu navigieren und mit deren Features zu interagieren. Diese Benutzer können u. U. keine Maus bedienen und sind auf verschiedene Hilfstechnologien wie etwa Tastaturerweiterungstools, Bildschirmtastaturen, Bildschirmlupen, Bildschirmleseprogramme oder die Möglichkeit der Spracheingabe angewiesen.
+Eine gut durchdachte Tastatur-UI ist ein wichtiger Aspekt für die Barrierefreiheit von Software. Sie ermöglicht es Benutzern mit einer Sehbeeinträchtigung oder mit bestimmten motorischen Einschränkungen, in einer App zu navigieren und mit deren Features zu interagieren. Diese Benutzer können u.U. keine Maus bedienen und sind auf verschiedene Hilfstechnologien wie etwa Tastaturerweiterungstools, Bildschirmtastaturen, Bildschirmlupen, Bildschirmleseprogramme oder die Möglichkeit der Spracheingabe angewiesen.
 
 Benutzer können mit universellen Apps über eine Hardwaretastatur und zwei Softwaretastaturen (Bildschirmtastatur oder Touch-Bildschirmtastatur) interagieren.
 
@@ -34,7 +34,7 @@ Bei der Bildschirmtastatur handelt es sich um eine visuelle Softwaretastatur, di
 
 Die Bildschirmtastatur kann auf der Seite „Tastatur“ unter „Einstellungen &gt; Erleichterte Bedienung“ aktiviert werden.
 
-**Hinweis**  Die Bildschirmtastatur hat Priorität gegenüber der Touch-Bildschirmtastatur. Diese wird nicht angezeigt, wenn die Bildschirmtastatur angezeigt wird.
+**Hinweis**: Die Bildschirmtastatur hat Priorität gegenüber der Touch-Bildschirmtastatur. Diese wird nicht angezeigt, wenn die Bildschirmtastatur angezeigt wird.
 
  
 
@@ -49,7 +49,7 @@ Abhängig vom Gerät wird die Touch-Bildschirmtastatur angezeigt, wenn ein Textf
 
 ![Symbol der Touch-Bildschirmtastatur im Benachrichtigungs-Center](images/input-patterns/touch-keyboard-notificationcenter.png)
 
-**Hinweis**  Möglicherweise muss der Benutzer zum Bildschirm **Tablet-Modus** unter „Einstellungen &gt; System“ wechseln und „Durch die Verwendung des Geräts als Tablet wird die Toucheingabe in Windows verbessert“ aktivieren, um die automatische Anzeige der Touch-Bildschirmtastatur festzulegen.
+**Hinweis**: Möglicherweise muss der Benutzer zum Bildschirm **Tablet-Modus** unter „Einstellungen &gt; System“ wechseln und „Durch die Verwendung des Geräts als Tablet wird die Toucheingabe in Windows verbessert“ aktivieren, um die automatische Anzeige der Touch-Bildschirmtastatur zu aktivieren.
 
  
 
@@ -77,27 +77,27 @@ Hier finden Sie einige Beispiele für verschiedene Modi der Touch-Bildschirmtast
 Hier finden Sie einige Beispiele für verschiedene Modi der Touch-Bildschirmtastatur. Das erste Bild zeigt das Standardlayout, das zweite das Daumenlayout. (Letzteres ist unter Umständen nicht in allen Sprachen verfügbar.)
 <table>
 <tr>
-    <td>**Bildschirmtastatur mit Standard-Layout:  **</td>
-    <td>![the touch keyboard in default layout mode](images/touchkeyboard-standard.png)</td>
+    <td>**Touch-Bildschirmtastatur mit Standardlayout  **</td>
+    <td>![Touch-Bildschirmtastatur mit Standardlayout](images/touchkeyboard-standard.png)</td>
 </tr>
 <tr>
-    <td>**Touch-Bildschirmtastatur im erweiterten Layoutmodus:  **</td>
-    <td>![the touch keyboard in expanded layout mode](images/touchkeyboard-expanded.png)</td>
+    <td>**Touch-Bildschirmtastatur mit erweitertem Layout  **</td>
+    <td>![Touch-Bildschirmtastatur mit erweitertem Layout](images/touchkeyboard-expanded.png)</td>
 </tr>
 <tr>
     <td>**Touch-Bildschirmtastatur im standardmäßigen Daumenlayoutmodus:  **</td>
-    <td>![the touch keyboard in thumb layout mode](images/touchkeyboard-thumb.png)</td>
+    <td>![Touch-Bildschirmtastatur mit Daumenlayout](images/touchkeyboard-thumb.png)</td>
 </tr>
 <tr>
-    <td>**Touch-Bildschirmtastatur im numerischen Daumenlayoutmodus:  **</td>
-    <td>![the touch keyboard in numeric thumb layout mode](images/touchkeyboard-numeric-thumb.png)</td>
+    <td>**Touch-Bildschirmtastatur mit numerischem Daumenlayout  **</td>
+    <td>![Touch-Bildschirmtastatur mit numerischem Daumenlayout](images/touchkeyboard-numeric-thumb.png)</td>
 </tr>
 </table>
 
 
 Erfolgreiche Tastaturinteraktionen ermöglichen es Benutzern, einfache App-Szenarien nur über die Tastatur auszuführen; Benutzer können demnach über die Tastatur alle interaktiven Elemente erreichen und Standardfunktionen aktivieren. Eine Reihe von Faktoren kann den Erfolg beeinflussen, z. B. Tastaturnavigation, Tastenkombinationen für die Barrierefreiheit sowie Tastenkombinationen für erfahrene Benutzer.
 
-**Hinweis** Die Bildschirmtastatur unterstützt weder die Umschaltung noch die meisten Systembefehle (siehe [Muster](#keyboard_command_patterns)).
+**Hinweis**  Die Touch-Bildschirmtastatur unterstützt keine Umschaltung und nur die wenigsten Systembefehle (siehe [Muster](#keyboard_command_patterns)).
 
 ## Navigation
 
@@ -168,7 +168,7 @@ Hier wird der Textfeldwert „Einzug links“ hervorgehoben, nachdem die in der 
 ## Benutzerfreundlichkeit und Barrierefreiheit
 
 
-Eine gut durchdachte Tastaturinteraktionserfahrung ist ein wichtiger Aspekt für die Barrierefreiheit von Software. Sie ermöglicht es Benutzern mit einer Sehbeeinträchtigung oder mit bestimmten motorischen Einschränkungen, in einer App zu navigieren und mit deren Features zu interagieren. Diese Benutzer können u. U. keine Maus bedienen und sind auf verschiedene Hilfstechnologien wie Tastaturerweiterungstools, Bildschirmtastaturen, Bildschirmlupen, Bildschirmleseprogramme oder die Möglichkeit der Spracheingabe angewiesen. Für diese Benutzer ist Vollständigkeit wichtiger als Konsistenz.
+Eine gut durchdachte Tastaturinteraktionserfahrung ist ein wichtiger Aspekt für die Barrierefreiheit von Software. Sie ermöglicht es Benutzern mit einer Sehbeeinträchtigung oder mit bestimmten motorischen Einschränkungen, in einer App zu navigieren und mit deren Features zu interagieren. Diese Benutzer können u.U. keine Maus bedienen und sind auf verschiedene Hilfstechnologien wie Tastaturerweiterungstools, Bildschirmtastaturen, Bildschirmlupen, Bildschirmleseprogramme oder die Möglichkeit der Spracheingabe angewiesen. Für diese Benutzer ist Vollständigkeit wichtiger als Konsistenz.
 
 Erfahrene Benutzer haben oftmals eine starke Vorliebe für die Verwendung der Tastatur, da tastaturbasierte Befehle viel schneller eingegeben werden können. Zudem ist es dafür nicht erforderlich, die Hände von der Tastatur wegzubewegen. Für diese Benutzer sind Effizienz und Konsistenz entscheidend. Die Vollständigkeit hingegen ist nur für am häufigsten verwendeten Befehle wichtig.
 
@@ -293,7 +293,7 @@ In den folgenden Tabellen sind häufig verwendete Tastaturbefehle aufgeführt. E
 | Neues Element                                               | STRG+N          |
 | Einfügen                                                  | STRG+V          |
 | Öffnen                                                   | STRG+O          |
-| Adresse öffnen (z. B. eine URL in Internet Explorer) | STRG+L oder ALT+D |
+| Adresse öffnen (z.B. eine URL in Internet Explorer) | STRG+L oder ALT+D |
 
  
 
@@ -307,17 +307,17 @@ In den folgenden Tabellen sind häufig verwendete Tastaturbefehle aufgeführt. E
 
  
 
-Hinweis: Die Tastenbefehle für die Mediennavigation wie "Wiedergeben"/"Anhalten" oder "Nächstes Element" entsprechen den jeweiligen Tastenkombinationen für "Drucken" und "Suchen". Häufig verwendete Befehle sollten Priorität gegenüber Navigationsbefehlen für Medien haben. Wenn eine App z. B. sowohl das Wiedergeben von Medien als auch das Drucken unterstützt, sollte die Tastenkombination STRG+P den Druckvorgang starten.
+Hinweis: Die Tastenbefehle für die Mediennavigation wie "Wiedergeben"/"Anhalten" oder "Nächstes Element" entsprechen den jeweiligen Tastenkombinationen für "Drucken" und "Suchen". Häufig verwendete Befehle sollten Priorität gegenüber Navigationsbefehlen für Medien haben. Wenn eine App z.B. sowohl das Wiedergeben von Medien als auch das Drucken unterstützt, sollte die Tastenkombination STRG+P den Druckvorgang starten.
 ## Visuelles Feedback
 
 
 Verwenden Sie Fokusrechtecke nur bei Tastaturinteraktionen. Wenn der Benutzer eine Touch-Interaktion auslöst, blenden Sie die für Tastaturinteraktionen spezifische UI schrittweise aus. Somit bleibt die Benutzeroberfläche sauber und aufgeräumt.
 
-Zeigen Sie kein visuelles Feedback an, wenn ein Element keine Interaktionen unterstützt (z. B. statischer Text). Beachten Sie, dass die Benutzeroberfläche dadurch sauber und aufgeräumt bleibt.
+Zeigen Sie kein visuelles Feedback an, wenn ein Element keine Interaktionen unterstützt (z.B. statischer Text). Beachten Sie, dass die Benutzeroberfläche dadurch sauber und aufgeräumt bleibt.
 
 Versuchen Sie, für alle Elemente, die das gleiche Eingabeziel darstellen, das gleiche visuelle Feedback anzuzeigen.
 
-Versuchen Sie, Schaltflächen (z. B. „+“ und „-“) bereitzustellen, um Hinweise für touchbasierte Manipulationen wie etwa Schwenken, Drehen, Zoomen usw. zu emulieren.
+Versuchen Sie, Schaltflächen (z.B. „+“ und „-“) bereitzustellen, um Hinweise für touchbasierte Manipulationen wie etwa Schwenken, Drehen, Zoomen usw. zu emulieren.
 
 Allgemeine Informationen zum visuellen Feedback finden Sie unter [Richtlinien für visuelles Feedback](guidelines-for-visualfeedback.md).
 
@@ -353,11 +353,8 @@ Standardmäßig entspricht die Aktivierreihenfolge von Steuerelementen der Reihe
 Ein Eingabe-Ereignishandler implementiert einen Delegaten, der die folgenden Informationen bereitstellt:
 
 -   Den Sender des Ereignisses. Der Sender meldet das Objekt, dem der Ereignishandler angefügt ist.
--   Ereignisdaten. Bei Tastaturereignissen sind diese Daten eine Instanz von [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072). [
-            **KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904) ist der Delegat für Handler. Die wichtigsten Eigenschaften von **KeyRoutedEventArgs** für die meisten Handler-Szenarien sind [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) und möglicherweise [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075).
--   [
-              **OriginalSource**
-            ](https://msdn.microsoft.com/library/windows/apps/br208810). Da es sich bei Tastaturereignissen um Routingereignisse handelt, stellen die Ereignisdaten **OriginalSource** bereit. Wenn Sie bewusst das Bubbling von Ereignissen in der Objektstruktur zulassen, ist **OriginalSource** manchmal eher das fragliche Objekt als der Sender. Das hängt jedoch vom Design ab. Weitere Informationen dazu, wie Sie **OriginalSource** anstelle des Senders verwenden können, finden Sie im Abschnitt „Routingereignisse der Tastatur“ in diesem Thema oder unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/mt185584).
+-   Ereignisdaten. Bei Tastaturereignissen sind diese Daten eine Instanz von [**KeyRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943072). [**KeyEventHandler**](https://msdn.microsoft.com/library/windows/apps/br227904) ist der Delegat für Handler. Die wichtigsten Eigenschaften von **KeyRoutedEventArgs** für die meisten Handler-Szenarien sind [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074) und möglicherweise [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075).
+-   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810). Da es sich bei Tastaturereignissen um Routingereignisse handelt, stellen die Ereignisdaten **OriginalSource** bereit. Wenn Sie bewusst das Bubbling von Ereignissen in der Objektstruktur zulassen, ist **OriginalSource** manchmal eher das fragliche Objekt als der Sender. Das hängt jedoch vom Design ab. Weitere Informationen dazu, wie Sie **OriginalSource** anstelle des Senders verwenden können, finden Sie im Abschnitt „Routingereignisse der Tastatur“ in diesem Thema oder unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/mt185584).
 
 ### Anfügen eines Tastaturereignishandlers
 
@@ -402,9 +399,7 @@ Alle Tastaturereignisse verwenden [**KeyRoutedEventArgs**](https://msdn.microsof
 -   [**Key**](https://msdn.microsoft.com/library/windows/apps/hh943074)
 -   [**KeyStatus**](https://msdn.microsoft.com/library/windows/apps/hh943075)
 -   [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073)
--   [
-              **OriginalSource**
-            ](https://msdn.microsoft.com/library/windows/apps/br208810) (geerbt von [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809))
+-   [**OriginalSource**](https://msdn.microsoft.com/library/windows/apps/br208810) (geerbt von [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809))
 
 ### Key
 
@@ -416,7 +411,7 @@ Zusatztasten sind Tasten wie beispielsweise STRG oder UMSCHALT, die Benutzer nor
 
 Sie erkennen Tastenkombinationen mithilfe des Codes in den Ereignishandlern [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) und [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Sie können dann den Zustand "Gedrückt" der Zusatztasten überwachen, die für Sie von Interesse sind. Wenn für eine Nichtzusatztaste ein Tastaturereignis auftritt, können Sie überprüfen, ob gleichzeitig eine Zusatztaste gedrückt wurde.
 
-**Hinweis** Die ALT-TASTE wird durch den Wert **VirtualKey.Menu** dargestellt.
+**Hinweis**: Die ALT-Taste wird durch den Wert **VirtualKey.Menu** dargestellt.
 
  
 
@@ -579,14 +574,14 @@ Private Sub MediaButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-**Hinweis** Durch das Festlegen der Eigenschaft [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/hh759762) oder [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/hh759763) in XAML werden Zeichenfolgeninformationen zum Dokumentieren der Tastenkombination zum Auslösen der jeweiligen Aktion bereitgestellt. Die Informationen werden von Microsoft-Benutzeroberflächenautomatisierungsclients wie der Sprachausgabe erfasst und normalerweise direkt für den Benutzer bereitgestellt. Mit dem Festlegen der Eigenschaft **AutomationProperties.AcceleratorKey** oder **AutomationProperties.AccessKey** ist keine eigene Aktion verknüpft. Sie müssen weiterhin Handler für [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)- oder [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)-Ereignisse anhängen, um das Verhalten der Tastenkombination tatsächlich in die App zu implementieren. Außerdem wird der Unterstrichzusatz für eine Zugriffstaste nicht automatisch bereitgestellt. Sie müssen den Text für die jeweilige Taste in Ihrem mnemonischen Zeichen explizit als [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982)-Formatierung unterstreichen, wenn in der UI unterstrichener Text angezeigt werden soll.
+**Hinweis**: Durch das Festlegen der Eigenschaften [**AutomationProperties.AcceleratorKey**](https://msdn.microsoft.com/library/windows/apps/hh759762) oder [**AutomationProperties.AccessKey**](https://msdn.microsoft.com/library/windows/apps/hh759763) in XAML werden Zeichenfolgeninformationen zum Dokumentieren der Tastenkombination zum Auslösen der jeweiligen Aktion bereitgestellt. Die Informationen werden von Microsoft-Benutzeroberflächenautomatisierungsclients wie der Sprachausgabe erfasst und normalerweise direkt für den Benutzer bereitgestellt. Mit dem Festlegen der Eigenschaft **AutomationProperties.AcceleratorKey** oder **AutomationProperties.AccessKey** ist keine eigene Aktion verknüpft. Sie müssen weiterhin Handler für [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941)- oder [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)-Ereignisse anhängen, um das Verhalten der Tastenkombination tatsächlich in die App zu implementieren. Außerdem wird der Unterstrichzusatz für eine Zugriffstaste nicht automatisch bereitgestellt. Sie müssen den Text für die jeweilige Taste in Ihrem mnemonischen Zeichen explizit als [**Underline**](https://msdn.microsoft.com/library/windows/apps/br209982)-Formatierung unterstreichen, wenn in der UI unterstrichener Text angezeigt werden soll.
 
  
 
 ## Routingereignisse der Tastatur
 
 
-Bestimmte Ereignisse gelten als Routingereignisse, wie z. B. [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) und [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Routingereignisse verwenden die Bubbling-Routingstrategie. Bei der Bubbling-Routingstrategie geht ein Ereignis von einem untergeordneten Objekt aus und wird jeweils an die übergeordneten Objekte in der Struktur weitergeleitet. Dadurch ergibt sich eine weitere Möglichkeit, dasselbe Ereignis zu behandeln und mit denselben Ereignisdaten zu interagieren.
+Bestimmte Ereignisse gelten als Routingereignisse, wie z.B. [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208941) und [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942). Routingereignisse verwenden die Bubbling-Routingstrategie. Bei der Bubbling-Routingstrategie geht ein Ereignis von einem untergeordneten Objekt aus und wird jeweils an die übergeordneten Objekte in der Struktur weitergeleitet. Dadurch ergibt sich eine weitere Möglichkeit, dasselbe Ereignis zu behandeln und mit denselben Ereignisdaten zu interagieren.
 
 Im folgenden XAML-Beispiel werden [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942)-Ereignisse für ein [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267)-Objekt und zwei [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)-Objekte definiert. Wenn Sie in diesem Fall eine Taste loslassen, während der Fokus auf einem der **Button**-Objekte liegt, wird das Ereignis **KeyUp** ausgelöst. Das Ereignis wird per Bubbling an die übergeordnete **Canvas** weitergeleitet.
 
@@ -639,8 +634,7 @@ Trotzdem können Sie generell einer [**TextBox**](https://msdn.microsoft.com/lib
 
 Beispielsweise verarbeitet [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736) (die Basisklasse von [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)) [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208942) so, dass eine Überprüfung für die LEERTASTE oder für die EINGABETASTE durchgeführt werden kann. **ButtonBase** verarbeitet **KeyUp** analog zu einem Ereignis für das Drücken der linken Maustaste, um ein [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Ereignis auszulösen. Diese Verarbeitung des Ereignisses wird beim Überschreiben der virtuellen Methode [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983) durch **ButtonBase** erreicht. In der Implementierung wird [**Handled**](https://msdn.microsoft.com/library/windows/apps/hh943073) auf **true** festgelegt. Als Ergebnis empfängt kein übergeordnetes Element einer Schaltfläche, die bei der LEERTASTE auf ein Tastaturereignis lauscht, das bereits verarbeitete Element für seine eigenen Handler.
 
-[
-            **TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) ist ein weiteres Beispiel. Einige Tasten, wie die Pfeiltasten, werden von **TextBox** nicht als Text angesehen und gelten stattdessen als spezifisch für das UI-Steuerelementverhalten **TextBox** markiert diese Ereignisse als verarbeitet.
+[**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) ist ein weiteres Beispiel. Einige Tasten, wie die Pfeiltasten, werden von **TextBox** nicht als Text angesehen und gelten stattdessen als spezifisch für das UI-Steuerelementverhalten **TextBox** markiert diese Ereignisse als verarbeitet.
 
 Benutzerdefinierte Steuerelemente können ein ähnliches eigenes Überschreibungsverhalten für Tastaturereignisse implementieren und [**OnKeyDown**](https://msdn.microsoft.com/library/windows/apps/hh967982) / [**OnKeyUp**](https://msdn.microsoft.com/library/windows/apps/hh967983) überschreiben. Wenn Ihr benutzerdefiniertes Steuerelement bestimmte Zugriffstasten verarbeitet oder ein Steuerelement- oder Fokusverhalten besitzt, das mit dem für [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683) geschilderten Szenario vergleichbar ist, sollten Sie diese Logik in Ihre eigenen **OnKeyDown** / **OnKeyUp**-Überschreibungen aufnehmen.
 
@@ -708,6 +702,6 @@ Benutzer können Daten in Ihre App schneller und einfacher eingeben, indem Sie d
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

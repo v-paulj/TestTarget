@@ -3,7 +3,6 @@ author: mtoepke
 title: "Vollständiger Code für \"BasicLoader\""
 description: "Vollständiger Code für eine Klasse und Methoden, die allgemeine Grafikressourcen wie Gitter, Texturen und verschiedene Shader-Objekte konvertieren und laden."
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
-translationtype: Human Translation
 ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
 ms.openlocfilehash: 355e5a65a16e5e2df9bb039383f68dda16ff23a2
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 355e5a65a16e5e2df9bb039383f68dda16ff23a2
 # Vollständiger Code für "BasicLoader"
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Vollständiger Code für eine Klasse und Methoden, die allgemeine Grafikressourcen wie Gitter, Texturen und verschiedene Shader-Objekte konvertieren und laden.
 
@@ -30,13 +29,17 @@ Dieses Beispiel kann nicht heruntergeladen werden.
 
 ## Technologien
 
-**Programmiersprachen** – C++  
-**Programmiermodelle** – Windows-Runtime
+
+            **Programmiersprachen** – C++  
+
+            **Programmiermodelle** – Windows-Runtime
 
 ## Anforderungen
 
-**Unterstützte Mindestversion (Client)** – Windows 10                              
-**Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview 
+
+            **Unterstützte Mindestversion (Client)** – Windows 10                              
+
+            **Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview 
 
 
 ## Anzeigen des Codes (C++)

@@ -5,7 +5,6 @@ MS-HAID: dev\_app\_to\_app.use\_edp\_to\_protect\_enterprise\_data\_transferred\
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: "Schützen von zwischen Apps übertragenen Unternehmensdaten mithilfe von EDP"
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 77533d4aca3cc84e0a021a0faac57f5afbbefdd7
 
@@ -13,11 +12,13 @@ ms.openlocfilehash: 77533d4aca3cc84e0a021a0faac57f5afbbefdd7
 
 # Schützen von zwischen Apps übertragenen Unternehmensdaten mithilfe von EDP
 
-__Hinweis__ EDP-Richtlinien (Enterprise Data Protection, Unternehmensdatenschutz) können nicht unter Windows 10 (Version 1511, Build 10586 oder älter) verwendet werden.
+
+            __Hinweis__ EDP-Richtlinien (Enterprise Data Protection, Unternehmensdatenschutz) können nicht unter Windows 10 (Version 1511, Build 10586 oder älter) verwendet werden.
 
 Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten EDP-Szenarien mit Datenübertragung durchgeführt werden müssen. Umfassende Informationen zu den Zusammenhängen zwischen EDP und Dateien, Datenströmen, Zwischenablage, Netzwerk, Hintergrundaufgaben und dem Schutz von Daten im Sperrzustand finden Sie unter [Unternehmensdatenschutz (EDP)](../enterprise/edp-hub.md).
 
-**Hinweis**  Das [Unternehmensdatenschutz-Beispiel (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) veranschaulicht viele der in diesem Thema beschriebenen Dateiszenarien.
+
+            **Hinweis**  Das [Unternehmensdatenschutz-Beispiel (EDP)](http://go.microsoft.com/fwlink/p/?LinkId=620031&clcid=0x409) veranschaulicht viele der in diesem Thema beschriebenen Dateiszenarien.
 
 ## Voraussetzungen
 
@@ -37,7 +38,8 @@ Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gä
 ## Einfache Zwischenablagequelle
 
 
-In diesem Szenario ist Ihre App eine Editor-App, die sowohl für private Dateien als auch für Unternehmensdateien verwendet wird. Hier ist keine Änderung der App-Logik für das Kopieren und Einfügen erforderlich. Die App muss lediglich [**ProtectionPolicyManager.TryApplyProcessUIPolicy**](https://msdn.microsoft.com/library/windows/apps/dn705791) aufrufen, wenn der Benutzer ein Unternehmensdokument öffnet und dessen Inhalt anzeigt. Wenn der Inhalt auf der Benutzeroberfläche Ihrer App angezeigt wird, kann ihn der Benutzer kopieren und in eine andere App einfügen. Daher ist es wichtig, die UI-Richtlinie festzulegen. Dadurch kann das Betriebssystem die derzeit festgelegte Richtlinie auf einen Einfügevorgang mit geschützten Daten anwenden. Ebenso wichtig ist es, die UI-Richtlinie wieder zu löschen, sobald sie nicht mehr benötigt wird, damit der Benutzer private Daten wieder ohne Einschränkungen kopieren/einfügen kann. **TryApplyProcessUIPolicy** gibt „false“ zurück, wenn das dazugehörige Identity-Argument nicht durch eine Unternehmensrichtlinie verwaltet wird.
+In diesem Szenario ist Ihre App eine Editor-App, die sowohl für private Dateien als auch für Unternehmensdateien verwendet wird. Hier ist keine Änderung der App-Logik für das Kopieren und Einfügen erforderlich. Die App muss lediglich [**ProtectionPolicyManager.TryApplyProcessUIPolicy**](https://msdn.microsoft.com/library/windows/apps/dn705791) aufrufen, wenn der Benutzer ein Unternehmensdokument öffnet und dessen Inhalt anzeigt. Wenn der Inhalt auf der Benutzeroberfläche Ihrer App angezeigt wird, kann ihn der Benutzer kopieren und in eine andere App einfügen. Daher ist es wichtig, die UI-Richtlinie festzulegen. Dadurch kann das Betriebssystem die derzeit festgelegte Richtlinie auf einen Einfügevorgang mit geschützten Daten anwenden. Ebenso wichtig ist es, die UI-Richtlinie wieder zu löschen, sobald sie nicht mehr benötigt wird, damit der Benutzer private Daten wieder ohne Einschränkungen kopieren/einfügen kann. 
+            **TryApplyProcessUIPolicy** gibt „false“ zurück, wenn das dazugehörige Identity-Argument nicht durch eine Unternehmensrichtlinie verwaltet wird.
 
 ```CSharp
 using Windows.Security.EnterpriseData;
@@ -212,7 +214,8 @@ In Ihrer App ist ein neues, leeres Dokument geöffnet, das im leeren Zustand als
 
 Wenn Sie in Ihrer App den Freigabe-Vertrag unterstützen, müssen Sie zum Einrichten einer Freigabequelle den Unternehmensidentitätskontext im [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/br205873)-Element festlegen, wie in diesem Codebeispiel zu sehen.
 
-**Hinweis**  Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
+
+            **Hinweis**  Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
 
 
 
@@ -305,7 +308,8 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 
 In diesem Szenario wird die UI für Einfügevorgänge nur aktiviert, wenn sich Daten in der Zwischenablage befinden. Für dieses Feature können Sie die [**ProtectionPolicyManager.CheckAccess**](https://msdn.microsoft.com/library/windows/apps/dn705783)-Methode verwenden, die eine passive Überprüfung der Richtlinie ermöglicht.
 
-**Hinweis**  Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
+
+            **Hinweis**  Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
 
 
 
@@ -338,7 +342,8 @@ private bool IsClipboardPeekAllowedAsync()
 
 Das Szenario veranschaulicht die Überprüfung des Zugriffs für einen Einfügevorgang.
 
-**Hinweis**  Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
+
+            **Hinweis**  Dieses Codebeispiel setzt voraus, dass Sie bereits die Identität für das ProtectionPolicyManager-Objekt für die aktuelle Ansicht festgelegt haben (siehe [Markieren eines spezifischen Fensters mit Unternehmensidentität](#tag_window_with_id)). Andernfalls enthält die [**ProtectionPolicyManager.Identity**](https://msdn.microsoft.com/library/windows/apps/dn705785)-Eigenschaft eine leere Zeichenfolge.
 
 
 
@@ -382,7 +387,8 @@ private async void OnPasteWithRequestAccess()
 }
 ```
 
-**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die UWP-Apps (Universelle Windows-Plattform) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+
+            **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die UWP-Apps (Universelle Windows-Plattform) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
 
 

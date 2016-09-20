@@ -3,7 +3,6 @@ title: "Einführung in Zertifikate"
 description: "In diesem Artikel wird die Verwendung von Zertifikaten in Apps für die universelle Windows-Plattform (UWP) beschrieben."
 ms.assetid: 4EA2A9DF-BA6B-45FC-AC46-2C8FC085F90D
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
 ms.openlocfilehash: 84596f70a5deee6cebb5f4bac442a6aaca8210cd
 
@@ -12,14 +11,14 @@ ms.openlocfilehash: 84596f70a5deee6cebb5f4bac442a6aaca8210cd
 # Einführung in Zertifikate
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird die Verwendung von Zertifikaten in UWP-Apps (Universelle Windows-Plattform) beschrieben. Mit digitalen Zertifikaten wird ein öffentlicher Schlüssel in der Kryptografie für öffentliche Schlüssel an eine Person, an einen Computer oder an eine Organisation gebunden. Die gebundenen Identitäten werden meist dazu verwendet, eine Entität für die andere zu authentifizieren. Zertifikate werden z. B. häufig dazu verwendet, einen Webserver für einen Benutzer und einen Benutzer für einen Webserver zu authentifizieren. Sie können Zertifikatanforderungen erstellen und ausgestellte Zertifikate installieren oder importieren. Außerdem können Sie ein Zertifikat in einer Zertifikathierarchie registrieren.
 
 ### Freigegebene Zertifikatspeicher
 
-UWP-Apps verwenden das neue Isolationsanwendungsmodell, das in Windows 8 eingeführt wurde. In diesem Modell werden Apps in einem Low-Level-Betriebssystemkonstrukt ausgeführt, das App-Container genannt wird. In diesem Konstrukt wird verhindert, dass die App auf Ressourcen oder Dateien zugreift, die außerhalb des eigenen Umfangs liegen, wobei der Zugriff auch ausdrücklich erlaubt und dadurch ermöglicht werden kann. In den folgenden Abschnitten werden die Auswirkungen auf die Public Key-Infrastruktur (PKI) erläutert.
+UWP-Apps verwenden das neue Isolationsanwendungsmodell, das in Windows8 eingeführt wurde. In diesem Modell werden Apps in einem Low-Level-Betriebssystemkonstrukt ausgeführt, das App-Container genannt wird. In diesem Konstrukt wird verhindert, dass die App auf Ressourcen oder Dateien zugreift, die außerhalb des eigenen Umfangs liegen, wobei der Zugriff auch ausdrücklich erlaubt und dadurch ermöglicht werden kann. In den folgenden Abschnitten werden die Auswirkungen auf die Public Key-Infrastruktur (PKI) erläutert.
 
 ### Zertifikatspeicher pro App-Container
 
@@ -76,7 +75,7 @@ Ein X.509-Zertifikat der Version 2 enthält die grundlegenden Felder, die in Ver
 | Issuer Unique Identifier | Enthält einen eindeutigen Wert, mit dem der X.500-Name des Zertifikatantragstellers eindeutig festgelegt werden kann, wenn dieser im Lauf der Zeit von verschiedenen Entitäten wiederverwendet wird. |
  
 
-### Erweiterungen für Version 3
+### Erweiterungen für Version3
 
 Ein X.509-Zertifikat der Version 3 enthält die Felder, die in Version 1 und Version 2 definiert sind, und es werden Zertifikaterweiterungen hinzugefügt.
 

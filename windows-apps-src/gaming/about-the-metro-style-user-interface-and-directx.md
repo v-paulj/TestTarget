@@ -5,7 +5,7 @@ description: "Für die Universelle Windows-Plattform (UWP) mit DirectX-Spielen w
 ms.assetid: 46f92156-29f8-d65e-2587-7ba1de5b48a6
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a8c8cb8fa8ccec54af4c824d23bc26cb91db7cf7
+ms.openlocfilehash: 78e2bbcc4c9182b09138da457c839466b49ac31a
 
 ---
 
@@ -82,18 +82,14 @@ Dies lässt sich wie folgt zusammenfassen: Das App-Objekt stellt eine Ansichtsan
 ## CoreApplicationView – Verhalten und Eigenschaften
 
 
-[
-              **CoreApplicationView**
-            ](https://msdn.microsoft.com/library/windows/apps/br225017) stellt die aktuelle App-Ansicht dar. Das App-Singleton erstellt die App-Ansicht während der Initialisierung; die Ansicht bleibt jedoch so lange ruhend, bis sie aktiviert wird. Sie können das [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) abrufen, in dem die Ansicht angezeigt wird, indem Sie auf die zugehörige [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019)-Eigenschaft zugreifen: Sie können Aktivierungs- und Deaktivierungsereignisse für die Ansicht behandeln, indem Sie Delegaten beim [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis registrieren.
+[**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017) stellt die aktuelle App-Ansicht dar. Das App-Singleton erstellt die App-Ansicht während der Initialisierung; die Ansicht bleibt jedoch so lange ruhend, bis sie aktiviert wird. Sie können das [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) abrufen, in dem die Ansicht angezeigt wird, indem Sie auf die zugehörige [**CoreApplicationView.CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019)-Eigenschaft zugreifen: Sie können Aktivierungs- und Deaktivierungsereignisse für die Ansicht behandeln, indem Sie Delegaten beim [**CoreApplicationView.Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis registrieren.
 
 ## CoreWindow – Verhalten und Eigenschaften
 
 
 Das übergeordnete Fenster, das eine [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Instanz darstellt, wird erstellt und an den Ansichtsanbieter übergeben, wenn das App-Objekt initialisiert wird. Wenn die App über ein anzuzeigendes Fenster verfügt, wird dieses angezeigt. Andernfalls wird lediglich die Ansicht initialisiert.
 
-[
-              **CoreWindow**
-            ](https://msdn.microsoft.com/library/windows/apps/br208225) stellt eine Reihe von Ereignissen bereit, die spezifisch für das Eingabeverhalten und das grundlegende Fensterverhalten sind. Sie können diese Ereignisse behandeln, indem Sie eigene Delegaten für diese registrieren.
+[**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) stellt eine Reihe von Ereignissen bereit, die spezifisch für das Eingabeverhalten und das grundlegende Fensterverhalten sind. Sie können diese Ereignisse behandeln, indem Sie eigene Delegaten für diese registrieren.
 
 Sie können auch den Fensterereignisverteiler für das Fenster abrufen, indem Sie auf die [**CoreWindow.Dispatcher**](https://msdn.microsoft.com/library/windows/apps/br208264)-Eigenschaft zugreifen, die eine Instanz von [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) bereitstellt.
 
@@ -160,6 +156,6 @@ Im Allgemeinen sollten Sie bei der Entwicklung Ihrer UWP-App den [**CoreDispatch
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

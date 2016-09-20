@@ -3,7 +3,6 @@ author: TylerMSFT
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: Dateien und Ordner in den Musik-, Bild- und Videobibliotheken
 description: "Fügen Sie vorhandene Musik-, Bilder- oder Video-Ordner den entsprechenden Bibliotheken hinzu. Sie können auch Ordner aus Bibliotheken entfernen, die Liste der Ordner in einer Bibliothek abrufen und gespeicherte Fotos, Musik und Videos untersuchen."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 332f89f53a55d5783f7497ca5c6cd601dcee5217
 
@@ -17,7 +16,7 @@ ms.openlocfilehash: 332f89f53a55d5783f7497ca5c6cd601dcee5217
 
 Fügen Sie vorhandene Musik-, Bilder- oder Video-Ordner den entsprechenden Bibliotheken hinzu. Sie können auch Ordner aus Bibliotheken entfernen, die Liste der Ordner in einer Bibliothek abrufen und gespeicherte Fotos, Musik und Videos untersuchen.
 
-Eine Bibliothek ist eine virtuelle Sammlung von Ordnern, die standardmäßig einen bekannten Ordner sowie alle anderen Ordner enthält, die der Benutzer mithilfe Ihrer App oder einer der integrierten Apps zur Bibliothek hinzugefügt hat. Die Bildbibliothek enthält z. B. standardmäßig den bekannten Ordner „Bilder“. Der Benutzer kann mithilfe Ihrer App oder der integrierten Fotos-App Ordner zur Bildbibliothek hinzufügen oder aus ihr entfernen.
+Eine Bibliothek ist eine virtuelle Sammlung von Ordnern, die standardmäßig einen bekannten Ordner sowie alle anderen Ordner enthält, die der Benutzer mithilfe Ihrer App oder einer der integrierten Apps zur Bibliothek hinzugefügt hat. Die Bildbibliothek enthält z.B. standardmäßig den bekannten Ordner „Bilder“. Der Benutzer kann mithilfe Ihrer App oder der integrierten Fotos-App Ordner zur Bildbibliothek hinzufügen oder aus ihr entfernen.
 
 ## Voraussetzungen
 
@@ -39,7 +38,8 @@ Eine Bibliothek ist eine virtuelle Sammlung von Ordnern, die standardmäßig ein
 ## Abrufen eines Verweises auf eine Bibliothek
 
 
-**Hinweis**  Denken Sie daran, die entsprechende Funktion zu deklarieren.
+
+            **Hinweis**  Denken Sie daran, die entsprechende Funktion zu deklarieren.
  
 
 Rufen Sie die [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725)-Methode auf, um einen Verweis auf die Musik-, Bild- oder Videobibliothek des Benutzers zu erhalten. Geben Sie den entsprechenden Wert der [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399)-Enumeration ein.
@@ -122,15 +122,20 @@ Ein Gerät bietet fünf vordefinierte Speicherorte, an denen Benutzer und Apps M
 
 Die Speicherorte lauten:
 
--   Ordner **Bilder**. Enthält Bilder.
+-   
+            Ordner **Bilder**. Enthält Bilder.
 
-    -   Ordner **Eigene Aufnahmen**. Enthält Fotos und Videos, die mit der integrierten Kamera aufgenommen wurden.
+    -   
+            Ordner **Eigene Aufnahmen**. Enthält Fotos und Videos, die mit der integrierten Kamera aufgenommen wurden.
 
-    -   Ordner **Gespeicherte Bilder**. Enthält Bilder, die der Benutzer aus anderen Apps gespeichert hat.
+    -   
+            Ordner **Gespeicherte Bilder**. Enthält Bilder, die der Benutzer aus anderen Apps gespeichert hat.
 
--   Ordner **Musik**. Enthält Songs, Podcasts und Hörbücher.
+-   
+            Ordner **Musik**. Enthält Songs, Podcasts und Hörbücher.
 
--   Ordner **Video**. Enthält Videos.
+-   
+            Ordner **Video**. Enthält Videos.
 
 Mediendateien können von Benutzern und Apps auch außerhalb der Medienbibliothekordner auf der SD-Karte gespeichert werden. Durchsuchen Sie den Inhalt der SD-Karte, um eine Mediendatei auf der SD-Karte auf zuverlässige Weise zu finden, oder bitten Sie den Benutzer, mithilfe einer Dateiauswahl auf die Datei zuzugreifen. Weitere Informationen finden Sie unter [Zugreifen auf die SD-Karte](access-the-sd-card.md).
 
@@ -204,66 +209,67 @@ Hier sind einige Beispiele für Abfragen und die jeweils zurückgegebenen Ergebn
 
 Hier sind die Funktionen aufgeführt, die Sie in der App-Manifestdatei angeben können, um in der App auf Mediendateien zuzugreifen.
 
--   **Musik**. Geben Sie die **Music Library**-Funktion in der App-Manifestdatei an, damit Dateien der folgenden Dateitypen für die App sichtbar sind und darauf zugegriffen werden kann:
+-   
+            **Musik**. Geben Sie die **Music Library**-Funktion in der App-Manifestdatei an, damit Dateien der folgenden Dateitypen für die App sichtbar sind und darauf zugegriffen werden kann:
 
-    -   QCP
-    -   WAV
-    -   MP3
-    -   M4R
-    -   M4A
-    -   AAC
-    -   AMR
-    -   WMA
-    -   3G2
-    -   3GP
-    -   MP4
-    -   WM
-    -   ASF
-    -   3GPP
-    -   3GP2
-    -   MPA
-    -   ADT
-    -   ADTS
-    -   PYA
--   **Fotos**. Geben Sie die **Pictures Library**-Funktion in der App-Manifestdatei an, damit Dateien der folgenden Dateitypen für die App sichtbar sind und darauf zugegriffen werden kann:
+    -   .qcp
+    -   .wav
+    -   .mp3
+    -   .m4r
+    -   .m4a
+    -   .aac
+    -   .amr
+    -   .wma
+    -   .3g2 -   .3gp -   .mp4 -   .wm -   .asf -   .3gpp -   .3gp2 -   .mpa -   .adt -   .adts -   .pya -   **Fotos**.
+    -   Geben Sie die **Pictures Library**-Funktion in der App-Manifestdatei an, damit Dateien der folgenden Dateitypen für die App sichtbar sind und darauf zugegriffen werden kann:
+    -   -   .jpeg -   .jpe -   .jpg -   .gif -   .tiff -   .tif -   .png -   .bmp -   .wdp -   .jxr -   .hdp -   **Videos**.
+    -   Geben Sie die **Video Library**-Funktion in der App-Manifestdatei an, damit Dateien der folgenden Dateitypen für die App sichtbar sind und darauf zugegriffen werden kann:
+    -   -   .wm -   .m4v -   .wmv -   .asf -   .mov -   .mp4 -   .3g2 -   .3gp -   .mp4v -   .avi -   .pyv -   .3gpp -   .3gp2
+    -   Verwenden von Fotos
+    -   Auf Geräten, auf denen jedes Bild von der Kamera sowohl in niedriger als auch in hoher Auflösung gespeichert wird, wird bei tiefen Abfragen nur das Bild mit niedriger Auflösung zurückgegeben.
+    -   Für die Ordner „Eigene Aufnahmen“ und „Gespeicherte Bilder“ werden keine tiefen Abfragen unterstützt.
+    -   Öffnen eines Fotos in der App, mit der es aufgenommen wurde
+    -   Wenn Sie es Benutzern ermöglichen möchten, ein Foto später erneut in der App zu öffnen, mit der es aufgenommen wurde, können Sie die **CreatorAppId** mit den Metadaten des Fotos speichern. Verwenden Sie hierzu ähnlichen Code wie im folgenden Beispiel.
+    -   In diesem Beispiel ist **testPhoto** eine [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
+-   Verwenden von Datenstrommethoden zum Hinzufügen einer Datei zur Medienbibliothek Wenn Sie auf eine Medienbibliothek zugreifen, indem Sie einen bekannten Ordner wie **KnownFolders.PictureLibrary** verwenden, und der Medienbibliothek mithilfe von Datenstrommethoden eine Datei hinzufügen, müssen Sie darauf achten, alle von Ihrem Code geöffneten Datenströme wieder zu schließen.
 
-    -   JPEG
-    -   JPE
-    -   JPG
-    -   GIF
-    -   TIFF
-    -   TIF
-    -   PNG
-    -   BMP
-    -   WDP
-    -   JXR
-    -   HDP
--   **Videos**. Geben Sie die **Video Library**-Funktion in der App-Manifestdatei an, damit Dateien der folgenden Dateitypen für die App sichtbar sind und darauf zugegriffen werden kann:
+    -   Andernfalls wird die Datei der Medienbibliothek mit diesen Methoden nicht wie erwartet hinzugefügt, weil mindestens ein Stream weiterhin über einen Handle für die Datei verfügt.
+    -   Wenn Sie beispielsweise den folgenden Code ausführen, wird die Datei nicht der Medienbibliothek hinzugefügt.
+    -   In der Codezeile `using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))` wird sowohl mit der **OpenAsync**-Methode als auch mit der **GetOutputStreamAt**-Methode ein Datenstrom geöffnet.
+    -   Es wird aber nur der mit der **GetOutputStreamAt**-Methode geöffnete Datenstrom aufgrund der **using**-Anweisung wieder geschlossen.
+    -   Der andere Datenstrom bleibt geöffnet und verhindert das Speichern der Datei.
+    -   Um Streammethoden erfolgreich zum Hinzufügen einer Datei zur Medienbibliothek zu verwenden, müssen Sie alle Datenströme schließen, die von Ihrem Code geöffnet werden. Dies ist im folgenden Beispiel dargestellt.
+    -   .png
+    -   .bmp
+    -   .wdp
+    -   .jxr
+    -   .hdp
+-   <bpt id="p1">**</bpt>Videos<ept id="p1">**</ept>. Specify the <bpt id="p1">**</bpt>Video Library<ept id="p1">**</ept> capability in the app manifest file to let your app see and access files of the following file types:
 
-    -   WM
-    -   M4V
-    -   WMV
-    -   ASF
-    -   MOV
-    -   MP4
-    -   3G2
-    -   3GP
-    -   MP4V
-    -   AVI
-    -   PYV
-    -   3GPP
-    -   3GP2
+    -   .wm
+    -   .m4v
+    -   .wmv
+    -   .asf
+    -   .mov
+    -   .mp4
+    -   .3g2
+    -   .3gp
+    -   .mp4v
+    -   .avi
+    -   .pyv
+    -   .3gpp
+    -   .3gp2
 
-## Verwenden von Fotos
+## Working with photos
 
 
-Auf Geräten, auf denen jedes Bild von der Kamera sowohl in niedriger als auch in hoher Auflösung gespeichert wird, wird mit tiefen Abfragen nur das Bild mit niedriger Auflösung zurückgegeben.
+On devices where the camera saves both a low-resolution image and a high-resolution image of every picture, the deep queries return only the low-resolution image.
 
-Für die Ordner „Eigene Aufnahmen“ und „Gespeicherte Bilder“ werden keine tiefen Abfragen unterstützt.
+The Camera Roll and the Saved Pictures folder do not support the deep queries.
 
-**Öffnen eines Fotos in der App, mit der es aufgenommen wurde**
+**Opening a photo in the app that captured it**
 
-Wenn Sie es Benutzern ermöglichen möchten, ein Foto später erneut in der App zu öffnen, mit der es aufgenommen wurde, können Sie die **CreatorAppId** mit den Metadaten des Fotos speichern. Verwenden Sie hierzu ähnlichen Code wie im folgenden Beispiel. In diesem Beispiel ist **testPhoto** eine [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
+If you want to let the user open a photo again later in the app that captured it, you can save the <bpt id="p1">**</bpt>CreatorAppId<ept id="p1">**</ept> with the photo's metadata by using code similar to the following example. In this example, <bpt id="p1">**</bpt>testPhoto<ept id="p1">**</ept> is a <bpt id="p2">[</bpt><bpt id="p3">**</bpt>StorageFile<ept id="p3">**</ept><ept id="p2">](https://msdn.microsoft.com/library/windows/apps/br227171)</ept>.
 
 ```CSharp
   IDictionary<string, object> propertiesToSave = new Dictionary<string, object>();
@@ -274,12 +280,12 @@ Wenn Sie es Benutzern ermöglichen möchten, ein Foto später erneut in der App 
   testPhoto.Properties.SavePropertiesAsync(propertiesToSave).AsyncWait();   
 ```
 
-## Verwenden von Datenstrommethoden zum Hinzufügen einer Datei zur Medienbibliothek
+## Using stream methods to add a file to a media library
 
 
-Wenn Sie auf eine Medienbibliothek zugreifen, indem Sie einen bekannten Ordner wie **KnownFolders.PictureLibrary** verwenden, und der Medienbibliothek mithilfe von Datenstrommethoden eine Datei hinzufügen, müssen Sie darauf achten, alle von Ihrem Code geöffneten Datenströme wieder zu schließen. Andernfalls wird die Datei der Medienbibliothek mit diesen Methoden nicht wie erwartet hinzugefügt, weil mindestens ein Stream weiterhin über einen Handle für die Datei verfügt.
+When you access a media library by using a known folder such as <bpt id="p1">**</bpt>KnownFolders.PictureLibrary<ept id="p1">**</ept>, and you use stream methods to add a file to the media library, you have to make sure to close all the streams that your code opens. Otherwise these methods fail to add the file to the media library as expected because at least one stream still has a handle to the file.
 
-Wenn Sie beispielsweise den folgenden Code ausführen, wird die Datei nicht der Medienbibliothek hinzugefügt. In der Codezeile `using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))` wird sowohl mit der **OpenAsync**-Methode als auch mit der **GetOutputStreamAt**-Methode ein Datenstrom geöffnet. Es wird aber nur der mit der **GetOutputStreamAt**-Methode geöffnete Datenstrom aufgrund der **using**-Anweisung wieder geschlossen. Der andere Datenstrom bleibt geöffnet und verhindert das Speichern der Datei.
+For example, when you run the following code, the file is not added to the media library. In the line of code, <ph id="ph1">`using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))`</ph>, both the <bpt id="p1">**</bpt>OpenAsync<ept id="p1">**</ept> method and the <bpt id="p2">**</bpt>GetOutputStreamAt<ept id="p2">**</ept> method open a stream. However only the stream opened by the <bpt id="p1">**</bpt>GetOutputStreamAt<ept id="p1">**</ept> method is disposed as a result of the <bpt id="p2">**</bpt>using<ept id="p2">**</ept> statement. The other stream remains open and prevents saving the file.
 
 ```CSharp
 StorageFolder testFolder = await StorageFolder.GetFolderFromPathAsync(@"C:\test");
@@ -295,7 +301,7 @@ using (var sourceStream = (await sourceFile.OpenReadAsync()).GetInputStreamAt(0)
 
 ```
 
-Um Streammethoden erfolgreich zum Hinzufügen einer Datei zur Medienbibliothek zu verwenden, müssen Sie alle Datenströme schließen, die von Ihrem Code geöffnet werden. Dies ist im folgenden Beispiel dargestellt.
+To use stream methods successfully to add a file to the media library, make sure to close all the streams that your code opens, as shown in the following example.
 
 ```CSharp
 StorageFolder testFolder = await StorageFolder.GetFolderFromPathAsync(@"C:\test");

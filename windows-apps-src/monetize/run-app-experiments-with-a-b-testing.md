@@ -3,7 +3,6 @@ author: mcleanbyron
 Description: "Sie können über das Windows Dev Center-Dashboard Experimente für Ihre UWP-Apps (Universelle Windows-Plattform) mit A/B-Tests durchführen."
 title: "Ausführen von Experimenten mit A/B-Tests"
 ms.assetid: 790B4B37-C72D-4CEA-97AF-D226B2216DCC
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 88fd0516e3c10b657884b93377480b62c1758992
 
@@ -21,12 +20,15 @@ Wenn Sie eine Variante ermittelt haben, die für Ihre Geschäftsziele am besten 
 
 Führen Sie zum Erstellen und Ausführen eines A/B-Tests die folgenden Schritte aus:
 
-1. [Definieren Sie das Experiment im Dev Center-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md). Jedes Experiment besteht aus folgenden Elementen:
+1. 
+            [Definieren Sie das Experiment im Dev Center-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md). Jedes Experiment besteht aus folgenden Elementen:
   * Ein *Anzeigeereignis*, das angibt, wann der Benutzer mit dem Anzeigen einer Variante beginnt, die Teil des Experiments ist.
   * Eines oder mehrere Ziele mit *Umwandlungsereignissen*, um anzugeben, wann ein Ziel erreicht wurde.
   * Eine oder mehrere *Varianten*, die die im Experiment verwendeten Einstellungen definieren.
-2. [Codieren Sie Ihre App für das Experiment](code-your-experiment-in-your-app.md). Verwenden Sie eine API im Microsoft Store Engagement and Monetization SDK, um Varianteneinstellungen für das Experiment abzurufen, ändern Sie mit diesen Daten das Verhalten des getesteten Features, und senden Sie das Anzeigeereignis und die Umwandlungsereignisse an Dev Center.
-3. [Führen Sie das Experiment im Dev Center-Dashboard aus, und verwalten Sie es](manage-your-experiment.md). Im Dashboard können Sie die Ergebnisse des Experiments überprüfen und das Experiment abschließen.
+2. 
+            [Codieren Sie Ihre App für das Experiment](code-your-experiment-in-your-app.md). Verwenden Sie eine API im Microsoft Store Engagement and Monetization SDK, um Varianteneinstellungen für das Experiment abzurufen, ändern Sie mit diesen Daten das Verhalten des getesteten Features, und senden Sie das Anzeigeereignis und die Umwandlungsereignisse an Dev Center.
+3. 
+            [Führen Sie das Experiment im Dev Center-Dashboard aus, und verwalten Sie es](manage-your-experiment.md). Im Dashboard können Sie die Ergebnisse des Experiments überprüfen und das Experiment abschließen.
 
 Eine exemplarische Vorgehensweise, in der der Prozess vollständig dargestellt wird, finden Sie unter [Create and run your first experiment with A/B testing](create-and-run-your-first-experiment-with-a-b-testing.md) (Erstellen und Ausführen eines ersten Experiments mit A/B-Tests).
 

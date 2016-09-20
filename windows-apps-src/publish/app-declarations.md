@@ -3,7 +3,6 @@ author: jnHs
 Description: "Im Abschnitt „App-Deklarationen“ der Seite „App-Eigenschaften“ können Sie während des Übermittlungsprozesses zusätzliche Informationen zu Ihrer App bereitstellen."
 title: App-Deklarationen
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: ee2e54494a868fbec8c4a8bd7bbb9bdcd6cbf9ae
 
@@ -25,17 +24,18 @@ Wenn Sie dieses Kontrollkästchen aktivieren, kann die App von Kunden gefunden w
 
 Sie sollten dieses Kontrollkästchen erst aktivieren, nachdem Sie die folgenden Schritte erledigt haben:
 
--   Alle relevanten Barrierefreiheitsinfos für UI-Elemente festlegen, z. B. barrierefreie Namen
+-   Alle relevanten Barrierefreiheitsinfos für UI-Elemente festlegen, z.B. barrierefreie Namen
 -   Tastaturnavigation und -vorgänge unter Berücksichtigung der Registerkartenreihenfolge, Tastaturaktivierung, Navigation mit Pfeiltasten und Tastenkombinationen implementieren
 -   Barrierefreie visuelle Darstellung sicherstellen, z. B. durch Berücksichtigen eines Textkontrastverhältnisses von 4,5:1 (und nicht nur durch die Verwendung farblich gekennzeichneter Informationen)
--   Tools zum Testen der Barrierefreiheit verwenden, z. B. Inspect oder AccChecker, um Ihre App zu überprüfen und alle von diesen Tools ermittelten Fehler mit hoher Priorität zu beheben
+-   Tools zum Testen der Barrierefreiheit verwenden, z.B. Inspect oder AccChecker, um Ihre App zu überprüfen und alle von diesen Tools ermittelten Fehler mit hoher Priorität zu beheben
 -   Die wichtigsten Szenarien der App unter Verwendung von Funktionen und Tools wie „Sprachausgabe“, „Bildschirmlupe“, „Bildschirmtastatur“, „Hoher Kontrast“ und „Hoher DPI-Wert“ vollständig überprüfen
 
 Wenn Sie Ihre App als barrierefrei ausweisen, erklären Sie ausdrücklich, dass Ihre App eine Barrierefreiheit für alle Kunden aufweist, einschließlich für Personen mit Behinderungen. Das bedeutet beispielsweise, dass Sie die App im Modus mit hohem Kontrast und die Sprachausgabe getestet haben. Sie haben außerdem sichergestellt, dass die Benutzeroberfläche ordnungsgemäß mit der Tastatur, der Bildschirmlupe und weiteren Tools zur Unterstützung der Barrierefreiheit funktioniert.
 
 Weitere Informationen finden Sie unter [Barrierefreiheit für Windows-Runtime-Apps](https://msdn.microsoft.com/library/windows/apps/dn263101), [Barrierefreiheitstests](https://msdn.microsoft.com/library/windows/apps/mt297664) und [Barrierefreiheit im Store](https://msdn.microsoft.com/library/windows/apps/mt297663).
 
-> **Wichtig**  Weisen Sie die App nur dann als barrierefrei aus, wenn Sie sie ausdrücklich für diesen Zweck entwickelt und getestet haben. Falls Ihre App als barrierefrei ausgewiesen ist, jedoch eigentlich keine Barrierefreiheit unterstützt, werden Sie wahrscheinlich negatives Feedback von der Community erhalten.
+> 
+            **Wichtig**  Weisen Sie die App nur dann als barrierefrei aus, wenn Sie sie ausdrücklich für diesen Zweck entwickelt und getestet haben. Falls Ihre App als barrierefrei ausgewiesen ist, jedoch eigentlich keine Barrierefreiheit unterstützt, werden Sie wahrscheinlich negatives Feedback von der Community erhalten.
 
 ## Kunden können diese App auf alternativen Laufwerken oder Wechselmedien installieren.
 
@@ -45,7 +45,8 @@ Wenn Sie verhindern möchten, dass Ihre App auf alternativen Laufwerken oder Wec
 
 Beachten Sie, dass keine Option zum Einschränken der Installation einer App auf Wechselmedien vorhanden ist.
 
-> **Hinweis**  Für Windows Phone 8.1 wurde dies zuvor über die Datei „StoreManifest.xml“ angegeben.
+> 
+            **Hinweis**  Für Windows Phone 8.1 wurde dies zuvor über die Datei „StoreManifest.xml“ angegeben.
 
 ## Windows kann die Daten dieser App in automatische Sicherungen auf OneDrive einschließen.
 
@@ -53,7 +54,8 @@ Dieses Kontrollkästchen ist standardmäßig aktiviert, damit die Daten Ihrer Ap
 
 Wenn Sie verhindern möchten, dass die App-Daten in automatische Sicherungen eingeschlossen werden, deaktivieren Sie das Kontrollkästchen.
 
-> **Hinweis**  Für Windows Phone 8.1 wurde dies zuvor über die Datei „StoreManifest.xml“ angegeben.
+> 
+            **Hinweis**  Für Windows Phone 8.1 wurde dies zuvor über die Datei „StoreManifest.xml“ angegeben.
 
  
 

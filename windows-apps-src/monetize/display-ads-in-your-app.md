@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: "Mit dem Microsoft Store Engagement and Monetization SDK haben Sie mehrere Möglichkeiten zur Monetarisierung Ihrer App mit Anzeigen."
 title: Anzeigen von Werbung in Ihrer App
-translationtype: Human Translation
 ms.sourcegitcommit: 8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707
 ms.openlocfilehash: c79ba96908cc7b52afefbe44c3f56ce009c87f16
 
@@ -18,7 +17,7 @@ Mit dem [Microsoft Store Engagement and Monetization SDK](monetize-your-app-with
 
 ## Anzeigen von Bannern und Video-Interstitialanzeigen über die Microsoft Advertising-Bibliotheken
 
-Steigern Sie Ihre Einnahmen mit Windows-Apps, indem Sie Banner und Video-Interstitialanzeigen einbinden. Die Anzeigen werden in Windows-Apps für PCs, Tablets und Smartphones angezeigt. Sie können die Performance der Werbung mithilfe des Windows Dev Center-Dashboards in Echtzeit verfolgen.
+Steigern Sie Ihre Einnahmen mit Windows-Apps, indem Sie Banner und Video-Interstitialanzeigen einbinden. Die Anzeigen werden in Windows-Apps für PCs, Tablets und Smartphones angezeigt. Sie können die Performance der Werbung mithilfe des WindowsDevCenter-Dashboards in Echtzeit verfolgen.
 
 Um Werbung in Ihre Apps einzufügen, verwenden Sie die Steuerelemente **AdControl** und **InterstitialAd** in den Advertising-Bibliotheken, die im Microsoft Store Engagement and Monetization SDK verteilt werden. Anhand dieser Steuerelemente können Sie Banner und Video-Interstitialanzeigen von Microsoft in Ihren XAML- oder JavaScript-/HTML-Apps für Windows 10, Windows 8.1, Windows Phone 8.1 und Windows Phone 8 anzeigen.
 

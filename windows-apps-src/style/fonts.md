@@ -47,8 +47,7 @@ Sie müssen die Segoe UI-Schriftart nicht für alles verwenden. Sie können ande
 
 Dies ist die Liste der Schriftarten, die garantiert in allen Editionen von Windows10 verfügbar sind, die UWP-Apps unterstützen.
 
-
-              **Hinweis**  Wenn Sie eine Schriftart verwenden, die nicht in dieser Liste enthalten ist, löst Ihre App möglicherweise einen automatischen Download der Schriftartdaten von einem Microsoft-Dienst aus. Dies kann die Leistung und andere Faktoren beeinträchtigen, die insbesondere für mobile Geräte möglicherweise ein Problem darstellen. Beachten Sie zudem, dass dabei möglicherweise der mobile Datentarif eines Benutzers in Anspruch genommen wird oder Kosten für die Nutzung mobiler Daten anfallen. UWP-Apps, die auf mobilen Geräten verfügbar sind, sollten nie andere Schriftarten für UI-Content als in dieser Liste verwenden.
+**Hinweis**  Wenn Sie eine Schriftart verwenden, die nicht in dieser Liste enthalten ist, löst Ihre App möglicherweise einen automatischen Download der Schriftartdaten von einem Microsoft-Dienst aus. Dies kann die Leistung und andere Faktoren beeinträchtigen, die insbesondere für mobile Geräte möglicherweise ein Problem darstellen. Beachten Sie zudem, dass dabei möglicherweise der mobile Datentarif eines Benutzers in Anspruch genommen wird oder Kosten für die Nutzung mobiler Daten anfallen. UWP-Apps, die auf mobilen Geräten verfügbar sind, sollten nie andere Schriftarten für UI-Content als in dieser Liste verwenden.
 
  
 
@@ -275,8 +274,7 @@ Dies ist die Liste der Schriftarten, die garantiert in allen Editionen von Windo
 
 **Für Designer**
 * [Beschriftung (oder Textblock)](../controls-and-patterns/labels.md)
-* 
-              [Segoe UI Symbol-Symbole](segoe-ui-symbol-font.md)
+* [Segoe UI Symbol-Symbole](segoe-ui-symbol-font.md)
 **Für Entwickler (XAML)**
 * [XAML-Designressourcen](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [Gestalten einer App-Seite](https://msdn.microsoft.com/library/windows/apps/hh872191)

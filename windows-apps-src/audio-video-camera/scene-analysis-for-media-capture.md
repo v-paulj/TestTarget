@@ -2,16 +2,16 @@
 author: drewbatgit
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
 description: Dieser Artikel beschreibt, wie Sie mit SceneAnalysisEffect und FaceDetectionEffect den Inhalt des Vorschaudatenstroms der Medienaufnahme analysieren.
-title: "Szenenanalyse für die Medienaufnahme"
+title: "Effekte für die Analyse von Kamera-Frames"
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 891c0d274c2d3fb82f855011158ecd3ccdcd87b3
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: a5af97156ade8574537e38e50c45b9b15f506980
 
 ---
 
-# Szenenanalyse für die Medienaufnahme
+# Effekte für die Analyse von Kamera-Frames
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 Dieser Artikel beschreibt, wie Sie mit [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) und [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) den Inhalt des Vorschaudatenstroms der Medienaufnahme analysieren.
@@ -66,8 +66,7 @@ Wenn Ihre App die Aufnahme abgeschlossen hat, deaktivieren Sie vor dem Löschen 
 
 ## Gesichtserkennungseffekt
 
-[
-            **FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) identifiziert die Position von Gesichtern innerhalb des Vorschaudatenstroms der Medienaufnahme. Mit dem Effekt erhalten Sie eine Benachrichtigung, wenn ein Gesicht im Vorschaudatenstrom erkannt wird, und es wird der Begrenzungsrahmen für jedes erkannte Gesicht im Vorschauframe bereitgestellt. Auf unterstützten Geräten stellt die Gesichtserkennung auch erweiterte Belichtung und Fokus auf das wichtigste Gesicht in der Szene bereit.
+[**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) identifiziert die Position von Gesichtern innerhalb des Vorschaudatenstroms der Medienaufnahme. Mit dem Effekt erhalten Sie eine Benachrichtigung, wenn ein Gesicht im Vorschaudatenstrom erkannt wird, und es wird der Begrenzungsrahmen für jedes erkannte Gesicht im Vorschauframe bereitgestellt. Auf unterstützten Geräten stellt die Gesichtserkennung auch erweiterte Belichtung und Fokus auf das wichtigste Gesicht in der Szene bereit.
 
 ### Namespaces der Gesichtserkennung
 
@@ -113,7 +112,8 @@ Nicht alle Geräte verfügen über ein Aufnahmegerät, das den Fokus und die Bel
 
 ## Verwandte Themen
 
-* [Aufnehmen von Fotos und Videos mit „MediaCapture“](capture-photos-and-video-with-mediacapture.md)
+* [Kamera](camera.md)
+* [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -124,6 +124,6 @@ Nicht alle Geräte verfügen über ein Aufnahmegerät, das den Fokus und die Bel
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

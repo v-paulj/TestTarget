@@ -5,7 +5,7 @@ title: Storyboardanimationen
 description: Storyboardanimationen sind nicht nur Animationen visueller Art.
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: bcb8dbd3c0b2556c3d426687eb9be02ffe7265fb
+ms.openlocfilehash: 361765de700af2a701e16fc27a5867d80907865a
 
 ---
 # Storyboardanimationen
@@ -97,15 +97,9 @@ Weitere Informationen zur Verwendung eines Eigenschaftenpfads für die indirekte
 
 Das Windows-Runtime-Animationssystem verfügt über drei spezielle Typen für Storyboardanimationen:
 
--   
-              [
-              **Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) kann mit jeder [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) animiert werden.
--   
-              [
-              **Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) kann mit jeder [**PointAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210346) animiert werden.
--   
-              [
-              **Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) kann mit jeder [**ColorAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243066) animiert werden.
+-   [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx) kann mit jeder [**DoubleAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243136) animiert werden.
+-   [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) kann mit jeder [**PointAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210346) animiert werden.
+-   [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) kann mit jeder [**ColorAnimation**](https://msdn.microsoft.com/library/windows/apps/BR243066) animiert werden.
 
 Es ist auch ein generalisierter [**Object**](https://msdn.microsoft.com/library/windows/apps/xaml/system.object.aspx)-Animationstyp für Objektverweiswerte vorhanden, der später erläutert wird.
 
@@ -140,15 +134,13 @@ Sehen wir uns das vorherige XAML-Beispiel und die **From**- und **To**-Werte sow
 
 Weitere Informationen zu [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377)-Werten und der XAML-Syntax finden Sie unter [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377).
 
-
-              **Hinweis:** Wenn Sie sich in Bezug auf das gezeigte Beispiel sicher sind, dass der Startzustand des animierten Objekts für [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) stets den Wert„1“ aufweist (durch standardmäßige oder explizite Festlegung), können Sie den **From**-Wert auslassen. Die Animation verwendet dann den impliziten Startwert, und das Ergebnis ist identisch.
+**Hinweis:** Wenn Sie sich in Bezug auf das gezeigte Beispiel sicher sind, dass der Startzustand des animierten Objekts für [**Opacity**](https://msdn.microsoft.com/library/windows/apps/BR208962) stets den Wert„1“ aufweist (durch standardmäßige oder explizite Festlegung), können Sie den **From**-Wert auslassen. Die Animation verwendet dann den impliziten Startwert, und das Ergebnis ist identisch.
 
  
 
 ### From/To/By akzeptieren NULL-Werte
 
-Es wurde bereits erwähnt, dass Sie **From**, **To** oder **By** weglassen können und so aktuelle nicht animierte Werte als Ersatzwerte für einen fehlenden Wert verwenden können. 
-              **From**, **To** oder **By**-Eigenschaften einer Animation haben einen anderen Typ, als Sie vielleicht vermuten. Der Typ der [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx)-Eigenschaft lautet beispielsweise nicht [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Stattdessen gilt [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) für **Double**. Der Standardwert lautet **null**, nicht0. Anhand dieses **null**-Werts kann das Animationssystem unterscheiden, dass Sie keinen spezifischen Wert für eine **From**-, **To**- oder **By**-Eigenschaft festgelegt haben. VisualC++-Komponentenerweiterungen (C++/CX) verfügen nicht über einen **Nullable**-Typ und nutzen stattdessen [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864).
+Es wurde bereits erwähnt, dass Sie **From**, **To** oder **By** weglassen können und so aktuelle nicht animierte Werte als Ersatzwerte für einen fehlenden Wert verwenden können. **From**, **To** oder **By**-Eigenschaften einer Animation sind möglicherweise von einem anderen Typ, als Sie vermuten. Der Typ der [**DoubleAnimation.To**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.doubleanimation.easingfunction.aspx)-Eigenschaft lautet beispielsweise nicht [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx). Stattdessen gilt [**Nullable**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) für **Double**. Der Standardwert lautet **null**, nicht0. Anhand dieses **null**-Werts kann das Animationssystem unterscheiden, dass Sie keinen spezifischen Wert für eine **From**-, **To**- oder **By**-Eigenschaft festgelegt haben. VisualC++-Komponentenerweiterungen (C++/CX) verfügen nicht über einen **Nullable**-Typ und nutzen stattdessen [**IReference**](https://msdn.microsoft.com/library/windows/apps/BR225864).
 
 ### Andere Eigenschaften einer Animation
 
@@ -221,8 +213,7 @@ Im nächsten Beispiel wird veranschaulicht, wie das [**Storyboard**](https://msd
 
 Das Definieren von Ressourcen auf der XAML-Stammebene einer XAML-Datei, z.B. page.xaml oder app.xaml, ist eine übliche Vorgehensweise zum Organisieren von Ressourcen mit Schlüsseln in XAML. Sie können Ressourcen auch auf separate Dateien aufteilen und diese in Apps oder Seiten zusammenführen. Weitere Informationen finden Sie unter [ResourceDictionary- und XAML-Ressourcenreferenzen](https://msdn.microsoft.com/library/windows/apps/Mt187273).
 
-
-              **Hinweis:**  Windows-Runtime-XAML unterstützt die Identifizierung von Ressourcen unter Verwendung des [x:Key-Attributs](https://msdn.microsoft.com/library/windows/apps/Mt204787) oder des [x:Name-Attributs](https://msdn.microsoft.com/library/windows/apps/Mt204788). Das x:Name-Attribut wird für ein [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) häufiger verwendet, weil darauf später anhand des Variablennamens verwiesen werden soll, damit Sie dessen [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin)-Methode aufrufen und die Animationen ausführen können. Wenn Sie dagegen das [x:Key-Attribut](https://msdn.microsoft.com/library/windows/apps/Mt204787) verwenden, müssen Sie [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794)-Methoden wie den [**Item**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.item)-Indexer zum Abrufen als Ressource mit Schlüssel nutzen und das abgerufene Objekt dann für das **Storyboard** umwandeln, um die **Storyboard**-Methoden zu verwenden.
+**Hinweis:**  Windows-Runtime-XAML unterstützt die Identifizierung von Ressourcen unter Verwendung des [x:Key-Attributs](https://msdn.microsoft.com/library/windows/apps/Mt204787) oder des [x:Name-Attributs](https://msdn.microsoft.com/library/windows/apps/Mt204788). Das x:Name-Attribut wird für ein [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490) häufiger verwendet, weil darauf später anhand des Variablennamens verwiesen werden soll, damit Sie dessen [**Begin**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.begin)-Methode aufrufen und die Animationen ausführen können. Wenn Sie dagegen das [x:Key-Attribut](https://msdn.microsoft.com/library/windows/apps/Mt204787) verwenden, müssen Sie [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794)-Methoden wie den [**Item**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.item)-Indexer zum Abrufen als Ressource mit Schlüssel nutzen und das abgerufene Objekt dann für das **Storyboard** umwandeln, um die **Storyboard**-Methoden zu verwenden.
 
  
 
@@ -243,8 +234,7 @@ Eine Animation ist unabhängig, wenn Sie diese Merkmale aufweist:
 -   Die Animation hat einen [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)-Wert als Ziel und verwendet ein [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR242962)-Element, für das [**Color**](https://msdn.microsoft.com/library/windows/apps/BR242963) animiert wird.
 -   Die Animation ist ein [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/BR210320)-Element.
 
-
-              **Achtung**  Damit Ihre Animation als unabhängige Animation behandelt wird, müssen Sie `Duration="0"` explizit festlegen. Wenn Sie z.B. `Duration="0"` aus diesem XAML-Beispiel entfernen, wird die Animation als abhängige Animation behandelt, obwohl die [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR243169) des Frames "0:0:0" ist.
+**Achtung**  Damit Ihre Animation als unabhängige Animation behandelt wird, müssen Sie `Duration="0"` explizit festlegen. Wenn Sie z.B. `Duration="0"` aus diesem XAML-Beispiel entfernen, wird die Animation als abhängige Animation behandelt, obwohl die [**KeyTime**](https://msdn.microsoft.com/library/windows/apps/BR243169) des Frames "0:0:0" ist.
 
  
 
@@ -265,8 +255,7 @@ Die erforderliche Aktivierung abhängiger Animationen durch den App-Entwickler i
 
 Als App-Entwickler können Sie sich auch für die Anwendung einer App-weiten Einstellung entscheiden, mit der abhängige Animationen immer deaktiviert werden – auch Animationen, für die **EnableDependentAnimation** auf **true** festgelegt ist. Informationen finden Sie unter [**Timeline.AllowDependentAnimations**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.allowdependentanimations).
 
-
-              **Tipp:**  Wenn Sie visuelle Zustände für ein Steuerelement mithilfe von Visual Studio erstellen, wird im Designer eine Warnung angezeigt, wenn Sie versuchen, eine abhängige Animation auf eine Eigenschaft für einen visuellen Zustand anzuwenden.
+**Tipp:**  Wenn Sie visuelle Zustände für ein Steuerelement mithilfe von Visual Studio erstellen, wird im Designer eine Warnung angezeigt, wenn Sie versuchen, eine abhängige Animation auf eine Eigenschaft für einen visuellen Zustand anzuwenden.
 
  
 
@@ -305,8 +294,7 @@ myStoryBoard.Begin()
 
 Sie können das [**Completed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.completed.aspx)-Ereignis behandeln, wenn Sie andere Logik ausführen möchten, nachdem die Animation das Anwenden von Werten abgeschlossen hat. Für die Problembehandlung bei Eigenschaftssystem-/Animationsinteraktionen kann auch die [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/BR242358)-Methode hilfreich sein.
 
-
-              **Tipp**  Wenn Sie den Code für ein App-Szenario erstellen, bei dem Sie eine Animation aus dem App-Code starten, sollten Sie noch einmal überprüfen, ob in der Animationsbibliothek für Ihr UI-Szenario nicht bereits eine Animation oder ein Übergang enthalten ist. Die Bibliotheksanimationen ermöglichen eine einheitlichere UI-Erfahrung in allen Windows-Runtime-Apps und sind einfacher zu verwenden.
+**Tipp**  Wenn Sie den Code für ein App-Szenario erstellen, bei dem Sie eine Animation aus dem App-Code starten, sollten Sie noch einmal überprüfen, ob in der Animationsbibliothek für Ihr UI-Szenario nicht bereits eine Animation oder ein Übergang enthalten ist. Die Bibliotheksanimationen ermöglichen eine einheitlichere UI-Erfahrung in allen Windows-Runtime-Apps und sind einfacher zu verwenden.
 
  
 
@@ -314,8 +302,7 @@ Sie können das [**Completed**](https://msdn.microsoft.com/library/windows/apps/
 
 Das Ausführungsverhalten für ein [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490), das zum Definieren des visuellen Zustands eines Steuerelements verwendet wird, unterscheidet sich davon, wie eine App ein Storyboard ggf. direkt ausführt. Bei der Anwendung auf eine Definition des visuellen Zustands in XAML ist das **Storyboard** ein Element eines enthaltenden [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)-Elements, und der gesamte Zustand wird mithilfe der [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager)-API gesteuert. Alle enthaltenen Animationen werden gemäß ihren Animationswerten und [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517)-Eigenschaften ausgeführt, wenn das enthaltende **VisualState**-Element von einem Steuerelement verwendet wird. Weitere Informationen finden Sie unter [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808). Für visuelle Zustände unterscheidet sich das [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/BR243209)-Element. Wenn ein visueller Zustand in einen anderen Zustand geändert wird, werden alle auf den vorherigen visuellen Zustand angewendeten Eigenschaftsänderungen und die zugehörigen Animationen abgebrochen – auch dann, wenn der neue visuelle Zustand nicht ausdrücklich eine neue Animation auf eine Eigenschaft anwendet.
 
-### 
-              **Storyboard** und **EventTrigger**
+### **Storyboard** und **EventTrigger**
 
 Es gibt eine Möglichkeit zum Starten einer Animation, bei der die Deklaration vollständig in XAML durchgeführt werden kann. Dieses Verfahren wird jedoch nicht mehr häufig angewendet. Es handelt sich um alte Syntax aus WPF und frühen Versionen von Silverlight, bevor die Unterstützung für [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.visualstatemanager) hinzugefügt wurde. Diese [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390)-Syntax funktioniert aus Import- und Kompatibilitätsgründen in Windows-Runtime-XAML noch. Dies gilt jedoch nur für ein Auslöserverhalten basierend auf dem [**FrameworkElement.Loaded**](https://msdn.microsoft.com/library/windows/apps/BR208723)-Ereignis. Falls versucht wird, andere Ereignisse auszulösen, werden Ausnahmen ausgelöst, oder die Kompilierung schlägt fehl. Weitere Informationen finden Sie unter [**EventTrigger**](https://msdn.microsoft.com/library/windows/apps/BR242390) oder [**BeginStoryboard**](https://msdn.microsoft.com/library/windows/apps/BR243053).
 
@@ -346,6 +333,6 @@ Bisher wurden die benutzerdefinierten Animationen vorgestellt, bei denen die Ani
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

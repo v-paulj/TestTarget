@@ -1,21 +1,23 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: "Erstellen Sie UWP-Apps (Universelle Windows-Plattform), die benutzerdefinierte Interaktionen von Zeichen- und Eingabestiften unterstützen, einschließlich Freihandeingabe für das Schreiben und Zeichnen, wie Sie es von Papier gewohnt sind."
-title: Zeichen- und Eingabestiftinteraktionen in UWP-Apps
+Description: "Erstellen Sie UWP-Apps (Universelle Windows-Plattform), die benutzerdefinierte Interaktionen über Stifte und Tabletstifte unterstützen, einschließlich Freihandeingabe für das Schreiben und Zeichnen ganz wie auf Papier."
+title: Stiftinteraktionen und Windows Ink in UWP-Apps
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
-label: Pen and stylus interactions in UWP apps
+label: Pen interactions and Windows Ink in UWP apps
 template: detail.hbs
 keyword: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas
-ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: e642e6ba5319dce2d78c243ab3c57a9ffcc6902f
+translationtype: Human Translation
+ms.sourcegitcommit: 8bc5612c0fc9273d32ccbfcd5b4334566d24b017
+ms.openlocfilehash: 67149f51cc16fee6f5ba818915432b18d2c1a549
 
 ---
 
-# Zeichen- und Eingabestiftinteraktionen in UWP-Apps
+# Stiftinteraktionen und Windows Ink in UWP-Apps
 
 Optimieren Sie Ihre UWP-Apps (Universelle Windows-Plattform) für Stifteingaben, um sowohl Standardfunktionalität für [**Zeigergeräte**](https://msdn.microsoft.com/library/windows/apps/br225633) als auch optimale Windows Ink-Funktionalität für Benutzer bereitzustellen.
 
-> Hinweis: Der Schwerpunkt dieses Themas liegt auf der Windows Ink-Plattform. Informationen zur allgemeinen Behandlung von Zeigereingaben (ähnlich wie Maus-, Touch- und Touchpadeingaben) finden Sie unter [Behandeln von Zeigereingaben](handle-pointer-input.md).
+> [!NOTE]
+> Der Schwerpunkt dieses Themas liegt auf der Windows Ink-Plattform. Informationen zur allgemeinen Behandlung von Zeigereingaben (ähnlich wie Maus-, Touch- und Touchpadeingaben) finden Sie unter [Behandeln von Zeigereingaben](handle-pointer-input.md).
 
 ![Touchpad](images/input-patterns/input-pen.jpg)
 
@@ -27,45 +29,47 @@ Optimieren Sie Ihre UWP-Apps (Universelle Windows-Plattform) für Stifteingaben,
 
 Zusammen mit einem Zeichenstift bietet die Windows Ink-Plattform eine Möglichkeit, digitale Notizen, Zeichnungen und Anmerkungen wie vom Papier her gewohnt zu erstellen. Sie können auf der Plattform Freihanddaten aus einem Eingabedigitalisierungsgerät erfassen, Freihanddaten generieren, verwalten und als letzte Striche auf dem Ausgabegerät rendern sowie über die Schrifterkennung in Text umwandeln.
 
-Ihre App kann nicht nur die grundlegende Position und Bewegung des Stifts aufzeichnen, während der Benutzer schreibt oder zeichnet, sondern auch den variierenden Druck während des gesamten Strichs nachverfolgen und erfassen. Mit diesen Informationen, zusammen mit Einstellungen für Form und Größe der Stiftspitze, Drehung, Freihandfarbe und Zweck (einfache Freihandeingabe, Löschen, Hervorheben und Auswählen), können Sie dem Benutzer ermöglichen, auf ähnliche Wiese wie mit einem Stift, Bleistift oder Pinsel auf Papier zu arbeiten.
+Ihre App kann nicht nur die grundlegende Position und Bewegung des Stifts aufzeichnen, während der Benutzer schreibt oder zeichnet, sondern auch den variierenden Druck während des gesamten Strichs nachverfolgen und erfassen. Mit diesen Informationen, zusammen mit Einstellungen für Form und Größe der Stiftspitze, Drehung, Freihandfarbe und Zweck (einfache Freihandeingabe, Löschen, Hervorheben und Auswählen), können Sie dem Benutzer ermöglichen, auf ähnliche Weise wie mit einem Stift, Bleistift oder Pinsel auf Papier zu arbeiten.
 
-**Hinweis**  Ihre App kann auch Freihandeingaben von anderen zeigerbasierten Geräten wie Touchdigitalisierungs- und Mausgeräten unterstützen. 
+> [!NOTE]
+> Ihre App kann auch Freihandeingaben von anderen zeigerbasierten Geräten, z.B. Touchdigitalisierungs- und Mausgeräte, unterstützen. 
 
-Die Freihandplattform ist sehr flexibel. Sie unterstützt verschiedene Funktionalitätsgrade, abhängig von Ihren Anforderungen.
+Die Freihandplattform ist sehr flexibel. Je nach Ihren Anforderungen unterstützt sie verschiedene Funktionalitätsgrade.
 
-Die Freihandplattform enthält drei Komponenten:
 
--   [
-              **InkCanvas**
-            ](https://msdn.microsoft.com/library/windows/apps/dn858535): Ein XAML-UI-Plattformsteuerelement, das standardmäßig alle Eingaben von einem Stift als letzten Strich oder ausradierten Strich empfängt und anzeigt.
 
--   [
-              **InkPresenter**
-            ](https://msdn.microsoft.com/library/windows/apps/dn922011): Ein CodeBehind-Objekt, das zusammen mit einem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement instanziiert wird (über die [**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft verfügbar gemacht). Dieses Objekt stellt alle Standardfreihandfunktionen bereit, die vom **InkCanvas**-Steuerelement zur Verfügung gestellt werden, sowie einen umfassenden Satz von APIs für zusätzliche Anpassung und Personalisierung.
+Richtlinien für die Benutzeroberfläche von WindowsInk finden Sie unter [Inking controls](../controls-and-patterns/inking-controls.md).
 
--   [
-              **IInkD2DRenderer**
-            ](https://msdn.microsoft.com/library/mt147263): Ermöglicht das Rendern von letzten Strichen im angegebenen Direct2D-Gerätekontext einer universellen Windows-App statt im standardmäßigen [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement. Dies ermöglicht die umfassende Anpassung der Freihandfunktionen.
+## Komponenten der WindowsInk-Plattform
+
+| Komponente | Beschreibung |
+| --- | --- |
+| [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | Ein XAML-UI-Plattformsteuerelement, das standardmäßig alle Eingaben von einem Stift als Freihandstriche oder Löschen von Freihandstrichen empfängt und anzeigt.<br/>Weitere Informationen zur Verwendung von InkCanvas finden Sie unter [Erkennen von Windows Ink-Strichen als Text](convert-ink-to-text.md) und [Speichern und Abrufen der Daten von Windows Ink-Strichen](save-and-load-ink.md). |
+| [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | Ein CodeBehind-Objekt, das zusammen mit einem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement instanziiert wird (über die [**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft verfügbar gemacht). Dieses Objekt stellt alle Standardfreihandfunktionen bereit, die vom **InkCanvas**-Steuerelement zur Verfügung gestellt werden, sowie einen umfassenden Satz von APIs für zusätzliche Anpassung und Personalisierung.<br/>Weitere Informationen zur Verwendung von InkPresenter finden Sie unter [Erkennen von Windows Ink-Strichen als Text](convert-ink-to-text.md) und [Speichern und Abrufen der Daten von Windows Ink-Strichen](save-and-load-ink.md). |
+| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Fügen Sie einer App für die Freihandeingabe in der universellen Windows-Plattform (UWP) eine Standard-InkToolbar hinzu. Fügen Sie der InkToolbar einen anpassbaren Stift hinzu, und binden Sie diesen an eine benutzerdefinierte Definition für den Stift. Ein XAML-UI-Plattformsteuerelement, das eine anpassbare und erweiterbare Sammlung von Schaltflächen enthält, die Freihanddaten in einem verknüpften InkCanvas-Element aktivieren.<br/>Weitere Informationen zur Verwendung von InkToolbar finden Sie unter [Add an InkToolbar to a Universal Windows Platform (UWP) inking app](ink-toolbar.md). |
+| [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | Ermöglicht das Rendern von Freihandstrichen im angegebenen Direct2D-Gerätekontext einer universellen Windows-App statt im standardmäßigen [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement. Dies ermöglicht die umfassende Anpassung der Freihandfunktionen.<br/>Weitere Informationen finden Sie in diesem [komplexen Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314). |
 
 ## Einfaches Freihandzeichnen mit „InkCanvas“
 
-
 Platzieren Sie für einfaches Freihandzeichen einfach an einer beliebigen Stelle auf einer Seite ein [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement.
 
-Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement unterstützt nur Freihandeingaben mit einem Stift. Die Eingabe wird entweder als letzter Strich mit den Standardeinstellungen für Farbe und Stärke gerendert oder als Strichradierer behandelt (wenn die Eingabe von einer mit einer Löschschaltfläche geänderten Radiergummi- oder Stiftspitze stammt).
+Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement unterstützt standardmäßig nur Freihandeingaben mit einem Stift. Die Eingabe wird entweder als Strich mit den Standardeinstellungen für Farbe und Stärke gerendert (ein schwarzer Kugelschreiber mit einer Stärke von 2Pixeln) oder als Strichradierer behandelt (wenn die Eingabe von einer mit einer Löschschaltfläche geänderten Radiergummi- oder Stiftspitze stammt).
+
+> [!NOTE]
+> Falls keine Radiergummispitze bzw. -schaltfläche vorhanden ist, kann InkCanvas so konfiguriert werden, dass Eingaben mit der Stiftspitze wie Radierstriche behandelt werden.
 
 In diesem Beispiel überlagert ein [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement ein Hintergrundbild.
 
-```XAML
+```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid.RowDefinitions>
         <RowDefinition Height="Auto"/>
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <StackPanel x:Name="HeaderPanel" Orientation="Horizontal" Grid.Row="0">
-        <TextBlock x:Name="Header" 
-                   Text="Basic ink sample" 
-                   Style="{ThemeResource HeaderTextBlockStyle}" 
+        <TextBlock x:Name="Header"
+                   Text="Basic ink sample"
+                   Style="{ThemeResource HeaderTextBlockStyle}"
                    Margin="10,0,0,0" />            
     </StackPanel>
     <Grid Grid.Row="1">
@@ -87,26 +91,23 @@ Für die einfache Freihandeingabe müssen Sie sich nicht mit dem [**InkPresenter
 
 ## Einfache Anpassung mit „InkPresenter“
 
-
 Für jedes [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement wird ein [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt instanziiert.
 
 Das [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt stellt nicht nur das gesamte Standard-Freihandeingabeverhalten des entsprechenden [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements bereit, sondern bietet auch einen umfassenden Satz von APIs für die zusätzliche Strichanpassung. Hierzu zählen Stricheigenschaften, unterstützte Eingabegerätetypen und die Möglichkeit festzulegen, ob die Eingabe vom Objekt verarbeitet oder an die App übergeben wird.
 
-**Hinweis**  
-Das [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt kann nicht direkt instanziiert werden. Stattdessen erfolgt der Zugriff darauf über die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft des [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements.
-
- 
+> [!NOTE]
+> Das [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Objekt kann nicht direkt instanziiert werden. Stattdessen erfolgt der Zugriff darauf über die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft des [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements. 
 
 Hier konfigurieren wir das [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt, damit es Eingabedaten von Stift und Maus als Freihandstriche interpretiert. Außerdem legen wir einige anfängliche Freihandstrichattribute fest, die zum Rendern von Strichen mit dem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement verwendet werden.
 
-```CSharp
+```csharp
 public MainPage()
 {
     this.InitializeComponent();
 
     // Set supported inking device types.
-    inkCanvas.InkPresenter.InputDeviceTypes = 
-        Windows.UI.Core.CoreInputDeviceTypes.Mouse | 
+    inkCanvas.InkPresenter.InputDeviceTypes =
+        Windows.UI.Core.CoreInputDeviceTypes.Mouse |
         Windows.UI.Core.CoreInputDeviceTypes.Pen;
 
     // Set initial ink stroke attributes.
@@ -122,17 +123,17 @@ Freihandstrichattribute können dynamisch entsprechend den Benutzereinstellungen
 
 Hier kann der Benutzer aus einer Liste von Freihandfarben auswählen.
 
-```XAML
+```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid.RowDefinitions>
         <RowDefinition Height="Auto"/>
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <StackPanel x:Name="HeaderPanel" Orientation="Horizontal" Grid.Row="0">
-        <TextBlock x:Name="Header" 
-                   Text="Basic ink customization sample" 
+        <TextBlock x:Name="Header"
+                   Text="Basic ink customization sample"
                    VerticalAlignment="Center"
-                   Style="{ThemeResource HeaderTextBlockStyle}" 
+                   Style="{ThemeResource HeaderTextBlockStyle}"
                    Margin="10,0,0,0" />
         <TextBlock Text="Color:"
                    Style="{StaticResource SubheaderTextBlockStyle}"
@@ -155,13 +156,13 @@ Hier kann der Benutzer aus einer Liste von Freihandfarben auswählen.
 
 Anschließend behandeln wir Änderungen an der ausgewählten Farbe und aktualisieren die Attribute für letzte Striche entsprechend.
 
-```CSharp
+```csharp
 // Update ink stroke color for new strokes.
 private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 {
     if (inkCanvas != null)
     {
-        InkDrawingAttributes drawingAttributes = 
+        InkDrawingAttributes drawingAttributes =
             inkCanvas.InkPresenter.CopyDefaultDrawingAttributes();
 
         string value = ((ComboBoxItem)PenColor.SelectedItem).Content.ToString();
@@ -187,15 +188,12 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 Diese Bilder zeigen, wie die Stifteingabe vom [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt verarbeitet und angepasst wird.
 
 | ![InkCanvas mit standardmäßigen schwarzen Freihandstrichen](images/ink-basic-custom-1-small.png) | ![InkCanvas mit vom Benutzer ausgewählten roten Freihandstrichen](images/ink-basic-custom-2-small.png) |
-| --- | -- |
-| Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement mit standardmäßigen schwarzen letzten Strichen | Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement mit vom Benutzer ausgewählten roten letzten Strichen |
-
- 
+| --- | --- |
+| Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement mit standardmäßigen schwarzen letzten Strichen | Das [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement mit vom Benutzer ausgewählten roten letzten Strichen | 
 
 Um zusätzlich zur Freihandeingabe und zum Löschen weitere Funktionen wie etwa die Strichauswahl bereitzustellen, muss die App bestimmte Eingaben identifizieren, die vom [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt ohne Verarbeitung zur Behandlung an die App weitergegeben werden.
 
 ## Weitergabe der Eingabe für die erweiterte Verarbeitung
-
 
 Standardmäßig verarbeitet [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081) sämtliche Eingaben als letzten Strich oder ausradierten Strich. Hierzu zählen auch Eingaben, die durch ein sekundäres Hardwareangebot wie etwa eine Zeichenstift-Drucktaste, eine rechte Maustaste oder ein ähnliches Element geändert werden.
 
@@ -214,35 +212,37 @@ In diesem Beispiel verwenden wir die Dateien „MainPage.xaml“ und „MainPage
     Hier fügen wir einen Zeichenbereich (unterhalb des [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelements) zum Zeichnen der Strichauswahl hinzu. Durch die Verwendung einer eigenen Ebene zum Zeichnen der Strichauswahl bleiben das **InkCanvas**-Steuerelement und dessen Inhalt unverändert.
 
     ![Das leere InkCanvas-Steuerelement mit einem darunterliegenden Auswahlzeichenbereich](images/ink-unprocessed-1-small.png)
-```    XAML
-<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions>
+
+      ```xaml
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+          <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <StackPanel x:Name="HeaderPanel" Orientation="Horizontal" Grid.Row="0">
-            <TextBlock x:Name="Header" 
-                       Text="Advanced ink customization sample" 
-                       VerticalAlignment="Center"
-                       Style="{ThemeResource HeaderTextBlockStyle}" 
-                       Margin="10,0,0,0" />
-        </StackPanel>
-        <Grid Grid.Row="1">
+          </Grid.RowDefinitions>
+          <StackPanel x:Name="HeaderPanel" Orientation="Horizontal" Grid.Row="0">
+            <TextBlock x:Name="Header"
+              Text="Advanced ink customization sample"
+              VerticalAlignment="Center"
+              Style="{ThemeResource HeaderTextBlockStyle}"
+              Margin="10,0,0,0" />
+          </StackPanel>
+          <Grid Grid.Row="1">
             <!-- Canvas for displaying selection UI. -->
             <Canvas x:Name="selectionCanvas"/>
             <!-- Inking area -->
             <InkCanvas x:Name="inkCanvas"/>
+          </Grid>
         </Grid>
-    </Grid>
-```
+      ```
 
 2.  In „MainPage.xaml.cs“ deklarieren wir eine Reihe von globalen Variablen zum Speichern von Verweisen auf Aspekte der Auswahl-UI. Dies gilt insbesondere für den Auswahllassostrich und das umgebende Rechteck, das die ausgewählten Striche hervorhebt.
-```    CSharp
-// Stroke selection tool.
-    private Polyline lasso;
-    // Stroke selection area.
-    private Rect boundingRect;
-```
+
+      ```csharp
+        // Stroke selection tool.
+        private Polyline lasso;
+        // Stroke selection area.
+        private Rect boundingRect;
+      ```
 
 3.  Anschließend konfigurieren wir das [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt so, dass es Eingabedaten von Stift und Maus als Freihandstriche interpretiert. Zudem legen wir anfängliche Freihandstrichattribute zum Rendern von Freihandstrichen mit dem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement fest.
 
@@ -253,175 +253,179 @@ In diesem Beispiel verwenden wir die Dateien „MainPage.xaml“ und „MainPage
     Schließlich weisen wir Listener für die Ereignisse [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) und [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767) des [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekts zu. Wir verwenden die Handler für diese Ereignisse, um die Auswahl-UI zu bereinigen, wenn ein neuer Strich begonnen oder ein vorhandener Strich ausradiert wird.
 
     ![InkCanvas mit standardmäßigen schwarzen letzten Strichen](images/ink-unprocessed-2-small.png)
-```    CSharp
-public MainPage()
-    {
-        this.InitializeComponent();
 
-        // Set supported inking device types.
-        inkCanvas.InkPresenter.InputDeviceTypes =
+      ```csharp
+        public MainPage()
+        {
+          this.InitializeComponent();
+
+          // Set supported inking device types.
+          inkCanvas.InkPresenter.InputDeviceTypes =
             Windows.UI.Core.CoreInputDeviceTypes.Mouse |
             Windows.UI.Core.CoreInputDeviceTypes.Pen;
 
-        // Set initial ink stroke attributes.
-        InkDrawingAttributes drawingAttributes = new InkDrawingAttributes();
-        drawingAttributes.Color = Windows.UI.Colors.Black;
-        drawingAttributes.IgnorePressure = false;
-        drawingAttributes.FitToCurve = true;
-        inkCanvas.InkPresenter.UpdateDefaultDrawingAttributes(drawingAttributes);
+          // Set initial ink stroke attributes.
+          InkDrawingAttributes drawingAttributes = new InkDrawingAttributes();
+          drawingAttributes.Color = Windows.UI.Colors.Black;
+          drawingAttributes.IgnorePressure = false;
+          drawingAttributes.FitToCurve = true;
+          inkCanvas.InkPresenter.UpdateDefaultDrawingAttributes(drawingAttributes);
 
-        // By default, the InkPresenter processes input modified by 
-        // a secondary affordance (pen barrel button, right mouse 
-        // button, or similar) as ink.
-        // To pass through modified input to the app for custom processing 
-        // on the app UI thread instead of the background ink thread, set 
-        // InputProcessingConfiguration.RightDragAction to LeaveUnprocessed.
-        inkCanvas.InkPresenter.InputProcessingConfiguration.RightDragAction = 
-            InkInputRightDragAction.LeaveUnprocessed;
+          // By default, the InkPresenter processes input modified by
+          // a secondary affordance (pen barrel button, right mouse
+          // button, or similar) as ink.
+          // To pass through modified input to the app for custom processing
+          // on the app UI thread instead of the background ink thread, set
+          // InputProcessingConfiguration.RightDragAction to LeaveUnprocessed.
+          inkCanvas.InkPresenter.InputProcessingConfiguration.RightDragAction =
+              InkInputRightDragAction.LeaveUnprocessed;
 
-        // Listen for unprocessed pointer events from modified input.
-        // The input is used to provide selection functionality.
-        inkCanvas.InkPresenter.UnprocessedInput.PointerPressed += 
-            UnprocessedInput_PointerPressed;
-        inkCanvas.InkPresenter.UnprocessedInput.PointerMoved += 
-            UnprocessedInput_PointerMoved;
-        inkCanvas.InkPresenter.UnprocessedInput.PointerReleased += 
-            UnprocessedInput_PointerReleased;
+          // Listen for unprocessed pointer events from modified input.
+          // The input is used to provide selection functionality.
+          inkCanvas.InkPresenter.UnprocessedInput.PointerPressed +=
+              UnprocessedInput_PointerPressed;
+          inkCanvas.InkPresenter.UnprocessedInput.PointerMoved +=
+              UnprocessedInput_PointerMoved;
+          inkCanvas.InkPresenter.UnprocessedInput.PointerReleased +=
+              UnprocessedInput_PointerReleased;
 
-        // Listen for new ink or erase strokes to clean up selection UI.
-        inkCanvas.InkPresenter.StrokeInput.StrokeStarted += 
-            StrokeInput_StrokeStarted;
-        inkCanvas.InkPresenter.StrokesErased += 
-            InkPresenter_StrokesErased;
-    }
-```
+          // Listen for new ink or erase strokes to clean up selection UI.
+          inkCanvas.InkPresenter.StrokeInput.StrokeStarted +=
+              StrokeInput_StrokeStarted;
+          inkCanvas.InkPresenter.StrokesErased +=
+              InkPresenter_StrokesErased;
+        }
+      ```
 
 4.  Anschließend definieren wir Handler für die nicht verarbeiteten Ereignisse [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/dn914712), [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/dn914711) und [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/dn914713), die vom [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Objekt weitergegeben werden.
 
     Sämtliche Auswahlfunktionalität, einschließlich des Lassostrichs und des umgebenden Rechtecks, wird in diesen Handlern implementiert.
 
     ![Auswahllasso](images/ink-unprocessed-3-small.png)
-```    CSharp
-// Handle unprocessed pointer events from modifed input.
-    // The input is used to provide selection functionality.
-    // Selection UI is drawn on a canvas under the InkCanvas.
-    private void UnprocessedInput_PointerPressed(
-        InkUnprocessedInput sender, PointerEventArgs args)
-    {
-        // Initialize a selection lasso.
-        lasso = new Polyline()
+
+      ```csharp
+        // Handle unprocessed pointer events from modifed input.
+        // The input is used to provide selection functionality.
+        // Selection UI is drawn on a canvas under the InkCanvas.
+        private void UnprocessedInput_PointerPressed(
+          InkUnprocessedInput sender, PointerEventArgs args)
         {
+          // Initialize a selection lasso.
+          lasso = new Polyline()
+          {
             Stroke = new SolidColorBrush(Windows.UI.Colors.Blue),
-            StrokeThickness = 1,
-            StrokeDashArray = new DoubleCollection() { 5, 2 },
-        };
+              StrokeThickness = 1,
+              StrokeDashArray = new DoubleCollection() { 5, 2 },
+              };
 
-        lasso.Points.Add(args.CurrentPoint.RawPosition);
+              lasso.Points.Add(args.CurrentPoint.RawPosition);
 
-        selectionCanvas.Children.Add(lasso);
-    }
+              selectionCanvas.Children.Add(lasso);
+          }
 
-    private void UnprocessedInput_PointerMoved(
-        InkUnprocessedInput sender, PointerEventArgs args)
-    {
-        // Add a point to the lasso Polyline object.
-        lasso.Points.Add(args.CurrentPoint.RawPosition);
-    }
+          private void UnprocessedInput_PointerMoved(
+            InkUnprocessedInput sender, PointerEventArgs args)
+          {
+            // Add a point to the lasso Polyline object.
+            lasso.Points.Add(args.CurrentPoint.RawPosition);
+          }
 
-    private void UnprocessedInput_PointerReleased(
-        InkUnprocessedInput sender, PointerEventArgs args)
-    {
-        // Add the final point to the Polyline object and 
-        // select strokes within the lasso area.
-        // Draw a bounding box on the selection canvas 
-        // around the selected ink strokes.
-        lasso.Points.Add(args.CurrentPoint.RawPosition);
+          private void UnprocessedInput_PointerReleased(
+            InkUnprocessedInput sender, PointerEventArgs args)
+          {
+            // Add the final point to the Polyline object and
+            // select strokes within the lasso area.
+            // Draw a bounding box on the selection canvas
+            // around the selected ink strokes.
+            lasso.Points.Add(args.CurrentPoint.RawPosition);
 
-        boundingRect = 
-            inkCanvas.InkPresenter.StrokeContainer.SelectWithPolyLine(
+            boundingRect =
+              inkCanvas.InkPresenter.StrokeContainer.SelectWithPolyLine(
                 lasso.Points);
 
-        DrawBoundingRect();
-    }
-```
+            DrawBoundingRect();
+          }
+      ```
 
 5.  Um den PointerReleased-Ereignishandler abzuschließen, löschen wir sämtlichen Inhalt (den Lassostrich) aus der Auswahlebene und zeichnen dann ein einzelnes umgebendes Rechteck um die letzten Striche, die sich im Lassobereich befinden.
 
     ![Das umgebende Auswahlrechteck](images/ink-unprocessed-4-small.png)
-```    CSharp
-// Draw a bounding rectangle, on the selection canvas, encompassing 
-    // all ink strokes within the lasso area.
-    private void DrawBoundingRect()
-    {
-        // Clear all existing content from the selection canvas.
-        selectionCanvas.Children.Clear();
 
-        // Draw a bounding rectangle only if there are ink strokes 
-        // within the lasso area.
-        if (!((boundingRect.Width == 0) || 
-            (boundingRect.Height == 0) || 
-            boundingRect.IsEmpty))
+      ```csharp
+        // Draw a bounding rectangle, on the selection canvas, encompassing
+        // all ink strokes within the lasso area.
+        private void DrawBoundingRect()
         {
-            var rectangle = new Rectangle()
+          // Clear all existing content from the selection canvas.
+          selectionCanvas.Children.Clear();
+
+          // Draw a bounding rectangle only if there are ink strokes
+          // within the lasso area.
+          if (!((boundingRect.Width == 0) ||
+            (boundingRect.Height == 0) ||
+            boundingRect.IsEmpty))
             {
+              var rectangle = new Rectangle()
+              {
                 Stroke = new SolidColorBrush(Windows.UI.Colors.Blue),
-                StrokeThickness = 1,
-                StrokeDashArray = new DoubleCollection() { 5, 2 },
-                Width = boundingRect.Width,
-                Height = boundingRect.Height
-            };
+                  StrokeThickness = 1,
+                  StrokeDashArray = new DoubleCollection() { 5, 2 },
+                  Width = boundingRect.Width,
+                  Height = boundingRect.Height
+              };
 
-            Canvas.SetLeft(rectangle, boundingRect.X);
-            Canvas.SetTop(rectangle, boundingRect.Y);
+              Canvas.SetLeft(rectangle, boundingRect.X);
+              Canvas.SetTop(rectangle, boundingRect.Y);
 
-            selectionCanvas.Children.Add(rectangle);
-        }
-    }
-```
+              selectionCanvas.Children.Add(rectangle);
+            }
+          }
+      ```
 
 6.  Schließlich definieren wir Handler für die InkPresenter-Ereignisse [**StrokeStarted**](https://msdn.microsoft.com/library/windows/apps/dn914702) und [**StrokesErased**](https://msdn.microsoft.com/library/windows/apps/dn948767).
 
     Diese beiden rufen einfach die gleiche Bereinigungsfunktion auf, um bei jeder Erkennung eines neuen Strichs die aktuelle Auswahl zu löschen.
-```    CSharp
-// Handle new ink or erase strokes to clean up selection UI.
-    private void StrokeInput_StrokeStarted(
-        InkStrokeInput sender, Windows.UI.Core.PointerEventArgs args)
-    {
-        ClearSelection();
-    }
 
-    private void InkPresenter_StrokesErased(
-        InkPresenter sender, InkStrokesErasedEventArgs args)
-    {
-        ClearSelection();
-    }
-```
+      ```csharp
+        // Handle new ink or erase strokes to clean up selection UI.
+        private void StrokeInput_StrokeStarted(
+          InkStrokeInput sender, Windows.UI.Core.PointerEventArgs args)
+        {
+          ClearSelection();
+        }
+
+        private void InkPresenter_StrokesErased(
+          InkPresenter sender, InkStrokesErasedEventArgs args)
+        {
+          ClearSelection();
+        }
+      ```
 
 7.  Dies ist die Funktion zum Entfernen der gesamten Auswahl-UI aus dem Auswahlzeichenbereich, wenn ein neuer Strich begonnen oder ein vorhandener Strich ausradiert wird.
-```    CSharp
-// Clean up selection UI.
-    private void ClearSelection()
-    {
-        var strokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
-        foreach (var stroke in strokes)
-        {
-            stroke.Selected = false;
-        }
-        ClearDrawnBoundingRect();
-    }
 
-    private void ClearDrawnBoundingRect()
-    {
-        if (selectionCanvas.Children.Any())
+      ```csharp
+        // Clean up selection UI.
+        private void ClearSelection()
         {
+          var strokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
+          foreach (var stroke in strokes)
+          {
+            stroke.Selected = false;
+          }
+          ClearDrawnBoundingRect();
+        }
+
+        private void ClearDrawnBoundingRect()
+        {
+          if (selectionCanvas.Children.Any())
+          {
             selectionCanvas.Children.Clear();
             boundingRect = Rect.Empty;
+          }
         }
-    }
-```
+      ```
 
 ## Benutzerdefiniertes Rendern von Freihandeingaben
-
 
 Standardmäßig werden Freihandeingaben in einem Hintergrundthread mit geringer Wartezeit verarbeitet und während des Zeichnens „nass“ gerendert. Wenn der Strich abgeschlossen ist (der Stift oder Finger wurde angehoben oder die Maustaste losgelassen), wird er im UI-Thread verarbeitet und auf der [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Ebene „trocken“ gerendert (über dem Anwendungsinhalt, wo er die nasse Freihandeingabe ersetzt).
 
@@ -434,35 +438,15 @@ Eine App erstellt durch Aufruf von [**ActivateCustomDrying**](https://msdn.micro
 Ein vollständiges Beispiel für diese Funktionalität finden Sie unter [Komplexes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314).
 
 
-## Andere Artikel in diesem Abschnitt 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Thema</th>
-<th align="left">Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>[Erkennen von letzten Strichen](convert-ink-to-text.md)</p></td>
-<td align="left"><p>Konvertieren Sie letzte Striche mit der Schrifterkennung in Text oder mit der benutzerdefinierten Erkennung in Formen.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>[Speichern und Abrufen von letzten Strichen](save-and-load-ink.md)</p></td>
-<td align="left"><p>Speichern Sie letzte Striche mithilfe eingebetteter serialisierter Freihandformat-Metadaten (Ink Serialized Format, ISF) in einer GIF-Datei (Graphics Interchange Format).</p></td>
-</tr>
-</tbody>
-</table>
+## Andere Artikel in diesem Abschnitt
 
- 
-
+| Thema | Beschreibung |
+| --- | --- |
+| [Erkennen von letzten Strichen](convert-ink-to-text.md) | Konvertieren Sie letzte Striche mit der Schrifterkennung in Text oder mit der benutzerdefinierten Erkennung in Formen. |
+| [Speichern und Abrufen von letzten Strichen](save-and-load-ink.md) | Speichern Sie Freihandstrichdaten mithilfe eingebetteter serialisierter Freihandformat-Metadaten (Ink Serialized Format, ISF) in einer GIF-Datei (Graphics Interchange Format). |
+| [Hinzufügen eines InkToolbar-Elements zu einer UWP-App für die Freihandeingabe](ink-toolbar.md) | Fügen Sie einer App für die Freihandeingabe in der universellen Windows-Plattform (UWP) eine Standard-InkToolbar hinzu. Fügen Sie der InkToolbar eine anpassbare Stiftschaltfläche hinzu, und binden Sie diese an eine benutzerdefinierte Definition für den Stift. |
 
 ## Verwandte Artikel
-
 
 * [Behandeln von Zeigereingaben](handle-pointer-input.md)
 * [Identifizieren von Eingabegeräten](identify-input-devices.md)
@@ -487,10 +471,6 @@ Ein vollständiges Beispiel für diese Funktionalität finden Sie unter [Komplex
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

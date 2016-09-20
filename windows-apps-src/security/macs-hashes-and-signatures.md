@@ -3,7 +3,6 @@ title: MACs, Hashes und Signaturen
 description: "In diesem Thema wird erläutert, wie Nachrichtenauthentifizierungscodes (MACs), Hashes und Signaturen in UWP-Apps verwendet werden können, um die Manipulation von Nachrichten zu erkennen."
 ms.assetid: E674312F-6678-44C5-91D9-B489F49C4D3C
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
 ms.openlocfilehash: d7c66d9ead6e3dbf750f1d058e311ef3c84a204f
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: d7c66d9ead6e3dbf750f1d058e311ef3c84a204f
 # MACs, Hashes und Signaturen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Thema wird erläutert, wie Nachrichtenauthentifizierungscodes (MACs), Hashes und Signaturen in UWP-Apps verwendet werden können, um die Manipulation von Nachrichten zu erkennen.

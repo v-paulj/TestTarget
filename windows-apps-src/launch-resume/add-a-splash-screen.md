@@ -11,7 +11,7 @@ ms.openlocfilehash: 261b52d1835e992a784aa5fa356230fdd326b8c5
 # Hinzufügen eines Begrüßungsbildschirms
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Hier erfahren Sie, wie Sie das Bild und die Hintergrundfarbe für den Begrüßungsbildschirm der App mit Microsoft Visual Studio 2015 festlegen.
@@ -37,13 +37,15 @@ Wenn Sie eine Visual Studio 2015-Vorlage zum Erstellen der App verwenden, wird d
 
 4.  Drücken Sie zum Auswählen eines neuen Begrüßungsbildschirm-Bilds für eine UWP-App die Schaltfläche mit den Auslassungspunkten, die neben der Bezeichnung **1240 x 600 px** unterhalb von **Skalierte Anlagen** angezeigt wird. Wählen Sie das Bild mit 1240 x 600 Pixeln (PNG, JPG oder JPEG) aus, das Sie für den Begrüßungsbildschirm verwenden möchten.
 
-    **Wichtig**  Das Bild für den Begrüßungsbildschirm muss 620 x 300 Pixel groß sein und einen einfachen Skalierungsfaktor aufweisen. Beachten Sie beim Entwerfen des Begrüßungsbildschirms zudem, dass er kleiner als der Bildschirm und zentriert angezeigt wird. Im Gegensatz zum Begrüßungsbildschirm einer Windows Phone Store-App füllt er den Bildschirm nicht komplett aus.
+    
+            **Wichtig**  Das Bild für den Begrüßungsbildschirm muss 620x300 Pixel groß sein und einen einfachen Skalierungsfaktor aufweisen. Beachten Sie beim Entwerfen des Begrüßungsbildschirms zudem, dass er kleiner als der Bildschirm und zentriert angezeigt wird. Im Gegensatz zum Begrüßungsbildschirm einer Windows Phone Store-App füllt er den Bildschirm nicht komplett aus.
 
      
 
 5.  Drücken Sie zum Auswählen eines neuen Bilds für eine Windows Phone Store-App die Schaltfläche mit den Auslassungszeichen, die neben der Bezeichnung **1152 x 1920 px** unterhalb von **Skalierte Anlagen** angezeigt wird. Wählen Sie das Bild mit 1152 x 1920 Pixeln (.png, .jpg oder .jpeg) aus, das Sie für den Begrüßungsbildschirm verwenden möchten.
 
-    **Wichtig**  Das Bild für den Begrüßungsbildschirm muss 1152 x 1920 Pixel aufweisen. Dabei handelt es sich um die richtige Größe für einen Skalierungsfaktor von 2,4. Ist dies die einzige Ressource, die Sie bereitstellen, wird es auf die Skalierungsfaktoren 1.4x und 1x nach unten skaliert.
+    
+            **Wichtig**  Das Bild für den Begrüßungsbildschirm muss 1152x1920 Pixel aufweisen. Dabei handelt es sich um die richtige Größe für einen Skalierungsfaktor von 2,4. Ist dies die einzige Ressource, die Sie bereitstellen, wird es auf die Skalierungsfaktoren 1.4x und 1x nach unten skaliert.
 
      
 

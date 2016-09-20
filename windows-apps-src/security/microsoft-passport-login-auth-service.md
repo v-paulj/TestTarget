@@ -3,7 +3,6 @@ title: Erstellen eines Microsoft Passport-Anmeldediensts
 description: "Dies ist Teil 2 der umfassenden exemplarischen Vorgehensweise zum Verwenden von Microsoft Passport als Alternative zu herkömmlichen Authentifizierungssystemen mit Benutzername und Kennwort in Windows 10-Apps für die universelle Windows-Plattform (UWP)."
 ms.assetid: ECC9EF3D-E0A1-4BC4-94FA-3215E6CFF0E4
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 6fe013a69bad964dafa788efb4e26ba521b3d621
 
@@ -12,14 +11,14 @@ ms.openlocfilehash: 6fe013a69bad964dafa788efb4e26ba521b3d621
 # Erstellen eines Microsoft Passport-Anmeldediensts
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
 
 Dies ist Teil 2 der umfassenden exemplarischen Vorgehensweise zum Verwenden von Microsoft Passport als Alternative zu herkömmlichen Authentifizierungssystemen mit Benutzername und Kennwort in Windows 10-Apps für die universelle Windows-Plattform (UWP). Dieser Artikel führt Teil 1, [Microsoft Passport-Anmelde-App](microsoft-passport-login.md), weiter und erweitert die Funktionalität, um zu veranschaulichen, wie Sie Microsoft Passport in Ihre vorhandene Anwendung integrieren können.
 
-Die Erstellung dieses Projekts setzt Erfahrung mit C# und XAML voraus. Außerdem muss Visual Studio 2015 (mindestens Community Edition) auf einem Computer unter Windows 10 verwendet werden.
+Die Erstellung dieses Projekts setzt Erfahrung mit C# und XAML voraus. Außerdem muss Visual Studio2015 (mindestens Community Edition) auf einem Computer unter Windows10 verwendet werden.
 
 ## Übung 1: Serverseitige Logik
 
@@ -1177,7 +1176,7 @@ Wir haben Ihnen in Form einer Übung die Details bereitgestellt, wie Sie die Aut
 
 ## Verwandte Themen
 
-* [Microsoft Passport und Windows Hello](microsoft-passport.md)
+* [MicrosoftPassport und WindowsHello](microsoft-passport.md)
 * [Microsoft Passport-Anmelde-App](microsoft-passport-login.md)
 
 

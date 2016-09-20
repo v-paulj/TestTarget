@@ -3,7 +3,6 @@ author: jnHs
 Description: "Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zertifizierung von Apps verhindern oder nach der Veröffentlichung der App bei einer Stichprobenkontrolle auftreten können."
 title: Vermeiden allgemeiner Zertifizierungsfehler
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 6af2842eeb5eeebfc9ffc5a7a3ec98fdcebddb74
 
@@ -14,13 +13,15 @@ ms.openlocfilehash: 6af2842eeb5eeebfc9ffc5a7a3ec98fdcebddb74
 
 Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zertifizierung von Apps verhindern oder nach der Veröffentlichung der App bei einer Stichprobenkontrolle auftreten können.
 
-> **Hinweis**  Lesen Sie außerdem die [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944), um sicherzustellen, dass Ihre App alle darin aufgeführten Anforderungen erfüllt.
+> 
+            **Hinweis**  Lesen Sie außerdem die [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944), um sicherzustellen, dass Ihre App alle darin aufgeführten Anforderungen erfüllt.
 
  
 
 -   Reichen Sie die App erst ein, wenn sie fertig ist. Sie können die Beschreibung Ihrer App gern nutzen, um auf geplante Features hinzuweisen. Achten Sie jedoch darauf, dass Ihre App keine unvollständigen Abschnitte, Links zu unfertigen Webseiten oder andere Elemente enthält, die Kunden darauf schließen lassen, dass sich die App in einem unvollständigen Zustand befindet.
 
--   [Testen Sie die App vor dem Einreichen mit dem Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt186449).
+-   
+            [Testen Sie die App vor dem Einreichen mit dem Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt186449).
 
 -   Testen Sie die App unter verschiedenen Konfigurationen, um größtmögliche Stabilität sicherzustellen.
 
@@ -33,7 +34,7 @@ Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zerti
 
 -   [Deklarieren Sie die App nur dann als barrierefrei](app-declarations.md#this-app-has-been-tested-to-meet-accessibility-guidelines), wenn Sie sie ausdrücklich für Barrierefreiheitsszenarien entwickelt und getestet haben.
 
--   [Stellen Sie unbedingt die erforderlichen Infos](notes-for-certification.md) zum Verwenden der App bereit, z. B. Benutzername und Kennwort für ein Testkonto, wenn sich Benutzer bei einem Dienst anmelden müssen, oder geben Sie die erforderlichen Schritte zum Zugreifen auf versteckte oder gesperrte Features an.
+-   [Stellen Sie unbedingt die erforderlichen Infos](notes-for-certification.md) zum Verwenden der App bereit, z.B. Benutzername und Kennwort für ein Testkonto, wenn sich Benutzer bei einem Dienst anmelden müssen, oder geben Sie die erforderlichen Schritte zum Zugreifen auf versteckte oder gesperrte Features an.
 
  
 

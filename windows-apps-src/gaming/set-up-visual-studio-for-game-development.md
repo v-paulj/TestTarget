@@ -3,7 +3,6 @@ author: mtoepke
 title: "Visual Studio-Tools für die Spieleprogrammierung"
 description: "Sie erhalten eine Übersicht über spezielle DirectX-Tools, die unter Visual Studio verfügbar sind."
 ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 2202474f24e93aab32ec9f4e85e765616cbae056
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 2202474f24e93aab32ec9f4e85e765616cbae056
 # Visual Studio-Tools für die Spieleprogrammierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Zusammenfassung**
 
@@ -42,7 +41,8 @@ Erstellen Sie [Buildanpassungsdateien](#custom), um diese Formate zur Buildzeit 
 
 Weitere Informationen finden Sie unter [Arbeiten mit Texturen und Bildern](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> **Hinweis**  Der Grafik-Editor ist nicht als Ersatz für eine Bildbearbeitungs-App mit vollem Funktionsumfang gedacht, aber für viele einfache Anzeige- und Bearbeitungsfälle geeignet.
+> 
+            **Hinweis**  Der Grafik-Editor ist nicht als Ersatz für eine Bildbearbeitungs-App mit vollem Funktionsumfang gedacht, aber für viele einfache Anzeige- und Bearbeitungsfälle geeignet.
 
  
 
@@ -61,7 +61,8 @@ Dies ist ein Screenshot eines Modells im Editor, auf das Beleuchtungsfunktionen 
 
 Weitere Informationen finden Sie unter [Arbeiten mit 3D-Modellen](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
 
-> **Hinweis**  Der Modell-Editor ist nicht als Ersatz für eine Modellbearbeitungs-App mit vollem Funktionsumfang gedacht, aber für viele einfache Anzeige- und Bearbeitungsfälle geeignet.
+> 
+            **Hinweis**  Der Modell-Editor ist nicht als Ersatz für eine Modellbearbeitungs-App mit vollem Funktionsumfang gedacht, aber für viele einfache Anzeige- und Bearbeitungsfälle geeignet.
 
  
 
@@ -116,7 +117,7 @@ Sie können dem Projekt Buildanpassungen hinzufügen, sodass Ressourcen von Visu
 Zum Hinzufügen von Buildanpassungen klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt und wählen die Option **Buildanpassungen...**. Sie können dem Projekt die folgenden Arten von Buildanpassungen hinzufügen:
 
 -   Von der Bildinhaltpipeline werden Bilddateien als Eingaben verwendet und DirectDraw Surface-Dateien (.dds) ausgegeben.
--   Von der Gitterinhaltpipeline werden Gitterdateien (z. B. FBX) als Eingabe verwendet und CMO-Gitterdateien ausgegeben.
+-   Von der Gitterinhaltpipeline werden Gitterdateien (z.B. FBX) als Eingabe verwendet und CMO-Gitterdateien ausgegeben.
 -   Von der Shaderinhaltpipeline werden visuelle Shaderdiagramme (.dgsl) aus dem Shader-Editor von Visual Studio verwendet und kompilierte Shaderausgabedateien (.cso) ausgegeben.
 
 Weitere Informationen finden Sie unter [Verwenden von 3D-Objekten im Spiel oder in der App](https://msdn.microsoft.com/library/windows/apps/hh972446.aspx).
@@ -138,7 +139,8 @@ Visual Studio enthält grafikspezifische Debugtools. Verwenden Sie diese Tools z
 
 Weitere Informationen finden Sie unter [Debuggen von DirectX-Grafiken](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
 
-> **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> 
+            **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 

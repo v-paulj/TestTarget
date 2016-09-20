@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: fcebd659-438b-4d03-bc73-6b662ed6f1f3
 description: "Hier wird die Entwicklung und Veröffentlichung einer App mit Anzeigen vollständig erläutert."
 title: "Workflows für das Erstellen von Apps mit Anzeigen"
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
 
@@ -13,7 +12,7 @@ ms.openlocfilehash: 69dd1a17290b7ffbc14dbc58404868119403f7c0
 # Workflows für das Erstellen von Apps mit Anzeigen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Damit Anzeigen in Ihren Apps dargestellt werden können, muss Ihre App in der Lage sein, Anzeigen von einem Anzeigennetzwerk zu empfangen. Microsoft bietet einen Webdienst, der Entwicklern von Windows-Apps das Empfangen von Anzeigen ermöglicht. Wenn Benutzer in Ihrer App auf die Anzeige klicken, erhalten Sie (der *Veröffentlicher* der Anzeige) eine Vergütung vom Ersteller der Anzeige (dem *Werbekunden*). Zahlungen von Werbekunden werden über Ihr Konto abgewickelt.
 

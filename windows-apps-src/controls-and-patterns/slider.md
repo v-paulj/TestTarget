@@ -5,7 +5,6 @@ title: Schieberegler
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: 64ae11c8c7e46d973c13cacb69482fd957e0488d
 
@@ -100,7 +99,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 -   Bedenken Sie beim Festlegen der Flussrichtung bzw. Ausrichtung Ihres Schiebereglers die Textrichtung. In einigen Sprachen fließt das Skript von links nach rechts, und in anderen von rechts nach links.
 -   Verwenden Sie einen Schieberegler nicht als Statusanzeige.
 -   Legen Sie für die Miniaturansicht des Schiebereglers keine andere Größe als die Standardgröße fest.
--   Erstellen Sie keinen fortlaufenden Schieberegler, wenn der Wertebereich groß ist und die Benutzer mit hoher Wahrscheinlichkeit einen von mehreren repräsentativen Werten aus dem Bereich auswählen. Verwenden Sie diese Werte stattdessen als einzige zulässige Schritte. Wenn der Höchstwert für einen Zeitwert beispielsweise 1 Monat ist, die Benutzer aber nur zwischen 1 Minute, 1 Stunde, 1 Tag oder 1 Monat auswählen sollen, erstellen Sie einen Schieberegler mit 4 Schrittpunkten.
+-   Erstellen Sie keinen fortlaufenden Schieberegler, wenn der Wertebereich groß ist und die Benutzer mit hoher Wahrscheinlichkeit einen von mehreren repräsentativen Werten aus dem Bereich auswählen. Verwenden Sie diese Werte stattdessen als einzige zulässige Schritte. Wenn der Höchstwert für einen Zeitwert beispielsweise 1Monat ist, die Benutzer aber nur zwischen 1Minute, 1Stunde, 1Tag oder 1Monat auswählen sollen, erstellen Sie einen Schieberegler mit 4Schrittpunkten.
 
 ## Weitere Hinweise zur Verwendung
 
@@ -108,7 +107,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 Sie können den Schieberegler horizontal oder vertikal ausrichten. Bestimmen Sie anhand dieser Richtlinien das geeignete Layout.
 
--   Verwenden Sie eine natürliche Ausrichtung. Wenn der Schieberegler beispielsweise einen echten Wert darstellt, der normalerweise vertikal angezeigt wird (z. B. eine Temperatur), verwenden Sie die vertikale Ausrichtung.
+-   Verwenden Sie eine natürliche Ausrichtung. Wenn der Schieberegler beispielsweise einen echten Wert darstellt, der normalerweise vertikal angezeigt wird (z.B. eine Temperatur), verwenden Sie die vertikale Ausrichtung.
 -   Wenn das Steuerelement für die Suche in Medien verwendet wird, beispielsweise in einer Video-App, verwenden Sie die horizontale Ausrichtung.
 -   Wenn Sie einen Schieberegler auf einer Seite verwenden, die in eine Richtung geschwenkt werden kann (horizontal oder vertikal), verwenden Sie für den Schieberegler eine andere Ausrichtung als die Schwenkrichtung. Anderenfalls streifen Benutzer möglicherweise beim Schwenken der Seite den Schieberegler und ändern versehentlich den Wert.
 -   Wenn Sie noch nicht sicher sind, welche Ausrichtung Sie verwenden sollen, nehmen Sie die, die am besten zum Seitenlayout passt.
@@ -125,10 +124,10 @@ Die Bereichsrichtung ist die Richtung, in der Sie den Schieberegler bewegen, wen
 
 -   Verwenden Sie Schrittpunkte, wenn der Schieberegler keine beliebigen Werte zwischen minimalen und maximalen Werten zulassen soll. Wenn Sie beispielsweise einen Schieberegler verwenden, um die Anzahl der zu kaufenden Kinotickets anzugeben, lassen Sie keine Gleitkommawerte zu. Verwenden Sie den Schrittwert "1".
 -   Wenn Sie Schritte (auch als Andockpunkte bezeichnet) angeben, stellen Sie sicher, dass der letzte Schritt am Maximalwert des Schiebereglers ausgerichtet ist.
--   Verwenden Sie Teilstriche, wenn Sie Benutzern die Position wichtiger Werte zeigen möchten. So kann beispielsweise ein Schieberegler für die Zoomsteuerung Teilstriche für 50 %, 100 % und 200 % haben.
+-   Verwenden Sie Teilstriche, wenn Sie Benutzern die Position wichtiger Werte zeigen möchten. So kann beispielsweise ein Schieberegler für die Zoomsteuerung Teilstriche für 50%, 100% und 200% haben.
 -   Zeigen Sie Teilstriche an, wenn Benutzer den ungefähren Wert der Einstellung wissen müssen.
 -   Zeigen Sie Teilstriche und eine Wertbeschriftung an, wenn die Benutzer den genauen Wert der ausgewählten Einstellung erfahren sollen, ohne mit dem Steuerelement zu interagieren. Andernfalls können Sie die QuickInfo für den Wert verwenden, um den genauen Wert anzuzeigen.
--   Zeigen Sie immer Teilstriche an, wenn Schrittpunkte nicht offensichtlich sind. Wenn der Schieberegler beispielsweise 200 Pixel breit ist und 200 Andockpunkte hat, können Sie die Teilstriche ausblenden, da die Benutzer das Andockverhalten nicht bemerken. Wenn aber nur zehn Andockpunkte vorhanden sind, zeigen Sie Teilstriche an.
+-   Zeigen Sie immer Teilstriche an, wenn Schrittpunkte nicht offensichtlich sind. Wenn der Schieberegler beispielsweise 200Pixel breit ist und 200Andockpunkte hat, können Sie die Teilstriche ausblenden, da die Benutzer das Andockverhalten nicht bemerken. Wenn aber nur zehn Andockpunkte vorhanden sind, zeigen Sie Teilstriche an.
 
 ### Beschriftungen
 
@@ -167,10 +166,12 @@ Ziehen Sie beim Entwerfen eines benutzerdefinierten Schiebereglers Möglichkeite
 ## Verwandte Themen
 
 **Für Designer**
-- [Richtlinien für Umschalter](toggles.md)
+- 
+            [Richtlinien für Umschalter](toggles.md)
             
           
             **Für Entwickler (XAML)**
+          
 - [**Slider-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209614)
 
 

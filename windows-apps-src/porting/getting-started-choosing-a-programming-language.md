@@ -3,7 +3,6 @@ author: mcleblanc
 title: "Auswählen einer Programmiersprache"
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
 description: "Auswählen einer Programmiersprache"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 10fa4a349621c8e7b248c7daf4d7cdf967e25255
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: 10fa4a349621c8e7b248c7daf4d7cdf967e25255
 
 # Erste Schritte: Auswählen einer Programmiersprache
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Auswählen einer Programmiersprache
 
@@ -24,12 +23,13 @@ Obwohl wir uns in diesem Artikel auf C# konzentrieren, bieten die restlichen Spr
 -   [Erstellen Ihrer ersten Windows Store-App mit C++](https://msdn.microsoft.com/library/windows/apps/hh974580)
 -   [Erstellen Ihrer ersten Windows Store-App mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)
 -   [Erstellen Ihrer ersten Windows Store-App mit JavaScript](https://msdn.microsoft.com/library/windows/apps/br211385)
--   [Erstellen Ihrer ersten Windows Phone Store-App mit C# oder Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=397877)
--   [WinJS unter Windows Phone 8.1](http://go.microsoft.com/fwlink/p/?LinkID=397879)
+-   [Erstellen Ihrer ersten WindowsPhoneStore-App mit C# oder Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=397877)
+-   [WinJS unter WindowsPhone8.1](http://go.microsoft.com/fwlink/p/?LinkID=397879)
 
-**Hinweis**  Bei Apps mit 3D-Grafiken sind die Standards OpenGL und OpenGL ES für UWP-Apps nicht verfügbar. Wenn Sie Ihren OpenGL ES-Code in Microsoft DirectX nicht neu schreiben möchten, könnte **Angle** von Interesse für Sie sein. Angle ist ein laufendes Projekt, das zum Konvertieren von OpenGL in DirectX entwickelt wurde, indem OpenGL-API-Aufrufe in DirectX-API-Aufrufe übersetzt werden. Weitere Informationen hierzu finden Sie unter den folgenden Themen:
+
+            **Hinweis**  Bei Apps mit 3D-Grafiken sind die Standards OpenGL und OpenGL ES für UWP-Apps nicht verfügbar. Wenn Sie Ihren OpenGL ES-Code in Microsoft DirectX nicht neu schreiben möchten, könnte **Angle** von Interesse für Sie sein. Angle ist ein laufendes Projekt, das zum Konvertieren von OpenGL in DirectX entwickelt wurde, indem OpenGL-API-Aufrufe in DirectX-API-Aufrufe übersetzt werden. Weitere Informationen hierzu finden Sie unter den folgenden Themen:
 -   [Angle](https://code.google.com/p/angleproject/)
--   [Erstellen Ihrer ersten Windows Store-App mit DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
+-   [Erstellen Ihrer ersten WindowsStore-App mit DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
 -   [Beispiele für Windows Store-Apps mit DirectX](http://go.microsoft.com/fwlink/p/?LinkId=263603)
 -   [Wo finde ich das DirectX SDK?](https://msdn.microsoft.com/library/windows/desktop/ee663275)
 
@@ -37,7 +37,7 @@ Obwohl wir uns in diesem Artikel auf C# konzentrieren, bieten die restlichen Spr
 
 Als iOS-Entwickler sind Sie die Arbeit mit Objective-C und Swift gewohnt. C# ist die Microsoft-Programmiersprache, die beiden am ähnlichsten ist. Unserer Meinung nach ist C# für die meisten Entwickler und die meisten Apps die Sprache, die am einfachsten und schnellsten erlernbar ist. Daher liegt der Schwerpunkt der Informationen und exemplarischen Vorgehensweisen in diesem Artikel auf dieser Sprache. Weitere Informationen zu C# finden Sie unter den folgenden Themen:
 
--   [Erstellen Ihrer ersten Windows Store-App mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)
+-   [Erstellen Ihrer ersten WindowsStore-App mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/hh974581)
 -   [Beispiele für Windows Store-Apps mit C#](http://go.microsoft.com/fwlink/p/?LinkId=263453)
 -   [Visual C#](http://go.microsoft.com/fwlink/p/?LinkId=263450)
 

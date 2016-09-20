@@ -5,7 +5,6 @@ ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: "Übersicht über die Barrierefreiheit"
 label: Accessibility overview
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: 430484a9243abc644de75d35c03bb11cf47960c0
 
@@ -50,7 +49,7 @@ Hilfstechnologieprodukte umfassen eine breite Palette an Software und Hardware. 
 * Spracherkennungssoftware, mit der Sprache in geschriebenen Text konvertiert werden kann.
 * Bildschirmleseprogramme, die Text in Sprache oder andere Formate wie Braille konvertieren.
 * Die Sprachausgabe, die Teil von Windows ist. Die Sprachausgabe verfügt über einen Touchmodus, mit dem die Sprachausgabe anhand von Toucheingabe gesteuert werden kann, für Situationen, in denen keine Tastatur verfügbar ist.
-* Programme oder Einstellungen, mit denen die Anzeige oder bestimmte Bereiche der Anzeige angepasst werden, z. B. Designs mit hohem Kontrast, DPI (Dots per Inch)-Einstellungen der Anzeige oder die Bildschirmlupe.
+* Programme oder Einstellungen, mit denen die Anzeige oder bestimmte Bereiche der Anzeige angepasst werden, z.B. Designs mit hohem Kontrast, DPI (Dots per Inch)-Einstellungen der Anzeige oder die Bildschirmlupe.
 
 Apps mit guter Tastatur- und Bildschirmleseprogrammunterstützung funktionieren normalerweise ohne Probleme mit unterschiedlichen Hilfstechnologieprodukten. In vielen Fällen kann eine UWP-App ohne zusätzliche Anpassung der Informationen oder Struktur mit diesen Produkten verwendet werden. Es kann jedoch empfehlenswert sein, einige Einstellungen anzupassen, um eine optimale Barrierefreiheit zu erzielen oder um weitere Unterstützung zu implementieren.
 
@@ -72,7 +71,7 @@ Es sind einige andere Automatisierungseigenschaften verfügbar (einschließlich 
 <span id="keyboard_support"/>
 <span id="KEYBOARD_SUPPORT"/>
 ## Tastaturunterstützung  
-Um eine gute Tastaturunterstützung bereitzustellen, müssen Sie dafür sorgen, dass jeder Teil Ihrer Anwendung mit einer Tastatur verwendet werden kann. Wenn Ihre App hauptsächlich die Standardsteuerelemente und keine benutzerdefinierten Steuerelemente verwendet, ist das meiste schon getan. Das grundlegende XAML-Steuerelementmodell bietet integrierte Tastaturunterstützung, einschließlich Unterstützung für die TAB-Navigation, Texteingaben und steuerelementspezifischer Unterstützung. Die Elemente, die als Layoutcontainer dienen (z. B. Panels), verwenden die Layoutreihenfolge, um eine Standardaktivierreihenfolge festzulegen. Diese Reihenfolge ist häufig die richtige Aktivierreihenfolge zur barrierefreien Darstellung der UI. Wenn Sie die Steuerelemente [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) zum Anzeigen von Daten verwenden, bieten diese Steuerelemente eine integrierte Unterstützung für die Navigation mittels Pfeiltasten. Oder wenn Sie ein [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)-Steuerelement verwenden, werden die LEERTASTE oder EINGABETASTE bereits zur Schaltflächenaktivierung behandelt.
+Um eine gute Tastaturunterstützung bereitzustellen, müssen Sie dafür sorgen, dass jeder Teil Ihrer Anwendung mit einer Tastatur verwendet werden kann. Wenn Ihre App hauptsächlich die Standardsteuerelemente und keine benutzerdefinierten Steuerelemente verwendet, ist das meiste schon getan. Das grundlegende XAML-Steuerelementmodell bietet integrierte Tastaturunterstützung, einschließlich Unterstützung für die TAB-Navigation, Texteingaben und steuerelementspezifischer Unterstützung. Die Elemente, die als Layoutcontainer dienen (z.B. Panels), verwenden die Layoutreihenfolge, um eine Standardaktivierreihenfolge festzulegen. Diese Reihenfolge ist häufig die richtige Aktivierreihenfolge zur barrierefreien Darstellung der UI. Wenn Sie die Steuerelemente [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) zum Anzeigen von Daten verwenden, bieten diese Steuerelemente eine integrierte Unterstützung für die Navigation mittels Pfeiltasten. Oder wenn Sie ein [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)-Steuerelement verwenden, werden die LEERTASTE oder EINGABETASTE bereits zur Schaltflächenaktivierung behandelt.
 
 Weitere Informationen zu allen Aspekten der Tastaturunterstützung, einschließlich Aktivierreihenfolge und tastenbasierter Aktivierung oder Navigation, finden Sie unter [Barrierefreiheit der Tastaturnavigation](keyboard-accessibility.md).
 
@@ -158,7 +157,8 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 Weitere Informationen zum Ausweis der Barrierefreiheit und zum Veröffentlichen Ihrer App finden Sie unter [Barrierefreiheit im Store](accessibility-in-the-store.md).
 
 > [!NOTE]
-> Das Deklarieren der App als barrierefrei ist nur für den Windows Store relevant.
+> 
+            [!NOTE]  Das Ausweisen der App als barrierefrei ist nur für den Windows Store relevant.
 
 <span id="Assistive_technology_support_in_custom_controls"/>
 <span id="assistive_technology_support_in_custom_controls"/>

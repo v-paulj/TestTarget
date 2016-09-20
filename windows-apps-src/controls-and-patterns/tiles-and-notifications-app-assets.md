@@ -5,7 +5,6 @@ title: "Ressourcen für Kacheln und Symbole"
 ms.assetid: D6CE21E5-2CFA-404F-8679-36AA522206C7
 label: Tile and icon assets
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 98eebc4fbf18aa2fbe4586958f666b41580cf6d9
 
@@ -19,12 +18,12 @@ ms.openlocfilehash: 98eebc4fbf18aa2fbe4586958f666b41580cf6d9
 
 Ressourcen für App-Symbole, die in einer Vielzahl von Formen innerhalb des Windows 10-Betriebssystems vorkommen, sind die Aushängeschilder für Ihre App für die Universelle Windows-Plattform (UWP). In diesen Richtlinien wird beschrieben, wo Ressourcen für App-Symbole im System angezeigt werden, und Sie erhalten ausführliche Designtipps zum Erstellen ansprechender Symbole.
 
-![Starten von Windows 10 und Kacheln](images/assetguidance01.jpg)
+![Starten von Windows10 und Kacheln](images/assetguidance01.jpg)
 
 ## <span id="Adaptive_scaling"></span><span id="adaptive_scaling"></span><span id="ADAPTIVE_SCALING"></span>Adaptive Skalierung
 
 
-Zunächst erhalten Sie einen kurzen Überblick über die adaptive Skalierung, um die Funktion der Skalierung mit Ressourcen verstehen zu können. Mit Windows 10 wird eine Weiterentwicklung des vorhandenen Skalierungsmodells eingeführt. Neben der Skalierung von Vektorinhalten gibt es einen einheitlichen Satz von Skalierungsfaktoren, der eine einheitliche Größe für UI-Elemente für eine Vielzahl von Bildschirmgrößen und -auflösungen bietet. Die Skalierungsfaktoren sind auch mit den Skalierungsfaktoren anderer Betriebssysteme wie iOS und Android kompatibel, sodass die Ressourcen einfacher für alle diese Plattformen verwendet werden können.
+Zunächst erhalten Sie einen kurzen Überblick über die adaptive Skalierung, um die Funktion der Skalierung mit Ressourcen verstehen zu können. Mit Windows10 wird eine Weiterentwicklung des vorhandenen Skalierungsmodells eingeführt. Neben der Skalierung von Vektorinhalten gibt es einen einheitlichen Satz von Skalierungsfaktoren, der eine einheitliche Größe für UI-Elemente für eine Vielzahl von Bildschirmgrößen und -auflösungen bietet. Die Skalierungsfaktoren sind auch mit den Skalierungsfaktoren anderer Betriebssysteme wie iOS und Android kompatibel, sodass die Ressourcen einfacher für alle diese Plattformen verwendet werden können.
 
 Die Auswahl der aus dem Store herunterzuladenden Ressourcen erfolgt zum Teil auf Grundlage des DPI-Werts eines Geräts. Nur die Ressourcen, die dem Gerät am besten entsprechen, werden heruntergeladen.
 
@@ -43,10 +42,10 @@ Die Höhe der Brandingleiste basiert auf dem Skalierungsfaktor des Geräts, auf 
 
 | Skalierungsfaktor | Pixel |
 |--------------|--------|
-| 100 %         | 32     |
-| 125 %         | 40     |
-| 150 %         | 48     |
-| 200 %         | 64     |
+| 100%         | 32     |
+| 125%         | 40     |
+| 150%         | 48     |
+| 200%         | 64     |
 | 400%         | 128    |
 
  
@@ -59,10 +58,10 @@ Die Randbreite basiert auf dem Skalierungsfaktor des Geräts, auf dem sie angeze
 
 | Skalierungsfaktor | Pixel |
 |--------------|--------|
-| 100 %         | 8      |
-| 125 %         | 10     |
-| 150 %         | 12     |
-| 200 %         | 16     |
+| 100%         | 8      |
+| 125%         | 10     |
+| 150%         | 12     |
+| 200%         | 16     |
 | 400%         | 32     |
 
  
@@ -108,19 +107,19 @@ In diesem Beispiel ist das Symbol für die Kachel zu klein:
 
 Die folgenden Abstandsverhältnisse sind optimal für horizontal oder vertikal ausgerichtete Symbole.
 
-Beschränken Sie bei kleinen Kacheln die Breite und Höhe auf 66 % der Kachelgröße:
+Beschränken Sie bei kleinen Kacheln die Breite und Höhe auf 66% der Kachelgröße:
 
 ![Verhältnisse bei kleinen Kachelgrößen](images/assetguidance09.png)
 
-Beschränken Sie bei mittelgroßen Kacheln die Symbolbreite auf 66 % und die Höhe auf 50 % der Kachelgröße. Dadurch wird verhindert, dass Elemente in der Brandingleiste überlappen:
+Beschränken Sie bei mittelgroßen Kacheln die Symbolbreite auf 66% und die Höhe auf 50% der Kachelgröße. Dadurch wird verhindert, dass Elemente in der Brandingleiste überlappen:
 
 ![Verhältnisse bei mittelgroßen Kacheln](images/assetguidance10.png)
 
-Beschränken Sie bei breiten Kacheln die Symbolbreite auf 66 % und die Höhe auf 50 % der Kachelgröße. Dadurch wird verhindert, dass Elemente in der Brandingleiste überlappen:
+Beschränken Sie bei breiten Kacheln die Symbolbreite auf 66% und die Höhe auf 50% der Kachelgröße. Dadurch wird verhindert, dass Elemente in der Brandingleiste überlappen:
 
 ![Verhältnisse bei breiten Kacheln](images/assetguidance11.png)
 
-Beschränken Sie bei großen Kacheln die Breite und Höhe auf 50 % der Kachelgröße:
+Beschränken Sie bei großen Kacheln die Breite und Höhe auf 50% der Kachelgröße:
 
 ![Verhältnisse bei großen Kacheln](images/assetguidance12.png)
 
@@ -143,15 +142,15 @@ Kacheln können auch in einer Listenansicht angezeigt werden. Größenrichtlinie
 
 ![Kachelressourcen in einer Listenansicht](images/assetguidance16.png)
 
-Beschränken Sie die Breite und Höhe von Symbolen auf 75 % der Kachelgröße:
+Beschränken Sie die Breite und Höhe von Symbolen auf 75% der Kachelgröße:
 
 ![Größe eines Symbols einer Listenansichtkachel](images/assetguidance17.png)
 
-Beschränken Sie bei vertikalen und horizontalen Symbolformaten die Breite und Höhe auf 75 % der Kachelgröße:
+Beschränken Sie bei vertikalen und horizontalen Symbolformaten die Breite und Höhe auf 75% der Kachelgröße:
 
 ![Größe eines Symbols einer Listenansichtkachel](images/assetguidance18.png)
 
-Behalten Sie bei randlosen Grafiken wichtiger Brandingelemente Ränder von 12,5 % bei:
+Behalten Sie bei randlosen Grafiken wichtiger Brandingelemente Ränder von 12,5% bei:
 
 ![Randlose Grafiken in Listenansichtkachel](images/assetguidance19.png)
 
@@ -166,7 +165,7 @@ In diesem Beispiel ist das Symbol in der Kachel zu klein:
 ## <span id="Target-based_assets"></span><span id="target-based_assets"></span><span id="TARGET-BASED_ASSETS"></span>Zielbasierte Ressourcen
 
 
-Zielbasierte Ressourcen gelten für Symbole und Kacheln, die in der Windows-Taskleiste, in der Aufgabenansicht, über ALT+TAB, in der Andockhilfe und in der unteren rechten Ecke von Startkacheln angezeigt werden. Sie müssen für diese Ressourcen keine Abstände hinzufügen, diese werden bei Bedarf von Windows hinzugefügt. Bei diesen Ressourcen sollte eine minimale Fläche von 16 Pixeln vorgesehen werden. Unten sehen Sie ein Beispiel dafür, wie diese Ressourcen als Symbole in der Windows-Taskleiste angezeigt werden:
+Zielbasierte Ressourcen gelten für Symbole und Kacheln, die in der Windows-Taskleiste, in der Aufgabenansicht, über ALT+TAB, in der Andockhilfe und in der unteren rechten Ecke von Startkacheln angezeigt werden. Sie müssen für diese Ressourcen keine Abstände hinzufügen, diese werden bei Bedarf von Windows hinzugefügt. Bei diesen Ressourcen sollte eine minimale Fläche von 16Pixeln vorgesehen werden. Unten sehen Sie ein Beispiel dafür, wie diese Ressourcen als Symbole in der Windows-Taskleiste angezeigt werden:
 
 ![Ressourcen in Windows-Taskleiste](images/assetguidance21.png)
 
@@ -174,9 +173,9 @@ Diese Benutzeroberfläche verwendet zwar neben einer farbigen Rückwand standard
 
 ![Ressourcen mit und ohne Anpassung](images/assetguidance22.png)
 
-Nachfolgend finden Sie die Größenempfehlungen für zielbasierte Ressourcen mit einer Skalierung von 100 %:
+Nachfolgend finden Sie die Größenempfehlungen für zielbasierte Ressourcen mit einer Skalierung von 100%:
 
-![Zielbasierte Ressourcengröße bei einer Skalierung von 100 %](images/assetguidance23.png)
+![Zielbasierte Ressourcengröße bei einer Skalierung von 100%](images/assetguidance23.png)
 
 **App-Ressourcen für Iconic-Vorlage**
 
@@ -234,10 +233,10 @@ Es wird dringend empfohlen, dass Sie mindestens Ressourcen für die Skalierungsf
 
 | Kategorie             | Elementname      | Bei einer Skalierung von 100 % | Bei einer Skalierung von 125 % | Bei einer Skalierung von 150 % | Bei einer Skalierung von 200 % | Bei einer Skalierung von 400 % |
 |----------------------|-------------------|---------------|---------------|---------------|---------------|---------------|
-| Klein                | Square71x71Logo   | 71 x 71         | 89 x 89         | 107 x 107       | 142 x 142       | 284 x 284       |
-| Mittel               | Square150x150Logo | 150 x 150       | 188 x 188       | 225 x 225       | 300 x 300       | 600 x 600       |
-| Breit                 | Square310x150Logo | 310 x 150       | 388 x 188       | 465 x 225       | 620 x 300       | 1240 x 600      |
-| Groß (nur Desktop) | Square310x310Logo | 310 x 310       | 388 x 388       | 465 x 465       | 620 x 620       | 1240 x 1240     |
+| Klein                | Square71x71Logo   | 71 x 71         | 89 x 89         | 107 x 107       | 142 x 142       | 284x284       |
+| Mittel               | Square150x150Logo | 150x150       | 188 x 188       | 225 x 225       | 300 x 300       | 600 x 600       |
+| Breit                 | Square310x150Logo | 310x150       | 388 x 188       | 465 x 225       | 620 x 300       | 1240 x 600      |
+| Groß (nur Desktop) | Square310x310Logo | 310x310       | 388 x 388       | 465 x 465       | 620 x 620       | 1240 x 1240     |
 | App-Liste (Symbol)      | Square44x44Logo   | 44 x 44         | 55 x 55         | 66 x 66         | 88 x 88         | 176 x 176       |
 
  
@@ -280,7 +279,7 @@ Die folgende Tabelle enthält alle zielbasierten Ressourcengrößen und die ents
 | 48 x 48\*    | AppNameAppList.targetsize-48.png  |
 | 256 x 256\*  | AppNameAppList.targetsize-256.png |
 | 20 x 20      | AppNameAppList.targetsize-20.png  |
-| 30 x 30      | AppNameAppList.targetsize-30.png  |
+| 30x30      | AppNameAppList.targetsize-30.png  |
 | 36 x 36      | AppNameAppList.targetsize-36.png  |
 | 40 x 40      | AppNameAppList.targetsize-40.png  |
 | 60 x 60      | AppNameAppList.targetsize-60.png  |

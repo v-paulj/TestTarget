@@ -3,7 +3,6 @@ author: TylerMSFT
 ms.assetid: AC96F645-1BDE-4316-85E0-2FBDE0A0A62A
 title: Abrufen von Dateieigenschaften
 description: "Es werden Eigenschaften&\\#8212;oberste Ebene, grundlegend und erweitert&\\#8212;für eine Datei abgerufen, die durch ein StorageFile-Objekt dargestellt wird."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 56b83d2f05189b4cbb5bbc015987a4ffce8d86fd
 
@@ -21,7 +20,8 @@ ms.openlocfilehash: 56b83d2f05189b4cbb5bbc015987a4ffce8d86fd
 
 Es werden Eigenschaften – oberste Ebene, grundlegend und erweitert – für eine Datei abgerufen, die durch ein [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt dargestellt wird.
 
-**Hinweis**  Siehe auch [Beispiel zum Dateizugriff](http://go.microsoft.com/fwlink/p/?linkid=619995).
+
+            **Hinweis**  Siehe auch [Beispiel zum Dateizugriff](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
  
 
@@ -40,7 +40,8 @@ Es werden Eigenschaften – oberste Ebene, grundlegend und erweitert – für ei
 
 Auf viele Dateieigenschaften der obersten Ebene kann in Form von Membern der [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Klasse zugegriffen werden. Diese Eigenschaften enthalten für eine Datei Attribute, Inhaltstyp, Erstellungsdatum, Anzeigename, Dateityp usw.
 
-**Hinweis**  Denken Sie daran, die **picturesLibrary**-Funktion anzugeben.
+
+            **Hinweis**  Denken Sie daran, die **picturesLibrary**-Funktion anzugeben.
 
  
 

@@ -1,11 +1,10 @@
 ---
 author: DelfCo
-Description: "Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App durch Windows steuern."
+Description: "Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App steuern."
 title: Verwalten von Sprache und Region
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 label: Manage language and region
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: 294f087fffeefda67ddacd09636915144bf18ff4
 
@@ -23,7 +22,7 @@ ms.openlocfilehash: 294f087fffeefda67ddacd09636915144bf18ff4
 -   [**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022)
 -   [**WinJS.Resources-Namespace**](https://msdn.microsoft.com/library/windows/apps/br229779)
 
-Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App durch Windows steuern.
+Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App steuern.
 
 ## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>Einführung
 
@@ -38,7 +37,7 @@ Der Benutzer kann Apps in einer völlig anderen Sprache ausführen als Windows s
 
 Für Windows Store-Apps wird eine Sprache als ein [BCP-47-Sprachtag](http://go.microsoft.com/fwlink/p/?linkid=227302) dargestellt. Die meisten APIs in Windows-Runtime, HTML und XAML können Zeichenfolgendarstellungen dieser BCP-47-Sprachtags zurückgeben oder akzeptieren. Weitere Informationen finden Sie in der [IANA-Liste der Sprachen](http://go.microsoft.com/fwlink/p/?linkid=227303).
 
-Eine Liste mit speziell vom Windows Store unterstützten Sprachtags finden Sie unter [Unterstützte Sprachen](https://msdn.microsoft.com/library/windows/apps/jj657969).
+Eine Liste mit speziell vom WindowsStore unterstützten Sprachtags finden Sie unter [Unterstützte Sprachen](https://msdn.microsoft.com/library/windows/apps/jj657969).
 
 ## <span id="Tasks"></span><span id="tasks"></span><span id="TASKS"></span>Aufgaben
 
@@ -65,31 +64,32 @@ Die Eigenschaft für die Standardsprache muss auch als erste Sprache im Manifest
 
 ### <span id="Qualify_resources_with_their_language."></span><span id="qualify_resources_with_their_language."></span><span id="QUALIFY_RESOURCES_WITH_THEIR_LANGUAGE."></span>Qualifizieren von Ressourcen mit ihrer Sprache.
 
-Berücksichtigen Sie Ihr Zielpublikum sowie Sprache und Standort der Benutzer, die Sie ansprechen möchten. Viele Menschen, die in einer bestimmten Region leben, bevorzugen nicht die Hauptsprache dieser Region. Es gibt z. B. Millionen von Haushalten in den USA. in den hauptsächlich Spanisch gesprochen wird.
+Berücksichtigen Sie Ihr Zielpublikum sowie Sprache und Standort der Benutzer, die Sie ansprechen möchten. Viele Menschen, die in einer bestimmten Region leben, bevorzugen nicht die Hauptsprache dieser Region. Es gibt z.B. Millionen von Haushalten in den USA. in den hauptsächlich Spanisch gesprochen wird.
 
 Qualifizieren von Ressourcen mit einer Sprache:
 
--   Binden Sie ein Skript ein, falls für die Sprache kein Wert definiert ist, der besagt, dass Skripte unterdrückt werden sollen. Einzelheiten zu Sprachtags finden Sie unter [IANA Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303). Verwenden Sie z. B. "zh-Hant", "zh-Hant-TW" oder "zh-Hans", aber nicht "zh-CN" oder "zh-TW".
--   Markieren Sie den gesamten sprachlichen Inhalt für eine Sprache. Die Projekteigenschaft "Standardsprache" ist nicht die Sprache der nicht markierten Ressourcen (d. h. eine neutrale Sprache), sondern sie gibt an, welche markierte Sprache ausgewählt werden soll, wenn keine markierte Sprachressource zum Benutzer passt.
+-   Binden Sie ein Skript ein, falls für die Sprache kein Wert definiert ist, der besagt, dass Skripte unterdrückt werden sollen. Einzelheiten zu Sprachtags finden Sie unter [IANA Subtag Registry](http://go.microsoft.com/fwlink/p/?linkid=227303). Verwenden Sie z.B. "zh-Hant", "zh-Hant-TW" oder "zh-Hans", aber nicht "zh-CN" oder "zh-TW".
+-   Markieren Sie den gesamten sprachlichen Inhalt für eine Sprache. Die Projekteigenschaft "Standardsprache" ist nicht die Sprache der nicht markierten Ressourcen (d.h. eine neutrale Sprache), sondern sie gibt an, welche markierte Sprache ausgewählt werden soll, wenn keine markierte Sprachressource zum Benutzer passt.
 
 Markieren von Ressourcen mit einer genauen Darstellung des Inhalts.
 
 -   Windows führt einen komplexen Abgleich unter Berücksichtigung regionaler Varianten wie „en-US“ und „en-GB“ durch, sodass Anwendungen die Ressourcen mit einer exakten Inhaltsdarstellung markieren und Windows den korrekten Abgleich für jeden Benutzer überlassen können.
 -   Windows Store zeigt für Benutzer, die auf die Anwendung blicken, den Inhalt des Manifests an.
 -   Berücksichtigen Sie, dass für manche Tools und Komponenten wie Übersetzungsprogramme spezielle Sprachtags wie Informationen zu regionalen Dialekten für das Verständnis der Daten hilfreich sein können.
--   Markieren Sie Ressourcen unbedingt mit allen Einzelheiten, insbesondere dann, wenn mehrere Varianten verfügbar sind. Markieren Sie z. B. "en-GB" und "en-US", wenn beide für die Region spezifisch sind.
--   Bei Sprachen mit nur einem Standarddialekt muss keine Region hinzugefügt werden. Eine Verwendung von allgemeinen Tags ist in einigen Situationen vernünftig, so z. B. das Markieren von Ressourcen mit "ja" anstelle von "ja-JP".
+-   Markieren Sie Ressourcen unbedingt mit allen Einzelheiten, insbesondere dann, wenn mehrere Varianten verfügbar sind. Markieren Sie z.B. "en-GB" und "en-US", wenn beide für die Region spezifisch sind.
+-   Bei Sprachen mit nur einem Standarddialekt muss keine Region hinzugefügt werden. Eine Verwendung von allgemeinen Tags ist in einigen Situationen vernünftig, so z.B. das Markieren von Ressourcen mit "ja" anstelle von "ja-JP".
 
 In manchen Situationen müssen nicht alle Ressourcen lokalisiert werden.
 
 -   Markieren Sie Ressourcen wie UI-Zeichenfolgen, die in allen Sprachen bereitgestellt werden, mit ihrer eigenen Sprache, und stellen Sie sicher, dass alle diese Ressourcen in der Standardsprache vorhanden sind. Es muss keine neutrale Ressource angegeben werden (eine nicht mit einer Sprache markierte).
--   Geben Sie bei Ressourcen, die eine Teilmenge der Menge der Sprachen der Anwendung darstellen (partielle Lokalisierung), die Menge der Sprachen an, in denen die Ressourcen vorliegen, und stellen Sie sicher, dass alle diese Ressourcen in der Standardsprache vorliegen. Windows wählt nach Beachtung aller vom Benutzer gesprochenen Sprachen in der bevorzugten Reihenfolge die für den Benutzer bestmögliche Sprache aus. Z. B. muss nicht die ganze UI einer App ins Katalanische lokalisiert werden, wenn die App über einen vollständigen Satz von Ressourcen auf Spanisch verfügt. Wenn ein Benutzer Katalanisch und dann Spanisch spricht, werden die nicht auf Katalanisch verfügbaren Ressourcen auf Spanisch angezeigt.
--   Bei Ressourcen mit spezifischen Ausnahmen für bestimmte Sprachen, bei denen alle anderen Sprachen einer gemeinsamen Ressource zugeordnet werden, muss die für alle Sprachen zu verwendende Ressource mit dem Tag "und" für eine unbestimmte Sprache markiert werden. Windows interpretiert das Sprachtag „und“ ähnlich wie „\*“, d. h., spezifische Entsprechungen haben Vorrang vor der Hauptsprache der Anwendung. Wenn beispielsweise einige Ressourcen (z. B. die Breite eines Elements) für Finnisch verschieden sind, der Rest der Ressourcen aber für alle Sprachen übereinstimmt, sollte die Ressource für Finnisch mit dem Sprachtag "Finnisch" und die übrigen mit "und" markiert werden.
--   Verwenden Sie für Ressourcen, die auf dem Skript für eine Sprache anstatt auf der Sprache basieren, z. B. eine Schriftart oder eine Texthöhe, das Tag für eine unbestimmte Sprache mit einem angegebenen Skript an: 'und-&lt;script&gt;'. Verwenden Sie z. B. für lateinische Schriftarten „und-Latn\\fonts.css“ und für kyrillische Schriftarten „und-Cryl\\fonts.css“.
+-   Geben Sie bei Ressourcen, die eine Teilmenge der Menge der Sprachen der Anwendung darstellen (partielle Lokalisierung), die Menge der Sprachen an, in denen die Ressourcen vorliegen, und stellen Sie sicher, dass alle diese Ressourcen in der Standardsprache vorliegen. Windows wählt nach Beachtung aller vom Benutzer gesprochenen Sprachen in der bevorzugten Reihenfolge die für den Benutzer bestmögliche Sprache aus. Z.B. muss nicht die ganze UI einer App ins Katalanische lokalisiert werden, wenn die App über einen vollständigen Satz von Ressourcen auf Spanisch verfügt. Wenn ein Benutzer Katalanisch und dann Spanisch spricht, werden die nicht auf Katalanisch verfügbaren Ressourcen auf Spanisch angezeigt.
+-   Bei Ressourcen mit spezifischen Ausnahmen für bestimmte Sprachen, bei denen alle anderen Sprachen einer gemeinsamen Ressource zugeordnet werden, muss die für alle Sprachen zu verwendende Ressource mit dem Tag "und" für eine unbestimmte Sprache markiert werden. Windows interpretiert das Sprachtag „und“ ähnlich wie „\*“, d. h., spezifische Entsprechungen haben Vorrang vor der Hauptsprache der Anwendung. Wenn beispielsweise einige Ressourcen (z.B. die Breite eines Elements) für Finnisch verschieden sind, der Rest der Ressourcen aber für alle Sprachen übereinstimmt, sollte die Ressource für Finnisch mit dem Sprachtag "Finnisch" und die übrigen mit "und" markiert werden.
+-   Verwenden Sie für Ressourcen, die auf dem Skript für eine Sprache anstatt auf der Sprache basieren, z.B. eine Schriftart oder eine Texthöhe, das Tag für eine unbestimmte Sprache mit einem angegebenen Skript an: 'und-&lt;script&gt;'. Verwenden Sie z.B. für lateinische Schriftarten „und-Latn\\fonts.css“ und für kyrillische Schriftarten „und-Cryl\\fonts.css“.
 
 ### <span id="Create_the_application_language_list."></span><span id="create_the_application_language_list."></span><span id="CREATE_THE_APPLICATION_LANGUAGE_LIST."></span>Erstellen Sie die Anwendungssprachenliste.
 
-Das System ermittelt zur Laufzeit die bevorzugten Benutzersprachen, für die die App im Manifest Unterstützung deklariert, und erstellt eine *Anwendungssprachenliste*. Anhand dieser Liste werden die Sprachen bestimmt, in denen die App erscheinen soll. Diese Liste bestimmt die Sprachen, die für die App und Systemressourcen, Datumsangaben, Uhrzeiten, Zahlen und andere Komponenten verwendet werden. Das Ressourcenverwaltungssystem ([**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) und [**WinJS.Resources Namespace**](https://msdn.microsoft.com/library/windows/apps/br229779)) lädt beispielsweise UI-Ressourcen gemäß der Anwendungssprache. [
+Das System ermittelt zur Laufzeit die bevorzugten Benutzersprachen, für die die App im Manifest Unterstützung deklariert, und erstellt eine *Anwendungssprachenliste*. Anhand dieser Liste werden die Sprachen bestimmt, in denen die App erscheinen soll. Diese Liste bestimmt die Sprachen, die für die App und Systemressourcen, Datumsangaben, Uhrzeiten, Zahlen und andere Komponenten verwendet werden. Das Ressourcenverwaltungssystem ([**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) und [**WinJS.Resources Namespace**](https://msdn.microsoft.com/library/windows/apps/br229779)) lädt beispielsweise UI-Ressourcen gemäß der Anwendungssprache. 
+            [
               **Windows.Globalization**
             ](https://msdn.microsoft.com/library/windows/apps/br206813) wählt ebenfalls Formate basierend auf der Anwendungssprachenliste aus. Die Anwendungssprachenliste ist über [**Windows.Globalization.ApplicationLanguages.Languages**](https://msdn.microsoft.com/library/windows/apps/hh972396) verfügbar.
 
@@ -97,28 +97,29 @@ Die Zuordnung zwischen Sprachen und Ressourcen ist schwierig. Wir empfehlen, Win
 
 Beispiele für optionale Komponenten in einem Sprachtag:
 
--   Skript für Sprachen mit Skriptunterdrückung. "en-Latn-US" passt z. B. zu "en-US".
--   Region "en-US" passt z. B. zu %%en".
--   Varianten. "de-DE-1996" passt z. B. zu %%de-DE".
--   "-x" und andere Erweiterungen. "en-US-x-Pirate" passt z. B. zu "en-US".
+-   Skript für Sprachen mit Skriptunterdrückung. "en-Latn-US" passt z.B. zu "en-US".
+-   Region "en-US" passt z.B. zu %%en".
+-   Varianten. "de-DE-1996" passt z.B. zu %%de-DE".
+-   "-x" und andere Erweiterungen. "en-US-x-Pirate" passt z.B. zu "en-US".
 
 Es gibt darüber hinaus viele Komponenten von Sprachtags, die nicht die Form "xx" oder "xx-yy" haben, und nicht alle passen zueinander.
 
 -   "zh-Hant" passt nicht zu "zh-Hans".
 
-Windows priorisiert die Zuordnung von Sprachen nach einer exakt definierten Standardmethode. "en-US" passt z. B. in der Reihenfolge der Priorität zu "en-US", "en", "en-GB" usw.
+Windows priorisiert die Zuordnung von Sprachen nach einer exakt definierten Standardmethode. "en-US" passt z.B. in der Reihenfolge der Priorität zu "en-US", "en", "en-GB" usw.
 
 -   Windows führt eine Zuordnung über Regionen durch. „en-US“ passt zu „en-US“, dann zu „en“ und dann zu „en-\*“.
--   Windows verfügt über zusätzliche Daten zur Affinitätszuordnung einer Region, z. B. die primäre Region für eine Sprache. "fr-FR" passt z. B. besser zu "fr-BE" als zu "fr-CA".
+-   Windows verfügt über zusätzliche Daten zur Affinitätszuordnung einer Region, z. B. die primäre Region für eine Sprache. "fr-FR" passt z.B. besser zu "fr-BE" als zu "fr-CA".
 -   Sie profitieren kostenlos von allen zukünftigen Verbesserungen der Sprachzuordnung in Windows, wenn Sie sich auf die Windows-APIs verlassen.
 
-Zuerst wird die erste Sprache in einer Liste abgeglichen und dann die zweite Sprache in der Liste (auch bei anderen regionalen Varianten). Eine Ressource für "en-GB" wird z. B. vor einer "fr-CA"-Ressource ausgewählt, wenn "en-US" die Anwendungssprache ist. Nur dann, wenn keine Ressourcen für eine Form von "en" vorhanden sind, wird eine Ressource für "fr-CA" gewählt.
+Zuerst wird die erste Sprache in einer Liste abgeglichen und dann die zweite Sprache in der Liste (auch bei anderen regionalen Varianten). Eine Ressource für "en-GB" wird z.B. vor einer "fr-CA"-Ressource ausgewählt, wenn "en-US" die Anwendungssprache ist. Nur dann, wenn keine Ressourcen für eine Form von "en" vorhanden sind, wird eine Ressource für "fr-CA" gewählt.
 
-Die Anwendungssprachenliste wird auf die regionale Variante des Benutzers festgelegt, auch wenn diese sich von der regionalen Variante der App unterscheidet. Wenn der Benutzer z. B. "en-GB" spricht, die App jedoch "en-US" unterstützt, schließt die Anwendungssprachenliste "en-GB"ein. Dadurch wird sichergestellt, dass Datumsangaben, Uhrzeiten und Zahlen den Erwartungen des Benutzers entsprechend formatiert werden („en-GB“), die UI-Ressourcen aber wegen des Sprachabgleichs trotzdem in der von der App unterstützten Sprache („en-US“) geladen werden.
+Die Anwendungssprachenliste wird auf die regionale Variante des Benutzers festgelegt, auch wenn diese sich von der regionalen Variante der App unterscheidet. Wenn der Benutzer z.B. "en-GB" spricht, die App jedoch "en-US" unterstützt, schließt die Anwendungssprachenliste "en-GB"ein. Dadurch wird sichergestellt, dass Datumsangaben, Uhrzeiten und Zahlen den Erwartungen des Benutzers entsprechend formatiert werden („en-GB“), die UI-Ressourcen aber wegen des Sprachabgleichs trotzdem in der von der App unterstützten Sprache („en-US“) geladen werden.
 
 Die Anwendungssprachenliste umfasst die folgenden Elemente:
 
-1.  **(Optional) Überschreibung der primären Sprache** [**PrimaryLanguageOverride**](https://msdn.microsoft.com/library/windows/apps/hh972398) ist eine einfache Überschreibungseinstellung für Apps, bei denen Benutzer eine eigene Sprachauswahl treffen können, oder für Apps, bei denen die Standardsprachauswahl aus einem speziellen Grund überschrieben werden sollte. Weitere Informationen dazu finden Sie unter [Anwendungsressourcen und Lokalisierung – Beispiel](http://go.microsoft.com/fwlink/p/?linkid=231501).
+1.  
+            **(Optional) Überschreibung der primären Sprache** [**PrimaryLanguageOverride**](https://msdn.microsoft.com/library/windows/apps/hh972398) ist eine einfache Überschreibungseinstellung für Apps, bei denen Benutzer eine eigene Sprachauswahl treffen können, oder für Apps, bei denen die Standardsprachauswahl aus einem speziellen Grund überschrieben werden sollte. Weitere Informationen dazu finden Sie unter [Anwendungsressourcen und Lokalisierung – Beispiel](http://go.microsoft.com/fwlink/p/?linkid=231501).
 2.  **Die von der App unterstützten Sprachen des Benutzers.** Hierbei handelt es sich um eine Liste der nach Präferenz geordneten bevorzugten Sprachen des Benutzers. Sie wird anhand der Liste der unterstützten Sprachen im App-Manifest gefiltert. Das Filtern der Benutzersprachen anhand der von der App unterstützten Sprachen sorgt für dauerhafte Konsistenz zwischen den Software Development Kits (SDKs), Klassenbibliotheken, abhängigen Frameworkpaketen und der App.
 3.  **Wenn 1 und 2 leer sind, die Standardsprache oder erste von der App unterstützte Sprache.** Wenn der Benutzer keine der von der App unterstützten Anwendungssprachen versteht, wird die erste von der App unterstützte Sprache ausgewählt.
 
@@ -132,7 +133,8 @@ HTTP-Anforderungen, die von Windows Store-Apps und Desktop-Apps in typischen Web
 
 In der Regel verwenden die API-Elemente im [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)-Namespace die Anwendungssprachenliste zur Bestimmung der Sprache. Hat keine der Sprachen ein übereinstimmendes Format, wird das Benutzergebietsschema verwendet. Hierbei handelt es sich um das von der Systemuhr verwendete Gebietsschema. Das Benutzergebietsschema ist in **Einstellungen**&gt;**Zeit und Sprache**&gt;**Region und Sprache**&gt;**Zusätzliche Datums-, Uhrzeit- und Ländereinstellungen**&gt;**Region: Datums-, Uhrzeit- oder Zahlenformat ändern** verfügbar. Die **Windows.Globalization-APIs** akzeptieren auch eine Überschreibung, wenn Sie eine Liste mit Sprachen angeben möchten, die anstelle der Anwendungssprachenliste verwendet werden soll.
 
-[
+
+            [
               **Windows.Globalization**
             ](https://msdn.microsoft.com/library/windows/apps/br206813) besitzt ebenfalls ein [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804)-Objekt, das als Hilfsobjekt bereitgestellt wird. Damit können Apps die Details der Sprache überprüfen, wie das Skript der Sprache, den Anzeigenamen und den systemeigenen Namen.
 
@@ -140,7 +142,8 @@ In der Regel verwenden die API-Elemente im [**Windows.Globalization**](https://m
 
 Verwenden Sie zur Auswahl der Inhalte, die dem Benutzer angezeigt werden sollen, nicht die Sprache, sondern die Einstellung für den geografischen Standort des Benutzers. So kann eine Nachrichten-App beispielsweise standardmäßig Inhalte für den Wohnort eines Benutzers anzeigen, der bei der Installation von Windows festgelegt wird und auf der Benutzeroberfläche von Windows unter **Region: Datums-, Uhrzeit- oder Zahlenformat ändern** zu finden ist (wie in der vorherigen Aufgabe beschrieben). Die aktuelle Wohnorteinstellung kann mit [**Windows.System.UserProfile.GlobalizationPreferences.HomeGeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br241829) abgerufen werden.
 
-[
+
+            [
               **Windows.Globalization**
             ](https://msdn.microsoft.com/library/windows/apps/br206813) besitzt ebenfalls ein [**GeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br206795)-Objekt, das als Hilfsobjekt bereitgestellt wird. Damit können Apps Details zu einer bestimmten Region (wie Anzeigename, systemeigener Name und verwendete Währungen) überprüfen.
 

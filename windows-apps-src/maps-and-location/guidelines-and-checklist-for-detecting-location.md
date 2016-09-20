@@ -3,15 +3,16 @@ author: msatranjr
 Description: "In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der Zugriff auf den Standort eines Benutzers erforderlich ist."
 title: "Richtlinien für Apps mit Standortbestimmung"
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 6a5451d449719d979bce7e83f5a2949661dd7834
+ms.openlocfilehash: bbdd4d5a54deba11161c1865cd8f6f2fb47bcad4
 
 ---
 
 # Richtlinien für Apps mit Standortbestimmung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -43,7 +44,7 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
 
     Geben Sie das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt frei, wenn der Benutzer den Zugriff auf Standortinformationen unter „Einstellungen“ deaktiviert. Die App empfängt **ACCESS\_DENIED**-Ergebnisse für alle standortbezogenen API-Aufrufe. Wenn Ihre App Standortdaten (zwischen)speichert, löschen Sie zwischengespeicherte Daten, wenn der Benutzer den Zugriff auf seinen Standort zurücknimmt. Stellen Sie eine Alternativmöglichkeit zur Angabe des Standorts bereit, wenn keine diesbezüglichen Informationen für Positionsdienste verfügbar sind.
 
--   Stellen Sie eine Benutzeroberfläche für das erneute Aktivieren der Positionsdienste bereit. Möglich wäre z. B. eine Aktualisierungsschaltfläche, die das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt neu instanziiert und erneut versucht, Standortinformationen abzurufen.
+-   Stellen Sie eine Benutzeroberfläche für das erneute Aktivieren der Positionsdienste bereit. Möglich wäre z.B. eine Aktualisierungsschaltfläche, die das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt neu instanziiert und erneut versucht, Standortinformationen abzurufen.
 
     Stellen Sie in Ihrer App eine Benutzeroberfläche zum Aktivieren der Positionsdienste bereit.
 
@@ -67,7 +68,7 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
 
     -   Verwenden Sie einen [**reportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541)-Wert, der Ihrer App-Funktion entspricht und die Nutzung von Systemressourcen minimiert. Beispielsweise kann bei einer Wetter-App eine Aktualisierung der Daten alle 15 Minuten ausreichen. Für die meisten Apps ist im Gegensatz zu Apps für die Echtzeitnavigation kein präziser, konstanter Datenstrom mit Positionsupdates erforderlich. Wenn für Ihre App kein möglichst präziser Datenstrom oder nur seltene Aktualisierungen erforderlich sind, legen Sie die **ReportInterval**-Eigenschaft fest, um die Mindesthäufigkeit der für die App erforderlichen Positionsupdates anzugeben. Die Standortquelle kann dann Energie sparen, indem der Standort nur bei Bedarf berechnet wird.
 
-        Bei Apps, für die Echtzeitdaten erforderlich sind, sollte [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) auf „0“ festgelegt werden. Damit geben Sie an, dass kein Mindestintervall festgelegt ist. Das standardmäßige Berichtsintervall lautet 1 Sekunde oder entspricht der durch die Hardware unterstützten Häufigkeit, je nachdem, was davon kürzer ist.
+        Bei Apps, für die Echtzeitdaten erforderlich sind, sollte [**ReportInterval**](https://msdn.microsoft.com/library/windows/apps/br225541) auf „0“ festgelegt werden. Damit geben Sie an, dass kein Mindestintervall festgelegt ist. Das standardmäßige Berichtsintervall lautet 1Sekunde oder entspricht der durch die Hardware unterstützten Häufigkeit, je nachdem, was davon kürzer ist.
 
         Geräte, die Standortdaten bereitstellen, können das von verschiedenen Apps angeforderte Berichtsintervall nachverfolgen und Datenberichte im kürzesten angeforderten Intervall bereitstellen. Dann empfängt die App, die den höchsten Bedarf an Präzision hat, die benötigten Daten. Es ist deshalb möglich, dass die Positionssuche häufiger als von der App angefordert Updates generiert, falls eine andere App häufigere Updates angefordert hat.
 
@@ -82,13 +83,13 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
 
         Beispiel:
 
-        -   Wenn Ihre App den Standort zum Abstimmen von Werbung, für Wettermeldungen, Nachrichten usw. abruft, ist eine Genauigkeit von 5000 m in der Regel ausreichend.
-        -   Zeigt Ihre App Angebote aus der näheren Umgebung an, erhalten Sie im Allgemeinen mit einer Genauigkeit von 300 m gute Ergebnisse.
-        -   Sucht der Besucher nach Restaurantempfehlungen in der Nähe, ist wahrscheinlich eine Position innerhalb eines Straßenblocks gewünscht, sodass eine Genauigkeit von 100 m genügt.
-        -   Möchte der Benutzer seine Position teilen, sollte die App eine Genauigkeit von ungefähr 10 m anfordern.
-    -   Verwenden Sie die [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526)-Eigenschaft, wenn für Ihre App bestimmte Genauigkeitsanforderungen gelten. Navigations-Apps sollten z. B. mit der **Geocoordinate.accuracy**-Eigenschaft ermitteln, ob die verfügbaren Standortdaten die Anforderungen der App erfüllen.
+        -   Wenn Ihre App den Standort zum Abstimmen von Werbung, für Wettermeldungen, Nachrichten usw. abruft, ist eine Genauigkeit von 5000m in der Regel ausreichend.
+        -   Zeigt Ihre App Angebote aus der näheren Umgebung an, erhalten Sie im Allgemeinen mit einer Genauigkeit von 300m gute Ergebnisse.
+        -   Sucht der Besucher nach Restaurantempfehlungen in der Nähe, ist wahrscheinlich eine Position innerhalb eines Straßenblocks gewünscht, sodass eine Genauigkeit von 100m genügt.
+        -   Möchte der Benutzer seine Position teilen, sollte die App eine Genauigkeit von ungefähr 10m anfordern.
+    -   Verwenden Sie die [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526)-Eigenschaft, wenn für Ihre App bestimmte Genauigkeitsanforderungen gelten. Navigations-Apps sollten z.B. mit der **Geocoordinate.accuracy**-Eigenschaft ermitteln, ob die verfügbaren Standortdaten die Anforderungen der App erfüllen.
 
--   Berücksichtigen Sie die Startverzögerung. Wenn die App zum ersten Mal Standortdaten anfordert, kann während des Startens des Anbieters eine kurze Verzögerung (1 – 2 Sekunden) auftreten. Berücksichtigen Sie dies beim Design der App-Benutzeroberfläche. Beispielsweise können Sie verhindern, dass andere Aufgaben bis zum Abschluss des Aufrufs von [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) blockiert werden.
+-   Berücksichtigen Sie die Startverzögerung. Wenn die App zum ersten Mal Standortdaten anfordert, kann während des Startens des Anbieters eine kurze Verzögerung (1–2Sekunden) auftreten. Berücksichtigen Sie dies beim Design der App-Benutzeroberfläche. Beispielsweise können Sie verhindern, dass andere Aufgaben bis zum Abschluss des Aufrufs von [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) blockiert werden.
 
 -   Berücksichtigen Sie das Hintergrundverhalten. Falls die App inaktiv und im Hintergrund angehalten ist, empfängt sie keine Positionsupdateereignisse. Beachten Sie dies, wenn Ihre App Positionsupdates durch Protokollierung nachverfolgt. Wenn die App wieder aktiv ist, empfängt sie nur neue Ereignisse. Es werden keine Aktualisierungen abgerufen, die während ihrer Inaktivität stattfanden.
 
@@ -99,7 +100,7 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
 
     Mit Ausnahme des Magnetometers können die Windows-Runtime-APIs auf all diese Sensoren zugreifen. Fusionssensoren sind genauer und stabiler als Rohdatensensoren, sie benötigen jedoch auch mehr Energie. Verwenden Sie die richtigen Sensoren für den richtigen Zweck. Weitere Informationen finden Sie unter [Sensoren](https://msdn.microsoft.com/library/windows/apps/mt187358).
 
-**Verbindungsstandby:** Wenn sich der PC im Verbindungsstandby befindet, können [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekte immer instanziiert werden. Das **Geolocator**-Objekt findet jedoch keine zu aggregierenden Sensoren, sodass für Aufrufe von [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) nach 7 Sekunden ein Timeout auftritt. [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540)-Ereignislistener werden niemals aufgerufen, und [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542)-Ereignislistener werden einmal mit dem **NoData**-Status aufgerufen.
+**Verbindungsstandby:  **Wenn sich der PC im Verbindungsstandby befindet, können [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekte immer instanziiert werden. Das **Geolocator**-Objekt findet jedoch keine zu aggregierenden Sensoren, sodass für Aufrufe von [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) nach 7 Sekunden ein Timeout auftritt. [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540)-Ereignislistener werden niemals aufgerufen, und [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542)-Ereignislistener werden einmal mit dem **NoData**-Status aufgerufen.
 
 ## Weitere Hinweise zur Verwendung
 
@@ -125,7 +126,7 @@ Ermöglichen Sie Ihrer App die Verwendung von [**Geocoordinate.accuracy**](https
 
     ![Beispiel für eine Karte mit einer GPS-Genauigkeit von ungefähr 10 Metern](images/10metererrorradius.png)
 
--   Bei einer Genauigkeit zwischen 10 und 500 Metern (ungefähr 100 Meter) wird der Standort üblicherweise durch WiFi-Auflösung empfangen. Der von einem Mobiltelefon abgerufene Standort hat eine Genauigkeit von ca. 300 m. In diesem Fall empfiehlt es sich, einen Fehlerradius in der App anzuzeigen. Bei Apps, die Wegbeschreibungen anzeigen, für die ein Zentrierpunkt erforderlich ist, kann ein solcher Punkt mit einem ihn umgebenden Fehlerradius angezeigt werden.
+-   Bei einer Genauigkeit zwischen 10 und 500 Metern (ungefähr 100 Meter) wird der Standort üblicherweise durch WiFi-Auflösung empfangen. Der von einem Mobiltelefon abgerufene Standort hat eine Genauigkeit von ca. 300m. In diesem Fall empfiehlt es sich, einen Fehlerradius in der App anzuzeigen. Bei Apps, die Wegbeschreibungen anzeigen, für die ein Zentrierpunkt erforderlich ist, kann ein solcher Punkt mit einem ihn umgebenden Fehlerradius angezeigt werden.
 
     ![Beispiel für eine Karte mit einer WiFi-Genauigkeit von ungefähr 100 Metern](images/100metererrorradius.png)
 
@@ -171,6 +172,6 @@ Der geografische Standort eines Benutzers gehört zu den personenbezogenen Infor
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

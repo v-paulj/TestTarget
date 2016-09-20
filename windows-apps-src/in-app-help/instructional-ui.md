@@ -11,15 +11,15 @@ ms.openlocfilehash: f9f1f34bb02cda89d31caa9453b6e3eb056e7bc9
 
 # Richtlinien für Benutzeroberflächen mit Anleitungen
 
-\ [Aktualisiert für Apps für die universelle Windows-Plattform (UWP) unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\ [Aktualisiert für Apps für die universelle Windows-Plattform (UWP) unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
-Manchmal kann es hilfreich sein, Anleitungen bereitzustellen, um Benutzern Funktionen in Ihrer App zu zeigen, die möglicherweise nicht offensichtlich sind, z. B. bestimmte Touchinteraktionen. In diesen Fällen müssen Sie Anleitungen auf der Benutzeroberfläche für die Benutzer bereitstellen, damit sie diese Funktionen, die sie möglicherweise übersehen haben, finden und nutzen können.
+Manchmal kann es hilfreich sein, Anleitungen bereitzustellen, um Benutzern die Funktionen in Ihrer App zu demonstrieren, die möglicherweise nicht offensichtlich sind, z.B. bestimmte Touchinteraktionen. In diesen Fällen müssen Sie Anleitungen auf der Benutzeroberfläche für die Benutzer bereitstellen, damit sie diese Funktionen, die sie möglicherweise übersehen haben, finden und nutzen können.
 
 ## <span id="when_to_use_instructional_ui"></span><span id="WHEN_TO_USE_INSTRUCTIONAL_UI"></span>Gründe für die Verwendung einer Benutzeroberfläche mit Anleitungen
 
 Benutzeroberflächen mit Anleitungen sollten Sie sparsam einsetzen. Bei übermäßiger Nutzung werden die Anleitungen leicht ignoriert oder verärgern die Benutzer und sind somit wirkungslos.
 
-Benutzeroberflächen mit Anleitungen sollten dazu dienen, dass Benutzer auf wichtige und nicht offensichtliche Funktionen Ihrer App hingewiesen werden, wie z. B. Touchgesten oder Einstellungen, die für sie von Interesse sind. Sie können auch dazu verwendet werden, Benutzer über neue Funktionen und Änderungen in der App aufmerksam zu machen, die sie andernfalls möglicherweise übersehen.
+Benutzeroberflächen mit Anleitungen sollten dazu dienen, dass Benutzer auf wichtige und nicht offensichtliche Funktionen Ihrer App hingewiesen werden, wie z.B. Touchgesten oder Einstellungen, die für sie von Interesse sind. Sie können auch dazu verwendet werden, Benutzer über neue Funktionen und Änderungen in der App aufmerksam zu machen, die sie andernfalls möglicherweise übersehen.
 
 Benuteroberflächen mit Anleitungen sollten nur dann zum Vermitteln grundlegender Funktionen Ihrer App verwendet werden, wenn Ihre App von Touchgesten abhängig ist.
 
@@ -27,21 +27,30 @@ Benuteroberflächen mit Anleitungen sollten nur dann zum Vermitteln grundlegende
 
 Gute Benutzeroberflächen mit Anleitungen sind hilfreich und lehrreich für Benutzer und optimieren die Benutzerfreundlichkeit. Folgende Merkmale sollten diese Benutzeroberflächen ausmachen:
 
--   **Einfach:** Benutzer möchten nicht durch komplizierte Informationen unterbrochen werden.
--   **Einprägsam:** Benutzer möchten nicht, dass die gleichen Anleitungen bei jedem Versuch, eine Aufgabe auszuführen, angezeigt werden. Die Anleitungen müssen daher leicht einprägsam sein.
--   **Unmittelbar relevant:** Wenn die Anleitungen auf der Benutzeroberfläche sich nicht auf eine Aktion beziehen, die die Benutzer gerade ausführen möchten, sehen sie keinen Grund, diesen ihre Aufmerksamkeit zu schenken.
+-   
+            **Einfach:** Benutzer möchten nicht durch komplizierte Informationen unterbrochen werden.
+-   
+            **Einprägsam:** Benutzer möchten nicht, dass die gleichen Anleitungen bei jedem Versuch, eine Aufgabe auszuführen, angezeigt werden. Die Anleitungen müssen daher leicht einprägsam sein.
+-   
+            **Unmittelbar relevant:** Wenn die Anleitungen auf der Benutzeroberfläche sich nicht auf eine Aktion beziehen, die die Benutzer gerade ausführen möchten, sehen sie keinen Grund, diesen ihre Aufmerksamkeit zu schenken.
 
 Setzen Sie Benutzeroberflächen mit Anleitungen nicht übermäßig ein, und achten Sie darauf, die richtigen Themen auszuwählen. Stellen Sie sicher, dass Folgendes nicht mithilfe von Benutzeroberflächen mit Anleitungen vermittelt wird:
 
--   **Grundlegende Features:** Wenn Benutzer Anleitungen zum Verwenden Ihrer App benötigen, sollten Sie das App-Design intuitiver gestalten.
--   **Offensichtliche Features:** Wenn eine Funktion für einen Benutzer ohne Anleitung offensichtlich ist, wird ihn eine Benutzeroberfläche mit Anleitungen nur behindern.
--   **Komplexe Features:** Benutzeroberflächen mit Anleitungen müssen präzise sein. Benutzer, für die komplexe Funktionen von Interesse sind, sind in der Regel bereit, selbst nach Anleitungen zu suchen.
+-   
+            **Grundlegende Features:** Wenn Benutzer Anleitungen zum Verwenden Ihrer App benötigen, sollten Sie das App-Design intuitiver gestalten.
+-   
+            **Offensichtliche Features:** Wenn eine Funktion für einen Benutzer ohne Anleitung offensichtlich ist, wird ihn eine Benutzeroberfläche mit Anleitungen nur behindern.
+-   
+            **Komplexe Features:** Benutzeroberflächen mit Anleitungen müssen präzise sein. Benutzer, für die komplexe Funktionen von Interesse sind, sind in der Regel bereit, selbst nach Anleitungen zu suchen.
 
 Vermeiden Sie es, die Benutzererfahrung durch Ihre Benutzeroberfläche mit Anleitungen zu beeinträchtigen. Nicht empfohlene Vorgehensweise:
 
--   **Überdecken wichtiger Informationen:** Benutzeroberflächen mit Anleitungen sollten niemals anderen Features Ihrer App im Weg stehen.
--   **Nutzungszwang für Benutzer:** Benutzer sollten in der Lage sein, Anleitungen in der Benutzeroberfläche zu ignorieren und mit der Verwendung der App fortzufahren.
--   **Wiederholte Anzeige von Informationen:** Belästigen Sie die Benutzer nicht mit der wiederholten Anzeige von Anleitungen auf der Benutzeroberfläche, auch wenn diese bei der ersten Anzeige ignoriert wurden. Das Hinzufügen einer Einstellung, mit der Anleitungen erneut auf der Benutzeroberfläche angezeigt werden können, ist die bessere Lösung.
+-   
+            **Überdecken wichtiger Informationen:** Benutzeroberflächen mit Anleitungen sollten niemals anderen Features Ihrer App im Weg stehen.
+-   
+            **Nutzungszwang für Benutzer:** Benutzer sollten in der Lage sein, Anleitungen in der Benutzeroberfläche zu ignorieren und mit der Verwendung der App fortzufahren.
+-   
+            **Wiederholte Anzeige von Informationen:** Belästigen Sie die Benutzer nicht mit der wiederholten Anzeige von Anleitungen auf der Benutzeroberfläche, auch wenn diese bei der ersten Anzeige ignoriert wurden. Das Hinzufügen einer Einstellung, mit der Anleitungen erneut auf der Benutzeroberfläche angezeigt werden können, ist die bessere Lösung.
 
 ## <span id="examples_of_instructional_ui"></span><span id="EXAMPLES_OF_INSTRUCTIONAL_UI"></span>Beispiele für Benutzeroberflächen mit Anleitungen
 
@@ -67,7 +76,7 @@ Hier sehen Sie einige Beispiele für Benutzeroberflächen mit Anleitungen, die f
 
 ## <span id="related_topics"></span>Verwandte Artikel
 
-* [Anleitungen für die App-Hilfe](guidelines-for-app-help.md)
+* [Richtlinien für die App-Hilfe](guidelines-for-app-help.md)
 
 
 

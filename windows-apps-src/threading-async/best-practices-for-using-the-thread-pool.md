@@ -3,14 +3,13 @@ author: TylerMSFT
 ms.assetid: 95CF7F3D-9E3A-40AC-A083-D8A375272181
 title: "Bewährte Methoden zum Verwenden des Threadpools"
 description: "In diesem Thema werden bewährte Methoden für die Verwendung des Threadpools beschrieben."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 53f7460be63fa9bd440ed6999ac9cca7cdca0174
 
 ---
 # Bewährte Methoden zum Verwenden des Threadpools
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Thema werden bewährte Methoden für die Verwendung des Threadpools beschrieben.
@@ -37,11 +36,11 @@ In diesem Thema werden bewährte Methoden für die Verwendung des Threadpools be
 ## Nicht empfohlene Aktionen
 
 
--   Erstellen Sie keine regelmäßigen Timer mit einem *period*-Wert von &lt;1 Millisekunde (einschließlich 0). Andernfalls verhält sich die Arbeitsaufgabe wie ein einmaliger Timer.
+-   Erstellen Sie keine regelmäßigen Timer mit einem *period*-Wert von &lt;1 Millisekunde (einschließlich0). Andernfalls verhält sich die Arbeitsaufgabe wie ein einmaliger Timer.
 
 -   Senden Sie keine regelmäßigen Arbeitsaufgaben, deren Ausführung länger dauert als die im *period*-Parameter festgelegte Dauer.
 
--   Senden Sie keine Benutzeroberflächenaktualisierungen (mit Ausnahme von Popups und Benachrichtigungen) von einer Arbeitsaufgabe, die von einer Hintergrundaufgabe übermittelt wird. Verwenden Sie stattdessen Status- und Abschlusshandler für Hintergrundaufgaben, z. B. [**IBackgroundTaskInstance.Progress**](https://msdn.microsoft.com/library/windows/apps/BR224800).
+-   Senden Sie keine Benutzeroberflächenaktualisierungen (mit Ausnahme von Popups und Benachrichtigungen) von einer Arbeitsaufgabe, die von einer Hintergrundaufgabe übermittelt wird. Verwenden Sie stattdessen Status- und Abschlusshandler für Hintergrundaufgaben, z.B. [**IBackgroundTaskInstance.Progress**](https://msdn.microsoft.com/library/windows/apps/BR224800).
 
 -   Beachten Sie bei der Verwendung von Arbeitsaufgabenhandlern mit dem **async**-Schlüsselwort, dass die Threadpool-Arbeitsaufgabe möglicherweise vor der Ausführung des gesamten Codes im Ereignishandler auf den Status „Abgeschlossen“ gesetzt wird. Code, der innerhalb des Handlers auf ein **await**-Schlüsselwort folgt, kann ausgeführt werden, nachdem die Arbeitsaufgabe auf den Status „Abgeschlossen“ gesetzt wurde.
 

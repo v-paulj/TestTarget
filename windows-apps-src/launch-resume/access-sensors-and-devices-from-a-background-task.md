@@ -11,10 +11,11 @@ ms.openlocfilehash: 65471f26596f94fe550c92a10e01ca7f5cef64a1
 # Zugreifen auf Sensoren und Geräte von einer Hintergrundaufgabe
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-[
+
+            [
               Mit **DeviceUseTrigger**
             ](https://msdn.microsoft.com/library/windows/apps/dn297337) kann Ihre universelle Windows-App im Hintergrund auf Sensoren und Peripheriegeräte zugreifen. Dies ist selbst dann möglich, wenn die Vordergrund-App angehalten wird. Je nachdem, wo Ihre App ausgeführt wird, kann sie eine Hintergrundaufgabe zum Synchronisieren von Daten mit Geräten oder zum Überwachen von Sensoren verwenden. Zur Verbesserung der Akkulaufzeit und Sicherstellung der Zustimmung durch den Benutzer unterliegt die Nutzung von [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) den Richtlinien, die in diesem Thema beschrieben werden.
 
@@ -25,7 +26,8 @@ Erstellen Sie zum Zugreifen auf Sensoren oder Peripheriegeräte im Hintergrund e
 
 Wenn Ihre App für den Benutzer nicht mehr sichtbar ist, wird die App von Windows angehalten oder beendet, um Arbeitsspeicher und CPU-Ressourcen freizugeben. Dies ermöglicht anderen Apps die Ausführung im Vordergrund und reduziert den Stromverbrauch. In diesem Fall wären alle laufenden Datenereignisse ohne die Hilfe einer Hintergrundaufgabe verloren. Windows stellt den Trigger für die Hintergrundaufgabe bereit: [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Damit kann Ihre App lange Synchronisierungs- und Überwachungsvorgänge auf Geräten und Sensoren auch dann sicher im Hintergrund ausführen, wenn Ihre App angehalten wurde. Weitere Informationen zum App-Lebenszyklus finden Sie unter [Starten, Fortsetzen und Hintergrundaufgaben](index.md). Weitere Informationen zu Hintergrundaufgaben finden Sie unter [Unterstützen von Apps durch Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
-**Hinweis**  In einer universellen Windows-App erfordert das Synchronisieren eines Geräts im Hintergrund, dass der Benutzer das Synchronisieren im Hintergrund für Ihre App genehmigt hat. Das Gerät muss – mit E/A-Aktivierung – auch mit dem PC verbunden oder gekoppelt sein und kann maximal zehn Minuten lang Aktivitäten im Hintergrund ausführen. Weitere Details zur Richtlinienerzwingung sind weiter unten in diesem Thema beschrieben.
+
+            **Hinweis**  In einer universellen Windows-App erfordert das Synchronisieren eines Geräts im Hintergrund, dass der Benutzer das Synchronisieren im Hintergrund für Ihre App genehmigt hat. Das Gerät muss – mit E/A-Aktivierung – auch mit dem PC verbunden oder gekoppelt sein und kann maximal zehn Minuten lang Aktivitäten im Hintergrund ausführen. Weitere Details zur Richtlinienerzwingung sind weiter unten in diesem Thema beschrieben.
 
 ### Einschränkung: Kritische Gerätevorgänge
 
@@ -95,7 +97,8 @@ Beachten Sie bei der Verwendung von [**DeviceUseTrigger**](https://msdn.microsof
 
  
 
-**Tipp**  Laden Sie ein Beispiel herunter, um zu sehen, wie diese Hintergrundaufgaben funktionieren. Ein Beispiel für die Vorgehensweise auf einem PC finden Sie unter [Beispiel für ein benutzerdefiniertes USB-Gerät](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Ein Beispiel für ein Smartphone finden Sie unter [Beispiel für Hintergrundsensoren](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+
+            **Tipp**  Laden Sie ein Beispiel herunter, um zu sehen, wie diese Hintergrundaufgaben funktionieren. Ein Beispiel für die Vorgehensweise auf einem PC finden Sie unter [Beispiel für ein benutzerdefiniertes USB-Gerät](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Ein Beispiel für ein Smartphone finden Sie unter [Beispiel für Hintergrundsensoren](http://go.microsoft.com/fwlink/p/?LinkId=393307).
 
  
 
@@ -131,7 +134,7 @@ In dieser Tabelle ist aufgeführt, welche Richtlinien für die Aufgabeninitiieru
 |  |  |
 |  | Familie der Mobilgeräte: 1 Aufgabe auf einem 512 MB-Gerät. Andernfalls können 2 Aufgaben registriert und parallel ausgeführt werden. |
 | Maximale Anzahl von Peripheriegeräten oder Sensoren, auf die Ihre App über eine einzelne [DeviceUseTrigger](https://msdn.microsoft.com/library/windows/apps/dn297337)-Hintergrundaufgabe zugreifen kann, wenn sie die unterstützten APIs/Protokolle verwendet. | Unbegrenzt |
-| Die Hintergrundaufgabe verbraucht pro Minute 400 ms an CPU-Zeit (bei einer CPU mit 1 GHz), wenn der Bildschirm gesperrt ist. Bei nicht gesperrtem Bildschirm wird diese Zeit innerhalb von 5 Minuten verbraucht. Wenn diese Richtlinie nicht erfüllt wird, kann dies zum Abbruch der Aufgabe führen. | ![Richtlinie gilt](images/ap-tools.png) |
+| Die Hintergrundaufgabe verbraucht pro Minute 400ms an CPU-Zeit (bei einer CPU mit 1GHz), wenn der Bildschirm gesperrt ist. Bei nicht gesperrtem Bildschirm wird diese Zeit innerhalb von 5Minuten verbraucht. Wenn diese Richtlinie nicht erfüllt wird, kann dies zum Abbruch der Aufgabe führen. | ![Richtlinie gilt](images/ap-tools.png) |
  
 
 ### Richtlinienprüfung zur Laufzeit

@@ -3,7 +3,6 @@ author: mtoepke
 title: "Hinzufügen einer Benutzeroberfläche"
 description: Sie haben gesehen, wie das Beispiel das Hauptspielobjekt implementiert, und das grundlegende Renderingframework kennengelernt.
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d7af6683ab2def1af62e73be008e9189190cde95
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: d7af6683ab2def1af62e73be008e9189190cde95
 # Hinzufügen einer Benutzeroberfläche
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Sie haben gesehen, wie das Beispiel das Hauptspielobjekt implementiert, und das grundlegende Renderingframework kennengelernt. Jetzt wollen wir uns ansehen, wie das Spiel dem Spieler Feedback zum Spielzustand gibt. Hier erfahren Sie, wie Sie einfache Menüoptionen und Heads-Up-Anzeigekomponenten zur 3D-Grafikpipelineausgabe hinzufügen.
 
@@ -173,7 +172,8 @@ void GameHud::Render(
 
 In diesem Code wird das für das Overlay eingerichtete Direct2D-Renderziel aktualisiert, um die Änderungen der Trefferzahl, die verbleibende Zeit und die Levelnummer zu aktualisieren. Die Rechtecke werden mit [**DrawRect**](https://msdn.microsoft.com/library/windows/desktop/dd371902)-Aufrufen und die Fadenkreuze mit zwei [**DrawLine**](https://msdn.microsoft.com/library/windows/desktop/dd371895)-Aufrufen gezeichnet.
 
-> **Hinweis**   Ihnen ist vermutlich aufgefallen, dass der Aufruf von **GameHud::Render** einen [**Windows::Foundation::Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)-Parameter verwendet, der die Größe des Hauptfenster-Rechtecks enthält. Dieser Aufruf veranschaulicht einen wichtigen Teil der Oberflächenprogrammierung: Das Abrufen der Fenstergröße in einer als DIPs (geräteunabhängige Pixel) bezeichneten Einheit, wobei ein DIP als 1/96 Zoll definiert ist. Beim Zeichnen skaliert Direct2D die Zeichnungseinheiten mithilfe der Dots per Inch (DPI)-Einstellung von Windows in tatsächliche Pixel. Ebenso geben Sie beim Zeichnen von Text mit DirectWrite DIPs anstelle von Punkten für die Schriftgröße an. DIPs werden als Gleitkommazahlen angegeben.
+> 
+            **Hinweis**   Ihnen ist vermutlich aufgefallen, dass der Aufruf von **GameHud::Render** einen [**Windows::Foundation::Rect**](https://msdn.microsoft.com/library/windows/apps/br225994)-Parameter verwendet, der die Größe des Hauptfenster-Rechtecks enthält. Dieser Aufruf veranschaulicht einen wichtigen Teil der Oberflächenprogrammierung: Das Abrufen der Fenstergröße in einer als DIPs (geräteunabhängige Pixel) bezeichneten Einheit, wobei ein DIP als 1/96Zoll definiert ist. Beim Zeichnen skaliert Direct2D die Zeichnungseinheiten mithilfe der Dots per Inch (DPI)-Einstellung von Windows in tatsächliche Pixel. Ebenso geben Sie beim Zeichnen von Text mit DirectWrite DIPs anstelle von Punkten für die Schriftgröße an. DIPs werden als Gleitkommazahlen angegeben.
 
  
 
@@ -205,7 +205,7 @@ Im Folgenden beschäftigen wir uns damit, wie das Overlay für diese fünf Zust�
 
 ### Initialisieren und Zeichnen des Overlays
 
-Die fünf expliziten Zustände habe drei Dinge gemeinsam: Sie enthalten alle ein schwarzes Rechteck in der Mitte des Bildschirms als Hintergrund, der angezeigte Text ist entweder Titeltext oder Textkörper, und der Text wird oben im Rechteck in der Schriftart „Segoe UI“ gezeichnet. Die erforderlichen Ressourcen und die Methoden zum Implementieren der Zustände sind daher sehr ähnlich.
+Die fünf expliziten Zustände habe drei Dinge gemeinsam: Sie enthalten alle ein schwarzes Rechteck in der Mitte des Bildschirms als Hintergrund, der angezeigte Text ist entweder Titeltext oder Textkörper, und der Text wird oben im Rechteck in der Schriftart „SegoeUI“ gezeichnet. Die erforderlichen Ressourcen und die Methoden zum Implementieren der Zustände sind daher sehr ähnlich.
 
 Das Beispielsspiel verfügt über vier Methoden (**GameInfoOverlay::Initialize**, **GameInfoOverlay::SetDpi**, **GameInfoOverlay::RecreateDirectXResources** und **GameInfoOverlay::RecreateDpiDependentResources**), die zum Initialisieren, Festlegen der Punkte pro Zoll, erneuten Erstellen der DirectWrite-Ressourcen (Textelemente) bzw. zum Konstruieren des Overlays für die Anzeige verwendet werden. Im Folgenden sehen Sie den Code für diese vier Methoden:
 
@@ -366,7 +366,8 @@ void GameInfoOverlay::RecreateDpiDependentResources()
 
 Die **Initialize**-Methode ruft eine Factory von dem an sie übergebenen [**ID2D1Device**](https://msdn.microsoft.com/library/windows/desktop/hh404478)-Objekt ab, die sie dann zum Erstellen eines [**ID2D1DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/hh404479)-Elements verwendet, in das das Overlayobjekt selbst zeichnen kann, und legt das **m\_dWriteFactory**-Feld auf den angegebenen [**IDWriteFactory**](https://msdn.microsoft.com/library/windows/desktop/dd368183)-Verweis fest. Außerdem legt sie den DPI-Wert für den Kontext fest. Anschließend ruft sie **RecreateDeviceResources** auf, um das Overlay zusammenzusetzen und zu zeichnen.
 
-**RecreateDeviceResources** verwendet das DirectWrite-Factoryobjekt, um Formatierer (Pinsel) für die Titel- und Textkörperzeichenfolgen zu erstellen, die im Overlay angezeigt werden. Sie erstellt einen weißen Pinsel zum Zeichnen des Texts, einen schwarzen Pinsel zum Zeichnen des Hintergrunds und einen orangefarbenen Pinsel zum Zeichnen von Aktionsmeldungen. Anschließend ruft sie **RecreateDpiDependentResources** auf, um eine Bitmap zum Zeichnen des Texts für [**ID2D1DeviceContext::CreateBitmap**](https://msdn.microsoft.com/library/windows/desktop/hh404480) vorzubereiten. Zum Schluss legt **RecreateDpiDependentResources** das Renderziel für den Direct2D-Gerätekontext auf die Bitmap fest und löscht sie, wodurch dann jedes Pixel in der Bitmap auf die Farbe Schwarz festgelegt wird.
+
+            **RecreateDeviceResources** verwendet das DirectWrite-Factoryobjekt, um Formatierer (Pinsel) für die Titel- und Textkörperzeichenfolgen zu erstellen, die im Overlay angezeigt werden. Sie erstellt einen weißen Pinsel zum Zeichnen des Texts, einen schwarzen Pinsel zum Zeichnen des Hintergrunds und einen orangefarbenen Pinsel zum Zeichnen von Aktionsmeldungen. Anschließend ruft sie **RecreateDpiDependentResources** auf, um eine Bitmap zum Zeichnen des Texts für [**ID2D1DeviceContext::CreateBitmap**](https://msdn.microsoft.com/library/windows/desktop/hh404480) vorzubereiten. Zum Schluss legt **RecreateDpiDependentResources** das Renderziel für den Direct2D-Gerätekontext auf die Bitmap fest und löscht sie, wodurch dann jedes Pixel in der Bitmap auf die Farbe Schwarz festgelegt wird.
 
 Jetzt ist nur noch der Text erforderlich, der im Overlay angezeigt wird.
 
@@ -384,9 +385,12 @@ static const D2D1_RECT_F actionRectangle = D2D1::RectF(50.0f, GameInfoOverlayCon
 
 Diese Bereiche dienen alle einem bestimmten Zweck:
 
--   **titleRectangle**: Hier wird der Titeltext gezeichnet.
--   **bodyRectangle**: Hier wird der Textkörper gezeichnet.
--   **actionRectangle**: Hier wird der Text gezeichnet, mit dem der Spieler zum Ausführen einer bestimmten Aktion aufgefordert wird. (Dieser Bereich befindet sich unten links in der Overlaybitmap.)
+-   
+            **titleRectangle**: Hier wird der Titeltext gezeichnet.
+-   
+            **bodyRectangle**: Hier wird der Textkörper gezeichnet.
+-   
+            **actionRectangle**: Hier wird der Text gezeichnet, mit dem der Spieler zum Ausführen einer bestimmten Aktion aufgefordert wird. (Dieser Bereich befindet sich unten links in der Overlaybitmap.)
 
 Unter Berücksichtigung dieser Bereiche wollen wir nun eine der zustandsspezifischen Methoden (**GameInfoOverlay::SetGameStats**) näher untersuchen und sehen, wie das Overlay gezeichnet wird.
 
@@ -442,7 +446,7 @@ void GameInfoOverlay::SetGameStats(int maxLevel, int hitCount, int shotCount)
 
 Das **GameInfoOverlay**-Objekt wurde mit dem Direct2D-Gerätekontext mithilfe von **Initialize** und **RecreateDirectXResources** initialisiert und konfiguriert. Diese Methode füllt die Titel- und Textkörperrechtecke mithilfe des Hintergrundpinsels mit der Farbe Schwarz. Sie zeichnet mit dem weißen Textpinsel den Text für die Zeichenfolge „High Score“ im Titelrechteck und eine Zeichenfolge mit den aktualisierten Spielzuständen im Textkörperrechteck.
 
-Das Aktionsrechteck wird durch einen anschließenden **GameInfoOverlay::SetAction**-Aufruf von einer Methode des **DirectXApp**-Objekts aktualisiert, das die für **SetAction** erforderlichen Informationen zum Spielzustand bereitstellt, um die passende Meldung für den Spieler anzuzeigen (z. B. „Tap to continue“).
+Das Aktionsrechteck wird durch einen anschließenden **GameInfoOverlay::SetAction**-Aufruf von einer Methode des **DirectXApp**-Objekts aktualisiert, das die für **SetAction** erforderlichen Informationen zum Spielzustand bereitstellt, um die passende Meldung für den Spieler anzuzeigen (z.B. „Tap to continue“).
 
 Das Overlay für einen Zustand wird wie folgt in der **SetGameInfoOverlay**-Methode für **DirectXApp** aufgerufen:
 

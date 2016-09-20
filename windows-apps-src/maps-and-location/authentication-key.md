@@ -11,12 +11,13 @@ ms.openlocfilehash: b7c981e071f70ab0a76d73333a94580b3c497b0e
 # Anfordern eines Kartenauthentifizierungsschlüssels
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 Ihre [universelle Windows-App](https://msdn.microsoft.com/library/windows/apps/dn894631) muss authentifiziert werden, bevor sie die [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Klasse und Kartendienste im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)-Namespace verwenden kann. Zum Authentifizieren Ihrer App müssen Sie einen Kartenauthentifizierungsschlüssel angeben. In diesem Thema wird beschrieben, wie Sie einen Kartenauthentifizierungsschlüssel vom [Bing Maps Developer Center](https://www.bingmapsportal.com/) anfordern und Ihrer App hinzufügen.
 
-**Tipp** Um mehr über das Verwenden von Karten in Ihrer App zu erfahren, laden Sie das folgende Beispiel aus den [API-Beispielen für die universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter:
+
+            **Tipp** Um mehr über das Verwenden von Karten in Ihrer App zu erfahren, laden Sie das folgende Beispiel aus den [API-Beispielen für die universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter:
 
 -   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -41,10 +42,14 @@ So erstellen Sie einen neuen Schlüssel
 
 7.  Füllen Sie das Formular **Schlüssel erstellen** aus, und klicken Sie dann auf **Erstellen**.
 
-    -   **Anwendungsname:** Der Name Ihrer Anwendung.
-    -   **Anwendungs-URL (optional):** Die URL Ihrer Anwendung.
-    -   **Schlüsseltyp:** Wählen Sie **Basic** oder **Enterprise** aus.
-    -   **Anwendungstyp:** Wählen Sie **Universelle Windows-App** für die Verwendung in Ihrer universellen Windows-App aus.
+    -   
+            **Anwendungsname:** Der Name Ihrer Anwendung.
+    -   
+            **Anwendungs-URL (optional):** Die URL Ihrer Anwendung.
+    -   
+            **Schlüsseltyp:** Wählen Sie **Basic** oder **Enterprise** aus.
+    -   
+            **Anwendungstyp:** Wählen Sie **Universelle Windows-App** für die Verwendung in Ihrer universellen Windows-App aus.
 
     So sieht das Formular aus.
 
@@ -55,7 +60,7 @@ So erstellen Sie einen neuen Schlüssel
 ## Hinzufügen des Schlüssels zur App
 
 
-Der Kartenauthentifizierungsschlüssel ist erforderlich, um die [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Klasse und Kartendienste ([**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)) in Ihrer universellen Windows-App zu verwenden. Fügen Sie ihn ggf. dem Kartensteuerelement und Kartendienstobjekten hinzu.
+Der Kartenauthentifizierungsschlüssel ist erforderlich, um die [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Klasse und Kartendienste ([**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)) in Ihrer universellenWindows-App zu verwenden. Fügen Sie ihn ggf. dem Kartensteuerelement und Kartendienstobjekten hinzu.
 
 ### So fügen Sie den Schlüssel einem Kartensteuerelement hinzu
 

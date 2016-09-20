@@ -8,7 +8,7 @@ template: detail.hbs
 isNew: true
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 463da46dc1f4e2ed5125a26b058075e7fe1faafd
+ms.openlocfilehash: c353d649529eef8361c982ff6451371a4cebc4eb
 
 ---
 
@@ -19,20 +19,17 @@ Es ist jetzt möglich, das Gamepad an einen PC anzuschließen und mit UWP-Apps z
 
 Um bei Verwendung eines Gamepads oder einer Fernbedienung eine funktionierende und praktische Benutzeroberfläche für Ihre UWP-App zu gewährleisten, sollten Sie Folgendes beachten:
 
-* [Hardwaretasten](designing-for-tv.md#hardware-buttons)
-             -
+* [Hardwaretasten](designing-for-tv.md#hardware-buttons) -
 Die Tasten und Konfigurationen von Gamepad und Fernbedienung unterscheiden sich stark.
 
-* [XY-Fokusnavigation und Interaktion](designing-for-tv.md#xy-focus-navigation-and-interaction)
-             -
+* [XY-Fokusnavigation und Interaktion](designing-for-tv.md#xy-focus-navigation-and-interaction) -
 Mithilfe der XY-Fokusnavigation können die Benutzer auf der Benutzeroberfläche Ihrer App navigieren.
 
-* [Mausmodus](designing-for-tv.md#mouse-mode)
-             -
+* [Mausmodus](designing-for-tv.md#mouse-mode) -
 Im Mausmodus kann Ihre App eine Mauseingabe emulieren, wenn die XY Fokusnavigation nicht ausreichend ist.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

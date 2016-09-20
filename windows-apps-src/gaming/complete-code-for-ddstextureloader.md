@@ -3,7 +3,6 @@ author: mtoepke
 title: "Vollständiger Code für „DDSTextureLoader“"
 description: "Vollständiger Code für eine Klasse und Methode, die eine DDS-Textur aus dem Speicher lädt."
 ms.assetid: ebaf4111-6235-0316-46cf-bc8643851493
-translationtype: Human Translation
 ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
 ms.openlocfilehash: 9a842c773ce16e1093a158426b89caf239858f05
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 9a842c773ce16e1093a158426b89caf239858f05
 # Vollständiger Code für „DDSTextureLoader“
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Vollständiger Code für eine Klasse und Methode, die eine DDS-Textur aus dem Speicher lädt.
 
@@ -30,13 +29,17 @@ Dieses Beispiel kann nicht heruntergeladen werden.
 
 ## Technologien
 
-**Programmiersprachen** – C++    
-**Programmiermodelle** – Windows-Runtime
+
+            **Programmiersprachen** – C++    
+
+            **Programmiermodelle** – Windows-Runtime
 
 ## Anforderungen
 
-**Unterstützte Mindestversion (Client)** – Windows 10                               
-**Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview
+
+            **Unterstützte Mindestversion (Client)** – Windows 10                               
+
+            **Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview
 
 
 

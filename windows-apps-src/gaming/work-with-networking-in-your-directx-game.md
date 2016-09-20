@@ -3,7 +3,6 @@ author: mtoepke
 title: "Netzwerkfunktionen für Spiele"
 description: Hier erfahren Sie, wie Sie Netzwerkfeatures entwickeln und in ein DirectX-Spiel integrieren.
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 63a40f5853740d1053449e1b1839f5b0232ce28e
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 63a40f5853740d1053449e1b1839f5b0232ce28e
 # Netzwerkfunktionen für Spiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier erfahren Sie, wie Sie Netzwerkfeatures entwickeln und in ein DirectX-Spiel integrieren.
 
@@ -61,7 +60,7 @@ Bei der Verwendung von Netzwerk-APIs können beispielsweise aus folgenden Gründ
 -   Netzwerkserver- oder Remoteendpunktfehler
 -   Andere Netzwerkfehler
 
-Ausnahmen aufgrund von Netzwerkfehlern (z. B. Unterbrechung oder Änderung der Netzwerkverbindung, Verbindungsfehler und Serverfehler) können jederzeit auftreten. Diese Fehler haben zur Folge, dass Ausnahmen ausgelöst werden. Wenn eine Ausnahme nicht von Ihrer App behandelt wird, kann sie dazu führen, dass die gesamte App von der Runtime beendet wird.
+Ausnahmen aufgrund von Netzwerkfehlern (z.B. Unterbrechung oder Änderung der Netzwerkverbindung, Verbindungsfehler und Serverfehler) können jederzeit auftreten. Diese Fehler haben zur Folge, dass Ausnahmen ausgelöst werden. Wenn eine Ausnahme nicht von Ihrer App behandelt wird, kann sie dazu führen, dass die gesamte App von der Runtime beendet wird.
 
 Beim Aufrufen der meisten asynchronen Netzwerkmethoden müssen Sie Code zum Behandeln von Ausnahmen schreiben. In manchen Fällen kann versucht werden, eine Netzwerkmethode beim Auftreten einer Ausnahme zu wiederholen, um das Problem zu beheben. In anderen Fällen muss die App ohne Netzwerkverbindung mit zuvor zwischengespeicherten Daten weiter ausgeführt werden.
 
@@ -116,7 +115,7 @@ Hinzufügen von Code zum Überprüfen einer Zeichenfolge für einen Hostnamen vo
 
 Der [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960)-Namespace enthält praktische Hilfsmethoden und Enumerationen für die Behandlung von Fehlern bei der Verwendung von Sockets. Mit ihnen lassen sich spezifische Netzwerkausnahmen in der App unterschiedlich behandeln.
 
-Ein Fehler, der für einen [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Vorgang auftritt, führt zur Auslösung einer Ausnahme. Die Ursache der Ausnahme ist ein Fehlerwert, der als **HRESULT**-Wert dargestellt wird. Mit der [**SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462)-Methode wird ein Netzwerkfehler aus einem Socketvorgang in einen [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457)-Enumerationswert konvertiert. Die meisten **SocketErrorStatus**-Enumerationswerte entsprechen einem vom systemeigenen Windows Sockets-Vorgang zurückgegebenen Fehler. Eine App kann nach bestimmten **SocketErrorStatus**-Enumerationswerten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
+Ein Fehler, der für einen [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Vorgang auftritt, führt zur Auslösung einer Ausnahme. Die Ursache der Ausnahme ist ein Fehlerwert, der als **HRESULT**-Wert dargestellt wird. Mit der [**SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462)-Methode wird ein Netzwerkfehler aus einem Socketvorgang in einen [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457)-Enumerationswert konvertiert. Die meisten **SocketErrorStatus**-Enumerationswerte entsprechen einem vom systemeigenen WindowsSockets-Vorgang zurückgegebenen Fehler. Eine App kann nach bestimmten **SocketErrorStatus**-Enumerationswerten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 
 Bei Parameterprüfungsfehlern kann eine App den **HRESULT**-Wert aus der Ausnahme auch verwenden, um ausführlichere Informationen zum zugehörigen Fehler zu erhalten. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Für die meisten Parameterüberprüfungsfehler wird der **HRESULT**-Wert **E\_INVALIDARG** zurückgegeben.
 

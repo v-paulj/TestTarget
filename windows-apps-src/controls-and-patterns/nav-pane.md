@@ -5,7 +5,6 @@ title: "Richtlinien für Navigationsbereiche"
 ms.assetid: 8FB52F5E-8E72-4604-9222-0B0EC6A97541
 label: Nav pane
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: eb5600a78d7e8cfcad98509afc4de2d117066f7e
 
@@ -93,10 +92,10 @@ Um die Anwendbarkeit einer Vielzahl von Geräten zu maximieren, wird die Nutzung
    -   Kleiner als oder gleich 640 Pixeln.
    -   Der Navigationsbereich sollte den Überlagerungsmodus verwenden, standardmäßig geschlossen.
 -   Mittelgroßes Fenster
-   -   Größer als 640 Pixel mit einer Breite, die kleiner als oder gleich 1007 Pixeln ist.
+   -   Größer als 640 Pixel mit einer Breite, die kleiner als oder gleich 1007Pixeln ist.
    -   Der Navigationsbereich sollte den Streifenmodus verwenden, standardmäßig geschlossen.
 -   Großes Fenster
-   -   Breite größer als 1007 Pixel.
+   -   Breite größer als 1007Pixel.
    -   Der Navigationsbereich sollte den Andockmodus verwenden, standardmäßig geöffnet.
 
 ## <span id="Tailoring"></span><span id="tailoring"></span><span id="TAILORING"></span>Anpassung

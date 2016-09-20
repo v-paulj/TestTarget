@@ -6,7 +6,6 @@ ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
 label: Media player
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 2dbc4e7fa227de3f37b8a337eded0004496dbe36
 
@@ -69,12 +68,13 @@ Das Layout mit doppelzeiligen Steuerelementen (siehe unten) wird für die meiste
 
 **Steuerelemente für den Systemmedientransport**
 
-Sie können das [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) auch in die Steuerelemente für den Systemmedientransport integrieren. Die Systemtransportsteuerelemente sind die Steuerelemente, die angezeigt werden, wenn Hardwaretasten für Medien betätigt werden, z. B. die Medientasten auf Tastaturen). Wenn der Benutzer die PAUSE-Taste auf einer Tastatur drückt und Ihre App die [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) unterstützt, wird die App benachrichtigt, und Sie können die entsprechende Aktion durchführen. Weitere Informationen finden Sie unter [Steuerelemente für den Systemmedientransport](https://msdn.microsoft.com/library/windows/apps/mt228338).
+Sie können das [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) auch in die Steuerelemente für den Systemmedientransport integrieren. Die Systemtransportsteuerelemente sind die Steuerelemente, die angezeigt werden, wenn Hardwaretasten für Medien betätigt werden, z.B. die Medientasten auf Tastaturen). Wenn der Benutzer die PAUSE-Taste auf einer Tastatur drückt und Ihre App die [**SystemMediaTransportControls**](https://msdn.microsoft.com/library/windows/apps/dn278677) unterstützt, wird die App benachrichtigt, und Sie können die entsprechende Aktion durchführen. Weitere Informationen finden Sie unter [Steuerelemente für den Systemmedientransport](https://msdn.microsoft.com/library/windows/apps/mt228338).
 
 ### Festlegen der Medienquelle
 Legen Sie die [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419)-Eigenschaft auf den Pfad der gewünschten Datei fest, um Dateien aus dem Netzwerk oder in die App eingebettete Dateien wiederzugeben.
 
-**Tipp**  Zum Öffnen von Dateien aus dem Internet müssen Sie die **Internet (Client)**-Funktion im App-Manifest (Package.appxmanifest) deklarieren. Weitere Informationen zum Deklarieren von Funktionen finden Sie unter [Deklaration der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
+
+            **Tipp**  Zum Öffnen von Dateien aus dem Internet müssen Sie die **Internet (Client)**-Funktion im App-Manifest (Package.appxmanifest) deklarieren. Weitere Informationen zum Deklarieren von Funktionen finden Sie unter [Deklaration der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
  
 
@@ -197,9 +197,9 @@ async private System.Threading.Tasks.Task SetLocalMedia()
 ```
 
 ### Festlegen der Posterquelle
-Mit der [**PosterSource**](https://msdn.microsoft.com/library/windows/apps/br227409)-Eigenschaft können Sie eine visuelle Darstellung für Ihr [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) bereitstellen, bevor die Medien geladen werden. Eine **PosterSource** ist ein Bild, z. B. ein Screenshot oder Filmplakat, das anstelle der Medien angezeigt wird. Die **PosterSource** wird in folgenden Fällen angezeigt:
+Mit der [**PosterSource**](https://msdn.microsoft.com/library/windows/apps/br227409)-Eigenschaft können Sie eine visuelle Darstellung für Ihr [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) bereitstellen, bevor die Medien geladen werden. Eine **PosterSource** ist ein Bild, z.B. ein Screenshot oder Filmplakat, das anstelle der Medien angezeigt wird. Die **PosterSource** wird in folgenden Fällen angezeigt:
 
--   Wenn keine gültige Quelle festgelegt ist. Beispiel: [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) ist nicht festgelegt, **Source** wurde auf **Null** festgelegt, oder die Quelle ist ungültig (z. B. wenn ein [**MediaFailed**](https://msdn.microsoft.com/library/windows/apps/br227393)-Ereignis eintritt).
+-   Wenn keine gültige Quelle festgelegt ist. Beispiel: [**Source**](https://msdn.microsoft.com/library/windows/apps/br227419) ist nicht festgelegt, **Source** wurde auf **Null** festgelegt, oder die Quelle ist ungültig (z.B. wenn ein [**MediaFailed**](https://msdn.microsoft.com/library/windows/apps/br227393)-Ereignis eintritt).
 -   Während Medien geladen werden. Beispiel: Eine gültige Quelle ist festgelegt, aber das [**MediaOpened**](https://msdn.microsoft.com/library/windows/apps/br227394)-Ereignis ist noch nicht eingetreten.
 -   Beim Streamen von Medien auf ein anderes Gerät.
 -   Wenn die Medien nur Audio enthalten.
@@ -268,7 +268,8 @@ private void MediaElement_CurrentStateChanged(object sender, RoutedEventArgs e)
     ```
 
 ### Programmgesteuertes Steuern der Medienwiedergabe
-[
+
+            [
               **MediaElement**
             ](https://msdn.microsoft.com/library/windows/apps/br242926) stellt zahlreiche Eigenschaften, Methoden und Ereignisse zum Steuern der Audio- und Videowiedergabe bereit. Eine vollständige Liste der Eigenschaften, Methoden und Ereignisse finden Sie auf der Referenzseite zu [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926).
     
@@ -285,7 +286,7 @@ Verwenden Sie die [**AudioStreamIndex**](https://msdn.microsoft.com/library/wind
 
 2.  Rufen Sie die Sprache des Audiotitels ab.
 
-    Rufen Sie die Sprache des Titels mit der [**GetAudioStreamLanguage**](https://msdn.microsoft.com/library/windows/apps/br227384)-Methode ab. Die Sprache des Titels wird durch einen [Sprachcode](http://msdn.microsoft.com/library/ms533052(vs.85).aspx) identifiziert, z. B. **"en"** für Englisch oder **"ja"** für Japanisch.
+    Rufen Sie die Sprache des Titels mit der [**GetAudioStreamLanguage**](https://msdn.microsoft.com/library/windows/apps/br227384)-Methode ab. Die Sprache des Titels wird durch einen [Sprachcode](http://msdn.microsoft.com/library/ms533052(vs.85).aspx) identifiziert, z.B. **"en"** für Englisch oder **"ja"** für Japanisch.
 
 3.  Legen Sie den aktiven Audiotitel fest.
 
@@ -318,7 +319,8 @@ private bool SetAudioLanguage(string lcid, MediaElement media)
 
 ### Aktivieren des Videorenderings im Vollfenstermodus
 
-Legen Sie die [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/dn298980)-Eigenschaft fest, um das Rendering im Vollfenstermodus zu aktivieren und zu deaktivieren. Wenn Sie das Rendering im Vollfenstermodus in Ihrer App programmgesteuert festlegen, sollten Sie immer die **IsFullWindow**-Eigenschaft verwenden, anstatt diese Einstellung manuell vorzunehmen. **IsFullWindow** stellt sicher, dass Optimierungen auf Systemebene zum Verbessern der Leistung und Akkulaufzeit durchgeführt werden. Wenn das Rendering im Vollfenstermodus nicht korrekt eingerichtet wird, werden diese Optimierungen möglicherweise nicht angewendet.
+Legen Sie die [**IsFullWindow**](https://msdn.microsoft.com/library/windows/apps/dn298980)-Eigenschaft fest, um das Rendering im Vollfenstermodus zu aktivieren und zu deaktivieren. Wenn Sie das Rendering im Vollfenstermodus in Ihrer App programmgesteuert festlegen, sollten Sie immer die **IsFullWindow**-Eigenschaft verwenden, anstatt diese Einstellung manuell vorzunehmen. 
+            **IsFullWindow** stellt sicher, dass Optimierungen auf Systemebene zum Verbessern der Leistung und Akkulaufzeit durchgeführt werden. Wenn das Rendering im Vollfenstermodus nicht korrekt eingerichtet wird, werden diese Optimierungen möglicherweise nicht angewendet.
 
 Der folgende Code erstellt ein [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/dn279244)-Steuerelement zum Umschalten des Renderings im Vollfenstermodus.
 
@@ -339,16 +341,20 @@ private void FullWindow_Click(object sender, object e)
 
 Verwenden Sie die [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br227422)-Eigenschaft, um zu ändern, wie der Videoinhalt den Container ausfüllt, in dem er sich befindet. Das Video wird dabei entsprechend dem [**Stretch**](https://msdn.microsoft.com/library/windows/apps/br242968)-Wert vergrößert bzw. verkleinert oder gestreckt. Die **Stretch**-Zustände sind mit den Bildformateinstellungen bei vielen Fernsehern vergleichbar. Sie können dieses Verhalten mit einer Schaltfläche verknüpfen und dem Benutzer die Auswahl der gewünschten Einstellung ermöglichen.
 
--   [
+-   
+            [
               **None**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) zeigt den Inhalt mit der systemeigenen Auflösung in seiner Originalgröße an.
--   [
+-   
+            [
               **Uniform**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) füllt unter Beibehaltung des Seitenverhältnisses und des Bildinhalts den größtmöglichen Platz aus. Dies kann zu horizontalen oder vertikalen schwarzen Balken an den Rändern des Videos führen. Dieser Zustand ist mit Breitbildmodi vergleichbar.
--   [
+-   
+            [
               **UniformToFill**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) füllt den gesamten Platz unter Beibehaltung des Seitenverhältnisses aus. Dies kann dazu führen, dass ein Teil des Bilds abgeschnitten wird. Dieser Zustand ist mit Vollbildmodi vergleichbar.
--   [
+-   
+            [
               **Fill**
             ](https://msdn.microsoft.com/library/windows/apps/br242968) füllt den gesamten Platz aus, ohne das Seitenverhältnis beizubehalten. Das Bild wird nicht zugeschnitten, kann aber gestreckt werden. Dieser Zustand ist mit Streckmodi vergleichbar.
 

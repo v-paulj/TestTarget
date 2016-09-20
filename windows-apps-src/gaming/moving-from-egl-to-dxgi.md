@@ -1,9 +1,8 @@
 ---
 author: mtoepke
 title: Vergleichen des EGL-Codes mit DXGI und Direct3D
-description: "Die DirectX-Grafikschnittstelle (DXGI) und verschiedene Direct3D-APIs erfüllen die gleiche Rolle wie EGL. In diesem Thema werden die DXGI und Direct3D 11 aus Sicht von EGL erläutert."
+description: "Die DirectX-Grafikschnittstelle (DXGI) und verschiedene Direct3D-APIs erfüllen die gleiche Rolle wie EGL. In diesem Thema werden die DXGI und Direct3D11 aus Sicht von EGL erläutert."
 ms.assetid: 90f5ecf1-dd5d-fea3-bed8-57a228898d2a
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 461983b646148c21aba7da2adb703510d95b0343
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 461983b646148c21aba7da2adb703510d95b0343
 # Vergleichen des EGL-Codes mit DXGI und Direct3D
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -21,11 +20,12 @@ ms.openlocfilehash: 461983b646148c21aba7da2adb703510d95b0343
 -   [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)
 -   [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)
 
-Die DirectX-Grafikschnittstelle (DXGI) und verschiedene Direct3D-APIs erfüllen die gleiche Rolle wie EGL. In diesem Thema werden die DXGI und Direct3D 11 aus Sicht von EGL erläutert.
+Die DirectX-Grafikschnittstelle (DXGI) und verschiedene Direct3D-APIs erfüllen die gleiche Rolle wie EGL. In diesem Thema werden die DXGI und Direct3D11 aus Sicht von EGL erläutert.
 
 Mit der DXGI und Direct3D werden, wie bei EGL, Methoden zum Konfigurieren von Grafikressourcen, Beschaffen eines Renderkontexts, in den von den Shadern gezeichnet werden kann, und Anzeigen der Ergebnisse in einem Fenster bereitgestellt. Für die DXGI und Direct3D sind jedoch deutlich mehr Optionen vorhanden. Zudem ist beim Portieren aus EGL das richtige Einrichten mit mehr Aufwand verbunden.
 
-> **Hinweis**   Diese Anleitung basiert auf der offenen Spezifikation der Khronos Group für EGL 1.4 unter [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). In dieser Anleitung wird nicht auf Unterschiede eingegangen, die sich auf die spezielle Syntax für andere Plattformen und Entwicklungssprachen beziehen.
+> 
+            **Hinweis**   Diese Anleitung basiert auf der offenen Spezifikation der Khronos Group für EGL1.4 unter [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). In dieser Anleitung wird nicht auf Unterschiede eingegangen, die sich auf die spezielle Syntax für andere Plattformen und Entwicklungssprachen beziehen.
 
  
 
@@ -41,12 +41,12 @@ Wie EGL auch, verfügen DXGI und Direct3D über APIs für das folgende Verhalten
 -   Beschaffen und Konfigurieren von Renderkontexten, in die gezeichnet wird
 -   Ausgeben von Befehlen in die Grafikpipeline für einen bestimmten Renderkontext
 -   Erstellen und Verwalten von Shaderressourcen und Zuordnen von Renderinhalten
--   Rendern in bestimmte Renderziele (z. B. Texturen)
+-   Rendern in bestimmte Renderziele (z.B. Texturen)
 -   Aktualisieren der Anzeigefläche des Fensters mit den Ergebnissen des Rendervorgangs mit den Grafikressourcen
 
 Sehen Sie sich die DirectX 11-Vorlage für UWP-Apps in Microsoft Visual Studio 2015 an. Sie finden darin Informationen zum grundlegenden Direct3D-Prozess für die Konfiguration der Grafikpipeline. Die darin enthaltene Renderklasse stellt eine gute Grundlage für die Einrichtung der Direct3D 11-Grafikinfrastruktur und die Konfiguration der dazugehörigen grundlegenden Ressourcen dar. Außerdem werden UWP-App-Features (Universelle Windows-Plattform) wie die Bildschirmdrehung unterstützt.
 
-Im Vergleich zu Direct3D 11 verfügt EGL über sehr wenige APIs. Die Navigation in Direct3D 11 kann sich als schwierig erweisen, wenn Sie mit den Benennungen und der "Sprache" der jeweiligen Plattform nicht vertraut sind. Unten ist als Hilfe eine einfache Übersicht angegeben.
+Im Vergleich zu Direct3D11 verfügt EGL über sehr wenige APIs. Die Navigation in Direct3D11 kann sich als schwierig erweisen, wenn Sie mit den Benennungen und der "Sprache" der jeweiligen Plattform nicht vertraut sind. Unten ist als Hilfe eine einfache Übersicht angegeben.
 
 Sehen Sie sich zuerst an, wie die grundlegenden EGL-Objekte der Direct3D-Schnittstelle zugeordnet sind:
 
@@ -69,7 +69,8 @@ Im Folgenden ist der grundlegende Prozess zum Einrichten einer einfachen Grafika
 6.  Nachdem die Pipeline ausgeführt und ein Frame in den Hintergrundpuffer gezeichnet wurde, können Sie ihn mit der [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)-Methode auf dem Bildschirm darstellen.
 
 Ausführlichere Informationen zu diesem Prozess finden Sie unter [Erste Schritte mit DirectX-Grafiken](https://msdn.microsoft.com/library/windows/desktop/hh309467). Die restlichen Informationen in diesem Artikel beziehen sich auf diverse allgemeine Schritte zur Einrichtung und Verwaltung der Grafikpipeline.
-> **Hinweis**   Windows-Desktop-Apps verfügen über unterschiedliche APIs zum Abrufen einer Direct3D-Swapchain, wie beispielsweise [**D3D11Device::CreateDeviceAndSwapChain**](https://msdn.microsoft.com/library/windows/desktop/ff476083). Sie verwenden dabei kein [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt.
+> 
+            **Hinweis**   Windows-Desktop-Apps verfügen über unterschiedliche APIs zum Abrufen einer Direct3D-Swapchain, wie beispielsweise [**D3D11Device::CreateDeviceAndSwapChain**](https://msdn.microsoft.com/library/windows/desktop/ff476083). Sie verwenden dabei kein [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt.
 
  
 
@@ -177,7 +178,7 @@ Rufen Sie die [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library
 
 Beachten Sie, dass in Direct3D 11 keine mit EGLSurface identische Abstraktion vorhanden ist. (Es gibt die [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343)-Schnittstelle, die jedoch anders verwendet wird.) Konzeptionell am ähnlichsten ist das [**ID3D11RenderTargetView** ](https://msdn.microsoft.com/library/windows/desktop/ff476582)-Objekt, mit dem wir eine Textur ([**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)) als Hintergrundpuffer zuweisen, die von der Shaderpipeline genutzt wird.
 
-Einrichten des Hintergrundpuffers für die Swapchain in Direct3D 11
+Einrichten des Hintergrundpuffers für die Swapchain in Direct3D11
 
 ``` syntax
 ComPtr<ID3D11RenderTargetView>    m_d3dRenderTargetViewWin; // scoped to renderer object
@@ -207,7 +208,7 @@ m_d3dContext->OMSetRenderTargets(
 ## Erstellen eines Renderkontexts
 
 
-In EGL 1.4 steht eine "Anzeige" (Display) für eine Reihe von Fensterressourcen. Normalerweise konfigurieren Sie eine "Fläche" für die Anzeige, indem Sie Attribute für das Anzeigeobjekt angeben und als Rückgabe eine Fläche erhalten. Sie erstellen einen Kontext zum Anzeigen der Inhalte der Fläche, indem Sie diesen Kontext erstellen und an die Fläche und die Anzeige binden.
+In EGL1.4 steht eine "Anzeige" (Display) für eine Reihe von Fensterressourcen. Normalerweise konfigurieren Sie eine "Fläche" für die Anzeige, indem Sie Attribute für das Anzeigeobjekt angeben und als Rückgabe eine Fläche erhalten. Sie erstellen einen Kontext zum Anzeigen der Inhalte der Fläche, indem Sie diesen Kontext erstellen und an die Fläche und die Anzeige binden.
 
 Der Aufruf läuft normalerweise wie folgt ab:
 
@@ -242,7 +243,7 @@ if (!eglMakeCurrent(display, surface, surface, context))
 
 In Direct3D 11 wird ein Renderkontext mithilfe eines [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/hh404575)-Objekts dargestellt. Dieses Objekt steht für den Adapter und ermöglicht das Erstellen von Direct3D-Ressourcen wie Puffer und Shader. Außerdem wird der Kontext durch das [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598)-Objekt dargestellt, mit dem Sie die Grafikpipeline verwalten und die Shader ausführen können.
 
-Seien Sie sich der Direct3D-Featureebenen bewusst! Diese werden zum Unterstützen älterer Direct3D-Hardwareplattformen verwendet (von DirectX 9.1 bis DirectX 11). Viele Plattformen, für die stromsparende Grafikhardware verwendet wird, wie etwa Tablet PCs, haben nur Zugriff auf DirectX 9.1-Features. Bei der älteren Grafikhardware werden die Version 9.1 bis 11 unterstützt.
+Seien Sie sich der Direct3D-Featureebenen bewusst! Diese werden zum Unterstützen älterer Direct3D-Hardwareplattformen verwendet (von DirectX9.1 bis DirectX11). Viele Plattformen, für die stromsparende Grafikhardware verwendet wird, wie etwa Tablet PCs, haben nur Zugriff auf DirectX 9.1-Features. Bei der älteren Grafikhardware werden die Version 9.1 bis 11 unterstützt.
 
 Erstellen eines Renderkontexts mit DXGI und Direct3D
 
@@ -285,7 +286,7 @@ D3D11CreateDevice(
 ## Zeichnen in eine Textur oder pixmap-Ressource
 
 
-Zum Zeichnen in eine Textur mit OpenGL ES 2.0 konfigurieren Sie einen Pixelpuffer (PBuffer). Nachdem Sie dafür ein EGLSurface-Element konfiguriert und erstellt haben, können Sie einen Renderkontext bereitstellen und die Shaderpipeline ausführen, um in die Textur zu zeichnen.
+Zum Zeichnen in eine Textur mit OpenGLES2.0 konfigurieren Sie einen Pixelpuffer (PBuffer). Nachdem Sie dafür ein EGLSurface-Element konfiguriert und erstellt haben, können Sie einen Renderkontext bereitstellen und die Shaderpipeline ausführen, um in die Textur zu zeichnen.
 
 Zeichnen in einen Pixelpuffer mit OpenGL ES 2.0
 
@@ -305,7 +306,7 @@ EGLSurface pBuffer = eglCreatePbufferSurface(eglDisplay, pBufConfig, EGL_TEXTURE
 
 In Direct3D 11 erstellen Sie eine [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)-Ressource und machen diese zu einem Renderziel. Konfigurieren Sie das Renderziel mithilfe von [**D3D11\_RENDER\_TARGET\_VIEW\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476201). Wenn Sie die [**ID3D11DeviceContext::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407)-Methode (oder einen ähnlichen Draw\*-Vorgang im Gerätekontext) unter Verwendung dieses Renderziels aufrufen, werden die Ergebnisse in eine Textur gezeichnet.
 
-Zeichnen in eine Textur mit Direct3D 11
+Zeichnen in eine Textur mit Direct3D11
 
 ``` syntax
 ComPtr<ID3D11Texture2D> renderTarget1;
@@ -334,7 +335,7 @@ Diese Textur kann an einen Shader übergeben werden, wenn eine Zuordnung zu eine
 
 Nachdem Sie mit dem EGLContext-Element den Puffer konfiguriert und die Daten aktualisiert haben, führen Sie daran gebundenen Shader aus. Zeichnen Sie die Ergebnisse mithilfe von glDrawElements in den Hintergrundpuffer. Sie können den Hintergrundpuffer anzeigen, indem Sie das eglSwapBuffers-Element aufrufen.
 
-OpenGL ES 2.0: Zeichnen auf den Bildschirm
+OpenGLES2.0: Zeichnen auf den Bildschirm
 
 ``` syntax
 glDrawElements(GL_TRIANGLES, renderer->numIndices, GL_UNSIGNED_INT, 0);

@@ -5,7 +5,6 @@ title: "Richtlinien für Datums- und Uhrzeitsteuerelemente"
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
 label: Calendar, date, and time controls
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: e9d8d73c35e2e600e89330fbd54aea57a815aebf
 
@@ -37,7 +36,8 @@ Uhrzeitauswahl         |![Beispiel für eine Zeitauswahl](images/time-picker-clo
 
 ### Kalenderansicht
 
-Mit **CalendarView** können Benutzer einen Kalender anzeigen und damit interagieren. Als Ansichten sind Monat, Jahr und zehn Jahre möglich. Benutzer können ein einzelnes Datum oder einen Datumsbereich auswählen. Es gibt keine Auswahloberfläche, und der Kalender ist immer sichtbar.
+
+            Mit **CalendarView** können Benutzer einen Kalender anzeigen und damit interagieren. Als Ansichten sind Monat, Jahr und zehn Jahre möglich. Benutzer können ein einzelnes Datum oder einen Datumsbereich auswählen. Es gibt keine Auswahloberfläche, und der Kalender ist immer sichtbar.
 
 Die Kalenderansicht besteht aus drei Ansichten: Monat, Jahr und Jahrzehnt. Standardmäßig ist in der Kalenderansicht zunächst die Monatsansicht geöffnet, Sie können jedoch jede Ansicht als Startansicht angeben.
 
@@ -48,7 +48,8 @@ Die Kalenderansicht besteht aus drei Ansichten: Monat, Jahr und Jahrzehnt. Stand
 
 ### Kalenderdatumsauswahl
 
-**CalendarDatePicker** ist ein Dropdownsteuerelement, das für die Auswahl eines einzelnen Datums aus einer Kalenderansicht optimiert ist, in der kontextbezogene Informationen wie der Wochentag oder die Belegung des Kalenders von Bedeutung sind. Sie können den Kalender bearbeiten, um Kontext hinzuzufügen oder verfügbare Tage einzugrenzen.
+
+            **CalendarDatePicker** ist ein Dropdownsteuerelement, das für die Auswahl eines einzelnen Datums aus einer Kalenderansicht optimiert ist, in der kontextbezogene Informationen wie der Wochentag oder die Belegung des Kalenders von Bedeutung sind. Sie können den Kalender bearbeiten, um Kontext hinzuzufügen oder verfügbare Tage einzugrenzen.
 
 Der Einstiegspunkt zeigt Platzhaltertext an, falls kein Datum festgelegt wurde. Andernfalls wird das ausgewählte Datum angezeigt. Wenn Benutzer den Einstiegspunkt auswählen, wird eine Kalenderansicht eingeblendet, damit sie ein Datum auswählen können. Die Kalenderansicht überlagert andere Elemente der Benutzeroberfläche. Die anderen Elemente der Benutzeroberfläche werden dadurch jedoch nicht „beiseitegeschoben“.
 
@@ -98,11 +99,12 @@ Die in den XAML-Datums- und Uhrzeitsteuerelementen verwendeten Datumsobjekte wei
 - C# und Visual Basic verwenden die [ **System.DateTimeOffset** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx)-Struktur, die Teil von .NET ist. 
 - C++ / CX verwendet die [ **Windows::Foundation::DateTime** ](https://msdn.microsoft.com/library/windows/apps/xaml/br205770.aspx)-Struktur. 
 
-Ein verwandtes Konzept ist die Calendar-Klasse, die beeinflusst, wie die Daten im Kontext interpretiert werden. Alle Windows-Runtime-Apps können die [ **Windows.Globalization.Calendar** ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendar.aspx)-Klasse verwenden. C# und Visual Basic-Apps können auch die [ **System.Globalization.Calendar** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.globalization.calendar.aspx)-Klasse verwenden. Diese weist eine sehr ähnliche Funktionalität auf. (Windows-Runtime-Apps können die .NET-Basisklasse Calendar verwenden, nicht jedoch die spezifischen Implementierungen wie z. B. GregorianCalendar.)
+Ein verwandtes Konzept ist die Calendar-Klasse, die beeinflusst, wie die Daten im Kontext interpretiert werden. Alle Windows-Runtime-Apps können die [ **Windows.Globalization.Calendar** ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.globalization.calendar.aspx)-Klasse verwenden. C# und Visual Basic-Apps können auch die [ **System.Globalization.Calendar** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.globalization.calendar.aspx)-Klasse verwenden. Diese weist eine sehr ähnliche Funktionalität auf. (Windows-Runtime-Apps können die .NET-Basisklasse Calendar verwenden, nicht jedoch die spezifischen Implementierungen wie z.B. GregorianCalendar.)
 
 .NET unterstützt auch einen Typ mit der Bezeichnung [ **DateTime**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetime.aspx), der implizit in [ **DateTimeOffset**](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx) konvertierbar ist. Somit könnte ein Typ „DateTime“ in .NET-Code verwendet werden, der zum Festlegen von Werten verwendet wird, bei denen es sich eigentlich um DateTimeOffset handelt. Weitere Informationen zum Unterschied zwischen DateTime und DateTimeOffset finden Sie in den Bemerkungen in der [ **DateTimeOffset** ](https://msdn.microsoft.com/library/windows/apps/xaml/system.datetimeoffset.aspx)-Klasse.
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;Eigenschaften, die Datumsobjekte verwenden, können nicht als XAML-Attributzeichenfolge festgelegt werden, da der Windows-Runtime-XAML-Parser nicht über eine Konvertierungslogik zum Konvertieren von Zeichenfolgen in Datumsangaben als DateTime/DateTimeOffset-Objekte verfügt. In der Regel legen Sie diese Werte im Code fest. Eine andere Möglichkeit besteht darin, ein Datum zu definieren, das als Datenobjekt oder im Datenkontext verfügbar ist, und anschließend die Eigenschaft als XAML-Attribut festzulegen, das auf einen [\{Binding\}-Markuperweiterung](../xaml-platform/binding-markup-extension.md)-Ausdruck verweist, der auf das Datum als Daten zugreifen kann.
 
 

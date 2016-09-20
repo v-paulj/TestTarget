@@ -20,7 +20,8 @@ ms.openlocfilehash: dd3d75c7f3dfe325324e1fe31c039cd207b68d0b
 
 Hier erfahren Sie, wie Sie den angezeigten Inhalt aktualisieren, wenn das System die App fortsetzt. Im Beispiel in diesem Thema wird ein Ereignishandler für das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis registriert.
 
-**Roadmap:** Wie hängt dieses Thema mit anderen zusammen? Weitere Informationen:
+
+            **Roadmap:** Wie hängt dieses Thema mit anderen zusammen? Weitere Informationen:
 
 -   [Roadmap für Windows-Runtime-Apps mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583)
 -   [Roadmap für Windows-Runtime-Apps mit C++](https://msdn.microsoft.com/library/windows/apps/hh700360)
@@ -96,13 +97,16 @@ Aktualisieren der angezeigten Inhalte nach einer Unterbrechung
 ## [!div class="tabbedCodeSnippets"]
 
 
-**Hinweis**  Da das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis nicht im UI-Thread ausgelöst wird, muss mit einem Verteiler der UI-Thread aufgerufen und ein Update eingefügt werden (falls Sie dies in Ihrem Handler umsetzen möchten). Anmerkungen Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum Desktop wechselt. Wenn der Benutzer wieder zu Ihrer App wechselt, wird die App fortgesetzt. Beim Fortsetzen der App haben die Variablen und Datenstrukturen den gleichen Inhalt wie vor der Unterbrechung.
+
+            **Hinweis**  Da das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis nicht im UI-Thread ausgelöst wird, muss mit einem Verteiler der UI-Thread aufgerufen und ein Update eingefügt werden (falls Sie dies in Ihrem Handler umsetzen möchten). Anmerkungen Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum Desktop wechselt. Wenn der Benutzer wieder zu Ihrer App wechselt, wird die App fortgesetzt. Beim Fortsetzen der App haben die Variablen und Datenstrukturen den gleichen Inhalt wie vor der Unterbrechung.
 
 Das System stellt die App exakt so wieder her, wie sie unterbrochen wurde. Dadurch entsteht für den Benutzer der Eindruck, die App wäre im Hintergrund weiter ausgeführt worden.
 
-> Da die App jedoch unter Umständen für einen längeren Zeitraum unterbrochen war, müssen sämtliche angezeigte Inhalte, die sich möglicherweise während der Unterbrechung geändert haben, aktualisiert werden. Zu solchen Inhalten zählen beispielsweise Newsfeeds oder der Standort des Benutzers. Wenn Ihre App keine Inhalte anzeigt, die aktualisiert werden müssen, muss das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis nicht behandelt werden. **Hinweis:** Wenn Ihre App an den Visual Studio-Debugger gebunden ist, können Sie ihr ein **Resume**-Ereignis senden.
+> Da die App jedoch unter Umständen für einen längeren Zeitraum unterbrochen war, müssen sämtliche angezeigte Inhalte, die sich möglicherweise während der Unterbrechung geändert haben, aktualisiert werden. Zu solchen Inhalten zählen beispielsweise Newsfeeds oder der Standort des Benutzers. Wenn Ihre App keine Inhalte anzeigt, die aktualisiert werden müssen, muss das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis nicht behandelt werden. 
+            **Hinweis:** Wenn Ihre App an den Visual Studio-Debugger gebunden ist, können Sie ihr ein **Resume**-Ereignis senden.
 
-> Sorgen Sie dafür, dass die Symbolleiste **Debugspeicherort** angezeigt wird, und klicken Sie auf das Dropdownelement neben dem Symbol **Anhalten**. Wählen Sie dann **Fortsetzen** aus. **Hinweis**  Für Windows Phone Store-Apps folgt auf das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis immer [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), auch wenn Ihre App derzeit angehalten ist und der Benutzer Ihre App über eine primäre Kachel oder die App-Liste neu startet.
+> Sorgen Sie dafür, dass die Symbolleiste **Debugspeicherort** angezeigt wird, und klicken Sie auf das Dropdownelement neben dem Symbol **Anhalten**. Wählen Sie dann **Fortsetzen** aus. 
+            **Hinweis**  Für Windows Phone Store-Apps folgt auf das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis immer [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), auch wenn Ihre App derzeit angehalten ist und der Benutzer Ihre App über eine primäre Kachel oder die App-Liste neu startet.
 
 ## Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden.
 

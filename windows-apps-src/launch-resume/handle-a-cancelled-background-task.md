@@ -10,7 +10,7 @@ ms.openlocfilehash: ab575415e5e6a091fb45dab49af21d0552834406
 
 # Behandeln einer abgebrochenen Hintergrundaufgabe
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 **Wichtige APIs**
 
@@ -20,7 +20,8 @@ ms.openlocfilehash: ab575415e5e6a091fb45dab49af21d0552834406
 
 Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch mithilfe des beständigen Speichers an die App meldet.
 
-> **Hinweis:**  Mit Ausnahme von Desktopgeräten können Hintergrundaufgaben bei allen Gerätefamilien beendet werden, wenn der Arbeitsspeicher des Geräts knapp wird. Wenn eine Ausnahme über wenig Arbeitsspeicher nicht angezeigt oder von der App nicht behandelt wird, wird die Hintergrundaufgabe ohne Warnung und ohne Auslösen des OnCanceled-Ereignisses beendet. Dadurch soll die Benutzerfreundlichkeit der App im Vordergrund sichergestellt werden. Entwerfen Sie die Hintergrundaufgabe so, dass dieses Szenario behandelt wird.
+> 
+            **Hinweis:**  Mit Ausnahme von Desktopgeräten können Hintergrundaufgaben bei allen Gerätefamilien beendet werden, wenn der Arbeitsspeicher des Geräts knapp wird. Wenn eine Ausnahme über wenig Arbeitsspeicher nicht angezeigt oder von der App nicht behandelt wird, wird die Hintergrundaufgabe ohne Warnung und ohne Auslösen des OnCanceled-Ereignisses beendet. Dadurch soll die Benutzerfreundlichkeit der App im Vordergrund sichergestellt werden. Entwerfen Sie die Hintergrundaufgabe so, dass dieses Szenario behandelt wird.
 
 Dieses Thema setzt voraus, dass Sie bereits eine Hintergrundaufgabenklasse erstellt haben, einschließlich der Run-Methode, die für die Hintergrundaufgabe als Einstiegspunkt verwendet wird. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie die Infos unter [Erstellen und Registrieren einer Hintergrundaufgabe](create-and-register-a-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
@@ -85,7 +86,7 @@ Diese Variable wird verwendet, um anzuzeigen, ob eine Abbruchanforderung erfolgt
 >     }
 > ```
 
-Legen Sie in der OnCanceled-Methode, die Sie in Schritt 1 erstellt haben, die Kennzeichenvariable **\_CancelRequested** auf **true** fest. Die vollständige OnCanceled-Methode des [Beispiels zur Hintergrundaufgabe]( http://go.microsoft.com/fwlink/p/?linkid=227509) legt **\_CancelRequested** auf **true** fest und gibt eine möglicherweise hilfreiche Debugmeldung aus:
+Legen Sie in der OnCanceled-Methode, die Sie in Schritt1 erstellt haben, die Kennzeichenvariable **\_CancelRequested** auf **true** fest. Die vollständige OnCanceled-Methode des [Beispiels zur Hintergrundaufgabe]( http://go.microsoft.com/fwlink/p/?linkid=227509) legt **\_CancelRequested** auf **true** fest und gibt eine möglicherweise hilfreiche Debugmeldung aus:
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -100,7 +101,7 @@ Legen Sie in der OnCanceled-Methode, die Sie in Schritt 1 erstellt haben, die K
 
 Registrieren Sie in der Run-Methode der Hintergrundaufgabe die OnCanceled-Ereignishandlermethode, bevor Sie mit der Arbeit beginnen.
 
-Verwenden Sie z. B. folgende Codezeile: [!div class="tabbedCodeSnippets"]
+Verwenden Sie z.B. folgende Codezeile: [!div class="tabbedCodeSnippets"]
 
 Behandeln des Abbruchs durch Verlassen der Run-Methode
 
@@ -202,7 +203,8 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 
 ## [!div class="tabbedCodeSnippets"]
 
-**Hinweis**  Das oben gezeigte Codebeispiel verwendet die Eigenschaft [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800), mit der der Fortschritt der Hintergrundaufgabe aufgezeichnet wird.
+
+            **Hinweis**  Das oben gezeigte Codebeispiel verwendet die Eigenschaft [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797).[**Progress**](https://msdn.microsoft.com/library/windows/apps/br224800), mit der der Fortschritt der Hintergrundaufgabe aufgezeichnet wird.
 
 Der Fortschritt wird der App mithilfe der [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Klasse gemeldet.
 
@@ -335,8 +337,9 @@ Das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=6
 * [Beispiel der Run-Methode](declare-background-tasks-in-the-application-manifest.md)
 * [Im Folgenden sind die vollständige Run-Methode und der Timerrückruf-Code aus dem [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) aufgeführt:](guidelines-for-background-tasks.md)
 * [[!div class="tabbedCodeSnippets"]](monitor-background-task-progress-and-completion.md)
-* [**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Apps für die universelle Windows-Plattform) schreiben.](register-a-background-task.md)
-* [Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).](respond-to-system-events-with-background-tasks.md)
+* [
+            **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Apps für die universelle Windows-Plattform) schreiben.](register-a-background-task.md)
+* [Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).](respond-to-system-events-with-background-tasks.md)
 * [Verwandte Themen](run-a-background-task-on-a-timer-.md)
 * [Erstellen und Registrieren einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](update-a-live-tile-from-a-background-task.md)

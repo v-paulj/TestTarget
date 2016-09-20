@@ -3,7 +3,6 @@ author: mtoepke
 title: "Audio für Spiele"
 description: "Hier erfahren Sie, wie Sie Musik und Sound entwickeln und in Ihr DirectX-Spiel integrieren. Außerdem erfahren Sie, wie Sie Audiosignale verarbeiten, um dynamischen und positionsbezogenen Sound zu erzeugen."
 ms.assetid: ab29297a-9588-c79b-24c5-3b94b85e74a8
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 98896d4966ee2adb3bf494dcba22656fc8bb6414
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 98896d4966ee2adb3bf494dcba22656fc8bb6414
 # Audio für Spiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier erfahren Sie, wie Sie Musik und Sound entwickeln und in Ihr DirectX-Spiel integrieren. Außerdem erfahren Sie, wie Sie Audiosignale verarbeiten, um dynamischen und positionsbezogenen Sound zu erzeugen.
 
@@ -29,7 +28,7 @@ Im Anschluss finden Sie einige Konzepte für die Audioprogrammierung, die in die
 -   Bei Stimmen handelt es sich um einen Submix aus mindestens zwei Signalen. XAudio2 bietet drei Arten von Stimmobjekten: Quellstimme, Submixstimme und Masterstimme. Quellstimmen verarbeiten die vom Client bereitgestellten Audiodaten. Quell- und Submixstimmen senden ihre Ausgabe an mindestens eine Submix- oder Masterstimme. Submix- und Masterstimmen mischen die Audiodaten aller Stimmen, von denen sie Daten erhalten, und verarbeiten das Ergebnis. Masterstimmen schreiben Audiodaten auf ein Audiogerät.
 -   Beim Mixing werden mehrere getrennte Stimmen – beispielsweise die Soundeffekte und die Hintergrundgeräusche einer Szene – in einem einzelnen Stream miteinander kombiniert. Beim Submixing werden mehrere getrennte Signale – beispielsweise die Soundkomponenten eines Motorengeräuschs – zu einer Stimme kombiniert.
 -   Audioformate. Musik und Soundeffekte für Ihr Spiel können in vielen unterschiedlichen digitalen Formaten gespeichert werden. Zur Auswahl stehen unkomprimierte Formate wie WAV sowie komprimierte Formate wie MP3 und OGG. Je stärker die Komprimierung eines Audiosamples (üblicherweise abzulesen an der Bitrate), desto schlechter die Klangtreue, da die Verringerung der Bitrate höhere Verluste nach sich zieht. Aufgrund der Klangtreueunterschiede bei verschiedenen Komprimierungsschemas und Bitraten empfiehlt es sich, ein wenig zu experimentieren, um eine möglichst gute Lösung für Ihr Spiel zu finden.
--   Samplingrate und Qualität. Sound kann unterschiedliche Samplingraten haben. Mit abnehmender Samplingrate verschlechtert sich die Klangtreue allerdings erheblich. Die Samplingrate für Sound in CD-Qualität beträgt 44,1 kHz (44.100 Hz). Wenn es bei Ihrem Sound nicht auf hohe Klangtreue ankommt, können Sie eine geringere Samplingrate wählen. Eine höhere Samplingrate empfiehlt sich unter Umständen für professionelle Audioanwendungen, bei einem Spiel ist sie dagegen nicht unbedingt erforderlich – es sei denn, das Spiel benötigt Sound mit professioneller Klangtreue.
+-   Samplingrate und Qualität. Sound kann unterschiedliche Samplingraten haben. Mit abnehmender Samplingrate verschlechtert sich die Klangtreue allerdings erheblich. Die Samplingrate für Sound in CD-Qualität beträgt 44,1kHz (44.100Hz). Wenn es bei Ihrem Sound nicht auf hohe Klangtreue ankommt, können Sie eine geringere Samplingrate wählen. Eine höhere Samplingrate empfiehlt sich unter Umständen für professionelle Audioanwendungen, bei einem Spiel ist sie dagegen nicht unbedingt erforderlich – es sei denn, das Spiel benötigt Sound mit professioneller Klangtreue.
 -   Soundquellen. Soundquellen in XAudio2 sind Punkte, von denen Sound ausgeht – ganz gleich, ob es sich dabei um einen Piepton im Hintergrund oder um einen fetzigen Rocksong aus einer Stereoanlage im Spiel handelt. Die Quellen werden anhand von Weltkoordinaten angegeben.
 -   Soundempfänger. Beim Soundempfänger handelt es sich häufig um den Spieler, in aufwendigeren Spielen möglicherweise auch um eine Entität mit künstlicher Intelligenz, die den von einer Soundquelle stammenden Sound verarbeitet. Dieser Sound kann per Submixing dem Audiodatenstrom zugeführt und so für den Spieler wiedergegeben werden. Alternativ können Sie den Sound aber auch verwenden, um eine bestimmte Aktion im Spiel (beispielsweise die Alarmierung einer als Empfänger markierten KI-Wache) auszulösen.
 
@@ -85,7 +84,7 @@ XAudio2 ist die Audiomixingbibliothek für DirectX, die in erster Linie zum Entw
 </tr>
 <tr class="odd">
 <td align="left"><p>[XAudio2-Audioeffekte](https://msdn.microsoft.com/library/windows/desktop/ee415756)</p></td>
-<td align="left"><p>In diesem Thema werden XAudio2-Audioeffekte behandelt, die eingehende Audiodaten empfangen und vor der Weitergabe bestimmte Vorgänge für die Daten (z. B. einen Halleffekt) ausführen.</p></td>
+<td align="left"><p>In diesem Thema werden XAudio2-Audioeffekte behandelt, die eingehende Audiodaten empfangen und vor der Weitergabe bestimmte Vorgänge für die Daten (z.B. einen Halleffekt) ausführen.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>[Streamen von Audiodaten mit XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415821)</p></td>
@@ -191,9 +190,9 @@ XAudio2 ist die Audiomixingbibliothek für DirectX, die in erster Linie zum Entw
 
  
 
-### Media Foundation-Ressourcen
+### MediaFoundation-Ressourcen
 
-Media Foundation (MF) ist eine Medienplattform zum Streamen von Audio- und Videodaten. Mithilfe der Media Foundation-APIs können Sie mit verschiedenen Algorithmen codierte und komprimierte Audio- und Videodaten streamen. Die Plattform ist nicht für Echtzeitspielszenarien konzipiert. Stattdessen bietet sie leistungsstarke Tools und breite Codec-Unterstützung für eine lineare Aufnahme und Präsentation von Audio- und Videokomponenten.
+Media Foundation (MF) ist eine Medienplattform zum Streamen von Audio- und Videodaten. Mithilfe der MediaFoundation-APIs können Sie mit verschiedenen Algorithmen codierte und komprimierte Audio- und Videodaten streamen. Die Plattform ist nicht für Echtzeitspielszenarien konzipiert. Stattdessen bietet sie leistungsstarke Tools und breite Codec-Unterstützung für eine lineare Aufnahme und Präsentation von Audio- und Videokomponenten.
 
 <table>
 <colgroup>
@@ -209,11 +208,11 @@ Media Foundation (MF) ist eine Medienplattform zum Streamen von Audio- und Video
 <tbody>
 <tr class="odd">
 <td align="left"><p>[Info über Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms696274)</p></td>
-<td align="left"><p>Dieser Abschnitt enthält allgemeine Informationen zu den Media Foundation-APIs und die verfügbaren Tools zu ihrer Unterstützung.</p></td>
+<td align="left"><p>Dieser Abschnitt enthält allgemeine Informationen zu den MediaFoundation-APIs und die verfügbaren Tools zu ihrer Unterstützung.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Media Foundation: Grundlegende Konzepte](https://msdn.microsoft.com/library/windows/desktop/ee663601)</p></td>
-<td align="left"><p>In diesem Thema werden einige Konzepte vorgestellt, die Sie vor dem Schreiben einer Media Foundation-Anwendung kennen müssen.</p></td>
+<td align="left"><p>[MediaFoundation: Grundlegende Konzepte](https://msdn.microsoft.com/library/windows/desktop/ee663601)</p></td>
+<td align="left"><p>In diesem Thema werden einige Konzepte vorgestellt, die Sie vor dem Schreiben einer MediaFoundation-Anwendung kennen müssen.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Media Foundation-Architektur](https://msdn.microsoft.com/library/windows/desktop/ms696219)</p></td>
@@ -228,7 +227,7 @@ Media Foundation (MF) ist eine Medienplattform zum Streamen von Audio- und Video
 <td align="left"><p>In diesem Thema wird die Implementierung der Audio- oder Videowiedergabe in Ihrer App beschrieben.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Unterstützte Medienformate in Media Foundation](https://msdn.microsoft.com/library/windows/desktop/dd757927)</p></td>
+<td align="left"><p>[Unterstützte Medienformate in MediaFoundation](https://msdn.microsoft.com/library/windows/desktop/dd757927)</p></td>
 <td align="left"><p>In diesem Thema sind die Medienformate aufgeführt, für die Microsoft Media Foundation systemeigene Unterstützung bietet. (Drittanbieter können zusätzliche Formate durch Erstellung benutzerdefinierter Plug-Ins unterstützen.)</p></td>
 </tr>
 <tr class="odd">
@@ -236,16 +235,16 @@ Media Foundation (MF) ist eine Medienplattform zum Streamen von Audio- und Video
 <td align="left"><p>In diesem Thema wird die Verwendung von Microsoft Media Foundation zum Codieren von Audio- und Videodaten und zum Erstellen von Mediendateien beschrieben.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Windows Media-Codecs](https://msdn.microsoft.com/library/windows/desktop/ff819508)</p></td>
-<td align="left"><p>In diesem Thema wird beschrieben, wie Sie mit den Features der Windows Media-Codecs für Audio- und Videodaten komprimierte Datenströme erzeugen und wiedergeben.</p></td>
+<td align="left"><p>[WindowsMedia-Codecs](https://msdn.microsoft.com/library/windows/desktop/ff819508)</p></td>
+<td align="left"><p>In diesem Thema wird beschrieben, wie Sie mit den Features der WindowsMedia-Codecs für Audio- und Videodaten komprimierte Datenströme erzeugen und wiedergeben.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>[Media Foundation-Programmierreferenz](https://msdn.microsoft.com/library/windows/desktop/ms704847)</p></td>
-<td align="left"><p>Dieser Abschnitt enthält Referenzinformationen für die Media Foundation-APIs.</p></td>
+<td align="left"><p>[MediaFoundation-Programmierreferenz](https://msdn.microsoft.com/library/windows/desktop/ms704847)</p></td>
+<td align="left"><p>Dieser Abschnitt enthält Referenzinformationen für die MediaFoundation-APIs.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>[Media Foundation-SDK-Beispiele](https://msdn.microsoft.com/library/windows/desktop/aa371827)</p></td>
-<td align="left"><p>In diesem Abschnitt sind Beispiel-Apps aufgeführt, die die Verwendung von Media Foundation veranschaulichen.</p></td>
+<td align="left"><p>[MediaFoundation-SDK-Beispiele](https://msdn.microsoft.com/library/windows/desktop/aa371827)</p></td>
+<td align="left"><p>In diesem Abschnitt sind Beispiel-Apps aufgeführt, die die Verwendung von MediaFoundation veranschaulichen.</p></td>
 </tr>
 </tbody>
 </table>
@@ -254,7 +253,7 @@ Media Foundation (MF) ist eine Medienplattform zum Streamen von Audio- und Video
 
 ### Medientypen der Windows-Runtime-XAML
 
-Bei Verwendung der [DirectX-XAML-Interoperabilität](https://msdn.microsoft.com/library/windows/apps/hh825871) können die Windows-Runtime-XAML-Medien-APIs für einfachere Spielszenarien mithilfe von DirectX mit C++ in die Windows Store-Apps integriert werden.
+Bei Verwendung der [DirectX-XAML-Interoperabilität](https://msdn.microsoft.com/library/windows/apps/hh825871) können die Windows-Runtime-XAML-Medien-APIs für einfachere Spielszenarien mithilfe von DirectX mit C++ in die WindowsStore-Apps integriert werden.
 
 <table>
 <colgroup>
@@ -301,7 +300,7 @@ Bei Verwendung der [DirectX-XAML-Interoperabilität](https://msdn.microsoft.com/
 -   [Übersicht über Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
 
 > **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 

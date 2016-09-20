@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 79CF3927-25DE-43DD-B41A-87E6768D5C35
 title: Optimieren des XAML-Layouts
 description: "Das Layout kann einen aufwendigen Teil einer XAML-App darstellen, sowohl hinsichtlich der CPU-Nutzung als auch der Beanspruchung des Arbeitsspeichers. Hier sind einige einfache Schritte, mit denen Sie die Layoutleistung Ihrer XAML-App verbessern können."
-translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
 ms.openlocfilehash: dbec176310896164ebc99c20aefca4c5b2b29ee9
 
@@ -130,7 +129,8 @@ Wie die folgenden Beispiele zeigen, gibt es viele Möglichkeiten, die gleiche Be
 
 Eine allgemeine UI-Anforderung ist ein Layout, in dem Elemente einander überlappen. In der Regel werden Abstand, Rand, Ausrichtung und Transformationen verwendet, um Elementen in dieser Weise zu positionieren. Das [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)-Steuerelement in XAML wurde zur Verbesserung der Layoutleistung für sich überschneidende Elemente optimiert.
 
-**Wichtig**  Um eine Verbesserung festzustellen, verwenden Sie ein einzelliges [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)-Element. Definieren Sie weder [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) noch [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
+
+            **Wichtig**  Um eine Verbesserung festzustellen, verwenden Sie ein einzelliges [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)-Element. Definieren Sie weder [**RowDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.rowdefinitions) noch [**ColumnDefinitions**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.columndefinitions).
 
 ### Beispiele
 
@@ -156,7 +156,8 @@ Eine allgemeine UI-Anforderung ist ein Layout, in dem Elemente einander überlap
 
 ## Verwenden der integrierten Rahmeneigenschaften von Bereichen
 
-[
+
+            [
               **Grid**
             ](https://msdn.microsoft.com/library/windows/apps/BR242704)-, [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635)-, [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/Dn879546)- und [**ContentPresenter**](https://msdn.microsoft.com/library/windows/apps/BR209378)-Steuerelemente besitzen integrierte Rahmeneigenschaften, mit denen Sie einen Rahmen um sie herum zeichnen können, ohne XAML ein zusätzliches [**Border**](https://msdn.microsoft.com/library/windows/apps/BR209250)-Element hinzufügen zu müssen. Die neuen Eigenschaften, die den integrierten Rahmen unterstützen sind: **BorderBrush**, **BorderThickness**, **CornerRadius** und **Padding**. Jede davon ist eine [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/BR242362)-Eigenschaft, sodass sie mit Bindungen und Animationen verwendet werden können. Sie sind als vollständiger Ersatz für ein separates **Border**-Element konzipiert.
 
@@ -175,9 +176,11 @@ Wenn Ihre Benutzeroberfläche über [**Border**](https://msdn.microsoft.com/libr
 
 Die [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706)-Klasse umfasst zwei ähnliche Ereignisse für die Reaktion auf Layoutänderungen: [**LayoutUpdated**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated) und [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged). Möglicherweise verwenden Sie eines dieser Ereignisse, um Benachrichtigungen zu empfangen, wenn ein Element während des Layouts geändert wird. Die Semantik der beiden Ereignisse unterscheiden sich, und es gibt wichtige Leistungsaspekte, die bei der Auswahl zu berücksichtigen sind.
 
-Wenn eine gute Leistung Priorität hat, ist [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged) fast immer die richtige Wahl. **SizeChanged** hat eine intuitive Semantik. Es wird während des Layouts ausgelöst, wenn die Größe des [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706)-Objekts aktualisiert wurde.
+Wenn eine gute Leistung Priorität hat, ist [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.sizechanged) fast immer die richtige Wahl. 
+            **SizeChanged** hat eine intuitive Semantik. Es wird während des Layouts ausgelöst, wenn die Größe des [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/BR208706)-Objekts aktualisiert wurde.
 
-[
+
+            [
               **LayoutUpdated**
             ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.layoutupdated) wird auch während des Layouts ausgelöst, hat aber eine globale Semantik. Es wird für jedes Element ausgelöst, sobald ein Element aktualisiert wird. Es ist üblich, Ereignishandler nur lokal zu verarbeiten, wodurch der Code häufiger als nötig ausgeführt wird. Verwenden Sie **LayoutUpdated** nur, wenn Sie wissen müssen, wann ein Element ohne Größenänderung neu angeordnet wird (was ungewöhnlich ist).
 

@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 089660A2-7CAE-4911-9994-F619C5D22287
 title: "Beispieldaten für die Entwurfsoberfläche und Prototyperstellung"
 description: "Möglicherweise ist es nicht möglich oder nicht erwünscht (z. B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt."
-translationtype: Human Translation
 ms.sourcegitcommit: 53e807c0d9de8faf2d0b5dc0e1c8e9c380e42d86
 ms.openlocfilehash: 2f7ac4b269a167c3b521fa94d77e27091fa490a8
 
@@ -11,12 +10,13 @@ ms.openlocfilehash: 2f7ac4b269a167c3b521fa94d77e27091fa490a8
 Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
 =============================================================================================
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
-**Hinweis**  Der Bedarf an Beispieldaten und deren Nutzen für Sie hängen davon ab, ob für die Bindungen die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) oder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) verwendet wird. Die in diesem Thema beschriebenen Verfahren basieren auf der Verwendung eines [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) und eignen sich deshalb nur für **{Binding}**. Wenn Sie jedoch **{x:Bind}** verwenden, zeigen die Bindungen zumindest Platzhalterwerte auf der Entwurfsoberfläche an (selbst für Elementsteuerelemente). Deshalb besteht ein geringerer Bedarf an Beispieldaten.
 
-Möglicherweise ist es nicht möglich oder nicht erwünscht (z. B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt. Es gibt mehrere Möglichkeiten, Entwurfszeit-Beispieldaten zu verwenden, damit die Steuerelemente mit Daten aufgefüllt werden (sodass Sie das Layout, die Vorlagen und andere visuelle Eigenschaften der App bearbeiten können). Beispieldaten können auch hilfreich sein und Zeit sparen, wenn Sie eine App als Skizze (oder Prototyp) erstellen. Sie können zur Laufzeit Beispieldaten in der Skizze oder im Prototyp verwenden, um Ihre Ideen zu veranschaulichen, ohne echte Livedaten nutzen zu müssen.
+            **Hinweis**  Der Bedarf an Beispieldaten und deren Nutzen für Sie hängen davon ab, ob für die Bindungen die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) oder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) verwendet wird. Die in diesem Thema beschriebenen Verfahren basieren auf der Verwendung eines [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) und eignen sich deshalb nur für **{Binding}**. Wenn Sie jedoch **{x:Bind}** verwenden, zeigen die Bindungen zumindest Platzhalterwerte auf der Entwurfsoberfläche an (selbst für Elementsteuerelemente). Deshalb besteht ein geringerer Bedarf an Beispieldaten.
+
+Möglicherweise ist es nicht möglich oder nicht erwünscht (z.B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt. Es gibt mehrere Möglichkeiten, Entwurfszeit-Beispieldaten zu verwenden, damit die Steuerelemente mit Daten aufgefüllt werden (sodass Sie das Layout, die Vorlagen und andere visuelle Eigenschaften der App bearbeiten können). Beispieldaten können auch hilfreich sein und Zeit sparen, wenn Sie eine App als Skizze (oder Prototyp) erstellen. Sie können zur Laufzeit Beispieldaten in der Skizze oder im Prototyp verwenden, um Ihre Ideen zu veranschaulichen, ohne echte Livedaten nutzen zu müssen.
 
 Festlegen des DataContext im Markup
 -----------------------------
@@ -52,7 +52,7 @@ Und so sieht die Benutzeroberfläche aus, wenn die Bindungen aufgelöst werden k
 
 ![Designfähige Benutzeroberfläche](images/displaying-data-in-the-designer-03.png)
 
-Im Dialogfeld **Datenbindung erstellen** ist nur ein Typ als Grundlage erforderlich, die Bindungen erfordern jedoch, dass die Eigenschaften mit Werten initialisiert werden. Wenn Sie zur Entwurfszeit nicht den Clouddienst in Anspruch nehmen möchten (aus Gründen der Leistung, der Kosten der Datenübertragung, des Datenschutzes usw.), kann der Initialisierungscode überprüfen, ob die App in einem Entwicklungstool (z. B. Visual Studio oder Blend für Visual Studio) ausgeführt wird. Wenn dies der Fall ist, laden Sie Beispieldaten, die nur zur Entwurfszeit verwendet werden.
+Im Dialogfeld **Datenbindung erstellen** ist nur ein Typ als Grundlage erforderlich, die Bindungen erfordern jedoch, dass die Eigenschaften mit Werten initialisiert werden. Wenn Sie zur Entwurfszeit nicht den Clouddienst in Anspruch nehmen möchten (aus Gründen der Leistung, der Kosten der Datenübertragung, des Datenschutzes usw.), kann der Initialisierungscode überprüfen, ob die App in einem Entwicklungstool (z.B. Visual Studio oder Blend für Visual Studio) ausgeführt wird. Wenn dies der Fall ist, laden Sie Beispieldaten, die nur zur Entwurfszeit verwendet werden.
 
 ``` csharp
 if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
@@ -86,11 +86,13 @@ Sie müssen lediglich eine Klasse für den zu verwendenden Befehl angeben. Der B
 </Page>
 ```
 
-Die verschiedenen xmlns-Deklarationen bedeuten, dass Attribute mit dem **d:**-Präfix nur zur Entwurfszeit interpretiert und während der Laufzeit ignoriert werden. Somit wirkt sich das **d:DataContext**-Attribut nur zur Entwurfszeit auf den Wert der Eigenschaft [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) aus und hat zur Laufzeit keine Auswirkungen. Sie können im Markup sogar sowohl **d:DataContext** als auch **DataContext** festlegen, wenn Sie dies wünschen. **d:DataContext** überschreibt zur Entwurfszeit, und **DataContext** überschreibt zur Laufzeit. Diese Überschreibungsregeln werden auf alle Entwurfszeit- und Laufzeitattribute angewendet.
+Die verschiedenen xmlns-Deklarationen bedeuten, dass Attribute mit dem **d:**-Präfix nur zur Entwurfszeit interpretiert und während der Laufzeit ignoriert werden. Somit wirkt sich das **d:DataContext**-Attribut nur zur Entwurfszeit auf den Wert der Eigenschaft [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) aus und hat zur Laufzeit keine Auswirkungen. Sie können im Markup sogar sowohl **d:DataContext** als auch **DataContext** festlegen, wenn Sie dies wünschen. 
+            **d:DataContext** überschreibt zur Entwurfszeit, und **DataContext** überschreibt zur Laufzeit. Diese Überschreibungsregeln werden auf alle Entwurfszeit- und Laufzeitattribute angewendet.
 
 Das **d:DataContext**-Attribut und alle anderen Entwurfszeitattribute sind im Thema [Designzeitattribute](http://go.microsoft.com/fwlink/p/?LinkId=272504) dokumentiert, das für Universelle Windows-Plattform (UWP)-Apps) weiterhin Gültigkeit hat.
 
-[
+
+            [
               **CollectionViewSource**
             ](https://msdn.microsoft.com/library/windows/apps/BR209833) besitzt nicht die Eigenschaft **DataContext**, jedoch die Eigenschaft **Source**. Daher gibt es eine Eigenschaft **d:Source**, mit der Sie auf die Entwurfszeit beschränkte Beispieldaten in einer **CollectionViewSource** festlegen können.
 

@@ -105,7 +105,7 @@ Speichern von App-Daten vor dem Anhalten Wenn die App das [**Suspending**](https
 ## Die App sollte die [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/br241622)-Speicher-API verwenden, um einfache Anwendungsdaten synchron zu speichern.
 
 
-[!div class="tabbedCodeSnippets"] Anmerkungen Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum Desktop bzw. auf den Startbildschirm wechselt. Wenn der Benutzer wieder zu Ihrer App wechselt, wird diese vom System fortgesetzt.
+[!div class="tabbedCodeSnippets"] Hinweise Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum Desktop bzw. auf den Startbildschirm wechselt. Wenn der Benutzer wieder zu Ihrer App wechselt, wird diese vom System fortgesetzt.
 
 Beim Fortsetzen der App haben die Variablen und Datenstrukturen den gleichen Inhalt wie vor der Unterbrechung. Das System stellt die App exakt so wieder her, wie sie unterbrochen wurde. Dadurch entsteht für den Benutzer der Eindruck, die App wäre im Hintergrund weiter ausgeführt worden. Das System versucht, die App und die dazugehörigen Daten zu speichern, während sie angehalten ist.
 
@@ -113,11 +113,14 @@ Wenn das System aber nicht über die notwendigen Ressourcen verfügt, um die App
 
 > Wenn der Benutzer wieder zu einer angehaltenen App wechselt, die beendet wurde, sendet das System ein [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis, und es sollte die App-Daten in der [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode wiederherstellen. Das System benachrichtigt eine App nicht, wenn sie beendet wird. Wenn Ihre App angehalten wird, muss sie daher die App-Daten speichern und die exklusiven Ressourcen und Dateihandles freigeben, damit diese beim erneuten Aktivieren der App nach der Beendigung wiederhergestellt werden können.
 
-> **Hinweis**  Wenn Sie asynchrone Arbeiten erledigen müssen, während die App angehalten wird, müssen Sie den Abschluss des Anhaltens bis zur Fertigstellung Ihrer Arbeit verzögern. Mithilfe der [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690)-Methode im [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688)-Objekt (verfügbar über die Ereignisargumente) können Sie den Abschluss des Anhaltens verzögern, bis Sie die [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685)-Methode für das zurückgegebene [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684)-Objekt aufgerufen haben. **Hinweis**  Zum Verbessern der Reaktionsfähigkeit des Systems in Windows 8.1 erhalten angehaltene Apps nur eine geringe Priorität beim Zugriff auf Ressourcen.
+> 
+            **Hinweis**  Wenn Sie asynchrone Arbeiten erledigen müssen, während die App angehalten wird, müssen Sie den Abschluss des Anhaltens bis zur Fertigstellung Ihrer Arbeit verzögern. Mithilfe der [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/br224690)-Methode im [**SuspendingOperation**](https://msdn.microsoft.com/library/windows/apps/br224688)-Objekt (verfügbar über die Ereignisargumente) können Sie den Abschluss des Anhaltens verzögern, bis Sie die [**Complete**](https://msdn.microsoft.com/library/windows/apps/br224685)-Methode für das zurückgegebene [**SuspendingDeferral**](https://msdn.microsoft.com/library/windows/apps/br224684)-Objekt aufgerufen haben. 
+            **Hinweis**  Zum Verbessern der Reaktionsfähigkeit des Systems in Windows 8.1 erhalten angehaltene Apps nur eine geringe Priorität beim Zugriff auf Ressourcen.
 
-> Zur Unterstützung dieser neuen Priorität wird das Timeout für den Anhaltevorgang ausgedehnt, sodass die App für normale Priorität unter Windows über einen 5-Sekunden-Timeout und unter Windows Phone über einen Timeout von 1 bis 10 Sekunden verfügt. Dieses Timeout-Fenster kann weder verlängert noch geändert werden. **Hinweis zum Debuggen mit Visual Studio:**  Visual Studio verhindert, dass Windows eine an den Debugger angeschlossene App anhält. Dies hat den Zweck, dem Benutzer das Anzeigen der Debugging-Benutzeroberfläche von Visual Studio zu ermöglichen, während die App ausgeführt wird.
+> Zur Unterstützung dieser neuen Priorität wird das Timeout für den Anhaltevorgang ausgedehnt, sodass die App für normale Priorität unter Windows über einen 5-Sekunden-Timeout und unter WindowsPhone über einen Timeout von 1 bis 10Sekunden verfügt. Dieses Timeout-Fenster kann weder verlängert noch geändert werden. 
+            **Hinweis zum Debuggen mit Visual Studio:**  Visual Studio verhindert, dass Windows eine an den Debugger angeschlossene App anhält. Dies hat den Zweck, dem Benutzer das Anzeigen der Debugging-Benutzeroberfläche von Visual Studio zu ermöglichen, während die App ausgeführt wird.
 
-## Beim Debuggen einer App können Sie mit Visual Studio ein Anhalteereignis an die App senden.
+## Beim Debuggen einer App können Sie mit VisualStudio ein Anhalteereignis an die App senden.
 
 
 * [Stellen Sie sicher, dass die Symbolleiste **Debugspeicherort** angezeigt wird, und klicken Sie dann auf das Symbol **Anhalten**.](activate-an-app.md)

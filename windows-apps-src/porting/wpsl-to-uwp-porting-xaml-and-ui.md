@@ -5,7 +5,7 @@ title: Portieren von Windows Phone Silverlight-XAML und -UI zu UWP
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7fa520443f242844cd661d70bad0fdeb2297fb1d
+ms.openlocfilehash: 344ea7a71fce744bcf90ac99ada9a6fe17568a9b
 
 ---
 
@@ -65,8 +65,7 @@ Ihre Ansichtsmodelle sind eine der Stellen, an denen imperativer Code auf UI-Typ
     return new BitmapImage(new Uri(this.CoverImagePath, UriKind.Relative));
 ```
 
-
-              **BitmapImage** befindet sich im **System.Windows.Media.Imaging**-Namespace in WindowsPhone Silverlight. Durch die Verwendung einer using-Direktive in derselben Datei kann **BitmapImage** wie im Codeausschnitt oben ohne Namespacequalifizierung verwendet werden. In einem solchen Fall können Sie in Visual Studio mit der rechten Maustaste auf den Typnamen (**BitmapImage**) klicken und der Datei mit dem Befehl **Resolve** im Kontextmenü eine neue Namespacedirektive hinzufügen. In diesem Fall wird der [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258)-Namespace hinzugefügt, in dem sich der Typ in der UWP befindet. Sie können die using-Direktive **System.Windows.Media.Imaging** entfernen. Mehr müssen Sie nicht tun, um Code wie den im obigen Codeausschnitt zu portieren. Wenn Sie fertig sind, haben Sie alle Windows Phone Silverlight-Namespaces entfernt.
+**BitmapImage** befindet sich im **System.Windows.Media.Imaging**-Namespace in WindowsPhone Silverlight. Durch die Verwendung einer using-Direktive in derselben Datei kann **BitmapImage** wie im Codeausschnitt oben ohne Namespacequalifizierung verwendet werden. In einem solchen Fall können Sie in Visual Studio mit der rechten Maustaste auf den Typnamen (**BitmapImage**) klicken und der Datei mit dem Befehl **Resolve** im Kontextmenü eine neue Namespacedirektive hinzufügen. In diesem Fall wird der [**Windows.UI.Xaml.Media.Imaging**](https://msdn.microsoft.com/library/windows/apps/br243258)-Namespace hinzugefügt, in dem sich der Typ in der UWP befindet. Sie können die using-Direktive **System.Windows.Media.Imaging** entfernen. Mehr müssen Sie nicht tun, um Code wie den im obigen Codeausschnitt zu portieren. Wenn Sie fertig sind, haben Sie alle Windows Phone Silverlight-Namespaces entfernt.
 
 In einfachen Fällen wie diesem, in denen Sie die Typen in einem alten Namespace den gleichen Typen in einem neuen Namespace zuordnen, können Sie mit dem Visual Studio-Befehl **Suchen und ersetzen** Massenänderungen an Ihrem Quellcode vornehmen. Der Befehl **Resolve** ist eine großartige Methode, um den neuen Namespace eines Typs zu ermitteln. Sie können beispielsweise auch alle Vorkommen von „System.Windows“ durch „Windows.UI.Xaml“ ersetzen. Dadurch werden im Grunde alle Direktiven und vollqualifizierten Typnamen portiert, die auf diesen Namespace verweisen.
 
@@ -194,12 +193,10 @@ WindowsPhone Silverlight-Apps verwenden in den Namespaces **Microsoft.Phone.Cont
 | ControlTiltEffect.TiltEffect-Klasse | Animationen aus der UWP-Animationsbibliothek sind in die Standardstile der allgemeinen Steuerelemente integriert. Siehe [Animieren von Zeigeraktionen](https://msdn.microsoft.com/library/windows/apps/xaml/jj649432). |
 | LongListSelector mit gruppierten Daten | Das WindowsPhone Silverlight-Steuerelement „LongListSelector“ funktioniert auf zwei Arten, die zusammen verwendet werden können. Erstens kann es nach einem Schlüssel gruppierte Daten anzeigen, z. B. eine nach dem Anfangsbuchstaben gruppierte Liste mit Namen. Zweitens kann es zwischen zwei semantischen Ansichten „zoomen“: der gruppierten Liste von Elementen (z.B. Namen) und einer Liste, die nur die Gruppenschlüssel selbst enthält (z.B. Anfangsbuchstaben). Bei der UWP können Sie gruppierte Daten mit den [Richtlinien für Listenansicht- und Rasteransichtsteuerelementen anzeigen](https://msdn.microsoft.com/library/windows/apps/mt186889). |
 | LongListSelector mit flachen Daten | Aus Leistungsgründen empfehlen wir bei sehr langen Listen die Verwendung von „LongListSelector“ anstelle eines WindowsPhone Silverlight-Listenfelds auch für flache, nicht gruppierte Daten. In einer UWP-App werden [GridView](https://msdn.microsoft.com/library/windows/apps/br242705) für lange Elementlisten bevorzugt, unabhängig davon, ob die Daten gruppiert werden können. |
-| Panorama | Das Windows Phone Silverlight Panorama-Steuerelement entspricht den [Richtlinien für Hub-Steuerelemente in Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/dn449149) und Richtlinien für das Hub-Steuerelement. <br/> Beachten Sie, dass ein Panorama-Steuerelement aus dem letzten Abschnitt in den ersten Abschnitt umbricht und dass das Hintergrundbild im Parallaxmodus relativ zu den Abschnitten verschoben wird. 
-              [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843)-Abschnitte brechen nicht um, und es wird kein Parallaxmodus verwendet. |
+| Panorama | Das Windows Phone Silverlight Panorama-Steuerelement entspricht den [Richtlinien für Hub-Steuerelemente in Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/dn449149) und Richtlinien für das Hub-Steuerelement. <br/> Beachten Sie, dass ein Panorama-Steuerelement aus dem letzten Abschnitt in den ersten Abschnitt umbricht und dass das Hintergrundbild im Parallaxmodus relativ zu den Abschnitten verschoben wird. [Hub](https://msdn.microsoft.com/library/windows/apps/dn251843)-Abschnitte brechen nicht um, und es wird kein Parallax-Modus verwendet. |
 | Pivot | Das UWP-Äquivalent des WindowsPhone Silverlight Pivot-Steuerelements ist [Windows.UI.Xaml.Controls.Pivot](https://msdn.microsoft.com/library/windows/apps/dn608241). Es ist für alle Gerätefamilien verfügbar. |
 
-
-              **Hinweis**   Der PointerOver-Ansichtszustand ist für benutzerdefinierte Stile/Vorlagen in Windows10-Apps relevant, nicht jedoch für WindowsPhone Silverlight-Apps. Es gibt auch andere Gründe, warum Ihre vorhandenen benutzerdefinierten Stile/Vorlagen unter Umständen für Windows10-Apps ungeeignet sind, z.B. die von Ihnen verwendeten Systemressourcenschlüssel, Änderungen an den verwendeten Ansichtszustandgruppen und vorgenommene Leistungsverbesserungen für die standardmäßigen Windows10-Stile/-Vorlagen. Wir empfehlen Ihnen, eine unbenutzte Kopie einer Windows 10-Standardvorlage eines Steuerelements zu bearbeiten und Ihre Stil- und Vorlagenanpassung darauf neu anzuwenden.
+**Hinweis**   Der PointerOver-Ansichtszustand ist für benutzerdefinierte Stile/Vorlagen in Windows10-Apps relevant, nicht jedoch für WindowsPhone Silverlight-Apps. Es gibt auch andere Gründe, warum Ihre vorhandenen benutzerdefinierten Stile/Vorlagen unter Umständen für Windows10-Apps ungeeignet sind, z.B. die von Ihnen verwendeten Systemressourcenschlüssel, Änderungen an den verwendeten Ansichtszustandgruppen und vorgenommene Leistungsverbesserungen für die standardmäßigen Windows10-Stile/-Vorlagen. Wir empfehlen Ihnen, eine unbenutzte Kopie einer Windows 10-Standardvorlage eines Steuerelements zu bearbeiten und Ihre Stil- und Vorlagenanpassung darauf neu anzuwenden.
 
 Weitere Informationen zu UWP-Steuerelementen finden Sie unter [Steuerelemente nach Funktion](https://msdn.microsoft.com/library/windows/apps/mt185405), [Liste der Steuerelemente](https://msdn.microsoft.com/library/windows/apps/mt185406) und [Richtlinien für Steuerelemente](https://msdn.microsoft.com/library/windows/apps/dn611856).
 
@@ -372,8 +369,7 @@ Da der Wert für die feste Breite der Anzeigepixel eines Telefonbildschirms bish
 
 Damit Ihre App auf allen Displays optimal funktioniert, empfiehlt es sich, die einzelnen Bitmap-Ressourcen in verschiedenen Größen zu erstellen, die jeweils für einen bestimmten Skalierungsfaktor geeignet sind. Durch die Bereitstellung von Ressourcen mit einer Skalierung von 100 %, 200 % und 400 % (in dieser Prioritätsreihenfolge) erhalten Sie in den meisten Fällen auch bei allen Skalierungsfaktoren dazwischen hervorragende Ergebnisse.
 
-
-              **Hinweis**  Wenn Sie aus irgendeinem Grund Ressourcen nicht in mehr als einer Größe erstellen können, erstellen Sie Ressourcen für die Skalierung von 100%. In Microsoft Visual Studio bietet die Standardprojektvorlage für UWP-Apps Brandingressourcen (Bilder für Kacheln und Logos) in nur einer Größe, jedoch nicht mit einer Skalierung von 100 %. Befolgen Sie bei der Erstellung von Ressourcen für Ihre eigene App die Informationen in diesem Abschnitt, stellen Sie die Ressourcen mit einer Skalierung von 100%, 200% und 400% bereit, und verwenden Sie Ressourcenpakete.
+**Hinweis**  Wenn Sie aus irgendeinem Grund keine Assets in mehr als einer Größe erstellen können, erstellen Sie Assets in die Skalierung von 100%. In Microsoft Visual Studio bietet die Standardprojektvorlage für UWP-Apps Brandingressourcen (Bilder für Kacheln und Logos) in nur einer Größe, jedoch nicht mit einer Skalierung von 100 %. Befolgen Sie bei der Erstellung von Ressourcen für Ihre eigene App die Informationen in diesem Abschnitt, stellen Sie die Ressourcen mit einer Skalierung von 100%, 200% und 400% bereit, und verwenden Sie Ressourcenpakete.
 
 Falls Sie komplexe Grafiken verwenden, sollten Sie mehr Skalierungen bereitstellen. Wenn Sie mit Vektorgrafiken beginnen, ist es relativ einfach, qualitativ hochwertige Ressourcen für beliebige Skalierungsfaktoren zu generieren.
 
@@ -399,6 +395,6 @@ Das nächste Thema ist [Portieren: E/A, Gerät und App-Modell](wpsl-to-uwp-input
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

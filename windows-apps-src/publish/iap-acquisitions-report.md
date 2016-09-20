@@ -3,7 +3,6 @@ author: jnHs
 Description: "Im Bericht IAP-Käufe im Windows Dev Center-Dashboard können Sie sehen, wie viele IAPs Sie verkauft haben. Außerdem können Sie demografische und plattformspezifische Details anzeigen."
 title: "Bericht zu IAP-Käufen"
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3191df12ca5b59f545cf250c3e669b30192af6bc
 
@@ -16,16 +15,20 @@ Im Bericht **IAP-Käufe** im Windows Dev Center-Dashboard können Sie sehen, wie
 
 In diesem Bericht steht „IAP-Kauf“ für einen Kunden, der ein IAP von Ihnen erworben hat. Wenn ein Kunde mehrere Käufe desselben konsumierbaren IAPs getätigt hat, werden diese als separate IAP-Käufe aufgeführt.
 
-> **Wichtig**  Im Bericht **IAP-Käufe** sind keine Daten über Erstattungen, Rückbuchungen, Rückvergütungen usw. enthalten. Um die Erträge aus Ihren Apps zu schätzen, besuchen Sie [Auszahlungszusammenfassung](payout-summary.md). Klicken Sie im Abschnitt **Reserviert** auf den Link **Reservierte Transaktionen herunterladen**.
+> 
+            **Wichtig**  Im Bericht **IAP-Käufe** sind keine Daten über Erstattungen, Rückbuchungen, Rückvergütungen usw. enthalten. Um die Erträge aus Ihren Apps zu schätzen, besuchen Sie [Auszahlungszusammenfassung](payout-summary.md). Klicken Sie im Abschnitt **Reserviert** auf den Link **Reservierte Transaktionen herunterladen**.
 
 ## Anwenden von Filtern
 
 
 Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten auf dieser Seite nach Datumsbereich und/oder Gerätetyp zu filtern. Sie können auch Daten nach einem bestimmten IAP filtern.
 
--   **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
--   **IAP**: Der Standardfilter ist **Alle IAPs**. Wenn Sie Daten zu Käufen nur für einen Ihrer IAPs anzeigen möchten, können Sie hier einen bestimmten angeben.
--   **Gerätetyp**: Die Standardeinstellung ist **Alle Geräte**. Wenn Daten für IAP-Käufe nur für einen bestimmten Gerätetyp angezeigt werden sollen, können Sie hier einen bestimmten auswählen.
+-   
+            **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
+-   
+            **IAP**: Der Standardfilter ist **Alle IAPs**. Wenn Sie Daten zu Käufen nur für einen Ihrer IAPs anzeigen möchten, können Sie hier einen bestimmten angeben.
+-   
+            **Gerätetyp**: Die Standardeinstellung ist **Alle Geräte**. Wenn Daten für IAP-Käufe nur für einen bestimmten Gerätetyp angezeigt werden sollen, können Sie hier einen bestimmten auswählen.
 
 Die Informationen in den unten angezeigten Diagrammen beziehen sich auf den unter **Filter anwenden** ausgewählten Zeitraum.
 
@@ -57,7 +60,8 @@ Das Diagramm **Märkte** zeigt die Gesamtanzahl von IAP-Käufen im ausgewählten
 
 Das Diagramm **Kundendemografie** zeigt demografische Informationen zu den Personen, die Ihre App erworben haben. Sie können sehen, wie viele Käufe (im ausgewählten Zeitraum) von Personen einer bestimmten Altersgruppe getätigt wurden und welches Geschlecht die Käufer hatten.
 
-> **Hinweis** Einige Kunden haben festgelegt, dass sie diese Informationen nicht freigeben möchten. Falls die Altergruppe oder das Geschlecht nicht ermittelt werden konnten, wird der Kauf als **Unbekannt** kategorisiert.
+> 
+            **Hinweis** Einige Kunden haben festgelegt, dass sie diese Informationen nicht freigeben möchten. Falls die Altergruppe oder das Geschlecht nicht ermittelt werden konnten, wird der Kauf als **Unbekannt** kategorisiert.
 
 ## Betriebssystemversion
 

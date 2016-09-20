@@ -3,8 +3,8 @@ title: "Verbinden mit Identitätsanbietern über Web Account Manager"
 description: "In diesem Artikel wird beschrieben, wie Sie AccountsSettingsPane verwenden, um Ihre App für die universelle Windows-Plattform (UWP) mit externen Identitätsanbietern wie Microsoft oder Facebook zu verbinden. Dazu verwenden Sie die neuen Web Account Manager-APIs in Windows 10."
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: c9f6a0183edc3c01566311360417c256329ef904
-ms.openlocfilehash: 6ab12d6da9c4858cf6ab16d4143cf073bb0cb275
+ms.sourcegitcommit: f3cdb187ec4056d4c7db6acde471b0bc91c78390
+ms.openlocfilehash: 093ca8906853121bbf33a729c523717d26cb7b0d
 
 ---
 # Verbinden mit Identitätsanbietern über Web Account Manager
@@ -174,7 +174,7 @@ Informationen zu OneDrive finden Sie unter (Authentifizierung und Anmeldung bei 
 
 ## Verwenden des Tokens
 
-Die RequestTokenAsync-Methode gibt ein WebTokenRequestResult-Objekt zurück, das die Ergebnisse für Ihre Anforderung enthält. Wenn die Anforderung erfolgreich war, enthält sie ein Token.  
+Die RequestTokenAsync-Methode sendet ein WebTokenRequestResult-Objekt zurück, das die Ergebnisse für Ihre Anforderung enthält. Wenn die Anforderung erfolgreich war, enthält sie ein Token.  
 
 ```C#
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
@@ -188,6 +188,8 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
     }
 }
 ```
+
+> Hinweis: Wenn Sie eine Fehlermeldung erhalten, wenn ein Token angefordert haben, stellen Sie sicher, dass Sie Ihre App im Store wie in Schritt 1 beschrieben zugeordnet haben. Ihre App wird nicht in der Lage sein, ein Token abzurufen, wenn Sie diesen Schritt übersprungen haben. 
 
 Sobald Sie im Besitz des Tokens sind, können Sie darüber die API Ihres Anbieters aufrufen. Im folgenden Code werden Microsoft Live-APIs aufgerufen, um grundlegende Informationen zum Benutzer zu erhalten und sie auf der Benutzeroberfläche anzuzeigen. 
 
@@ -388,6 +390,6 @@ Einstellungsbefehle lassen sich grundsätzlich überall verwenden. Es wird jedoc
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ title: Kompositionspinsel
 description: "Ein Pinsel zeichnet den Bereich eines Visual-Objekts mit der zugehörigen Ausgabe. Verschiedene Pinsel haben unterschiedliche Ausgabetypen."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: a9f30ca041d320798c7ace596bd9be37f9712129
+ms.openlocfilehash: 11989aafb86d280b93eed7c2e3f016b5914b15ab
 
 ---
 # Kompositionspinsel
@@ -14,15 +14,9 @@ ms.openlocfilehash: a9f30ca041d320798c7ace596bd9be37f9712129
 
 Ein Pinsel zeichnet den Bereich eines [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Objekts mit der zugehörigen Ausgabe. Verschiedene Pinsel haben unterschiedliche Ausgabetypen. Die Composition-API bietet drei Pinseltypen:
 
--   
-              [
-              **CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) zeichnet ein Visual-Element mit einer Volltonfarbe.
--   
-              [
-              **CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) zeichnet ein Visual-Element mit den Inhalten einer Kompositionsoberfläche.
--   
-              [
-              **CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406) zeichnet ein Visual-Element mit den Inhalten einer Kompositionseffekts.
+-   [**CompositionColorBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589399) zeichnet ein Visual-Element mit einer Volltonfarbe.
+-   [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) zeichnet ein Visual-Element mit den Inhalten einer Kompositionsoberfläche.
+-   [**CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406) zeichnet ein Visual-Element mit den Inhalten eines Kompositionseffekts.
 
 Alle Pinsel erben von [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398). Die geräteabhängigen Ressourcen werden direkt oder indirekt durch [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) erstellt. Zwar sind Pinsel geräteunabhängig, aber [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) und [**CompositionEffectBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589406) zeichnen ein [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Objekt mit geräteabhängigen Inhalten einer Kompositionsoberfläche.
 
@@ -102,9 +96,7 @@ visual.Brush = _surfaceBrush;
 
 Manchmal füllt der Inhalt der [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Dn706819) für [**CompositionSurfaceBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589415) die Bereiche des zu zeichnenden visuellen Elements nicht vollständig. In diesem Fall verwendet die Composition-API die Moduseinstellungen [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx), [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) und [**Stretch**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.stretch) des Pinsels, um den restlichen Bereich auszufüllen.
 
--   
-              [
-              **HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) und [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) sind vom Typ „float“ und können verwendet werden, um die Position des Pinsels innerhalb der visuellen Grenzen zu steuern.
+-   [**HorizontalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.horizontalalignmentratio.aspx) und [**VerticalAlignmentRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.composition.compositionsurfacebrush.verticalalignmentratio) sind vom Typ „float“ und können verwendet werden, um die Position des Pinsels innerhalb der visuellen Grenzen zu steuern.
     -   Der Wert 0,0 richtet die linke obere Ecke des Pinsels an der linken oberen Ecke des visuellen Elements aus.
     -   Der Wert 0,5 richtet die Mitte des Pinsels an der Mitte des visuellen Elements aus.
     -   Der Wert1,0 richtet die rechte untere Ecke des Pinselelements an der rechten unteren Ecke des visuellen Elements aus.
@@ -124,6 +116,6 @@ Manchmal füllt der Inhalt der [**ICompositionSurface**](https://msdn.microsoft.
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

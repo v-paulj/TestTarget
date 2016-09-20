@@ -8,7 +8,6 @@ title: XAML-Designressourcen
 ms.assetid: 41B87DBF-E7A2-44E9-BEBA-AF6EEBABB81B
 label: XAML theme resources
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: fa0d0881eee0f87b549a7d053e75882ffd2afa6e
 
@@ -35,7 +34,8 @@ Für eine [{StaticResource}-Markuperweiterung](../xaml-platform/staticresource-m
 
 Jede Designressource ist Teil der XAML-Datei „themeresources.xaml“. Zu Designzwecken steht „themeresources.xaml“ im Order „\\(Programme)\\Windows Kits\\10\\DesignTime\\CommonConfiguration\\Neutral\\UAP\\&lt;SDK version&gt;\\Generic“ aus einer Windows Software Development Kit (SDK)-Installation zur Verfügung. Die Ressourcenverzeichnisse in „themeresources.xaml“ werden auch in „generic.xaml“ im selben Verzeichnis reproduziert.
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;Die Windows-Runtime verwendet diese physischen Dateien nicht für die Runtime-Suche. Daher befinden sie sich in einem speziellen DesignTime-Ordner und werden nicht standardmäßig in Apps kopiert. Stattdessen sind die Ressourcenverzeichnisse als Teil der Windows-Runtime selbst im Speicher vorhanden, und die XAML-Ressource Ihrer App verweist auf Designressourcen (oder Systemressourcen), die dort zu Laufzeit aufgelöst werden.
 
  ## Richtlinien für die Verwendung von Designressourcen
@@ -51,9 +51,10 @@ NICHT EMPFOHLEN:
 
 -   Verwenden Sie die [{ThemeResource}-Markuperweiterung](../xaml-platform/themeresource-markup-extension.md) nicht in Ihren Ressourcendefinitionen in [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807). Verwenden Sie stattdessen die [{StaticResource}-Markuperweiterung](../xaml-platform/staticresource-markup-extension.md).
 
-    AUSNAHME: Sie können die [{ThemeResource}-Markuperweiterung](../xaml-platform/themeresource-markup-extension.md) verwenden, um auf Ressourcen zu verweisen, die in Bezug auf das App-Design in [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807) agnostisch sind. Beispiele für diese Ressourcen sind Akzentfarbenressourcen wie `SystemAccentColor` oder Systemfarbenressourcen, die normalerweise das Präfix „SystemColor“ haben, z. B. `SystemColorButtonFaceColor`.
+    AUSNAHME: Sie können die [{ThemeResource}-Markuperweiterung](../xaml-platform/themeresource-markup-extension.md) verwenden, um auf Ressourcen zu verweisen, die in Bezug auf das App-Design in [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/br208807) agnostisch sind. Beispiele für diese Ressourcen sind Akzentfarbenressourcen wie `SystemAccentColor` oder Systemfarbenressourcen, die normalerweise das Präfix „SystemColor“ haben, z.B. `SystemColorButtonFaceColor`.
 
-**Achtung**  Wenn Sie diesen Richtlinien nicht folgen, kann ein unerwartetes Verhalten im Zusammenhang mit Designs in Ihrer App auftreten. Weitere Informationen finden Sie im Abschnitt [Problembehandlung für Designressourcen](#troubleshooting_theme_resources).
+
+            **Achtung**  Wenn Sie diesen Richtlinien nicht folgen, kann ein unerwartetes Verhalten im Zusammenhang mit Designs in Ihrer App auftreten. Weitere Informationen finden Sie im Abschnitt [Problembehandlung für Designressourcen](#troubleshooting_theme_resources).
  
 
 ## Die XAML-Farbskala und designabhängige Pinsel
@@ -102,11 +103,15 @@ Diese Tabelle enthält die systemweiten Farben, die XAML als Ressourcenobjekte a
 
 | Schlüssel                           | Name der erleichterten Bedienung            | Einfacher Name für HighContrast | Anfänglicher Standardwert |
 |-------------------------------|--------------------------------|--------------------------|-----------------|
-| SystemColorButtonFaceColor    | **Text der Schaltfläche** (Hintergrund)   | Hintergrund               | \#FFF0F0F0      |
-| SystemColorButtonTextColor    | **Text der Schaltfläche** (Vordergrund)   | Vordergrund               | \#FF000000      |
+| SystemColorButtonFaceColor    | 
+            **Text der Schaltfläche** (Hintergrund)   | Hintergrund               | \#FFF0F0F0      |
+| SystemColorButtonTextColor    | 
+            **Text der Schaltfläche** (Vordergrund)   | Vordergrund               | \#FF000000      |
 | SystemColorGrayTextColor      | **Deaktivierter Text**              | Deaktiviert                 | \#FF6D6D6D      |
-| SystemColorHighlightColor     | **Ausgewählter Text** (Hintergrund) | Hervorheben                | \#FF3399FF      |
-| SystemColorHighlightTextColor | **Ausgewählter Text** (Vordergrund) | HighlightAlt             | \#FFFFFFFF      |
+| SystemColorHighlightColor     | 
+            **Ausgewählter Text** (Hintergrund) | Hervorheben                | \#FF3399FF      |
+| SystemColorHighlightTextColor | 
+            **Ausgewählter Text** (Vordergrund) | HighlightAlt             | \#FFFFFFFF      |
 | SystemColorHotlightColor      | **Hyperlinks**                 | Hyperlink                | \#FF0066CC      |
 | SystemColorWindowColor        | **Hintergrund**                 | PageBackground           | \#FFFFFFFF      |
 | SystemColorWindowTextColor    | **Text**                       | PageText                 | \#FF000000      |
@@ -122,7 +127,8 @@ Weitere Informationen zum Unterstützen von Designs mit hohem Kontrast finden Si
 
 Neben der Systemdesignfarben mit hohem Kontrast wird die Akzentfarbe des Systems als spezielle Ressource mit dem Schlüssel `SystemAccentColor` bereitgestellt. Zur Laufzeit ruft diese Ressource die Farbe ab, die der Benutzer als Akzentfarbe in den Windows-Einstellungen zur Personalisierung angegeben hat.
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;Es ist möglich, die Systemfarbressourcen für hohen Kontrast und Akzentfarbe durch Erstellen von Ressourcen mit demselben Namen zu überschreiben, aber es wird empfohlen, die Farbauswahl des Benutzers zu respektieren, insbesondere bei Einstellungen für hohen Kontrast.
 
 ### Designabhängige Pinsel
@@ -151,7 +157,8 @@ Sie können das `SystemControl[Simple HighContrast name][Simple light/dark name]
 For many examples of how the brushes are used in the XAML control templates, see the [Default control styles and templates](default-control-styles-and-templates.md).
 -->
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;Nicht jede Kombination aus \[*Einfacher Name für HighContrast*\]\[*Einfacher Name für hell/dunkel*\] wird als Pinselressource bereitgestellt.
 
 ## Die XAML-Typhierarchie
@@ -166,7 +173,8 @@ Die Stile sehen bei Anwendung auf ein [**TextBlock**](https://msdn.microsoft.com
 
 ### BaseTextBlockStyle
 
-**TargetType**: [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)
+
+            **TargetType**: [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)
 
 Stellt die gemeinsamen Eigenschaften für alle anderen [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Textcontainerstile bereit.
 
@@ -276,7 +284,8 @@ Stellt die gemeinsamen Eigenschaften für alle anderen [**TextBlock**](https://m
 
 ### BaseRichTextBlockStyle
 
-**TargetType**: [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)
+
+            **TargetType**: [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)
 
 Stellt die gemeinsamen Eigenschaften für alle anderen [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)-Containerstile bereit.
 
@@ -313,7 +322,8 @@ Stellt die gemeinsamen Eigenschaften für alle anderen [**RichTextBlock**](https
 </Style>
 ```
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;  Die [**RichTextBlock**](https://msdn.microsoft.com/library/windows/apps/br227565)-Stile verfügen nicht über alle Texthierarchiestile von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652). Dies liegt hauptsächlich daran, dass das blockbasierte Dokumentobjektmodell für **RichTextBlock** das Festlegen von Attributen für die einzelnen Textelemente erleichtert. Außerdem entsteht, wenn Sie [**TextBlock.Text**](https://msdn.microsoft.com/library/windows/apps/br209676) mit der XAML-Inhaltseigenschaft festlegen, eine Situation, in der kein zu formatierendes Textelement vorhanden ist und Sie daher den Container formatieren müssen. Das ist für **RichTextBlock** kein Problem, da sein Textinhalt immer in spezifischen Textelementen wie [**Paragraph**](https://msdn.microsoft.com/library/windows/apps/br244503) enthalten sein muss, in denen Sie XAML-Stile für die Kopfzeile, die Seitenunterüberschrift und ähnliche Texthierarchiedefinitionen festlegen können.
 
 ## Sonstige benannte Stile
@@ -322,7 +332,8 @@ Es gibt eine Reihe von weiteren [**Style**](https://msdn.microsoft.com/library/w
 
 ### TextBlockButtonStyle
 
-**TargetType**: [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736)
+
+            **TargetType**: [**ButtonBase**](https://msdn.microsoft.com/library/windows/apps/br227736)
 
 Wenden Sie diesen Stil auf eine [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) an, wenn Sie Text anzeigen müssen, auf den ein Benutzer klicken kann, um Aktionen auszuführen. Der Text wird mithilfe der aktuellen Akzentfarbe formatiert, um ihn als interaktiv hervorzuheben, und weist Fokusrechtecke auf, die gut für Text geeignet sind. Im Gegensatz zum impliziten Stil eines [**HyperlinkButton**](https://msdn.microsoft.com/library/windows/apps/br242739)-Elements unterstreicht der **TextBlockButtonStyle** den Text nicht.
 
@@ -341,7 +352,8 @@ Es sieht ungefähr so aus:
 
 ### NavigationBackButtonNormalStyle
 
-**TargetType**: [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)
+
+            **TargetType**: [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)
 
 Dieser [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) stellt eine vollständige Vorlage für ein [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)-Element bereit, bei der es sich um die Navigationsschaltfläche „Zurück“ für eine Navigations-App handeln kann. Sie enthält Designressourcenverweise, durch die diese Schaltfläche die Symbolschriftart Segoe MDL2 verwendet, sodass Sie einen [**Symbol**](https://msdn.microsoft.com/library/windows/apps/dn252842)-Wert als Inhalt anstelle von Text verwenden sollten. Die Standardgröße ist 40 x 40 Pixel. Um den Stil anzupassen, können Sie die Eigenschaften [**Height**](https://msdn.microsoft.com/library/windows/apps/br208718), [**Width**](https://msdn.microsoft.com/library/windows/apps/br208751), [**FontSize**](https://msdn.microsoft.com/library/windows/apps/br209406) und andere für Ihr **Button**-Element explizit festlegen oder einen abgeleiteten Stil mithilfe von [**BasedOn**](https://msdn.microsoft.com/library/windows/apps/br208852) erstellen.
 
@@ -358,7 +370,8 @@ Es sieht ungefähr so aus:
 
 ### NavigationBackButtonSmallStyle
 
-**TargetType**: [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)
+
+            **TargetType**: [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)
 
 Dieser [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) stellt eine vollständige Vorlage für ein [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)-Element bereit, bei der es sich um die Navigationsschaltfläche „Zurück“ für eine Navigations-App handeln kann. Sie ähnelt **NavigationBackButtonNormalStyle**, aber die Größe beträgt 30 x 30 Pixel.
 

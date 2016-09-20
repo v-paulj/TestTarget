@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: "Geräteportal für HoloLens"
 description: "Hier erfahren Sie, wie Sie mit dem Windows Device Portal für HoloLens Ihr HoloLens-Gerät per Fernzugriff konfigurieren und verwalten können."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: bd1ae8ccdd81f319fc36ca04b8b839cb313b2854
 
@@ -23,7 +22,8 @@ ms.openlocfilehash: bd1ae8ccdd81f319fc36ca04b8b839cb313b2854
 4. Wählen Sie das Menüelement **Aktualisieren** aus.
 5. Wählen Sie das Menüelement **Für Entwickler** aus.
 6. Aktivieren Sie den **Entwicklermodus**.
-7. [Führen Sie einen Bildlauf nach unten durch](https://dev.windows.com/holographic/Gestures.html#Navigation), und aktivieren Sie Device Portal.
+7. 
+            [Führen Sie einen Bildlauf nach unten durch](https://dev.windows.com/holographic/Gestures.html#Navigation), und aktivieren Sie Device Portal.
 
 
 ### Koppeln des Geräts
@@ -84,36 +84,60 @@ Jede HoloLens generiert ein eindeutiges selbstsigniertes Zertifikat für die SSL
 Die Geräteportalsitzung beginnt auf der Startseite. Der Zugriff auf andere Seiten erfolgt über die Navigationsleiste links von der Startseite.
 
 Die Symbolleiste am oberen Rand der Seite ermöglicht den Zugriff auf häufig verwendete Status und Features.
-- **Online**: Gibt an, ob das Gerät mit dem WLAN verbunden ist.
-- **Herunterfahren**: Schaltet das Gerät aus.
-- **Neu starten**: Schaltet das Gerät aus und wieder ein.
-- **Sicherheit**: Öffnet die Seite „Device Security“.
-- **Cool**: Gibt die Temperatur des Geräts an.
-- **A/C**: Gibt an, ob das Gerät angeschlossen ist und geladen wird.
-- **Hilfe**: Öffnet die Seite mit der Dokumentation der REST-Schnittstelle.
+- 
+            **Online**: Gibt an, ob das Gerät mit dem WLAN verbunden ist.
+- 
+            **Herunterfahren**: Schaltet das Gerät aus.
+- 
+            **Neu starten**: Schaltet das Gerät aus und wieder ein.
+- 
+            **Sicherheit**: Öffnet die Seite „Device Security“.
+- 
+            **Cool**: Gibt die Temperatur des Geräts an.
+- 
+            **A/C**: Gibt an, ob das Gerät angeschlossen ist und geladen wird.
+- 
+            **Hilfe**: Öffnet die Seite mit der Dokumentation der REST-Schnittstelle.
 
 Auf der Startseite werden die folgenden Informationen angezeigt:
-- **Gerätestatus**: Überwacht die Integrität des Geräts und meldet schwerwiegende Fehler.
-- **Windows-Informationen**: Zeigt den Namen der HoloLens und die derzeit installierte Version von Windows an.
-- **Einstellungen**: Dieser Abschnitt enthält die folgenden Einstellungen:
-    - **IPD**: Legt den Pupillenabstand (Interpupillary Distance, IPD) fest. Dies ist der Abstand in Millimeter zwischen dem Mittelpunkt der Pupillen des Benutzers, wenn dieser geradeaus schaut. Die Einstellung wird sofort wirksam. Der Standardwert wurde beim Einrichten des Geräts automatisch berechnet.
-    - **Gerätename**: Weisen Sie der HoloLens einen Namen zu. Nach dem Ändern dieses Werts müssen Sie das Gerät neu starten, damit er wirksam wird. Nach dem Klicken auf „Speichern“ wird ein Dialogfeld mit der Frage angezeigt, ob Sie das Gerät sofort oder später neu starten möchten.
-    - **Standbymoduseinstellungen**: Hier legen Sie die Wartezeit fest, bevor das Gerät in den Ruhezustand wechselt, wenn es angeschlossen ist und wenn es mit Akkustrom betrieben wird.
+- 
+            **Gerätestatus**: Überwacht die Integrität des Geräts und meldet schwerwiegende Fehler.
+- 
+            **Windows-Informationen**: Zeigt den Namen der HoloLens und die derzeit installierte Version von Windows an.
+- 
+            **Einstellungen**: Dieser Abschnitt enthält die folgenden Einstellungen:
+    - 
+            **IPD**: Legt den Pupillenabstand (Interpupillary Distance, IPD) fest. Dies ist der Abstand in Millimeter zwischen dem Mittelpunkt der Pupillen des Benutzers, wenn dieser geradeaus schaut. Die Einstellung wird sofort wirksam. Der Standardwert wurde beim Einrichten des Geräts automatisch berechnet.
+    - 
+            **Gerätename**: Weisen Sie der HoloLens einen Namen zu. Nach dem Ändern dieses Werts müssen Sie das Gerät neu starten, damit er wirksam wird. Nach dem Klicken auf „Speichern“ wird ein Dialogfeld mit der Frage angezeigt, ob Sie das Gerät sofort oder später neu starten möchten.
+    - 
+            **Standbymoduseinstellungen**: Hier legen Sie die Wartezeit fest, bevor das Gerät in den Ruhezustand wechselt, wenn es angeschlossen ist und wenn es mit Akkustrom betrieben wird.
 
 ### 3D View 
 
 Auf der Seite „3D View“ können Sie erkennen, wie die HoloLens Ihre Umgebung interpretiert. Navigieren Sie mit der Maus in der Ansicht:
-- **Drehen**: Linksklick + Bewegen der Maus
-- **Schwenken**: Rechtsklick + Bewegen der Maus
-- **Zoomen**: Drehen des Mausrads
-- **Tracking options**: Wenn Sie „Force visual tracking“ markieren, aktivieren Sie die fortlaufende visuelle Nachverfolgung. Mit „Anhalten“ wird die visuelle Nachverfolgung angehalten.
-- **Ansichtsoptionen**: Legen Sie die Optionen für die 3D-Ansicht fest: „Tracking“ gibt an, ob die visuelle Nachverfolgung aktiviert ist.
-- **Show floor**: Zeigt eine schachbrettartige Bodenfläche an.
-- **Show frustum**: Zeigt das Ansichts-Frustum an.
-- **Show stabilization plane**: Zeigt die Ebene an, die von der HoloLens für die Bewegungsstabilisierung verwendet wird.
-- **Show mesh**: Zeigt das Surface-Mapping-Gitter an, das die Umgebung darstellt.
-- **Details anzeigen**: Zeigt die Änderung von Handpositionen, der Kopfdrehungsquaternionen und des Geräteursprungsvektors in Echtzeit an.
-- **Vollbildschaltfläche**: Mit dieser Schaltfläche wird die Seite „3D View“ im Vollbildmodus angezeigt. Drücken Sie die ESC-Taste, um die Vollbildansicht zu beenden.
+- 
+            **Drehen**: Linksklick + Bewegen der Maus
+- 
+            **Schwenken**: Rechtsklick + Bewegen der Maus
+- 
+            **Zoomen**: Drehen des Mausrads
+- 
+            **Tracking options**: Wenn Sie „Force visual tracking“ markieren, aktivieren Sie die fortlaufende visuelle Nachverfolgung. Mit „Anhalten“ wird die visuelle Nachverfolgung angehalten.
+- 
+            **Ansichtsoptionen**: Legen Sie die Optionen für die 3D-Ansicht fest: „Tracking“ gibt an, ob die visuelle Nachverfolgung aktiviert ist.
+- 
+            **Show floor**: Zeigt eine schachbrettartige Bodenfläche an.
+- 
+            **Show frustum**: Zeigt das Ansichts-Frustum an.
+- 
+            **Show stabilization plane**: Zeigt die Ebene an, die von der HoloLens für die Bewegungsstabilisierung verwendet wird.
+- 
+            **Show mesh**: Zeigt das Surface-Mapping-Gitter an, das die Umgebung darstellt.
+- 
+            **Details anzeigen**: Zeigt die Änderung von Handpositionen, der Kopfdrehungsquaternionen und des Geräteursprungsvektors in Echtzeit an.
+- 
+            **Vollbildschaltfläche**: Mit dieser Schaltfläche wird die Seite „3D View“ im Vollbildmodus angezeigt. Drücken Sie die ESC-Taste, um die Vollbildansicht zu beenden.
 
 - Oberflächenrekonstruktion: Klicken oder tippen Sie auf „Aktualisieren“, um das aktuelle Spatial-Mapping-Gitter vom Gerät anzuzeigen. Ein vollständiger Durchlauf kann bis zu einige Sekunden lang dauern. Das Gitter wird in der 3D-Ansicht nicht automatisch aktualisiert. Sie müssen auf „Update“ klicken, um das aktuelle Gitter vom Gerät abzurufen. Klicken Sie auf „Speichern“ um das aktuelle Spatial-Mapping-Gitter als OBJ-Datei auf dem PC zu speichern.
 
@@ -121,15 +145,20 @@ Auf der Seite „3D View“ können Sie erkennen, wie die HoloLens Ihre Umgebung
 
 Auf der Seite „Mixed Reality Capture“ können Sie Mediendatenströme von der HoloLens speichern.
 - Einstellungen: Steuern Sie die erfassten Mediendatenströme durch Aktivieren der folgenden Einstellungen: „Holograms“ erfasst den holografischen Anteil des Videodatenstroms. Hologramme werden in Mono und nicht in Stereo gerendert.
-- **PV camera**: Erfasst den Videodatenstrom der Foto-/Videokamera.
-- **Mic Audio**: Erfasst Audioaufnahmen vom Mikrofonarray.
-- **App Audio**: Erfasst Audioaufnahmen von der derzeit ausgeführten App.
-- **Live preview quality**: Wählen Sie die Bildschirmauflösung, Bildfrequenz und Streamingrate für die Live-Vorschau aus.
+- 
+            **PV camera**: Erfasst den Videodatenstrom der Foto-/Videokamera.
+- 
+            **Mic Audio**: Erfasst Audioaufnahmen vom Mikrofonarray.
+- 
+            **App Audio**: Erfasst Audioaufnahmen von der derzeit ausgeführten App.
+- 
+            **Live preview quality**: Wählen Sie die Bildschirmauflösung, Bildfrequenz und Streamingrate für die Live-Vorschau aus.
 
 - Klicken oder tippen Sie auf die Schaltfläche „Live preview“, um den Aufnahmedatenstrom anzuzeigen. Mit „Stop live preview“ wird der Aufnahmedatenstrom beendet.
 - Klicken oder tippen Sie auf „Aufzeichnen“, um die Aufzeichnung des Mixed-Reality-Datenstroms mit den angegebenen Einstellungen zu starten. Mit „Aufnahme beenden“ wird die Aufzeichnung beendet und gespeichert.
 - Klicken oder tippen Sie auf „Take photo“, um ein Standbild des Aufnahmedatenstroms zu erstellen.
-- **Videos and photos**: Zeigt eine Liste der auf dem Gerät aufgenommenen Videos und Fotos an.
+- 
+            **Videos and photos**: Zeigt eine Liste der auf dem Gerät aufgenommenen Videos und Fotos an.
 
 Beachten Sie, dass HoloLens-Apps kein MRC-Foto oder -Video aufnehmen können, während Sie über das Geräteportal eine Live-Vorschau aufzeichnen oder streamen.
 
@@ -138,9 +167,12 @@ Beachten Sie, dass HoloLens-Apps kein MRC-Foto oder -Video aufnehmen können, w�
 Das Tool „Systemleistung“ der HoloLens bietet drei zusätzliche Metriken, die aufgezeichnet werden können. 
 
 Die folgenden Metriken sind verfügbar:
-- **SoC Power**: Sofortige Nutzung des System-on-a-Chip-Stroms, gemittelt über eine Minute.
-- **Systemstromversorgung**: Sofortige Nutzung des Systemstroms, gemittelt über eine Minute.
-- **Framerate**: Bilder pro Sekunde, übersprungene VBlanks pro Sekunde und aufeinanderfolgende übersprungene VBlanks
+- 
+            **SoC Power**: Sofortige Nutzung des System-on-a-Chip-Stroms, gemittelt über eine Minute.
+- 
+            **Systemstromversorgung**: Sofortige Nutzung des Systemstroms, gemittelt über eine Minute.
+- 
+            **Framerate**: Bilder pro Sekunde, übersprungene VBlanks pro Sekunde und aufeinanderfolgende übersprungene VBlanks
 
 ### Seite „App Crash Dumps“ 
 
@@ -157,10 +189,14 @@ Beachten Sie, dass die App auch dann beim Starten ausgeführt wird, wenn der Kio
 ### Simulation 
 
 Ermöglicht Ihnen das Aufzeichnen und Wiedergeben von Eingabedaten für Testzwecke.
-- **Capture room**: Wird verwendet, um eine Datei für einen simulierten Raum herunterzuladen, die das Spatial-Mapping-Gitter für die Umgebung des Benutzers enthält. Benennen Sie den Raum, und klicken Sie auf „Aufnahme“, um die Daten als XEF-Datei auf dem PC zu speichern. Diese Raumdatei kann in den HoloLens-Emulator geladen werden.
-- **Aufzeichnung**: Markieren Sie die aufzuzeichnenden Datenströme, benennen Sie die Aufzeichnung, und klicken oder tippen Sie auf „Aufzeichnen“, um die Aufzeichnung zu starten. Führen Sie mit der HoloLens Aktionen aus, und klicken Sie dann auf „Beenden“, um die Daten als XEF-Datei auf dem PC zu speichern. Diese Datei kann im HoloLens-Emulator oder auf dem Gerät geladen werden.
-- **Wiedergabe**: Klicken oder tippen Sie auf „Upload recording“, um auf dem PC eine XEF-Datei auszuwählen und die Daten an die HoloLens zu senden.
-- **Steuerungsmodus**: Wählen Sie in der Dropdownliste „Standard“ oder „Simulation“ aus, und klicken oder tippen Sie auf die Schaltfläche „Festlegen“, um den Modus der HoloLens auszuwählen. Durch Auswahl von „Simulation“ werden die realen Sensoren auf der HoloLens deaktiviert und stattdessen hochgeladene simulierte Daten verwendet. Wenn Sie zu „Simulation“ wechseln, reagiert die HoloLens nicht auf den realen Benutzer, bis Sie zurück zu „Standard“ wechseln.
+- 
+            **Capture room**: Wird verwendet, um eine Datei für einen simulierten Raum herunterzuladen, die das Spatial-Mapping-Gitter für die Umgebung des Benutzers enthält. Benennen Sie den Raum, und klicken Sie auf „Aufnahme“, um die Daten als XEF-Datei auf dem PC zu speichern. Diese Raumdatei kann in den HoloLens-Emulator geladen werden.
+- 
+            **Aufzeichnung**: Markieren Sie die aufzuzeichnenden Datenströme, benennen Sie die Aufzeichnung, und klicken oder tippen Sie auf „Aufzeichnen“, um die Aufzeichnung zu starten. Führen Sie mit der HoloLens Aktionen aus, und klicken Sie dann auf „Beenden“, um die Daten als XEF-Datei auf dem PC zu speichern. Diese Datei kann im HoloLens-Emulator oder auf dem Gerät geladen werden.
+- 
+            **Wiedergabe**: Klicken oder tippen Sie auf „Upload recording“, um auf dem PC eine XEF-Datei auszuwählen und die Daten an die HoloLens zu senden.
+- 
+            **Steuerungsmodus**: Wählen Sie in der Dropdownliste „Standard“ oder „Simulation“ aus, und klicken oder tippen Sie auf die Schaltfläche „Festlegen“, um den Modus der HoloLens auszuwählen. Durch Auswahl von „Simulation“ werden die realen Sensoren auf der HoloLens deaktiviert und stattdessen hochgeladene simulierte Daten verwendet. Wenn Sie zu „Simulation“ wechseln, reagiert die HoloLens nicht auf den realen Benutzer, bis Sie zurück zu „Standard“ wechseln.
 
 
 ### Virtual Input 

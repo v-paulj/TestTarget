@@ -1,175 +1,295 @@
 ---
 author: Xansky
-Description: "Beschreibt die Schritte, mit denen Sie die Verwendbarkeit Ihrer UWP-App (App für die Universelle Windows-Plattform) sicherstellen können, wenn ein Design mit hohem Kontrast aktiviert ist."
+description: "Beschreibt die Schritte, mit denen Sie die Verwendbarkeit Ihrer UWP-App (Universelle Windows-Plattform) sicherstellen können, wenn ein Design mit hohem Kontrast aktiviert ist."
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: Designs mit hohem Kontrast
-label: High-contrast themes
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 4201f5a0b08f1fc8d691218da0803ee04ab2c86a
+ms.sourcegitcommit: f3da82cab8813653a6ee999976983937649b42b2
+ms.openlocfilehash: 30785998d11f09ef94f33789e3e74b0933d9c83e
 
 ---
 
 # Designs mit hohem Kontrast  
 
-Beschreibt die Schritte, mit denen Sie die Verwendbarkeit Ihrer UWP-App (App für die Universelle Windows-Plattform) sicherstellen können, wenn ein Design mit hohem Kontrast aktiviert ist.
+Windows unterstützt Designs mit hohem Kontrast für das Betriebssystem und Apps, die von Benutzern aktiviert werden können. Designs mit hohem Kontrast verwenden eine kleine Palette von Farbkombinationen mit hohem Farbkontrast, durch die die Benutzeroberfläche leichter zu erkennen ist.
 
-Eine UWP-App unterstützt standardmäßig Designs mit hohem Kontrast. Wenn sich ein Benutzer für die Verwendung eines Designs mit hohem Kontrast aus den Systemeinstellungen oder Tools für die Barrierefreiheit entscheidet, werden vom Framework automatisch Farben und Stileinstellungen verwendet, mit denen für Steuerelemente und Komponenten auf der Benutzeroberfläche ein Layout und Rendering mit hohem Kontrast entsteht.
+**Abbildung 1. Rechner im hellen Design und im Design „Hoher Kontrast (Schwarz)”**
 
-Diese standardmäßige Unterstützung basiert auf der Verwendung der Standarddesigns und -vorlagen. Diese Designs und Vorlagen verweisen auf Systemfarben als Ressourcendefinitionen. Die Ressourcenquellen werden automatisch geändert, wenn sich das System in einem Modus mit hohem Kontrast befindet. Wenn Sie jedoch benutzerdefinierte Vorlagen, Designs und Stile für die Steuerelemente verwenden, achten Sie darauf, dass die integrierte Unterstützung des hohen Kontrasts nicht deaktiviert ist. Bei Verwendung eines XAML-Designers für Microsoft Visual Studio für die Formatierung wird vom Designer neben dem primären Design immer ein separates Design mit hohem Kontrast generiert, wenn Sie eine Vorlage definieren, die sich wesentlich von der Standardvorlage unterscheidet. Die separaten Designwörterbücher sind in der [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx)-Sammlung, einer dedizierten Eigenschaft eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794)-Elements, enthalten.
+![Rechner im hellen Design und im Design „Hoher Kontrast (Schwarz)”](images/high-contrast-calculators.png)
 
-Weitere Informationen zu Designs und Steuerelementvorlagen finden Sie unter [Schnellstart: Steuerelementvorlagen](https://msdn.microsoft.com/library/windows/apps/xaml/Hh465374). Die XAML-Ressourcenwörterbücher und -Designs enthalten häufig Informationen zu bestimmten Steuerelementen sowie dazu, wie die Designs konstruiert sind und wie sie auf Ressourcen verweisen, die für die möglichen Einstellungen für hohen Kontrast ähnlich, jedoch nicht identisch sind.
+
+Sie können über *Einstellungen > Erleichterte Bedienung > Hoher Kontrast* zu einem Design mit hohem Kontrast wechseln.
+
+> [!NOTE]
+> Designs mit hohem Kontrast sind nicht mit hellen und dunklen Designs zu verwechseln. Helle und dunkle Designs unterstützen eine deutlich größere Farbpalette ohne Farbkombinationen mit hohem Kontrast. Weitere helle und dunkle Designs finden Sie im Artikel zu [Farben](../style/color.md).
+
+Während bei allgemeinen Steuerelementen vollständige Unterstützung für hohen Kontrast automatisch verfügbar ist, ist beim Anpassen der Benutzeroberfläche Vorsicht geboten. Die Ursache für den häufigsten Fehler bei der Verwendung von Designs mit hohem Kontrast ist die Inlinehartcodierung einer Steuerelementfarbe.
+
+```xaml
+<!-- Don't do this! -->
+<Grid Background="#E6E6E6">
+
+<!-- Instead, create BrandedPageBackgroundBrush and do this. -->
+<Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
+```
+
+Wird die Farbe `#E6E6E6` im ersten Beispiel inline festgelegt, behält das Raster diese Hintergrundfarbe in allen Designs bei. Wenn der Benutzer zum Design „Hoher Kontrast (Schwarz)” wechselt, erwartet er, dass Ihre App einen schwarzen Hintergrund hat. Da `#E6E6E6` fast weiß ist, sind einige Benutzer möglicherweise nicht in der Lage, mit Ihrer App zu interagieren.
+
+Im zweiten Beispiel wird die [**{ThemeResource}-Markuperweiterung**](../xaml-platform/themeresource-markup-extension.md) verwendet, um auf eine Farbe in der [**ThemeDictionaries**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.resourcedictionary.themedictionaries.aspx)-Sammlung zu verweisen, bei der es sich um eine dedizierte Eigenschaft eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794)-Elements handelt. Die ThemeDictionaries-Sammlung ermöglicht es XAML, Farben automatisch basierend auf dem aktuellen Design des Benutzers auszutauschen.
 
 ## Designverzeichnisse
 
-Wenn Sie die Systemstandardfarbe ändern oder Bilder wie etwa ein Hintergrundbild zu Dekorationszwecken hinzufügen müssen, erstellen Sie eine **ThemeDictionaries**-Sammlung für Ihre App.
+Wenn Sie die Systemstandardfarbe ändern müssen, erstellen Sie eine ThemeDictionaries-Sammlung für Ihre App.
 
-* Erstellen Sie zunächst die richtigen Grundlagen (sofern nicht bereits vorhanden). Erstellen Sie in „App.xaml“ eine **ThemeDictionaries**-Sammlung:
-
-``` xaml
- <Application.Resources>
-    <ResourceDictionary>
-        <ResourceDictionary.ThemeDictionaries>
-            <!-- Default is a fallback if a more precise theme isn't called out below -->
-            <ResourceDictionary x:Key="Default">
-
-            </ResourceDictionary>
-            <!-- HighContrast is used in any high contrast theme -->
-            <ResourceDictionary x:Key="HighContrast">
-
-            </ResourceDictionary>
-        </ResourceDictionary.ThemeDictionaries>
-    </ResourceDictionary>
-</Application.Resources
-```
-
-* 
-            **HighContrast** ist nicht der einzige verfügbare Schlüsselname. Es gibt auch noch **HighContrastBlack**, **HighContrastWhite** und **HighContrastCustom**. In den meisten Fällen ist **HighContrast** ausreichend.
-* Erstellen Sie unter **Default** den gewünschten [**Brush**](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx)-Typ (in der Regel **SolidColorBrush**). Vergeben Sie einen **x:Key**-Namen, der für die Verwendung spezifisch ist:<br/>
-    `<SolidColorBrush x:Key="BrandedPageBackground" />`
-* Weisen Sie das gewünschte **Color**-Element zu:<br/>
-    `<SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />`
-* Kopieren Sie das **Brush**-Objekt in **HighContrast**:
+1. Erstellen Sie zunächst die richtige Grundstruktur (sofern nicht bereits vorhanden). Erstellen Sie in „App.xaml” eine ThemeDictionaries-Sammlung, die mindestens **Default** und **HighContrast** enthält.
+2. Erstellen Sie in „Default” den gewünschten [Bürstentyp](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.brush.aspx) (in der Regel „SolidColorBrush”). Legen Sie einen für den Verwendungszweck spezifischen x:Key-Namen fest.
+3. Weisen Sie das gewünschte Color-Element zu.
+4. Kopieren Sie das Brush-Objekt in „HighContrast”.
 
 ``` xaml
 <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.ThemeDictionaries>
-            <!-- Default is a fallback if a more precise theme isn't called out below -->
+            <!-- Default is a fallback if a more precise theme isn't called
+            out below -->
             <ResourceDictionary x:Key="Default">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
             </ResourceDictionary>
-            <!-- HighContrast is used in any high contrast theme -->
+
+            <!-- Optional, Light is used in light theme.
+            If included, Default will be used for Dark theme -->
+            <ResourceDictionary x:Key="Light">
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
+            </ResourceDictionary>
+
+            <!-- HighContrast is used in all high contrast themes -->
             <ResourceDictionary x:Key="HighContrast">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
             </ResourceDictionary>
         </ResourceDictionary.ThemeDictionaries>
     </ResourceDictionary>
 </Application.Resources>
 ```
 
-* Ermitteln Sie die gewünschte Farbe für das **Brush**-Objekt, und ändern Sie sie in **HighContrast**.
+Im letzten Schritt bestimmen Sie, welche Farbe für hohen Kontrast verwendet werden soll. Dies wird im nächsten Abschnitt erläutert.
 
-Das Festlegen einer Farbe für den hohen Kontrast erfordert etwas Übung. Die zuvor erstellten Grundlagen sind einfach zu aktualisieren.
+> [!NOTE]
+> „HighContrast” ist nicht der einzige verfügbare Schlüsselname. Außerdem gibt es „HighContrastBlack”, „HighContrastWhite” und „HighContrastCustom”. In den meisten Fällen ist „HighContrast” ausreichend.
 
 ## Farben mit hohem Kontrast
 
-Benutzer können auf der Einstellungsseite zu hohem Kontrast wechseln. Standardmäßig sind vier Designs mit hohem Kontrast vorhanden. Nachdem der Benutzer eine Option ausgewählt hat, wird auf der Seite eine Vorschau mit der voraussichtlichen Darstellung der Apps angezeigt.
+Auf der Seite *Einstellungen > Erleichterte Bedienung > Hoher Kontrast* sind standardmäßig vier Designs mit hohem Kontrast verfügbar. 
 
-![Einstellungen für hohen Kontrast](images/high-contrast-settings.png)<br/>
-_Einstellungen für hohen Kontrast_
+**Abbildung 2. Nachdem der Benutzer eine Option ausgewählt hat, wird auf der Seite eine Vorschau angezeigt.**
 
- Sie können zum Ändern der Werte auf jedes Quadrat in der Vorschau klicken. Jedes Quadrat ist zudem direkt einer Systemressource zugeordnet.
+![Einstellungen für hohen Kontrast](images/high-contrast-settings.png)
 
-![Ressourcen mit hohem Kontrast](images/high-contrast-resources.png)<br/>
-_Ressourcen mit hohem Kontrast_
+**Abbildung 3. Sie können zum Ändern der Werte auf jedes Farbmuster in der Vorschau klicken. Zudem ist jedes Farbmuster direkt einer XAML-Farbressource zugeordnet.**
 
-Wenn Sie den oben gekennzeichneten Namen das Präfix _SystemColor_ und das Postfix _Color_ hinzufügen, z.B. **SystemColorWindowTextColor**, werden sie automatisch aktualisiert, um der Benutzerangabe zu entsprechen. Dadurch müssen Sie keine bestimmte Farbe für den hohen Kontrast auswählen. Wählen Sie stattdessen eine Systemressource aus, die dem Verwendungszweck der Farbe entspricht. Im oben genannten Beispiel haben wir für die Hintergrundfarbe einer Seite **SolidColorBrushBrandedPageBackground** festgelegt. Da diese Einstellung für einen Hintergrund verwendet wird, können wir sie **SystemColorWindowColor** im Modus mit hohem Kontrast zuordnen:
+![Ressourcen mit hohem Kontrast](images/high-contrast-resources.png)
+
+Jede `SystemColor*Color`-Ressource ist eine Variable, die die Farbe automatisch aktualisiert, wenn der Benutzer Designs mit hohem Kontrast wechselt. Im Folgenden finden Sie Richtlinien für die Verwendung der einzelnen Ressourcen.
+
+Ressource | Verwendung
+-------- | -----
+SystemColorWindowTextColor | Textkörper, Überschriften, Listen, beliebiger Text, mit dem nicht interagiert werden kann
+SystemColorHotlightColor | Links
+SystemColorGrayTextColor | Deaktivierte Benutzeroberflächenelemente
+SystemColorHighlightTextColor | Vordergrundfarbe für Text oder Benutzeroberflächenelemente, die sich in Bearbeitung befinden, die ausgewählt sind oder mit denen gegenwärtig interagiert wird
+SystemColorHighlightColor | Hintergrundfarbe für Text oder Benutzeroberflächenelemente, die sich in Bearbeitung befinden, die ausgewählt sind oder mit denen gegenwärtig interagiert wird
+SystemColorButtonTextColor | Vordergrundfarbe für Schaltflächen und beliebige Benutzeroberflächenelemente, mit denen interagiert werden kann
+SystemColorButtonFaceColor | Hintergrundfarbe für Schaltflächen und beliebige Benutzeroberflächenelemente, mit denen interagiert werden kann
+SystemColorWindowColor | Hintergrund von Seiten, Bereichen, Popups und Leisten
+<br/>
+Häufig ist es hilfreich, sich in vorhandenen Apps, Startseiten oder allgemeinen Steuerelementen anzusehen, wie andere Entwickler ähnliche Probleme beim Entwerfen für hohen Kontrast gelöst haben.
+
+**Empfohlen**
+
+* Beachten Sie nach Möglichkeit die Hintergrund-/Vordergrundpaare.
+* Testen Sie alle vier Designs mit hohem Kontrast, während die App ausgeführt wird. Der Benutzer sollte die App bei einem Wechsel des Designs nicht neu starten müssen.
+* Achten Sie auf Einheitlichkeit.
+
+**Nicht empfohlen**
+
+* Hartcodierung einer Farbe im Design „HighContrast” – verwenden Sie die `SystemColor*Color`-Ressourcen.
+* Berücksichtigen Sie bei der Auswahl einer Farbressource die Ästhetik. Denken Sie daran, dass sich die Farbressourcen mit dem Design ändern.
+* Verwenden Sie `SystemColorGrayTextColor` nicht für sekundären oder als Hinweis fungierenden Textkörper.
+
+
+Im vorherigen Beispiel müssen Sie eine Ressource für `BrandedPageBackgroundBrush` auswählen. Da der Name bereits besagt, dass dieser Pinsel für einen Hintergrund verwendet wird, ist `SystemColorWindowColor` eine gute Wahl.
 
 ``` xaml
 <Application.Resources>
     <ResourceDictionary>
         <ResourceDictionary.ThemeDictionaries>
-            <!-- Default is a fallback if a more precise theme isn't called out below -->
+            <!-- Default is a fallback if a more precise theme isn't called
+            out below -->
             <ResourceDictionary x:Key="Default">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
             </ResourceDictionary>
-            <!-- HighContrast is used in any high contrast theme -->
+
+            <!-- Optional, Light is used in light theme.
+            If included, Default will be used for Dark theme -->
+            <ResourceDictionary x:Key="Light">
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="#E6E6E6" />
+            </ResourceDictionary>
+
+            <!-- HighContrast is used in all high contrast themes -->
             <ResourceDictionary x:Key="HighContrast">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="{ThemeResource SystemColorWindowColor}" />
+                <SolidColorBrush x:Key="BrandedPageBackgroundBrush" Color="{ThemeResource SystemColorWindowColor}" />
             </ResourceDictionary>
         </ResourceDictionary.ThemeDictionaries>
     </ResourceDictionary>
 </Application.Resources>
 ```
 
-Wenn Sie die Palette mit acht Farben mit hohem Kontrast verwenden, müssen Sie keine zusätzlichen **ResourceDictionaries**-Elemente mit hohem Kontrast erstellen. Diese eingeschränkte Palette kann häufig zu Problemen bei der Darstellung komplexer visueller Zustände führen. Das Hinzufügen eines Rahmens nur zu einem Bereich mit hohem Kontrast kann oftmals zu einer besseren Übersichtlichkeit beitragen.
+Später können Sie dann in Ihrer App den Hintergrund festlegen.
 
-### Empfohlene und nicht empfohlene Vorgehensweisen
-
-* Führen Sie im Modus mit hohem Kontrast frühzeitig und regelmäßig Tests aus.
-* Verwenden Sie die benannten Farben für den jeweils beabsichtigten Zweck.
-* Platzieren Sie Grundtypen wie **Color**, **Brush** und **Thickness** innerhalb von **ThemeDictionaries**. Platzieren Sie darin keine komplexen Ressourcen wie **Style**-Elemente. Das folgende Beispiel funktioniert einwandfrei:
-
-``` xaml
-<Application.Resources>
-    <ResourceDictionary>
-        <ResourceDictionary.ThemeDictionaries>
-            <!-- Default is a fallback if a more precise theme isn't called out below -->
-            <ResourceDictionary x:Key="Default">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="Red" />
-            </ResourceDictionary>
-            <!-- HighContrast is used in any high contrast theme -->
-            <ResourceDictionary x:Key="HighContrast">
-                <SolidColorBrush x:Key="BrandedPageBackground" Color="{ThemeResource SystemColorWindowColor}" />
-            </ResourceDictionary>
-        </ResourceDictionary.ThemeDictionaries>
-
-        <Style x:Key="MyButtonStyle" TargetType="Button">
-            <Setter Property="Foreground" Value="{ThemeResource BrandedPageBackground}" />
-        </Style>
-    </ResourceDictionary>
-</Application.Resources>
-
-...
-
-<Button Style="{StaticResource MyButtonStyle}" />
+```xaml
+<Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
 ```
 
-* Verwenden Sie für UI-Elemente im Vordergrund Vordergrundfarben mit hohem Kontrast.
-* Verwenden Sie Farben mit hohem Kontrast zusammen mit ihren definierten Farbpaaren. Verwenden Sie beispielsweise **BUTTONTEXT** stets mit **BUTTONFACE**, insbesondere bei der Verwendung von Vordergrund und Hintergrund.
-* Verwenden Sie für ein bestimmtes UI-Element die empfohlenen Farbpaare für hohen Kontrast, um das erforderliche Kontrastverhältnis von 14:1 zu gewährleisten.
-* Trennen Sie Farbpaare für hohen Kontrast nicht, und mischen Sie Farben mit hohem Kontrast nicht beliebig. Dadurch wird häufig nicht sichtbare UI für mindestens eins der vorinstallierten Designs mit hohem Kontrast erzeugt.
-* Platzieren Sie keine von Ihnen erstellten **Brush**-Objekte außerhalb einer **ThemeDictionaries**-Sammlung.
-* Verwenden Sie niemals **StaticResource** für den Verweis auf eine Ressource in einer **ThemeDictionaries**-Sammlung. Das funktioniert scheinbar, bis der Benutzer bei ausgeführter App Designs ändert. Verwenden Sie stattdessen **ThemeResource**.
-* Verwenden Sie keine hartcodierten Farbwerte.
-* Verwenden Sie eine Farbe nicht nur deswegen, weil sie Ihnen gefällt.
-
-Weitere Informationen finden Sie unter [XAML-Designressourcen](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources).
+Beachten Sie, dass `{ThemeResource}` zweimal verwendet wird – einmal um auf `SystemColorWindowColor` zu verweisen und ein weiteres Mal, um auf `BrandedPageBackgroundBrush` zu verweisen. Beide Verweise sind erforderlich, damit zur Laufzeit das korrekte Design in Ihrer App verwendet wird. Dies ist ein guter Zeitpunkt, um die Funktionalität in Ihrer App zu testen. Der Hintergrund des Rasters wird automatisch aktualisiert, wenn Sie zu einem Design mit hohem Kontrast wechseln. Beim Wechseln zwischen verschiedenen Designs mit hohem Kontrast wird er ebenfalls aktualisiert.
 
 ## Wann sollten Rahmen verwenden werden?
-Fügen Sie im Modus mit hohem Kontrast ggf. Rahmen zu einem UI-Element hinzu, um das Element deutlich abzugrenzen. Verwenden Sie Rahmen, um die Inhaltsbereiche für Navigation, Aktionen und Inhalte voneinander abzugrenzen.
 
-![Ein vom Rest der Seite abgegrenzter Navigationsbereich](images/high-contrast-actions-content.png)<br/>
-_Ein vom Rest der Seite abgegrenzter Navigationsbereich_
+Für den Hintergrund von Seiten, Bereichen, Popups und Leisten sollte im Design mit hohem Kontrast `SystemColorWindowColor` verwendet werden. Fügen Sie bei Bedarf einen Rahmen nur für hohen Kontrast hinzu, um wichtige Grenzen in Ihrer Benutzeroberfläche beizubehalten.
 
-Wenn ein UI-Element standardmäßig _keinen_ Rahmen oder Hintergrund hat, fügen Sie dem Standardzustand im Modus mit hohem Kontrast keinen Rahmen oder Hintergrund hinzu.
+**Abbildung 4 Der Navigationsbereich und die Seite haben im Design mit hohem Kontrast dieselbe Hintergrundfarbe. Zur Trennung der beiden Komponenten ist ein Rahmen erforderlich, der nur im Design mit hohem Kontrast verwendet wird.**
 
-Wenn ein UI-Element standardmäßig über einen Rahmen _verfügt_, behalten Sie den Rahmen im Modus mit hohem Kontrast bei.
+![Ein vom Rest der Seite abgegrenzter Navigationsbereich](images/high-contrast-actions-content.png)
 
-Überlappende oder benachbarte Farben sollten unterscheidbar sein. Sie müssen jedoch nicht unbedingt das Farbkontrastverhältnis von 14:1 aufweisen. Für diese Szenarien wird jedoch ein Kontrastverhältnis von 3:1 empfohlen.
+## Listenelemente
 
-Falls Hintergrundfarben mit hohem Kontrast dazu verwendet werden, überlappende UI-Elemente voneinander abzuheben, kann der Kontrast zwischen diesen Elementen nur durch Rahmen gewährleistet werden.
+Im Design mit hohem Kontrast wird der Hintergrund von Elementen in einer [ListView](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listview.aspx) auf `SystemColorHighlightColor` festgelegt, wenn der Benutzer auf sie zeigt, sie drückt oder auswählt. Ein häufiger Fehler bei komplexen Listenelementen ist, dass die Farbe des Inhalts des Listenelements beim Zeigen, Drücken oder Auswählen nicht umgekehrt wird. Dies führt dazu, dass das Element nicht gelesen werden kann.
 
-## Ermitteln, wann ein Design mit hohem Kontrast aktiviert ist  
-Verwenden Sie Member der [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)-Klasse, um die aktuellen Einstellungen für Designs mit hohem Kontrast zu ermitteln. Mit der [**HighContrast**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrast)-Eigenschaft wird ermittelt, ob derzeit ein Design mit hohem Kontrast ausgewählt ist. Falls **true** für **HighContrast** festgelegt ist, besteht der nächste Schritt in der Überprüfung des Werts der [**HighContrastScheme**](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.accessibilitysettings.highcontrastscheme)-Eigenschaft, um den Namen des verwendeten Designs mit hohem Kontrast abzurufen. „Hoher Kontrast (Weiß)“ und „Hoher Kontrast (Schwarz)“ sind typische Werte für **HighContrastScheme**, auf die Ihr Code reagieren sollte. XAML-definierte [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/BR208794)-Schlüssel dürfen keine Leerstellen enthalten. Daher lauten die Schlüssel für diese Designs in einem Ressourcenwörterbuch in der Regel „HighContrastWhite“ und „HighContrastBlack“. Darüber hinaus müssen Sie Fallback-Logik für ein Standarddesign mit hohem Kontrast aufnehmen, falls als Wert eine andere Zeichenfolge angegeben ist. 
-            Im [XAML-Beispiel für hohen Kontrast](http://go.microsoft.com/fwlink/p/?linkid=254993) wird die Logik hierfür gezeigt.
+**Abbildung 5. Einfache Liste im hellen Design (links) und im Design „Hoher Kontrast (Schwarz)” (rechts). Das zweite Element ist ausgewählt. Beachten Sie, dass die Textfarbe im Design mit hohem Kontrast umgekehrt wird.**
+
+![Einfache Liste im hellen Design und im Design „Hoher Kontrast (Schwarz)”](images/high-contrast-list1.png)
+
+
+
+### Listenelemente mit farbigem Text
+
+Das Festlegen von „TextBlock.Foreground” in der [DataTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemtemplate.aspx) des ListView-Steuerelements kann Probleme verursachen. Diese Einstellung wird meist vorgenommen, um eine visuelle Hierarchie zu erzeugen. Die Foreground-Eigenschaft ist für das [ListViewItem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx) festgelegt, und TextBlock-Elemente in der „DataTemplate” erben die richtige Vordergrundfarbe, wenn auf das Element gezeigt, es gedrückt oder ausgewählt wird. Durch das Festlegen der Foreground-Eigenschaft funktioniert die Vererbung jedoch nicht.
+
+**Abbildung 6. Komplexe Liste im hellen Design (links) und im Design „Hoher Kontrast (Schwarz)” (rechts). Beachten Sie, dass die Farbe der zweiten Zeile des ausgewählten Elements im Design mit hohem Kontrast nicht umgekehrt wurde.**
+
+![Komplexe Liste im hellen Design und im Design „Hoher Kontrast (Schwarz)”](images/high-contrast-list2.png)
+
+Sie können dieses Problem umgehen, indem Sie die Foreground-Eigenschaft bedingt über einen Stil in einer ThemeDictionaries-Sammlung festlegen. Da die Foreground-Eigenschaft nicht durch „SecondaryBodyTextBlockStyle” in „HighContrast” festgelegt wird, wird die Farbe korrekt umgekehrt.
+
+```xaml
+<!-- In App.xaml... -->
+<ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Default">
+        <Style
+            x:Key="SecondaryBodyTextBlockStyle"
+            TargetType="TextBlock"
+            BasedOn="{StaticResource BodyTextBlockStyle}">
+            <Setter Property="Foreground" Value="{StaticResource SystemControlForegroundBaseMediumBrush}" />
+        </Style>
+    </ResourceDictionary>
+
+    <ResourceDictionary x:Key="Light">
+        <Style
+            x:Key="SecondaryBodyTextBlockStyle"
+            TargetType="TextBlock"
+            BasedOn="{StaticResource BodyTextBlockStyle}">
+            <Setter Property="Foreground" Value="{StaticResource SystemControlForegroundBaseMediumBrush}" />
+        </Style>
+    </ResourceDictionary>
+
+    <ResourceDictionary x:Key="HighContrast">
+        <!-- The Foreground Setter is omitted in HighContrast -->
+        <Style
+            x:Key="SecondaryBodyTextBlockStyle"
+            TargetType="TextBlock"
+            BasedOn="{StaticResource BodyTextBlockStyle}" />
+    </ResourceDictionary>
+</ResourceDictionary.ThemeDictionaries>
+
+<!-- Usage in your DataTemplate... -->
+<DataTemplate>
+    <StackPanel>
+        <TextBlock Style="{StaticResource BodyTextBlockStyle}" Text="Double line list item" />
+
+        <!-- Note how ThemeResource is used to reference the Style -->
+        <TextBlock Style="{ThemeResource SecondaryBodyTextBlockStyle}" Text="Second line of text" />
+    </StackPanel>
+</DataTemplate>
+```
+
+### Listenelemente mit Schaltflächen und Links
+
+Mitunter verfügen Listenelemente über komplexere Steuerelemente, beispielsweise [HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.hyperlinkbutton.aspx) oder [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx). Diese Steuerelemente besitzen eigene Zustände für Zeigen, Drücken und manchmal auch Auswählen, die im Vordergrund eines Listenelements nicht funktionieren. Links werden auch im Design „Hoher Kontrast (Schwarz)” gelb angezeigt, wodurch sie schwer lesbar sind, wenn auf ein Listenelement gezeigt, es gedrückt oder ausgewählt wird.
+
+**Abbildung 7. Im Design mit hohem Kontrast ist der Link schwer lesbar.**
+
+![Liste mit einem Link im hellen Design und im Design „Hoher Kontrast (Schwarz)”](images/high-contrast-list3.png)
+
+Eine Lösung besteht darin, den Hintergrund der „DataTemplate” im Design mit hohem Kontrast auf `SystemColorWindowColor` festzulegen. Dadurch entsteht im Design mit hohem Kontrast der Effekt eines Rahmens.
+
+```xaml
+<!-- In App.xaml... -->
+<ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Default">
+        <SolidColorBrush x:Key="HighContrastOnlyBackgroundBrush" Color="Transparent" />
+    </ResourceDictionary>
+
+    <ResourceDictionary x:Key="HighContrast">
+        <SolidColorBrush x:Key="HighContrastOnlyBackgroundBrush" Color="{ThemeResource SystemColorWindowColor}" />
+    </ResourceDictionary>
+</ResourceDictionary.ThemeDictionaries>
+
+<!-- Usage in your ListView... -->
+<ListView>
+    <ListView.ItemContainerStyle>
+        <Style TargetType="ListViewItem">
+            <!-- Causes the DataTemplate to fill the entire width and height
+            of the list item -->
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+
+            <!-- Padding is handled in the DataTemplate -->
+            <Setter Property="Padding" Value="0" />
+        </Style>
+    </ListView.ItemContainerStyle>
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <!-- Margin of 2px allows some of the ListViewItem's background
+            to shine through. An additional left padding of 10px puts the
+            content a total of 12px from the left edge -->
+            <StackPanel
+                Margin="2,2,2,2"
+                Padding="10,0,0,0"
+                Background="{ThemeResource HighContrastOnlyBackgroundBrush}">
+
+                <!-- Foreground is explicitly set so that it doesn't
+                disappear on hovered, pressed, or selected -->
+                <TextBlock
+                    Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"
+                    Text="Double line list item" />
+
+                <HyperlinkButton Content="Hyperlink" />
+            </StackPanel>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
+```
+**Abbildung 8. Der Rahmeneffekt eignet sich gut, wenn Ihre Listenelemente komplexere Steuerelemente enthalten.**
+
+![Liste mit einem Link im hellen Design und im Design „Hoher Kontrast (Schwarz)” (fixiert)](images/high-contrast-list4.png)
+
+
+
+## Erkennen von hohem Kontrast
+
+Sie können mithilfe von Membern der [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)-Klasse programmgesteuert überprüfen, ob das aktuelle Design ein Design mit hohem Kontrast ist.
 
 > [!NOTE]
-> Achten Sie darauf, dass Sie den [**AccessibilitySettings**](https://msdn.microsoft.com/library/windows/apps/BR242237)-Konstruktor aus einem Bereich aufrufen, in dem die App initialisiert ist und bereits Inhalte anzeigt.
-
-Apps können während ihrer Ausführung zur Verwendung von Ressourcenwerten mit hohem Kontrast wechseln. Dies funktioniert, solange die Ressourcen mithilfe der [{ThemeResource}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt185591) im Stil- oder Vorlagen-XAML angefordert werden. Dieses Verfahren der {ThemeResource}-Markuperweiterung wird von allen Standarddesigns (generic.xaml) verwendet. Sie können also dieses Verhalten erzielen, wenn Sie die Standarddesigns für Steuerelemente verwenden. Mit benutzerdefinierten Steuerelementen oder benutzerdefinierten Steuerelementformatierungen ist dies möglich, wenn Sie das Ressourcenverfahren der {ThemeResource}-Markuperweiterung auch in Ihren benutzerdefinierten Vorlagen und Stilen verwendet haben.
+> Achten Sie darauf, dass Sie den **AccessibilitySettings**-Konstruktor in einem Bereich aufrufen, in dem die App initialisiert ist und bereits Inhalt anzeigt.
 
 ## Verwandte Themen  
 * [Barrierefreiheit](accessibility.md)
@@ -180,6 +300,6 @@ Apps können während ihrer Ausführung zur Verwendung von Ressourcenwerten mit 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

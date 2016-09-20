@@ -1,11 +1,10 @@
 ---
 author: mijacobs
-Description: "Gute Symbole harmonieren mit der Typografie und der übrigen Designsprache. Sie mischen keine Metaphern und geben so einfach und schnell wie möglich lediglich die erforderlichen Informationen weiter."
+Description: "Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und geben einfach und schnell nur die erforderlichen Informationen weiter."
 title: Symbole
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: e5e601bf3ff9d0b1518c86130a5b0fefbb86a773
 
@@ -13,16 +12,16 @@ ms.openlocfilehash: e5e601bf3ff9d0b1518c86130a5b0fefbb86a773
 
 # Symbole für UWP-Apps
 
-Gute Symbole harmonieren mit der Typografie und der übrigen Designsprache. Sie mischen keine Metaphern und geben so einfach und schnell wie möglich lediglich die erforderlichen Informationen weiter. 
+Gute Symbole harmonieren mit der Typografie und der übrigen Gestaltungssprache. Sie verwenden keine Metaphern und geben einfach und schnell nur die erforderlichen Informationen weiter. 
 
 ## Größenabstufungen für lineare Skalierungen 
 
 <table>
     <tr> 
-        <td>16 x 16 px</td>
-        <td>24 x 24 px</td>
-        <td>32 x 32 px</td>
-        <td>48 x 48 px</td>
+        <td>16x16px</td>
+        <td>24 x 24px</td>
+        <td>32 x 32px</td>
+        <td>48 x 48px</td>
     </tr>
     <tr> 
         <td>![Icons at 16x16 effective pixels](images/icons-16x16.png)</td>
@@ -36,7 +35,7 @@ Gute Symbole harmonieren mit der Typografie und der übrigen Designsprache. Sie 
 
 Grundsätzlich sollten Symbole den vorhandenen Platz mit geringem Abstand möglichst vollständig ausnutzen. Diese Formen sind Ausgangspunkte für die Bestimmung der Größe einfacher Formen. 
 
-![Raster der Größe 32 x 32 px](images/icons-common-shapes.png)
+![Raster der Größe 32x32px](images/icons-common-shapes.png)
 
 Verwenden Sie die Form, die der Ausrichtung des Symbols entspricht, und berücksichtigen Sie dabei diese grundlegenden Parameter. Symbole müssen die Form nicht unbedingt ausfüllen oder vollständig hinein passen. Sie können nach Bedarf angepasst werden, um ausgewogen zu wirken. 
 
@@ -125,9 +124,9 @@ Wir empfehlen, beim Erstellen von Symbolen ausschließlich rein geometrische For
 
 ## Gefüllte Formen 
 
-Bei Bedarf können Symbole gefüllte Formen enthalten, aber sie sollten bei einer Rastergröße von 32 × 32 px maximal 4 px groß sein. Gefüllte Kreise dürfen maximal 6 × 6 px groß sein. 
+Bei Bedarf können Symbole gefüllte Formen enthalten, aber sie sollten bei einer Rastergröße von 32×32px maximal 4px groß sein. Gefüllte Kreise dürfen maximal 6×6px groß sein. 
 
-![Füllung mit 5 px x 8 px ](images/icons-filled-shapes.png)
+![Füllung mit 5pxx8px ](images/icons-filled-shapes.png)
 
 ## Signale
 
@@ -169,7 +168,7 @@ Die Standardposition für jeden Status bzw. jede Aktion ist unten rechts. Verwen
 
 ### Signalgröße
 
-Signale sollten bei einem Raster der Größe 32 × 32 px 10 bis 18 px umfassen. 
+Signale sollten bei einem Raster der Größe 32×32px 10 bis 18px umfassen. 
 
 ## Verwandte Artikel
 

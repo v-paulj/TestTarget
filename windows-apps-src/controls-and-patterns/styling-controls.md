@@ -8,7 +8,6 @@ title: Formatieren von Steuerelementen
 ms.assetid: AB469A46-FAF5-42D0-9340-948D0EDF4150
 label: Styling controls
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 02cd8f7777f169ad9fc4e5bfe854a8b6e0fe5060
 
@@ -105,7 +104,7 @@ In diesem Beispiel besitzt der erste Stil ein [x:Key-Attribut](../xaml-platform/
 
 ## Verwenden abgeleiteter Stile
 
-Um die Verwaltung von Stilen zu vereinfachen und die Wiederverwendung zu optimieren, können Sie Stile erstellen, die von anderen Stilen erben. Verwenden Sie die [**BasedOn**](https://msdn.microsoft.com/library/windows/apps/br208852)-Eigenschaft, um abgeleitete Stile zu erstellen. Stile, die von anderen Stilen erben, müssen als Ziel denselben Steuerelementtyp haben oder ein Steuerelement, das von dem Typ abgeleitet wird, auf den der Basisstil verweist. Wenn das Ziel des Basisstils z. B. [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/br209365) ist, können die von diesem abgeleiteten Stile **ContentControl** als Ziel haben oder Typen, die von **ContentControl** abgeleitet sind, z. B. [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) und [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527). Wenn ein Wert im abgeleiteten Stil nicht festgelegt wurde, wird er vom Basisstil vererbt. Möchten Sie den Wert vom Basisstil ändern, können Sie ihn im abgeleiteten Stil überschreiben. Das nächste Beispiel zeigt einen **Button** und ein [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) mit Stilen, die von demselben Basisstil abgeleitet sind.
+Um die Verwaltung von Stilen zu vereinfachen und die Wiederverwendung zu optimieren, können Sie Stile erstellen, die von anderen Stilen erben. Verwenden Sie die [**BasedOn**](https://msdn.microsoft.com/library/windows/apps/br208852)-Eigenschaft, um abgeleitete Stile zu erstellen. Stile, die von anderen Stilen erben, müssen als Ziel denselben Steuerelementtyp haben oder ein Steuerelement, das von dem Typ abgeleitet wird, auf den der Basisstil verweist. Wenn das Ziel des Basisstils z.B. [**ContentControl**](https://msdn.microsoft.com/library/windows/apps/br209365) ist, können die von diesem abgeleiteten Stile **ContentControl** als Ziel haben oder Typen, die von **ContentControl** abgeleitet sind, z.B. [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265) und [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/br209527). Wenn ein Wert im abgeleiteten Stil nicht festgelegt wurde, wird er vom Basisstil vererbt. Möchten Sie den Wert vom Basisstil ändern, können Sie ihn im abgeleiteten Stil überschreiben. Das nächste Beispiel zeigt einen **Button** und ein [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316) mit Stilen, die von demselben Basisstil abgeleitet sind.
 
 ![Formatierte Schaltflächen mit abgeleiteten Stilen](images/styles-buttons-based-on.png)
 

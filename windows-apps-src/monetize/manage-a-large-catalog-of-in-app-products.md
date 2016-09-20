@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 5E722AFF-539D-456E-8C4A-ADE90CF7674A
 description: "Wenn Ihre App einen großen In-App-Produktkatalog enthält, können Sie optional das in diesem Thema beschriebene Verfahren zum Verwalten des Katalogs ausführen."
 title: "Verwalten eines großen Katalogs mit In-App-Produkten"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 0927df3cd696e5a6fbd3a235d2b87074f1d63929
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 0927df3cd696e5a6fbd3a235d2b87074f1d63929
 # Verwalten eines großen Katalogs mit In-App-Produkten
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Wenn Ihre App einen großen In-App-Produktkatalog enthält, können Sie optional das in diesem Thema beschriebene Verfahren zum Verwalten des Katalogs ausführen. Sie erstellen einige wenige Produkteinträge für bestimmte Preisniveaus, mit denen im Katalog jeweils Hunderte von Produkten dargestellt werden können.
 
@@ -20,7 +19,8 @@ Zur Aktivierung dieser Funktion verwenden Sie die [**RequestProductPurchaseAsync
 
 Im Store wird nur die *offerId* aus der Kaufanforderung des entsprechenden [**PurchaseResults**](https://msdn.microsoft.com/library/windows/apps/dn263392) verwendet. Mit diesem Verfahren werden die Informationen, die ursprünglich bei der [Eintragung des In-App-Produkts im Store](https://msdn.microsoft.com/library/windows/apps/mt148551) bereitgestellt wurden, nicht direkt geändert.
 
-**Hinweis**  Ab Windows 10 ist die Anzahl von Produkteinträgen pro Entwicklerkonto im Store nicht länger eingeschränkt. In früheren Versionen galt eine Store-Beschränkung von 200 Produkteinträgen pro Entwicklerkonto; mit dem in diesem Thema beschriebenen Verfahren kann diese Beschränkung umgangen werden.
+
+            **Hinweis**  Ab Windows10 ist die Anzahl von Produkteinträgen pro Entwicklerkonto im Store nicht länger eingeschränkt. In früheren Versionen galt eine Store-Beschränkung von 200 Produkteinträgen pro Entwicklerkonto; mit dem in diesem Thema beschriebenen Verfahren kann diese Beschränkung umgangen werden.
 
 ## Voraussetzungen
 
@@ -66,7 +66,7 @@ catch (Exception)
 
 Die App muss die Produkterfüllung an den Store melden, sobald die lokale Erfüllung für das Angebot abgeschlossen ist. Wenn die App die Erfüllung des Angebots bei Verwendung eines großen Katalogs nicht meldet, kann der Benutzer keine In-App-Angebote erwerben, für die der gleiche Store-Produkteintrag genutzt wird.
 
-Wie bereits erwähnt verwendet der Store nur bereitgestellte Angebotsinformationen zum Auffüllen des [**PurchaseResults**](https://msdn.microsoft.com/library/windows/apps/dn263392)-Elements und erstellt keine beständige Zuordnung zwischen einem Angebot aus einem umfangreichen Katalog und einem Produkteintrag im Store. Daher müssen Sie die Benutzerberechtigungen für Produkte aus umfangreichen Katalogen nachverfolgen und dem Benutzer produktspezifischen Kontext (wie z. B. den Namen des angebotenen Artikels oder Details dazu) außerhalb des [**RequestProductPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/dn263382)-Vorgangs zur Verfügung stellen.
+Wie bereits erwähnt verwendet der Store nur bereitgestellte Angebotsinformationen zum Auffüllen des [**PurchaseResults**](https://msdn.microsoft.com/library/windows/apps/dn263392)-Elements und erstellt keine beständige Zuordnung zwischen einem Angebot aus einem umfangreichen Katalog und einem Produkteintrag im Store. Daher müssen Sie die Benutzerberechtigungen für Produkte aus umfangreichen Katalogen nachverfolgen und dem Benutzer produktspezifischen Kontext (wie z.B. den Namen des angebotenen Artikels oder Details dazu) außerhalb des [**RequestProductPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/dn263382)-Vorgangs zur Verfügung stellen.
 
 Der folgende Code veranschaulicht den Erfüllungsaufruf sowie ein Muster für Meldungen auf der Benutzeroberfläche, in das die angebotsspezifischen Informationen eingefügt werden. Da keine produktspezifischen Informationen vorhanden sind, werden im Beispiel Informationen aus dem [**ListingInformation**](https://msdn.microsoft.com/library/windows/apps/br225163)-Element des Produkts verwendet.
 
@@ -110,8 +110,8 @@ switch (result)
 
 ## Verwandte Themen
 
-* [Unterstützen von Käufen von In-App-Produkten](enable-in-app-product-purchases.md)
-* [Käufe konsumierbarer In-App-Produkte aktivieren](enable-consumable-in-app-product-purchases.md)
+* [Unterstützen von In-App-Produktkäufen](enable-in-app-product-purchases.md)
+* [Unterstützen von Käufen konsumierbarer In-App-Produkte](enable-consumable-in-app-product-purchases.md)
 * [Store-Beispiel (zeigt Testversionen und In-App-Einkäufe)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
 * [**RequestProductPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/dn263382)
 * [**ProductPurchaseDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/dn263384)

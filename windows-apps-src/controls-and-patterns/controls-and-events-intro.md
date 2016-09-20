@@ -5,7 +5,6 @@ title: "Hinzufügen von Steuerelementen und Verarbeiten von Ereignissen"
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
 label: Intro to controls and events
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 709771424daba7c034dc6f19d6998469705a24da
 
@@ -15,7 +14,7 @@ ms.openlocfilehash: 709771424daba7c034dc6f19d6998469705a24da
 Sie erstellen die Benutzeroberfläche für Ihre App mit Steuerelementen wie Schaltflächen, Textfeldern und Kombinationsfeldern, um Daten anzuzeigen und Benutzereingaben zu erhalten. Hier zeigen wir Ihnen, wie Sie Ihrer App Steuerelemente hinzufügen. Es gibt drei wichtige Schritte zum Hinzufügen von Steuerelementen zur App: 
 
 - Fügen Sie Ihrer App-UI ein Steuerelement hinzu. 
-- Legen Sie Eigenschaften für das Steuerelement fest, z. B. Breite, Höhe und Vordergrundfarbe. 
+- Legen Sie Eigenschaften für das Steuerelement fest, z.B. Breite, Höhe und Vordergrundfarbe. 
 - Fügen Sie den Ereignishandlern des Steuerelements Code hinzu, damit sie eine Funktion haben. 
 
 ## Hinzufügen eines Steuerelements
@@ -72,9 +71,9 @@ Sie können Steuerelementeigenschaften im Eigenschaftenfenster, in XAML oder im 
 
 Hier wird beschrieben, wie Sie die „Foreground“-Eigenschaft im XAML-Editor festlegen. Beachten Sie das Visual Studio IntelliSense-Fenster, in dem hilfreiche Informationen zur Syntax angezeigt werden. 
 
-![IntelliSense in XAML Teil 1](images/add-controls-foreground-xaml.png)
+![IntelliSense in XAML Teil1](images/add-controls-foreground-xaml.png)
 
-![IntelliSense in XAML Teil 2](images/add-controls-foreground-xaml-2.png)
+![IntelliSense in XAML Teil2](images/add-controls-foreground-xaml-2.png)
 
 Im Folgenden finden Sie den XAML-Code, der nach dem Festlegen der „Foreground“-Eigenschaft vorliegt. 
 
@@ -98,7 +97,7 @@ Wählen Sie zum Erstellen eines Ereignishandlers das Steuerelement aus, und klic
 
 ![Ereignisliste in Visual Studio](images/add-controls-add-event-designer.png)
 
-Wenn Sie einen Ereignishandler mit dem Standardnamen erstellen möchten, doppelklicken Sie im Eigenschaftenfenster auf das Textfeld neben dem Ereignisnamen. Wenn Sie einen Ereignishandler mit einem benutzerdefinierten Namen erstellen möchten, geben Sie im Textfeld den gewünschten Namen ein, und drücken Sie die EINGABETASTE. Der Ereignishandler wird erstellt, und die CodeBehind-Datei wird im Code-Editor geöffnet. Die Ereignishandlermethode enthält zwei Parameter. Der erste Parameter ist `sender`. Dabei handelt es sich um einen Verweis auf das Objekt, dem der Handler angefügt ist. Der `sender`-Parameter ist ein **Object**-Typ. In der Regel wandeln Sie `sender` in einen genaueren Typ um, wenn Sie den Zustand direkt für das `sender`-Objekt überprüfen oder ändern möchten. Abhängig davon, wo der Handler angefügt wird, handelt es sich dabei basierend auf Ihrem eigenen App-Design voraussichtlich um einen Typ, in den `sender` sicher umgewandelt werden kann. Den zweiten Wert stellen Ereignisdaten dar. In der Regel sind diese in Signaturen als `e`- oder `args`-Parameter enthalten.
+Wenn Sie einen Ereignishandler mit dem Standardnamen erstellen möchten, doppelklicken Sie im Eigenschaftenfenster auf das Textfeld neben dem Ereignisnamen. Wenn Sie einen Ereignishandler mit einem benutzerdefinierten Namen erstellen möchten, geben Sie im Textfeld den gewünschten Namen ein, und drücken Sie die EINGABETASTE. Der Ereignishandler wird erstellt, und die CodeBehind-Datei wird im Code-Editor geöffnet. Die Ereignishandlermethode enthält zweiParameter. Der erste Parameter ist `sender`. Dabei handelt es sich um einen Verweis auf das Objekt, dem der Handler angefügt ist. Der `sender`-Parameter ist ein **Object**-Typ. In der Regel wandeln Sie `sender` in einen genaueren Typ um, wenn Sie den Zustand direkt für das `sender`-Objekt überprüfen oder ändern möchten. Abhängig davon, wo der Handler angefügt wird, handelt es sich dabei basierend auf Ihrem eigenen App-Design voraussichtlich um einen Typ, in den `sender` sicher umgewandelt werden kann. Den zweiten Wert stellen Ereignisdaten dar. In der Regel sind diese in Signaturen als `e`- oder `args`-Parameter enthalten.
 
 Hier finden Sie den Code, der das Click-Ereignis einer Schaltfläche namens `Button1` behandelt. Wenn Sie auf die Schaltfläche klicken, wird die „Foreground“-Eigenschaft der Schaltfläche auf Blau gesetzt. 
 

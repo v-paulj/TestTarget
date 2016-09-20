@@ -11,7 +11,7 @@ ms.openlocfilehash: 9b48aeddb5ddc912fccd07149980655a06535470
 # Starten der Windows Store-App
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Thema wird das **ms-windows-store:**-URI-Schema beschrieben. Ihre App kann mit diesem URI-Schema die Windows Store-App mit bestimmten Seiten des Store starten.
 

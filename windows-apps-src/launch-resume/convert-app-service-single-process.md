@@ -1,16 +1,20 @@
 ---
 author: TylerMSFT
-title: Convert an app service to run in the same process as its provider
-description: Convert app service code that ran in a separate background process into code that runs inside the same process as your app service provider.
+title: "Konvertieren eines App-Diensts für die Ausführung im gleichen Prozess wie sein Anbieter"
+description: "Konvertieren Sie App-Dienstcode, der in einem separaten Hintergrundprozess auf Code gestoßen ist, der in demselben Prozess ausführt wird wie Ihr App-Dienstanbieter."
+translationtype: Human Translation
+ms.sourcegitcommit: 9e959a8ae6bf9496b658ddfae3abccf4716957a3
+ms.openlocfilehash: 0990e9938bb9bf1794cf58c5541a64f22853b093
+
 ---
 
-# Convert an app service to run in the same process as its provider
+# Konvertieren eines App-Diensts für die Ausführung im gleichen Prozess wie sein Anbieter
 
-An App Service Connection enables another application to wake up your app in the background and start a direct line of communication with it.
+Eine [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) ermöglicht einer anderen Anwendung, Ihre App im Hintergrund zu aktivieren und einen direkten Kommunikationsweg mit ihr zu starten.
 
-With the introduction of single-process App Services, two running foreground applications can have a direct line of communication via an app service connection. App Services can now run in the same process as the foreground application; which makes communication between apps much easier while removing the need to separate the service code into a separate project.
+Mit der Einführung von Einzelprozess-App-Diensten können zwei ausgeführte Vordergrundanwendungen einen direkten Kommunikationsweg über eine App-Dienst-Verbindung aufweisen. App-Dienste können jetzt im gleichen Prozess wie die Vordergrundanwendung ausgeführt werden. Die Kommunikation zwischen Apps wird dadurch sehr viel einfacher, während gleichzeitig die Notwendigkeit entfällt, den Dienstcode in ein separates Projekt zu trennen.
 
-Turning a multiple process model App Service into single process model requires two changes. The first is a manifest change.
+Um einen Multiprozessmodell-App-Dienst in ein Einzelprozessmodell zu konvertieren, sind zwei Änderungen erforderlich. Die erste ist eine Manifest-Änderung.
 
 > ```xml
 >  <uap:Extension Category="windows.appService">
@@ -18,11 +22,11 @@ Turning a multiple process model App Service into single process model requires 
 >  </uap:Extension>
 > ```
 
-Remove the `EntryPoint` attribute. Now `OnBackgroundActivated()` callback will be used as the callback method when the app service is invoked.
+Entfernen Sie das `EntryPoint`-Attribut. Jetzt wird beim Aufrufen des App-Dienstes der  [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx)-Rückruf als Rückrufmethode verwendet.
 
-The second change is to move the service logic from its separate background task project into methods that can be called from `OnBackgroundActivated()`.
+Die zweite Änderung besteht darin, die Dienstlogik aus ihrem eigenen Hintergrundaufgabenprojekt in Methoden zu verschieben, die über **OnBackgroundActivated()** aufgerufen werden können.
 
-Now your application can directly run your App Service.  For example:
+Jetzt kann Ihre Anwendung den App-Dienst direkt ausführen.  Beispiel:
 
 > ``` cs
 > private AppServiceConnection appServiceconnection;
@@ -65,8 +69,14 @@ Now your application can directly run your App Service.  For example:
 > }
 > ```
 
-In the code above the `OnBackgroundActivated` method handles the app service activation. All of the events required for communication through an `AppServiceConnection` are registered, and the task deferral object is stored so that it can be marked as complete when the communication between the applications is done.
+Im obigen Code steuert die `OnBackgroundActivated`-Methode die App-Dienst-Aktivierung. Alle Ereignisse, die für die Kommunikation über eine [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) erforderlich sind, werden registriert, und das Aufgaben-Verzögerungsobjekt wird gespeichert, damit es nach Abschluss der Kommunikation zwischen den Anwendungen als abgeschlossen gekennzeichnet werden kann.
 
-When the app receives a request and reads the `ValueSet` provided to see if the `Key` and `Value` strings are present. If they are present then the app service returns a pair of `Response` and `True` string values back to the app on the other side of the AppServiceConnection.
+Wenn die App eine Anforderung empfängt, liest sie das zur Verfügung gestellte [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx), um festzustellen, ob die Zeichenfolgen `Key` und `Value` vorhanden sind. Wenn sie vorhanden sind, gibt der App-Dienst ein Wertepaar von Zeichenfolgen `Response` und `True` an die App auf der anderen Seite der **AppServiceConnection** zurück.
 
-Learn more about connecting and communicating with other apps at [Create and Consume an App Service](https://msdn.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service?f=255&MSPPError=-2147217396).
+Weitere Informationen zum Herstellen einer Verbindung und Kommunizieren mit anderen Apps finden Sie unter [Erstellen und Verwenden eines App-Diensts](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service?f=255&MSPPError=-2147217396).
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

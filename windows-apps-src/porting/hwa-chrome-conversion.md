@@ -59,8 +59,7 @@ Passen Sie Ihre Web-App nach dem Verpacken für den Windows Store an, damit sie 
 
 ### Regeln für den Anwendungsinhalt-URI
 
-
-              [Regeln für den Anwendungsinhalt-URI (Application Content URI Rules, ACURs)](/hwa-access-features.md#keep-your-app-secure-setting-application-content-uri-rules-acurs) bzw. Inhalts-URIs definieren den Bereich Ihrer gehosteten Web-App über eine URL-Zulassungsliste im Manifest für das App-Paket. Um die Kommunikation zu und von Remoteinhalten zu steuern, müssen Sie die URLs definieren, die in dieser Liste enthalten oder von dieser Liste ausgeschlossen werden. Wenn ein Benutzer auf eine URL klickt, die nicht explizit enthalten ist, öffnet Windows den Zielpfad im Standardbrowser. Mit ACURs können Sie einer URL auch Zugriff auf [universelle Windows-APIs](https://msdn.microsoft.com/library/windows/apps/br211377.aspx) gewähren.
+[Regeln für den Anwendungsinhalt-URI (Application Content URI Rules, ACURs)](/hwa-access-features.md#keep-your-app-secure-setting-application-content-uri-rules-acurs) bzw. Inhalts-URIs definieren den Bereich Ihrer gehosteten Web-App über eine URL-Zulassungsliste im Manifest für das App-Paket. Um die Kommunikation zu und von Remoteinhalten zu steuern, müssen Sie die URLs definieren, die in dieser Liste enthalten oder von dieser Liste ausgeschlossen werden. Wenn ein Benutzer auf eine URL klickt, die nicht explizit enthalten ist, öffnet Windows den Zielpfad im Standardbrowser. Mit ACURs können Sie einer URL auch Zugriff auf [universelle Windows-APIs](https://msdn.microsoft.com/library/windows/apps/br211377.aspx) gewähren.
 
 Ihre Regeln sollten mindestens die Startseite Ihrer App enthalten. Das Konvertierungstool erstellt automatisch einen Satz von ACURs für Sie, basierend auf Ihrer Startseite und deren Domäne. Wenn es jedoch programmbasierte Umleitungen gibt, ob auf dem Server oder auf dem Client, müssen diese Ziele der Zulassungsliste hinzugefügt werden.
 

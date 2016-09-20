@@ -3,7 +3,6 @@ author: mijacobs
 Description: "Mithilfe von Inhaltsübergangsanimationen können Sie den Inhalt eines Bildschirmbereichs ändern und gleichzeitig den Container oder Hintergrund unverändert lassen. Neuer Inhalt wird eingeblendet. Muss vorhandener Inhalt ersetzt werden, wird dieser Inhalt ausgeblendet."
 title: "Richtlinien für Inhaltsübergangsanimationen"
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
 

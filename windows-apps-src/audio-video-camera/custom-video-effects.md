@@ -5,7 +5,6 @@ MS-HAID: dev\_audio\_vid\_camera.custom\_video\_effects
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Benutzerdefinierte Videoeffekte
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 
@@ -14,12 +13,12 @@ ms.openlocfilehash: d6ad5b2488f79787c07b4057b34fcbfd3a4df3c3
 # Benutzerdefinierte Videoeffekte
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt für die hier bereitgestellten Informationen keine Garantie, weder ausdrücklicher noch impliziter Art.\]
 
-In diesem Artikel wird beschrieben, wie Sie eine Windows-Runtime-Komponente erstellen, die die [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788)-Schnittstelle implementiert, mit der Sie benutzerdefinierte Effekte für Videostreams erstellen können. Benutzerdefinierte Effekte können mit verschiedenen Windows-Runtime-APIs verwendet werden, z. B. [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124), die den Zugriff auf die Kamera eines Gerätes ermöglicht, sowie [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646), mit der Sie komplexe Kompositionen aus Medienclips erstellen können.
+In diesem Artikel wird beschrieben, wie Sie eine Windows-Runtime-Komponente erstellen, die die [**IBasicVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn764788)-Schnittstelle implementiert, mit der Sie benutzerdefinierte Effekte für Videostreams erstellen können. Benutzerdefinierte Effekte können mit verschiedenen Windows-Runtime-APIs verwendet werden, z.B. [MediaCapture](https://msdn.microsoft.com/library/windows/apps/br241124), die den Zugriff auf die Kamera eines Gerätes ermöglicht, sowie [**MediaComposition**](https://msdn.microsoft.com/library/windows/apps/dn652646), mit der Sie komplexe Kompositionen aus Medienclips erstellen können.
 
 ## Hinzufügen eines benutzerdefinierten Effekts zu Ihrer App
 
@@ -67,9 +66,10 @@ Die [**DiscardQueuedFrames**](https://msdn.microsoft.com/library/windows/apps/dn
 
 ### IsReadOnly-Eigenschaft
 
-Die [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792)-Eigenschaft teilt dem System mit, ob Ihr Effekt in die Ausgabe des Effekts schreibt. Wenn Ihre App die Videoframes nicht ändert – z. B. ein Effekt, der nur eine Analyse der Videoframes durchführt –, sollten Sie diese Eigenschaft auf „true“ festlegen. Dann kopiert das System für Sie die Frameeingabe in die Frameausgabe.
+Die [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792)-Eigenschaft teilt dem System mit, ob Ihr Effekt in die Ausgabe des Effekts schreibt. Wenn Ihre App die Videoframes nicht ändert– z.B. ein Effekt, der nur eine Analyse der Videoframes durchführt–, sollten Sie diese Eigenschaft auf „true“ festlegen. Dann kopiert das System für Sie die Frameeingabe in die Frameausgabe.
 
-**Tipp**  Wenn die [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792)-Eigenschaft auf „true“ festgelegt ist, kopiert das System den Eingabeframe in den Ausgabeframe, bevor [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) aufgerufen wird. Das Festlegen der **IsReadOnly**-Eigenschaft auf „true“ schränkt Sie nicht darin ein, in die Ausgabeframes in **ProcessFrame** zu schreiben.
+
+            **Tipp**  Wenn die [**IsReadOnly**](https://msdn.microsoft.com/library/windows/apps/dn764792)-Eigenschaft auf „true“ festgelegt ist, kopiert das System den Eingabeframe in den Ausgabeframe, bevor [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794) aufgerufen wird. Das Festlegen der **IsReadOnly**-Eigenschaft auf „true“ schränkt Sie nicht darin ein, in die Ausgabeframes in **ProcessFrame** zu schreiben.
 
 [!code-cs[IsReadOnly](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetIsReadOnly)] 
 
@@ -89,7 +89,8 @@ Das System überprüft die [**SupportedEncodingProperties**](https://msdn.micros
 [!code-cs[SupportedEncodingProperties](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSupportedEncodingProperties)]
 
 
-**Hinweis**  Wenn Sie eine leere Liste mit [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217)-Objekten von **SupportedEncodingProperties** zurückgeben, verwendet das System standardmäßig die ARGB32-Codierung.
+
+            **Hinweis**  Wenn Sie eine leere Liste mit [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217)-Objekten von **SupportedEncodingProperties** zurückgeben, verwendet das System standardmäßig die ARGB32-Codierung.
 
  
 
@@ -100,7 +101,8 @@ Das System überprüft die [**SupportedMemoryTypes**](https://msdn.microsoft.com
 [!code-cs[SupportedMemoryTypes](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetSupportedMemoryTypes)]
 
 
-**Hinweis**  Wenn Sie [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822) angeben, verwendet das System entweder den GPU- oder Systemarbeitsspeicher, je nachdem, welcher für die Pipeline effizienter ist. Wenn Sie diesen Wert verwenden, müssen Sie in der [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794)-Methode prüfen, ob [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) oder [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505), das an die Methode übergeben wird, Daten enthält, und den Frame dann entsprechend verarbeiten.
+
+            **Hinweis**  Wenn Sie [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822) angeben, verwendet das System entweder den GPU- oder Systemarbeitsspeicher, je nachdem, welcher für die Pipeline effizienter ist. Wenn Sie diesen Wert verwenden, müssen Sie in der [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794)-Methode prüfen, ob [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) oder [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505), das an die Methode übergeben wird, Daten enthält, und den Frame dann entsprechend verarbeiten.
 
  
 
@@ -139,7 +141,8 @@ Fügen Sie den folgenden Code in den Namespace für den Effekt ein, um die Schni
 [!code-cs[COMImport](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs#SnippetCOMImport)]
 
 
-**Hinweis**  Da diese Technik auf einen systemeigenen, nicht verwalteten Bildpuffer zugreift, müssen Sie Ihr Projekt konfigurieren, um unsicheren Code zuzulassen.
+
+            **Hinweis**  Da diese Technik auf einen systemeigenen, nicht verwalteten Bildpuffer zugreift, müssen Sie Ihr Projekt konfigurieren, um unsicheren Code zuzulassen.
 1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt „VideoEffectComponent“, und wählen Sie „Eigenschaften...“ aus.
 2.  Wählen Sie die Registerkarte „Erstellen“ aus.
 3.  Aktivieren Sie das Kontrollkästchen für „Unsicheren Code zulassen“.
@@ -216,7 +219,8 @@ Um den Videoeffekt aus Ihrer App zu verwenden, müssen Sie einen Verweis zum Eff
 
 Sie können einen einfachen Vorschaustream von der Kamera einrichten, indem Sie die Schritte im Artikel [Einfacher Zugriff auf die Kameravorschau](simple-camera-preview-access.md) ausführen. Wenn Sie diese Schritte ausführen, erhalten Sie ein initialisiertes [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124)-Objekt, das für den Zugriff auf den Videostream der Kamera verwendet wird.
 
-Um Ihren benutzerdefinierten Videoeffekt einem Kamerastream hinzuzufügen, erstellen Sie zuerst ein neues [**VideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608055)-Objekt, wobei der Namespace und der Klassenname für Ihren Effekt übergeben wird. Rufen Sie anschließend die [**AddVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn878035)-Methode des **MediaCapture**-Objekts auf, um den Effekt dem angegebenen Stream hinzuzufügen. In diesem Beispiel wird der [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640)-Wert verwendet, um anzugeben, dass der Effekt dem Vorschaustream hinzugefügt werden sollte. Wenn Ihre App die Videoaufnahme unterstützt, könnten Sie auch **MediaStreamType.VideoRecord** verwenden, um den Effekt zum Aufnahmestream hinzuzufügen. **AddVideoEffect** gibt ein [**IMediaExtension**](https://msdn.microsoft.com/library/windows/apps/br240985)-Objekt zurück, das Ihren benutzerdefinierten Effekt darstellt. Mit der SetProperties-Methode können Sie die Konfiguration für den Effekt festlegen.
+Um Ihren benutzerdefinierten Videoeffekt einem Kamerastream hinzuzufügen, erstellen Sie zuerst ein neues [**VideoEffectDefinition**](https://msdn.microsoft.com/library/windows/apps/dn608055)-Objekt, wobei der Namespace und der Klassenname für Ihren Effekt übergeben wird. Rufen Sie anschließend die [**AddVideoEffect**](https://msdn.microsoft.com/library/windows/apps/dn878035)-Methode des **MediaCapture**-Objekts auf, um den Effekt dem angegebenen Stream hinzuzufügen. In diesem Beispiel wird der [**MediaStreamType.VideoPreview**](https://msdn.microsoft.com/library/windows/apps/br226640)-Wert verwendet, um anzugeben, dass der Effekt dem Vorschaustream hinzugefügt werden sollte. Wenn Ihre App die Videoaufnahme unterstützt, könnten Sie auch **MediaStreamType.VideoRecord** verwenden, um den Effekt zum Aufnahmestream hinzuzufügen. 
+            **AddVideoEffect** gibt ein [**IMediaExtension**](https://msdn.microsoft.com/library/windows/apps/br240985)-Objekt zurück, das Ihren benutzerdefinierten Effekt darstellt. Mit der SetProperties-Methode können Sie die Konfiguration für den Effekt festlegen.
 
 Nachdem der Effekt hinzugefügt wurde, wird [**StartPreviewAsync** ](https://msdn.microsoft.com/library/windows/apps/br226613) aufgerufen, um den Vorschaustream zu starten.
 
@@ -235,13 +239,15 @@ Allgemeine Informationen zum Erstellen von Medienkompositionen von Videoclips fi
 ## Verwandte Themen
 
 
-[Einfacher Zugriff auf die Kameravorschau](simple-camera-preview-access.md)
+
+            [Einfacher Zugriff auf die Kameravorschau](simple-camera-preview-access.md)
             
           
             [Medienkompositionen und -bearbeitung](media-compositions-and-editing.md)
             
           
             [Win2D-Dokumentation](http://go.microsoft.com/fwlink/?LinkId=519078)
+          
  
 
  

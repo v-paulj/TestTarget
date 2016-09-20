@@ -5,7 +5,6 @@ title: "Einführung in das UWP-App-Design"
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 label: Intro to UWP app design
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: ec154ec64ba18badb5f81b59e76fc04e539de1a8
 
@@ -37,7 +36,7 @@ Aufgrund der Funktionsweise des Skalierungssystems beim Entwerfen Ihrer UWP-App,
 
 -   Sie können die Pixeldichte und die tatsächliche Bildschirmauflösung beim Entwerfen ignorieren. Entwerfen Sie stattdessen für die effektive Auflösung (die Auflösung in effektiven Pixeln) für eine Größenklasse (Größenklassen werden [weiter unten in diesem Artikel](#sizeclasses) definiert).
 
--   Wenn das System die Benutzeroberfläche skaliert, erfolgt dies durch die Multiplikation mit vier. Um eine scharfe Darstellung zu gewährleisten, docken Sie Ihre Entwürfe an das 4 x 4-Pixelraster an: Stellen Sie Ränder, Größen und Positionen von UI-Elementen (nicht jedoch die Größe, Text kann eine beliebige Größe aufweisen) und die Position des Textes als ein Vielfaches von 4 in effektiven Pixeln dar.
+-   Wenn das System die Benutzeroberfläche skaliert, erfolgt dies durch die Multiplikation mit vier. Um eine scharfe Darstellung zu gewährleisten, docken Sie Ihre Entwürfe an das 4x4-Pixelraster an: Stellen Sie Ränder, Größen und Positionen von UI-Elementen (nicht jedoch die Größe, Text kann eine beliebige Größe aufweisen) und die Position des Textes als ein Vielfaches von 4 in effektiven Pixeln dar.
 
 Diese Abbildung zeigt Designelemente, die dem 4 x 4-Pixelraster zugeordnet sind. Das Designelement wird immer scharfe Kanten aufweisen.
 
@@ -45,9 +44,10 @@ Diese Abbildung zeigt Designelemente, die dem 4 x 4-Pixelraster zugeordnet sind.
 
 Die nächste Abbildung zeigt Designelemente, die nicht an das 4 x 4-Raster angedockt werden. Auf einigen Geräten werden diese Designelemente verschwommene, weiche Kanten aufweisen.
 
-![Designelemente, die nicht am 4 x 4-Pixelraster ausgerichtet werden](images/rsp-design/offthegridillustration.png)
+![Designelemente, die nicht am 4x4-Pixelraster ausgerichtet werden](images/rsp-design/offthegridillustration.png)
 
-**Tipp**   Legen Sie beim Erstellen von Bildschirmmodellen in Bildbearbeitungsprogrammen die DPI auf 72 und die Bildgröße auf effektive Auflösung für die Zielgrößenklasse fest. (Eine Liste der Größenklassen und effektiven Auflösungen finden Sie im Abschnitt [Empfehlungen für bestimmte Größenklassen](#sizeclasses) dieses Artikels.)
+
+            **Tipp**   Legen Sie beim Erstellen von Bildschirmmodellen in Bildbearbeitungsprogrammen die DPI auf 72 und die Bildgröße auf effektive Auflösung für die Zielgrößenklasse fest. (Eine Liste der Größenklassen und effektiven Auflösungen finden Sie im Abschnitt [Empfehlungen für bestimmte Größenklassen](#sizeclasses) dieses Artikels.)
 
 
 ### Universelle Eingabe und Smart-Interaktionen
@@ -76,7 +76,7 @@ Die UWP bietet auch einige nützliche Bausteine, die den Entwurf von Apps für m
     -   Eine Segoe-basierter Typenverlauf, der sicherstellt, dass der App-Text auf allen Geräten scharf dargestellt wird.
     -   Standardanimationen für Interaktionen.
     -   Automatische Unterstützung von Modi mit hohem Kontrast. Bei der Entwicklung unserer Stile wurden hohe Kontraste berücksichtigt, sodass Ihre App auch auf einem Gerät im Modus mit hohem Kontrast gut dargestellt wird.
-    -   Automatische Unterstützung anderer Sprachen. Die Standardstile wählen automatisch die richtige Schriftart für jede Sprache aus, die Windows unterstützt. Sie können sogar mehrere Sprachen in derselben App verwenden, die dann ebenfalls richtig dargestellt werden.
+    -   Automatische Unterstützung anderer Sprachen. Die Standardstile wählen automatisch die richtige Schriftart für jede Sprache aus, die Windowsunterstützt. Sie können sogar mehrere Sprachen in derselben App verwenden, die dann ebenfalls richtig dargestellt werden.
     -   Integrierte Unterstützung für die Leserichtung von rechts nach links.
 
     Sie können diese Standardstile anpassen, um Ihrer App eine persönliche Note zu verleihen, oder Sie können sie vollständig durch Ihre eigene visuelle Benutzeroberfläche erstellen. Hier sehen Sie als Beispiel ein Design für eine Wetter-App mit einem einzigartigen visuellen Stil:
@@ -134,17 +134,17 @@ Bevor wir fortfahren, möchten wir Sie darauf aufmerksam machen, dass Windows ke
 
 -   **Effektive Bildschirmbereichnutzung und reduzierte Navigation**
 
-    Wenn Sie eine App für ein Gerät mit einem kleinen Bildschirm entwickeln, z. B. Smartphone, kann die App auf einem PC mit einem viel größeren Bildschirm verwendet werden, eine Menge des Bildschirmbereichs bleibt jedoch vermutlich ungenutzt. Sie können die App anpassen, damit mehr Inhalt angezeigt wird, wenn eine bestimmte Bildschirmgröße überschritten wird. Bei einer Shopping-App beispielsweise wird auf einem Smartphone ggf. eine Kategorie zum bestimmten Zeitpunkt anzeigt, während auf einem PC oder Laptop mehrere Kategorien und Produkte gleichzeitig angezeigt werden.
+    Wenn Sie eine App für ein Gerät mit einem kleinen Bildschirm entwickeln, z.B. Smartphone, kann die App auf einem PC mit einem viel größeren Bildschirm verwendet werden, eine Menge des Bildschirmbereichs bleibt jedoch vermutlich ungenutzt. Sie können die App anpassen, damit mehr Inhalt angezeigt wird, wenn eine bestimmte Bildschirmgröße überschritten wird. Bei einer Shopping-App beispielsweise wird auf einem Smartphone ggf. eine Kategorie zum bestimmten Zeitpunkt anzeigt, während auf einem PC oder Laptop mehrere Kategorien und Produkte gleichzeitig angezeigt werden.
 
     Durch das Platzieren von mehr Inhalt auf dem Bildschirm reduzieren Sie die erforderliche Navigation des Benutzers.
 
 -   **Profitieren von Gerätefunktionen**
 
-    Bestimmte Geräte verfügen über bestimmte Gerätefunktionen. Smartphones z. B. verfügen wahrscheinlich über einen Positionssensor und eine Kamera, während ein PC darüber möglicherweise nicht verfügt. Ihre App kann erkennen, welche Funktionen verfügbar sind und Features die Verwendung dieser ermöglichen.
+    Bestimmte Geräte verfügen über bestimmte Gerätefunktionen. Smartphones z.B. verfügen wahrscheinlich über einen Positionssensor und eine Kamera, während ein PC darüber möglicherweise nicht verfügt. Ihre App kann erkennen, welche Funktionen verfügbar sind und Features die Verwendung dieser ermöglichen.
 
 -   **Optimieren für Eingabe**
 
-    Die universelle Steuerelementbibliothek kann mit allen Eingabetypen (Toucheingabe, Stift, Tastatur, Maus) verwendet werden. Sie können jedoch eine Optimierung für bestimmte Eingabetypen erreichen, indem Sie Ihre UI-Elemente neu anordnen. Wenn Sie z. B. Elemente für die Navigation am unteren Bildschirmrand platzieren, ist der Zugriff auf diese für Smartphonebenutzer einfacher; die meisten PC-Benutzer hingegen erwarten, dass Elemente für die Navigation eher am oberen Bildschirmrand angezeigt werden.
+    Die universelle Steuerelementbibliothek kann mit allen Eingabetypen (Toucheingabe, Stift, Tastatur, Maus) verwendet werden. Sie können jedoch eine Optimierung für bestimmte Eingabetypen erreichen, indem Sie Ihre UI-Elemente neu anordnen. Wenn Sie z.B. Elemente für die Navigation am unteren Bildschirmrand platzieren, ist der Zugriff auf diese für Smartphonebenutzer einfacher; die meisten PC-Benutzer hingegen erwarten, dass Elemente für die Navigation eher am oberen Bildschirmrand angezeigt werden.
 
 ## <span id="Responsive_design_techniques"></span><span id="responsive_design_techniques"></span><span id="RESPONSIVE_DESIGN_TECHNIQUES"></span>Reaktionsfähige Designtechniken
 
@@ -153,7 +153,7 @@ Wenn Sie die Benutzeroberfläche Ihrer App für bestimmte Bildschirmbreiten opti
 
 ### <span id="Reposition"></span><span id="reposition"></span><span id="REPOSITION"></span>Ändern der Position
 
-Sie können den Ort und die Position der UI-Elemente der App ändern, um auf jedem Gerät ein optimales Ergebnis zu erzielen. In diesem Beispiel ist für das Hochformat auf Smartphone oder Phablet ein Bildlauf der Benutzeroberfläche erforderlich, da nur ein gesamter Frame zu einem Zeitpunkt sichtbar ist. Wenn die App auf einem Gerät mit zwei vollständigen Frames verwendet wird, egal ob im Hoch- oder im Querformat, kann Frame B den dedizierten Speicherplatz belegen. Wenn Sie ein Raster für die Positionierung verwenden, können Sie das gleiche Raster für eine Neuanordnung der UI-Elemente verwenden.
+Sie können den Ort und die Position der UI-Elemente der App ändern, um auf jedem Gerät ein optimales Ergebnis zu erzielen. In diesem Beispiel ist für das Hochformat auf Smartphone oder Phablet ein Bildlauf der Benutzeroberfläche erforderlich, da nur ein gesamter Frame zu einem Zeitpunkt sichtbar ist. Wenn die App auf einem Gerät mit zwei vollständigen Frames verwendet wird, egal ob im Hoch- oder im Querformat, kann FrameB den dedizierten Speicherplatz belegen. Wenn Sie ein Raster für die Positionierung verwenden, können Sie das gleiche Raster für eine Neuanordnung der UI-Elemente verwenden.
 
 ![Ändern der Position](images/rsp-design/rspd-reposition.png)
 
@@ -179,15 +179,15 @@ Dieses Beispiel zeigt, wie eine einzelne Spalte mit Inhalt für vertikalen Bildl
 
 Das Einblenden von UI-Elementen kann von der Bildschirmfläche sowie davon abhängig gemacht werden, ob das Gerät zusätzliche Funktionen, bestimmte Situationen oder bevorzugte Bildschirmausrichtungen unterstützt.
 
-In diesem Beispiel mit Registerkarten ist die mittlere Registerkarte mit dem Kamerasymbol möglicherweise für die App auf einem Smartphone oder Phablet bestimmt und bei größeren Geräten nicht anwendbar. Deshalb ist sie auf dem Gerät auf der rechten Seite eingeblendet. Ein weiteres häufiges Beispiel für das Einblenden oder Ausblenden der Benutzeroberfläche bezieht sich auf Media Player-Steuerelemente. Hierbei sind die Schaltflächen bei kleineren Geräten minimiert und werden bei Geräten mit größerem Bildschirm vergrößert. Der Media Player auf dem PC kann z. B. wesentlich mehr Funktionen auf dem Bildschirm anzeigen als auf einem Smartphone.
+In diesem Beispiel mit Registerkarten ist die mittlere Registerkarte mit dem Kamerasymbol möglicherweise für die App auf einem Smartphone oder Phablet bestimmt und bei größeren Geräten nicht anwendbar. Deshalb ist sie auf dem Gerät auf der rechten Seite eingeblendet. Ein weiteres häufiges Beispiel für das Einblenden oder Ausblenden der Benutzeroberfläche bezieht sich auf MediaPlayer-Steuerelemente. Hierbei sind die Schaltflächen bei kleineren Geräten minimiert und werden bei Geräten mit größerem Bildschirm vergrößert. Der Media Player auf dem PC kann z. B. wesentlich mehr Funktionen auf dem Bildschirm anzeigen als auf einem Smartphone.
 
 ![Ausblenden von Designelementen](images/rsp-design/rspd-revealhide.png)
 
-Die Methode zum Ein- und Ausblenden umfasst die Wahl, wann mehr Metadaten angezeigt werden sollen. Wenn der verfügbare Bildschirmbereich knapp ist, z. B. bei einem Smartphone oder einem Phablet, wird empfohlen, eine minimale Menge von Metadaten anzuzeigen. Mit einem Laptop oder Desktop-PC kann eine wesentlich höhere Menge von Metadaten angezeigt werden. Einige Beispiele zur Verwendung von Ein- oder Ausblenden für Metadaten umfassen:
+Die Methode zum Ein- und Ausblenden umfasst die Wahl, wann mehr Metadaten angezeigt werden sollen. Wenn der verfügbare Bildschirmbereich knapp ist, z.B. bei einem Smartphone oder einem Phablet, wird empfohlen, eine minimale Menge von Metadaten anzuzeigen. Mit einem Laptop oder Desktop-PC kann eine wesentlich höhere Menge von Metadaten angezeigt werden. Einige Beispiele zur Verwendung von Ein- oder Ausblenden für Metadaten umfassen:
 
 -   In einer E-Mail-App können Sie den Avatar des Benutzers anzeigen.
 -   In einer Musik-App können Sie weitere Informationen zu einem Album oder Interpreten anzeigen.
--   In einer Video-App können Sie weitere Informationen zu einem Film oder einer Show anzeigen, z. B. Details zu Besetzung und Crew.
+-   In einer Video-App können Sie weitere Informationen zu einem Film oder einer Show anzeigen, z.B. Details zu Besetzung und Crew.
 -   In jeder App können Sie Spalten aufteilen und mehr Details anzeigen.
 -   In jeder App können Sie etwas vertikal oder horizontal anordnen. Beim Wechseln von Smartphone oder Phablet auf größere Geräte, können aus gestapelten Listenelementen Zeilen mit Listenelementen und Spalten mit Metadaten werden.
 

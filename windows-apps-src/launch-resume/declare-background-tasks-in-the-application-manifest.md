@@ -11,7 +11,7 @@ ms.openlocfilehash: d7dbdab0e8d404e6607585045d49bb3dd1407de6
 # Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -84,7 +84,8 @@ Kopieren Sie diesen Code in das "Extensions"-Element (Attribute werden in den fo
 
 2.  Ändern Sie die Liste der Aufgabentypenattribute, um den für diese Hintergrundaufgabe verwendeten Typ der Aufgabenregistrierung anzugeben. Wenn die Hintergrundaufgabe mit mehreren Triggertypen registriert wird, fügen Sie für jeden Typ zusätzliche Task-Elemente und Type-Attribute hinzu.
 
-    **Hinweis:**  Listen Sie alle verwendeten Triggertypen auf, da die Hintergrundaufgabe ansonsten die nicht deklarierten Triggertypen nicht registriert (bei der [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772)-Methode tritt ein Fehler auf, und eine Ausnahme wird ausgelöst).
+    
+            **Hinweis:**  Listen Sie alle verwendeten Triggertypen auf, da die Hintergrundaufgabe ansonsten die nicht deklarierten Triggertypen nicht registriert (bei der [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772)-Methode tritt ein Fehler auf, und eine Ausnahme wird ausgelöst).
 
     Dieses Beispiel für einen Codeausschnitt gibt die Verwendung von Systemereignistriggern und Pushbenachrichtigungen an:
 
@@ -97,7 +98,8 @@ Kopieren Sie diesen Code in das "Extensions"-Element (Attribute werden in den fo
                 </Extension>
     ```
 
-    > **Hinweis**  Normalerweise wird eine App in einem bestimmten Prozess mit der Bezeichnung „BackgroundTaskHost.exe“ ausgeführt. Sie können dem Erweiterungselement ein Executable-Element hinzufügen, damit Hintergrundaufgaben im Kontext der App ausgeführt werden. Verwenden Sie das Executable-Element nur bei Hintergrundaufgaben, für die es unbedingt erforderlich ist, z. B. [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).    
+    > 
+            **Hinweis**  Normalerweise wird eine App in einem bestimmten Prozess mit der Bezeichnung „BackgroundTaskHost.exe“ ausgeführt. Sie können dem Erweiterungselement ein Executable-Element hinzufügen, damit Hintergrundaufgaben im Kontext der App ausgeführt werden. Verwenden Sie das Executable-Element nur bei Hintergrundaufgaben, für die es unbedingt erforderlich ist, z.B. [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).    
 
 ## Hinzufügen von weiteren Hintergrundaufgabenerweiterungen
 

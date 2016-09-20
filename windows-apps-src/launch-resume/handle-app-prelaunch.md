@@ -11,7 +11,7 @@ ms.openlocfilehash: d9d3bdf86d858367008a32d9d6a06ec9fc13787d
 # Behandeln des Vorabstarts von Apps
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -25,9 +25,9 @@ Erfahren Sie, wie Sie den Vorabstart von Apps durch Überschreiben der [**OnLaun
 
 Sofern die verfügbaren Systemressourcen dies zulassen, wird die Startleistung von Windows Store-Apps verbessert, indem die vom Benutzer am häufigsten verwendeten Apps im Hintergrund proaktiv gestartet werden. Eine vorab gestartete App wird kurz nach dem Start in den angehaltenen Zustand versetzt. Wenn der Benutzer die App aufruft, wird sie fortgesetzt, indem sie vom angehaltenen Zustand in den Ausführzustand versetzt wird, was schneller als ein Kaltstart der App ist.
 
-Vor Windows 10 waren die Vorteile des Vorabstarts nicht automatisch für Apps verfügbar. Ab Windows 10 nutzen alle universelle Windows-Plattform-Apps (UWP) automatisch das Vorabstartfeature.
+Vor Windows10 waren die Vorteile des Vorabstarts nicht automatisch für Apps verfügbar. Ab Windows10 nutzen alle universelle Windows-Plattform-Apps (UWP) automatisch das Vorabstartfeature.
 
-Die meisten Apps sollten den Vorabstart ohne jegliche Änderungen unterstützen. Einige App-Typen müssen jedoch u. U. ihr Startverhalten ändern, damit sie reibungslos mit dem Vorabstart funktionieren. Dazu gehört beispielsweise eine Nachrichten-App, die die Onlinesichtbarkeit des Benutzers beim Starten ändert, oder ein Spiel, das davon ausgeht, dass der Benutzer anwesend ist, und beim Starten der App aufwändige visuelle Elemente anzeigt.
+Die meisten Apps sollten den Vorabstart ohne jegliche Änderungen unterstützen. Einige App-Typen müssen jedoch u.U. ihr Startverhalten ändern, damit sie reibungslos mit dem Vorabstart funktionieren. Dazu gehört beispielsweise eine Nachrichten-App, die die Onlinesichtbarkeit des Benutzers beim Starten ändert, oder ein Spiel, das davon ausgeht, dass der Benutzer anwesend ist, und beim Starten der App aufwändige visuelle Elemente anzeigt.
 
 ## Vorabstart und App-Lebenszyklus
 
@@ -80,14 +80,15 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
-**Tipp**  Wenn Sie Vorabstarts deaktivieren möchten, aktivieren Sie das [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740)-Kennzeichen. Wenn es festgelegt ist, kehren Sie von „OnLaunched()“ zurück, bevor Sie Aufgaben zum Erstellen eines Frames ausführen oder das Fenster aktivieren.
+
+            **Tipp**  Wenn Sie Vorabstarts deaktivieren möchten, aktivieren Sie das [**LaunchActivatedEventArgs.PrelaunchActivated**](https://msdn.microsoft.com/library/windows/apps/dn263740)-Kennzeichen. Wenn es festgelegt ist, kehren Sie von „OnLaunched()“ zurück, bevor Sie Aufgaben zum Erstellen eines Frames ausführen oder das Fenster aktivieren.
 
  
 
 ## Verwenden des VisibilityChanged-Ereignisses
 
 
-Eine durch den Vorabstart aktivierte App ist für den Benutzer nicht sichtbar. Sie wird sichtbar, wenn der Benutzer zur App wechselt. Möglicherweise sollen bestimmte Vorgänge verzögert werden, bis das Hauptfenster der App sichtbar wird. Wenn Ihre App z. B. eine Liste mit Neuigkeiten aus einem Feed anzeigt, könnten Sie die Liste während des [**VisibilityChanged**](https://msdn.microsoft.com/library/windows/apps/hh702458)-Ereignisses aktualisieren, anstatt eine Liste zu verwenden, die beim Vorabstart der App erstellt wurde und bereits veraltet sein kann, wenn der Benutzer die App aktiviert. Der folgende Code behandelt das **VisibilityChanged**-Ereignis für **MainPage**:
+Eine durch den Vorabstart aktivierte App ist für den Benutzer nicht sichtbar. Sie wird sichtbar, wenn der Benutzer zur App wechselt. Möglicherweise sollen bestimmte Vorgänge verzögert werden, bis das Hauptfenster der App sichtbar wird. Wenn Ihre App z.B. eine Liste mit Neuigkeiten aus einem Feed anzeigt, könnten Sie die Liste während des [**VisibilityChanged**](https://msdn.microsoft.com/library/windows/apps/hh702458)-Ereignisses aktualisieren, anstatt eine Liste zu verwenden, die beim Vorabstart der App erstellt wurde und bereits veraltet sein kann, wenn der Benutzer die App aktiviert. Der folgende Code behandelt das **VisibilityChanged**-Ereignis für **MainPage**:
 
 ```cs
 public sealed partial class MainPage : Page
@@ -114,11 +115,11 @@ public sealed partial class MainPage : Page
 -   Apps sollten keine Audiowiedergabe aus [**Application.OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) initiieren, wenn die App vorab gestartet wird, da die App nicht angezeigt wird und daher nicht offensichtlich ist, warum eine Audiowiedergabe stattfindet.
 -   Apps sollten während des Starts keine Vorgänge ausführen, die voraussetzen, dass die App für den Benutzer sichtbar ist, oder davon ausgehen, dass die App explizit vom Benutzer gestartet wurde. Da eine App jetzt ohne explizite Benutzeraktion im Hintergrund gestartet werden kann, sollten Entwickler die Auswirkungen auf den Datenschutz, die Benutzerfreundlichkeit und Leistung berücksichtigen.
     -   Beispielsweise wird der Datenschutz beeinträchtigt, wenn eine soziale App den Benutzerstatus in „Online“ ändert. Die App sollte warten, bis der Benutzer zur App wechselt, anstatt den Status beim Vorabstart der App zu ändern.
-    -   Ein Negativbeispiel für die Benutzerfreundlichkeit bietet eine App, z. B. ein Spiel, die beim Start eine Einführungssequenz präsentiert. Diese Einführungssequenz sollte verzögert werden, bis der Benutzer zur App wechselt.
+    -   Ein Negativbeispiel für die Benutzerfreundlichkeit bietet eine App, z.B. ein Spiel, die beim Start eine Einführungssequenz präsentiert. Diese Einführungssequenz sollte verzögert werden, bis der Benutzer zur App wechselt.
     -   Nachfolgend ein Beispiel für eine Leistungsauswirkung: Um die aktuelle Wetterlage abzurufen, sollte gewartet werden, bis der Benutzer zur App wechselt. Die Infos sollten nicht beim Vorabstart der App geladen werden, weil sie erneut geladen werden müssen, wenn die App sichtbar wird, um sicherzustellen, dass die Informationen aktuell sind.
 -   Wenn die Live-Kachel Ihrer App beim Start gelöscht wird, stellen Sie diese Aktion bis zum VisibilityChanged-Ereignis zurück.
 -   Die Telemetrie für Ihre App sollte zwischen normalen Kachelaktivierungen und Vorabstartaktivierungen unterscheiden, damit Sie das problematische Szenario ermitteln können.
--   Wenn Sie Microsoft Visual Studio 2015 Update 1 und Windows 10, Version 1511 verwenden, können Sie den Vorabstart Ihrer App in Visual Studio 2015 simulieren, indem Sie **Debuggen**&gt;**Andere Debugziele**&gt;**Vorabstart universeller Windows-Apps debuggen** auswählen.
+-   Wenn Sie Microsoft Visual Studio2015 Update 1 und Windows10, Version1511 verwenden, können Sie den Vorabstart Ihrer App in Visual Studio2015 simulieren, indem Sie **Debuggen**&gt;**Andere Debugziele**&gt;**Vorabstart universeller Windows-Apps debuggen** auswählen.
 
 ## Verwandte Themen
 

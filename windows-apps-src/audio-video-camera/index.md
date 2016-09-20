@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 0fc12d26-f1cf-4da7-b5a7-735a5074b74a
 description: "Dieser Abschnitt enthält Informationen zum Erstellen von universellen Windows-Apps, mit denen Fotos, Videos oder Audiodateien aufgenommen, wiedergegeben oder bearbeitet werden können."
 title: Audio, Video und Kamera
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 8480eb181b6af26eae5950a1f1bf040d0cb5db99
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: 8480eb181b6af26eae5950a1f1bf040d0cb5db99
 
 # Audio, Video und Kamera
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Dieser Abschnitt enthält Informationen zum Erstellen von universellen Windows-Apps, mit denen Fotos, Videos oder Audiodateien aufgenommen, wiedergegeben oder bearbeitet werden können.
  
@@ -36,7 +35,7 @@ Dieser Abschnitt enthält Informationen zum Erstellen von universellen Windows-A
 | [Kameraunabhängige Taschenlampe](camera-independent-flashlight.md)                                 | In diesem Artikel wird beschrieben, wie Sie auf die Taschenlampe eines Geräts zugreifen und diese verwenden, sofern vorhanden. Die Taschenlampenfunktion wird unabhängig von der Kamera des Geräts und der Blitzfunktion der Kamera verwaltet.                                                                                                                 |
 | [Unterstützte Codecs](supported-codecs.md)                                                           | In diesem Artikel wird aufgeführt, welche Audio- und Videocodecs und welche Formate für UWP-Apps unterstützt werden.                                                                                                                                                                                                                  |
 | [PlayReady DRM](playready-client-sdk.md)                                                          | In diesem Abschnitt wird beschrieben, wie Sie Ihrer UWP-App (Universelle Windows-Plattform) PlayReady-geschützte Medieninhalte hinzufügen.                                                                                                                                                                                |
-| [Verschlüsselte Medienerweiterung von PlayReady](playready-encrypted-media-extension.md)                     | In diesem Abschnitt wird beschrieben, wie Sie Ihre Web-App mit PlayReady ändern, um die Änderungen zu unterstützen, die gegenüber der Windows 8.1-Version in der Version für Windows 10 vorgenommen wurden.                                                                                                                                       |
+| [Verschlüsselte Medienerweiterung von PlayReady](playready-encrypted-media-extension.md)                     | In diesem Abschnitt wird beschrieben, wie Sie Ihre Web-App mit PlayReady ändern, um die Änderungen zu unterstützen, die gegenüber der Windows8.1-Version in der Version für Windows10 vorgenommen wurden.                                                                                                                                       |
 
  
 

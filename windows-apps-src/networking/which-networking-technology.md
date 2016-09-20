@@ -3,7 +3,6 @@ author: DelfCo
 ms.assetid: 2CC2E526-DACB-4008-9539-DA3D0C190290
 description: "Eine kurze Übersicht über die Netzwerktechnologien, die für UWP-Entwickler zur Verfügung stehen, mit Vorschlägen zum Auswählen der Technologien, die für Ihre App geeignet sind."
 title: Welche Netzwerktechnologie?
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d2f7a4a2bd0f94c4923b33fbd62a8b2ff6eddd65
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: d2f7a4a2bd0f94c4923b33fbd62a8b2ff6eddd65
 
 # Welche Netzwerktechnologie?
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Eine kurze Übersicht über die Netzwerktechnologien, die für UWP-Entwickler zur Verfügung stehen, mit Vorschlägen zum Auswählen der Technologien, die für Ihre App geeignet sind.
 
@@ -74,7 +73,7 @@ Ein neues Feature für die Hintergrundübertragung in Windows 10 ist die Möglic
 -   Verwenden Sie Hintergrundübertragungen zum zuverlässigen Übertragen großer Dateien oder einer großen Anzahl von Dateien.
 -   Verwenden Sie Hintergrundübertragungen mit Abschlussgruppen für Hintergrundübertragungen, wenn Sie Dateiübertragungen im Nachhinein mit einer Hintergrundaufgabe verarbeiten möchten.
 -   Verwenden Sie Hintergrundübertragungen, wenn Sie eine laufende Übertragung nach einer Netzwerkunterbrechung wiederaufnehmen möchten.
--   Verwenden Sie Hintergrundübertragungen, wenn Sie das Übertragungsverhalten auf Grundlage von Netzwerkbedingungen ändern möchten, z. B. beim Wechsel zu einem Volumentarif.
+-   Verwenden Sie Hintergrundübertragungen, wenn Sie das Übertragungsverhalten auf Grundlage von Netzwerkbedingungen ändern möchten, z.B. beim Wechsel zu einem Volumentarif.
 
 ### Wann sollten Hintergrundübertragungen nicht verwendet werden?
 
@@ -133,7 +132,7 @@ Die [**Windows.Networking.NetworkOperators**](https://msdn.microsoft.com/library
 
 ### SMS
 
-Der [**Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/br206567)-Namespace verarbeitet SMS- und verwandte Nachrichten als untergeordnete Elemente. Er wird für die Verwendung durch Mobilfunkanbieter für die App-gerichtete SMS-Verwendung bereitgestellt und wird durch eine Funktion gesteuert, die nicht zur Verwendung durch die meisten App-Entwickler genehmigt wird. Wenn Sie eine App für die Verarbeitung von Nachrichten schreiben, verwenden Sie stattdessen die [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/dn642321)-API, da sie nicht nur SMS-Nachrichten verarbeiten kann, sondern auch Nachrichten aus anderen Quellen, z. B. Echtzeit-Chat-Apps, sodass eine viel umfangreichere Chat-/Nachrichtenerfahrung möglich wird.
+Der [**Windows.Devices.Sms**](https://msdn.microsoft.com/library/windows/apps/br206567)-Namespace verarbeitet SMS- und verwandte Nachrichten als untergeordnete Elemente. Er wird für die Verwendung durch Mobilfunkanbieter für die App-gerichtete SMS-Verwendung bereitgestellt und wird durch eine Funktion gesteuert, die nicht zur Verwendung durch die meisten App-Entwickler genehmigt wird. Wenn Sie eine App für die Verarbeitung von Nachrichten schreiben, verwenden Sie stattdessen die [**Windows.ApplicationModel.Chat**](https://msdn.microsoft.com/library/windows/apps/dn642321)-API, da sie nicht nur SMS-Nachrichten verarbeiten kann, sondern auch Nachrichten aus anderen Quellen, z.B. Echtzeit-Chat-Apps, sodass eine viel umfangreichere Chat-/Nachrichtenerfahrung möglich wird.
 
 
 

@@ -28,7 +28,7 @@ Wenn Sie eine der Standardanzeigenvorlagen verwenden, können Sie die Größe, d
 
 ## Wo erscheint meine Anzeige?
 
-Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen. Sie legen diese Eigenschaften fest, wenn Sie Ihre App im Windows Store veröffentlichen.
+Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen. Sie legen diese Eigenschaften fest, wenn Sie Ihre App im WindowsStore veröffentlichen.
 
 Anzeigenkampagnen werden derzeit in folgenden Ländern und Regionen unterstützt:
 
@@ -42,9 +42,9 @@ Arabisch, Chinesisch (traditionell), Chinesisch (vereinfacht), Dänisch, Deutsch
 
 ## Wann erfolgt die Abrechnung?
 
-Ihnen werden jedes Mal, wenn auf Ihrem Konto 50 $ Gebühren anfallen (oder der entsprechende Betrag in der lokalen Währung Ihres Markts oder Ihrer Region), alle kostenpflichtigen Kampagnen für Ihr Konto in Rechnung gestellt.
+Ihnen werden jedes Mal, wenn auf Ihrem Konto 50$ Gebühren anfallen (oder der entsprechende Betrag in der lokalen Währung Ihres Markts oder Ihrer Region), alle kostenpflichtigen Kampagnen für Ihr Konto in Rechnung gestellt.
 
-Wenn auf Ihrem Konto in dem Zeitraum von 30 Tagen nach dem letzten Abrechnungsdatum weniger als 50 $ Gebühren anfallen, werden Ihnen diese Gebühren zu Beginn des Folgemonats in Rechnung gestellt. Dadurch wird sichergestellt, dass auf Ihrem Konto nicht länger als einen Monat Gebühren für Anzeigenkampagnen offen bleiben.
+Wenn auf Ihrem Konto in dem Zeitraum von 30 Tagen nach dem letzten Abrechnungsdatum weniger als 50$ Gebühren anfallen, werden Ihnen diese Gebühren zu Beginn des Folgemonats in Rechnung gestellt. Dadurch wird sichergestellt, dass auf Ihrem Konto nicht länger als einen Monat Gebühren für Anzeigenkampagnen offen bleiben.
 
 ## Wie kann ich eine Kreditkarte löschen oder die Details einer Kreditkarte bearbeiten?
 

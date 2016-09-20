@@ -3,7 +3,6 @@ title: Freigabe von Zertifikaten zwischen Apps
 description: "UWP-Apps, die über eine Kombination aus Benutzer-ID und Kennwort hinaus eine sichere Authentifizierung benötigen, können Zertifikate für die Authentifizierung verwenden."
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
 # Freigabe von Zertifikaten zwischen Apps
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 UWP-Apps, die über eine Kombination aus Benutzer-ID und Kennwort hinaus eine sichere Authentifizierung benötigen, können Zertifikate für die Authentifizierung verwenden. Die Zertifikatauthentifizierung bietet eine hohe Vertrauenswürdigkeit bei der Benutzerauthentifizierung. Es kann vorkommen, dass eine Gruppe von Diensten einen Benutzer für mehrere Apps authentifizieren möchte. In diesem Artikel wird veranschaulicht, wie Sie mehrere Apps mit demselben Zertifikat authentifizieren und für einen Benutzer geeigneten Code zum Importieren eines Zertifikats bereitstellen können, das für den Zugriff auf sichere Webdienste bestimmt ist.
@@ -26,7 +25,7 @@ In diesem Artikel werden die Microsoft-Internetinformationsdienste (Microsoft In
 
 1.  Öffnen Sie die Systemsteuerung, und wählen Sie **Programme** aus.
 2.  Wählen Sie die Option **Windows-Features aktivieren oder deaktivieren** aus.
-3.  Erweitern Sie **Internetinformationsdienste** und dann **WWW-Dienste**. Erweitern Sie **Anwendungsentwicklungsfeatures**, und wählen Sie **ASP.NET 3.5** und **ASP.NET 4.5**. Das Auswählen führt dazu, dass **Internetinformationsdienste** automatisch aktiviert wird.
+3.  Erweitern Sie **Internetinformationsdienste** und dann **WWW-Dienste**. Erweitern Sie **Anwendungsentwicklungsfeatures**, und wählen Sie **ASP.NET3.5** und **ASP.NET4.5**. Das Auswählen führt dazu, dass **Internetinformationsdienste** automatisch aktiviert wird.
 4.  Klicken Sie auf **OK**, um die Änderungen zu übernehmen.
 
 ## Erstellen und Veröffentlichen eines sicheren Webdiensts
@@ -71,7 +70,8 @@ Nachdem Sie nun über mindestens einen sicheren Webdienst verfügen, können Ihr
 
 Falls keine Clientzertifikate verfügbar sind, muss der Benutzer dem Zertifikatspeicher ein Zertifikat hinzufügen. Sie können Code in die App einfügen, der Benutzern die Auswahl einer PFX-Datei mit einem Clientzertifikat und das Importieren dieses Zertifikats in den Clientzertifikatspeicher ermöglicht.
 
-**Tipp**  Verwenden Sie „makecert.exe“ zum Erstellen einer PFX-Datei zur Verwendung für diese Schnellstartanleitung. Informationen zur Verwendung von „makecert.exe“ finden Sie unter [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968).
+
+            **Tipp**  Verwenden Sie „makecert.exe“ zum Erstellen einer PFX-Datei zur Verwendung für diese Schnellstartanleitung. Informationen zur Verwendung von „makecert.exe“ finden Sie unter [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968).
 
  
 

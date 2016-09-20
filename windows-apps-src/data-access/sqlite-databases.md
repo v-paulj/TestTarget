@@ -3,14 +3,13 @@ author: mcleblanc
 ms.assetid: 5A47301A-2291-4FC8-8BA7-55DB2A5C653F
 title: SQLite-Datenbanken
 description: "SQLite ist ein eingebettetes Datenbankmodul ohne Server. In diesem Artikel wird erläutert, wie die im SDK enthaltene SQLite-Bibliothek verwendet wird und wie Sie Ihre eigene SQLite-Bibliothek in einer Universellen Windows-App verpacken oder aus der Quelle erstellen können."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: dd628d16b3ee230ddc0c56b47fd381a518b8af00
 
 ---
 # SQLite-Datenbanken
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 SQLite ist ein eingebettetes Datenbankmodul ohne Server. In diesem Artikel wird erläutert, wie die im SDK enthaltene SQLite-Bibliothek verwendet wird und wie Ihre eigene SQLite-Bibliothek in einer universellen Windows-App verpackt oder aus der Quelle erstellt wird.
@@ -19,7 +18,7 @@ SQLite ist ein eingebettetes Datenbankmodul ohne Server. In diesem Artikel wird 
 
 SQLite ist eine eingebettete Open-Source-Datenbank ohne Server. In den letzten Jahren hat es sich zur dominanten geräteseitigen Technologie für die Speicherung von Daten auf vielen Plattformen und Geräten entwickelt. Universelle Windows-Plattform (UWP) unterstützt und empfiehlt SQLite für den lokalen Speicher in allen Windows 10-Gerätefamilien.
 
-SQLite eignet sich am besten für Telefon-Apps, eingebettete Apps für Windows 10 IoT Core (IoT Core) und als Cache für RDBS-Daten (Relations Database Server) von Unternehmen. Es erfüllt die meisten Anforderungen an den lokalen Datenzugriff, sofern keine umfangreichen gleichzeitigen Schreibvorgänge oder Big Data-Szenarios vorliegen, was für die meisten Apps aber unwahrscheinlich ist.
+SQLite eignet sich am besten für Telefon-Apps, eingebettete Apps für Windows 10 IoT Core (IoT Core) und als Cache für RDBS-Daten (Relations Database Server) von Unternehmen. Es erfüllt die meisten Anforderungen an den lokalen Datenzugriff, sofern keine umfangreichen gleichzeitigen Schreibvorgänge oder BigData-Szenarios vorliegen, was für die meisten Apps aber unwahrscheinlich ist.
 
 In Anwendungen für Medienwiedergabe und Spiele kann SQLite auch als Dateiformat zum Speichern von Katalogen oder anderen Ressourcen verwendet werden, zum Beispiel für die Level eines Spiels, die unverändert von einem Webserver heruntergeladen werden können.
 

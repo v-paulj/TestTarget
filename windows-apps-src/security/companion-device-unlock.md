@@ -1,17 +1,17 @@
 ---
 title: "Entsperren von Windows mit Begleitgeräten (IoT)"
-description: "Ein Begleitgerät ist ein Gerät, das in Verbindung mit dem Windows 10-Desktopgerät zur Verbesserung der Benutzerauthentifizierung verwendet werden kann. Mit dem Begleitgeräteframework kann ein Begleitgerät umfangreiche Funktionen für Microsoft Passport bereitstellen, auch wenn Windows Hello nicht verfügbar ist (beispielsweise, wenn das Windows 10-Desktopgerät über keine Kamera für die Gesichtsauthentifizierung oder über kein Fingerabdrucklesegerät verfügt)."
+description: "Ein Begleitgerät ist ein Gerät, das in Verbindung mit dem Windows10-Desktopgerät zur Verbesserung der Benutzerauthentifizierung verwendet werden kann. Mit dem Begleitgeräteframework kann ein Begleitgerät umfangreiche Funktionen für Microsoft Passport bereitstellen, auch wenn Windows Hello nicht verfügbar ist (beispielsweise, wenn das Windows10-Desktopgerät über keine Kamera für die Gesichtsauthentifizierung oder über kein Fingerabdrucklesegerät verfügt)."
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: a6265ca66a1a9d729465845da1014d1aff0e7d4d
 ms.openlocfilehash: 18102d6277ff1c66ebd147b5c1fd2f2d6c91edd1
 
 ---
 # Entsperren von Windows mit Begleitgeräten (IoT)
 
-Ein Begleitgerät ist ein Gerät, das in Verbindung mit dem Windows 10-Desktopgerät zur Verbesserung der Benutzerauthentifizierung verwendet werden kann. Mit dem Begleitgeräteframework kann ein Begleitgerät umfangreiche Funktionen für Microsoft Passport bereitstellen, auch wenn Windows Hello nicht verfügbar ist (beispielsweise, wenn das Windows 10-Desktopgerät über keine Kamera für die Gesichtsauthentifizierung oder über kein Fingerabdrucklesegerät verfügt).
+Ein Begleitgerät ist ein Gerät, das in Verbindung mit dem Windows10-Desktopgerät zur Verbesserung der Benutzerauthentifizierung verwendet werden kann. Mit dem Begleitgeräteframework kann ein Begleitgerät umfangreiche Funktionen für Microsoft Passport bereitstellen, auch wenn Windows Hello nicht verfügbar ist (beispielsweise, wenn das Windows10-Desktopgerät über keine Kamera für die Gesichtsauthentifizierung oder über kein Fingerabdrucklesegerät verfügt).
 
-> **Hinweis:**  Das Begleitgeräteframework ist ein spezielles Feature und nicht für alle App-Entwickler verfügbar. Damit dieses Framework verwendet werden kann, muss Ihre App speziell von Microsoft bereitgestellt werden und die eingeschränkte Funktion *SecondaryAuthenticatorFactor* muss im Manifest angegeben sein. Wenden Sie sich zwecks Genehmigung an [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
+> 
+            **Hinweis:**  Das Begleitgeräteframework ist ein spezielles Feature und nicht für alle App-Entwickler verfügbar. Damit dieses Framework verwendet werden kann, muss Ihre App speziell von Microsoft bereitgestellt werden und die eingeschränkte Funktion *SecondaryAuthenticatorFactor* muss im Manifest angegeben sein. Wenden Sie sich zwecks Genehmigung an [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com).
 
 ## Einführung
 
@@ -42,7 +42,7 @@ Die Integration des Begleitgeräteframeworks erfordert Folgendes:
 
 - Eine aus dem Windows Store heruntergeladene, für das Begleitgerät bestimmte Begleitgeräte-App für die [universelle Windows-Plattform (UWP)](https://msdn.microsoft.com/windows/uwp/get-started/universal-application-platform-guide). 
 - Die Möglichkeit, auf dem Begleitgerät zwei 256-Bit-HMAC-Schlüssel zu erstellen und damit HMAC (mit SHA-256) zu generieren.
-- Ordnungsgemäß konfigurierte Sicherheitsreinstellungen auf dem Windows 10-Desktopgerät. Bevor Begleitgeräte eingebunden werden können, muss diese PIN für den Begleitauthentifizierungsdienst eingerichtet werden. Die Benutzer müssen über „Einstellungen“ > „Konten“ > „Anmeldeoptionen“ eine PIN einrichten.
+- Ordnungsgemäß konfigurierte Sicherheitsreinstellungen auf dem Windows10-Desktopgerät. Bevor Begleitgeräte eingebunden werden können, muss diese PIN für den Begleitauthentifizierungsdienst eingerichtet werden. Die Benutzer müssen über „Einstellungen“ > „Konten“ > „Anmeldeoptionen“ eine PIN einrichten.
 
 Zusätzlich zu den oben genannten Anforderungen ist die Begleitgeräte-App für Folgendes zuständig:
 
@@ -56,9 +56,12 @@ In der Regel werden Begleitgeräte mit einer Ersteinrichtungs-App (beispielsweis
 
 Jedes Begleitgerät muss mit einer App kombiniert werden, die drei Benutzersignale unterstützt. Bei diesen Signalen kann es sich um eine Aktion oder um eine Geste handeln.
 
-- **Absichtssignal**: Ermöglicht dem Benutzer, seine Entsperrabsicht deutlich zu machen (beispielsweise durch Drücken einer Taste auf dem Begleitgerät). Das Absichtssignal muss auf dem **Begleitgerät** erfasst werden.
-- **Benutzeranwesenheitssignal**: Bestätigt die Anwesenheit des Benutzers. Das Begleitgerät kann beispielsweise eine PIN anfordern, bevor es zum Entsperren des PCs verwendet werden kann (nicht zu verwechseln mit einer PC-PIN), oder es ist unter Umständen ein Tastendruck erforderlich.
-- **Mehrdeutigkeitsvermeidungssignal**: Gibt an, welches Windows 10-Desktopgerät der Benutzer entsperren möchte, wenn dem Begleitgerät mehrere Optionen zur Verfügung stehen.
+- 
+            **Absichtssignal**: Ermöglicht dem Benutzer, seine Entsperrabsicht deutlich zu machen (beispielsweise durch Drücken einer Taste auf dem Begleitgerät). Das Absichtssignal muss auf dem **Begleitgerät** erfasst werden.
+- 
+            **Benutzeranwesenheitssignal**: Bestätigt die Anwesenheit des Benutzers. Das Begleitgerät kann beispielsweise eine PIN anfordern, bevor es zum Entsperren des PCs verwendet werden kann (nicht zu verwechseln mit einer PC-PIN), oder es ist unter Umständen ein Tastendruck erforderlich.
+- 
+            **Mehrdeutigkeitsvermeidungssignal**: Gibt an, welches Windows10-Desktopgerät der Benutzer entsperren möchte, wenn dem Begleitgerät mehrere Optionen zur Verfügung stehen.
 
 Von diesen Benutzersignalen kann eine beliebige Anzahl zu einem einzelnen Signal kombiniert werden. Benutzeranwesenheits- und Absichtssignale sind bei jeder Verwendung erforderlich.
 
@@ -66,9 +69,9 @@ Von diesen Benutzersignalen kann eine beliebige Anzahl zu einem einzelnen Signal
 
 Damit ein Begleitgerät in das Begleitgeräteframework eingebunden werden kann, muss es zunächst beim Framework registriert werden. Für den Registrierungsprozess ist allein die Begleitgeräte-App zuständig.
 
-Bei der registrierten Beziehung zwischen dem Begleitgerät und dem Windows 10-Desktopgerät kann es sich um eine 1:n-Beziehung handeln. (Ein Begleitgerät kann also für viele Windows 10-Desktopgeräte verwendet werden.) Jedes Begleitgerät kann jedoch nur für einen einzelnen Benutzer auf dem jeweiligen Windows 10-Desktopgerät verwendet werden.   
+Bei der registrierten Beziehung zwischen dem Begleitgerät und dem Windows10-Desktopgerät kann es sich um eine 1:n-Beziehung handeln. (Ein Begleitgerät kann also für viele Windows10-Desktopgeräte verwendet werden.) Jedes Begleitgerät kann jedoch nur für einen einzelnen Benutzer auf dem jeweiligen Windows10-Desktopgerät verwendet werden.   
 
-Damit ein Begleitgerät mit einem PC kommunizieren kann, müssen sich beide auf einen Transport einigen. Die Entscheidung wird von der Begleitgeräte-App getroffen. Das Begleitgeräteframework schränkt weder den Transporttyp (USB, NFC, WLAN, Bluetooth, BLE usw.) noch das Protokoll zwischen Begleitgerät und Begleitgeräte-App des Windows 10-Desktopgeräts ein. Es schlägt jedoch bestimmte Sicherheitsaspekte für die Transportschicht vor (wie in diesem Dokument im Abschnitt „Sicherheitsanforderungen“ beschrieben). Für die Erfüllung dieser Anforderungen ist der Geräteanbieter verantwortlich. Sie werden nicht vom Framework bereitgestellt.
+Damit ein Begleitgerät mit einem PC kommunizieren kann, müssen sich beide auf einen Transport einigen. Die Entscheidung wird von der Begleitgeräte-App getroffen. Das Begleitgeräteframework schränkt weder den Transporttyp (USB, NFC, WLAN, Bluetooth, BLE usw.) noch das Protokoll zwischen Begleitgerät und Begleitgeräte-App des Windows10-Desktopgeräts ein. Es schlägt jedoch bestimmte Sicherheitsaspekte für die Transportschicht vor (wie in diesem Dokument im Abschnitt „Sicherheitsanforderungen“ beschrieben). Für die Erfüllung dieser Anforderungen ist der Geräteanbieter verantwortlich. Sie werden nicht vom Framework bereitgestellt.
 
 
 ## Benutzerinteraktionsmodell
@@ -77,12 +80,12 @@ Damit ein Begleitgerät mit einem PC kommunizieren kann, müssen sich beide auf 
 
 Im Anschluss sehen Sie einen typischen Benutzerworkflow:
 
-- Der Benutzer richtet die PIN auf jedem der Windows 10-Zieldesktopgeräte ein, die er mit dem Begleitgerät entsperren möchte.
-- Der Benutzer führt auf dem Windows 10-Desktopgerät die Begleitgeräte-App aus, um sein Begleitgerät bei dem Windows 10-Desktopgerät zu registrieren.
+- Der Benutzer richtet die PIN auf jedem der Windows10-Zieldesktopgeräte ein, die er mit dem Begleitgerät entsperren möchte.
+- Der Benutzer führt auf dem Windows10-Desktopgerät die Begleitgeräte-App aus, um sein Begleitgerät bei dem Windows10-Desktopgerät zu registrieren.
 
 Hinweise:
 
-- Es empfiehlt sich, die Erkennung, das Herunterladen und das Starten der Begleitgeräte-App zu optimieren und nach Möglichkeit zu automatisieren, sodass die App beispielsweise aufseiten des Windows 10-Desktopgeräts durch Tippen auf die Begleitgeräte-App auf einem NFC-Lesegerät heruntergeladen werden kann. Dies ist allerdings Aufgabe des Begleitgeräts und der Begleitgeräte-App.
+- Es empfiehlt sich, die Erkennung, das Herunterladen und das Starten der Begleitgeräte-App zu optimieren und nach Möglichkeit zu automatisieren, sodass die App beispielsweise aufseiten des Windows10-Desktopgeräts durch Tippen auf die Begleitgeräte-App auf einem NFC-Lesegerät heruntergeladen werden kann. Dies ist allerdings Aufgabe des Begleitgeräts und der Begleitgeräte-App.
 - In einer Unternehmensumgebung kann die Begleitgeräte-App per MDM bereitgestellt werden.
 - Fehlermeldungen, die unter Umständen im Rahmen der Registrierung auftreten, müssen dem Benutzer von der Begleitgeräte-App angezeigt werden.
 
@@ -103,7 +106,7 @@ Beachten Sie außerdem Folgendes: Im obigen Diagramm ist zwar zu sehen, dass zwe
 
 ### Starten von Authentifizierungsflüssen
 
-Der Anmeldefluss für Windows 10-Desktopgeräte kann vom Benutzer (durch ein Absichtssignal) über das Begleitgeräteframework auf zwei Arten gestartet werden:
+Der Anmeldefluss für Windows10-Desktopgeräte kann vom Benutzer (durch ein Absichtssignal) über das Begleitgeräteframework auf zwei Arten gestartet werden:
 
 - Durch Öffnen des Deckels (Laptop) oder durch Drücken der Leertaste oder Wischen nach oben (PC)
 - Durch eine Geste oder eine Aktion auf dem Begleitgerät
@@ -112,7 +115,7 @@ Welche Option als Ausgangspunkt verwendet wird, liegt beim Begleitgerät. Das Be
 
 ### Anmeldeinformationsanbieter für Begleitgeräte
 
-Windows 10 verfügt über einen neuen Anmeldeinformationsanbieter zur Behandlung sämtlicher Begleitgeräte.
+Windows10 verfügt über einen neuen Anmeldeinformationsanbieter zur Behandlung sämtlicher Begleitgeräte.
 
 Der Anmeldeinformationsanbieter für Begleitgeräte startet die Begleitgerät-Hintergrundaufgabe mittels Aktivierung eines Triggers. Der Trigger wird erstmals festgelegt, wenn der PC aktiviert und ein Sperrbildschirm angezeigt wird. Das zweite Mal erfolgt, wenn der PC die Anmeldebenutzeroberfläche anzeigt und der Anmeldeinformationsanbieter für Begleitgeräte die ausgewählte Kachel ist.
 
@@ -138,17 +141,17 @@ Der zweite Wert wird vom Dienst nicht nur zur Authentifizierung des Geräts, son
 
 ### Einmalige Registrierung, ortsunabhängige Verwendung
 
-Ohne Back-End-Server müssen Benutzer ihr Begleitgerät separat bei jedem Windows 10-Desktopgerät registrieren.
+Ohne Back-End-Server müssen Benutzer ihr Begleitgerät separat bei jedem Windows10-Desktopgerät registrieren.
 
-Eine Begleitgerätehersteller oder OEM kann einen Webdienst implementieren, um den Registrierungszustand für mehrere Windows 10-Desktopgeräte oder mobile Geräte des Benutzers zur Verfügung zu stellen. Ausführlichere Informationen finden Sie im Abschnitt „Roaming, Sperrung und Filterdienst“.
+Eine Begleitgerätehersteller oder OEM kann einen Webdienst implementieren, um den Registrierungszustand für mehrere Windows10-Desktopgeräte oder mobile Geräte des Benutzers zur Verfügung zu stellen. Ausführlichere Informationen finden Sie im Abschnitt „Roaming, Sperrung und Filterdienst“.
 
 ### PIN-Verwaltung
 
-Bevor ein Begleitgerät verwendet werden kann, muss auf dem Windows 10-Desktopgerät eine PIN eingerichtet werden. Dadurch wird sichergestellt, dass der Benutzer über eine Ausweichmöglichkeit verfügt, falls das Begleitgerät nicht funktioniert. Die PIN wird von Windows verwaltet und den Apps gegenüber nie offengelegt. Sie kann unter „Einstellungen“ > „Konten“ > „Anmeldeoptionen“ geändert werden.
+Bevor ein Begleitgerät verwendet werden kann, muss auf dem Windows10-Desktopgerät eine PIN eingerichtet werden. Dadurch wird sichergestellt, dass der Benutzer über eine Ausweichmöglichkeit verfügt, falls das Begleitgerät nicht funktioniert. Die PIN wird von Windows verwaltet und den Apps gegenüber nie offengelegt. Sie kann unter „Einstellungen“ > „Konten“ > „Anmeldeoptionen“ geändert werden.
 
 ### Verwaltung und Richtlinie
 
-Benutzer können ein Begleitgerät von einem Windows 10-Desktopgerät entfernen, indem sie die Begleitgeräte-App auf dem entsprechenden Desktopgerät ausführen.
+Benutzer können ein Begleitgerät von einem Windows10-Desktopgerät entfernen, indem sie die Begleitgeräte-App auf dem entsprechenden Desktopgerät ausführen.
 
 Unternehmen stehen zum Steuern des Begleitgeräteframeworks zwei Optionen zur Verfügung:
 
@@ -159,7 +162,7 @@ Das Begleitgeräteframework unterstützt keine zentralisierte Inventarisierung v
 
 ### Sperrung
 
-Die Remoteentfernung eines Begleitgeräts von einem bestimmten Windows 10-Desktopgerät wird vom Begleitgeräteframework nicht unterstützt. Stattdessen können Benutzer das Begleitgerät über die auf dem Windows 10-Desktopgerät ausgeführte Begleitgeräte-App entfernen.
+Die Remoteentfernung eines Begleitgeräts von einem bestimmten Windows10-Desktopgerät wird vom Begleitgeräteframework nicht unterstützt. Stattdessen können Benutzer das Begleitgerät über die auf dem Windows10-Desktopgerät ausgeführte Begleitgeräte-App entfernen.
 
 Begleitgerätehersteller können jedoch einen Dienst erstellen, der eine Remotesperrung ermöglicht. Ausführlichere Informationen finden Sie im Abschnitt „Roaming, Sperrung und Filterdienst“.
 
@@ -167,10 +170,10 @@ Begleitgerätehersteller können jedoch einen Dienst erstellen, der eine Remotes
 
 Begleitgerätehersteller können einen Webdienst implementieren, der für folgende Szenarien verwendet werden kann:
 
-- Filterdienst für Unternehmen: Ein Unternehmen kann die Begleitgeräte, die in seiner Umgebung verwendet werden können, auf eine kleine Gruppe von Geräten eines bestimmten Herstellers beschränken. So kann das Unternehmen Contoso beispielsweise beim Hersteller X 10.000 Begleitgeräte des Modells Y bestellen und sicherstellen, dass in der Contoso-Domäne ausschließlich diese Geräte (und kein anderes Gerätemodell des Herstellers X) verwendet werden können.
+- Filterdienst für Unternehmen: Ein Unternehmen kann die Begleitgeräte, die in seiner Umgebung verwendet werden können, auf eine kleine Gruppe von Geräten eines bestimmten Herstellers beschränken. So kann das Unternehmen Contoso beispielsweise beim HerstellerX 10.000Begleitgeräte des ModellsY bestellen und sicherstellen, dass in der Contoso-Domäne ausschließlich diese Geräte (und kein anderes Gerätemodell des HerstellersX) verwendet werden können.
 - Inventarisierung: Ein Unternehmen kann eine Liste mit vorhandenen Begleitgeräten erstellen, die in einer Unternehmensumgebung verwendet werden.
 - Echtzeitsperrung: Wenn ein Mitarbeiter sein Begleitgerät als verloren oder gestohlen meldet, kann dieses Gerät über den Webdienst gesperrt werden.
-- Roaming: Ein Benutzer muss sein Begleitgerät lediglich einmal registrieren und kann es danach für alle seine Desktopgeräte und mobilen Geräte unter Windows 10 verwenden.
+- Roaming: Ein Benutzer muss sein Begleitgerät lediglich einmal registrieren und kann es danach für alle seine Desktopgeräte und mobilen Geräte unter Windows10 verwenden.
 
 Zur Implementierung dieser Features muss die Begleitgeräte-App bei der Registrierung und Verwendung mit dem Webdienst kommunizieren. Die Begleitgeräte-App kann zur Optimierung in Anmeldeszenarien mit Zwischenspeicherung verwendet werden, sodass beispielsweise nur einmal täglich mit dem Webdienst kommuniziert werden muss. (Dadurch verlängert sich allerdings die Zeit für die Sperrung auf bis zu einen Tag.)  
 
@@ -225,11 +228,11 @@ Das Ergebnis des ersten Aufrufs wird über die Enumeration „SecondaryAuthentic
 }
 ```
 
-Mit dem zweiten Aufruf (FinishRegisteringDeviceAsync) wird die Registrierung abgeschlossen. Im Rahmen des Registrierungsprozesses kann die Begleitgeräte-App Konfigurationsdaten des Begleitgeräts mit dem Begleitauthentifizierungsdienst speichern. Für diese Daten gilt eine Größenbeschränkung von 4 KB. Die Daten stehen der Begleitgeräte-App bei der Authentifizierung zur Verfügung. Diese Daten können etwa zum Herstellen einer Verbindung mit dem Begleitgerät verwendet werden (beispielsweise im Falle einer MAC-Adresse). Ein weiteres Verwendungsbeispiel für Konfigurationsdaten wäre die Verwendung des PCs als Speicherort, falls das Begleitgerät über keine Speichermöglichkeit verfügt. Beachten Sie, dass in den Konfigurationsdaten gespeicherte vertrauliche Daten mit einem Schlüssel verschlüsselt werden müssen, der nur dem Begleitgerät bekannt ist. Wenn Konfigurationsdaten von einem Windows-Dienst gespeichert werden, stehen sie der Begleitgeräte-App außerdem benutzerprofilübergreifend zur Verfügung.
+Mit dem zweiten Aufruf (FinishRegisteringDeviceAsync) wird die Registrierung abgeschlossen. Im Rahmen des Registrierungsprozesses kann die Begleitgeräte-App Konfigurationsdaten des Begleitgeräts mit dem Begleitauthentifizierungsdienst speichern. Für diese Daten gilt eine Größenbeschränkung von 4KB. Die Daten stehen der Begleitgeräte-App bei der Authentifizierung zur Verfügung. Diese Daten können etwa zum Herstellen einer Verbindung mit dem Begleitgerät verwendet werden (beispielsweise im Falle einer MAC-Adresse). Ein weiteres Verwendungsbeispiel für Konfigurationsdaten wäre die Verwendung des PCs als Speicherort, falls das Begleitgerät über keine Speichermöglichkeit verfügt. Beachten Sie, dass in den Konfigurationsdaten gespeicherte vertrauliche Daten mit einem Schlüssel verschlüsselt werden müssen, der nur dem Begleitgerät bekannt ist. Wenn Konfigurationsdaten von einem Windows-Dienst gespeichert werden, stehen sie der Begleitgeräte-App außerdem benutzerprofilübergreifend zur Verfügung.
 
 Die Begleitgeräte-App kann „AbortRegisteringDeviceAsync“ aufrufen, um die Registrierung abzubrechen und einen Fehlercode zu übergeben. Der Begleitauthentifizierungsdienst protokolliert den Fehler in den Telemetriedaten. Ein gutes Beispiel für diesen Aufruf wäre etwa, wenn die Registrierung aufgrund eines Begleitgerätefehlers nicht abgeschlossen werden konnte (beispielsweise, weil die HMAC Schlüssel nicht gespeichert werden können oder die Bluetooth-Verbindung unterbrochen wurde).
 
-Die Begleitgeräte-App muss dem Benutzer eine Option zur Verfügung stellen, über die er die Registrierung des Begleitgeräts bei seinem Windows 10-Desktopgerät aufheben kann (beispielsweise, wenn er sein Begleitgerät verloren oder eine neuere Version gekauft hat). Bei Verwendung dieser Option muss die Begleitgeräte-App „UnregisterDeviceAsync“ aufrufen. Dieser Aufruf durch die Begleitgeräte-App sorgt dafür, dass der Begleitgeräte-Authentifizierungsdienst aufseiten des PCs alle Daten (einschließlich der HMAC-Schlüssel) löscht, die mit der speziellen Geräte- und App-ID zusammenhängen. Dieser API-Aufruf versucht nicht, HMAC-Schlüssel aus der Begleitgeräte-App oder aufseiten des Begleitgeräts zu löschen. Dies muss in der Begleitgeräte-App implementiert werden.
+Die Begleitgeräte-App muss dem Benutzer eine Option zur Verfügung stellen, über die er die Registrierung des Begleitgeräts bei seinem Windows10-Desktopgerät aufheben kann (beispielsweise, wenn er sein Begleitgerät verloren oder eine neuere Version gekauft hat). Bei Verwendung dieser Option muss die Begleitgeräte-App „UnregisterDeviceAsync“ aufrufen. Dieser Aufruf durch die Begleitgeräte-App sorgt dafür, dass der Begleitgeräte-Authentifizierungsdienst aufseiten des PCs alle Daten (einschließlich der HMAC-Schlüssel) löscht, die mit der speziellen Geräte- und App-ID zusammenhängen. Dieser API-Aufruf versucht nicht, HMAC-Schlüssel aus der Begleitgeräte-App oder aufseiten des Begleitgeräts zu löschen. Dies muss in der Begleitgeräte-App implementiert werden.
 
 Sämtliche Fehlermeldungen der Registrierungs- und Registrierungsaufhebungsphase müssen von der Begleitgeräte-App angezeigt werden.
 
@@ -354,7 +357,7 @@ Bei der ersten Initiierungs-API (StartAuthenticationAsync) kann ein Fehler auftr
 }
 ```
 
-Beim zweiten API-Aufruf (FinishAuthencationAsync) kann ein Fehler auftreten, wenn die Nonce aus dem ersten Aufruf nicht mehr gültig ist. (Dies ist nach 20 Sekunden der Fall.) Die Enumeration „SecondaryAuthenticationFactorFinishAuthenticationStatus“ erfasst die möglichen Ergebnisse.
+Beim zweiten API-Aufruf (FinishAuthencationAsync) kann ein Fehler auftreten, wenn die Nonce aus dem ersten Aufruf nicht mehr gültig ist. (Dies ist nach 20Sekunden der Fall.) Die Enumeration „SecondaryAuthenticationFactorFinishAuthenticationStatus“ erfasst die möglichen Ergebnisse.
 
 ```C#
 {
@@ -364,7 +367,7 @@ Beim zweiten API-Aufruf (FinishAuthencationAsync) kann ein Fehler auftreten, wen
 }
 ```
 
-Das Timing der beiden API-Aufrufe („StartAuthenticationAsync“ und „FinishAuthencationAsync“) muss sich an der Erfassung der Absichts-, Benutzeranwesenheits- und Mehrdeutigkeitsvermeidungssignale durch das Begleitgerät orientieren. (Weitere Informationen finden Sie unter „Benutzersignale“.) So darf der zweite Aufruf beispielweise erst nach Verfügbarkeit des Absichtssignals übermittelt werden. Anders ausgedrückt: Der PC darf nicht entsperrt werden, wenn der Benutzer dies nicht ausdrücklich beabsichtigt. Um es noch etwas deutlicher zu machen: Wenn die Entsperrung des PCs darauf beruht, dass sich ein Bluetooth-Gerät in Reichweite befindet, muss ein explizites Absichtssignal erfasst werden. Andernfalls wird der PC jedes Mal entsperrt, wenn der Benutzer auf dem Weg in die Küche daran vorbeiläuft. Darüber hinaus ist die im ersten Aufruf zurückgegebene Nonce nur für 20 Sekunden gültig und läuft dann ab. Daher darf der erste Aufruf erst erfolgen, wenn die Begleitgeräte-App davon ausgehen kann, dass das Begleitgerät vorhanden ist (also etwa per USB angeschlossen oder an das NFC-Lesegerät gehalten wird). Achten Sie bei Verwendung von Bluetooth darauf, weder den Akku des PCs noch andere laufende Bluetooth-Aktivitäten zu beeinträchtigen, während geprüft wird, ob sich das Begleitgerät in Reichweite befindet. Falls ein Benutzeranwesenheitssignal (etwa die Eingabe einer PIN) erforderlich ist, empfiehlt es sich zudem, den ersten Authentifizierungsaufruf erst nach Erfassung dieses Signals durchzuführen.
+Das Timing der beiden API-Aufrufe („StartAuthenticationAsync“ und „FinishAuthencationAsync“) muss sich an der Erfassung der Absichts-, Benutzeranwesenheits- und Mehrdeutigkeitsvermeidungssignale durch das Begleitgerät orientieren. (Weitere Informationen finden Sie unter „Benutzersignale“.) So darf der zweite Aufruf beispielweise erst nach Verfügbarkeit des Absichtssignals übermittelt werden. Anders ausgedrückt: Der PC darf nicht entsperrt werden, wenn der Benutzer dies nicht ausdrücklich beabsichtigt. Um es noch etwas deutlicher zu machen: Wenn die Entsperrung des PCs darauf beruht, dass sich ein Bluetooth-Gerät in Reichweite befindet, muss ein explizites Absichtssignal erfasst werden. Andernfalls wird der PC jedes Mal entsperrt, wenn der Benutzer auf dem Weg in die Küche daran vorbeiläuft. Darüber hinaus ist die im ersten Aufruf zurückgegebene Nonce nur für 20Sekunden gültig und läuft dann ab. Daher darf der erste Aufruf erst erfolgen, wenn die Begleitgeräte-App davon ausgehen kann, dass das Begleitgerät vorhanden ist (also etwa per USB angeschlossen oder an das NFC-Lesegerät gehalten wird). Achten Sie bei Verwendung von Bluetooth darauf, weder den Akku des PCs noch andere laufende Bluetooth-Aktivitäten zu beeinträchtigen, während geprüft wird, ob sich das Begleitgerät in Reichweite befindet. Falls ein Benutzeranwesenheitssignal (etwa die Eingabe einer PIN) erforderlich ist, empfiehlt es sich zudem, den ersten Authentifizierungsaufruf erst nach Erfassung dieses Signals durchzuführen.
 
 Dank des Begleitgeräteframeworks kann die Begleitgeräte-App die beiden obigen Aufrufe zu einem geeigneten Zeitpunkt durchführen, da immer genau bekannt ist, in welcher Phase des Authentifizierungsablaufs sich der Benutzer befindet. Zu diesem Zweck informiert das Begleitgeräteframework die App-Hintergrundaufgabe über Sperrzustandsänderungen.
 
@@ -661,16 +664,16 @@ Die Begleitgeräte-App kann durch Aufrufen von „FindAllRegisteredDeviceInfoAsy
 
 Der erste Bereich gibt die Liste der Geräte für den angemeldeten Benutzer zurück. Der zweite gibt die Liste für alle Benutzer auf dem PC zurück. Der erste Bereich muss beim Aufheben der Registrierung verwendet werden, um zu verhindern, dass die Registrierung für ein Begleitgerät eines anderen Benutzers aufgehoben wird. Der zweite muss bei der Authentifizierung oder Registrierung verwendet werden: Bei der Registrierung kann diese Enumeration dazu beitragen, eine doppelte Registrierung des gleichen Begleitgeräts durch die App zu vermeiden.
 
-Hinweis: Selbst wenn die App diese Überprüfung nicht durchführt, wird eine mehrmalige Registrierung des gleichen Begleitgeräts durch den PC verhindert. Wenn zum Zeitpunkt der Authentifizierung der Bereich „AllUsers“ verwendet wird, kann die Begleitgeräte-App den Wechsel des Benutzerflusses besser unterstützen: Benutzer A wird angemeldet, während Benutzer B angemeldet ist. (Dazu müssen beide Benutzer die Begleitgeräte-App installiert haben, Benutzer A muss seine Begleitgeräte beim PC registriert haben, und auf dem PC muss der Sperr- oder der Anmeldebildschirm angezeigt werden.)
+Hinweis: Selbst wenn die App diese Überprüfung nicht durchführt, wird eine mehrmalige Registrierung des gleichen Begleitgeräts durch den PC verhindert. Wenn zum Zeitpunkt der Authentifizierung der Bereich „AllUsers“ verwendet wird, kann die Begleitgeräte-App den Wechsel des Benutzerflusses besser unterstützen: BenutzerA wird angemeldet, während BenutzerB angemeldet ist. (Dazu müssen beide Benutzer die Begleitgeräte-App installiert haben, BenutzerA muss seine Begleitgeräte beim PC registriert haben, und auf dem PC muss der Sperr- oder der Anmeldebildschirm angezeigt werden.)
 
 ## Sicherheitsanforderungen
 
 Der Begleitauthentifizierungsdienst bietet folgende Sicherheitsvorkehrungen:
 
-- Schadsoftware auf einem Windows 10-Desktopgerät, die als mittlerer Benutzer oder App-Container ausgeführt wird, kann über das Begleitgerät nicht unbemerkt auf (im Rahmen von Microsoft Passport gespeicherte) Benutzeranmeldeinformationsschlüssel auf dem PC zugreifen.
-- Ein böswilliger Benutzer auf einem Windows 10-Desktopgerät kann kein Begleitgerät eines anderen Benutzers auf dem Windows 10-Desktopgerät verwenden, um unbemerkt auf dessen Benutzeranmeldeinformationsschlüssel (auf dem gleichen Windows 10-Desktopgerät) zuzugreifen.
-- Schadsoftware auf dem Begleitgerät kann nicht unbemerkt auf die Benutzeranmeldeinformationsschlüssel auf dem Windows 10-Desktopgerät zugreifen und auch keine Funktionen und keinen Code nutzen, die speziell für das Begleitgeräteframework entwickelt wurden.
-- Ein böswilliger Benutzer kann das Windows 10-Desktopgerät nicht durch Abfangen und späteres Wiedergeben von Datenverkehr zwischen Begleitgerät und Windows 10-Desktopgerät entsperren. Die Verwendung von Nonce, Authentifizierungsschlüssel und HMAC in unserem Protokoll schützt zuverlässig vor Replay-Angriffen.
+- Schadsoftware auf einem Windows10-Desktopgerät, die als mittlerer Benutzer oder App-Container ausgeführt wird, kann über das Begleitgerät nicht unbemerkt auf (im Rahmen von Microsoft Passport gespeicherte) Benutzeranmeldeinformationsschlüssel auf dem PC zugreifen.
+- Ein böswilliger Benutzer auf einem Windows10-Desktopgerät kann kein Begleitgerät eines anderen Benutzers auf dem Windows10-Desktopgerät verwenden, um unbemerkt auf dessen Benutzeranmeldeinformationsschlüssel (auf dem gleichen Windows10-Desktopgerät) zuzugreifen.
+- Schadsoftware auf dem Begleitgerät kann nicht unbemerkt auf die Benutzeranmeldeinformationsschlüssel auf dem Windows10-Desktopgerät zugreifen und auch keine Funktionen und keinen Code nutzen, die speziell für das Begleitgeräteframework entwickelt wurden.
+- Ein böswilliger Benutzer kann das Windows10-Desktopgerät nicht durch Abfangen und späteres Wiedergeben von Datenverkehr zwischen Begleitgerät und Windows10-Desktopgerät entsperren. Die Verwendung von Nonce, Authentifizierungsschlüssel und HMAC in unserem Protokoll schützt zuverlässig vor Replay-Angriffen.
 - Schadsoftware oder ein böswilliger Benutzer auf einem nicht autorisierten PC kann nicht über ein Begleitgerät auf den PC eines regulären Benutzers zugreifen. Dies wird durch die gegenseitige Authentifizierung zwischen Begleitauthentifizierungsdienst und Begleitgerät mit Authentifizierungsschlüssel und HMAC in unserem Protokoll erreicht.
 
 Der Schlüssel für die oben aufgeführten Sicherheitsvorkehrungen liegt im Schutz der HMAC Schlüssel vor unbefugtem Zugriff sowie in der Überprüfung der Benutzeranwesenheit. Genauer gesagt müssen folgende Anforderungen erfüllt werden:

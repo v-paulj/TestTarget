@@ -5,27 +5,25 @@ description: "Hier zeigen wir Ihnen das Erstellen eines Direct3D-Geräts, einer 
 ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f60d7c5b526fcdea8552256a6ebe4b92d5736264
+ms.openlocfilehash: af52969011a90f0c665dc8a5508c213d3a73b5b7
 
 ---
 
 # Einrichten von DirectX-Ressourcen und Darstellen eines Bilds
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Hier zeigen wir Ihnen das Erstellen eines Direct3D-Geräts, einer Swapchain und einer Renderziel-Ansicht sowie die Darstellung des gerenderten Bilds auf dem Bildschirm.
 
-
-            **Ziel:** Sie richten DirectX-Ressourcen in einer UWP-App (Universelle Windows-Plattform) mit C++ ein und zeigen eine Volltonfarbe an.
+**Ziel:** Sie richten DirectX-Ressourcen in einer UWP-App (Universelle Windows-Plattform) mit C++ ein und zeigen eine Volltonfarbe an.
 
 ## Voraussetzungen
 
 
 Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem mit den grundlegenden Konzepten der Grafikprogrammierung vertraut sein.
 
-
-            **Zeitaufwand:** 20 Minuten.
+**Zeitaufwand:** 20Minuten.
 
 ## Anweisungen
 
@@ -42,8 +40,7 @@ Wir deklarieren Direct3D-Schnittstellenvariablen mit der [intelligenten Zeigervo
         );
 ```
 
-Wenn Sie [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) mit ComPtr deklarieren, können Sie anschließend die ComPtr-Methode **GetAddressOf** zum Abrufen der Adresse des Zeigers auf **ID3D11RenderTargetView** (\*\*ID3D11RenderTargetView) für die Übergabe an [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) verwenden. 
-            **OMSetRenderTargets** bindet das Renderziel an den [Ausgabezusammenführungsstatus](https://msdn.microsoft.com/library/windows/desktop/bb205120), um das Renderziel als Ausgabeziel anzugeben.
+Wenn Sie [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) mit ComPtr deklarieren, können Sie anschließend die ComPtr-Methode **GetAddressOf** zum Abrufen der Adresse des Zeigers auf **ID3D11RenderTargetView** (\*\*ID3D11RenderTargetView) für die Übergabe an [**ID3D11DeviceContext::OMSetRenderTargets**](https://msdn.microsoft.com/library/windows/desktop/ff476464) verwenden. **OMSetRenderTargets** bindet das Renderziel an den [Ausgabezusammenführungsstatus](https://msdn.microsoft.com/library/windows/desktop/bb205120), um das Renderziel als Ausgabeziel anzugeben.
 
 Nachdem die Beispiel-App gestartet wurde, wird sie initialisiert und geladen. Danach kann sie ausgeführt werden.
 
@@ -295,6 +292,6 @@ Als Nächstes zeichnen wir ein Dreieck auf dem Bildschirm.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

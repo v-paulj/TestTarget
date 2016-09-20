@@ -13,7 +13,7 @@ ms.openlocfilehash: 5b11c3d4757d7da0c4c99d8f74a8988babfc26fd
 # Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 **Wichtige APIs**
@@ -152,17 +152,19 @@ namespace BackgroundTasks
 5.  Legen Sie unter **App-Einstellungen** den Einstiegspunkt auf **BackgroundTasks.BlogFeedBackgroundTask** fest.
 6.  Klicken oder tippen Sie auf die Registerkarte **Anwendungsbenutzeroberfläche**.
 7.  Legen Sie die Option **Benachrichtigungen bei gesperrtem Bildschirm** auf **Text für Infoanzeiger und Kachel**fest.
-8.  Legen Sie im Feld **Infoanzeigerlogo** einen Pfad zu einem Symbol mit einer Größe von 24 x 24 Pixel fest.
-    **Wichtig**  Für dieses Symbol dürfen nur einfarbige und transparente Pixel verwendet werden.
-9.  Legen Sie im Feld **Kleines Logo** einen Pfad zu einem Symbol der Größe 30 x 30 Pixel fest.
-10. Legen Sie im Feld **Breites Logo** einen Pfad zu einem Symbol mit einer Größe von 310 x 150 Pixel fest.
+8.  Legen Sie im Feld **Infoanzeigerlogo** einen Pfad zu einem Symbol mit einer Größe von 24x24Pixel fest.
+    
+            **Wichtig**  Für dieses Symbol dürfen nur einfarbige und transparente Pixel verwendet werden.
+9.  Legen Sie im Feld **Kleines Logo** einen Pfad zu einem Symbol der Größe 30x30 Pixel fest.
+10. Legen Sie im Feld **Breites Logo** einen Pfad zu einem Symbol mit einer Größe von 310x150Pixel fest.
 
 ## Registrieren der Hintergrundaufgabe
 
 
 Erstellen Sie zum Registrieren Ihrer Aufgabe ein [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Objekt.
 
-> **Hinweis**  Ab Windows 8.1 werden Parameter für die Registrierung von Hintergrundaufgaben zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Ihre App muss Szenarien mit nicht erfolgreicher Registrierung von Hintergrundaufgaben problemlos verarbeiten können. Verwenden Sie beispielsweise eine Bedingungsanweisung, um die App auf Registrierungsfehler zu prüfen, und wiederholen Sie die nicht erfolgreiche Registrierung mit anderen Parameterwerten.
+> 
+            **Hinweis**  Ab Windows8.1 werden Parameter für die Registrierung von Hintergrundaufgaben zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Ihre App muss Szenarien mit nicht erfolgreicher Registrierung von Hintergrundaufgaben problemlos verarbeiten können. Verwenden Sie beispielsweise eine Bedingungsanweisung, um die App auf Registrierungsfehler zu prüfen, und wiederholen Sie die nicht erfolgreiche Registrierung mit anderen Parameterwerten.
  
 
 Fügen Sie auf der Hauptseite der App die **RegisterBackgroundTask**-Methode hinzu, und rufen Sie sie im **OnNavigatedTo**-Ereignishandler auf.

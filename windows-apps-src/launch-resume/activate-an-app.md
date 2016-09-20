@@ -11,7 +11,7 @@ ms.openlocfilehash: f47a3b7fcb4bec4138e11a079c3d10e918c1eb95
 # Behandeln der App-Aktivierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -36,7 +36,8 @@ Definieren Sie die Klasse für Ihre Anwendung.
 
 Überschreiben Sie die [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode. Diese Methode wird immer dann aufgerufen, wenn der Benutzer die App startet. Der [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731)-Parameter enthält den vorherigen Status der App sowie die Aktivierungsargumente.
 
-**Hinweis**  Für Windows Phone Store-Apps wird diese Methode jedes Mal aufgerufen, wenn der Benutzer die App über die Startkachel oder App-Liste startet. Dies ist auch dann der Fall, wenn die App derzeit im Arbeitsspeicher angehalten ist. Unter Windows wird beim Starten einer angehaltenen App über die Startkachel oder die App-Liste diese Methode nicht aufgerufen.
+
+            **Hinweis**  Für Windows Phone Store-Apps wird diese Methode jedes Mal aufgerufen, wenn der Benutzer die App über die Startkachel oder App-Liste startet. Dies ist auch dann der Fall, wenn die App derzeit im Arbeitsspeicher angehalten ist. Unter Windows wird beim Starten einer angehaltenen App über die Startkachel oder die App-Liste diese Methode nicht aufgerufen.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -162,7 +163,8 @@ Von der App werden die gespeicherten Anwendungsdaten geladen, und der angezeigte
 
 ## [!div class="tabbedCodeSnippets"]
 
-> Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) gleich **NotRunning** ist, konnten die Anwendungsdaten von der App nicht erfolgreich gespeichert werden. Die App muss in diesem Fall neu gestartet werden, als ob sie erstmalig gestartet wird. Anmerkungen **Hinweis**  Für Windows Phone Store-Apps folgt auf das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis immer [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), auch wenn Ihre App derzeit angehalten ist und der Benutzer Ihre App über eine primäre Kachel oder die App-Liste neu startet.
+> Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) gleich **NotRunning** ist, konnten die Anwendungsdaten von der App nicht erfolgreich gespeichert werden. Die App muss in diesem Fall neu gestartet werden, als ob sie erstmalig gestartet wird. Anmerkungen 
+            **Hinweis**  Für Windows Phone Store-Apps folgt auf das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis immer [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), auch wenn Ihre App derzeit angehalten ist und der Benutzer Ihre App über eine primäre Kachel oder die App-Liste neu startet.
 
 ## Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden.
 

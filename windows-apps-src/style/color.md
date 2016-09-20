@@ -6,7 +6,6 @@ ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
 label: Color
 template: detail.hbs
 extraBodyClass: style-color
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 878470a7cbf44862c47a1428a1d25d332db32fdc
 
@@ -99,7 +98,7 @@ Jede Farbe steht als eine XAML-[Designressource](https://msdn.microsoft.com/libr
 
 ## Barrierefreiheit
 
-Unsere Palette ist für die Verwendung auf Bildschirmen optimiert. Zur optimalen Lesbarkeit von Text wird ein Mindestkontrastverhältnis gegenüber dem Hintergrund von 4,5:1 empfohlen. Es gibt viele kostenlose Tools, mit denen Sie testen können, ob Ihre Farben geeignet sind, z. B. [Kontrastverhältnis](http://leaverou.github.io/contrast-ratio/).
+Unsere Palette ist für die Verwendung auf Bildschirmen optimiert. Zur optimalen Lesbarkeit von Text wird ein Mindestkontrastverhältnis gegenüber dem Hintergrund von 4,5:1 empfohlen. Es gibt viele kostenlose Tools, mit denen Sie testen können, ob Ihre Farben geeignet sind, z.B. [Kontrastverhältnis](http://leaverou.github.io/contrast-ratio/).
 
 
 

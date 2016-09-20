@@ -5,14 +5,14 @@ title: "3D-Perspektiveneffekte für XAML-UI"
 description: "Mithilfe der perspektivischen Transformation können Sie 3D-Effekte auf Inhalte in Ihren Windows-Runtime-Apps anwenden. Sie können z. B. wie hier gezeigt die Illusion schaffen, dass sich ein Objekt auf Sie zu oder von Ihnen wegbewegt."
 translationtype: Human Translation
 ms.sourcegitcommit: 54bcd19419f31563f910b705fce8128bca33825b
-ms.openlocfilehash: 4141d23c5102df4970ef7c4fb3659bf3ba561ccf
+ms.openlocfilehash: 543dfb60b1fa70e2fceebbdd03da8a301eb9d08f
 
 ---
 # 3D-Perspektiveneffekte für XAML-UI
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Mithilfe der perspektivischen Transformation können Sie 3D-Effekte auf Inhalte in Ihren Windows-Runtime-Apps anwenden. Sie können z. B. wie hier gezeigt die Illusion schaffen, dass sich ein Objekt auf Sie zu oder von Ihnen wegbewegt.
+Mithilfe der perspektivischen Transformation können Sie 3D-Effekte auf Inhalte in Ihren Windows-Runtime-Apps anwenden. Sie können z.B. wie hier gezeigt die Illusion schaffen, dass sich ein Objekt auf Sie zu oder von Ihnen wegbewegt.
 
 ![Bild mit perspektivischer Transformation](images/3dsimple.png)
 
@@ -81,15 +81,13 @@ Die [**RotationZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.x
 </Image>
 ```
 
-![RotateZ minus 45 Grad](images/3drotatezminus35.png)
+![RotateZ minus 45Grad](images/3drotatezminus35.png)
 
 Für die Drehungseigenschaften kann ein positiver oder negativer Wert für die Drehung in beiden Richtungen angegeben werden. Die absolute Zahl kann größer als 360 sein, wodurch das Objekt um mehr als eine volle Drehung gedreht wird. [Führen Sie dieses Beispiel aus](http://go.microsoft.com/fwlink/p/?linkid=236112), um mit verschiedenen Werten für die Eigenschaften [**RotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationx), [**RotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationy) und [**RotationZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationz) zu experimentieren und die entsprechenden Auswirkungen zu veranschaulichen.
 
 Sie können den Drehmittelpunkt mithilfe der Eigenschaften [**CenterOfRotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.centerofrotationx), [**CenterOfRotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.centerofrotationy) und [**CenterOfRotationZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.centerofrotationz) verschieben. Standardmäßig verläuft die Drehachse direkt durch den Objektmittelpunkt, wodurch das Objekt um seinen Mittelpunkt gedreht wird. Wenn Sie jedoch den Drehmittelpunkt an den Rand des Objekts verschieben, wird das Objekt um den betreffenden Rand gedreht. Der Standardwert für **CenterOfRotationX** und **CenterOfRotationY** ist 0,5, und der Standardwert für **CenterOfRotationZ** ist 0. Für **CenterOfRotationX** und **CenterOfRotationY** wird der Drehpunkt mit Werten zwischen 0 und 1 auf eine bestimmte Position auf dem Objekt festgelegt. Durch den Wert "0" wird ein Rand des Objekts angegeben, während mit dem Wert "1" der gegenüberliegende Rand angegeben wird. Werte außerhalb dieses Bereichs sind zulässig, und der Drehmittelpunkt wird entsprechend verschoben. Da die Z-Achse des Drehmittelpunkts durch die Fläche des Objekts gezeichnet wird, können Sie den Drehmittelpunkt mit einer negativen Zahl hinter das Objekt und mit einer positiven Zahl vor das Objekt (auf den Betrachter zu) verschieben.
 
-[
-              **CenterOfRotationX**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.centerofrotationx) verschiebt den Drehmittelpunkt entlang der X-Achse parallel zum Objekt, während [**CenterOfRotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.centerofrotationy) den Drehmittelpunkt entlang der Y-Achse des Objekts verschiebt. In der folgenden Abbildung wird die Auswirkung von verschiedenen Werten für **CenterOfRotationY** veranschaulicht.
+[**CenterOfRotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.centerofrotationx) verschiebt den Drehmittelpunkt entlang der X-Achse parallel zum Objekt, während [**CenterOfRotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.centerofrotationy) den Drehmittelpunkt entlang der Y-Achse des Objekts verschiebt. In der folgenden Abbildung wird die Auswirkung von verschiedenen Werten für **CenterOfRotationY** veranschaulicht.
 
 ```xml
 <Image Source="kid.png">
@@ -147,24 +145,12 @@ Platzieren Sie den Drehmittelpunkt mithilfe von [**CenterOfRotationZ**](https://
 
 Sie haben nun erfahren, wie Sie ein Objekt im Raum drehen können. Mit den folgenden Eigenschaften können Sie diese gedrehten Objekte relativ zueinander im Raum positionieren:
 
--   [
-              **LocalOffsetX**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetx) verschiebt ein Objekt entlang der X-Achse der Fläche eines gedrehten Objekts.
--   [
-              **LocalOffsetY**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsety) verschiebt ein Objekt entlang der Y-Achse der Fläche eines gedrehten Objekts.
--   [
-              **LocalOffsetZ**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetz) verschiebt ein Objekt entlang der Z-Achse der Fläche eines gedrehten Objekts.
--   [
-              **GlobalOffsetX**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.globaloffsetx) verschiebt ein Objekt entlang der am Bildschirm ausgerichteten X-Achse.
--   [
-              **GlobalOffsetY**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.globaloffsety) verschiebt ein Objekt entlang der am Bildschirm ausgerichteten Y-Achse.
--   [
-              **GlobalOffsetZ**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.globaloffsetz) verschiebt ein Objekt entlang der am Bildschirm ausgerichteten Z-Achse.
+-   [**LocalOffsetX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetx) verschiebt ein Objekt entlang der X-Achse der Fläche eines gedrehten Objekts.
+-   [**LocalOffsetY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsety) verschiebt ein Objekt entlang der Y-Achse der Fläche eines gedrehten Objekts.
+-   [**LocalOffsetZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetz) verschiebt ein Objekt entlang der Z-Achse der Fläche eines gedrehten Objekts.
+-   [**GlobalOffsetX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.globaloffsetx) verschiebt ein Objekt entlang der am Bildschirm ausgerichteten X-Achse.
+-   [**GlobalOffsetY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.globaloffsety) verschiebt ein Objekt entlang der am Bildschirm ausgerichteten Y-Achse.
+-   [**GlobalOffsetZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.globaloffsetz) verschiebt ein Objekt entlang der am Bildschirm ausgerichteten Z-Achse.
 
 **Lokaler Versatz**
 
@@ -174,15 +160,11 @@ Die Eigenschaften [**LocalOffsetX**](https://msdn.microsoft.com/library/windows/
 
 Im vorigen Beispiel ist zu beobachten, dass das Objekt entlang seiner eigenen X-Achse verschoben wird. Das Objekt wird gleich zu Beginn der Animation, wenn der Wert von [**RotationY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationy) nahe null liegt (d. h. parallel zum Bildschirm), entlang des Bildschirms in der X-Richtung verschoben. Während das Objekt jedoch in Richtung des Betrachters gedreht wird, erfolgt eine Verschiebung entlang der X-Achse der Objektfläche in Richtung Betrachter. Wenn Sie die **RotationY**-Eigenschaft jedoch mit einem Wert von -65 Grad animiert haben, wird das Objekt in einer Kurvenbewegung vom Betrachter weg gedreht.
 
-[
-              **LocalOffsetY**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsety) funktioniert ähnlich wie [**LocalOffsetX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetx), die Bewegung erfolgt jedoch entlang der vertikalen Achse. Eine Änderung von [**RotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationx) wirkt sich daher auf die Richtung aus, in der **LocalOffsetY** das Objekt verschiebt. Im nächsten Beispiel wird **LocalOffsetY** von 0 bis 400 Grad animiert, und **RotationX** wird von 0 bis 65 Grad animiert.
+[**LocalOffsetY**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsety) funktioniert ähnlich wie [**LocalOffsetX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetx), die Bewegung erfolgt jedoch entlang der vertikalen Achse. Eine Änderung von [**RotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationx) wirkt sich daher auf die Richtung aus, in der **LocalOffsetY** das Objekt verschiebt. Im nächsten Beispiel wird **LocalOffsetY** von 0 bis 400 Grad animiert, und **RotationX** wird von 0 bis 65 Grad animiert.
 
 [Dieses Beispiel ausführen](http://go.microsoft.com/fwlink/p/?linkid=236210)
 
-[
-              **LocalOffsetZ**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetz) versetzt das Objekt senkrecht zur Fläche des Objekts, als ob durch den Mittelpunkt an der Objektrückseite ein Vektor direkt in Richtung des Betrachters gezeichnet würde. Zum Veranschaulichen der Funktionsweise von **LocalOffsetZ** wird im folgenden Beispiel **LocalOffsetZ** von 0 bis 400 Grad animiert, und [**RotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationx) wird von 0 bis 65 Grad animiert.
+[**LocalOffsetZ**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.localoffsetz) versetzt das Objekt senkrecht zur Fläche des Objekts, als ob durch den Mittelpunkt an der Objektrückseite ein Vektor direkt in Richtung des Betrachters gezeichnet würde. Zum Veranschaulichen der Funktionsweise von **LocalOffsetZ** wird im folgenden Beispiel **LocalOffsetZ** von 0 bis 400 Grad animiert, und [**RotationX**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.planeprojection.rotationx) wird von 0 bis 65 Grad animiert.
 
 [Dieses Beispiel ausführen](http://go.microsoft.com/fwlink/p/?linkid=236211)
 
@@ -204,6 +186,6 @@ Sie können den [**Matrix3DProjection**](https://msdn.microsoft.com/library/wind
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

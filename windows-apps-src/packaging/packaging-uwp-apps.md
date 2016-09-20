@@ -3,7 +3,6 @@ author: msatranjr
 ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Verpacken von UWP-Apps
 description: "Um Ihre UWP-App (Universelle Windows-Plattform) zu verkaufen oder an andere Benutzer zu verteilen, müssen Sie ein APPXUPLOAD-Paket erstellen."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: a77e441cbd1b6826e06064dbd4be449813754b25
 
@@ -16,10 +15,14 @@ Um Ihre UWP-App (Universelle Windows-Plattform) zu verkaufen oder an andere Benu
 
 Für Windows 10 generieren Sie ein Paket („.appxupload“), das in den Windows Store hochgeladen werden kann. Ihre App kann dann auf beliebigen Windows 10-Geräten installiert und ausgeführt werden. Im Folgenden finden Sie die Schritte zum Erstellen eines App-Pakets.
 
-1.  [Vor dem Verpacken der App](#before-packaging-your-app). Führen Sie die folgenden Schritte aus, um sicherzustellen, dass die App verpackt und an den Store übermittelt werden kann.
-2.  [Konfigurieren eines App-Pakets](#configure-an-app-package). Verwenden Sie den Manifest-Designer, um das Paket zu konfigurieren. Fügen Sie beispielsweise Kachelbilder hinzu, und wählen Sie die von Ihrer App unterstützten Ausrichtungen aus.
-3.  [Erstellen eines App-Pakets](#create-an-app-package). Verwenden Sie den Assistenten in Microsoft Visual Studio, um ein App-Paket zu erstellen und Ihr Paket mit dem Zertifizierungskit für Windows-Apps zu zertifizieren.
-4.  [Querladen des App-Pakets](#sideload-your-app-package). Nach dem Querladen Ihrer App auf ein Gerät können Sie testen, ob es ordnungsgemäß funktioniert.
+1.  
+            [Vor dem Verpacken der App](#before-packaging-your-app). Führen Sie die folgenden Schritte aus, um sicherzustellen, dass die App verpackt und an den Store übermittelt werden kann.
+2.  
+            [Konfigurieren eines App-Pakets](#configure-an-app-package). Verwenden Sie den Manifest-Designer, um das Paket zu konfigurieren. Fügen Sie beispielsweise Kachelbilder hinzu, und wählen Sie die von Ihrer App unterstützten Ausrichtungen aus.
+3.  
+            [Erstellen eines App-Pakets](#create-an-app-package). Verwenden Sie den Assistenten in Microsoft Visual Studio, um ein App-Paket zu erstellen und Ihr Paket mit dem Zertifizierungskit für Windows-Apps zu zertifizieren.
+4.  
+            [Querladen des App-Pakets](#sideload-your-app-package). Nach dem Querladen Ihrer App auf ein Gerät können Sie testen, ob es ordnungsgemäß funktioniert.
 
 Nachdem Sie die vorangehenden Schritte abgeschlossen haben, können Sie Ihre App im Store zum Kauf anbieten. Eine branchenspezifische App, die Sie nicht verkaufen, sondern nur internen Benutzern zur Verfügung stellen möchten, können Sie querladen, um sie auf einem beliebigen Windows 10-Gerät zu installieren.
 
@@ -91,11 +94,13 @@ Wenn Sie eine App über den Store verteilen möchten, müssen Sie ein APPXUPLOAD
 **Überprüfen des App-Pakets auf einem Windows 10-Remotegerät**
 
 1.  Aktivieren Sie das Windows 10-Gerät für die Entwicklung, indem Sie die Anweisungen unter [Aktivieren Ihres Geräts für die Entwicklung](https://msdn.microsoft.com/library/windows/apps/Dn706236) befolgen.
-    **Wichtig**  Sie können das App-Paket nicht auf einem ARM-Remotegerät für Windows 10 überprüfen.
+    
+            **Wichtig**  Sie können das App-Paket nicht auf einem ARM-Remotegerät für Windows10 überprüfen.
 2.  Laden Sie die Remotetools für Visual Studio herunter, und installieren Sie sie. Diese Tools werden verwendet, um das Zertifizierungskit für Windows-Apps remote auszuführen. Weitere Informationen zu diesen Tools einschließlich der Downloadseite finden Sie unter [Ausführen von Windows Store-Apps auf einem Remotecomputer](https://msdn.microsoft.com/library/hh441469.aspx#BKMK_Starting_the_Remote_Debugger_Monitor).
 3.  Laden Sie das erforderliche [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkID=309666) herunter, und installieren Sie es auf Ihrem Windows 10-Remotegerät.
 4.  Aktivieren Sie auf der Seite **Paketerstellung abgeschlossen** des Assistenten das Optionsfeld **Remotecomputer**. Klicken Sie anschließend neben der Schaltfläche **Testverbindung** auf die Schaltfläche mit den Auslassungszeichen.
-    **Hinweis**  Das Optionsfeld **Remotecomputer** ist nur verfügbar, wenn Sie mindestens eine Projektmappenkonfiguration ausgewählt haben, die die Überprüfung unterstützt. Weitere Informationen zum Testen der App mit dem WACK finden Sie unter [Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/Mt186449).
+    
+            **Hinweis**  Das Optionsfeld **Remotecomputer** ist nur verfügbar, wenn Sie mindestens eine Projektmappenkonfiguration ausgewählt haben, die die Überprüfung unterstützt. Weitere Informationen zum Testen der App mit dem WACK finden Sie unter [Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/Mt186449).
 5.  Geben Sie ein Gerät vom Subnetz aus an, oder geben Sie den DNS-Namen (Domain Name Server) oder die IP-Adresse eines Geräts an, das sich außerhalb des Subnetzes befindet.
 6.  Wählen Sie in der Liste **Authentifizierungsmodus** die Option **Keiner** aus, wenn Ihr Gerät keine Anmeldung mittels Windows-Anmeldeinformationen erfordert.
 7.  Klicken Sie auf die Schaltfläche **Auswählen** und anschließend auf die Schaltfläche **Zertifizierungskit für Windows-Apps starten**. Wenn die Remotetools auf diesem Gerät ausgeführt werden, stellt Visual Studio eine Verbindung her und führt die Überprüfungstests aus. Weitere Informationen finden Sie unter [Tests im Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt186450).
@@ -128,7 +133,8 @@ Die folgende Liste enthält die Anforderungen für das Querladen von Apps.
 
     Nachdem das App-Paket installiert wurde, sehen Sie die folgende Meldung im PowerShell-Fenster: Ihre App wurde erfolgreich installiert.
 
-    **Hinweis**  Wenn Sie das Kontextmenü auf einem Tablet öffnen möchten, berühren Sie den Bildschirm an der Stelle, an der Sie mit der rechten Maustaste klicken möchten. Drücken Sie so lange, bis ein vollständiger Kreis angezeigt wird, und lassen Sie dann wieder los. Das Kontextmenü wird angezeigt, sobald Sie loslassen.
+    
+            **Hinweis**  Wenn Sie das Kontextmenü auf einem Tablet öffnen möchten, berühren Sie den Bildschirm an der Stelle, an der Sie mit der rechten Maustaste klicken möchten. Drücken Sie so lange, bis ein vollständiger Kreis angezeigt wird, und lassen Sie dann wieder los. Das Kontextmenü wird angezeigt, sobald Sie loslassen.
 4.  Klicken Sie auf die Schaltfläche „Start“, und geben Sie den Namen der App ein, um sie zu starten.
 
  

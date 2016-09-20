@@ -5,7 +5,7 @@ description: In diesem Artikel wird beschrieben, wie Sie den MediaProcessingTrig
 title: Verarbeiten von Mediendateien im Hintergrund
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dcf655ff80c4463a567ade0b6d1cc784b60c18be
+ms.openlocfilehash: 704fa52a9e98382940b7863d6196ca0af5d33460
 
 ---
 
@@ -16,8 +16,7 @@ ms.openlocfilehash: dcf655ff80c4463a567ade0b6d1cc784b60c18be
 
 In diesem Artikel wird beschrieben, wie Sie [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) und eine Hintergrundaufgabe verwenden, um Mediendateien im Hintergrund zu verarbeiten.
 
-Mit der in diesem Artikel beschriebenen Beispiel-App kann der Benutzer eine zu transcodierende Eingabemediendatei auswählen und eine Ausgabedatei für das Transcodierungsergebnis angeben. Anschließend wird eine Hintergrundaufgabe gestartet, um den Transcodierungsvorgang auszuführen. [
-            **MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) unterstützt außer der Transcodierung noch viele andere Medienverarbeitungsszenarien, einschließlich Rendern von Medienkompositionen auf Datenträger und Hochladen von verarbeiteten Mediendateien nach Abschluss der Verarbeitung.
+Mit der in diesem Artikel beschriebenen Beispiel-App kann der Benutzer eine zu transcodierende Eingabemediendatei auswählen und eine Ausgabedatei für das Transcodierungsergebnis angeben. Anschließend wird eine Hintergrundaufgabe gestartet, um den Transcodierungsvorgang auszuführen. [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) unterstützt außer der Transcodierung noch viele andere Medienverarbeitungsszenarien, einschließlich Rendern von Medienkompositionen auf Datenträger und Hochladen von verarbeiteten Mediendateien nach Abschluss der Verarbeitung.
 
 Ausführlichere Informationen zu den verschiedenen universellen Windows-App-Features in diesem Beispiel finden Sie unter:
 
@@ -141,6 +140,6 @@ Der **OnCompleted**-Ereignishandler wird aufgerufen, wenn die Ausführung der Hi
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

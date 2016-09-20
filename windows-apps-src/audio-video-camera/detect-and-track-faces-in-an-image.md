@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 84729E44-10E9-4D7D-8575-6A9D97467ECD
 description: "In diesem Thema erfahren Sie, wie mit dem FaceDetector Gesichter in einem Bild erkannt werden. Der FaceTracker ist für die Verfolgung von Gesichtern im zeitlichen Verlauf einer Sequenz von Videoframes optimiert."
 title: Erkennen von Gesichtern in Bildern oder Videos
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
 
 # Erkennen von Gesichtern in Bildern oder Videos
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
@@ -46,7 +45,8 @@ In der aktuellen Version unterstützt die **FaceDetector**-Klasse nur Bilder im 
 
 [!code-cs[Format](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFormat)]
 
-Instanziieren Sie das **FaceDetector**-Objekt, indem Sie [**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132) und dann [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134) aufrufen, und übergeben Sie die Bitmap, die auf eine geeignete Größe skaliert und in ein unterstütztes Pixelformat konvertiert wurde. Diese Methode gibt eine Liste von [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123)-Objekten zurück. **ShowDetectedFaces** ist eine Hilfsmethode (unten dargestellt), die Quadrate um die Gesichter im Bild zeichnet.
+Instanziieren Sie das **FaceDetector**-Objekt, indem Sie [**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132) und dann [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134) aufrufen, und übergeben Sie die Bitmap, die auf eine geeignete Größe skaliert und in ein unterstütztes Pixelformat konvertiert wurde. Diese Methode gibt eine Liste von [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123)-Objekten zurück. 
+            **ShowDetectedFaces** ist eine Hilfsmethode (unten dargestellt), die Quadrate um die Gesichter im Bild zeichnet.
 
 [!code-cs[Erkennen](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDetect)]
 

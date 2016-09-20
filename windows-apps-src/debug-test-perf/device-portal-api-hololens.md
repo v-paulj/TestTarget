@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 41ac0142-4d86-4bb3-b580-36d0d6956091
 title: "Referenz zu Geräteportal-APIs für HoloLens"
 description: "Hier erhalten Sie Informationen zu den HoloLens-REST-APIs für das Windows Device Portal, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 5ed8ffe0a409569777fbf4e56a90ab3b80cd395c
 
@@ -159,7 +158,7 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 
 URI-Parameter | Beschreibung
 :---          | :---
-Erforderlich   | (**Erforderlich**) Bestimmt, ob für das Geräteportal HTTPS erforderlich ist. Die möglichen Werte lauten **yes**, **no** und **default**.
+required   | (**Erforderlich**) Bestimmt, ob für das Geräteportal HTTPS erforderlich ist. Die möglichen Werte lauten **yes**, **no** und **default**.
 
 **Anforderungsheader**
 

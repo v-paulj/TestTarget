@@ -3,7 +3,6 @@ author: mtoepke
 title: Portieren der Shaderobjekte
 description: "Beim Portieren des einfachen Renderers aus OpenGL ES 2.0 ist der erste Schritt das Einrichten der äquivalenten Vertex- und Fragmentshaderobjekte in Direct3D 11. Stellen Sie außerdem sicher, dass das Hauptprogramm mit den Shaderobjekten kommunizieren kann, nachdem diese kompiliert wurden."
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 17d66e217e40eca0653078820746746eb23185e1
 
@@ -22,11 +21,12 @@ ms.openlocfilehash: 17d66e217e40eca0653078820746746eb23185e1
 
 Beim Portieren des einfachen Renderers aus OpenGL ES 2.0 ist der erste Schritt das Einrichten der äquivalenten Vertex- und Fragmentshaderobjekte in Direct3D 11. Stellen Sie außerdem sicher, dass das Hauptprogramm mit den Shaderobjekten kommunizieren kann, nachdem diese kompiliert wurden.
 
-> **Hinweis**  Haben Sie ein neues Direct3D-Projekt erstellt? Falls nicht, befolgen Sie die Anleitung unter [Erstellen eines neuen DirectX 11-Projekts für die Universelle Windows-Plattform (UWP)](user-interface.md). Bei dieser exemplarischen Vorgehensweise wird vorausgesetzt, dass Sie die DXGI- und Direct3D-Ressourcen zum Zeichnen auf den Bildschirm erstellt haben, die auch in der Vorlage bereitgestellt werden.
+> 
+            **Hinweis**  Haben Sie ein neues Direct3D-Projekt erstellt? Falls nicht, befolgen Sie die Anleitung unter [Erstellen eines neuen DirectX 11-Projekts für die Universelle Windows-Plattform (UWP)](user-interface.md). Bei dieser exemplarischen Vorgehensweise wird vorausgesetzt, dass Sie die DXGI- und Direct3D-Ressourcen zum Zeichnen auf den Bildschirm erstellt haben, die auch in der Vorlage bereitgestellt werden.
 
  
 
-Wie unter OpenGL ES 2.0 auch, müssen die kompilierten Shader in Direct3D einem Kontext für das Zeichnen zugeordnet werden. Direct3D verfügt jedoch nicht per se über das Konzept eines Shaderprogrammobjekts. Daher weisen Sie die Shader direkt einem [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) zu. Bei diesem Schritt wird der OpenGL ES 2.0-Prozess zum Erstellen und Binden von Shaderobjekten eingehalten, und es werden die entsprechenden API-Verhalten in Direct3D bereitgestellt.
+Wie unter OpenGLES2.0 auch, müssen die kompilierten Shader in Direct3D einem Kontext für das Zeichnen zugeordnet werden. Direct3D verfügt jedoch nicht per se über das Konzept eines Shaderprogrammobjekts. Daher weisen Sie die Shader direkt einem [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) zu. Bei diesem Schritt wird der OpenGL ES 2.0-Prozess zum Erstellen und Binden von Shaderobjekten eingehalten, und es werden die entsprechenden API-Verhalten in Direct3D bereitgestellt.
 
 Anweisungen
 ------------
@@ -35,7 +35,7 @@ Anweisungen
 
 In diesem einfachen OpenGL ES 2.0-Beispiel werden die Shader als Textdateien gespeichert und als Zeichenfolgendaten für die Laufzeitkompilierung geladen.
 
-OpenGL ES 2.0: Kompilieren eines Shaders
+OpenGLES2.0: Kompilieren eines Shaders
 
 ``` syntax
 GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
@@ -75,7 +75,8 @@ GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
 
 In Direct3D werden Shader nicht während der Laufzeit kompiliert. Sie werden immer in CSO-Dateien kompiliert, wenn auch die restlichen Daten des Programms kompiliert werden. Wenn Sie die App mit Microsoft Visual Studio kompilieren, werden die HLSL-Dateien in CSO-Dateien (.cso) kompiliert, die von der App geladen werden müssen. Achten Sie darauf, diese CSO-Dateien der App beim Verpacken hinzuzufügen!
 
-> **Hinweis**  Im folgenden Beispiel wird das asynchrone Laden und Kompilieren des Shaders mit dem **auto**-Schlüsselwort und der Lambdasyntax durchgeführt. ReadDataAsync() ist eine für die Vorlage implementierte Methode, mit der eine CSO-Datei als Array mit Bytedaten (fileData) eingelesen wird.
+> 
+            **Hinweis**  Im folgenden Beispiel wird das asynchrone Laden und Kompilieren des Shaders mit dem **auto**-Schlüsselwort und der Lambdasyntax durchgeführt. ReadDataAsync() ist eine für die Vorlage implementierte Methode, mit der eine CSO-Datei als Array mit Bytedaten (fileData) eingelesen wird.
 
  
 
@@ -106,7 +107,7 @@ auto createPSTask = loadPSTask.then([this](Platform::Array<byte>^ fileData) {
 
 Unter OpenGL ES 2.0 wird ein so genanntes Shaderprogramm verwendet, das als Schnittstelle zwischen dem Hauptprogramm, das über die CPU ausgeführt wird, und den Shadern fungiert, die über die GPU ausgeführt werden. Shader werden kompiliert (oder aus kompilierten Quellen geladen) und einem Programm zugeordnet, das die Ausführung über die GPU ermöglicht.
 
-OpenGL ES 2.0: Laden der Vertex- und Fragmentshader in ein Schattierungsprogramm
+OpenGLES2.0: Laden der Vertex- und Fragmentshader in ein Schattierungsprogramm
 
 ``` syntax
 GLuint __cdecl LoadShaderProgram (const char *vertShaderSrcStr, const char *fragShaderSrcStr)
@@ -185,14 +186,17 @@ m_d3dContext->PSSetShader(
 
 Im OpenGL ES 2.0-Beispiel wird ein **uniform**-Element für die Shaderpipeline deklariert:
 
--   **u\_mvpMatrix**: Ein 4x4-Array mit Float-Werten, welches die endgültige Modell-Ansicht-Projektion-Transformationsmatrix darstellt, das die Modellkoordinaten für den Würfel verwendet und sie in 2D-Projektionskoordinaten für die Scankonvertierung transformiert.
+-   
+            **u\_mvpMatrix**: Ein 4x4-Array mit Float-Werten, welches die endgültige Modell-Ansicht-Projektion-Transformationsmatrix darstellt, das die Modellkoordinaten für den Würfel verwendet und sie in 2D-Projektionskoordinaten für die Scankonvertierung transformiert.
 
 Zusätzlich zwei **attribute**-Werte für die Vertexdaten:
 
--   **a\_position**: Ein 4-Float-Vektor für die Modellkoordinaten eines Vertex.
--   **a\_color**: Ein 4-Float-Vektor für den RGBA-Farbwert, der dem Vertex zugeordnet ist.
+-   
+            **a\_position**: Ein 4-Float-Vektor für die Modellkoordinaten eines Vertex.
+-   
+            **a\_color**: Ein 4-Float-Vektor für den RGBA-Farbwert, der dem Vertex zugeordnet ist.
 
-OpenGL ES 2.0: GLSL-Definitionen für die uniform-Elemente und Attribute
+OpenGLES2.0: GLSL-Definitionen für die uniform-Elemente und Attribute
 
 ``` syntax
 uniform mat4 u_mvpMatrix;
@@ -202,7 +206,7 @@ attribute vec4 a_color;
 
 Die entsprechenden Variablen des Hauptprogramms werden in diesem Fall als Felder des Rendererobjekts definiert. (Weitere Informationen finden Sie unter [So wird's gemacht: Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md).) Danach müssen die Speicherorte im Speicher angegeben werden, an denen das Hauptprogramm diese Werte für die Shaderpipeline bereitstellt. Dies erfolgt normalerweise direkt vor einem Draw-Aufruf:
 
-OpenGL ES 2.0: Kennzeichnen des Speicherorts der uniform- und Attributdaten
+OpenGLES2.0: Kennzeichnen des Speicherorts der uniform- und Attributdaten
 
 ``` syntax
 
@@ -222,7 +226,7 @@ glEnableVertexAttribArray(loc);
 renderer->mvpLoc = glGetUniformLocation(renderer->programObject, "u_mvpMatrix");
 ```
 
-In Direct3D werden "Attribute" oder "uniform-Elemente" in dieser Form nicht verwendet (bzw. wird diese Syntax nicht freigegeben). Stattdessen werden Konstantenpuffer verwendet, die als Direct3D-Unterressourcen dargestellt werden. Diese Ressourcen werden vom Hauptprogramm und den Shaderprogrammen gemeinsam genutzt. Einige dieser Unterressourcen, wie Vertexpositionen und -farben, werden in Form von HLSL-Semantik beschrieben. Weitere Informationen zu Konstantenpuffern und zur HLSL-Semantik und deren Beziehung zu OpenGL ES 2.0-Konzepten finden Sie unter [Portieren von Framepufferobjekten, uniform-Elementen und Attributen](porting-uniforms-and-attributes.md).
+In Direct3D werden "Attribute" oder "uniform-Elemente" in dieser Form nicht verwendet (bzw. wird diese Syntax nicht freigegeben). Stattdessen werden Konstantenpuffer verwendet, die als Direct3D-Unterressourcen dargestellt werden. Diese Ressourcen werden vom Hauptprogramm und den Shaderprogrammen gemeinsam genutzt. Einige dieser Unterressourcen, wie Vertexpositionen und -farben, werden in Form von HLSL-Semantik beschrieben. Weitere Informationen zu Konstantenpuffern und zur HLSL-Semantik und deren Beziehung zu OpenGLES2.0-Konzepten finden Sie unter [Portieren von Framepufferobjekten, uniform-Elementen und Attributen](porting-uniforms-and-attributes.md).
 
 Wenn dieser Prozess unter Direct3D durchgeführt werden soll, wird das „uniform“-Element in einen Direct3D-Konstantenpuffer („cbuffer“) konvertiert und erhält ein Register für die Suche per **register**-HLSL-Semantik. Die beiden Vertexattribute werden als Eingabeelemente für die Shaderpipelinephasen behandelt und ebenfalls mit [HLSL-Semantik](https://msdn.microsoft.com/library/windows/desktop/bb205574) (POSITION und COLOR0) zum Informieren der Shader versehen. Vom Pixelshader wird ein SV\_POSITION-Element verwendet, wobei mit dem Präfix „SV\_“ angegeben wird, dass es sich um einen von der GPU erzeugten Systemwert handelt. (In diesem Fall ist dies eine Pixelposition, die während der Scankonvertierung erzeugt wurde.) Die Elemente VertexShaderInput und PixelShaderInput werden nicht als Konstantenpuffer deklariert, weil VertexShaderInput zum Definieren des Vertexpuffers verwendet wird (siehe [Portieren der Vertexpuffer und -daten](port-the-vertex-buffers-and-data-config.md)). Die Daten für PixelShaderInput werden als Folge einer vorherigen Phase der Pipeline erzeugt. In diesem Fall ist dies der Vertex-Shader.
 

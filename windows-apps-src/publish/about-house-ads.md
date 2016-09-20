@@ -3,7 +3,6 @@ author: jnHs
 Description: "Sie haben die Möglichkeit, eine Anzeige zu erstellen, um eine Ihrer Apps in Ihren anderen Apps zu bewerben – und das kostenlos. Wir bezeichnen dies als Eigenwerbung."
 title: "Über Eigenwerbung"
 ms.assetid: C6507C8B-351B-49E7-A194-35AB05BC3358
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c9b73bb1963839640243fce4caaa7f3701b1eb45
 
@@ -21,7 +20,8 @@ Zum Einrichten von Eigenwerbung müssen Sie beim [Erstellen einer Anzeigenkampag
 
 Wenn Eigenwerbung für App A in App B erscheint, wird der Aufruf weder in Rechnung gestellt, noch erhalten Sie Erlöse für die Darstellung der Anzeige in Ihrer App B-Anzeigeneinheit. Kostenpflichtige Anzeigen werden in Ihren Anzeigeneinheiten vorrangig vor Eigenwerbung angezeigt.
 
-> **Hinweis**  Ein einzelner Endbenutzer sieht eine bestimmte Eigenwerbung maximal fünf Mal am Tag.
+> 
+            **Hinweis**  Ein einzelner Endbenutzer sieht eine bestimmte Eigenwerbung maximal fünf Mal am Tag.
 
  
 

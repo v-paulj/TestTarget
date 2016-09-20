@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "Geräteportal für mobile Geräte"
 description: "Hier erfahren Sie, wie Sie mit dem Windows Device Portal Ihr mobiles Gerät per Fernzugriff konfigurieren und verwalten können."
-translationtype: Human Translation
 ms.sourcegitcommit: df6d42d6a91b8721e905fe9bc3a339dc33408459
 ms.openlocfilehash: eeeb8f98d97468544cc30e3d9884cce15cb913a9
 
@@ -20,7 +19,7 @@ Informationen zum Aktivieren des Entwicklermodus finden Sie unter [Aktivieren Ih
 
 ### Aktivieren der Geräteermittlung und -kopplung
 
-Damit Sie eine Verbindung mit dem Device Portal herstellen können, müssen Sie die Geräteermittlung aktivieren. Auf diese Weise können Sie Ihr Smartphone mit einem PC oder einem anderen Windows 10-Gerät koppeln. Beide Geräte müssen über eine kabelgebundene oder drahtlose Verbindung mit dem gleichen Subnetz des Netzwerks verbunden sein oder über USB verbunden werden.
+Damit Sie eine Verbindung mit dem Device Portal herstellen können, müssen Sie die Geräteermittlung aktivieren. Auf diese Weise können Sie Ihr Smartphone mit einem PC oder einem anderen Windows10-Gerät koppeln. Beide Geräte müssen über eine kabelgebundene oder drahtlose Verbindung mit dem gleichen Subnetz des Netzwerks verbunden sein oder über USB verbunden werden.
 
 Wenn Sie das erste Mal eine Verbindung mit dem Geräteportal herstellen, werden Sie aufgefordert, einen sechsstelligen Sicherheitscode einzugeben (mit Beachtung der Groß- und Kleinschreibung). Dadurch wird sichergestellt, dass Sie Zugriff auf das Smartphone haben, und Sie werden vor Angriffen geschützt. Tippen Sie auf Ihrem Smartphone auf die Schaltfläche „Koppeln“, um den Code zu generieren und anzuzeigen. Geben Sie dann die sechs Zeichen in das Textfeld im Browser ein.
 
@@ -32,15 +31,15 @@ Sie haben 3 Möglichkeiten zum Herstellen einer Verbindung mit dem Geräteportal
 
 1. Geben Sie in Ihrem Browser die hier angegebene Adresse für den verwendeten Verbindungstyp ein.
 
-    - USB: `http://127.0.0.1:10080`
+    - USB:  `http://127.0.0.1:10080`
 
     Verwenden Sie diese Adresse, wenn das Smartphone über USB mit einem PC verbunden ist. Auf beiden Geräten muss Windows 10, Version 1511 oder höher, ausgeführt werden.
     
-    - Lokaler Host: `http://127.0.0.1`
+    - Lokaler Host:  `http://127.0.0.1`
 
     Verwenden Sie diese Adresse, um das Geräteportal lokal auf dem Smartphone in Microsoft Edge für Windows 10 Mobile anzuzeigen.
     
-    - Lokales Netzwerk: `https://<The IP address of the phone>`
+    - Lokales Netzwerk:  `https://<The IP address of the phone>`
 
     Verwenden Sie diese Adresse, um die Verbindung über ein lokales Netzwerk herzustellen.
 
@@ -56,7 +55,7 @@ Dies ist der Geräteportalabschnitt auf der Seite mit den Entwicklerseiten in Wi
 
 ![Einstellungen im Geräteportal](images/device-portal/mob-dev-mode-portal.png)
 
-Sie können die Authentifizierung deaktivieren, wenn Sie das Geräteportal in einer geschützten Umgebung verwenden, z. B. in einem Testlabor, in dem Sie allen im lokalen Netzwerk vertrauen, keine persönlichen Informationen auf dem Gerät gespeichert haben und in dem spezielle Anforderungen bestehen. Dies ermöglicht eine unverschlüsselte Kommunikation, und jeder, der die IP-Adresse Ihres Smartphones kennt, kann es steuern.
+Sie können die Authentifizierung deaktivieren, wenn Sie das Geräteportal in einer geschützten Umgebung verwenden, z.B. in einem Testlabor, in dem Sie allen im lokalen Netzwerk vertrauen, keine persönlichen Informationen auf dem Gerät gespeichert haben und in dem spezielle Anforderungen bestehen. Dies ermöglicht eine unverschlüsselte Kommunikation, und jeder, der die IP-Adresse Ihres Smartphones kennt, kann es steuern.
 
 ## Anmerkungen zu Tools
 

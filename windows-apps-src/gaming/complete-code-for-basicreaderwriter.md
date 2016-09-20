@@ -3,7 +3,6 @@ author: mtoepke
 title: "Vollständiger Code für \"BasicReaderWriter\""
 description: "Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien."
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
-translationtype: Human Translation
 ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
 ms.openlocfilehash: 46762d7b7234be9ff7b4c288a09162d4f942a707
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 46762d7b7234be9ff7b4c288a09162d4f942a707
 # Vollständiger Code für "BasicReaderWriter"
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien. Wird von der [BasicLoader](complete-code-for-basicloader.md)-Klasse verwendet.
 
@@ -30,14 +29,18 @@ Dieses Beispiel kann nicht heruntergeladen werden.
 
 ## Technologien
 
-**Programmiersprachen** – C++  
-**Programmiermodelle** – Windows-Runtime
+
+            **Programmiersprachen** – C++  
+
+            **Programmiermodelle** – Windows-Runtime
 
 
 ## Anforderungen
 
- **Unterstützte Mindestversion (Client)** – Windows 10       
- **Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview 
+ 
+            **Unterstützte Mindestversion (Client)** – Windows 10       
+
+             **Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview 
 
 ## Anzeigen des Codes (C++)
 

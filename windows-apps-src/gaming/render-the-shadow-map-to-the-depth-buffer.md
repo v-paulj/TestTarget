@@ -3,7 +3,6 @@ author: mtoepke
 title: Rendern der Schattenmap zum Tiefenpuffer
 description: "Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine zweidimensionale Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird."
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 644e2084baa750965a5283208fde1cea24ecfdea
 
@@ -15,7 +14,7 @@ ms.openlocfilehash: 644e2084baa750965a5283208fde1cea24ecfdea
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine zweidimensionale Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird. Mithilfe der Tiefenmap wird eine Maske für den Raum erstellt, der im Schatten gerendert wird. Teil 2 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).
+Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine zweidimensionale Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird. Mithilfe der Tiefenmap wird eine Maske für den Raum erstellt, der im Schatten gerendert wird. Teil2 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D11](implementing-depth-buffers-for-shadow-mapping.md).
 
 ## Löschen des Tiefenpuffers
 
@@ -122,7 +121,8 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-**Optimieren des Frustums:**  Stellen Sie sicher, dass in Ihrer Implementierung ein exaktes Frustum berechnet wird, damit Sie mit dem Tiefenpuffer die größtmögliche Präzision erzielen. Weitere Tipps zu Schattenmethoden finden Sie unter [Häufig verwendete Methoden zur Verbesserung von Tiefenmaps für Schatten](https://msdn.microsoft.com/library/windows/desktop/ee416324).
+
+            **Optimieren des Frustums:**  Stellen Sie sicher, dass in Ihrer Implementierung ein exaktes Frustum berechnet wird, damit Sie mit dem Tiefenpuffer die größtmögliche Präzision erzielen. Weitere Tipps zu Schattenmethoden finden Sie unter [Häufig verwendete Methoden zur Verbesserung von Tiefenmaps für Schatten](https://msdn.microsoft.com/library/windows/desktop/ee416324).
 
 ## Vertex-Shader für Schattendurchlauf
 

@@ -1,9 +1,8 @@
 ---
 author: mcleanbyron
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
-description: "Jede Windows Store-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben."
+description: "Jede WindowsStore-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben."
 title: "Überprüfen von Produktkäufen anhand von Belegen"
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: b1322b74bf1038f05cd1cba275e432e279ed362d
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: b1322b74bf1038f05cd1cba275e432e279ed362d
 # Überprüfen von Produktkäufen anhand von Belegen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 **Wichtige APIs**
@@ -20,9 +19,9 @@ ms.openlocfilehash: b1322b74bf1038f05cd1cba275e432e279ed362d
 -   [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)
 -   [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)
 
-Jede Windows Store-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben. Diese Belege enthalten Informationen zum gelisteten Produkt und zu den Kosten für den Kunden.
+Jede WindowsStore-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben. Diese Belege enthalten Informationen zum gelisteten Produkt und zu den Kosten für den Kunden.
 
-Der Zugriff auf diese Informationen unterstützt Szenarien, in denen Ihre App überprüfen muss, ob ein Benutzer Ihre App erworben oder In-App-Produktkäufe im Windows Store getätigt hat. Das kann zum Beispiel bei einem Spiel der Fall sein, in dem Inhalte heruntergeladen wurden. Wenn der Benutzer, der die Spielinhalte gekauft hat, das Spiel auf einem anderen Gerät spielen möchte, müssen Sie überprüfen, ob der Benutzer die Inhalte bereits besitzt. Gehen Sie dazu wie folgt vor:
+Der Zugriff auf diese Informationen unterstützt Szenarien, in denen Ihre App überprüfen muss, ob ein Benutzer Ihre App erworben oder In-App-Produktkäufe im WindowsStore getätigt hat. Das kann zum Beispiel bei einem Spiel der Fall sein, in dem Inhalte heruntergeladen wurden. Wenn der Benutzer, der die Spielinhalte gekauft hat, das Spiel auf einem anderen Gerät spielen möchte, müssen Sie überprüfen, ob der Benutzer die Inhalte bereits besitzt. Gehen Sie dazu wie folgt vor:
 
 ## Anfordern eines Belegs
 

@@ -5,13 +5,13 @@ description: "In diesem Artikel werden das Lesen und Schreiben von Eigenschaften
 title: Bildmetadaten
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 571d71d52931392a36c3c11030749f6ecb3cc961
+ms.openlocfilehash: 1f97bf89682bee430849a6b962c68a8c4877a609
 
 ---
 
 # Bildmetadaten
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel werden das Lesen und Schreiben von Eigenschaften von Bildmetadaten und das Hinzufügen von Geomarkierungen zu Dateien mithilfe der [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683)-Hilfsklasse erläutert.
@@ -66,9 +66,7 @@ Nachdem Sie über den Decoder verfügen, erstellen Sie eine Liste mit Zeichenfol
 
 -   Informationen über die WIC-Metadatenabfragesprache und die unterstützten Eigenschaften finden Sie unter [WIC-Metadatenabfragen für native Bildformate](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   Viele Metadateneigenschaften werden nur von einer Teilmenge aller Bildtypen unterstützt. [
-              Bei Ausführung von **GetPropertiesAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/br226250) tritt ein Fehler mit Fehlercode 0x88982F41 auf, wenn eine der angeforderten Eigenschaften von dem dem Decoder zugeordneten Bild nicht unterstützt wird, und mit Fehlercode 0x88982F81, wenn das Bild überhaupt keine Metadaten unterstützt. Die diesen Fehlercodes zugeordneten Konstanten sind WINCODEC\_ERR\_PROPERTYNOTSUPPORTED und WINCODEC\_ERR\_UNSUPPORTEDOPERATION und werden in der Headerdatei „winerror.h“ definiert.
+-   Viele Metadateneigenschaften werden nur von einer Teilmenge aller Bildtypen unterstützt. [Bei Ausführung von **GetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226250) tritt ein Fehler mit Fehlercode 0x88982F41 auf, wenn eine der angeforderten Eigenschaften von dem dem Decoder zugeordneten Bild nicht unterstützt wird, und mit Fehlercode 0x88982F81, wenn das Bild überhaupt keine Metadaten unterstützt. Die diesen Fehlercodes zugeordneten Konstanten sind WINCODEC\_ERR\_PROPERTYNOTSUPPORTED und WINCODEC\_ERR\_UNSUPPORTEDOPERATION und werden in der Headerdatei „winerror.h“ definiert.
 -   Da ein Bild nicht unbedingt einen Wert für eine bestimmte Eigenschaft enthält, überprüfen Sie mithilfe von **IDictionary.ContainsKey**, ob eine Eigenschaft in den Ergebnissen vorhanden ist, bevor Sie versuchen, darauf zuzugreifen.
 
 Um Bildmetadaten in den Datenstrom zu schreiben, muss der Bildausgabedatei ein **BitmapEncoder** zugeordnet sein.
@@ -79,9 +77,7 @@ Erstellen Sie ein [**BitmapPropertySet**](https://msdn.microsoft.com/library/win
 
 -   Ausführliche Informationen dazu, welche Eigenschaften für welche Bilddateitypen unterstützt werden, finden Sie unter [Windows-Eigenschaften](https://msdn.microsoft.com/library/windows/desktop/dd561977), [Richtlinien zu Fotometadaten](https://msdn.microsoft.com/library/windows/desktop/ee872003) und [WIC-Metadatenabfragen für systemeigene Bildformate](https://msdn.microsoft.com/library/windows/desktop/ee719904).
 
--   [
-              Für **SetPropertiesAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/br226252) tritt ein Fehler mit dem Fehlercode 0x88982F41 auf, wenn das dem Encoder zugeordnete Bild eine der angeforderten Eigenschaften nicht unterstützt.
+-   [Für **SetPropertiesAsync**](https://msdn.microsoft.com/library/windows/apps/br226252) tritt ein Fehler mit dem Fehlercode 0x88982F41 auf, wenn das dem Encoder zugeordnete Bild eine der angeforderten Eigenschaften nicht unterstützt.
 
 ## Verwandte Themen
 
@@ -96,6 +92,6 @@ Erstellen Sie ein [**BitmapPropertySet**](https://msdn.microsoft.com/library/win
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

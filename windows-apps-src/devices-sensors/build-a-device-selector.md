@@ -3,14 +3,13 @@ author: DBirtolo
 ms.assetid: D06AA3F5-CED6-446E-94E8-713D98B13CAA
 title: "Erstellen einer Geräteauswahl"
 description: "Durch das Erstellen einer Geräteauswahl können Sie die Geräte begrenzen, die Sie beim Auflisten von Geräten durchsuchen."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 67bf2795a7d555dc5cd236eeafb07009511fe5d3
 
 ---
 # Erstellen einer Geräteauswahl
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 ** Wichtige APIs **
@@ -32,7 +31,8 @@ Bei Verwendung der [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/
 
 Die [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-APIs enthalten eine Canonical AQS-Syntax, die jedoch nicht alle Operatoren unterstützt. Eine Liste der beim Erstellen der Filterzeichenfolge verfügbaren Eigenschaften finden Sie unter [Geräteinformationseigenschaften](device-information-properties.md).
 
-**Achtung**  Mithilfe des `{GUID} PID`-Formats definierte benutzerdefinierte Eigenschaften können beim Erstellen der AQS-Filterzeichenfolge nicht verwendet werden. Dies liegt daran, dass der Eigenschaftstyp vom bekannten Eigenschaftennamen abgeleitet wird.
+
+            **Achtung**  Mithilfe des `{GUID} PID`-Formats definierte benutzerdefinierte Eigenschaften können beim Erstellen der AQS-Filterzeichenfolge nicht verwendet werden. Dies liegt daran, dass der Eigenschaftstyp vom bekannten Eigenschaftennamen abgeleitet wird.
 
  
 
@@ -56,9 +56,11 @@ Die folgende Tabelle enthält die AQS-Operatoren mit den von ihnen unterstützte
 | **COP\_APPLICATION\_SPECIFIC** | Nicht unterstützt                                                               |
 
 
-> **Tipp**  Sie können für **COP\_EQUAL** oder **COP\_NOTEQUAL** den Wert **NULL** angeben. Dies führt zu einer Eigenschaft ohne Wert oder ohne vorhandenen Wert. In AQS geben Sie **NULL** mithilfe leerer Klammern \[\] an.
+> 
+            **Tipp**  Sie können für **COP\_EQUAL** oder **COP\_NOTEQUAL** den Wert **NULL** angeben. Dies führt zu einer Eigenschaft ohne Wert oder ohne vorhandenen Wert. In AQS geben Sie **NULL** mithilfe leerer Klammern \[\] an.
 
-> **Wichtig**  Bei Verwendung der Operatoren **COP\_VALUE\_CONTAINS** und **COP\_VALUE\_NOTCONTAINS** verhalten sie sich bei Zeichenfolgen und Zeichenfolgenarrays auf andere Weise. Im Falle einer Zeichenfolge führt das System eine Suche ohne Berücksichtigung der Groß-/Kleinschreibung durch, um festzustellen, ob das Gerät die angegebene Zeichenfolge als Teilzeichenfolge enthält. Im Falle eines Zeichenfolgenarrays werden Teilzeichenfolgen nicht gesucht. Mit dem Zeichenfolgenarray wird das Array durchsucht, um festzustellen, ob es die gesamte angegebene Zeichenfolge enthält. Es ist nicht möglich, ein Zeichenfolgenarray zu durchsuchen, um festzustellen, ob die Elemente im Array eine Teilzeichenfolge enthalten.
+> 
+            **Wichtig**  Bei Verwendung der Operatoren **COP\_VALUE\_CONTAINS** und **COP\_VALUE\_NOTCONTAINS** verhalten sie sich bei Zeichenfolgen und Zeichenfolgenarrays auf andere Weise. Im Falle einer Zeichenfolge führt das System eine Suche ohne Berücksichtigung der Groß-/Kleinschreibung durch, um festzustellen, ob das Gerät die angegebene Zeichenfolge als Teilzeichenfolge enthält. Im Falle eines Zeichenfolgenarrays werden Teilzeichenfolgen nicht gesucht. Mit dem Zeichenfolgenarray wird das Array durchsucht, um festzustellen, ob es die gesamte angegebene Zeichenfolge enthält. Es ist nicht möglich, ein Zeichenfolgenarray zu durchsuchen, um festzustellen, ob die Elemente im Array eine Teilzeichenfolge enthalten.
 
 Wenn keine einzelne AQS-Filterzeichenfolge erstellt werden kann, die den richtigen Ergebnisbereich herausfiltert, können Sie Ihre Ergebnisse nach Erhalt filtern. In diesem Fall wird jedoch empfohlen, die Ergebnisse der anfänglichen AQS-Filterzeichenfolge so weit wie möglich einzuschränken, wenn Sie sie für [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-APIs bereitstellen. Dadurch wird die Leistung der Anwendung verbessert.
 
@@ -66,7 +68,8 @@ Wenn keine einzelne AQS-Filterzeichenfolge erstellt werden kann, die den richtig
 
 Die folgenden Beispiele veranschaulichen, wie die AQS-Syntax verwendet werden kann, um die aufzulistenden Geräte einzuschränken. Alle diese Filterzeichenfolgen werden mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991) kombiniert, um einen vollständigen Filter zu erstellen. Wenn keine Art angegeben ist, wird **DeviceInterface** als Standardart verwendet.
 
-Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **DeviceInterface** kombiniert wird, listet er alle Objekte auf, die die Schnittstellenklasse für die Audioaufzeichnung enthalten und derzeit aktiviert sind. **
+Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **DeviceInterface** kombiniert wird, listet er alle Objekte auf, die die Schnittstellenklasse für die Audioaufzeichnung enthalten und derzeit aktiviert sind. 
+            **
               =
             ** wird zu **COP\_EQUALS**.
 
@@ -75,7 +78,8 @@ System.Devices.InterfaceClassGuid:="{2eef81be-33fa-4800-9670-1cd474972c3f}" AND
 System.Devices.InterfaceEnabled:=System.StructuredQueryType.Boolean#True
 ```
 
-Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **Device** kombiniert wird, listet er alle Objekte auf, die mindestens eine Hardware-ID von „GenCdRom“ aufweisen. **
+Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **Device** kombiniert wird, listet er alle Objekte auf, die mindestens eine Hardware-ID von „GenCdRom“ aufweisen. 
+            **
               ~~
             ** wird zu **COP\_VALUE\_CONTAINS**.
 
@@ -83,7 +87,8 @@ Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.m
 System.Devices.HardwareIds:~~"GenCdRom"
 ```
 
-Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **DeviceContainer** kombiniert wird, listet er alle Objekte auf, die einen Modellnamen aufweisen, der die Teilzeichenfolge „Microsoft“ enthält. **
+Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **DeviceContainer** kombiniert wird, listet er alle Objekte auf, die einen Modellnamen aufweisen, der die Teilzeichenfolge „Microsoft“ enthält. 
+            **
               ~~
             ** wird zu **COP\_VALUE\_CONTAINS**.
 
@@ -91,7 +96,8 @@ Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.m
 System.Devices.ModelName:~~"Microsoft"
 ```
 
-Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **DeviceInterface** kombiniert wird, listet er alle Objekte auf, deren Name mit der Teilzeichenfolge „Microsoft“ beginnt. **
+Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **DeviceInterface** kombiniert wird, listet er alle Objekte auf, deren Name mit der Teilzeichenfolge „Microsoft“ beginnt. 
+            **
               ~&lt;
             ** wird zu **COP\_STARTSWITH**.
 
@@ -99,14 +105,16 @@ Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.m
 System.ItemNameDisplay:~<"Microsoft"
 ```
 
-Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **Device** kombiniert wird, listet er alle Objekte auf, für die eine **System.Devices.IpAddress**-Eigenschaft festgelegt wurde. **
+Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **Device** kombiniert wird, listet er alle Objekte auf, für die eine **System.Devices.IpAddress**-Eigenschaft festgelegt wurde. 
+            **
               &lt;&gt;\[\]** wird zu **COP\_NOTEQUALS** kombiniert mit einem **NULL**-Wert.
 
 ``` syntax
 System.Devices.IpAddress:<>[]
 ```
 
-Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **Device** kombiniert wird, listet er alle Objekte auf, für die keine **System.Devices.IpAddress**-Eigenschaft festgelegt wurde. **=\[\]** wird zu **COP\_EQUALS**, kombiniert mit einem **NULL**-Wert.
+Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/Dn948991)-Aufzählung vom Typ **Device** kombiniert wird, listet er alle Objekte auf, für die keine **System.Devices.IpAddress**-Eigenschaft festgelegt wurde. 
+            **=\[\]** wird zu **COP\_EQUALS**, kombiniert mit einem **NULL**-Wert.
 
 ``` syntax
 System.Devices.IpAddress:=[]

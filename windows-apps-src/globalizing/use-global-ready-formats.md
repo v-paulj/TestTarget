@@ -5,7 +5,6 @@ title: Verwenden weltweit einsetzbarer Formate
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 label: Use global-ready formats
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: 77b5e7bd412936dd5d8c4bc252771631d6b884cf
 
@@ -41,11 +40,11 @@ Zur Vereinfachung der Anpassung an neue Märkte können Sie bereits bei der App-
 
 1.  **Formatieren Sie Datumsangaben und Uhrzeiten entsprechend.**
 
-    Es gibt viele verschiedene Möglichkeiten, um Datumsangaben und Uhrzeiten korrekt anzuzeigen. In den verschiedenen Regionen und Kulturen gelten unterschiedliche Konventionen für die Reihenfolge von Tag und Monat im Datum, für die Trennung von Stunden und Minuten und sogar für das zu verwendende Trennzeichen. Zudem kann das Datum in verschiedenen langen Formaten (Mittwoch, 28. März 2012) oder kurzen Formaten (28.03.12) angezeigt werden, die je nach Kultur variieren können. Und natürlich sind die Namen und Kurzformen für die Wochentage und Monate in jeder Sprache anders.
+    Es gibt viele verschiedene Möglichkeiten, um Datumsangaben und Uhrzeiten korrekt anzuzeigen. In den verschiedenen Regionen und Kulturen gelten unterschiedliche Konventionen für die Reihenfolge von Tag und Monat im Datum, für die Trennung von Stunden und Minuten und sogar für das zu verwendende Trennzeichen. Zudem kann das Datum in verschiedenen langen Formaten (Mittwoch, 28.März2012) oder kurzen Formaten (28.03.12) angezeigt werden, die je nach Kultur variieren können. Und natürlich sind die Namen und Kurzformen für die Wochentage und Monate in jeder Sprache anders.
 
     Wenn Sie Benutzern erlauben möchten, ein Datum oder eine Uhrzeit auszuwählen, verwenden Sie die Standardsteuerelemente zur [Datums- und Uhrzeitauswahl](https://msdn.microsoft.com/library/windows/apps/hh465466). Diese verwenden automatisch die Datums- und Uhrzeitformate für die bevorzugte Sprache und Region des Benutzers.
 
-    Wenn Sie selbst Datumsangaben oder Uhrzeiten anzeigen müssen, verwenden Sie die Formatierer [**Date/Time**](https://msdn.microsoft.com/library/windows/apps/br206859) und [**Number**](https://msdn.microsoft.com/library/windows/apps/br226136), um automatisch das vom Benutzer bevorzugte Format für Datumsangaben, Uhrzeiten und Zahlen anzuzeigen. Der folgende Code formatiert eine bestimmte Datum/Uhrzeit-Angabe gemäß der bevorzugten Sprache und Region. Wenn das aktuelle Datum z. B. der 3. Juni 2012 ist, zeigt der Formatierer 6/3/2012 an, wenn die bevorzugte Sprache des Benutzers „Englisch (USA)“ ist, aber 03.06.2012, wenn die bevorzugte Sprache des Benutzers „Deutsch (Deutschland)“ ist:
+    Wenn Sie selbst Datumsangaben oder Uhrzeiten anzeigen müssen, verwenden Sie die Formatierer [**Date/Time**](https://msdn.microsoft.com/library/windows/apps/br206859) und [**Number**](https://msdn.microsoft.com/library/windows/apps/br226136), um automatisch das vom Benutzer bevorzugte Format für Datumsangaben, Uhrzeiten und Zahlen anzuzeigen. Der folgende Code formatiert eine bestimmte Datum/Uhrzeit-Angabe gemäß der bevorzugten Sprache und Region. Wenn das aktuelle Datum z.B. der 3.Juni2012 ist, zeigt der Formatierer 6/3/2012 an, wenn die bevorzugte Sprache des Benutzers „Englisch(USA)“ ist, aber 03.06.2012, wenn die bevorzugte Sprache des Benutzers „Deutsch(Deutschland)“ ist:
 
     **C#**
     ```    CSharp
@@ -161,7 +160,7 @@ Zur Vereinfachung der Anpassung an neue Märkte können Sie bereits bei der App-
 
 3.  **Verwenden Sie einen kulturspezifischen Kalender.**
 
-    Der Kalender ist für verschiedene Regionen und Sprachen unterschiedlich. Der gregorianische Kalender ist nicht der Standardkalender für alle Regionen. In einigen Regionen wählen Benutzer möglicherweise alternative Kalender aus, z. B. den japanischen Ära-Kalender oder den arabischen Mondkalender. In Datumsangaben und Uhrzeiten im Kalender werden auch verschiedene Zeitzonen und Sommerzeiten berücksichtigt.
+    Der Kalender ist für verschiedene Regionen und Sprachen unterschiedlich. Der gregorianische Kalender ist nicht der Standardkalender für alle Regionen. In einigen Regionen wählen Benutzer möglicherweise alternative Kalender aus, z.B. den japanischen Ära-Kalender oder den arabischen Mondkalender. In Datumsangaben und Uhrzeiten im Kalender werden auch verschiedene Zeitzonen und Sommerzeiten berücksichtigt.
 
     Verwenden Sie die Standardsteuerelemente zur [Datums- und Uhrzeitauswahl](https://msdn.microsoft.com/library/windows/apps/hh465466), um Benutzern die Wahl eines Datums zu ermöglichen und die Verwendung des bevorzugten Kalenderformats zu gewährleisten. Bei komplexeren Szenarien, in denen direkt mit Vorgängen in Bezug auf das Kalenderdatum gearbeitet werden muss, stellt „Windows.Globalization“ eine [**Calendar**](https://msdn.microsoft.com/library/windows/apps/br206724)-Klasse bereit, die eine passende Kalenderdarstellung für die jeweilige Kultur, Region und den Kalendertyp ermöglicht.
 

@@ -3,7 +3,6 @@ author: mcleblanc
 description: Aufbau von Visual Studio
 title: Aufbau von Visual Studio
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d31e6e940f0b03667f1e19abec17804f6f3e16a6
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: d31e6e940f0b03667f1e19abec17804f6f3e16a6
 
 # Erste Schritte: Aufbau von Visual Studio
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Aufbau von Microsoft Visual Studio
 

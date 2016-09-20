@@ -5,7 +5,6 @@ title: "Suche und „Auf Seite suchen“"
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: cd746f81e8cca27c5111f3d15342d1def0f874dc
 
@@ -51,7 +50,8 @@ Die Suche ist ein gängiges Feature, und die entsprechenden UI-Elemente begegnen
 
 Im Anschluss finden Sie einige gängige Suchbereiche:
 
-**Global** und **Kontext/Eingrenzung**  Übergreifende Suche für mehrere Quellen mit Cloud-basierten und lokalen Inhalten. Zu den unterschiedlichen Ergebnisse zählen beispielsweise URLs, Dokumente, Medien, Aktionen und Apps.
+
+            **Global** und **Kontext/Eingrenzung**  Übergreifende Suche für mehrere Quellen mit Cloud-basierten und lokalen Inhalten. Zu den unterschiedlichen Ergebnisse zählen beispielsweise URLs, Dokumente, Medien, Aktionen und Apps.
 
 **Web.**  Suche nach einem Webindex. Die Ergebnisse können unter anderem Seiten, Entitäten und Antworten umfassen.
 
@@ -92,7 +92,7 @@ Nach dem Klicken auf das Suchsymbol:
 
  
 
-Als Einstiegspunkt für die Suche wird immer ein nach rechts geneigtes Lupensymbol verwendet. Dabei ist das Symbol mit dem Hexadezimalzeichencode 0xE0094 (Segoe UI Symbol; üblicherweise mit einem Schriftgrad von 15 Epx) zu verwenden.
+Als Einstiegspunkt für die Suche wird immer ein nach rechts geneigtes Lupensymbol verwendet. Dabei ist das Symbol mit dem Hexadezimalzeichencode0xE0094 (Segoe UI Symbol; üblicherweise mit einem Schriftgrad von 15Epx) zu verwenden.
 
 Der Sucheinstiegspunkt kann in verschiedenen Bereichen platziert werden und so Aufschluss über Suchbereich und -kontext geben. Suchfunktionen, die übergreifende Ergebnisse für eine Umgebung oder Ergebnisse außerhalb der App sammeln, befinden sich üblicherweise auf der höchsten App-Chromebene. Hierzu zählen beispielsweise globale Befehlsleisten oder Navigationselemente.
 
@@ -148,67 +148,67 @@ Die Funktion „Auf Seite suchen“ bietet Benutzern die Möglichkeit, im aktuel
 
     -   Aktivieren Sie die Tastenkombination (STRG+F). Implementieren Sie die Tastenkombination STRG+F, um das schnelle Öffnen der Befehlsleiste für „Auf Seite suchen“ zu ermöglichen.
 
-    -   Binden Sie die Basiselemente der Funktion "Auf Seite suchen" ein. Hierbei handelt es sich um die UI-Elemente, die benötigt werden, um "Auf Seite suchen" zu implementieren.
+    -   Binden Sie die Basiselemente der Funktion "Auf Seite suchen" ein. Hierbei handelt es sich um die UI-Elemente, die benötigt werden, um „Auf Seite suchen“ zu implementieren.
 
         -   Eingabefeld
-        -   Die Schaltflächen "Zurück" und "Weiter"
-        -   Übereinstimmungszähler
-        -   Schließen (nur Desktop)
-    -   In der Ansicht sollten Übereinstimmungen hervorgehoben werden, und es sollte ein Bildlauf erfolgen, sodass die nächste Übereinstimmung auf dem Bildschirm angezeigt wird. Die Schaltflächen **Zurück** und **Weiter** sowie Bildlaufleisten oder die direkte Manipulation mittels Fingereingabe ermöglichen den Benutzern die schnelle Navigation innerhalb des Dokuments.
-
+        -   Die Schaltflächen „Zurück“ und „Weiter“
+        -   Übereinstimmungszähler -   Schließen (nur Desktop) -   In der Ansicht sollten Übereinstimmungen hervorgehoben werden, und es sollte ein Bildlauf erfolgen, sodass die nächste Übereinstimmung auf dem Bildschirm angezeigt wird.
+        -   Die Schaltflächen **Zurück** und **Weiter** sowie Bildlaufleisten oder die direkte Manipulation mittels Fingereingabe ermöglichen den Benutzern die schnelle Navigation innerhalb des Dokuments.
     -   Funktionalität zum Suchen und Ersetzen sollte mit den Basisfunktionen von "Auf Seite suchen" zusammenarbeiten. Sorgen Sie bei Apps, die eine Funktion zum Suchen und Ersetzen bereitstellen, dafür, dass sich diese Funktion und „Auf Seite suchen“ nicht gegenseitig behindern.
 
--   Fügen Sie einen Übereinstimmungszähler ein, damit der Benutzer weiß, wie viele Textübereinstimmungen auf der Seite vorhanden sind.
--   Aktivieren Sie die Tastenkombination (STRG+F).
+    -   Fügen Sie einen Übereinstimmungszähler ein, damit der Benutzer weiß, wie viele Textübereinstimmungen auf der Seite vorhanden sind. Aktivieren Sie die Tastenkombination (STRG+F).
 
-## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>Beispiele
+-   Beispiele
+-   Stellen Sie eine einfache Möglichkeit zur Verfügung, um das Feature „Auf Seite suchen“ zuzugreifen.
+
+## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>In diesem Beispiel auf einer mobilen Benutzeroberfläche wird „Auf Seite suchen“ hinter zwei „Hinzufügen zu…“-Befehlen in einem erweiterbarem Menü angezeigt:
 
 
-Stellen Sie eine einfache Möglichkeit zur Verfügung, um das Feature „Auf Seite suchen“ zuzugreifen. In diesem Beispiel auf einer mobilen Benutzeroberfläche wird „Auf Seite suchen“ hinter zwei „Hinzufügen zu…“-Befehlen in einem erweiterbarem Menü angezeigt:
+„Auf Seite suchen“ (Beispiel 1) Nach der Auswahl von „Auf Seite suchen“ gibt der Benutzer einen Suchbegriff ein.
 
-![„Auf Seite suchen“ (Beispiel 1)](images/findinpage-01.png)
-
- 
-
-Nach der Auswahl von „Auf Seite suchen“ gibt der Benutzer einen Suchbegriff ein. Textvorschläge können angezeigt werden, wenn ein Suchbegriff eingegeben wird:
-
-![„Auf Seite suchen“ (Beispiel 2)](images/findinpage-02.png)
+![Textvorschläge können angezeigt werden, wenn ein Suchbegriff eingegeben wird:](images/findinpage-01.png)
 
  
 
-Wenn keine Textübereinstimmung in der Suche vorliegt, sollte die Textzeichenfolge „Keine Ergebnisse“ im Ergebnisfeld angezeigt werden:
+„Auf Seite suchen“ (Beispiel 2) Wenn keine Textübereinstimmung in der Suche vorliegt, sollte die Textzeichenfolge „Keine Ergebnisse“ im Ergebnisfeld angezeigt werden:
 
-![„Auf Seite suchen“ (Beispiel 3)](images/findinpage-03.png)
+![„Auf Seite suchen“ (Beispiel 3)](images/findinpage-02.png)
 
  
 
 Wenn eine Textübereinstimmung in der Suche vorliegt, sollte der erste Begriff in einer eindeutigen Farbe hervorgehoben werden, wobei die nachfolgenden Übereinstimmungen in einem dezenteren Ton derselben Farbpalette gehalten werden sollten, wie dies in diesem Beispiel ersichtlich ist:
 
-![„Auf Seite suchen“ (Beispiel 4)](images/findinpage-04.png)
+![„Auf Seite suchen“ (Beispiel 4)](images/findinpage-03.png)
 
  
 
 „Auf Seite suchen“ weist einen Übereinstimmungszähler auf:
 
-![Beispiel des Suchindikators von „Auf Seite suchen“](images/findinpage-counter.png)
+![Beispiel des Suchindikators von „Auf Seite suchen“](images/findinpage-04.png)
+
+ 
+
+Implementieren von "Auf Seite suchen"
+
+![Bei Dokumentviewern, Lesern und Browsern handelt es sich um die wahrscheinlichsten App-Typen für die Bereitstellung von „Auf Seite suchen“, was Benutzern eine vollständige Bildschirmanzeige-/-leseerfahrung ermöglicht.](images/findinpage-counter.png)
 
 
 
 
 ## <span id="implementing_find_in_page"></span><span id="IMPLEMENTING_FIND_IN_PAGE"></span>
 
-**Implementieren von "Auf Seite suchen"**
+**Die Funktion „Auf Seite suchen“ ist sekundär und sollte auf einer Befehlsleiste platziert werden.**
 
--   Bei Dokumentviewern, Lesern und Browsern handelt es sich um die wahrscheinlichsten App-Typen für die Bereitstellung von „Auf Seite suchen“, was Benutzern eine vollständige Bildschirmanzeige-/-leseerfahrung ermöglicht.
--   Die Funktion „Auf Seite suchen“ ist sekundär und sollte auf einer Befehlsleiste platziert werden.
+-   Weitere Informationen zum Hinzufügen von Befehlen zur Befehlsleiste finden Sie unter [Command bar](app-bars.md) (Befehlsleiste).
+-   Verwandte Artikel
 
-Weitere Informationen zum Hinzufügen von Befehlen zur Befehlsleiste finden Sie unter [Command bar](app-bars.md) (Befehlsleiste).
+Feld mit automatischen Vorschlägen
 
 
 
-## <span id="related_topics"></span>Verwandte Artikel
+## <span id="related_topics"></span>Related articles
 
-* [**Feld mit automatischen Vorschlägen**](auto-suggest-box.md)
+* [**Auto-suggest box**](auto-suggest-box.md)
 
 
  

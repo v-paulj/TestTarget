@@ -3,13 +3,14 @@ author: scottmill
 ms.assetid: f1297b7d-1a10-52ae-dd84-6d1ad2ae2fe6
 title: Komposition visueller Strukturen
 description: "Visuelle Kompositionselemente bilden die visuelle Struktur, die die Grundlage für alle anderen Features der Composition-API bildet und von diesen verwendet wird. Die API ermöglicht es Entwicklern, visuelle Objekte zu definieren und zu erstellen, die jeweils für einen einzelnen Knoten in einer visuellen Struktur stehen."
+translationtype: Human Translation
 ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 61adc6a894c56c6cfd292d89d4cd5c4ba6b0d017
+ms.openlocfilehash: 0603939bb62b107a781cb3804bcf92aeac7a6155
 
 ---
 # Visuelle Kompositionsstruktur
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Visuelle Kompositionselemente bilden die visuelle Struktur, die als Grundlage für alle anderen Features der Composition-API verwendet wird. Die API ermöglicht es Entwicklern, visuelle Objekte zu definieren und zu erstellen, die jeweils für einen einzelnen Knoten in einer visuellen Struktur stehen.
 
@@ -17,22 +18,14 @@ Visuelle Kompositionselemente bilden die visuelle Struktur, die als Grundlage f�
 
 Es gibt drei Arten visueller Elemente, aus denen sich die visuelle Struktur zusammensetzt, sowie eine grundlegende Pinselklasse mit mehreren Unterklassen, die Einfluss auf den Inhalt eines visuellen Elements hat:
 
--   [
-              **Visual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706858) – Basisobjekt; umfasst den Großteil der Eigenschaften. Diese werden von anderen visuellen Objekten geerbt.
--   [
-              **ContainerVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706810) – Abgeleitet von [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858). Fügt die Fähigkeit zum Erstellen von untergeordneten Elementen hinzu.
--   [
-              **SpriteVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589433) – Abgeleitet von [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810). Bietet zudem die Möglichkeit, einen Pinsel zuzuordnen, sodass das Visual-Element Pixel, einschließlich Bilder, Effekte oder Volltonfarbe, rendern kann.
--   [
-              **CompositionBrush**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589398) – Ermöglicht die Anwendung eines Effekts auf den Inhalt eines Visual-Elements. Es gibt eine Reihe von Unterklassen von „CompositionBrush“.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – Basisobjekt; umfasst den Großteil der Eigenschaften. Diese werden von anderen visuellen Objekten geerbt.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – Abgeleitet von [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858). Fügt die Fähigkeit zum Erstellen von untergeordneten Elementen hinzu.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – Abgeleitet von [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810). Bietet zudem die Möglichkeit, einen Pinsel zuzuordnen, sodass das Visual-Element Pixel, einschließlich Bilder, Effekte oder Volltonfarbe, rendern kann.
+-   [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Mt589398) – Ermöglicht die Anwendung eines Effekts auf den Inhalt eines Visual-Elements. Es gibt eine Reihe von Unterklassen von „CompositionBrush“.
 
 ## Das CompositionVisual-Beispiel
 
-Im Beispiel sehen Sie eine Reihe farbiger Quadrate, die Sie anklicken und über den Bildschirm ziehen können. Durch Klicken auf ein Quadrat gelangt dieses in den Vordergrund, dreht sich um 45 Grad und wird während der Bewegung undurchsichtig.
+Im Beispiel sehen Sie eine Reihe farbiger Quadrate, die Sie anklicken und über den Bildschirm ziehen können. Durch Klicken auf ein Quadrat gelangt dieses in den Vordergrund, dreht sich um 45Grad und wird während der Bewegung undurchsichtig.
 
 Es zeigt einige grundlegenden Konzepte für die Arbeit mit der API, einschließlich:
 
@@ -45,15 +38,9 @@ Es zeigt einige grundlegenden Konzepte für die Arbeit mit der API, einschließl
 
 Das Beispiel veranschaulicht die Nutzung dreier unterschiedlicher visueller Elemente:
 
--   [
-              **Visual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706858) – Basisobjekt; umfasst den Großteil der Eigenschaften. Diese werden von anderen visuellen Objekten geerbt.
--   [
-              **ContainerVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Dn706810) – Abgeleitet von Visual. Fügt die Fähigkeit zum Erstellen von untergeordneten Elementen hinzu.
--   [
-              **SpriteVisual**
-            ](https://msdn.microsoft.com/library/windows/apps/Mt589433) – Abgeleitet von Visual. Bietet zudem die Möglichkeit, einen Pinsel zuzuordnen, sodass das Visual-Element Pixel, einschließlich Bilder, Effekte oder Volltonfarbe, rendern kann.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – Basisobjekt; umfasst den Großteil der Eigenschaften. Diese werden von anderen visuellen Objekten geerbt.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – Abgeleitet von Visual. Fügt die Fähigkeit zum Erstellen von untergeordneten Elementen hinzu.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – Abgeleitet von Visual. Bietet zudem die Möglichkeit, einen Pinsel zuzuordnen, sodass das Visual-Element Pixel, einschließlich Bilder, Effekte oder Volltonfarbe, rendern kann.
 
 Dieses Beispiel veranschaulicht keine Konzepte wie Animationen oder komplexere Effekte. Es enthält die Bausteine, die alle diese Systeme verwenden.
 
@@ -78,8 +65,7 @@ Diese wenigen Zeilen Code veranschaulichen ein leistungsfähiges Konzept. [**Spr
 
 ## Beschneiden eines visuellen Elements
 
-[
-            **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) kann auch zum Beschneiden eines [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Objekts verwendet werden. Im folgenden Beispiel werden mit [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825) die Seiten des visuellen Elements gekürzt:
+[**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) kann auch zum Beschneiden eines [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Objekts verwendet werden. Im folgenden Beispiel werden mit [**InsetClip**](https://msdn.microsoft.com/library/windows/apps/Dn706825) die Seiten des visuellen Elements gekürzt:
 
 ```cs
 var clip = _compositor.CreateInsetClip();
@@ -104,7 +90,7 @@ Drehung ist nur ein Beispiel für eine Reihe von Transformationskomponenten, die
 
 ## Festlegen der Deckkraft
 
-Das Festlegen der Deckkraft eines visuellen Elements ist mit einem Float-Wert unproblematisch. In diesem Beispiel haben alle Quadrate anfangs eine Deckkraft von 0,8:
+Das Festlegen der Deckkraft eines visuellen Elements ist mit einem Float-Wert unproblematisch. In diesem Beispiel haben alle Quadrate anfangs eine Deckkraft von0,8:
 
 ```cs
 visual.Opacity = 0.8f;
@@ -522,6 +508,6 @@ namespace compositionvisual
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

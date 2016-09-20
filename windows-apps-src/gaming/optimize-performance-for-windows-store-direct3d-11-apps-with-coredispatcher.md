@@ -3,7 +3,6 @@ author: mtoepke
 title: "Optimieren der Eingabelatenz für UWP-DirectX-Spiele (Universelle Windows-Plattform)"
 description: "Die Eingabelatenz kann das Spielerlebnis erheblich beeinträchtigen, und Spiele wirken professioneller, wenn in diesem Bereich eine Optimierung vorgenommen wird."
 ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 19bcf043f3fc8c729f5f9fbbeee237bd1749443d
 
@@ -30,19 +29,19 @@ Es ist wichtig, dass Sie für Ihr Spiel die Anforderungen an die Eingabelatenz v
 
 Im Zusammenhang mit der Eingabelatenz geht es bei der effizienten Nutzung der Energie darum, wie stark die GPU vom Spiel genutzt wird. Ein Spiel, bei dem weniger GPU-Ressourcen genutzt werden, ist energieeffizienter und ermöglicht eine längere Akkulaufzeit. Dies gilt auch für die CPU.
 
-Wenn ein Spiel den gesamten Bildschirm mit weniger als 60 Frames pro Sekunde zeichnen kann (derzeit die maximale Rendergeschwindigkeit der meisten Displays), ohne das Spielerlebnis zu beeinträchtigen, ist die Energieeffizienz höher, weil weniger oft gezeichnet werden muss. Bei einigen Spielen wird der Bildschirm nur als Reaktion auf Benutzereingaben aktualisiert, sodass die gleichen Inhalte nicht immer wieder mit 60 Frames pro Sekunde gezeichnet werden müssen.
+Wenn ein Spiel den gesamten Bildschirm mit weniger als 60Frames pro Sekunde zeichnen kann (derzeit die maximale Rendergeschwindigkeit der meisten Displays), ohne das Spielerlebnis zu beeinträchtigen, ist die Energieeffizienz höher, weil weniger oft gezeichnet werden muss. Bei einigen Spielen wird der Bildschirm nur als Reaktion auf Benutzereingaben aktualisiert, sodass die gleichen Inhalte nicht immer wieder mit 60Frames pro Sekunde gezeichnet werden müssen.
 
 ## Auswählen der Optimierungsziele
 
 
-Beim Entwerfen einer DirectX-App müssen Sie einige Entscheidungen treffen. Müssen für die App 60 Frames pro Sekunde gerendert werden, um eine reibungslose Animation zu gewährleisten, oder muss nur als Reaktion auf Eingaben gerendert werden? Muss die geringstmögliche Eingabelatenz verwendet werden, oder ist eine kurze Verzögerung tolerierbar? Erwarten die Benutzer, dass bei der App auf die Akkunutzung geachtet wird?
+Beim Entwerfen einer DirectX-App müssen Sie einige Entscheidungen treffen. Müssen für die App 60Frames pro Sekunde gerendert werden, um eine reibungslose Animation zu gewährleisten, oder muss nur als Reaktion auf Eingaben gerendert werden? Muss die geringstmögliche Eingabelatenz verwendet werden, oder ist eine kurze Verzögerung tolerierbar? Erwarten die Benutzer, dass bei der App auf die Akkunutzung geachtet wird?
 
 Die Antworten auf diese Fragen führen für die App in der Regel zu einem der folgenden Fälle:
 
 1.  Rendern bei Bedarf: Für Spiele dieser Kategorie muss der Bildschirm nur als Reaktion auf bestimmte Arten von Eingaben aktualisiert werden. Die Energieeffizienz ist sehr gut, weil von der App identische Frames nicht immer wieder gerendert werden, und die Eingabelatenz ist niedrig, da die App die meiste Zeit mit dem Warten auf eine Eingabe verbringt. Brettspiele und Newsreader sind Beispiele für Apps, die ggf. in diese Kategorie fallen.
 2.  Rendern bei Bedarf mit kurzlebigen Animationen Dieser Fall ähnelt dem ersten Fall, mit der Ausnahme, dass bestimmte Arten von Eingaben eine Animation auslösen, die nicht von Folgeeingaben des Benutzers abhängig ist. Die Energieeffizienz ist gut, weil identische Frames vom Spiel nicht immer wieder gerendert werden, und die Eingabelatenz ist niedrig, während im Spiel keine Animationen aktiv sind. Interaktive Spiele für Kinder und Brettspiele, bei denen jeder Zug animiert ist, sind Beispiele für Apps, die ggf. in diese Kategorie fallen.
-3.  Rendern von 60 Frames pro Sekunde: In diesem Fall wird der Bildschirm vom Spiel ständig aktualisiert. Die Energieeffizienz ist nicht gut, weil die maximale Anzahl Frames, die vom Display dargestellt werden kann, gerendert wird. Die Eingabelatenz ist hoch, da der Thread während der Darstellung der Inhalte von DirectX blockiert wird. So wird der Thread daran gehindert, mehr Frames an das Display zu senden, als dem Benutzer angezeigt werden können. Ego-Shooter, Echtzeit-Strategiespiele und Spiele auf physischer Basis sind Beispiele für Apps, die ggf. in diese Kategorie fallen.
-4.  Rendern von 60 Frames pro Sekunde und Erzielen der geringstmöglichen Eingabelatenz Die App aktualisiert den Bildschirm, ähnlich wie im dritten Fall, ständig, und die Energieeffizienz ist schlecht. Der Unterschied besteht darin, dass das Spiel über einen separaten Thread auf Eingaben reagiert. Daher wird die Eingabeverarbeitung beim Darstellen von Grafiken auf dem Display nicht blockiert. Onlinespiele mit mehreren Spielern, Kampfspiele oder Spiele auf Rhythmus- bzw. Zeitbasis fallen ggf. in diese Kategorie, da Eingaben innerhalb von extrem engen Ereignisfenstern unterstützt werden.
+3.  Rendern von 60Frames pro Sekunde: In diesem Fall wird der Bildschirm vom Spiel ständig aktualisiert. Die Energieeffizienz ist nicht gut, weil die maximale Anzahl Frames, die vom Display dargestellt werden kann, gerendert wird. Die Eingabelatenz ist hoch, da der Thread während der Darstellung der Inhalte von DirectX blockiert wird. So wird der Thread daran gehindert, mehr Frames an das Display zu senden, als dem Benutzer angezeigt werden können. Ego-Shooter, Echtzeit-Strategiespiele und Spiele auf physischer Basis sind Beispiele für Apps, die ggf. in diese Kategorie fallen.
+4.  Rendern von 60Frames pro Sekunde und Erzielen der geringstmöglichen Eingabelatenz Die App aktualisiert den Bildschirm, ähnlich wie im dritten Fall, ständig, und die Energieeffizienz ist schlecht. Der Unterschied besteht darin, dass das Spiel über einen separaten Thread auf Eingaben reagiert. Daher wird die Eingabeverarbeitung beim Darstellen von Grafiken auf dem Display nicht blockiert. Onlinespiele mit mehreren Spielern, Kampfspiele oder Spiele auf Rhythmus- bzw. Zeitbasis fallen ggf. in diese Kategorie, da Eingaben innerhalb von extrem engen Ereignisfenstern unterstützt werden.
 
 ## Implementierung
 
@@ -57,7 +56,7 @@ Wenn die Inhalte eines DirectX-Spiels gerendert und bereit für die Darstellung 
 
 Die Implementierung der Spielschleife wird unten für die einzelnen beschriebenen Fälle veranschaulicht, indem der Prozess eines einfachen Puzzlespiels durchlaufen wird. Die Entscheidungspunkte, Vorteile und Nachteile, die Teil jeder Implementierung sind, dienen Ihnen als Unterstützung beim Optimieren Ihrer Apps in Bezug auf eine niedrige Eingabelatenz und eine hohe Energieeffizienz.
 
-## Szenario 1: Rendern bei Bedarf
+## Szenario1: Rendern bei Bedarf
 
 
 Beim ersten Durchlauf des Puzzlespiels wird der Bildschirm nur aktualisiert, wenn ein Benutzer ein Puzzleteil verschiebt. Benutzer können ein Puzzleteil entweder an seinen Platz ziehen oder das Teil auswählen und dann auf die richtige Position tippen. Im letzteren Fall wird das Puzzleteil ohne Animation oder Effekte eingefügt.
@@ -88,7 +87,7 @@ void App::Run()
 }
 ```
 
-## Szenario 2: Rendern bei Bedarf mit kurzlebigen Animationen
+## Szenario2: Rendern bei Bedarf mit kurzlebigen Animationen
 
 
 Beim zweiten Durchlauf wird das Spiel modifiziert. Wenn Benutzer ein Puzzleteil auswählen und dann auf die richtige Position für das Teil tippen, wird es auf dem Bildschirm per Animation an seine Zielposition verschoben.
@@ -136,12 +135,12 @@ void App::Run()
 
 Zur Unterstützung des Übergangs zwischen **ProcessOneAndAllPending** und **ProcessAllIfPresent** muss der Status von der App nachverfolgt werden, um ermitteln zu können, ob die Animation aktiv ist. In der Puzzle-App fügen Sie dazu eine neue Methode hinzu, die während der Spielschleife für die GameState-Klasse aufgerufen werden kann. Der Animationszweig der Spielschleife bewirkt die Aktualisierungen des Animationsstatus, indem die neue Update-Methode für GameState aufgerufen wird.
 
-## Szenario 3: Rendern von 60 Frames pro Sekunde
+## Szenario3: Rendern von 60Frames pro Sekunde
 
 
-Beim dritten Durchlauf zeigt die App einen Zeitgeber an, um Benutzern mitzuteilen, wie lange sie bereits an der Lösung des Puzzles gearbeitet haben. Da die verstrichene Dauer bis auf Millisekunden genau angegeben wird, müssen 60 Frames pro Sekunde gerendert werden, um die Anzeige aktuell zu halten.
+Beim dritten Durchlauf zeigt die App einen Zeitgeber an, um Benutzern mitzuteilen, wie lange sie bereits an der Lösung des Puzzles gearbeitet haben. Da die verstrichene Dauer bis auf Millisekunden genau angegeben wird, müssen 60Frames pro Sekunde gerendert werden, um die Anzeige aktuell zu halten.
 
-Wie in den Szenarien 1 und 2 auch, verfügt die App über eine Spielschleife mit einem einzelnen Thread. Bei diesem Szenario besteht der Unterschied darin, dass aufgrund des ständigen Renderns keine Änderungen des Spielstatus mehr nachverfolgt werden müssen, wie dies bei den ersten beiden Szenarien der Fall war. Daher kann für die Verarbeitung von Ereignissen standardmäßig **ProcessAllIfPresent** verwendet werden. Wenn keine Ereignisse ausstehen, erfolgt die Rückgabe für **ProcessEvents** sofort, und es wird mit dem Rendern des nächsten Frames fortgefahren.
+Wie in den Szenarien1 und2 auch, verfügt die App über eine Spielschleife mit einem einzelnen Thread. Bei diesem Szenario besteht der Unterschied darin, dass aufgrund des ständigen Renderns keine Änderungen des Spielstatus mehr nachverfolgt werden müssen, wie dies bei den ersten beiden Szenarien der Fall war. Daher kann für die Verarbeitung von Ereignissen standardmäßig **ProcessAllIfPresent** verwendet werden. Wenn keine Ereignisse ausstehen, erfolgt die Rückgabe für **ProcessEvents** sofort, und es wird mit dem Rendern des nächsten Frames fortgefahren.
 
 ``` syntax
 void App::Run()
@@ -174,12 +173,12 @@ Dieser Ansatz ist die einfachste Möglichkeit, ein Spiel zu schreiben, da für d
 
 Die Einfachheit dieses Entwicklungsansatzes hat aber auch einen Nachteil. Beim Rendern mit 60 Frames pro Sekunde wird mehr Energie als beim Rendern bei Bedarf verbraucht. Am besten eignet sich **ProcessAllIfPresent**, wenn die Anzeige vom Spiel für jeden Frame geändert wird. Außerdem wird damit die Eingabelatenz um bis zu 16,7 ms erhöht, da die App die Spielschleife nun während des Synchronisierungsintervalls des Displays und nicht bei **ProcessEvents** blockiert. Unter Umständen werden einige Eingabeereignisse verworfen, da die Warteschlange nur einmal pro Frame (60 Hz) verarbeitet wird.
 
-## Szenario 4: Rendern von 60 Frames pro Sekunde und Erzielen der geringstmöglichen Eingabelatenz
+## Szenario4: Rendern von 60Frames pro Sekunde und Erzielen der geringstmöglichen Eingabelatenz
 
 
-Bei einigen Spielen kann es möglich sein, den Anstieg der Eingabelatenz aus Szenario 3 zu ignorieren oder auszugleichen. Wenn eine geringe Eingabelatenz für das Spielerlebnis und die Spielerrückmeldungen aber von entscheidender Bedeutung ist, müssen Spiele, die 60 Frames pro Sekunde rendern, die Eingabe in einem separaten Thread verarbeiten.
+Bei einigen Spielen kann es möglich sein, den Anstieg der Eingabelatenz aus Szenario3 zu ignorieren oder auszugleichen. Wenn eine geringe Eingabelatenz für das Spielerlebnis und die Spielerrückmeldungen aber von entscheidender Bedeutung ist, müssen Spiele, die 60Frames pro Sekunde rendern, die Eingabe in einem separaten Thread verarbeiten.
 
-Der vierte Durchlauf des Puzzlespiels baut auf Szenario 3 auf, indem die Eingabeverarbeitung und das Rendern der Grafiken aus der Spielschleife in separate Threads unterteilt wird. Mit der Nutzung separater Threads wird sichergestellt, dass die Eingabe durch die Grafikausgabe nicht verzögert werden kann. Der Code wird dadurch aber komplexer. In Szenario 4 ruft der Eingabethread [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) mit [**CoreProcessEventsOption::ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217) auf. Damit wird auf neue Ereignisse gewartet, und alle verfügbaren Ereignisse werden verteilt. Dieses Verhalten wird beibehalten, bis das Fenster geschlossen wird oder das Spiel [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows/apps/br208260) aufruft.
+Der vierte Durchlauf des Puzzlespiels baut auf Szenario3 auf, indem die Eingabeverarbeitung und das Rendern der Grafiken aus der Spielschleife in separate Threads unterteilt wird. Mit der Nutzung separater Threads wird sichergestellt, dass die Eingabe durch die Grafikausgabe nicht verzögert werden kann. Der Code wird dadurch aber komplexer. In Szenario 4 ruft der Eingabethread [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) mit [**CoreProcessEventsOption::ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217) auf. Damit wird auf neue Ereignisse gewartet, und alle verfügbaren Ereignisse werden verteilt. Dieses Verhalten wird beibehalten, bis das Fenster geschlossen wird oder das Spiel [**CoreWindow::Close**](https://msdn.microsoft.com/library/windows/apps/br208260) aufruft.
 
 ``` syntax
 void App::Run()
@@ -237,15 +236,15 @@ In der Vorlage **DirectX 11- und XAML-App (Universelle Windows-App)** in Microso
 
 ### Verwenden von Swapchains mit Wartemöglichkeit
 
-DirectX-Spiele reagieren auf Benutzereingaben mit der Aktualisierung der Inhalte, die Benutzer auf dem Bildschirm sehen. Bei einem 60 Hz-Display wird der Bildschirm alle 16,7 ms (1 Sekunde/60 Frames) aktualisiert. In Abbildung 1 sind der ungefähre Lebenszyklus und die Reaktion auf ein Eingabeereignis relativ zum Aktualisierungssignal nach 16,7 ms (VBlank) für eine App dargestellt, die mit 60 Frames pro Sekunde gerendert wird:
+DirectX-Spiele reagieren auf Benutzereingaben mit der Aktualisierung der Inhalte, die Benutzer auf dem Bildschirm sehen. Bei einem 60Hz-Display wird der Bildschirm alle 16,7ms (1Sekunde/60Frames) aktualisiert. In Abbildung1 sind der ungefähre Lebenszyklus und die Reaktion auf ein Eingabeereignis relativ zum Aktualisierungssignal nach 16,7ms (VBlank) für eine App dargestellt, die mit 60Frames pro Sekunde gerendert wird:
 
-Abbildung 1
+Abbildung1
 
 ![Abbildung 1: Eingabelatenz in DirectX ](images/input-latency1.png)
 
-Unter Windows 8.1 wurde mit DXGI das **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT**-Flag für die Swapchain eingeführt. Damit können Apps diese Latenz leicht reduzieren, ohne dass eine Heuristik implementiert werden muss, mit der die Present-Warteschlange leer gehalten wird. Mit diesem Flag erstellte Swapchains werden als Swapchains mit Wartemöglichkeit bezeichnet. Abbildung 2 zeigt den ungefähren Lebenszyklus und die Reaktion auf ein Eingabeereignis bei Verwendung von Swapchains mit Wartemöglichkeit:
+Unter Windows 8.1 wurde mit DXGI das **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT**-Flag für die Swapchain eingeführt. Damit können Apps diese Latenz leicht reduzieren, ohne dass eine Heuristik implementiert werden muss, mit der die Present-Warteschlange leer gehalten wird. Mit diesem Flag erstellte Swapchains werden als Swapchains mit Wartemöglichkeit bezeichnet. Abbildung2 zeigt den ungefähren Lebenszyklus und die Reaktion auf ein Eingabeereignis bei Verwendung von Swapchains mit Wartemöglichkeit:
 
-Abbildung 2
+Abbildung2
 
 ![Abbildung 2: Eingabelatenz in DirectX mit Wartemöglichkeit](images/input-latency2.png)
 

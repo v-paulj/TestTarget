@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 4e7c2388-b94e-4828-a104-14fa33f6eb2d
 description: "Hier erfahren Sie, wie Sie die AdControl-Klasse nutzen können, um Werbebanner in einer XAML-App für Windows 10 (UWP), Windows 8.1 oder Windows Phone 8.1 anzuzeigen."
 title: AdControl in XAML und .NET
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: d17d8a39f31bfcbf3172b4592e918f0be4a6bf92
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: d17d8a39f31bfcbf3172b4592e918f0be4a6bf92
 # AdControl in XAML und .NET
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Klasse nutzen können, um Werbebanner in einer XAML-App für Windows 10 (UWP), Windows 8.1 oder Windows Phone 8.1 anzuzeigen. In dieser exemplarischen Vorgehensweise wird die **AdMediatorControl** oder die Anzeigenvermittlung nicht verwendet.
 
@@ -20,7 +19,7 @@ Ein vollständiges Beispielprojekt, das veranschaulicht, wie Sie mithilfe von C#
 
 ## Voraussetzungen
 
-* Installieren Sie das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) mit Visual Studio 2015 oder Visual Studio 2013.
+* Installieren Sie das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) mit Visual Studio2015 oder Visual Studio2013.
 
 ## Codeentwicklung
 
@@ -40,7 +39,8 @@ Ein vollständiges Beispielprojekt, das veranschaulicht, wie Sie mithilfe von C#
 
   ![addreferences](images/13-a84c026e-b283-44f2-8816-f950a1ef89aa.png)
 
-    > **Hinweis**  Diese Abbildung bezieht sich auf die Erstellung eines UWP-Projekts für Windows 10 mit Visual Studio 2015. Wenn Sie eine Windows 8.1- oder Windows Phone 8.1-App erstellen oder Visual Studio 2013 verwenden, sieht Ihr Bildschirm anders aus.
+    > 
+            **Hinweis**  Diese Abbildung bezieht sich auf die Erstellung eines UWP-Projekts für Windows 10 mit Visual Studio 2015. Wenn Sie eine Windows 8.1- oder Windows Phone 8.1-App erstellen oder Visual Studio 2013 verwenden, sieht Ihr Bildschirm anders aus.
 
 3.  Klicken Sie im **Verweis-Manager** auf OK.
 4.  Ändern Sie das XAML für die Seite, in die Sie Werbung einbetten möchten, um den **Microsoft.Advertising.WinRT.UI**-Namespace miteinzubeziehen. Beispiel: Bei der Standard-Beispiel-App, die von Visual Studio generiert wird (in dieser App mit MyAdFundedWindows10AppXAML bezeichnet), heißt die XAML-Seite **"MainPage.xaml"**.
@@ -86,7 +86,8 @@ Ein vollständiges Beispielprojekt, das veranschaulicht, wie Sie mithilfe von C#
 
     1.  Weisen Sie den Eigenschaften [ApplicationId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.applicationid.aspx) und [AdUnitId](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.adunitid.aspx) Eigenschaften auf der **Seite** die unter [Testmoduswerte](test-mode-values.md) bereitgestellten Testwerte zu.
 
-        > **Hinweis**  Ersetzen Sie die Testwerte mit Live-Werten, bevor Sie Ihre App übermitteln.
+        > 
+            **Hinweis**  Ersetzen Sie die Testwerte mit Live-Werten, bevor Sie Ihre App übermitteln.
 
     2.  Passen Sie Höhe und Breite des Steuerelements an, damit es einer der [unterstützten Anzeigengrößen für Werbebanner](supported-ad-sizes-for-banner-ads.md) entspricht.
 
@@ -138,7 +139,8 @@ Ein vollständiges Beispielprojekt, das veranschaulicht, wie Sie mithilfe von C#
 
 2.  Ersetzen Sie in Ihrem Code die Testwerte der Anzeigenheit (**ApplicationId** und **AdUnitId**) mit den Live-Werten, die Sie in Dev Center generiert haben.
 
-3.  [Übermitteln Sie Ihre App](../publish/app-submissions.md) mithilfe des Dev Center-Dashboards an den Store.
+3.  
+            [Übermitteln Sie Ihre App](../publish/app-submissions.md) mithilfe des Dev Center-Dashboards an den Store.
 
 4.  Überprüfen Sie die [Anzeigenvermittlungsberichte](../publish/advertising-performance-report.md) auf dem Dev Center-Dashboard.
 

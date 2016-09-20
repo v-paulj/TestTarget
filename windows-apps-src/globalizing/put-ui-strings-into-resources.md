@@ -5,7 +5,6 @@ title: Aufnehmen von UI-Zeichenfolgen in Ressourcen
 ms.assetid: E420B9BB-C0F6-4EC0-BA3A-BA2875B69722
 label: Put UI strings into resources
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: b44d9235e34b8d4c75f663029d1dde3f87bd0eb7
 
@@ -32,7 +31,8 @@ In diesem Thema wird gezeigt, welche Schritte Sie ausführen, um Ihrer universel
 1.  Öffnen Sie Ihre Projektmappe in Visual Studio (oder erstellen Sie eine neue).
 
 2.  Öffnen Sie in Visual Studio „package.appxmanifest“, rufen Sie die Registerkarte **Anwendung** auf, und legen Sie (in diesem Beispiel) die Standardsprache auf „en-US“ fest. Wenn Ihre Projektmappe mehrere Dateien namens „package.appxmanifest“ enthält, führen Sie die Schritte für jede Datei aus.
-    <br>**Hinweis**  Damit haben Sie die Standardsprache für das Projekt festgelegt. Die Standardsprachressourcen werden verwendet, wenn die bevorzugte Sprache des Benutzers oder die Anzeigesprachen nicht mit den von der Anwendung bereitgestellten Sprachressourcen übereinstimmen.
+    <br>
+            **Hinweis**  Damit haben Sie die Standardsprache für das Projekt festgelegt. Die Standardsprachressourcen werden verwendet, wenn die bevorzugte Sprache des Benutzers oder die Anzeigesprachen nicht mit den von der Anwendung bereitgestellten Sprachressourcen übereinstimmen.
 3.  Erstellen Sie einen Ordner, um dort die Ressourcendateien zu speichern.
     1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt (das freigegebene Projekt, falls die Projektmappe mehrere Projekte enthält), und wählen Sie **Hinzufügen**&gt;**Neuer Ordner** aus.
     2.  Geben Sie dem neuen Ordner den Namen „Strings“.
@@ -41,11 +41,14 @@ In diesem Thema wird gezeigt, welche Schritte Sie ausführen, um Ihrer universel
 4.  Erstellen Sie einen Unterordner und eine Ressourcendatei für Englisch (USA).
     1.  Klicken Sie mit der rechten Maustaste auf den Ordner „Strings“, und fügen Sie darunter einen neuen Ordner hinzu. Geben Sie ihm den Namen „en-US“. Die Ressourcendatei muss in einem Ordner mit dem Sprachtag [BCP-47](http://go.microsoft.com/fwlink/p/?linkid=227302) abgelegt werden. Details zum Sprachqualifizierer und eine Liste häufiger Sprachtags finden Sie unter [Benennen von Ressourcen mit Qualifizierern](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
     2.  Klicken Sie mit der rechten Maustaste auf den Ordner „en-US“, und wählen Sie **Hinzufügen**&gt;**Neues Element** aus.
-    3.  **XAML:** Wählen Sie „Ressourcendatei (.resw)“ aus.
-        <br>**HTML:** Wählen Sie „Ressourcendatei (.resjson)“ aus.
+    3.  
+                    **XAML:** Wählen Sie „Ressourcendatei (.resw)“ aus.
+<br>
+            **HTML:** Wählen Sie „Ressourcendatei (.resjson)“ aus.
 
     4.  Klicken Sie auf **Hinzufügen**. Dadurch wird eine Ressourcendatei mit dem Standardnamen „Resources.resw“ (für **XAML**) oder „resources.resjson“ (für **HTML**) hinzugefügt. Es wird empfohlen, diesen Standarddateinamen zu verwenden. Apps können ihre Ressourcen in andere Dateien partitionieren. Sie müssen jedoch darauf achten, richtig auf die Dateien zu verweisen (siehe [Laden von Zeichenfolgenressourcen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323)).
-    5.  **Nur XAML:** Wenn Sie RESX-Dateien ausschließlich mit Zeichenfolgenressourcen aus vorherigen .NET-Projekten haben, wählen Sie **Hinzufügen**&gt;**Vorhandenes Element** aus, fügen Sie die RESX-Datei hinzu, und benennen Sie sie in eine RESW-Datei um.
+    5.  
+            **Nur XAML:** Wenn Sie RESX-Dateien ausschließlich mit Zeichenfolgenressourcen aus vorherigen .NET-Projekten haben, wählen Sie **Hinzufügen**&gt;**Vorhandenes Element** aus, fügen Sie die RESX-Datei hinzu, und benennen Sie sie in eine RESW-Datei um.
     6.  Öffnen Sie die Datei, und fügen Sie mit dem Editor die folgenden Ressourcen hinzu:
 
         **XAML:**
@@ -81,9 +84,9 @@ Sie müssen jedes Steuerelement, das lokalisierten Text erfordert, mit der RESW-
 <TextBlock x:Uid="Greeting" Text="" />
 ```
 
-Für den Ressourcennamen geben Sie den **Uid**-Attributwert und die Eigenschaft an, die die übersetzte Zeichenfolge erhält (in diesem Fall die Eigenschaft „Text“). Sie können andere Eigenschaften/Werte für verschiedene Sprachen festlegen, z. B. "Greeting.Width". Sie sollten mit solchen layoutbezogenen Eigenschaften jedoch vorsichtig umgehen. Versuchen Sie stets, ein dynamisches Layout auf Grundlage des Gerätebildschirms für die Steuerelemente zu verwenden.
+Für den Ressourcennamen geben Sie den **Uid**-Attributwert und die Eigenschaft an, die die übersetzte Zeichenfolge erhält (in diesem Fall die Eigenschaft „Text“). Sie können andere Eigenschaften/Werte für verschiedene Sprachen festlegen, z.B. "Greeting.Width". Sie sollten mit solchen layoutbezogenen Eigenschaften jedoch vorsichtig umgehen. Versuchen Sie stets, ein dynamisches Layout auf Grundlage des Gerätebildschirms für die Steuerelemente zu verwenden.
 
-Beachten Sie weiterhin, dass die verknüpften Eigenschaften unterschiedlich in RESW-Dateien behandelt werden, z. B. "AutomationPeer.Name". Sie müssen den Namespace explizit wie folgt ausschreiben:
+Beachten Sie weiterhin, dass die verknüpften Eigenschaften unterschiedlich in RESW-Dateien behandelt werden, z.B. "AutomationPeer.Name". Sie müssen den Namespace explizit wie folgt ausschreiben:
 
 ```XML
 MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name</code></pre></td>
@@ -112,7 +115,8 @@ auto str = loader->GetString("Farewell");
 
 1.  Fügen Sie der HTML-Datei, sofern noch nicht vorhanden, Verweise auf die Windows-Bibliothek für JavaScript hinzu.
 
-    **Hinweis**  Das folgende Beispiel zeigt den HTML-Code für die Datei „default.html“ des Windows-Projekts, das generiert wird, wenn Sie in Visual Studio ein neues JavaScript-Projekt vom Typ **Leere App (Universelle Windows-App)** erstellen. Beachten Sie, dass die Datei bereits Verweise auf die WinJS enthält.
+    
+            **Hinweis**  Das folgende Beispiel zeigt den HTML-Code für die Datei „default.html“ des Windows-Projekts, das generiert wird, wenn Sie in Visual Studio ein neues JavaScript-Projekt vom Typ **Leere App (Universelle Windows-App)** erstellen. Beachten Sie, dass die Datei bereits Verweise auf die WinJS enthält.
 
     ```    HTML
     <!-- WinJS references -->
@@ -160,7 +164,8 @@ auto str = loader->GetString("Farewell");
 
     Das allgemeine Muster des Attributs „data-win-res“ für HTML-Ersatz ist „data-win-res = "{*propertyname1*: '*Ressourcen-ID*', *propertyname2*: '*Ressource ID2*'}“.
 
-    **Hinweis**  Wenn die Zeichenfolge kein Markup enthält, sollte die Ressource möglichst an die textContent-Eigenschaft und nicht an „innerHTML“ gebunden werden. Die textContent-Eigenschaft ist sehr viel schneller zu ersetzen als „innerHTML“.
+    
+            **Hinweis**  Wenn die Zeichenfolge kein Markup enthält, sollte die Ressource möglichst an die textContent-Eigenschaft und nicht an „innerHTML“ gebunden werden. Die textContent-Eigenschaft ist sehr viel schneller zu ersetzen als „innerHTML“.
 
 5.  Verweisen Sie auf die Zeichenfolgenressourcen in JavaScript.
     <span codelanguage="JavaScript"></span>

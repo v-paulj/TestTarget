@@ -5,13 +5,13 @@ title: Netzwerkgrundlagen
 ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 96c6617595b49c48ee77bec87b6aa87ae1634ed9
+ms.openlocfilehash: 221c3278f8561fa322257714f67bd2985fa04f22
 
 ---
 
 # Netzwerkgrundlagen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Aktionen, die Sie für eine netzwerkfähige App ausführen müssen.
 
@@ -67,12 +67,8 @@ Ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)
 
 Es gibt zwei Möglichkeiten, eine [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Verbindung mit SSL/TLS zu sichern:
 
--   [
-              **ConnectAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701504): Stellt die erste Verbindung mit einem Netzwerkdienst her und handelt sofort die Verwendung von SSL/TLS für jede Kommunikation aus.
--   [
-              **UpgradeToSslAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/br226922): Stellt die erste Verbindung mit einem Netzwerkdienst ohne Verschlüsselung her. Die App kann Daten senden oder empfangen. Dann wird die Verbindung für die Verwendung von SSL/TLS für jede weitere Verbindung hochgestuft.
+-   [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) – Stellt die erste Verbindung mit einem Netzwerkdienst her und handelt sofort die Verwendung von SSL/TLS für jede Kommunikation aus.
+-   [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) – Stellt die erste Verbindung mit einem Netzwerkdienst ohne Verschlüsselung her. Die App kann Daten senden oder empfangen. Dann wird die Verbindung für die Verwendung von SSL/TLS für jede weitere Verbindung hochgestuft.
 
 Durch den angegebenen SocketProtectionLevel-Wert wird die minimale Schutzebene festgelegt, die Sie zulassen möchten. Die letztendliche Schutzebene der hergestellten Verbindung wird jedoch im Aushandlungsprozess zwischen beiden Endpunkten der Verbindung festgelegt. Dies kann zu einer Schutzebene führen, die sichererer als die von Ihnen angegebene Ebene ist, wenn der andere Endpunkt eine höhere Ebene erfordert. Die tatsächlich mithilfe von [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) oder [**UpgradeToSslAsync**](https://msdn.microsoft.com/library/windows/apps/br226922) ausgehandelte SSL-Schlüsselstärke kann durch Abruf der [**StreamSocketinformation.ProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/hh967868)-Eigenschaft bestimmt werden, nachdem der asynchrone Vorgang erfolgreich abgeschlossen wurde.
 
@@ -80,16 +76,10 @@ Durch den angegebenen SocketProtectionLevel-Wert wird die minimale Schutzebene f
 
 ### Verwenden von ConnectAsync
 
-[
-              **ConnectAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701504) kann verwendet werden, um die erste Verbindung mit einem Netzwerkdienst herzustellen und dann sofort die Verwendung von SSL/TLS für jede Kommunikation auszuhandeln. Es gibt zwei **ConnectAsync**-Methoden, die das Übergeben eines *protectionLevel*-Parameters unterstützen:
+[**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504) kann verwendet werden, um die erste Verbindung mit einem Netzwerkdienst herzustellen und dann sofort die Verwendung von SSL/TLS für jede Kommunikation auszuhandeln. Es gibt zwei **ConnectAsync**-Methoden, die das Übergeben eines *protectionLevel*-Parameters unterstützen:
 
--   [
-              **ConnectAsync(EndpointPair, SocketProtectionLevel)**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701511): Startet einen asynchronen Vorgang für ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt, um eine Verbindung mit einem Remotenetzwerkziel herzustellen, das durch ein [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953)-Objekt und [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880) angegeben wird.
--   [
-              **ConnectAsync(HostName, String, SocketProtectionLevel)**
-            ](https://msdn.microsoft.com/library/windows/apps/br226916): Startet einen asynchronen Vorgang für ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt, um eine Verbindung mit einem Remoteziel herzustellen, das durch einen Remotehostnamen, einen Remotedienstnamen und [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880) angeben wird.
+-   [**ConnectAsync(EndpointPair, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/hh701511) – Startet einen asynchronen Vorgang für ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt, um eine Verbindung mit einem Remotenetzwerkziel herzustellen, das durch ein [**EndpointPair**](https://msdn.microsoft.com/library/windows/apps/hh700953)-Objekt und eine [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880) angegeben wird.
+-   [**ConnectAsync(HostName, String, SocketProtectionLevel)**](https://msdn.microsoft.com/library/windows/apps/br226916) – Startet einen asynchronen Vorgang für ein [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Objekt, um eine Verbindung mit einem Remoteziel herzustellen, das durch einen Remotehostnamen, einen Remotedienstnamen und eine [**SocketProtectionLevel**](https://msdn.microsoft.com/library/windows/apps/br226880) angegeben wird.
 
 Wenn der *protectionLevel*-Parameter beim Aufruf einer der obigen [**ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/hh701504)-Methoden auf **Windows.Networking.Sockets.SocketProtectionLevel.Ssl** festgelegt ist, muss mit [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) die Verwendung von SSL/TLS für die Verschlüsselung sichergestellt werden. Dieser Wert erfordert eine Verschlüsselung, wobei keine NULL-Verschlüsselung zulässig ist.
 
@@ -365,7 +355,7 @@ using Windows::Storage::Streams;
 
 ### Erstellen von sicheren WebSocket-Verbindungen
 
-WebSocket-Verbindungen können wie herkömmliche Socketverbindungen mit TLS (Transport Layer Security)/SSL (Secure Sockets Layer) verschlüsselt werden, wenn Sie die Features [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) und [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) für Windows Store-Apps in Windows 8 verwenden. In den meisten Fällen empfiehlt sich die Verwendung einer sicheren WebSocket-Verbindung. Dadurch ist es wahrscheinlicher, dass die Verbindung funktioniert, da andernfalls viele Proxys unverschlüsselte WebSocket-Verbindungen ablehnen.
+WebSocket-Verbindungen können wie herkömmliche Socketverbindungen mit TLS (Transport Layer Security)/SSL (Secure Sockets Layer) verschlüsselt werden, wenn Sie die Features [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) und [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) für Windows Store-Apps in Windows8 verwenden. In den meisten Fällen empfiehlt sich die Verwendung einer sicheren WebSocket-Verbindung. Dadurch ist es wahrscheinlicher, dass die Verbindung funktioniert, da andernfalls viele Proxys unverschlüsselte WebSocket-Verbindungen ablehnen.
 
 Beispiele für das Erstellen einer sicheren WebSocket-Verbindung mit einem Netzwerkdienst bzw. für das Schützen einer WebSocket-Verbindung mit einem Netzwerkdienst finden Sie unter [So wird’s gemacht: Schützen von WebSocket-Verbindungen mit TLS/SSL](https://msdn.microsoft.com/library/windows/apps/xaml/hh994399).
 
@@ -434,6 +424,6 @@ Die Netzwerk-APIs unterstützen verschiedene Methoden zum Abrufen der detaillier
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

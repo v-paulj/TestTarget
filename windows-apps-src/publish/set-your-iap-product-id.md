@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: "Beim Erstellen eines neuen IAP (In-App-Produkt) im Windows Dev Center-Dashboard müssen Sie einen Produkttyp angeben eine Produkt-ID zuweisen."
+Description: "Beim Erstellen eines neuen IAP (In-App-Produkt) im WindowsDevCenter-Dashboard müssen Sie einen Produkttyp angeben eine Produkt-ID zuweisen."
 title: "Festlegen von Produkttyp und Produkt-ID für das IAP"
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
 ms.sourcegitcommit: ae4727974af632a275c102a6328734597cee3e9b
@@ -18,7 +18,8 @@ Nachdem Sie auf die Schaltfläche geklickt haben, wird die Seite **Neues IAP ers
 
 Zunächst müssen Sie angeben, welche Art von IAP Sie anbieten. Diese Auswahloption bezieht sich darauf, wie das IAP vom Kunden genutzt werden kann.
 
-> **Hinweis:** Nachdem Sie diese Seite gespeichert haben, um das IAP zu erstellen, kann der Produkttyp nicht mehr geändert werden. Sollten Sie den falschen Produkttyp ausgewählt haben, können Sie die in Bearbeitung befindliche IAP-Übermittlung jederzeit löschen und ein neues IAP erstellen.
+> 
+            **Hinweis:** Nachdem Sie diese Seite gespeichert haben, um das IAP zu erstellen, kann der Produkttyp nicht mehr geändert werden. Sollten Sie den falschen Produkttyp ausgewählt haben, können Sie die in Bearbeitung befindliche IAP-Übermittlung jederzeit löschen und ein neues IAP erstellen.
 
 Wählen Sie den geeigneten Produkttyp für Ihr IAP aus:
 

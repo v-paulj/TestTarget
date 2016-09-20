@@ -4,18 +4,18 @@ description: "In diesem Thema wird erläutert, wie UWP-Apps Smartcards verwenden
 ms.assetid: 86524267-50A0-4567-AE17-35C4B6D24745
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 6e673ce75ee7f178332da6fc9ae68dbf01a9d7ce
+ms.sourcegitcommit: 2ea21aeee5dd93bb44de3a1793b352d2046b3839
+ms.openlocfilehash: d0646aca9863f3f326df9b3a86adb2481fdcda70
 
 ---
 
 # Smartcards
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-In diesem Thema wird erläutert, wie UWP-Apps Smartcards verwenden können, um Benutzer mit sicheren Netzwerkdiensten zu verbinden, einschließlich Informationen für den Zugriff auf physische Smartcardleser, zum Erstellen virtueller Smartcards, zum Kommunizieren mit Smartcards, Authentifizieren von Benutzern, zum Zurücksetzen von Benutzer-PINs und zum Entfernen oder Trennen von Smartcards.
+In diesem Thema wird erläutert, wie UWP-Apps Smartcards verwenden können, um Benutzer mit sicheren Netzwerkdiensten zu verbinden, einschließlich Informationen für den Zugriff auf physische Smartcardleser, zum Erstellen virtueller Smartcards, zum Kommunizieren mit Smartcards, Authentifizieren von Benutzern, zum Zurücksetzen von Benutzer-PINs und zum Entfernen oder Trennen von Smartcards. 
 
 ## Konfigurieren des App-Manifests
 
@@ -116,9 +116,7 @@ Nachdem wir die Logik für Authentifizierungsaufforderungen definiert haben, kö
 
 2.  Übergeben Sie als Nächstes den Aufforderungswert der Karte und den vom Dienst oder Verwaltungstool bereitgestellten Administratorschlüssel an das **ChallengeResponseAlgorithm**-Element, das wir im vorhergehenden Beispiel definiert haben.
 
-3.  [
-              **VerifyResponseAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/dn297627) gibt den Wert **true** zurück, wenn die Authentifizierung erfolgreich ist.
+3.  [**VerifyResponseAsync**](https://msdn.microsoft.com/library/windows/apps/dn297627) gibt bei erfolgreicher Authentifizierung den Wert **true** zurück.
 
 ```cs
 bool verifyResult = false;
@@ -156,9 +154,7 @@ bool result = await provisioning.RequestPinChangeAsync();
 So fordern Sie das Zurücksetzen einer PIN an:
 
 1.  Rufen Sie [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825) auf, um den Vorgang zu initiieren. Dieser Aufruf enthält eine [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701)-Methode, die die Smartcard und die Anforderung der PIN-Zurücksetzung darstellt.
-2.  [
-              **SmartCardPinResetHandler**
-            ](https://msdn.microsoft.com/library/windows/apps/dn297701) stellt Informationen bereit, die das in einen [**SmartCardPinResetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn297693)-Aufruf eingeschlossene **ChallengeResponseAlgorithm**-Element verwenden, um den Aufforderungswert der Karte und den vom Dienst oder Verwaltungstool bereitgestellten Administratorschlüssel zur Authentifizierung der Anforderung zu vergleichen.
+2.  [**SmartCardPinResetHandler**](https://msdn.microsoft.com/library/windows/apps/dn297701) stellt Informationen bereit, die mit dem in einen [**SmartCardPinResetDeferral**](https://msdn.microsoft.com/library/windows/apps/dn297693)-Aufruf eingeschlossenen **ChallengeResponseAlgorithm**-Element den Aufforderungswert der Karte und den vom Dienst oder Verwaltungstool bereitgestellten Administratorschlüssel zur Authentifizierung der Anforderung vergleichen.
 
 3.  Bei einer erfolgreichen Aufforderung ist der [**RequestPinResetAsync**](https://msdn.microsoft.com/library/windows/apps/dn263825)-Aufruf abgeschlossen; bei einem erfolgreichen Zurücksetzen der PIN wird der Wert **true** zurückgegeben.
 
@@ -193,7 +189,7 @@ bool result = await provisioning.RequestPinResetAsync(
 
 Wenn eine physische Smartcard entfernt wird, wird beim Löschen der Karte ein [**CardRemoved**](https://msdn.microsoft.com/library/windows/apps/dn263875)-Ereignis ausgelöst.
 
-Ordnen Sie das Auslösen dieses Ereignisses mithilfe der Methode, die das Verhalten Ihrer App beim Entfernen einer Karte oder eines Lesers definiert, dem Kartenleser als Ereignishandler zu. Bei diesem Verhalten kann es sich z. B. einfach um eine Benachrichtigung des Benutzers handeln, dass die Karte entfernt wurde.
+Ordnen Sie das Auslösen dieses Ereignisses mithilfe der Methode, die das Verhalten Ihrer App beim Entfernen einer Karte oder eines Lesers definiert, dem Kartenleser als Ereignishandler zu. Bei diesem Verhalten kann es sich z.B. einfach um eine Benachrichtigung des Benutzers handeln, dass die Karte entfernt wurde.
 
 ```cs
 reader = card.Reader;
@@ -208,6 +204,6 @@ bool result = await SmartCardProvisioning
 ```
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

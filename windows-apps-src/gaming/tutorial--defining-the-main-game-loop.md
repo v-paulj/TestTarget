@@ -3,7 +3,6 @@ author: mtoepke
 title: "Definieren des Hauptobjekts für das Spiel"
 description: "In diesem Abschnitt widmen wir uns den Details des Hauptobjekts des Beispielspiels. Außerdem erfahren Sie, wie die implementierten Regeln in Interaktionen mit der Spielwelt übersetzt werden."
 ms.assetid: 6afeef84-39d0-cb78-aa2e-2e42aef936c9
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 66e40c150b5eb4f57c9cddfaf472c56601b3fa0b
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 66e40c150b5eb4f57c9cddfaf472c56601b3fa0b
 # Definieren des Hauptobjekts für das Spiel
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Wir haben bislang das grundlegende Framework des Beispielspiels eingerichtet und einen Zustandsautomaten für die übergeordneten Benutzer- und Systemverhalten implementiert. Was wir allerdings noch nicht behandelt haben, ist der Teil, der das Beispielspiel zu einem richtigen Spiel macht: die Regeln und die Spielmechanik sowie deren Implementierung. In diesem Abschnitt widmen wir uns den Details des Hauptobjekts des Beispielspiels. Außerdem erfahren Sie, wie die implementierten Regeln in Interaktionen mit der Spielwelt übersetzt werden.
 
@@ -31,7 +30,8 @@ Der Großteil der Grundstruktur des Spiels wird in den folgenden Dateien definie
 
 In [Definieren des UWP-App-Frameworks für das Spiel](tutorial--building-the-games-metro-style-app-framework.md) haben wir das in **App.cpp** definierte Framework des Spiels behandelt.
 
-**Simple3DGame.cpp** stellt den Code für eine Klasse **Simple3DGame** bereit, die die Implementierung des eigentlichen Gameplays angibt. Zuvor haben wir die Behandlung des Beispielspiels als UWP-App beleuchtet. Nun widmen wir uns dem Code, der es zu einem Spiel macht.
+
+            **Simple3DGame.cpp** stellt den Code für eine Klasse **Simple3DGame** bereit, die die Implementierung des eigentlichen Gameplays angibt. Zuvor haben wir die Behandlung des Beispielspiels als UWP-App beleuchtet. Nun widmen wir uns dem Code, der es zu einem Spiel macht.
 
 Den vollständigen Code für **Simple3DGame.h/.cpp** finden Sie unter [Vollständiger Beispielcode für diesen Abschnitt](#code_sample).
 
@@ -86,28 +86,40 @@ private:
 
 Werfen wir zunächst einen Blick auf die internen Methoden, die für **Simple3DGame** definiert sind.
 
--   **Initialize**. Legt die Anfangswerte der globalen Variablen fest und initialisiert die Spielobjekte.
--   **LoadGame**. Initialisiert ein neues Level und startet den entsprechenden Ladevorgang.
--   **LoadLevelAsync**. Startet eine asynchrone Aufgabe (weitere Details finden Sie unter [Parallel Patterns Library](https://msdn.microsoft.com/library/windows/apps/dd492418.aspx)) zum Initialisieren des Levels und ruft dann eine asynchrone Aufgabe für den Renderer auf, um die gerätespezifischen Ressourcen für das Level zu laden. Diese Methode wird in einem gesonderten Thread ausgeführt. Daher können in diesem Thread nur [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)-Methoden (und keine [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)-Methoden) aufgerufen werden. Alle Gerätekontextmethoden werden in der **FinalizeLoadLevel**-Methode aufgerufen.
--   **FinalizeLoadLevel**. Führt alle Aktionen zum Laden des Levels aus, die im Hauptthread durchgeführt werden müssen. Dies schließt alle Aufrufe von Direct3D 11-Gerätekontextmethoden ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) ein.
--   **StartLevel**. Startet das Gameplay für ein neues Level.
--   **PauseGame**. Hält das Spiel an.
--   **RunGame**. Führt eine Iteration der Spielschleife aus. Wird jeweils einmal pro Iteration der Spielschleife von **App::Update** aufgerufen, sofern sich das Spiel im Zustand **Active** befindet.
--   **OnSuspending** und **OnResuming**. Hält die Audiowiedergabe des Spiels an bzw. setzt sie fort.
+-   
+            **Initialize**. Legt die Anfangswerte der globalen Variablen fest und initialisiert die Spielobjekte.
+-   
+            **LoadGame**. Initialisiert ein neues Level und startet den entsprechenden Ladevorgang.
+-   
+            **LoadLevelAsync**. Startet eine asynchrone Aufgabe (weitere Details finden Sie unter [Parallel Patterns Library](https://msdn.microsoft.com/library/windows/apps/dd492418.aspx)) zum Initialisieren des Levels und ruft dann eine asynchrone Aufgabe für den Renderer auf, um die gerätespezifischen Ressourcen für das Level zu laden. Diese Methode wird in einem gesonderten Thread ausgeführt. Daher können in diesem Thread nur [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)-Methoden (und keine [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)-Methoden) aufgerufen werden. Alle Gerätekontextmethoden werden in der **FinalizeLoadLevel**-Methode aufgerufen.
+-   
+            **FinalizeLoadLevel**. Führt alle Aktionen zum Laden des Levels aus, die im Hauptthread durchgeführt werden müssen. Dies schließt alle Aufrufe von Direct3D11-Gerätekontextmethoden ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) ein.
+-   
+            **StartLevel**. Startet das Gameplay für ein neues Level.
+-   
+            **PauseGame**. Hält das Spiel an.
+-   
+            **RunGame**. Führt eine Iteration der Spielschleife aus. Wird jeweils einmal pro Iteration der Spielschleife von **App::Update** aufgerufen, sofern sich das Spiel im Zustand **Active** befindet.
+-   
+            **OnSuspending** und **OnResuming**. Hält die Audiowiedergabe des Spiels an bzw. setzt sie fort.
 
 Und die privaten Methoden:
 
--   **LoadSavedState** und **SaveState**. Lädt bzw. speichert den aktuellen Zustand des Spiels.
--   **SaveHighScore** und **LoadHighScore**. Speichert bzw. lädt den spielübergreifenden Highscore.
--   **InitializeAmmo**. Setzt den Zustand der als Munition verwendeten Kugelobjekte in den Originalzustand für den Beginn einer neuen Runde zurück.
--   **UpdateDynamics**. Diese Methode ist sehr wichtig, da sie alle Spielobjekte auf der Grundlage vordefinierter Animationsroutinen, Physikeffekte und Steuerungseingaben aktualisiert. Hierbei handelt es sich gewissermaßen um das Herzstück der Interaktivität, die das Spiel ausmacht. Hiermit beschäftigen wir uns im Abschnitt [Aktualisieren des Spiels](#update_game) noch ausführlicher.
+-   
+            **LoadSavedState** und **SaveState**. Lädt bzw. speichert den aktuellen Zustand des Spiels.
+-   
+            **SaveHighScore** und **LoadHighScore**. Speichert bzw. lädt den spielübergreifenden Highscore.
+-   
+            **InitializeAmmo**. Setzt den Zustand der als Munition verwendeten Kugelobjekte in den Originalzustand für den Beginn einer neuen Runde zurück.
+-   
+            **UpdateDynamics**. Diese Methode ist sehr wichtig, da sie alle Spielobjekte auf der Grundlage vordefinierter Animationsroutinen, Physikeffekte und Steuerungseingaben aktualisiert. Hierbei handelt es sich gewissermaßen um das Herzstück der Interaktivität, die das Spiel ausmacht. Hiermit beschäftigen wir uns im Abschnitt [Aktualisieren des Spiels](#update_game) noch ausführlicher.
 
 Die anderen öffentlichen Methoden dienen zum Abrufen von Eigenschaften und geben Gameplay- und Overlay-spezifische Informationen an das App-Framework zurück, um diese anzuzeigen.
 
 ## Definieren der Spielzustandsvariablen
 
 
-Das Spielobjekt fungiert u. a. als Container für die Daten, die eine Spielsitzung, ein Level oder eine Lebensdauer ausmachen – je nachdem, wie Sie Ihr Spiel auf einer übergeordneten Ebene definieren. Im aktuellen Fall beziehen sich die Spielzustandsdaten auf die Lebensdauer des Spiels und werden ein Mal initialisiert, wenn der Benutzer das Spiel startet.
+Das Spielobjekt fungiert u.a. als Container für die Daten, die eine Spielsitzung, ein Level oder eine Lebensdauer ausmachen – je nachdem, wie Sie Ihr Spiel auf einer übergeordneten Ebene definieren. Im aktuellen Fall beziehen sich die Spielzustandsdaten auf die Lebensdauer des Spiels und werden ein Mal initialisiert, wenn der Benutzer das Spiel startet.
 
 Im Anschluss finden Sie alle Definitionen für die Zustandsvariablen des Spielobjekts.
 
@@ -149,7 +161,7 @@ private:
 Am Anfang des Codebeispiels befinden sich vier Objekte, deren Instanzen während der Ausführung der Spielschleife aktualisiert werden.
 
 -   Das **MoveLookController**-Objekt. Dieses Objekt stellt die Eingaben des Spielers dar. (Ausführlichere Informationen zum **MoveLookController**-Objekt finden Sie unter [Hinzufügen von Steuerelementen](tutorial--adding-controls.md).)
--   Das **GameRenderer**-Objekt. Dieses Objekt stellt den von der **DirectXBase**-Klasse abgeleiteten Direct3D 11-Renderer dar, der alle gerätespezifischen Objekte und deren Rendering verarbeitet. (Weitere Informationen finden Sie unter [Zusammensetzen der Renderingpipeline](tutorial--assembling-the-rendering-pipeline.md).)
+-   Das **GameRenderer**-Objekt. Dieses Objekt stellt den von der **DirectXBase**-Klasse abgeleiteten Direct3D11-Renderer dar, der alle gerätespezifischen Objekte und deren Rendering verarbeitet. (Weitere Informationen finden Sie unter [Zusammensetzen der Renderingpipeline](tutorial--assembling-the-rendering-pipeline.md).)
 -   Das **Camera**-Objekt. Dieses Objekt stellt die Sicht des Spielers auf die Spielwelt aus der Ich-Perspektive dar. (Ausführlichere Informationen zum **Camera**-Objekt finden Sie unter [Zusammensetzen der Renderingpipeline](tutorial--assembling-the-rendering-pipeline.md).)
 -   Das **Audio**-Objekt. Dieses Objekt steuert die Audiowiedergabe für das Spiel. (Ausführlichere Informationen zum **Audio**-Objekt finden Sie unter [Hinzufügen von Sound](tutorial--adding-sound.md).)
 
@@ -400,9 +412,12 @@ Im Anschluss finden Sie ein Diagramm mit dem grundlegenden Spielfluss und den ü
 
 Beim Start des Beispielspiels kann sich das Spielobjekt in einem von drei Zuständen befinden:
 
--   **Waiting for resources**. Dieser Zustand wird aktiviert, wenn das Spielobjekt initialisiert wird oder die Komponenten eines Levels geladen werden. Wird dieser Zustand durch eine Anforderung zum Laden eines vorherigen Spiels ausgelöst, wird das Overlay mit der Spielstatistik angezeigt. Wird es durch eine Anforderung zum Spielen eines Levels ausgelöst, wird das Overlay für den Levelstart angezeigt. Ausgelöst durch den abgeschlossenen Ladevorgang der Ressourcen durchläuft das Spiel den Zustand **Resources loaded** und geht dann in den Zustand **Waiting for press** über.
--   **Waiting for press**. Dieser Zustand wird aktiviert, wenn das Spiel angehalten wird. Dabei spielt es keine Rolle, ob dies durch den Spieler oder durch das System (beispielsweise nach dem Laden von Ressourcen) geschieht. Wenn der Spieler diesen Zustand verlassen möchte, wird er aufgefordert, einen neuen Spielzustand zu laden (LoadGame), das geladene Level zu starten oder neu zu starten (StartLevel) oder das aktuelle Level fortzusetzen (ContinueGame).
--   **Dynamics**. Wenn die Eingabe eines Spielers abgeschlossen und die Folgeaktion der Start oder die Fortsetzung eines Levels ist, wechselt das Spielobjekt in den Zustand *Dynamics*. In diesem Zustand wird das Spiel gespielt, und die Spielwelt sowie die Spielerobjekte werden auf der Grundlage der Animationsroutinen und der Spielereingaben aktualisiert. Dieser Zustand endet, wenn der Spieler ein Pausenereignis auslöst – entweder durch Drücken der P-TASTE, durch eine Aktion, die das Hauptfenster deaktiviert, oder durch Abschließen eines Levels oder des Spiels.
+-   
+            **Waiting for resources**. Dieser Zustand wird aktiviert, wenn das Spielobjekt initialisiert wird oder die Komponenten eines Levels geladen werden. Wird dieser Zustand durch eine Anforderung zum Laden eines vorherigen Spiels ausgelöst, wird das Overlay mit der Spielstatistik angezeigt. Wird es durch eine Anforderung zum Spielen eines Levels ausgelöst, wird das Overlay für den Levelstart angezeigt. Ausgelöst durch den abgeschlossenen Ladevorgang der Ressourcen durchläuft das Spiel den Zustand **Resources loaded** und geht dann in den Zustand **Waiting for press** über.
+-   
+            **Waiting for press**. Dieser Zustand wird aktiviert, wenn das Spiel angehalten wird. Dabei spielt es keine Rolle, ob dies durch den Spieler oder durch das System (beispielsweise nach dem Laden von Ressourcen) geschieht. Wenn der Spieler diesen Zustand verlassen möchte, wird er aufgefordert, einen neuen Spielzustand zu laden (LoadGame), das geladene Level zu starten oder neu zu starten (StartLevel) oder das aktuelle Level fortzusetzen (ContinueGame).
+-   
+            **Dynamics**. Wenn die Eingabe eines Spielers abgeschlossen und die Folgeaktion der Start oder die Fortsetzung eines Levels ist, wechselt das Spielobjekt in den Zustand *Dynamics*. In diesem Zustand wird das Spiel gespielt, und die Spielwelt sowie die Spielerobjekte werden auf der Grundlage der Animationsroutinen und der Spielereingaben aktualisiert. Dieser Zustand endet, wenn der Spieler ein Pausenereignis auslöst – entweder durch Drücken der P-TASTE, durch eine Aktion, die das Hauptfenster deaktiviert, oder durch Abschließen eines Levels oder des Spiels.
 
 Werfen wir nun einen Blick auf spezifischen Code in der **App**-Klasse (siehe [Definieren des UWP-App-Frameworks für das Spiel](tutorial--building-the-games-metro-style-app-framework.md)) für die **Update**-Methode, die diesen Zustandsautomaten implementiert.
 
@@ -555,7 +570,8 @@ Wenn sich das Spiel im Zustand „Dynamics“ befindet (der Spieler also spielt)
 
 `GameState runState = m_game->RunGame();`
 
-**RunGame** behandelt die Gruppe von Daten, die den aktuellen Zustand des Gameplays für die aktuelle Iteration der Spielschleife definieren. Der Fluss sieht so aus:
+
+            **RunGame** behandelt die Gruppe von Daten, die den aktuellen Zustand des Gameplays für die aktuelle Iteration der Spielschleife definieren. Der Fluss sieht so aus:
 
 1.  Die Methode aktualisiert den Zeitgeber, der die Sekunden bis zum Levelabschluss herunterzählt, und überprüft, ob die Zeit für den Level abgelaufen ist. Dies ist eine der Spielregeln: Wurden vor Ablauf der Zeit nicht alle Ziele getroffen, ist das Spiel vorbei.
 2.  Ist die Zeit abgelaufen, legt die Methode den Spielzustand **TimeExpired** fest und kehrt zur **Update**-Methode im vorherigen Code zurück.
@@ -831,7 +847,7 @@ void Simple3DGame::UpdateDynamics()
 
 (Dieses Codebeispiel wurde zur einfacheren Lesbarkeit gekürzt. Der vollständige Code ist im vollständigen Codebeispiel am Ende dieses Themas enthalten.)
 
-Diese Methode behandelt vier Berechnungssätze:
+Diese Methode behandelt vierBerechnungssätze:
 
 -   Die Positionen der Kugeln für die abgefeuerte Munition in der Spielwelt.
 -   Die Animation der Säulenhindernisse.
@@ -3606,7 +3622,7 @@ XMFLOAT3 AnimateCirclePosition::Evaluate(_In_ float t)
 ```
 
 > **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 

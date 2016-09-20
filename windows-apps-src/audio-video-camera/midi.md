@@ -4,14 +4,14 @@ ms.assetid: 9146212C-8480-4C16-B74C-D7F08C7086AF
 description: "In diesem Artikel wird beschrieben, wie Sie MIDI-Geräte (Musical Instrument Digital Interface) aufzählen und MIDI-Nachrichten in einer universellen Windows-App senden und empfangen."
 title: MIDI
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: a67b859cc2bd42abc13bcba0d405783b99a0ca5c
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: cc3553aff7c30a2e84b527dc9e108f7c45b7b21f
 
 ---
 
 # MIDI
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird beschrieben, wie Sie MIDI-Geräte (Musical Instrument Digital Interface) aufzählen und MIDI-Nachrichten in einer universellen Windows-App senden und empfangen.
@@ -26,7 +26,7 @@ Fügen Sie der XAML-Seite ein [**ListBox**](https://msdn.microsoft.com/library/w
 
 [!code-xml[MidiListBoxes](./code/MIDIWin10/cs/MainPage.xaml#SnippetMidiListBoxes)]
 
-Die [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432)-Methode der [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)-Klasse wird verwendet, um viele verschiedene Arten von Geräten aufzulisten, die von Windows erkannt werden. Um anzugeben, dass die Methode nur nach MIDI-Eingabegeräten suchen soll, verwenden Sie die von [**MidiInPort.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn894779) zurückgegebene Auswahlzeichenfolge. **FindAllAsync** gibt eine [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/br225395) zurück, die eine **DeviceInformation** für jedes beim System registrierte MIDI-Eingabegerät enthält. Wenn die zurückgegebene Sammlung keine Elemente enthält, sind keine MIDI-Eingabegeräte verfügbar. Wenn die Sammlung Elemente enthält, durchlaufen Sie die **DeviceInformation**-Objekte, und fügen Sie den Namen der einzelnen Geräte zu **ListBox** mit MIDI-Eingabegeräten hinzu.
+Die [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/br225432)-Methode der [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/br225393)-Klasse wird verwendet, um viele verschiedene Arten von Geräten aufzulisten, die von Windows erkannt werden. Um anzugeben, dass die Methode nur nach MIDI-Eingabegeräten suchen soll, verwenden Sie die von [**MidiInPort.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/dn894779) zurückgegebene Auswahlzeichenfolge. **FindAllAsync** gibt eine [**DeviceInformationCollection**](https://msdn.microsoft.com/library/windows/apps/br225395) zurück, die für jedes beim System registrierte MIDI-Eingabegerät eine **DeviceInformation** enthält. Wenn die zurückgegebene Sammlung keine Elemente enthält, sind keine MIDI-Eingabegeräte verfügbar. Wenn die Sammlung Elemente enthält, durchlaufen Sie die **DeviceInformation**-Objekte, und fügen Sie den Namen der einzelnen Geräte zu **ListBox** mit MIDI-Eingabegeräten hinzu.
 
 [!code-cs[EnumerateMidiInputDevices](./code/MIDIWin10/cs/MainPage.xaml.cs#SnippetEnumerateMidiInputDevices)]
 
@@ -63,18 +63,10 @@ Registrieren Sie Handler für die Ereignishandler des Überwachungselements.
 
 **DeviceWatcher** hat die folgenden Ereignisse:
 
--   [
-              **Added**
-            ](https://msdn.microsoft.com/library/windows/apps/br225450) – Wird ausgelöst, wenn dem System ein neues Gerät hinzugefügt wird.
--   [
-              **Removed**
-            ](https://msdn.microsoft.com/library/windows/apps/br225453) – Wird ausgelöst, wenn ein Gerät aus dem System entfernt wird.
--   [
-              **Updated**
-            ](https://msdn.microsoft.com/library/windows/apps/br225458) – Wird ausgelöst, wenn die Informationen im Zusammenhang mit einem vorhandenen Gerät aktualisiert werden.
--   [
-              **EnumerationCompleted**
-            ](https://msdn.microsoft.com/library/windows/apps/br225451) – Wird ausgelöst, wenn das Überwachungselement die Aufzählung des angeforderten Gerätetyps abgeschlossen hat.
+-   [**Added**](https://msdn.microsoft.com/library/windows/apps/br225450): Wird ausgelöst, wenn dem System ein neues Gerät hinzugefügt wird
+-   [**Removed**](https://msdn.microsoft.com/library/windows/apps/br225453) - Wird ausgelöst, wenn ein Gerät aus dem System entfernt wird.
+-   [**Updated**](https://msdn.microsoft.com/library/windows/apps/br225458) - Wird ausgelöst, wenn die Informationen im Zusammenhang mit einem vorhandenen Gerät aktualisiert werden.
+-   [**EnumerationCompleted**](https://msdn.microsoft.com/library/windows/apps/br225451) - Wird ausgelöst, wenn das Überwachungselement die Aufzählung des angeforderten Gerätetyps abgeschlossen hat.
 
 Im Ereignishandler für jedes dieser Ereignisse wird die **UpdateDevices**-Hilfsmethode aufgerufen, um das **ListBox** mit der aktuellen Geräteliste zu aktualisieren. Da **UpdateDevices** UI-Elemente aktualisiert und diese Ereignishandler nicht für den UI-Thread aufgerufen werden, muss jeder Aufruf von einem Aufruf von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) umschlossen werden, wodurch der angegebene Code für den UI-Thread ausgeführt wird.
 
@@ -140,7 +132,8 @@ Beim Aufzählen der MIDI-Ausgabegeräte mit dem oben beschriebenen Verfahren erk
 2.  Erweitern Sie den Knoten **Universelle Windows-App**.
 3.  Wählen Sie **Erweiterungen**.
 4.  Wählen Sie aus der Liste der Erweiterungen **Microsoft General MIDI-DLS für universelle Windows-Apps**.
-    **Hinweis** Wenn mehrere Versionen der Erweiterung vorhanden sind, müssen Sie die Version auswählen, die Ihre App als Ziel aufweist. Auf der Registerkarte **Anwendung** der Projekteigenschaften können Sie sehen, welche SDK-Version Ihre App als Ziel aufweist.
+    > [!NOTE] 
+    > Wenn mehrere Versionen der Erweiterung vorhanden sind, müssen Sie die Version auswählen, die dem Ziel Ihrer App entspricht. Auf der Registerkarte **Anwendung** der Projekteigenschaften können Sie sehen, welche SDK-Version Ihre App als Ziel aufweist.
 
  
 
@@ -152,6 +145,6 @@ Beim Aufzählen der MIDI-Ausgabegeräte mit dem oben beschriebenen Verfahren erk
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

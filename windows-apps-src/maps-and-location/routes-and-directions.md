@@ -3,20 +3,21 @@ author: msatranjr
 title: Anzeigen von Routen und Wegbeschreibungen auf einer Karte
 description: Fordern Sie Routen und Wegbeschreibungen an, und zeigen Sie sie in Ihrer App an.
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 2132b0c76a78dac5250ea85f08abd0b1edbd6ed7
+ms.openlocfilehash: eb3596236e7de29473635b26f48f0c7e4fa1d49f
 
 ---
 
 # Anzeigen von Routen und Wegbeschreibungen auf einer Karte
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Fordern Sie Routen und Wegbeschreibungen an, und zeigen Sie sie in Ihrer App an.
 
-**Tipp** Um mehr über das Verwenden von Karten in Ihrer App zu erfahren, laden Sie das folgende Beispiel aus den [API-Beispielen für die Universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.
+**Tipp** Wenn Sie weitere Informationen über das Verwenden von Karten in Ihrer App benötigen, laden Sie das folgende Beispiel aus den [API-Beispielen für die Universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter.
 
 -   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -43,12 +44,12 @@ Rufen Sie Routen und Wegbeschreibungen für Auto und Fußgänger ab, indem Sie d
 Wenn Sie eine Route anfordern, können Sie Folgendes angeben:
 
 -   Sie können nur einen Startpunkt und einen Endpunkt oder eine Reihe von Wegpunkten zur Berechnung angeben.
--   Sie können Optimierungen angeben, z. B. die Minimierung der Distanz.
+-   Sie können Optimierungen angeben, z.B. die Minimierung der Distanz.
 -   Sie können Einschränkungen festlegen, z. B. das Vermeiden von Autobahnen.
 
 Die berechnete [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) hat Eigenschaften, die die Zeit zum Zurücklegen der Route, die Länge der Route und die Auflistung von [**MapRouteLeg**](https://msdn.microsoft.com/library/windows/apps/dn636955)-Objekten bereitstellen, die die Teilstrecken der Route enthalten. Jedes **MapRouteLeg**-Objekt enthält eine Auflistung von [**MapRouteManeuver**](https://msdn.microsoft.com/library/windows/apps/dn636961)-Objekten. Das **MapRouteManeuver**-Objekt enthält eine Wegbeschreibung, auf die Sie über seine [**InstructionText**](https://msdn.microsoft.com/library/windows/apps/dn636964)-Eigenschaft zugreifen können.
 
-**Wichtig:** Sie müssen einen Kartenauthentifizierungsschlüssel angeben, um Kartendienste verwenden zu können. Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](authentication-key.md).
+**Wichtig** Sie müssen einen Kartenauthentifizierungsschlüssel angeben, um Kartendienste verwenden zu können. Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](authentication-key.md).
 
  
 
@@ -130,7 +131,7 @@ You have reached your destination.
 
 Blenden Sie eine [**MapRoute**](https://msdn.microsoft.com/library/windows/apps/dn636937) auf einem [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) ein, indem Sie eine [**MapRouteView**](https://msdn.microsoft.com/library/windows/apps/dn637122) mit der ****MapRoute erstellen. Fügen Sie die **MapRouteView** anschließend zur [**Routes**](https://msdn.microsoft.com/library/windows/apps/dn637047)-Auflistung von **MapControl** hinzu.
 
-**Wichtig:** Sie müssen einen Kartenauthentifizierungsschlüssel angeben, um Kartendienste oder das Kartensteuerelement verwenden zu können. Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](authentication-key.md).
+**Wichtig** Sie müssen einen Kartenauthentifizierungsschlüssel angeben, um Kartendienste oder das Kartensteuerelement verwenden zu können. Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](authentication-key.md).
 
  
 
@@ -194,6 +195,6 @@ Dieses Beispiel zeigt Folgendes in einem [**MapControl**](https://msdn.microsoft
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

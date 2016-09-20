@@ -3,7 +3,6 @@ author: DelfCo
 description: "Mithilfe von Fremdanbieterfeeds, die entsprechend den RSS- und Atom-Standards mit Features im Windows.Web.Syndication-Namespace generiert werden, können Sie die neuesten und beliebtesten Webinhalte abrufen oder erstellen."
 title: RSS/Atom-Feeds
 ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: 625a18203bd2d60acc97a6243d4f3e1e0cf2b297
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: 625a18203bd2d60acc97a6243d4f3e1e0cf2b297
 
 # RSS/Atom-Feeds
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 **Wichtige APIs**
 
@@ -29,7 +28,7 @@ Ein Webfeed ist ein Dokument, das eine Reihe von Einzeleinträgen enthält, die 
 
 Die universelle Windows-Plattform (UWP) unterstützt das Abrufen von Feeds für RSS-Formatstandards von 0.91 bis RSS 2.0 sowie für Atom-Standards von 0.3 bis 1.0. Klassen im [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632)-Namespace können Feeds und Feedelemente definieren, die sowohl RSS- als auch Atom-Elemente darstellen können.
 
-Zudem können Feeddokumente in den Atom 1.0- und RSS 2.0-Formaten Elemente oder Attribute enthalten, die nicht in den offiziellen Spezifikationen definiert sind. Mit der Zeit haben sich diese benutzerdefinierten Elemente und Attribute zu einer Möglichkeit entwickelt, domänenspezifische Informationen zu definieren, die von anderen Webdienst-Datenformaten wie GData und OData genutzt werden. Zur Unterstützung dieses zusätzlichen Features stellt die [**SyndicationNode**](https://msdn.microsoft.com/library/windows/apps/br243585)-Klasse generische XML-Elemente dar. Durch die Verwendung von **SyndicationNode** mit Klassen im [**Windows.Data.Xml.Dom**](https://msdn.microsoft.com/library/windows/apps/br240819)-Namespace können Apps auf Attribute, Erweiterungen und beliebige verwendbare Inhalte zugreifen.
+Zudem können Feeddokumente in den Atom1.0- und RSS2.0-Formaten Elemente oder Attribute enthalten, die nicht in den offiziellen Spezifikationen definiert sind. Mit der Zeit haben sich diese benutzerdefinierten Elemente und Attribute zu einer Möglichkeit entwickelt, domänenspezifische Informationen zu definieren, die von anderen Webdienst-Datenformaten wie GData und OData genutzt werden. Zur Unterstützung dieses zusätzlichen Features stellt die [**SyndicationNode**](https://msdn.microsoft.com/library/windows/apps/br243585)-Klasse generische XML-Elemente dar. Durch die Verwendung von **SyndicationNode** mit Klassen im [**Windows.Data.Xml.Dom**](https://msdn.microsoft.com/library/windows/apps/br240819)-Namespace können Apps auf Attribute, Erweiterungen und beliebige verwendbare Inhalte zugreifen.
 
 Beachten Sie, dass die UWP-Implementierung des Atom Publication Protocol ([**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609)) für die Veröffentlichung der Inhalte von Fremdanbietern lediglich Feedinhaltsvorgänge gemäß den Standards Atom und Atom Publication unterstützt.
 
@@ -95,13 +94,13 @@ try {
 }
 ```
 
-Anschließend konfigurieren wir die Anforderung, indem wir alle erforderlichen Serveranmeldeinformationen (die [**ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243461)-Eigenschaft), Proxyanmeldeinformationen (die [**ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243459)-Eigenschaft) und HTTP-Header (die [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br243462)-Methode) festlegen. Da die grundlegenden Anforderungsparameter nun konfiguriert sind, haben wir ein gültiges, mit einer von der App bereitgestellten Feed-URI-Zeichenfolge erstelltes [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017)-Objekt. Das **Uri**-Objekt wird anschließend an die [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460)-Funktion übergeben, um den Feed anzufordern.
+[!div class="tabbedCodeSnippets"] Anschließend konfigurieren wir die Anforderung, indem wir alle Serveranmeldeinformationen (die [**ServerCredential**](https://msdn.microsoft.com/library/windows/apps/br243461)-Eigenschaft), Proxyanmeldeinformationen (die [**ProxyCredential**](https://msdn.microsoft.com/library/windows/apps/br243459)-Eigenschaft) und HTTP-Header (die [**SetRequestHeader**](https://msdn.microsoft.com/library/windows/apps/br243462)-Methode) festlegen. Da die grundlegenden Anforderungsparameter nun konfiguriert sind, haben wir ein gültiges, mit einer von der App bereitgestellten Feed-URI-Zeichenfolge erstelltes [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017)-Objekt.
 
-In der Annahme, dass die gewünschten Feedinhalte zurückgegeben wurden, durchläuft der Beispielcode jedes Feedelement, wobei er **displayCurrentItem** aufruft (was wir als Nächstes definieren), um Elemente und ihre Inhalte über die UI als Liste anzuzeigen.
+Das **Uri**-Objekt wird anschließend an die [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460)-Funktion übergeben, um den Feed anzufordern.
 
-Beim Aufrufen der meisten asynchronen Netzwerkmethoden müssen Sie Code zum Behandeln von Ausnahmen schreiben. Ihr Ausnahmehandler kann detailliertere Informationen zur Ursache abrufen, um die Ausnahme besser verstehen und entsprechende Entscheidungen treffen zu können.
+In der Annahme, dass die gewünschten Feedinhalte zurückgegeben wurden, durchläuft der Beispielcode jedes Feedelement, wobei er **displayCurrentItem** aufruft (was wir als Nächstes definieren), um Elemente und ihre Inhalte über die UI als Liste anzuzeigen. Beim Aufrufen der meisten asynchronen Netzwerkmethoden müssen Sie Code zum Behandeln von Ausnahmen schreiben.
 
-Die [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460)-Methode löst eine Ausnahme aus, wenn keine Verbindung mit dem HTTP-Server hergestellt werden kann oder wenn das [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017)-Objekt nicht auf einen gültigen AtomPub- oder RSS-Feed verweist. Im JavaScript-Beispielcode wird eine **onError**-Funktion verwendet, um etwaige Ausnahmen abzufangen und ausführlichere Informationen zur Ausnahme auszugeben, wenn ein Fehler auftritt.
+Ihr Ausnahmehandler kann detailliertere Informationen zur Ursache abrufen, um die Ausnahme besser verstehen und entsprechende Entscheidungen treffen zu können. Die [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460)-Methode löst eine Ausnahme aus, wenn keine Verbindung mit dem HTTP-Server hergestellt werden kann oder wenn das [**Uri**](https://msdn.microsoft.com/library/windows/apps/br226017)-Objekt nicht auf einen gültigen AtomPub- oder RSS-Feed verweist.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -170,7 +169,7 @@ function retreiveFeed(uri) {
 }
 ```
 
-Im vorherigen Schritt hat [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) die angeforderten Feedinhalte zurückgegeben, und der Beispielcode hat damit begonnen, die verfügbaren Feedelemente zu durchlaufen. Jedes dieser Elemente wird mithilfe eines [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533)-Objekts dargestellt, das alle vom jeweiligen Veröffentlichungsstandard (RSS oder Atom) bereitgestellten Eigenschaften und Inhalte des Elements enthält. Im folgenden Beispiel beobachten wir die **displayCurrentItem**-Funktion dabei, wie sie die einzelnen Elemente durchgeht und ihre Inhalte über verschiedene benannte UI-Elemente ausgibt.
+Im Javascript-Beispielcode wird eine **onError**-Funktion verwendet, um etwaige Ausnahmen abzufangen und ausführlichere Informationen zur Ausnahme auszugeben, wenn ein Fehler auftritt. [!div class="tabbedCodeSnippets"] Im vorherigen Schritt hat [**RetrieveFeedAsync**](https://msdn.microsoft.com/library/windows/apps/br243460) die angeforderten Feedinhalte zurückgegeben, und der Beispielcode hat damit begonnen, die verfügbaren Feedelemente zu durchlaufen.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -218,7 +217,7 @@ function displayCurrentItem() {
                 //displayCurrentItem is continued below.
 ```
 
-Wie bereits angesprochen, unterscheidet sich der Inhaltstyp, der durch ein [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533)-Objekt dargestellt wird, in Abhängigkeit vom Feedstandard (RSS oder Atom), der für die Veröffentlichung des Feeds genutzt wird. Im Gegensatz zu einem RSS-Feed kann ein Atom-Feed beispielsweise eine Liste mit [**Contributors**](https://msdn.microsoft.com/library/windows/apps/br243540)-Elementen bereitstellen. Auf Erweiterungselemente in einem Feedelement, die von keinem der Standards unterstützt werden (etwa Dublin Core-Erweiterungselemente), kann jedoch mithilfe der [**SyndicationItem.ElementExtensions**](https://msdn.microsoft.com/library/windows/apps/br243543)-Eigenschaft zugegriffen werden, um sie anschließend wie im folgenden Beispielcode dargestellt anzuzeigen:
+Jedes dieser Elemente wird mithilfe eines [**SyndicationItem**](https://msdn.microsoft.com/library/windows/apps/br243533)-Objekts dargestellt, das alle vom jeweiligen Veröffentlichungsstandard (RSS oder Atom) bereitgestellten Eigenschaften und Inhalte des Elements enthält. Im folgenden Beispiel beobachten wir die **displayCurrentItem**-Funktion dabei, wie sie die einzelnen Elemente durchgeht und ihre Inhalte über verschieden benannte UI-Elemente ausgibt. [!div class="tabbedCodeSnippets"]
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp

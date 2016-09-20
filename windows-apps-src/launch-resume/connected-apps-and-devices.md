@@ -1,29 +1,35 @@
 ---
 author: TylerMSFT
-title: Connected apps and devices
-description: This section describes how to discover connected devices, launch an app on another device, and communicate with an app on a remote device.
+title: "Verbundene Apps und Geräte (Project &quot;Rome&quot;)"
+description: "Dieser Abschnitt beschreibt, wie Sie mithilfe von Project &quot;Rome&quot; verbundene Geräte ermitteln, eine App auf einem anderen Gerät starten und mit einer App auf einem Remotegerät kommunizieren."
+translationtype: Human Translation
+ms.sourcegitcommit: ff8e16d0e376d502157ae42b9cdae11875008554
+ms.openlocfilehash: 4f49acfd7efcb10d99f9d23884d20c0fc51e5a4a
+
 ---
 
-# Connected apps and devices
+# Verbundene Apps und Geräte (Project "Rome")
 
-This section explains how to connect apps across devices and platforms. Learn how to discover connected devices, launch an app on another device, and communicate with an app on a remote device.
+In diesem Abschnitt wird erläutert, wie Apps mithilfe von Project "Rome" geräte- und plattformübergreifend verbunden werden. Erfahren Sie, wie Sie verbundene Geräte erkennen, eine App auf einem anderen Gerät starten und mit einer App auf einem Remotegerät kommunizieren.
 
-Most people have multiple devices, and often begin an activity on one device and finish it on another. To accommodate this, apps need to span devices and platforms.
+Die meisten Benutzer verfügen über mehrere Geräte, wobei sie häufig eine Aktivität auf einem Gerät beginnen und sie auf einem anderen Gerät abschließen. Dazu müssen Apps geräte- und plattformübergreifend sein.
 
-The [Remote Systems APIs](https://msdn.microsoft.com/en-us/library/windows/apps/Windows.System.RemoteSystems)
-introduced in Windows 10, version 1607, enable you to write apps that allow users to start a task on one device and finish it on another. The task remains the central focus, and users can do their work on the device that is most convenient. For example, you might be listening to the radio on your phone in the car, but when you get home you may want to transfer playback to your Xbox One that is hooked up to your home stereo system.
+Die mit Windows 10, Version 1607, eingeführten [Remotesysteme-APIs](https://msdn.microsoft.com/en-us/library/windows/apps/Windows.System.RemoteSystems) ermöglichen es Ihnen, Apps zu schreiben, mit denen Benutzer eine Aufgabe auf einem Gerät starten und auf einem anderen Gerät abschließen können. Die Aufgabe bleibt der zentrale Fokus, und Benutzer können an dem für sie komfortabelsten Gerät arbeiten. Zum Beispiel hören Sie im Auto vielleicht Radio auf Ihrem Mobiltelefon. Aber zu Hause angekommen möchten Sie möglicherweise die Wiedergabe auf Ihre Xbox One übertragen, die in Ihre Heim-Stereoanlage eingebunden ist.
 
-You can also use connected apps and devices for companion devices, or remote control scenarios. Use the app messaging APIs to create an app channel between two devices to send and receive custom messages. For example, you can write an app for your phone that controls playback on your TV, or a companion app that provides information about the characters on a TV show you are watching on another app.  
+Sie können Project "Rome" auch für Begleitgeräte oder Remotesteuerungsszenarien verwenden. Verwenden Sie die App-Messaging-APIs, um einen App-Kanal zwischen zwei Geräten zum Senden und Empfangen von benutzerdefinierten Nachrichten zu erstellen. Beispielsweise können Sie eine App für Ihr Mobiltelefon schreiben, die die Wiedergabe auf Ihrem Fernsehgerät steuert, oder eine Begleit-App, die Informationen über die Charaktere in einer Fernsehsendung bereitstellt, die Sie sich auf einer anderen App ansehen.  
 
-Devices can be connected proximally through Bluetooth and wireless, or remotely through the cloud, and are connected by the Microsoft account of the person using them.
+Geräte können über Bluetooth und Wireless LAN proximal verbunden werden, oder remote über die Cloud, und sind über das Microsoft-Konto der Person verbunden, die sie verwendet.
 
-See the [Remote Systems sample](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems ) for examples of how to discover remote system, launch an app on a remote system, and use app services to send messages between apps running on two systems.  
+Unter [Beispiel für Remotesysteme](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems ) finden Sie Beispiele für die Vorgehensweise zum Erkennen eines Remotesystems, Starten einer App auf einem Remotesystem und Verwenden von App-Diensten zum Senden von Nachrichten zwischen Apps, die auf zwei Systemen ausgeführt werden.
 
-
-Install the Connected Apps and Devices SDK to enable remote experiences on iOS and Android devices.
-
-| Remote activity | Description                                                                                                                                                                |
+| Remote-Aktivität | Beschreibung                                                                                                                                                                |
 |-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Discover remote devices](discover-connected-devices.md)  | Learn how to discover devices that you can connect to. |
-| [Launch an app on a remote device](launch-a-remote-app.md) | Learn how to launch an app on a remote device.  |
-| [Communicate with a remote app service](communicate-with-a-remote-app-service.md) | Learn how to interact with an app on a remote device. |
+| [Ermitteln von Remotegeräten](discover-remote-devices.md)  | Erfahren Sie, wie Sie Geräte erkennen, zu denen Sie eine Verbindung herstellen können. |
+| [Starten einer App auf einem Remotegerät](launch-a-remote-app.md) | Erfahren Sie, wie Sie eine App auf einem Remotegerät starten.  |
+| [Kommunikation mit einem App-Remotedienst](communicate-with-a-remote-app-service.md) | Erfahren Sie, wie Sie mit einer App auf einem Remotegerät interagieren. |
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

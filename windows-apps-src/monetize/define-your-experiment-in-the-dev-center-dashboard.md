@@ -3,7 +3,6 @@ author: mcleanbyron
 Description: "Vor dem Ausführen eines Experiments in Ihrer Universellen Windows-Plattform(UWP)-App mit A/B-Test müssen Sie Ihr Experiment im Dev Center-Dashboard definieren."
 title: Definieren des Experiments im Dev Center-Dashboard
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 7462c23de58b44f897a1737d0d54913144b14f75
 
@@ -38,7 +37,8 @@ Erstellen Sie als Nächstes ein neues Experiment und definieren Sie die Ziele f�
 4. Wenn Sie ein Testexperiment erstellen möchten, klicken Sie auf das Kontrollkästchen **Testexperiment**. Der Unterschied zwischen Testexperimenten und regulären Experimenten liegt darin, dass nur Testexperimente nach erfolgter Aktivierung noch geändert werden können.
 
   Testexperimente sollen Ihnen dabei helfen, alle Variationen auf einem Client-Gerät zu testen, bevor Sie Ihr Experiment für Kunden freigeben. Um sicherzustellen, dass eine Variante erwartungsgemäß auf Clients bereitgestellt wird, können Sie ein Testexperiment mit 100 % Verteilung für eine Variante und 0 % für andere Varianten aktivieren. Nachdem Sie diese Variante überprüft haben, können Sie den Prozess für andere Varianten wiederholen.
-  > **Hinweis**  Überprüfen Sie dieses Kontrollkästchen nur, wenn Sie ein Testexperiment zum Überprüfen von Parametern über interne Tests erstellen. Aktivieren Sie dieses Kontrollkästchen nicht, wenn Sie eine Experiment erstellen, das Sie an Kunden freigegeben werden.
+  > 
+            **Hinweis**  Überprüfen Sie dieses Kontrollkästchen nur, wenn Sie ein Testexperiment zum Überprüfen von Parametern über interne Tests erstellen. Aktivieren Sie dieses Kontrollkästchen nicht, wenn Sie eine Experiment erstellen, das Sie an Kunden freigegeben werden.
 
 5. Geben Sie im Feld **Ereignisnamen anzeigen** den Namen des *Anzeigeereignisses* für Ihr Experiment ein. Das Anzeigeereignis ist eine beliebige Zeichenfolge, die eine Aktivität darstellt, wenn der Benutzer beginnt, eine Variante anzusehen, die Teil Ihres Experiments ist. Der App-Code sendet die Zeichenfolge des Anzeigeereignisses an Dev Center, wenn der Benutzer beginnt, eine Variante anzusehen. Weitere Informationen finden Sie unter [Code Ihrer App für Experimente](code-your-experiment-in-your-app.md).
 6. Definieren Sie im Abschnitt **Ziele und Umwandlungsereignisse** mindestens ein Ziel für Ihr Experiment:
@@ -46,7 +46,8 @@ Erstellen Sie als Nächstes ein neues Experiment und definieren Sie die Ziele f�
   * Geben Sie im Feld **Ereignisnamenumwandlung** den Namen des *Umwandlungsereignisses* für dieses Ziel ein. Eine Ereignisumwandlung ist eine beliebige Zeichenfolge, die ein Ziel für dieses Ziel darstellt. Ihr App-Code sendet diese Umwandlungsereignis-Zeichenfolge an Dev Center, wenn der Benutzer ein Ziel erreicht. Weitere Informationen finden Sie unter [Code Ihrer App für Experimente](code-your-experiment-in-your-app.md).
   * Wählen Sie im Feld **Ziel** **Maximieren** oder **Minimieren**aus, je nachdem, ob Sie das Vorkommen des Umwandlungsereignisses maximieren oder minimieren möchten. Diese Informationen werden in der Ergebniszusammenfassung des Experiments verwendet.
 
-  >**Hinweis** Dev Center meldet nur das erste Umwandlungsereignis für jede Benutzeransicht innerhalb eines Zeitraums von 24 Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer verfälscht werden, wenn das Ziel darin besteht, die Anzahl der Benutzer zu maximieren, die eine Umwandlung durchführen.
+  >
+            **Hinweis** Dev Center meldet nur das erste Umwandlungsereignis für jede Benutzeransicht innerhalb eines Zeitraums von 24Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer verfälscht werden, wenn das Ziel darin besteht, die Anzahl der Benutzer zu maximieren, die eine Umwandlung durchführen.
 
 ## Definieren Sie die Varianten und Einstellungen für das Experiment
 
@@ -64,17 +65,21 @@ Definition der Varianten und Standardeinstellungen für Ihr Experiment:
 
 Wenn Sie die Eingabe in die erforderlichen Felder für Ihr Experiment abgeschlossen haben, klicken Sie auf **Speichern**, um Ihr Experiment zu speichern.
 
-> **Wichtig** Nach dem Speichern eines Experiments können Sie den API-Schlüssel für das Experiment nicht mehr ändern, auch wenn Sie das Experiment noch nicht aktiviert haben.
+> 
+            **Wichtig** Nach dem Speichern eines Experiments können Sie den API-Schlüssel für das Experiment nicht mehr ändern, auch wenn Sie das Experiment noch nicht aktiviert haben.
 
 Wenn Sie mit den Parametern für Ihr Experiment zufrieden sind Sie bereit sind, es zu aktivieren, damit Sie mit der Datenerfassung von Ihrer App beginnen können, klicken Sie auf **Aktivieren**. Wenn das Experiment aktiv ist, kann Ihre App Variationseinstellungen abrufen und Anzeige- und Umwandlungsereignisse im Dev Center melden.
 
-> **Wichtig** Nach der Aktivierung eines Experiments können Sie die Experimentparameter nicht mehr ändern, sofern es sich nicht um ein Testexperiment handelt (d. h. Sie haben beim Erstellen des Experiments das Kontrollkästchen **Testexperiment** aktiviert). Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
+> 
+            **Wichtig** Nach der Aktivierung eines Experiments können Sie die Experimentparameter nicht mehr ändern, sofern es sich nicht um ein Testexperiment handelt (d. h. Sie haben beim Erstellen des Experiments das Kontrollkästchen **Testexperiment** aktiviert). Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
 
 ## Nächste Schritte
 
 Nachdem Sie Ihr Experiment im Dev Center-Dashboard definiert haben, sind Sie bereit für die folgenden Schritte:
-1. [Codieren Sie Ihre App für das Experiment](code-your-experiment-in-your-app.md). Verwenden Sie eine API im Microsoft Store Engagement and Monetization SDK, um Varianteneinstellungen für das Experiment abzurufen, ändern Sie mit diesen Daten das Verhalten des getesteten Features, und senden Sie das Anzeigeereignis und die Umwandlungsereignisse an Dev Center.
-2. [Führen Sie das Experiment im Dev Center-Dashboard aus, und verwalten Sie es](manage-your-experiment.md). Im Dashboard können Sie die Ergebnisse des Experiments überprüfen und das Experiment abschließen.
+1. 
+            [Codieren Sie Ihre App für das Experiment](code-your-experiment-in-your-app.md). Verwenden Sie eine API im Microsoft Store Engagement and Monetization SDK, um Varianteneinstellungen für das Experiment abzurufen, ändern Sie mit diesen Daten das Verhalten des getesteten Features, und senden Sie das Anzeigeereignis und die Umwandlungsereignisse an Dev Center.
+2. 
+            [Führen Sie das Experiment im Dev Center-Dashboard aus, und verwalten Sie es](manage-your-experiment.md). Im Dashboard können Sie die Ergebnisse des Experiments überprüfen und das Experiment abschließen.
 
 ## Verwandte Themen
 

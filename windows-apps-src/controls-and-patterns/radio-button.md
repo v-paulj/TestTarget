@@ -5,7 +5,6 @@ title: "Richtlinien für Optionsfelder"
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: 317df548e72f9aff475ba0959668b6441ac29d3d
 
@@ -58,7 +57,8 @@ Optionsfelder funktionieren in Gruppen. Es gibt zwei Arten zur Gruppierung von O
 - Platzieren Sie sie im gleichen übergeordneten Container.
 - Legen Sie die [**GroupName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.radiobutton.groupname.aspx)-Eigenschaft für jedes Optionsfeld auf denselben Wert fest.
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;Eine Gruppe von Optionsfeldern verhält sich wie ein einzelnes Steuerelement, wenn der Zugriff darauf über die Tastatur erfolgt. Der Benutzer kann mit der TAB-TASTE nur auf die jeweils ausgewählte Option zugreifen, mithilfe der Pfeiltasten kann der Benutzer jedoch in der Gruppe navigieren.
 
 In diesem Beispiel wird die erste Gruppe von Optionsfeldern implizit gruppiert, da die Felder im selben StackPanel-Element enthalten sind. Die zweite Gruppe ist auf zwei StackPanel-Elemente aufgeteilt, damit sie explizit nach GroupName gruppiert werden.
@@ -160,7 +160,7 @@ Ein Optionsfeld hat zwei Zustände: *aktiviert* und *deaktiviert*. Wenn ein Opti
 -   Verwenden Sie die standardmäßige Schriftart, es sei denn, Sie müssen gemäß Ihren Markenrichtlinien eine andere verwenden.
 -   Schließen Sie das Optionsfeld in ein Bezeichnungselement ein, sodass das Optionsfeld durch Tippen auf die Bezeichnung ausgewählt wird.
 -   Platzieren Sie den Bezeichnungstext hinter dem Optionsfeldsteuerelement und nicht davor oder darüber.
--   Ziehen Sie in Erwägung, Ihre Schaltflächen anzupassen. Standardmäßig besteht ein Optionsfeld aus zwei konzentrischen Kreisen – der innere ist ausgefüllt (und wird gezeigt, wenn das Optionsfeld aktiviert wird), und der äußere ist gestrichelt – und einigem Textinhalt. Wir ermutigen Sie jedoch, kreativ zu sein. Benutzer mögen es, direkt mit dem Inhalt einer App zu interagieren. Daher können Sie auswählen, den tatsächlichen Inhalt als Angebot anzuzeigen, unabhängig davon, ob er mit Grafiken oder als unauffälliger Textumschalter präsentiert wird.
+-   Ziehen Sie in Erwägung, Ihre Schaltflächen anzupassen. Standardmäßig besteht ein Optionsfeld aus zwei konzentrischen Kreisen– der innere ist ausgefüllt (und wird gezeigt, wenn das Optionsfeld aktiviert wird), und der äußere ist gestrichelt– und einigem Textinhalt. Wir ermutigen Sie jedoch, kreativ zu sein. Benutzer mögen es, direkt mit dem Inhalt einer App zu interagieren. Daher können Sie auswählen, den tatsächlichen Inhalt als Angebot anzuzeigen, unabhängig davon, ob er mit Grafiken oder als unauffälliger Textumschalter präsentiert wird.
 -   Eine Optionsfeldgruppe sollte nicht mehr als acht Optionen beinhalten. Wenn Sie mehr Optionen verwenden müssen, verwenden Sie stattdessen eine [Dropdownliste](lists.md), ein [Listenfeld](lists.md)oder eine [Listenansicht](lists.md).
 -   Zwei Optionsfeldgruppen sollten nicht direkt nebeneinander platziert werden. Wenn sich zwei Optionsfeldgruppen direkt nebeneinander befinden, ist es schwierig, festzustellen, welche Schaltflächen zu welcher Gruppe gehören. Verwenden Sie Gruppenbeschriftungen, um sie zu trennen.
 

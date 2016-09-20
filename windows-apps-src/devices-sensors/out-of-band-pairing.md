@@ -3,7 +3,6 @@ author: IvorB
 ms.assetid: E9ADC88F-BD4F-4721-8893-0E19EA94C8BA
 title: Out-of-Band-Kopplung
 description: "Mithilfe der Out-of-Band-Kopplung können Apps ohne Geräteermittlung eine Verbindung mit einem POS-Peripheriegerät (Point-of-Service) herstellen."
-translationtype: Human Translation
 ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
 ms.openlocfilehash: d8d37b779a0f9a4bec36d73fcd2d35272c587b11
 
@@ -23,13 +22,17 @@ Mithilfe der Out-of-Band-Kopplung können Apps ohne Geräteermittlung eine Verbi
     "providerName":"PrinterProtocolProvider.dll"
 ```
 
-**connectionKind** – die Art der Verbindung. Gültige Werte sind „Network“ und „Bluetooth“.
 
-**physicalAddress** – die MAC-Adresse des Peripheriegeräts. Bei einem Netzwerkdrucker wäre dies z. B. die MAC-Adresse, die vom Testblatt des Druckers im Format AA:BB:CC:DD:EE:FF bereitgestellt wird.
+            **connectionKind** – die Art der Verbindung. Gültige Werte sind „Network“ und „Bluetooth“.
 
-**connectionString** – die Verbindungszeichenfolge des Peripheriegeräts. Bei einem Netzwerkdrucker wäre dies z. B. die auf dem Testblatt im Format 192.168.1.1:9001 ausgegebene IP-Adresse. Dieses Feld wird bei allen Bluetooth-Peripheriegeräten weggelassen.
 
-**peripheralKinds** – Die GUID für den Gerätetyp. Gültige Werte sind:
+            **physicalAddress** – die MAC-Adresse des Peripheriegeräts. Bei einem Netzwerkdrucker wäre dies z.B. die MAC-Adresse, die vom Testblatt des Druckers im Format AA:BB:CC:DD:EE:FF bereitgestellt wird.
+
+
+            **connectionString** – die Verbindungszeichenfolge des Peripheriegeräts. Bei einem Netzwerkdrucker wäre dies z. B. die auf dem Testblatt im Format 192.168.1.1:9001 ausgegebene IP-Adresse. Dieses Feld wird bei allen Bluetooth-Peripheriegeräten weggelassen.
+
+
+            **peripheralKinds** – Die GUID für den Gerätetyp. Gültige Werte sind:
 
 | Gerätetyp | GUID |
 | ---- | ---- |
@@ -38,7 +41,8 @@ Mithilfe der Out-of-Band-Kopplung können Apps ohne Geräteermittlung eine Verbi
 | *Kassenschublade* | 772E18F2-8925-4229-A5AC-6453CB482FDA |
 
 
-**providerId** – die GUID für die Protokollanbieterklasse. Gültige Werte sind:
+
+            **providerId** – die GUID für die Protokollanbieterklasse. Gültige Werte sind:
 
 | Protokollanbieterklasse | GUID |
 | ---- | ---- |
@@ -52,7 +56,8 @@ Mithilfe der Out-of-Band-Kopplung können Apps ohne Geräteermittlung eine Verbi
 | *APG-Bluetooth-Schublade* | 332E6550-2E01-42EB-9401-C6A112D80185 |
 
 
-**providerName** – die DLL mit dem Namen des Anbieters. Die Standardanbieter sind:
+
+            **providerName** – die DLL mit dem Namen des Anbieters. Die Standardanbieter sind:
 
 | Anbieter | DLL-Name |
 | ---- | ---- |

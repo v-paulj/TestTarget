@@ -3,7 +3,6 @@ author: jnHs
 Description: "Sie können für Ihre Apps detaillierte Analysen im Windows Dev Center-Dashboard anzeigen."
 title: Analyse
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
-translationtype: Human Translation
 ms.sourcegitcommit: dfaf348956b19746aa5332aeb7ad5cbc4b224e8c
 ms.openlocfilehash: 8922a53da8b1bc97bef7faf49d0e412a26127188
 
@@ -13,7 +12,8 @@ ms.openlocfilehash: 8922a53da8b1bc97bef7faf49d0e412a26127188
 
 Sie können für Ihre Apps detaillierte Analysen im Windows Dev Center-Dashboard anzeigen. Statistiken und Diagramme geben Aufschluss über den Erfolg Ihrer Apps, z. B. wie viele Kunden Sie erreichen, wie die Kunden Ihre App einsetzen und was die Kunden über die App denken. Außerdem finden Sie dort Informationen zur App-Integrität, Anzeigennutzung und vieles mehr. Zeigen Sie die Berichte im Dashboard an, oder [laden Sie die erforderlichen Berichte herunter](download-analytic-reports.md), um Ihre Daten offline zu analysieren. Wir stellen Ihnen auch verschiedene Möglichkeiten für den [Zugriff auf Analysedaten ohne das Dashboard](#no-dashboard) zur Verfügung.
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;Zusätzlich zu den Dashboardberichten können Sie auf einige Analysedaten auch programmgesteuert mithilfe der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) zugreifen.
 
 ## Analysen für Ihre gesamten Apps
@@ -40,7 +40,8 @@ In diesem Abschnitt erhalten Sie Details zu den Informationen, die in den folgen
 -   [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md)
 -   [Bericht zu Kanälen und Konvertierungen](channels-and-conversions-report.md)
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;Abhängig von den spezifischen Features und der Implementierung Ihrer App enthalten einige dieser Berichte möglicherweise keine Daten.
 
 ## Seitenfilter und Abschnittsfilter
@@ -70,10 +71,11 @@ Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zu
 * [Informationen zum Verwenden von Power BI](https://powerbi.microsoft.com/guided-learning/)
 * [Informationen zum Einsetzen des Windows Dev Center-Inhaltspakets für Power BI, um eine Verbindung zu Ihren Analysedaten herzustellen](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;Für die Verbindung zum Windows Dev Center-Inhaltspaket für Power BI sollten Sie Anmeldeinformationen aus einem Azure AD-Verzeichnis angeben, das mit Ihrem Dev Center-Konto verknüpft ist. Wenn Sie die Anmeldeinformationen Ihres Microsoft-Kontos verwenden, werden Ihre Analysedaten in Power BI nicht automatisch aktualisiert. Für eine Aktualisierung müssen Sie sich dann in Power BI anmelden. Wenn in Ihrer Organisation bereits mit Office 365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie es [kostenlos abrufen](http://go.microsoft.com/fwlink/p/?LinkId=703757). Weitere Informationen zur Verknüpfung Ihres Dev Center-Kontos mit Azure AD finden Sie unter [Kontobenutzer verwalten](manage-account-users.md).
 
-### Dev Center-App
+### DevCenter-App
 
 Installieren Sie die [Dev Center](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)-App, um schnell Details über den Zustand und die Leistung Ihrer Apps auf Windows 10-Geräten anzuzeigen. 
 

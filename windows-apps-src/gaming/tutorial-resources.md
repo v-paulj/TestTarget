@@ -5,7 +5,6 @@ description: "Herzlichen Glückwunsch! Sie sind nun mit den Schlüsselkomponente
 ms.assetid: a1432c45-569e-7ecd-4098-f5ad6da9327e
 keywords:
 - DirectX, XAML
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: 02b8681c45c84e1cdd5b97dfc717a68015df1252
 
@@ -14,18 +13,18 @@ ms.openlocfilehash: 02b8681c45c84e1cdd5b97dfc717a68015df1252
 # Erweitern des Spielbeispiels
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Herzlichen Glückwunsch! Sie sind nun mit den Schlüsselkomponenten eines einfachen dreidimensionalen DirectX-Spiels für die universelle Windows-Plattform (UWP) vertraut. Sie können das Framework für ein Spiel (einschließlich Ansichtsanbieter und Rendering-Pipeline) einrichten und eine einfache Spielschleife implementieren. Zudem können Sie ein einfaches Benutzeroberflächenoverlay erstellen und Soundeffekte und Steuerelemente einbauen. Damit sind Sie der Erstellung eines eigenen Spiels einen großen Schritt näher gekommen. Hier finden Sie einige Ressourcen, um Ihre Kenntnisse im Bereich der DirectX-Spieleentwicklung weiter zu vertiefen.
 
 -   [DirectX-Grafik und -Spiele](https://msdn.microsoft.com/library/windows/desktop/ee663274)
--   [Übersicht über Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
--   [Referenz für Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476147)
+-   [Übersicht über Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
+-   [Referenz für Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476147)
 
 ## Erweitern des Spielbeispiels: Verwenden von XAML für das Overlay
 
 
-Eine Alternative, auf die wir noch nicht näher eingegangen sind, ist die Verwendung von XAML anstelle von Direct2D für das Overlay. Beim Zeichnen von UI-Elementen hat XAML gegenüber Direct2D viele Vorteile. Der wichtigste: Das Windows 10-Erscheinungsbild lässt sich komfortabler in Ihr DirectX-Spiel integrieren. Viele der allgemeinen Elemente, Stile und Verhalten, die eine UWP-App ausmachen, sind eng in das XAML-Modell integriert und ersparen einem Spieleentwickler eine Menge Arbeit bei der Implementierung. Falls Ihr eigenes Spieldesign eine komplizierte Benutzeroberfläche hat, empfiehlt sich unter Umständen die Verwendung von XAML anstelle von Direct2D.
+Eine Alternative, auf die wir noch nicht näher eingegangen sind, ist die Verwendung von XAML anstelle von Direct2D für das Overlay. Beim Zeichnen von UI-Elementen hat XAML gegenüber Direct2D viele Vorteile. Der wichtigste: Das Windows10-Erscheinungsbild lässt sich komfortabler in Ihr DirectX-Spiel integrieren. Viele der allgemeinen Elemente, Stile und Verhalten, die eine UWP-App ausmachen, sind eng in das XAML-Modell integriert und ersparen einem Spieleentwickler eine Menge Arbeit bei der Implementierung. Falls Ihr eigenes Spieldesign eine komplizierte Benutzeroberfläche hat, empfiehlt sich unter Umständen die Verwendung von XAML anstelle von Direct2D.
 
 Welche Unterschiede bestehen also zwischen der Direct2D-Implementierung einer Benutzeroberfläche und der Implementierung der gleichen Benutzeroberfläche mit XAML?
 
@@ -194,7 +193,7 @@ Weitere Informationen zu diesem Prozess finden Sie unter [Interoperabilität von
 ## Vollständiger Code für die XAML-CodeBehinds des XAML-Spielbeispiels
 
 
-Hier sehen Sie den vollständigen Code für die CodeBehinds in der XAML-Version des Beispielshooters mit Direct3D 11.1.
+Hier sehen Sie den vollständigen Code für die CodeBehinds in der XAML-Version des Beispielshooters mit Direct3D11.1.
 
 (Im Gegensatz zur in den anderen Themen behandelten Version des Spielbeispiels definiert die XAML-Version ihr Framework nicht in den Dateien **DirectXApp.cpp** und **GameInfoOverlay.cpp**, sondern in den Dateien **App.xaml.cpp** und **MainPage.xaml.cpp**.)
 

@@ -3,7 +3,6 @@ author: PatrickFarley
 title: 3D-Drucken in der App
 description: "Erfahren Sie, wie Sie Ihrer universellen Windows-App 3D-Druckfunktionen hinzufügen. In diesem Thema wird erläutert, wie das 3D-Drucken-Dialogfeld aufgerufen wird, nachdem Sie sich vergewissert haben, dass das 3D-Modell gedruckt werden kann und im richtigen Format vorliegt."
 ms.assetid: D78C4867-4B44-4B58-A82F-EDA59822119C
-translationtype: Human Translation
 ms.sourcegitcommit: 61d9f5c1fca1ad2e26f052b901361813975ae357
 ms.openlocfilehash: e68a9c681974152bc0d4dfa58e824f80e77dc51f
 
@@ -12,14 +11,14 @@ ms.openlocfilehash: e68a9c681974152bc0d4dfa58e824f80e77dc51f
 # 3D-Drucken in der App
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
 
 -   [**Windows.Graphics.Printing3D**](https://msdn.microsoft.com/library/windows/apps/dn998169)
 
-Erfahren Sie, wie Sie Ihrer Universellen Windows-App 3D-Druckfunktionen hinzufügen. In diesem Thema wird erläutert, wie Sie 3D-Geometriedaten in Ihre App laden und das 3D-Druckdialogfeld starten, nachdem Sie sichergestellt haben, dass Ihr 3D-Modell druckbar ist und das richtige Format hat. Ein Beispiel wie dieses Verfahren in Aktion funktioniert, finden Sie unter [Beispiel für 3D-Druck – UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting).
+Erfahren Sie, wie Sie Ihrer Universellen Windows-App 3D-Druckfunktionen hinzufügen. In diesem Thema wird erläutert, wie Sie 3D-Geometriedaten in Ihre App laden und das 3D-Druckdialogfeld starten, nachdem Sie sichergestellt haben, dass Ihr 3D-Modell druckbar ist und das richtige Format hat. Ein Beispiel wie dieses Verfahren in Aktion funktioniert, finden Sie unter [Beispiel für 3D-Druck– UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting).
 
 ## Einrichten von Klassen
 
@@ -60,11 +59,13 @@ Laden Sie in der `OnLoadClick`-Methode mit der [FileOpenPicker](https://msdn.mic
 
 An dieser Stelle können Sie eine 3D-Datendatei in den Speicher der App laden. 3D-Geometriedaten liegen jedoch in den unterschiedlichsten Formaten vor, und hinsichtlich des 3D-Drucks sind nicht alle effizient. In Windows 10 wird der 3MF-Dateityp (3D Manufacturing Format) für alle 3D-Druckaufgaben verwendet.
 
-> **Hinweis**  Der 3MF-Dateityp unterstützt eine Vielzahl von Funktionen, die in dieser Anleitung nicht behandelt werden. Weitere Informationen zu 3MF und den Features des Formats für Hersteller und Verbraucher von 3D-Produkten finden Sie in der [3MF-Spezifikation](http://3mf.io/what-is-3mf/3mf-specification/). Wie Sie diese Features mithilfe von Windows 10-APIs nutzen, finden Sie im Lernprogramm [Generieren ein 3MF-Pakets](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf).
+> 
+            **Hinweis**  Der 3MF-Dateityp unterstützt eine Vielzahl von Funktionen, die in dieser Anleitung nicht behandelt werden. Weitere Informationen zu 3MF und den Features des Formats für Hersteller und Verbraucher von 3D-Produkten finden Sie in der [3MF-Spezifikation](http://3mf.io/what-is-3mf/3mf-specification/). Wie Sie diese Features mithilfe von Windows 10-APIs nutzen, finden Sie im Lernprogramm [Generieren ein 3MF-Pakets](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf).
 
 Glücklicherweise kann die [3D Builder](https://www.microsoft.com/store/apps/3d-builder/9wzdncrfj3t6)-App Dateien der gängigsten 3D-Formate öffnen und diese als 3MF-Dateien speichern. In diesem Beispiel mit variierendem Dateityp besteht eine sehr einfache Lösung darin, dass 3D Builder geöffnet und der Benutzer aufgefordert wird, die importierten Daten als 3MF-Datei zu speichern und anschließend neu zu laden.
 
-> **Hinweis**  Neben dem Konvertieren von Dateiformaten bietet **3D Builder** einfache Tools zum Bearbeiten von Modellen, Hinzufügen von Farbdaten und Ausführen anderer druckspezifischer Vorgänge. Daher empfiehlt sich häufig die Integration in App, mit der 3D-Druckvorgänge ausgeführt werden sollen.
+> 
+            **Hinweis**  Neben dem Konvertieren von Dateiformaten bietet **3D Builder** einfache Tools zum Bearbeiten von Modellen, Hinzufügen von Farbdaten und Ausführen anderer druckspezifischer Vorgänge. Daher empfiehlt sich häufig die Integration in App, mit der 3D-Druckvorgänge ausgeführt werden sollen.
 
 [!code-cs[FileCheck](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetFileCheck)]
 
@@ -89,9 +90,11 @@ Später, wenn das 3D-Druckdialogfeld für den Benutzer angezeigt wird und dieser
 
 Der grundlegende Zweck dieser Methode besteht darin, mit dem *args*-Objekt ein **Printing3D3MFPackage** entlang der Pipeline zu senden. Der **Print3DTaskRequestedEventArgs**-Typ verfügt über eine Eigenschaft: **Request**. Diese ist vom Typ [Print3DTaskRequest](https://msdn.microsoft.com/library/windows/apps/dn998050) und stellt eine Druckauftrag-Anforderung dar. Die zugehörige Methode **CreateTask** ermöglicht es dem Programm, die richtigen Informationen für den Druckauftrag zu senden. Es wird ein Verweis auf das [Print3DTask](https://msdn.microsoft.com/library/windows/apps/dn998044)-Objekt zurückgegeben, der an die 3D-Druckpipeline gesendet wird.
 
-**CreateTask** weist die folgenden Eingabeparameter auf: einen **string** für den Namen des Druckauftrags, einen **string** für die ID des zu verwendenden Druckers sowie einen **Print3DTaskSourceRequestedHandler**-Delegaten. Der Delegat wird automatisch aufgerufen, wenn das **3DTaskSourceRequested**-Ereignis ausgelöst wird (dies erfolgt durch die API selbst). Zu beachten ist unbedingt, dass dieser Delegat beim Initiieren eines Druckauftrags aufgerufen wird. Er ist dafür zuständig, das richtige 3D-Druckpaket bereitzustellen.
 
-**Print3DTaskSourceRequestedHandler** akzeptiert einen Parameter, ein [Print3DTaskSourceRequestedArgs](https://msdn.microsoft.com/library/windows/apps/dn998056)-Objekt, das die zu sendenden Daten angibt. Die öffentliche Methode dieser Klasse, **SetSource**, akzeptiert das zu druckende Paket. Implementieren Sie einen **Print3DTaskSourceRequestedHandler**-Delegaten wie folgt:
+            **CreateTask** weist die folgenden Eingabeparameter auf: einen **string** für den Namen des Druckauftrags, einen **string** für die ID des zu verwendenden Druckers sowie einen **Print3DTaskSourceRequestedHandler**-Delegaten. Der Delegat wird automatisch aufgerufen, wenn das **3DTaskSourceRequested**-Ereignis ausgelöst wird (dies erfolgt durch die API selbst). Zu beachten ist unbedingt, dass dieser Delegat beim Initiieren eines Druckauftrags aufgerufen wird. Er ist dafür zuständig, das richtige 3D-Druckpaket bereitzustellen.
+
+
+            **Print3DTaskSourceRequestedHandler** akzeptiert einen Parameter, ein [Print3DTaskSourceRequestedArgs](https://msdn.microsoft.com/library/windows/apps/dn998056)-Objekt, das die zu sendenden Daten angibt. Die öffentliche Methode dieser Klasse, **SetSource**, akzeptiert das zu druckende Paket. Implementieren Sie einen **Print3DTaskSourceRequestedHandler**-Delegaten wie folgt:
 
 [!code-cs[SourceHandler](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetSourceHandler)]
 
@@ -103,7 +106,8 @@ Der zurückgegebene **Print3DTask** wird der Klassenvariablen zugewiesen, die zu
 
 [!code-cs[Optional](./code/3dprinthowto/cs/MainPage.xaml.cs#SnippetOptional)]
 
-> **Hinweis**  Sie müssen eine `Task_Submitting`-Methode und eine `Task_Completed`-Methode implementieren, wenn Sie sie für diese Ereignisse registrieren möchten.
+> 
+            **Hinweis**  Sie müssen eine `Task_Submitting`-Methode und eine `Task_Completed`-Methode implementieren, wenn Sie sie für diese Ereignisse registrieren möchten.
 
 ## Ausführen des Druckvorgangs: Öffnen des Dialogfelds für den 3D-Druck
 
@@ -124,7 +128,7 @@ Schließlich empfiehlt es sich, die Registrierung der Ereignishandler aufzuheben
 
 [Generieren eines 3MF-Pakets](https://msdn.microsoft.com/windows/uwp/devices-sensors/generate-3mf)
 
-[Beispiel für 3D-Druck – UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
+[Beispiel für 3D-Druck– UWP](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
  
 
  

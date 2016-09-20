@@ -3,7 +3,6 @@ title: Datenschutz
 description: "In diesem Artikel wird erläutert, wie Sie mithilfe der DataProtectionProvider-Klasse im Windows.Security.Cryptography.DataProtection-Namespace digitale Daten in einer UWP-App verschlüsseln und entschlüsseln können."
 ms.assetid: 9EE3CC45-5C44-4196-BD8B-1D64EFC5C509
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
 ms.openlocfilehash: 958d5dd1c5f61078a0b288d53debe93875d65f06
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 958d5dd1c5f61078a0b288d53debe93875d65f06
 # Datenschutz
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Artikel wird erläutert, wie Sie mithilfe der [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559)-Klasse im [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585)-Namespace digitale Daten in einer UWP-App verschlüsseln und entschlüsseln können.
 

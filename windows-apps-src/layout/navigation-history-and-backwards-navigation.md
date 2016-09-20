@@ -6,7 +6,6 @@ ms.assetid: e9876b4c-242d-402d-a8ef-3487398ed9b3
 isNew: true
 label: History and backwards navigation
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: a35b76f04d450aeafcc50c307dc058c52f6aebe4
 
@@ -166,7 +165,8 @@ Im Desktopmodus wird jede App in einem Fenster mit Titelleiste ausgeführt. Sie 
 
 Die Titelleisten-Zurück-Schaltfläche ist nur in Apps verfügbar, die auf Geräten im Desktop-Modus ausgeführt werden. Sie unterstützt nur den In-App-Navigationsverlauf. Der App-zu-App-Navigationsverlauf wird nicht unterstützt.
 
-**Wichtig**  Die Schaltfläche „Zurück“ der Titelleiste wird standardmäßig nicht angezeigt. Sie müssen sie aktivieren.
+
+            **Wichtig**  Die Schaltfläche „Zurück“ der Titelleiste wird standardmäßig nicht angezeigt. Sie müssen sie aktivieren.
 
  
 

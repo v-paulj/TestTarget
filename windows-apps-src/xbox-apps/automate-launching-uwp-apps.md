@@ -1,8 +1,7 @@
 ---
-title: "Automatisieren des Starts für Apps der universellen Windows Plattform (UWP) in Windows 10"
+title: "Automatisieren des Starts für Apps der universellen Windows Plattform (UWP) in Windows10"
 description: "Mit der Protokoll- und Startaktivierung können Entwickler ihre UWP-Apps oder Spiele für automatisierte Tests automatisch starten."
 author: listurm
-translationtype: Human Translation
 ms.sourcegitcommit: adf2d16f9c208631f91fbcad19d1ea8087cd9cb5
 ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
 
@@ -14,9 +13,11 @@ ms.openlocfilehash: ae2f80a915f4aed90c269c37a11d01a2f6c9849e
 
 Entwickler haben mehrere Möglichkeiten, einen automatisierten Start von UWP-Apps zu realisieren. Dieses Dokument beschreibt Methoden zum Starten einer App über die Protokoll- und Startaktivierung.
 
-Die *Protokollaktivierung* ermöglicht der App eine Registrierung als Handler für ein bestimmtes Protokoll. 
 
-Die *Startaktivierung* stellt den normalen Start einer App dar, beispielsweise das Starten über eine App-Kachel.
+             Die *Protokollaktivierung* ermöglicht der App eine Registrierung als Handler für ein bestimmtes Protokoll. 
+
+
+             Die *Startaktivierung* stellt den normalen Start einer App dar, beispielsweise das Starten über eine App-Kachel.
 
 Bei jeder Aktivierungsmethode können Sie entweder die Befehlszeile oder eine Startanwendung nutzen. Wird die App gerade ausgeführt, wird sie bei allen Aktivierungsmethoden in den Vordergrund geschaltet, wodurch sie erneut aktiviert wird. Dabei werden die neuen Aktivierungsargumente bereitgestellt. Somit besteht die Möglichkeit, Aktivierungsbefehle zu verwenden, um neue Nachrichten für die App bereitzustellen. Beachten Sie unbedingt, dass das Projekt kompiliert und für die Aktivierungsmethode bereitgestellt werden muss, damit die aktualisierte App ausgeführt wird. 
 

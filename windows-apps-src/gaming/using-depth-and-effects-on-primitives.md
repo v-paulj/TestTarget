@@ -5,18 +5,18 @@ description: Hier zeigen wir Ihnen die Verwendung von Tiefen, Perspektiven, Farb
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 47547a226a69b2631313972ed67b39b1f29de402
+ms.openlocfilehash: 6c58e23a0831a0850a4e28887b4717abedbc7086
 
 ---
 
 # Verwenden von Tiefen und Effekten in Primitiven
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier zeigen wir Ihnen die Verwendung von Tiefen, Perspektiven, Farben und anderen Effekten in Primitiven.
 
-**Ziel:** Erstellen eines 3D-Objekts und Anwenden einer einfachen Vertexbeleuchtung und -färbung
+**Ziel:** Ein 3D-Objekt zu erstellen und einfache Vertexbeleuchtung und -färbung darauf anzuwenden.
 
 ## Voraussetzungen
 
@@ -25,7 +25,7 @@ Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem 
 
 Des Weiteren gehen wir davon aus, dass Sie die Themen [Schnellstart: Einrichten von DirectX-Ressourcen und Anzeigen von Bildern](setting-up-directx-resources.md) sowie [Erstellen von Shadern und Zeichnen von Primitiven](creating-shaders-and-drawing-primitives.md) bearbeitet haben.
 
-**Zeitaufwand:** 20 Minuten.
+**Zeitaufwand:** 20Minuten.
 
 Anweisungen
 ------------
@@ -458,6 +458,6 @@ Als Nächstes wenden wir Texturen auf Primitive an.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

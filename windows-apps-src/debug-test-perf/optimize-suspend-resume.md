@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
 title: Optimieren von Anhalten/Fortsetzen
 description: "Erstellen Sie Apps für die universelle Windows-Plattform (UWP), die die Verwendung des Prozesslebensdauer-Systems optimieren und nach dem Anhalten oder Beenden effizient fortgesetzt werden."
-translationtype: Human Translation
 ms.sourcegitcommit: e0f04c4242891b25db460d4852ab8cc070d82260
 ms.openlocfilehash: 9fee4ab9c55c1243c04c2ed5f007412751528037
 
@@ -34,7 +33,7 @@ Ermitteln Sie den Zeitpunkt für die Zustandsspeicherung nicht auf der Grundlage
 
 Verringern Sie den Speicherbedarf Ihrer angehaltenen App. Wenn Ihre angehaltene App weniger Arbeitsspeicher beansprucht, reagiert das gesamte System schneller, und es müssen weniger angehaltene Apps (einschließlich Ihrer eigenen) beendet werden. Achten Sie dabei jedoch darauf, den Speicherbedarf nicht so weit zu verringern, dass sich die Fortsetzung der App erheblich verlangsamt, weil Ihre App erst wieder große Datenmengen in den Arbeitsspeicher laden muss.
 
-Bei verwalteten Apps wird nach Abschluss der Suspend-Handler der App ein Garbage Collection-Durchlauf ausgeführt. Machen Sie sich das zunutze, indem Sie Verweise auf Objekte freigeben, die zur Verringerung des Speicherbedarfs der angehaltenen App beitragen.
+Bei verwalteten Apps wird nach Abschluss der Suspend-Handler der App ein GarbageCollection-Durchlauf ausgeführt. Machen Sie sich das zunutze, indem Sie Verweise auf Objekte freigeben, die zur Verringerung des Speicherbedarfs der angehaltenen App beitragen.
 
 Im Idealfall ist die Anhaltelogik Ihrer App in weniger als einer Sekunde abgeschlossen. Je kürzer der Anhaltevorgang, desto besser. Dies kommt der Reaktionsgeschwindigkeit von anderen Apps und Teilen des Systems zugute. Bei Bedarf kann die Anhaltelogik bis zu fünf Sekunden (Desktopgeräte) bzw. bis zu zehn Sekunden (mobile Geräte) dauern. Nach diesem Zeitlimit wird die App abrupt beendet. Das gilt es zu vermeiden. Denn wenn der Benutzer wieder zu Ihrer App wechselt, wird ein neuer Prozess gestartet, was im Vergleich zur Fortsetzung einer angehaltenen App einen deutlich langsameren Eindruck hinterlässt.
 
@@ -60,7 +59,8 @@ Als Serialisierungstechnologien für .NET-Apps stehen die Klassen [**System.Xml.
 
 Aus Leistungsgründen empfehlen wir die Verwendung der [**XmlSerializer**](https://msdn.microsoft.com/library/windows/apps/xaml/system.xml.serialization.xmlserializer.aspx)-Klasse. Die **XmlSerializer**-Klasse zeichnet sich durch die schnellste Serialisierung und Deserialisierung sowie durch einen geringen Speicherbedarf aus. **XmlSerializer** ist nur in wenigen Bereichen mit .NET Framework verknüpft. Im Vergleich zu den anderen Serialisierungstechnologien müssen daher für die Verwendung von **XmlSerializer** weniger Module in Ihre App geladen werden.
 
-[
+
+            [
               **DataContractSerializer**
             ](https://msdn.microsoft.com/library/windows/apps/xaml/system.runtime.serialization.datacontractserializer.aspx) vereinfacht die Serialisierung angepasster Klassen, auch wenn es größere Auswirkungen auf die Leistung als **XmlSerializer** hat. Wenn Sie eine bessere Leistung benötigen, denken Sie über einen Wechsel nach. Generell sollten Sie nur ein Serialisierungsprogramm laden und **XmlSerializer** vorziehen, falls Sie nicht die Funktionen eines anderen Serialisierungsprogramms benötigen.
 

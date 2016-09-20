@@ -9,14 +9,13 @@ ms.assetid: E3CBFA3D-6AF5-44E1-B9F9-C3D3EA8A25CE
 label: ResourceDictionary and XAML resource references
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: fddd345507aace54aca66fe1caa2d9f89a74a299
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 352514139f6c9d096dc0b04de46231c8a5ed8034
 
 ---
-
 # ResourceDictionary- und XAML-Ressourcenreferenzen
 
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Sie können die UI oder Ressourcen für Ihre App mit XAML definieren. Bei Ressourcen handelt es sich meist um Definitionen von Objekten, die Sie voraussichtlich mehrmals verwenden. Um später auf eine XAML-Ressource verweisen zu können, geben Sie einen Ressourcenschlüssel an, der wie ein Name fungiert. Auf eine Ressource kann überall in einer App sowie auf jeder enthaltenen XAML-Seite verwiesen werden. Ressourcen können mithilfe eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)-Elements aus der Windows-Runtime-XAML definiert werden. Anschließend können Sie auf die Ressourcen mithilfe einer [StaticResource-Markuperweiterung](../xaml-platform/staticresource-markup-extension.md) oder [ThemeResource-Markuperweiterung](../xaml-platform/themeresource-markup-extension.md) verweisen.
 
@@ -51,8 +50,7 @@ Für dieses Beispiel gilt Folgendes:
 -   `<x:String>` – Definiert die Ressource mit dem Schlüssel „greeting“
 -   `{StaticResource greeting}` – Sucht nach der Ressource mit dem Schlüssel „greeting“, die der [**Text**](https://msdn.microsoft.com/library/windows/apps/br209676)-Eigenschaft von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) zugeordnet ist.
 
-> **Hinweis**
-            &nbsp;&nbsp;Die Konzepte für [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) dürfen nicht mit dem Buildvorgang **Resource**, mit Ressourcendateien (.resw) oder mit anderen Ressourcen verwechselt werden, die im Zusammenhang mit der Strukturierung des Codeprojekts zur Generierung Ihres App-Pakets erwähnt werden.
+> **Hinweis**&nbsp;&nbsp;Die Konzepte für [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) dürfen nicht mit dem Buildvorgang **Resource**, mit Ressourcendateien (.resw) oder mit anderen Ressourcen verwechselt werden, die im Zusammenhang mit der Strukturierung des Codeprojekts zur Generierung Ihres App-Pakets erwähnt werden.
 
 Ressourcen sind nicht zwingend Zeichenfolgen, sondern können beliebige freigebbare Objekte sein (etwa Stile, Vorlagen, Pinsel und Farben). Steuerelemente, Formen und andere [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)-Elemente können allerdings nicht freigegeben und somit auch nicht als wiederverwendbare Ressourcen deklariert werden. Weitere Informationen zum Freigeben finden Sie weiter unten in diesem Thema im Abschnitt [XAML-Ressourcen müssen freigabefähig sein](#xaml_resources_must_be_sharable).
 
@@ -76,12 +74,8 @@ Hierbei werden sowohl ein Pinsel als auch eine Zeichenfolge als Ressourcen dekla
 
 Alle Ressourcen müssen über einen Schlüssel verfügen. Normalerweise ist dieser Schlüssel eine Zeichenfolge, die wie folgt definiert ist: `x:Key=”myString”`. Es gibt aber auch einige andere Möglichkeiten, einen Schlüssel anzugeben:
 
--   [
-              **Style**
-            ](https://msdn.microsoft.com/library/windows/apps/br208849) und [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) erfordern ein **TargetType**-Element. **TargetType** wird als Schlüssel verwendet, wenn [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787) nicht angegeben ist. In diesem Fall ist der Schlüssel das eigentliche Typobjekt, anstatt einer Zeichenfolge. (Siehe Beispiele unten.)
--   [
-              Für **DataTemplate**
-            ](https://msdn.microsoft.com/library/windows/apps/br242348)-Ressourcen mit **TargetType** wird das **TargetType**-Element als Schlüssel verwendet, wenn [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787) nicht angegeben ist. In diesem Fall ist der Schlüssel das eigentliche Typobjekt, anstatt einer Zeichenfolge.
+-   [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849) und [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) erfordern ein **TargetType**-Element. **TargetType** wird als Schlüssel verwendet, wenn [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787) nicht angegeben ist. In diesem Fall ist der Schlüssel das eigentliche Typobjekt, anstatt einer Zeichenfolge. (Siehe Beispiele unten.)
+-   [Für **DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)-Ressourcen mit **TargetType** wird das **TargetType**-Element als Schlüssel verwendet, wenn [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787) nicht angegeben ist. In diesem Fall ist der Schlüssel das eigentliche Typobjekt, anstatt einer Zeichenfolge.
 -   [x:Name](https://msdn.microsoft.com/library/windows/apps/mt204788) kann anstelle von [x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787) verwendet werden. Bei x:Name wird aber auch ein CodeBehind-Feld für die Ressource generiert. x:Name ist also weniger effizient als x:Key, da dieses Feld beim Laden der Seite initialisiert werden muss.
 
 Mit der [StaticResource-Markuperweiterung](../xaml-platform/staticresource-markup-extension.md) können Ressourcen nur per Zeichenfolgenname ([x:Key](https://msdn.microsoft.com/library/windows/apps/mt204787) oder [x:Name](https://msdn.microsoft.com/library/windows/apps/mt204788)) abgerufen werden. Das XAML-Framework sucht aber auch nach impliziten Stilressourcen (für die **TargetType** verwendet wird, anstatt x:Key oder x:Name), wenn entschieden wird, welcher Stil und welche Vorlage für ein Steuerelement verwendet werden sollen, für das die Eigenschaften [**Style**](https://msdn.microsoft.com/library/windows/apps/br208743) und [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) oder [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/br242830) nicht festgelegt wurden.
@@ -110,8 +104,7 @@ Weitere Informationen zu impliziten Stilen und zu ihrer Funktionsweise finden Si
 
 Der Zugriff auf Member des Ressourcenverzeichnisses erfolgt auf die gleiche Weise wie bei allen anderen Verzeichnissen.
 
-> **Achtung**
-            &nbsp;&nbsp;Wenn Sie im Code eine Ressourcensuche durchführen, werden nur die Ressourcen im `Page.Resources`-Verzeichnis berücksichtigt. Im Gegensatz zur [StaticResource-Markuperweiterung](../xaml-platform/staticresource-markup-extension.md) erfolgt kein Fallback auf das `Application.Resources`-Verzeichnis, falls die Ressourcen im ersten Verzeichnis nicht gefunden werden.
+> **Achtung**&nbsp;&nbsp;Wenn Sie im Code eine Ressourcensuche durchführen, werden nur die Ressourcen im `Page.Resources`-Verzeichnis berücksichtigt. Im Gegensatz zur [StaticResource-Markuperweiterung](../xaml-platform/staticresource-markup-extension.md) erfolgt kein Fallback auf das `Application.Resources`-Verzeichnis, falls die Ressourcen im ersten Verzeichnis nicht gefunden werden.
 
  
 
@@ -199,9 +192,7 @@ sealed partial class App : Application
 
 ## Jedes FrameworkElement kann über ein ResourceDictionary verfügen
 
-[
-              **FrameworkElement**
-            ](https://msdn.microsoft.com/library/windows/apps/br208706) ist eine Basisklasse zum Steuern der Vererbung, und sie verfügt über eine [**Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)-Eigenschaft. Sie können also jedem **FrameworkElement**-Element ein lokales Ressourcenverzeichnis hinzufügen.
+[**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706) ist eine Basisklasse zum Steuern der Vererbung, und sie verfügt über eine [**Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)-Eigenschaft. Sie können also jedem **FrameworkElement**-Element ein lokales Ressourcenverzeichnis hinzufügen.
 
 Hier wird ein Ressourcenverzeichnis einem Seitenelement hinzugefügt.
 
@@ -263,8 +254,7 @@ Verwenden Sie die [**Resources**](https://msdn.microsoft.com/library/windows/app
 
 Bei einem *zusammengeführten Ressourcenverzeichnis* wird ein Ressourcenverzeichnis mit einem anderen kombiniert, meist in einer anderen Datei.
 
-> **Tipp**
-            &nbsp;&nbsp;In Microsoft Visual Studio können Sie eine Ressourcenverzeichnisdatei erstellen, indem Sie im Menü **Projekt** die Option **Hinzufügen &gt; Neues Element… &gt; Ressourcenverzeichnis** verwenden.
+> **Tipp**&nbsp;&nbsp;In Microsoft Visual Studio können Sie eine Ressourcenverzeichnisdatei erstellen, indem Sie im Menü **Projekt** die Option **Hinzufügen &gt; Neues Element… &gt; Ressourcenverzeichnis** verwenden.
 
 Hier definieren Sie ein Ressourcenverzeichnis in einer separaten XAML-Datei mit dem Namen „Dictionary1.xaml“.
 
@@ -406,8 +396,7 @@ Das Suchverhalten für XAML-Ressourcenverweise beginnt mit dem Objekt, bei dem d
 
 Anschließend überprüft die Suchsequenz das nächste übergeordnete Objekt in der Laufzeitobjektstruktur der App. Wenn eine [**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)-Eigenschaft vorhanden ist und ein [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) enthält, wird das Verzeichniselement mit der angegebenen Schlüsselzeichenfolge angefordert. Wenn die Ressource gefunden wird, hält die Suchsequenz an, und das Objekt wird an dem Speicherort angegeben, an dem die Referenz erstellt wurde. Andernfalls wechselt das Suchverhalten zur nächsten übergeordneten Ebene in Richtung des Objektstrukturstamms. Die Suche wird bis zum Erreichen des XAML-Stammelements rekursiv nach oben fortgesetzt, wobei die Suche an allen möglichen Speicherorten für direkte Ressourcen erfolgt.
 
-> **Hinweis**
-            &nbsp;&nbsp;Es ist üblich, alle direkten Ressourcen auf Stammebene einer Seite zu definieren, um sowohl die Vorteile dieses Ressourcensuchverhaltens zu nutzen als auch eine Konvention des XAML-Markupstils einzuhalten.
+> **Hinweis**&nbsp;&nbsp;Es ist üblich, alle direkten Ressourcen auf Stammebene einer Seite zu definieren, um sowohl die Vorteile dieses Ressourcensuchverhaltens zu nutzen als auch eine Konvention des XAML-Markupstils einzuhalten.
 
  
 
@@ -443,12 +432,8 @@ Ein [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br2
 -   Pinsel und Farben (von [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) abgeleitete Klassen und [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723)-Werte)
 -   Animationstypen, einschließlich [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)
 -   Transformationen (von [**GeneralTransform**](https://msdn.microsoft.com/library/windows/apps/br210034) abgeleitete Klassen)
--   [
-              **Matrix**
-            ](https://msdn.microsoft.com/library/windows/apps/br210127) und [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/br243266)
--   [
-              **Point**
-            ](https://msdn.microsoft.com/library/windows/apps/br225870)-Werte
+-   [**Matrix**](https://msdn.microsoft.com/library/windows/apps/br210127) und [**Matrix3D**](https://msdn.microsoft.com/library/windows/apps/br243266)
+-   [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870)-Werte
 -   Bestimmte andere UI-bezogene Strukturen wie [**Thickness**](https://msdn.microsoft.com/library/windows/apps/br208864) und [**CornerRadius**](https://msdn.microsoft.com/library/windows/apps/br242343)
 -   [Systeminterne XAML-Datentypen](https://msdn.microsoft.com/library/windows/apps/mt186448)
 
@@ -516,6 +501,6 @@ Für erweiterte Szenarien können Sie eine Klasse implementieren, die von dem hi
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

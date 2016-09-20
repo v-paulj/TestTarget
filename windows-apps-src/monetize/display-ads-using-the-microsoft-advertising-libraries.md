@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 5cde1c22-91fd-4f5c-ac82-32efaa0d9fee
 description: Verwenden Sie die Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK, um Banner und Video-Interstitialanzeigen in Ihren XAML- oder JavaScript-/HTML-Apps anzuzeigen.
 title: Anzeigen von Werbung mithilfe der Microsoft Advertising-Bibliotheken
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: ab96dac3af382d334c767ad42a563c0dbc67a8f5
 
@@ -12,11 +11,12 @@ ms.openlocfilehash: ab96dac3af382d334c767ad42a563c0dbc67a8f5
 # Anzeigen von Werbung mithilfe der Microsoft Advertising-Bibliotheken
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Verwenden Sie die Microsoft Advertising-Bibliotheken in der [Microsoft Store Engagement and Monetization SDK](monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk.md), um Banner und Video-Interstitialanzeigen in Ihren XAML- oder JavaScript-/HTML-Apps in Windows 10, Windows 8.1, Windows Phone 8.1 und Windows Phone 8 anzuzeigen.
 
-> **Wichtig**   Die Microsoft Advertising-Bibliotheken unterscheiden sich von den Bibliotheken der Anzeigenvermittlung. Weitere Informationen zu den Unterschieden zwischen den Bibliotheken der Anzeigenvermittlung und Microsoft Advertising-Bibliotheken finden Sie unter [Was ist der Unterschied zwischen AdMediatorControl und AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md). Weitere Informationen zur Verwendung der Anzeigenvermittlung finden Sie unter [Maximieren des Umsatzes mit einer Anzeigenvermittlung](https://msdn.microsoft.com/windows/uwp/monetize/use-ad-mediation-to-maximize-revenue).
+> 
+            **Wichtig**   Die Microsoft Advertising-Bibliotheken unterscheiden sich von den Bibliotheken der Anzeigenvermittlung. Weitere Informationen zu den Unterschieden zwischen den Bibliotheken der Anzeigenvermittlung und Microsoft Advertising-Bibliotheken finden Sie unter [Was ist der Unterschied zwischen AdMediatorControl und AdControl](what-is-the-difference-admediatorcontrol-or-adcontrol.md). Weitere Informationen zur Verwendung der Anzeigenvermittlung finden Sie unter [Maximieren des Umsatzes mit einer Anzeigenvermittlung](https://msdn.microsoft.com/windows/uwp/monetize/use-ad-mediation-to-maximize-revenue).
 
  
 Die folgenden Themen enthalten Informationen zu allgemeinen Aufgaben im Zusammenhang mit den Windows-Advertising-Bibliotheken.

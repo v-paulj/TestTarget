@@ -3,7 +3,6 @@ author: mcleanbyron
 Description: "Das Microsoft Store Engagement and Monetization SDK bietet Bibliotheken und Tools zum Hinzufügen von Features zu Ihren Apps, mit denen Sie mehr Geld verdienen und Kunden gewinnen können."
 title: Microsoft Store Engagement and Monetization SDK
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
-translationtype: Human Translation
 ms.sourcegitcommit: de85956c7c1d2a0ba509d61ee8928b412f057f8a
 ms.openlocfilehash: 481cf2aab806a1f9ce368256a9df8930cbc756c1
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: 481cf2aab806a1f9ce368256a9df8930cbc756c1
 
 # Microsoft Store Engagement and Monetization SDK
 
-Das Microsoft Store Engagement and Monetization SDK bietet Bibliotheken und Tools, mit denen Sie mehr Geld verdienen und Kunden gewinnen können. Mit diesen können Sie z. B. Anzeigen in Ihren Apps einblenden und Experimente mit A/B-Tests durchführen. Dieses SDK ersetzt das Microsoft Universal Ad Client SDK und wird ständig weiterentwickelt, um neue Funktionen für die Kundengewinnung und Monetarisierung bereitzustellen.
+Das Microsoft Store Engagement and Monetization SDK bietet Bibliotheken und Tools, mit denen Sie mehr Geld verdienen und Kunden gewinnen können. Mit diesen können Sie z.B. Anzeigen in Ihren Apps einblenden und Experimente mit A/B-Tests durchführen. Dieses SDK ersetzt das Microsoft Universal Ad Client SDK und wird ständig weiterentwickelt, um neue Funktionen für die Kundengewinnung und Monetarisierung bereitzustellen.
 
 
 ## In dem SDK verfügbare Features
@@ -30,7 +29,8 @@ Verwenden Sie die [Feedback](https://msdn.microsoft.com/library/windows/apps/mic
 
 Weitere Informationen finden Sie unter [Feedback-Hub über Ihre App starten](launch-feedback-hub-from-your-app.md).
 
->**Hinweis** Der **Feedback**-Bericht ist zurzeit nur für Entwicklerkonten verfügbar, die Mitglied des [Dev Center-Insider-Programms](../publish/dev-center-insider-program.md) sind.
+>
+            **Hinweis** Der **Feedback**-Bericht ist zurzeit nur für Entwicklerkonten verfügbar, die Mitglied des [Dev Center-Insider-Programms](../publish/dev-center-insider-program.md) sind.
 
 ### Anzeigen von Werbung in Ihren Apps
 
@@ -38,7 +38,8 @@ Erhöhen Sie Ihren Umsatz durch Anzeigen von Werbebannern und Video-Interstitial
 
 Weitere Informationen finden Sie unter [Anzeigen von Werbung in Ihrer App](display-ads-in-your-app.md).
 
->**Hinweis** Die Werbefeatures aus früheren Versionen des Universal Ad Client SDK, der Ad Mediator-Erweiterung und des Microsoft Advertising SDK sind jetzt im Microsoft Store Monetization and Engagement SDK enthalten.
+>
+            **Hinweis** Die Werbefeatures aus früheren Versionen des Universal Ad Client SDK, der Ad Mediator-Erweiterung und des Microsoft Advertising SDK sind jetzt im Microsoft Store Monetization and Engagement SDK enthalten.
 
 ### API-Referenz
 
@@ -56,7 +57,8 @@ Microsoft veröffentlicht in regelmäßigen Abständen neue Versionen des Micros
 
 Die Werbefeatures aus früheren Versionen des Universal Ad Client SDK, der Ad Mediator-Erweiterung und des Microsoft Advertising SDK sind jetzt im Microsoft Store Monetization and Engagement SDK enthalten. Wenn Sie über vorhandene Visual Studio 2015- oder Visual Studio 2013-Projekte verfügen, die die Webefeatures aus den früheren Versionen verwenden, können Sie nach der Installation des Microsoft Store Monetization and Engagement SDK wie gewohnt mit Ihren Projekten weiterarbeiten.
 
->**Hinweis** Damit Sie das Microsoft Store Engagement and Monetization SDK mit Visual Studio 2015 installieren können, muss Version 1.1 oder höher der Visual Studio-Tools für universelle Windows-Apps installiert sein. Weitere Informationen zu diesem Update der Visual Studio-Tools für universelle Windows-Apps finden Sie in den [Versionshinweisen](http://go.microsoft.com/fwlink/?LinkID=624516).
+>
+            **Hinweis** Damit Sie das Microsoft Store Engagement and Monetization SDK mit Visual Studio 2015 installieren können, muss Version 1.1 oder höher der Visual Studio-Tools für universelle Windows-Apps installiert sein. Weitere Informationen zu diesem Update der Visual Studio-Tools für universelle Windows-Apps finden Sie in den [Versionshinweisen](http://go.microsoft.com/fwlink/?LinkID=624516).
 
 ## Frameworkpakete im SDK
 

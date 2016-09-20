@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 9165f709-71d7-42cf-9b30-3190fe029fb4
 description: "Hier werden die Unterschiede zwischen der AdControl-Klasse in den Microsoft Advertising-Bibliotheken und der AdMediatorControl-Klasse in den Bibliotheken der Anzeigenvermittlung erläutert."
 title: Unterschiede zwischen AdMediatorControl und AdControl
-translationtype: Human Translation
 ms.sourcegitcommit: 8a5b02dbc40f3f0cd9be32aa7d5184e60a3b2707
 ms.openlocfilehash: 291e1c4d707e8987d29ae5840248918543d7d12a
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 291e1c4d707e8987d29ae5840248918543d7d12a
 # Unterschiede zwischen AdMediatorControl und AdControl
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Verwenden Sie in Ihrer App die Microsoft Advertising-Bibliotheken für XAML und JavaScript, um Werbebanner oder Video-Interstitialanzeigen von Microsoft einzublenden. Diese Bibliotheken unterscheiden sich von den Bibliotheken der Anzeigenvermittlung, die Sie zum Anzeigen von Werbung aus mehreren Anzeigennetzwerken verwenden. Verwenden Sie diese Dokumentation zu den Microsoft Advertising-Bibliotheken (XAML und JavaScript) in folgenden Fällen:
 
@@ -21,7 +20,8 @@ Verwenden Sie in Ihrer App die Microsoft Advertising-Bibliotheken für XAML und 
 
 Die Microsoft Advertising-Bibliotheken und die Bibliotheken der Anzeigenvermittlung sind beide im Microsoft Store Engagement and Monetization SDK enthalten. Weitere Informationen zum Installieren dieses SDKs und zu den unterschiedlichen im SDK enthaltenen Microsoft Advertising-Bibliotheken finden Sie unter [Installieren der Microsoft Advertising-Bibliotheken](install-the-microsoft-advertising-libraries.md).
 
->**Hinweis**  Verwenden Sie das **InterstitialAd**-Steuerelement zum Anzeigen von Interstitialanzeigen. **AdControl** und **AdMediatorControl** sind nicht in der Lage, Interstitialanzeigen darzustellen. Weitere Informationen finden Sie unter [Interstitialanzeigen](interstitial-ads.md).
+>
+            **Hinweis**  Verwenden Sie das **InterstitialAd**-Steuerelement zum Anzeigen von Interstitialanzeigen. **AdControl** und **AdMediatorControl** sind nicht in der Lage, Interstitialanzeigen darzustellen. Weitere Informationen finden Sie unter [Interstitialanzeigen](interstitial-ads.md).
 
  
 

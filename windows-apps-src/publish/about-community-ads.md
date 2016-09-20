@@ -10,7 +10,7 @@ ms.openlocfilehash: 582b26d2dde6cf4f3c7dd6f6d7b182ec4b7002ea
 
 # Informationen zu Community-Anzeigen
 
-Wenn Ihre App ein **AdMediatorControl**- oder ein **AdControl**-Element zum Anzeigen von Werbebannern verwendet, können Sie Ihre App mit anderen Entwicklern mit Apps im Windows Store kostenlos bewerben. Dieses Feature wird *Community-Anzeigen* genannt.  
+Wenn Ihre App ein **AdMediatorControl**- oder ein **AdControl**-Element zum Anzeigen von Werbebannern verwendet, können Sie Ihre App mit anderen Entwicklern mit Apps im WindowsStore kostenlos bewerben. Dieses Feature wird *Community-Anzeigen* genannt.  
 
 Das funktioniert wie folgt:
 
@@ -27,9 +27,11 @@ So melden Sie sich für Community-Anzeigen an:
 
 1. Navigieren Sie im Windows Dev Center-Dashboard zu **Monetisierung**&gt;**Monetisierung durch Werbeanzeigen**.
 2. Aktivieren Sie im Abschnitt **Community ads** das Kontrollkästchen **Show community ads in my app**.
-   > **Hinweis:**  Nach dem Aktivieren oder Deaktivieren dieses Kontrollkästchens müssen Sie Ihre App nicht neu veröffentlichen, damit die Änderungen wirksam werden.
+   > 
+            **Hinweis:**  Nach dem Aktivieren oder Deaktivieren dieses Kontrollkästchens müssen Sie Ihre App nicht neu veröffentlichen, damit die Änderungen wirksam werden.
 
-3. [Erstellen Sie eine Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) für Ihre App. Wählen Sie den Kampagnentyp **Kostenlose Community-Anzeigen** aus.
+3. 
+            [Erstellen Sie eine Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) für Ihre App. Wählen Sie den Kampagnentyp **Kostenlose Community-Anzeigen** aus.
 
 
 ## Verwandte Themen

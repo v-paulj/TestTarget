@@ -5,7 +5,6 @@ title: "Kontextmenüs und Dialogfelder"
 ms.assetid: 7CA2600C-A1DB-46AE-8F72-24C25E224417
 label: Menus, dialogs, and popups
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
 
@@ -74,7 +73,8 @@ Hier ist ein Beispiel eines Dialogfelds mit zwei Schaltflächen, bei dem der Ben
 
 Dialogfelder sind modal, was bedeutet, dass sie alle Interaktionen mit der App blockieren, bis der Benutzer eine Dialogfeldschaltfläche auswählt. Um das modale Verhalten von Dialogfeldern visuell zu unterstreichen, zeichnen sie eine Overlay-Ebene, welche die vorübergehend nicht erreichbare App-UI teilweise verdeckt.
 
-**Hinweis** Ist „Abbrechen“ eine der verfügbaren Dialogfeldoptionen, können Apps Benutzer das Dialogfeld durch Drücken der ESC-Taste schließen lassen. Dieses Verhalten ist nicht in das Steuerelement integriert, stellt aber einen häufig implementierten Shortcut dar.
+
+            **Hinweis** Ist „Abbrechen“ eine der verfügbaren Dialogfeldoptionen, können Apps Benutzer das Dialogfeld durch Drücken der ESC-Taste schließen lassen. Dieses Verhalten ist nicht in das Steuerelement integriert, stellt aber einen häufig implementierten Shortcut dar.
 
 Flyouts und Kontextmenüs sind einfach auszublendende Steuerelemente, was bedeutet, dass Benutzer eine Reihe von Aktionen auswählen können, um vorübergehend angezeigte Benutzeroberflächen schnell zu schließen. Diese Interaktionen sollen leicht sein und den Benutzer nicht blockieren. Aktionen zum einfachen Ausblenden sind folgende
 - Klicken oder Tippen außerhalb der vorübergehend angezeigten Benutzeroberfläche
@@ -111,7 +111,7 @@ Ein Kontextmenü, das mit der MenuFlyout-Klasse implementiert wurde, kann [**Men
   - Verwenden Sie für folgende Aktionen Trennlinien zwischen Gruppen von Befehlen in einem Kontextmenü:
     - Trennen von Gruppen verwandter Befehle
     - Gruppieren von Befehlen
-    - Trennen von spezifischen Befehlen für eine App oder Ansicht von Standardbefehlen, z. B. für die Zwischenablage, (Ausschneiden/Kopieren/Einfügen)
+    - Trennen von spezifischen Befehlen für eine App oder Ansicht von Standardbefehlen, z.B. für die Zwischenablage, (Ausschneiden/Kopieren/Einfügen)
   -   Auf Laptops und Desktops sind Kontextmenüs und QuickInfos nicht auf das Anwendungsfenster begrenzt und können teilweise außerhalb davon gezeichnet werden. Wenn die App versucht, ein Kontextmenü vollständig außerhalb des Fensters darzustellen, wird eine Ausnahme ausgelöst.
 
 - **Empfohlene und nicht empfohlene Vorgehensweisen**

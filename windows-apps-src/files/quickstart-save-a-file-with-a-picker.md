@@ -3,7 +3,6 @@ author: TylerMSFT
 ms.assetid: 8BDDE64A-77D2-4F9D-A1A0-E4C634BCD890
 title: Speichern einer Datei mit einer Auswahl
 description: "Mithilfe von FileSavePicker können Benutzer den Namen und Speicherort zum Speichern einer Datei durch die App angeben."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 68c7fcedbea40541632aa0a7ae65aa77db206280
 
@@ -22,7 +21,8 @@ ms.openlocfilehash: 68c7fcedbea40541632aa0a7ae65aa77db206280
 
 Mithilfe von [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) können Benutzer den Namen und Speicherort zum Speichern einer Datei durch die App angeben.
 
-> **Hinweis**  Siehe auch das [Beispiel zur Dateiauswahl](http://go.microsoft.com/fwlink/p/?linkid=619994).
+> 
+            **Hinweis**  Siehe auch das [Beispiel zur Dateiauswahl](http://go.microsoft.com/fwlink/p/?linkid=619994).
 
  
 
@@ -58,7 +58,8 @@ Legen Sie Eigenschaften für das Dateiauswahlobjekt fest, die für Ihre Benutzer
 
 In diesem Beispiel werden drei Eigenschaften festgelegt: [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880), [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) und [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878).
 
-> **Hinweis**
+> 
+            **Hinweis**
             [
               **FileSavePicker**
             ](https://msdn.microsoft.com/library/windows/apps/br207871)-Objekte zeigen die Dateiauswahl mithilfe von [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891) an.
@@ -68,7 +69,8 @@ In diesem Beispiel werden drei Eigenschaften festgelegt: [**SuggestedStartLocati
  
 - Da wir sicherstellen möchten, dass unsere App die Datei nach dem Speichern öffnen kann, verwenden wir im Beispiel [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) für die Angabe der vom Beispiel unterstützten Dateitypen (Microsoft Word-Dokumente und Textdateien). Stellen Sie sicher, dass alle von Ihnen angegebenen Dateitypen von Ihrer App unterstützt werden. Die Benutzer können ihre Datei unter einem beliebigen der von Ihnen angegebenen Dateitypen speichern. Sie können auch den Dateityp ändern, indem sie einen anderen von Ihnen angegebenen Dateityp auswählen. Der erste Dateityp in der Liste ist standardmäßig ausgewählt. Legen Sie zum Steuern dieses Verhaltens die [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873)-Eigenschaft fest.
 
-> **Hinweis**  Für die Dateiauswahl wird zudem der aktuell ausgewählte Dateityp zum Filtern nach den angezeigten Dateien verwendet, sodass dem Benutzer nur die Dateitypen angezeigt werden, die mit den ausgewählten Dateitypen übereinstimmen.
+> 
+            **Hinweis**  Für die Dateiauswahl wird zudem der aktuell ausgewählte Dateityp zum Filtern nach den angezeigten Dateien verwendet, sodass dem Benutzer nur die Dateitypen angezeigt werden, die mit den ausgewählten Dateitypen übereinstimmen.
 
 - Um dem Benutzer einige Eingaben zu ersparen, legt das Beispiel einen [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878) fest. Verwenden Sie als vorgeschlagenen Dateinamen einen Namen, der für die gespeicherte Datei relevant ist. Beispielsweise können Sie wie in Word den vorhandenen Dateinamen vorschlagen, sofern vorhanden. Sie können auch die erste Zeile eines Dokuments vorschlagen, wenn der Benutzer eine noch nicht benannte Datei speichert.
 
@@ -107,7 +109,8 @@ Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
 
 Im Beispiel wird überprüft, ob die Datei gültig ist. Danach wird der eigene Dateiname in die Datei geschrieben. Weitere Informationen finden Sie unter [Erstellen, Lesen und Schreiben einer Datei](quickstart-reading-and-writing-files.md)
 
-**Tipp**  Sie sollten vor einer weiteren Verarbeitung immer die Gültigkeit der gespeicherten Datei überprüfen. Anschließend können Sie Inhalte dem Zweck der App entsprechend in der Datei speichern und das Verhalten für den Fall festlegen, dass die ausgewählte Datei nicht gültig ist.
+
+            **Tipp**  Sie sollten vor einer weiteren Verarbeitung immer die Gültigkeit der gespeicherten Datei überprüfen. Anschließend können Sie Inhalte dem Zweck der App entsprechend in der Datei speichern und das Verhalten für den Fall festlegen, dass die ausgewählte Datei nicht gültig ist.
 
      
 

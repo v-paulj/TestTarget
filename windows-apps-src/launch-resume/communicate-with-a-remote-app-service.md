@@ -1,17 +1,21 @@
 ---
 author: PatrickFarley
-title: Communicate with a remote app service
-description: Exchange messages with an app service running on a remote device.
+title: Kommunikation mit einem App-Remotedienst
+description: "Tauschen Sie Nachrichten mit einem App-Dienst aus, der auf einem Remotegerät mit Project &quot;Rome&quot; ausgeführt wird."
+translationtype: Human Translation
+ms.sourcegitcommit: c90304b7ca3f7185fca9146aa2303b09cba5ab9a
+ms.openlocfilehash: bff77a63d0f88907410c74d4dce19fb422c1bd3f
+
 ---
 
-# Communicate with a remote app service
+# Kommunikation mit einem App-Remotedienst
 
-In addition to launching an app on a remote device using a URI, you can run and communicate with *app services* on remote devices as well. Any Windows-based device can be used as either the home or target device, or both. This gives you an almost limitless number of ways to interact with connected devices without needing to bring an app to the foreground.
+Sie können nicht nur eine App auf einem Remotegerät mithilfe eines URI starten, sondern auch *App-Dienste* auf Remotegeräten ausführen und mit ihnen kommunizieren. Jedes Windows-basierte Gerät kann als Ausgangs- oder als Zielgerät oder als beides verwendet werden. Dies bietet Ihnen eine nahezu unbegrenzte Anzahl von Möglichkeiten zur Interaktion mit verbundenen Geräten, ohne eine App in den Vordergrund bringen zu müssen.
 
-## Set up the app service on the target device
-In order to run an app service on a remote device, you must already have a provider of that app service installed on the target device. This guide will use the Random number generator app service, which is available on [Windows universal samples repo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices). For instructions on how to write your own app service, see [Create and consume an app service](how-to-create-and-consume-an-app-service.md).
+## Einrichten des App-Dienstes auf dem Zielgerät
+Um einen App-Dienst auf einem Remotegerät ausführen zu können, muss bereits ein Anbieter dieses App-Dienstes auf dem Zielgerät installiert sein. In dieser Anleitung wird der Zufallsgenerator-App-Dienst verwendet, der im [Repository Beispiele für Universelle Windows-Plattform](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices) verfügbar ist. Anleitungen zum Schreiben eines eigenen App-Diensts finden Sie unter [Erstellen und Verwenden eines App-Diensts](how-to-create-and-consume-an-app-service.md).
 
-Whether you are using an already-made app service or writing your own, you will need to make a few edits in order to make the service compatible with remote systems. In Visual Studio, go to the app service provider's project and select its Package.appxmanifest file. Right-click and select **View Code** to view the full contents of the file. Find the `Extension` element that defines the project as an app service and names its parent project.
+Gleichgültig, ob Sie einen bereits erstellten App-Dienst verwenden oder einen eigenen schreiben, Sie müssen einige Änderungen vornehmen, um den Dienst mit Remotesystemen kompatibel zu machen. Wechseln Sie in Visual Studio zum Projekt des App-Dienstanbieters, und wählen Sie die Datei "Package.appxmanifest" aus. Klicken Sie mit der rechten Maustaste, und wählen Sie **Code anzeigen** aus, um den gesamten Inhalt der Datei anzuzeigen. Suchen Sie das Element **Erweiterung**, das das Projekt als App-Dienst definiert und das übergeordnete Projekt benennt.
 
 ``` xml
 ...
@@ -23,7 +27,7 @@ Whether you are using an already-made app service or writing your own, you will 
 ...
 ```
 
-Change the namespace of the `AppService` element to `uap3` and add the `SupportsRemoteSystems` attribute:
+Ändern Sie den Namespace des Elements **AppService** in **uap3** und fügen Sie das Attribut **SupportsRemoteSystems** hinzu:
 
 ``` xml
 ...
@@ -31,7 +35,7 @@ Change the namespace of the `AppService` element to `uap3` and add the `Supports
 ...
 ```
 
-In order to use elements in this new namespace, you must add the namespace definition at the top of the manifest file.
+Um Elemente in diesem neuen Namespace zu verwenden, müssen Sie die Namespacedefinition am Anfang der Manifest-Datei hinzufügen.
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,41 +48,47 @@ In order to use elements in this new namespace, you must add the namespace defin
 </Package>
 ```
 
-Build your app service provider project and deploy it to the target device(s).
+Erstellen Sie Ihr App-Dienstanbieterprojekt, und stellen Sie es auf dem bzw. den Zielgeräten bereit.
 
-## Target the app service from the home device
-The device *from which* the remote app service is to be called needs an app with Remote Systems functionality. This can be added into the same app that provides the app service on the target device (in which case you would install the same app on both devices), or put in a completely different app.
+## Festlegen des App-Dienstes als Ziel auf dem Ausgangsgerät
+Das Gerät *, über das* der App-Remotedienst aufgerufen werden soll, muss über eine App mit Remotesystemfunktionen verfügen. Diese können der App hinzugefügt werden, die den App-Dienst auf dem Zielgerät bereitstellt (in diesem Fall installieren Sie diese App auf beiden Geräten), oder in eine völlig andere App eingefügt werden.
 
-The following `using` statements are needed for the code in this section to run as-is:
+Die folgenden **using**-Anweisungen werden für den Code in diesem Abschnitt benötigt, damit er in der vorliegenden Form ausgeführt wird:
 
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetUsings)]
 
 
-You must first instantiate an [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.AppService.AppServiceConnection) object, just as if you were to call an app service locally. This process is covered in more detail in [Create and consume an app service](how-to-create-and-consume-an-app-service.md). In this example, the app service to target is the Random number generator service.
+Instanziieren Sie zunächst ein [**AppServiceConnection**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.AppService.AppServiceConnection)-Objekt, als ob Sie einen App-Dienst lokal aufrufen würden. Dieser Vorgang wird in [Erstellen und Verwenden eines App-Diensts](how-to-create-and-consume-an-app-service.md) ausführlicher behandelt. In diesem Beispiel ist der als Ziel festzulegende App-Dienst der Zufallszahlen-Generator-Dienst.
 
 > [!NOTE]
-> It is assumed that a [RemoteSystem](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem) object has already been acquired by some means within the code that would call the following method. See [Launch a remote app](launch-a-remote-app.md) for instructions on how to set this up.
+> Es wird davon ausgegangen, dass ein [RemoteSystem](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystem)-Objekt bereits auf irgendeine Weise innerhalb des Codes zum Aufrufen der folgenden Methode geladen wurde. Anleitungen dazu, wie Sie dies einrichten können, finden Sie unter [Starten einer Remote-App](launch-a-remote-app.md).
 
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetAppService)]
 
-Next, a [**RemoteSystemConnectionRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemConnectionRequest) object is created for the intended remote device. It is then used to open the **AppServiceConnection** to that device. Note that in the example below, error handling and reporting is greatly simplified for the sake of brevity.
+Als Nächstes wird ein [**RemoteSystemConnectionRequest**](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems.RemoteSystemConnectionRequest)-Objekt für das vorgesehene Remotegerät erstellt. Es wird dann zum Öffnen der **AppServiceConnection** zu diesem Gerät verwendet. Beachten Sie, dass in dem Beispiel unten Fehlerbehandlung und Berichte aus Platzgründen erheblich vereinfacht werden.
 
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetRemoteConnection)]
 
-At this point, you should have an open connection to an app service on a remote machine.
+An diesem Punkt sollten Sie über eine offene Verbindung zu einem App-Dienst auf einem Remotecomputer verfügen.
 
-## Exchange service-specific messages over the remote connection
+## Exchange-Dienst-spezifische Nachrichten über die Remoteverbindung
 
-From here, you can send and receive messages to and from the service in the form of [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset) objects (for more information, see [Create and consume an app service](how-to-create-and-consume-an-app-service.md)). The Random number generator service takes two integers with the keys `"minvalue"` and `"maxvalue"` as inputs, randomly selects an integer within their range, and returns it to the calling process with the key `"Result"`.
+Hier können Sie Nachrichten in Form von [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset)-Objekten an den Dienst senden und von dem Dienst empfangen (weitere Informationen finden Sie unter [Erstellen und Verwenden eines App-Diensts](how-to-create-and-consume-an-app-service.md)). Der Zufallszahlen-Generator-Dienst verwendet zwei Ganzzahlen mit den Schlüsseln `"minvalue"` und `"maxvalue"` als Eingaben, wählt nach dem Zufallsprinzip eine Ganzzahl in dem Bereich aus und gibt sie an den aufrufenden Prozess mit dem Schlüssel `"Result"` zurück.
 
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetSendMessage)]
 
-Now you have connected to an app service on a targeted remote device, run an operation on that device, and received data to your home device in response.
+Sie haben jetzt eine Verbindung zu einem App-Dienst auf einem als Ziel festgelegten Remotegerät hergestellt, einen Vorgang auf diesem Gerät ausgeführt und Daten auf Ihrem Ausgangsgerät als Antwort empfangen.
 
-## Related topics
+## Verwandte Themen
 
-[Connected apps and devices overview](connected-apps-and-devices.md)  
-[Launch a remote app](launch-a-remote-app.md)  
-[Create and consume an app service](how-to-create-and-consume-an-app-service.md)  
-[Remote Systems API reference](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
-[Remote Systems sample](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems ) demonstrates how to discover a remote system, launch an app on a remote system, and use app services to send messages between apps running on two systems.
+[Übersicht über verbundene Apps und Geräte (Projekt "Rome")](connected-apps-and-devices.md)  
+[Starten einer Remote-App](launch-a-remote-app.md)  
+[Erstellen und Verwenden eines App-Diensts](how-to-create-and-consume-an-app-service.md)  
+[API-Referenz für Remotesysteme](https://msdn.microsoft.com/library/windows/apps/Windows.System.RemoteSystems)  
+[Beispiel für Remotesysteme](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems ) veranschaulicht die Vorgehensweise zum Erkennen eines Remotesystems, Starten einer App auf einem Remotesystem und Verwenden von App-Diensten zum Senden von Nachrichten zwischen Apps, die auf zwei Systemen ausgeführt werden.
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

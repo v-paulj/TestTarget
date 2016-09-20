@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 69E05E56-B5F0-4D4C-A1FF-B6EAFF5D0E28
 description: "Während der Übermittlung können Sie das gewünschte Verhalten der Anzeigenvermittlung konfigurieren. Dieses können Sie später anpassen, ohne dazu Codeänderungen vorzunehmen oder neue Pakete zu übermitteln."
 title: "Übermitteln der App und Konfigurieren der Anzeigenvermittlung"
-translationtype: Human Translation
 ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
 ms.openlocfilehash: 13dd6a9c38d85ead29a43f470b7c0f63d025d612
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 13dd6a9c38d85ead29a43f470b7c0f63d025d612
 # Übermitteln der App und Konfigurieren der Anzeigenvermittlung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Sobald Sie Ihre App mit allen Anzeigennetzwerken, die Sie verwenden möchten, erstellt und ihre korrekte Funktion getestet haben, ist die App zur Übermittlung bereit. Während der Übermittlung können Sie das gewünschte Verhalten der Anzeigenvermittlung konfigurieren. Dieses können Sie später anpassen, ohne dazu Codeänderungen vorzunehmen oder neue Pakete zu übermitteln.
@@ -29,12 +28,15 @@ Die folgenden Schritte beschreiben, wie Sie im Abschnitt **Windows-Anzeigenvermi
 1.  Stellen Sie sicher, dass unter **Konfigurieren der Vermittlung für** das richtige App-Paket ausgewählt ist.
 2.  Stellen Sie sicher, dass unter **Ziel** die Option **Baseline** ausgewählt ist.
 3.  Wählen Sie unter **Aktualisierungsrate** die Länge des Vermittlungszyklus aus (die Häufigkeit, mit der neue Anzeigen eingeblendet werden). Die Dauer muss zwischen 30 und 120 Sekunden liegen.
-  > **Hinweis**  Wenn Sie in einem Ihrer Anzeigennetzwerkportale bereits eine Aktualisierungsrate konfiguriert haben, achten Sie darauf, hier die gleiche Aktualisierungsrate festzulegen.
+  > 
+            **Hinweis**  Wenn Sie in einem Ihrer Anzeigennetzwerkportale bereits eine Aktualisierungsrate konfiguriert haben, achten Sie darauf, hier die gleiche Aktualisierungsrate festzulegen.
 
 4.  Als Nächstes enthält der Abschnitt **Windows-Anzeigenvermittlung** alle von der App verwendeten Anzeigennetzwerke. Es werden zwei verschiedene Methoden bereitgestellt, um anzugeben, wie oft die einzelnen Anzeigennetzwerke von der App verwendet werden sollen. Wählen Sie eine der folgenden Optionen aus der Dropdownliste **Vermittlungstyp** aus:
 
-    -   **Nach Gewicht sortieren**. Wählen Sie diese Option aus, um Prozentwerte auf die einzelnen Anzeigennetzwerke anzuwenden. Diese geben an, wie oft jedes Anzeigennetzwerk von der App verwendet werden soll. Die für alle Anzeigennetzwerke festgelegten Prozentsätze müssen insgesamt genau 100 % ergeben. Weitere Informationen finden Sie unter [Sortieren von Anzeigennetzwerken nach Gewicht](#order-ad-networks-by-weight).
-    -   **Nach Rang sortieren**. Wählen Sie diese Option aus, um eine Rangfolge von 1 bis *n* auf die einzelnen Anzeigennetzwerke anzuwenden. Diese gibt an, wie oft jedes Anzeigennetzwerk von der App verwendet werden soll. Weitere Informationen finden Sie unter [Sortieren von Anzeigennetzwerken nach Rang](#order-ad-networkds-by-rank).
+    -   
+            **Nach Gewicht sortieren**. Wählen Sie diese Option aus, um Prozentwerte auf die einzelnen Anzeigennetzwerke anzuwenden. Diese geben an, wie oft jedes Anzeigennetzwerk von der App verwendet werden soll. Die für alle Anzeigennetzwerke festgelegten Prozentsätze müssen insgesamt genau 100% ergeben. Weitere Informationen finden Sie unter [Sortieren von Anzeigennetzwerken nach Gewicht](#order-ad-networks-by-weight).
+    -   
+            **Nach Rang sortieren**. Wählen Sie diese Option aus, um eine Rangfolge von 1 bis *n* auf die einzelnen Anzeigennetzwerke anzuwenden. Diese gibt an, wie oft jedes Anzeigennetzwerk von der App verwendet werden soll. Weitere Informationen finden Sie unter [Sortieren von Anzeigennetzwerken nach Rang](#order-ad-networkds-by-rank).
 
     Dev Center wendet automatisch [Standardeinstellungen](#default-ad-mediation-settings) an, die festlegen, wie oft die einzelnen Anzeigennetzwerke von der App verwendet werden sollen.
 
@@ -51,14 +53,14 @@ Die folgenden Schritte beschreiben, wie Sie im Abschnitt **Windows-Anzeigenvermi
 
 ### Sortieren von Anzeigennetzwerken nach Gewicht
 
-Wählen Sie eine dieser Optionen in der Dropdownliste **Vermittlungstyp** aus, um Prozentwerte anzugeben, die festlegen, wie oft jedes Anzeigennetzwerk von der App verwendet werden soll. Die für alle Anzeigennetzwerke festgelegten Prozentsätze müssen insgesamt genau 100 % ergeben.
+Wählen Sie eine dieser Optionen in der Dropdownliste **Vermittlungstyp** aus, um Prozentwerte anzugeben, die festlegen, wie oft jedes Anzeigennetzwerk von der App verwendet werden soll. Die für alle Anzeigennetzwerke festgelegten Prozentsätze müssen insgesamt genau 100% ergeben.
 
-Um Anforderungen automatisch gleichmäßig auf alle Netzwerke zu verteilen, klicken Sie auf **Anzeigenanforderungen gleichmäßig über alle aktiven Anzeigennetzwerke verteilen**. Wenn Sie Anforderungen ungleichmäßig verteilen möchten, legen Sie mithilfe der Schieberegler-Steuerelemente fest, wie oft jedes Anzeigennetzwerk von Ihrer App verwendet werden soll. Die für alle Anzeigennetzwerke festgelegten Prozentsätze müssen insgesamt genau 100 % ergeben. Bei der Verwendung der Schieberegler-Steuerelemente haben Sie verschiedene Optionen:
+Um Anforderungen automatisch gleichmäßig auf alle Netzwerke zu verteilen, klicken Sie auf **Anzeigenanforderungen gleichmäßig über alle aktiven Anzeigennetzwerke verteilen**. Wenn Sie Anforderungen ungleichmäßig verteilen möchten, legen Sie mithilfe der Schieberegler-Steuerelemente fest, wie oft jedes Anzeigennetzwerk von Ihrer App verwendet werden soll. Die für alle Anzeigennetzwerke festgelegten Prozentsätze müssen insgesamt genau 100% ergeben. Bei der Verwendung der Schieberegler-Steuerelemente haben Sie verschiedene Optionen:
 
 -   Wenn Sie den Schieberegler auf eine Zahl einstellen, gibt die Zahl den Prozentsatz der Zeit an, in der dieses Anzeigennetzwerk als erste Wahl der App in einem Vermittlungszyklus aufgerufen wird.
--   Wenn Sie den Schieberegler auf **Sicherung** einstellen, wird das Anzeigennetzwerk nur aufgerufen, wenn keines der Anzeigennetzwerke, für die ein Prozentsatz angegeben ist, eine Anzeige bereitstellen kann. Dies entspricht dem Festlegen eines Prozentsatzes von 0 %.
+-   Wenn Sie den Schieberegler auf **Sicherung** einstellen, wird das Anzeigennetzwerk nur aufgerufen, wenn keines der Anzeigennetzwerke, für die ein Prozentsatz angegeben ist, eine Anzeige bereitstellen kann. Dies entspricht dem Festlegen eines Prozentsatzes von 0%.
 -   Wenn Sie den Schieberegler auf **Inaktiv** einstellen, wird das Anzeigennetzwerk nie aufgerufen. Die Assemblys für das Anzeigennetzwerk bleiben zwar im Paket, der Vermittler versucht aber nicht, sie aufzurufen. Sie können diese Option in marktspezifischen Konfigurationen verwenden, um Anzeigennetzwerke auszuschließen, die in bestimmten Märkten bekanntermaßen schlechte Leistung bieten oder diese nicht unterstützen.
--   Wenn Sie den Prozentsatz für ein Anzeigennetzwerk anpassen, werden alle anderen Schieberegler-Steuerelemente, mit denen Sie einen anderen Wert als **Sicherung** ausgewählt haben, automatisch so angepasst, dass die Gesamtverteilung 100 % beträgt. Wenn Sie das Kontrollkästchen **Sperren** für ein Anzeigennetzwerk aktivieren, wird der derzeit ausgewählte Wert für dieses Anzeigennetzwerk beibehalten. Sie können die Werte für die anderen Anzeigennetzwerke dann anpassen, ohne dass der Wert für das gesperrte Anzeigennetzwerk dadurch geändert wird.
+-   Wenn Sie den Prozentsatz für ein Anzeigennetzwerk anpassen, werden alle anderen Schieberegler-Steuerelemente, mit denen Sie einen anderen Wert als **Sicherung** ausgewählt haben, automatisch so angepasst, dass die Gesamtverteilung 100% beträgt. Wenn Sie das Kontrollkästchen **Sperren** für ein Anzeigennetzwerk aktivieren, wird der derzeit ausgewählte Wert für dieses Anzeigennetzwerk beibehalten. Sie können die Werte für die anderen Anzeigennetzwerke dann anpassen, ohne dass der Wert für das gesperrte Anzeigennetzwerk dadurch geändert wird.
 
 ### Sortieren von Anzeigennetzwerken nach Rang
 
@@ -104,7 +106,8 @@ Sofern die folgenden Bedingungen erfüllt sind, werden die vorhandenen Konfigura
 
 Wenn eine dieser Bedingungen nicht erfüllt ist, müssen Sie die Basiskonfiguration und alle marktspezifischen Zielkonfigurationen für Ihre App neu erstellen.
 
-> **Hinweis**  Die ID eines **AdMediatorControl**-Steuerelements wird generiert, wenn Sie es auf eine Entwurfsoberfläche in Ihrer App ziehen. Diese ID wird nur geändert, wenn Sie das Steuerelement löschen und anschließend ersetzen, indem Sie ein neues Steuerelement auf die gleiche Oberfläche ziehen.
+> 
+            **Hinweis**  Die ID eines **AdMediatorControl**-Steuerelements wird generiert, wenn Sie es auf eine Entwurfsoberfläche in Ihrer App ziehen. Diese ID wird nur geändert, wenn Sie das Steuerelement löschen und anschließend ersetzen, indem Sie ein neues Steuerelement auf die gleiche Oberfläche ziehen.
 
  
 
@@ -126,13 +129,13 @@ Legen Sie zunächst für jedes Netzwerk eine gleichmäßige Verteilung von Vermi
 
 Nach einigen Tagen oder Wochen sollten Sie die Füllrate und eCPM in allen Anzeigennetzwerk-Portalen überprüfen. So können Sie die besten Anzeigennetzwerke für jeden Markt ermitteln. Anschließend können Sie Anpassungen für bestimmte Märkte (oder insgesamt) vornehmen, ohne neue Pakete zu übermitteln.
 
-### Beispiel 2
+### Beispiel2
 
 Sie möchten Microsoft Advertising nach Möglichkeit zuerst verwenden. Wenn Microsoft Advertising keine Anzeige bereitstellen kann, möchten Sie gerne eines Ihrer anderen Anzeigennetzwerke als Sicherung verwenden, wobei keines einem anderen vorgezogen wird.
 
 | Anzeigennetzwerk            | Konfiguration |
 |-----------------------|---------------|
-| Microsoft             | 100 %          |
+| Microsoft             | 100%          |
 | Inneractive           | Sicherung        |
 | AdDuplex              | Sicherung        |
 
@@ -142,8 +145,8 @@ Im Allgemeinen möchten Sie Microsoft Advertising als Erstes verwenden. Wenn Mic
 
 | Anzeigennetzwerk            | Konfiguration |
 |-----------------------|---------------|
-| Microsoft             | 90 %           |
-| Inneractive           | 10 %           |
+| Microsoft             | 90%           |
+| Inneractive           | 10%           |
 | AdDuplex              | Sicherung        |
 
 ### Beispiel 4
@@ -152,8 +155,8 @@ Sie möchten Microsoft Advertising und Inneractive gleichermaßen verwenden, sod
 
 | Anzeigennetzwerk            | Konfiguration |
 |-----------------------|---------------|
-| Microsoft             | 50 %           |
-| Inneractive           | 50 %           |
+| Microsoft             | 50%           |
+| Inneractive           | 50%           |
 | AdDuplex              | Sicherung        |
 
 

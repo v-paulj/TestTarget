@@ -5,7 +5,6 @@ title: "Befehlsdesigngrundlagen für Apps der universellen Windows-Plattform (UW
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: be7ff187df9800a8c2c47c4315f3f9b021e265f8
 
@@ -33,23 +32,24 @@ Die Verwendung passender Elemente für die richtigen Interaktionen kann den Unte
 | Datums- und Zeitauswahl | [Kalenderdatumsauswahl, Kalenderansicht, Datumsauswahl, Zeitauswahl](https://msdn.microsoft.com/library/windows/apps/hh465466)                                                                                                                 | Ermöglicht dem Benutzer das Anzeigen und Ändern von Datums- und Uhrzeitinformationen (beispielsweise beim Eingeben des Ablaufdatums einer Kreditkarte oder beim Festlegen einer Weckzeit).                   |
 | Listen                 | [Dropdownliste, Listenfeld, Listen- und Rasteransicht](https://msdn.microsoft.com/library/windows/apps/mt186889)                                                                                                                                              | Stellt Elemente in einer interaktiven Liste oder in einem Raster dar. Verwenden Sie diese Elemente, um Benutzern die Auswahl eines Films aus einer Liste mit Neuerscheinungen oder die Verwaltung von Inventar zu ermöglichen. |
 | Textvorhersage | [Feld mit automatischen Vorschlägen](https://msdn.microsoft.com/library/windows/apps/dn997762)                                                                                                                                                                    | Liefert Vorschläge während der Eingabe durch den Benutzer und ermöglicht somit schnellere Dateneingaben und Abfragen.                                                   |
-| Auswahlsteuerelemente    | [Kontrollkästchen](https://msdn.microsoft.com/library/windows/apps/hh700393), [Optionsfeld](https://msdn.microsoft.com/library/windows/apps/hh700395), [Umschalter](https://msdn.microsoft.com/library/windows/apps/hh465475) | Gibt dem Benutzer die Wahl zwischen verschiedenen Optionen (beispielsweise bei einer Umfrage oder beim Konfigurieren von App-Einstellungen).                                      |
+| Auswahlsteuerelemente    | 
+            [Kontrollkästchen](https://msdn.microsoft.com/library/windows/apps/hh700393), [Optionsfeld](https://msdn.microsoft.com/library/windows/apps/hh700395), [Umschalter](https://msdn.microsoft.com/library/windows/apps/hh465475) | Gibt dem Benutzer die Wahl zwischen verschiedenen Optionen (beispielsweise bei einer Umfrage oder beim Konfigurieren von App-Einstellungen).                                      |
 
  
 
 Eine vollständige Liste finden Sie unter [Steuerelemente und UI-Elemente](https://dev.windows.com/design/controls-patterns).
 
-## <span id="_________Place_commands_on_the_right_surface_______"></span><span id="_________place_commands_on_the_right_surface_______"></span><span id="_________PLACE_COMMANDS_ON_THE_RIGHT_SURFACE_______"></span> Platzieren von Befehlen auf der passenden Oberfläche
+## <span id="_________Place_commands_on_the_right_surface_______"></span><span id="_________place_commands_on_the_right_surface_______"></span><span id="_________PLACE_COMMANDS_ON_THE_RIGHT_SURFACE_______"></span>  Platzieren von Befehlen auf der passenden Oberfläche
 
 
-Befehlselemente können in Ihrer App auf verschiedenen Oberflächen platziert werden. Hierzu zählen etwa die App-Canvas (Inhaltsbereich der App) sowie spezielle Befehlselemente (z. B. Befehlsleisten, Menüs, Dialogfelder und Flyouts), die als Befehlscontainer fungieren können. Im Anschluss finden Sie einige allgemeine Empfehlungen für die Platzierung von Befehlen:
+Befehlselemente können in Ihrer App auf verschiedenen Oberflächen platziert werden. Hierzu zählen etwa die App-Canvas (Inhaltsbereich der App) sowie spezielle Befehlselemente (z.B. Befehlsleisten, Menüs, Dialogfelder und Flyouts), die als Befehlscontainer fungieren können. Im Anschluss finden Sie einige allgemeine Empfehlungen für die Platzierung von Befehlen:
 
--   Ermöglichen Sie es den Benutzern nach Möglichkeit, Inhalte direkt auf der App-Canvas manipulieren, anstatt Befehle für die Interaktion mit dem Inhalt hinzuzufügen. Gestalten Sie also beispielsweise die Reise-App so, dass die Benutzer ihre Reiseroute verändern können, indem sie Aktivitäten in einer Liste auf der Canvas per Drag & Drop verschieben, anstatt die Aktivität auswählen und sie mithilfe entsprechender Befehlsschaltflächen nach oben/unten verschieben zu müssen.
+-   Ermöglichen Sie es den Benutzern nach Möglichkeit, Inhalte direkt auf der App-Canvas manipulieren, anstatt Befehle für die Interaktion mit dem Inhalt hinzuzufügen. Gestalten Sie also beispielsweise die Reise-App so, dass die Benutzer ihre Reiseroute verändern können, indem sie Aktivitäten in einer Liste auf der Canvas per Drag&Drop verschieben, anstatt die Aktivität auswählen und sie mithilfe entsprechender Befehlsschaltflächen nach oben/unten verschieben zu müssen.
 -   Wenn Benutzer Inhalte nicht direkt bearbeiten können, platzieren Sie die Befehle auf einer der folgenden Benutzeroberflächen:
 
     -   Auf der [Befehlsleiste](https://msdn.microsoft.com/library/windows/apps/hh465302): Platzieren Sie den Großteil der Befehle auf der Befehlsleiste. Dies kommt der Übersichtlichkeit zugute und erleichtert den Zugriff.
     -   Auf der App-Canvas: Befindet sich der Benutzer auf einer Seite oder in einer Ansicht mit nur einem Zweck, können Sie Befehle für diesen Zweck direkt auf der Canvas bereitstellen. Es sollte nur sehr wenige dieser Befehle geben.
-    -   In einem [Kontextmenü](https://msdn.microsoft.com/library/windows/apps/hh465308): Sie können Kontextmenüs für Zwischenablageaktionen (z. B. Ausschneiden, Kopieren und Einfügen) oder für Befehle verwenden, die auf Inhalte angewendet werden, die nicht ausgewählt werden können (z. B. Hinzufügen einer Stecknadel zu einem Standort auf einer Karte).
+    -   In einem [Kontextmenü](https://msdn.microsoft.com/library/windows/apps/hh465308): Sie können Kontextmenüs für Zwischenablageaktionen (z.B. Ausschneiden, Kopieren und Einfügen) oder für Befehle verwenden, die auf Inhalte angewendet werden, die nicht ausgewählt werden können (z.B. Hinzufügen einer Stecknadel zu einem Standort auf einer Karte).
 
 Die folgende Liste enthält die unter Windows verfügbaren Befehlsoberflächen sowie Empfehlungen für deren Verwendung:
 
@@ -86,7 +86,7 @@ Die folgende Liste enthält die unter Windows verfügbaren Befehlsoberflächen s
 <p>Kontextmenüs eignen sich für Verknüpfungen mit häufig verwendeten Aktionen und ermöglichen den Zugriff auf sekundäre Befehle, die nur in bestimmten Kontexten relevant sind.</p>
 <p>Kontextmenüs sind für die folgenden Arten von Befehlen und Befehlsszenarien gedacht:</p>
 <ul>
-<li>Kontextbezogene Aktionen beim Auswählen von Text, z. B. Kopieren, Ausschneiden, Einfügen, Rechtschreibprüfung usw.</li>
+<li>Kontextbezogene Aktionen beim Auswählen von Text, z.B. Kopieren, Ausschneiden, Einfügen, Rechtschreibprüfung usw.</li>
 <li>Befehle für ein Objekt, das Gegenstand einer Aktion sein soll, aber weder ausgewählt noch anderweitig angegeben werden kann.</li>
 <li>Anzeigen von Befehlen in der Zwischenablage</li>
 <li>Benutzerdefinierte Befehle</li>
@@ -135,11 +135,12 @@ Ganz gleich, wie gut die Benutzeroberfläche gestaltet ist und wie vorsichtig de
     -   Ändern des Inhalts oder Bearbeiten von Text
     -   Umbenennen einer Datei
 
-**Tipp**  Verwenden Sie nicht zu viele Bestätigungsdialogfelder. Diese können zwar sehr hilfreich sein, wenn dem Benutzer ein Fehler unterläuft, bei bewusst durchgeführten Aktionen sind sie jedoch eher hinderlich.
+
+            **Tipp**  Verwenden Sie nicht zu viele Bestätigungsdialogfelder. Diese können zwar sehr hilfreich sein, wenn dem Benutzer ein Fehler unterläuft, bei bewusst durchgeführten Aktionen sind sie jedoch eher hinderlich.
 
  
 
-## <span id="_________Optimize_for_specific_input_types_______"></span><span id="_________optimize_for_specific_input_types_______"></span><span id="_________OPTIMIZE_FOR_SPECIFIC_INPUT_TYPES_______"></span> Optimieren für bestimmte Eingabearten
+## <span id="_________Optimize_for_specific_input_types_______"></span><span id="_________optimize_for_specific_input_types_______"></span><span id="_________OPTIMIZE_FOR_SPECIFIC_INPUT_TYPES_______"></span>  Optimieren für bestimmte Eingabearten
 
 
 Ausführliche Informationen zum Optimieren der Benutzerfreundlichkeit bei einem bestimmten Eingabetyp oder -gerät finden Sie unter [Einführung in die Interaktion](../input-and-devices/input-primer.md).

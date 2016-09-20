@@ -3,7 +3,6 @@ author: mcleblanc
 description: "Verwenden Sie Ihren aktuellen Mac-Computer zum Entwickeln von Apps für Windows."
 title: Einrichten von Windows 10 auf Ihrem Mac
 ms.assetid: 6D520610-5DE0-476E-A792-AA57E002D309
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 10ebdb0a534d8f2931d15481c1bee4705268b0bb
 
@@ -19,15 +18,17 @@ Verwenden Sie Ihren aktuellen Mac-Computer zum Entwickeln von Apps für Windows.
 
 Sie sind bereit zum Entwickeln universeller Windows-Apps, haben aber keinen PC zur Hand? Das ist kein Problem – Sie können auch Ihren Mac verwenden! Installieren Sie Windows 10 und Microsoft Visual Studio mithilfe beliebter Drittanbieterlösungen wie Apple Boot Camp, Oracle VirtualBox, VMware Fusion und Parallels Desktop auf Ihrem Apple-Computer.
 
-**Hinweis**  Sie benötigen ein startbares Windows 10-Image auf der Festplatte oder auf einem USB-Flashlaufwerk. Wenn Sie MSDN-Abonnent sind, können Sie das Image aus dem Center mit Downloads für MSDN-Abonnenten herunterladen. Wenn Sie ein Abonnent sind, kann das Installationsprogramm im [Windows Store](http://apps.microsoft.com/windows/app) erworben werden. Sie können es auch [hier](http://go.microsoft.com/fwlink/?LinkId=623906) herunterladen. Das ist hilfreich, wenn Sie Windows bereits verwenden und ein Upgrade ausführen möchten.
+
+            **Hinweis**  Sie benötigen ein startbares Windows 10-Image auf der Festplatte oder auf einem USB-Flashlaufwerk. Wenn Sie MSDN-Abonnent sind, können Sie das Image aus dem Center mit Downloads für MSDN-Abonnenten herunterladen. Wenn Sie ein Abonnent sind, kann das Installationsprogramm im [Windows Store](http://apps.microsoft.com/windows/app) erworben werden. Sie können es auch [hier](http://go.microsoft.com/fwlink/?LinkId=623906) herunterladen. Das ist hilfreich, wenn Sie Windows bereits verwenden und ein Upgrade ausführen möchten.
 
 Sobald Windows ausgeführt wird, können Sie Visual Studio 2015 unter [Entwicklerdownloads für Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=302144) herunterladen und mit dem Schreiben von Apps beginnen!
 
-**Hinweis**  Wenn Sie die Visual Studio-Geräteemulatoren verwenden möchten, **müssen** Sie eine 64-Bit (x64)-Version von Windows 10 Pro oder höher installieren. Leider unterstützen einige ältere Macs 64-Bit-Versionen von Windows nicht. Auf dieser[Supportseite von Apple](http://go.microsoft.com/fwlink/p/?LinkID=397959)können Sie nachsehen, ob Ihre Hardware kompatibel ist.
+
+            **Hinweis**  Wenn Sie die Visual Studio-Geräteemulatoren verwenden möchten, **müssen** Sie eine 64-Bit (x64)-Version von Windows 10 Pro oder höher installieren. Leider unterstützen einige ältere Macs 64-Bit-Versionen von Windows nicht. Auf dieser[Supportseite von Apple](http://go.microsoft.com/fwlink/p/?LinkID=397959)können Sie nachsehen, ob Ihre Hardware kompatibel ist.
 
 ## Apple Boot Camp
 
-Die App Boot Camp-Assistent ist auf jedem neueren Mac vorinstalliert und führt Sie durch die Installation von Windows 10. Sie benötigen nur eine Kopie von Windows (aus den oben aufgeführten Quellen) und mindestens 30 GB freien Speicherplatz. Nach der Installation können Sie mit Mac OSX oder Windows 10 starten. Weitere Informationen finden Sie auf der [Seite mit Anweisungen zu Boot Camp](http://go.microsoft.com/fwlink/?LinkId=623912) von Apple.
+Die App Boot Camp-Assistent ist auf jedem neueren Mac vorinstalliert und führt Sie durch die Installation von Windows 10. Sie benötigen nur eine Kopie von Windows (aus den oben aufgeführten Quellen) und mindestens 30GB freien Speicherplatz. Nach der Installation können Sie mit MacOSX oder Windows10 starten. Weitere Informationen finden Sie auf der [Seite mit Anweisungen zu Boot Camp](http://go.microsoft.com/fwlink/?LinkId=623912) von Apple.
 
 ## Parallels Desktop
 

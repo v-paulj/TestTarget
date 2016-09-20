@@ -1,9 +1,8 @@
 ---
 author: mcleanbyron
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
-description: "Erfahren Sie mehr über die Verwendung von interstitiellen Anzeigen in Windows 10-, Windows 8.1- oder Windows Phone 8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK."
+description: "Erfahren Sie mehr über die Verwendung von interstitiellen Anzeigen in Windows10-, Windows8.1- oder Windows Phone8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK."
 title: Interstitielle Anzeigen
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 0f159409bb584aacaf66550efe8d147cd8fddd50
 
@@ -12,9 +11,9 @@ ms.openlocfilehash: 0f159409bb584aacaf66550efe8d147cd8fddd50
 # Interstitielle Anzeigen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-In dieser Schritt-für-Schritt-Einführung wird die Verwendung von interstitiellen Anzeigen in Windows 10-, Windows 8.1- oder Windows Phone 8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK gezeigt.
+In dieser Schritt-für-Schritt-Einführung wird die Verwendung von interstitiellen Anzeigen in Windows10-, Windows8.1- oder Windows Phone8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK gezeigt.
 
 Vollständige Beispielprojekte, die das Hinzufügen von interstitiellen Anzeigen zu JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ zeigen, finden Sie in den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
@@ -27,7 +26,7 @@ Im Gegensatz zu Banneranzeigen werden interstitielle Anzeigen (oder *Interstitia
 
     ![whatisaninterstitial](images/13-ed0a333b-0fc8-4ca9-a4c8-11e8b4392831.png)
 
-* Bei *prämienbasierten* Anzeigen möchte der Benutzer ausdrücklich einen Vorteil nutzen, z. B. einen Hinweis oder zusätzliche Zeit zum Abschließen eines Levels erhalten, und initialisiert daher über die Benutzeroberfläche der App die Videoanzeige.
+* Bei *prämienbasierten* Anzeigen möchte der Benutzer ausdrücklich einen Vorteil nutzen, z.B. einen Hinweis oder zusätzliche Zeit zum Abschließen eines Levels erhalten, und initialisiert daher über die Benutzeroberfläche der App die Videoanzeige.
 
     Es ist wichtig, zu beachten, dass dieses SDK keine Benutzeroberfläche behandelt, ausgenommen zum Zeitpunkt der Videowiedergabe. Informieren Sie sich in den [bewährten Methoden für Interstitialanzeigen](ui-and-user-experience-guidelines.md#interstitialbestpractices10) über Richtlinien für das, was Sie tun und was Sie vermeiden sollten, wenn Sie sich überlegen, wie Sie interstitielle Anzeigen in Ihre App integrieren können.
 
@@ -36,7 +35,7 @@ Im Gegensatz zu Banneranzeigen werden interstitielle Anzeigen (oder *Interstitia
 
 ### Voraussetzungen
 
-1.  Installieren Sie das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) mit Visual Studio 2015 oder Visual Studio 2013.
+1.  Installieren Sie das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) mit Visual Studio2015 oder Visual Studio2013.
 
 2.  Öffnen Sie in Visual Studio Ihr Projekt, oder erstellen Sie ein neues Projekt.
 
@@ -51,7 +50,8 @@ Im Gegensatz zu Banneranzeigen werden interstitielle Anzeigen (oder *Interstitia
 <span id="interstitialadsxaml10"/>
 ### Interstitialanzeigen (XAML/.NET)
 
-> **Hinweis**   Dieser Abschnitt enthält Beispiele für C#-. Visual Basic und C++ werden jedoch ebenfalls unterstützt.
+> 
+            **Hinweis**   Dieser Abschnitt enthält Beispiele für C#-. Visual Basic und C++ werden jedoch ebenfalls unterstützt.
  
 1. Öffnen Sie das Projekt in Visual Studio.
 2. Wählen Sie im **Verweis-Manager** je nach Projekttyp einen der folgenden Verweise aus:
@@ -83,7 +83,8 @@ Im Gegensatz zu Banneranzeigen werden interstitielle Anzeigen (oder *Interstitia
 #endif
     ```
 
-    > **Hinweis**   Ersetzen Sie die Testwerte mit Livewerten, bevor Sie Ihre App übermitteln.
+    > 
+            **Hinweis**   Ersetzen Sie die Testwerte mit Livewerten, bevor Sie Ihre App übermitteln.
 
 5.  Instanziieren Sie ein [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx), verbinden Sie alle Ereignishandler, und fordern Sie eine Anzeige an.
 
@@ -241,7 +242,8 @@ In diesem Beispiel wird angenommen, dass Sie ein Universal App-Projekt für Java
 
 In diesem Beispiel wird angenommen, dass Sie ein Universal App-Projekt für XAML in Visual Studio 2015 erstellt haben, das für eine bestimmte CPU-Architektur bestimmt ist.
 
-> **Wichtig**   Dieser Code wird in C++ geschrieben, wie für DirectX erforderlich.
+> 
+            **Wichtig**   Dieser Code wird in C++ geschrieben, wie für DirectX erforderlich.
 
  
 1. Öffnen Sie das Projekt in Visual Studio.
@@ -358,7 +360,8 @@ In diesem Beispiel wird angenommen, dass Sie ein Universal App-Projekt für XAML
 
 2.  Ersetzen Sie in Ihrem Code die Testanzeigen-Einheitenwerte mit den Livewerten, die Sie in Dev Center generiert haben.
 
-3.  [Übermitteln Sie Ihre App](../publish/app-submissions.md) mithilfe des Windows Dev Center-Dashboards an den Store.
+3.  
+            [Übermitteln Sie Ihre App](../publish/app-submissions.md) mithilfe des Windows Dev Center-Dashboards an den Store.
 
 4.  Überprüfen Sie die [Anzeigenvermittlungsberichte](../publish/advertising-performance-report.md) im Dev Center-Dashboard.
 

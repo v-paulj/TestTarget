@@ -3,7 +3,6 @@ author: DBirtolo
 ms.assetid: 374D1983-60E0-4E18-ABBB-04775BAA0F0D
 title: Scannen aus Ihrer App
 description: "Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können."
-translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
 ms.openlocfilehash: fe01ccf5b0b91ffcca7937842cf0152622d59f9e
 
@@ -20,7 +19,8 @@ ms.openlocfilehash: fe01ccf5b0b91ffcca7937842cf0152622d59f9e
 
 Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können.
 
-**Wichtig**  Die [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)-APIs sind Teil der [Desktopgerätefamilie](https://msdn.microsoft.com/library/windows/apps/Dn894631). Apps können diese APIs nur in der Desktopversion von Windows 10 verwenden.
+
+            **Wichtig**  Die [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)-APIs sind Teil der [Desktopgerätefamilie](https://msdn.microsoft.com/library/windows/apps/Dn894631). Apps können diese APIs nur in der Desktopversion von Windows 10 verwenden.
 
 Damit Sie über Ihre App scannen können, müssen Sie zunächst die verfügbaren Scanner auflisten, indem Sie ein neues [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt deklarieren und den [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381)-Typ abrufen. Nur Scanner, die lokal mit WIA-Treibern installiert sind, werden in Ihrer App aufgeführt und stehen darin zur Verfügung.
 
@@ -94,7 +94,8 @@ Für jeden [**ImageScannerScanSource**](https://msdn.microsoft.com/library/windo
 
 Zum Scan mit den Standardeinstellungen ist Ihre App bei der Auswahl eines Scanners vom [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250)-Namespace abhängig und scannt aus dieser Quelle. Es werden keine Scaneinstellungen geändert. Die möglichen Scanner sind „Automatisch konfiguriert“, „Flachbett“ und „Einzug“. Bei dieser Scanart kommt es wahrscheinlich zu einem erfolgreichen Scanvorgang, selbst wenn der Scan von der falschen Quelle aus stattfindet (wie Flachbett anstelle von Einzug).
 
-**Hinweis**  Wenn der Benutzer das Dokument zum Scannen in den Einzug legt, erfolgt der Scanvorgang stattdessen über das Flachbett. Wenn der Benutzer versucht, aus einem leeren Einzug zu scannen, generiert der Scanauftrag keine gescannten Dateien.
+
+            **Hinweis**  Wenn der Benutzer das Dokument zum Scannen in den Einzug legt, erfolgt der Scanvorgang stattdessen über das Flachbett. Wenn der Benutzer versucht, aus einem leeren Einzug zu scannen, generiert der Scanauftrag keine gescannten Dateien.
  
 ```csharp
     var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default, 
@@ -105,7 +106,8 @@ Zum Scan mit den Standardeinstellungen ist Ihre App bei der Auswahl eines Scanne
 
 Ihre App kann den [automatisch konfigurierten Scan](https://msdn.microsoft.com/library/windows/hardware/Ff539393) des Geräts mit den optimalen Scaneinstellungen verwenden. Bei dieser Option kann das Gerät selbst die besten Scaneinstellungen, wie Farbmodus und Scanauflösung, basierend auf dem zu scannenden Inhalt bestimmen. Das Gerät wählt die Scaneinstellungen zur Laufzeit für jeden neuen Scanauftrag.
 
-**Hinweis**  Da diese Funktion nicht von allen Scannern unterstützt wird, muss die App prüfen, ob der Scanner die Funktion unterstützt, bevor sie diese Einstellung verwendet.
+
+            **Hinweis**  Da diese Funktion nicht von allen Scannern unterstützt wird, muss die App prüfen, ob der Scanner die Funktion unterstützt, bevor sie diese Einstellung verwendet.
 
 In diesem Beispiel prüft die App zunächst, ob der Scanner die automatische Konfiguration unterstützt, und startet dann den Scanvorgang. Um einen Flachbett- oder Einzugsscanner anzugeben, ersetzen Sie einfach **AutoConfigured** durch **Flatbed** oder **Feeder**.
 

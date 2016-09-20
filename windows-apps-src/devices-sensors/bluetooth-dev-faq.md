@@ -1,19 +1,23 @@
 ---
 author: msatranjr
-title: Bluetooth developer FAQ
-description: This article contains answers to commonly asked questions related to the UWP bluetooth APIs.
+title: "Bluetooth-Entwickler – Häufig gestellte Fragen"
+description: "Dieser Artikel bietet Antworten auf häufig gestellte Fragen zu den UWP-Bluetooth-APIs."
+translationtype: Human Translation
+ms.sourcegitcommit: e4c95448262c6c62956fcb50581c98d8c34d6dc0
+ms.openlocfilehash: 2afc1250aa9d7a6cf6c9c8cb45dd2379b9d36984
+
 ---
-# Bluetooth Developer FAQ
+# Bluetooth-Entwickler – Häufig gestellte Fragen
 
-This article contains answers to commonly asked UWP Bluetooth API questions.
+Dieser Artikel bietet Antworten auf häufig gestellte Fragen zu UWP-Bluetooth-APIs.
 
-## Why does my Bluetooth LE Device stop responding after a disconnect?
+## Warum reagiert mein Bluetooth LE-Gerät nach einem Trennvorgang nicht mehr?
 
-The common reason this happens is because the remote device has lost pairing information. A lot of earlier Bluetooth devices don't require authentication. To protect the user, all pairing ceremonies performed from the Settings app will require authentication and some devices don't know how to deal with that. 
+Der häufigste Grund besteht darin, dass die Kopplungsinformationen auf dem Remotegerät verloren gegangen sind. Viele ältere Bluetooth-Geräte erfordern keine Authentifizierung. Zum Schutz des Benutzers erfordern alle über die Einstellungs-App ausgeführten Kopplungsversuche eine Authentifizierung. Einige Geräte sind dafür nicht ausgelegt. 
 
-Starting with Windows 10 release 1511, developers have control over the pairing ceremony. The [Device Enumeration and Pairing Sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing) details the various aspects of associating new devices.
+Ab Windows 10, Version 1511, haben Entwickler Kontrolle über den Kopplungsvorgang. Im [Beispiel für die Geräteenumeration und -kopplung](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing) werden verschiedene Aspekte beim Zuordnen neuer Geräte erörtert.
 
-In this example, we initiate pairing with a device using no encryption. Note, this will only work if the remote device does not require encryption or authentication to function.
+In diesem Beispiel wird die Kopplung mit einem Gerät ohne Verschlüsselung initiiert. Dies funktioniert allerdings nur, wenn das Remotegerät keine Verschlüsselung oder Authentifizierung erfordert.
 
 ```csharp
 // Get ceremony type and protection level selections
@@ -30,9 +34,15 @@ In this example, we initiate pairing with a device using no encryption. Note, th
     DevicePairingResult result = await customPairing.PairAsync(ceremonySelected, protectionLevel);
 ```
 
-## Do I have to pair Bluetooth devices before using them?
+## Muss ich Bluetooth-Geräte vor der Verwendung koppeln?
 
-You don't have to for Bluetooth RFCOMM (classic) devices. Starting with Windows 10 release 1607, you can simply query for nearby devices and connect to them. The updated [RFCOMM Chat Sample](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BluetoothRfcommChat) shows this functionality. 
+Bei Bluetooth RFCOMM (Classic)-Geräten ist dies nicht erforderlich. Ab Windows 10, Version 1607, können Sie einfach Geräte in der Nähe suchen und eine Verbindung herstellen. Das aktualisierte [RFCOMM Chat-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BluetoothRfcommChat) veranschaulicht diese Funktionalität. 
 
-This feature is not available for Bluetooth Low Energy (GATT Client), so you will still have to pair either through the Settings page or using the [Windows.Devices.Enumeration](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.aspx) APIs in order access these devices.
+Da dieses Feature für Bluetooth Low Energy (GATT-Client) nicht verfügbar ist, müssen diese Geräte immer noch über die Einstellungsseite oder mithilfe der [Windows.Devices.Enumeration](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.aspx)-APIs gekoppelt werden, damit Sie darauf zugreifen können.
+
+
+
+
+<!--HONumber=Aug16_HO3-->
+
 

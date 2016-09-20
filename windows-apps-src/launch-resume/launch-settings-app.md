@@ -11,7 +11,7 @@ ms.openlocfilehash: e52a4245e8697a68bfc5c5605dc54e5ea510c662
 # Starten der Einstellungs-App von Windows
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -71,9 +71,9 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 |                    | Benachrichtigungen & Infos                | Beide           | ms-settings:notifications                 |
 |                    | Telefon                                  | nur Mobile    | ms-settings:phone                         |
 |                    | Nachrichten                              | nur Mobile    | ms-settings:messaging                     |
-|                    | Stromsparmodus                          | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z. B. Tablet    | ms-settings:batterysaver                  |
-|                    | Stromsparmodus/Einstellungen für Stromsparmodus | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z. B. Tablet | ms-settings:batterysaver-settings         |
-|                    | Stromsparmodus/Akkunutzung            | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z. B. Tablet    | ms-settings:batterysaver-usagedetails     |
+|                    | Stromsparmodus                          | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z.B. Tablet    | ms-settings:batterysaver                  |
+|                    | Stromsparmodus/Einstellungen für Stromsparmodus | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z.B. Tablet | ms-settings:batterysaver-settings         |
+|                    | Stromsparmodus/Akkunutzung            | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z.B. Tablet    | ms-settings:batterysaver-usagedetails     |
 |                    | Ein/Aus/Ruhezustand                          | nur Desktop   | ms-settings:powersleep                    |
 |                    | Desktop: Info                         | Beide           | ms-settings:deviceencryption              |
 |                    |                                        |                |                                           |

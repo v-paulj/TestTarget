@@ -3,7 +3,6 @@ author: DelfCo
 description: "Sie können als UWP-App-Entwickler (Universelle Windows-Plattform) Windows.Networking.Sockets und Winsock zur Kommunikation mit anderen Geräten verwenden."
 title: Sockets
 ms.assetid: 23B10A3C-E33F-4CD6-92CB-0FFB491472D6
-translationtype: Human Translation
 ms.sourcegitcommit: 4557fa59d377edc2ae5bf5a9be63516d152949bb
 ms.openlocfilehash: 432d9849335c537836fd23a4cd95c79c51bc881d
 
@@ -20,7 +19,8 @@ ms.openlocfilehash: 432d9849335c537836fd23a4cd95c79c51bc881d
 
 Sie können als UWP-App-Entwickler (Universelle Windows-Plattform) [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960) und [Winsock](https://msdn.microsoft.com/library/windows/desktop/ms737523) zur Kommunikation mit anderen Geräten verwenden. In diesem Thema finden Sie umfassende Anleitungen zur Verwendung des **Windows.Networking.Sockets**-Namespace, um Netzwerkvorgänge durchzuführen.
 
->**Hinweis**  Zur Sicherstellung der [Netzwerkisolation](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx) verbietet das System die Einrichtung von Socketverbindungen (Sockets oder WinSock) zwischen zwei UWP-Apps, die auf demselben Computer ausgeführt werden, über die lokale Loopbackadresse (127.0.0.0) oder durch explizite Angabe der lokalen IP-Adresse. Dies bedeutet, dass Sie Sockets nicht für die Kommunikation zwischen zwei UWP-Apps verwenden können. UWP stellt andere Mechanismen für die Kommunikation zwischen Apps zur Verfügung. Einzelheiten finden Sie unter [App-zu-App-Kommunikation](https://msdn.microsoft.com/windows/uwp/app-to-app/index).
+>
+>            **Hinweis**  Zur Sicherstellung der [Netzwerkisolation](https://msdn.microsoft.com/library/windows/apps/hh770532.aspx) verbietet das System die Einrichtung von Socketverbindungen (Sockets oder WinSock) zwischen zwei UWP-Apps, die auf demselben Computer ausgeführt werden, über die lokale Loopbackadresse (127.0.0.0) oder durch explizite Angabe der lokalen IP-Adresse. Dies bedeutet, dass Sie Sockets nicht für die Kommunikation zwischen zwei UWP-Apps verwenden können. UWP stellt andere Mechanismen für die Kommunikation zwischen Apps zur Verfügung. Einzelheiten finden Sie unter [App-zu-App-Kommunikation](https://msdn.microsoft.com/windows/uwp/app-to-app/index).
 
 ## Grundlegende TCP-Socketvorgänge
 
@@ -255,7 +255,8 @@ foreach (IBuffer packet in packetsToSend)
 await outputStream.FlushAsync();
 ```
 
-In früheren Versionen von Windows wurde sofort **FlushAsync** zurückgegeben und dadurch konnte nicht garantiert werden, dass alle Vorgänge für den Stream bereits abgeschlossen wurden. In Windows 10 hat sich das Verhalten geändert. **FlushAsync** kehrt jetzt garantiert zurück, nachdem alle Vorgänge im Ausgabedatenstrom abgeschlossen sind.
+In früheren Versionen von Windows wurde sofort **FlushAsync** zurückgegeben und dadurch konnte nicht garantiert werden, dass alle Vorgänge für den Stream bereits abgeschlossen wurden. In Windows 10 hat sich das Verhalten geändert. 
+            **FlushAsync** kehrt jetzt garantiert zurück, nachdem alle Vorgänge im Ausgabedatenstrom abgeschlossen sind.
 
 Es gibt einige wichtige Einschränkungen, die für Schreibvorgänge im Batch in Ihrem Code gelten.
 
@@ -287,7 +288,7 @@ Der Konstruktor für die [**HostName**](https://msdn.microsoft.com/library/windo
 
 Der [**Windows.Networking.Sockets**](https://msdn.microsoft.com/library/windows/apps/br226960)-Namespace enthält praktische Hilfsmethoden und Enumerationen für die Behandlung von Fehlern bei der Verwendung von Sockets und WebSockets. Mit ihnen lassen sich spezifische Netzwerkausnahmen in der App unterschiedlich behandeln.
 
-Ein Fehler in einem [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Vorgang wird als **HRESULT**-Wert zurückgegeben. Mit der [**SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462)-Methode wird ein Netzwerkfehler aus einem Socketvorgang in einen [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457)-Enumerationswert konvertiert. Die meisten **SocketErrorStatus**-Enumerationswerte entsprechen einem vom systemeigenen Windows Sockets-Vorgang zurückgegebenen Fehler. Eine App kann nach bestimmten **SocketErrorStatus**-Enumerationswerten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
+Ein Fehler in einem [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Vorgang wird als **HRESULT**-Wert zurückgegeben. Mit der [**SocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701462)-Methode wird ein Netzwerkfehler aus einem Socketvorgang in einen [**SocketErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh701457)-Enumerationswert konvertiert. Die meisten **SocketErrorStatus**-Enumerationswerte entsprechen einem vom systemeigenen WindowsSockets-Vorgang zurückgegebenen Fehler. Eine App kann nach bestimmten **SocketErrorStatus**-Enumerationswerten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 
 Ein Fehler in einem [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)- oder [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Vorgang wird als **HRESULT**-Wert zurückgegeben. Mit der [**WebSocketError.GetStatus**](https://msdn.microsoft.com/library/windows/apps/hh701529)-Methode wird ein Netzwerkfehler aus einem WebSocket-Vorgang in einen [**WebErrorStatus**](https://msdn.microsoft.com/library/windows/apps/hh747818)-Enumerationswert konvertiert. Die meisten **WebErrorStatus**-Enumerationswerte entsprechen einem vom systemeigenen HTTP-Clientvorgang zurückgegebenen Fehler. Eine App kann nach bestimmten **WebErrorStatus**-Enumerationswerten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 

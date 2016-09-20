@@ -3,7 +3,6 @@ author: jnHs
 Description: "Fügen Sie Ihrem Dev Center-Konto Benutzer hinzu, und weisen Sie diesen Rollen mit bestimmten Berechtigungen zu."
 title: Verwalten von Kontobenutzern
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
-translationtype: Human Translation
 ms.sourcegitcommit: 3cfc50e56f3fa65a9dfa2c8b4582c1a53c2b13d1
 ms.openlocfilehash: 18e25d0064652089d450eec811a7a5d24b8dc3e8
 
@@ -14,7 +13,8 @@ ms.openlocfilehash: 18e25d0064652089d450eec811a7a5d24b8dc3e8
 
 Sie können mit Azure Active Directory Ihrem Dev Center-Konto Benutzer hinzufügen. Jedem Benutzer wird eine Rolle zugewiesen, mit der er bestimmte Berechtigungen für das Konto erhält. Sie können eine Rolle auch einer Gruppe von Benutzern oder einer Azure AD-App zuweisen.
 
-> **Wichtig**  Zum Hinzufügen und Verwalten von Kontobenutzern müssen Sie zunächst Ihr Dev Center-Konto dem Azure Active Directory Ihres Unternehmens zuordnen. Dazu müssen Sie sich bei Azure AD mit einem [globalen Administratorkonto](http://go.microsoft.com/fwlink/?LinkId=746654) anmelden. Nachdem Sie diese Zuordnung festgelegt haben, können Sie sie erst nach Rücksprache mit dem Support wieder entfernen.
+> 
+            **Wichtig**  Zum Hinzufügen und Verwalten von Kontobenutzern müssen Sie zunächst Ihr Dev Center-Konto dem Azure Active Directory Ihres Unternehmens zuordnen. Dazu müssen Sie sich bei Azure AD mit einem [globalen Administratorkonto](http://go.microsoft.com/fwlink/?LinkId=746654) anmelden. Nachdem Sie diese Zuordnung festgelegt haben, können Sie sie erst nach Rücksprache mit dem Support wieder entfernen.
 
  
 
@@ -25,13 +25,14 @@ Windows Dev Center nutzt Azure Active Directory zum Verwalten mehrerer Benutzer 
 
 Beachten Sie, dass einem Azure AD jeweils nur ein Dev Center-Konto zugeordnet werden kann. Ebenso kann einem Dev Center-Konto auch nur ein Azure AD zugeordnet werden.
 
-> **Hinweis**  Sie können Ihrem Dev Center-Konto nur Benutzer hinzufügen, die Teil des Azure AD Ihrer Organisation sind (oder wenn Sie für diese neue Azure AD-Konten erstellen). Es ist nicht möglich, dem Dev Center-Konto Benutzer mithilfe ihrer persönlichen Microsoft-Konten hinzuzufügen.
+> 
+            **Hinweis**  Sie können Ihrem Dev Center-Konto nur Benutzer hinzufügen, die Teil des Azure AD Ihrer Organisation sind (oder wenn Sie für diese neue Azure AD-Konten erstellen). Es ist nicht möglich, dem Dev Center-Konto Benutzer mithilfe ihrer persönlichen Microsoft-Konten hinzuzufügen.
 
 So ordnen Sie Ihr Dev Center-Konto dem vorhandenen Azure AD Ihrer Organisation zu
 
 1.  Wechseln Sie zu den **Kontoeinstellungen**, und klicken Sie auf **Benutzer verwalten**.
 2.  Klicken Sie auf die **Schaltfläche zum Zuordnen Ihres Dev Center-Kontos zu Azure AD**.
-3.  Melden Sie sich bei Ihrem Azure AD-Konto an. Dieses Konto muss über Berechtigungen des [globalen Administrators](http://go.microsoft.com/fwlink/?LinkId=746654) verfügen, damit die Zuordnung eingerichtet werden kann.
+3.  Melden Sie sich bei Ihrem AzureAD-Konto an. Dieses Konto muss über Berechtigungen des [globalen Administrators](http://go.microsoft.com/fwlink/?LinkId=746654) verfügen, damit die Zuordnung eingerichtet werden kann.
 4.  Überprüfen Sie den Organisations- und den Domänennamen für das Azure AD-Konto. Klicken Sie zum Abschließen der Zuordnung auf **Bestätigen**.
 5.  Wenn die Zuordnung erfolgreich abgeschlossen wurde, können Sie nun auf der Seite **Benutzer verwalten** Ihres Kontos Kontobenutzer hinzufügen und verwalten, wie in den folgenden Abschnitten beschrieben.
   
@@ -39,21 +40,26 @@ So erstellen Sie ein neues Azure AD, um diesem Ihr Dev Center-Konto zuzuordnen
 1.  Wechseln Sie zu den **Kontoeinstellungen**, und klicken Sie auf **Benutzer verwalten**.
 2.  Klicken Sie auf die Schaltfläche **Neues Azure AD erstellen**.
 3.  Geben Sie die Verzeichnisinformationen für das neue Azure AD ein:
-- **Domänenname**: der eindeutige Name, den für Ihre Azure AD-Domäne verwendet wird, zusammen mit „. onmicrosoft.com“. Wenn Sie beispielsweise „beispiel“ eingegeben haben, wäre Ihre Azure AD-Domäne „beispiel.onmicrosoft.com“. 
-- **Kontakt-E-Mail-Adresse**: eine E-Mail-Adresse, unter der wir Sie hinsichtlich Ihres Kontos erreichen können, wenn nötig.
-- **Benutzerkontoinformationen für den globalen Administrator**: Vorname, Nachname, Benutzername und Kennwort, die Sie für das neue Administratorkonto verwenden möchten. 
+- 
+            **Domänenname**: der eindeutige Name, den für Ihre Azure AD-Domäne verwendet wird, zusammen mit „. onmicrosoft.com“. Wenn Sie beispielsweise „beispiel“ eingegeben haben, wäre Ihre Azure AD-Domäne „beispiel.onmicrosoft.com“. 
+- 
+            **Kontakt-E-Mail-Adresse**: eine E-Mail-Adresse, unter der wir Sie hinsichtlich Ihres Kontos erreichen können, wenn nötig.
+- 
+            **Benutzerkontoinformationen für den globalen Administrator**: Vorname, Nachname, Benutzername und Kennwort, die Sie für das neue Administratorkonto verwenden möchten. 
 4.  Klicken Sie auf **Erstellen**, um die neue Domäne und die Kontoinformationen zu bestätigen.
 5.  Melden Sie sich mit dem neuen Azure AD-Benutzernamen und -Kennwort als globaler Administrator an, um auf der Seite **Benutzer verwalten** zusätzliche Kontobenutzer hinzuzufügen und zu verwalten, wie in den folgenden Abschnitten beschrieben.
 
 
-> **Wichtig**  Nachdem Sie Ihr Dev Center-Konto dem Azure AD zugeordnet haben, müssen Sie sich am Dev Center stets mithilfe des globalen Azure AD-Administratorkontos (und nicht mit einem persönlichen Microsoft-Konto) anmelden, um Kontobenutzer hinzuzufügen und zu verwalten.
+> 
+            **Wichtig**  Nachdem Sie Ihr Dev Center-Konto dem Azure AD zugeordnet haben, müssen Sie sich am Dev Center stets mithilfe des globalen Azure AD-Administratorkontos (und nicht mit einem persönlichen Microsoft-Konto) anmelden, um Kontobenutzer hinzuzufügen und zu verwalten.
 
 ## Hinzufügen und Verwalten von Kontobenutzern, Gruppen und Azure AD-Anwendungen
 
 
 Nachdem Sie die Zuordnung hergestellt haben, können Sie Ihrem Konto Benutzer, Gruppen und Azure AD-Apps hinzufügen. Sie können auch Rollen ändern, Kontodetails bearbeiten und Benutzer entfernen.
 
-> **Hinweis**  Wenn Ihre Organisation die [Verzeichnisintegration](http://go.microsoft.com/fwlink/p/?LinkID=724033) zum Synchronisieren des lokalen Verzeichnisdiensts mit Azure AD verwendet, können Sie in Dev Center keine neuen Benutzer, Gruppen oder Azure AD-Anwendungen erstellen. Sie (oder ein anderer Administrator in Ihrem lokalen Verzeichnis) müssen sie direkt im lokalen Verzeichnis erstellen, bevor sie in Dev Center angezeigt und hinzugefügt werden können.
+> 
+            **Hinweis**  Wenn Ihre Organisation die [Verzeichnisintegration](http://go.microsoft.com/fwlink/p/?LinkID=724033) zum Synchronisieren des lokalen Verzeichnisdiensts mit AzureAD verwendet, können Sie in DevCenter keine neuen Benutzer, Gruppen oder AzureAD-Anwendungen erstellen. Sie (oder ein anderer Administrator in Ihrem lokalen Verzeichnis) müssen sie direkt im lokalen Verzeichnis erstellen, bevor sie in DevCenter angezeigt und hinzugefügt werden können.
 
 Beachten Sie beim Verwalten von Benutzern Folgendes:
 
@@ -68,7 +74,8 @@ Beachten Sie beim Verwalten von Benutzern Folgendes:
 
 Allen Benutzern, Gruppen oder Azure AD-Anwendungen, die Sie einem Konto hinzufügen, müssen Sie mindestens eine der unten angegebenen Rollen zuweisen. Jede Rolle verfügt über spezifische Berechtigungen, mit denen bestimmte Funktionen innerhalb des Kontos ausgeführt werden können.
 
-> **Hinweis**  Der Besitzer des Kontos ist die Person, die es als erste mit einem Microsoft-Konto erstellt hat (und keiner der Benutzer, die über Azure AD hinzugefügt wurden). Dieser Kontobesitzer ist die einzige Person mit Vollzugriff auf das Konto. Hierzu zählt die Möglichkeit, Apps zu löschen, zu erstellen und zu bearbeiten, alle Kontobenutzer zu bearbeiten sowie sämtliche finanziellen Einstellungen und Kontoeinstellungen zu ändern. Das Microsoft-Konto, das zum Erstellen des Kontos verwendet wurde, muss beim Erstellen von App-Paketen in Microsoft Visual Studio verwendet werden.
+> 
+            **Hinweis**  Der Besitzer des Kontos ist die Person, die es als erste mit einem Microsoft-Konto erstellt hat (und keiner der Benutzer, die über Azure AD hinzugefügt wurden). Dieser Kontobesitzer ist die einzige Person mit Vollzugriff auf das Konto. Hierzu zählt die Möglichkeit, Apps zu löschen, zu erstellen und zu bearbeiten, alle Kontobenutzer zu bearbeiten sowie sämtliche finanziellen Einstellungen und Kontoeinstellungen zu ändern. Das Microsoft-Konto, das zum Erstellen des Kontos verwendet wurde, muss beim Erstellen von App-Paketen in Microsoft Visual Studio verwendet werden.
 
 | Rolle                 | Beschreibung              |
 |----------------------|--------------------------|
@@ -78,7 +85,8 @@ Allen Benutzern, Gruppen oder Azure AD-Anwendungen, die Sie einem Konto hinzufü
 | Mitwirkender im Finanzbereich  | Kann [Auszahlungsberichte](payout-summary.md) anzeigen. Kann keine Änderungen an Apps, IAPs und Kontoeinstellungen vornehmen.                                                                                                                                                                                                                                                                                                                                                                                 |
 | Händler             | Kann auf [Kundenbewertungen reagieren](respond-to-customer-reviews.md) und nicht finanzbezogene [Analyseberichte](analytics.md) einsehen. Kann keine Änderungen an Apps, IAPs und Kontoeinstellungen vornehmen.                                                                                                                                                                                                                                                                                                            |
 
-> **Hinweis**  Benutzer mit der Rolle „Manager“ oder „Entwickler“ können Apps über das Dashboard übermitteln. Beim Erstellen von App-Paketen in Visual Studio muss anstelle des Azure AD-Kontos das Microsoft-Konto verwendet werden, mit dem das Entwicklerkonto eröffnet wurde.
+> 
+            **Hinweis**  Benutzer mit der Rolle „Manager“ oder „Entwickler“ können Apps über das Dashboard übermitteln. Beim Erstellen von App-Paketen in Visual Studio muss anstelle des Azure AD-Kontos das Microsoft-Konto verwendet werden, mit dem das Entwicklerkonto eröffnet wurde.
 
 ### Hinzufügen und Verwalten von Kontobenutzern
 
@@ -104,7 +112,7 @@ Wenn Sie einem völlig neuen Benutzerkonto Zugriff auf Dev Center gewähren möc
 4.  Wählen Sie im Abschnitt **Rollen** eine oder mehrere Rollen aus, die dem neuen Benutzer zugewiesen werden sollen.
 5.  Wählen Sie im Abschnitt **Gruppenmitgliedschaft** alle Gruppen aus, denen der neue Benutzer angehören soll.
 6.  Klicken Sie auf **Speichern**.
-7.  Auf der Bestätigungsseite werden die Anmeldedaten für den neuen Benutzer angezeigt, z. B. ein temporäres Kennwort. Notieren Sie sich diese Informationen, und teilen Sie sie dem neuen Benutzer mit, da Sie nach dem Verlassen dieser Seite nicht mehr auf das temporäre Kennwort zugreifen können.
+7.  Auf der Bestätigungsseite werden die Anmeldedaten für den neuen Benutzer angezeigt, z.B. ein temporäres Kennwort. Notieren Sie sich diese Informationen, und teilen Sie sie dem neuen Benutzer mit, da Sie nach dem Verlassen dieser Seite nicht mehr auf das temporäre Kennwort zugreifen können.
 
 Änderungen an den Benutzerkonten, die Sie Ihrem Dev Center-Konto hinzugefügt haben, können Sie im Abschnitt **Benutzer verwalten** vornehmen. Beachten Sie, dass Änderungen des Benutzernamens oder der Gruppenmitgliedschaft des Benutzers im Verzeichnis der Organisation und nicht nur im Dev Center-Konto widergespiegelt werden. Änderungen an der Rolle eines Benutzers wirken sich nur auf dessen jeweiligen Dev Center-Zugriff aus.
 
@@ -125,11 +133,12 @@ Wenn Sie das Kennwort für ein Benutzerkonto ändern müssen, das Sie dem Dev Ce
 1.  Klicken Sie auf der Seite **Benutzer verwalten** auf den Namen des Benutzerkontos, das bearbeitet werden soll.
 2.  Klicken Sie am unteren Rand der Seite auf die Schaltfläche **Kennwort zurücksetzen**.
 3.  Auf einer Bestätigungsseite werden die Anmeldeinformationen für den Benutzer angezeigt, einschließlich eines temporären Kennworts.
-  > **Wichtig**  Drucken oder kopieren Sie diese Informationen, und teilen Sie sie dem neuen Benutzer mit, da Sie nach dem Verlassen dieser Seite nicht mehr auf das temporäre Kennwort zugreifen können.
+  > 
+            **Wichtig**  Drucken oder kopieren Sie diese Informationen, und teilen Sie sie dem neuen Benutzer mit, da Sie nach dem Verlassen dieser Seite nicht mehr auf das temporäre Kennwort zugreifen können.
 
 ### Hinzufügen und Verwalten von Gruppen
 
-Wenn Sie dem Dev Center-Konto eine Gruppe aus dem Verzeichnis der Organisation hinzufügen, kann jeder Benutzer, der Mitglied dieser Gruppe ist, mit den Berechtigungen für die der Gruppe zugewiesenen Rolle darauf zugreifen. Beachten Sie, dass alle an Gruppen vorgenommenen Änderungen (u. a. Änderungen von Name oder Mitgliedschaft) im Verzeichnis der Organisation widergespiegelt werden.
+Wenn Sie dem Dev Center-Konto eine Gruppe aus dem Verzeichnis der Organisation hinzufügen, kann jeder Benutzer, der Mitglied dieser Gruppe ist, mit den Berechtigungen für die der Gruppe zugewiesenen Rolle darauf zugreifen. Beachten Sie, dass alle an Gruppen vorgenommenen Änderungen (u.a. Änderungen von Name oder Mitgliedschaft) im Verzeichnis der Organisation widergespiegelt werden.
 
 Wenn Sie mehrere Gruppen gleichzeitig hinzufügen, müssen Sie ihnen die gleiche Rolle zuweisen. Wenn Sie Gruppen hinzufügen, ihnen jedoch unterschiedliche Rollen zuweisen möchten, wiederholen Sie die folgenden Schritte für jede Rolle.
 
@@ -202,13 +211,15 @@ Wenn die Azure AD-App Daten in Microsoft Azure AD liest und schreibt, benötigt 
 
 1.  Klicken Sie auf der Seite **Benutzer verwalten** auf den Namen der Azure AD-App.
 
-    > **Tipp**  Wenn Sie auf den Namen der Azure AD-App klicken, sehen Sie alle aktiven Schlüssel für die Azure AD-App mit dem jeweiligen Erstellungs- und Ablaufdatum des Schlüssels. Klicken Sie auf **Entfernen**, um einen nicht mehr benötigten Schlüssel zu entfernen.
+    > 
+            **Tipp**  Wenn Sie auf den Namen der Azure AD-App klicken, sehen Sie alle aktiven Schlüssel für die Azure AD-App mit dem jeweiligen Erstellungs- und Ablaufdatum des Schlüssels. Klicken Sie auf **Entfernen**, um einen nicht mehr benötigten Schlüssel zu entfernen.
 
 2.  Klicken Sie auf **Add new key**, um einen neuen Schlüssel hinzuzufügen.
 
 3.  Es wird ein Bildschirm mit den Werten für **Client-ID** und **Schlüssel** angezeigt.
 
-    > **Wichtig**  Drucken oder kopieren Sie diese Informationen, da Sie nach dem Verlassen dieser Seite nicht mehr darauf zugreifen können.
+    > 
+            **Wichtig**  Drucken oder kopieren Sie diese Informationen, da Sie nach dem Verlassen dieser Seite nicht mehr darauf zugreifen können.
 
 4.  Klicken Sie auf **Add another key**, wenn Sie weitere Schlüssel erstellen möchten.
 
@@ -216,7 +227,8 @@ Wenn die Azure AD-App Daten in Microsoft Azure AD liest und schreibt, benötigt 
 
 Um einen Benutzer, eine Gruppe oder eine Azure AD-Anwendung aus Ihrem Dev Center-Konto zu entfernen, klicken Sie auf den Link **Entfernen**, der auf der Seite **Benutzer verwalten** neben dem jeweiligen Namen angezeigt wird. Nachdem Sie das Entfernen bestätigt haben, kann der Benutzer, die Gruppe oder die Azure AD-Anwendung nicht mehr auf Ihr Dev Center-Konto zugreifen (es sei denn, Sie fügen das Element später wieder hinzu).
 
-> **Hinweis**  Wenn Sie Benutzer, Gruppen oder Azure AD-Anwendungen entfernen, bedeutet dies, dass diese nicht mehr auf Ihr Dev Center-Konto zugreifen können. Dadurch werden nicht die betreffenden Benutzer, Gruppen oder Azure AD-Apps aus dem Verzeichnis der Organisation gelöscht.
+> 
+            **Hinweis**  Wenn Sie Benutzer, Gruppen oder Azure AD-Anwendungen entfernen, bedeutet dies, dass diese nicht mehr auf Ihr Dev Center-Konto zugreifen können. Dadurch werden nicht die betreffenden Benutzer, Gruppen oder Azure AD-Apps aus dem Verzeichnis der Organisation gelöscht.
 
  
 

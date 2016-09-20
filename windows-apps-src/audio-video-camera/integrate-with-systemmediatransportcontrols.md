@@ -1,80 +1,90 @@
 ---
 author: drewbatgit
 ms.assetid: 
-description: This article shows you how to interact with the System Media Transport Controls.
-title: Integrate with the System Media Transport Controls
+description: "In diesem Artikel wird erläutert, wie Sie mit den Steuerelementen für den Systemmedientransport arbeiten."
+title: "Integration in die Steuerelemente für den Systemmedientransport"
+translationtype: Human Translation
+ms.sourcegitcommit: 53b1cb94f90cd697a96bca49c5f2109d4749dbd1
+ms.openlocfilehash: c490ea43a6f49e09828cb6b07a6fbf1920acca74
+
 ---
 
-# Integrate with the System Media Transport Controls
+# Integration in die Steuerelemente für den Systemmedientransport
 
-This article shows you how to interact with the System Media Transport Controls (SMTC). The SMTC is a set of controls that are common to all Windows 10 devices and that provide a consistent way for users to control media playback for all running apps that use [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) for playback.
+In diesem Artikel wird erläutert, wie Sie mit den Steuerelementen für den Systemmedientransport (System Media Transport Controls, SMTC) arbeiten. SMTC ist eine Reihe von Steuerelementen, die auf allen Windows 10-Geräten verfügbar ist. Sie bieten den Benutzern eine einheitliche Methode zum Steuern der Wiedergabe von Medien für alle ausgeführten Apps, die Sound über [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) ausgeben.
 
-For a complete sample that demonstrates integration with the SMTC, see [System Media Tranport Controls sample on github](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls).
-            		
-##Automatic integration with SMTC
-Starting with Windows 10, version 1607, UWP apps that use the [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) class to play media are automatically integrated with the SMTC by default. Simply instantiate a new instance of **MediaPlayer** and assign a [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem), or [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList) to the player's [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) property and the user will see your app name in the SMTC and can play, pause, and move through your playback lists by using the SMTC controls. 
+Ein vollständiges Beispiel, das die Integration in SMTC veranschaulicht, finden Sie in dem [Beispiel für die Steuerelemente für den Systemmedientransport auf GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls).
+                    
+##Automatische Integration in SMTC
+Ab Windows 10, Version 1607, sind UWP-Apps, die die [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)-Klasse für die Medienwiedergabe verwenden, automatisch in SMTC integriert. Erstellen Sie einfach eine neue Instanz von **MediaPlayer** , und weisen Sie der [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source)-Eigenschaft ein [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource)-, [ **MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem)- oder [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList)-Objekt zu. Dem Benutzer wird der Name Ihrer App in SMTC angezeigt, und er kann mit den Steuerelementen für den Systemmedientransport durch seine Wiedergabelisten navigieren und Titel wiedergeben und anhalten. 
 
-Your app can create and use multiple **MediaPlayer** objects at once. For each active **MediaPlayer** instance in your app, a separate tab is created in the SMTC, allowing the user to switch between your active media players and those of other running apps. Whichever media player is currently selected in the SMTC is the one that the controls will affect.
+Ihre App kann mehrere **MediaPlayer** Objekte auf einmal erstellen und verwenden. Für jede aktive **MediaPlayer**-Instanz in Ihrer App wird in SMTC eine separaten Registerkarte erstellt, sodass der Benutzer zwischen dem aktiven MediaPlayer und den Instanzen in anderen ausgeführten Apps wechseln kann. Die Steuerelemente bedienen den jeweils ausgewählten MediaPlayer.
 
-For more information on using **MediaPlayer** in your app, including binding it to a [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) in your XAML page, see [Play audio and video with MediaPlayer](play-audio-and-video-with-mediaplayer.md). 
+Weitere Informationen zur Verwendung von **MediaPlayer** in Ihrer App, u.a. zum Einbinden an ein [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)-Objekt in der XAML-Seite finden Sie unter [Audio-und Videowiedergabe mit MediaPlayer](play-audio-and-video-with-mediaplayer.md). 
 
-For more information on working with **MediaSource**, **MediaPlaybackItem**, and **MediaPlaybackList**, see [Media items, playlists, and tracks](media-playback-with-mediasource.md).
+Weitere Informationen zum Arbeiten mit **MediaSource**-, **MediaPlaybackItem**- und **MediaPlaybackList**-Objekten finden Sie unter [Medienelemente, Wiedergabelisten und Titel](media-playback-with-mediasource.md).
 
-##Add metadata to be displayed by the SMTC
-If you want add or modify the metadata that is displayed for your media items in the SMTC, such as a video or song title, you need to update the display properties for the **MediaPlaybackItem** representing your media item. First, get a reference to the [**MediaItemDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties) object by calling [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties). Next, set the type of media, music or video, for the item with the [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type) property. Then you can populate the fields of the [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties) or [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties), depending on which media type you specified. Finally, update the metadata for the media item by calling [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923).
+##Hinzufügen von Metadaten, die von SMTC angezeigt werden sollen
+Wenn Sie Metadaten, die für die Medienobjekte in SMTC angezeigt werden, hinzufügen oder ändern möchten z. B. dass ein Video oder Songtitel angezeigt wird, müssen Sie die Anzeigeeigenschaften für das **MediaPlaybackItem**, das Ihr Medienelement darstellt, aktualisieren. Rufen Sie zunächst einen Verweis auf das [**MediaItemDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties)-Objekt ab, indem Sie [**GetDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem.GetDisplayProperties) aufrufen. Legen Sie dann den Medientyp für das Objekt mit der [**Type**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.Type)-Eigenschaft als Musik oder Video fest. Anschließend können Sie Werte in die Felder für die [**MusicProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.MusicProperties)- bzw. [**VideoProperties**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaItemDisplayProperties.VideoProperties)-Eigenschaften einfügen, je nachdem, welchen Medientyp Sie angegeben haben. Zum Schluss aktualisieren Sie die Metadaten für das Medienobjekt, indem Sie [**ApplyDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/mt489923) aufrufen.
 
 [!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
 
 [!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
 
-##Use CommandManager to modify or override the default SMTC commands
-Your app can modify or completely override the behavior of the SMTC controls with the [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) class. A command manager instance can be obtained for each instance of the **MediaPlayer** class by accessing the [**CommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.CommandManager) property.
+##Verwenden Sie CommandManager, um die Standard-SMTC-Befehle zu ändern oder zu überschreiben.
+Ihre App kann das Verhalten der SMTC-Steuerelemente in der [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager)-Klasse ändern oder vollständig überschreiben. Sie können für jede Instanz der **MediaPlayer**-Klasse eine Befehlsmanagerinstanz abrufen, indem Sie auf die [**CommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.CommandManager)-Eigenschaft zugreifen.
 
-For every command, such as the *Next* command which by default skips to the next item in a **MediaPlaybackList**, the command manager exposes a received event, like [**NextReceived**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.NextReceived), and an object that manages the behavior of the command, like [**NextBehavior**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.NextBehavior). 
+Für jeden Befehl, beispielsweise den Befehl *Next*, der standardmäßig zum nächsten Element in einer **MediaPlaybackList**-Liste springt, veröffentlicht der Befehlsmanager empfangene Ereignisse (z. B. [**NextReceived**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.NextReceived)) und ein Objekt, das Verhalten des Befehls verwaltet (z. B. [**NextBehavior**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.NextBehavior)). 
 
-The following example registers a handler for the **NextReceived** event and for the [**IsEnabledChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.IsEnabledChanged) event of the **NextBehavior**.
+In dem folgenden Beispiel wird ein Handler für das **NextReceived** Ereignis und für das [**IsEnabledChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.IsEnabledChanged)-Ereignis von **NextBehavior** registriert.
 
 [!code-cs[AddNextHandler](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetAddNextHandler)]
 
-The following example illustrates a scenario where the app wants to disable the *Next* command after the user has clicked through five items in the playlist, perhaps requiring some user interaction before continuing playing content. Each ## the **NextReceived** event is raised, a counter is incremented. Once the counter reaches the target number, the [**EnablingRule**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.EnablingRule) for the *Next* command is set to [**Never**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaCommandEnablingRule), which disables the command. 
+Das folgende Beispiel illustriert ein Anwendungsszenario, in dem die App den Befehl *Next* deaktiviert, nachdem der Benutzer nacheinander auf fünf Elemente in der Playlist geklickt hat, weil vielleicht ein Benutzereingriff erforderlich ist, bevor weiter Inhalte wiedergegeben werden. Jedes Mal, wenn das **NextReceived**-Ereignis ausgelöst wird, wird ein Zähler erhöht. Wenn der Zähler die angegebene Zahl erreicht, wird die [**EnablingRule**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.EnablingRule)-Eigenschaft für den *Next*-Befehl auf [**Never**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaCommandEnablingRule) festgelegt, was den Befehl deaktiviert. 
 
 [!code-cs[NextReceived](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetNextReceived)]
 
-You can also set the command to **Always**, which means the command will always be enabled even if, for the *Next* command example, there are no more items in the playlist. Or you can set the command to **Auto**, where the system determines whether the command should be enabled based on the current content being played.
+Sie können den Befehl auch auf **Always** festlegen, was bedeutet, dass der Befehl auch dann aktiviert ist, wenn bei dem *Next*-Befehl in dem Beispiel keine Elemente mehr in der Playlist vorhanden sind. Alternativ können Sie den Befehl auf **Auto** festlegen. In diesem Fall bestimmt das System auf der Grundlage des aktuell wiedergegebenen Inhalts, ob der Befehl aktiviert werden soll.
 
-For the scenario described above, at some point the app will want to reenable the *Next* command and does so by setting the **EnablingRule** to **Auto**.
+Bei dem oben beschriebenen Anwendungsszenario sollte die App zu einem bestimmten Zeitpunkt den *Next*-Befehl wieder aktivieren. Dies erfolgt, indem **EnablingRule** auf **Auto** festgelegt wird.
 
 [!code-cs[EnableNextButton](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetEnableNextButton)]
 
-Because your app may have it's own UI for controlling playback while it is in the foreground, you can use the [**IsEnabledChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.IsEnabledChanged) events to update your own UI to match the SMTC as commands are enabled or disabled by accessing the [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.IsEnabled) of the [**MediaPlaybackCommandManagerCommandBehavior**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior) passed into the handler.
+Da Ihre App möglicherweise eine eigene UI zum Steuern der Videowiedergabe hat, wenn sie sich im Vordergrund befindet, können Sie mithilfe der [ **IsEnabledChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.IsEnabledChanged)-Ereignisse die eigene Benutzeroberfläche entsprechend den Steuerelemente für den Systemmedientransport aktualisieren, sobald Befehle aktiviert oder deaktiviert werden, indem Sie auf [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior.IsEnabled) von [ **MediaPlaybackCommandManagerCommandBehavior**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior) zugreifen, das an den Handler übergeben wird.
 
 [!code-cs[IsEnabledChanged](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetIsEnabledChanged)]
 
-In some cases, you may want to completely override the behavior of an SMTC command. The example below illustrates a scenario where an app uses the *Next* and *Previous* commands to switch between internet radio stations instead of skipping between tracks in the current playlist. As in the previous example, a handler is registered for when a command is received, in this case it is the [**PreviousReceived**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.PreviousReceived) event.
+In einigen Fällen gibt es Gründe, das Verhalten eines Befehls in den Steuerelementen für den Systemmedientransport vollständig zu überschreiben. Das folgende Beispiel illustriert ein Anwendungsszenario, in dem eine App die Befehle *Next* und *Previous* verwendet, um zwischen Internetradiosendern zu wechseln statt zwischen den Titeln der aktuellen Playlist. Wie im vorherigen Beispiel wird ein Handler registriert, wenn ein Befehl empfangen wird. In diesem Fall ist dies das [**PreviousReceived**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.PreviousReceived)-Ereignis.
 
 [!code-cs[AddPreviousHandler](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetAddPreviousHandler)]
 
-In the **PreviousReceived** handler, first a [**Deferral**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Deferral) is obtained by calling the  [**GetDeferral**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs.GetDeferral) of the [**MediaPlaybackCommandManagerPreviousReceivedEventArgs**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs) passed into the handler. This tells the system to wait for until the deferall is complete before executing the command. This is extremely important if you are going to make asynchronous calls in the handler. At this point, the example calls a custom method that returns a **MediaPlaybackItem** representing the previous radio station.
+In dem **PreviousReceived**-Handler wird zuerst ein [ **Deferral** ](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Deferral)-Wert abgerufen, indem die Funktion [ **GetDeferral** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs.GetDeferral) von [ **MediaPlaybackCommandManagerPreviousReceivedEventArgs** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs) aufgerufen wird, das an den Handler übergeben wurde. Dies weist das System an, entsprechend der Verzögerung zu warten, und erst dann den Befehl auszuführen. Dies ist sehr wichtig, wenn Sie beabsichtigen, in dem Ereignishandler asynchrone Aufrufe auszuführen. An dieser Stelle wird im Beispiel eine angepasste Methode aufgerufen, die einen **MediaPlaybackItem**-Wert zurückgibt, der den vorherigen Radiosender darstellt.
 
-Next, the [**Handled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs.Handled) property is checked to make sure that the event wasn't already handled by another handler. If not, the **Handled** property is set to true. This lets the SMTC, and any other subscribed handlers, know that they should take no action to execute this command because it has already been handled. The code then sets the new source for the media player and starts the player.
+Als Nächstes wird die [**Handled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs.Handled)-Eigenschaft überprüft, um sicherzustellen, dass das Ereignis nicht bereits von einem anderen Handler verarbeitet wird. Wenn dies nicht der Fall ist, wird die Eigenschaft **Handled** auf „true“ festgelegt. Auf diese Weise können die Steuerelemente für den Systemmedientransport und auch alle anderen abonnierten Handler wissen, dass sie keine weiteren Aktionen zum Ausführen dieses Befehls auslösen sollen, da dieser bereits verarbeitet wird. Anschließend wird die neue Quelle für die Medienwiedergabe festgelegt und der Player gestartet.
 
-Finally, [**Complete**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Deferral.Complete) is called on the deferral object to let the system know that you are done processing the command.
+Schließlich wird für das Deferral-Objekt die Funktion [**Complete**](https://msdn.microsoft.com/library/windows/apps/Windows.Foundation.Deferral.Complete) aufgerufen, um dem System mitzuteilen, dass die Verarbeitung des Befehls abgeschlossen wurde.
 
 [!code-cs[PreviousReceived](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetPreviousReceived)]
-             	
-##Manual control of the SMTC
-As mentioned previously in this article, the SMTC will automatically detect and display information for every instance of **MediaPlayer** that your app creates. If you want to use multiple instances of **MediaPlayer** but want the SMTC to provide a single entry for your app, then you must manually control the behavior of the SMTC instead of relying on automatic integration. Also, if you are using MediaTimelineController to control one or more media players, you must use manual SMTC integration. For information on how to manually control the SMTC, see [Manual control of the System Media Transport Controls](system-media-transport-controls.md).
+                
+##Manuelle Steuerung von SMTC
+Wie weiter oben in diesem Artikel bereits erwähnt, erkennt der SMTC automatisch die Informationen für jede einzelne Instanz von **MediaPlayer**, die Ihre App erstellt, und zeigt diese an. Wenn Sie mehrere Instanzen von **MediaPlayer** verwenden möchten, SMTC jedoch noch einen einzelnen Eintrag für Ihre App bereitstellt, müssen Sie das Verhalten von SMTC manuell steuern anstatt sich auf die automatische Integration zu verlassen. Auch wenn Sie [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) verwenden, um mindestens ein MediaPlayer zu steuern, müssen Sie die SMTC-Integration manuell durchführen. Dies gilt außerdem, wenn Ihre App ein anderes API als **MediaPlayer** verwendet, um Medien wiederzugeben, z. B. die [**AudioGraph**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Audio.AudioGraph)-Klasse. Auch in diesem Fall müssen Sie die SMTC-Integration manuell durchführen, damit der Benutzer Ihre App mit den Steuerelementen für den Systemmedientransport bedienen kann. Informationen zur manuellen Bedienung der Steuerelemente für den Systemmedientransport finden Sie unter [Manuelle Steuerung der Steuerelemente für den Systemmedientransport](system-media-transport-controls.md).
 
 
-## Related topics
-* [Media playback](media-playback.md)
-* [Play audio and video with MediaPlayer](play-audio-and-video-with-mediaplayer.md)
-* [Manual control of the System Media Transport Controls](system-media-transport-controls.md)
-* [System Media Tranport Controls sample on github](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
- 
+## Verwandte Themen
+* [Medienwiedergabe](media-playback.md)
+* [Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“](play-audio-and-video-with-mediaplayer.md)
+* [Manuelle Steuerung der Steuerelemente für den Systemmedientransport](system-media-transport-controls.md)
+* [Beispiel für die Steuerelemente für den Systemmedientransport auf GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)
+ 
 
- 
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO3-->
 
 

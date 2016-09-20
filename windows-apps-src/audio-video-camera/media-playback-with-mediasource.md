@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
 description: "Die MediaSource-Klasse wird allgemein zum Verweisen auf Medien aus verschiedenen Quellen (etwa lokale Dateien oder Remotedateien) sowie zum Wiedergeben dieser Medien verwendet und macht ein gemeinsames Modell für den Mediendatenzugriff verfügbar – unabhängig vom zugrunde liegenden Medienformat."
 title: "Medienwiedergabe mit „MediaSource“"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
@@ -11,12 +10,13 @@ ms.openlocfilehash: d64f4484566d80eaf2a353b1aba954c15079343c
 
 # Medienwiedergabe mit „MediaSource“
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 \[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
 
-Die [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905)-Klasse wird allgemein zum Verweisen auf Medien aus verschiedenen Quellen (etwa lokale Dateien oder Remotedateien) sowie zum Wiedergeben dieser Medien verwendet und macht ein gemeinsames Modell für den Mediendatenzugriff verfügbar – unabhängig vom zugrunde liegenden Medienformat. Die [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939)-Klasse erweitert den Funktionsumfang von **MediaSource** und ermöglicht die Verwaltung und Auswahl mehrerer Audio-, Video- und Metadatentitel in einem Medienelement. [
+Die [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/dn930905)-Klasse wird allgemein zum Verweisen auf Medien aus verschiedenen Quellen (etwa lokale Dateien oder Remotedateien) sowie zum Wiedergeben dieser Medien verwendet und macht ein gemeinsames Modell für den Mediendatenzugriff verfügbar – unabhängig vom zugrunde liegenden Medienformat. Die [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/dn930939)-Klasse erweitert den Funktionsumfang von **MediaSource** und ermöglicht die Verwaltung und Auswahl mehrerer Audio-, Video- und Metadatentitel in einem Medienelement. 
+            [
               **MediaPlaybackList**
             ](https://msdn.microsoft.com/library/windows/apps/dn930955) ermöglicht die Erstellung von Wiedergabelisten auf der Grundlage von Medienelementen.
 
@@ -144,7 +144,8 @@ Dieses Beispiel fügt einen benutzerdefinierten Texttitel hinzu. Hierzu wird bei
 
 Mithilfe des [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)-Elements können Sie eine Wiedergabeliste mit Medienelementen (dargestellt durch **MediaPlaybackItem**-Objekte) erstellen.
 
-**Hinweis**  Elemente in einer [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) werden mit lückenloser Wiedergabe gerendert. Das System verwendet die in MP3- oder AAC-codierten Dateien bereitgestellten Metadaten, um die für die lückenlose Wiedergabe erforderliche Verzögerungs- oder Auffüllkorrektur (Delay/Padding) zu ermitteln. Werden diese Metadaten von den MP3- oder AAC-codierten Dateien nicht bereitgestellt, ermittelt das System Verzögerungen und Auffüllungen heuristisch. Bei verlustfreien Formaten wie PCM, FLAC oder ALAC ergreift das System keine Maßnahme, da diese Encoder keine Verzögerungen oder Auffüllungen verursachen.
+
+            **Hinweis**  Elemente in einer [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) werden mit lückenloser Wiedergabe gerendert. Das System verwendet die in MP3- oder AAC-codierten Dateien bereitgestellten Metadaten, um die für die lückenlose Wiedergabe erforderliche Verzögerungs- oder Auffüllkorrektur (Delay/Padding) zu ermitteln. Werden diese Metadaten von den MP3- oder AAC-codierten Dateien nicht bereitgestellt, ermittelt das System Verzögerungen und Auffüllungen heuristisch. Bei verlustfreien Formaten wie PCM, FLAC oder ALAC ergreift das System keine Maßnahme, da diese Encoder keine Verzögerungen oder Auffüllungen verursachen.
 
 Deklarieren Sie zunächst eine Variable zum Speichern Ihres **MediaPlaybackList**-Elements.
 
@@ -158,7 +159,7 @@ Aktualisieren Sie im **CurrentItemChanged**-Ereignishandler Ihre UI mit dem derz
 
 [!code-cs[MediaPlaybackListItemChanged](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetMediaPlaybackListItemChanged)]
 
-Rufen Sie [**MovePrevious**](https://msdn.microsoft.com/library/windows/apps/mt146455) oder [**MoveNext**](https://msdn.microsoft.com/library/windows/apps/mt146454) auf, um bei der Media Player-Wiedergabe zum vorherigen oder nächsten Element Ihres **MediaPlaybackList**-Elements zu wechseln.
+Rufen Sie [**MovePrevious**](https://msdn.microsoft.com/library/windows/apps/mt146455) oder [**MoveNext**](https://msdn.microsoft.com/library/windows/apps/mt146454) auf, um bei der MediaPlayer-Wiedergabe zum vorherigen oder nächsten Element Ihres **MediaPlaybackList**-Elements zu wechseln.
 
 [!code-cs[PrevButton](./code/MediaSource_Win10/cs/MainPage.xaml.cs#SnippetPrevButton)]
 

@@ -5,7 +5,6 @@ MS-HAID: dev\_devices\_sensors.generate\_3mf
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
 title: Erstellen eines 3MF-Pakets
-translationtype: Human Translation
 ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
 ms.openlocfilehash: fd85530d27a157bd65a6feec8a20cca8cadfb88f
 
@@ -60,7 +59,8 @@ Die nächste Methode definiert alle Dreiecke, die über diese Scheitelpunkte gez
 
 [!code-cs[TriangleIndices](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetTriangleIndices)]
 
-> **Hinweis** Die Indizes aller Dreiecke müssen gegen den Uhrzeigersinn definiert werden (bei Sicht auf das Dreieck von außerhalb des Gitterobjekts), sodass ihre Oberflächennormalvektoren nach außen zeigen.
+> 
+            **Hinweis** Die Indizes aller Dreiecke müssen gegen den Uhrzeigersinn definiert werden (bei Sicht auf das Dreieck von außerhalb des Gitterobjekts), sodass ihre Oberflächennormalvektoren nach außen zeigen.
 
 Wenn ein Printing3DMesh-Objekt gültige Sätze von Scheitelpunkten und Dreiecken enthält, sollte es anschließend der **Meshes**-Eigenschaft des Modells hinzugefügt werden. Alle **Printing3DMesh**-Objekte in einem Paket müssen unter der **Meshes**-Eigenschaft der **Printing3DModel**-Klasse gespeichert werden.
 
@@ -82,17 +82,20 @@ Der standardmäßige Materialtyp ist **Base Material**, der sowohl einen **Color
 
 [!code-cs[BaseMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetBaseMaterialGroup)]
 
-**Hinweis**  Das 3D-Fertigungsgerät bestimmt, welche verfügbaren physischen Materialien den jeweiligen im 3MF gespeicherten virtuellen Materialelementen zugeordnet werden. Die Materialzuordnung muss nicht 1:1 erfolgen: Wenn ein 3D-Drucker nur ein Material verwendet, wird das gesamte Modell in diesem Material gedruckt, unabhängig davon, welchen Objekten oder Oberflächen verschiedene Materialien zugeordnet wurden.
+
+            **Hinweis**  Das 3D-Fertigungsgerät bestimmt, welche verfügbaren physischen Materialien den jeweiligen im 3MF gespeicherten virtuellen Materialelementen zugeordnet werden. Die Materialzuordnung muss nicht 1:1 erfolgen: Wenn ein 3D-Drucker nur ein Material verwendet, wird das gesamte Modell in diesem Material gedruckt, unabhängig davon, welchen Objekten oder Oberflächen verschiedene Materialien zugeordnet wurden.
 
 ### Farbmaterialien
 
-**Farbmaterialien** ähneln den **Basismaterialien**, enthalten jedoch keinen Namen. Somit enthalten sie keine Anweisungen, welche Materialart vom Gerät verwendet werden soll. Sie enthalten lediglich Farbdaten und überlassen dem Gerät die Auswahl des Materialtyps (das Gerät kann anschließend den Benutzer zur Auswahl auffordern). Im folgenden Code werden die `colrMat`-Objekte aus der vorherigen Methode alleine verwendet.
+
+            **Farbmaterialien** ähneln den **Basismaterialien**, enthalten jedoch keinen Namen. Somit enthalten sie keine Anweisungen, welche Materialart vom Gerät verwendet werden soll. Sie enthalten lediglich Farbdaten und überlassen dem Gerät die Auswahl des Materialtyps (das Gerät kann anschließend den Benutzer zur Auswahl auffordern). Im folgenden Code werden die `colrMat`-Objekte aus der vorherigen Methode alleine verwendet.
 
 [!code-cs[ColorMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetColorMaterialGroup)]
 
 ### Zusammengesetzte Materialien
 
-**Zusammengesetzte Materialien** weisen das Fertigungsgerät an, eine einheitliche Mischung aus unterschiedlichen **Basismaterialien** zu verwenden. Jede **zusammengesetzte Materialgruppe** muss auf genau eine **Basismaterialgruppe** verweisen, aus der die Bestandteile entnommen werden sollen. Zusätzlich müssen die **Basismaterialien** in dieser Gruppe, die verfügbar gemacht werden sollen, in einer Liste mit den **Materialindizes** aufgeführt werden, auf die anschließend jedes **zusammengesetzte Material** verweist, wenn die Verhältnisse angeben werden (jedes **zusammengesetzte Material** ist lediglich ein Verhältnis der **Basismaterialien**).
+
+            **Zusammengesetzte Materialien** weisen das Fertigungsgerät an, eine einheitliche Mischung aus unterschiedlichen **Basismaterialien** zu verwenden. Jede **zusammengesetzte Materialgruppe** muss auf genau eine **Basismaterialgruppe** verweisen, aus der die Bestandteile entnommen werden sollen. Zusätzlich müssen die **Basismaterialien** in dieser Gruppe, die verfügbar gemacht werden sollen, in einer Liste mit den **Materialindizes** aufgeführt werden, auf die anschließend jedes **zusammengesetzte Material** verweist, wenn die Verhältnisse angeben werden (jedes **zusammengesetzte Material** ist lediglich ein Verhältnis der **Basismaterialien**).
 
 [!code-cs[CompositeMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetCompositeMaterialGroup)]
 
@@ -102,7 +105,8 @@ Der standardmäßige Materialtyp ist **Base Material**, der sowohl einen **Color
 
 [!code-cs[TextureResource](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetTextureResource)]
 
-**Hinweis** Texturdaten gehören zum 3MF-Paket selbst und nicht zum Modellteil innerhalb des Pakets.
+
+            **Hinweis** Texturdaten gehören zum 3MF-Paket selbst und nicht zum Modellteil innerhalb des Pakets.
 
 Als Nächstes müssen die **Texture3Coord-Materialien** angegeben werden. Jedes dieser Materialien verweist auf eine Texturressource und gibt einen bestimmten Punkt im Bild an (in UV-Koordinaten).
 
@@ -116,7 +120,8 @@ Um festzulegen, welche Materialien welchen Scheitelpunkten der einzelnen Dreieck
 
 ## Komponenten und Erstellung
 
-Die Komponentenstruktur ermöglicht es dem Benutzer, mehrere Gitterobjekte in einem druckbaren 3D-Modell zu platzieren. Ein [**Printing3DComponent**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponent.aspx)-Objekt enthält ein einzelnes Gitter und eine Liste der Verweise auf andere Komponenten. Hierbei handelt es sich eigentlich um eine Liste der [**Printing3DComponentWithMatrix**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponentwithmatrix.aspx)-Objekte. **Printing3DComponentWithMatrix**-Objekte enthalten jeweils eine **Printing3DComponent** und insbesondere eine Transformationsmatrix, die auf das Gitter und die enthaltenen Komponenten der **Printing3DComponent** angewendet wird.
+Die Komponentenstruktur ermöglicht es dem Benutzer, mehrere Gitterobjekte in einem druckbaren 3D-Modell zu platzieren. Ein [**Printing3DComponent**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponent.aspx)-Objekt enthält ein einzelnes Gitter und eine Liste der Verweise auf andere Komponenten. Hierbei handelt es sich eigentlich um eine Liste der [**Printing3DComponentWithMatrix**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3dcomponentwithmatrix.aspx)-Objekte. 
+            **Printing3DComponentWithMatrix**-Objekte enthalten jeweils eine **Printing3DComponent** und insbesondere eine Transformationsmatrix, die auf das Gitter und die enthaltenen Komponenten der **Printing3DComponent** angewendet wird.
 
 Das Modell eines Autos könnte zum Beispiel aus einer „Karosserie“-**Printing3DComponent** bestehen, die das Gitter für die Karosserie enthält. Die „Karosserie“-Komponente kann dann Verweise auf vier verschiedene **Printing3DComponentWithMatrix**-Objekte enthalten, die alle auf dieselbe **Printing3DComponent** mit dem Gitter „Reifen“ verweisen und vier verschiedene Transformationsmatrizen enthalten (die die Reifen vier verschiedenen Positionen an der Karosserie zuordnen). In diesem Szenario müssen die Gitter „Karosserie“ und „Reifen“ nur jeweils einmal gespeichert werden, obwohl das endgültige Produkt insgesamt fünf Gitter umfassen würde.
 

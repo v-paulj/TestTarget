@@ -7,7 +7,7 @@ label: Use patterns to format dates and times
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 17cd1619a13adced643b4c8983dbf874bebaa740
+ms.openlocfilehash: f49af17ada36ceb2e5898d80047c2d616b1d0c6e
 
 ---
 
@@ -28,13 +28,11 @@ Verwenden Sie die [**Windows.Globalization.DateTimeFormatting**](https://msdn.mi
 ## <span id="Introduction"></span><span id="introduction"></span><span id="INTRODUCTION"></span>Einführung
 
 
-[
-              **Windows.Globalization.DateTimeFormatting**
-            ](https://msdn.microsoft.com/library/windows/apps/br206859) bietet mehrere Möglichkeiten zur ordnungsgemäßen Formatierung von Datums- und Uhrzeitwerten für Sprachen und Regionen auf der ganzen Welt. Sie können Standardformate für Jahr, Monat, Tag usw. oder auch Standard-Zeichenfolgenvorlagen wie „longdate“ oder „month day“ verwenden.
+[**Windows.Globalization.DateTimeFormatting**](https://msdn.microsoft.com/library/windows/apps/br206859) bietet vielfältige Wege um Daten und Uhrzeiten für Sprachen und Regionen rund um die Welt ordnungsgemäß zu formatieren. Sie können Standardformate für Jahr, Monat, Tag usw. oder auch Standard-Zeichenfolgenvorlagen wie „longdate“ oder „month day“ verwenden.
 
 Wenn Sie allerdings mehr Kontrolle über Reihenfolge und Format der Bestandteile der anzuzeigenden [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576)-Zeichenfolge haben möchten, können Sie für den Zeichenfolgenvorlagen-Parameter eine spezielle Syntax (ein so genanntes Muster) verwenden. Mit der Mustersyntax können Sie einzelne Bestandteile eines **DateTime**-Objekts (beispielsweise nur den Monatsnamen oder nur den Jahreswert) abrufen und in einem beliebigen benutzerdefinierten Format anzeigen. Darüber hinaus kann das Muster mittels Lokalisierung für andere Sprachen und Regionen angepasst werden.
 
-**Hinweis**  Hier finden Sie eine Übersicht über Formatmuster. Eine ausführlichere Besprechung der Formatvorlagen und Formatmuster finden Sie in der Dokumentation zur [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)-Klasse im Abschnitt „Anmerkungen“.
+**Hinweis**  Dies ist ein Überblick über Formatierungsmuster. Eine ausführlichere Besprechung der Formatvorlagen und Formatmuster finden Sie in der Dokumentation zur [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)-Klasse im Abschnitt „Anmerkungen“.
 
  
 
@@ -52,7 +50,7 @@ var datefmt = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("mo
 var datefmt = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("month day");
 ```
 
-Hierdurch wird ein Formatierer erstellt, der auf dem Sprach- und Regionswert des aktuellen Kontexts basiert. Monat und Tag werden somit immer gemeinsam in einem geeigneten globalen Format dargestellt. Beispiel: „January 1“ für Englisch (USA), „1 janvier“ für Französisch (Frankreich) und „1月1日“ für Japanisch. Der Grund hierfür ist, dass die Vorlage auf einer kulturspezifischen Musterzeichenfolge basiert, auf die über die Mustereigenschaft zugegriffen werden kann:
+Hierdurch wird ein Formatierer erstellt, der auf dem Sprach- und Regionswert des aktuellen Kontexts basiert. Monat und Tag werden somit immer gemeinsam in einem geeigneten globalen Format dargestellt. Beispiel: „January1“ für Englisch(USA), „1janvier“ für Französisch (Frankreich) und „1月1日“ für Japanisch. Der Grund hierfür ist, dass die Vorlage auf einer kulturspezifischen Musterzeichenfolge basiert, auf die über die Mustereigenschaft zugegriffen werden kann:
 
 **C#**
 ```CSharp
@@ -71,7 +69,7 @@ Fr-FR: "{day.integer} {month.full}"
 Ja-JP: "{month.integer}月{day.integer}日"
 ```
 
-Mit Mustern können Sie ein benutzerdefiniertes [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)-Element erstellen. Hier sehen Sie ein auf dem Muster für Englisch (USA) basierendes Beispiel:
+Mit Mustern können Sie ein benutzerdefiniertes [**DateTimeFormatter**](https://msdn.microsoft.com/library/windows/apps/br206828)-Element erstellen. Hier sehen Sie ein auf dem Muster für Englisch(USA) basierendes Beispiel:
 
 **C#**
 ```CSharp
@@ -99,14 +97,14 @@ Darüber hinaus können sich Muster im Lauf der Zeit ändern. Länder und Region
 
 Zusammenfassung der Unterschiede zwischen Standard-Zeichenfolgenvorlagen und nicht standardmäßigen Zeichenfolgenvorlagen:
 
-**Zeichenfolgenvorlagen, z. B. „month day“:**
+**Zeichenfolgenvorlagen, z.B. „month day“:**
 
 -   Eine abstrahierte Darstellung des [**DateTime**](https://msdn.microsoft.com/library/windows/apps/br206576)-Formats, die Werte für den Tag und den Monat in einer bestimmten Reihenfolge enthält.
 -   Gibt für alle von Windows unterstützten Sprach- und Regionswerte stets ein gültiges Standardformat zurück.
 -   Liefert stets eine entsprechend der Kultur formatierte Zeichenfolge für die angegebene Sprache und Region.
 -   Nicht alle Kombinationen der Bestandteile sind gültig. Beispielsweise gibt es keine Zeichenfolgenvorlage für „dayofweek day“.
 
-**Zeichenfolgenmuster, z. B. „{month.full} {day.integer}“:**
+**Zeichenfolgenmuster, z.B. „{month.full} {day.integer}“:**
 
 -   Eine Zeichenfolge mit explizit festgelegter Reihenfolge, die den vollständigen Monatsnamen, gefolgt von einem Leerzeichen, auf das der als ganze Zahl dargestellte Tag folgt, angibt (und zwar in dieser Reihenfolge).
 -   Entspricht möglicherweise nicht dem gültigen Standardformat für jedes Sprach-Region-Paar.
@@ -116,7 +114,7 @@ Zusammenfassung der Unterschiede zwischen Standard-Zeichenfolgenvorlagen und nic
 ## <span id="Tasks"></span><span id="tasks"></span><span id="TASKS"></span>Aufgaben
 
 
-Angenommen, Sie möchten den aktuellen Monat und den aktuellen Tag zusammen mit der aktuellen Uhrzeit in einen bestimmten Format anzeigen. Sie möchten also z. B., dass für US-Benutzer Folgendes angezeigt wird:
+Angenommen, Sie möchten den aktuellen Monat und den aktuellen Tag zusammen mit der aktuellen Uhrzeit in einen bestimmten Format anzeigen. Sie möchten also z.B., dass für US-Benutzer Folgendes angezeigt wird:
 
 ``` syntax
 June 25 | 1:38 PM
@@ -148,7 +146,7 @@ var mydatepattern = mydate.patterns[0];
 var mytimepattern = mytime.patterns[0];
 ```
 
-Ihr benutzerdefiniertes Format muss als lokalisierbare Ressourcenzeichenfolge gespeichert werden. Die Zeichenfolge für Englisch (USA) lautet beispielsweise „{date} | {time}“. Lokalisierer können diese Zeichenfolge wie gewünscht anpassen. Sie können beispielsweise die Reihenfolge der Bestandteile ändern, falls in bestimmten Sprachen oder Regionen die Uhrzeit vor dem Datum stehen soll. Oder Sie können „|“ durch ein anderes Trennzeichen ersetzen. Zur Laufzeit werden die Bestandteile „{date}“ und „{time}“ der Zeichenfolge durch das entsprechende Muster ersetzt:
+Ihr benutzerdefiniertes Format muss als lokalisierbare Ressourcenzeichenfolge gespeichert werden. Die Zeichenfolge für Englisch(USA) lautet beispielsweise „{date} | {time}“. Lokalisierer können diese Zeichenfolge wie gewünscht anpassen. Sie können beispielsweise die Reihenfolge der Bestandteile ändern, falls in bestimmten Sprachen oder Regionen die Uhrzeit vor dem Datum stehen soll. Oder Sie können „|“ durch ein anderes Trennzeichen ersetzen. Zur Laufzeit werden die Bestandteile „{date}“ und „{time}“ der Zeichenfolge durch das entsprechende Muster ersetzt:
 
 **C#**
 ```CSharp
@@ -194,6 +192,6 @@ var mydateplustimefmt = new dtf.DateTimeFormatter(mydateplustime);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

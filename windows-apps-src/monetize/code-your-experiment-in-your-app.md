@@ -1,9 +1,8 @@
 ---
 author: mcleanbyron
-Description: "Nachdem Sie Ihr Experiment im Dev Center-Dashboard definiert haben, können Sie es in Ihrer App programmieren."
+Description: "Nachdem Sie Ihr Experiment im DevCenter-Dashboard definiert haben, können Sie es in Ihrer App programmieren."
 title: "Programmieren der App für Experimente"
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
-translationtype: Human Translation
 ms.sourcegitcommit: d403e78b775af0f842ba2172295a09e35015dcc8
 ms.openlocfilehash: 4e6706624e71c6d448a3d457c27d11c9f6ecc156
 
@@ -11,13 +10,13 @@ ms.openlocfilehash: 4e6706624e71c6d448a3d457c27d11c9f6ecc156
 
 # Programmieren der App für Experimente
 
-Nach dem [Definieren des Experiments im Dev Center-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md) können Sie den Code in Ihrer App für die universelle Windows-Plattform (UWP) aktualisieren, um Variantendaten für das Experiment zu erhalten, das Verhalten des getesteten Features anhand dieser Daten anzupassen sowie Anzeige- und Umwandlungsereignisse in Dev Center zu protokollieren.
+Nach dem [Definieren des Experiments im DevCenter-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md) können Sie den Code in Ihrer App für die universelle Windows-Plattform (UWP) aktualisieren, um Variantendaten für das Experiment zu erhalten, das Verhalten des getesteten Features anhand dieser Daten anzupassen sowie Anzeige- und Umwandlungsereignisse in Dev Center zu protokollieren.
 
 In den folgenden Abschnitten erfahren Sie ganz allgemein, wie Sie Variationen für Ihr Experiment erhalten und Ereignisse in Dev Center protokollieren. Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführungsprozess für ein Experiment veranschaulicht, finden Sie unter [Erstellen und Ausführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 ## Konfigurieren des Projekts
 
-Installieren Sie zunächst das Microsoft Store Engagement and Monetization SDK auf dem Entwicklungscomputer, und fügen Sie dem Projekt die erforderlichen Verweise hinzu.
+Installieren Sie zunächst das Microsoft Store Engagement and MonetizationSDK auf dem Entwicklungscomputer, und fügen Sie dem Projekt die erforderlichen Verweise hinzu.
 
 1. Installieren Sie das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk).
 2. Öffnen Sie das Projekt in Visual Studio.
@@ -35,7 +34,7 @@ private readonly ExperimentClient experiment;
 private ExperimentVariation variation;
 ```
 
-2. Initialisieren Sie das [ExperimentClient](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentclient.aspx)-Objekt, und übergeben Sie den API-Schlüssel von der Dashboardseite **Experimente** an den Konstruktor. Weitere Informationen zum API-Schlüssel finden Sie unter [Definieren des Experiments im Dev Center-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md#generate-an-api-key). Der hier gezeigte API-Schlüssel dient nur als Beispiel.
+2. Initialisieren Sie das [ExperimentClient](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentclient.aspx)-Objekt, und übergeben Sie den API-Schlüssel von der Dashboardseite **Experimente** an den Konstruktor. Weitere Informationen zum API-Schlüssel finden Sie unter [Definieren des Experiments im DevCenter-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md#generate-an-api-key). Der hier gezeigte API-Schlüssel dient nur als Beispiel.
 ```CSharp
 experiment = new ExperimentClient("F48AC670-4472-4387-AB7D-D65B095153FB");
 ```
@@ -63,7 +62,7 @@ if (result.ErrorCode != EngagementErrorCode.Success || result.Variation.NeedsRef
 }
 ```
 
-5. Verwenden Sie die [GetBoolean](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.getboolean.aspx)-, [GetDouble](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.getdouble.aspx)-, [GetInteger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.getinteger.aspx)- oder [GetString](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.getstring.aspx)-Methode des [ExperimentVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.aspx)-Objekts, um die Einstellungen für die Variantenzuweisung abzurufen. Der erste Parameter in den Methoden ist jeweils der Name der Einstellung, die Sie abrufen möchten (gemäß Eingabe auf dem Dev Center-Dashboard). Der zweite Parameter ist der Standardwert, den die Methode zurückgeben soll, falls der angegebene Wert nicht aus dem Dev Center abgerufen werden kann (etwa, weil keine Netzwerkverbindung besteht) und keine zwischengespeicherte Version der Variante verfügbar ist.
+5. Verwenden Sie die [GetBoolean](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.getboolean.aspx)-, [GetDouble](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.getdouble.aspx)-, [GetInteger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.getinteger.aspx)- oder [GetString](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.getstring.aspx)-Methode des [ExperimentVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.aspx)-Objekts, um die Einstellungen für die Variantenzuweisung abzurufen. Der erste Parameter in den Methoden ist jeweils der Name der Einstellung, die Sie abrufen möchten (gemäß Eingabe auf dem DevCenter-Dashboard). Der zweite Parameter ist der Standardwert, den die Methode zurückgeben soll, falls der angegebene Wert nicht aus dem Dev Center abgerufen werden kann (etwa, weil keine Netzwerkverbindung besteht) und keine zwischengespeicherte Version der Variante verfügbar ist.
 
   Im folgenden Beispiel wird mithilfe von [GetString](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.getstring.aspx) eine Einstellung namens *buttonText* abgerufen und der Standardeinstellungswert **Grey Button** angegeben.
 ```CSharp
@@ -80,7 +79,7 @@ Fügen Sie im nächsten Schritt Code hinzu, der die Anzeige- und Umwandlungserei
 
 Welchen Code Sie genau benötigen, hängt von Ihrer App ab. Hier werden daher nur die allgemeinen Schritte angegeben. Ein umfassendes Codebeispiel finden Sie unter [Erstellen und Ausführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
 
-1. Rufen Sie in dem Code, der ausgeführt wird, wenn der Benutzer mit der Betrachtung einer Variante beginnt, die statische [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx)-Methode für das [StoreServicesCustomEvents](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.aspx)-Objekt auf. Übergeben Sie den Namen des Anzeigeereignisses, das Sie in Ihrem Experiment im Dev Center-Dashboard definiert haben, sowie das [ExperimentVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.aspx)-Objekt, das die aktuelle Variantenzuweisung darstellt. (Dieses Objekt liefert den Ereigniskontext für Dev Center.) Im folgenden Beispiel wird ein Anzeigeereignis namens **userViewedButton** protokolliert.
+1. Rufen Sie in dem Code, der ausgeführt wird, wenn der Benutzer mit der Betrachtung einer Variante beginnt, die statische [Log](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.log.aspx)-Methode für das [StoreServicesCustomEvents](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomevents.aspx)-Objekt auf. Übergeben Sie den Namen des Anzeigeereignisses, das Sie in Ihrem Experiment im DevCenter-Dashboard definiert haben, sowie das [ExperimentVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.experimentvariation.aspx)-Objekt, das die aktuelle Variantenzuweisung darstellt. (Dieses Objekt liefert den Ereigniskontext für Dev Center.) Im folgenden Beispiel wird ein Anzeigeereignis namens **userViewedButton** protokolliert.
 ```CSharp
 StoreServicesCustomEvents.Log("userViewedButton", variation);
 ```
@@ -91,12 +90,12 @@ StoreServicesCustomEvents.Log("userClickedButton", variation);
 
 ## Nächste Schritte
 
-Nachdem Sie Ihr Experiment im Dev Center-Dashboard definiert und in Ihrer App programmiert haben, können Sie das [Experiment im Dev Center-Dashboard ausführen und verwalten](manage-your-experiment.md).
+Nachdem Sie Ihr Experiment im DevCenter-Dashboard definiert und in Ihrer App programmiert haben, können Sie das [Experiment im DevCenter-Dashboard ausführen und verwalten](manage-your-experiment.md).
 
 ## Verwandte Themen
 
-  * [Definieren des Experiments im Dev Center-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md)
-  * [Verwalten des Experiments im Dev Center-Dashboard](manage-your-experiment.md)
+  * [Definieren des Experiments im DevCenter-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md)
+  * [Verwalten des Experiments im DevCenter-Dashboard](manage-your-experiment.md)
   * [Erstellen und Ausführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md)
   * [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
 

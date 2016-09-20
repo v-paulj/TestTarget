@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 5efb4f40-a021-4dd2-82b4-7c95c3849485
 description: Lesen Sie die gesamten Lizenzbedingungen, da diese wichtige Informationen enthalten.
 title: "Wichtiger Hinweis – Lizenzbedingungen"
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 89af54f5b8cf52366100b4751ed37ddd7a7bacb7
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 89af54f5b8cf52366100b4751ed37ddd7a7bacb7
 # Wichtiger Hinweis – Lizenzbedingungen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Lesen Sie die gesamten Lizenzbedingungen.
 

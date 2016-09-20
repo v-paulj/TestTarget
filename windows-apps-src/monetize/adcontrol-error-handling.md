@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 386c1ee4-a31c-4561-b193-36268bc90446
 description: Hier erfahren Sie, wie Sie mit Fehlern im Zusammenhang mit der AdControl in Ihrer App umgehen.
 title: AdControl-Fehlerbehandlung
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: a335b4b6548e910076b5a984cc6078aa6c18dc32
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: a335b4b6548e910076b5a984cc6078aa6c18dc32
 # AdControl-Fehlerbehandlung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Dieser Abschnitt enthält exemplarische Vorgehensweisen, die zeigen, wie Sie Fehler im Zusammenhang mit der [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Klasse in Ihrer App behandeln können.
 

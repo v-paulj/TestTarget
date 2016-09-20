@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
 description: "In diesem Thema werden die Effekte für Videoaufnahmeszenarien beschrieben. Dazu zählt auch der Videostabilisierungseffekt."
 title: "Effekte für die Videoaufnahme"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
 
 # Effekte für die Videoaufnahme
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Thema werden die Effekte für Videoaufnahmeszenarien beschrieben. Dazu zählt auch der Videostabilisierungseffekt.
 
@@ -64,8 +63,7 @@ Legen Sie die [**Video**](https://msdn.microsoft.com/library/windows/apps/hh7011
 
 ### Behandeln des Deaktivierens des Videostabilisierungseffekts
 
-Das System kann den Videostabilisierungseffekt automatisch deaktivieren, wenn Sie der Pixeldurchsatz zu groß für die Verarbeitung durch den Effekt ist oder wenn erkannt wird, dass der Effekt langsam ausgeführt wird. In diesem Fall wird das „EnabledChanged“-Ereignis ausgelöst. Die **VideoStabilizationEffect**-Instanz im Parameter *sender* gibt den neuen Zustand des Effekts (aktiviert oder deaktiviert) an. [
-            **VideoStabilizationEffectEnabledChangedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948979) hat einen [**VideoStabilizationEffectEnabledChangedReason**](https://msdn.microsoft.com/library/windows/apps/dn948981)-Wert, der angibt, warum der Effekt aktiviert oder deaktiviert wurde. Beachten Sie, dass dieses Ereignis auch ausgelöst wird, wenn Sie den Effekt programmgesteuert aktivieren oder deaktivieren. In diesem Fall ist der Grund **Programmatic**.
+Das System kann den Videostabilisierungseffekt automatisch deaktivieren, wenn Sie der Pixeldurchsatz zu groß für die Verarbeitung durch den Effekt ist oder wenn erkannt wird, dass der Effekt langsam ausgeführt wird. In diesem Fall wird das „EnabledChanged“-Ereignis ausgelöst. Die **VideoStabilizationEffect**-Instanz im Parameter *sender* gibt den neuen Zustand des Effekts (aktiviert oder deaktiviert) an. [**VideoStabilizationEffectEnabledChangedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn948979) hat einen [**VideoStabilizationEffectEnabledChangedReason**](https://msdn.microsoft.com/library/windows/apps/dn948981)-Wert, der angibt, warum der Effekt aktiviert oder deaktiviert wurde. Beachten Sie, dass dieses Ereignis auch ausgelöst wird, wenn Sie den Effekt programmgesteuert aktivieren oder deaktivieren. In diesem Fall ist der Grund **Programmatic**.
 
 In der Regel verwenden Sie dieses Ereignis zum Anpassen der Benutzeroberfläche Ihrer App, um den aktuellen Status der Videostabilisierung anzugeben.
 

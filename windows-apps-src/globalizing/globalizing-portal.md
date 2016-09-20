@@ -6,7 +6,6 @@ title: Globalisierung und Lokalisierung
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: 1fc82ff462a5c0af6b10e7dc8455adc215558b4e
 
@@ -17,9 +16,10 @@ ms.openlocfilehash: 1fc82ff462a5c0af6b10e7dc8455adc215558b4e
 
 
 
-Windows wird auf der ganzen Welt von Benutzern mit unterschiedlicher Kultur, Herkunft und Sprache verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können das Marktpotenzial Ihrer App erweitern, indem Sie eine mithilfe von *Globalisierung* und *Lokalisierung* leicht anpassbare App entwickeln.
+Windows wird auf der ganzen Welt in verschiedenen Märkten und von Anwendern unterschiedlicher Kulturen, Herkunft und Sprachen verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können die Marktchancen Ihrer App erweitern, indem Sie mithilfe der *Globalisierung* und *Lokalisierung* eine variable App entwickeln.
 
-**Globalisierung** beschreibt den Entwurf und die Entwicklung der App für verschiedene globale Märkte, ohne dass Änderungen oder Anpassungen erforderlich sind.
+
+            **Globalisierung** beschreibt den Entwurf und die Entwicklung der App für verschiedene globale Märkte, ohne dass Änderungen oder Anpassungen erforderlich sind.
 
 Sie haben u. a. folgende Möglichkeiten:
 
@@ -27,7 +27,8 @@ Sie haben u. a. folgende Möglichkeiten:
 -   Verwenden von Text und kulturspezifischen Bildern aus Ressourcen, die an verschiedene lokale Märkte angepasst werden können, anstatt hartcodierte Elemente im Code oder Markup der App zu programmieren
 -   Verwenden von Globalisierungs-APIs zum Anzeigen von Daten, die in verschiedenen Regionen unterschiedlich formatiert sind, z. B. numerische Werte, Datumsangaben, Uhrzeiten und Währungen
 
-**Lokalisierung** beschreibt die Anpassung der App an die sprachlichen, kulturellen und politischen Anforderungen bestimmter lokaler Märkte.
+
+            **Lokalisierung** beschreibt die Anpassung der App an die sprachlichen, kulturellen und politischen Anforderungen bestimmter lokaler Märkte.
 
 Beispiel:
 
@@ -59,7 +60,7 @@ Das folgende Video enthält eine kurze Einführung dazu, wie Sie Ihre App für d
 </tr>
 <tr class="even">
 <td align="left"><p>[Verwalten von Sprache und Region](manage-language-and-region.md)</p></td>
-<td align="left"><p>Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App durch Windows steuern.</p></td>
+<td align="left"><p>Mithilfe der verschiedenen Sprach- und Regionseinstellungen von Windows können Sie die Auswahl von UI-Ressourcen und die Formatierung der UI-Elemente der App steuern.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>[Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten](use-patterns-to-format-dates-and-times.md)</p></td>
@@ -82,7 +83,7 @@ Das folgende Video enthält eine kurze Einführung dazu, wie Sie Ihre App für d
 
  
 
-Weitere Informationen finden Sie in der ursprünglich für Windows 8.x erstellten Dokumentation, die weiterhin für universelle Windows-Plattform-Apps (UWP) und Windows 10 gilt.
+Weitere Informationen finden Sie in der ursprünglich für Windows8.x erstellten Dokumentation, die weiterhin für universelle Windows-Plattform-Apps (UWP) und Windows10 gilt.
 
 -   [Globalisierung Ihrer App](https://msdn.microsoft.com/library/windows/apps/xaml/hh965328)
 -   [Sprachabgleich](https://msdn.microsoft.com/library/windows/apps/xaml/jj673578.aspx)

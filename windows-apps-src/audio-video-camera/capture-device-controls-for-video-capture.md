@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
 description: "In diesem Artikel erfahren Sie, wie Sie Steuerelemente eines Videoaufnahmegeräts verwenden, um verbesserte Videoaufnahmeszenarien, einschließlich HDR-Video und Belichtungspriorität, zu ermöglichen."
 title: "Steuerelemente des Aufnahmegeräts für Videoaufnahmen"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 65883f1be1a014b6c7e211e2e060ae97fbd9eb0d
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: 65883f1be1a014b6c7e211e2e060ae97fbd9eb0d
 
 # Steuerelemente des Aufnahmegeräts für Videoaufnahmen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel erfahren Sie, wie Sie Steuerelemente eines Videoaufnahmegeräts verwenden, um verbesserte Videoaufnahmeszenarien, einschließlich HDR-Video und Belichtungspriorität, zu ermöglichen.

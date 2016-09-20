@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: Planen der Leistung
 description: "Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen."
-translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
 ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
 
@@ -17,9 +16,9 @@ Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und
 
 ## Festlegen der Ziele
 
-Eine einfache Methode zum Definieren einer guten Leistung ist die Benutzererfahrung. Die Startzeit einer App kann sich darauf auswirken, wie ein Benutzer die Leistung der App wahrnimmt. Eine App-Startzeit von unter einer Sekunde kann als hervorragende Leistung erachtet werden, weniger als 5 Sekunden als gute Leistung und länger als 5 Sekunden als schwache Leistung.
+Eine einfache Methode zum Definieren einer guten Leistung ist die Benutzererfahrung. Die Startzeit einer App kann sich darauf auswirken, wie ein Benutzer die Leistung der App wahrnimmt. Eine App-Startzeit von unter einerSekunde kann als hervorragende Leistung erachtet werden, weniger als 5Sekunden als gute Leistung und länger als 5Sekunden als schwache Leistung.
 
-Andere Metriken haben weniger offensichtliche Auswirkungen auf die Benutzerfreundlichkeit, z. B. der Arbeitsspeicher. Die Wahrscheinlichkeit, dass eine App beendet wird, während sie entweder angehalten ist oder nicht mehr reagiert, steigt mit zunehmendem Speicherbedarf der aktiven App. Eine hohe Speicherauslastung verringert im Allgemeinen die Benutzerfreundlichkeit für alle Apps auf dem System, daher ist das Ziel einer angemessenen Speicherauslastung begründet. Berücksichtigen Sie die vom Benutzer wahrgenommene ungefähre Größe der App: klein, mittel oder groß. Erwartungen in Bezug auf die Leistung korrelieren mit dieser Einschätzung. Beispiel: Sie möchten eine kleine App entwickeln, die nicht viele Medien nutzt und weniger als 100 MB Arbeitsspeicher belegt.
+Andere Metriken haben weniger offensichtliche Auswirkungen auf die Benutzerfreundlichkeit, z.B. der Arbeitsspeicher. Die Wahrscheinlichkeit, dass eine App beendet wird, während sie entweder angehalten ist oder nicht mehr reagiert, steigt mit zunehmendem Speicherbedarf der aktiven App. Eine hohe Speicherauslastung verringert im Allgemeinen die Benutzerfreundlichkeit für alle Apps auf dem System, daher ist das Ziel einer angemessenen Speicherauslastung begründet. Berücksichtigen Sie die vom Benutzer wahrgenommene ungefähre Größe der App: klein, mittel oder groß. Erwartungen in Bezug auf die Leistung korrelieren mit dieser Einschätzung. Beispiel: Sie möchten eine kleine App entwickeln, die nicht viele Medien nutzt und weniger als 100MB Arbeitsspeicher belegt.
 
 Es ist besser, ein erstes Ziel festzulegen und es später zu überdenken, anstatt überhaupt kein Ziel zu haben. Die Leistungsziele für Ihre App sollten genau bezeichnet und messbar sein sowie in drei Kategorien fallen: Wie lange dauert es für Benutzer oder die App, Aufgaben auszuführen (Zeit)? Mit welcher Frequenz und Kontinuität stellt sich die App selbst als Reaktion auf Benutzerinteraktionen neu dar (Flüssigkeit)? Wie gut spart die App Systemressourcen einschließlich der Akkuleistung (Effizienz)?
 
@@ -29,12 +28,12 @@ Es ist besser, ein erstes Ziel festzulegen und es später zu überdenken, anstat
 
 | Bezeichnung der Interaktionsklasse | Benutzerwahrnehmung                 | Ideal            | Maximal          | Beispiele                                                                     |
 |-------------------------|---------------------------------|------------------|------------------|------------------------------------------------------------------------------|
-| Schnell                    | Minimal erkennbare Verzögerung      | 100 Millisekunden | 200 Millisekunden | App-Leiste aufrufen; Schaltfläche betätigen (erste Reaktion)                        |
-| Standard                 | Zügig, aber nicht schnell             | 300 Millisekunden | 500 Millisekunden | Größe ändern; semantischer Zoom                                                        |
-| Dynamisch              | Nicht zügig, aber dynamisch | 500 Millisekunden | 1 Sekunde         | Zu einer anderen Seite navigieren; angehaltene App fortsetzen          |
-| Start                  | Nicht flüssig          | 1 Sekunde         | 3 Sekunden        | App zum ersten Mal starten oder App aufrufen, nachdem sie zuvor beendet wurde |
-| Kontinuierlich              | Wird nicht mehr als dynamisch wahrgenommen      | 500 Millisekunden | 5 Sekunden        | Datei aus dem Internet herunterladen                                            |
-| Träge                 | Lang; Benutzer könnte Interesse verlieren    | 500 Millisekunden | 10 Sekunden       | Mehrere Apps aus dem Store installieren                                         |
+| Schnell                    | Minimal erkennbare Verzögerung      | 100Millisekunden | 200Millisekunden | App-Leiste aufrufen; Schaltfläche betätigen (erste Reaktion)                        |
+| Standard                 | Zügig, aber nicht schnell             | 300Millisekunden | 500Millisekunden | Größe ändern; semantischer Zoom                                                        |
+| Dynamisch              | Nicht zügig, aber dynamisch | 500Millisekunden | 1Sekunde         | Zu einer anderen Seite navigieren; angehaltene App fortsetzen          |
+| Start                  | Nicht flüssig          | 1Sekunde         | 3Sekunden        | App zum ersten Mal starten oder App aufrufen, nachdem sie zuvor beendet wurde |
+| Kontinuierlich              | Wird nicht mehr als dynamisch wahrgenommen      | 500Millisekunden | 5Sekunden        | Datei aus dem Internet herunterladen                                            |
+| Träge                 | Lang; Benutzer könnte Interesse verlieren    | 500Millisekunden | 10Sekunden       | Mehrere Apps aus dem Store installieren                                         |
 
  
 
@@ -44,11 +43,11 @@ Sie können den Leistungsszenarien Ihrer App jetzt Interaktionsklassen zuweisen.
 <!-- DHALE: used HTML table here b/c WDCML src used rowspans -->
 <table>
 <tr><th>Szenario</th><th>Zeitpunkt</th><th>Benutzererfahrung</th><th>Interaktionsklasse</th></tr>
-<tr><td rowspan="3">Zur Rezeptseite navigieren </td><td>Erste Reaktion</td><td>Seitenübergangsanimation gestartet</td><td>Schnell (100 - 200 Millisekunden)</td></tr>
-<tr><td>Dynamisch</td><td>Zutatenliste gestartet; keine Bilder</td><td>Dynamisch (500 Millisekunden bis 1 Sekunde)</td></tr>
-<tr><td>Alle Elemente sichtbar</td><td>Gesamter Inhalt geladen; Bilder angezeigt</td><td>Kontinuierlich (500 Millisekunden - 5 Sekunden)</td></tr>
-<tr><td rowspan="2">Rezeptsuche</td><td>Erste Reaktion</td><td>Klick auf Suchschaltfläche</td><td>Schnell (100 - 200 Millisekunden)</td></tr>
-<tr><td>Alle Elemente sichtbar</td><td>Liste der lokalen Rezepte angezeigt</td><td>Standard (300 - 500 Millisekunden)</td></tr>
+<tr><td rowspan="3">Zur Rezeptseite navigieren </td><td>Erste Reaktion</td><td>Seitenübergangsanimation gestartet</td><td>Schnell (100 - 200Millisekunden)</td></tr>
+<tr><td>Dynamisch</td><td>Zutatenliste gestartet; keine Bilder</td><td>Dynamisch (500Millisekunden bis 1Sekunde)</td></tr>
+<tr><td>Alle Elemente sichtbar</td><td>Gesamter Inhalt geladen; Bilder angezeigt</td><td>Kontinuierlich (500Millisekunden - 5Sekunden)</td></tr>
+<tr><td rowspan="2">Rezeptsuche</td><td>Erste Reaktion</td><td>Klick auf Suchschaltfläche</td><td>Schnell (100 - 200Millisekunden)</td></tr>
+<tr><td>Alle Elemente sichtbar</td><td>Liste der lokalen Rezepte angezeigt</td><td>Standard (300 - 500Millisekunden)</td></tr>
 </table>
 
 Wenn Sie Live-Inhalte anzeigen, berücksichtigen Sie auch die Ziele hinsichtlich der Aktualität des Inhalts. Ist als Ziel vorgegeben, den Inhalt alle paar Sekunden zu aktualisieren? Oder ist es für die Benutzererfahrung akzeptabel, den Inhalt alle paar Minuten, Stunden oder sogar nur einmal täglich zu aktualisieren?
@@ -96,7 +95,7 @@ Sie können jetzt die Leistungsziele verwenden, um den Entwurf Ihrer App zu beei
 
 -   Rufen Sie Inhalte vorab ab, wenn dies möglich ist. Informationen zum automatischen Vorabrufen finden Sie in den Angaben zur [**ContentPrefetcher**](https://msdn.microsoft.com/library/windows/apps/Dn279042)-Klasse. Informationen zum manuellen Vorabrufen finden Sie in den Angaben zum [**Windows.ApplicationModel.Background**](https://msdn.microsoft.com/library/windows/apps/BR224847)-Namespace und zur [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/Hh700517)-Klasse.
 -   Speichern Sie Inhalte, für die der Zugriff aufwendig ist, nach Möglichkeit im Cache. Weitere Informationen finden Sie unter den Eigenschaften [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/BR241621) und [**LocalSettings**](https://msdn.microsoft.com/library/windows/apps/BR241622).
--   Zeigen Sie für Cachefehler so schnell wie möglich eine Platzhalter-UI an, die angibt, dass die App weiterhin Inhalte lädt. Führen Sie den Übergang von Platzhaltern zu Liveinhalten so durch, dass Benutzer sich nicht gestört fühlen. Ändern Sie z. B. nicht die Position der Inhalte unter dem Finger oder Mauszeiger des Benutzers, während von der App Liveinhalte geladen werden.
+-   Zeigen Sie für Cachefehler so schnell wie möglich eine Platzhalter-UI an, die angibt, dass die App weiterhin Inhalte lädt. Führen Sie den Übergang von Platzhaltern zu Liveinhalten so durch, dass Benutzer sich nicht gestört fühlen. Ändern Sie z.B. nicht die Position der Inhalte unter dem Finger oder Mauszeiger des Benutzers, während von der App Liveinhalte geladen werden.
 
 **Starten und Fortsetzen von Apps**
 
@@ -165,9 +164,9 @@ Verwenden Sie diese Verfahren und Tools zum Testen, wie Ihre App gegenüber den 
     -   Kompilieren Sie Ihre App in systemeigenen Code, indem Sie sie in der Releasekonfiguration erstellen, bevor sie auf dem Testgerät bereitgestellt wird.
     -   Um sicherzustellen, dass die automatische Wartung keinen Einfluss auf die Leistung des Testgeräts hat, lösen Sie es manuell aus und warten Sie, bis der Vorgang abgeschlossen ist. Suchen Sie in Windows im Startmenü nach **Sicherheit und Wartung**. Wählen Sie im Bereich **Wartung** unter **Automatische Wartung** die Option **Wartung starten** aus, und warten Sie, bis sich der Status **Wartung wird durchgeführt** ändert.
     -   Führen Sie die App mehrmals aus, um zufällige Testvariablen so gut es geht auszuschließen und dadurch konsistente Messungen zu ermöglichen.
--   Führen Sie Tests zur verringerten Leistungsverfügbarkeit durch. Das Gerät der Benutzer weist möglicherweise eine deutlich geringere Leistung als das Entwicklungssystem auf. Windows wurde unter Berücksichtigung von Geräten mit niedrigem Stromverbrauch, z. B. mobile Geräte, konzipiert. Apps, die auf der Plattform ausgeführt werden, sollten sicherstellen, dass sie auch auf diesen Geräten ordnungsgemäß ausgeführt werden können. Sie können davon ausgehen, dass ein energiesparendes Gerät ungefähr viermal langsamer ist als ein Desktop-PC. Legen Sie Ihre Ziele entsprechend fest.
+-   Führen Sie Tests zur verringerten Leistungsverfügbarkeit durch. Das Gerät der Benutzer weist möglicherweise eine deutlich geringere Leistung als das Entwicklungssystem auf. Windows wurde unter Berücksichtigung von Geräten mit niedrigem Stromverbrauch, z.B. mobile Geräte, konzipiert. Apps, die auf der Plattform ausgeführt werden, sollten sicherstellen, dass sie auch auf diesen Geräten ordnungsgemäß ausgeführt werden können. Sie können davon ausgehen, dass ein energiesparendes Gerät ungefähr viermal langsamer ist als ein Desktop-PC. Legen Sie Ihre Ziele entsprechend fest.
 -   Verwenden Sie eine Kombination von Tools wie Microsoft Visual Studio und Windows Performance Analyzer, um die App-Leistung zu messen. Visual Studio stellt eine Analyse bereit, die auf die App ausgerichtet ist, beispielsweise die Quellcodeverknüpfung. Windows Performance Analyzer bietet dagegen eine systemorientierte Analyse, beispielsweise die Bereitstellung von Systeminfos, Infos zu Touchmanipulationsereignissen sowie Infos zur Datenträger-E/A und Grafikprozessorauslastung (GPU). Beide Tools können Ablaufverfolgungsdateien sammeln und exportieren und freigegebene sowie Post-Mortem-Traces erneut öffnen.
--   Bevor Sie Ihre App zur Zertifizierung an den Store übermitteln, sollten Sie die leistungsbezogenen Testfälle in Ihre Testpläne integrieren, so wie im Abschnitt „Leistungstests“ unter [Tests im Zertifizierungskit für Windows-Apps](windows-app-certification-kit-tests.md) und im Abschnitt „Leistung und Stabilität“ unter [Testfälle für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/Dn275879) beschrieben.
+-   Bevor Sie Ihre App zur Zertifizierung an den Store übermitteln, sollten Sie die leistungsbezogenen Testfälle in Ihre Testpläne integrieren, so wie im Abschnitt „Leistungstests“ unter [Tests im Zertifizierungskit für Windows-Apps](windows-app-certification-kit-tests.md) und im Abschnitt „Leistung und Stabilität“ unter [Testfälle für WindowsStore-Apps](https://msdn.microsoft.com/library/windows/apps/Dn275879) beschrieben.
 
 Weitere Informationen finden Sie unter diesen Ressourcen und Tools zur Profilerstellung.
 
@@ -175,7 +174,7 @@ Weitere Informationen finden Sie unter diesen Ressourcen und Tools zur Profilers
 -   [Windows Performance Toolkit](https://msdn.microsoft.com/library/windows/apps/xaml/hh162945.aspx)
 -   [Analysieren der Leistung mithilfe von Visual Studio-Diagnosetools](https://msdn.microsoft.com/library/windows/apps/xaml/hh696636.aspx)
 -   Die „//build/“-Sitzung [XAML-Leistung](https://channel9.msdn.com/Events/Build/2015/3-698)
--   Die „//build/“-Sitzung [Neue XAML-Tools in Visual Studio 2015](https://channel9.msdn.com/Events/Build/2015/2-697)
+-   Die „//build/“-Sitzung [Neue XAML-Tools in Visual Studio2015](https://channel9.msdn.com/Events/Build/2015/2-697)
 
 ## Reagieren auf die Leistungstestergebnisse
 

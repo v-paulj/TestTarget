@@ -5,7 +5,6 @@ title: "Richtlinien für die Toucheingabe"
 ms.assetid: 3250F729-4FDD-4AD4-B856-B8BA575C3375
 label: Touch design guidelines
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 67b851ce854c803934c2b97dbe7519e2916383a3
 
@@ -33,9 +32,9 @@ Gestalten Sie die Benutzerinteraktion mit Ihren UWP-Apps (Universelle Windows-Pl
 ## <span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Weitere Hinweise zur Verwendung
 
 
-Am wichtigsten ist, dass Sie beim Entwerfen Ihrer App davon ausgehen, dass die Benutzer in erster Linie die Fingereingabe als Eingabemethode verwenden. Wenn Sie die Steuerelemente der Plattform verwenden, ist keine zusätzliche Programmierung für die Unterstützung von Touchpad, Maus und Zeichen-/Eingabestift erforderlich, da sie in Windows 8 standardmäßig bereitgestellt wird.
+Am wichtigsten ist, dass Sie beim Entwerfen Ihrer App davon ausgehen, dass die Benutzer in erster Linie die Fingereingabe als Eingabemethode verwenden. Wenn Sie die Steuerelemente der Plattform verwenden, ist keine zusätzliche Programmierung für die Unterstützung von Touchpad, Maus und Zeichen-/Eingabestift erforderlich, da sie in Windows8 standardmäßig bereitgestellt wird.
 
-Bedenken Sie dabei jedoch, dass eine für Fingereingaben optimierte Benutzeroberfläche einer herkömmlichen Benutzeroberfläche nicht in jedem Fall überlegen ist. Beide haben Vor- und Nachteile, die je nach Technologie oder Anwendung unterschiedlich sein können. Sie müssen beim Übergang zu einer vorrangig auf Fingereingabe ausgelegten UI die wichtigsten Unterschiede zwischen Fingereingabe (einschließlich des Touchpads) und Eingabe über Maus, Zeichen- oder Eingabestift und Tastatur verstehen. Betrachten Sie die Eigenschaften vertrauter Eingabegeräte nicht als selbstverständlich, da die Fingereingabe in Windows 8 nicht einfach nur diese Funktionalität emuliert.
+Bedenken Sie dabei jedoch, dass eine für Fingereingaben optimierte Benutzeroberfläche einer herkömmlichen Benutzeroberfläche nicht in jedem Fall überlegen ist. Beide haben Vor- und Nachteile, die je nach Technologie oder Anwendung unterschiedlich sein können. Sie müssen beim Übergang zu einer vorrangig auf Fingereingabe ausgelegten UI die wichtigsten Unterschiede zwischen Fingereingabe (einschließlich des Touchpads) und Eingabe über Maus, Zeichen- oder Eingabestift und Tastatur verstehen. Betrachten Sie die Eigenschaften vertrauter Eingabegeräte nicht als selbstverständlich, da die Fingereingabe in Windows8 nicht einfach nur diese Funktionalität emuliert.
 
 In diesen Richtlinien wird immer wieder erkennbar, dass die Fingereingabe einen anderen Ansatz für das UI-Design erfordert.
 
@@ -76,13 +75,13 @@ Identisch mit der Maus.
  
 
 **Hinweis**  
-Die indirekte Eingabe hat den Vorteil, dass sie über 25 Jahre optimiert wurde. Features wie durch Zeigen ausgelöste QuickInfos wurden als Lösung für die Erforschung der UI speziell für die Eingabe über Touchpad, Maus, Zeichen- oder Eingabestift und Tastatur entworfen. Solche UI-Funktionen wurden neu entworfen, um der umfassenden Toucheingabefunktion gerecht zu werden, ohne die Benutzererfahrung auf den anderen Geräten zu beeinträchtigen.
+Die indirekte Eingabe hat den Vorteil, dass sie über 25Jahre optimiert wurde. Features wie durch Zeigen ausgelöste QuickInfos wurden als Lösung für die Erforschung der UI speziell für die Eingabe über Touchpad, Maus, Zeichen- oder Eingabestift und Tastatur entworfen. Solche UI-Funktionen wurden neu entworfen, um der umfassenden Toucheingabefunktion gerecht zu werden, ohne die Benutzererfahrung auf den anderen Geräten zu beeinträchtigen.
 
  
 
 **Verwenden von Feedback für die Fingereingabe**
 
-Durch entsprechendes visuelles Feedback bei Interaktionen mit der App helfen Sie den Benutzern, zu erkennen und zu lernen, wie ihre Interaktionen von der App und von Windows 8 interpretiert werden, und sich daran anzupassen. Visuelles Feedback kann auf erfolgreiche Interaktionen hinweisen, über den Systemstatus informieren, das Gefühl der Kontrolle verstärken, Fehler verringern, Benutzern das Verständnis des Systems und des Eingabegeräts erleichtern und zu Interaktionen ermutigen.
+Durch entsprechendes visuelles Feedback bei Interaktionen mit der App helfen Sie den Benutzern, zu erkennen und zu lernen, wie ihre Interaktionen von der App und von Windows8 interpretiert werden, und sich daran anzupassen. Visuelles Feedback kann auf erfolgreiche Interaktionen hinweisen, über den Systemstatus informieren, das Gefühl der Kontrolle verstärken, Fehler verringern, Benutzern das Verständnis des Systems und des Eingabegeräts erleichtern und zu Interaktionen ermutigen.
 
 Visuelles Feedback ist wichtig, wenn der Benutzer die Fingereingabe für Aktivitäten verwendet, bei denen Positionsgenauigkeit gefragt ist. Zeigen Sie immer Feedback an, wenn Toucheingabe erkannt wird, damit der Benutzer die von der App und den Steuerelementen definierten angepassten Zielbestimmungsregeln versteht.
 
@@ -156,7 +155,8 @@ Darüber hinaus wird Folgendes dringend empfohlen:
 -   Die Interaktionen sollten zusammengesetzte Manipulationen unterstützen. Beispiel: Zoomen durch Zusammendrücken und gleichzeitiges Ziehen der Finger, um etwas zu verschieben.
 -   Die Interaktionen sollten nicht anhand der Zeit unterschieden werden. Eine Interaktion sollte unabhängig von der Ausführungsdauer immer zum gleichen Ergebnis führen. Zeitbasierte Aktivierungen führen zu obligatorischen Verzögerungen für Benutzer und beeinträchtigen die immersive Natur der direkten Manipulation und die Wahrnehmung der Reaktion des Systems.
 
-    **Hinweis**  Eine Ausnahme ist die Verwendung bestimmter zeitlich festgelegter Interaktionen zur Unterstützung beim Lernen und Erkunden (z. B. Drücken und Halten).
+    
+            **Hinweis**  Eine Ausnahme ist die Verwendung bestimmter zeitlich festgelegter Interaktionen zur Unterstützung beim Lernen und Erkunden (z.B. Drücken und Halten).
 
      
 

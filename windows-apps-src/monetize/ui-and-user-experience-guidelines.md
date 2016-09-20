@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Erfahren Sie mehr über UI- und Benutzererfahrungsrichtlinien in App-Anzeigen."
 title: UI- und Benutzererfahrungsrichtlinien in App-Anzeigen
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
 
@@ -13,7 +12,7 @@ ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
 # UI- und Benutzererfahrungsrichtlinien in App-Anzeigen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## Allgemeine UI-Ressourcen für Windows-Apps
 
@@ -109,7 +108,7 @@ Wir bemühen uns, Ihnen bei der geschickten Umsetzung behilflich zu sein. Da Sie
     * Gutes Inventar wird die Konvertierung von vorab abgerufenen Anzeigen in berechenbare Anzeigenaufrufe maximieren.
 
 
-* Bestrafen eines Nutzers für Probleme bei der Anzeigenbereitstellung, d. h., wenn beispielsweise keine Anzeigen verfügbar sind. Wenn Sie beispielsweise eine UI-Option anzeigen, die lautet „Sehen Sie sich eine Anzeige an und erhalten Sie *xxx*“, dann sollten Sie *xxx* auch tatsächlich bereitstellen, wenn der Nutzer seinen Teil erfüllt. Berücksichtigen Sie die folgenden beiden Optionen:
+* Bestrafen eines Nutzers für Probleme bei der Anzeigenbereitstellung, d.h., wenn beispielsweise keine Anzeigen verfügbar sind. Wenn Sie beispielsweise eine UI-Option anzeigen, die lautet „Sehen Sie sich eine Anzeige an und erhalten Sie *xxx*“, dann sollten Sie *xxx* auch tatsächlich bereitstellen, wenn der Nutzer seinen Teil erfüllt. Berücksichtigen Sie die folgenden beiden Optionen:
 
     * Bieten Sie die Option nur an, wenn das [AdReady](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.adready.aspx)-Ereignis bereits ausgelöst wurde.
 

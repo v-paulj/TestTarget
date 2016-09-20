@@ -3,14 +3,13 @@ author: scottmill
 ms.assetid: 6e9b9ff2-234b-6f63-0975-1afb2d86ba1a
 title: Kompositionseffekte
 description: "Mithilfe von Effekt-APIs können Entwickler anpassen, wie ihre Benutzeroberfläche gerendert wird."
-translationtype: Human Translation
 ms.sourcegitcommit: b3d198af0c46ec7a2041a7417bccd56c05af760e
 ms.openlocfilehash: 10c3b6d0f56d0e8670cc202ac8d8a3f7538eb5a7
 
 ---
 # Kompositionseffekte
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Mit der WinRT-API [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Dn706878) können Echtzeiteffekte mithilfe animierbarer Effekteigenschaften auf Bilder und Benutzeroberflächen angewendet werden. In dieser Übersicht erläutern wir die Funktionen, über die Effekte auf visuelle Kompositionselemente angewendet werden können.
 
@@ -154,7 +153,7 @@ In diesem Schnellstart-Lernprogramm erfahren Sie, wie Sie einige der grundlegend
 
 Win2D wird als „Nuget.org“-Paket freigegeben und muss installiert werden, damit Sie Effekte nutzen können.
 
-Es gibt zwei Paketversionen: eine für Windows 10 und eine für Windows 8.1. Für Kompositionseffekte verwenden Sie die Windows 10-Version.
+Es gibt zwei Paketversionen: eine für Windows 10 und eine für Windows 8.1. Für Kompositionseffekte verwenden Sie die Windows10-Version.
 
 -   Starten Sie den NuGet-Paket-Manager, indem Sie „Extras → NuGet-Paket-Manager → NuGet-Pakete für Projektmappe verwalten“ auswählen.
 -   Suchen Sie nach „Win2D“, und wählen Sie das entsprechende Paket für die Zielversion von Windows aus. Da Windows.UI. Composition Windows 10 (aber nicht 8.1) unterstützt, wählen Sie „Win2D.uwp“ aus.

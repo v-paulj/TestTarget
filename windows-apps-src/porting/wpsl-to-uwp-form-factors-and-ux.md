@@ -3,7 +3,6 @@ author: mcleblanc
 description: "Windows-Apps weisen auf PCs, Mobilgeräten und vielen anderen Arten von Geräten ein einheitliches Erscheinungsbild auf. Die Benutzeroberfläche, Eingabe und Interaktionsmuster sind fast identisch, und Benutzer profitieren von einer einheitlichen Umgebung auf allen Geräten."
 title: "Portieren von Windows Phone Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit"
 ms.assetid: 96244516-dd2c-494d-ab5a-14b7dcd2edbd
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 7d5f1fa969e4ddf4a695a3ca77072a0f9c21316f
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: 7d5f1fa969e4ddf4a695a3ca77072a0f9c21316f
 
 #  Portieren von Windows Phone Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Das vorherige Thema war [Portieren der Geschäfts- und Datenebene](wpsl-to-uwp-business-and-data.md).
 
@@ -33,9 +32,9 @@ Trotzdem ist es ratsam, Ihre App mit vielen verschiedenen Geräten zu testen, da
 
 ## Touchauflösung und Anzeigeauflösung
 
-Touchelemente (UI-Widgets) müssen die richtige Größe aufweisen. Daher muss für Touchelemente auf verschiedenen Geräten mit verschiedenen Pixeldichten die physische Größe mehr oder weniger beibehalten werden. Auch hierfür sind effektive Pixel hilfreich: Sie werden auf unterschiedlichen Geräten – unter Berücksichtigung der Pixeldichte – skaliert, um eine nahezu konstante physische Größe zu erreichen, die sich ideal für Touchelemente eignet.
+Touchelemente (UI-Widgets) müssen die richtige Größe aufweisen. Daher muss für Touchelemente auf verschiedenen Geräten mit verschiedenen Pixeldichten die physische Größe mehr oder weniger beibehalten werden. Auch hierfür sind effektive Pixel hilfreich: Sie werden auf unterschiedlichen Geräten– unter Berücksichtigung der Pixeldichte– skaliert, um eine nahezu konstante physische Größe zu erreichen, die sich ideal für Touchelemente eignet.
 
-Text muss die richtige Größe zum Lesen haben (Text mit 12 Punkten ist bei einem Abstand von 50 cm eine gute Faustregel), und Bilder müssen die richtige Größe und effektive Auflösung für den Abstand aufweisen. Auf unterschiedlichen Geräten sorgt diese einheitliche Skalierung der effektiven Pixel dafür, dass UI-Elemente die richtige Größe aufweisen und lesbar sind. Text und andere vektorbasierten Grafiken werden automatisch skaliert, und das sehr gut. Raster (Bitmap)-basierte Grafiken werden auch automatisch skaliert, wenn der Entwickler eine Ressource in einer einzelnen, großen Größe bereitstellt. Vorzugsweise stellt der Entwickler jedoch alle Ressourcen in einer Vielzahl von Größen bereit, damit die passende Option für den Skalierungsfaktor des Zielgeräts automatisch geladen werden kann. Weitere Informationen hierzu finden Sie unter [Anzeigepixel/Effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels).
+Text muss die richtige Größe zum Lesen haben (Text mit 12Punkten ist bei einem Abstand von 50cm eine gute Faustregel), und Bilder müssen die richtige Größe und effektive Auflösung für den Abstand aufweisen. Auf unterschiedlichen Geräten sorgt diese einheitliche Skalierung der effektiven Pixel dafür, dass UI-Elemente die richtige Größe aufweisen und lesbar sind. Text und andere vektorbasierten Grafiken werden automatisch skaliert, und das sehr gut. Raster (Bitmap)-basierte Grafiken werden auch automatisch skaliert, wenn der Entwickler eine Ressource in einer einzelnen, großen Größe bereitstellt. Vorzugsweise stellt der Entwickler jedoch alle Ressourcen in einer Vielzahl von Größen bereit, damit die passende Option für den Skalierungsfaktor des Zielgeräts automatisch geladen werden kann. Weitere Informationen hierzu finden Sie unter [Anzeigepixel/Effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren](wpsl-to-uwp-porting-xaml-and-ui.md#effective-pixels).
 
 ## Layout und adaptiver Visual State-Manager
 

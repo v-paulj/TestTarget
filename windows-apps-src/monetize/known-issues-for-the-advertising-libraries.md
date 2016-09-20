@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
 description: "Erfahren Sie mehr über bekannte Probleme mit der aktuellen Version der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK."
 title: Bekannte Probleme mit den Microsoft Advertising-Bibliotheken
-translationtype: Human Translation
 ms.sourcegitcommit: 5b6d3e034b73e6ae693fbeab3ecd3b2b81f38bb1
 ms.openlocfilehash: cfaa108cc93b6bae903e86ad141656bf613f185d
 
@@ -12,17 +11,17 @@ ms.openlocfilehash: cfaa108cc93b6bae903e86ad141656bf613f185d
 # Bekannte Probleme mit den Microsoft Advertising-Bibliotheken
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Thema werden bekannte Probleme mit der aktuellen Version der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK aufgelistet.
 
 ## Installation erfordert Visual Studio-Tools für universelle Windows-Apps
 
-Um das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) mit Visual Studio 2015 zu installieren, muss Version 1.1 oder höher der Visual Studio-Tools für universelle Windows-Apps installiert sein. Weitere Informationen finden Sie in den [Versionshinweisen](http://go.microsoft.com/fwlink/?LinkID=624516) für Visual Studio.
+Um das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) mit Visual Studio2015 zu installieren, muss Version1.1 oder höher der Visual Studio-Tools für universelle Windows-Apps installiert sein. Weitere Informationen finden Sie in den [Versionshinweisen](http://go.microsoft.com/fwlink/?LinkID=624516) für Visual Studio.
 
-## Windows Phone 8.x Silverlight-Projekte
+## Windows Phone8.x Silverlight-Projekte
 
-Um die Microsoft Advertising-Assemblys für Windows Phone 8.x Silverlight-Projekte zu erhalten, installieren Sie das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk), öffnen das Projekt in Visual Studio und wechseln anschließend zu **Projekt** > **Verbundenen Dienst hinzufügen** > **Ad Mediator**. Die Assemblys werden anschließend automatisch heruntergeladen. Im Anschluss daran können Sie die Ad Mediator-Referenzen aus Ihrem Projekt entfernen, wenn Sie Ad Mediator nicht verwenden möchten. Weitere Informationen finden Sie unter [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md).
+Um die Microsoft Advertising-Assemblys für Windows Phone8.x Silverlight-Projekte zu erhalten, installieren Sie das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk), öffnen das Projekt in Visual Studio und wechseln anschließend zu **Projekt** > **Verbundenen Dienst hinzufügen** > **Ad Mediator**. Die Assemblys werden anschließend automatisch heruntergeladen. Im Anschluss daran können Sie die Ad Mediator-Referenzen aus Ihrem Projekt entfernen, wenn Sie Ad Mediator nicht verwenden möchten. Weitere Informationen finden Sie unter [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md).
 
 ## AdControl-Schnittstelle in XAML nicht bekannt
 
@@ -58,7 +57,7 @@ Sie können auch im [Forum](http://go.microsoft.com/fwlink/p/?LinkId=401266) ein
 
 Testanzeigen können angezeigt werden, auch wenn Sie Liveanzeigen erwarten. Dies kann in den folgenden Szenarien vorkommen:
 
-* Microsoft Advertising kann die Liveanwendungs-ID nicht überprüfen oder finden, die im App Store verwendet wird. Wenn eine Anzeigeneinheit von einem Benutzer erstellt wird, kann in diesem Fall der Status als live (Nicht-Test) beginnen, jedoch innerhalb von 6 Stunden nach der ersten Anzeigenanforderung in den Teststatus wechseln. Er wechselt zurück zum Livestatus, wenn es 10 Tage keine Anforderungen von Test-Apps gibt.
+* Microsoft Advertising kann die Liveanwendungs-ID nicht überprüfen oder finden, die im App Store verwendet wird. Wenn eine Anzeigeneinheit von einem Benutzer erstellt wird, kann in diesem Fall der Status als live (Nicht-Test) beginnen, jedoch innerhalb von 6Stunden nach der ersten Anzeigenanforderung in den Teststatus wechseln. Er wechselt zurück zum Livestatus, wenn es 10Tage keine Anforderungen von Test-Apps gibt.
 
 * Quergeladene Apps oder im Emulator ausgeführte Apps zeigen keine Liveanzeigen an.
 
@@ -94,7 +93,7 @@ Achten Sie darauf, die beabsichtigten Architekturen einzuschließen, wenn Sie Ap
 
 ## Z-Reihenfolge in JavaScript/HTML-Apps
 
-JavaScript/HTML-Apps müssen Elemente nicht in den reservierten MAX 10-Bereich der Z-Reihenfolge platzieren. Die einzigen Ausnahmen sind Interrupt-Overlays wie eingehende Anrufbenachrichtigungen für Skype-Apps.
+JavaScript/HTML-Apps müssen Elemente nicht in den reservierten MAX10-Bereich der Z-Reihenfolge platzieren. Die einzigen Ausnahmen sind Interrupt-Overlays wie eingehende Anrufbenachrichtigungen für Skype-Apps.
 
 <span id="bkmk-ui"/>
 ## Verwenden Sie keine Rahmen

@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
 description: In diesem Thema wird das Abrufen eines Vorschauframes aus dem Vorschaustream der Medienaufnahme veranschaulicht.
 title: Abrufen eines Vorschauframes
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c512ec92272ab03cfd8e91602018f09ef8225652
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: c512ec92272ab03cfd8e91602018f09ef8225652
 
 # Abrufen eines Vorschauframes
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Thema wird das Abrufen eines Vorschauframes aus dem Vorschaustream der Medienaufnahme veranschaulicht.
 

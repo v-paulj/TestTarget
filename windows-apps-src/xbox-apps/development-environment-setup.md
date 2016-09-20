@@ -28,7 +28,8 @@ In diesem Artikel werden die Schritte zum Einrichten und Testen der Entwicklungs
 
 Installieren Sie das aktuelle Windows 10 SDK Preview Build. Informationen zur Installation finden Sie unter [Insider Preview-Updates für Entwickler herunterladen](http://go.microsoft.com/fwlink/p/?LinkId=780552).
 
-  > **Wichtig**
+  > 
+            **Wichtig**
             &nbsp;&nbsp;Sie müssen das aktuelle SDK installieren, Sie müssen jedoch _nicht_ die aktuelle Windows Insider Preview-Version des Betriebssystems installieren.
 
 ## Einrichten Ihrer Xbox One

@@ -5,7 +5,7 @@ description: "In Ihrem Spiel für die universelle Windows-Plattform (UWP) könne
 ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: dda452a6f9b2a47d7ddaee9732bb714f0f5dbe5d
+ms.openlocfilehash: 167709c7ba3470c144924801cb8cf18ffa544c5d
 
 ---
 
@@ -18,8 +18,7 @@ In Spielen oder Apps für die universelle Windows-Plattform (UWP) können Sie ei
 
 Falls Ihre App hauptsächlich 2-D-Rendering verwendet, empfiehlt sich unter Umständen die Verwendung der [**Win2D**](https://github.com/microsoft/win2d)-Windows-Runtime-Bibliothek. Diese Bibliothek wird von Microsoft verwaltet und basiert auf den Direct2D-Kerntechnologien. Sie trägt erheblich zur Vereinfachung des Verwendungsmusters für die Implementierung von 2D-Grafik bei und enthält hilfreiche Abstraktionen für einige der in diesem Dokument beschriebenen Techniken. Ausführlichere Informationen finden Sie auf der Projektseite. Bei diesem Dokument handelt es sich um einen Leitfaden für App-Entwickler, die sich *gegen* die Verwendung von Win2D entschieden haben.
 
-> 
-              **Hinweis:** DirectX-APIs sind nicht als Windows-Runtime-Typen definiert. Daher werden in der Regel VisualC++-Komponentenerweiterungen (C++/CX) verwendet, um mit DirectX kompatible XAML-UWP-Komponenten zu entwickeln. Sie können UWP-DirectX-Apps auch mit C# und XAML erstellen, indem Sie die DirectX-Aufrufe in eine separate Windows-Runtime-Metadatendatei einschließen.
+> **Hinweis:** DirectX-APIs sind nicht als Windows-Runtime-Typen definiert. Daher werden in der Regel VisualC++-Komponentenerweiterungen (C++/CX) verwendet, um mit DirectX kompatible XAML-UWP-Komponenten zu entwickeln. Sie können UWP-DirectX-Apps auch mit C# und XAML erstellen, indem Sie die DirectX-Aufrufe in eine separate Windows-Runtime-Metadatendatei einschließen.
 
  
 
@@ -30,8 +29,7 @@ DirectX bietet mit Direct2D und Microsoft Direct3D zwei leistungsstarke Biblioth
 Wenn Sie eine benutzerdefinierte Interoperabilität zwischen XAML und DirectX implementieren möchten, müssen Sie mit den beiden folgenden Konzepten vertraut sein:
 
 -   Bei gemeinsam genutzten Flächen (Shared Surfaces) handelt es sich um Anzeigebereiche bestimmter Größe, die von XAML definiert werden. In diesen Bereichen können Sie indirekt mit DirectX und [**Windows::UI::Xaml::Media::ImageSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imagesource.aspx)-Typen zeichnen. Bei gemeinsam genutzten Flächen steuern Sie nicht, wann genau neuer Inhalt auf dem Bildschirm angezeigt wird. Stattdessen werden Änderungen an den gemeinsam genutzten Flächen mit den Updates des XAML-Frameworks synchronisiert.
--   
-              [Swapchains](https://msdn.microsoft.com/library/windows/desktop/bb206356(v=vs.85).aspx) stellen eine Sammlung von Puffern dar, die verwendet werden, um Grafiken mit minimaler Verzögerung anzuzeigen. Swapchains werden üblicherweise mit 60Frames pro Sekunde und separat vom UI-Thread aktualisiert. Im Gegensatz zu CPU-Ressourcen haben Swapchains allerdings einen höheren Arbeitsspeicherbedarf, um schnelle Aktualisierungen zu unterstützen, und ihre Verwendung ist komplizierter, da mehrere Threads verwaltet werden müssen.
+-   [Swapchains](https://msdn.microsoft.com/library/windows/desktop/bb206356(v=vs.85).aspx) stellen eine Sammlung von Puffern dar, die verwendet werden, um Grafiken mit minimaler Verzögerung anzuzeigen. Swapchains werden üblicherweise mit 60Frames pro Sekunde und separat vom UI-Thread aktualisiert. Im Gegensatz zu CPU-Ressourcen haben Swapchains allerdings einen höheren Arbeitsspeicherbedarf, um schnelle Aktualisierungen zu unterstützen, und ihre Verwendung ist komplizierter, da mehrere Threads verwaltet werden müssen.
 
 Überlegen Sie sich, wofür Sie DirectX verwenden. Wird es für die Zusammenstellung und Animierung eines einzelnen Steuerelements verwendet, das in die Abmessungen des Anzeigefensters passt? Wird eine Ausgabe enthalten sein, die wie in einem Spiel in Echtzeit gerendert und gesteuert werden muss? In diesen Fällen empfiehlt sich wahrscheinlich die Implementierung einer Swapchain. Andernfalls können Sie normalerweise auch eine gemeinsam genutzte Fläche verwenden.
 
@@ -46,9 +44,7 @@ Nachdem Sie sich überlegt haben, wie DirectX verwendet werden soll, können Sie
 ## SurfaceImageSource
 
 
-
-              [
-              **SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) bietet gemeinsam genutzte Flächen, in die mit DirectX gezeichnet werden kann, und setzt die einzelnen Bestandteile dann zu App-Inhalten zusammen.
+[**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) bietet gemeinsam genutzte Flächen, in die mit DirectX gezeichnet werden kann, und setzt die einzelnen Bestandteile dann zu App-Inhalten zusammen.
 
 Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstellen und Aktualisieren eines [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)-Objekts im CodeBehind:
 
@@ -94,8 +90,7 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
 
 4.  Stellen Sie einen Zeiger für das [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565)-Objekt zur Methode [**ISurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) bereit, und zeichnen Sie mit DirectX in dieser Fläche. Es wird nur in dem Bereich gezeichnet, der im Parameter *updateRect* für Updates festgelegt wurde.
 
-    > 
-              **Hinweis:** Es kann jeweils nur ein ausstehender [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323)-Vorgang pro [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527) aktiv sein.
+    > **Hinweis:** Es kann jeweils nur ein ausstehender [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323)-Vorgang pro [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527) aktiv sein.
 
      
 
@@ -125,21 +120,16 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
     brush->ImageSource = surfaceImageSource;
     ```
 
-> 
-              **Hinweis:** Das Aufrufen von [**SurfaceImageSource::SetSource**](https://msdn.microsoft.com/library/windows/apps/br243255) (geerbt von **IBitmapSource::SetSource**) löst zurzeit eine Ausnahme aus. Rufen Sie es nicht vom [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)-Objekt aus auf.
+> **Hinweis:** Das Aufrufen von [**SurfaceImageSource::SetSource**](https://msdn.microsoft.com/library/windows/apps/br243255) (geerbt von **IBitmapSource::SetSource**) löst zurzeit eine Ausnahme aus. Rufen Sie es nicht vom [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041)-Objekt aus auf.
 
  
 
 ## VirtualSurfaceImageSource
 
 
+[**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) erweitert [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041), wenn die Inhalte potenziell zu groß sind, um auf dem Bildschirm angezeigt zu werden, und die Inhalte virtualisiert werden müssen, um ein optimales Rendering zu gewährleisten.
 
-              [
-              **VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) erweitert [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041), wenn die Inhalte potenziell zu groß sind, um auf dem Bildschirm angezeigt zu werden, und die Inhalte virtualisiert werden müssen, um ein optimales Rendering zu gewährleisten.
-
-
-              [
-              **VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) unterscheidet sich von [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) durch die Verwendung der Callback-Methode [**IVirtualSurfaceImageSourceCallbacksNative::UpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848337). Die Callback-Methode wird implementiert, um bestimmte Bereiche der Fläche zu aktualisieren, sobald sie auf dem Bildschirm angezeigt werden. Somit müssen Sie keine ausgeblendeten Bereiche löschen, da das XAML-Framework diese Aufgabe für Sie übernimmt.
+[**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050) unterscheidet sich von [**SurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702041) durch die Verwendung der Callback-Methode [**IVirtualSurfaceImageSourceCallbacksNative::UpdatesNeeded**](https://msdn.microsoft.com/library/windows/desktop/hh848337). Die Callback-Methode wird implementiert, um bestimmte Bereiche der Fläche zu aktualisieren, sobald sie auf dem Bildschirm angezeigt werden. Somit müssen Sie keine ausgeblendeten Bereiche löschen, da das XAML-Framework diese Aufgabe für Sie übernimmt.
 
 Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstellen und Aktualisieren eines [**VirtualSurfaceImageSource**](https://msdn.microsoft.com/library/windows/apps/hh702050)-Objekts im CodeBehind:
 
@@ -244,8 +234,7 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
 
         Wie bei [**IlSurfaceImageSourceNative::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323) gibt diese Methode den X-Y-Punkt-Offset für das aktualisierte Zielrechteck im Parameter *offset* zurück. Anhand dieser Information bestimmen Sie die Stelle, an der Sie innerhalb der Schnittstelle [**IDXGISurface**](https://msdn.microsoft.com/library/windows/desktop/bb174565) zeichnen.
 
-        > 
-              **Hinweis:** Es kann jeweils nur ein ausstehender [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323)-Vorgang pro [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527) aktiv sein.
+        > **Hinweis:** Es kann jeweils nur ein ausstehender [**BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/hh848323)-Vorgang pro [**IDXGIDevice**](https://msdn.microsoft.com/library/windows/desktop/bb174527) aktiv sein.
 
          
 
@@ -270,9 +259,7 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
 ## SwapChainPanel und Gaming
 
 
-
-              [
-              **SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) ist der Windows-Runtime-Typ, der für die Unterstützung von High-End-Grafik und -Spielen mit direkter Swapchain-Verwaltung entwickelt wurde. Sie erstellen in diesem Fall Ihre eigene DirectX-Swapchain und verwalten die Präsentation Ihrer gerenderten Inhalte selbst.
+[**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834) ist der Windows-Runtime-Typ, der für die Unterstützung von High-End-Grafik und -Spielen mit direkter Swapchain-Verwaltung entwickelt wurde. Sie erstellen in diesem Fall Ihre eigene DirectX-Swapchain und verwalten die Präsentation Ihrer gerenderten Inhalte selbst.
 
 Es gibt gewisse Einschränkungen für die Klasse [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/dn252834), um die bestmögliche Leistungsfähigkeit sicherzustellen:
 
@@ -287,8 +274,7 @@ Die Klasse [**SwapChainPanel**](https://msdn.microsoft.com/library/windows/apps/
 Falls Sie in **SwapChainPanel** Zeigereingaben mit geringer Verzögerung empfangen müssen, verwenden Sie [**SwapChainPanel::CreateCoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.swapchainpanel.createcoreindependentinputsource). Das von dieser Methode zurückgegebene [**CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.core.coreindependentinputsource)-Objekt ermöglicht den Empfang von Eingabeereignissen mit minimaler Verzögerung in einem Hintergrundthread. Hinweis: Nach dem Aufrufen dieser Methode werden keine normalen XAML-Zeigereingabeereignisse für **SwapChainPanel** mehr ausgelöst, da alle Eingaben in den Hintergrundthread umgeleitet werden.
 
 
-> 
-              **Hinweis:** Im Allgemeinen sollten Ihre DirectX-Apps Swapchains im Querformat und entsprechend der angezeigten Fenstergröße erstellen (in den meisten WindowsStore-Spielen für gewöhnlich die native Bildschirmauflösung). Dadurch wird sichergestellt, dass Ihre App die optimale Swapchainimplementierung verwendet, wenn sie über keine sichtbaren XAML-Overlays verfügt. Wenn die App in das Hochformat gedreht wird, sollte sie [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801) in der vorhandenen Swapchain aufrufen, eine Umwandlung des Inhalts anwenden, wenn erforderlich, und anschließend erneut [**SetSwapChain**](https://msdn.microsoft.com/library/windows/desktop/dn302144) auf der gleichen Swapchain aufrufen. Darüber hinaus sollte Ihre App jedes Mal erneut **SetSwapChain** auf der gleichen Swapchain aufrufen, wenn die Größe der Swapchain geändert wird, indem [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) aufgerufen wird.
+> **Hinweis:** Im Allgemeinen sollten Ihre DirectX-Apps Swapchains im Querformat und entsprechend der angezeigten Fenstergröße erstellen (in den meisten WindowsStore-Spielen für gewöhnlich die native Bildschirmauflösung). Dadurch wird sichergestellt, dass Ihre App die optimale Swapchainimplementierung verwendet, wenn sie über keine sichtbaren XAML-Overlays verfügt. Wenn die App in das Hochformat gedreht wird, sollte sie [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801) in der vorhandenen Swapchain aufrufen, eine Umwandlung des Inhalts anwenden, wenn erforderlich, und anschließend erneut [**SetSwapChain**](https://msdn.microsoft.com/library/windows/desktop/dn302144) auf der gleichen Swapchain aufrufen. Darüber hinaus sollte Ihre App jedes Mal erneut **SetSwapChain** auf der gleichen Swapchain aufrufen, wenn die Größe der Swapchain geändert wird, indem [**IDXGISwapChain::ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) aufgerufen wird.
 
 
  
@@ -386,6 +372,6 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

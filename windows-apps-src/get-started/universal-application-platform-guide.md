@@ -1,11 +1,11 @@
 ---
 author: TylerMSFT
 title: "Anleitung für Apps für die Universelle Windows-Plattform (UWP)"
-description: "In dieser Anleitung erfahren Sie mehr über Apps für die Universelle Windows-Plattform (UWP), die auf einer Vielzahl von Geräten ausgeführt werden können."
+description: "Erfahren Sie mehr über Apps für die Universelle Windows-Plattform (UWP), die auf einer Vielzahl von Geräten ausgeführt werden können."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 4ad8dc5883b7edafa2c2579d3733eafba0b9cc1f
-ms.openlocfilehash: 8f4e906c9f1c685a5f6aeebd5fe0ebcc96ff9a7c
+ms.sourcegitcommit: 2df873ad451e2bb1196a1ce42e3fcd40f8c3ac8e
+ms.openlocfilehash: 925db2c5242eb49229f41298f1db4e2653f3499d
 
 ---
 
@@ -34,7 +34,7 @@ Da Ihre UWP-App auf einer Vielzahl von Geräten mit verschiedenen Formfaktoren u
 
 Windows8.1- und WindowsPhone8.1-Apps sind auf ein bestimmtes Betriebssystem (Windows oder Windows Phone) ausgerichtet. Mit Windows10 entwickeln Sie eine App nicht mehr für ein Betriebssystem. Stattdessen ist Ihre App für einzelne oder mehrere Gerätefamilien bestimmt. Eine Gerätefamilie identifiziert die APIs, Systemmerkmale und Verhaltensweisen, die Sie auf allen Geräten innerhalb der Gerätefamilie erwarten können. Sie bestimmt außerdem die Gerätegruppe, auf der Ihre App aus dem Store installiert werden kann. Hier finden Sie die Gerätefamilienhierarchie.
 
-![Gerätefamilien](images/devicefamilytree.png)
+![Gerätefamilien](images/device-family-tree.png)
 
 Eine Gerätefamilie ist eine mit Name und Versionsnummer versehene API-Sammlung. Eine Gerätefamilie ist die Grundlage eines Betriebssystems. PCs führen das Desktop-Betriebssystem aus, es basiert auf der Desktopgerätefamilie. Smartphones, Tablets usw. führen das mobile Betriebssystem aus, das auf der Mobilgerätefamilie basiert. Und so weiter.
 
@@ -51,6 +51,8 @@ Die Entscheidung darüber, für welche Gerätefamilie (oder Familien) Ihrer App 
 -   Den Satz von Geräten, auf denen Ihre App aus dem Store installiert werden kann (und daher die Formfaktoren, die Sie berücksichtigen müssen).
 
 Es gibt zwei zentrale Konsequenzen einer Entscheidung für eine Gerätefamilie: die API-Oberfläche, die jederzeit von der App aufgerufen werden kann und die Anzahl der Geräte, die von der App erreicht werden können. Diese beiden Faktoren umfassen Nachteile und sind umgekehrt miteinander verknüpft. Eine UWP-App ist beispielsweise eine App, die speziell auf die universelle Gerätefamilie ausgerichtet ist und daher auf allen Geräten verfügbar ist. Eine App für die universelle Gerätefamilie kann das Vorhandensein von nur den APIs in der universellen Gerätefamilie vorausgesetzt werden (da sie darauf ausgerichtet ist). Andere APIs müssen bedingt aufgerufen werden. Außerdem muss eine entsprechende App eine hochgradig adaptive UI und umfassende Funktionen zur Eingabe enthalten, da sie auf einer Vielzahl von Geräten ausgeführt werden kann. Eine mobile Windows-App ist eine App, die speziell auf die Mobilgerätefamilie ausgerichtet ist, und für Geräte verfügbar ist, deren Betriebssystem auf der Mobilgerätefamilie basiert (einschließlich Smartphones, Tablets und ähnlichen Geräten). Eine App für die Mobilgerätefamilie kann von dem Vorhandensein aller APIS in der Mobilgerätefamilie ausgehen und die UI muss angemessen adaptiv sein. Eine App, die auf die IoT-Gerätefamilie ausgerichtet ist, kann nur auf IoT-Geräten installiert werden und es kann vom Vorhandensein aller APIs in der IoT-Gerätefamilie ausgegangen werden. Diese App kann hinsichtlich der Benutzeroberfläche und den Eingabefunktionen sehr speziell sein, da Sie wissen, dass Sie nur auf einem bestimmten Gerätetyp ausgeführt werden kann.
+
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-UWP-and-Device-Families/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
 Hier sind einige Überlegungen, die Sie bei der Entscheidung hinsichtlich der Ausrichtung der Gerätefamilie unterstützen:
 
@@ -103,9 +105,7 @@ Damit Sie das Layout der gesamten Benutzeroberfläche abhängig vom verfügbaren
 
 ### Entwerfen einer adaptiver UI mit adaptiven Bereichen
 
-Layoutbereiche steuern Größe und Position untergeordneter Elemente abhängig vom verfügbaren Platz. [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) ordnet seine untergeordneten Elemente beispielsweise nacheinander an (horizontal oder vertikal). 
-              [
-              **Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) ist mit einem CSS-Raster vergleichbar, das untergeordnete Elemente in Zellen platziert.
+Layoutbereiche steuern Größe und Position untergeordneter Elemente abhängig vom verfügbaren Platz. [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635) ordnet seine untergeordneten Elemente beispielsweise nacheinander an (horizontal oder vertikal). [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) ist mit einem CSS-Raster vergleichbar, das untergeordnete Elemente in Zellen platziert.
 
 Das neue [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/dn879546)-Element implementiert einen Layoutstil, der durch die Beziehungen zwischen den untergeordneten Elementen definiert ist. Er dient zum Erstellen von App-Layouts, die sich andere Bildschirmauflösungen anpassen können. Das **RelativePanel**-Element vereinfacht den Prozess der Neuanordnung von Elementen, indem es die Beziehungen zwischen Elementen definiert, sodass Sie eine dynamischere Benutzeroberfläche ohne geschachtelte Layouts entwickeln können.
 
@@ -185,15 +185,9 @@ Sie können eine universelle Windows-App mit universellen Steuerelementen erstel
 
 Die folgenden APIs bieten Zugriff auf Eingaben:
 
--   
-              [
-              **CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) ist eine neue API, mit der Sie Rohdateneingaben im Hauptthread oder in einem Hintergrundthread nutzen können.
--   
-              [
-              **PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) fasst unformatierte Touch-, Maus- und Stifteingaben zu einem einzelnen einheitlichen Satz von Schnittstellen und Ereignissen zusammen, die mit **CoreInput** im Hauptthread oder Hintergrundthread genutzt werden können.
--   
-              [
-              **PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) ist eine Geräte-API, die die Abfrage von Gerätefunktionen unterstützt, sodass Sie ermitteln können, welche Eingabemodalitäten auf dem Gerät verfügbar sind.
+-   [**CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460) ist eine neue API, mit der Sie Rohdateneingaben im Hauptthread oder in einem Hintergrundthread aufnehmen können.
+-   [**PointerPoint**](https://msdn.microsoft.com/library/windows/apps/br242038) fasst unformatierte Touch-, Maus- und Stifteingaben zu einem einzelnen einheitlichen Satz von Schnittstellen und Ereignissen zusammen, die mit **CoreInput** im Hauptthread oder Hintergrundthread genutzt werden können.
+-   [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) ist eine Geräte-API, die die Abfrage von Gerätefunktionen unterstützt, sodass Sie ermitteln können, welche Eingabemodalitäten auf dem Gerät verfügbar sind.
 -   Das neue [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-XAML-Steuerelement und die [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011)-Windows-Runtime-APIs ermöglichen Ihnen den Zugriff auf Strichdaten.
 
 ## Schreiben von Code
@@ -263,8 +257,7 @@ Eine vollständige Liste von Win32-APIs für UWP-Apps finden Sie unter [API-Sät
 
 Eine universelle Windows-App ermöglicht Ihnen, die einzigartigen Funktionen des Geräts, auf dem die App ausgeführt wird, zu nutzen. Ihre App kann die gesamten Möglichkeiten von Desktopgeräten, natürliche Interaktionen mittels direkter Manipulationen auf Tablets (einschließlich Touch- und Stifteingabe), die Mobilität und Benutzerfreundlichkeit mobiler Geräte, die Funktionen zur Zusammenarbeit von [Surface Hub](http://go.microsoft.com/fwlink/?LinkId=526365) und weiterer Geräte nutzen, die UWP-Apps unterstützen.
 
-Zu einem guten [Design](http://go.microsoft.com/fwlink/?LinkId=258848) gehören nicht nur das gute Aussehen und die Funktionen einer App, sondern auch die Entscheidung darüber, wie Benutzer mit der App interagieren. Die Benutzerfreundlichkeit spielt eine große Rolle bei der Beurteilung, wie gerne Benutzer Ihre App verwenden. Sparen Sie daher nicht an diesem Schritt. 
-              [Designgrundlagen](https://dev.windows.com/design) bieten eine Einführung in das Design von Apps für die Universelle Windows-Plattform. Unter [Einführung in universelle Windows-Plattform-Apps (UWP) für Designer](https://msdn.microsoft.com/library/windows/apps/dn958439) finden Sie Informationen zum Entwerfen von UWP-Apps, die Benutzer begeistern. Bevor Sie mit dem Schreiben von Code beginnen, lesen Sie die Informationen unter [Einführung der Geräte](../input-and-devices/device-primer.md). Diese helfen Ihnen dabei, die Interaktionsmöglichkeiten Ihrer App für alle in Frage kommenden Formfaktoren zu durchdenken.
+Zu einem guten [Design](http://go.microsoft.com/fwlink/?LinkId=258848) gehören nicht nur das gute Aussehen und die Funktionen einer App, sondern auch die Entscheidung darüber, wie Benutzer mit der App interagieren. Die Benutzerfreundlichkeit spielt eine große Rolle bei der Beurteilung, wie gerne Benutzer Ihre App verwenden. Sparen Sie daher nicht an diesem Schritt. [Designgrundlagen](https://dev.windows.com/design) bieten eine Einführung in das Design von Apps für die Universelle Windows-Plattform. Unter [Einführung in universelle Windows-Plattform-Apps (UWP) für Designer](https://msdn.microsoft.com/library/windows/apps/dn958439) finden Sie Informationen zum Entwerfen von UWP-Apps, die Benutzer begeistern. Bevor Sie mit dem Schreiben von Code beginnen, lesen Sie die Informationen unter [Einführung der Geräte](../input-and-devices/device-primer.md). Diese helfen Ihnen dabei, die Interaktionsmöglichkeiten Ihrer App für alle in Frage kommenden Formfaktoren zu durchdenken.
 
 ![Windows-Geräte](images/1894834-hig-device-primer-01-500.png)
 
@@ -274,8 +267,7 @@ Zusätzlich zur Interaktion auf verschiedenen Geräten sollten Sie [Ihre App pla
 
 -   Überlegen Sie, wie Sie Benutzer unterstützen können, die von einem Gerät auf ein anderes wechseln, sodass sie nahtlos mit ihrer Arbeit fortfahren können. Beziehen Sie [Benachrichtigungen](https://msdn.microsoft.com/library/windows/apps/mt187203) und [In-App-Einkäufe](https://msdn.microsoft.com/library/windows/apps/mt219684) in Ihre Planung mit ein. Diese Features sollten auf allen Geräten funktionieren.
 
--   Entwerfen Sie Ihren Workflow anhand von [Navigationsdesigngrundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958438), damit die App auf dem Bildschirm eines mobilen Geräts genauso gut funktioniert wie auf Geräten mit mittelgroßem und großem Bildschirm. 
-              [Erstellen Sie das Layout der Benutzeroberfläche](https://msdn.microsoft.com/library/windows/apps/dn958435), um unterschiedliche Bildschirmgrößen und Auflösungen zu berücksichtigen.
+-   Entwerfen Sie Ihren Workflow anhand von [Navigationsdesigngrundlagen für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn958438), damit die App auf dem Bildschirm eines mobilen Geräts genauso gut funktioniert wie auf Geräten mit mittelgroßem und großem Bildschirm. [Erstellen Sie das Layout der Benutzeroberfläche](https://msdn.microsoft.com/library/windows/apps/dn958435), um unterschiedliche Bildschirmgrößen und Auflösungen zu berücksichtigen.
 
 -   Überlegen Sie, ob Ihre App über Features verfügt, die für einen kleinen Bildschirm nicht sinnvoll sind. So kann es im Gegensatz dazu auch Bereiche geben, die auf einem Desktopcomputer nicht sinnvoll sind und ihr volles Potenzial erst auf einem mobilen Gerät entfalten. Hierzu zählen zum Beispiel Szenarien, bei denen es um den [Standort](https://msdn.microsoft.com/library/windows/apps/mt219698) geht, und die ein mobiles Gerät voraussetzen.
 
@@ -290,12 +282,8 @@ Im neuen einheitlichen WindowsDevCenter-Dashboard können Sie all Ihre Apps für
 
 Unter [Verwenden des einheitlichen Windows Dev Center-Dashboards](../publish/using-the-windows-dev-center-dashboard.md) erfahren Sie, wie Sie Ihre Apps zur Veröffentlichung im WindowsStore übermitteln.
 
- 
-
- 
 
 
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

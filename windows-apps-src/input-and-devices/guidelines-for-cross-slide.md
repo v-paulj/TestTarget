@@ -5,7 +5,6 @@ title: "Richtlinien für Querziehen"
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 label: Cross-slide
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 47a16acc4025541b1cc19582c2c7d59755fd2594
 
@@ -14,7 +13,7 @@ ms.openlocfilehash: 47a16acc4025541b1cc19582c2c7d59755fd2594
 # Richtlinien für Querziehen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -45,17 +44,18 @@ Das folgende Diagramm zeigt Distanzschwellen, die bei der Interaktion des Querzi
 
 ![Screenshot der Prozesse für Auswahl und Drag & Drop](images/crossslide-threshold.png)
 
-Damit die Verschiebungsfunktion erhalten bleibt, muss eine niedrige Schwelle von 2,7 mm (ca. 10 Pixel bei Zielauflösung) überschritten werden, bevor eine Auswahl- oder Ziehinteraktion aktiviert wird. Anhand dieser niedrigen Schwelle kann das System zwischen Querziehen und Verschieben unterscheiden. Außerdem kann so eine Tippbewegung von Querziehen und Verschieben unterschieden werden.
+Damit die Verschiebungsfunktion erhalten bleibt, muss eine niedrige Schwelle von 2,7mm (ca. 10Pixel bei Zielauflösung) überschritten werden, bevor eine Auswahl- oder Ziehinteraktion aktiviert wird. Anhand dieser niedrigen Schwelle kann das System zwischen Querziehen und Verschieben unterscheiden. Außerdem kann so eine Tippbewegung von Querziehen und Verschieben unterschieden werden.
 
 Die folgende Abbildung zeigt, wie der Benutzer ein UI-Element berührt, den Finger beim Kontakt aber leicht nach unten bewegt. Ohne Schwelle würde die Interaktion aufgrund der anfänglichen vertikalen Bewegung als Querziehen interpretiert. Dank der Schwelle wird die Bewegung korrekt als horizontales Verschieben interpretiert.
 
-![Screenshot der Mehrdeutigkeitsvermeidungsschwelle für Auswahl und Drag & Drop](images/crossslide-threshold2.png)
+![Screenshot der Mehrdeutigkeitsvermeidungsschwelle für Auswahl und Drag&Drop](images/crossslide-threshold2.png)
 
 Beachten Sie die folgenden Richtlinien, wenn Sie eine Querziehfunktion in Ihrer App bereitstellen.
 
 Verwenden Sie das Querziehen für Listen oder Auflistungen, bei denen ein Bildlauf nur in eine Richtung möglich ist. Weitere Informationen finden Sie unter [Hinzufügen von ListView-Steuerelementen](https://msdn.microsoft.com/library/windows/apps/hh465382).
 
-**Hinweis**  In Fällen, in denen der Inhaltsbereich in zwei Richtungen verschoben werden kann, z. B. in einem Webbrowser oder E-Reader, sollte die zeitlich festgelegte Interaktion des Gedrückthaltens verwendet werden, um das Kontextmenü für Objekte wie Bilder und Links aufzurufen.
+
+            **Hinweis**  In Fällen, in denen der Inhaltsbereich in zwei Richtungen verschoben werden kann, z.B. in einem Webbrowser oder E-Reader, sollte die zeitlich festgelegte Interaktion des Gedrückthaltens verwendet werden, um das Kontextmenü für Objekte wie Bilder und Links aufzurufen.
 
  
 
@@ -104,11 +104,11 @@ Der Auswahlkorb ist eine visuell unverwechselbare, dynamische Darstellung von El
 -   Es können mehrere Elemente ausgewählt werden.
 -   Einer Aktion oder einem Befehl wird die Auswahlliste zugrunde gelegt.
 
-Der Inhalt des Auswahlkorbs bleibt über Aktionen und Befehle hinweg erhalten. Wenn Sie z. B. eine Serie von Fotos aus einer Galerie auswählen, in jedem Foto eine Farbkorrektur durchführen und die Fotos auf irgendeine Weise mit anderen teilen, bleibt die Auswahl der Elemente erhalten.
+Der Inhalt des Auswahlkorbs bleibt über Aktionen und Befehle hinweg erhalten. Wenn Sie z.B. eine Serie von Fotos aus einer Galerie auswählen, in jedem Foto eine Farbkorrektur durchführen und die Fotos auf irgendeine Weise mit anderen teilen, bleibt die Auswahl der Elemente erhalten.
 
-Wenn in einer Anwendung kein Auswahlkorb verwendet wird, sollte die aktuelle Auswahl nach einer Aktion oder einem Befehl gelöscht werden. Wenn Sie z. B. einen Musiktitel in einer Wiedergabeliste auswählen und bewerten, sollte die Auswahl gelöscht werden.
+Wenn in einer Anwendung kein Auswahlkorb verwendet wird, sollte die aktuelle Auswahl nach einer Aktion oder einem Befehl gelöscht werden. Wenn Sie z.B. einen Musiktitel in einer Wiedergabeliste auswählen und bewerten, sollte die Auswahl gelöscht werden.
 
-Auch wenn kein Auswahlkorb verwendet und ein anderes Element in der Liste oder Auflistung aktiviert wird, sollte die aktuelle Auswahl gelöscht werden. Wenn Sie z. B. eine Nachricht im Posteingang auswählen, wird das Vorschaufenster aktualisiert. Wählen Sie anschließend eine zweite Nachricht im Posteingang aus, wird die Auswahl der vorherigen Nachricht aufgehoben und das Vorschaufenster erneut aktualisiert.
+Auch wenn kein Auswahlkorb verwendet und ein anderes Element in der Liste oder Auflistung aktiviert wird, sollte die aktuelle Auswahl gelöscht werden. Wenn Sie z.B. eine Nachricht im Posteingang auswählen, wird das Vorschaufenster aktualisiert. Wählen Sie anschließend eine zweite Nachricht im Posteingang aus, wird die Auswahl der vorherigen Nachricht aufgehoben und das Vorschaufenster erneut aktualisiert.
 
 **Warteschlangen**
 
@@ -135,16 +135,18 @@ Wenn mehrere Objekte verschoben werden müssen, geben Sie dem Benutzer die Mögl
 * [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
 * [Eingabebeispiel mit geringer Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
 * [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Beispiel für visuelle Fokus-Elemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* 
+            [Beispiel für visuelle Fokus-Elemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
             
           
             **Archivbeispiele**
+          
 * [Eingabe: Beispiel XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
 * [Eingabe: Beispiel für Fingereingabe-Treffertests](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoomen](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Eingabe: vereinfachtes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Eingabe: Beispiel für Windows 8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Eingabe: Beispiel für Windows8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
  

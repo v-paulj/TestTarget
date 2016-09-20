@@ -20,7 +20,8 @@ Bevor Sie Beschreibungsinformationen eingeben können, müssen Sie mindestens ei
 
 Klicken Sie unter dem Abschnitt **Beschreibungen** Ihrer IAP-Einreichung auf **Manage description languages**, klicken Sie dann auf der nächsten Seite auf **Manage languages**. Aktivieren Sie die Kontrollkästchen für die Sprachen, die Sie hinzufügen möchten, und klicken Sie dann auf **Aktualisieren**. Die ausgewählten Sprachen werden im Abschnitt **Description languages** der Seite angezeigt. Klicken Sie zum Entfernen einer oder mehrerer dieser Sprachen auf **Entfernen** (oder klicken Sie auf **Manage languages**, und deaktivieren Sie die Kontrollkästchen für die Sprachen, die Sie entfernen möchten). Klicken Sie auf **Speichern**, wenn Sie mit der Liste der Sprachen zufrieden sind.
 
-> **Tipp** Klicken Sie zum Hinzufügen und Entfernen zusätzlicher Sprachen in der IAP-Übermittlungsübersicht auf **Manage description languages**.
+> 
+            **Tipp** Klicken Sie zum Hinzufügen und Entfernen zusätzlicher Sprachen in der IAP-Übermittlungsübersicht auf **Manage description languages**.
 
 Klicken Sie zum Bearbeiten einer Beschreibung in der IAP-Übermittlungsübersicht auf den Namen der Sprache. Die Informationen, die Sie für jede Sprache eingeben können, werden im Folgenden beschrieben.
 

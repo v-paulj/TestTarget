@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 4804e371-065e-4d5a-ab1a-9c5732f52a9e
 description: "Erfahren Sie mehr über die unterstützten Länder und Regionen für interstitielle und Banneranzeigen."
 title: "Unterstützte Märkte für Microsoft Advertising"
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 2d17a3936a4932b0aa30c80a38bb492f3f21fb37
 

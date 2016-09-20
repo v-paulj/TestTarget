@@ -3,7 +3,6 @@ author: mtoepke
 title: "2D-Grafiken für DirectX-Spiele"
 description: Hier finden Sie Informationen zum Einsatz von 2D-Bitmapgrafiken und -effekten im Allgemeinen und in Ihrem Spiel.
 ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 50782c5923f9c811f5d8e91aa9aee897876e6c24
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 50782c5923f9c811f5d8e91aa9aee897876e6c24
 # 2D-Grafiken für DirectX-Spiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier finden Sie Informationen zum Einsatz von 2D-Bitmapgrafiken und -effekten im Allgemeinen und in Ihrem Spiel.
 
@@ -46,7 +45,7 @@ Mit der Entwicklung von 2D-Grafiken können Sie sich sehr gut in die Direct3D-En
 
 Verwenden Sie für den Zeichnungsvorgang immer einen Hintergrundpuffer. Wenn der Zeichnungsvorgang direkt im Framepuffer erfolgt, wird das Bild angezeigt, sobald das Signal zum Anzeigen empfangen wird (üblicherweise jede sechzigstel Sekunde), auch wenn der Zeichnungsvorgang noch gar nicht abgeschlossen sein sollte.
 
-Achten Sie bei Ihrer Grafikengine darauf, dass diese eine Reihe von Auflösungen unterstützt – von 1024 x 600 bis mindestens 1920 x 1080. Ihre Zielgruppe wird es zu schätzen wissen, wenn Ihr Spiel die native Auflösung ihres LCD-Monitors unterstützt (besonders bei 2D-Grafiken).
+Achten Sie bei Ihrer Grafikengine darauf, dass diese eine Reihe von Auflösungen unterstützt – von 1024x600 bis mindestens 1920x1080. Ihre Zielgruppe wird es zu schätzen wissen, wenn Ihr Spiel die native Auflösung ihres LCD-Monitors unterstützt (besonders bei 2D-Grafiken).
 
 In Sachen Optik sind großartige Grafiken Ihre wichtigste Ressource. Ihre Bitmapgrafiken sind zwar vielleicht nicht ganz so beeindruckend wie fotorealistische 3D-Grafik mit den neuesten Shadermodell-Features, mit einer großartigen Grafik in hoher Auflösung können Sie aber mindestens genauso viel Stil und Persönlichkeit erzeugen – und das bei deutlich geringerem Leistungsbedarf.
 
@@ -58,7 +57,7 @@ In Sachen Optik sind großartige Grafiken Ihre wichtigste Ressource. Ihre Bitmap
 -   [Übersicht über die Interoperabilität von Direct2D und Direct3D](https://msdn.microsoft.com/library/windows/desktop/dd370966)
 
 > **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 

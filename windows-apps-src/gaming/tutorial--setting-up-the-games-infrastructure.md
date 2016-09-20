@@ -3,7 +3,6 @@ author: mtoepke
 title: Einrichten des Spieleprojekts
 description: "Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
 # Einrichten des Spieleprojekts
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben. Sie können sich eine Menge Zeit und Arbeit ersparen, wenn Sie die richtige Vorlage verwenden und das Projekt speziell für die Spieleentwicklung konfigurieren. Im Anschluss finden Sie die erforderlichen Einrichtungs- und Konfigurationsschritte für ein einfaches Spieleprojekt.
 
@@ -29,12 +28,12 @@ Sie können ein Spiel natürlich von Grund auf neu entwickeln. Dafür brauchen S
 ## 1. Auswählen der richtigen Vorlage
 
 
-Eine Visual Studio-Vorlage ist eine Sammlung von Einstellungen und Codedateien, die abhängig von der bevorzugten Sprache und Technologie auf eine bestimmte Art von App ausgerichtet sind. In Microsoft Visual Studio 2015 stehen einige Vorlagen zur Verfügung, die die Entwicklung des Spiels und der Grafik deutlich vereinfachen können. Ohne Verwendung einer Vorlage müssen Sie einen Großteil des grundlegenden Rendering- und Anzeigeframeworks für die Grafik selbst entwickeln, was insbesondere für neue Spieleentwickler recht mühsam sein kann.
+Eine Visual Studio-Vorlage ist eine Sammlung von Einstellungen und Codedateien, die abhängig von der bevorzugten Sprache und Technologie auf eine bestimmte Art von App ausgerichtet sind. In Microsoft Visual Studio2015 stehen einige Vorlagen zur Verfügung, die die Entwicklung des Spiels und der Grafik deutlich vereinfachen können. Ohne Verwendung einer Vorlage müssen Sie einen Großteil des grundlegenden Rendering- und Anzeigeframeworks für die Grafik selbst entwickeln, was insbesondere für neue Spieleentwickler recht mühsam sein kann.
 
-Die richtige Vorlage für dieses Tutorial ist die Vorlage „DirectX 11-App (Universelle Windows-App)“. Klicken Sie in Visual Studio 2015 auf **Datei...**&gt;**Neues Projekt** und gehen Sie anschließend wie folgt vor:
+Die richtige Vorlage für dieses Tutorial ist die Vorlage „DirectX 11-App (Universelle Windows-App)“. Klicken Sie in Visual Studio2015 auf **Datei...**&gt;**Neues Projekt** und gehen Sie anschließend wie folgt vor:
 
-1.  Navigieren Sie unter **Vorlagen** zu **Visual C++** > **Windows** > **Universell**.
-2.  Wählen Sie im mittleren Bereich **DirectX 11-App (universelle Windows-App)**aus.
+1.  Navigieren Sie unter **Vorlagen** zu **Visual C++**> **Windows**> **Universell**.
+2.  Wählen Sie im mittleren Bereich **DirectX11-App (universelle Windows-App)**aus.
 3.  Geben Sie Ihrem Spieleprojekt einen Namen, und klicken Sie auf **OK**.
 
 ![Auswählen der Vorlage „Direct3D-Anwendung“](images/simple-dx-game-vs-new-proj.png)
@@ -147,7 +146,7 @@ Ein paar Dateien haben wir uns für den Schluss aufgehoben. Diese Dateien bieten
 | StepTimer.h                  | Definiert einen Timer mit hoher Auflösung, der sich besonders für Spiele oder Apps mit interaktivem Rendering eignet.                                                                                                                                       |
 | Sample3DSceneRenderer.h/.cpp | Definiert eine einfache Renderimplementierung, die eine Direct3D-Swapchain und einen Grafikadapter mit Ihrem UWP-DirectX-Spiel verbindet.                                                                                            |
 | DirectXHelper.h              | Implementiert eine einzelne Methode (**DX::ThrowIfFailed**). Mit dieser Methode werden die von DirectX-APIs zurückgegebenen HRESULT-Fehlerwerte in Ausnahmen der Windows-Runtime konvertiert. Verwenden Sie diese Methode, um einen Haltepunkt zum Debuggen von DirectX-Fehlern zu setzen. |
-| pch.h/.cpp                   | Enthält alles, was das Windows-System für die von einer Direct3D-App genutzten APIs (einschließlich DirectX 11-APIs) enthält.                                                                                                           |
+| pch.h/.cpp                   | Enthält alles, was das Windows-System für die von einer Direct3D-App genutzten APIs (einschließlich DirectX11-APIs) enthält.                                                                                                           |
 | SamplePixelShader.hlsl       | Enthält den Code der High-Level-Shader-Language (HLSL) für einen sehr einfachen Pixel-Shader.                                                                                                                                     |
 | SampleVertexShader.hlsl      | Enthält den Code der High-Level Shader Language (HLSL) für einen sehr einfachen Vertex-Shader.                                                                                                                                    |
 

@@ -5,7 +5,7 @@ ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: "Lineare Keyframe-Animationen, Keyframe-Animationen mit einem „KeySpline“-Wert und Beschleunigungsfunktionen sind drei verschiedene Techniken für etwa das gleiche Szenario."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 9c010e0abca4dd095b32b42b3a8606f8faf3fcaa
+ms.openlocfilehash: 00abdacf8d1f8376a3d1a0c472ff7cf2c15afb01
 
 ---
 # Keyframe-Animationen und Animationen für Beschleunigungsfunktionen
@@ -31,25 +31,14 @@ Die Dauer einer Keyframe-Animation entspricht implizit der Dauer des höchsten *
 
 Neben der [**Duration**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.duration) können Sie alle [**Timeline**](https://msdn.microsoft.com/library/windows/apps/BR210517)-basierten Eigenschaften in einer Keyframe-Animation festlegen (genau wie bei einer **From**/**To**/**By**-Animation) da die Keyframe-Animationsklassen ebenfalls von der **Timeline** abgeleitet werden. Dies sind:
 
--   
-              [
-              **AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): Sobald der letzte Keyframe erreicht ist, werden die Frames vom anderen Ende ausgehend in umgekehrter Reihenfolge wiederholt. So wird die scheinbare Dauer der Animation verdoppelt.
--   
-              [
-              **BeginTime**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): Verzögert den Start der Animation. Die Zeitachse für die **KeyTime**-Werte in den Frames beginnt erst nach Erreichen der **BeginTime** mit der Zählung, damit kein Risiko besteht, dass Frames abgeschnitten werden.
--   
-              [
-              **FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): Steuert die Ereignisse nach dem Erreichen des letzten Keyframes. 
-              **FillBehavior** hat keine Auswirkungen auf Zwischenkeyframes.
--   
-              [
-              **RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
+-   [**AutoReverse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.autoreverse): Sobald der letzte Keyframe erreicht ist, werden die Frames vom anderen Ende ausgehend in umgekehrter Reihenfolge wiederholt. So wird die scheinbare Dauer der Animation verdoppelt.
+-   [**BeginTime**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.begintime): Verzögert den Start der Animation. Die Zeitachse für die **KeyTime**-Werte in den Frames beginnt erst nach Erreichen der **BeginTime** mit der Zählung, damit kein Risiko besteht, dass Frames abgeschnitten werden.
+-   [**FillBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.fillbehavior): Steuert die Ereignisse nach dem Erreichen des letzten Keyframes. **FillBehavior** hat keine Auswirkungen auf Zwischenkeyframes.
+-   [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.repeatbehaviorproperty):
     -   Bei Festlegung auf **Forever** werden die Keyframes und die dazugehörige Zeitachse unendlich wiederholt.
     -   Bei Festlegung auf eine bestimmte Iterationsanzahl wird die Zeitachse entsprechend oft wiederholt.
     -   Bei Festlegung auf eine [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR242377) wird die Zeitachse bis zum Erreichen dieser Zeit wiederholt. Dadurch wird die Animation u.U. mitten in der Keyframe-Sequenz abgeschnitten, wenn sie keinen ganzzahligen Teiler der impliziten Dauer der Zeitachse darstellt.
--   
-              [
-              **SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (allgemein nicht verwendet)
+-   [**SpeedRatio**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.timeline.speedratioproperty) (allgemein nicht verwendet)
 
 ### Lineare Keyframes
 
@@ -77,8 +66,7 @@ Im Folgenden erfahren Sie, wie die Renderhöhe eines Rechtecks mithilfe von line
 
 Diskrete Keyframes verwenden überhaupt keine Interpolation. Beim Erreichen einer **KeyTime** wird einfach der neue **Value** angewendet. Je nach der animierten UI-Eigenschaft führt dies häufig dazu, dass die Animation zu „springen“ scheint. Stellen Sie sicher, dass dieses ästhetische Verhalten gewünscht ist. Sie können die scheinbaren Sprünge reduzieren, indem Sie die Anzahl der deklarierten Keyframes erhöhen. Möchten Sie jedoch eine flüssige Animation erzielen, sollten Sie stattdessen lineare Keyframes oder Spline-Keyframes verwenden.
 
-
-              **Hinweis**  Diskrete Keyframes stellen die einzige Möglichkeit dar, einen Wert mit [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) zu animieren, der nicht den Typ [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) und [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) hat. Dies wird später in diesem Thema ausführlich erläutert.
+**Hinweis**  Diskrete Keyframes stellen die einzige Möglichkeit dar, einen Wert mit [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/BR243132) zu animieren, der nicht den Typ [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870) und [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723) hat. Dies wird später in diesem Thema ausführlich erläutert.
 
  
 
@@ -166,39 +154,17 @@ Beschleunigungsfunktionen können auf dreiverschiedene Arten auf Animationen ang
 
 Nachfolgend finden Sie eine Liste der Beschleunigungsfunktionen:
 
--   
-              [
-              **BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049): Zieht die Bewegung einer Animation vor ihrer Ausführung in dem angegebenen Pfad etwas zurück.
--   
-              [
-              **BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057): Erstellt einen Sprungeffekt.
--   
-              [
-              **CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063): Erstellt eine Animation, die anhand einer Winkelfunktion beschleunigt oder verzögert wird.
--   
-              [
-              **CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126): Erstellt eine Animation, die anhand der Formel f(t) = t3 beschleunigt oder verzögert wird.
--   
-              [
-              **ElasticEase**](https://msdn.microsoft.com/library/windows/apps/BR210282): Erstellt eine Animation ähnlich einer Sprungfeder, die auf und ab federt und schließlich zur Ruhe kommt.
--   
-              [
-              **ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294): Erstellt eine Animation, die anhand einer Exponentialfunktion beschleunigt oder verzögert wird.
--   
-              [
-              **PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399): Erstellt eine Animation, die anhand der Formel f(t) = tp beschleunigt oder verzögert wird, wobei p der Eigenschaft [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power) entspricht.
--   
-              [
-              **QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403): Erstellt eine Animation, die anhand der Formel f(t) = t2 beschleunigt oder verzögert wird.
--   
-              [
-              **QuarticEase**](https://msdn.microsoft.com/library/windows/apps/BR210405): Erstellt eine Animation, die anhand der Formel f(t) = t4 beschleunigt oder verzögert wird.
--   
-              [
-              **QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): Erstellt eine Animation, die anhand der Formel f(t) = t5 beschleunigt oder verzögert wird.
--   
-              [
-              **SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): Erstellt eine Animation, die anhand einer Sinusfunktion beschleunigt oder verzögert wird.
+-   [**BackEase**](https://msdn.microsoft.com/library/windows/apps/BR243049): Zieht die Bewegung einer Animation vor ihrer Ausführung in dem angegebenen Pfad etwas zurück.
+-   [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057): Erstellt einen Sprungeffekt.
+-   [**CircleEase**](https://msdn.microsoft.com/library/windows/apps/BR243063): Erstellt eine Animation, die anhand einer Winkelfunktion beschleunigt oder verzögert wird.
+-   [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126): Erstellt eine Animation, die anhand der Formel f(t) = t3 beschleunigt oder verzögert wird.
+-   [**ElasticEase**](https://msdn.microsoft.com/library/windows/apps/BR210282): Erstellt eine Animation ähnlich einer Sprungfeder, die auf und ab federt und schließlich zur Ruhe kommt.
+-   [**ExponentialEase**](https://msdn.microsoft.com/library/windows/apps/BR210294): Erstellt eine Animation, die anhand einer Exponentialfunktion beschleunigt oder verzögert wird.
+-   [**PowerEase**](https://msdn.microsoft.com/library/windows/apps/BR210399): Erstellt eine Animation, die anhand der Formel f(t) = tp beschleunigt oder verzögert wird, wobei p der Eigenschaft [**Power**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.powerease.power) entspricht.
+-   [**QuadraticEase**](https://msdn.microsoft.com/library/windows/apps/BR210403): Erstellt eine Animation, die anhand der Formel f(t) = t2 beschleunigt oder verzögert wird.
+-   [**QuarticEase**](https://msdn.microsoft.com/library/windows/apps/BR210405): Erstellt eine Animation, die anhand der Formel f(t) = t4 beschleunigt oder verzögert wird.
+-   [**QuinticEase**](https://msdn.microsoft.com/library/windows/apps/BR210407): Erstellt eine Animation, die anhand der Formel f(t) = t5 beschleunigt oder verzögert wird.
+-   [**SineEase**](https://msdn.microsoft.com/library/windows/apps/BR210439): Erstellt eine Animation, die anhand einer Sinusfunktion beschleunigt oder verzögert wird.
 
 Einige der Beschleunigungsfunktionen verfügen über eigene Eigenschaften. Beispielsweise verfügt [**BounceEase**](https://msdn.microsoft.com/library/windows/apps/BR243057) über die beiden Eigenschaften [**Bounces**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounces.aspx) und [**Bounciness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.bounceease.bounciness.aspx), die das Funktion-über-Zeit-Verhalten dieser bestimmten **BounceEase** ändern. Andere Beschleunigungsfunktionen wie z.B. [**CubicEase**](https://msdn.microsoft.com/library/windows/apps/BR243126) haben keine weiteren Eigenschaften außer der Eigenschaft [**EasingMode**](https://msdn.microsoft.com/library/windows/apps/BR210275), die von allen Beschleunigungsfunktionen gemeinsam verwendet wird, und erzeugen immer dasselbe Funktion-über-Zeit-Verhalten.
 
@@ -317,6 +283,6 @@ Sie können mehrere [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/libr
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

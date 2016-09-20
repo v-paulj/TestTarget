@@ -5,7 +5,6 @@ title: Senden einer lokalen Kachelbenachrichtigung
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: cc2f86f2a56aae5ee9e3019dafa3417a25e7d610
 
@@ -21,7 +20,8 @@ Primäre App-Kacheln in Windows 10 werden im App-Manifest definiert, sekundäre 
 
 ![Standardkachel und Kachel mit Benachrichtigung](images/sending-local-tile-01.png)
 
-**Hinweis**  Hier erhalten Sie weitere Informationen über das [Erstellen von adaptiven Kacheln](tiles-and-notifications-create-adaptive-tiles.md) und das [Vorlageschema für adaptive Kacheln](tiles-and-notifications-adaptive-tiles-schema.md).
+
+            **Hinweis**  Hier erhalten Sie weitere Informationen über das [Erstellen von adaptiven Kacheln](tiles-and-notifications-create-adaptive-tiles.md) und das [Vorlageschema für adaptive Kacheln](tiles-and-notifications-adaptive-tiles-schema.md).
 
  
 
@@ -45,7 +45,7 @@ using NotificationsExtensions.Tiles; // NotificationsExtensions.Win10
 ## <span id="Create_the_notification_content"></span><span id="create_the_notification_content"></span><span id="CREATE_THE_NOTIFICATION_CONTENT"></span>Erstellen des Benachrichtigungsinhalts
 
 
-In Windows 10 werden Kachelnutzlasten mit adaptiven Kachelvorlagen definiert, mit denen Sie benutzerdefinierte visuelle Layouts für Ihre Benachrichtigungen erstellen können. (Informationen darüber, was mit adaptiven Kacheln möglich ist, finden Sie in den Artikeln [Erstellen adaptiver Kacheln](tiles-and-notifications-create-adaptive-tiles.md) und [Vorlagen für adaptive Kacheln](tiles-and-notifications-adaptive-tiles-schema.md).)
+In Windows10 werden Kachelnutzlasten mit adaptiven Kachelvorlagen definiert, mit denen Sie benutzerdefinierte visuelle Layouts für Ihre Benachrichtigungen erstellen können. (Informationen darüber, was mit adaptiven Kacheln möglich ist, finden Sie in den Artikeln [Erstellen adaptiver Kacheln](tiles-and-notifications-create-adaptive-tiles.md) und [Vorlagen für adaptive Kacheln](tiles-and-notifications-adaptive-tiles-schema.md).)
 
 Dieses Codebeispiel erstellt adaptive Kachelinhalte für mittelgroße und breite Kacheln.
 
@@ -171,7 +171,7 @@ TileUpdateManager.CreateTileUpdaterForApplication().Update(notification);
 
 **Sekundäre Kachel**
 
-Um eine Benachrichtigung an eine sekundäre Kachel zu senden, müssen Sie zuerst sicherstellen Sie, dass die sekundäre Kachel vorhanden ist. Wenn Sie versuchen, eine Kachelaktualisierung für eine sekundäre Kachel zu erstellen, die nicht vorhanden ist (z. B. wenn der Benutzer die sekundäre Kachel gelöst hat), wird eine Ausnahme ausgelöst. Sie können mit [**SecondaryTile.Exists**](https://msdn.microsoft.com/library/windows/apps/br242205)(tileId) ermitteln, ob die sekundäre Kachel angeheftet ist, und dann eine Kachelaktualisierung für eine sekundäre Kachel erstellen und die Benachrichtigung senden.
+Um eine Benachrichtigung an eine sekundäre Kachel zu senden, müssen Sie zuerst sicherstellen Sie, dass die sekundäre Kachel vorhanden ist. Wenn Sie versuchen, eine Kachelaktualisierung für eine sekundäre Kachel zu erstellen, die nicht vorhanden ist (z.B. wenn der Benutzer die sekundäre Kachel gelöst hat), wird eine Ausnahme ausgelöst. Sie können mit [**SecondaryTile.Exists**](https://msdn.microsoft.com/library/windows/apps/br242205)(tileId) ermitteln, ob die sekundäre Kachel angeheftet ist, und dann eine Kachelaktualisierung für eine sekundäre Kachel erstellen und die Benachrichtigung senden.
 
 Mit diesem Codebeispiel wird eine Benachrichtigung an eine sekundäre Kachel gesendet.
 

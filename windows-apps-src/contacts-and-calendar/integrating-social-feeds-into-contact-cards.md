@@ -1,31 +1,37 @@
 ---
 author: normesta
-description: 'Shows how to integrate social feeds into the People app'
-MSHAttr: 'PreferredLib:/library/windows/apps'
-title: 'Provide social feeds to the People app'
+description: Veranschaulicht die Integration von Social Media-Feeds in die Kontakte-App
+MSHAttr: PreferredLib:/library/windows/apps
+title: Bereitstellen von Social Media-Feeds in der Kontakte-App
+translationtype: Human Translation
+ms.sourcegitcommit: 767acdc847e1897cc17918ce7f49f9807681f4a3
+ms.openlocfilehash: c5b9666d8654a4065bc0e4e400d3e47de4773b8b
+
 ---
 
-# Provide social feeds to the People app
+# Bereitstellen von Social Media-Feeds in der Kontakte-App
 
-Integrate social feed data from your database into the People app.
+Integrieren Sie Daten aus Social Media-Feeds aus Ihrer Datenbank in die Kontakte-App.
 
-Your feed data will appear in the **What's New** pages of the People app or in the **Profile** page of a contact.
+Die Feeddaten werden auf den **Neuigkeiten**-Seiten der Kontakte-App und auf der **Profil**-Seite von Kontakten angezeigt.
 
-![Social Feeds in People App](images/social-feeds.png)
+Benutzer können auf ein Element eines Feeds tippen, um Ihre App zu öffnen.
 
-To get started, create a foreground app that tags contacts for social feeds and a background agent that sends feed data to the People app.
+![Social Media-Feeds in der Kontakte-App](images/social-feeds.png)
 
-For a more complete sample, see [Social Info Sample](https://github.com/Microsoft/Windows-Social-Samples/tree/master/SocialInfoSampleApp).
+Erstellen Sie zunächst eine Vordergrund-App, die Kontakte, für die Social Media-Feeds angezeigt werden sollen, markiert, sowie einen Hintergrund-Agent, der die Daten aus den Feeds an die der Kontakte-App überträgt.
 
-## Create a foreground app
+Ein ausführlicheres Beispiel finden Sie unter [Beispiel für Informationen aus Social Media](https://github.com/Microsoft/Windows-Social-Samples/tree/master/SocialInfoSampleApp).
 
-First, create a Universal Windows Platform (UWP) project and then add the **Windows Mobile Extensions for UWP** to it.
+## Erstellen einer Vordergrund-App
 
-![Mobile Extensions](images/mobile-extensions.png)
+Erstellen Sie zunächst ein UWP-Projekt und fügen dem Projekt dann die **Windows Mobile-Erweiterungen für UWP** hinzu.
 
-### Find or create contacts
+![Mobile Erweiterungen](images/mobile-extensions.png)
 
-You can find contacts by using a name, email address, or phone number.
+### Suchen oder Erstellen von Kontakten
+
+Sie können Kontakte über Namen, E-Mail-Adresse oder Telefonnummer suchen.
 
 ```cs
 ContactStore contactStore = await ContactManager.RequestStoreAsync();
@@ -36,7 +42,7 @@ contacts = await contactStore.FindContactsAsync(emailAddress);
 
 Contact contact = contacts[0];
 ```
-You can also create contacts and then add them to a contact list.
+Sie können auch Kontakte erstellen und diese anschließend einer Kontaktliste hinzufügen.
 
 ```cs
 Contact contact = new Contact();
@@ -67,11 +73,11 @@ else
 await contactList.SaveContactAsync(contact);
 ```
 
-### Tag each contact with an annotation
+### Kennzeichnen von Kontakten mit einer Anmerkung
 
-This *annotation* causes the People app to request feed data for the contact from your background agent.
+Diese *Anmerkung* weist die Kontakte-App an, Feeddaten für den Kontakt von Ihrem Hintergrund-Agent anzufordern.
 
-As part of the annotation, associate the ID of the contact to an ID that your app uses internally to identify that contact.
+Wenn Sie diese Anmerkungen erstellen, ordnen Sie die ID des Kontakts einer ID zu, die Ihre App intern verwendet, um diesen Kontakt zu identifizieren.
 
 ```cs
 ContactAnnotationStore annotationStore = await
@@ -94,11 +100,11 @@ annotation.SupportedOperations = ContactAnnotationOperations.SocialFeeds;
 await annotationList.TrySaveAnnotationAsync(annotation);
 
 ```
-### Provision the background agent
+### Bereitstellen des Hintergrund-Agents
 
-Make sure that the [SocialInfoContract](https://msdn.microsoft.com/library/windows/apps/dn706146.aspx) API contract is available on the device that will run your app.
+Stellen Sie sicher, dass der API-Vertrag [SocialInfoContract](https://msdn.microsoft.com/library/windows/apps/dn706146.aspx) auf dem Gerät, auf dem Ihre App ausgeführt werden soll, verfügbar ist.
 
-If it's available, then provision the background agent.
+Wenn sie verfügbar ist, stellen Sie den Hintergrund-Agent bereit.
 
 ```cs
 if (Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(
@@ -114,21 +120,21 @@ if (Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent(
     }
 }
 ```
-## Create the background agent
+## Erstellen des Hintergrund-Agents
 
-The background agent is a Windows Runtime Component that responds to feed requests from the People app.
+Der Hintergrund-Agent ist eine Komponente für Windows-Runtime, die auf Anfragen auf Datenfeeds aus der Kontakte-App antwortet.
 
-In your agent, you'll respond to those requests by giving the People app feed data from your database.
+In dem Agent werden Sie auf diese Anfragen reagieren, indem Sie Feeddaten aus Ihrer Datenbank an die Kontakte-App weiterleiten.
 
-### Create a Windows Runtime Component
+### Erstellen einer Komponente für Windows-Runtime
 
-Add a **Windows Runtime Component (Universal Windows)** project to your solution.
+Fügen Sie der Projektmappe ein **Komponente für Windows-Runtime (Universal-Windows)**-Projekt hinzu.
 
-![Windows Runtime Component](images/windows-runtime-component.png)
+![Komponente für Windows-Runtime](images/windows-runtime-component.png)
 
-### Register the background agent as an app service
+### Registrieren des Hintergrund-Agents als App-Dienst
 
-Register by adding protocol handlers to the ``Extensions`` element of the manifest.
+Registrieren Sie die Vorgänge, indem Sie dem ``Extensions``-Element des Manifests Protokollhandler hinzufügen.
 
 ```xml
 <Extensions>
@@ -137,27 +143,27 @@ Register by adding protocol handlers to the ``Extensions`` element of the manife
   </uap:Extension>
 </Extensions>
 ```
-You can also add these in the **Declarations** tab of the manifest designer in Visual Studio.
+Sie können diese auch in der Registerkarte **Deklarationen** im Manifest-Designer in Visual Studio hinzufügen.
 
-![App Service in Manifest Designer](images/manifest-designer-app-service.png)
+![App-Dienst im Manifest-Designer](images/manifest-designer-app-service.png)
 
-### Request operations from the People app
+### Anfordern von Vorgängen in der Kontakte-App
 
-Ask the People app what type of data it wants next. The People app will respond to your request with a code that indicates which feed it wants data for.
+Fragen Sie die Kontakte-App welche Art von Daten sie als Nächstes möchte. Die Kontakte-App antwortet auf Ihre Anfrage mit einem Code, der angibt, für welchen Feed sie Daten benötigt.
 
-This table describes each feed:
+In der folgenden Tabelle werden diese Feeds beschrieben:
 
-| Feed | Description |
+| Feed | Beschreibung |
 |-------|-------------|
-| Home | Feed that appears in the What's New page of the People app. |
-| Contact | Feed that appears in the What's New page of a contact. |
-| Dashboard | Feed that appears in the contact card next to the profile picture. |
+| Home | Ein Feed, der auf der Neuigkeiten-Seite der Kontakte-App angezeigt wird |
+| Contact | Ein Feed, der auf der Neuigkeiten-Seite eines Kontakts angezeigt wird |
+| Dashboard | Ein Feed, der auf der Visitenkarte neben dem Profilbild angezeigt wird |
 <br>
-You'll ask the People app by requesting an *operation*. Implement the [IBackgroundTask](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.aspx) interface and override the [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) method.
+Sie fordern die Kontakte-App an, indem Sie einen *Vorgang* anfordern. Implementieren Sie die [IBackgroundTask](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.aspx)-Schnittstelle, und überschreiben Sie die [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx)-Methode.
 
-In the [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx) method, send the People app two key-value pairs. One of them contains the version of the protocol and the other one contains the type of the operation.
+Übermitteln Sie in der [Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx)-Methode zwei Schlüssel-Wert-Paare an die Kontakte-App. Das eine Paar enthält die Version des Protokolls und das andere den Typ des Vorgangs.
 
-Then listen for a response from the People app. That response will contain a code.
+Horchen Sie dann auf eine Antwort von der Kontakte-App. Diese Antwort enthält einen Code.
 
 ```cs
 public sealed class BackgroundAgent : IBackgroundTask
@@ -225,41 +231,41 @@ public sealed class BackgroundAgent : IBackgroundTask
 }
 ```
 
-Refer to the ``Type`` element of the [AppServiceResponse.Message](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceresponse.message.aspx) property to get that code. Here's a complete list of the codes.
+Sie finden diesen Code im Element ``Type`` der [AppServiceResponse.Message](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceresponse.message.aspx)-Eigenschaft und können ihn dort abrufen. Nachstehend finden Sie eine vollständige Liste der Codes.
 
-| Type| Description |
+| Typ| Beschreibung |
 |-----|-------------|
-| 0x10 | A request to the People app for the next operation. |
-| 0x11 | A request from the People app to provide the home feed for the primary user. |
-| 0x13 | A request from the People app to get the contact feed for the selected contact. |
-| 0x15 | A request from the People app to get the dashboard item of the selected contact. |
-| 0x80 | Indicates that the operation is completed. This notifies the People app that the data is now available. |
-| 0xF1 | A message from the People app indicating that it does not require any other operations. The background agent can shut down now. |
+| 0x10 | Eine Anfrage an die Kontakte-App, um den nächsten Vorgang abzurufen |
+| 0x11 | Eine Anfrage der Kontakte-App, um den „Home“-Feed für den primären Benutzer bereitzustellen |
+| 0x13 | Eine Anfrage der Kontakte-App, um den „Contact“-Feed für den ausgewählten Kontakt abzurufen |
+| 0x15 | Eine Anfrage der Kontakte-App, um den „Dashboard“-Feed für den ausgewählten Kontakt abzurufen |
+| 0x80 | Gibt an, dass der Vorgang abgeschlossen ist. Dies teilt der Kontakte-App mit, dass die Daten jetzt verfügbar sind. |
+| 0xF1 | Eine Nachricht von der Kontakte-App, die angibt, dass keine anderen Vorgänge erforderlich sind. Der Hintergrund-Agent kann jetzt beendet werden. |
 <br>
-The [AppServiceResponse.Message](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceresponse.message.aspx) property also returns a collection of other key-value pairs that describe the response. Here's a list of them.
+Die Eigenschaft [AppServiceResponse.Message](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceresponse.message.aspx) gibt außerdem eine Sammlung von weiteren Schlüssel-Wert-Paaren zurück, die die Antwort beinhalten. Nachstehend finden Sie eine Liste der Antworten.
 
-| Key | Type | Description |
+| Schlüssel | Typ | Beschreibung |
 |-----|------|-------------|
-| Version | UINT32 | (Required) Identifies the version of the message protocol. The upper 16 bits are the major version, and the lower 16 bits are the minor version. |
-| Type | UINT32 | (Required) The type of operation to perform. The previous example uses the Type key to determine what operation the People app is asking for.
-| OperationId | UINT32 | The ID of the operation. |
-| OwnerRemoteId | String | ID that your app uses internally to identify that contact. |
-| LastFeedItemTimeStamp | String | The ID of the last feed item that was retrieved. |
-| LastFeedItemTimeStamp | DateTime | The time stamp of the last feed item that was retrieved. |
-| ItemCount | UINT32 | The number of items that the People app asks for. |
-| IsFetchMore | BOOLEAN | Determines when the internal cache is updated. |
-| ErrorCode | UINT32 | The error code associated with the background agent operation. |
+| Version | UINT32 | (Erforderlich) Gibt die Version des Nachrichtenprotokolls an. Die oberen 16 Bit enthalten die Hauptversion, und die unteren 16 Bit die Nebenversion. |
+| Typ | UINT32 | (Erforderlich) Der Typ des auszuführenden Vorgangs. In dem Beispiel oben wird der Schlüssel „Type“ verwendet, um zu ermitteln, welchen Vorgang die Kontakte-App anfordert.
+| OperationId | UINT32 | Die ID des Vorgangs. |
+| OwnerRemoteId | Zeichenfolge | Die ID, die Ihre App intern verwendet, um diesen Kontakt zu identifizieren |
+| LastFeedItemTimeStamp | Zeichenfolge | Die ID des letzten Feedelements, das abgerufen wurde |
+| LastFeedItemTimeStamp | DateTime | Der Zeitstempel des letzten Feedelements, das abgerufen wurde |
+| ItemCount | UINT32 | Die Anzahl der Elemente, die die Kontakte-App anfordert |
+| IsFetchMore | BOOLEAN | Bestimmt, wann der interne Cache aktualisiert wird |
+| ErrorCode | UINT32 | Der Fehlercode, der dem Vorgang des Hintergrund-Agents zugeordnet ist. |
 <br>
-### Provide a data feed to the People app
+### Bereitstellen ein Datenfeeds für die Kontakte-App
 
-A **Type** value of ``0x11``, ``0x13``, or ``0x15`` is a request from the People app for feed data.  
+Wenn der Wert für **Type** ``0x11``, ``0x13`` oder ``0x15`` lautet, ist dies eine Anfrage der Kontakte-App auf Feeddaten.  
 
-The next few snippets show an approach to providing that data to the People app.
+Die nächsten Codeausschnitte zeigen einen Ansatz zum Bereitstellen dieser Daten für die Kontakte-App.
 
 > [!NOTE]
-> These snippets come from the [Social Info Sample](https://github.com/Microsoft/Windows-Social-Samples/tree/master/SocialInfoSampleApp). They contain references to interfaces, classes and members that are defined elsewhere in the sample. Use these snippets along with the other examples in this topic to understand the flow of tasks and refer to the sample if you're interested in diving further into the stack of interfaces, classes, and types.
+> Diese Codeausschnitte stammen aus den [Beispiel für Informationen aus Social Media](https://github.com/Microsoft/Windows-Social-Samples/tree/master/SocialInfoSampleApp). Sie enthalten Verweise auf Schnittstellen, Klassen und Mitglieder, die an anderer Stelle im Beispiel definiert werden. Verwenden Sie diese Codeausschnitte zusammen mit den anderen Beispielen in diesem Thema, um den Ablauf der Aufgaben zu verstehen. Sie können das Beispiel auch nutzen, um tiefer in diesen Steck von Schnittstellen, Klassen und Typen einzutauchen.
 
-**Get contact feed items**
+**Abrufen der Feedelemente von Kontakten**
 
 ```cs
 public override async Task DownloadFeedAsync()
@@ -311,7 +317,7 @@ public override async Task DownloadFeedAsync()
 }
 ```
 
-**Get dashboard items**
+**Abrufen der Dashboardelemente**
 
 ```cs
 public override async Task DownloadFeedAsync()
@@ -354,7 +360,7 @@ public override async Task DownloadFeedAsync()
 }
 ```
 
-**Get home feed items**
+**Abrufen der Feedelemente für den Startbildschirm**
 
 ```cs
 public override async Task DownloadFeedAsync()
@@ -406,9 +412,9 @@ public override async Task DownloadFeedAsync()
 }
 ```
 
-### Send success or failure notification back to the People app
+### Zurücksenden einer Benachrichtigung über Erfolg oder Fehler an die Kontakte-App
 
-Encapsulate your calls in a try catch block and then pass back a success or failure message to the People app after you've provided feed data.
+Kapseln Sie Ihre Anrufe in einem Try-Catch-Block und geben Sie dann eine Nachricht über Erfolg oder Fehler an die Kontakte-App zurück, nachdem Sie die Feeddaten bereitgestellt haben.
 
 ```cs
 try
@@ -433,3 +439,9 @@ fields.Add("OperationId", operationID);
 await this.mAppServiceConnection.SendMessageAsync(fields);
 
 ```
+
+
+
+<!--HONumber=Aug16_HO4-->
+
+

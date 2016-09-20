@@ -1,12 +1,11 @@
 ---
 author: DelfCo
-Description: "Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und beim Lokalisieren Ihrer Apps für einen bestimmten Markt."
+Description: "Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und wenn Sie Ihre Apps für einen bestimmten Markt lokalisieren."
 Search.Refinement.TopicID: 180
 title: "Richtlinien für Globalisierung und Lokalisierung"
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
 label: Do's and don'ts
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
 ms.openlocfilehash: bdbe6b3e319aa90a78660c664f1603bac93399ca
 
@@ -26,7 +25,7 @@ ms.openlocfilehash: bdbe6b3e319aa90a78660c664f1603bac93399ca
 -   [**Resources**](https://msdn.microsoft.com/library/windows/apps/br206022)
 -   [**Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039)
 
-Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und beim Lokalisieren Ihrer Apps für einen bestimmten Markt.
+Befolgen Sie diese bewährten Methoden beim Globalisieren Ihrer Apps für eine größere Zielgruppe und wenn Sie Ihre Apps für einen bestimmten Markt lokalisieren.
 
 
 
@@ -52,7 +51,7 @@ Bereiten Sie Ihre App für die einfache Anpassung an verschiedene Märkte vor, i
 </tr>
 <tr class="even">
 <td align="left"><p>Unterstützen Sie internationale Papierformate.</p></td>
-<td align="left"><p>Die gebräuchlichen Papierformate unterscheiden sich zwischen den Ländern. Unterstützen und testen Sie häufig verwendete internationale Formate, wenn Sie Features einsetzen möchten, bei denen das Papierformat eine Rolle spielt (z. B. Drucken).</p></td>
+<td align="left"><p>Die gebräuchlichen Papierformate unterscheiden sich zwischen den Ländern. Unterstützen und testen Sie häufig verwendete internationale Formate, wenn Sie Features einsetzen möchten, bei denen das Papierformat eine Rolle spielt (z.B. Drucken).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Unterstützen Sie internationale Maßeinheiten und Währungen.</p></td>
@@ -73,12 +72,12 @@ Bereiten Sie Ihre App für die einfache Anpassung an verschiedene Märkte vor, i
 </tr>
 <tr class="odd">
 <td align="left"><p>Leiten Sie den Standort des Benutzers nicht von der Sprache ab und umgekehrt nicht die Sprache vom Standort des Benutzers.</p></td>
-<td align="left"><p>Sprache und Standort des Benutzers sind in Windows zwei unterschiedliche Konzepte. Ein Benutzer kann eine bestimmte regionale Sprachvariante sprechen, beispielsweise "en-gb" für britisches Englisch, kann sich jedoch in einem ganz anderen Land oder einer anderen Region befinden. Überlegen Sie, ob die Sprache des Benutzers für die App relevant ist, z. B. für UI-Text, und ob der Standort relevant ist, z. B. für Lizenzbelange.</p>
+<td align="left"><p>Sprache und Standort des Benutzers sind in Windows zwei unterschiedliche Konzepte. Ein Benutzer kann eine bestimmte regionale Sprachvariante sprechen, beispielsweise "en-gb" für britisches Englisch, kann sich jedoch in einem ganz anderen Land oder einer anderen Region befinden. Überlegen Sie, ob die Sprache des Benutzers für die App relevant ist, z.B. für UI-Text, und ob der Standort relevant ist, z.B. für Lizenzbelange.</p>
 <p>Weitere Informationen finden Sie unter [<strong>Verwalten von Sprache und Region</strong>](manage-language-and-region.md).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Verwenden Sie keine umgangssprachlichen Ausdrücke und Metaphern.</p></td>
-<td align="left"><p>Eine für eine demografische Gruppe (z. B. Kultur oder Alter) spezifische Sprache ist schwer zu übersetzen, da nur Personen in dieser demografischen Gruppe diese Sprache verwenden. Ebenso ergeben Metaphern nicht für alle Personen Sinn. Beispielsweise hat &quot;Bache&quot; (weibliches Wildschwein) für Jäger eine besondere, für andere Personen jedoch keine Bedeutung. Wenn Sie die App lokalisieren möchten und informelle Formulierungen verwenden, erklären Sie den Lokalisierern genau die zu übersetzende Bedeutung und Ausdrucksweise.</p></td>
+<td align="left"><p>Eine für eine demografische Gruppe (z.B. Kultur oder Alter) spezifische Sprache ist schwer zu übersetzen, da nur Personen in dieser demografischen Gruppe diese Sprache verwenden. Ebenso ergeben Metaphern nicht für alle Personen Sinn. Beispielsweise hat &quot;Bache&quot; (weibliches Wildschwein) für Jäger eine besondere, für andere Personen jedoch keine Bedeutung. Wenn Sie die App lokalisieren möchten und informelle Formulierungen verwenden, erklären Sie den Lokalisierern genau die zu übersetzende Bedeutung und Ausdrucksweise.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Verwenden Sie keinen technischen Jargon, Abkürzungen oder Akronyme.</p></td>
@@ -90,11 +89,11 @@ Bereiten Sie Ihre App für die einfache Anpassung an verschiedene Märkte vor, i
 </tr>
 <tr class="odd">
 <td align="left"><p>Vermeiden Sie politische Beleidigungen in Karten oder bei Verweisen auf Regionen.</p></td>
-<td align="left"><p>Karten können umstrittene regionale oder nationale Grenzen enthalten und erweisen sich als eine häufige Quelle von politischen Beleidigungen. Achten Sie darauf, dass die Benutzeroberfläche für die Auswahl von Nationen die Formulierung &quot;Land/Region&quot; verwendet. Wenn ein umstrittenes Gebiet in einer Liste mit der Bezeichnung &quot;Länder&quot; (z. B. in einem Adressformular) aufgeführt wird, könnte dies zu Problemen führen.</p></td>
+<td align="left"><p>Karten können umstrittene regionale oder nationale Grenzen enthalten und erweisen sich als eine häufige Quelle von politischen Beleidigungen. Achten Sie darauf, dass die Benutzeroberfläche für die Auswahl von Nationen die Formulierung &quot;Land/Region&quot; verwendet. Wenn ein umstrittenes Gebiet in einer Liste mit der Bezeichnung &quot;Länder&quot; (z.B. in einem Adressformular) aufgeführt wird, könnte dies zu Problemen führen.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Verwenden Sie zum Vergleichen von Sprachtags nicht nur den Zeichenfolgenvergleich.</p></td>
-<td align="left"><p>BCP-47-Sprachtags sind komplex. Beim Vergleichen von Sprachtags muss einiges berücksichtigt werden, wie z. B. der Abgleich von Skriptinformationen, Legacytags und mehrfache regionale Varianten. Das Ressourcenverwaltungssystem in Windows übernimmt den Abgleich für Sie. Sie können eine Ressourcengruppe in beliebigen Sprachen angeben, und das System wählt die geeignete Gruppe für den Benutzer und die App aus.</p>
+<td align="left"><p>BCP-47-Sprachtags sind komplex. Beim Vergleichen von Sprachtags muss einiges berücksichtigt werden, wie z.B. der Abgleich von Skriptinformationen, Legacytags und mehrfache regionale Varianten. Das Ressourcenverwaltungssystem in Windows übernimmt den Abgleich für Sie. Sie können eine Ressourcengruppe in beliebigen Sprachen angeben, und das System wählt die geeignete Gruppe für den Benutzer und die App aus.</p>
 <p>Weitere Informationen zur Ressourcenverwaltung finden Sie unter [<strong>Definition der App-Ressourcen</strong>](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321).</p></td>
 </tr>
 <tr class="odd">
@@ -123,16 +122,16 @@ Bereiten Sie Ihre App für die einfache Anpassung an verschiedene Märkte vor, i
 <tr class="odd">
 <td align="left"><p>Trennen Sie Ressourcen wie Zeichenfolgen und Bilder der Benutzeroberfläche vom Code.</p></td>
 <td align="left"><p>Entwickeln Sie Ihre Apps so, dass Ressourcen wie Zeichenfolgen und Bilder vom Code abgegrenzt sind. So können sie unabhängig verwaltet, lokalisiert und für unterschiedliche Skalierungsfaktoren, Barrierefreiheitsoptionen und andere Benutzer- und Computersituationen angepasst werden.</p>
-<p>Trennen Sie Zeichenfolgenressourcen vom Code der App, und erstellen Sie eine einzige sprachunabhängige Codebasis. Trennen Sie immer Zeichenfolgen von Code und Markup, und speichern Sie sie in einer Ressourcendatei (z. B. ResW oder ResJSON).</p>
+<p>Trennen Sie Zeichenfolgenressourcen vom Code der App, und erstellen Sie eine einzige sprachunabhängige Codebasis. Trennen Sie immer Zeichenfolgen von Code und Markup, und speichern Sie sie in einer Ressourcendatei (z.B. ResW oder ResJSON).</p>
 <p>Verwenden Sie die Ressourceninfrastruktur in Windows zur Auswahl der am besten geeigneten Ressourcen, die der Laufzeitumgebung eines bestimmten Benutzers am besten gerecht werden.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Isolieren Sie andere lokalisierbare Ressourcendateien.</p></td>
-<td align="left"><p>Speichern Sie andere Dateien, die lokalisiert werden müssen, in Ordnern mit den entsprechenden Sprachnamen. Dazu gehören z. B. Bilder mit Text, der übersetzt oder aus kulturellen Gründen geändert werden muss.</p></td>
+<td align="left"><p>Speichern Sie andere Dateien, die lokalisiert werden müssen, in Ordnern mit den entsprechenden Sprachnamen. Dazu gehören z.B. Bilder mit Text, der übersetzt oder aus kulturellen Gründen geändert werden muss.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Legen Sie die Standardsprache fest, und kennzeichnen Sie alle Ressourcen (selbst die in der Standardsprache).</p></td>
-<td align="left"><p>Legen Sie immer die am besten geeignete Standardsprache für die Apps im App-Manifest (package.appxmanifest) fest. Die Standardsprache wird verwendet, wenn der Benutzer keine der unterstützten Sprachen der App spricht. Kennzeichnen Sie Ressourcen der Standardsprache (z. B. „en-us/Logo.png“) mit der entsprechenden Sprache, sodass das System die Sprache der Ressource und ihre Verwendung in bestimmten Situationen erkennen kann.</p></td>
+<td align="left"><p>Legen Sie immer die am besten geeignete Standardsprache für die Apps im App-Manifest (package.appxmanifest) fest. Die Standardsprache wird verwendet, wenn der Benutzer keine der unterstützten Sprachen der App spricht. Kennzeichnen Sie Ressourcen der Standardsprache (z.B. „en-us/Logo.png“) mit der entsprechenden Sprache, sodass das System die Sprache der Ressource und ihre Verwendung in bestimmten Situationen erkennen kann.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Ermitteln Sie die Ressourcen der App, die lokalisiert werden müssen.</p></td>
@@ -145,7 +144,7 @@ Bereiten Sie Ihre App für die einfache Anpassung an verschiedene Märkte vor, i
 </tr>
 <tr class="even">
 <td align="left"><p>Ermöglichen Sie das Vergrößern des Textumfangs.</p></td>
-<td align="left"><p>Weisen Sie Textpuffer dynamisch zu, da der Textumfang beim Übersetzen zunehmen kann. Wenn sich statische Puffer nicht vermeiden lassen, verwenden Sie besonders große (vielleicht die doppelte Länge bei einer englischen Zeichenfolge), um die eventuell längere Zeichenfolge nach der Übersetzung zu berücksichtigen. Auch bei der Benutzeroberfläche kann der verfügbare Platz eingeschränkt sein. Stellen Sie für die lokalisierten Sprachen sicher, dass die Zeichenfolgen etwa 40 % länger sein können als die englischen Zeichenfolgen. Bei sehr kurzen Zeichenfolgen wie einzelnen Wörtern ist vielleicht sogar 300 % mehr Platz nötig. Wenn zudem mehrere Zeilen und Textumbrüche in Steuerelementen unterstützt werden, ist mehr Platz zum Anzeigen von Zeichenfolgen verfügbar.</p></td>
+<td align="left"><p>Weisen Sie Textpuffer dynamisch zu, da der Textumfang beim Übersetzen zunehmen kann. Wenn sich statische Puffer nicht vermeiden lassen, verwenden Sie besonders große (vielleicht die doppelte Länge bei einer englischen Zeichenfolge), um die eventuell längere Zeichenfolge nach der Übersetzung zu berücksichtigen. Auch bei der Benutzeroberfläche kann der verfügbare Platz eingeschränkt sein. Stellen Sie für die lokalisierten Sprachen sicher, dass die Zeichenfolgen etwa 40% länger sein können als die englischen Zeichenfolgen. Bei sehr kurzen Zeichenfolgen wie einzelnen Wörtern ist vielleicht sogar 300% mehr Platz nötig. Wenn zudem mehrere Zeilen und Textumbrüche in Steuerelementen unterstützt werden, ist mehr Platz zum Anzeigen von Zeichenfolgen verfügbar.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Unterstützen Sie Spiegelung.</p></td>

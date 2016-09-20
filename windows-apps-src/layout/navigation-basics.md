@@ -5,7 +5,6 @@ title: "Navigationsdesigngrundlagen für Universal Windows Platform (UWP)-Apps"
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: 6926d70c7140b1545a8b5492981d6d0b61af3784
 
@@ -23,11 +22,12 @@ Damit sie fehlerlos und intuitiv von den Benutzern verwendet werden kann, umfass
 
     Das Erstellen einer für Benutzer sinnvollen Navigationsstruktur ist für die Entwicklung einer intuitiven Navigationsfunktionalität entscheidend.
 
--   **Kompatible Navigationselemente**, die die ausgewählte Struktur unterstützen.
+-   
+            **Kompatible Navigationselemente**, die die ausgewählte Struktur unterstützen.
 
     Navigationselemente können dem Benutzer helfen, zum gewünschten Inhalt zu gelangen, und sie können auch anzeigen, wo sich der Benutzer in der App befindet. Allerdings belegen sie auch Platz, der für Inhalte oder Steuerungselemente genutzt werden könnte. Daher ist es wichtig, dass Sie die für Ihre App-Struktur geeigneten Navigationselemente verwenden.
 
--   **Geeignete Reaktionen auf Navigationsfeatures auf Systemebene (z. B. „Zurück”)**
+-   **Geeignete Reaktionen auf Navigationsfeatures auf Systemebene (z.B. „Zurück”)**
 
     Um eine einheitliche intuitive Benutzererfahrung zu bieten, reagieren Sie in vorhersehbarer Weise auf Navigationsfeatures auf Systemebene.
 

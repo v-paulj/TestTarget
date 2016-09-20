@@ -4,8 +4,8 @@ ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Visuelle Ebene
 description: "Die Windows.UI.Composition-API ermöglicht den Zugriff auf die Kompositionsebene zwischen der Frameworkebene (XAML) und der Grafikebene (DirectX)."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 1abb663d0ee27d7e57ab83dab2589557d1f9f29a
+ms.sourcegitcommit: 4a00847f0559d93eea199d7ddca0844b5ccaa5aa
+ms.openlocfilehash: 3a3dbf7b529d5d2848b161869d2f77fef3651488
 
 ---
 # Visuelle Ebene
@@ -27,18 +27,10 @@ Die API ermöglicht es Entwicklern, einzelne oder viele [**Visual**](https://msd
 
 Visuelle Elemente können Container für andere visuelle Elemente sein oder Inhalte visueller Elemente hosten. Die API sorgt für mehr Benutzerfreundlichkeit, indem sie eine eindeutige Gruppe von [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Objekten für bestimmte Aufgaben bereitstellt, die in einer Hierarchie vorhanden sind:
 
--   
-              [
-              **Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – das Basisobjekt. Die meisten Eigenschaften befinden sich hier und werden von den anderen visuellen Objekten geerbt.
--   
-              [
-              **ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – wird von [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) abgeleitet und fügt die Möglichkeit hinzu, untergeordnete visuelle Elemente einzufügen.
--   
-              [
-              **SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – wird von [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) abgeleitet und enthält Inhalte in Form von Bildern, Effekten und Swapchains.
--   
-              [
-              **Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – die Objektfactory, die die Beziehung zwischen einer Anwendung und dem Kompositorprozess des Systems verwaltet.
+-   [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) – das Basisobjekt. Die meisten Eigenschaften befinden sich hier und werden von den anderen visuellen Objekten geerbt.
+-   [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) – wird von [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858) abgeleitet und bietet die Möglichkeit, untergeordnete visuelle Elemente einzusetzen.
+-   [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) – wird von [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) abgeleitet und enthält Inhalte in Form von Bildern, Effekten und Swapchains.
+-   [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Dn706789) – die Objektfactory, die die Beziehung zwischen einer Anwendung und dem Kompositorprozess des Systems verwaltet.
 
 Der Kompositor ist auch eine Factory für zahlreiche andere Kompositionsobjekte, die dazu verwendet werden, um visuelle Elemente in der Struktur sowie eine Reihe von Animationen und Effekten zu beschneiden und umzuwandeln.
 
@@ -58,15 +50,9 @@ Weitere Informationen finden Sie in der Übersicht [Kompositionsanimationen](com
 
 Die Composition-API kann eine visuelle Struktur von Grund auf neu erstellen und ist zusätzlich für die Interoperabilität mit einer bereits vorhandenen XAML-UI entworfen, wobei die [**ElementCompositionPreview**](https://msdn.microsoft.com/library/windows/apps/Mt608976)-Klasse in [**Windows.UI.Xaml.Hosting**](https://msdn.microsoft.com/library/windows/apps/Hh701908) verwendet wird.
 
-- 
-              [
-              **ElementCompositionPreview.GetElementVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): ruft das zugrundeliegende visuelle Objekt eines Elements auf, um es mittels Composition-APIs zu animieren.
-- 
-              [
-              **ElementCompositionPreview.SetChildVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): fügt eine „visuelle Insel“ von Composition-Inhalten zu einer XAML-Struktur hinzu.
-- 
-              [
-              **ElementCompositionPreview.GetScrollViewerManipulationPropertySet()**](https://msdn.microsoft.com/library/windows/apps/mt608980.aspx): verwendet die Manipulation eines [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) als Eingabe für eine Composition-Animation.
+- [**ElementCompositionPreview.GetElementVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): ruft das zugrundeliegende visuelle Objekt eines Elements auf, um es mittels Composition-APIs zu animieren.
+- [**ElementCompositionPreview.SetChildVisual()**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): fügt eine „visuelle Insel“ von Composition-Inhalten zu einer XAML-Struktur hinzu.
+- [**ElementCompositionPreview.GetScrollViewerManipulationPropertySet()**](https://msdn.microsoft.com/library/windows/apps/mt608980.aspx): verwendet die Manipulation eines [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.scrollviewer.aspx) als Eingabe für eine Compositionsanimation.
 
 
 **Hinweis**  
@@ -78,10 +64,8 @@ Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die Univers
 
 -   Lesen Sie den MSDN-Artikel von Kenny Kerr zu dieser API: [Grafiken und Animationen – Windows Composition wird 10](https://msdn.microsoft.com/magazine/mt590968)
 -   Erweiterte Beispiele für Benutzeroberfläche und Composition finden Sie im [WindowsUIDevLabs-GitHub](https://github.com/microsoft/windowsuidevlabs).
--   
-              [
-              **Vollständige Referenzdokumentation für die API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
--   Bekannte Probleme: [Bekannte Probleme](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues).
+-   [**Vollständige Dokumentation zur Referenz für die API**](https://msdn.microsoft.com/library/windows/apps/Dn706878).
+-   Bekannte Probleme: [Bekannte Probleme](http://go.microsoft.com/fwlink/?LinkId=823237).
 
  
 
@@ -93,6 +77,6 @@ Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die Univers
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

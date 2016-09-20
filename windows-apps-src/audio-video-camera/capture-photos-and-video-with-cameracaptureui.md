@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: "Dieser Artikel beschreibt, wie Sie die „CameraCaptureUI“-Klasse zum Aufnehmen von Fotos oder Videos mit der in Windows integrierten Kamera-UI verwenden."
 title: "Aufnehmen von Fotos und Videos mit „CameraCaptureUI“"
-translationtype: Human Translation
 ms.sourcegitcommit: 72abc006de1925c3c06ecd1b78665e72e2ffb816
 ms.openlocfilehash: a98edd0b4c52271fad4255af5ab0a005b0c66d68
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: a98edd0b4c52271fad4255af5ab0a005b0c66d68
 
 # Aufnehmen von Fotos und Videos mit „CameraCaptureUI“
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 Dieser Artikel beschreibt, wie Sie die „CameraCaptureUI“-Klasse zum Aufnehmen von Fotos oder Videos mit der in Windows integrierten Kamera-UI verwenden. Dieses Feature ist benutzerfreundlich und ermöglicht, dass die App ein vom Benutzer aufgenommenes Fotos oder Video mit nur wenigen Codezeilen abruft.
@@ -24,9 +23,10 @@ Um die Kameraaufnahme-UI zu verwenden, schließen Sie den [**Windows.Media.Captu
 
 [!code-cs[UsingCaptureUI](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetUsingCaptureUI)]
 
-Um ein Foto aufzunehmen, erstellen Sie ein neues [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030)-Objekt. Durch Verwendung der [**PhotoSettings**](https://msdn.microsoft.com/library/windows/apps/br241058)-Eigenschaft des Objekts können Sie Eigenschaften für das zurückgegebene Foto angeben, z. B. das Bildformat des Fotos. Standardmäßig kann der Benutzer über die Kameraaufnahme-UI das Foto zuschneiden, bevor es zurückgegeben wird. Dies kann aber mit der [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042)-Eigenschaft deaktiviert werden. In diesem Beispiel wird [**CroppedSizeInPixels**](https://msdn.microsoft.com/library/windows/apps/br241044) festgelegt, um anzufordern, dass das zurückgegebene Bild 200 x 200 Pixel hat.
+Um ein Foto aufzunehmen, erstellen Sie ein neues [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030)-Objekt. Durch Verwendung der [**PhotoSettings**](https://msdn.microsoft.com/library/windows/apps/br241058)-Eigenschaft des Objekts können Sie Eigenschaften für das zurückgegebene Foto angeben, z. B. das Bildformat des Fotos. Standardmäßig kann der Benutzer über die Kameraaufnahme-UI das Foto zuschneiden, bevor es zurückgegeben wird. Dies kann aber mit der [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042)-Eigenschaft deaktiviert werden. In diesem Beispiel wird [**CroppedSizeInPixels**](https://msdn.microsoft.com/library/windows/apps/br241044) festgelegt, um anzufordern, dass das zurückgegebene Bild 200x200 Pixel hat.
 
-**Hinweis**  Das Zuschneiden von Bildern im „CameraCaptureUI“-Objekt wird für Geräte in der Mobilgerätefamilie nicht unterstützt. Der Wert der [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042)-Eigenschaft wird ignoriert, wenn Ihre App auf diesen Geräten ausgeführt wird.
+
+            **Hinweis**  Das Zuschneiden von Bildern im „CameraCaptureUI“-Objekt wird für Geräte in der Mobilgerätefamilie nicht unterstützt. Der Wert der [**AllowCropping**](https://msdn.microsoft.com/library/windows/apps/br241042)-Eigenschaft wird ignoriert, wenn Ihre App auf diesen Geräten ausgeführt wird.
 
 Rufen Sie [**CaptureFileAsync**](https://msdn.microsoft.com/library/windows/apps/br241057) auf, und geben Sie [**CameraCaptureUIMode.Photo**](https://msdn.microsoft.com/library/windows/apps/br241040) an, um festzulegen, dass ein Foto aufgenommen werden soll. Die Methode gibt eine [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Instanz mit dem Bild zurück, wenn die Aufnahme erfolgreich ist. Wenn der Benutzer die Aufnahme abbricht, ist das zurückgegebene Objekt „null“.
 
@@ -94,7 +94,7 @@ Zum Schluss legen Sie die Streamquelle so fest, dass die [**SetMediaStreamSource
 Sie können weiter Videoclips aufzeichnen und diese der Komposition hinzufügen. Weitere Informationen zu Medienkompositionen finden Sie unter [Medienkompositionen und -bearbeitung](media-compositions-and-editing.md).
 
 **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 

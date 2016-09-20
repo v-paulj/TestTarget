@@ -1,9 +1,8 @@
 ---
 author: mtoepke
-title: "Portieren von DirectX 9 zur Universellen Windows-Plattform (UWP)"
+title: Portieren von DirectX9 zur Universellen Windows-Plattform (UWP)
 description: "Dieser Abschnitt enthält Artikel, Übersichten und exemplarische Vorgehensweisen zum Portieren von DirectX 9-Spielen zur Universellen Windows-Plattform (UWP)."
 ms.assetid: 536c0b99-cdf3-1527-1ee2-4187f50a2cf0
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 1cb77db78fe368c567990c9521122b42ef10ec65
 
@@ -20,8 +19,8 @@ Dieser Abschnitt enthält Artikel, Übersichten und exemplarische Vorgehensweise
 
 
 -   Erreichen der UWP-Zielgruppe, um mit dem Spiel Geld zu verdienen
--   Erreichen einer großen Zahl von Geräten, auf denen jeweils mindestens die Direct3D 9.1-Grafikfeatures unterstützt werden
--   Erlernen wertvoller neuer Fähigkeiten zur Entwicklung von Windows-Spielen, z. B. Direct3D 11, vereinheitlichte Shadermodelle, Windows-APIs, XAudio2, Toucheingabe, C++/CX usw.
+-   Erreichen einer großen Zahl von Geräten, auf denen jeweils mindestens die Direct3D9.1-Grafikfeatures unterstützt werden
+-   Erlernen wertvoller neuer Fähigkeiten zur Entwicklung von Windows-Spielen, z.B. Direct3D11, vereinheitlichte Shadermodelle, Windows-APIs, XAudio2, Toucheingabe, C++/CX usw.
 
 ## Wo soll ich beginnen?
 

@@ -1,9 +1,8 @@
 ---
 author: mtoepke
-title: "Reduzieren der Latenz mit DXGI 1.3-Swapchains"
+title: Reduzieren der Latenz mit DXGI1.3-Swapchains
 description: Verwenden Sie DXGI 1.3 zum Reduzieren der geltenden Framelatenz, indem Sie warten, bis die Swapchain den geeigneten Zeitpunkt signalisiert, um mit dem Rendern eines neuen Frames zu beginnen.
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 174e2918d54a2b03124752d009f43f0cb0c800ca
 
@@ -14,7 +13,7 @@ ms.openlocfilehash: 174e2918d54a2b03124752d009f43f0cb0c800ca
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Verwenden Sie DXGI 1.3 zum Reduzieren der geltenden Framelatenz, indem Sie warten, bis die Swapchain den geeigneten Zeitpunkt zum Beginnen mit dem Rendern eines neuen Frames signalisiert. Spiele müssen in der Regel die geringstmögliche Latenz aufweisen, was den Zeitraum vom Eingang der Spielereingabe bis zur Reaktion des Spiels auf die Eingabe betrifft, indem die Anzeige aktualisiert wird. In diesem Thema wird ein Verfahren erläutert, das ab Version Direct3D 11.2 verfügbar ist. Damit können Sie in Ihrem Spiel die geltende Framelatenz verringern.
+Verwenden Sie DXGI 1.3 zum Reduzieren der geltenden Framelatenz, indem Sie warten, bis die Swapchain den geeigneten Zeitpunkt zum Beginnen mit dem Rendern eines neuen Frames signalisiert. Spiele müssen in der Regel die geringstmögliche Latenz aufweisen, was den Zeitraum vom Eingang der Spielereingabe bis zur Reaktion des Spiels auf die Eingabe betrifft, indem die Anzeige aktualisiert wird. In diesem Thema wird ein Verfahren erläutert, das ab Version Direct3D11.2 verfügbar ist. Damit können Sie in Ihrem Spiel die geltende Framelatenz verringern.
 
 ## Wie kann mit dem Warten auf den Hintergrundpuffer die Latenz reduziert werden?
 
@@ -32,7 +31,8 @@ Geben Sie das [**DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT**](ht
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
 ```
 
-> **Hinweis**  Dieses Flag kann nicht wie andere Flags mithilfe von [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) hinzugefügt oder entfernt werden. Von DXGI wird ein Fehlercode zurückgegeben, wenn dieses Flag anders als bei der Erstellung der Swapchain festgelegt wird.
+> 
+            **Hinweis**  Dieses Flag kann nicht wie andere Flags mithilfe von [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) hinzugefügt oder entfernt werden. Von DXGI wird ein Fehlercode zurückgegeben, wenn dieses Flag anders als bei der Erstellung der Swapchain festgelegt wird.
 
  
 
@@ -77,7 +77,7 @@ Rufen Sie [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](https://msdn.micr
 m_frameLatencyWaitableObject = swapChain2->GetFrameLatencyWaitableObject();
 ```
 
-## Schritt 4: Warten vor dem Rendern der einzelnen Frames
+## Schritt4: Warten vor dem Rendern der einzelnen Frames
 
 
 Die Renderschleife sollte warten, bis die Swapchain über das Objekt mit Wartemöglichkeit ein Signal sendet, bevor sie mit dem Rendern eines Frames beginnt. Dies gilt auch für den ersten Frame, der mit der Swapchain gerendert wird. Verwenden Sie [**WaitForSingleObjectEx**](https://msdn.microsoft.com/library/windows/desktop/ms687036), und stellen Sie das in Schritt 2 abgerufene „wait“-Handle bereit, um den Start eines Frames zu signalisieren.

@@ -3,7 +3,6 @@ author: mcleblanc
 description: "Welche Optionen gibt es beim Entwickeln von plattformübergreifenden Apps?"
 title: "Auswählen eines Ansatzes für die Entwicklung von iOS- und UWP-Apps"
 ms.assetid: 5CDAB313-07B7-4A32-A49B-026361DCC853
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 2703a0c919b08331cc7ab55fe78b868555312ac0
 
@@ -21,7 +20,7 @@ Windows und iOS sind anscheinend sehr unterschiedlich, es stehen jedoch immer me
 
 ## Schreiben einer neuen App
 
-Wenn Sie eine neue App erstellen, stehen zahlreiche Optionen zur Verfügung, u. a.:
+Wenn Sie eine neue App erstellen, stehen zahlreiche Optionen zur Verfügung, u.a.:
 
 -   [Xamarin](http://go.microsoft.com/fwlink/p/?LinkID=320484)
 
@@ -37,7 +36,7 @@ Wenn Sie eine neue App erstellen, stehen zahlreiche Optionen zur Verfügung, u.�
 
 -   [MonoGame](http://go.microsoft.com/fwlink/p/?LinkID=320483)
 
-    Der geistige Nachfolger von XNA. Nun handelt es sich dabei um ein plattformübergreifendes Open Source-Framework. Das bedeutet, Sie können Apps in C# für zahlreiche Plattformen mit Unterstützung für Physik-Engines sowie 2D- und 3D-Grafiken schreiben.
+    Der geistige Nachfolger von XNA. Nun handelt es sich dabei um ein plattformübergreifendes OpenSource-Framework. Das bedeutet, Sie können Apps in C# für zahlreiche Plattformen mit Unterstützung für Physik-Engines sowie 2D- und 3D-Grafiken schreiben.
 
 ## Anpassen einer vorhandenen App
 
@@ -53,7 +52,7 @@ Bei einer vorhandenen iOS-App stehen weniger Optionen zur Verfügung. Es ist jed
 
 -   [Verwenden von ANGLE zum Ausführen von OpenGL ES unter Windows](http://go.microsoft.com/fwlink/p/?linkid=618387)
 
-    Ein Zwischenschritt zum Portieren Ihres OpenGL ES 2.0-Projekts ist die Verwendung von ANGLE. Mit ANGLE können Sie OpenGL ES-Inhalte unter Windows ausführen, indem Sie OpenGL ES-API-Aufrufe in DirectX 11-API-Aufrufe übersetzen.
+    Ein Zwischenschritt zum Portieren Ihres OpenGL ES2.0-Projekts ist die Verwendung von ANGLE. Mit ANGLE können Sie OpenGL ES-Inhalte unter Windows ausführen, indem Sie OpenGL ES-API-Aufrufe in DirectX11-API-Aufrufe übersetzen.
 
 ## Andere plattformübergreifende Erstellungstools
 

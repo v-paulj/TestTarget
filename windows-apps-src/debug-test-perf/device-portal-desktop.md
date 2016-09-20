@@ -78,7 +78,7 @@ In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzw
 
 ### Das Paket konnte nicht gefunden werden
 
-„Das Entwicklermoduspaket wurde in Windows Update nicht gefunden. Fehlercode 0x001234. Weitere Informationen“   
+"Developer Mode package couldn’t be located in Windows Update. Error Code 0x001234 Learn more"   
 
 Dieser Fehler kann aufgrund eines Netzwerkverbindungsproblems, aufgrund von Enterprise-Einstellungen oder weil das Paket nicht vorhanden ist, auftreten. 
 
@@ -94,7 +94,7 @@ Nachdem Sie einen der oben genannten Schritte durchgeführt haben, deaktivieren 
 
 ### Fehler beim Installieren des Pakets
 
-„Fehler beim Installieren des Entwicklermoduspakets. Fehlercode 0x001234. Weitere Informationen“
+"Developer Mode package failed to install. Error code 0x001234  Learn more"
 
 Dieser Fehler kann aufgrund von Inkompatibilitäten zwischen dem Build von Windows und dem Entwicklermoduspaket auftreten. 
 

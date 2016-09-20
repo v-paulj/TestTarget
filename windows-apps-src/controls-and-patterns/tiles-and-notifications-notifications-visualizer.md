@@ -5,7 +5,6 @@ title: Notifications Visualizer
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 label: TBD
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: dcbf05669093047bd76dc01c217daf353d8fb9da
 
@@ -32,7 +31,8 @@ Dieser Screenshot der App zeigt die XML-Nutzlast und die Art und Weise, wie Kach
 
 Mit Notifications Visualizer können Sie adaptive Kachelnutzlasten erstellen und testen, ohne die App selbst bearbeiten und bereitstellen zu müssen. Nachdem Sie eine Nutzlast mit idealen visuellen Ergebnisse erstellt haben, können Sie sie in Ihre App integrieren. Weitere Informationen finden Sie unter [Senden einer lokalen Kachelbenachrichtigung](tiles-and-notifications-sending-a-local-tile-notification.md).
 
-**Hinweis**  Die Simulation des Windows-Startmenüs mit Notifications Visualizer ist nicht immer hundertprozentig genau, und bestimmte Nutzlasteigenschaften wie [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712) werden nicht unterstützt. Wenn Sie das gewünschte Kacheldesign fertig haben, testen Sie es, indem Sie die Kachel an das tatsächliche Startmenü anheften, um sicherzustellen, dass es wie gewünscht angezeigt wird.
+
+            **Hinweis**  Die Simulation des Windows-Startmenüs mit Notifications Visualizer ist nicht immer hundertprozentig genau, und bestimmte Nutzlasteigenschaften wie [baseUri](https://msdn.microsoft.com/library/windows/apps/br208712) werden nicht unterstützt. Wenn Sie das gewünschte Kacheldesign fertig haben, testen Sie es, indem Sie die Kachel an das tatsächliche Startmenü anheften, um sicherzustellen, dass es wie gewünscht angezeigt wird.
 
  
 
@@ -41,7 +41,7 @@ Mit Notifications Visualizer können Sie adaptive Kachelnutzlasten erstellen und
 
 Notifications Visualizer enthält eine Reihe von Beispielnutzlasten, um zu zeigen, was mit adaptiven Live-Kacheln möglich ist und um Sie bei den ersten Schritten zu unterstützen. Sie können mit den verschiedenen Textoptionen, Gruppen/Untergruppen, Hintergrundbildern experimentieren und sehen, wie sich die Kachel an verschiedene Geräte und Bildschirme anpasst. Wenn Sie Änderungen vornehmen, können Sie Ihre aktualisierte Nutzlast in einer Datei zur späteren Verwendung speichern.
 
-Der Editor stellt Fehler und Warnungen in Echtzeit bereit. Wenn Ihre App-Nutzlast beispielsweise auf weniger als 5 KB (eine Plattformbeschränkung) begrenzt ist, warnt Notifications Visualizer Sie, falls Ihre Nutzlast diese Grenze überschreitet. Sie erhalten Warnungen aufgrund falscher Attributnamen oder Werte, wodurch das Debuggen visueller Probleme erleichtert wird.
+Der Editor stellt Fehler und Warnungen in Echtzeit bereit. Wenn Ihre App-Nutzlast beispielsweise auf weniger als 5KB (eine Plattformbeschränkung) begrenzt ist, warnt Notifications Visualizer Sie, falls Ihre Nutzlast diese Grenze überschreitet. Sie erhalten Warnungen aufgrund falscher Attributnamen oder Werte, wodurch das Debuggen visueller Probleme erleichtert wird.
 
 Sie können Kacheleigenschaften, wie Anzeigename, Farbe, Logos, ShowName, Signalwert, steuern. Anhand dieser Optionen verstehen Sie sofort, wie Ihre Kacheleigenschaften und Kachelbenachrichtigungsnutzlasten interagieren und welche Ergebnisse sie produzieren.
 

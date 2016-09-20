@@ -11,8 +11,7 @@ ms.openlocfilehash: a7f7dccb9c7461e482bd43c8f370a2a7244eb735
 
 # Zugriff auf Features der Universellen Windows-Plattform (UWP)
 
-Ihre Webanwendung kann über vollständigen Zugriff auf die Universelle Windows Plattform (UWP) verfügen. So kann sie auf Windows-Geräten systemeigene Features aktivieren, [von der Windows-Sicherheit profitieren](#keep-your-app-secure-setting-application-content-uri-rules-acurs), [Windows-Runtime-APIs](#call-windows-runtime-apis) direkt über ein auf einem Server gehostetes Skript aufrufen, die [Cortana-Integration](#integrate-cortana-voice-commands) nutzen und einen [Onlineauthentifizierungsanbieter](#web-authentication-broker) verwenden. 
-              [Hybrid-Apps](#create-hybrid-apps-packaged-web-apps-vs-hosted-web-apps) werden ebenfalls unterstützt, da Sie lokalen Code einfügen können, der aus dem gehosteten Skript aufgerufen werden soll, und die App-Navigation zwischen Remote- und lokalen Seiten verwalten können.
+Ihre Webanwendung kann über vollständigen Zugriff auf die Universelle Windows Plattform (UWP) verfügen. So kann sie auf Windows-Geräten systemeigene Features aktivieren, [von der Windows-Sicherheit profitieren](#keep-your-app-secure-setting-application-content-uri-rules-acurs), [Windows-Runtime-APIs](#call-windows-runtime-apis) direkt über ein auf einem Server gehostetes Skript aufrufen, die [Cortana-Integration](#integrate-cortana-voice-commands) nutzen und einen [Onlineauthentifizierungsanbieter](#web-authentication-broker) verwenden. [Hybrid-Apps](#create-hybrid-apps-packaged-web-apps-vs-hosted-web-apps) werden ebenfalls unterstützt, da Sie lokalen Code einfügen können, der aus dem gehosteten Skript aufgerufen werden soll, und die App-Navigation zwischen Remote- und lokalen Seiten verwalten können.
 
 ## Schützen Sie Ihre App durch das Einrichten von Regeln für den Anwendungsinhalt-URI (Application Content URI Rules, ACURs)
 
@@ -48,12 +47,9 @@ Wenn eine URL innerhalb der App-Grenzen (ACURs) definiert ist, kann sie mithilfe
 
 Geben Sie dazu das Attribut `(WindowsRuntimeAccess="<<level>>")` in den ACURs mit einem dieser Werte an:
 
-- 
-              **all**: Remote-JavaScript-Code hat Zugriff auf alle UWP-APIs und alle lokal verpackten Komponenten.
-- 
-              **allowForWeb**: Remote-JavaScript-Cpde hat nur Zugriff auf benutzerdefinierte Komponenten im Paketcode. Lokaler Zugriff auf benutzerdefinierte C++/C#-Komponenten.
-- 
-              **none**: Standard. Die angegebene URL hat keinen Plattformzugriff.
+- **all**: Remote-JavaScript-Code hat Zugriff auf alle UWP-APIs und alle lokal verpackten Komponenten.
+- **allowForWeb**: Remote-JavaScript-Cpde hat nur Zugriff auf benutzerdefinierte Komponenten im Paketcode. Lokaler Zugriff auf benutzerdefinierte C++/C#-Komponenten.
+- **none**: Standard. Die angegebene URL hat keinen Plattformzugriff.
 
 Dies ist ein Beispiel für einen Regeltyp:
 
@@ -131,12 +127,9 @@ Weitere Informationen finden Sie unter [Überlegungen zum Webauthentifizierungsb
 
 Wenn Ihre App programmgesteuerten Zugriff auf Benutzerressourcen wie Bilder oder Musik oder auf Geräte wie eine Kamera oder ein Mikrofon benötigt, müssen Sie die entsprechende Funktion deklarieren. Es gibt drei Kategorien von App Funktionsdeklarationen: 
 
-- 
-              [Funktionen zur allgemeinen Verwendung](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#General-use_capabilities), die auf die meisten allgemeinen App-Szenarien zutreffen. 
-- 
-              [Gerätefunktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Device_capabilities), die Ihrer App den Zugriff auf Peripheriegeräte und interne Geräte ermöglichen. 
-- 
-              [Sonderfunktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Special_and_restricted_capabilities) die ein spezielles Unternehmenskonto für die Einreichung beim Store erfordern. 
+- [Funktionen zur allgemeinen Verwendung](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#General-use_capabilities), die auf die meisten allgemeinen App-Szenarien zutreffen. 
+- [Gerätefunktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Device_capabilities), die Ihrer App den Zugriff auf Peripheriegeräte und interne Geräte ermöglichen. 
+- [Sonderfunktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Special_and_restricted_capabilities) die ein spezielles Unternehmenskonto für die Einreichung beim Store erfordern. 
 
 Weitere Informationen zu Unternehmenskonten finden Sie unter [Kontotypen, Standorte und Gebühren](https://msdn.microsoft.com/library/windows/apps/jj863494.aspx).
 

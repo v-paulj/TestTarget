@@ -3,7 +3,6 @@ title: Codieren und Decodieren von Daten
 description: "Dieser Beispielcode zeigt, wie Sie base64- und Hexadezimaldaten in einer App für die universelle Windows-Plattform (UWP) codieren und decodieren."
 ms.assetid: 2CC23863-E840-48F4-B087-0479045743AC
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
 ms.openlocfilehash: cd70a84e498c390684a59b33ec8a34375e1eb863
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: cd70a84e498c390684a59b33ec8a34375e1eb863
 # Codieren und Decodieren von Daten
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Dieser Beispielcode zeigt, wie Sie base64- und Hexadezimaldaten in einer App für die universelle Windows-Plattform (UWP) codieren und decodieren.
 

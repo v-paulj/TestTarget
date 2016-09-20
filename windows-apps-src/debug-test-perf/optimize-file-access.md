@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 40122343-1FE3-4160-BABE-6A2DD9AF1E8E
 title: Optimieren des Dateizugriffs
 description: "Erstellen Sie UWP-Apps (Universelle Windows-Plattform), die effizient auf das Dateisystem zugreifen und dadurch Leistungsprobleme aufgrund von Datenträgerlatenz und Arbeitsspeicher-/CPU-Zyklen vermeiden."
-translationtype: Human Translation
 ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
 ms.openlocfilehash: 354a11fefd7164fd6ba5b21ec871ecbe7916ad25
 
@@ -40,7 +39,7 @@ Im ersten Beispiel werden mithilfe von [**Windows.Storage.StorageFolder.GetFiles
 > Next i
 > ```
 
-Im zweiten Beispiel wird [**Windows.Storage.StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/BR227273) verwendet. Anschließend werden die Bildeigenschaften für die einzelnen Dateien abgerufen. Bei dieser Vorgehensweise ist eine schlechte Leistung zu beobachten.
+[!div class="tabbedCodeSnippets"] Im zweiten Beispiel wird [**Windows.Storage.StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/BR227273) verwendet, und anschließend werden die Bildeigenschaften für die einzelnen Dateien abgerufen.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -66,7 +65,7 @@ Im zweiten Beispiel wird [**Windows.Storage.StorageFolder.GetFilesAsync**](https
 > Next i
 > ```
 
-Im dritten Beispiel werden mit [**QueryOptions**](https://msdn.microsoft.com/library/windows/apps/BR207995) Informationen für eine Gruppe von Dateien abgerufen. Diese Vorgehensweise bietet eine wesentlich bessere Leistung als das vorhergehende Beispiel.
+Bei dieser Vorgehensweise ist eine schlechte Leistung zu beobachten. [!div class="tabbedCodeSnippets"]
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -123,17 +122,17 @@ Im dritten Beispiel werden mit [**QueryOptions**](https://msdn.microsoft.com/lib
 > 
 > Next file
 > ```
-Wenn Sie mehrere Vorgänge an Windows.Storage-Objekten wie `Windows.Storage.ApplicationData.Current.LocalFolder` ausführen, erstellen Sie eine lokale Variable, die auf die Speicherquelle verweist, sodass nicht bei jedem Zugriff erneut Zwischenobjekte erstellt werden müssen.
+Im dritten Beispiel werden mit [**QueryOptions**](https://msdn.microsoft.com/library/windows/apps/BR207995) Infos für eine Gruppe von Dateien abgerufen.
 
-## Streamleistung in C# und Visual Basic
+## Diese Vorgehensweise bietet eine wesentlich bessere Leistung als das vorhergehende Beispiel.
 
-### Puffern zwischen UWP- und .NET-Streams
+### [!div class="tabbedCodeSnippets"]
 
-Ein UWP-Stream (wie [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) oder [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728)) kann in zahlreichen Szenarien in .NET-Streams ([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx)) konvertiert werden. Dies ist beispielsweise hilfreich, wenn Sie eine UWP-App (Universelle Windows-Plattform) erstellen und vorhandenen .NET-Code für Streams im UWP-Dateisystem verwenden möchten. .NET-APIs für Windows Store-Apps stellen zu diesem Zweck Erweiterungsmethoden für die Konvertierung zwischen .NET- und UWP-Streams bereit. Weitere Informationen finden Sie unter [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx).
+Wenn Sie mehrere Vorgänge an Windows.Storage-Objekten wie `Windows.Storage.ApplicationData.Current.LocalFolder` ausführen, erstellen Sie eine lokale Variable, die auf die Speicherquelle verweist, sodass nicht bei jedem Zugriff erneut Zwischenobjekte erstellt werden müssen. Streamleistung in C# und Visual Basic Puffern zwischen UWP- und .NET-Streams Ein UWP-Stream (wie [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) oder [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728)) kann in zahlreichen Szenarien in .NET-Streams ([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx)) konvertiert werden.
 
-Beim Konvertieren eines UWP-Streams in einen .NET-Stream wird eigentlich ein Adapter für den zugrundeliegenden UWP-Stream erstellt. Das Aufrufen von Methoden für UWP-Streams ist unter bestimmten Umständen mit einem Laufzeitaufwand verbunden. Dieser kann sich insbesondere in Szenarien mit vielen kleinen und häufig ausgeführten Lese- oder Schreibvorgängen auf die Geschwindigkeit Ihrer App auswirken.
+Dies ist beispielsweise hilfreich, wenn Sie eine UWP-App (Universelle Windows-Plattform) erstellen und vorhandenen .NET-Code für Streams im UWP-Dateisystem verwenden möchten. .NET-APIs für Windows Store-Apps stellen zu diesem Zweck Erweiterungsmethoden für die Konvertierung zwischen .NET- und UWP-Streams bereit. Weitere Informationen finden Sie unter [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx).
 
-Damit entsprechende Geschwindigkeitseinbußen nach Möglichkeit vermieden werden, verfügen UWP-Streamadapter über einen Datenpuffer. Im folgenden Codebeispiel werden kleine, aufeinander folgende Lesevorgänge unter Verwendung eines UWP-Streamadapters mit Standardpuffergröße veranschaulicht.
+Beim Konvertieren eines UWP-Streams in einen .NET-Stream wird eigentlich ein Adapter für den zugrundeliegenden UWP-Stream erstellt. Das Aufrufen von Methoden für UWP-Streams ist unter bestimmten Umständen mit einem Laufzeitaufwand verbunden.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -186,13 +185,13 @@ Damit entsprechende Geschwindigkeitseinbußen nach Möglichkeit vermieden werden
 > End Using
 > ```
 
-Das Verhalten des Standardpuffers eignet sich für die meisten Szenarien, in denen ein UWP-Stream in einen .NET-Stream konvertiert werden soll. In einigen Szenarien kann es jedoch wünschenswert sein, das Pufferverhalten zu optimieren, um die Leistung zu erhöhen.
+Dieser kann sich insbesondere in Szenarien mit vielen kleinen und häufig ausgeführten Lese- oder Schreibvorgängen auf die Geschwindigkeit Ihrer App auswirken. Damit entsprechende Geschwindigkeitseinbußen nach Möglichkeit vermieden werden, verfügen UWP-Streamadapter über einen Datenpuffer.
 
-### Arbeiten mit umfangreichen Datensätzen
+### Im folgenden Codebeispiel werden kleine, aufeinander folgende Lesevorgänge unter Verwendung eines UWP-Streamadapters mit Standardpuffergröße veranschaulicht.
 
-Beim Lesen oder Schreiben umfangreicher Datensätze können Sie den Durchsatz möglicherweise erhöhen, indem Sie den Puffer für die Erweiterungsmethoden [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) und [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) vergrößern. Dadurch enthält der Streamadapter einen größeren internen Puffer. So kann der Parser beim Übergeben eines Streams von einer großen Datei an einen XML-Parser eine Vielzahl von kleinen Lesevorgängen für den Stream ausführen. Große Puffer können dafür sorgen, dass der zugrunde liegende UWP-Stream weniger oft aufgerufen und somit die Leistung gesteigert wird.
+[!div class="tabbedCodeSnippets"] Das Verhalten des Standardpuffers eignet sich für die meisten Szenarien, in denen ein UWP-Stream in einen .NET-Stream konvertiert werden soll. In einigen Szenarien kann es jedoch wünschenswert sein, das Pufferverhalten zu optimieren, um die Leistung zu erhöhen. Arbeiten mit umfangreichen Datensätzen
 
-> **Hinweis**   Beachten Sie jedoch, dass es ab einer Puffergröße von etwa 80 KB zu Fragmentierungen im Garbage Collector-Heap (siehe [Verbessern der Leistung der Garbage Collection](improve-garbage-collection-performance.md)) kommen kann. Im folgenden Codebeispiel wird ein verwalteter Datenstromadapter mit einem Puffer mit 81.920 Bytes erstellt.
+> Beim Lesen oder Schreiben umfangreicher Datensätze können Sie den Durchsatz möglicherweise erhöhen, indem Sie den Puffer für die Erweiterungsmethoden [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) und [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) vergrößern. Dadurch enthält der Streamadapter einen größeren internen Puffer.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
@@ -204,7 +203,8 @@ Stream managedStream = nativeStream.AsStreamForRead(bufferSize: 81920);
 Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 ```
 
-Die [**Stream.CopyTo**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copyto.aspx)- und die [**CopyToAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copytoasync.aspx)-Methode weisen darüber hinaus einen lokalen Puffer für das Kopieren zwischen Datenströmen zu. Analog zur [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx)-Erweiterungsmethode kann die Leistung beim Kopieren umfangreicher Streams durch Überschreiben der Standardpuffergröße u. U. verbessert werden. Im folgenden Codebeispiel wird das Ändern der Standardpuffergröße eines **CopyToAsync**-Aufrufs veranschaulicht.
+So kann der Parser beim Übergeben eines Streams von einer großen Datei an einen XML-Parser eine Vielzahl von kleinen Lesevorgängen für den Stream ausführen. Große Puffer können dafür sorgen, dass der zugrunde liegende UWP-Stream weniger oft aufgerufen und somit die Leistung gesteigert wird. 
+            **Hinweis**   Beachten Sie jedoch, dass es ab einer Puffergröße von etwa 80KB zu Fragmentierungen im Garbage Collector-Heap (siehe [Verbessern der Leistung der Garbage Collection](improve-garbage-collection-performance.md)) kommen kann.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -224,15 +224,15 @@ Die [**Stream.CopyTo**](https://msdn.microsoft.com/library/windows/apps/xaml/sys
 > Await managedStream.CopyToAsync(destination, bufferSize:=1024 * 1024)
 > ```
 
-Die Puffergröße im Beispiel beträgt 1 MB. Die empfohlene Puffergröße von 80 KB wird somit deutlich übertroffen. Durch die Verwendung eines entsprechend großen Puffers kann der Durchsatz des Kopiervorgangs bei umfangreichen Datensätzen (von mehreren Hundert Megabyte) verbessert werden. Da dieser Puffer jedoch für den Heap für große Objekte zugewiesen wird, kann die Leistung der Garbage Collection dadurch beeinträchtigt werden. Große Puffergrößen sollten daher nur verwendet werden, wenn die Leistung der App dadurch spürbar verbessert werden kann.
+Im folgenden Codebeispiel wird ein verwalteter Streamadapter mit einem 81.920 Byte großen Puffer erstellt. [!div class="tabbedCodeSnippets"] Die [**Stream.CopyTo**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copyto.aspx)- und die [**CopyToAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.copytoasync.aspx)-Methode weisen auch einen lokalen Puffer für das Kopieren zwischen Streams zu. Analog zur [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx)-Erweiterungsmethode kann die Leistung beim Kopieren umfangreicher Streams durch Überschreiben der Standardpuffergröße u. U. verbessert werden.
+
+Im folgenden Codebeispiel wird das Ändern der Standardpuffergröße eines **CopyToAsync**-Aufrufs veranschaulicht. [!div class="tabbedCodeSnippets"] Die Puffergröße im Beispiel beträgt 1 MB. Die empfohlene Puffergröße von maximal 80 KB wird somit deutlich übertroffen.
+
+### Durch die Verwendung eines entsprechend großen Puffers kann der Durchsatz des Kopiervorgangs bei umfangreichen Datensätzen (von mehreren Hundert Megabyte) verbessert werden.
+
+Da dieser Puffer jedoch für den Heap für große Objekte zugewiesen wird, kann die Leistung der Garbage Collection dadurch beeinträchtigt werden. Große Puffergrößen sollten daher nur verwendet werden, wenn die Leistung der App dadurch spürbar verbessert werden kann.
 
 Wenn Sie eine große Anzahl von Streams gleichzeitig verwenden, können Sie den Speichermehraufwand des Puffers verringern oder vermeiden. Sie können einen kleineren Puffer angeben oder den *bufferSize*-Parameter auf 0 festlegen, um den Puffer für den betreffenden Streamadapter vollständig zu deaktivieren. Auch ohne Puffer können Sie bei Lese- und Schreibvorgängen für den verwalteten Stream jedoch eine gute Durchsatzleistung erreichen.
-
-### Durchführen von Vorgängen, bei denen Latenz eine Rolle spielt
-
-Das Vermeiden von Pufferungen kann ebenfalls wünschenswert sein, wenn Lese- und Schreibvorgänge mit geringer Latenz ausgeführt werden sollen, ohne große Blöcke aus dem zugrunde liegenden UWP-Stream zu lesen. Beispielsweise eignen sich Lese- und Schreibvorgänge mit geringer Latenz sehr gut für Netzwerkkommunikationsstreams.
-
-In einer Chat-App können Sie Nachrichten mit einem Stream über eine Netzwerkschnittstelle senden und empfangen. Die Nachrichten sollen dabei unmittelbar nach dem Verfassen und nicht erst dann gesendet werden, wenn der Puffer voll ist. Wenn Sie die Puffergröße beim Aufrufen der Methoden [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforread.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) und [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) auf 0 festlegen, wird vom resultierenden Adapter kein Puffer zugewiesen. Außerdem wird der zugrunde liegende UWP-Datenstrom von allen Aufrufen direkt bearbeitet.
 
 
 

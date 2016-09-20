@@ -5,7 +5,6 @@ title: "Grundlagen des Inhaltsdesigns für UWP-Apps (Universelle Windows-Plattfo
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
 ms.openlocfilehash: c8328150601bf132c28e569c4db21095cb77f88c
 
@@ -22,9 +21,12 @@ Dieser Artikel bietet Empfehlungen zum Content-Design für drei Content-Szenarie
 
 Dies sind die drei wichtigsten Contentszenarien:
 
--   **Konsum**: Eine hauptsächlich einseitige Erfahrung, bei der der Content konsumiert wird. Beinhaltet Aufgaben wie Lesen, Musik hören, Videos, Fotos und Bilder ansehen.
--   **Erstellen**: Eine hauptsächlich einseitige Erfahrung, bei der der Schwerpunkt auf dem Erstellen von neuem Content liegt. Kann aufgeschlüsselt werden in das Erstellen von Dingen von Grund auf, wie etwa Aufnehmen eines Fotos oder Videos, das Erstellen eines neuen Bilds in einer Mal-App oder das Öffnen eines leeren Dokuments.
--   **Interaktiv**: Eine bilaterale Content-Erfahrung, die den Konsum, die Erstellung und Überprüfung von Content umfasst.
+-   
+            **Konsum**: Eine hauptsächlich einseitige Erfahrung, bei der der Content konsumiert wird. Beinhaltet Aufgaben wie Lesen, Musik hören, Videos, Fotos und Bilder ansehen.
+-   
+            **Erstellen**: Eine hauptsächlich einseitige Erfahrung, bei der der Schwerpunkt auf dem Erstellen von neuem Content liegt. Kann aufgeschlüsselt werden in das Erstellen von Dingen von Grund auf, wie etwa Aufnehmen eines Fotos oder Videos, das Erstellen eines neuen Bilds in einer Mal-App oder das Öffnen eines leeren Dokuments.
+-   
+            **Interaktiv**: Eine bilaterale Content-Erfahrung, die den Konsum, die Erstellung und Überprüfung von Content umfasst.
 
 ## <span id="Consumption-focused_apps"></span><span id="consumption-focused_apps"></span><span id="CONSUMPTION-FOCUSED_APPS"></span>Konsumorientierte Apps
 
@@ -50,7 +52,8 @@ Als Beispiel finden Sie hier ein Design einer Foto-App, die Befehlszeilen zum Be
 Allgemeine Empfehlungen für erstellungsorientierte Apps:
 
 -   Minimieren Sie die Verwendung von [Navigationselementen](navigation-basics.md).
--   [Befehlselemente](commanding-basics.md) sind insbesondere bei erstellungsorientierten Apps wichtig. Da Benutzer zahlreiche Befehle ausführen, empfehlen wir die Bereitstellung eines Befehlsverlaufs/einer Rückgängig-Funktion.
+-   
+            [Befehlselemente](commanding-basics.md) sind insbesondere bei erstellungsorientierten Apps wichtig. Da Benutzer zahlreiche Befehle ausführen, empfehlen wir die Bereitstellung eines Befehlsverlaufs/einer Rückgängig-Funktion.
 
 ## <span id="Apps_with_interactive_content"></span><span id="apps_with_interactive_content"></span><span id="APPS_WITH_INTERACTIVE_CONTENT"></span>Apps mit interaktivem Content
 
@@ -61,8 +64,10 @@ In einer App mit interaktivem Content erstellen die Benutzer Content, zeigen ihn
 
 Diese Art Apps muss ein Gleichgewicht aller drei UI-Elemente enthalten:
 
--   [Navigationselemente](navigation-basics.md) helfen Benutzern beim Suchen und Anzeigen von Content. Falls Sie Content anzeigen und suchen, ist das wichtigste Szenario, Navigationselemente zu priorisieren, zu filtern, zu sortieren und zu suchen.
--   [Befehlselemente](commanding-basics.md) lassen den Benutzer Content erstellen und bearbeiten.
+-   
+            [Navigationselemente](navigation-basics.md) helfen Benutzern beim Suchen und Anzeigen von Content. Falls Sie Content anzeigen und suchen, ist das wichtigste Szenario, Navigationselemente zu priorisieren, zu filtern, zu sortieren und zu suchen.
+-   
+            [Befehlselemente](commanding-basics.md) lassen den Benutzer Content erstellen und bearbeiten.
 
 Allgemeine Empfehlungen für Apps mit interaktivem Content:
 
@@ -94,7 +99,8 @@ Häufig zum Anzeigen von Content verwendete UI-Elemente. (Eine vollständige Lis
 </tr>
 <tr class="even">
 <td align="left">Bild-Viewer</td>
-<td align="left">[Flip-Ansicht](../controls-and-patterns/flipview.md), [Bild](../controls-and-patterns/images-imagebrushes.md)</td>
+<td align="left">
+            [Flip-Ansicht](../controls-and-patterns/flipview.md), [Bild](../controls-and-patterns/images-imagebrushes.md)</td>
 <td align="left">Zeigt Bilder an. Die „Flip-Ansicht“ zeigt Bilder nacheinander in einer Sammlung an, wie etwa Fotos in einem Album oder Elemente auf einer Produktdetailseite.</td>
 </tr>
 <tr class="odd">
@@ -104,7 +110,8 @@ Häufig zum Anzeigen von Content verwendete UI-Elemente. (Eine vollständige Lis
 </tr>
 <tr class="even">
 <td align="left">Text und Texteingabe</td>
-<td align="left"><p>[Textblock](../controls-and-patterns/text-block.md), [Textfeld](../controls-and-patterns/text-box.md), [Rich-Edit-Feld](../controls-and-patterns/rich-edit-box.md)</p>
+<td align="left"><p>
+            [Textblock](../controls-and-patterns/text-block.md), [Textfeld](../controls-and-patterns/text-box.md), [Rich-Edit-Feld](../controls-and-patterns/rich-edit-box.md)</p>
 </td>
 <td align="left">Zeigt Text an. Einige Elemente ermöglichen dem Benutzer das Bearbeiten von Text. Weitere Informationen finden Sie unter [Textsteuerelemente](../controls-and-patterns/text-controls.md)</td>
 </tr>

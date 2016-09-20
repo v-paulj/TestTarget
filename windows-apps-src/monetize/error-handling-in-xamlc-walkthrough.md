@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: cf0d2709-21a1-4d56-9341-d4897e405f5d
 description: Hier erfahren Sie, wie AdControl-Fehler in Ihrer App aufgefangen werden.
 title: Exemplarische Vorgehensweise zur Fehlerbehandlung in XAML/C#
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 7cb827b4269afb55f0326eec0a0ee25b93119eb0
 
@@ -13,7 +12,7 @@ ms.openlocfilehash: 7cb827b4269afb55f0326eec0a0ee25b93119eb0
 # Exemplarische Vorgehensweise zur Fehlerbehandlung in XAML/C#
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Thema wird veranschaulicht, wie [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Fehler in Ihrer App aufgefangen werden können.
 

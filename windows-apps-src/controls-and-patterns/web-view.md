@@ -6,20 +6,29 @@ ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: dd947d0b55dad56fdd6c684ae236f1c31ac8da86
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 5752e1a7f7ac358043ec99c8db07cbfda9c4cd37
 
 ---
-
 # Webansicht
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 
 
 
 Mithilfe eines Webansichtssteuerelements betten Sie eine Ansicht in Ihre App ein, die Webinhalte mit dem Microsoft Edge-Renderingmodul rendert. In einem Webansichtssteuerelement können auch Links angezeigt und verwendet werden.
 
-**Wichtige APIs**
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br227702"><strong>WebView-Klasse</strong></a></li>
+</ul>
 
--   [**WebView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227702)
+</div>
+</div>
+
+
+
 
 ## Ist dies das richtige Steuerelement?
 
@@ -29,9 +38,7 @@ Verwenden Sie ein Webansichtssteuerelement zum Anzeigen von grafisch ansprechend
 
 **Ändern der Darstellung einer Webansicht**
 
-[
-              **WebView**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx) ist keine [**Control**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.aspx)-Unterklasse und verfügt daher über keine Steuerelementvorlage. Sie können jedoch verschiedene Eigenschaften festlegen, um einige visuelle Aspekte der Webansicht zu steuern.
+[**WebView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx) ist keine [**Control**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.aspx)-Unterklasse und verfügt daher über keine Steuerelementvorlage. Sie können jedoch verschiedene Eigenschaften festlegen, um einige visuelle Aspekte der Webansicht zu steuern.
 - Legen Sie zum Einschränken des Anzeigebereichs die [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.width.aspx)-Eigenschaft und die [**Height**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.height.aspx)-Eigenschaft fest. 
 - Verwenden Sie zum Verschieben, Skalieren, Neigen und Drehen einer Webansicht die [**RenderTransform**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.rendertransform.aspx)-Eigenschaft.
 - Legen Sie zum Steuern der Deckkraft der Webansicht die [**Opacity**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.opacity.aspx)-Eigenschaft fest.
@@ -158,18 +165,10 @@ private void webView1_NavigationCompleted(WebView sender, WebViewNavigationCompl
 ```
 
 Ähnliche Ereignisse treten für jeden **iframe** im Webansichtsinhalt in der gleichen Reihenfolge auf: 
-- [
-              **FrameNavigationStarting**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framenavigationstarting.aspx) – tritt ein, bevor ein Frame in einer Webansicht zu neuem Inhalt navigiert. 
-- [
-              **FrameContentLoading**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framecontentloading.aspx) – tritt ein, nachdem ein Frame in der Webansicht mit dem Laden neuer Inhalte begonnen hat. 
-- [
-              **FrameDOMContentLoaded**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framedomcontentloaded.aspx) – tritt ein, nachdem ein Frame in der Webansicht die Analyse seines aktuellen HTML-Inhalts beendet hat. 
-- [
-              **FrameNavigationCompleted**
-            ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framenavigationcompleted.aspx) – tritt ein, nachdem ein Frame in der Webansicht das Laden seines Inhalts beendet hat. 
+- [**FrameNavigationStarting**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framenavigationstarting.aspx) – tritt ein, bevor ein Frame in einer Webansicht zu neuem Inhalt navigiert. 
+- [**FrameContentLoading**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framecontentloading.aspx) – tritt ein, nachdem ein Frame in der Webansicht mit dem Laden neuer Inhalte begonnen hat. 
+- [**FrameDOMContentLoaded**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framedomcontentloaded.aspx) – tritt ein, nachdem ein Frame in der Webansicht die Analyse seines aktuellen HTML-Inhalts beendet hat. 
+- [**FrameNavigationCompleted**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.framenavigationcompleted.aspx) – tritt ein, nachdem ein Frame in der Webansicht das Laden seines Inhalts beendet hat. 
 
 ### Reagieren auf mögliche Probleme
 
@@ -181,12 +180,11 @@ Das Webansichtssteuerelement kann keine beliebigen Dateitypen hosten. Wenn das L
 
 Entsprechend tritt das [**UnsupportedUriSchemeIdentified**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.unsupportedurischemeidentified.aspx)-Ereignis ein, wenn ein nicht unterstütztes URI-Schema wie „fbconnect://“ oder „mailto://“ im Webinhalt aufgerufen wird. Sie können das Ereignis so behandeln, dass es ein benutzerdefiniertes Verhalten zeigt, anstatt dem Standard-Systemstartprogramm das Starten des URIs zu erlauben.
 
-[
-            **UnsafeContentWarningDisplayingevent**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.unsafecontentwarningdisplaying.aspx) tritt ein, wenn die Webansicht eine Warnungsseite für Inhalte anzeigt, die vom SmartScreen-Filter als unsicher gemeldet wurden. Wenn sich der Benutzer entscheidet, die Navigation fortzusetzen, wird bei einer späteren Navigation zu der Seite weder die Warnung angezeigt noch das Ereignis ausgelöst.
+[**UnsafeContentWarningDisplayingevent**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.unsafecontentwarningdisplaying.aspx) tritt ein, wenn die Webansicht eine Warnungsseite für Inhalte anzeigt, die vom SmartScreen-Filter als unsicher gemeldet wurden. Wenn sich der Benutzer entscheidet, die Navigation fortzusetzen, wird bei einer späteren Navigation zu der Seite weder die Warnung angezeigt noch das Ereignis ausgelöst.
 
 ### Behandeln von Sonderfällen für Webansichtsinhalte
 
-Sie können die [ **ContainsFullScreenElement** ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.containsfullscreenelement.aspx)-Eigenschaft und das [ **ContainsFullScreenElementChanged** ](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.containsfullscreenelementchanged.aspx)-Ereignis verwenden, um Vollbilddarstellungen von Webinhalt (z. B. Videowiedergabe im Vollbildmodus) zu erkennen, darauf zu reagieren und sie zu aktivieren. Mit dem ContainsFullScreenElementChanged-Ereignis können Sie die Größe der Webansicht beispielsweise so ändern, dass sie die gesamte App-Ansicht ausfüllt, oder eine App mit Fenstern in den Vollbildmodus versetzen, wenn die Webnutzung in Vollbild gewünscht wird (siehe das folgende Beispiel).
+Sie können die [**ContainsFullScreenElement**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.containsfullscreenelement.aspx)-Eigenschaft und das [**ContainsFullScreenElementChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.containsfullscreenelementchanged.aspx)-Ereignis verwenden, um Vollbilddarstellungen von Webinhalt (z. B. Videowiedergabe im Vollbildmodus) zu erkennen, darauf zu reagieren und sie zu aktivieren. Mit dem ContainsFullScreenElementChanged-Ereignis können Sie die Größe der Webansicht beispielsweise so ändern, dass sie die gesamte App-Ansicht ausfüllt, oder eine App mit Fenstern in den Vollbildmodus versetzen, wenn die Webnutzung in Vollbild gewünscht wird (siehe das folgende Beispiel).
 
 ```csharp
 // Assume webView is defined in XAML
@@ -318,12 +316,11 @@ Verwenden Sie zum Abrufen eines Vorschaubilds des aktuellen Webansichtsinhalts d
 
 Webansichtsinhalte werden auf Geräten der Desktopgerätefamilie standardmäßig im UI-Thread und auf allen anderen Geräten in anderen Bereichen gehostet. Sie können die statische [**WebView.DefaultExecutionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.defaultexecutionmode.aspx)-Eigenschaft verwenden, um das Standardthreadingverhalten für den aktuellen Client abzufragen. Wenn erforderlich, können Sie dieses Verhalten mit dem [**WebView(WebViewExecutionMode)**](https://msdn.microsoft.com/library/windows/apps/xaml/dn932036.aspx)-Konstruktor überschreiben. 
 
-> **Hinweis**
-            &nbsp;&nbsp;Beim Hosten von Inhalten im UI-Thread mobiler Geräte können Leistungsprobleme auftreten. Wenn Sie DefaultExecutionMode ändern, sollten Sie die Leistung deshalb auf allen Zielgeräten testen.
+> **Hinweis**&nbsp;&nbsp;Beim Hosten von Inhalten im UI-Thread mobiler Geräte können Leistungsprobleme auftreten. Wenn Sie DefaultExecutionMode ändern, sollten Sie die Leistung deshalb auf allen Zielgeräten testen.
 
 Eine Webansicht, die Inhalte nicht im UI-Thread hostet, ist nicht mit übergeordneten Steuerelementen kompatibel, die Gesten zur Weitergabe des Webansichtssteuerelements an das übergeordnete Steuerelement (wie [**FlipView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flipview.aspx), [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.scrollviewer.aspx)) und andere verwandte Steuerelemente erfordern. Diese Steuerelemente können keine Gesten empfangen, die in der Hintergrundthread-Webansicht initiiert werden. Darüber hinaus wird der Ausdruck von Hintergrundthread-Webinhalten nicht direkt unterstützt. Sie sollten ein Element stattdessen mit der [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.aspx)-Füllung ausdrucken.
 
-## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Empfehlungen
+## Empfehlungen
 
 
 -   Stellen Sie sicher, dass die geladene Website für das Gerät korrekt formatiert wird und die verwendeten Farben sowie die verwendete Typografie und Navigation mit dem Rest der App konsistent sind.
@@ -332,7 +329,7 @@ Eine Webansicht, die Inhalte nicht im UI-Thread hostet, ist nicht mit übergeord
 
 
 
-## <span id="related_topics"></span>Verwandte Themen
+## Verwandte Themen
 
 * [**WebView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br227702)
  
@@ -345,6 +342,6 @@ Eine Webansicht, die Inhalte nicht im UI-Thread hostet, ist nicht mit übergeord
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

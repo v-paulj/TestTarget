@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 86D9D3CF-8FDC-4B67-881B-DF33A1BEE8BF
 description: "Vor dem Verwenden der Anzeigenvermittlung müssen Sie Konten bei jedem Anzeigennetzwerk einrichten, das Sie in Ihren Apps verwenden möchten."
 title: "Auswählen und Verwalten der Anzeigennetzwerke"
-translationtype: Human Translation
 ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
 ms.openlocfilehash: 49c9b8e60da9239c948265fb22563013019da259
 
@@ -44,7 +43,8 @@ Hinweis: Wenn Sie das [Ad Mediator-Steuerelement hinzufügen](add-and-use-the-ad
 
 | Website                        | Verwenden Sie zum Konfigurieren von Parametern für Anzeigennetzwerke die Seite [Monetisierung durch Werbeanzeigen](https://msdn.microsoft.com/library/windows/apps/mt170658) im [Windows Dev Center-Dashboard](https://dev.windows.com/overview).   |
 |--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SDK-Speicherort                   | [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk).                                                                                                                                                                                                                         |
+| SDK-Speicherort                   | 
+            [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk).                                                                                                                                                                                                                         |
 | Integrieren einer App              | Fügen Sie das Steuerelement der Anzeigenvermittlung zu Ihrer App hinzu, und senden Sie Ihre App an das Windows Dev Center-Dashboard.                                                                                                                                                                                                            |
 | Erforderliche Parameter            | ApplicationId und AdUnitId: Diese Parameter werden für Sie beim Einreichen Ihres App-Pakets auf Grundlage des Inhalts Ihrer App automatisch ausgefüllt. Sie können diese Parameter jedoch optional bearbeiten, wenn Sie [Ihre App einreichen und die Anzeigenvermittlung konfigurieren](submit-your-app-and-configure-ad-mediation.md). <br> <br> Height und Width (nur für Windows Phone 8 Silverlight und Windows Phone 8.1 Silverlight erforderlich).                                                                                                                                                                                                           |
 | Überschriebene/ignorierte Parameter | Latitude (überschrieben)  <br><br> Longitude (überschrieben) <br><br> AutoRefreshIntervalInSeconds (ignoriert) <br><br> IsAutoRefreshEnabled (ignoriert) <br><br> IsAutoCollapsedEnabled (ignoriert) <br><br> IsEngaged (ignoriert) <br><br> IsSuspended (ignoriert) |

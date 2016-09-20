@@ -1,136 +1,145 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Enable keyboard access using tab navigation and access keys so users can navigate across UI elements with the keyboard.
-title: Access keys
+Description: "Aktivieren Sie den Tastaturzugriff mit TAB-Navigation und Zugriffstasten, um Benutzern das Navigieren durch UI-Elemente mithilfe der Tastatur zu ermöglichen."
+title: Zugriffstasten
 ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Access keys
 template: detail.hbs
 keyword: Access keys, keyboard, accessibility
+translationtype: Human Translation
+ms.sourcegitcommit: ac86012b63646e53dbde492eef504cb8230f2afd
+ms.openlocfilehash: d96d507c6ce8537888619ce174e2ff0e5284dcce
+
 ---
 
-# Access keys
+# Zugriffstasten
 
-Users who cannot easily use a mouse, such as those with motor disabilities, often rely on the keyboard to navigate and interact with an app.  The XAML framework lets you enable keyboard access using tab navigation and access keys so users can navigate across UI elements with the keyboard.
+Benutzer, die beispielsweise aufgrund motorischer Einschränkungen Schwierigkeiten haben, eine Maus zu bedienen, greifen häufig auf die Tastatur zurück, um in einer App zu navigieren und damit zu interagieren.  Das XAML-Framework bietet Ihnen die Möglichkeit, den Zugriff auf UI-Elemente mithilfe der TAB-Navigation und Zugriffstasten über die Tastatur zu ermöglichen.
 
-- Tab navigation is a basic keyboard accessibility resource that’s enabled by default. Users press the tab and arrow keys on the keyboard to move focus around the UI elements.  
-- Access keys are an additional accessibility aid that you can implement. An access key uses the Alt key plus one or more alphanumeric characters associated with a UI element. For example, _Alt, F_ is commonly used to open the File menu, while _Alt, AL_ could invoke the Align Left option.  
+- Die TAB-Navigation ist ein grundlegendes tastaturgestütztes Angebot für Barrierefreiheit (und standardmäßig aktiviert). Dabei können Benutzer den Fokus zwischen UI-Elementen mithilfe der TAB-TASTE und der Pfeiltasten auf der Tastatur verschieben.
+- Zugriffstasten stellen ein ergänzendes Angebot für Barrierefreiheit dar (das Sie in Ihrer App implementieren). Sie ermöglichen über eine Kombination aus Tastaturmodifizierer (ALT-TASTE) und mindestens einer alphanumerischen Taste (normalerweise einem Buchstaben, der dem Befehl zugeordnet ist) den schnellen Zugriff auf App-Befehle. Häufige Zugriffstasten sind _ALT+F_ zum Öffnen des Menüs „Datei“ und _ALT+AL_ zum linksbündigen ausrichten.  
 
-For more info about keyboard navigation and accessibility, see [Keyboard interaction](https://msdn.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) and [Keyboard accessibility](https://msdn.microsoft.com/windows/uwp/accessibility/keyboard-accessibility). This article assumes you understand the concepts discussed in those articles.
+Weitere Informationen zur Tastaturnavigation und Barrierefreiheit finden Sie unter [Tastaturinteraktionen](https://msdn.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions) und [Barrierefreiheit der Tastaturnavigation](https://msdn.microsoft.com/windows/uwp/accessibility/keyboard-accessibility). In diesem Artikel wird davon ausgegangen, dass Sie mit den in diesen Artikeln erörterten Konzepten vertraut sind.
 
-## Access key overview
+## Übersicht über Zugriffstasten
 
-Access keys let users directly invoke buttons or set focus with the keyboard without requiring them to repeatedly press the arrow keys and tab. Access keys are intended to be easily discoverable, so you should document them directly in the UI; for example, a floating badge over the control with the access key.
+Mithilfe von Zugriffstasten können Benutzer Schaltflächen direkt aufrufen oder den Fokus mithilfe der Tastatur festlegen, ohne wiederholt die Pfeiltasten und die TAB-TASTE zu drücken. Zugriffstasten sollten leicht erkennbar sein und daher direkt in der Benutzeroberfläche dokumentiert werden, beispielsweise durch ein unverankertes Badge über dem Steuerelement mit der Zugriffstaste.
 
+![Beispiel für Zugriffstasten und zugehörige Zugriffstasteninfos in Microsoft Word](images/keyboard/accesskeys-keytips.png)
 
-_Figure 1: Example of Key Tips; floating badge access keys from Microsoft Word._
+_Abbildung 1: Beispiel für Zugriffstasten und zugehörige Zugriffstasteninfos in Microsoft Word_
 
-An access key is one or several alphanumeric characters associated with a UI element. For example, Microsoft Word uses _H_ for the Home tab, _2_ for Undo button, or _JI_ for the Draw tab.
+Eine Zugriffstaste entspricht mindestens einem alphanumerischen Zeichen, das einem UI-Element zugeordnet ist. In Microsoft Word wird beispielsweise _H_ für die Registerkarte „Start“, _2_ für die Schaltfläche „Rückgängig“ oder _JI_ für die Registerkarte „Zeichnen“ verwendet.
 
-**Access key scope**
+**Zugriffstastenbereich**
 
-An access key belongs to a specific scope. For example, in Figure 1, _F_, _H_, _N_, and _JI_, belong to the page’s scope.  When the user presses _H_, the scope changes to the Home tab’s scope and its access keys are shown as seen in Figure 2. The access keys, _V_, _FP_, _FF_, and _FS_ belong to the Home tab’s scope.
+Eine Zugriffstaste gehört zu einem bestimmten Bereich. In Abbildung 1 gehören _F_, _H_, _N_ und _JI_ beispielsweise zum Bereich der Seite.  Wenn der Benutzer _H_ drückt, ändert sich der Bereich in den Bereich der Registerkarte „Start“. Daraufhin werden deren Zugriffstasten angezeigt, wie in Abbildung 2 dargestellt. Die Zugriffstasten _V_, _FP_, _FF_ und _FS_ gehören zum Bereich der Registerkarte „Start“.
 
+![Beispiel für Zugriffstasten und zugehörige Zugriffstasteninfos für den Bereich der Registerkarte „Start“ in Microsoft Word](images/keyboard/accesskeys-keytips-hometab.png)
 
-_Figure 2: Access keys that belong to the Home tab’s scope_
+_Abbildung 2: Beispiel für Zugriffstasten und zugehörige Zugriffstasteninfos für den Bereich der Registerkarte „Start“ in Microsoft Word_
 
-Two elements can have the same access keys if the elements belong to different scopes. For example, _2_ is the access key for Undo on the page’s scope (Figure 1), and also for Italic in the Home tab’s scope (Figure 2). All access keys belong to the default scope unless another scope is specified.
+Zwei Elemente können über die gleichen Zugriffstasten verfügen, wenn die Elemente zu verschiedenen Bereichen gehören. Beispielsweise ist _2_ im Bereich der Seite die Zugriffstaste für „Rückgängig“ (Abbildung 1) und im Bereich der Registerkarte „Start“ auch die Zugriffstaste für „Kursiv“ (Abbildung 2). Solange kein anderer Bereich angegeben ist, gehören alle Zugriffstasten zum Standardbereich.
 
-**Access key sequence**
+**Zugriffstastenabfolge**
 
-To use access keys, users typically press one key at a time to achieve an action rather than pressing keys simultaneously. (There is an exception to this that we discuss in the next section.) The sequence of keystrokes needed to achieve the action is an _access key sequence_. The user presses the Alt key to initiate the access key sequence. An access key is invoked when the user presses the last key in an access key sequence. For example, to open the View tab in Word, the user would press the _Alt, W_ access key sequence.
+Bei einer Kombination von Zugriffstasten wird in der Regel eine Taste nach der anderen gedrückt, um eine Aktion zu erzielen, anstatt die Tasten gleichzeitig zu drücken. (Eine Ausnahme von dieser Regel wird im nächsten Abschnitt erörtert.) Die Abfolge von Tastenanschlägen, die zum Ausführen der Aktion erforderlich sind, wird als _Zugriffstastenabfolge_ bezeichnet. Der Benutzer drückt die ALT-TASTE, um die Zugriffstastenabfolge zu initiieren. Eine Zugriffstaste wird aufgerufen, wenn der Benutzer die letzte Taste in einer Zugriffstastenabfolge drückt. Um z. B. die Registerkarte „Ansicht“ in Word zu öffnen, würde der Benutzer die Zugriffstastenabfolge _ALT, W_ drücken.
 
-A user can invoke several access keys in an access key sequence. For example, to open the Format Painter in a Word document, the user presses Alt to initialize the sequence, then presses _H_ to navigate to the Home section and change the access key scope, then _F_, and eventually _P_. _H_ and _FP_ are the access keys for the Home tab and the Format Painter button respectively.
+Ein Benutzer kann mehrere Zugriffstasten in einer Zugriffstastenabfolge aufrufen. Beispiel: Um „Format übertragen“ in einem Word-Dokument zu öffnen, drückt der Benutzer ALT, um die Abfolge zu starten, dann _H_, um zum Abschnitt „Start“ zu navigieren und den Bereich der Zugriffstaste zu ändern, dann _F_ und zuletzt _P_. _H_ und _FP_ sind die Zugriffstasten für die Registerkarte „Start“ bzw. die Schaltfläche „Format übertragen“.
 
-Some elements finalize an access key sequence after they’re invoked (like the Format Painter button) and others don’t (like the Home tab). Invoking an access key can result in executing a command, moving the focus, changing the access key scope, or some other action associated with it.
+Durch einige Elemente (wie die Schaltfläche „Format übertragen“) wird eine Zugriffstastenabfolge abgeschlossen, nachdem sie aufgerufen wurden, bei anderen (wie der Registerkarte „Start“) nicht. Das Aufrufen einer Zugriffstaste kann bewirken, dass ein Befehl ausgeführt, der Fokus verschoben, der Zugriffstastenbereich geändert oder eine andere zugeordnete Aktion ausgeführt wird.
 
-## Access Key User Interaction
+## Benutzerinteraktion mit Zugriffstasten
 
-To understand the Access Key APIs, it is necessary to first understand the user interaction model. Below you can find a summary of the access key user interaction model:
+Um die Zugriffstasten-APIs zu verstehen, müssen Sie sich zunächst das Benutzerinteraktionsmodell vergegenwärtigen. Im Folgenden finden Sie eine Übersicht über das Modell für die Benutzerinteraktion mit Zugriffstasten:
 
-- When the user presses the Alt key, the access key sequence starts, even when the focus is on an input control. Then, the user can press the access key to invoke the associated action. This user interaction requires that you document the available access keys within the UI with some visual affordance, such as floating badges, that are shown when the Alt key is pressed
-- When the user presses the Alt key plus the access key simultaneously, the access key is invoked immediately. This is similar to having a keyboard shorcut defined by Alt+_access key_. In this case, the access key visual affordances are not shown. However, invoking an access key could result in changing the access key scope. In this case, an access key sequence is initiated and the visual affordances are shown for the new scope.
+- Wenn der Benutzer die ALT-TASTE drückt, wird die Zugriffstastenabfolge selbst dann gestartet, wenn sich der Fokus auf einem Eingabesteuerelement befindet. Anschließend kann der Benutzer die Zugriffstaste drücken, um die zugeordnete Aktion aufzurufen. Diese Benutzerinteraktion erfordert, dass Sie die verfügbaren Zugriffstasten innerhalb der Benutzeroberfläche visuell dokumentieren, beispielsweise durch unverankerte Badges, die eingeblendet werden, wenn die ALT-TASTE gedrückt wird.
+- Wenn der Benutzer die ALT-TASTE und die Zugriffstaste gleichzeitig drückt, wird die Zugriffstaste sofort aufgerufen. Dies ist vergleichbar mit einer durch ALT+_Zugriffstaste_ definierten Tastenkombination. In diesem Fall werden keine visuellen Angebote für die Zugriffstaste eingeblendet. Durch das Aufrufen einer Zugriffstaste kann jedoch auch der Zugriffstastenbereich geändert werden. In diesem Fall wird eine Zugriffstastenabfolge initiiert, und gleichzeitig werden visuelle Angebote für den neuen Bereich eingeblendet.
+    > [!NOTE]
+    > Diese Benutzerinteraktion wird nur von Zugriffstasten mit einem Zeichen unterstützt. Die Kombination aus ALT+_Zugriffstaste_ wird für Zugriffstasten mit mehr als einem Zeichen nicht unterstützt.    
+- Wenn Zugriffstasten, die aus mehreren Zeichen bestehen, teilweise dieselben Zeichen verwenden und der Benutzer eines dieser mehrfach verwendeten Zeichen drückt, werden die Zugriffstasten gefiltert. Angenommen, die drei Zugriffstasten _A1_, _A2_ und _C_ werden angezeigt. Wenn der Benutzer _A_ drückt, werden nur die Zugriffstasten _A1_ und _A2_ angezeigt, während das visuelle Angebot für „C“ ausgeblendet wird.
+- Durch die ESC-TASTE wird eine Filterebene entfernt. Beispiel: Wenn die Zugriffstasten _B_, _ABC_, _ACD_ und _ABD_ verfügbar sind und der Benutzer _A_ drückt, werden nur _ABC_, _ACD_ und _ABD_ angezeigt. Wenn der Benutzer dann _B_ drückt, werden nur _ABC_ und _ABD_ angezeigt. Wenn der Benutzer ESC drückt, wird eine Filterebene entfernt, und die Zugriffstasten _ABC_, _ACD_ und _ABD_ werden angezeigt. Wenn der Benutzer noch einmal ESC drückt, wird eine weitere Filterebene entfernt, sodass alle Zugriffstasten – _B_, _ABC_, _ACD_ und _ABD_ – aktiviert sind und die zugehörigen visuellen Angebote angezeigt werden.
+- Mit der ESC-TASTE navigieren Sie zurück zum vorherigen Bereich. Zugriffstasten können verschiedenen Bereichen angehören, um das Navigieren in Apps zu vereinfachen, die über zahlreiche Befehle verfügen. Die Zugriffstastenabfolge beginnt immer im Hauptbereich. Alle Zugriffstasten gehören zum Hauptbereich. Zugriffstasten, für die ein bestimmtes UI-Element als „Bereichsbesitzer“ angegeben ist, sind hiervon ausgenommen. Wenn der Benutzer die Zugriffstaste eines Elements aufruft, das einen Bereichsbesitzer darstellt, legt das XAML-Framework den Bereich automatisch auf das Element fest und fügt es einem internen Navigationsstapel für Zugriffstasten hinzu. Durch die ESC-TASTE können Sie im Navigationsstapel für Zugriffstasten zurückgehen.
+- Es gibt verschiedene Möglichkeiten, die Zugriffstastenabfolge zu schließen:
+    - Der Benutzer kann ALT drücken, um eine Zugriffstastenabfolge, die gerade aktiv ist, zu schließen. Denken Sie daran, dass die Zugriffstastenabfolge durch Drücken von ALT auch initiiert wird.
+    - Durch die ESC-TASTE wird die Zugriffstastenabfolge geschlossen, wenn sie dem Hauptbereich angehört und nicht gefiltert ist.
+        > [!NOTE]
+        > Der Anschlag der ESC-TASTE wird an die UI-Ebene übergeben und auch dort verarbeitet.
+– Mit der TAB-TASTE schließen Sie die Zugriffstastenabfolge und kehren zur TAB-Navigation zurück.
+– Durch die EINGABETASTE wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
+– Durch die Pfeiltasten wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
+– Durch ein Zeiger-nach-unten-Ereignis – z. B. ein Mausklick oder eine Toucheingabe – wird die Zugriffstastenabfolge geschlossen.
+– Wenn eine Zugriffstaste aufgerufen wird, wird die Zugriffstastenabfolge standardmäßig geschlossen.  Sie können dieses Verhalten jedoch überschreiben, indem Sie die [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx)-Eigenschaft auf **false** festlegen.
+- Zugriffstastenkonflikte treten auf, wenn kein DEA (deterministischer endlicher Automat) möglich ist. Zugriffstastenkonflikte lassen sich nicht immer vermeiden und können bei einer großen Anzahl von Befehlen oder Lokalisierungsproblemen auftreten oder dann, wenn Zugriffstasten während der Laufzeit generiert werden.
 
-    **NOTE**&nbsp;&nbsp;Only access keys with one character can take advantage of this user interaction. The Alt+_access key_ combination is not supported for access keys with more than one character.
-- When there are several multi-character access keys that share some characters, when the user presses a shared character, the access keys are filtered. For example, assume there are three access keys shown: _A1_, _A2_, and _C_. If the user presses _A_, then only the _A1_ and _A2_ access key are shown and the visual affordance for C is hidden.
-- The Esc key removes one level the filtering. For example, if there are access keys _B_, _ABC_, _ACD_, and _ABD_ and the user presses _A_, then only _ABC_, _ACD_ and _ABD_ are shown. If the user then presses _B_, only _ABC_ and _ABD_ are shown. If user presses Esc, one level of filtering is removed and _ABC_, _ACD_ and _ABD_ access keys are shown. If the user presses Esc again, another level of filtering is removed and all the access keys -   _B_, _ABC_, _ACD_, and _ABD_ – are enabled and their visual affordances are shown.
-- The Esc key navigates back to the previous scope. Access keys can belong to different scopes to make it easier to navigate across apps that have a lot of commands. The access key sequence always starts on the main scope. All access keys belong to the main scope except those that specify a particular UI element as their scope owner. When the user invokes the access key of an element that is a scope owner, the XAML framework automatically moves the scope to it and adds it to an internal access key navigation stack. The Esc key moves back through the access key navigation stack.
-- There are several ways to dismiss the access key sequence:
-    - The user can press Alt to dismiss an access key sequence that is in progress. Remember that pressing Alt initiates the access key sequence as well.
-    - The Esc key dismisses the access key sequence if it is in the main scope and is not filtered.
+ Es gibt zwei Fälle, in denen Konflikte auftreten:
+ - Wenn zwei UI-Elemente über denselben Zugriffstastenwert verfügen und demselben Zugriffstastenbereich angehören. Beispiel: Zugriffstaste _A1_ für `button1` und Zugriffstaste _A1_ für `button2`, die dem Standardbereich angehört. In diesem Fall löst das System den Konflikt auf, indem die Zugriffstaste des ersten Elements verarbeitet wird, das der visuellen Struktur hinzugefügt wurde. Der Rest wird ignoriert.
+ - Wenn derselbe Zugriffstastenbereich mehrere Berechnungsoptionen umfasst. Beispielsweise _A_ und _A1_. Wenn der Benutzer _A_ drückt, hat das System zwei Möglichkeiten: Zugriffstaste _A_ aufrufen oder das Zeichen A als ersten Teil der Zugriffstaste _A1_ interpretieren und warten. In diesem Fall verarbeitet das System nur den ersten vom Automaten erreichten Zugriffstastenaufruf. Im Beispiel mit _A_ und _A1_ ruft das System nur die Zugriffstaste _A_ auf.
+-   Wenn der Benutzer in einer Zugriffstastenabfolge einen ungültigen Zugriffstastenwert drückt, passiert nichts. Zwei Kategorien von Zugriffstasten werden in einer Zugriffstastenabfolge als gültig angesehen:
+ - Sondertasten zum Beenden der Zugriffstastenabfolge: ESC, ALT, EINGABE, TAB und die Pfeiltasten.
+ - Die den Zugriffstasten zugewiesenen alphanumerischen Zeichen.
 
-        **NOTE**&nbsp;&nbsp;The Esc keystroke is passed to the UI layer to be handled there as well.
-    - The Tab key dismisses the access key sequence and returns to the Tab navigation.
-    - The Enter key dismisses the access key sequence and sends the keystroke to the element that has the focus.
-    - The arrow keys dismiss the access key sequence and send the keystroke to the element that has the focus.
-    - A pointer down event such a mouse click or a touch dismisses the access key sequence.
-    - By default, when an access key is invoked, the access key sequence is dismissed.  However, you can override this behavior by setting the [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) property to **false**.
-- Access key collisions occur when a deterministic finite automaton is not possible. Access key collisions are not desirable but can happen because of a large number of commands, localization issues, or runtime generation of access keys.
+## Zugriffstasten-APIs
 
- There are two cases where collisions happen:
- - When two UI elements have the same access key value and belong to the same access key scope. For example, an access key _A1_ for a `button1` and access key _A1_ for a `button2` that belongs to the default scope. In this case, the system resolves the collision by processing the access key of the first element added to the visual tree. The rest are ignored.
- - When there is more than one computational option in the same access key scope. For example, _A_ and _A1_. When user presses _A_, the system has two options: invoke the _A_ access key or keep going and consume the A character from the _A1_ access key. In this case, the system will process only the first access key invocation reached by the automata. For the example, _A_ and _A1_, the system will only invoke the _A_ access key.
-- 	When the user presses an invalid access key value in an access key sequence, nothing happens. There are two categories of keys considered as valid access keys in an access key sequence:
- - Special keys to exit the access key sequence: This is Esc, Alt, the arrow keys, Enter, and Tab.
- - The alphanumeric characters assigned to the access keys.
-
-## Access key APIs
-
-To support the access key user interaction, the XAML framework provides the APIs described here.
+Das XAML-Framework bietet die hier beschriebenen APIs, um die Benutzerinteraktion mit Zugriffstasten zu unterstützen.
 
 **AccessKeyManager**
 
-The [AccessKeyManager](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.aspx) is a helper class that you can use to manage your UI when access keys are shown or hidden. The [IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx) event is raised each time the app enters and exits from the access key sequence. You can query the [IsDisplayModeEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabled.aspx) property to determine whether the visual affordances are shown or hidden.  You can also call [ExitDisplayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.exitdisplaymode.aspx) to force dismissal of an access key sequence.
+[AccessKeyManager](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.aspx) ist eine Hilfsklasse, mit der Sie die Benutzeroberfläche verwalten können, wenn Zugriffstasten angezeigt oder ausgeblendet werden. Das [IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx)-Ereignis wird jedes Mal ausgelöst, wenn die Zugriffstastenabfolge in der App initiiert und beendet wird. Sie können die [IsDisplayModeEnabled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabled.aspx)-Eigenschaft abfragen, um zu bestimmen, ob visuelle Angebote ein- oder ausgeblendet werden.  Sie können auch [ExitDisplayMode](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.exitdisplaymode.aspx) aufrufen, um das Schließen einer Zugriffstastenabfolge zu erzwingen.
 
-**NOTE**&nbsp;&nbsp;There is no built-in implementation of the access key's visual; you have to provide it.  
+> [!NOTE]
+> Es gibt keine integrierte Implementierung visueller Elemente für Zugriffstasten. Diese müssen von Ihnen bereitgestellt werden.  
 
 **AccessKey**
 
-The [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) property lets you specify an access key on a UIElement or [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.accesskey.aspx). If two elements have the same access key and the same scope, only the first element added to the visual tree will be processed.
+Mit der [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx)-Eigenschaft können Sie eine Zugriffstaste für UIElement oder [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.accesskey.aspx) angeben. Wenn zwei Elemente über dieselbe Zugriffstaste und denselben Bereich verfügen, wird nur das erste Element verarbeitet, das der visuellen Struktur hinzugefügt wurde.
 
-To ensure the XAML Framework processes the access keys, the UI elements must be realized in the visual tree. If there are no elements in the visual tree with an access key, no access key events are raised.
+Um sicherzustellen, dass die Zugriffstasten vom XAML-Framework verarbeitet werden, müssen die UI-Elemente in der visuellen Struktur erkannt werden. Wenn die visuelle Struktur keine Elemente mit einer Zugriffstaste enthält, werden keine Zugriffstastenereignisse ausgelöst.
 
-Access key APIs don’t support characters that need two keystrokes to be generated. An individual character must correspond to a key on a particular language’s native keyboard layout.  
+Zugriffstasten-APIs unterstützen keine Zeichen, die mit zwei Tastenanschlägen erzeugt werden müssen. Ein einzelnes Zeichen muss einer Taste im systemeigenen Tastaturlayout der jeweiligen Sprache entsprechen.  
 
 **AccessKeyDisplayRequested/Dismissed**
 
-The [AccessKeyDisplayRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplayrequested.aspx) and the [AccessKeyDisplayDismissed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplaydismissed.aspx) events are raised when an access key visual affordance should be displayed or dismissed. These events are not raised for elements with their [Visibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility.aspx) property set to **Collapsed**. The AccessKeyDisplayRequested event is raised during an access key sequence every time the user presses a character that is used by the access key. For example, if an access key is set to _AB_, this event is raised when the user presses Alt, and again when the user presses _A_. When user presses _B_, the AccessKeyDisplayDismissed event is raised
+Das [AccessKeyDisplayRequested](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplayrequested.aspx)-Ereignis und das[AccessKeyDisplayDismissed](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeydisplaydismissed.aspx)-Ereignis werden ausgelöst, wenn ein visuelles Angebot für eine Zugriffstaste angezeigt oder geschlossen werden soll. Für Elemente, deren [Visibility](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.visibility.aspx)-Eigenschaft auf **Collapsed** festgelegt ist, werden diese Ereignisse nicht ausgelöst. Das AccessKeyDisplayRequested-Ereignis wird während einer Zugriffstastenabfolge jedes Mal ausgelöst, wenn der Benutzer ein von der Zugriffstaste verwendetes Zeichen drückt. Beispiel: Wenn eine Zugriffstaste auf _AB_ festgelegt ist, wird dieses Ereignis einmal ausgelöst, wenn der Benutzer ALT drückt, und ein zweites Mal, wenn er _A_ drückt. Wenn der Benutzer _B_ drückt, wird das AccessKeyDisplayDismissed-Ereignis ausgelöst.
 
 **AccessKeyInvoked**
 
-The [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx) event is raised when a user reaches the last character of an access key. An access key can have one or several characters. For example, for access keys _A_ and _BC_, when a user presses _Alt, A_, or _Alt,  B, C_, the event is raised, but not when the user presses just _Alt, B_. This event is raised when the key is pressed, not when it’s released.
+Das [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx)-Ereignis wird ausgelöst, wenn ein Benutzer das letzte Zeichen einer Zugriffstaste erreicht. Eine Zugriffstaste kann ein oder mehrere Zeichen umfassen. Beispiel: Für die Zugriffstasten _A_ und _BC_ wird das Ereignis ausgelöst, wenn ein Benutzer _ALT, A_ oder _ALT, B, C_ drückt. Wenn der Benutzer nur _ALT, B_ drückt, wird es jedoch nicht ausgelöst. Dieses Ereignis wird ausgelöst, wenn die Taste gedrückt und nicht, wenn sie losgelassen wird.
 
 **IsAccessKeyScope**
 
-The [IsAccessKeyScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.isaccesskeyscope.aspx) property lets you specify that a UIElement is the root of an access key scope. The AccessKeyDisplayRequested event is raised for this element, but not for its children. When a user invokes this element, the XAML framework changes the scope automatically and raises the AccessKeyDisplayRequested event on its children and the AccessKeyDisplayDismissed event on other UI elements (including the parent).  The access key sequence is not exited when the scope is changed.
+Mit der [IsAccessKeyScope](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.isaccesskeyscope.aspx)-Eigenschaft können Sie angeben, dass ein UIElement das Stammelement eines Zugriffstastenbereichs ist. Das AccessKeyDisplayRequested-Ereignis wird für dieses Element, aber nicht für seine untergeordneten Elemente ausgelöst. Wenn ein Benutzer dieses Element aufruft, ändert das XAML-Framework automatisch den Bereich und löst das AccessKeyDisplayRequested-Ereignis für die untergeordneten Elemente und das AccessKeyDisplayDismissed-Ereignis für andere UI-Elemente (einschließlich des übergeordneten Elements) aus.  Die Zugriffstastenabfolge wird bei einer Änderung des Bereichs nicht beendet.
 
 **AccessKeyScopeOwner**
 
-To make an element participate in the scope of another element (the source) that is not its parent in the visual tree, you can set the [AccessKeyScopeOwner](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyscopeowner.aspx) property. The element bound to the AccessKeyScopeOwner property must have IsAccessKeyScope set to **true**. Otherwise, an exception is thrown.
+Wenn ein Element dem Bereich eines anderen Elements (Quelle) angehören soll, das ihm in der visuellen Struktur nicht übergeordnet ist, können Sie die [AccessKeyScopeOwner](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyscopeowner.aspx)-Eigenschaft festlegen. Bei dem an die AccessKeyScopeOwner-Eigenschaft gebundenen Element muss IsAccessKeyScope auf **true** festgelegt sein. Andernfalls wird eine Ausnahme ausgelöst.
 
 **ExitDisplayModeOnAccessKeyInvoked**
 
-By default, when an access key is invoked and the element is not a scope owner, the access key sequence is finalized and the [AccessKeyManager.IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx) event is raised. You can set the [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) property to **false** to override this behavior and prevent exiting from the access key sequence after its invoked. (This property is on both [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) and [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.exitdisplaymodeonaccesskeyinvoked.aspx)).
+Wenn eine Zugriffstaste aufgerufen wird und das Element kein Bereichsbesitzer ist, wird standardmäßig die Zugriffstastenabfolge abgeschlossen, und das [AccessKeyManager.IsDisplayModeEnabledChanged](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeymanager.isdisplaymodeenabledchanged.aspx)-Ereignis wird ausgelöst. Sie können die [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx)-Eigenschaft auf **false** festlegen, um dieses Verhalten zu überschreiben und zu verhindern, dass die Zugriffstastenabfolge nach dem Aufrufen beendet wird. (Diese Eigenschaft gilt sowohl für [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx) als auch für [TextElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.textelement.exitdisplaymodeonaccesskeyinvoked.aspx).)
 
-**NOTE**&nbsp;&nbsp;If the element is a scope owner (`IsAccessKeyScope="True"`), the app enters a new access key scope and the IsDisplayModeEnabledChanged event is not raised.
+> [!NOTE]
+> Wenn das Element ein Bereichsbesitzer (`IsAccessKeyScope="True"`) ist, wechselt die App in einen neuen Zugriffstastenbereich, und das IsDisplayModeEnabledChanged-Ereignis wird nicht ausgelöst.
 
-**Localization**
+**Lokalisierung**
 
-Access keys can be localized in multiple languages and loaded at runtime using the [ResourceLoader](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.resources.resourceloader.aspx) APIs.
+Zugriffstasten können in mehrere Sprachen lokalisiert und zur Laufzeit mit den [ResourceLoader](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.resources.resourceloader.aspx)-APIs geladen werden.
 
-## Control patterns used when an access key is invoked
+## Beim Aufrufen einer Zugriffstaste verwendete Steuerungsmuster
 
-Control patterns are interface implementations that expose common control functionality; for example, buttons implement the **Invoke** control pattern and this raises the **Click** event. When an access key is invoked, the XAML framework looks up whether the invoked element implements a control pattern and executes it if it does. If the element has more than one control pattern, only one is invoked, the rest are ignored. Control patterns are searched in the following order:
+Steuerungsmuster sind Schnittstellenimplementierungen, die allgemeine Steuerungsfunktionen verfügbar machen. Schaltflächen implementieren z. B. das **Invoke**-Steuerungsmuster, das das **Click**-Ereignis auslöst. Wenn eine Zugriffstaste aufgerufen wird, überprüft das XAML-Framework, ob das aufgerufene Element ein Steuerungsmuster implementiert, und führt es ggf. aus. Wenn das Element mehrere Steuerungsmuster aufweist, wird nur eins aufgerufen, und die übrigen werden ignoriert. Steuerungsmuster werden in der folgenden Reihenfolge gesucht:
 
-1.	Invoke. For example, a Button.
-2.	Toggle. For example, a Checkbox.
-3.	Selection. For example, a RadioButton.
-4.	Expand/Collapse. For example, a ComboBox.
+1.  „Invoke“. Beispielsweise eine Schaltfläche.
+2.  „Toggle“. Beispielsweise ein Kontrollkästchen.
+3.  „Selection“. Beispielsweise RadioButton.
+4.  „Expand/Collapse“. Beispielsweise ComboBox.
 
-If a control pattern is not found, the access key invocation will appear as a no-op and a debug message is recorded to assist you in debugging this situation: "No automation patterns for this component found. Implement desired behavior in the event handler for AccessKeyInvoked. Setting Handled to true in your event handler will suppress this message."
+Falls ein Steuerungsmuster nicht gefunden wird, wird der Zugriffstastenaufruf als „No-Op“ angegeben. Außerdem wird eine mit der folgenden vergleichbare Debugmeldung aufgezeichnet, um Sie beim Debuggen des Problems zu unterstützen: „Es wurden keine Automatisierungsmuster für diese Komponente gefunden. Implementieren Sie das gewünschte Verhalten im Ereignishandler für AccessKeyInvoked. Wenn Sie „Handled“ im Ereignishandler auf „true“ festlegen, wird diese Meldung unterdrückt.“
 
-**NOTE**&nbsp;&nbsp;The debugger's Application process type must be _Mixed (Managed and Native)_ or _Native_ in Visual Studio's Debug Settings to see this message.
+> [!NOTE]
+> Der Anwendungsprozesstyp des Debuggers muss in den Debugeinstellungen von Visual Studio _Gemischt (verwaltet und systemeigen)_ oder _Systemeigen_ lauten, damit diese Meldung angezeigt wird.
 
-If you do not want an access key to execute its default control pattern, or if the element does not have a control pattern, you should handle the [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx) event and implement the desired behavior.
+Wenn eine Zugriffstaste nicht ihr standardmäßiges Steuerungsmuster ausführen soll oder wenn das Element kein Steuerungsmuster aufweist, sollten Sie das [AccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskeyinvoked.aspx)-Ereignis behandeln und das gewünschte Verhalten implementieren.
 ```csharp
 private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args)
 {
@@ -139,19 +148,20 @@ private void OnAccessKeyInvoked(UIElement sender, AccessKeyInvokedEventArgs args
 }
 ```
 
-For more info about control patterns, see [UI Automation Control Patterns Overview](https://msdn.microsoft.com/library/windows/desktop/ee671194.aspx).
+Weitere Informationen über Steuerungsmuster finden Sie unter [Übersicht über Steuerungsmuster der Benutzeroberflächenautomatisierung](https://msdn.microsoft.com/library/windows/desktop/ee671194.aspx).
 
-## Access keys and Narrator
+## Zugriffstasten und Sprachausgabe
 
-Windows Runtime has UI Automation providers that expose properties on Microsoft UI Automation elements. These properties enable UI Automation client applications to discover information about pieces of the user interface. The [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763) property lets clients, such as Narrator, discover the access key associated with an element. Narrator will read this property every time an element gets focus. If AutomationProperties.AccessKey is does not have value, the XAML framework returns the [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx) property value from the UIElement or TextElement. You don't need to setup AutomationProperties.AccessKey if the AccessKey property already has a value.
+Windows-Runtime verfügt über Benutzeroberflächenautomatisierungs-Anbieter, die Eigenschaften in Microsoft-Benutzeroberflächenautomatisierungs-Elementen verfügbar machen. Mithilfe dieser Eigenschaften können Benutzeroberflächenautomatisierungs-Clientanwendungen Informationen zu Teilen der Benutzeroberfläche ermitteln. Mithilfe der [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763)-Eigenschaft können Clients wie die Sprachausgabe die einem Element zugeordnete Zugriffstaste ermitteln. Die Sprachausgabe liest diese Eigenschaft jedes Mal, wenn ein Element den Fokus erhält. Wenn AutomationProperties.AccessKey keinen Wert aufweist, gibt das XAML-Framework den [AccessKey](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.accesskey.aspx)-Eigenschaftswert von UIElement oder TextElement zurück. Sie müssen AutomationProperties.AccessKey nicht einrichten, wenn die AccessKey-Eigenschaft bereits über einen Wert verfügt.
 
-## Example: Access key for button
+## Beispiel: Zugriffstaste für eine Schaltfläche
 
-This example shows how to create an access key for a Button. It uses Tooltips as a visual affordance to implement a floating badge that contains the access key.
+Dieses Beispiel veranschaulicht, wie Sie eine Zugriffstaste für eine Schaltfläche erstellen. Dabei werden QuickInfos als visuelle Angebote verwendet, um ein unverankertes Badge zu implementieren, das die Zugriffstaste enthält.
 
-**NOTE**&nbsp;&nbsp;Tooltip is used for simplicity, but we recommend that you create your own control to display it using, for example, [Popup](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.popup.aspx).
+> [!NOTE]
+> Der Einfachheit halber werden QuickInfos verwendet, es wird jedoch empfohlen, z. B. mit [Popup](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.popup.aspx) ein eigenes Steuerelement für die Anzeige zu erstellen.
 
-The XAML framework automatically calls the handler for the Click event, so you don't need to handle the AccessKeyInvoked event. The example provides visual affordances for only the characters that are remaining to invoke the access key by using the [AccessKeyDisplayRequestedEventArgs.PressedKeys](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeydisplayrequestedeventargs.pressedkeys.aspx) property. For example, if there are three displayed access keys: _A1_, _A2_, and _C_, and the user presses _A_, then only _A1_ and _A2_ access key are unfiltered, and are displayed as _1_ and _2_ instead of _A1_ and _A2_.
+Da der Handler für das Click-Ereignis automatisch vom XAML-Framework aufgerufen wird, müssen Sie das AccessKeyInvoked-Ereignis nicht behandeln. Im Beispiel werden mit der [AccessKeyDisplayRequestedEventArgs.PressedKeys](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.input.accesskeydisplayrequestedeventargs.pressedkeys.aspx)-Eigenschaft visuelle Angebote nur für die Zeichen bereitgestellt, die zum Aufrufen der Zugriffstaste noch gedrückt werden müssen. Wenn beispielsweise die drei Zugriffstasten _A1_, _A2_ und _C_ angezeigt werden und der Benutzer _A_ drückt, werden nur die Zugriffstasten _A1_ und _A2_ nicht herausgefiltert und als _1_ und _2_ anstatt als _A1_ und _A2_ angezeigt.
 
 ```xaml
 <StackPanel
@@ -219,13 +229,13 @@ The XAML framework automatically calls the handler for the Click event, so you d
     }
 ```
 
-## Example: Scoped access keys
+## Beispiel: Bereichsbezogene Zugriffstasten
 
-This example shows how to create scoped access keys. The PivotItem’s IsAccessKeyScope property prevents the access keys of the PivotItem's child elements from showing when user presses Alt. These access keys are shown only when the user invokes the PivotItem because the XAML framework automatically switches the scope. The framework also hides the access keys of the other scopes.
+Dieses Beispiel veranschaulicht das Erstellen bereichsbezogener Zugriffstasten. Die IsAccessKeyScope-Eigenschaft von PivotItem verhindert, dass die Zugriffstasten der untergeordneten Elemente von PivotItem angezeigt werden, wenn der Benutzer die ALT-TASTE drückt. Diese Zugriffstasten werden nur angezeigt, wenn der Benutzer PivotItem aufruft, da der Bereich automatisch vom XAML-Framework gewechselt wird. Das Framework blendet auch die Zugriffstasten der anderen Bereiche aus.
 
-This example also shows how to handle the AccessKeyInvoked event. The PivotItem doesn’t implement any control pattern, so the XAML framework doesn't invoke any action by default. This implementation shows how to select the PivotItem that was invoked using the access key.
+Dieses Beispiel veranschaulicht auch, wie das AccessKeyInvoked-Ereignis behandelt wird. Da PivotItem kein Steuerungsmuster implementiert, ruft das XAML-Framework standardmäßig keine Aktion auf. Diese Implementierung zeigt, wie das mit der Zugriffstaste aufgerufene PivotItem ausgewählt wird.
 
-Finally, the example shows the IsDisplayModeChanged event where you can do something when the display mode changes. In this example, the Pivot control is collapsed until the user presses Alt. When the user finishes interacting with the Pivot, it collapses again. You can use IsDisplayModeEnabled to check if the access key display mode is enabled or disabled.
+Abschließend wird im Beispiel das IsDisplayModeChanged-Ereignis gezeigt, in dem Sie eine Aktion ausführen können, wenn sich der Anzeigemodus ändert. In diesem Beispiel wird das Pivot-Steuerelement reduziert, bis der Benutzer ALT drückt. Wenn der Benutzer seine Interaktion mit dem Pivot-Steuerelement beendet hat, wird es wieder reduziert. Mit IsDisplayModeEnabled können Sie überprüfen, ob der Anzeigemodus für Zugriffstasten aktiviert oder deaktiviert ist.
 
 ```xaml   
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -372,3 +382,9 @@ public sealed partial class ScopedAccessKeys : Page
         }
     }
 ```
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

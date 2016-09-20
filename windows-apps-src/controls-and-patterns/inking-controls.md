@@ -1,34 +1,38 @@
 ---
 author: Karl-Bridge-Microsoft
-Description: Ink tools described
-title: Inking Controls
+Description: Beschreibung der Freihandtools
+title: "Steuerelemente für Freihandeingaben"
 label: Inking Controls
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 7198f4084df8ce484cdc5f6b3231a4bdb02f18b5
+
 ---
+# Steuerelemente für Freihandeingaben
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
-# Inking controls
+Es gibt zwei verschiedene Steuerelemente, die die Freihandeingabe in Apps in der universellen Windows-Plattform (UWP) ermöglichen: [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) und [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
 
-There are two different controls that facilitate inking in Universal Windows Platform (UWP) apps: [**InkCanvas**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx) and [**InkToolbar**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx).
+Das InkCanvas-Steuerelement rendert Stifteingaben entweder als Freihandstrich (mit Standardeinstellungen für Farbe und Breite) oder als Radierstrich. Dieses Steuerelement ist eine transparente Überlagerung, die keine integrierte Benutzeroberfläche zum Ändern der Standardeigenschaften von Freihandstrichen enthält.
 
-The InkCanvas control renders pen input as either an ink stroke (using default settings for color and thickness) or an erase stroke. This control is a transparent overlay that doesn't include any built-in UI for changing the default ink stroke properties.
+>**Hinweis**&nbsp;&nbsp;Das InkCanvas-Steuerelement kann zur Unterstützung ähnlicher Funktionen für Maus- und Toucheingabe konfiguriert werden.
 
->**Note**&nbsp;&nbsp;InkCanvas can be configured to support similar functionality for both mouse and touch input.
+Da das InkCanvas-Steuerelement keine Unterstützung für das Ändern der Standardeinstellungen von Freihandstrichen enthält, kann es mit einem InkToolbar-Steuerelement kombiniert werden. Das InkToolbar-Steuerelement enthält eine anpassbare und erweiterbare Sammlung von Schaltflächen, die Features für Freihandeingaben in einem verknüpften InkCanvas-Steuerelement aktivieren.
 
-As the InkCanvas control does not include support for changing the default ink stroke settings, it can be paired with an InkToolbar control. The InkToolbar contains a customizable and extensible collection of buttons that activate ink-related features in an associated InkCanvas.
+Das InkToolbar-Steuerelement enthält standardmäßig Schaltflächen zum Zeichnen, Löschen, Hervorheben sowie zum Anzeigen eines Lineals. Abhängig vom Feature werden in einem Flyout weitere Einstellungen und Befehle bereitgestellt, beispielsweise für Freihandfarbe, Strichstärke und das Löschen aller Freihandeingaben.
 
-By default, the InkToolbar includes buttons for drawing, erasing, highlighting, and displaying a ruler. Depending on the feature, other settings and commands, such as ink color, stroke thickness, erase all ink, are provided in a flyout.
-
->**Note**&nbsp;&nbsp;InkToolbar supports pen and mouse input and can be configured to recognize touch input.
+>**Hinweis**&nbsp;&nbsp;Das InkToolbar-Steuerelement unterstützt Stift- und Mauseingaben und kann zur Erkennung von Toucheingaben konfiguriert werden.
 
 <img src="images/ink-tools-invoked-toolbar.png" width="300">
 
 <div class="important-apis" >
-<b>Important APIs</b><br/>
+<b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx"><strong>InkCanvas class</strong></a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx"><strong>InkToolbar class</strong></a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx"><strong>InkPresenter class</strong></a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inkcanvas.aspx"><strong>InkCanvas-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx"><strong>InkToolbar-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx"><strong>InkPresenter-Klasse</strong></a></li>
 <li><a href="https://msdn.microsoft.com/library/windows/apps/br208524"><strong>Windows.UI.Input.Inking</strong></a></li>
 </ul>
 
@@ -38,118 +42,124 @@ By default, the InkToolbar includes buttons for drawing, erasing, highlighting, 
 
 
 
-## Is this the right control?
+## Ist dies das richtige Steuerelement?
 
-Use the InkCanvas when you need to enable basic inking features in your app without providing any ink settings to the user.
+Verwenden Sie das InkCanvas-Steuerelement, wenn Sie in Ihrer App einfache Freihandfeatures ohne Freihandeinstellungen für den Benutzer bereitstellen müssen.
 
-By default, strokes are rendered as ink when using the pen tip (a black ballpoint pen with a thickness of 2 pixels) and as an eraser when using the eraser tip. If an eraser tip is not present, the InkCanvas can be configured to process input from the pen tip as an erase stroke.
+Standardmäßig werden Striche als Freihandeingabe gerendert, wenn die Stiftspitze (ein schwarzer Kugelschreiber mit einer Stärke von 2 Pixeln) verwendet wird, und als Radierer, wenn die Radiergummispitze verwendet wird. Falls keine Radiergummispitze vorhanden ist, kann das InkCanvas-Steuerelement so konfiguriert werden, dass Eingaben mit der Stiftspitze wie Radierstriche behandelt werden.
 
-Pair the InkCanvas with an InkToolbar to provide a UI for activating ink features and setting basic ink properties such as stroke size, color, and shape of the pen tip.
+Kombinieren Sie das InkCanvas-Steuerelement mit einem InkToolbar-Steuerelement, um eine Benutzeroberfläche zum Aktivieren von Freihandfeatures und Festlegen grundlegender Freihandeigenschaften wie Strichgröße, Farbe und Form der Stiftspitze bereitzustellen.
 
->**Note**&nbsp;&nbsp;For more extensive customization of ink stroke rendering on an InkCanvas, use the underlying [**InkPresenter**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx) object.
+>**Hinweis**&nbsp;&nbsp;Verwenden Sie das zugrunde liegende [**InkPresenter**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.input.inking.inkpresenter.aspx)-Objekt, wenn Sie umfassendere Anpassungen am Rendering von Freihandeingaben für ein InkCanvas-Steuerelement vornehmen möchten.
 
-## Examples
+## Beispiele
 
 **Microsoft Edge**
 
-The Edge browser uses the InkCanvas and InkToolbar for **Web Notes**.  
-![InkCanvas is used to ink in Microsoft Edge](images/ink-tools-edge.png)
+Der Edge-Browser verwendet „InkCanvas” und „InkToolbar” für **Webseitennotizen**.  
+![Das InkCanvas-Steuerelement wird für Freihandeingaben in Microsoft Edge verwendet.](images/ink-tools-edge.png)
 
-**Windows Ink Workspace**
+**Windows Ink-Arbeitsbereich**
 
-The InkCanvas and InkToolbar are also used for both **Sketchpad** and **Screen sketch** in the **Windows Ink Workspace**.  
-![InkToolbar in the Windows Ink Workspace](images/ink-tools-ink-workspace.png)
+Die InkCanvas- und InkToolbar-Steuerelemente werden auch für den **Skizzenblock** und **Bildschirmskizzen** im **Windows Ink-Arbeitsbereich** verwendet.  
+![InkToolbar-Steuerelement im Windows Ink-Arbeitsbereich](images/ink-tools-ink-workspace.png)
 
-## Create an InkCanvas and InkToolbar
+## Erstellen eines InkCanvas- und InkToolbar-Steuerelements
 
-Adding an InkCanvas to your app requires just one line of markup:
+Zum Hinzufügen eines InkCanvas-Steuerelements zu Ihrer App ist nur eine Markupzeile erforderlich:
 
 ```xaml
 <InkCanvas x:Name=“myInkCanvas”/>
 ```
 
->**Note**&nbsp;&nbsp;For detailed InkCanvas customization using InkPresenter, see the ["Pen and stylus interactions in UWP apps"](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/) article.
+>**Hinweis**&nbsp;&nbsp;Ausführliche Informationen zur Anpassung von „InkCanvas” mit „InkPresenter” finden Sie im Artikel [Zeichen- und Eingabestiftinteraktionen in UWP-Apps](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/).
 
-The InkToolbar control must be used in conjunction with an InkCanvas. Incorporating an InkToolbar (with all built-in tools) into your app requires one additional line of markup:
+Das InkToolbar-Steuerelement muss in Verbindung mit einem InkCanvas-Steuerelement verwendet werden. Zum Einbinden eines InkToolbar-Steuerelements (mit allen integrierten Tools) in Ihre App ist nur eine zusätzliche Markupzeile erforderlich:
 
  ```xaml
 <InkToolbar TargetInkCanvas=“{x:Bind myInkCanvas}”/>
  ```
 
-This displays the following InkToolbar:
+Dadurch wird das folgende InkToolbar-Steuerelement angezeigt:
 <img src="images/ink-tools-uninvoked-toolbar.png" width="250">
 
-### Built-in buttons
+### Integrierte Schaltflächen
 
-The InkToolbar includes the following built-in buttons:
+Das InkToolbar-Steuerelement enthält die folgenden integrierten Schaltflächen:
 
-**Pens**
+**Stifte**
 
-- Ballpoint pen - draws a solid, opaque stroke with a circle pen tip. The stroke size is dependent on the pen pressure detected.
-- Pencil - draws a soft-edged, textured, and semi-transparent stroke (useful for layered shading effects) with a circle pen tip. The stroke color (darkness) is dependent on the pen pressure detected.
-- Highlighter – draws a semi-transparent stroke with a rectangle pen tip.
+- Kugelschreiber – zeichnet mit einer runden Stiftspitze einen durchgehenden, undurchsichtigen Strich. Die Strichgröße hängt vom erkannten Stiftdruck ab.
+- Bleistift – zeichnet mit einer runden Stiftspitze einen auslaufenden halbtransparenten Strich mit Textur (nützlich für überlagerte Schattierungseffekte). Die Strichfarbe (Dunkelheit) hängt vom erkannten Stiftdruck ab.
+- Textmarker – zeichnet mit einer rechteckigen Stiftspitze einen halbtransparenten Strich.
 
-You can customize both the color palette and size attributes (min, max, default) in the flyout for each pen.
+Sie können sowohl die Farbpalette als auch die Größenattribute (Mindest-, Höchst- und Standardwerte) im Flyout für jeden Stift anpassen.
 
 **Tool**
 
-- Eraser – deletes any ink stroke touched. Note that the entire ink stroke is deleted, not just the portion under the eraser stroke.
+- Radierer – löscht alle Freihandstriche, die berührt werden. Beachten Sie, dass der gesamte Freihandstrich gelöscht wird, nicht nur der Teil unter dem Radiererstrich.
 
-**Toggle**
+**Ein-/Ausschalten**
 
-- Ruler – shows or hides the ruler. Drawing near the ruler edge causes the ink stroke to snap to the ruler.  
- ![Ruler visual associated with InkToolbar](images/inking-tools-ruler.png)
+- Lineal – blendet das Lineal ein oder aus. Beim Zeichnen in der Nähe des Linealrands wird der Freihandstrich am Lineal ausgerichtet.  
+ ![Dem InkToolbar-Steuerelement zugeordnetes visuelles Linealelement](images/inking-tools-ruler.png)
 
-Although this is the default configuration, you have complete control over which built-in buttons are included in the InkToolbar for your app.
+Obwohl dies die Standardkonfiguration ist, haben Sie die vollständige Kontrolle über die integrierten Schaltflächen, die im InkToolbar-Steuerelement für Ihre App enthalten sind.
 
-### Custom buttons
+### Benutzerdefinierte Schaltflächen
 
-The InkToolbar consists of two distinct groups of button types:
+Das InkToolbar-Steuerelement besteht aus zwei unterschiedlichen Gruppen von Schaltflächentypen:
 
-1. A group of "tool" buttons containing the built-in drawing, erasing, and highlighting buttons. Custom pens and tools are added here.
-> **Note**&nbsp;&nbsp;Feature selection is mutually exclusive.
+1. Eine Gruppe von „Toolschaltflächen“ mit den integrierten Schaltflächen zum Zeichnen, Radieren und Hervorheben. Hier werden benutzerdefinierte Stifte und Tools hinzugefügt.
+> **Hinweis**&nbsp;&nbsp;Die ausgewählten Features schließen sich gegenseitig aus.
 
-2. A group of "toggle" buttons containing the built-in ruler button. Custom toggles are added here.
-> **Note**&nbsp;&nbsp;Features are not mutually exclusive and can be used concurrently with other active tools.
+2. Eine Gruppe von „Umschaltflächen“ mit der integrierten Linealschaltfläche. Hier werden benutzerdefinierte Umschaltflächen hinzugefügt.
+> **Hinweis**&nbsp;&nbsp;Die Features schließen sich nicht gegenseitig aus und können gleichzeitig mit anderen aktiven Tools verwendet werden.
 
-Depending on your application and the inking functionality required, you can add any of the following buttons (bound to your custom ink features) to the InkToolbar:
+Je nach Anwendung und erforderlicher Freihandfunktion können Sie dem InkToolbar-Steuerelement eine der folgenden Schaltflächen (die an die benutzerdefinierten Freihandfunktionen gebunden sind) hinzufügen:
 
-- Custom pen – a pen for which the ink color palette and pen tip properties, such as shape, rotation, and size, are defined by the host app.
-- Custom tool – a non-pen tool, defined by the host app.
-- Custom toggle – Sets the state of an app-defined feature to on or off. When turned on, the feature works in conjunction with the active tool.
+- Benutzerdefinierter Stift: Ein Stift, für den die Farbpaletten- und Stiftspitzeneigenschaften der Freihandeingabe wie Form, Drehung und Größe von der Host-App definiert werden.
+- Benutzerdefiniertes Tool: Ein Tool ohne Stift, das von der Host-App definiert wird.
+- Benutzerdefiniertes Umschalten: Legt den Zustand eines durch die App definierten Features auf „aktiviert“ oder „deaktiviert“ fest. Wenn die Schaltfläche aktiviert ist, funktioniert das Feature in Verbindung mit dem aktiven Tool.
 
-> **Note**&nbsp;&nbsp;You cannot change the display order of the built-in buttons. The default display order is: Ballpoint pen, pencil, highlighter, eraser, and ruler. Custom pens are appended to the last default pen, custom tool buttons are added between the last pen button and the eraser button and custom toggle buttons are added after the ruler button. (Custom buttons are added in the order they are specified.)
+> **Hinweis**&nbsp;&nbsp;Die Anzeigereihenfolge der integrierten Schaltflächen kann nicht geändert werden. Die standardmäßige Anzeigereihenfolge lautet wie folgt: Kugelschreiber, Stift, Textmarker, Radierer und Lineal. Benutzerdefinierte Stifte werden an den letzten Standardstift angefügt, benutzerdefinierte Tool-Schaltflächen werden zwischen der letzten Stiftschaltfläche und der Radiererschaltfläche hinzugefügt, und benutzerdefinierte Umschaltflächen werden nach der Linealschaltfläche hinzugefügt. (Benutzerdefinierte Schaltflächen werden in der Reihenfolge hinzugefügt, in der sie angegeben werden.)
 
-Although the InkToolbar can be a top level item, it is typically exposed through an “Inking” button or command. We recommend using EE56 glyph from the Segoe MLD2 Assets font as a top level icon.
+Obwohl das InkToolbar-Steuerelement ein Element auf oberster Ebene sein kann, wird es in der Regel über eine Schaltfläche oder einen Befehl für die Freihandeingabe verfügbar gemacht. Wir empfehlen, die Glyphe EE56 aus der Schriftart „Segoe MLD2 Assets“ als Symbol auf oberster Ebene zu verwenden.
 
-## InkToolbar Interaction
+## InkToolbar-Interaktion
 
-All built-in pen and tool buttons include a flyout menu where ink properties and pen tip shape and size can be set. An "extension glyph" ![InkToolbar glyph](images/ink-tools-glyph.png) is displayed on the button to indicate the existence of the flyout.
+Alle integrierten Stift- und Toolschaltflächen enthalten ein Flyoutmenü, in dem Freihandeigenschaften sowie die Form und Größe der Stiftspitze festgelegt werden können. Eine „Erweiterungsglyphe” ![InkToolbar-Glyphe](images/ink-tools-glyph.png) wird auf der Schaltfläche angezeigt, um auf das Vorhandensein des Flyouts hinzuweisen.
 
-The flyout is shown when the button of an active tool is selected again. When the color or size is changed, the flyout is automatically dismissed and inking can be resumed. Custom pens and tools can use the default flyout or specify a custom flyout.
+Das Flyout wird angezeigt, wenn die Schaltfläche eines aktiven Tools erneut ausgewählt wird. Wenn die Farbe oder Größe geändert wird, wird das Flyout automatisch geschlossen, und die Freihandeingabe kann fortgesetzt werden. Für benutzerdefinierte Stifte und Tools kann das Standardflyoutmenü oder ein benutzerdefiniertes Flyoutmenü verwendet werden.
 
-The eraser also has a flyout that provides the **Erase All Ink** command.  
-![InkToolbar with eraser flyout invoked](images/ink-tools-erase-all-ink.png)
+Der Radierer verfügt ebenfalls über ein Flyout mit dem Befehl **Freihand vollständig löschen**.  
+![InkToolbar-Steuerelement mit aufgerufenem Radierer-Flyout](images/ink-tools-erase-all-ink.png)
 
- For information on customization and extensibility, check out [SimpleInk sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk).
+ Informationen zur Anpassung und Erweiterbarkeit finden Sie im [einfachen Freihandbeispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk).
 
-## Do's and don'ts
+## Empfohlene und nicht empfohlene Vorgehensweisen
 
-- The InkCanvas, and inking in general, is best experienced through an active pen. However, we recommend supporting inking with mouse and touch (including passive pen) input if required by your app.
-- Use an InkToolbar control with the InkCanvas to provide basic inking features and settings. Both the InkCanvas and InkToolbar can be programmatically customized.
-- The InkToolbar, and inking in general, is best experienced through an active pen. However, inking with mouse and touch can be supported if required by your app.
-- If supporting inking with touch input, we recommend using the ED5F icon from the Segoe MLD2 Assets font for the toggle button, with a “Touch writing” tooltip.
-- If using more than one InkCanvas, we recommend using a single InkToolbar to control inking across canvases.
-- For best performance, we recommend altering the default flyout rather than creating a custom one for both default and custom tools.
+- Das InkCanvas-Steuerelement und die Freihandeingabe im Allgemeinen bieten bei der Verwendung eines aktiven Stifts die beste Benutzerfreundlichkeit. Es wird jedoch empfohlen, die Freihandeingabe mit Maus- und Toucheingabe (einschließlich des passiven Stifts) zu unterstützen, wenn dies für Ihre App erforderlich ist.
+- Verwenden Sie ein InkToolbar-Steuerelement mit dem InkCanvas-Steuerelement, um grundlegende Freihandfeatures und -einstellungen bereitzustellen. Sowohl das InkCanvas- als auch das InkToolbar-Steuerelement können programmgesteuert angepasst werden.
+- Das InkToolbar-Steuerelement und die Freihandeingabe im Allgemeinen bieten bei der Verwendung eines aktiven Stifts die beste Benutzerfreundlichkeit. Die Freihandeingabe mit Maus- und Toucheingabe kann aber unterstützt werden, wenn dies für Ihre App erforderlich ist.
+- Wenn Sie die Freihandeingabe per Toucheingabe unterstützen, wird empfohlen, das Symbol ED5F aus der Schriftart „Segoe MLD2 Assets” für die Umschaltfläche mit einer QuickInfo „Schreiben durch Berühren” zu verwenden.
+- Wenn Sie mehrere InkCanvas-Steuerelemente verwenden, empfehlen wir die Verwendung eines einzelnen InkToolbar-Steuerelements zum Steuern der Freihandeingabe auf allen Canvas.
+- Für eine optimale Leistung empfehlen wir, das Standardflyout zu ändern, anstatt ein benutzerdefiniertes Flyoutmenü für standardmäßige und benutzerdefinierte Tools zu erstellen.
 
-## Get the samples
+## Beispiele herunterladen
 
-[SimpleInk sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk) demonstrates 8 scenarios around the customization and extensibility capabilities of the InkCanvas and InkToolbar controls. Each scenario provides basic guidance on common inking situations and control implementations.
+Im [einfachen Freihandbeispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk) werden acht Szenarien im Zusammenhang mit den Anpassungs- und Erweiterbarkeitsfunktionen der InkCanvas- und InkToolbar-Steuerelemente erläutert. Jedes Szenario bietet einen allgemeinen Überblick über gängige Situationen bei der Freihandeingabe und Steuerelementimplementierungen.
 
-For a more advanced inking sample, see [ComplexInk sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk).
+Erweiterte Szenarien finden Sie im [komplexen Freihandbeispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk).
 
-## Related articles
+## Verwandte Artikel
 
-- [Pen and stylus interactions in UWP apps](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/)
-- [Recognize ink strokes](http://windowsstyleguide/input-and-devices/convert-ink-to-text/)
-- [Store and retrieve ink strokes](http://windowsstyleguide/input-and-devices/save-and-load-ink/)
+- [Zeichen- und Eingabestiftinteraktionen in UWP-Apps](http://windowsstyleguide/input-and-devices/pen-and-stylus-interactions/)
+- [Erkennen von Freihandstrichen](http://windowsstyleguide/input-and-devices/convert-ink-to-text/)
+- [Speichern und Abrufen von Freihandstrichen](http://windowsstyleguide/input-and-devices/save-and-load-ink/)
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

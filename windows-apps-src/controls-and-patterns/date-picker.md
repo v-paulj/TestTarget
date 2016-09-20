@@ -6,7 +6,6 @@ ms.assetid: d4a01425-4dee-4de3-9a05-3e85c3fc03cb
 isNew: true
 label: Date picker
 template: detail.hbs
-translationtype: Human Translation
 ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
 ms.openlocfilehash: c237d4bc013ad0a1d0d16f695f4332a6aac7efdc
 
@@ -49,7 +48,8 @@ Die fertige Datumsauswahl sieht wie folgt aus:
 
 ![Beispiel für eine Datumsauswahl](images/date-picker-closed.png)
 
-> **Hinweis**
+> 
+            **Hinweis**
             &nbsp;&nbsp;Wichtige Informationen zu Datumswerten finden Sie im Artikel zu Datums- und Uhrzeitsteuerelementen unter [DateTime- und Calendar-Werte](date-and-time.md#datetime-and-calendar-values).
 
 

@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 3aeddb83-5314-447b-b294-9fc28273cd39
 description: "Erfahren Sie mehr über die Installation der Microsoft Advertising-Bibliotheken."
 title: Installieren der Microsoft Advertising-Bibliotheken
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 0951818ceaf3d96543f9f97ec6993d08fdaab2b8
 
@@ -13,13 +12,14 @@ ms.openlocfilehash: 0951818ceaf3d96543f9f97ec6993d08fdaab2b8
 # Installieren der Microsoft Advertising-Bibliotheken
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Die Microsoft Advertising-Bibliotheken für Windows-Apps sind im [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) enthalten. Dieses SDK ist eine Erweiterung von Visual Studio 2015 und Visual Studio 2013.
+Die Microsoft Advertising-Bibliotheken für Windows-Apps sind im [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) enthalten. Dieses SDK ist eine Erweiterung von Visual Studio2015 und Visual Studio2013.
 
 Installationsanweisungen finden Sie unter [Monetisierung Ihrer App und Kundengewinnung mit dem Microsoft Store Engagement and Monetization SDK](https://msdn.microsoft.com/windows/uwp/monetize/monetize-your-app-with-the-microsoft-store-engagement-and-monetization-sdk).
 
-> **Hinweis** Wenn Sie Windows 10 Anniversary SDK Preview Build 14295 oder höher mit Visual Studio 2015 installiert haben, müssen Sie auch die WinJS-Bibliothek installieren, wenn Sie einer JavaScript/HTML-App Anzeigen hinzufügen möchten. Diese Bibliothek war in den früheren Versionen von Windows SDK für Windows 10 enthalten. Ab Windows 10 Anniversary SDK Preview Build 14295 muss diese Bibliothek jedoch separat installiert werden. Informationen zur Installation von WinJS finden Sie unter [WinJS herunterladen](http://try.buildwinjs.com/download/GetWinJS/).
+> 
+            **Hinweis** Wenn Sie Windows 10 Anniversary SDK Preview Build14295 oder höher mit Visual Studio2015 installiert haben, müssen Sie auch die WinJS-Bibliothek installieren, wenn Sie einer JavaScript/HTML-App Anzeigen hinzufügen möchten. Diese Bibliothek war in den früheren Versionen von Windows SDK für Windows 10 enthalten. Ab Windows10 Anniversary SDK Preview Build 14295 muss diese Bibliothek jedoch separat installiert werden. Informationen zur Installation von WinJS finden Sie unter [WinJS herunterladen](http://try.buildwinjs.com/download/GetWinJS/).
 
 ## Bibliotheksnamen für Werbung und Anzeigenvermittlung
 
@@ -38,7 +38,8 @@ Bevor Sie eines der Anzeigensteuerelemente in Ihrem App-Code verwenden können, 
     </thead>
     <tbody>
     <tr>
-            <td rowspan="3">**AdControl** und **InterstitialAd** (XAML)</td>
+            <td rowspan="3">
+            **AdControl** und **InterstitialAd** (XAML)</td>
             <td>UWP</td>
             <td>Microsoft Advertising SDK für XAML</td>
             <td>10.0</td>
@@ -49,28 +50,30 @@ Bevor Sie eines der Anzeigensteuerelemente in Ihrem App-Code verwenden können, 
             <td>1.0</td>
         </tr>
         <tr>
-            <td>Windows Phone 8.1</td>
+            <td>WindowsPhone8.1</td>
             <td>Ad Mediator SDK für Windows Phone 8.1 XAML</td>
             <td>1.0</td>
         </tr>
     <tr>
-            <td rowspan="3">**AdControl** und **InterstitialAd** (JavaScript/HTML)</td>
+            <td rowspan="3">
+            **AdControl** und **InterstitialAd** (JavaScript/HTML)</td>
             <td>UWP</td>
             <td>Microsoft Advertising SDK für JavaScript</td>
             <td>10.0</td>
         </tr>
         <tr>
             <td>Windows 8.1</td>
-            <td>Microsoft Advertising SDK für Windows 8.1 Native (JS)</td>
+            <td>Microsoft Advertising SDK für Windows8.1 Native (JS)</td>
             <td>8.5</td>
         </tr>
         <tr>
-            <td>Windows Phone 8.1</td>
-            <td>Microsoft Advertising SDK für Windows Phone 8.1 Native (JS)</td>
+            <td>WindowsPhone8.1</td>
+            <td>Microsoft Advertising SDK für Windows Phone8.1 Native (JS)</td>
             <td>8.5</td>
         </tr>
     <tr>
-            <td rowspan="3">**AdMediatorControl** (nur XAML)</td>
+            <td rowspan="3">
+            **AdMediatorControl** (nur XAML)</td>
             <td>UWP</td>
             <td>Microsoft Advertising Universal SDK</td>
             <td>1.0</td>

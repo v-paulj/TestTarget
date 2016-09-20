@@ -3,7 +3,6 @@ author: Mtoepke
 title: "Beispiele für UWP auf Xbox One"
 description: "Beispiele und Bibliotheken, mit denen Sie großartige Xbox One- und TV-Inhalte erstellen können."
 area: Xbox
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 6f38f5aabb6a409fab894bf7127ad4011162f7c6
 

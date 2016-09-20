@@ -1,21 +1,20 @@
 ---
 author: mcleanbyron
 ms.assetid: 3C03FDD8-FA61-4E7B-BDCA-3C29DFEA20E4
-description: "Befolgen Sie nach der Installation des Microsoft Store Engagement and Monetization SDK die Anweisungen in diesem Thema, um das Ad Mediator-Steuerelement in Ihrer App zu verwenden."
-title: "Hinzufügen und Verwenden des Ad Mediator-Steuerelements"
-translationtype: Human Translation
+description: Befolgen Sie nach der Installation des Microsoft Store Engagement and Monetization SDK die Anweisungen in diesem Thema, um das AdMediator-Steuerelement in Ihrer App zu verwenden.
+title: "Hinzufügen und Verwenden des AdMediator-Steuerelements"
 ms.sourcegitcommit: 8c3f1997427a7c3d4f4b4b7acc876a2a091e4553
 ms.openlocfilehash: a0d73b50207d251c079714265845a816f4ac23da
 
 ---
 
-# Hinzufügen und Verwenden des Ad Mediator-Steuerelements
+# Hinzufügen und Verwenden des AdMediator-Steuerelements
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
-Befolgen Sie nach der [Installation des Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) die Anweisungen in diesem Thema, um das Ad Mediator-Steuerelement in Ihrer App zu verwenden. Eine Liste der Anzeigennetzwerke und Projekttypen, die derzeit von der Anzeigenvermittlung unterstützt werden, finden Sie unter [Auswählen und Verwalten der Anzeigennetzwerke](select-and-manage-your-ad-networks.md).
+Befolgen Sie nach der [Installation des Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) die Anweisungen in diesem Thema, um das AdMediator-Steuerelement in Ihrer App zu verwenden. Eine Liste der Anzeigennetzwerke und Projekttypen, die derzeit von der Anzeigenvermittlung unterstützt werden, finden Sie unter [Auswählen und Verwalten der Anzeigennetzwerke](select-and-manage-your-ad-networks.md).
 
 ## Hinzufügen des Ad Mediator-Steuerelements zum Projekt
 
@@ -33,9 +32,10 @@ So fügen Sie Ihrem Projekt eine Instanz des Ad Mediator-Steuerelements hinzu:
     -   In einem Windows 8.1- oder Windows Phone 8.1-Projekt mit C# oder Visual Basic und XAML verwenden Sie das **AdMediatorControl**-Element unter dem Abschnitt **AdMediator**.
     -   In einem Windows Phone Silverlight-Projekt verwenden Sie das **AdMediatorControl**-Element unter dem Abschnitt **Alle Windows Phone-Steuerelemente**.
 
-    > **Hinweis**  Beim ersten Ziehen des **AdMediatorControl**-Steuerelements in den Designer in einem UWP-, Windows 8.1- oder Windows Phone 8.1-Projekt mit C# oder Visual Basic und XAML fügt Visual Studio Ihrem Projekt den erforderlichen Ad Mediator-Assemblyverweis hinzu, das Steuerelement wird dem Designer jedoch noch nicht hinzugefügt. Klicken Sie zum Hinzufügen des Steuerelements in der von Visual Studio angezeigten Meldung auf „OK“, warten dann einige Sekunden auf die Aktualisierung des Designers und ziehen das Steuerelement anschließend erneut in den Designer. Wenn Sie dem Designer das Steuerelement weiterhin nicht hinzufügen können, stellen Sie sicher, dass Ihr Projekt die geeignete Prozessorarchitektur für Ihre App aufweist (z. B. **X 86**) statt einer **beliebigen CPU**. Das Steuerelement kann dem Designer nicht hinzugefügt werden, wenn das Projekt für die Buildplattform auf eine **beliebige CPU** ausgerichtet ist.
+    > 
+            **Hinweis**  Beim ersten Ziehen des **AdMediatorControl**-Steuerelements in den Designer in einem UWP-, Windows 8.1- oder Windows Phone 8.1-Projekt mit C# oder Visual Basic und XAML fügt Visual Studio Ihrem Projekt den erforderlichen Ad Mediator-Assemblyverweis hinzu, das Steuerelement wird dem Designer jedoch noch nicht hinzugefügt. Klicken Sie zum Hinzufügen des Steuerelements in der von VisualStudio angezeigten Meldung auf „OK“, warten dann einige Sekunden auf die Aktualisierung des Designers und ziehen das Steuerelement anschließend erneut in den Designer. Wenn Sie dem Designer das Steuerelement weiterhin nicht hinzufügen können, stellen Sie sicher, dass Ihr Projekt die geeignete Prozessorarchitektur für Ihre App aufweist (z.B. **X 86**) statt einer **beliebigen CPU**. Das Steuerelement kann dem Designer nicht hinzugefügt werden, wenn das Projekt für die Buildplattform auf eine **beliebige CPU** ausgerichtet ist.
 
-5.  Visual Studio fügt einen Assemblyverweis für Ad Mediator zu Ihrem Projekt hinzu und fügt XAML für das Ad Mediator-Steuerelement auf der aktuellen Seite ein, u. a. eine eindeutige ID und einen Namen für das Steuerelement. Der Assemblyverweis und die XAML variieren je nach Zielplattform. Bei einer UWP (Universelle Windows-Plattform)-App lautet der Name der Assembly z. B. **Microsoft.AdMediator.Universal**, und die generierte XAML ähnelt dem folgenden Beispiel.
+5.  Visual Studio fügt einen Assemblyverweis für Ad Mediator zu Ihrem Projekt hinzu und fügt XAML für das Ad Mediator-Steuerelement auf der aktuellen Seite ein, u.a. eine eindeutige ID und einen Namen für das Steuerelement. Der Assemblyverweis und die XAML variieren je nach Zielplattform. Bei einer UWP (Universelle Windows-Plattform)-App lautet der Name der Assembly z. B. **Microsoft.AdMediator.Universal**, und die generierte XAML ähnelt dem folgenden Beispiel.
 
     ```xml
     // Code that gets added to the XAML page header
@@ -56,27 +56,31 @@ So fügen Sie Ihrem Projekt eine Instanz des Ad Mediator-Steuerelements hinzu:
 
 Nachdem Sie die gewünschten Steuerelemente hinzugefügt haben, können Sie die Anzeigennetzwerke über „Verbundene Dienste“ konfigurieren.
 
-> **Wichtig**  Wenn Sie später ein zusätzliches AdMediatorControl-Element hinzufügen, müssen Sie es erneut über „Verbundene Dienste“ konfigurieren. Andernfalls kann das neue Steuerelement die Anzeigenvermittlung nicht verwenden.
+> 
+            **Wichtig**  Wenn Sie später ein zusätzliches AdMediatorControl-Element hinzufügen, müssen Sie es erneut über „Verbundene Dienste“ konfigurieren. Andernfalls kann das neue Steuerelement die Anzeigenvermittlung nicht verwenden.
 
 So konfigurieren Sie die Anzeigennetzwerke
 
-1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Namen des Projekts, klicken Sie auf **Hinzufügen** und anschließend auf **Verbundener Dienst…**, um das Fenster **Verbundenen Dienst hinzufügen** (Visual Studio 2015) oder **Dienst-Manager** (Visual Studio 2013) zu öffnen.
+1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Namen des Projekts, klicken Sie auf **Hinzufügen** und anschließend auf **Verbundener Dienst…**, um das Fenster **Verbundenen Dienst hinzufügen** (Visual Studio2015) oder **Dienst-Manager** (Visual Studio2013) zu öffnen.
 2.  Wenn Sie Visual Studio 2015 verwenden, klicken Sie auf **Ad Mediator** und dann auf **Konfigurieren**, um das Fenster **Ad Mediator** zu öffnen. Wenn Sie Visual Studio 2013 verwenden, klicken Sie einfach auf **Ad Mediator** (im linken Bereich des **Dienste-Managers**).
 
     Die Datei „AdMediator.config“ wird dem Projekt hinzugefügt. In dieser Datei werden die anfänglichen Konfigurationseinstellungen für das Anzeigennetzwerk lokal in Ihrem Projekt gespeichert.
 
 3.  Klicken Sie im Fenster **Ad Mediator** (Visual Studio 2015) oder **Dienste-Manager** (Visual Studio 2013) auf **Anzeigennetzwerke auswählen**, wählen Sie dann die zu verwendenden Anzeigennetzwerke aus, und klicken Sie im Fenster **Anzeigennetzwerke auswählen** auf **OK**.
 
-    > **Tipp**  Fügen Sie am besten alle Netzwerke hinzu, für die Sie Konten besitzen, auch wenn Sie nicht alle sofort in Ihrer App verwenden möchten. Nachdem die App veröffentlicht wurde, können Sie konfigurieren, wie oft jedes Netzwerk in Dev Center verwendet wird (oder ein Netzwerk festlegen, das Sie zuvor noch nicht genutzt haben), ohne Codeänderungen vorzunehmen und die App erneut einzureichen.
+    > 
+            **Tipp**  Fügen Sie am besten alle Netzwerke hinzu, für die Sie Konten besitzen, auch wenn Sie nicht alle sofort in Ihrer App verwenden möchten. Nachdem die App veröffentlicht wurde, können Sie konfigurieren, wie oft jedes Netzwerk in Dev Center verwendet wird (oder ein Netzwerk festlegen, das Sie zuvor noch nicht genutzt haben), ohne Codeänderungen vorzunehmen und die App erneut einzureichen.
 
     Visual Studio ruft die erforderlichen Assemblys für die ausgewählten Anzeigennetzwerke ab und fügt diese Assemblyverweise zum Projekt hinzu. Nachdem dieser Vorgang abgeschlossen ist, klicken Sie im Dialogfenster zum **Abrufen des Status** auf **OK**.
 
 4.  Wählen Sie im Fenster **Ad Mediator** (Visual Studio 2015) oder **Dienste-Manager** (Visual Studio 2013) optional die einzelnen Netzwerke aus, und klicken Sie auf **Konfigurieren**, um die Konfigurationsinformationen für die einzelnen Netzwerke einzugeben, die beim Testen der App verwendet werden. Diese Informationen werden in der Datei „AdMediator.config“ in Ihrem Projekt gespeichert. Sie können diese Informationen ändern, wenn Sie im Windows Dev Center-Dashboard das Verhalten des Anzeigennetzwerks konfigurieren. Weitere Informationen finden Sie unter [Übermitteln der App und Konfigurieren der Anzeigenvermittlung](submit-your-app-and-configure-ad-mediation.md).
-    > **Hinweis**  Wenn Sie in diesem Schritt keine Konfigurationsinformationen eingeben, verwendet die Anzeigenvermittlung automatisch Testkonfigurationswerte, wenn Sie Ihre App auf dem Entwicklungscomputer (für UWP-Apps und XAML-Apps für Windows 8.1) oder im Emulator bzw. auf einem Gerät (für Windows Phone-Apps) ausführen.
+    > 
+            **Hinweis**  Wenn Sie in diesem Schritt keine Konfigurationsinformationen eingeben, verwendet die Anzeigenvermittlung automatisch Testkonfigurationswerte, wenn Sie Ihre App auf dem Entwicklungscomputer (für UWP-Apps und XAML-Apps für Windows 8.1) oder im Emulator bzw. auf einem Gerät (für Windows Phone-Apps) ausführen.
 
 5.  Überprüfen Sie im Fenster **Ad Mediator** (Visual Studio 2015) oder **Dienste-Manager** (Visual Studio 2013), ob für jedes von Ihnen ausgewählte Anzeigennetzwerk **Abgerufen** angezeigt wird. Klicken Sie auf **OK**, um die Änderungen an Ihr Projekt zu übermitteln.
 
-> **Hinweis**  Wenn Sie später ein Upgrade auf eine neuere Version des Microsoft Store Engagement and Monetization SDK durchführen, müssen Sie **Verbundene Dienste** neu starten, damit automatisch abgerufene DLL-Dateien des Anzeigennetzwerks ordnungsgemäß aktualisiert werden.
+> 
+            **Hinweis**  Wenn Sie später ein Upgrade auf eine neuere Version des Microsoft Store Engagement and Monetization SDK durchführen, müssen Sie **Verbundene Dienste** neu starten, damit automatisch abgerufene DLL-Dateien des Anzeigennetzwerks ordnungsgemäß aktualisiert werden.
 
 ### Deklarieren der erforderlichen Funktionen
 
@@ -93,7 +97,8 @@ Der folgende Screenshot zeigt die erforderlichen Funktionen für verschiedene An
 
 Unter Umständen sehen Sie, dass bestimmte DLL-Dateien nicht abgerufen wurden. In diesem Fall müssen Sie diese manuell hinzufügen. Links zum Herunterladen einzelner Assemblys finden Sie unter [Auswählen und Verwalten von Anzeigennetzwerken](select-and-manage-your-ad-networks.md).
 
-> **Hinweis**  Wenn Sie DLL-Dateien manuell hinzufügen, erhalten Sie möglicherweise die Fehlermeldung „Dem Projekt kann kein Verweis auf eine höhere Version oder inkompatible Assembly hinzugefügt werden." Klicken Sie zum Beheben dieses Fehlers mit der rechten Maustaste auf die DLL-Datei im Explorer, und wählen Sie dann **Eigenschaften**. Klicken Sie im Abschnitt „Sicherheit“ auf **Aufheben**.
+> 
+            **Hinweis**  Wenn Sie DLL-Dateien manuell hinzufügen, erhalten Sie möglicherweise die Fehlermeldung „Dem Projekt kann kein Verweis auf eine höhere Version oder inkompatible Assembly hinzugefügt werden." Klicken Sie zum Beheben dieses Fehlers mit der rechten Maustaste auf die DLL-Datei im Explorer, und wählen Sie dann **Eigenschaften**. Klicken Sie im Abschnitt „Sicherheit“ auf **Aufheben**.
 
 ![Schaltfläche „Aufheben“ zum Beheben der Fehlermeldung](images/ad-med-4.png)
 ## Anpassen der Größe und Position
@@ -122,22 +127,22 @@ myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.MicrosoftAdvertising]["Ve
 
 ### Unterstützte Anzeigengrößen für Microsoft Advertising
 
-Microsoft Advertising unterstützt nur Anzeigen in den folgenden Standardgrößen. Diese werden vom Interactive Advertising Bureau (IAB) für Apps empfohlen, die auf den Plattformen ausgeführt werden.
+MicrosoftAdvertising unterstützt nur Anzeigen in den folgenden Standardgrößen. Diese werden vom Interactive Advertising Bureau (IAB) für Apps empfohlen, die auf den Plattformen ausgeführt werden.
 
 -   Windows 10 und Windows 8.1:
-    -   160 x 600
-    -   300 x 250
-    -   300 x 600
-    -   728 x 90
+    -   160x600
+    -   300x250
+    -   300x600
+    -   728x90
 -   Windows 10 Mobile, Windows Phone 8.1 und Windows Phone 8:
-    -   300 x 50
-    -   320 x 50
-    -   480 x 80 (Diese Größe wird nur für Windows Phone Silverlight unterstützt.)
-    -   640 x 100
+    -   300x50
+    -   320x50
+    -   480x80 (Diese Größe wird nur für Windows Phone Silverlight unterstützt.)
+    -   640x100
 
-Möglicherweise möchten Sie eine Ad Mediator-Steuerelementgröße angeben, die keiner der von Microsoft Advertising unterstützten Anzeigengrößen entspricht (etwa, wenn eine andere Größe besser zur Benutzeroberfläche Ihrer App passt oder wenn das Steuerelement auch in anderen Anzeigennetzwerken verwendet werden soll, die andere Anzeigengrößen unterstützen). Hierzu geben Sie die genaue gewünschte Steuerelementgröße im Designer oder im XAML-Code an und weisen dann die optionalen Parameter **Breite** und **Höhe** für Microsoft Advertising der unterstützten Größe zu, die am ehesten in die Grenzen des Steuerelements passt. Das Steuerelement wird im Designer mit der angegebenen genauen Größe angezeigt, aber die von Microsoft Advertising geschalteten Anzeigen entsprechen der angegebenen Größe mit den optionalen Parametern **Breite** und **Höhe**.
+Möglicherweise möchten Sie eine AdMediator-Steuerelementgröße angeben, die keiner der von Microsoft Advertising unterstützten Anzeigengrößen entspricht (etwa, wenn eine andere Größe besser zur Benutzeroberfläche Ihrer App passt oder wenn das Steuerelement auch in anderen Anzeigennetzwerken verwendet werden soll, die andere Anzeigengrößen unterstützen). Hierzu geben Sie die genaue gewünschte Steuerelementgröße im Designer oder im XAML-Code an und weisen dann die optionalen Parameter **Breite** und **Höhe** für Microsoft Advertising der unterstützten Größe zu, die am ehesten in die Grenzen des Steuerelements passt. Das Steuerelement wird im Designer mit der angegebenen genauen Größe angezeigt, aber die von Microsoft Advertising geschalteten Anzeigen entsprechen der angegebenen Größe mit den optionalen Parametern **Breite** und **Höhe**.
 
-Beispiel: Wenn bei einer UWP-App das Ad Mediator-Steuerelement mit einer Größe von 300 x 300 angezeigt werden soll, legen Sie das Steuerelement im Designer oder im XAML-Code auf 300 x 300 fest. Weisen Sie anschließend den optionalen Parameter **Breite** mit 300 und den optionalen Parameter **Höhe** mit 250 für Microsoft Advertising zu, wie im folgenden Code dargestellt.
+Beispiel: Wenn bei einer UWP-App das Ad Mediator-Steuerelement mit einer Größe von 300x300 angezeigt werden soll, legen Sie das Steuerelement im Designer oder im XAML-Code auf 300x300 fest. Weisen Sie anschließend den optionalen Parameter **Breite** mit300 und den optionalen Parameter **Höhe** mit250 für Microsoft Advertising zu, wie im folgenden Code dargestellt.
 
 ```CSharp
 myAdMediatorControl.AdSdkOptionalParameters[AdSdkNames.MicrosoftAdvertising]["Width"] = 300;
@@ -154,7 +159,7 @@ Wenden Sie die AdMediatorControl.Disable()-Methode an, um den Ad Mediator vollst
 
 ## Festlegen von Timeouts
 
-Sie können die Anzahl der Sekunden (von 2 bis 60) angeben, für die die Anzeigenvermittlung nach dem Anfordern einer Anzeige aus diesem Anzeigennetzwerk warten soll, bevor die Anfrage abgebrochen und eine Anfrage bei einem anderen Netzwerk gestellt wird. Standardmäßig beträgt das Timeout für alle Werbenetzwerke 15 Sekunden.
+Sie können die Anzahl der Sekunden (von 2 bis 60) angeben, für die die Anzeigenvermittlung nach dem Anfordern einer Anzeige aus diesem Anzeigennetzwerk warten soll, bevor die Anfrage abgebrochen und eine Anfrage bei einem anderen Netzwerk gestellt wird. Standardmäßig beträgt das Timeout für alle Werbenetzwerke 15Sekunden.
 
 Der folgende Code veranschaulicht, wie eine Timeoutdauer für Microsoft Advertising festgelegt wird. Sie können die Dauer und Netzwerke bei Bedarf ändern.
 
@@ -162,7 +167,8 @@ Der folgende Code veranschaulicht, wie eine Timeoutdauer für Microsoft Advertis
 myAdMediatorControl.AdSdkTimeouts[AdSdkNames.MicrosoftAdvertising] = TimeSpan.FromSeconds(10);
 ```
 
-> **Hinweis**  Alternativ können Sie den Timeoutwert auf der Seite **Gewinnbringende Nutzung mit Anzeigen** im Dev Center-Dashboard festlegen. Wenn Sie das Timeout im Code und im Dashboard festgelegt haben, überschreibt der im Code angegebene Wert den Dashboardwert.
+> 
+            **Hinweis**  Alternativ können Sie den Timeoutwert auf der Seite **Gewinnbringende Nutzung mit Anzeigen** im Dev Center-Dashboard festlegen. Wenn Sie das Timeout im Code und im Dashboard festgelegt haben, überschreibt der im Code angegebene Wert den Dashboardwert.
 
 ## Ereignishandling
 
@@ -202,7 +208,8 @@ void AdMediator_Bottom_AdError(object sender, Microsoft.AdMediator.Core.Events.A
 
 ## Behandeln von unbehandelten Ausnahmen von Anzeigennetzwerken
 
-> **Hinweis**  Beim Testen haben wir eine Reihe von unbehandelten Ausnahmen von bestimmten Anzeigennetzwerken identifiziert, die innerhalb der App gelöst werden müssen, um App-Abstürze zu vermeiden. Wir empfehlen dringend, das folgende Codebeispiel zu kopieren und in die Datei „App.Xaml.cs“ einzufügen.
+> 
+            **Hinweis**  Beim Testen haben wir eine Reihe von unbehandelten Ausnahmen von bestimmten Anzeigennetzwerken identifiziert, die innerhalb der App gelöst werden müssen, um App-Abstürze zu vermeiden. Wir empfehlen dringend, das folgende Codebeispiel zu kopieren und in die Datei „App.Xaml.cs“ einzufügen.
 
 Code für eine UWP-, Windows 8.1- oder Windows Phone-App mit C# und XAML
 

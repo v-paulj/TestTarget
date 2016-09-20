@@ -5,13 +5,13 @@ title: XAML-Namescopes
 ms.assetid: EB060CBD-A589-475E-B83D-B24068B54C21
 translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: b8b833f40bc38799acc8813d38ddea63426f05b3
+ms.openlocfilehash: 34ef0bf246abe49a5e19adef66bddda7004a3441
 
 ---
 
 # XAML-Namescopes
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Ein *XAML-NameScope* speichert Beziehungen zwischen den definierten XAML-Namen von Objekten und ihren entsprechenden Instanzen. Dies ist vergleichbar mit der weiteren Bedeutung des Begriffs *NameScope* in anderen Programmiersprachen und Technologien.
 
@@ -87,6 +87,6 @@ Wegen der separaten XAML-NameScopes erfordert die Suche nach benannten Elementen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

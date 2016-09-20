@@ -3,7 +3,6 @@ author: TylerMSFT
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: Zugriff auf Inhalte in der Heimnetzgruppe
 description: "Greifen Sie auf Inhalte zu, die sich im Heimnetzgruppenordner des Benutzers befinden, einschließlich Bildern, Musik und Videos."
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
 
@@ -29,7 +28,8 @@ Greifen Sie auf Inhalte zu, die sich im Heimnetzgruppenordner des Benutzers befi
 
     Damit auf Heimnetzgruppeninhalte zugegriffen werden kann, muss auf dem Computer des Benutzers eine Heimnetzgruppe eingerichtet sein, und Ihre App muss mindestens eine der folgenden Funktionen unterstützen: **picturesLibrary**, **musicLibrary** oder **videosLibrary**. Wenn Ihre App auf den Heimnetzgruppenordner zugreift, sieht sie nur die Bibliotheken, die den im Manifest Ihrer App deklarierten Funktionen entsprechen. Weitere Informationen finden Sie unter [Berechtigungen für den Dateizugriff](file-access-permissions.md).
 
-    **Hinweis**  Inhalte der Dokumentbibliothek einer Heimnetzgruppe sind für Ihre App nicht sichtbar, unabhängig von den deklarierten Funktionen in ihrem Manifest und den Freigabeeinstellungen des Benutzers.
+    
+            **Hinweis**  Inhalte der Dokumentbibliothek einer Heimnetzgruppe sind für Ihre App nicht sichtbar, unabhängig von den deklarierten Funktionen in ihrem Manifest und den Freigabeeinstellungen des Benutzers.
 
      
 
@@ -190,7 +190,8 @@ Gehen Sie wie folgt vor, um Videoinhalte aus der Heimnetzgruppe zu streamen:
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **Öffnen Sie die Dateiauswahl des Benutzers für den Lesezugriff, und legen Sie den Dateidatenstrom als Quelle für das**
+3.  
+            **Öffnen Sie die Dateiauswahl des Benutzers für den Lesezugriff, und legen Sie den Dateidatenstrom als Quelle für das**
             [
               **MediaElement**
             ](https://msdn.microsoft.com/library/windows/apps/br242926) fest. Spielen Sie die Datei anschließend ab.

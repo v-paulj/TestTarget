@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
 description: "Erfahren Sie, wie Sie Ihrer App die Anwendungs-ID und die Anzeigeneinheits-ID aus dem Windows Dev Center-Dashboard hinzufügen, bevor Sie die App an den Store übermitteln."
 title: Einrichten von Anzeigeneinheiten in der App
-translationtype: Human Translation
 ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
 ms.openlocfilehash: 96c09de9321f67dc26cc3538f2655bd598f134f9
 
@@ -30,7 +29,8 @@ So richten Sie Anwendungs-ID und Anzeigeblöcke für die endgültige App ein:
 
     * Wenn Ihre App Video-Interstitialanzeigen anzeigt, übergeben Sie diese Werte an die **RequestAd**-Methode Ihres **InterstitialAd**-Objekts.
 
-> **Wichtig**   Wenn Ihre App die Anzeigenvermittlung zum Darstellen von Werbebannern aus Microsoft Advertising verwendet (also das **AdMediatorControl**-Objekt benutzt), müssen Sie keine Anzeigeneinheiten anfordern. In diesem Szenario werden Microsoft Advertising-Anzeigeneinheiten automatisch generiert. Weitere Informationen finden Sie unter [Was ist der Unterschied zwischen AdMediatorControl und AdControl?](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
+> 
+            **Wichtig**   Wenn Ihre App die Anzeigenvermittlung zum Darstellen von Werbebannern aus Microsoft Advertising verwendet (also das **AdMediatorControl**-Objekt benutzt), müssen Sie keine Anzeigeneinheiten anfordern. In diesem Szenario werden Microsoft Advertising-Anzeigeneinheiten automatisch generiert. Weitere Informationen finden Sie unter [Was ist der Unterschied zwischen AdMediatorControl und AdControl?](what-is-the-difference-admediatorcontrol-or-adcontrol.md).
 
  
 

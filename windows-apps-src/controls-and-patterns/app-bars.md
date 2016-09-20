@@ -3,23 +3,31 @@ author: Jwmsft
 label: App bars/command bars
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
-ms.openlocfilehash: c7107599529d5af5b118a46cb065106f08afe113
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 4ce59951387542124bcea1cbd0f636c0e44e0d1e
 
 ---
-
 # App-Leiste und Befehlsleiste
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Über Befehlsleisten (auch als „App-Leisten“ bezeichnet) können Benutzer komfortabel auf häufig verwendete Befehle in Ihrer App zugreifen und Befehle oder Optionen verwenden, die mit dem Kontext des Benutzers zusammenhängen (wie etwa Fotoauswahl oder Zeichnungsmodus). Sie können auch für die Navigation zwischen Seiten oder Abschnitten der App genutzt werden. Befehlsleisten können mit jedem Navigationsmuster verwendet werden.
 
 ![Beispiel für eine Befehlsleiste mit Symbolen](images/controls_appbar_icons.png)
 
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx"><strong>CommandBar</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx"><strong>AppBarButton</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx"><strong>AppBarToggleButton</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx"><strong>AppBarSeparator</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
--   [**CommandBar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.aspx)
--   [**AppBarButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarbutton.aspx)
--   [**AppBarToggleButton**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbartogglebutton.aspx)
--   [**AppBarSeparator**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.appbarseparator.aspx)
 
 ## Ist dies das richtige Steuerelement?
 
@@ -51,10 +59,7 @@ Dies ist die gleiche Befehlsleiste im geöffneten Zustand. Die Beschriftungen ze
 ![Geschlossene Befehlsleiste](images/commandbar_anatomy_open.png)
 
 Die Befehlsleiste ist in 4 Hauptbereiche unterteilt:
-- Die Schaltfläche für weitere Optionen (\[•••\]) wird rechts auf der Leiste angezeigt. Das Auswählen der Schaltfläche für weitere Optionen (\[•••\]) hat 2 Folgen: Die Beschriftungen auf den primären Befehlsschaltflächen werden eingeblendet, und das Überlaufmenü wird geöffnet, wenn sekundäre Befehle vorhanden sind. Im neuesten SDK wird die Schaltfläche nicht angezeigt, wenn keine sekundären Befehle oder ausgeblendeten Beschriftungen vorhanden sind. 
-            [
-              **OverflowButtonVisibility**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx) ermöglicht Apps, das Standardverhalten „Automatisch im Hintergrund“ zu ändern
+- Die Schaltfläche für weitere Optionen (\[•••\]) wird rechts auf der Leiste angezeigt. Das Auswählen der Schaltfläche für weitere Optionen (\[•••\]) hat 2 Folgen: Die Beschriftungen auf den primären Befehlsschaltflächen werden eingeblendet, und das Überlaufmenü wird geöffnet, wenn sekundäre Befehle vorhanden sind. Im neuesten SDK wird die Schaltfläche nicht angezeigt, wenn keine sekundären Befehle oder ausgeblendeten Beschriftungen vorhanden sind. Die [**OverflowButtonVisibility**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility.aspx)-Eigenschaft ermöglicht es Apps, das Standardverhalten für „Automatisch im Hintergrund“ zu ändern.
 - Der Inhaltsbereich wird an der linken Seite der Leiste ausgerichtet. Er wird angezeigt, wenn die [**Content**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.contentcontrol.content.aspx)-Eigenschaft gefüllt wird.
 - Der Bereich für primäre Befehle wird an der rechten Seite der Leiste ausgerichtet, neben der Schaltfläche für weitere Optionen (\[•••\]). Er wird angezeigt, wenn die [**PrimaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.primarycommands.aspx)-Eigenschaft gefüllt wird.  
 - Das Überlaufmenü wird nur angezeigt, wenn die Befehlsleiste geöffnet ist und die [**SecondaryCommands**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.commandbar.secondarycommands.aspx)-Eigenschaft gefüllt ist. Das neue dynamische Überlaufverhalten verschiebt primäre Befehle automatisch in den SecondaryCommands-Bereich, wenn der Platz begrenzt ist.
@@ -185,12 +190,9 @@ private void CommandBar_Closing(object sender, object e)
 ### ClosedDisplayMode
 
 Sie können steuern, wie die Befehlsleiste im geschlossenen Zustand angezeigt wird, indem Sie die [**ClosedDisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbar.closeddisplaymode.aspx)-Eigenschaft festlegen. Sie können aus drei Anzeigemodi für den geschlossenen Zustand auswählen:
-- 
-            **Kompakt**: Standardmodus. Hiermit werden der Inhalt, primäre Befehlssymbole ohne Beschriftungen und die Schaltfläche für weitere Optionen (\[•••\]) angezeigt.
-- 
-            **Minimal**: Hiermit wird nur eine dünne Leiste angezeigt, die als Schaltfläche für weitere Optionen (\[•••\]) fungiert. Der Benutzer kann auf eine beliebige Stelle auf der Leiste tippen, um sie zu öffnen.
-- 
-            **Ausgeblendet**: Die Befehlsleiste wird nicht angezeigt, wenn sie geschlossen ist. Dies kann hilfreich beim Anzeigen von Kontextbefehlen mit einer Inlinebefehlsleiste sein. In diesem Fall müssen Sie die Befehlsleiste programmgesteuert öffnen, indem Sie die **IsOpen**-Eigenschaft festlegen oder ClosedDisplayMode auf **Minimal** oder **Compact** festlegen.
+- **Kompakt**: Standardmodus. Hiermit werden der Inhalt, primäre Befehlssymbole ohne Beschriftungen und die Schaltfläche für weitere Optionen (\[•••\]) angezeigt.
+- **Minimal**: Hiermit wird nur eine dünne Leiste angezeigt, die als Schaltfläche für weitere Optionen (\[•••\]) fungiert. Der Benutzer kann auf eine beliebige Stelle auf der Leiste tippen, um sie zu öffnen.
+- **Ausgeblendet**: Die Befehlsleiste wird nicht angezeigt, wenn sie geschlossen ist. Dies kann hilfreich beim Anzeigen von Kontextbefehlen mit einer Inlinebefehlsleiste sein. In diesem Fall müssen Sie die Befehlsleiste programmgesteuert öffnen, indem Sie die **IsOpen**-Eigenschaft festlegen oder ClosedDisplayMode auf **Minimal** oder **Compact** festlegen.
 
 Hier enthält eine Befehlsleiste einfache Formatierungsbefehle für eine [RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx). Wenn das Bearbeitungsfeld nicht den Fokus besitzt, können die Formatierungsbefehle störend sein, daher werden sie ausgeblendet. Wenn das Bearbeitungsfeld verwendet wird, wird ClosedDisplayMode für die Befehlsleiste in „Compact“ geändert, sodass die Formatierungsbefehle angezeigt werden.
 
@@ -219,9 +221,7 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 }
 ```
 
->
-            **Hinweis**
-            &nbsp;&nbsp;Die Implementierung von Bearbeitungsbefehlen sprengt den Umfang dieses Beispiels. Weitere Informationen finden Sie im Artikel zu [RichEditBox](rich-edit-box.md).
+>**Hinweis**&nbsp;&nbsp;Die Implementierung von Bearbeitungsbefehlen geht über den Rahmen dieses Beispiels hinaus. Weitere Informationen finden Sie im Artikel zu [RichEditBox](rich-edit-box.md).
 
 Auch wenn die Modi „Minimal“ und „Hidden“ in einigen Situationen nützlich sind, beachten Sie, dass es für die Benutzer verwirrend sein kann, wenn alle Aktionen ausgeblendet werden.
 
@@ -247,8 +247,7 @@ Befehlsleisten können auf Bildschirmen mit einzelner Ansicht (linkes Beispiel) 
 
 ![Beispiel2 für die Platzierung der App-Leiste](images/AppbarGuidelines_Placement2.png)
 
->
-            **Fingereingabegeräte**: Wenn die Befehlsleiste für den Benutzer sichtbar bleiben muss, wenn die Bildschirmtastatur (oder ein Soft Input Panel, SIP) angezeigt wird, können Sie die Befehlsleiste der [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx)-Eigenschaft einer Seite zuordnen. Sie wird dann verschoben und bleibt sichtbar, wenn die Bildschirmtastatur eingeblendet ist. Andernfalls müssen Sie die Befehlsleiste inline relativ zum App-Inhalt platzieren.
+>**Fingereingabegeräte**: Wenn die Befehlsleiste für den Benutzer sichtbar bleiben muss, während die Bildschirmtastatur (oder ein Soft Input Panel, SIP) angezeigt wird, können Sie die Befehlsleiste der [BottomAppBar](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.bottomappbar.aspx)-Eigenschaft einer Seite zuweisen. Sie wird dann verschoben und bleibt sichtbar, wenn die Bildschirmtastatur eingeblendet ist. Andernfalls müssen Sie die Befehlsleiste inline relativ zum App-Inhalt platzieren.
 
 ### Aktionen
 
@@ -288,24 +287,14 @@ Ziehen Sie logische Gruppierungen für die Befehle in Erwägung. Platzieren Sie 
 
 ## Verwandte Artikel
 
+**Für Designer**
+[Befehlsdesigngrundlagen für UWP-Apps](../layout/commanding-basics.md)
 
-            **Für Designer**
-            
-          
-            [Befehlsdesigngrundlagen für UWP-Apps](../layout/commanding-basics.md)
-          
-
-
-            **Für Entwickler (XAML)**
-            
-          
-            [
-              **CommandBar**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279427)
-          
+**Für Entwickler (XAML)**
+[**CommandBar**](https://msdn.microsoft.com/library/windows/apps/dn279427)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

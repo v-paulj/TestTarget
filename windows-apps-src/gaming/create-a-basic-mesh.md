@@ -3,7 +3,6 @@ author: mtoepke
 title: Erstellen und Anzeigen einfacher Gitter
 description: "In 3D-Spielen für die universelle Windows-Plattform (UWP) werden Spielobjekte und Oberflächen in der Regel durch Polygone dargestellt."
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada2
 
@@ -12,11 +11,12 @@ ms.openlocfilehash: c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada2
 # Erstellen und Anzeigen einfacher Gitter
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In 3D-Spielen für die universelle Windows-Plattform (UWP) werden Spielobjekte und Oberflächen in der Regel durch Polygone dargestellt. Die Liste der Vertizes, die die Struktur dieser polygonalen Objekte und Oberflächen darstellen, werden als Gitter bezeichnet. Hier erstellen wir ein einfaches Gitter für ein Würfelobjekt und stellen es zum Rendern und Anzeigen für die Shader-Pipeline bereit.
 
-> **Wichtig:** Der hier enthaltene Beispielcode verwendet Typen (wie etwa „DirectX::XMFLOAT3“ und „DirectX::XMFLOAT4X4“) und Inlinemethoden, die in „DirectXMath.h“ deklariert werden. Wenn Sie diesen Code ausschneiden und einfügen, nehmen Sie auch &lt;DirectXMath.h&gt; in Ihr Projekt auf.
+> 
+            **Wichtig:**  Der hier enthaltene Beispielcode verwendet Typen (wie etwa „DirectX::XMFLOAT3“ und „DirectX::XMFLOAT4X4“) und Inlinemethoden, die in „DirectXMath.h“ deklariert werden. Wenn Sie diesen Code ausschneiden und einfügen, nehmen Sie auch &lt;DirectXMath.h&gt; in Ihr Projekt auf.
 
  
 
@@ -30,11 +30,11 @@ In 3D-Spielen für die universelle Windows-Plattform (UWP) werden Spielobjekte u
 ### Voraussetzungen
 
 -   Grundkenntnisse in linearer Algebra und 3D-Koordinatensystemen
--   Visual Studio 2015-Direct3D-Vorlage
+-   Visual Studio2015-Direct3D-Vorlage
 
 ## Anweisungen
 
-### Schritt 1: Konstruieren des Gitters für das Modell
+### Schritt1: Konstruieren des Gitters für das Modell
 
 In den meisten Spielen wird das Gitter für ein Spielobjekt aus einer Datei geladen, die die spezifischen Vertexdaten enthält. Die Reihenfolge dieser Vertizes ist App-abhängig, in der Regel werden sie jedoch ketten- oder fächerförmig serialisiert. Vertexdaten können aus einer beliebigen Softwarequelle stammen oder manuell erstellt werden. Die Daten müssen vom Spiel so interpretiert werden, dass sie vom Vertex-Shader effektiv verarbeitet werden können.
 
@@ -63,7 +63,7 @@ Bei jedem in Klammern gesetzten Paar gibt die zweite DirectX::XMFLOAT3-Wertgrupp
 
 Daraus ergeben sich acht Vertizes mit jeweils einer bestimmten Farbe. Jedes Paar aus Vertex und Farbe stellt die vollständigen Daten für einen Vertex in unserem Beispiel dar. Wenn Sie den Vertexpuffer angeben, müssen Sie dabei dieses spezielle Layout berücksichtigen. Dieses Eingabelayout wird dem Vertex-Shader zur Verfügung gestellt, damit er die Vertexdaten interpretieren kann.
 
-### Schritt 2: Einrichten des Eingabelayouts
+### Schritt2: Einrichten des Eingabelayouts
 
 Nun befinden sich die Vertizes im Speicher. Ihr Grafikgerät besitzt jedoch einen eigenen Speicher, auf den Sie mithilfe von Direct3D zugreifen. Um die Vertexdaten zur Verarbeitung an das Grafikgerät zu übergeben, müssen Sie den Weg dazu ebnen. Das bedeutet: Sie müssen deklarieren, wie die Vertexdaten angeordnet sind, sodass sie vom Grafikgerät interpretiert werden können, wenn sie vom Spiel an das Gerät übergeben werden. Verwenden Sie dazu [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575).
 
@@ -88,25 +88,28 @@ m_d3dDevice->CreateInputLayout(
 
 In diesem Code geben Sie ein Layout für die Vertizes an – genauer gesagt: welche Daten die einzelnen Elemente in der Vertexliste enthalten. In **basicVertexLayoutDesc** geben Sie zwei Datenkomponenten an:
 
--   **POSITION**: Eine HLSL-Semantik für Positionsdaten, die für einen Shader bereitgestellt werden. In diesem Code ist dies ein DirectX::XMFLOAT3-Wert, oder genauer ausgedrückt, eine Struktur mit drei 32-Bit-Gleitkommazahlen, die einem 3D-Koordinatensystem (X, Y, Z) entsprechen. Sie könnten aber auch einen float4-Wert verwenden, wenn Sie die homogene W-Koordinate angeben. In diesem Fall müssten Sie dann „DXGI\_FORMAT\_R32G32B32A32\_FLOAT“ angeben. Ob Sie einen DirectX::XMFLOAT3- oder einen float4-Wert verwenden, ist von den speziellen Anforderungen Ihres Spiels abhängig. Stellen Sie lediglich sicher, dass die Vertexdaten für Ihr Gitter dem verwendeten Format entsprechen.
+-   
+            **POSITION**: Eine HLSL-Semantik für Positionsdaten, die für einen Shader bereitgestellt werden. In diesem Code ist dies ein DirectX::XMFLOAT3-Wert, oder genauer ausgedrückt, eine Struktur mit drei 32-Bit-Gleitkommazahlen, die einem 3D-Koordinatensystem (X, Y, Z) entsprechen. Sie könnten aber auch einen float4-Wert verwenden, wenn Sie die homogene W-Koordinate angeben. In diesem Fall müssten Sie dann „DXGI\_FORMAT\_R32G32B32A32\_FLOAT“ angeben. Ob Sie einen DirectX::XMFLOAT3- oder einen float4-Wert verwenden, ist von den speziellen Anforderungen Ihres Spiels abhängig. Stellen Sie lediglich sicher, dass die Vertexdaten für Ihr Gitter dem verwendeten Format entsprechen.
 
     Jeder Koordinatenwert wird als Gleitkommawert zwischen -1 und 1 im Koordinatenbereich des Objekts ausgedrückt. Nach Abschluss des Vertex-Shaders befindet sich der transformierte Vertex im homogenen (korrigierte Perspektive) Anzeigeprojektionsbereich.
 
     „Aber der Enumerationswert gibt RGB und nicht XYZ an!“, wie Sie völlig zu Recht bemerkt haben. Gut aufgepasst! Sowohl für Farbdaten als auch für Koordinatendaten verwenden Sie in der Regel drei oder vier Komponentenwerte. Warum kann also nicht dasselbe Formate für beide verwendet werden? Nicht der Formatname, sondern die HLSL-Semantik gibt an, wie der Shader die Daten behandelt.
 
--   **COLOR**: Eine HLSL-Semantik für Farbdaten. Genau wie **POSITION** besteht auch sie aus drei 32-Bit-Gleitkommawerten (DirectX::XMFLOAT3). Jeder Wert enthält eine Farbkomponente: rot (r), blau (b) oder grün (g). Diese werden als Gleitkommazahl zwischen 0 und 1 ausgedrückt.
+-   
+            **COLOR**: Eine HLSL-Semantik für Farbdaten. Genau wie **POSITION** besteht auch sie aus drei 32-Bit-Gleitkommawerten (DirectX::XMFLOAT3). Jeder Wert enthält eine Farbkomponente: rot (r), blau (b) oder grün (g). Diese werden als Gleitkommazahl zwischen0 und1 ausgedrückt.
 
-    **COLOR**-Werte werden in der Regel als RGBA-Wert aus vier Komponenten am Ende der Shader-Pipeline zurückgegeben. In diesem Beispiel legen Sie in der Shader-Pipeline für alle Pixel den Alpha-Wert „A“ auf „1,0“ (maximale Deckkraft) fest.
+    
+            **COLOR**-Werte werden in der Regel als RGBA-Wert aus vier Komponenten am Ende der Shader-Pipeline zurückgegeben. In diesem Beispiel legen Sie in der Shader-Pipeline für alle Pixel den Alpha-Wert „A“ auf „1,0“ (maximale Deckkraft) fest.
 
 Die vollständige Formatliste finden Sie unter [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059). Die vollständige HLSL-Semantikliste finden Sie unter [Semantik](https://msdn.microsoft.com/library/windows/desktop/bb509647).
 
 Rufen Sie [**ID3D11Device::CreateInputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476512) auf, und erstellen Sie das Eingabelayout auf dem Direct3D-Gerät. Nun müssen Sie einen Puffer erstellen, der die Daten auch enthalten kann.
 
-### Schritt 3: Füllen des Vertexpuffers
+### Schritt3: Füllen des Vertexpuffers
 
 Vertexpuffer enthalten die Liste der Vertizes für alle Dreiecke im Gitter. Alle Vertizes müssen in dieser Liste eindeutig sein. In unserem Beispiel sind acht Vertizes für den Würfel vorhanden. Der Vertex-Shader wird auf dem Grafikgerät ausgeführt. Er liest aus dem Vertexpuffer und interpretiert die Daten basierend auf dem im vorherigen Schritt angegebenen Eingabelayout.
 
-Im nächsten Beispiel geben Sie eine Beschreibung und eine Unterressource für den Puffer an. Diese beiden Elemente teilen Direct3D verschiedene Informationen zur physischen Zuordnung der Vertexdaten und zu ihrer Behandlung im Speicher des Grafikgeräts mit. Das ist erforderlich, weil Sie einen generischen [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) verwenden, der alles Mögliche enthalten kann. Die [**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)- und die [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)-Struktur werden bereitgestellt, um sicherzustellen, dass Direct3D das Layout des physischen Speichers des Puffers versteht. Hierzu zählen u. a. die Größe der einzelnen Vertexelemente im Puffer sowie die maximale Größe der Vertexliste. Darüber hinaus können Sie hier den Zugriff auf den Pufferspeicher und seinen Durchlauf steuern. Dies ist jedoch nicht Teil dieses Lernprogramms.
+Im nächsten Beispiel geben Sie eine Beschreibung und eine Unterressource für den Puffer an. Diese beiden Elemente teilen Direct3D verschiedene Informationen zur physischen Zuordnung der Vertexdaten und zu ihrer Behandlung im Speicher des Grafikgeräts mit. Das ist erforderlich, weil Sie einen generischen [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) verwenden, der alles Mögliche enthalten kann. Die [**D3D11\_BUFFER\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476092)- und die [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)-Struktur werden bereitgestellt, um sicherzustellen, dass Direct3D das Layout des physischen Speichers des Puffers versteht. Hierzu zählen u.a. die Größe der einzelnen Vertexelemente im Puffer sowie die maximale Größe der Vertexliste. Darüber hinaus können Sie hier den Zugriff auf den Pufferspeicher und seinen Durchlauf steuern. Dies ist jedoch nicht Teil dieses Lernprogramms.
 
 Nach dem Konfigurieren des Puffers rufen Sie [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) auf, um ihn zu erstellen. Bei mehreren Objekten müssen Sie natürlich Puffer für jedes einzelne Modell erstellen.
 
@@ -135,22 +138,22 @@ m_d3dDevice->CreateBuffer(
 
 Die Vertizes werden geladen. Aber in welcher Reihenfolge werden diese Vertizes verarbeitet? Dies wird festgelegt, wenn Sie für die Vertizes eine Liste mit den Indizes angeben. Die Reihenfolge dieser Indizes ist die Reihenfolge, in der sie vom Vertex-Shader verarbeitet werden.
 
-### Schritt 4: Füllen der Indexpuffer
+### Schritt4: Füllen der Indexpuffer
 
 Nun geben Sie eine Liste mit den Indizes für die einzelnen Vertizes an. Diese Indizes entsprechen der Position des Vertex im Vertexpuffer und beginnen mit 0. Stellen Sie sich zur besseren Veranschaulichung einfach vor, dass jedem eindeutigen Vertex in Ihrem Gitter eine eindeutige Zahl (wie eine ID) zugeordnet ist. Diese ID ist die ganzzahlige Position des Vertex im Vertexpuffer.
 
 ![Ein Würfel mit acht nummerierten Vertizes](images/cube-mesh-1.png)
 
-Unser Beispielwürfel besitzt acht Vertizes, die wiederum sechs Vierecke für die Seiten bilden. Wenn Sie die Vierecke in Dreiecke teilen, entstehen aus den acht Vertizes also insgesamt zwölf Dreiecke. Bei drei Vertizes pro Dreieck enthält der Indexpuffer 36 Einträge. In unserem Beispiel wird dieses Indexmuster als Dreiecksliste bezeichnet. Sie geben sie für Direct3D als **D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLELIST** an, wenn Sie die primitive Topologie festlegen.
+Unser Beispielwürfel besitzt acht Vertizes, die wiederum sechs Vierecke für die Seiten bilden. Wenn Sie die Vierecke in Dreiecke teilen, entstehen aus den acht Vertizes also insgesamt zwölfDreiecke. Bei drei Vertizes pro Dreieck enthält der Indexpuffer 36Einträge. In unserem Beispiel wird dieses Indexmuster als Dreiecksliste bezeichnet. Sie geben sie für Direct3D als **D3D11\_PRIMITIVE\_TOPOLOGY\_TRIANGLELIST** an, wenn Sie die primitive Topologie festlegen.
 
 Diese Art der Indexauflistung ist besonders ineffizient, da Dreiecke gemeinsame Punkte und Seiten besitzen und es so zu Redundanzen kommt. Teilt sich ein Dreieck also beispielsweise eine Seite mit einer Raute, werden für die vier Vertizes sechs Indizes aufgelistet:
 
 ![Reihenfolge der Indizes beim Konstruieren einer Raute](images/rhombus-surface-1.png)
 
--   Dreieck 1: \[0, 1, 2\]
--   Dreieck 2: \[0, 2, 3\]
+-   Dreieck1: \[0, 1, 2\]
+-   Dreieck2: \[0, 2, 3\]
 
-In einer ketten- oder fächerförmigen Topologie ordnen Sie die Vertizes so an, dass viele redundante Seiten beim Durchlaufen ausgeschlossen werden (z. B. die Seite von Index 0 zu Index 2 im Bild). Bei großen Gittern wird dadurch die Anzahl der Ausführungen des Vertex-Shaders deutlich reduziert und die Leistung erheblich gesteigert. Wir halten es hier jedoch einfach und verwenden die Dreiecksliste.
+In einer ketten- oder fächerförmigen Topologie ordnen Sie die Vertizes so an, dass viele redundante Seiten beim Durchlaufen ausgeschlossen werden (z.B. die Seite von Index0 zu Index2 im Bild). Bei großen Gittern wird dadurch die Anzahl der Ausführungen des Vertex-Shaders deutlich reduziert und die Leistung erheblich gesteigert. Wir halten es hier jedoch einfach und verwenden die Dreiecksliste.
 
 Deklarieren Sie die Indizes für den Vertexpuffer als eine einfache Dreieckslistentopologie.
 
@@ -175,17 +178,17 @@ unsigned short cubeIndices[] =
     0, 4, 7 };
 ```
 
-Bei 36 Indexelemente im Puffer für lediglich acht Vertizes ergibt sich ein hohes Maß an Redundanz. Wenn Sie einige Redundanzen ausschließen und einen anderen Vertexlistentyp (beispielsweise einen ketten- oder fächerförmigen Typ) verwenden möchten, müssen Sie diesen Typ angeben, wenn Sie einen bestimmten [**D3D11\_PRIMITIVE\_TOPOLOGY**](https://msdn.microsoft.com/library/windows/desktop/ff476189)-Wert für die [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455)-Methode angeben.
+Bei 36Indexelemente im Puffer für lediglich achtVertizes ergibt sich ein hohes Maß an Redundanz. Wenn Sie einige Redundanzen ausschließen und einen anderen Vertexlistentyp (beispielsweise einen ketten- oder fächerförmigen Typ) verwenden möchten, müssen Sie diesen Typ angeben, wenn Sie einen bestimmten [**D3D11\_PRIMITIVE\_TOPOLOGY**](https://msdn.microsoft.com/library/windows/desktop/ff476189)-Wert für die [**ID3D11DeviceContext::IASetPrimitiveTopology**](https://msdn.microsoft.com/library/windows/desktop/ff476455)-Methode angeben.
 
 Weitere Informationen zu verschiedenen Indexlistentechniken finden Sie unter [Primitive Topologien](https://msdn.microsoft.com/library/windows/desktop/bb205124).
 
-### Schritt 5: Erstellen eines konstanten Puffers für die Transformationsmatrizen
+### Schritt5: Erstellen eines konstanten Puffers für die Transformationsmatrizen
 
 Bevor Sie mit der Verarbeitung von Vertizes beginnen können, müssen Sie die Transformationsmatrizen angeben, die bei der Ausführung auf alle Vertizes angewendet (multipliziert) werden. Die meisten 3D-Spielen enthalten drei Matrizen:
 
--   4 x 4-Matrix, die eine Transformation vom Koordinatensystem des Objekts (Modell) zum allgemeinen Weltkoordinatensystem ausführt
--   4 x 4-Matrix, die eine Transformation vom Weltkoordinatensystem zum Kamerakoordinatensystem (Ansicht) ausführt
--   4 x 4-Matrix, die eine Transformation vom Kamerakoordinatensystem zum Koordinatensystem der 2D-Anzeigeprojektion ausführt
+-   4x4-Matrix, die eine Transformation vom Koordinatensystem des Objekts (Modell) zum allgemeinen Weltkoordinatensystem ausführt
+-   4x4-Matrix, die eine Transformation vom Weltkoordinatensystem zum Kamerakoordinatensystem (Ansicht) ausführt
+-   4x4-Matrix, die eine Transformation vom Kamerakoordinatensystem zum Koordinatensystem der 2D-Anzeigeprojektion ausführt
 
 Diese Matrizen werden in einem *konstanten Puffer* an den Shader übergeben. Bei einem Konstantenpuffer handelt es sich um einen Bereich des Speichers, der während des nächsten Schritts der Shader-Pipeline konstant bleibt und auf den von den Shadern aus dem HLSL-Code direkt zugegriffen werden kann. Sie definieren die einzelnen konstanten Puffer zweimal: zuerst im C++-Code Ihres Spiels und (mindestens) einmal in der C-ähnlichen HLSL-Syntax für den Shadercode. Die beiden Deklarationen müssen in Bezug auf Typ und Datenausrichtung direkt übereinstimmen. Schwer auffindbare Fehler entstehen schnell, wenn der Shader die HLSL-Deklaration zum Interpretieren von in C++ deklarierten Daten verwendet und die Typen nicht übereinstimmen oder die Ausrichtung der Daten deaktiviert ist.
 
@@ -193,7 +196,8 @@ Konstante Puffer werden von der HLSL-Syntax nicht geändert. Sie können sie än
 
 Dieses Beispiel enthält nur eine Art von Daten, die sich nie ändern: die DirectX::XMFLOAT4X4-Daten für die drei Matrizen.
 
-> **Hinweis:** In dem hier dargestellten Beispielcode werden spaltenweise absteigende Matrizen (column-major) verwendet. Sie können stattdessen zeilenweise absteigende Matrizen (row-major) verwenden, indem Sie das **row\_major**-Schlüsselwort in HLSL angeben und sicherstellen, dass die Quellmatrixdaten ebenfalls zeilenweise absteigend angeordnet sind. „DirectXMath“ verwendet zeilenweise absteigende Matrizen und kann direkt mit HLSL-Matrizen verwendet werden, die mit dem **row\_major**-Schlüsselwort definiert werden.
+> 
+            **Hinweis:**  In dem hier dargestellten Beispielcode werden spaltenweise absteigende Matrizen (column-major) verwendet. Sie können stattdessen zeilenweise absteigende Matrizen (row-major) verwenden, indem Sie das **row\_major**-Schlüsselwort in HLSL angeben und sicherstellen, dass die Quellmatrixdaten ebenfalls zeilenweise absteigend angeordnet sind. „DirectXMath“ verwendet zeilenweise absteigende Matrizen und kann direkt mit HLSL-Matrizen verwendet werden, die mit dem **row\_major**-Schlüsselwort definiert werden.
 
  
 
@@ -245,7 +249,8 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> **Hinweis:**  In der Regel deklarieren Sie die Projektionsmatrix beim Einrichten gerätespezifischer Ressourcen, da die Multiplikationsergebnisse mit den aktuellen 2D-Viewportgrößenparametern (die häufig der Pixelhöhe und -breite der Anzeige entsprechen) übereinstimmen müssen. Ändern sich diese, müssen Sie die Werte für die X- und die Y-Koordinate entsprechend skalieren.
+> 
+            **Hinweis:**  In der Regel deklarieren Sie die Projektionsmatrix beim Einrichten gerätespezifischer Ressourcen, da die Multiplikationsergebnisse mit den aktuellen 2D-Viewportgrößenparametern (die häufig der Pixelhöhe und -breite der Anzeige entsprechen) übereinstimmen müssen. Ändern sich diese, müssen Sie die Werte für die X- und die Y-Koordinate entsprechend skalieren.
 
  
 
@@ -300,7 +305,7 @@ m_d3dDeviceContext->IASetIndexBuffer(
 
 Gut. Das Eingabeassembly ist fertig. Nun ist alles bereit für das Rendern. Führen wir also den Vertex-Shader aus.
 
-### Schritt 6: Verarbeiten des Gitters mit dem Vertex-Shader
+### Schritt6: Verarbeiten des Gitters mit dem Vertex-Shader
 
 Sie haben nun einen Vertexpuffer mit den Vertizes, die Ihr Gitter definieren, und den Indexpuffer, der die Reihenfolge für die Verarbeitung der Vertizes festlegt. Senden Sie die beiden Puffer jetzt an den Vertex-Shader. Der Vertex-Shader-Code (ausdrückt als kompilierte High-Level Shader Language (HLSL)) wird ein Mal für jeden Vertex im Vertexpuffer ausgeführt. Dadurch wird die Transformation der einzelnen Vertizes ermöglicht. Das Endergebnis ist in der Regel eine 2D-Projektion.
 
@@ -367,9 +372,10 @@ PixelShaderInput SimpleVertexShader(VertexShaderInput input)
 
 Sehen Sie **cbuffer** ganz oben? Dieser HLSL-Code entspricht dem Konstantenpuffer, den wir zuvor in unserem C++-Code deklariert haben. Und wie sieht es mit **VertexShaderInputstruct** aus? Das sieht doch ganz nach der Deklaration Ihres Eingabelayouts und der Vertexdaten aus. Die Deklarationen des Konstantenpuffers und der Vertexdaten im C++-Code müssen mit den Deklarationen im HLSL-Code übereinstimmen – einschließlich Vorzeichen, Typen und Datenausrichtung.
 
-**PixelShaderInput** gibt das Layout der Daten an, die von der Hauptfunktion des Vertex-Shaders zurückgegeben werden. Nach der Verarbeitung eines Vertex geben Sie eine Vertexposition im 2D-Projektionsbereich und eine für die Beleuchtung der einzelnen Vertizes verwendete Farbe zurück. Die Grafikkarte verwendet die Datenausgabe des Shaders zum Berechnen der Fragmente (mögliche Pixel), die koloriert werden müssen, wenn der Pixel-Shader im nächsten Abschnitt der Pipeline ausgeführt wird.
 
-### Schritt 7: Übergeben des Gitters durch den Pixel-Shader
+            **PixelShaderInput** gibt das Layout der Daten an, die von der Hauptfunktion des Vertex-Shaders zurückgegeben werden. Nach der Verarbeitung eines Vertex geben Sie eine Vertexposition im 2D-Projektionsbereich und eine für die Beleuchtung der einzelnen Vertizes verwendete Farbe zurück. Die Grafikkarte verwendet die Datenausgabe des Shaders zum Berechnen der Fragmente (mögliche Pixel), die koloriert werden müssen, wenn der Pixel-Shader im nächsten Abschnitt der Pipeline ausgeführt wird.
+
+### Schritt7: Übergeben des Gitters durch den Pixel-Shader
 
 In der Regel führen Sie in diesem Abschnitt der Grafikpipeline Aktionen für einzelne Pixel auf den sichtbaren projizierten Oberflächen der Objekte aus. (Benutzer stehen auf Texturen.) Zu Beispielzwecken wird das Gitter hier jedoch nur direkt übergegeben.
 
@@ -398,7 +404,7 @@ float4 SimplePixelShader(PixelShaderInput input) : SV_TARGET
 
 Fügen Sie diesen Code getrennt vom Vertex-Shader-HLSL-Code in eine HLSL-Datei (beispielsweise „SimplePixelShader.hlsl“) ein. Dieser Code wird einmal für jedes sichtbare Pixel im Viewport (eine speicherinterne Darstellung des Bildschirmbereichs, in dem Sie zeichnen) ausgeführt. In diesem Fall entspricht er dem gesamten Bildschirm. Nun ist Ihre Grafikpipeline vollständig definiert.
 
-### Schritt 8: Rastern und Anzeigen des Gitters
+### Schritt8: Rastern und Anzeigen des Gitters
 
 Führen Sie die Pipeline aus. Rufen Sie dazu einfach [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/bb173565) auf.
 
@@ -431,7 +437,7 @@ Nun sind Sie fertig. Verwenden Sie für eine mit Modellen gefüllte Szene mehrer
 In diesem Thema wird das Erstellen und Anzeigen einfacher, selbst erstellter Geometrie behandelt. Weitere Informationen zum Laden komplexerer Geometrie aus einer Datei und Konvertieren in das beispielspezifische Vertexpufferobjekt-Format (VBO) finden Sie unter [So wird's gemacht: Laden von Ressourcen im DirectX-Spiel](load-a-game-asset.md).
 
 > **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 

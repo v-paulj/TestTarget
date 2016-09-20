@@ -32,7 +32,8 @@ In der folgenden Liste werden die neuen Features und Änderungen der verschlüss
 
     Sie können entweder wie in Windows 8.1 ein PlayReady-Objekt mit mehreren Schlüsselkennungen (KeyIDs) oder [Content Decryption Model (CDM)-Daten (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) mit mehreren KeyIDs verwenden.
 
-    **Hinweis**  In Windows 10 werden mehrere Schlüsselkennungen unter &lt;KeyID&gt; in CDMData unterstützt.
+    
+            **Hinweis**  In Windows 10 werden mehrere Schlüsselkennungen unter &lt;KeyID&gt; in CDMData unterstützt.
 
      
 
@@ -58,7 +59,7 @@ In der folgenden Liste werden die neuen Features und Änderungen der verschlüss
 
 In diesem Abschnitt wird die Version der verschlüsselten Medienerweiterungen von W3C beschrieben, die von PlayReady unterstützt werden.
 
-PlayReady für Web-Apps ist derzeit an die Entwurfsversion vom 10. Mai 2013 ([W3C Encrypted Media Extension (EME) draft of May 10, 2013](http://www.w3.org/TR/2013/WD-encrypted-media-20130510/)) gebunden. Für zukünftige Versionen von Windows wird diese Unterstützung in die aktualisierte EME-Spezifikation geändert.
+PlayReady für Web-Apps ist derzeit an die Entwurfsversion vom 10.Mai2013 ([W3C Encrypted Media Extension (EME) draft of May 10, 2013](http://www.w3.org/TR/2013/WD-encrypted-media-20130510/)) gebunden. Für zukünftige Versionen von Windows wird diese Unterstützung in die aktualisierte EME-Spezifikation geändert.
 
 ## Verwenden des Hardware-DRM
 
@@ -68,7 +69,8 @@ Um das Hardware-DRM mit PlayReady zu verwenden, sollte Ihre JavaScript-Web-App d
 
 Mitunter werden Inhalte jedoch nicht vom Hardware-DRM unterstützt. Cocktail-Inhalte werden nie vom Hardware-DRM unterstützt. Wenn Sie Cocktail-Inhalte wiedergeben möchten, müssen Sie das Hardware-DRM außer Kraft setzen. Einige Hardware-DRM-Typen unterstützen HEVC, andere dagegen nicht. Wenn Sie HEVC-Inhalte wiedergeben möchten und diese nicht vom Hardware-DRM unterstützt werden, sollten Sie das Hardware-DRM in diesem Fall ebenfalls außer Kraft setzen.
 
-**Hinweis**  Um festzustellen, ob HEVC-Inhalte unterstützt werden, verwenden Sie nach der Instanziierung von `com.microsoft.playready` die [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441)-Methode.
+
+            **Hinweis**  Um festzustellen, ob HEVC-Inhalte unterstützt werden, verwenden Sie nach der Instanziierung von `com.microsoft.playready` die [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441)-Methode.
 
  
 
@@ -81,7 +83,7 @@ Dank des sicheren Beendens kann ein PlayReady-Gerät einem Medienstreamingdienst
 Es gibt zwei primäre Szenarien für das Senden einer Abfrage für sicheres Beenden:
 
 -   Wenn die Mediendarstellung beendet wird, weil das Ende des Inhalts erreicht wurde, oder wenn die Mediendarstellung vor ihrem Ende vom Benutzer beendet wurde.
--   Wenn die vorherige Sitzung unerwartet beendet wurde (z. B. aufgrund eines System- oder App-Absturzes). Die App muss beim Starten oder Herunterfahren alle ausstehenden Sitzungen für sicheres Beenden abfragen und von anderen Medienwiedergaben getrennte Abfragen senden.
+-   Wenn die vorherige Sitzung unerwartet beendet wurde (z.B. aufgrund eines System- oder App-Absturzes). Die App muss beim Starten oder Herunterfahren alle ausstehenden Sitzungen für sicheres Beenden abfragen und von anderen Medienwiedergaben getrennte Abfragen senden.
 
 In den folgenden Verfahren wird beschrieben, wie Sie das sichere Beenden für verschiedene Szenarien einrichten.
 
@@ -95,7 +97,7 @@ So richten Sie das sichere Beenden für den Fall ein, dass der Benutzer die Seit
 
 -   Zum Aufzeichnen des Beendigungszustands ist keine App-Aktion erforderlich. Der Zustand wird automatisch aufgezeichnet.
 
-So richten Sie das sichere Beenden für benutzerdefinierte Steuerelemente oder Benutzeraktionen ein (z. B. benutzerdefinierte Navigationsschaltflächen oder das Starten einer neuen Mediendarstellung vor Abschluss der aktuellen Mediendarstellung)
+So richten Sie das sichere Beenden für benutzerdefinierte Steuerelemente oder Benutzeraktionen ein (z.B. benutzerdefinierte Navigationsschaltflächen oder das Starten einer neuen Mediendarstellung vor Abschluss der aktuellen Mediendarstellung)
 
 -   Wenn die benutzerdefinierte Aktion stattfindet, muss die App die Quelle auf **NULL** festlegen, damit Media Foundation die Topologie unterbricht, die Decryptors zerstört und den Beendigungszustand festlegt.
 
@@ -259,7 +261,8 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 }
 ```
 
-**Hinweis**  Für die `<SessionID>B64 encoded session ID</SessionID>` der Daten für sicheres Beenden im obigen Beispiel kann ein Sternchen (\*) angegeben werden. Das Sternchen ist ein Platzhalter für alle aufgezeichneten Sitzungen für sicheres Beenden. Beim **SessionID**-Tag kann es sich also um eine bestimmte Sitzung oder einen Platzhalter (\*) zur Auswahl aller Sitzungen für sicheres Beenden handeln.
+
+            **Hinweis**  Für die `<SessionID>B64 encoded session ID</SessionID>` der Daten für sicheres Beenden im obigen Beispiel kann ein Sternchen (\*) angegeben werden. Das Sternchen ist ein Platzhalter für alle aufgezeichneten Sitzungen für sicheres Beenden. Beim **SessionID**-Tag kann es sich also um eine bestimmte Sitzung oder einen Platzhalter (\*) zur Auswahl aller Sitzungen für sicheres Beenden handeln.
 
 ## Überlegungen zur Programmierung für verschlüsselte Medienerweiterungen (Encrypted Media Extensions, EME)
 

@@ -3,7 +3,6 @@ author: mtoepke
 title: "Toucheingabesteuerelemente für Spiele"
 description: "Hier erfahren Sie, wie Sie Ihrem C++-Spiel für die universelle Windows-Plattform (UWP) mit DirectX einfache touchbasierte Steuerelemente hinzufügen."
 ms.assetid: 9d40e6e4-46a9-97e9-b848-522d61e8e109
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: a2460ba2ffcf191fe87132180b2cca7519e87141
 
@@ -12,13 +11,14 @@ ms.openlocfilehash: a2460ba2ffcf191fe87132180b2cca7519e87141
 # Toucheingabesteuerelemente für Spiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier erfahren Sie, wie Sie Ihrem C++-Spiel für die universelle Windows-Plattform (UWP) mit DirectX einfache touchbasierte Steuerelemente hinzufügen. Wir zeigen Ihnen, wie Sie touchbasierte Steuerelemente hinzufügen, um eine Kamera mit fester Ebene in einer Direct3D-Umgebung zu bewegen, indem die Kameraperspektive durch Bewegen des Fingers oder Eingabestifts geändert wird.
 
-Sie können diese Steuerungen in Spiele integrieren, bei denen der Spieler in einer 3D-Umgebung (z. B. einer Karte oder einem Spielfeld) einen Bildlauf ausführen oder die Ansicht schwenken soll. Bei einem Strategie- oder Puzzlespiel kann der Spieler mit diesen Steuerungen z. B. durch Schwenken nach links oder rechts eine Spielumgebung anzeigen, die größer als der Bildschirm ist.
+Sie können diese Steuerungen in Spiele integrieren, bei denen der Spieler in einer 3D-Umgebung (z.B. einer Karte oder einem Spielfeld) einen Bildlauf ausführen oder die Ansicht schwenken soll. Bei einem Strategie- oder Puzzlespiel kann der Spieler mit diesen Steuerungen z.B. durch Schwenken nach links oder rechts eine Spielumgebung anzeigen, die größer als der Bildschirm ist.
 
-> **Hinweis**  Der Code eignet sich auch für mausbasierte Schwenksteuerungen. Die zeigerbezogenen Ereignisse werden von den Windows-Runtime-APIs abstrahiert, sodass sie toucheingabe- oder mausbasierte Zeigerereignisse behandeln können.
+> 
+            **Hinweis**  Der Code eignet sich auch für mausbasierte Schwenksteuerungen. Die zeigerbezogenen Ereignisse werden von den Windows-Runtime-APIs abstrahiert, sodass sie toucheingabe- oder mausbasierte Zeigerereignisse behandeln können.
 
  
 
@@ -30,7 +30,7 @@ Sie können diese Steuerungen in Spiele integrieren, bei denen der Spieler in ei
 ## Einrichten der grundlegenden Infrastruktur für Toucheingabeereignisse
 
 
-Als Erstes definieren wir den grundlegenden Controllertyp – in diesem Fall: **CameraPanController**. Der Controller wird hier als abstrakte Idee definiert, d. h. als Satz von Verhaltensweisen, die der Benutzer ausführen kann.
+Als Erstes definieren wir den grundlegenden Controllertyp – in diesem Fall: **CameraPanController**. Der Controller wird hier als abstrakte Idee definiert, d.h. als Satz von Verhaltensweisen, die der Benutzer ausführen kann.
 
 Die **CameraPanController**-Klasse ist eine regelmäßig aktualisierte Sammlung von Informationen zum Zustand des Kameracontrollers und bietet der App die Möglichkeit, diese Informationen aus ihrer Aktualisierungsschleife abzurufen.
 
@@ -101,26 +101,40 @@ public:
 
 Die privaten Felder enthalten den aktuellen Zustand des Kameracontrollers. Ihre Funktion wird im Folgenden erläutert.
 
--   **m\_position** ist die Position der Kamera im Szenenbereich. In diesem Beispiel ist der Wert der Z-Koordinate unveränderlich auf „0“ festgelegt. Dieser Wert könnte mit „DirectX::XMFLOAT2“ dargestellt werden, für dieses Beispiel – und um zukünftige Erweiterungen zu ermöglichen – verwenden wir hier aber „DirectX::XMFLOAT3“. Diesen Wert übergeben wir mit der **get\_Position**-Eigenschaft an die App, damit sie den Viewport entsprechend aktualisieren kann.
--   **m\_panInUse** ist ein boolescher Wert, der angibt, ob ein Schwenkvorgang aktiv ist (also ob der Spieler den Bildschirm berührt und die Kamera bewegt).
--   **m\_panPointerID** ist eine eindeutige ID für den Zeiger. Obwohl die ID im Beispiel nicht verwendet wird, empfiehlt es sich, der Controllerzustandsklasse immer einen bestimmten Zeiger zuzuordnen.
--   **m\_panFirstDown** ist der Punkt, an dem der Spieler während des Kameraschwenks erstmals den Bildschirm berührt oder mit der Maus geklickt hat. Dieser Wert wird später verwendet, um einen inaktiven Bereich festzulegen, damit die Ansicht nicht flimmert, wenn der Bildschirm berührt oder die Maus leicht bewegt wird.
--   **m\_panPointerPosition** ist der Punkt auf dem Bildschirm, an den der Spieler den Zeiger gerade bewegt hat. Dieser Wert wird mit **m\_panFirstDown** verglichen, um die beabsichtigte Bewegungsrichtung des Spielers zu bestimmen.
--   **m\_panCommand** ist der berechnete endgültige Befehl für den Kameracontroller: nach oben, nach unten, nach links oder nach rechts. Da die Kamerabewegung hier auf die X-Y-Ebene beschränkt ist, könnte stattdessen ein DirectX::XMFLOAT2-Wert verwendet werden.
+-   
+            **m\_position** ist die Position der Kamera im Szenenbereich. In diesem Beispiel ist der Wert der Z-Koordinate unveränderlich auf„0“ festgelegt. Dieser Wert könnte mit „DirectX::XMFLOAT2“ dargestellt werden, für dieses Beispiel – und um zukünftige Erweiterungen zu ermöglichen – verwenden wir hier aber „DirectX::XMFLOAT3“. Diesen Wert übergeben wir mit der **get\_Position**-Eigenschaft an die App, damit sie den Viewport entsprechend aktualisieren kann.
+-   
+            **m\_panInUse** ist ein boolescher Wert, der angibt, ob ein Schwenkvorgang aktiv ist (also ob der Spieler den Bildschirm berührt und die Kamera bewegt).
+-   
+            **m\_panPointerID** ist eine eindeutige ID für den Zeiger. Obwohl die ID im Beispiel nicht verwendet wird, empfiehlt es sich, der Controllerzustandsklasse immer einen bestimmten Zeiger zuzuordnen.
+-   
+            **m\_panFirstDown** ist der Punkt, an dem der Spieler während des Kameraschwenks erstmals den Bildschirm berührt oder mit der Maus geklickt hat. Dieser Wert wird später verwendet, um einen inaktiven Bereich festzulegen, damit die Ansicht nicht flimmert, wenn der Bildschirm berührt oder die Maus leicht bewegt wird.
+-   
+            **m\_panPointerPosition** ist der Punkt auf dem Bildschirm, an den der Spieler den Zeiger gerade bewegt hat. Dieser Wert wird mit **m\_panFirstDown** verglichen, um die beabsichtigte Bewegungsrichtung des Spielers zu bestimmen.
+-   
+            **m\_panCommand** ist der berechnete endgültige Befehl für den Kameracontroller: nach oben, nach unten, nach links oder nach rechts. Da die Kamerabewegung hier auf die X-Y-Ebene beschränkt ist, könnte stattdessen ein DirectX::XMFLOAT2-Wert verwendet werden.
 
 Mit den folgenden drei Ereignishandlern aktualisieren wir die Informationen zum Zustand des Kameracontrollers.
 
--   **OnPointerPressed** ist ein Ereignishandler, der von der App aufgerufen wird, wenn der Spieler den Touchscreen mit dem Finger berührt und der Zeiger zu den Koordinaten des Berührungspunkts bewegt wird.
--   **OnPointerMoved** ist ein Ereignishandler, der von der App aufgerufen wird, wenn der Spieler mit einem Finger eine Wischbewegung über den Touchscreen ausführt. Er aktualisiert den Wert mit den neuen Koordinaten der Bewegung.
--   **OnPointerReleased** ist ein Ereignishandler, der von der App aufgerufen wird, wenn der Spieler den Finger vom Touchscreen nimmt.
+-   
+            **OnPointerPressed** ist ein Ereignishandler, der von der App aufgerufen wird, wenn der Spieler den Touchscreen mit dem Finger berührt und der Zeiger zu den Koordinaten des Berührungspunkts bewegt wird.
+-   
+            **OnPointerMoved** ist ein Ereignishandler, der von der App aufgerufen wird, wenn der Spieler mit einem Finger eine Wischbewegung über den Touchscreen ausführt. Er aktualisiert den Wert mit den neuen Koordinaten der Bewegung.
+-   
+            **OnPointerReleased** ist ein Ereignishandler, der von der App aufgerufen wird, wenn der Spieler den Finger vom Touchscreen nimmt.
 
 Die folgenden Methoden und Eigenschaften verwenden wir, um die Zustandsinformationen des Kameracontrollers zu initialisieren, auf sie zuzugreifen und sie zu aktualisieren.
 
--   **Initialize** ist ein Ereignishandler, den die App aufruft, um die Steuerelemente zu initialisieren und an das [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt anzufügen, das das Anzeigefenster beschreibt.
--   **SetPosition** ist eine Methode, die die App aufruft, um die Koordinaten (X, Y und Z) der Steuerungen im Szenenbereich festzulegen. Beachten Sie, dass die Z-Koordinate in diesem Lernprogramm immer Null ist.
--   **get\_Position** ist eine Eigenschaft, auf die die App zugreift, um die aktuelle Position der Kamera im Szenenbereich abzurufen. Diese Eigenschaft wird verwendet, um der App die aktuelle Kameraposition mitzuteilen.
--   **get\_FixedLookPoint** ist eine Eigenschaft, auf die die App zugreift, um den aktuellen Punkt abzurufen, auf den die Kamera gerichtet ist. In diesem Beispiel ist der Punkt auf die Normale der X-Y-Ebene beschränkt.
--   **Update** ist eine Methode, die den Controllerzustand liest und die Kameraposition aktualisiert. &lt;Etwas&gt; wird in der Hauptschleife der App kontinuierlich aufgerufen, um die Kameracontrollerdaten und die Kameraposition im Szenenbereich zu aktualisieren.
+-   
+            **Initialize** ist ein Ereignishandler, den die App aufruft, um die Steuerelemente zu initialisieren und an das [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt anzufügen, das das Anzeigefenster beschreibt.
+-   
+            **SetPosition** ist eine Methode, die die App aufruft, um die Koordinaten (X, Y und Z) der Steuerungen im Szenenbereich festzulegen. Beachten Sie, dass die Z-Koordinate in diesem Lernprogramm immer Null ist.
+-   
+            **get\_Position** ist eine Eigenschaft, auf die die App zugreift, um die aktuelle Position der Kamera im Szenenbereich abzurufen. Diese Eigenschaft wird verwendet, um der App die aktuelle Kameraposition mitzuteilen.
+-   
+            **get\_FixedLookPoint** ist eine Eigenschaft, auf die die App zugreift, um den aktuellen Punkt abzurufen, auf den die Kamera gerichtet ist. In diesem Beispiel ist der Punkt auf die Normale der X-Y-Ebene beschränkt.
+-   
+            **Update** ist eine Methode, die den Controllerzustand liest und die Kameraposition aktualisiert. &lt;Etwas&gt; wird in der Hauptschleife der App kontinuierlich aufgerufen, um die Kameracontrollerdaten und die Kameraposition im Szenenbereich zu aktualisieren.
 
 Jetzt haben Sie alle Komponenten, die Sie zum Implementieren von Toucheingabesteuerungen benötigen. Sie können feststellen, wann und wo die Fingereingabe- oder Mauszeigerereignisse stattgefunden haben und um welche Aktion es sich dabei handelt. Sie können die Position und Ausrichtung der Kamera in Bezug zum Szenenbereich festlegen und die Änderungen nachverfolgen. Und schließlich können Sie die neue Kameraposition der aufrufenden App mitteilen.
 
@@ -129,7 +143,7 @@ Als Nächstes setzen wir diese Teile zusammen.
 ## Erstellen der grundlegenden Fingereingabeereignisse
 
 
-Der Ereignisverteiler der Windows-Runtime stellt drei Ereignisse bereit, die von der App behandelt werden sollen:
+Der Ereignisverteiler der Windows-Runtime stellt dreiEreignisse bereit, die von der App behandelt werden sollen:
 
 -   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)
 -   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)
@@ -236,7 +250,8 @@ void CameraPanController::Initialize( _In_ CoreWindow^ window )
 }
 ```
 
-Die **Initialize**-Methode akzeptiert als Parameter einen Verweis auf die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Instanz der App und registriert die von uns entwickelten Ereignishandler für die entsprechenden Ereignisse in dieser **CoreWindow**-Instanz.
+
+            Die **Initialize**-Methode akzeptiert als Parameter einen Verweis auf die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Instanz der App und registriert die von uns entwickelten Ereignishandler für die entsprechenden Ereignisse in dieser **CoreWindow**-Instanz.
 
 ## Abrufen und Festlegen der Position des Kameracontrollers
 
@@ -266,11 +281,14 @@ DirectX::XMFLOAT3 CameraPanController::get_FixedLookPoint()
 }
 ```
 
-**SetPosition** ist eine öffentliche Methode, die wir in der App aufrufen können, wenn wir die Position des Kameracontrollers auf einen bestimmten Punkt festlegen müssen.
 
-**get\_Position** ist die wichtigste öffentliche Eigenschaft: Mit dieser Eigenschaft ruft die App die aktuelle Position des Kameracontrollers im Szenenbereich ab, damit sie den Viewport entsprechend aktualisieren kann.
+            **SetPosition** ist eine öffentliche Methode, die wir in der App aufrufen können, wenn wir die Position des Kameracontrollers auf einen bestimmten Punkt festlegen müssen.
 
-**get\_FixedLookPoint** ist eine öffentliche Eigenschaft, die in diesem Beispiel einen Blickpunkt senkrecht zur X-Y-Ebene abruft. Sie können diese Methode ändern, um die Berechnung der X-, Y- und Z-Koordinatenwerte mit den trigonometrischen Funktionen Sinus und Kosinus durchzuführen, wenn Sie schrägere Winkel für die feste Kamera verwenden möchten.
+
+            **get\_Position** ist die wichtigste öffentliche Eigenschaft: Mit dieser Eigenschaft ruft die App die aktuelle Position des Kameracontrollers im Szenenbereich ab, damit sie den Viewport entsprechend aktualisieren kann.
+
+
+            **get\_FixedLookPoint** ist eine öffentliche Eigenschaft, die in diesem Beispiel einen Blickpunkt senkrecht zur X-Y-Ebene abruft. Sie können diese Methode ändern, um die Berechnung der X-, Y- und Z-Koordinatenwerte mit den trigonometrischen Funktionen Sinus und Kosinus durchzuführen, wenn Sie schrägere Winkel für die feste Kamera verwenden möchten.
 
 ## Aktualisieren der Zustandsinformationen des Kameracontrollers
 
@@ -318,12 +336,12 @@ void CameraPanController::Update( CoreWindow ^window )
 }
 ```
 
-Damit die Bewegung bei Verwendung der Finger- oder Mauseingabe nicht "zittert" und die Schwenkbewegung der Kamera dadurch ruckartig wird, legen wir einen inaktiven Bereich mit einem Durchmesser von 32 Pixel um den Zeiger fest. Außerdem haben wir einen Geschwindigkeitswert – in diesem Fall 1:1 – für die Zeigerbewegung außerhalb des inaktiven Bereichs. Sie können dieses Verhalten anpassen, um die Geschwindigkeitsrate zu erhöhen oder zu verringern.
+Damit die Bewegung bei Verwendung der Finger- oder Mauseingabe nicht "zittert" und die Schwenkbewegung der Kamera dadurch ruckartig wird, legen wir einen inaktiven Bereich mit einem Durchmesser von 32Pixel um den Zeiger fest. Außerdem haben wir einen Geschwindigkeitswert – in diesem Fall 1:1 – für die Zeigerbewegung außerhalb des inaktiven Bereichs. Sie können dieses Verhalten anpassen, um die Geschwindigkeitsrate zu erhöhen oder zu verringern.
 
 ## Aktualisieren der Ansichtsmatrix mit der neuen Kameraposition
 
 
-Jetzt können wir eine Koordinate des Szenenbereichs abrufen, auf die die Kamera ausgerichtet ist und die jedes Mal aktualisiert wird, wenn die App dazu angewiesen wird (z. B. alle 60 Sekunden in der Hauptschleife der App). Dieser Pseudocode zeigt das Aufrufverhalten, das Sie implementieren können:
+Jetzt können wir eine Koordinate des Szenenbereichs abrufen, auf die die Kamera ausgerichtet ist und die jedes Mal aktualisiert wird, wenn die App dazu angewiesen wird (z.B. alle 60Sekunden in der Hauptschleife der App). Dieser Pseudocode zeigt das Aufrufverhalten, das Sie implementieren können:
 
 ```cpp
  myCameraPanController->Update( m_window ); 
@@ -339,7 +357,7 @@ Jetzt können wir eine Koordinate des Szenenbereichs abrufen, auf die die Kamera
 Herzlichen Glückwunsch! Sie haben in Ihrem Spiel einen einfachen Satz mit Toucheingabesteuerungen zum Schwenken einer Kamera implementiert.
 
 > **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 

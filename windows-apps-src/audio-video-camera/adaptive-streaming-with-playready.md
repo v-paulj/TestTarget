@@ -3,7 +3,6 @@ author: eliotcowley
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
 description: "In diesem Artikel wird beschrieben, wie Sie einer App für die universelle Windows-Plattform (UWP) adaptives Streaming von Multimediainhalten mit Microsoft PlayReady-Inhaltsschutz hinzufügen."
 title: Adaptives Streaming mit PlayReady
-translationtype: Human Translation
 ms.sourcegitcommit: 176f8989aea5402106e3c14144948cec87a5dc27
 ms.openlocfilehash: d76f50e97f16699f34f138fcd25af8a90696085a
 
@@ -11,7 +10,7 @@ ms.openlocfilehash: d76f50e97f16699f34f138fcd25af8a90696085a
 
 # Adaptives Streaming mit PlayReady
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Artikel wird beschrieben, wie Sie einer UWP-App (Universelle Windows-Plattform) adaptives Streaming von Multimediainhalten mit Microsoft PlayReady-Inhaltsschutz hinzufügen. 
 

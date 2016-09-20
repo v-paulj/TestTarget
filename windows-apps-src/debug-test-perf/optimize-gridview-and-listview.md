@@ -3,7 +3,6 @@ author: mcleblanc
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: "Optimieren der ListView- und GridView-Benutzeroberfläche"
 description: Verbessern Sie die Leistung und Startzeit von ListView und GridView durch UI-Virtualisierung, Elementreduzierung und die progressive Aktualisierung von Elementen.
-translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
 ms.openlocfilehash: 362fbb6b733e855a2126196f12c650bdf2a7665d
 
@@ -27,7 +26,8 @@ Für reibungslose Verschiebungen/Bildläufe ist es wichtig, dass der UI-Thread e
 
 ## UI-Virtualisierung
 
-Die Virtualisierung der Benutzeroberfläche ist die wichtigste Verbesserung, die Sie vornehmen können. Dies bedeutet, dass die Benutzeroberflächenelemente, die die Objekte darstellen, bei Bedarf erstellt werden. Für ein an eine Sammlung von 1000 Elementen gebundenes Elementsteuerelement wäre es eine Verschwendung von Ressourcen, die Benutzeroberfläche für alle Elemente gleichzeitig zu erstellen, da sie nicht alle auf einmal angezeigt werden können. [
+Die Virtualisierung der Benutzeroberfläche ist die wichtigste Verbesserung, die Sie vornehmen können. Dies bedeutet, dass die Benutzeroberflächenelemente, die die Objekte darstellen, bei Bedarf erstellt werden. Für ein an eine Sammlung von 1000 Elementen gebundenes Elementsteuerelement wäre es eine Verschwendung von Ressourcen, die Benutzeroberfläche für alle Elemente gleichzeitig zu erstellen, da sie nicht alle auf einmal angezeigt werden können. 
+            [
               **ListView**
             ](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) (und andere von [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) abgeleitete Standardsteuerelemente) führen die Virtualisierung der Benutzeroberfläche für Sie durch. Wenn Elemente kurz davor sind, per Bildlauf in der Ansicht angezeigt zu werden (einige Seiten davon entfernt), generiert das Framework die Benutzeroberfläche für die Elemente und speichert sie zwischen. Wenn es unwahrscheinlich ist, dass die Elemente erneut angezeigt werden, gibt das Framework den Arbeitsspeicher wieder frei.
 
@@ -43,7 +43,7 @@ Wenn ein Elementsteuerelement erstmalig angezeigt wird, werden alle zum Rendern 
 
 Beispiele zur Elementreduzierung finden Sie unter [Optimieren des XAML-Markups](optimize-xaml-loading.md).
 
-Die standardmäßigen Steuerelementvorlagen für [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx) und [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridviewitem.aspx) enthalten ein [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/Dn298500)-Element. Dieser Presenter ist ein einzelnes optimiertes Element, das komplexe visuelle Elemente für Fokus, Auswahl und andere visuelle Zustände anzeigt. Wenn Sie bereits über benutzerdefinierte Elementsteuerelementvorlagen verfügen ([**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)) oder zukünftig eine Kopie einer Elementsteuerelementvorlage bearbeiten, wird empfohlen, dass Sie ein **ListViewItemPresenter**-Element verwenden, da dieses Element in der Mehrzahl der Fälle ein optimales Gleichgewicht zwischen Leistung und Anpassbarkeit bietet. Sie können den Presenter anpassen, indem Sie dessen Eigenschaften festlegen. Im folgenden Markup-Beispiel wird z. B. das standardmäßig beim Auswählen eines Elements angezeigte Häkchen entfernt und die Hintergrundfarbe des ausgewählten Elements in Orange geändert.
+Die standardmäßigen Steuerelementvorlagen für [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewitem.aspx) und [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.gridviewitem.aspx) enthalten ein [**ListViewItemPresenter**](https://msdn.microsoft.com/library/windows/apps/Dn298500)-Element. Dieser Presenter ist ein einzelnes optimiertes Element, das komplexe visuelle Elemente für Fokus, Auswahl und andere visuelle Zustände anzeigt. Wenn Sie bereits über benutzerdefinierte Elementsteuerelementvorlagen verfügen ([**ItemContainerStyle**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)) oder zukünftig eine Kopie einer Elementsteuerelementvorlage bearbeiten, wird empfohlen, dass Sie ein **ListViewItemPresenter**-Element verwenden, da dieses Element in der Mehrzahl der Fälle ein optimales Gleichgewicht zwischen Leistung und Anpassbarkeit bietet. Sie können den Presenter anpassen, indem Sie dessen Eigenschaften festlegen. Im folgenden Markup-Beispiel wird z.B. das standardmäßig beim Auswählen eines Elements angezeigte Häkchen entfernt und die Hintergrundfarbe des ausgewählten Elements in Orange geändert.
 
 ```xml
 ...
@@ -72,7 +72,7 @@ Wenn Sie die Datenvirtualisierung verwenden, können Sie für [**ListView**](htt
 
 Egal, von wo die Daten geladen werden (lokaler Datenträger, Netzwerk oder Cloud), kann ein Benutzer ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)- oder [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705)-Element so schnell schwenken/durchlaufen, dass es nicht möglich ist, alle Elemente originalgetreu zu rendern, während gleichzeitig eine flüssige Verschiebung bzw. ein gleichmäßiger Bildlauf gewährleistet wird. Um die Gleichmäßigkeit der Verschiebung bzw. des Bildlaufs zu erhalten, können Sie zusätzlich zur Verwendung von Platzhaltern das Element in mehreren Phasen rendern.
 
-Ein Beispiel für diese Verfahren findet sich häufig bei Fotoanzeige-Apps: Auch wenn nicht alle Bilder geladen und angezeigt wurden, kann der Benutzer dennoch Verschiebungen/Bildläufe vornehmen und mit der Sammlung interagieren. Für ein „Filmelement“ können Sie z. B. in der ersten Phase den Titel anzeigen, während die Altersfreigabe in der zweiten und ein Bild des Posters in der dritten Phase angezeigt werden. Der Benutzer sieht die wichtigsten Daten zu den einzelnen Elementen so früh wie möglich, d. h., es können sofort Maßnahmen ergriffen werden. Anschließend werden die weniger wichtigen Informationen ausgefüllt. Hier folgen die Plattformfeatures, mit denen Sie diese Verfahren implementieren können.
+Ein Beispiel für diese Verfahren findet sich häufig bei Fotoanzeige-Apps: Auch wenn nicht alle Bilder geladen und angezeigt wurden, kann der Benutzer dennoch Verschiebungen/Bildläufe vornehmen und mit der Sammlung interagieren. Für ein „Filmelement“ können Sie z.B. in der ersten Phase den Titel anzeigen, während die Altersfreigabe in der zweiten und ein Bild des Posters in der dritten Phase angezeigt werden. Der Benutzer sieht die wichtigsten Daten zu den einzelnen Elementen so früh wie möglich, d.h., es können sofort Maßnahmen ergriffen werden. Anschließend werden die weniger wichtigen Informationen ausgefüllt. Hier folgen die Plattformfeatures, mit denen Sie diese Verfahren implementieren können.
 
 ### Platzhalter
 
@@ -247,9 +247,12 @@ In einigen Anwendungen benötigen Sie verschiedene Benutzeroberflächen für unt
 
 **Das ChoosingItemContainer-Ereignis**
 
-[
+
+            [
               **ChoosingItemContainer**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) ist ein Ereignis, mit dem Sie ein Element (**ListViewItem**/**GridViewItem**) für [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) bereitstellen können, wenn ein neues Element beim Starten oder Wiederverwenden erforderlich ist. Sie können einen Container basierend auf dem Typ des Datenelements erstellen, das der Container anzeigen soll (im folgenden Beispiel dargestellt). **ChoosingItemContainer** ist die leistungsfähigere Möglichkeit zur Verwendung unterschiedlicher Datenvorlagen für verschiedene Elemente. Die Containerzwischenspeicherung kann mit **ChoosingItemContainer** erzielt werden. Wenn Sie beispielsweise fünf verschiedene Vorlagen besitzen, wobei eine Vorlage um eine Größenordnung häufiger als die anderen verwendet wird, können Sie mit ChoosingItemContainer nicht nur Elemente im benötigten Verhältnis erstellen, sondern auch eine passende Anzahl von Elementen im Zwischenspeicher speichern, die dann zur Wiederverwendung zur Verfügung stehen. [
+            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) ist ein Ereignis, mit dem Sie ein Element (**ListViewItem**/**GridViewItem**) für [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) bereitstellen können, wenn ein neues Element beim Starten oder Wiederverwenden erforderlich ist. Sie können einen Container basierend auf dem Typ des Datenelements erstellen, das der Container anzeigen soll (im folgenden Beispiel dargestellt). 
+            **ChoosingItemContainer** ist die leistungsfähigere Möglichkeit zur Verwendung unterschiedlicher Datenvorlagen für verschiedene Elemente. Die Containerzwischenspeicherung kann mit **ChoosingItemContainer** erzielt werden. Wenn Sie beispielsweise fünf verschiedene Vorlagen besitzen, wobei eine Vorlage um eine Größenordnung häufiger als die anderen verwendet wird, können Sie mit ChoosingItemContainer nicht nur Elemente im benötigten Verhältnis erstellen, sondern auch eine passende Anzahl von Elementen im Zwischenspeicher speichern, die dann zur Wiederverwendung zur Verfügung stehen. 
+            [
               **ChoosingGroupHeaderContainer**
             ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) bietet die gleiche Funktionalität für Gruppenheader.
 

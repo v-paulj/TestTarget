@@ -5,8 +5,9 @@ title: "Definieren von benutzerdefinierten Erkennungseinschränkungen"
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 75e7367ee13357d3463213ca7d8f1ff37c4f0b77
+ms.openlocfilehash: d619cd6b3c9f5d62ca7d68f555e4c051abaf9bad
 
 ---
 
@@ -31,22 +32,16 @@ Verwenden Sie die [**SpeechRecognizer.Constraints**](https://msdn.microsoft.com/
 
 Im Folgenden behandeln wir die drei Arten der Spracherkennungseinschränkungen, die in einer App verwendet werden. (Informationen zu Einschränkungen bei Sprachbefehlen finden Sie unter [Starten einer Vordergrund-App mit Sprachbefehlen in Cortana](launch-a-foreground-app-with-voice-commands-in-cortana.md).)
 
--   [
-              **SpeechRecognitionTopicConstraint**
-            ](https://msdn.microsoft.com/library/windows/apps/dn631446) – Eine Einschränkung auf der Grundlage einer vordefinierten Grammatik (Diktat oder Websuche).
--   [
-              **SpeechRecognitionListConstraint**
-            ](https://msdn.microsoft.com/library/windows/apps/dn631421) – Eine Einschränkung auf der Grundlage einer Liste von Wörtern oder Ausdrücken.
--   [
-              **SpeechRecognitionGrammarFileConstraint**
-            ](https://msdn.microsoft.com/library/windows/apps/dn631412) – Eine Einschränkung, die in einer Speech Recognition Grammar Specification (SRGS)-Datei definiert ist.
+-   [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446) – Eine Einschränkung auf der Grundlage einer vordefinierten Grammatik (Diktat oder Websuche).
+-   [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421) – Eine Einschränkung auf der Grundlage einer Liste von Wörtern oder Ausdrücken.
+-   [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412) – Eine Einschränkung, die in einer SRGS (Speech Recognition Grammar Specification)-Datei definiert ist.
 
 Jedes Spracherkennungsmodul kann über eine Einschränkungssammlung verfügen. Nur die folgenden Einschränkungskombinationen sind gültig:
 
 -   Eine Einschränkung zu einem Thema oder vordefinierte Grammatik (Diktat oder Websuche). Es sind keine anderen Einschränkungen zulässig.
 -   Eine Kombination aus Listeneinschränkungen und/oder Grammatikdatei-Einschränkungen.
 
-**Denken Sie daran: **Rufen Sie die [**SpeechRecognizer.CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)-Methode auf, um die Einschränkungen zu kompilieren, bevor Sie den Erkennungsprozess starten.
+**Denken Sie daran:  **Rufen Sie die [**SpeechRecognizer.CompileConstraintsAsync**](https://msdn.microsoft.com/library/windows/apps/dn653240)-Methode auf, um die Einschränkungen zu kompilieren, bevor Sie den Erkennungsprozess starten.
 
 ## Angeben einer Grammatik für die Websuche (SpeechRecognitionTopicConstraint)
 
@@ -130,7 +125,7 @@ private async void YesOrNo_Click(object sender, RoutedEventArgs e)
 
 SRGS-Grammatikdateien müssen der Einschränkungssammlung eines Spracherkennungsmoduls hinzugefügt werden.
 
-SRGS, Version 1.0, ist die branchenübliche Markupsprache zum Erstellen von Grammatik für die Spracherkennung im XML-Format. Universelle Windows-Apps bieten über SRGS hinaus auch Alternativen zur Erstellung von Grammatik für die Spracherkennung. Sie stellen aber möglicherweise fest, dass Sie beim Erstellen von Grammatik mit SRGS die besten Ergebnisse erzielen. Dies gilt besonders für komplexere Spracherkennungsszenarien.
+SRGS, Version1.0, ist die branchenübliche Markupsprache zum Erstellen von Grammatik für die Spracherkennung im XML-Format. Universelle Windows-Apps bieten über SRGS hinaus auch Alternativen zur Erstellung von Grammatik für die Spracherkennung. Sie stellen aber möglicherweise fest, dass Sie beim Erstellen von Grammatik mit SRGS die besten Ergebnisse erzielen. Dies gilt besonders für komplexere Spracherkennungsszenarien.
 
 SRGS-Grammatik bietet einen umfassenden Featuresatz, den Sie zum Erstellen komplexer Sprachinteraktionen für Ihre Apps nutzen können. Mit SRGS haben Sie beispielsweise folgende Möglichkeiten:
 
@@ -139,7 +134,7 @@ SRGS-Grammatik bietet einen umfassenden Featuresatz, den Sie zum Erstellen kompl
 -   Verlinken Sie zu anderen Grammatiken.
 -   Weisen Sie einem alternativen Wort oder einer Wortgruppe eine Gewichtung zu, um die Wahrscheinlichkeit der Verwendung zu erhöhen oder zu verringern und für die Spracheingabe so bessere Übereinstimmungen zu erzielen.
 -   Binden Sie optionale Wörter oder Wortgruppen ein.
--   Verwenden Sie spezielle Regeln zum Herausfiltern nicht angegebener oder unerwarteter Eingaben, z. B. ungewollte Spracheingaben, die keine Übereinstimmung mit der Grammatik ergeben, oder Hintergrundgeräusche.
+-   Verwenden Sie spezielle Regeln zum Herausfiltern nicht angegebener oder unerwarteter Eingaben, z.B. ungewollte Spracheingaben, die keine Übereinstimmung mit der Grammatik ergeben, oder Hintergrundgeräusche.
 -   Verwenden Sie Semantik, um zu definieren, was Spracherkennung für Ihre App bedeutet.
 -   Geben Sie verschiedene Aussprachen an, entweder direkt in einer Grammatik oder über einen Link zu einem Lexikon.
 
@@ -177,7 +172,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Diese SRGS-Datei (srgs.grxml) enthält Tags für die semantische Interpretation. Diese Tags liefern einen Mechanismus, mit dem übereinstimmende Grammatikdaten an Ihre App zurückgegeben werden. Die Grammatik muss der [Semantic Interpretation for Speech Recognition (SISR) 1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765)-Spezifikation des World Wide Web Consortium (W3C) entsprechen.
+Diese SRGS-Datei (srgs.grxml) enthält Tags für die semantische Interpretation. Diese Tags liefern einen Mechanismus, mit dem übereinstimmende Grammatikdaten an Ihre App zurückgegeben werden. Die Grammatik muss der [Semantic Interpretation for Speech Recognition (SISR)1.0](http://go.microsoft.com/fwlink/p/?LinkID=201765)-Spezifikation des World Wide Web Consortium (W3C) entsprechen.
 
 Hier horchen wir auf Varianten von „Ja“ und „Nein“.
 
@@ -246,6 +241,6 @@ Mit den Eigenschaften [**SpeechRecognizerUIOptions.AudiblePrompt**](https://msdn
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

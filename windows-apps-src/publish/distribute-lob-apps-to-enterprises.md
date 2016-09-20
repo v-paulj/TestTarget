@@ -13,14 +13,16 @@ ms.openlocfilehash: d7551e0456ce0e59dbbfa92690ddd5ba2ebaf8b4
 
 Über den Windows Store für Unternehmen können Sie branchenspezifische Apps (Line-of-Business-Apps, LOB-Apps) direkt für Unternehmen veröffentlichen, damit diese Volumenlizenzen erwerben können, ohne die Apps im Store allgemein zur Verfügung zu stellen.
 
-> **Wichtig**  Zurzeit können nur kostenlose Apps über den Windows Store exklusiv an Unternehmen verteilt werden. Wenn Sie eine kostenpflichtige App als LOB übermitteln, steht sie dem Unternehmen derzeit nicht zur Verfügung. 
+> 
+            **Wichtig**  Zurzeit können nur kostenlose Apps über den Windows Store exklusiv an Unternehmen verteilt werden. Wenn Sie eine kostenpflichtige App als LOB übermitteln, steht sie dem Unternehmen derzeit nicht zur Verfügung. 
 
 ## Einrichten der Unternehmenszuordnung
 
 
 Der erste Schritt beim exklusiven Veröffentlichen von branchenspezifischen Apps für ein Unternehmen besteht darin, eine Zuordnung zwischen Ihrem Konto und dem privaten Store des Unternehmens einzurichten.
 
-> **Wichtig**  Dieser Zuordnungsprozess muss vom Unternehmen initiiert werden und muss an die E-Mail-Adresse in den **Kontaktinformationen** Ihres Kontos gesendet werden. Weitere Informationen finden Sie unter [Arbeiten mit LOB-Apps](http://go.microsoft.com/fwlink/p/?LinkId=698846).
+> 
+            **Wichtig**  Dieser Zuordnungsprozess muss vom Unternehmen initiiert werden und muss an die E-Mail-Adresse in den **Kontaktinformationen** Ihres Kontos gesendet werden. Weitere Informationen finden Sie unter [Arbeiten mit LOB-Apps](http://go.microsoft.com/fwlink/p/?LinkId=698846).
 
 Wenn ein Unternehmen Sie zum Veröffentlichen von Apps für die exklusive Nutzung in diesem Unternehmen einlädt, erhalten Sie eine E-Mail mit einem Link, über den Sie die Zuordnung bestätigen können. Sie können diese Zuordnungen auch unter **Unternehmenszusammenschlüsse** in Ihren **Kontoeinstellungen** bestätigen.
 
@@ -39,7 +41,8 @@ Wenn **Branche – Distribution** aktiviert ist, werden die sonst angezeigten Op
 
 Wählen Sie die Unternehmen aus, die die App verwenden dürfen. Niemand sonst kann darauf zugreifen.
 
-> **Hinweis**  Sie müssen mindestens ein Unternehmen auswählen, um eine App als branchenspezifische App zu veröffentlichen.
+> 
+            **Hinweis**  Sie müssen mindestens ein Unternehmen auswählen, um eine App als branchenspezifische App zu veröffentlichen.
 
 ### Organisationslizenzierung
 
@@ -53,13 +56,14 @@ Weitere Informationen finden Sie unter [Optionen für die Organisationslizenzier
 
 Wenn Sie auf **An Store übermitteln** klicken, durchläuft die App den Zertifizierungsprozess. Danach muss ein Administrator des Unternehmens die App dem privaten Store des Unternehmens im Portal des Windows Store für Unternehmen hinzufügen. Das Unternehmen kann die App dann für seine Benutzer bereitstellen.
 
-> **Hinweis** Um Ihre branchenspezifische App zu erhalten, muss sich die Organisation in einem [unterstützten Markt](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets) befinden. Beim Übermitteln der App darf dieser Markt nicht ausgeschlossen worden sein. 
+> 
+            **Hinweis** Um Ihre branchenspezifische App zu erhalten, muss sich die Organisation in einem [unterstützten Markt](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview#supported-markets) befinden. Beim Übermitteln der App darf dieser Markt nicht ausgeschlossen worden sein. 
 
 Weitere Informationen finden Sie unter [Arbeiten mit Branchen-Apps](http://go.microsoft.com/fwlink/p/?LinkId=698846) und [Verteilen von Apps über den privaten Store](http://go.microsoft.com/fwlink/p/?LinkId=698847).
 
 ### Aktualisieren von branchenspezifischen Apps
 
-Wenn Sie Updates für eine App veröffentlichen möchten, die bereits als branchenspezifische App veröffentlicht wurde, erstellen Sie einfach eine neue Übermittlung. Sie können neue Pakete hochladen oder andere Änderungen vornehmen. Klicken Sie dann auf **An Store übermitteln**, um die aktualisierte Version verfügbar zu machen. Achten Sie darauf, die Auswahl der Unternehmen unter **Verteilung und Sichtbarkeit** nicht zu ändern (es sei denn, Sie möchten sie bewusst ändern und z. B. ein zusätzliches Unternehmen auswählen, das die App erwerben kann, oder eines der zuvor eingerichteten Unternehmen löschen).
+Wenn Sie Updates für eine App veröffentlichen möchten, die bereits als branchenspezifische App veröffentlicht wurde, erstellen Sie einfach eine neue Übermittlung. Sie können neue Pakete hochladen oder andere Änderungen vornehmen. Klicken Sie dann auf **An Store übermitteln**, um die aktualisierte Version verfügbar zu machen. Achten Sie darauf, die Auswahl der Unternehmen unter **Verteilung und Sichtbarkeit** nicht zu ändern (es sei denn, Sie möchten sie bewusst ändern und z.B. ein zusätzliches Unternehmen auswählen, das die App erwerben kann, oder eines der zuvor eingerichteten Unternehmen löschen).
 
 Wenn Sie eine App, die Sie zuvor als branchenspezifische App veröffentlicht haben, nicht mehr anbieten möchten und keine neuen Käufe möglich sein sollen, müssen Sie eine neue Übermittlung erstellen. Zunächst müssen Sie die Auswahl unter **Verteilung und Sichtbarkeit** von **Branche – Distribution** in **Einzelhandel – Distribution** ändern. Wählen Sie dann unter **Verteilung und Sichtbarkeit** die Option **Diese App ausblenden und den Verkauf stoppen** aus. Nachdem die Übermittlung den Zertifizierungsprozess durchlaufen hat, kann die App nicht mehr neu erworben werden. Benutzer, die sie bereits erworben haben, können sie jedoch weiter verwenden.
 
@@ -67,9 +71,9 @@ Wenn Sie eine App, die Sie zuvor als branchenspezifische App veröffentlicht hab
 
 Wenn Apps über den Store für Unternehmen verfügbar gemacht werden, wird sichergestellt, dass die App vom Store signiert wurde und den Standardrichtlinien des Stores entspricht.
 
-In einigen Fällen möchten Unternehmen möglicherweise aus verschiedenen Gründen nicht, dass ihre branchenspezifischen Apps über das Windows Dev Center übermittelt werden (z. B. aus Compliance-Gründen oder bei Apps, für die weitere Funktionen benötigt werden). In diesem Fall können die Unternehmen Apps durch Querladen direkt auf Computern bereitstellen und müssen nicht den Windows Store für Unternehmen verwenden.
+In einigen Fällen möchten Unternehmen möglicherweise aus verschiedenen Gründen nicht, dass ihre branchenspezifischen Apps über das Windows Dev Center übermittelt werden (z.B. aus Compliance-Gründen oder bei Apps, für die weitere Funktionen benötigt werden). In diesem Fall können die Unternehmen Apps durch Querladen direkt auf Computern bereitstellen und müssen nicht den Windows Store für Unternehmen verwenden.
 
-Weitere Informationen finden Sie unter [Querladen von Branchen-Apps in Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
+Weitere Informationen finden Sie unter [Querladen von Branchen-Apps in Windows10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
 
  
 

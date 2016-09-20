@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 7DBEE5E2-C3EC-4305-823D-9095C761A1CD
 description: "In diesem Artikel wird erläutert, wie Sie eine variable Fotosequenz aufnehmen, um mehrere Frames von Bildern in schneller Folge aufzunehmen und jeden Frame so zu konfigurieren, dass unterschiedliche Einstellungen für Fokus, Blitz, ISO, Belichtung und Belichtungskorrektur verwendet werden."
 title: Variable Fotosequenz
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: c6be6c0ea255c38bba65550ae44c7f88c140ca0f
 
@@ -11,10 +10,10 @@ ms.openlocfilehash: c6be6c0ea255c38bba65550ae44c7f88c140ca0f
 
 # Variable Fotosequenz
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
-In diesem Artikel wird erläutert, wie Sie eine variable Fotosequenz aufnehmen, um mehrere Frames von Bildern in schneller Folge aufzunehmen und jeden Frame so zu konfigurieren, dass unterschiedliche Einstellungen für Fokus, Blitz, ISO, Belichtung und Belichtungskorrektur verwendet werden. Mit diesem Feature können Sie z. B. HDR-Bilder (High Dynamic Range) erstellen.
+In diesem Artikel wird erläutert, wie Sie eine variable Fotosequenz aufnehmen, um mehrere Frames von Bildern in schneller Folge aufzunehmen und jeden Frame so zu konfigurieren, dass unterschiedliche Einstellungen für Fokus, Blitz, ISO, Belichtung und Belichtungskorrektur verwendet werden. Mit diesem Feature können Sie z.B. HDR-Bilder (High Dynamic Range) erstellen.
 
 Wenn Sie HDR-Bilder aufnehmen, aber nicht Ihre eigenen Algorithmen zur Bildverarbeitung implementieren möchten, können Sie mithilfe der [**AdvancedPhotoCapture**](https://msdn.microsoft.com/library/windows/apps/mt181386) API die in Windows integrierten HDR-Funktionen verwenden. Weitere Informationen finden Sie unter [HDR-Fotoaufnahmen (High Dynamic Range)](high-dynamic-range-hdr-photo-capture.md).
 

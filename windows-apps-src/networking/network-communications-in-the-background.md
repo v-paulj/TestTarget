@@ -4,32 +4,36 @@ description: "Apps halten die Kommunikation mithilfe von Hintergrundaufgaben und
 title: Netzwerkkommunikation im Hintergrund
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 4ab9ca2a1cd337bd0af8fbbfcf44d8fc6e6dda3e
+ms.sourcegitcommit: eea01135c60df0323b73bf3fda8b44e6d02cd04b
+ms.openlocfilehash: bea161a9eeac012aa7b09547212f021f1289afa6
 
 ---
 
 # Netzwerkkommunikation im Hintergrund
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Wichtige APIs**
 
 -   [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)
 -   [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)
 
-Apps halten die Kommunikation mithilfe von Hintergrundaufgaben und zwei wichtigen Mechanismen aufrecht, während sie nicht im Vordergrund ausgeführt werden: den Socketbroker und Steuerkanaltrigger. Apps, die Sockets verwenden, können den Besitz eines Sockets an einen System-Socketbroker delegieren, sobald sie aus dem Vordergrund wechseln. Der Broker aktiviert die App, wenn Datenverkehr auf dem Socket eintrifft, überträgt den Besitz zurück an die App, und die App verarbeitet den eingehenden Datenverkehr.
+Wenn Apps nicht im Vordergrund ausgeführt werden, halten sie die Kommunikation mithilfe von Hintergrundaufgaben und zwei wichtigen Mechanismen aufrecht: Socketbroker und Steuerkanaltrigger. Apps, die Sockets für dauerhafte Verbindungen verwenden, können den Besitz eines Sockets an einen System-Socketbroker delegieren, sobald sie in den Hintergrund wechseln. Der Broker aktiviert die App, wenn Datenverkehr auf dem Socket eintrifft, überträgt den Besitz zurück an die App, und die App verarbeitet den eingehenden Datenverkehr.
+
+## Kurzlebige Netzwerkvorgänge in Hintergrundaufgaben
+
+SocketActivityTrigger und ControlChannelTrigger (später in diesem Thema behandelt) sind für Apps vorgesehen, die langlebige Netzwerkverbindungen mit langer Laufzeit aufrechterhalten, die auch beim Ausführen der App im Hintergrund beibehalten werden. Apps, deren Logik für die jeweilige Hintergrundaufgabe kurzlebige Netzwerkinteraktionen erfordert (z.B. zum Senden einer HTTP-Anforderung), können direkt in den wichtigsten Netzwerk-APIs ([**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)) aufgerufen werden. Solche Aufgaben müssen jedoch auf eine bestimmte Weise konfiguriert werden, damit sie in jedem Fall ordnungsgemäß funktionieren. Hintergrundaufgaben müssen entweder die Bedingung [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) verwenden oder das Flag [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) für die Registrierung der Hintergrundaufgaben. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet.
+
+Wenn die Hintergrundaufgabe [InternetAvailable](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemconditiontype.aspx) oder [IsNetworkRequested](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundtaskbuilder.isnetworkrequested.aspx) nicht wie hier beschrieben verwendet, hat sie keinen Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z.B. wenn der Bildschirm eines Smartphones ausgeschaltet ist).
 
 ## Socketbroker und SocketActivityTrigger
 
-Wenn Ihre App eine [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Verbindung verwendet, sollten Sie den [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) und den Socketbroker verwenden, um eine Benachrichtigung zu erhalten, wenn Datenverkehr für Ihre App eintrifft, während diese nicht im Vordergrund ausgeführt wird.
+Wenn Ihre App eine [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Verbindung verwendet, sollten Sie mithilfe von [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) und Socketbroker Benachrichtigungen einrichten, um über eingehenden Datenverkehr für ihre App informiert zu werden, wenn diese im Hintergrund ausgeführt wird.
 
-Damit die App Daten, die auf einem Socket empfangen werden, während die App nicht aktiv ist, empfangen und verarbeiten kann, muss die App beim Start eine einmalige Einrichtung vornehmen und den Socket-Besitz dann an den Socketbroker übertragen, wenn sie zu einem nicht aktiven Zustand wechselt.
+Damit die App Daten, die auf einem Socket empfangen werden, auch bei Inaktivität empfangen und verarbeiten kann, muss die App beim Start eine einmalige Einrichtung vornehmen und den Socket-Besitz dann an den Socketbroker übertragen, wenn sie in einen nicht aktiven Zustand wechselt.
 
--   Die Schritte für die einmalige Einrichtung lauten wie folgt:
-
-    -   Erstellen Sie einen SocketActivityTrigger, und registrieren Sie eine Hintergrundaufgabe für den Trigger, wobei der TaskEntryPoint-Parameter auf den Code zum Verarbeiten des empfangenen Pakets festgelegt ist.
-
+Bei den Schritten für die einmalige Einrichtung handelt es sich um das Erstellen eines Triggers, das Registrieren einer Hintergrundaufgabe für den Trigger und das Aktivieren des Sockets für den Socketbroker:
+  - Erstellen Sie einen **SocketActivityTrigger**, und registrieren Sie eine Hintergrundaufgabe für den Trigger, wobei der TaskEntryPoint-Parameter auf den Code zum Verarbeiten des empfangenen Pakets festgelegt ist.
 ```csharp
             var socketTaskBuilder = new BackgroundTaskBuilder(); 
             socketTaskBuilder.Name = _backgroundTaskName; 
@@ -38,10 +42,7 @@ Damit die App Daten, die auf einem Socket empfangen werden, während die App nic
             socketTaskBuilder.SetTrigger(trigger); 
             _task = socketTaskBuilder.Register(); 
 ```
-
-    -   Call EnableTransferOwnership on the socket, before you bind the socket.
-
-
+  - Rufen Sie **EnableTransferOwnership** für den Socket auf, bevor Sie die Bindung für den Socket festlegen.
 ```csharp
            _tcpListener = new StreamSocketListener(); 
           
@@ -54,15 +55,12 @@ Damit die App Daten, die auf einem Socket empfangen werden, während die App nic
            await _tcpListener.BindServiceNameAsync("my-service-name"); 
 ```
 
--   Bei der Unterbrechung führen Sie folgende Aktion aus:
+Nachdem der Socket ordnungsgemäß eingerichtet ist, rufen Sie vor Anhalten der App für den Socket **TransferOwnership** auf, um ihn an einen Socketbroker zu übertragen. Der Broker überwacht den Socket und aktiviert die Hintergrundaufgabe, wenn Daten empfangen werden. Im folgenden Beispiel wird die **TransferOwnership**-Hilfsfunktion verwendet, um die Übertragung für **StreamSocketListener**-Sockets auszuführen. (Beachten Sie, dass unterschiedliche Sockettypen jeweils eine eigene **TransferOwnership**-Methode besitzen. Sie müssen daher für die Besitzübertragung des Sockets die richtige Methode verwenden. In der Regel enthält der Code eine überladene **TransferOwnership**-Hilfsfunktion mit einer einzelnen Implementierung für jeden verwendeten Sockettyp, damit der **OnSuspending**-Code gut lesbar bleibt.)
 
-    Bevor die App unterbrochen wird, rufen Sie **TransferOwnership** für den Socket auf, um ihn an einen Socketbroker zu übertragen. Der Broker überwacht den Socket und aktiviert die Hintergrundaufgabe, wenn Daten empfangen werden. Im folgenden Beispiel wird die **TransferOwnership**-Hilfsfunktion verwendet, um die Übertragung für **StreamSocketListener**-Sockets auszuführen. (Beachten Sie, dass unterschiedliche Sockettypen jeweils eine eigene **TransferOwnership**-Methode besitzen. Sie müssen daher für die Besitzübertragung des Sockets die richtige Methode verwenden. In der Regel enthält der Code eine überladene **TransferOwnership**-Hilfsfunktion mit einer einzelnen Implementierung für jeden verwendeten Sockettyp, damit der **OnSuspending**-Code gut lesbar bleibt.)
-
-    Eine App überträgt den Besitz eines Sockets an einen Socketbroker und übergibt die ID für die Hintergrundaufgabe mit der entsprechenden Methode:
-
-    -   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256)-Methoden für einen [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319).
-    -   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433)-Methoden für einen [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882).
-    -   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407)-Methoden für einen [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906).
+Eine App überträgt den Besitz eines Sockets an einen Socketbroker und übergibt die ID für die Hintergrundaufgabe mit der entsprechenden Methode:
+-   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804256)-Methoden für einen [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319).
+-   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn781433)-Methoden für einen [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882).
+-   Einer der [**TransferOwnership**](https://msdn.microsoft.com/library/windows/apps/dn804407)-Methoden für einen [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906).
 
 ```csharp
     private void TransferOwnership(StreamSocketListener tcpListener) 
@@ -84,26 +82,20 @@ Damit die App Daten, die auf einem Socket empfangen werden, während die App nic
         deferral.Complete(); 
     } 
 ```
-
--  Im Ereignishandler für die Hintergrundaufgabe:
-
+Im Ereignishandler für die Hintergrundaufgabe:
    -  Rufen Sie zunächst eine Hintergrundaufgabenverzögerung ab, damit Sie das Ereignis mit asynchronen Methoden behandeln können.
-
 ```csharp
 var deferral = taskInstance.GetDeferral();
 ```
-
    -  Als Nächstes extrahieren Sie die SocketActivityTriggerDetails aus den Ereignisargumenten und suchen den Grund für das Auslösen des Ereignisses:
-
 ```csharp
 var details = taskInstance.TriggerDetails as SocketActivityTriggerDetails; 
     var socketInformation = details.SocketInformation; 
     switch (details.Reason) 
 ```
+   -   Wenn das Ereignis aufgrund der Socket-Aktivität ausgelöst wurde, erstellen Sie einen DataReader für den Socket, laden den Reader asynchron und verwenden die Daten entsprechend der Logik der App. Beachten Sie, dass Sie den Besitz des Sockets wieder an Socketbroker zurückgeben müssen, um bei weiterer Socket-Aktivität erneut benachrichtigt zu werden.
 
-    -   If the event was raised because of socket activity, create a DataReader on the socket, load the reader asynchronously, and then use the data according to your app's design. Note that you must return ownership of the socket back to the socket broker, in order to be notified of further socket activity again.
-
-        In the following example, the text received on the socket is displayed in a toast.
+   Im folgenden Beispiel wird der vom Socket empfangene Text in einem Popup angezeigt.
 
 ```csharp
 case SocketActivityTriggerReason.SocketActivity: 
@@ -117,7 +109,7 @@ case SocketActivityTriggerReason.SocketActivity:
             break; 
 ```
 
-    -   If the event was raised because a keep alive timer expired, then your code should send some data over the socket in order to keep the socket alive and restart the keep alive timer. Again, it is important to return ownership of the socket back to the socket broker in order to receive further event notifications:
+   -   Wenn das Ereignis ausgelöst wurde, weil ein Keep-Alive-Zeitgeber abgelaufen ist, sollte der Code Daten über den Socket senden, damit der Socket geöffnet bleibt und der Keep-Alive-Zeitgeber neu gestartet wird. Dabei ist es wiederum wichtig, den Besitz des Sockets zurück an den Socketbroker zu übertragen, um weitere Ereignisbenachrichtigungen zu erhalten:
 
 ```csharp
 case SocketActivityTriggerReason.KeepAliveTimerExpired: 
@@ -131,7 +123,7 @@ case SocketActivityTriggerReason.KeepAliveTimerExpired:
             break; 
 ```
 
-    -   If the event was raised because the socket was closed, re-establish the socket, making sure that after you create the new socket, you transfer ownership of it to the socket broker. In this sample, the hostname and port are stored in local settings so that they can be used to establish a new socket connection:
+   -   Wenn das Ereignis durch das Schließen des Sockets ausgelöst wurde, richten Sie den Socket erneut ein und stellen sicher, anschließend den Besitz des neuen Sockets an den Socketbroker zu übertragen. In diesem Beispiel werden der Hostname und -port in den lokalen Einstellungen gespeichert, damit sie zum Einrichten einer neuen Socketverbindung verwendet werden können:
 
 ```csharp
 case SocketActivityTriggerReason.SocketClosed: 
@@ -148,7 +140,7 @@ case SocketActivityTriggerReason.SocketClosed:
             break; 
 ```
 
--   Denken Sie daran, die Verzögerung abzuschließen, sobald die Verarbeitung der Ereignisbenachrichtigung beendet wurde:
+   -   Denken Sie daran, die Verzögerung abzuschließen, sobald die Verarbeitung der Ereignisbenachrichtigung beendet wurde:
 
 ```csharp
   deferral.Complete();
@@ -437,8 +429,7 @@ Weitere Informationen zur Verwendung von [**MessageWebSocket**](https://msdn.mic
 
 Bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) müssen einige besondere Punkte berücksichtigt werden. Bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit **ControlChannelTrigger** sollten Sie sich an einige transportspezifische Verwendungsmuster und bewährte Methoden halten. Diese Aspekte beeinflussen, wie Anforderungen für den Paketempfang in der [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)-Klasse verarbeitet werden.
 
-**Hinweis**
-            [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) in Verbindung mit SSL wird derzeit bei Verwendung des Netzwerktriggerfeatures und von [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) nicht unterstützt.
+**Hinweis:**  [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) in Verbindung mit SSL wird derzeit bei Verwendung des Netzwerktriggerfeatures und von [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) nicht unterstützt.
 
  
 Beachten Sie bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) die folgenden Verwendungsmuster und bewährten Methoden:
@@ -599,6 +590,6 @@ Weitere Informationen zur Verwendung von [**IXMLHTTPRequest2**](https://msdn.mic
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

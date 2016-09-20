@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 ms.assetid: 28B30708-FE08-4BE9-AE11-5429F963C330
-title: "Bluetooth GATT"
+title: BluetoothGATT
 description: "Dieser Artikel enthält eine Übersicht über Bluetooth Generic Attribute Profile (GATT) für Universelle Windows-Plattform (UWP)-Apps zusammen mit Beispielcode für drei häufige GATT-Szenarien."
 ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
 ms.openlocfilehash: 664f6ce7829c9e9a6674daa6cdc21e7561ff094b
@@ -9,7 +9,7 @@ ms.openlocfilehash: 664f6ce7829c9e9a6674daa6cdc21e7561ff094b
 ---
 # Bluetooth GATT
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
@@ -164,9 +164,9 @@ void MainPage::TemperatureMeasurementChanged(
 }
 ```
 
-## Steuern eines Bluetooth LE-Thermometers
+## Steuern eines BluetoothLE-Thermometers
 
-In diesem Beispiel dient eine UWP-App (Universelle Windows-Plattform) als Controller für ein fiktives Bluetooth LE-Thermometer. Das Gerät deklariert außerdem ein Formatmerkmal, anhand dessen der Benutzer den Wert in Celsius oder Fahrenheit abrufen kann, zusätzlich zu den Standardmerkmalen des [**HealthThermometer**](https://msdn.microsoft.com/library/windows/apps/Dn297603)-Profils. Die App verwendet zuverlässige Schreibtransaktionen, um sicherzustellen, dass das Format und das Messintervall als einzelner Wert festgelegt werden.
+In diesem Beispiel dient eine UWP-App (Universelle Windows-Plattform) als Controller für ein fiktives BluetoothLE-Thermometer. Das Gerät deklariert außerdem ein Formatmerkmal, anhand dessen der Benutzer den Wert in Celsius oder Fahrenheit abrufen kann, zusätzlich zu den Standardmerkmalen des [**HealthThermometer**](https://msdn.microsoft.com/library/windows/apps/Dn297603)-Profils. Die App verwendet zuverlässige Schreibtransaktionen, um sicherzustellen, dass das Format und das Messintervall als einzelner Wert festgelegt werden.
 
 ```csharp
 // Uuid of the "Format" Characteristic Value
@@ -284,9 +284,9 @@ void MainPage::Initialize()
 
 ```
 
-## Steuern der Darstellung von Bluetooth LE-Gerätedaten
+## Steuern der Darstellung von BluetoothLE-Gerätedaten
 
-Ein Bluetooth LE-Gerät kann einen Akkudienst verfügbar machen, der dem Benutzer den aktuellen Akkustand anzeigt. Der Akkudienst enthält einen optionalen [**PresentationFormats**](https://msdn.microsoft.com/library/windows/apps/Dn263742)-Deskriptor, der eine gewisse Flexibilität bei der Interpretation der Akkustanddaten ermöglicht. Dieses Szenario stellt ein Beispiel für eine App bereit, die mit einem solchen Gerät ausgeführt wird und die **PresentationFormats**-Eigenschaft verwendet, um einen Merkmalswert zu formatieren, bevor er dem Benutzer angezeigt wird.
+Ein BluetoothLE-Gerät kann einen Akkudienst verfügbar machen, der dem Benutzer den aktuellen Akkustand anzeigt. Der Akkudienst enthält einen optionalen [**PresentationFormats**](https://msdn.microsoft.com/library/windows/apps/Dn263742)-Deskriptor, der eine gewisse Flexibilität bei der Interpretation der Akkustanddaten ermöglicht. Dieses Szenario stellt ein Beispiel für eine App bereit, die mit einem solchen Gerät ausgeführt wird und die **PresentationFormats**-Eigenschaft verwendet, um einen Merkmalswert zu formatieren, bevor er dem Benutzer angezeigt wird.
 
 ```csharp
 async void Initialize()

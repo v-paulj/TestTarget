@@ -26,7 +26,8 @@ Einige Hintergrundaufgaben, die durch ein Ereignis ausgelöst werden, müssen zu
 
 Wenn Sie Bedingungen für Hintergrundaufgaben festlegen, schonen Sie Akku und CPU-Laufzeit, da das unnötige Ausführen von Aufgaben verhindert wird. Wenn Ihre Hintergrundaufgabe z. B. nach einem Timer ausgeführt wird und eine Internetverbindung benötigt, fügen Sie die **InternetAvailable**-Bedingung zum [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) hinzu, bevor Sie die Aufgabe registrieren. So wird verhindert, dass die Aufgabe unnötig Systemressourcen nutzt und Akkulaufzeit beansprucht, da die Aufgabe erst ausgeführt wird, wenn der Timer abgelaufen und das Internet verfügbar ist.
 
-**Hinweis**  Sie können mehrere Bedingungen kombinieren, indem Sie AddCondition mehrmals für denselben [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) aufrufen. Achten Sie darauf, keine in Konflikt stehenden Bedingungen wie **UserPresent** und **UserNotPresent** hinzuzufügen.
+
+            **Hinweis**  Sie können mehrere Bedingungen kombinieren, indem Sie AddCondition mehrmals für denselben [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) aufrufen. Achten Sie darauf, keine in Konflikt stehenden Bedingungen wie **UserPresent** und **UserNotPresent** hinzuzufügen.
 
  
 
@@ -81,9 +82,11 @@ Registrieren Sie die Hintergrundaufgabe.
 
 Der folgende Code registriert die Aufgabe und speichert das resultierende BackgroundTaskRegistration-Objekt: [!div class="tabbedCodeSnippets"]
 
-> **Hinweis**  Universelle Windows-Apps müssen vor der Registrierung von Hintergrundtrigger-Typen [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen. Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) und anschließend [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) auf, wenn die App nach der Aktualisierung gestartet wird, um sicherzustellen, dass Ihre universelle Windows-App nach der Veröffentlichung eines Updates weiterhin ordnungsgemäß ausgeführt wird. Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md).
+> 
+            **Hinweis**  Universelle Windows-Apps müssen vor der Registrierung von Hintergrundtrigger-Typen [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen. Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) und anschließend [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) auf, wenn die App nach der Aktualisierung gestartet wird, um sicherzustellen, dass Ihre universelle Windows-App nach der Veröffentlichung eines Updates weiterhin ordnungsgemäß ausgeführt wird. Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md).
 
-## **Hinweis**  Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft.
+## 
+            **Hinweis**  Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft.
 
 Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App Szenarien, in denen die Registrierung von Hintergrundaufgaben einen Fehler verursacht, problemlos verarbeitet.
 
@@ -155,20 +158,23 @@ Zum Hinzufügen mehrerer Bedingungen ruft Ihre App die [**AddCondition**](https:
 ## Diese Aufrufe müssen stattfinden, bevor die Aufgabenregistrierung wirksam wird.
 
 
-> **Hinweis**  Achten Sie darauf, einer Hintergrundaufgabe keine in Konflikt stehenden Bedingungen hinzuzufügen. Der folgende Ausschnitt zeigt mehrere Bedingungen im Kontext der Erstellung und Registrierung einer Hintergrundaufgabe:
+> 
+            **Hinweis**  Achten Sie darauf, einer Hintergrundaufgabe keine in Konflikt stehenden Bedingungen hinzuzufügen. Der folgende Ausschnitt zeigt mehrere Bedingungen im Kontext der Erstellung und Registrierung einer Hintergrundaufgabe:
 
-> [!div class="tabbedCodeSnippets"] Anmerkungen
+> [!div class="tabbedCodeSnippets"] Hinweise
 
  
 
-## **Hinweis**  Wählen Sie die richtigen Bedingungen für Ihre Hintergrundaufgabe aus, damit sie nur bei Bedarf ausgeführt wird und nicht dann, wenn es nicht funktioniert.
+## 
+            **Hinweis**  Wählen Sie die richtigen Bedingungen für Ihre Hintergrundaufgabe aus, damit sie nur bei Bedarf ausgeführt wird und nicht dann, wenn es nicht funktioniert.
 
 
 ****
 
 * [Unter [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) finden Sie Beschreibungen der verschiedenen Bedingungen für Hintergrundaufgaben.](create-and-register-a-background-task.md)
-* [**Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben.](declare-background-tasks-in-the-application-manifest.md)
-* [Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
+* [
+            **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben.](declare-background-tasks-in-the-application-manifest.md)
+* [Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).](handle-a-cancelled-background-task.md)
 * [Verwandte Themen](monitor-background-task-progress-and-completion.md)
 * [Erstellen und Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](respond-to-system-events-with-background-tasks.md)

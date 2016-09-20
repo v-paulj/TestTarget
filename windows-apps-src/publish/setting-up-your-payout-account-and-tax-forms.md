@@ -13,11 +13,13 @@ ms.openlocfilehash: 45cb4e8b65f1aeb75c049a88c143a23350d47b64
 
 Damit Sie Geld aus den App-Verkäufen im Windows Store erhalten, müssen Sie ein Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen.
 
-> **Hinweis**  Seit dem 1. April 2016 werden Ihre Microsoft Advertising-Einnahmen auf das Auszahlungskonto gezahlt, das Sie im Dev Center eingerichtet haben. Weitere Informationen finden Sie unter [Konsolidierung des pubCenter- und DevCenter-Auszahlungskontos und -Steuerprofils](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
+> 
+            **Hinweis**  Seit dem 1. April 2016 werden Ihre Microsoft Advertising-Einnahmen auf das Auszahlungskonto gezahlt, das Sie im Dev Center eingerichtet haben. Weitere Informationen finden Sie unter [Konsolidierung des pubCenter- und DevCenter-Auszahlungskontos und -Steuerprofils](pubcenter-devcenter-payout-account-and-tax-profile-consolidation.md).
 
 Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Einkäufe bereitstellen oder Microsoft Advertising verwenden möchten), brauchen Sie kein Auszahlungskonto einzurichten oder Steuerformulare auszufüllen. Falls Sie zu einem späteren Zeitpunkt beschließen, Apps (oder In-App-Produkte) zu verkaufen, können Sie Ihr Auszahlungskonto dann noch einrichten und die Steuerformulare ausfüllen. Kostenpflichtige Apps und IAPs können erst übermittelt werden, wenn Sie Ihr Auszahlungskonto eingerichtet und Ihr Steuerprofil ausgefüllt haben.
 
-> **Hinweis:** In [bestimmten Märkten](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) können Entwickler nur kostenlose Apps übermitteln. Wenn Ihr Konto in einem dieser Märkte registriert ist, steht die Option zum Einrichten eines Auszahlungskontos nicht zur Verfügung.
+> 
+            **Hinweis:** In [bestimmten Märkten](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) können Entwickler nur kostenlose Apps übermitteln. Wenn Ihr Konto in einem dieser Märkte registriert ist, steht die Option zum Einrichten eines Auszahlungskontos nicht zur Verfügung.
 
 
 Nach dem [Einrichten des Entwicklerkontos](opening-a-developer-account.md) müssen Sie zwei Dinge tun, bevor Sie Apps (oder IAPs) im Windows Store verkaufen können:
@@ -25,7 +27,8 @@ Nach dem [Einrichten des Entwicklerkontos](opening-a-developer-account.md) müss
 -   [Einrichten eines Auszahlungskontos](#setting_up_your_payout_account)
 -   [Ausfüllen der Steuerformulare](#paying_taxes)
 
-> **Hinweis**  Ausführliche Informationen dazu, wie und wann Sie das mit den Apps verdiente Geld erhalten, finden Sie unter [Regelung der Bezahlung](getting-paid-apps.md).
+> 
+            **Hinweis**  Ausführliche Informationen dazu, wie und wann Sie das mit den Apps verdiente Geld erhalten, finden Sie unter [Regelung der Bezahlung](getting-paid-apps.md).
 
  
 
@@ -34,7 +37,8 @@ Nach dem [Einrichten des Entwicklerkontos](opening-a-developer-account.md) müss
 
 Bei einem Auszahlungskonto handelt es sich um das Bankkonto, auf das wir Ihren Verkaufserlös überweisen. Dieses Bankkonto muss sich im selben Land befinden, in dem Sie Ihr Entwicklerkonto registriert haben.
 
-> **Hinweis**  In einigen Märkten kann PayPal als Auszahlungskonto verwendet werden. Unter [Kontotypen, Standorte und Gebühren](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) können Sie feststellen, ob PayPal für einen bestimmten Markt unterstützt wird. Weitere Einzelheiten finden Sie in den [PayPal-Informationen](#paypal) unten.
+> 
+            **Hinweis**  In einigen Märkten kann PayPal als Auszahlungskonto verwendet werden. Unter [Kontotypen, Standorte und Gebühren](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) können Sie feststellen, ob PayPal für einen bestimmten Markt unterstützt wird. Weitere Einzelheiten finden Sie in den [PayPal-Informationen](#paypal) unten.
 
  
 **So richten Sie ein Auszahlungskonto ein**
@@ -42,17 +46,20 @@ Bei einem Auszahlungskonto handelt es sich um das Bankkonto, auf das wir Ihren V
 1.  Klicken Sie im Windows Dev Center-Dashboard im linken Navigationsmenü auf **Kontoeinstellungen**.
 2.  Klicken Sie im linken Navigationsmenü der Seite **Kontoeinstellungen** auf **Auszahlungskonto**.
 
-   > **Hinweis**  Da es sich um vertrauliche Informationen handelt, können Sie aufgefordert werden, sich erneut anzumelden.
+   > 
+            **Hinweis**  Da es sich um vertrauliche Informationen handelt, können Sie aufgefordert werden, sich erneut anzumelden.
 
 3.  Geben Sie im angezeigten Bildschirm die Informationen für Ihr Konto ein.
 
-   > **Hinweis**  Für die Felder, in die Sie Ihre Kontoinformationen eingeben, sind nur alphanumerische Zeichen zulässig.
+   > 
+            **Hinweis**  Für die Felder, in die Sie Ihre Kontoinformationen eingeben, sind nur alphanumerische Zeichen zulässig.
 
 4.  Speichern Sie die Informationen.
 
 Wenn Sie das Auszahlungskonto aktualisieren oder ändern müssen, führen Sie die gleichen Schritte wie oben aus, und ersetzen Sie dabei die aktuellen durch die neuen Informationen.
 
-> **Wichtig**  Durch die Änderung des Auszahlungskontos werden Ihre Zahlungen unter Umständen um einen Zahlungszyklus verzögert. Diese Verzögerung entsteht, da wir die Kontoänderung genau wie die erste Einrichtung des Auszahlungskontos überprüfen müssen. Sie erhalten dennoch den vollständigen Betrag, nachdem Ihr Konto verifiziert wurde. Zahlungen für den aktuellen Zahlungszyklus werden zum nächsten Zyklus addiert. Weitere Informationen finden Sie unter [Regelung der Bezahlung](getting-paid-apps.md).
+> 
+            **Wichtig**  Durch die Änderung des Auszahlungskontos werden Ihre Zahlungen unter Umständen um einen Zahlungszyklus verzögert. Diese Verzögerung entsteht, da wir die Kontoänderung genau wie die erste Einrichtung des Auszahlungskontos überprüfen müssen. Sie erhalten dennoch den vollständigen Betrag, nachdem Ihr Konto verifiziert wurde. Zahlungen für den aktuellen Zahlungszyklus werden zum nächsten Zyklus addiert. Weitere Informationen finden Sie unter [Regelung der Bezahlung](getting-paid-apps.md).
 
  
 
@@ -99,7 +106,7 @@ Berücksichtigen Sie auch folgende Punkte, um sicherzustellen, dass Ihre Auszahl
 
 ### Ukraine
 
-Wenn Sie Entwickler und in der Ukraine ansässig sind, müssen Sie Ihre Empfangsberechtigung gegenüber der Bank u. U. mit entsprechenden Belegen nachweisen. Wenn Sie für eine Zahlung berechtigt sind, erhalten Sie von uns folgende Belege in einer E-Mail-Nachricht:
+Wenn Sie Entwickler und in der Ukraine ansässig sind, müssen Sie Ihre Empfangsberechtigung gegenüber der Bank u.U. mit entsprechenden Belegen nachweisen. Wenn Sie für eine Zahlung berechtigt sind, erhalten Sie von uns folgende Belege in einer E-Mail-Nachricht:
 
 1.  Certificate of Acceptance (CoA): Enthält den Zahlungsbetrag, der auf Ihr Konto überwiesen wird.
 2.  App Developer Agreement (ADA): Eine unterschriebene Kopie der Entwicklervereinbarung, die gegengezeichnet werden muss.
@@ -123,31 +130,33 @@ Nach dem [Registrieren eines Entwicklerkontos](opening-a-developer-account.md) u
 
 Sie können die Steuerformulare im Dashboard elektronisch ausfüllen und übermitteln. In den meisten Fällen müssen keine Formulare ausgedruckt und per Post gesendet werden.
 
-> **Wichtig**  In den verschiedenen Ländern und Regionen gelten unterschiedliche Steuergesetze. Die genaue Höhe der zu zahlenden Steuern hängt von den Ländern und Regionen ab, in denen Sie Ihre Apps verkaufen. In der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) sehen Sie, in welchen Ländern Microsoft für Sie Verkaufs- und Nutzungssteuern überweist. In anderen Ländern müssen Sie u. U. je nachdem, wo Sie registriert sind, Verkaufs- und Nutzungssteuern direkt an die örtliche Steuerbehörde überweisen. Des Weiteren müssen die Erlöse aus Ihren App-Verkäufen unter Umständen als Einkommen versteuert werden. Wir empfehlen Ihnen nachdrücklich, sich an die zuständige Behörde in Ihrem Land oder Ihrer Region zu wenden, die Ihnen am besten dabei helfen kann, die richtigen Steuerinformationen für Ihre Windows Store-Entwickleraktivitäten zu ermitteln.
+> 
+            **Wichtig**  In den verschiedenen Ländern und Regionen gelten unterschiedliche Steuergesetze. Die genaue Höhe der zu zahlenden Steuern hängt von den Ländern und Regionen ab, in denen Sie Ihre Apps verkaufen. In der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) sehen Sie, in welchen Ländern Microsoft für Sie Verkaufs- und Nutzungssteuern überweist. In anderen Ländern müssen Sie u.U. je nachdem, wo Sie registriert sind, Verkaufs- und Nutzungssteuern direkt an die örtliche Steuerbehörde überweisen. Des Weiteren müssen die Erlöse aus Ihren App-Verkäufen unter Umständen als Einkommen versteuert werden. Wir empfehlen Ihnen nachdrücklich, sich an die zuständige Behörde in Ihrem Land oder Ihrer Region zu wenden, die Ihnen am besten dabei helfen kann, die richtigen Steuerinformationen für Ihre Windows Store-Entwickleraktivitäten zu ermitteln.
 
  
 **So füllen Sie Ihr Steuerprofil aus**
 
-1.  Klicken Sie im Windows Dev Center-Dashboard im linken Navigationsmenü auf **Kontoeinstellungen**.
+1.  Klicken Sie im WindowsDevCenter-Dashboard im linken Navigationsmenü auf **Kontoeinstellungen**.
 2.  Klicken Sie im linken Navigationsmenü der Seite **Kontoeinstellungen** auf **Steuerprofil**.
 
-   > **Hinweis**  Da es sich um vertrauliche Informationen handelt, können Sie aufgefordert werden, sich erneut anzumelden.
+   > 
+            **Hinweis**  Da es sich um vertrauliche Informationen handelt, können Sie aufgefordert werden, sich erneut anzumelden.
 
 3.  Prüfen Sie den aktuellen Status Ihres Steuerprofils, und klicken Sie auf **Bearbeiten**, um die erforderlichen Formulare auszufüllen.
 4.  Beantworten Sie die Frage bezüglich der amerikanischen Staatsbürgerschaft und des Wohnsitzes in den USA, und klicken Sie dann auf **Weiter**.
 5.  Bestätigen Sie Ihren Namen und Ihre Adressinformationen zu Steuerzwecken, wenn diese angezeigt werden.
 
-Daraufhin werden elektronische Versionen der Steuerformulare angezeigt, die Sie ausfüllen müssen. Um über den Windows Store Apps oder In-App-Produkte verkaufen zu können, müssen Sie – unabhängig von Ihrem Wohnsitzland oder Ihrer Staatsangehörigkeit – Steuerformulare für die USA ausfüllen. Entwickler, die bestimmte Kriterien für den Wohnsitz USA erfüllen, müssen ein IRS W-9-Formular ausfüllen. Entwickler außerhalb der USA müssen ein IRS W-8-Formular ausfüllen. Sie können diese Formulare online ausfüllen, wenn Sie Ihr Steuerprofil angeben.
+Daraufhin werden elektronische Versionen der Steuerformulare angezeigt, die Sie ausfüllen müssen. Um über den WindowsStore Apps oder In-App-Produkte verkaufen zu können, müssen Sie – unabhängig von Ihrem Wohnsitzland oder Ihrer Staatsangehörigkeit – Steuerformulare für die USA ausfüllen. Entwickler, die bestimmte Kriterien für den Wohnsitz USA erfüllen, müssen ein IRS W-9-Formular ausfüllen. Entwickler außerhalb der USA müssen ein IRS W-8-Formular ausfüllen. Sie können diese Formulare online ausfüllen, wenn Sie Ihr Steuerprofil angeben.
 
 Eine US-amerikanische Steueridentifikationsnummer (Individual Taxpayer Identification Number, ITIN) ist nicht erforderlich, um Zahlungen von Microsoft zu erhalten oder die Vorteile eines Steuerabkommens in Anspruch zu nehmen.
 
 ### Quellensteuersätze
 
-Die von Ihnen in den Steuerformularen übermittelten Informationen sind ausschlaggebend für die anwendbaren Quellensteuersätze. Der Quellensteuersatz bezieht sich nur auf Verkäufe in die USA. Verkäufe in Länder außer die USA unterliegen nicht der Quellensteuer. Die Quellensteuersätze können variieren, aber für die meisten außerhalb der USA registrierten Entwickler beträgt der Satz standardmäßig 30 %. Sie können diesen Satz senken, wenn Ihr Land Einkommenssteuervereinbarungen mit den USA abgeschlossen hat.
+Die von Ihnen in den Steuerformularen übermittelten Informationen sind ausschlaggebend für die anwendbaren Quellensteuersätze. Der Quellensteuersatz bezieht sich nur auf Verkäufe in die USA. Verkäufe in Länder außer die USA unterliegen nicht der Quellensteuer. Die Quellensteuersätze können variieren, aber für die meisten außerhalb der USA registrierten Entwickler beträgt der Satz standardmäßig 30%. Sie können diesen Satz senken, wenn Ihr Land Einkommenssteuervereinbarungen mit den USA abgeschlossen hat.
 
 ### Vorteile des Steuerabkommens
 
-Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den Vorteilen des Steuerabkommens profitieren. Diese Vorteile variieren von Land zu Land, sodass Sie vielleicht die Höhe der von Windows Store einbehaltenen Steuern reduzieren können. Sie müssen Teil II des W-8BEN-Formulars ausfüllen, um die Vorteile eines Steuerabkommens in Anspruch nehmen zu können. Wir empfehlen Ihnen, sich bei den zuständigen Stellen in Ihrem Land oder Ihrer Region zu erkundigen, ob diese Vorteile auf Sie zutreffen.
+Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den Vorteilen des Steuerabkommens profitieren. Diese Vorteile variieren von Land zu Land, sodass Sie vielleicht die Höhe der von Windows Store einbehaltenen Steuern reduzieren können. Sie müssen TeilII des W-8BEN-Formulars ausfüllen, um die Vorteile eines Steuerabkommens in Anspruch nehmen zu können. Wir empfehlen Ihnen, sich bei den zuständigen Stellen in Ihrem Land oder Ihrer Region zu erkundigen, ob diese Vorteile auf Sie zutreffen.
 
  
 

@@ -3,7 +3,6 @@ author: mtoepke
 title: Marble Maze-Anwendungsstruktur
 description: "Die Struktur einer DirectX-UWP-App unterscheidet sich von der einer herkömmlichen Desktopanwendung."
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: e9cc290fa77471f315daf7f29f605412d2ec45cc
 
@@ -12,19 +11,20 @@ ms.openlocfilehash: e9cc290fa77471f315daf7f29f605412d2ec45cc
 # Marble Maze-Anwendungsstruktur
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-Die Struktur einer DirectX-UWP-App unterscheidet sich von der einer herkömmlichen Desktopanwendung. Die Windows-Runtime verwendet keine Handletypen wie z. B. **HWND** und keine Funktionen wie z. B. **CreateWindow**, sondern stellt Schnittstellen, z. B. [**Windows::UI::Core::ICoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208296) bereit, sodass Sie UWP-Apps auf modernere Weise und mit stärkerer Objektorientierung entwickeln können. In diesem Abschnitt der Dokumentation ist dargestellt, wie der Anwendungscode von Marble Maze strukturiert ist.
+Die Struktur einer DirectX-UWP-App unterscheidet sich von der einer herkömmlichen Desktopanwendung. Die Windows-Runtime verwendet keine Handletypen wie z.B. **HWND** und keine Funktionen wie z.B. **CreateWindow**, sondern stellt Schnittstellen, z.B. [**Windows::UI::Core::ICoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208296) bereit, sodass Sie UWP-Apps auf modernere Weise und mit stärkerer Objektorientierung entwickeln können. In diesem Abschnitt der Dokumentation ist dargestellt, wie der Anwendungscode von Marble Maze strukturiert ist.
 
-> **Hinweis**   Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> 
+            **Hinweis**   Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 ## 
 Es folgen einige wichtige Punkte, die in diesem Dokument für das Strukturieren von Spielcode erläutert werden:
 
 -   Richten Sie in der Initialisierungsphase Laufzeit- und Bibliothekskomponenten ein, die das Spiel verwendet. Laden Sie auch spielspezifische Ressourcen.
--   Bei UWP-Apps muss der Start der Ereignisverarbeitung innerhalb von 5 Sekunden nach dem Start der App erfolgen. Laden Sie daher beim Laden Ihrer App nur wichtige Ressourcen. Spiele sollten umfangreiche Ressourcen im Hintergrund laden und einen Statusbildschirm anzeigen.
+-   Bei UWP-Apps muss der Start der Ereignisverarbeitung innerhalb von 5Sekunden nach dem Start der App erfolgen. Laden Sie daher beim Laden Ihrer App nur wichtige Ressourcen. Spiele sollten umfangreiche Ressourcen im Hintergrund laden und einen Statusbildschirm anzeigen.
 -   In der Spielschleife sollten vier Aktionen ausgeführt werden: Verarbeiten von Windows-Ereignissen, Lesen von Benutzereingaben, Aktualisieren von Szenenobjekten und Rendern der Szene.
 -   Reagieren Sie mithilfe von Handlern auf Fensterereignisse. (Diese ersetzen die Fenstermeldungen in Windows-Desktopanwendungen.)
 -   Verwenden Sie einen Zustandsautomaten, um den Fluss und die Reihenfolge der Spiellogik zu steuern.
@@ -101,7 +101,8 @@ Wenn die Handler für diese Ereignisse aufgerufen werden, übergeben sie die Ein
 
 Damit das Spiel innerhalb von 5 Sekunden nach dem Starten auf Fensterereignisse reagieren kann, wird empfohlen, die Spielressourcen asynchron oder im Hintergrund zu laden. Während die Objekte im Hintergrund geladen werden, kann das Spiel auf Fensterereignisse reagieren.
 
-> **Hinweis**  Sie können auch das Hauptmenü anzeigen, wenn es bereit ist, und den übrigen Ressourcen ermöglichen, den Ladevorgang im Hintergrund fortzusetzen. Wenn der Benutzer eine Menüoption auswählt, bevor alle Ressourcen geladen wurden, kann beispielsweise durch Anzeigen einer Statusleiste angegeben werden, dass Szenenressourcen weiter geladen werden.
+> 
+            **Hinweis**  Sie können auch das Hauptmenü anzeigen, wenn es bereit ist, und den übrigen Ressourcen ermöglichen, den Ladevorgang im Hintergrund fortzusetzen. Wenn der Benutzer eine Menüoption auswählt, bevor alle Ressourcen geladen wurden, kann beispielsweise durch Anzeigen einer Statusleiste angegeben werden, dass Szenenressourcen weiter geladen werden.
 
  
 
@@ -121,7 +122,8 @@ Die **MarbleMaze**-Klasse definiert das *m\_deferredResourcesReady*-Kennzeichen,
 
 Weitere Informationen zur asynchronen Programmierung für UWP-Apps finden Sie unter [Asynchrone Programmierung in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
 
->> > **Tipp**   Sollten Sie z. B. einen Spielcode schreiben, der Teil einer Windows-Runtime-C++-Bibliothek (d. h. eine DLL) ist, können Sie im Abschnitt [Erstellen asynchroner Vorgänge in C++ für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/hh750113.aspx) lesen, wie asynchrone Vorgänge erstellt werden, die von Apps und anderen Bibliotheken genutzt werden können.
+>> > 
+            **Tipp**   Sollten Sie z.B. einen Spielcode schreiben, der Teil einer Windows-Runtime-C++-Bibliothek (d.h. eine DLL) ist, können Sie im Abschnitt [Erstellen asynchroner Vorgänge in C++ für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/hh750113.aspx) lesen, wie asynchrone Vorgänge erstellt werden, die von Apps und anderen Bibliotheken genutzt werden können.
 
  
 
@@ -204,7 +206,7 @@ Die Windows-Runtime stellt ein objektorientiertes System zur Ereignisbehandlung 
 
 ### Unterstützen des Anhaltens, Fortsetzens und Neustartens
 
-Marble Maze wird angehalten, wenn der Benutzer aus dem Spiel herauswechselt oder Windows in den Energiesparmodus versetzt wird. Das Spiel wird fortgesetzt, wenn der Benutzer es in den Vordergrund bringt oder der Stromsparmodus für Windows beendet wird. Im Allgemeinen werden Apps nicht geschlossen. Die Apps kann von Windows beendet werden, wenn sich diese im angehaltenen Zustand befindet und Windows die von der App verwendeten Ressourcen (z. B. den Arbeitsspeicher) benötigt. Eine App wird von Windows benachrichtigt, wenn diese gerade angehalten oder fortgesetzt wird, sie wird jedoch nicht benachrichtigt, wenn sie gerade beendet wird. Daher muss die App – ab dem Zeitpunkt, an dem sie von Windows benachrichtigt wird, dass sie gerade angehalten wird – alle Daten speichern können, die erforderlich wären, um den aktuellen Benutzerzustand wiederherzustellen, wenn die App neu gestartet wird. Verfügt die App über einen signifikanten Benutzerzustand, der einen hohen Speicheraufwand erfordert, kann zudem ein regelmäßiges Speichern des Zustands erforderlich sein, noch bevor die App die Anhaltebenachrichtigung empfängt. Marble Maze reagiert aus zwei Gründen auf Anhalte- und Fortsetzungsbenachrichtigungen:
+Marble Maze wird angehalten, wenn der Benutzer aus dem Spiel herauswechselt oder Windows in den Energiesparmodus versetzt wird. Das Spiel wird fortgesetzt, wenn der Benutzer es in den Vordergrund bringt oder der Stromsparmodus für Windows beendet wird. Im Allgemeinen werden Apps nicht geschlossen. Die Apps kann von Windows beendet werden, wenn sich diese im angehaltenen Zustand befindet und Windows die von der App verwendeten Ressourcen (z.B. den Arbeitsspeicher) benötigt. Eine App wird von Windows benachrichtigt, wenn diese gerade angehalten oder fortgesetzt wird, sie wird jedoch nicht benachrichtigt, wenn sie gerade beendet wird. Daher muss die App – ab dem Zeitpunkt, an dem sie von Windows benachrichtigt wird, dass sie gerade angehalten wird – alle Daten speichern können, die erforderlich wären, um den aktuellen Benutzerzustand wiederherzustellen, wenn die App neu gestartet wird. Verfügt die App über einen signifikanten Benutzerzustand, der einen hohen Speicheraufwand erfordert, kann zudem ein regelmäßiges Speichern des Zustands erforderlich sein, noch bevor die App die Anhaltebenachrichtigung empfängt. Marble Maze reagiert aus zwei Gründen auf Anhalte- und Fortsetzungsbenachrichtigungen:
 
 1.  Wird die App angehalten, speichert das Spiel den aktuellen Spielzustand und hält die Audiowiedergabe an. Wird die App fortgesetzt, setzt das Spiel die Audiowiedergabe fort.
 2.  Wird die App geschlossen und später neu gestartet, wird das Spiel ab dem vorherigen Zustand fortgesetzt.
@@ -351,7 +353,8 @@ void MarbleMaze::LoadState()
 }
 ```
 
-> **Wichtig**  Marble Maze unterscheidet nicht zwischen Kaltstart – d. h. einem erstmaligen Start ohne vorheriges Anhalteereignis – und dem Fortsetzen vom angehaltenen Zustand aus. Dies ist der empfohlene Entwurf für alle UWP-Apps.
+> 
+            **Wichtig**  Marble Maze unterscheidet nicht zwischen Kaltstart– d.h. einem erstmaligen Start ohne vorheriges Anhalteereignis– und dem Fortsetzen vom angehaltenen Zustand aus. Dies ist der empfohlene Entwurf für alle UWP-Apps.
 
  
 

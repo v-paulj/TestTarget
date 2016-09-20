@@ -1,169 +1,179 @@
 ---
 author: drewbatgit
 ms.assetid: 
-description: This article shows you how to play media in your Universal Windows app with MediaPlayer.
-title: Play audio and video with MediaPlayer
+description: "In diesem Artikel erfahren Sie, wie Sie in Ihrer universellen Windows-App mithilfe von „MediaPlayer“ Medien wiedergeben."
+title: "Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“"
+translationtype: Human Translation
+ms.sourcegitcommit: 3d6f79ea55718d988415557bc4ac9a1f746f9053
+ms.openlocfilehash: 32df2810710e78eeb8c257548c39c0d5d978e888
+
 ---
 
-# Play audio and video with MediaPlayer
+# Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“
 
-This article shows you how to play media in your Universal Windows app using the  [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer) class. With Windows 10, version 1607, significant improvements were made to the media playback APIs, including a simplified single-process design for background audio, automatic integration with the System Media Transport Controls (SMTC), the ability to synchronize multiple media players, the ability to a Windows.UI.Composition surface, and an easy interface for creating and scheduling media breaks in your content. To take advantage of these improvements, the recommended best practice for playing media is to use the **MediaPlayer** class instead of **MediaElement** for media playback. The lightweight XAML control, [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement), has been introduced to allow you render media content in a XAML page. Many of the playback control and status APIs provided by **MediaElement** are now available through the new [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) object. **MediaElement** continues to function to support backwards compatibility, but no additional features will be added to this class.
+In diesem Artikel erfahren Sie, wie Sie in Ihrer universellen Windows-App mithilfe der [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)-Klasse Medien wiedergeben. In Windows10, Version1607, wurden wesentliche Verbesserungen an den APIs zur Medienwiedergabe vorgenommen, unter anderem ein vereinfachtes Einzelprozessdesign für die Audiowiedergabe im Hintergrund, automatische Integration in die Steuerelemente für den Systemmedientransport (System Media Transport Controls, SMTC), die Möglichkeit zum Synchronisieren mehrerer Media Player, die Option einer Windows.UI.Composition-Oberfläche und eine anwenderfreundliche Schnittstelle zum Erstellen und Planen von Medienunterbrechungen in Ihren Inhalten. Um diese Verbesserungen optimal zu nutzen, sollten Sie für die Medienwiedergabe anstelle von **MediaElement** die **MediaPlayer**-Klasse verwenden. Das einfache XAML-Steuerelement [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) wurde eingeführt, damit Sie Medieninhalte auf einer XAML-Seite rendern können. Viele der von **MediaElement** bereitgestellten Wiedergabesteuerelemente und Status-APIs sind jetzt über das neue [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession)-Objekt verfügbar. **MediaElement** gewährleistet weiterhin die Abwärtskompatibilität. Dieser Klasse werden jedoch keine weiteren Features hinzugefügt.
 
-This article will walk you through the **MediaPlayer** features that a typical media playback app will use. Note that **MediaPlayer** uses the [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource) class as a container for all media items. This class allows you to load and play media from many different sources, including local files, memory streams, and network sources, all using the same interface. There are also higher-level classes that work with **MediaSource**, such as [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) and [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList), that provide more advanced features like playlists and the ability to manage media sources with multiple audio, video, and metadata tracks. For more information on **MediaSource** and related APIs, see [Media items, playlists, and tracks](media-playback-with-mediasource.md).
+Dieser Artikel erläutert die Features von **MediaPlayer**, die von einer typischen App zur Medienwiedergabe verwendet werden. Beachten Sie, dass **MediaPlayer** die [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource)-Klasse als Container für alle Medienelemente verwendet. Diese Klasse ermöglicht Ihnen das Laden und Wiedergeben von Medien aus verschiedenen Quellen – z.B. aus lokalen Dateien, Speicherdatenströmen und Netzwerkquellen – über die gleiche Schnittstelle. Verschiedene Klassen auf höherer Ebene arbeiten ebenfalls mit **MediaSource**, z.B. [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) und [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList). Sie stellen erweiterte Features bereit wie Wiedergabelisten und die Möglichkeit, Medienquellen mit mehreren Audio-, Video- und Metadatentiteln zu verwalten, Weitere Informationen zu **MediaSource** und verwandten APIs finden Sie unter [Medienelemente, Wiedergabelisten und Titel](media-playback-with-mediasource.md).
 
 
-##Play a media file with MediaPlayer  
-Basic media playback with **MediaPlayer** is very simple to implement. First, create a new instance of the **MediaPlayer** class. Your app can have multiple **MediaPlayer** instances active at once. Next, set the [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source) property of the player to an object that implements the [**IMediaPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.IMediaPlaybackSource), such as a [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), a [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem), or a [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList). In this example, a **MediaSource** is created from a file in the app's local storage, and then a **MediaPlaybackItem** is created from the source and then assigned to the player's **Source** property.
+##Wiedergeben einer Mediendatei mit „MediaPlayer“  
+Die grundlegende Medienwiedergabe mit **MediaPlayer** ist sehr einfach zu implementieren. Erstellen Sie zunächst eine neue Instanz der **MediaPlayer**-Klasse. In Ihrer App können mehrere **MediaPlayer**-Instanzen gleichzeitig aktiv sein. Legen Sie dann für die [**Source**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Source)-Eigenschaft des Players ein Objekt fest, welches die [**IMediaPlaybackSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.IMediaPlaybackSource) implementiert, z.B. eine [**MediaSource**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource), ein [**MediaPlaybackItem**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackItem) oder eine [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList). In diesem Beispiel wird ein **MediaSource**-Objekt aus einer Datei im lokalen Speicher der App erstellt. Anschließend wird aus der Quelle ein **MediaPlaybackItem**-Objekt erstellt und der **Source**-Eigenschaft des Players zugewiesen.
 
-Unlike **MediaElement**, **MediaPlayer** does not automatically begin playback by default. You can start playback by calling [**Play**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play), by setting the [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AutoPlay) property to true, or waiting for the user to initiate playback with the built-in media controls.
+Anders als **MediaElement** startet **MediaPlayer** nicht standardmäßig automatisch mit der Wiedergabe. Sie können die Wiedergabe starten, indem Sie [**Play**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Play) aufrufen, für die [**AutoPlay**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AutoPlay) -Eigenschaft „true“ festlegen oder warten, bis der Benutzer die Wiedergabe mit den integrierten Media-Steuerelementen startet.
 
 [!code-cs[SimpleFilePlayback](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSimpleFilePlayback)]
 
-When your app is done using a **MediaPlayer**, you should call the [**Close**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Close) method (projected to **Dispose** in C#) to clean up the resources used by the player.
+Wenn Ihre App die Verwendung eines **MediaPlayers** beendet hat, sollten Sie die Methode[**Close**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.Close) aufrufen (**Dispose**-Methode in C#), um die vom Player verwendeten Ressourcen zu bereinigen.
 
 [!code-cs[CloseMediaPlayer](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCloseMediaPlayer)]
 
-##Use MediaPlayerElement to render video in XAML
-You can play media in a **MediaPlayer** without displaying it in XAML, but many media playback apps will want to render the media in a XAML page. To do this, use the lightweight [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement) control. Like **MediaElement**, **MediaPlayerElement** allows you to specify whether the built-in transport controls should be shown.
+##Rendern von Videos in XAML mit MediaPlayerElement
+Sie können Medien in einem **MediaPlayer** wiedergeben, ohne sie in XAML anzuzeigen. Viele Medienwiedergabe-Apps versuchen jedoch, die Medien auf einer XAML-Seite zu rendern. Verwenden Sie hierfür das einfache [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement)-Steuerelement. Wie mit **MediaElement** können Sie mit **MediaPlayerElement** festlegen, ob die integrierten Transport-Steuerelemente angezeigt werden sollen.
 
 [!code-xml[MediaPlayerElementXAML](./code/MediaPlayer_RS1/cs/MainPage.xaml#SnippetMediaPlayerElementXAML)]
 
-You can set the **MediaPlayer** instance that the element is bound to by calling [**SetMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/mt708764).
+Sie können die **MediaPlayer** -Instanz festlegen, an die das Element gebunden ist, indem Sie [**SetMediaPlayer**](https://msdn.microsoft.com/library/windows/apps/mt708764) aufrufen.
 
 [!code-cs[SetMediaPlayer](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetMediaPlayer)]
 
-You can also set the playback source on the **MediaPlayerElement** and the element will automatically create a new **MediaPlayer** instance that you can access using the [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.MediaPlayer) property.
+Sie können für das **MediaPlayerElement** auch die Wiedergabequelle festlegen. Das Element erstellt dann automatisch eine neue **MediaPlayer**-Instanz, auf die Sie mithilfe der [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.MediaPlayerElement.MediaPlayer)-Eigenschaft zugreifen können.
 
 [!code-cs[GetPlayerFromElement](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetGetPlayerFromElement)]
 
-##Common MediaPlayer tasks
-This section shows you how to use some of the features of the **MediaPlayer**.
+##Allgemeine MediaPlayer-Aufgaben
+In diesem Abschnitt erfahren Sie, wie Sie verschiedene Features des **MediaPlayers** verwenden.
 
-###Set the audio category
-Set the [**AudioCategory**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AudioCategory) property of a **MediaPlayer** to one of the values of the [**MediaPlayerAudioCategory**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerAudioCategory) enumeration to let the system know what kind of media you are playing. Games should categorize their music streams as **GameMedia** so that game music mutes automatically if another application plays music in the background. Music or video applications should categorize their streams as **Media** or **Movie** so they will take priority over **GameMedia** streams.
+###Festlegen der AudioCategory-Eigenschaft
+Legen Sie für die [**Audiocategory** ](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AudioCategory)-Eigenschaft eines **MediaPlayers** einen der Werte der [**MediaPlayerAudioCategory**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerAudioCategory)-Enumeration fest, um dem System mitzuteilen, welche Art von Medien Sie wiedergeben. Spiele sollten als Kategorie ihrer Musikdatenströme **GameMedia** angeben, sodass die Musik des Spiels automatisch auf stumm geschaltet wird, wenn eine andere Anwendung im Hintergrund Musik wiedergibt. Musik- oder Video-Apps sollten als Kategorien für ihre Datenströme **Media** oder **Movie** angeben, sodass ihnen gegenüber **GameMedia**-Datenströmen Priorität eingeräumt wird.
 
 [!code-cs[SetAudioCategory](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioCategory)]
 
-###Output to a specific audio endpoint
-By default, the audio output from a **MediaPlayer** is routed to the default audio endpoint for the system, but you can specify a specific audio endpoint that the **MediaPlayer** should use for output. In the example below, [**MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.MediaDevice.GetAudioRenderSelector) returns a string that uniquely idenfies the audio render category of devices. Next, the [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation) method [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation.FindAllAsync) is called to get a list of all available devices of the selected type. You may programmatically determine which device you want to use or add the returned devices to a [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox) to allow the user to select a device.
+###Ausgabe an einen bestimmten Audio-Endpunkt
+Die Audioausgabe eines **MediaPlayers** wird standardmäßig zum Standard-Audio-Endpunkt des Systems geleitet. Sie können jedoch auch einen bestimmten Audio-Endpunkt als Ausgabe für den **MediaPlayer** festlegen. Im folgenden Beispiel gibt [**MediaDevice.GetAudioRenderSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Devices.MediaDevice.GetAudioRenderSelector) eine Zeichenfolge zur eindeutigen Identifizierung der Audiorendering-Kategorie von Geräten zurück. Als Nächstes wird die [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation)-Methode [**FindAllAsync**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceInformation.FindAllAsync) aufgerufen, um eine Liste aller verfügbaren Geräte des ausgewählten Typs zu erstellen. Sie können programmgesteuert festlegen, welches Gerät Sie verwenden möchten, oder die zurückgegebenen Geräte zu einer [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ComboBox) hinzufügen, damit der Benutzer ein Gerät auswählen kann.
 
 [!code-cs[SetAudioEndpointEnumerate](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioEndpointEnumerate)]
 
-In the [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Primitives.Selector.SelectionChanged) event for the devices combo box, the [**AudioDevice**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AudioDevice) property of the **MediaPlayer** is set to the selected device, which was stored in the [**Tag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.FrameworkElement.Tag) property of the **ComboBoxItem**.
+Im [**SelectionChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Primitives.Selector.SelectionChanged)-Ereignis für das Geräte-Kombinationsfeld wird die [**AudioDevice**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.AudioDevice)-Eigenschaft des **MediaPlayers** auf das ausgewählte Gerät festgelegt, die in der [**Tag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.FrameworkElement.Tag)-Eigenschaft des **ComboBoxItem** gespeichert wurde.
 
 [!code-cs[SetAudioEndpontSelectionChanged](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetAudioEndpontSelectionChanged)]
 
-###Playback session
-As described previously in this article, many of the functions that are exposed by the **MediaElement** class have been moved to the [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession) class. This includes information about the playback state of the player, such as the current playback position, whether the player is paused or playing, and the current playback speed. **MediaPlaybackSession** also provides several events to notify you when the state changes, including the current buffering and download status of content being played and the natural size and aspect ratio of the currently playing video content.
+###Wiedergabesitzung
+Wie zuvor in diesem Artikel beschrieben, wurden viele der von der **MediaElement**-Klasse verfügbar gemachten Funktionen in die [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession)-Klasse verschoben. Dazu gehören Informationen über den Wiedergabestatus des Players, z.B. die aktuelle Wiedergabeposition, ob der Player Medien wiedergibt bzw. angehalten wurde sowie die aktuelle Wiedergabegeschwindigkeit. **MediaPlaybackSession** stellt außerdem einige Ereignisse bereit, um Sie bei Statusänderungen zu benachrichtigen. Dazu gehören der aktuelle Puffer- und Download-Status der wiedergegebenen Inhalte sowie die natürliche Größe und das Seitenverhältnis des aktuell wiedergegebenen Videoinhalts.
 
-The following example shows you how to implement a button click handler that skips 10 seconds forward in the content. First, the **MediaPlaybackSession** object for the player is retrieved with the [**PlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.PlaybackSession) property. Next the [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.Position) property is set to the current playback position plus 10 seconds.
+Das folgende Beispiel zeigt, wie Sie einen Klickhandler für Schaltflächen implementieren können, der bei der Medienwiedergabe 10 Sekunden überspringt. Zuerst wird das **MediaPlaybackSession**-Objekt für den Player mit der [**PlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.PlaybackSession)-Eigenschaft abgerufen. Als Nächstes wird die [**Position**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.Position)-Eigenschaft auf die aktuelle Wiedergabeposition plus 10 Sekunden festgelegt.
 
 [!code-cs[SkipForwardClick](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSkipForwardClick)]
 
-The next example illustrates using a toggle button to toggle between normal playback speed and 2X speed by setting the [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.PlaybackRate) property of the session.
+Das nächste Beispiel zeigt, wie durch Einstellen der [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.PlaybackRate)-Eigenschaft der Sitzung mithilfe einer Schaltfläche zwischen der normalen Wiedergabegeschwindigkeit und zweifacher Geschwindigkeit gewechselt werden kann.
 
 [!code-cs[SpeedChecked](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSpeedChecked)]
 
-###Pinch and zoom video
-**MediaPlayer** allows you to specify the source rectangle within video content that should be rendered, effectively allowing you to zoom into video. The rectangle you specify is relative to a normalized rectangle (0,0,1,1) where 0,0 is the upper left hand of the frame and 1,1 specifies the full width and height of the frame. So, for example, to set the zoom rectangle so that the top-right quadrant of the video is rendered, you would specify the rectangle (.5,0,.5,.5).  It is important that you check your values to make sure that your source rectangle is within the (0,0,1,1) normalized rectangle. Attempting to set a value outside of this range will cause an exception to be thrown.
+###Zwei-Finger-Zoomen von Video
+**MediaPlayer** ermöglicht Ihnen, im Videoinhalt das zu rendernde Quellrechteck festzulegen und so in das Video hineinzuzoomen. Das angegebene Rechteck bezieht sich auf ein normalisiertes Rechteck (0,0,1,1) wobei 0,0 der oberen linken Ecke des Frames entspricht und 1,1 die volle Breite und Höhe des Frames angibt. Um beispielsweise das Zoomrechteck so festzulegen, dass der obere rechte Quadrant des Videos gerendert wird, müssten Sie das Rechteck wie folgt angeben: (.5,0,.5,.5).  Es ist wichtig, die Werte zu überprüfen, um sicherzustellen, dass Ihr Quellrechteck sich innerhalb des normalisierten Rechtecks (0,0,1,1) befindet. Durch den Versuch, einen Wert außerhalb dieses Bereichs festzulegen, wird eine Ausnahme ausgelöst.
 
-To implement pinch and zoom using multi-touch gestures, you must first specify which gestures you want to support. In this example, scale and translate gestures are requested. The [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.ManipulationDelta) event is raised when one of the subscribed gestures occurs. The [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped) event will be used to reset the zoom to the full frame. 
+Um den Zwei-Finger-Zoom mithilfe von Multitouchbewegungen zu implementieren, müssen Sie zunächst angeben, welche Gesten unterstützt werden sollen. In diesem Beispiel wurden Gesten zum Skalieren und Übersetzen angefordert. Das [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.ManipulationDelta)-Ereignis wird ausgelöst, wenn eine der abonnierten Gesten auftritt. Das [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped)-Ereignis wird verwendet, um den Zoom auf den vollständigen Frame zurückzusetzen. 
 
 [!code-cs[RegisterPinchZoomEvents](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetRegisterPinchZoomEvents)]
 
-Next, declare a **Rect** object that will store the current zoom source rectangle.
+Deklarieren Sie als Nächstes ein **Rect**-Objekt, welches das aktuelle Zoom-Quellrechteck speichert.
 
 [!code-cs[DeclareSourceRect](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareSourceRect)]
 
-The **ManipulationDelta** handler adjusts either the scale or the translation of the zoom rectangle. If the delta scale value is not 1, it means that the user performed a pinch gesture. If the value is greater than 1, the source rectangle should be made smaller to zoom into the content. If the value is less than 1, then the source rectangle should be made bigger to zoom out. Before setting the new scale values, the resulting rectangle is checked to make sure it lies entirely within the (0,0,1,1) limits.
+Der **ManipulationDelta**-Handler passt die Skalierung oder die Übersetzung des Zoom-Rechtecks an. Ist der Deltawert für die Skalierung nicht 1, bedeutet dies, dass der Benutzer eine Zwei-Finger-Zoom-Geste ausgeführt hat. Wenn der Wert größer als 1 ist, muss das Quellrechteck verkleinert werden, um den Inhalt zu vergrößern. Wenn der Wert kleiner als 1 ist, sollte das Quellrechteck vergrößert werden, um den Inhalt zu verkleinern. Vor Festlegen der neuen Skalierungswerte wird das resultierende Rechteck überprüft, um sicherzustellen, dass es vollständig innerhalb der Grenzen von (0,0,1,1) liegt.
 
-If the scale value is 1, then the translation gesture is handled. The rectangle is simply translated by the number of pixels in gesture divided by the width and height of the control. Again, the resulting rectangle is checked to make sure it lies within the (0,0,1,1) bounds.
+Wenn der Skalierungswert 1 ist, wird die Übersetzungsgeste behandelt. Das Rechteck wird wie folgt übersetzt: Anzahl der Pixel in der Geste geteilt durch die Breite und Höhe des Steuerelements. Wieder wird das resultierende Rechteck überprüft, um sicherzustellen, dass es innerhalb der Grenzen von (0,0,1,1) liegt.
 
-Finally, the [**NormalizedSourceRect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NormalizedSourceRect) of the **MediaPlaybackSession** is set to the newly adjusted rectangle, specifying the area within the video frame that should be rendered.
+Schließlich wird die [**NormalizedSourceRect**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NormalizedSourceRect)-Eigenschaft der **MediaPlaybackSession** auf das neu angepasste Rechteck festgelegt. Dabei wird der Bereich innerhalb des Video-Frames angegeben, der gerendert werden soll.
 
 [!code-cs[ManipulationDelta](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetManipulationDelta)]
 
-In the [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped) event handler, the source rectangle is set back to (0,0,1,1) to cause the entire video frame to be rendered.
+Im [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.DoubleTapped)-Ereignishandler wird das Quellrechteck wieder auf (0,0,1,1) festgelegt, damit der gesamte Videoframe gerendert wird.
 
 [!code-cs[DoubleTapped](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDoubleTapped)]
-		
-##Use MediaPlayerSurface to render video to a Windows.UI.Composition surface
-Starting with Windows 10, version 1607, you can use **MediaPlayer** to render video to an to render video to an [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ICompositionSurface), which allows the player to interoperate with the APIs in the [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition) namespace. The composition framework allows you to work with graphics in the visual layer between XAML and the low-level DirectX graphics APIs. This enables scenarios like rendering video into any XAML control. For more information on using the composition APIs, see [Visual Layer](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer).
+        
+##Rendern von Videos auf einer Windows.UI.Composition-Oberfläche mit MediaPlayerSurface
+Ab Windows10, Version1607, können Sie mit **MediaPlayer** Videos auf einer [**ICompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ICompositionSurface) rendern. Dadurch kann der Player mit den APIs im [**Windows.UI.Composition**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition)-Namespace verwendet werden. Das Kompositions-Framework ermöglicht Ihnen, auf der visuellen Ebene zwischen XAML und den DirectX-Grafik-APIs auf niedriger Ebene Grafiken zu verwenden. Dies ermöglicht Szenarien wie das Rendering von Videos in alle XAML-Steuerelemente. Weitere Informationen zur Verwendung der Composition-APIs finden Sie unter [visuelle Ebene](https://msdn.microsoft.com/windows/uwp/graphics/visual-layer).
 
-The following example illustrates how to render video player content onto a [**Canvas**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Canvas) control. The media player-specific calls in this example are [**SetSurfaceSize**](https://msdn.microsoft.com/library/windows/apps/mt489968) and [**GetSurface**](https://msdn.microsoft.com/library/windows/apps/mt489963). **SetSurfaceSize** tells the system the size of the buffer that should be allocated for rendering content. **GetSurface** takes a [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.Compositor) as an arguemnt and retreives an instance of the [**MediaPlayerSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface) class. This class provides access to the **MediaPlayer** and **Compositor** used to create the surface and exposes the surface itself through the [**CompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface.CompositionSurface) property.
+Das folgende Beispiel veranschaulicht das Rendern von Inhalten des Videoplayers auf ein [**Canvas**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Canvas)-Steuerelement. Die mediaplayerspezifischen Aufrufe in diesem Beispiel sind [**SetSurfaceSize**](https://msdn.microsoft.com/library/windows/apps/mt489968) und [**GetSurface**](https://msdn.microsoft.com/library/windows/apps/mt489963). **SetSurfaceSize** teilt dem System die Größe des Puffers mit, der für das Rendern von Inhalten zugeordnet werden muss. **GetSurface** verwendet einen [**Compositor**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.Compositor) als Argument und ruft eine Instanz der [**MediaPlayerSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface)-Klasse ab. Diese Klasse ermöglicht den Zugriff auf den **MediaPlayer** und den **Compositor**, mit denen die Oberfläche erstellt wird. Die Klasse macht außerdem die Oberfläche selbst über die [**CompositionSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface.CompositionSurface)-Eigenschaft verfügbar.
 
-The rest of the code in this example creates a [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.SpriteVisual) to which the video is rendered and sets the size to the size of the canvas element that will display the visual. Next a [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.CompositionBrush) is created from the [**MediaPlayerSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface) and assigned to the [**Brush**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.SpriteVisual.Brush) property of the visual. Next a [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ContainerVisual) is created and the **SpriteVisual** is inserted at the top of its visual tree. Finally, [**SetElementChildVisual**](https://msdn.microsoft.com/library/windows/apps/mt608981) is called to assign the container visual to the **Canvas**.
+Der restliche Code in diesem Beispiel erstellt ein [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.SpriteVisual)-Element, in den das Video gerendert wird, und legt als Größe die Größe des Canvas-Elements fest, das das Visual anzeigt. Als Nächstes wird ein [**CompositionBrush**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.CompositionBrush) aus der [**MediaPlayerSurface**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayerSurface) erstellt und der [**Brush**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.SpriteVisual.Brush)-Eigenschaft des Visuals zugeordnet. Dann wird ein [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Composition.ContainerVisual) erstellt, und das **SpriteVisual** wird auf der oberen Ebene der visuellen Struktur eingefügt. Schließlich wird [**SetElementChildVisual**](https://msdn.microsoft.com/library/windows/apps/mt608981) aufgerufen, um das Container-Visual dem **Canvas** zuzuordnen.
 
 [!code-cs[Compositor](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCompositor)]
-		
-##Use MediaTimelineController to synchronize content across multiple players.
-As discussed previously in this article, your app can have several **MediaPlayer** objects active at a time. By default, each **MediaPlayer** you create operates independently. For some scenarios, such as synchronizing a commentary track to a video, you may want to synchronize the player state, playback position, and playback speed of multiple players. Starting with Windows 10, version 1607, you can implement this behavior by using the [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController) class.
+        
+##Synchronisieren von Inhalten zwischen mehreren Playern mit MediaTimelineController
+Wie in diesem Artikel bereits erläutert, können in Ihrer App mehrere **MediaPlayer**-Objekte gleichzeitig aktiv sein. Standardmäßig funktioniert jeder von Ihnen erstellte **MediaPlayer** unabhängig. In einigen Szenarien, z.B. beim Synchronisieren einer Kommentarspur mit einem Video, müssen möglicherweise der Status des Players, die Wiedergabeposition und die Wiedergabegeschwindigkeit von mehreren Playern synchronisiert werden. Ab Windows10, Version1607, können Sie dieses Verhalten mithilfe der [**MediaTimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController)-Klasse implementieren.
 
-###Implement playback controls
-The following example shows how to use a **MediaTimelineController** to control two instances of **MediaPlayer**. First, each instance of the **MediaPlayer** is instantiated and the **Source** is set to a media file. Next, a new **MediaTimelineController** is created. For each **MediaPlayer**, the [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) associated with each player is disabled by setting the [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled) property to false. And then then the [**TimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.TimelineController) property is set to the timeline controller object.
+###Implementieren der Wiedergabe-Steuerelemente
+Das folgende Beispiel zeigt, wie Sie mit einem **MediaTimelineController** zwei Instanzen des **MediaPlayers** steuern können. Zuerst werden alle Instanzen des **MediaPlayers** instanziiert und eine Mediendatei als **Source** festgelegt. Als Nächstes wird eine neue **MediaTimelineController**-Klasse erstellt. Bei jedem **MediaPlayer** wird der mit den einzelnen Playern verknüpfte [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) deaktiviert, indem die [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager.IsEnabled)-Eigenschaft auf „false“ festgelegt wird. Anschließend wird die [**TimelineController**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.TimelineController)-Eigenschaft auf de Zeitachsencontroller festgelegt.
 
 [!code-cs[DeclareMediaTimelineController](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareMediaTimelineController)]
 
 [!code-cs[SetTimelineController](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetTimelineController)]
 
-**Caution** The [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager) provides automatic integration between **MediaPlayer** and the System Media Transport Controls (SMTC), but this automatic integration can't be used with media players that are controlled with a **MediaTimelineController**. Therefore you must disable the command manager for the media player before setting the player's timeline controller. Failure to do so will result in an exception being thrown with the following message: "Attaching Media Timeline Controller is blocked because of the current state of the object." For more information on media player integration with the SMTC, see [Integrate with the System Media Transport Controls](integrate-with-systemmediatransportcontrols.md). If you are using a **MediaTimelineController** you can still control the SMTC manually. For more information, see [Manual control of the System Media Transport Controls](system-media-transport-controls.md).
+**Achtung** Die [**MediaPlaybackCommandManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackCommandManager)-Klasse stellt eine automatische Integration zwischen **MediaPlayer** und den Steuerelementen für den Systemmedientransport (System Media Transport Controls, SMTC) bereit. Diese automatische Integration kann jedoch nicht für Media Player verwendet werden, die über eine **MediaTimelineController**-Klasse gesteuert werden. Daher müssen Sie vor dem Festlegen des Zeitachsencontrollers des Players den Befehlsmanager des Media Players deaktivieren. Andernfalls wird eine Ausnahme mit der Benachrichtigung ausgelöst, dass das Anfügen des Medienzeitachsencontrollers im aktuellen Objektzustand blockiert wird. Weitere Informationen zur Integration des Media Players in die SMTC finden Sie unter [Integration in die Steuerelemente für den Systemmedientransport](integrate-with-systemmediatransportcontrols.md). Auch wenn Sie eine **MediaTimelineController**-Klasse verwenden, können Sie die SMTC weiterhin manuell steuern. Weitere Informationen finden Sie unter [Manuelle Steuerung der Steuerelemente für den Systemmedientransport](system-media-transport-controls.md).
 
-Once you have attached a **MediaTimelineController** to one or more media players, you can control the playback state by using the methods exposed by the controller. The following example calls [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController.Start) to begin playback of all associated media players at the beginning of the media.
+Nachdem Sie eine **MediaTimelineController**-Klasse einem oder mehreren Media Player zugewiesen haben, können Sie den Wiedergabestatus mit den vom Controller bereitgestellten Methoden steuern. Im folgenden Beispiel wird [**Start**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController.Start) aufgerufen, um die Wiedergabe aller zugeordneten Media Player zu Beginn des Mediums zu starten.
 
 [!code-cs[PlayButtonClick](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetPlayButtonClick)]
 
-This example illustrates pausing and resuming all of the attached media players.
+Dieses Beispiel veranschaulicht das Anhalten und Fortsetzen aller zugeordneten Media Player.
 
 [!code-cs[PauseButtonClick](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetPauseButtonClick)]
 
-To fast-forward all connected media players, set the playback speed to a value greater that 1.
+Für den schnellen Vorlauf aller verbundenen Media Player muss die Wiedergabegeschwindigkeit auf einen Wert größer als 1 festgelegt werden.
 
 [!code-cs[FastForwardButtonClick](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetFastForwardButtonClick)]
 
-The next example shows how to use a **Slider** control to show the current playback position of the timeline controller relative to the duration of the content of one of the connected media players. First, a new **MediaSource** is created and a handler for the [**OpenOperationCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource.OpenOperationCompleted) of the media source is registered. 
+Das nächste Beispiel zeigt die Verwendung eines **Slider**-Steuerelements, um die aktuelle Wiedergabeposition des Zeitachsencontrollers in Relation zum Inhalt eines der verbundenen Media Player anzuzeigen. Zunächst wird eine neue **MediaSource** erstellt und ein Handler für das [**OpenOperationCompleted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Core.MediaSource.OpenOperationCompleted)-Ereignis der Medienquelle registriert. 
 
 [!code-cs[CreateSourceWithOpenCompleted](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCreateSourceWithOpenCompleted)]
 
-The **OpenOperationCompleted** handler is used as an opportunity to discover the duration of the media source content. Once the duration is determined, the maximum value of the **Slider** control is set to the total number of seconds of the media item. The value is set inside a call to [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) to make sure it is run on the UI thread.
+Der **OpenOperationCompleted**-Handler bietet eine Möglichkeit, um die Dauer des Inhalts der Medienquelle festzustellen. Sobald die Dauer bestimmt ist, wird der Höchstwert des **Slider**-Steuerelements auf die Gesamtzahl der Sekunden des Medienelements festgelegt. Der Wert wird innerhalb eines Aufrufs von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) festgelegt, um sicherzustellen, dass es im UI-Thread ausgeführt wird.
 
 [!code-cs[DeclareDuration](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareDuration)]
 
 [!code-cs[OpenCompleted](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetOpenCompleted)]
 
-Next, a handler for the timeline controller's  [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController.PositionChanged) event is registered. This is called periodically by the system, approximately 4 times per second.
+Als Nächstes wird ein Handler für das [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.MediaTimelineController.PositionChanged)-Ereignis des Zeitachsencontrollers registriert. Dieses wird in regelmäßigen Abständen durch das System aufgerufen, ungefähr viermal pro Sekunde.
 
 [!code-cs[RegisterPositionChanged](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetRegisterPositionChanged)]
 
-In the handler for **PositionChanged**, the slider value is updated to reflect the current position of the timeline controller.
+Im Handler für **PositionChanged** wird der Schiebereglerwert aktualisiert, sodass er die aktuelle Position des Zeitachsencontrollers wiedergibt.
 
 [!code-cs[PositionChanged](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetPositionChanged)]
 
-###Offset the playback position from the timeline position
-In some cases you may want the playback position of one or more media players associated with a timeline controller to be offset from the other players. You can do this by setting the [**TimelineControllerPositionOffset**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.TimelineControllerPositionOffset) property of the **MediaPlayer** object you want to be offset. The following example uses the durations of the content of two media players to set the minimum and maximum values of two slider control to plus and minus the length of the item.  
+###Versetzen der Wiedergabeposition in Relation zur Zeitachsenposition
+In einigen Fällen soll möglicherweise die Wiedergabeposition eines oder mehrerer mit einem Zeitachsencontroller verknüpften Media Player in Relation zu den anderen Playern versetzt werden. Dafür können Sie die [**TimelineControllerPositionOffset**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer.TimelineControllerPositionOffset)-Eigenschaft des **MediaPlayer**-Objekts festlegen, welches versetzt werden soll. Im folgenden Beispiel wird anhand der jeweiligen Dauer des Inhalts von zwei Media Playern der Minimal- und Maximalwert von zwei Schieberegler-Steuerelementen festgelegt, um die Länge des Elements zu verkürzen bzw. zu verlängern.  
 
 [!code-cs[OffsetSliders](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetOffsetSliders)]
 
-In the [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Primitives.RangeBase.ValueChanged) event for each slider, the **TimelineControllerPositionOffset** for each player is set to the corresponding value.
+Im [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.Primitives.RangeBase.ValueChanged)-Ereignis jedes Schiebereglers wird **TimelineControllerPositionOffset** für jeden Player auf den entsprechenden Wert festgelegt.
 
 [!code-cs[TimelineOffset](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetTimelineOffset)]
 
-Note that if the offset value of a player maps to a negative playback position, the clip will remain paused until the offset reaches zero and then playback will begin. Likewise, if the offset value maps to a playback position greater than the duration of the media item, the final frame will be shown, just as it does when a single media player reached the end of its content.
+Beachten Sie: Wird der Offsetwert eines Players einer negativen Wiedergabeposition zugeordnet, wird der Clip angehalten, bis der Offset den Wert Null erreicht. Anschließend beginnt die Wiedergabe. Wenn der Offsetwert einer Wiedergabeposition zugeordnet ist, welche die Dauer des Medientitels überschreitet, wird entsprechend das letzte Bild angezeigt. Dies entspricht dem Vorgehen, wenn ein einzelner Media Player das Ende der Inhaltswiedergabe erreicht.
 
-## Related topics
-* [Media playback](media-playback.md)
-* [Media items, playlists, and tracks](media-playback-with-mediasource.md)
-* [Integrate with the Sytem Media Transport Controls](integrate-with-systemmediatransportcontrols.md)
-* [Create, schedule, and manage media breaks](create-schedule-and-manage-media-breaks.md)
-* [Play media in the background](background-audio.md)
-
-
+## Verwandte Themen
+* [Medienwiedergabe](media-playback.md)
+* [Medienelemente, Wiedergabelisten und Titel](media-playback-with-mediasource.md)
+* [Integration in die Steuerelemente für den Systemmedientransport](integrate-with-systemmediatransportcontrols.md)
+* [Erstellen, Planen und Verwalten von Medienunterbrechungen](create-schedule-and-manage-media-breaks.md)
+* [Wiedergeben von Medien im Hintergrund](background-audio.md)
 
 
 
- 
-
- 
 
 
+ 
+
+ 
+
+
+
+
+
+
+
+<!--HONumber=Aug16_HO3-->
 
 

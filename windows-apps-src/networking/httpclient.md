@@ -5,7 +5,7 @@ title: HttpClient
 ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b1908e83ffcab562c12c82cfcf7b5fe281d7ada1
+ms.openlocfilehash: a3d63f7bd090d9afe92813133503997b98502683
 
 ---
 
@@ -41,27 +41,13 @@ Die [**Windows.Web.Http.HttpRequestMessage**](https://msdn.microsoft.com/library
 
 Der [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace stellt HTTP-Inhalte als HTTP-Entitätskörper und Header dar, darunter auch Cookies. HTTP-Inhalte können einer HTTP-Anforderung oder einer HTTP-Antwort zugeordnet sein. Der **Windows.Web.Http**-Namespace stellt eine Reihe unterschiedlicher Klassen zum Darstellen von HTTP-Inhalten bereit.
 
--   [
-              **HttpBufferContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298625). Inhalt als Puffer
--   [
-              **HttpFormUrlEncodedContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298685). Inhalt als Name und Wert-Tupel, die mit dem MIME-Typ **application/x-www-form-urlencoded** codiert sind
--   [
-              **HttpMultipartContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298708). Inhalt in Form des MIME-Typs **multipart/\***
--   [
-              **HttpMultipartFormDataContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279596). Inhalt, der als MIME-Typ **multipart/form-data** codiert ist
--   [
-              **HttpStreamContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279649). Inhalt als Stream (Der interne Typ wird von der HTTP GET-Methode zum Empfangen von Daten und von der HTTP POST-Methode zum Hochladen von Daten verwendet.)
--   [
-              **HttpStringContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279661). Inhalt als Zeichenfolge
--   [
-              **IHttpContent**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279684) – Basisschnittstelle für Entwickler zum Erstellen eigener Inhaltsobjekte
+-   [**HttpBufferContent**](https://msdn.microsoft.com/library/windows/apps/dn298625). Inhalt als Puffer
+-   [**HttpFormUrlEncodedContent**](https://msdn.microsoft.com/library/windows/apps/dn298685). Inhalt als Name und Wert-Tupel, die mit dem MIME-Typ **application/x-www-form-urlencoded** codiert sind
+-   [**HttpMultipartContent**](https://msdn.microsoft.com/library/windows/apps/dn298708). Inhalt in Form des MIME-Typs **multipart/\***
+-   [**HttpMultipartFormDataContent**](https://msdn.microsoft.com/library/windows/apps/dn279596). Inhalt, der als MIME-Typ **multipart/form-data** codiert ist
+-   [**HttpStreamContent**](https://msdn.microsoft.com/library/windows/apps/dn279649). Inhalt als Stream (Der interne Typ wird von der HTTPGET-Methode zum Empfangen von Daten und von der HTTPPOST-Methode zum Hochladen von Daten verwendet.)
+-   [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661). Inhalt als Zeichenfolge
+-   [**IHttpContent**](https://msdn.microsoft.com/library/windows/apps/dn279684) – Basisschnittstelle für Entwickler zum Erstellen eigener Inhaltsobjekte
 
 Der Codeausschnitt im Abschnitt „Senden einer einfachen GET-Anforderung über HTTP“ verwendet die [**HttpStringContent**](https://msdn.microsoft.com/library/windows/apps/dn279661)-Klasse, um die HTTP-Antwort einer HTTP GET-Anforderung als Zeichenfolge darzustellen.
 
@@ -115,16 +101,15 @@ catch (Exception ex)
 
 Eine Ausnahme wird ausgelöst, wenn eine ungültige Zeichenfolge für einen Uniform Resource Identifier (URI) an den Konstruktor für das [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Objekt übergeben wird.
 
-**NET:  **Der [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Typ wird in C# und VB als [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) angezeigt.
+**NET: **Der [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Typ wird in C# und VB als [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) angezeigt.
 
-In C# und Visual Basic kann dieser Fehler vermieden werden, indem die [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)-Klasse in .NET 4.5 und eine der [**System.Uri.TryCreat**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx)-Methoden zum Testen der von einem Benutzer erhaltenen Zeichenfolge verwendet wird, bevor der URI erstellt wird.
+In C# und Visual Basic kann dieser Fehler vermieden werden, indem die [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)-Klasse in .NET4.5 und eine der [**System.Uri.TryCreat**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx)-Methoden zum Testen der von einem Benutzer erhaltenen Zeichenfolge verwendet wird, bevor der URI erstellt wird.
 
 In C++ gibt es keine Methode zum Analysieren einer Zeichenfolge für einen URI. Wenn eine App vom Benutzer eine Eingabe für das [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Element erhält, sollte sich der Konstruktor innerhalb eines try/catch-Blocks befinden. Wenn eine Ausnahme ausgelöst wird, kann die App den Benutzer benachrichtigen und einen neuen Hostnamen anfordern.
 
-[
-            **Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) bietet keine Funktion, die die Behandlung von Ausnahmen erleichtert. Eine App, die [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) und andere Klassen in diesem Namespace verwendet, muss daher den **HRESULT**-Wert verwenden.
+[**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) bietet keine Funktion, die die Behandlung von Ausnahmen erleichtert. Eine App, die [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) und andere Klassen in diesem Namespace verwendet, muss daher den **HRESULT**-Wert verwenden.
 
-In Apps in C# und VB.NET, die .NET Framework 4.5 verwenden, stellt [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) einen Fehler während der App-Ausführung dar, wenn eine Ausnahme auftritt. Die [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx)-Eigenschaft gibt den **HRESULT**-Wert zurück, der der jeweiligen Ausnahme zugewiesen ist. Die [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx)-Eigenschaft gibt die Meldung zurück, die die Ausnahme beschreibt. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Eine App kann nach bestimmten **HRESULT**-Werten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
+In Apps in C# und VB.NET, die .NET Framework4.5 verwenden, stellt [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) einen Fehler während der App-Ausführung dar, wenn eine Ausnahme auftritt. Die [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx)-Eigenschaft gibt den **HRESULT**-Wert zurück, der der jeweiligen Ausnahme zugewiesen ist. Die [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx)-Eigenschaft gibt die Meldung zurück, die die Ausnahme beschreibt. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Eine App kann nach bestimmten **HRESULT**-Werten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 
 In Apps mit verwaltetem C++ stellt das [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx)-Objekt einen Fehler während der App-Ausführung dar, wenn eine Ausnahme auftritt. Die [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx)-Eigenschaft gibt den **HRESULT**-Wert zurück, der der jeweiligen Ausnahme zugewiesen ist. Die [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx)-Eigenschaft gibt die vom System bereitgestellte Zeichenfolge zurück, die dem **HRESULT**-Wert zugeordnet ist. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Eine App kann nach bestimmten **HRESULT**-Werten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 
@@ -133,6 +118,6 @@ Für die meisten Parameterüberprüfungsfehler wird der **HRESULT**-Wert **E\_IN
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

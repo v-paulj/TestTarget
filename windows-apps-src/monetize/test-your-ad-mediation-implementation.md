@@ -3,7 +3,6 @@ author: mcleanbyron
 ms.assetid: 54ECD653-7FC2-4A95-AC5A-972C4FB5A54B
 description: "Vor dem Übermitteln Ihrer App empfehlen wir, die Implementierung der Anzeigenvermittlung zu testen."
 title: Testen der Implementierung der Anzeigenvermittlung
-translationtype: Human Translation
 ms.sourcegitcommit: ec7ce299545de8e5c167e1934fb9a0b4f4370948
 ms.openlocfilehash: 0805ed5462a4b100b837ed9c11ec2d9e7caabc34
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: 0805ed5462a4b100b837ed9c11ec2d9e7caabc34
 # Testen der Implementierung der Anzeigenvermittlung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Vor dem Übermitteln Ihrer App empfehlen wir, die Implementierung der Anzeigenvermittlung zu testen.
 
@@ -21,11 +20,12 @@ Vor dem Übermitteln Ihrer App empfehlen wir, die Implementierung der Anzeigenve
 
 Wenn Sie Ihre App ausführen, ohne **Verbundene Dienste** für Ihr Projekt in Visual Studio aufzurufen und Angaben zur Konfiguration des Anzeigennetzwerks zu machen, verwendet die Anzeigenvermittlung automatisch Testkonfigurationswerte beim Ausführen der App auf dem Entwicklungscomputer (für Apps für die universelle Windows-Plattform (UWP) und Windows 8.1 XAML-Apps) oder auf dem Emulator oder Gerät (für Windows Phone-Apps). So können Sie Ihre App schnell testen und sicherstellen, dass sie ordnungsgemäß codiert ist, bevor Sie die erforderlichen Parameter Ihres Anzeigennetzwerks eingegeben haben.
 
-Die Anzeigennetzwerke werden der Reihe nach rotierend angezeigt, d. h. ein Netzwerk nach dem anderen wird gleich lang angezeigt. Achten Sie darauf, mehrere Zyklen zu durchlaufen, damit Sie alle Anzeigennetzwerke anzeigen und die Wahrscheinlichkeit von temporären Konnektivitätsproblemen verringern können, die u. U. auftreten.
+Die Anzeigennetzwerke werden der Reihe nach rotierend angezeigt, d.h. ein Netzwerk nach dem anderen wird gleich lang angezeigt. Achten Sie darauf, mehrere Zyklen zu durchlaufen, damit Sie alle Anzeigennetzwerke anzeigen und die Wahrscheinlichkeit von temporären Konnektivitätsproblemen verringern können, die u.U. auftreten.
 
 Testanzeigen werden für Anzeigennetzwerke angezeigt, die diese unterstützen. Beachten Sie, dass die Testanzeigen manchmal wie Fehler aussehen. Überprüfen Sie unbedingt Ihre Ereignisse, um festzustellen, ob Fehler aufgetreten sind.
 
-> **Hinweis**  Beim Testen einer Windows Phone-Silverlight-App gibt Google AdMob immer den Fehler **Ungültige Anforderung** zurück, da keine Testmetadaten verwendet werden. Zum Überprüfen Ihrer Google AdMob-Implementierung müssen Sie wie im nächsten Abschnitt beschrieben die erforderlichen Parameter eingeben.
+> 
+            **Hinweis**  Beim Testen einer Windows Phone-Silverlight-App gibt Google AdMob immer den Fehler **Ungültige Anforderung** zurück, da keine Testmetadaten verwendet werden. Zum Überprüfen Ihrer Google AdMob-Implementierung müssen Sie wie im nächsten Abschnitt beschrieben die erforderlichen Parameter eingeben.
 
  
 

@@ -5,13 +5,13 @@ title: WebSockets
 ms.assetid: EAA9CB3E-6A3A-4C13-9636-CCD3DE46E7E2
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7e9ee140914718ce71357ba8ecaf10116949b87b
+ms.openlocfilehash: ff2429e1e9ea56c414978c126497551b1e1864b8
 
 ---
 
 # WebSockets
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 **Wichtige APIs**
 
@@ -24,7 +24,7 @@ Mit dem [WebSocket-Protokoll](http://tools.ietf.org/html/rfc6455) werden Daten u
 
 | MessageWebSocket                                                         | StreamWebSocket                                                                               |
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| Geeignet für die meisten Szenarien, in denen die Nachrichten nicht besonders groß sind.   | Geeignet für Szenarien, in denen große Dateien (z. B. Fotos oder Videos) übertragen werden. |
+| Geeignet für die meisten Szenarien, in denen die Nachrichten nicht besonders groß sind.   | Geeignet für Szenarien, in denen große Dateien (z.B. Fotos oder Videos) übertragen werden. |
 | Ermöglicht die Benachrichtigung, dass eine gesamte WebSocket-Nachricht erhalten wurde. | Ermöglicht, dass bei jedem Lesevorgang Abschnitte einer Nachricht gelesen werden.                             |
 | Unterstützt UTF-8-Nachrichten und binäre Nachrichten.                                 | Unterstützt nur binäre Nachrichten.                                                                |
 | Ähnlich wie ein UDP- oder Datagrammsocket.                                     | Ähnlich wie ein TCP- oder Streamsocket.                                                            |
@@ -226,41 +226,28 @@ Die folgende Funktion sendet die angegebene Zeichenfolge an einen verbundenen We
 
 ## Verwenden erweiterter Steuerelemente mit WebSockets
 
-[
-              **MessageWebSocket**
-            ](https://msdn.microsoft.com/library/windows/apps/br226842) und [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) folgen dem gleichen Modell für die Verwendung erweiterter Steuerelemente. Den zuvor genannten Hauptklassen entsprechen verwandte Klassen für den Zugriff auf erweiterte Steuerelemente.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) und [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) folgen dem gleichen Modell für die Verwendung erweiterter Steuerelemente. Den zuvor genannten Hauptklassen entsprechen verwandte Klassen für den Zugriff auf erweiterte Steuerelemente.
 
-[
-              **MessageWebSocketControl**
-            ](https://msdn.microsoft.com/library/windows/apps/br226843) stellt Socketsteuerungsdaten für ein [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)-Objekt bereit.
-[
-              **StreamWebSocketControl**
-            ](https://msdn.microsoft.com/library/windows/apps/br226924) stellt Socketsteuerungsdaten für ein [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Objekt bereit.
+[**MessageWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226843) stellt Socketsteuerungsdaten für ein [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842)-Objekt bereit.
+[**StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924) stellt Socketsteuerungsdaten für ein [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Objekt bereit.
 Das Grundmodell für die Verwendung erweiterter Steuerelemente ist für beide WebSocket-Typen gleich. In der folgenden Erläuterung wird exemplarisch ein [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Objekt verwendet, der gleiche Prozess kann jedoch auch mit einem Objekt vom Typ [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) ausgeführt werden.
 
 1.  Erstellen Sie das [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Objekt.
 2.  Verwenden Sie die [**StreamWebSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226934)-Eigenschaft, um die [**StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924)-Instanz abzurufen, die dem [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923)-Objekt zugeordnet ist.
 3.  Rufen Sie Eigenschaften für die [**StreamWebSocketControl**](https://msdn.microsoft.com/library/windows/apps/br226924)-Instanz ab, oder legen Sie sie fest, um bestimmte erweiterte Steuerelemente abzurufen oder festzulegen.
 
-[
-            **StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) und [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) stellen Anforderungen für den Zeitpunkt der Festlegung erweiterter Steuerelemente.
+[**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) und [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) stellen Anforderungen für den Zeitpunkt der Festlegung erweiterter Steuerelemente.
 
 -   Für alle erweiterten Steuerelemente von [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) muss die App vor dem Ausgeben eines Verbindungsvorgangs immer die Eigenschaft festlegen. Aufgrund dieser Anforderung empfiehlt es sich, alle Eigenschaften des Steuerelements unmittelbar nach dem Erstellen des **StreamWebSocket**-Objekts festzulegen. Versuchen Sie nicht, eine Steuerelementeigenschaft festzulegen, nachdem die [**StreamWebSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/br226933)-Methode aufgerufen wurde.
 -   Für alle erweiterte Steuerelemente auf dem [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) mit Ausnahme des Nachrichtentyps müssen Sie die Eigenschaft vor dem Ausgeben eines Verbindungsvorgangs festlegen. Es empfiehlt sich, alle Eigenschaften des Steuerelements unmittelbar nach dem Erstellen des **MessageWebSocket**-Objekts festzulegen. Versuchen Sie mit Ausnahme der Nachrichtentyps nicht, eine Steuerelementeigenschaft zu ändern, nachdem [**MessageWebSocket.ConnectAsync**](https://msdn.microsoft.com/library/windows/apps/br226859) aufgerufen wurde.
 
 ## WebSocket-Informationsklassen
 
-[
-              **MessageWebSocket**
-            ](https://msdn.microsoft.com/library/windows/apps/br226842) und [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) besitzen jeweils eine entsprechende Klasse, die zusätzliche Informationen über eine WebSocket-Instanz bereitstellt.
+[**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) und [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) besitzen jeweils eine entsprechende Klasse, die zusätzliche Informationen über eine WebSocket-Instanz bereitstellt.
 
-[
-              **MessageWebSocketInformation**
-            ](https://msdn.microsoft.com/library/windows/apps/br226849) enthält Informationen zu [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842), und Sie rufen eine Instanz der Informationsklasse mit der [**MessageWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226861)-Eigenschaft ab.
+[**MessageWebSocketInformation**](https://msdn.microsoft.com/library/windows/apps/br226849) stellt Informationen zu [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) bereit, und Sie rufen eine Instanz der Informationsklasse mit der [**MessageWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226861)-Eigenschaft ab.
 
-[
-              **StreamWebSocketInformation**
-            ](https://msdn.microsoft.com/library/windows/apps/br226929) enthält Informationen zu [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923), und Sie rufen eine Instanz der Informationsklasse mit der [**StreamWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226935)-Eigenschaft ab.
+[**StreamWebSocketInformation**](https://msdn.microsoft.com/library/windows/apps/br226929) stellt Informationen zu [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) bereit, und Sie rufen eine Instanz der Informationsklasse mit der [**StreamWebSocket.Information**](https://msdn.microsoft.com/library/windows/apps/br226935)-Eigenschaft ab.
 
 Beachten Sie, dass alle Eigenschaften für beide Informationsklassen schreibgeschützt sind und Sie aktuelle Informationen zu einem beliebigen Zeitpunkt während der Lebensdauer eines Websocket-Objekts abrufen können.
 
@@ -272,7 +259,7 @@ Bei Parameterprüfungsfehlern kann eine App den **HRESULT**-Wert aus der Ausnahm
 
 ## Festlegen von Timeouts für WebSocket-Vorgänge
 
-Die MessageWebSocket-Klasse und die StreamWebSocket-Klasse verwenden einen internen Systemdienst, um WebSocket-Clientanforderungen zu senden und Antworten von einem Server zu empfangen. Der standardmäßige Timeoutwert, der für einen WebSocket-Verbindungsvorgang verwendet wird, beträgt 60 Sekunden. Wenn der HTTP-Server, der WebSockets unterstützt, vorübergehend nicht verfügbar oder durch einen Netzwerkausfall blockiert ist und der Server nicht auf die WebSocket-Verbindungsanforderung antwortet oder antworten kann, wartet der interne Systemdienst die standardmäßig festgelegten 60 Sekunden ab, bevor ein Fehler zurückgegeben wird, der in der WebSocket ConnectAsync-Methode zur Auslösung einer Ausnahme führt. Falls die Namensabfrage für einen HTTP-Servernamen im URI mehrere IP-Adressen für den Namen zurückgibt, testet der interne Systemdienst bis zu fünf IP-Adressen für die Website. Dabei wird jeweils das Standardtimeout von 60 Sekunden eingehalten, bevor ein Fehler auftritt. Eine App, die eine WebSocket-Verbindungsanforderung ausführt, kann mehrere Minuten lang erneute Versuche für mehrere IP-Adressen durchführen, bevor ein Fehler zurückgegeben und eine Ausnahme ausgelöst wird. Dieses Verhalten kann für Benutzer den Anschein erwecken, als ob die App nicht mehr reagiert. Das Standardtimeout, das für Sende- und Empfangsvorgänge nach dem Herstellen einer WebSocket-Verbindung verwendet wird, beträgt 30 Sekunden.
+Die MessageWebSocket-Klasse und die StreamWebSocket-Klasse verwenden einen internen Systemdienst, um WebSocket-Clientanforderungen zu senden und Antworten von einem Server zu empfangen. Der standardmäßige Timeoutwert, der für einen WebSocket-Verbindungsvorgang verwendet wird, beträgt 60Sekunden. Wenn der HTTP-Server, der WebSockets unterstützt, vorübergehend nicht verfügbar oder durch einen Netzwerkausfall blockiert ist und der Server nicht auf die WebSocket-Verbindungsanforderung antwortet oder antworten kann, wartet der interne Systemdienst die standardmäßig festgelegten 60Sekunden ab, bevor ein Fehler zurückgegeben wird, der in der WebSocket ConnectAsync-Methode zur Auslösung einer Ausnahme führt. Falls die Namensabfrage für einen HTTP-Servernamen im URI mehrere IP-Adressen für den Namen zurückgibt, testet der interne Systemdienst bis zu fünf IP-Adressen für die Website. Dabei wird jeweils das Standardtimeout von 60Sekunden eingehalten, bevor ein Fehler auftritt. Eine App, die eine WebSocket-Verbindungsanforderung ausführt, kann mehrere Minuten lang erneute Versuche für mehrere IP-Adressen durchführen, bevor ein Fehler zurückgegeben und eine Ausnahme ausgelöst wird. Dieses Verhalten kann für Benutzer den Anschein erwecken, als ob die App nicht mehr reagiert. Das Standardtimeout, das für Sende- und Empfangsvorgänge nach dem Herstellen einer WebSocket-Verbindung verwendet wird, beträgt 30Sekunden.
 
 Wenn Apps schneller reagieren und diese Probleme verringert werden sollen, können Sie ein kürzeres Timeout für Verbindungsanforderungen festlegen. Somit tritt der Timeoutfehler früher auf als durch die Standardeinstellungen vorgegeben.
 
@@ -358,6 +345,6 @@ Das folgende Beispiel erstellt eine Aufgabe, die nach der angegebenen Verzögeru
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

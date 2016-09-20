@@ -3,7 +3,6 @@ title: Vergleichen von Puffern
 description: "Dieser Beispielcode zeigt, wie Sie Puffer in einer App für die universelle Windows-Plattform (UWP) vergleichen."
 ms.assetid: CB086E51-544A-470D-B7C8-C055271CD615
 author: awkoren
-translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
 ms.openlocfilehash: fcbc3c8a3f70613635201732f3ca5053d58325c7
 
@@ -12,7 +11,7 @@ ms.openlocfilehash: fcbc3c8a3f70613635201732f3ca5053d58325c7
 # Vergleichen von Puffern
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Dieser Beispielcode zeigt, wie Sie Puffer in einer Universellen Windows-Plattform (UWP)-App vergleichen können.
 

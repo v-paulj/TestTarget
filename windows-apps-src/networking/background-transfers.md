@@ -4,14 +4,14 @@ description: "Verwenden Sie die Hintergrundübertragungs-API zum zuverlässigen 
 title: "Hintergrundübertragungen"
 ms.assetid: 1207B089-BC16-4BF0-BBD4-FD99950C764B
 translationtype: Human Translation
-ms.sourcegitcommit: b15d01ec4fd41a8f03345a4416b4795455928533
-ms.openlocfilehash: cbb8308a3390634f0068f72041803989201e2345
+ms.sourcegitcommit: 177ada6ea8934ca74636454946dfa9c450285167
+ms.openlocfilehash: f8548c85e571d3f0f72f775af4ca40d85e86c163
 
 ---
 
 # Hintergrundübertragungen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 **Wichtige APIs**
@@ -45,8 +45,7 @@ Beispielsweise kann die für einen Vorgang definierte Kostenrichtlinie vorsehen,
 
 Obwohl das Feature für die Hintergrundübertragung über eigene Mechanismen zur Behandlung von Netzwerkstatusänderungen verfügt, müssen bei mit einem Netzwerk verbundenen Apps einige allgemeine Punkte im Zusammenhang mit der Konnektivität beachtet werden. Weitere Informationen finden Sie unter [Zugreifen auf den Netzwerkverbindungsstatus und Verwalten von Netzwerkkosten (HTML)](https://msdn.microsoft.com/library/windows/apps/hh452983).
 
-> 
-              **Hinweis:** Mithilfe von Features für auf Mobilgeräten ausgeführten Apps kann der Benutzer die übertragene Datenmenge basierend auf dem Verbindungstyp, Roamingstatus und Datentarif überwachen und einschränken. Aus diesem Grund können Hintergrundübertragungen auf dem Telefon auch dann angehalten werden, wenn die Übertragung gemäß dem [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)-Wert fortgesetzt werden sollte.
+> **Hinweis:** Mithilfe von Features für auf Mobilgeräten ausgeführte Apps kann der Benutzer die übertragene Datenmenge basierend auf dem Verbindungstyp, Roamingstatus und Datentarif überwachen und einschränken. Aus diesem Grund können Hintergrundübertragungen auf dem Telefon auch dann angehalten werden, wenn die Übertragung gemäß dem [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)-Wert fortgesetzt werden sollte.
 
 Die folgende Tabelle zeigt für jeden [**BackgroundTransferCostPolicy**](https://msdn.microsoft.com/library/windows/apps/br207138)-Wert, wann Hintergrundübertragungen basierend auf dem aktuellen Status des Telefons zulässig sind. Sie können den aktuellen Status des Telefons auch mithilfe der [**ConnectionCost**](https://msdn.microsoft.com/library/windows/apps/br207244)-Klasse ermitteln.
 
@@ -75,8 +74,7 @@ Die Erstellung eines Uploads beginnt mit [**BackgroundUploader**](https://msdn.m
 
 Vor dem Erstellen einer [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) müssen wir den URI des Speicherorts für den Upload und die hochzuladende Datei bestimmen. Im folgenden Beispiel wird der *uriString*-Wert mit einer Zeichenfolge aus der Benutzeroberflächeneingabe und der *file*-Wert mit dem [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekt gefüllt, das von einem [**PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275)-Vorgang zurückgegeben wird.
 
-[!code-js
-              [uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_B "Identifiziert Datei und Ziel für den Uploadvorgang.")]
+[!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_B "Identifiziert Datei und Ziel für den Uploadvorgang.")]
 
 **Erstellen und Initialisieren des Uploadvorgangs**
 
@@ -86,8 +84,7 @@ Dann verwendet [**BackgroundUploader**](https://msdn.microsoft.com/library/windo
 
 Schließlich erstellt [**BackgroundUploader**](https://msdn.microsoft.com/library/windows/apps/br207140) die [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)-Klasse (*upload*).
 
-[!code-js
-              [uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_A "Erstellt und initialisiert den Uploadvorgang.")]
+[!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_A "Erstellt und initialisiert den Uploadvorgang.")]
 
 Beachten Sie die asynchronen Methodenaufrufe, die mit JavaScript-Zusagen definiert sind. Sehen Sie sich die folgende Zeile aus dem letzten Beispiel an:
 
@@ -169,13 +166,11 @@ Bei Abschluss oder Abbruch von [**UploadOperation**](https://msdn.microsoft.com/
 
 1.  Bevor Sie die Funktion zum Aufzählen beibehaltener Vorgänge definieren, müssen wir ein Array erstellen, das die zurückzugebenden [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224)-Objekte enthält:
 
-    [!code-js
-              [uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_C "Startet unterbrochene Uploadvorgänge erneut.")]
+    [!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_C "Startet unterbrochene Uploadvorgänge erneut.")]
 
 1.  Im nächsten Schritt definieren Sie die Funktion, die alle beibehaltenen Vorgänge aufzählt und im Array speichert. Die **load**-Methode, die zum Neuzuweisen der Rückrufe von [**UploadOperation**](https://msdn.microsoft.com/library/windows/apps/br207224) aufgerufen wird, wenn der Download nach Beendigung der App fortgesetzt wird, befindet sich in der UploadOp-Klasse, die Sie weiter unten in diesem Abschnitt definieren.
 
-    [!code-js
-              [uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_D "Zählt beibehaltene Vorgänge auf.")]
+    [!code-js[uploadFile](./code/backgroundtransfer/upload_quickstart/js/main.js#Snippetupload_quickstart_D "Zählt beibehaltene Vorgänge auf.")]
 
 ## Herunterladen von Dateien
 
@@ -283,8 +278,7 @@ Es müssen zwei primäre Szenarien zu Verbindungszeitüberschreitungen berücksi
 
 -   Nach dem Herstellen einer Verbindung wird eine HTTP-Anforderungsnachricht abgebrochen, auf die nicht innerhalb von zwei Minuten reagiert wurde.
 
-> 
-              **Hinweis:** In beiden Szenarien wiederholt die Hintergrundübertragung eine Anforderung automatisch bis zu drei Mal (vorausgesetzt, es besteht eine Internetverbindung). Wenn keine Internetkonnektivität erkannt wird, warten zusätzliche Anforderungen, bis Konnektivität vorhanden ist.
+> **Hinweis:** In beiden Szenarien wiederholt die Hintergrundübertragung eine Anforderung automatisch bis zu drei Mal (vorausgesetzt, es besteht eine Internetverbindung). Wenn keine Internetkonnektivität erkannt wird, warten zusätzliche Anforderungen, bis Konnektivität vorhanden ist.
 
 ## Debugging-Leitfaden
 
@@ -308,8 +302,7 @@ Umgehen Sie dieses Problem, indem Sie alle Versionen der App vollständig deinst
 
 Eine Ausnahme wird ausgelöst, wenn eine ungültige Zeichenfolge für einen Uniform Resource Identifier (URI) an den Konstruktor für das [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Objekt übergeben wird.
 
-
-              **NET: **Der [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Typ wird in C# und VB als [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) angezeigt.
+**NET: **Der [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Typ wird in C# und VB als [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) angezeigt.
 
 In C# und Visual Basic kann dieser Fehler vermieden werden, indem die [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)-Klasse in .NET 4.5 und eine der [**System.Uri.TryCreate**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx)-Methoden zum Testen der vom App-Benutzer erhaltenen Zeichenfolge verwendet wird, bevor der URI erstellt wird.
 
@@ -324,6 +317,6 @@ Bei Parameterprüfungsfehlern kann eine App den **HRESULT**-Wert aus der Ausnahm
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

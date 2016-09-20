@@ -3,7 +3,6 @@ author: drewbatgit
 ms.assetid: 3b75d881-bdcf-402b-a330-23cd29d68e53
 description: "Dieser Artikel enthält eine Liste mit den DeviceInformation-Eigenschaften für Audiogeräte."
 title: "Eigenschaften für Audiogeräteinformationen"
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: b1bcb5b005e82303884c2e096356d5a0f542b1e1
 

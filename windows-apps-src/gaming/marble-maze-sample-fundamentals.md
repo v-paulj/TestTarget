@@ -3,7 +3,6 @@ author: mtoepke
 title: Grundlagen am Beispiel von Marble Maze
 description: In diesem Dokument werden die fundamentalen Eigenschaften des Marble Maze-Projekts beschrieben, beispielsweise wie Visual C++ in der Windows Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 5a9df995078763df73542a4101e73e147517b1eb
 
@@ -12,12 +11,13 @@ ms.openlocfilehash: 5a9df995078763df73542a4101e73e147517b1eb
 # Grundlagen am Beispiel von Marble Maze
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Dokument werden die fundamentalen Eigenschaften des Marble Maze-Projekts beschrieben, beispielsweise wie Visual C++ in der Windows Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist. Das Dokument enthält auch eine Beschreibung verschiedener Konventionen, die im Code verwendet werden.
 
-> **Hinweis**   Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> 
+            **Hinweis**   Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 ## 
@@ -38,11 +38,12 @@ Beim Erstellen des Visual Studio-Projekts für Marble Maze haben wir mit einem b
 
 Eine wichtige Projekteinstellung in der Voralge **DirectX 11-App (Universelle Windows-App)** ist die Option **/ZW**. Diese Option ermöglicht dem Programm die Verwendung der Windows-Runtime-Spracherweiterungen. Sie ist standardmäßig aktiviert, wenn Sie die Visual Studio-Vorlage verwenden.
 
-> **Achtung**   Die Option **/ZW** ist nicht kompatibel mit Optionen wie **/clr**. Im Fall von **/clr** bedeutet dies, dass Sie ein Visual C++-Projekt nicht gleichzeitig auf das .NET Framework und die Windows-Runtime ausrichten können.
+> 
+            **Achtung**   Die Option **/ZW** ist nicht kompatibel mit Optionen wie **/clr**. Im Fall von **/clr** bedeutet dies, dass Sie ein Visual C++-Projekt nicht gleichzeitig auf das .NET Framework und die Windows-Runtime ausrichten können.
 
  
 
-Jede UWP-App, die Sie aus dem Windows Store erwerben, wird in Form eines App-Pakets bereitgestellt. Ein App-Paket enthält ein App-Manifest, das wiederum Informationen zur App beinhaltet. Sie können beispielsweise die Funktionen (d. h. den erforderlichen Zugriff auf geschützte Systemressourcen oder Benutzerdaten) Ihrer App angeben. Wenn Sie festlegen, dass für Ihre App bestimmte Funktionen erforderlich sind, verwenden Sie das Paketmanifest, um die erforderlichen Funktionen zu deklarieren. Das Manifest ermöglicht Ihnen auch die Angabe von Projekteigenschaften wie der Rotation unterstützter Geräte, Kachelbildern und Begrüßungsbildschirm. Weitere Informationen zu App-Paketen finden Sie unter [Verpacken von Apps](https://msdn.microsoft.com/library/windows/apps/mt270969).
+Jede UWP-App, die Sie aus dem Windows Store erwerben, wird in Form eines App-Pakets bereitgestellt. Ein App-Paket enthält ein App-Manifest, das wiederum Informationen zur App beinhaltet. Sie können beispielsweise die Funktionen (d.h. den erforderlichen Zugriff auf geschützte Systemressourcen oder Benutzerdaten) Ihrer App angeben. Wenn Sie festlegen, dass für Ihre App bestimmte Funktionen erforderlich sind, verwenden Sie das Paketmanifest, um die erforderlichen Funktionen zu deklarieren. Das Manifest ermöglicht Ihnen auch die Angabe von Projekteigenschaften wie der Rotation unterstützter Geräte, Kachelbildern und Begrüßungsbildschirm. Weitere Informationen zu App-Paketen finden Sie unter [Verpacken von Apps](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
 ##  Erstellen, Bereitstellen und Ausführen des Spiels
 
@@ -75,7 +76,7 @@ Diese Sprachen erfordern für den Aufruf von Windows-Runtime-APIs aus JavaScript
 > **Wichtig**  
 Wenn Sie Windows-Runtime-Objekte oder Komponenten für die Windows-Runtime erstellen, müssen Sie nur **^** und **ref new** verwenden. Sie können die C++-Standardsyntax verwenden, wenn Sie Kernanwendungscode schreiben, in dem die Windows-Runtime nicht genutzt wird.
 
-In Marble Maze werden mit **^** und [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) vom Heap zugewiesene Objekte verwaltet und Arbeitsspeicherverluste minimiert. Es wird empfohlen, mit ^ die Lebensdauer von Windows-Runtime-Variablen zu verwalten, mit **ComPtr** die Lebensdauer von COM-Variables zu verwalten (z. B. bei Verwendung von DirectX) und mit std::[**std::shared\_ptr**](https://msdn.microsoft.com/library/windows/apps/bb982026) oder [**std::unique\_ptr**](https://msdn.microsoft.com/library/windows/apps/ee410601) die Lebensdauer sämtlicher vom Heap zugewiesenen C++-Objekte zu verwalten.
+In Marble Maze werden mit **^** und [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) vom Heap zugewiesene Objekte verwaltet und Arbeitsspeicherverluste minimiert. Es wird empfohlen, mit ^ die Lebensdauer von Windows-Runtime-Variablen zu verwalten, mit **ComPtr** die Lebensdauer von COM-Variables zu verwalten (z.B. bei Verwendung von DirectX) und mit std::[**std::shared\_ptr**](https://msdn.microsoft.com/library/windows/apps/bb982026) oder [**std::unique\_ptr**](https://msdn.microsoft.com/library/windows/apps/ee410601) die Lebensdauer sämtlicher vom Heap zugewiesenen C++-Objekte zu verwalten.
 
  
 
@@ -83,7 +84,7 @@ Weitere Informationen zu den Spracherweiterungen, die für eine C++-UWP-App verf
 
 ###  Fehlerbehandlung
 
-In Marble Maze werden unerwartete Fehler in erster Linie mithilfe der Ausnahmebehandlung verarbeitet. Obwohl für Spielecode zur Angabe von Fehlern traditionell die Protokollierung oder Fehlercodes verwendet werden, beispielsweise **HRESULT**-Werte, bietet die Ausnahmebehandlung zwei wesentliche Vorteile. Zunächst kann sie das Lesen und Verwalten von Code erleichtern. Aus Codeperspektive stellt die Ausnahmebehandlung ein effizienteres Verfahren dar, um einen Fehler an eine Routine weiterzugeben, die den Fehler behandeln kann. Bei der Verwendung von Fehlercodes muss i. d. R. jede Funktion explizit Fehler weitergeben. Ein zweiter Vorteil besteht darin, dass Sie den Visual Studio-Debugger so konfigurieren können, dass er beim Auftreten einer Ausnahme unterbrochen wird, damit die Ausführung unmittelbar an der Position und im Kontext des Fehlers angehalten wird. Die Windows-Runtime macht ebenfalls extensiven Gebrauch von der Ausnahmebehandlung. Deshalb können Sie durch die Verwendung von Ausnahmebehandlung im Code die gesamte Fehlerbehandlung in einem einzigen Modell zusammenfassen.
+In Marble Maze werden unerwartete Fehler in erster Linie mithilfe der Ausnahmebehandlung verarbeitet. Obwohl für Spielecode zur Angabe von Fehlern traditionell die Protokollierung oder Fehlercodes verwendet werden, beispielsweise **HRESULT**-Werte, bietet die Ausnahmebehandlung zwei wesentliche Vorteile. Zunächst kann sie das Lesen und Verwalten von Code erleichtern. Aus Codeperspektive stellt die Ausnahmebehandlung ein effizienteres Verfahren dar, um einen Fehler an eine Routine weiterzugeben, die den Fehler behandeln kann. Bei der Verwendung von Fehlercodes muss i.d.R. jede Funktion explizit Fehler weitergeben. Ein zweiter Vorteil besteht darin, dass Sie den Visual Studio-Debugger so konfigurieren können, dass er beim Auftreten einer Ausnahme unterbrochen wird, damit die Ausführung unmittelbar an der Position und im Kontext des Fehlers angehalten wird. Die Windows-Runtime macht ebenfalls extensiven Gebrauch von der Ausnahmebehandlung. Deshalb können Sie durch die Verwendung von Ausnahmebehandlung im Code die gesamte Fehlerbehandlung in einem einzigen Modell zusammenfassen.
 
 Es wird empfohlen, in Ihrem Fehlerbehandlungsmodell die folgenden Konventionen zu verwenden:
 

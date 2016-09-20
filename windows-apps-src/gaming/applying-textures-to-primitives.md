@@ -5,7 +5,7 @@ description: "Wir laden an dieser Stelle unformatierte Texturdaten und wenden di
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 56e8bf524537526d639f4d732ab228f3c0ea75da
+ms.openlocfilehash: 5533b086557be44b27e4e371c0d71bc8bc6310b0
 
 ---
 
@@ -25,7 +25,7 @@ Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem 
 
 Außerdem wird davon ausgegangen, dass Sie mit folgenden Themen vertraut sind: [Schnellstart: Einrichten von DirectX-Ressourcen und Anzeigen eines Bilds](setting-up-directx-resources.md), [Erstellen von Shadern und Zeichnen von Grundtypen](creating-shaders-and-drawing-primitives.md) und [Verwenden von Tiefe und Effekten für Grundtypen](using-depth-and-effects-on-primitives.md).
 
-**Zeitaufwand:** 20 Minuten.
+**Zeitaufwand:** 20Minuten.
 
 Anweisungen
 ------------
@@ -527,6 +527,6 @@ Wir haben unformatierte Textdaten geladen und diese Daten auf einen 3D-Grundtyp 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

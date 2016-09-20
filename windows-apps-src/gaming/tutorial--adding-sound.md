@@ -5,14 +5,14 @@ description: "In diesem Schritt untersuchen wir, wie das Beispielshooterspiel mi
 ms.assetid: aa05efe2-2baa-8b9f-7418-23f5b6cd2266
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f9e536e71dd7b5c94d587a8bb66df3b41cc9a4ae
+ms.openlocfilehash: e44bc1046310b57cffa3eb4009e91885c61470eb
 
 ---
 
 # Hinzufügen von Sound
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Schritt untersuchen wir, wie das Beispielshooterspiel mit den [XAudio2](https://msdn.microsoft.com/library/windows/desktop/ee415813)-APIs ein Objekt für die Soundwiedergabe erstellt.
 
@@ -215,7 +215,7 @@ Diese Methode verwendet die [Media Foundation](https://msdn.microsoft.com/librar
 6.  Sie liest die Audiodatei als Datenstrom, indem sie [**IMFSourceReader::ReadSample**](https://msdn.microsoft.com/library/windows/desktop/dd374665) aufruft.
 7.  Sie kopiert den Inhalt des Audiosample-Puffers in ein von der Methode zurückgegebenes Array.
 
-Das Wichtigste bei **SoundEffect::Initialize** ist die Erstellung des Source Voice-Objekts (**m\_sourceVoice**) auf der Grundlage der Mastering Voice. Die Source Voice wird für die eigentliche Wiedergabe des von **MediaReader::LoadMedia** abgerufenen Sounddatenpuffers verwendet.
+Das Wichtigste bei **SoundEffect::Initialize** ist die Erstellung des SourceVoice-Objekts (**m\_sourceVoice**) auf der Grundlage der Mastering Voice. Die Source Voice wird für die eigentliche Wiedergabe des von **MediaReader::LoadMedia** abgerufenen Sounddatenpuffers verwendet.
 
 Im Beispielspiel wird die Methode beim Initialisieren des **SoundEffect**-Objekts wie folgt aufgerufen:
 
@@ -302,14 +302,14 @@ void SoundEffect::PlaySound(_In_ float volume)
 }
 ```
 
-Für die Soundwiedergabe verwendet diese Methode das Source Voice-Objekt **m\_sourceVoice**, um die Wiedergabe des Sounddatenpuffers **m\_soundData** zu starten. Sie erstellt einen [**XAUDIO2\_BUFFER**](https://msdn.microsoft.com/library/windows/desktop/ee419228), für den sie einen Verweis auf den Sounddatenpuffer bereitstellt, und übermittelt ihn dann mit einem Aufruf von [**IXAudio2SourceVoice::SubmitSourceBuffer**](https://msdn.microsoft.com/library/windows/desktop/ee418473). Wenn die Sounddaten in die Warteschlange eingereiht sind, startet **SoundEffect::PlaySound** die Wiedergabe durch einen Aufruf von [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471).
+Für die Soundwiedergabe verwendet diese Methode das SourceVoice-Objekt **m\_sourceVoice**, um die Wiedergabe des Sounddatenpuffers **m\_soundData** zu starten. Sie erstellt einen [**XAUDIO2\_BUFFER**](https://msdn.microsoft.com/library/windows/desktop/ee419228), für den sie einen Verweis auf den Sounddatenpuffer bereitstellt, und übermittelt ihn dann mit einem Aufruf von [**IXAudio2SourceVoice::SubmitSourceBuffer**](https://msdn.microsoft.com/library/windows/desktop/ee418473). Wenn die Sounddaten in die Warteschlange eingereiht sind, startet **SoundEffect::PlaySound** die Wiedergabe durch einen Aufruf von [**IXAudio2SourceVoice::Start**](https://msdn.microsoft.com/library/windows/desktop/ee418471).
 
 Wenn die Munition jetzt ein Ziel trifft, wird durch einen Aufruf von **SoundEffect::PlaySound** ein Geräusch wiedergegeben.
 
 ## Nächste Schritte
 
 
-Das war eine Blitzeinführung in die Entwicklung von DirectX-Spielen für die universelle Windows-Plattform (UWP). Sie sollten nun wissen, was Sie tun müssen, um selbst ein großartiges Spiel für Windows 8 zu entwickeln. Denken Sie daran, dass Ihr Spiel auf vielen unterschiedlichen Windows 8-Geräten und -Plattformen gespielt werden kann. Entwerfen Sie daher alle Komponenten – Grafik, Steuerelemente, Benutzeroberfläche und Sound – für so viele Konfigurationen wie möglich.
+Das war eine Blitzeinführung in die Entwicklung von DirectX-Spielen für die universelle Windows-Plattform (UWP). Sie sollten nun wissen, was Sie tun müssen, um selbst ein großartiges Spiel für Windows8 zu entwickeln. Denken Sie daran, dass Ihr Spiel auf vielen unterschiedlichen Windows8-Geräten und -Plattformen gespielt werden kann. Entwerfen Sie daher alle Komponenten – Grafik, Steuerelemente, Benutzeroberfläche und Sound – für so viele Konfigurationen wie möglich.
 
 Weitere Informationen zum Ändern des Beispielspiels in diesen Dokumenten finden Sie unter [Erweitern des Beispielspiels](tutorial-resources.md).
 
@@ -564,6 +564,6 @@ void SoundEffect::PlaySound(_In_ float volume)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

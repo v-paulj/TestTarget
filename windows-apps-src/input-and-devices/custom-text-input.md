@@ -5,8 +5,9 @@ title: "Übersicht über benutzerdefinierte Texteingabe"
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 31f10b862ba53f2ba51f3936a73e874466590b30
+ms.openlocfilehash: 614c1b8f319ea1925cd15c5ad1a3093b2bce54d3
 
 ---
 
@@ -96,15 +97,9 @@ Dies ist beispielsweise der Zustand eines Bearbeitungssteuerelements, bevor der 
 
 ![Beispieldiagramm für einen Textstream](images/coretext/stream-3.png) Wenn der Benutzer „d“ eingibt, wird ein [**TextUpdating**](https://msdn.microsoft.com/library/windows/apps/dn958176)-Ereignis mit den folgenden [**CoreTextTextUpdatingEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn958229)-Daten ausgelöst:
 
--   [
-              **Range**
-            ](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
--   [
-              **Text**
-            ](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
--   [
-              **NewSelection**
-            ](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
+-   [**Range**](https://msdn.microsoft.com/library/windows/apps/dn958234) = \[10, 10\]
+-   [**Text**](https://msdn.microsoft.com/library/windows/apps/dn958236) = "d"
+-   [**NewSelection**](https://msdn.microsoft.com/library/windows/apps/dn958233) = \[11, 11\]
 
 Wenden Sie in Ihrem Bearbeitungssteuerelement die angegebenen Änderungen an, und legen Sie [**Result**](https://msdn.microsoft.com/library/windows/apps/dn958235) auf **Succeeded** fest. Hier sehen Sie den Zustand des Steuerelements, nachdem die Änderungen angewendet wurden.
 
@@ -170,6 +165,6 @@ Gelegentlich gibt [**Range**](https://msdn.microsoft.com/library/windows/apps/dn
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

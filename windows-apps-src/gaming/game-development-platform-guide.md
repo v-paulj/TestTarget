@@ -3,7 +3,6 @@ author: mtoepke
 title: "Spieletechnologien für UWP-Apps"
 description: "Dieses Handbuch enthält Informationen über verfügbare Technologien für die Entwicklung von Spielen für die Universelle Windows-Plattform (UWP)."
 ms.assetid: bc4d4648-0d6e-efbb-7608-80bd09decd6e
-translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
 ms.openlocfilehash: 3c7807d0b46a32bfe90c79b7eee3111039ca94ab
 
@@ -12,16 +11,16 @@ ms.openlocfilehash: 3c7807d0b46a32bfe90c79b7eee3111039ca94ab
 # Spieletechnologien für UWP-Apps (Universelle Windows-Plattform)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Dieses Handbuch enthält Informationen über verfügbare Technologien für die Entwicklung von Spielen für die Universelle Windows-Plattform (UWP).
 
-##  Vorteile von Windows 10 für die Spielentwicklung
+##  Vorteile von Windows10 für die Spielentwicklung
 
 
-Mit der Einführung von UWP in Windows 10 können Ihre Windows 10-Titel auf allen Microsoft-Plattformen ausgeführt werden. Dank der kostenlosen Migration von früheren Windows-Versionen wird die Zahl der Windows 10-Clients ständig zunehmen. Die Kombination dieser beiden Umstände bedeutet, dass Ihre Windows 10-Titel über den Windows Store eine große Zahl von Kunden erreichen werden.
+Mit der Einführung von UWP in Windows10 können Ihre Windows10-Titel auf allen Microsoft-Plattformen ausgeführt werden. Dank der kostenlosen Migration von früheren Windows-Versionen wird die Zahl der Windows10-Clients ständig zunehmen. Die Kombination dieser beiden Umstände bedeutet, dass Ihre Windows10-Titel über den Windows Store eine große Zahl von Kunden erreichen werden.
 
-Darüber hinaus bietet Windows 10 zahlreiche neue Features, die besonders für Spiele nützlich sind:
+Darüber hinaus bietet Windows10 zahlreiche neue Features, die besonders für Spiele nützlich sind:
 
 -   Reduzierte Speicherauslagerung und reduzierte Gesamtgröße des Speichersystems
 -   Mit der verbesserten Grafikspeicherverwaltung wird aktiv mehr Speicher für das Spiel im Vordergrund zugeordnet und reserviert.
@@ -29,12 +28,12 @@ Darüber hinaus bietet Windows 10 zahlreiche neue Features, die besonders für 
 ## UWP-Spiele mit C++ und DirectX
 
 
-Echtzeitspiele, die hohe Leistung erfordern, sollten DirectX-APIs verwenden. DirectX ist eine Sammlung systemeigener APIs zum Erstellen von Spielen und Multimedia-Anwendungen, die hohe Leistung erfordern, z. B. 3D-Spiele. Da es sich bei DirectX-APIs um systemeigene APIs handelt, ist C++ die einzige für die Verwendung mit DirectX unterstützte Sprache.
+Echtzeitspiele, die hohe Leistung erfordern, sollten DirectX-APIs verwenden. DirectX ist eine Sammlung systemeigener APIs zum Erstellen von Spielen und Multimedia-Anwendungen, die hohe Leistung erfordern, z.B. 3D-Spiele. Da es sich bei DirectX-APIs um systemeigene APIs handelt, ist C++ die einzige für die Verwendung mit DirectX unterstützte Sprache.
 
 ## Entwicklungsumgebung
 
 
-Um Spiele für UWP zu erstellen, müssen Sie Ihre Entwicklungsumgebung einrichten, indem Sie eine Kopie von Visual Studio 2015 installieren. Visual Studio 2015 ermöglicht Ihnen das Erstellen von UWP-Apps und stellt Tools für die Spielentwicklung bereit:
+Um Spiele für UWP zu erstellen, müssen Sie Ihre Entwicklungsumgebung einrichten, indem Sie eine Kopie von Visual Studio 2015 installieren. Visual Studio2015 ermöglicht Ihnen das Erstellen von UWP-Apps und stellt Tools für die Spielentwicklung bereit:
 
 -   Visual Studio-Tools für die DX-Spielprogrammierung – Visual Studio stellt Tools zum Erstellen, Bearbeiten, Anzeigen einer Vorschau und Exportieren von Bild-, Modell- und Shaderressourcen bereit. Außerdem sind Tools verfügbar, mit denen Sie Ressourcen zur Erstellungszeit konvertieren und DirectX-Grafikcode debuggen können. Weitere Informationen finden Sie unter [Visual Studio-Tools für die Spieleprogrammierung](set-up-visual-studio-for-game-development.md).
 -   Visual Studio-Grafikdiagnosefeatures – Grafikdiagnosetools stehen nun als optionales Feature in Windows zur Verfügung. Mit den Diagnosetools können Sie Grafiken debuggen, Grafikframeanalysen ausführen und die GPU-Nutzung in Echtzeit überwachen. Weitere Informationen finden Sie unter [Tools für die Grafikdiagnose](use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md).
@@ -44,9 +43,9 @@ Weitere Informationen finden Sie unter „Vorbereiten der Universellen Windows-P
 ## Erste Schritte mit DirectX-Spielprojektvorlagen
 
 
-Nach Einrichtung der Entwicklungsumgebung können Sie eine verwandte DirectX-Projektvorlage zum Erstellen Ihres DirectX-Spiels für UWP verwenden. Visual Studio 2015 enthält drei Vorlagen für das Erstellen neuer UWP-DirectX-Projekte, **DirectX 11-App (Universelles Windows)**, **DirectX 12-App (Universelles Windows)** und **DirectX 11- und XAML-App (Universelles Windows)**. Weitere Informationen finden Sie unter [DirectX-Spielprojektvorlagen](user-interface.md).
+Nach Einrichtung der Entwicklungsumgebung können Sie eine verwandte DirectX-Projektvorlage zum Erstellen Ihres DirectX-Spiels für UWP verwenden. Visual Studio2015 enthält drei Vorlagen für das Erstellen neuer UWP-DirectX-Projekte, **DirectX11-App (Universelles Windows)**, **DirectX12-App (Universelles Windows)** und **DirectX11- und XAML-App (Universelles Windows)**. Weitere Informationen finden Sie unter [DirectX-Spielprojektvorlagen](user-interface.md).
 
-## Windows 10-APIs
+## Windows10-APIs
 
 
 Windows 10 bietet eine umfangreiche Sammlung von APIs, die für die Spieleentwicklung hilfreich sind. Es gibt APIs für praktisch alle Aspekte von Spielen: 3D- und 2D-Grafiken, Audio, Eingabe, Textressourcen, Benutzeroberfläche und Netzwerk.
@@ -55,7 +54,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
 
 ![Technologien für die Spielplattform](images/gameplatformtechnologies.png)
 
--   3D-Grafiken – Windows 10 unterstützt zwei Sätze von 3D-Grafik-APIs, Direct3D 11 und [Direct3D 12](https://msdn.microsoft.com/library/windows/desktop/dn899121). Mit diesen beiden APIs können 3D- und 2D-Grafiken erstellt werden. Direct3D 11 und Direct3D 12 werden nicht zusammen verwendet, können jedoch zusammen mit APIs in der 2D-Grafik- und Benutzeroberflächengruppe verwendet werden. Weitere Informationen zum Verwenden der Grafik-APIs in Ihrem Spiel finden Sie unter [Grundlegendes zu 3D-Grafiken für DirectX-Spiele](an-introduction-to-3d-graphics-with-directx.md).
+-   3D-Grafiken – Windows10 unterstützt zwei Sätze von 3D-Grafik-APIs, Direct3D11 und [Direct3D12](https://msdn.microsoft.com/library/windows/desktop/dn899121). Mit diesen beiden APIs können 3D- und 2D-Grafiken erstellt werden. Direct3D 11 und Direct3D 12 werden nicht zusammen verwendet, können jedoch zusammen mit APIs in der 2D-Grafik- und Benutzeroberflächengruppe verwendet werden. Weitere Informationen zum Verwenden der Grafik-APIs in Ihrem Spiel finden Sie unter [Grundlegendes zu 3D-Grafiken für DirectX-Spiele](an-introduction-to-3d-graphics-with-directx.md).
 
     <table>
     <colgroup>
@@ -70,16 +69,16 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     </thead>
     <tbody>
     <tr class="odd">
-    <td align="left">Direct3D 12</td>
-    <td align="left"><p>Direct3D 12 stellt die nächste Version von Direct3D vor, der 3D-Grafik-API im Herzen von DirectX. Diese Version von Direct3D ist schneller und effizienter als frühere Versionen von Direct3D. Der Kompromiss für die höhere Geschwindigkeit von Direct3D 12 besteht darin, dass die Ebene niedrigerer ist. Sie müssen Ihre Grafikressourcen selbst verwalten und über eine umfassendere Grafikprogrammiererfahrung verfügen, um die höhere Geschwindigkeit zu realisieren.</p>
+    <td align="left">Direct3D12</td>
+    <td align="left"><p>Direct3D12 stellt die nächste Version von Direct3D vor, der 3D-Grafik-API im Herzen von DirectX. Diese Version von Direct3D ist schneller und effizienter als frühere Versionen von Direct3D. Der Kompromiss für die höhere Geschwindigkeit von Direct3D12 besteht darin, dass die Ebene niedrigerer ist. Sie müssen Ihre Grafikressourcen selbst verwalten und über eine umfassendere Grafikprogrammiererfahrung verfügen, um die höhere Geschwindigkeit zu realisieren.</p>
     <p><strong>Gründe für die Verwendung</strong></p>
     <p>Verwenden Sie Direct3D 12, wenn Sie die Leistung Ihres Spiels optimieren müssen und das Spiel CPU-gebunden ist.</p>
     <p><strong>Weitere Informationen</strong></p>
     <p>Weitere Informationen finden Sie in der [Direct3D 12](https://msdn.microsoft.com/library/windows/desktop/dn899121)-Dokumentation.</p></td>
     </tr>
     <tr class="even">
-    <td align="left">Direct3D 11</td>
-    <td align="left"><p>Direct3D 11 ist die vorherige Version von Direct3D, mit der Sie 3D-Grafiken unter Verwendung einer höheren Ebene der Hardwareabstraktion als bei D3D 12 erstellen können.</p>
+    <td align="left">Direct3D11</td>
+    <td align="left"><p>Direct3D11 ist die vorherige Version von Direct3D, mit der Sie 3D-Grafiken unter Verwendung einer höheren Ebene der Hardwareabstraktion als bei D3D12 erstellen können.</p>
     <p><strong>Gründe für die Verwendung</strong></p>
     <p>Verwenden Sie Direct3D 11, wenn Sie über vorhandenen Direct3D 11-Code verfügen, Ihr Spiel nicht CPU-gebunden ist, oder Sie davon profitieren möchten, dass Ihre Ressourcen verwaltet werden.</p>
     <p><strong>Weitere Informationen</strong></p>
@@ -90,7 +89,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
 
      
 
--   2D-Grafiken und Benutzeroberfläche – APIs für 2D-Grafiken z. B. Text und Benutzeroberflächen. Alle 2D-Grafiken und Benutzeroberflächen-APIs sind optional.
+-   2D-Grafiken und Benutzeroberfläche – APIs für 2D-Grafiken z.B. Text und Benutzeroberflächen. Alle 2D-Grafiken und Benutzeroberflächen-APIs sind optional.
 
     <table>
     <colgroup>
@@ -197,7 +196,7 @@ Es gibt viele verwandte APIs für die Spielentwicklung, nicht für alle Spiele m
     <li>Geringere Ressourcenverwendung</li>
     <li>Geringere Latenz des API-Aufrufs zum Abrufen von Eingaben</li>
     <li>Die Möglichkeit, mit mehr als 4 Gamepads gleichzeitig zu arbeiten</li>
-    <li>Die Möglichkeit zum Zugreifen auf zusätzliche Xbox One-Gamepadfeatures, z. B. Triggervibrationsmotoren.</li>
+    <li>Die Möglichkeit zum Zugreifen auf zusätzliche Xbox One-Gamepadfeatures, z.B. Triggervibrationsmotoren.</li>
     <li>Die Möglichkeit, beim Herstellen oder Trennen einer Verbindung durch ein Ereignis anstelle von Abruf benachrichtigt zu werden.</li>
     <li>Die Möglichkeit zum Zuweisen der Eingabe an einen bestimmten Benutzer (Windows.System.User)</li>
     </ul>
@@ -326,18 +325,18 @@ Xbox Live-Features – Geräteübergreifende Spiele mit Xbox, Erfolgen, Gamersco
 
 ### UWP-Spiele ohne DirectX
 
-Einfachere Spiele mit minimalem Leistungsanforderungen, z. B. Kartenspiele oder Brettspiele, können ohne DirectX und müssen nicht unbedingt in C++ geschrieben werden. Bei dieser Art von Spielen können alle von UWP unterstützten Sprachen verwendet werden, z. B. C#, Visual Basic, C++ und HTML/JavaScript. Wenn Ihr Spiel weder eine hohe Leistung noch rechenintensive Grafiken erfordert, sollten Sie sich das [Beispiel für ein JavaScript- und HTML5-Fingereingabespiel](http://code.msdn.microsoft.com/windowsapps/JavaScript-and-HTML5-touch-d96f6031) ansehen.
+Einfachere Spiele mit minimalem Leistungsanforderungen, z.B. Kartenspiele oder Brettspiele, können ohne DirectX und müssen nicht unbedingt in C++ geschrieben werden. Bei dieser Art von Spielen können alle von UWP unterstützten Sprachen verwendet werden, z.B. C#, Visual Basic, C++ und HTML/JavaScript. Wenn Ihr Spiel weder eine hohe Leistung noch rechenintensive Grafiken erfordert, sollten Sie sich das [Beispiel für ein JavaScript- und HTML5-Fingereingabespiel](http://code.msdn.microsoft.com/windowsapps/JavaScript-and-HTML5-touch-d96f6031) ansehen.
 
 ### Spielengines
 
 Eine Alternative zum Schreiben eigener Spielemodule mithilfe der Windows-APIs für die Entwicklung von Spielen stellen die zahlreichen qualitativ hochwertigen Spielemodule dar, die auf den Windows-APIs für die Entwicklung von Spielen basieren und für die Entwicklung von Spielen auf Windows-Plattformen zur Verfügung stehen. Wenn Sie eine Spielengine oder Bibliothek in Erwägung ziehen, können Sie zwischen den folgenden Möglichkeiten wählen:
 
--   Vollständige Spielengine – Eine vollständige Spielengine umfasst die meisten bzw. alle Windows 10-APIs, die Sie zum Schreiben einer eigenen Spielengine verwenden würden, z. B. Grafik, Eingabe und Netzwerk. Vollständige Spielengines können auch Spiellogikfunktionalität bereitstellen, z. B. künstliche Intelligenz und Pfadsuche.
+-   Vollständige Spielengine – Eine vollständige Spielengine umfasst die meisten bzw. alle Windows 10-APIs, die Sie zum Schreiben einer eigenen Spielengine verwenden würden, z.B. Grafik, Eingabe und Netzwerk. Vollständige Spielengines können auch Spiellogikfunktionalität bereitstellen, z.B. künstliche Intelligenz und Pfadsuche.
 -   Grafikengine – Grafikengines umfassen Windows 10-Grafik-APIs, verwalten Grafikressourcen und unterstützen zahlreiche Modell- und Weltformate.
 -   Audioengine – Audioengines umfassen Windows 10-Audio-APIs, verwalten Audioressourcen und stellen erweiterte Audiowiedergabe und -Effekte bereit.
 -   Netzwerkengine – Netzwerkengines umfassen Windows 10-Netzwerk-APIs zum Hinzufügen von Peer-zu-Peer- oder serverbasierter Multiplayerunterstützung zu Ihrem Spiel und enthalten ggf. erweiterte Netzwerkfunktionalität zur Unterstützung einer großen Anzahl von Spielern.
 -   Engine für künstliche Intelligenz und Pfadsuche – Engines für künstliche Intelligenz und Pfadsuche stellen ein Framework zur Steuerung des Agentverhaltens in einem Spiel bereit.
--   Engines für besondere Zwecke – Es stehen unterschiedliche weitere Engines zur Bewältigung von nahezu allen möglichen Spielentwicklungsaufgaben zur Verfügung, z. B. Erstellen von Inventarsystemen und Dialogstrukturen.
+-   Engines für besondere Zwecke – Es stehen unterschiedliche weitere Engines zur Bewältigung von nahezu allen möglichen Spielentwicklungsaufgaben zur Verfügung, z.B. Erstellen von Inventarsystemen und Dialogstrukturen.
 
 ## Übermitteln eines Spiels an den Store
 

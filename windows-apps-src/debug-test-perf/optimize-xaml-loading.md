@@ -5,7 +5,7 @@ title: Optimieren Ihres XAML-Markups
 description: "Die Analyse von XAML-Markup zum Erstellen von Objekten im Arbeitsspeicher kann für eine komplexe Benutzeroberfläche viel Zeit in Anspruch nehmen. Hier finden Sie einige Punkte, die Sie zur Optimierung der XAML-Markupanalyse, Ladezeit und Effizienz des Arbeitsspeichers für Ihre App vornehmen können."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c2131b084d8bb989f1f7767f54db697e1cdd8dcf
+ms.openlocfilehash: 655603e7fa8687480b5376806bc199afecd425fd
 
 ---
 # Optimieren Ihres XAML-Markups
@@ -82,7 +82,7 @@ Wenn Sie eine Ressource in der gesamten App auf vielen Seiten verwenden, ist es 
 </Application> <!-- NOTE: EXAMPLE OF INEFFICIENT CODE; DO NOT COPY-PASTE.-->
 ```
 
-Die Möglichkeit, das obige Gegenbeispiel effizienter zu gestalten, besteht darin, `SecondPageTextBrush` in „SecondPage.xaml“ und `ThirdPageTextBrush` in „ThirdPage.xaml“ zu verschieben. `InitialPageTextBrush` kann in „App.xaml“ verbleiben, da Anwendungsressourcen in jedem Fall beim Start der App analysiert werden müssen.
+Die Möglichkeit, das obige Gegenbeispiel effizienter zu gestalten, besteht darin, `SecondPageTextBrush` in „SecondPage.xaml“ und `ThirdPageTextBrush` in „ThirdPage.xaml“ zu verschieben. `InitialPageTextBrush`  kann in „App.xaml“ verbleiben, da Anwendungsressourcen in jedem Fall beim Start der App analysiert werden müssen.
 
 ## Minimieren der Elementanzahl
 
@@ -278,19 +278,19 @@ Ressourcenwörterbücher dienen im Allgemeinen zum Speichern von Ressourcen auf 
 
 **Ressource mit „x:Name“**. Ressourcen mit „x:Name“ profitieren nicht von der Plattformoptimierung, sondern werden sofort bei der Erstellung von ResourceDictionary instanziiert. Der Grund: „x:Name“ teilt der Plattform mit, dass Ihre App Feldzugriff auf diese Ressource benötigt. Daher muss die Plattform etwas erstellen, für das ein Verweis erstellt werden kann.
 
-**ResourceDictionaries in einem UserControl**. Innerhalb eines Benutzersteuerelements definierte Ressourcenwörterbücher führen zu Leistungseinbußen. Die Plattform erstellt für jede Instanz von UserControl eine Kopie von ResourceDictionary. Bei einem häufig verwendeten Benutzersteuerelement empfiehlt es sich daher, ResourceDictionary aus UserControl zu entfernen und auf der Seitenebene zu platzieren.
+**ResourceDictionaries in einem UserControl**-Element. Innerhalb eines Benutzersteuerelements definierte Ressourcenwörterbücher führen zu Leistungseinbußen. Die Plattform erstellt für jede Instanz von UserControl eine Kopie von ResourceDictionary. Bei einem häufig verwendeten Benutzersteuerelement empfiehlt es sich daher, ResourceDictionary aus UserControl zu entfernen und auf der Seitenebene zu platzieren.
 
 ## Verwendung von XBF2
 
-Bei XBF2 handelt es sich um eine binäre Darstellung des XAML-Markups, die sämtliche Nachteile der Textanalyse zur Laufzeit vermeidet. Darüber hinaus optimiert sie den Binärcode für das Laden und die Strukturerstellung und ermöglicht die Verwendung von Fast-Path für XAML-Typen, um die Effizienz bei der Heap- und Objekterstellung (VSM, ResourceDictionary, Stile usw.) zu verbessern. Dank vollständiger Abbildung im Speicher entsteht beim Laden und Lesen einer XAML-Seite keinerlei Heap-Bedarf. Des Weiteren verringert sich der Datenträgerbedarf gespeicherter XAML-Seiten in einem APPX-Element. XBF2 zeichnet sich durch eine kompaktere Darstellung aus und kann den Datenträgerbedarf im Vergleich zu XAML/XBF1-Dateien um bis zu 50 Prozent reduzieren. So wurde bei der integrierten Foto-App etwa eine Reduzierung um rund 60 Prozent erreicht – von ehemals rund 1 MB (XBF1-Ressourcen) auf ca. 400 KB (XBF2-Ressourcen). Darüber hinaus wurden für Apps auch Verbesserungen bei CPU (15 bis 20 Prozent) und Win32-Heap (10 bis 15 Prozent) verzeichnet.
+Bei XBF2 handelt es sich um eine binäre Darstellung des XAML-Markups, die sämtliche Nachteile der Textanalyse zur Laufzeit vermeidet. Darüber hinaus optimiert sie den Binärcode für das Laden und die Strukturerstellung und ermöglicht die Verwendung von Fast-Path für XAML-Typen, um die Effizienz bei der Heap- und Objekterstellung (VSM, ResourceDictionary, Stile usw.) zu verbessern. Dank vollständiger Abbildung im Speicher entsteht beim Laden und Lesen einer XAML-Seite keinerlei Heap-Bedarf. Des Weiteren verringert sich der Datenträgerbedarf gespeicherter XAML-Seiten in einem APPX-Element. XBF2 zeichnet sich durch eine kompaktere Darstellung aus und kann den Datenträgerbedarf im Vergleich zu XAML/XBF1-Dateien um bis zu 50Prozent reduzieren. So wurde bei der integrierten Foto-App etwa eine Reduzierung um rund 60Prozent erreicht – von ehemals rund 1MB (XBF1-Ressourcen) auf ca. 400KB (XBF2-Ressourcen). Darüber hinaus wurden für Apps auch Verbesserungen bei CPU (15 bis 20Prozent) und Win32-Heap (10 bis 15Prozent) verzeichnet.
 
-Integrierte XAML-Steuerelemente und vom Framework bereitgestellte Wörterbücher sind bereits vollständig XBF2-fähig. Achten Sie bei Ihrer eigenen App darauf, dass Ihre Projektdatei mindestens „TargetPlatformVersion 8.2“ deklariert.
+Integrierte XAML-Steuerelemente und vom Framework bereitgestellte Wörterbücher sind bereits vollständig XBF2-fähig. Achten Sie bei Ihrer eigenen App darauf, dass Ihre Projektdatei mindestens „TargetPlatformVersion8.2“ deklariert.
 
-Wenn Sie wissen möchten, ob Sie über XBF2 verfügen, öffnen Sie Ihre App in einem Binär-Editor. Falls das 12. und 13. Byte „00 02“ ist, haben Sie XBF2.
-
-
+Wenn Sie wissen möchten, ob Sie über XBF2 verfügen, öffnen Sie Ihre App in einem Binär-Editor. Falls das 12. und 13.Byte „00 02“ ist, haben Sie XBF2.
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+<!--HONumber=Aug16_HO3-->
 
 

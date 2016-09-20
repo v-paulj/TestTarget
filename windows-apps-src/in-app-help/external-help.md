@@ -11,7 +11,7 @@ ms.openlocfilehash: 0e21737e33f33d7239162ddcf9d4cdf39db17655
 
 # Externe Hilfeseiten
 
-\ [Aktualisiert für Apps für die universelle Windows-Plattform (UWP) unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+\ [Aktualisiert für Apps für die universelle Windows-Plattform (UWP) unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Wenn für Ihre App eine ausführliche Hilfe für komplexe Inhalte erforderlich ist, sollten Sie diese Anweisungen auf einer Webseite hosten.
 
@@ -38,7 +38,7 @@ Externe Hilfeseiten sind ideal, um für die Benutzer Lernprogramme und exemplari
 
 ## <span id="related_topics"></span>Verwandte Artikel
 
-* [Anleitungen für die App-Hilfe](guidelines-for-app-help.md)
+* [Richtlinien für die App-Hilfe](guidelines-for-app-help.md)
 
 
 

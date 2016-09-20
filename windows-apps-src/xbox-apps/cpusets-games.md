@@ -16,8 +16,10 @@ Die universelle Windows-Plattform (UWP) ist das Herzstück einer Vielzahl von el
 ## CPUSets-API
 
 Die CPUSets-API bietet Kontrolle darüber, welche CPU-Sätze zur Verfügung stehen, um die Ausführung von Threads darauf zu planen. Zwei Funktionen sind verfügbar, um zu steuern, wo Threads geplant werden:
-- **SetProcessDefaultCpuSets**: Diese Funktion kann zum Angeben der CPU-Sätze verwendet werden, auf denen neue Threads ausgeführt werden können, wenn sie nicht bestimmten CPU-Sätze zugeordnet sind.
-- **SetThreadSelectedCpuSets**: Mit dieser Funktion können Sie die CPU-Sätze beschränken, auf denen ein bestimmter Thread ausgeführt wird.
+- 
+            **SetProcessDefaultCpuSets**: Diese Funktion kann zum Angeben der CPU-Sätze verwendet werden, auf denen neue Threads ausgeführt werden können, wenn sie nicht bestimmten CPU-Sätze zugeordnet sind.
+- 
+            **SetThreadSelectedCpuSets**: Mit dieser Funktion können Sie die CPU-Sätze beschränken, auf denen ein bestimmter Thread ausgeführt wird.
 
 Wenn die Funktion **SetProcessDefaultCpuSets** niemals verwendet wird, können neu erstellte Threads auf jeder CPU geplant werden, die für Ihren Prozess verfügbar ist. Dieser Abschnitt behandelt die Grundlagen der CPUSets-API.
 
@@ -43,7 +45,7 @@ Jede Instanz von zurückgegebenen **SYSTEM_CPU_SET_INFORMATION** enthält Inform
 
 Die Informationen in jeder Instanz dieser Datenstruktur, die von **GetSystemCpuSetInformation** zurückgegeben wird, enthalten Informationen zu einer eindeutigen Verarbeitungseinheit, auf der Threads geplant werden können. Angesichts der möglichen Bandbreite von Zielgeräten gelten möglicherweise viele der Informationen in der **SYSTEM_CPU_SET_INFORMATION**-Datenstruktur nicht für die Entwicklung von Spielen. Tabelle 1 enthält eine Erläuterung der Datenmember, die für die Entwicklung von Spielen hilfreich sind.
 
- **Tabelle 1. Für die Entwicklung von Spielen hilfreiche Datenmember.**
+ **Tabelle1. Für die Entwicklung von Spielen hilfreiche Datenmember.**
 
 | Membername  | Datentyp | Beschreibung |
 | ------------- | ------------- | ------------- |
@@ -60,17 +62,17 @@ Die anderen Datenmember liefern Informationen, von denen es unwahrscheinlich ist
 
 Im Folgenden sind einige Beispiele für die Art der Informationen aufgeführt, die von UWP-Anwendungen gesammelt werden, die auf verschiedene Arten von Hardware ausgeführt werden.
 
-**Tabelle 2. Informationen, die von einer UWP-App zurückgegeben werden, die auf einem Microsoft Lumia 950 ausgeführt wird. Dies ist ein Beispiel für ein System, das über mehrere Caches der letzten Ebene verfügt. Das Lumia 950 bietet einen Qualcomm 808 Snapdragon-Prozess, der einen Dual-Core ARM Cortex A57 und Quad-Core ARM Cortex A53-CPUs enthält.**
+**Tabelle2. Informationen, die von einer UWP-App zurückgegeben werden, die auf einem Microsoft Lumia 950 ausgeführt wird. Dies ist ein Beispiel für ein System, das über mehrere Caches der letzten Ebene verfügt. Das Lumia 950 bietet einen Qualcomm 808 Snapdragon-Prozess, der einen Dual-Core ARM Cortex A57 und Quad-Core ARM Cortex A53-CPUs enthält.**
 
-  ![Tabelle 2](images/cpusets-table2.png)
+  ![Tabelle2](images/cpusets-table2.png)
 
-**Tabelle 3. Informationen, die von einer UWP-App zurückgegeben werden, die auf einem herkömmlichen PC ausgeführt wird. Dies ist ein Beispiel für ein System, das Hyperthreading verwendet; jeder physische Kern verfügt über zwei logische Kerne, auf denen Threads geplant werden können. In diesem Fall enthielt das System eine Intel Xenon CPU E5-2620.**
+**Tabelle3. Informationen, die von einer UWP-App zurückgegeben werden, die auf einem herkömmlichen PC ausgeführt wird. Dies ist ein Beispiel für ein System, das Hyperthreading verwendet; jeder physische Kern verfügt über zwei logische Kerne, auf denen Threads geplant werden können. In diesem Fall enthielt das System eine Intel Xenon CPU E5-2620.**
 
-  ![Tabelle 3](images/cpusets-table3.png)
+  ![Tabelle3](images/cpusets-table3.png)
 
-**Tabelle 4. Informationen, die von einer UWP-App zurückgegeben werden, die auf einem Quad-Core Microsoft Surface Pro 4 ausgeführt wird. Diesem System verfügt über eine Intel Core i5 6300-CPU.**
+**Tabelle4. Informationen, die von einer UWP-App zurückgegeben werden, die auf einem Quad-Core Microsoft Surface Pro 4 ausgeführt wird. Diesem System verfügt über eine Intel Core i5 6300-CPU.**
 
-  ![Tabelle 4](images/cpusets-table4.png)
+  ![Tabelle4](images/cpusets-table4.png)
 
 ### SetThreadSelectedCpuSets
 
@@ -95,7 +97,9 @@ Wie wir bereits gesehen haben, bietet die CPUSets-API viele Informationen und Fl
 
 Diese Methode ist effektiv, wenn Ihr Spiel einige Threads aufweist, die in Echtzeit zusammen mit anderen Arbeitsthreads ausgeführt werden müssen, die relativ wenig CPU-Zeit in Anspruch nehmen. Manche Aufgaben, z. B. fortlaufende Hintergrundmusik, müssen für ein optimales Spielerlebnis ohne Unterbrechung ausgeführt werden. Bereits ein einzelner Frame mit Audio-Threadzurückstellung kann eine Störung verursachen, sodass es wichtig ist, dass für jeden Frame die erforderliche Menge an CPU-Zeit zur Verfügung steht.
 
-Mithilfe von **SetThreadSelectedCpuSets** in Verbindung mit **SetProcessDefaultCpuSets** können Sie sicherstellen, dass Ihre rechenintensiven Threads nicht von Arbeitsthreads unterbrochen werden. **SetThreadSelectedCpuSets** können verwendet werden, um Ihre rechenintensiven Threads bestimmten CPU-Sätzen zuzuweisen. **SetProcessDefaultCpuSets** kann dann verwendet werden, um sicherzustellen, dass alle erstellten nicht zugewiesenen Threads auf anderen CPU-Sätzen geplant werden. Im Fall von CPUs, die Hyperthreading nutzen, ist es auch wichtig, logische Kerne auf dem gleichen physischen Kern zu berücksichtigen. Arbeitsthreads sollten nicht auf logischen Kernen ausgeführt werden dürfen, die den gleichen physischen Kern wie ein Thread verwenden, den Sie mit Echtzeit-Reaktionsfähigkeit ausführen möchten. Der folgende Code veranschaulicht, wie Sie bestimmen, ob ein PC Hyperthreading verwendet.
+Mithilfe von **SetThreadSelectedCpuSets** in Verbindung mit **SetProcessDefaultCpuSets** können Sie sicherstellen, dass Ihre rechenintensiven Threads nicht von Arbeitsthreads unterbrochen werden. 
+            **SetThreadSelectedCpuSets** können verwendet werden, um Ihre rechenintensiven Threads bestimmten CPU-Sätzen zuzuweisen. 
+            **SetProcessDefaultCpuSets** kann dann verwendet werden, um sicherzustellen, dass alle erstellten nicht zugewiesenen Threads auf anderen CPU-Sätzen geplant werden. Im Fall von CPUs, die Hyperthreading nutzen, ist es auch wichtig, logische Kerne auf dem gleichen physischen Kern zu berücksichtigen. Arbeitsthreads sollten nicht auf logischen Kernen ausgeführt werden dürfen, die den gleichen physischen Kern wie ein Thread verwenden, den Sie mit Echtzeit-Reaktionsfähigkeit ausführen möchten. Der folgende Code veranschaulicht, wie Sie bestimmen, ob ein PC Hyperthreading verwendet.
 
 ```
 unsigned long retsize = 0;
@@ -134,7 +138,7 @@ Ein Beispiel für das Organisieren von Threads basierend auf physischen Kernen f
 
 Cache-Kohärenz bedeutet, dass gecachter Arbeitsspeicher der gleiche für mehrere Hardwareressourcen ist, die auf dieselben Daten zugreifen. Wenn Threads auf verschiedenen Kernen geplant sind, aber auf dieselben Daten zugreifen, arbeiten sie möglicherweise mit separaten Kopien dieser Daten in verschiedenen Caches. Um richtige Ergebnisse zu erhalten, muss die Kohärenz dieser Caches gewährleistet sein. Die Aufrechterhaltung der Kohärenz zwischen mehreren Caches ist relativ teuer, ist aber erforderlich, damit ein System mit mehreren Kernen ausgeführt werden kann. Darüber hinaus liegt es völlig außerhalb der Kontrolle des Client-Codes; das zugrunde liegende System arbeitet unabhängig daran, Caches auf dem neuesten Stand zu halten, indem es auf zwischen Kernen freigegebene Speicherressourcen zugreift.
 
-Wenn Ihr Spiel mehrere Threads verwendet, die gemeinsam eine besonders große Menge an Daten nutzen, können Sie die Kosten der Cache-Kohärenz minimieren, indem Sie sicherstellen, dass sie auf CPU-Sätzen geplant werden, die einen Cache der letzten Ebene teilen. Der Cache der letzten Ebene ist der langsamste Cache, der für einen Kern auf Systemen zur Verfügung steht, die keine NUMA-Knoten verwenden. Es kommt äußerst selten vor, dass ein Spiele-PC NUMA-Knoten nutzt. Wenn Kerne keinen Cache der letzten Ebene teilen, müsste zur Aufrechterhaltung der Kohärenz auf Speicherressourcen höherer Ebene und somit langsamere Speicherressourcen zugegriffen werden. Durch eine Bindung von zwei Threads an separate CPU-Sätze, die einen Cache und einen physischen Kern teilen, kann eine noch bessere Leistung erzielt werden, als durch deren Planung auf separaten physischen Kernen, wenn sie in einem beliebigen Frame nicht mehr als 50 % der Zeit benötigen. 
+Wenn Ihr Spiel mehrere Threads verwendet, die gemeinsam eine besonders große Menge an Daten nutzen, können Sie die Kosten der Cache-Kohärenz minimieren, indem Sie sicherstellen, dass sie auf CPU-Sätzen geplant werden, die einen Cache der letzten Ebene teilen. Der Cache der letzten Ebene ist der langsamste Cache, der für einen Kern auf Systemen zur Verfügung steht, die keine NUMA-Knoten verwenden. Es kommt äußerst selten vor, dass ein Spiele-PC NUMA-Knoten nutzt. Wenn Kerne keinen Cache der letzten Ebene teilen, müsste zur Aufrechterhaltung der Kohärenz auf Speicherressourcen höherer Ebene und somit langsamere Speicherressourcen zugegriffen werden. Durch eine Bindung von zwei Threads an separate CPU-Sätze, die einen Cache und einen physischen Kern teilen, kann eine noch bessere Leistung erzielt werden, als durch deren Planung auf separaten physischen Kernen, wenn sie in einem beliebigen Frame nicht mehr als 50% der Zeit benötigen. 
 
 In diesem Codebeispiel wird veranschaulicht, wie Sie ermitteln, ob Threads, die häufig kommunizieren, einen Cache der letzten Ebene teilen können.
 
@@ -178,7 +182,7 @@ for (size_t i = 0; i < count; ++i)
 
 Das in Abbildung 1 dargestellte Cache-Layout ist ein Beispiel für die Art von Layout, die Sie möglicherweise bei einem System sehen. In dieser Abbildung sehen Sie eine Darstellung der Caches in einem Microsoft Lumia 950. Threadübergreifende Kommunikation zwischen CPU 256 und CPU 260 würde erheblichen Overhead verursachen, da das System seine L2-Caches kohärent halten müsste.
 
-**Abbildung 1. Cache-Architektur in einem Microsoft Lumia 950-Gerät.**
+**Abbildung1. Cache-Architektur in einem Microsoft Lumia 950-Gerät.**
 
 ![Lumia 950-Cache](images/cpusets-lumia950cache.png)
 

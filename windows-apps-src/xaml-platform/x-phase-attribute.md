@@ -3,7 +3,6 @@ author: jwmsft
 title: xPhase-Attribut
 description: Verwenden Sie xPhase mit der xBind-Markuperweiterung zum inkrementellen Rendern von ListView- und GridView-Elementen und zur Verbesserung des Verschiebens.
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
-translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
 ms.openlocfilehash: dfa12909d19a44ed38939c612712c8fe90f3f584
 
@@ -11,9 +10,10 @@ ms.openlocfilehash: dfa12909d19a44ed38939c612712c8fe90f3f584
 
 # x:Phase-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Verwenden Sie **x:Phase** mit der [{x:Bind}-Markuperweiterung](x-bind-markup-extension.md) zum inkrementellen Rendern von [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)-Elementen und zur Verbesserung des Verschiebungserlebnisses. **x:Phase** bietet eine deklarative Möglichkeit, die gleiche Wirkung zu erzielen wie bei Verwendung des [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914)-Ereignisses zum manuellen Steuern des Renderns von Listenelementen. Weitere Informationen finden Sie auch unter [Inkrementelles Aktualisieren von ListView- und GridView-Elementen](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
+Verwenden Sie **x:Phase** mit der [{x:Bind}-Markuperweiterung](x-bind-markup-extension.md) zum inkrementellen Rendern von [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)-Elementen und zur Verbesserung des Verschiebungserlebnisses. 
+            **x:Phase** bietet eine deklarative Möglichkeit, die gleiche Wirkung zu erzielen wie bei Verwendung des [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914)-Ereignisses zum manuellen Steuern des Renderns von Listenelementen. Weitere Informationen finden Sie auch unter [Inkrementelles Aktualisieren von ListView- und GridView-Elementen](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
 ## XAML-Attributsyntax
 

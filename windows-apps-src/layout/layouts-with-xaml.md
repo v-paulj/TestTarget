@@ -7,7 +7,7 @@ label: Page layouts with XAML
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 681023be35b01eac84272a73d1ae3e7a459351db
-ms.openlocfilehash: 0cc466ccdc4d214539fb4258f95fda72e08ac9db
+ms.openlocfilehash: 8ca8852df2747410b9d139b55a4f24366cc0eefc
 
 ---
 # Definieren von Seitenlayouts mit XAML
@@ -16,27 +16,22 @@ XAML bietet Ihnen ein flexibles Layoutsystem, mit dem Sie die automatische Grö�
 
 Hier erörtern wir die Verwendung von XAML-Eigenschaften und Layoutpanels zur Erstellung einer reaktionsfähigen und adaptiven App. Wir bauen auf wichtigen Informationen zu Techniken des reaktionsfähigen UI-Designs unter [Einführung in das UWP-App-Design](../layout/design-and-ui-intro.md). Sie sollten wissen, was effektive Pixel sind, und die einzelnen Techniken für das reaktionsfähige Design verstehen: Ändern der Position, Ändern der Größe, Neuanordnen, Einblenden, Ersetzen und Ändern der Architektur.
 
-> **Hinweis**
-            &nbsp;&nbsp;Das App-Layout beginnt mit dem von Ihnen ausgewählten Navigationsmodell, z. B., ob Sie ein [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) mit dem Modell [„Registerkarten und Pivot“](../controls-and-patterns/tabs-pivot.md) oder [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) mit dem Modell [„Navigationsbereich“](../controls-and-patterns/nav-pane.md) verwenden. Weitere Informationen hierzu finden Sie unter [Navigationsdesigngrundlagen für UWP-Apps](../layout/navigation-basics.md). Hier sprechen wir über Techniken, wie das Layout einer einzelnen Seite oder Gruppe von Elementen reaktionsfähig gestaltet werden kann. Diese Informationen gelten unabhängig davon, welches Navigationsmodell Sie für Ihre App auswählen.
+> **Hinweis**&nbsp;&nbsp;Das App-Layout beginnt mit dem von Ihnen ausgewählten Navigationsmodell, z. B., ob Sie ein [**Pivot**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) mit dem Modell [„Registerkarten und Pivot“](../controls-and-patterns/tabs-pivot.md) oder [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) mit dem Modell [„Navigationsbereich“](../controls-and-patterns/nav-pane.md) verwenden. Weitere Informationen hierzu finden Sie unter [Navigationsdesigngrundlagen für UWP-Apps](../layout/navigation-basics.md). Hier sprechen wir über Techniken, wie das Layout einer einzelnen Seite oder Gruppe von Elementen reaktionsfähig gestaltet werden kann. Diese Informationen gelten unabhängig davon, welches Navigationsmodell Sie für Ihre App auswählen.
 
 Das XAML-Framework bietet mehrere Ebenen der Optimierung, die Sie bei der Erstellung einer reaktionsfähigen Benutzeroberfläche verwenden können.
 - **Dynamisches Layout**
-              
-            Verwenden Sie Layouteigenschaften und -panels, um Ihre Standard-UI dynamisch zu gestalten.
+    Verwenden Sie Layouteigenschaften und -panels, um Ihre Standard-UI dynamisch zu gestalten.
 
-    Die Grundlage für ein dynamisches Layout ist die richtige Verwendung von Layouteigenschaften und -panels, um die Position und Größe von Inhalten zu ändern und Inhalte neu anzuordnen. Sie können eine feste Größe für ein Element festlegen oder eine automatische Größenanpassung verwenden, damit das übergeordnete Layoutpanel die Größe anpassen kann. Die verschiedenen [**Panel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.panel.aspx)-Klassen, z. B. [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) und [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), bieten verschiedene Möglichkeiten zur Größenanpassung und Positionierung ihrer untergeordneten Elemente.
+    Die Grundlage für ein dynamisches Layout ist die richtige Verwendung von Layouteigenschaften und -panels, um die Position und Größe von Inhalten zu ändern und Inhalte neu anzuordnen. Sie können eine feste Größe für ein Element festlegen oder eine automatische Größenanpassung verwenden, damit das übergeordnete Layoutpanel die Größe anpassen kann. Die verschiedenen [**Panel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.panel.aspx)-Klassen, z.B. [**Canvas**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.canvas.aspx), [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx), [**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) und [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx), bieten verschiedene Möglichkeiten zur Größenanpassung und Positionierung ihrer untergeordneten Elemente.
 
 - **Adaptives Layout**
-              
-            Verwenden Sie visuelle Zustände, um wesentliche Änderungen an Ihrer UI basierend auf der Fenstergröße oder andere Änderungen vorzunehmen.
+    Verwenden Sie visuelle Zustände, um basierend auf der Fenstergröße oder andere Änderungen größere Änderungen an Ihrer UI vorzunehmen.
 
     Wenn sich die Größe Ihres App-Fensters über einen bestimmten Punkt vergrößert oder verkleinert, können Sie Layouteigenschaften ändern, um die Größe und Position von Abschnitten Ihrer UI zu ändern oder diese neu anzuordnen, einzublenden oder zu ersetzen. Sie können verschiedene visuelle Zustände für Ihre Benutzeroberfläche definieren und diese anwenden, wenn die Fensterbreite oder Fensterhöhe einen bestimmten Schwellenwert überschreitet. Ein [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) bietet eine einfache Möglichkeit, um einen Schwellenwert (auch „Haltepunkt“ genannt) festzulegen, wenn ein Zustand angewendet wird.
 
 - **Maßgeschneidertes Layout**
-              
-            Ein maßgeschneidertes Layout ist für eine bestimmte Gerätefamilie oder verschiedene Bildschirmgrößen optimiert. Das Layout sollte innerhalb der Gerätefamilie im Rahmen der unterstützten Fenstergrößen weiterhin reaktionsfähig bleiben und sich an Änderungen anpassen können.
-    > **Note**
-            &nbsp;&nbsp; Mit [Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431) können Benutzer ihre Smartphones mit einem Bildschirm, einer Maus und einer Tastatur verbinden. Mithilfe dieser Funktion werden die Zeilen zwischen Smartphone- und Desktop-Gerätefamilien weichgezeichnet.
+    Ein maßgeschneidertes Layout ist für eine bestimmte Gerätefamilie oder verschiedene Bildschirmgrößen optimiert. Das Layout sollte innerhalb der Gerätefamilie im Rahmen der unterstützten Fenstergrößen weiterhin reaktionsfähig bleiben und sich an Änderungen anpassen können.
+    > **Hinweis**&nbsp;&nbsp; Mit [Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431) können Benutzer ihre Smartphones mit einem Bildschirm, einer Maus und einer Tastatur verbinden. Mithilfe dieser Funktion werden die Zeilen zwischen Smartphone- und Desktop-Gerätefamilien weichgezeichnet.
 
     Zu den Methoden für die Anpassung gehören
     - Erstellen eines benutzerdefinierten Auslösers
@@ -71,10 +66,9 @@ Legen Sie die Eigenschaften [**Height**](https://msdn.microsoft.com/library/wind
 
 Verwenden Sie die automatische Größenanpassung, damit die Größe von UI-Elementen entsprechend ihren Inhalten oder der Größe des übergeordneten Containers geändert wird. Sie können die automatische Größenanpassung auch für die Zeilen und Spalten eines Rasters verwenden. Um die automatische Größenanpassung zu verwenden, legen Sie für „Height“ und/oder „Width“ von UI-Elementen **Auto** fest.
 
-> **Hinweis**
-            &nbsp;&nbsp;Ob die Größe eines Elements an seinen Inhalt oder seinen Container angepasst wird, ist vom Wert der Eigenschaften [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) und [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) abhängig und davon, wie der übergeordnete Container die Größenanpassung seiner untergeordneten Elemente behandelt. Weitere Informationen finden Sie unter [Ausrichtung]() und [Layoutpanels]() weiter unten in diesem Artikel.
+> **Hinweis**&nbsp;&nbsp;Ob die Größe eines Elements an seinen Inhalt oder seinen Container angepasst wird, ist vom Wert der Eigenschaften [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) und [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx) abhängig und davon, wie der übergeordnete Container die Größenanpassung seiner untergeordneten Elemente behandelt. Weitere Informationen finden Sie unter [Ausrichtung]() und [Layoutpanels]() weiter unten in diesem Artikel.
 
-Die proportionale Größenanpassung, die auch als *Größenanpassung mit Sternvariable* bezeichnet wird, wird zum gleichmäßigen Aufteilen des verfügbaren Platzes auf die Zeilen und Spalten eines Rasters verwendet. In XAML werden Sternwerte als \* ausgedrückt (bzw. *n*\* für gleichmäßige Größenanpassung mit Sternvariable). Möchten Sie also z. B. angeben, dass eine Spalte fünfmal breiter als die zweite Spalte eines zweispaltigen Layouts ist, verwenden Sie "5\*" und "\*" für die [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.width.aspx)-Eigenschaften der [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.aspx)-Elemente.
+Die proportionale Größenanpassung, die auch als *Größenanpassung mit Sternvariable* bezeichnet wird, wird zum gleichmäßigen Aufteilen des verfügbaren Platzes auf die Zeilen und Spalten eines Rasters verwendet. In XAML werden Sternwerte als \* ausgedrückt (bzw. *n*\* für gleichmäßige Größenanpassung mit Sternvariable). Möchten Sie also z.B. angeben, dass eine Spalte fünfmal breiter als die zweite Spalte eines zweispaltigen Layouts ist, verwenden Sie "5\*" und "\*" für die [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.width.aspx)-Eigenschaften der [**ColumnDefinition**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.columndefinition.aspx)-Elemente.
 
 In diesem Beispiel wird die feste, automatische und proportionale Größenanpassung in einem [**Grid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) mit 4 Spalten kombiniert.
 
@@ -115,7 +109,7 @@ Verwenden Sie die Eigenschaften [**HorizontalAlignment**](https://msdn.microsoft
 - Die Werte für **HorizontalAlignment** sind **Left**, **Center**, **Right** und **Stretch**.
 - Die Werte für **VerticalAlignment** sind **Top**, **Center**, **Bottom** und **Stretch**.
 
-Bei der **Stretch**-Ausrichtung füllen die Elemente den Bereich, der für sie im übergeordneten Container bereitgestellt wird. „Stretch“ ist der Standardwert für beide Ausrichtungseigenschaften. Einige Steuerelemente, z. B. [**Button**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.button.aspx) überschreiben diesen Wert jedoch in ihrem Standardstil.
+Bei der **Stretch**-Ausrichtung füllen die Elemente den Bereich, der für sie im übergeordneten Container bereitgestellt wird. „Stretch“ ist der Standardwert für beide Ausrichtungseigenschaften. Einige Steuerelemente, z.B. [**Button**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.button.aspx) überschreiben diesen Wert jedoch in ihrem Standardstil.
 Alle Elemente, die untergeordnete Elemente haben können, können den Wert „Stretch“ für die Eigenschaften „HorizontalAlignment“ und „VerticalAlignment“ eindeutig behandeln. Angenommen, ein Element, das die standardmäßigen „Stretch“-Werte verwendet und in einem „Grid“ platziert ist, wird so gestreckt, dass es die Zelle füllt, die es enthält. Dasselbe Element in einem Canvas-Panel wird an die Größe seines Inhalts angepasst. Weitere Informationen dazu, wie die einzelnen Panels den „Stretch“-Wert behandeln, finden Sie unter im Artikel [Layoutpanels](layout-panels.md).
 
 Weitere Informationen finden Sie im Artikel [Ausrichtung, Rand und Abstand](alignment-margin-padding.md) und auf den Referenzseiten [**HorizontalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.horizontalalignment.aspx) und [**VerticalAlignment**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.frameworkelement.verticalalignment.aspx).
@@ -156,8 +150,7 @@ Sie können ein Element ein- oder ausblenden, indem Sie seine [**Visibility**](h
 
 Sie können die Visibility-Eigenschaft eines Elements im Code oder in einem visuellen Zustand ändern. Wenn die Visibility eines Elements geändert wird, werden auch alle untergeordneten Elemente geändert. Sie können Abschnitte der Benutzeroberfläche ersetzen, indem Sie ein Panel einblenden, während Sie ein anderes reduzieren.
 
-> **Tipp**
-            &nbsp;&nbsp;Wenn die Benutzeroberfläche Elemente enthält, die standardmäßig **Collapsed** sind, werden die Objekte beim Start weiterhin erstellt, obwohl sie nicht sichtbar sind. Sie können das Laden dieser Elemente bis zu ihrer Anzeige verzögern, indem Sie das **x:DeferLoadStrategy attribute** auf „Lazy“ festlegen. Dies kann die Leistung beim Starten verbessern. Weitere Informationen finden Sie unter [x: DeferLoadStrategy-Attribut](../xaml-platform/x-deferloadstrategy-attribute.md).
+> **Tipp**&nbsp;&nbsp;Wenn die Benutzeroberfläche Elemente enthält, die standardmäßig **Collapsed** sind, werden die Objekte beim Start dennoch erstellt, obwohl sie nicht sichtbar sind. Sie können das Laden dieser Elemente bis zu ihrer Anzeige verzögern, indem Sie das **x:DeferLoadStrategy attribute** auf „Lazy“ festlegen. Dies kann die Leistung beim Starten verbessern. Weitere Informationen finden Sie unter [x: DeferLoadStrategy-Attribut](../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### Stilressourcen
 
@@ -189,7 +182,7 @@ Verwenden Sie visuelle Zustände, um Abschnitte Ihrer Benutzeroberfläche basier
 
 Um einen visuellen Zustand aus Code anzuwenden, rufen Sie die [**VisualStateManager.GoToState**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.gotostate.aspx)-Methode auf. Um beispielsweise einen Zustand anzuwenden, wenn das App-Fenster eine bestimmte Größe erreicht, behandeln Sie das [**SizeChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.window.sizechanged.aspx)-Ereignis, und rufen Sie **GoToState** auf, um den entsprechenden Zustand anzuwenden.
 
-Hier enthält eine [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstategroup.aspx) zwei VisualState-Definitionen. Die erste Definition, `DefaultState`, ist leer. Wenn sie angewendet wird, werden die in der XAML-Seite definierten Werte angewendet. Die zweite Definition, `WideState`, ändert die [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.displaymode.aspx)-Eigenschaft der [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) in **Inline** und öffnet den Bereich. Dieser Zustand wird im „SizeChanged“-Ereignishandler angewendet, wenn die Fensterbreite mindestens 720 effektive Pixel beträgt.
+Hier enthält eine [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstategroup.aspx) zwei VisualState-Definitionen. Die erste Definition, `DefaultState`, ist leer. Wenn sie angewendet wird, werden die in der XAML-Seite definierten Werte angewendet. Die zweite Definition, `WideState`, ändert die [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.displaymode.aspx)-Eigenschaft der [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) in **Inline** und öffnet den Bereich. Dieser Zustand wird im „SizeChanged“-Ereignishandler angewendet, wenn die Fensterbreite mindestens 720effektive Pixel beträgt.
 
 ```xaml
 <Page ...>
@@ -248,7 +241,7 @@ private void CurrentWindow_SizeChanged(object sender, Windows.UI.Core.WindowSize
 
 Vor Windows 10 erforderten „VisualState“-Definitionen [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.animation.storyboard.aspx)-Objekte für Eigenschaftsänderungen, und Sie mussten **GoToState** im Code aufrufen, um den Zustand anzuwenden. Dies wird im vorherigen Beispiel veranschaulicht. Sie werden immer noch viele Beispiele finden, in denen diese Syntax verwendet wird, oder Sie verfügen möglicherweise über vorhandenen Code, der sie verwendet.
 
-Ab Windows 10 können Sie die hier dargestellte vereinfachte [**Setter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.setter.aspx)-Syntax verwenden, und Sie können [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx)-Elemente im XAML-Markup verwenden, um den Zustand anzuwenden. Sie verwenden „StateTrigger“-Elemente, um einfache Regeln zu erstellen, die automatisch Änderungen des visuellen Zustands als Reaktion auf ein App-Ereignis auslösen.
+Ab Windows10 können Sie die hier dargestellte vereinfachte [**Setter**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.setter.aspx)-Syntax verwenden, und Sie können [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx)-Elemente im XAML-Markup verwenden, um den Zustand anzuwenden. Sie verwenden „StateTrigger“-Elemente, um einfache Regeln zu erstellen, die automatisch Änderungen des visuellen Zustands als Reaktion auf ein App-Ereignis auslösen.
 
 In diesem Beispiel wird die gleiche Aufgabe wie im vorherigen Beispiel ausgeführt, es wird jedoch die vereinfachte **Setter**-Syntax anstelle eines Storyboard zum Definieren von Eigenschaftsänderungen verwendet. Anstatt „GoToState“ aufzurufen, wird der integrierte [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx)-Zustandsauslöser verwendet, um den Zustand anzuwenden. Bei Verwendung von Zustandsauslösern müssen Sie keinen leeren `DefaultState` definieren. Die Standardeinstellungen werden automatisch erneut angewendet, wenn die Bedingungen des Zustandsauslösers nicht mehr erfüllt sind.
 
@@ -284,8 +277,7 @@ In diesem Beispiel wird die gleiche Aufgabe wie im vorherigen Beispiel ausgefüh
 </Page>
 ```
 
-> **Wichtig**
-            &nbsp;&nbsp;Im vorherigen Beispiel wird die angefügte „VisualStateManager.VisualStateGroups“-Eigenschaft im **Grid**-Element festgelegt. Bei Verwendung von „StateTrigger“-Elementen müssen Sie immer sicherstellen, dass „VisualStateGroups“ an das erste untergeordnete Element des Stamms angefügt wird, damit die Auslöser automatisch wirksam werden. (Hier ist **Grid** das erste untergeordnete Element des Stammelements **Page**.)
+> **Wichtig**&nbsp;&nbsp;Im vorherigen Beispiel wird die angefügte „VisualStateManager.VisualStateGroups“-Eigenschaft im **Grid**-Element festgelegt. Bei Verwendung von „StateTrigger“-Elementen müssen Sie immer sicherstellen, dass „VisualStateGroups“ an das erste untergeordnete Element des Stamms angefügt wird, damit die Auslöser automatisch wirksam werden. (Hier ist **Grid** das erste untergeordnete Element des Stammelements **Page**.)
 
 ### Syntax von angefügten Eigenschaften
 
@@ -307,7 +299,7 @@ In diesem Beispiel wird veranschaulicht, wie die angefügte [**„RelativePanel.
 
 ### Benutzerdefinierte Zustandsauslöser
 
-Sie können die [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx)-Klasse erweitern, um benutzerdefinierte Auslöser für eine Vielzahl von Szenarien zu erstellen. Sie können z. B. ein „StateTrigger“-Element erstellen, um die verschiedenen Zustände basierend auf dem Eingabetyp auszulösen, und dann die Ränder um ein Steuerelement herum vergrößern, wenn der Eingabetyp „Toucheingabe“ ist. Alternativ können Sie ein „StateTrigger“-Element erstellen, um unterschiedliche Zustände auf der Grundlage der Gerätefamilie anzuwenden, in der die App ausgeführt wird. Beispiele zum Erstellen von benutzerdefinierten Auslösern und zum Verwenden der Auslöser, um optimale UI-Ergebnisse in einer einzelnen XAML-Ansicht zu erzielen, finden Sie im [Beispiel für Zustandsauslöser](http://go.microsoft.com/fwlink/p/?LinkId=620025).
+Sie können die [**StateTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.statetrigger.aspx)-Klasse erweitern, um benutzerdefinierte Auslöser für eine Vielzahl von Szenarien zu erstellen. Sie können z.B. ein „StateTrigger“-Element erstellen, um die verschiedenen Zustände basierend auf dem Eingabetyp auszulösen, und dann die Ränder um ein Steuerelement herum vergrößern, wenn der Eingabetyp „Toucheingabe“ ist. Alternativ können Sie ein „StateTrigger“-Element erstellen, um unterschiedliche Zustände auf der Grundlage der Gerätefamilie anzuwenden, in der die App ausgeführt wird. Beispiele zum Erstellen von benutzerdefinierten Auslösern und zum Verwenden der Auslöser, um optimale UI-Ergebnisse in einer einzelnen XAML-Ansicht zu erzielen, finden Sie im [Beispiel für Zustandsauslöser](http://go.microsoft.com/fwlink/p/?LinkId=620025).
 
 ### Visuelle Zustände und Stile
 
@@ -389,14 +381,13 @@ Verwenden Sie XAML-Ansichten, um unterschiedliche UI-Definitionen zu erstellen, 
 
 **So fügen Sie eine XAML-Ansicht zu einer App hinzu**
 1. Klicken Sie auf „Projekt“ > „Neues Element hinzufügen“. Das Dialogfeld „Neues Element hinzufügen“ wird geöffnet.
-    > **Tipp**
-            &nbsp;&nbsp;Stellen Sie sicher, dass im Projektmappen-Explorer nicht die Projektmappe, sondern ein Ordner oder das Projekt ausgewählt ist.
+    > **Tipp**&nbsp;&nbsp;Stellen Sie sicher, dass im Projektmappen-Explorer nicht die Projektmappe, sondern ein Ordner oder das Projekt ausgewählt ist.
 2. Wählen Sie im linken Bereich unter Visual C# oder Visual Basic den Vorlagentyp XAML aus.
 3. Wählen Sie im mittleren Bereich XAML-Ansicht aus.
 4. Geben Sie den Namen für die Ansicht ein. Die Ansicht muss korrekt benannt werden. Weitere Informationen zur Benennung finden Sie weiter unten in diesem Abschnitt.
 5. Klicken Sie auf „Hinzufügen“. Die Datei wird dem Projekt hinzugefügt.
 
-Mit den vorherigen Schritten wird nur eine XAML-Datei erstellt, aber keine zugehörige CodeBehind-Datei. Stattdessen wird die XAML-Ansicht mithilfe eines „DeviceName“-Qualifizierers, der Teil des Datei- oder Ordnernamens ist, einer vorhandenen „CodeBehind“-Datei zugeordnet. Der Name dieses Qualifizierers kann einem Zeichenfolgenwert zugeordnet werden, der die Gerätefamilie des Geräts darstellt, auf dem die App derzeit ausgeführt wird, z. B. „Desktop“, „Mobil“ und die Namen der anderen Gerätefamilien (siehe [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues.aspx)).
+Mit den vorherigen Schritten wird nur eine XAML-Datei erstellt, aber keine zugehörige CodeBehind-Datei. Stattdessen wird die XAML-Ansicht mithilfe eines „DeviceName“-Qualifizierers, der Teil des Datei- oder Ordnernamens ist, einer vorhandenen „CodeBehind“-Datei zugeordnet. Der Name dieses Qualifizierers kann einem Zeichenfolgenwert zugeordnet werden, der die Gerätefamilie des Geräts darstellt, auf dem die App derzeit ausgeführt wird, z.B. „Desktop“, „Mobil“ und die Namen der anderen Gerätefamilien (siehe [**ResourceContext.QualifierValues**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues.aspx)).
 
 Sie können den Qualifizierer dem Dateinamen hinzufügen, oder Sie können die Datei einem Ordner hinzufügen, der den Qualifizierernamen aufweist.
 
@@ -424,8 +415,7 @@ Um eindeutige Ansichten und Funktionen bereitzustellen, können Sie separate „
 
 **So fügen Sie einer App eine XAML-Seite hinzu**
 1. Klicken Sie auf „Projekt“ > „Neues Element hinzufügen“. Das Dialogfeld „Neues Element hinzufügen“ wird geöffnet.
-    > **Tipp**
-            &nbsp;&nbsp;Stellen Sie sicher, dass im Projektmappen-Explorer nicht die Projektmappe, sondern das Projekt ausgewählt ist.
+    > **Tipp**&nbsp;&nbsp;Stellen Sie sicher, dass im Projektmappen-Explorer nicht die Projektmappe, sondern das Projekt ausgewählt ist.
 2. Wählen Sie im linken Bereich unter Visual C# oder Visual Basic den Vorlagentyp XAML aus.
 3. Wählen Sie im mittleren Bereich „Leere Seite“ aus.
 4. Geben Sie den Namen für die Seite ein. Beispielsweise „MainPage_Mobile“. Es wird sowohl eine „“MainPage_Mobile.xaml“- als auch eine „MainPage_Mobile.xaml.cs/vb/cpp“-Codedatei erstellt.
@@ -448,6 +438,6 @@ Sie können auch unterschiedliche Kriterien verwenden, um zu bestimmen, zur welc
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
