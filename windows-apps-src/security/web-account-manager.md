@@ -106,7 +106,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-Als Nächstes rufen Sie einen Anbieter mit der WebAuthenticationCoreManager.FindAccountProviderAsync-Methode ab. Die Anbieter-URL ist je nach Anbieter verschieden und kann in der Anbieterdokumentation nachgeschlagen werden. Für Microsoft-Konten und Azure Active Directory lautet die URL „https://login.microsoft.com “. 
+Als Nächstes rufen Sie einen Anbieter mit der WebAuthenticationCoreManager.FindAccountProviderAsync-Methode ab. Die Anbieter-URL ist je nach Anbieter verschieden und kann in der Anbieterdokumentation nachgeschlagen werden. Für Microsoft-Konten und Azure Active Directory lautet die URL „https://login.microsoft.com". 
 
 ```C#
 private async void BuildPaneAsync(AccountsSettingsPane s,
