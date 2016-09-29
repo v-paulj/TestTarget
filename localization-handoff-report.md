@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/0f2ed552898f7cbb476055a6d6b7aa76545113b1/windows-apps-src/get-started/universal-application-platform-guide.md) | HandedOffSuccess | [Details](#c433bd2eba2a5be114680f52a8da0b5c7b5631863949)
+ [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/ed4da94f2732c279c3071135168da9e4b18953cb/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md) | HandedOffSuccess | [Details](#c0ed8386cb823ea83e5b1f80cd584f370a85f2784910)
 
 ## Item Details
-##### <a name='c433bd2eba2a5be114680f52a8da0b5c7b5631863949'></a> Source: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps/blob/0f2ed552898f7cbb476055a6d6b7aa76545113b1/windows-apps-src/get-started/universal-application-platform-guide.md)
+##### <a name='c0ed8386cb823ea83e5b1f80cd584f370a85f2784910'></a> Source: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps/blob/ed4da94f2732c279c3071135168da9e4b18953cb/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/90e85782689c736bc5472d3d77fe89d91df2d381/ol-handoff/Microsoft/windows-apps.de-de/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf)
-* Handoff Datetime: 2016-09-19 21:39:40
+* Handoff File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/daa38d8f4e7a0b131e922a72064ad06e8413d2cf/ol-handoff/Microsoft/windows-apps.de-de/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf)
+* Handoff Datetime: 2016-09-29 23:48:49
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\get-started\universal-application-platform-guide.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/get-started/universal-application-platform-guide.md)
-* Current Handback File: [universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/universal-application-platform-guide.07a46d09a6199df7032e233bf3e2f8009a4fb173.de-de.xlf)
+* Current Target File: [windows-apps-src\porting\desktop-to-uwp-run-desktop-app-converter.md](https://github.com/Microsoft/windows-apps.de-de/blob/6de8cee4ee31a6fa9082108f1a9e7ff09c39e62b/windows-apps-src/porting/desktop-to-uwp-run-desktop-app-converter.md)
+* Current Handback File: [desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/2c1ceb1dcd88de90d8169faf0aaddf2807f77d49/ol-handback/Microsoft/windows-apps.de-de/master/desktop-to-uwp-run-desktop-app-converter.fc9992a9afd4d31e675c1faac128c4ce323f2542.de-de.xlf)
 * Current Handback Datetime: 2016-07-20 16:33:49
 * [Back to Top](#report-top)
 
