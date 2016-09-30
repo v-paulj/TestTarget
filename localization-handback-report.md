@@ -1,42 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md) | HandedOffSuccess | [Details](#53e0b3f5a69f133e74430b1a2e32a13180569f063554)
- [windows-apps-src\input-and-devices\access-keys.md](https://github.com/Microsoft/windows-apps/blob/ac86012b63646e53dbde492eef504cb8230f2afd/windows-apps-src/input-and-devices/access-keys.md) | InSyncHandedBackSuccess | [Details](#d96d507c6ce8537888619ce174e2ff0e5284dcce4015)
 
 ## Item Details
-##### <a name='53e0b3f5a69f133e74430b1a2e32a13180569f063554'></a> Source: [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps/blob/6530fa257ea3735453a97eb5d916524e750e62fc/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/3878845b9383366365e5c4634d65ed9116ad8d4c/ol-handoff/Microsoft/windows-apps.de-de/master/walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.de-de.xlf)
-* Handoff Datetime: 2016-08-18 00:12:00
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [windows-apps-src\gaming\walkthrough--simple-port-from-direct3d-9-to-11-1.md](https://github.com/Microsoft/windows-apps.de-de/blob/e4034b4fdc02ddcce4a82f4899ea30a3991ff04f/windows-apps-src/gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md)
-* Current Handback File: [walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/4b3cf5f7a7fad6be92d241fae698b67375f3ec5b/ol-handback/Microsoft/windows-apps.de-de/master/walkthrough--simple-port-from-direct3d-9-to-11-1.2f646e01d0929d0a6e0a1f20964c3225228f6610.de-de.xlf)
-* Current Handback Datetime: 2016-09-30 14:47:03
-* [Back to Top](#report-top)
-
-##### <a name='d96d507c6ce8537888619ce174e2ff0e5284dcce4015'></a> Source: [windows-apps-src\input-and-devices\access-keys.md](https://github.com/Microsoft/windows-apps/blob/ac86012b63646e53dbde492eef504cb8230f2afd/windows-apps-src/input-and-devices/access-keys.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\input-and-devices\access-keys.md](https://github.com/Microsoft/windows-apps.de-de/blob/e4034b4fdc02ddcce4a82f4899ea30a3991ff04f/windows-apps-src/input-and-devices/access-keys.md)
-* Handoff File: [access-keys.e7e6faa761881e32d8acde656b07d07bacc698f5.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/3878845b9383366365e5c4634d65ed9116ad8d4c/ol-handoff/Microsoft/windows-apps.de-de/master/access-keys.e7e6faa761881e32d8acde656b07d07bacc698f5.de-de.xlf)
-* Handoff Datetime: 2016-08-18 00:12:00
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [access-keys.e7e6faa761881e32d8acde656b07d07bacc698f5.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/4b3cf5f7a7fad6be92d241fae698b67375f3ec5b/ol-handback/Microsoft/windows-apps.de-de/master/access-keys.e7e6faa761881e32d8acde656b07d07bacc698f5.de-de.xlf)
-* Handback Datetime: 2016-09-30 14:47:03
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
