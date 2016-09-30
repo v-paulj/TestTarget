@@ -73,18 +73,13 @@ Lesen Sie sich die Informationen unter [Konzepte und Aspekte der Portierung](por
 
 
 **Direct3D**
-            
-          
-            [Schreiben von HLSL-Shadern in Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
+          [Schreiben von HLSL-Shadern in Direct3D 9](https://msdn.microsoft.com/library/windows/desktop/bb944006)
           
 
 [Erstellen eines neuen DirectX11-Projekts für die UWP](user-interface.md)
 
 **Windows Store**
-            
-          
-            [
-              **Microsoft::WRL::ComPtr**
+          [**Microsoft::WRL::ComPtr**
             ](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)
           
 
