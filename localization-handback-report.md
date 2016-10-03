@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [windows-apps-src\security\web-account-manager.md](https://github.com/Microsoft/windows-apps/blob/f3cdb187ec4056d4c7db6acde471b0bc91c78390/windows-apps-src/security/web-account-manager.md) | InSyncHandedBackSuccess | [Details](#093ca8906853121bbf33a729c523717d26cb7b0d5208)
 
 ## Item Details
+##### <a name='093ca8906853121bbf33a729c523717d26cb7b0d5208'></a> Source: [windows-apps-src\security\web-account-manager.md](https://github.com/Microsoft/windows-apps/blob/f3cdb187ec4056d4c7db6acde471b0bc91c78390/windows-apps-src/security/web-account-manager.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [windows-apps-src\security\web-account-manager.md](https://github.com/Microsoft/windows-apps.de-de/blob/034eab6ecfa47ec1b2a607d94d08d9b3cf863767/windows-apps-src/security/web-account-manager.md)
+* Handoff File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/3878845b9383366365e5c4634d65ed9116ad8d4c/ol-handoff/Microsoft/windows-apps.de-de/master/web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.de-de.xlf)
+* Handoff Datetime: 2016-08-18 00:12:00
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/3327ccf9a8c9cd0a73e4328ff8b94740d253cd3a/ol-handback/Microsoft/windows-apps.de-de/master/web-account-manager.c4ec00c73877e67804733bb8c124a804cf1f1c55.de-de.xlf)
+* Handback Datetime: 2016-10-03 15:16:34
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
