@@ -2,14 +2,13 @@
 author: v-angraf
 title: "Neuigkeiten für UWP auf Xbox One"
 description: "Vorstellung neuer Features für UWP-Apps auf Xbox One."
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: edc9a914f200c643b1133cf07778e2ca3931d0d9
+ms.sourcegitcommit: 044aac722180015586487dcc8738facccf209f5c
+ms.openlocfilehash: 4cc1e0b495a80e019296b9c3be9e75a37c60224a
 
 ---
 
-# Neuigkeiten in der Developer Preview vom Juli2016 für UWP auf Xbox One
+# Neuigkeiten für Entwickler in der neuesten Aktualisierung von UWP auf Xbox One
 
 Die Developer Preview-Version vom Juli2016 für die Universelle Windows-Plattform (UWP) auf Xbox One enthält die folgenden neuen Features, Featureupdates und Fehlerkorrekturen.
 
@@ -23,10 +22,10 @@ Sie können nun Fiddler als Proxy für eine Konsole aktivieren, für die die Uni
 Der Mausmodus ist jetzt standardmäßig für XAML- und gehostete Web-Apps aktiviert.
 Es wird nachdrücklich empfohlen, diese Option zu deaktivieren und die direktionale Navigation über den Controller zu optimieren.
 Informationen zum Deaktivieren des Mausmodus finden Sie unter [So wird's gemacht: Deaktivieren des Mausmodus](how-to-disable-mouse-mode.md).
-Weitere Informationen dazu, wie Sie großartige Apps für die Xbox entwerfen, finden Sie unter [Entwerfen für Xbox und Fernsehgeräte](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode).
+Weitere Informationen dazu, wie Sie großartige Apps für die Xbox entwerfen, finden Sie unter [Entwerfen für Xbox und Fernsehgeräte](../input-and-devices/designing-for-tv.md#mouse-mode).
 
 ## Der erweiterte UWP-API-Oberflächenbereich ist jetzt in der Konsole verwendungsbereit.
-Zusätzliche UWP-APIs sind jetzt in der Xbox-Konsole verwendungsbereit. Weitere Informationen zur UWP-API-Unterstützung finden Sie unter [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/?LinkID=760755). 
+Zusätzliche UWP-APIs sind jetzt in der Xbox-Konsole verwendungsbereit. Weitere Informationen zur UWP-API-Unterstützung finden Sie unter [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/p/?LinkID=760755). 
 
 ## Funktionen für Hintergrundmusik und -audio
 Sie können jetzt Musik und Audio einer im Hintergrund ausgeführten App wiedergeben.
@@ -48,12 +47,12 @@ Am WDP (Windows Device Portal)-Tool für Xbox wurden folgende Verbesserungen vor
  - Das Tool kann einen losen Dateibuild Ihrer App bereitstellen. Weitere Informationen zu losen Dateibuilds finden Sie im Referenzthema [/api/app/packagemanager/register](wdp-loose-folder-register-api.md).
  - Sie können auf Entwicklerdateien auf der Konsole über einen Datei-Explorer auf Ihrem Entwicklungscomputer zugreifen. Weitere Informationen zum Zugreifen auf Dateien über einen Datei-Explorer finden Sie im Referenzthema [/ext/smb/developerfolder](wdp-smb-api.md).
 
-## Siehe auch
-- [UWP auf XboxOne](index.md)
+## Weitere Informationen
 - [Bekannte Probleme](known-issues.md)
+- [UWP auf XboxOne](index.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

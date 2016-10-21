@@ -5,22 +5,34 @@ title: "Suche und „Auf Seite suchen“"
 ms.assetid: C328FAA3-F6AE-4970-8372-B413F1290C39
 label: Search
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: cd746f81e8cca27c5111f3d15342d1def0f874dc
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: f245db6c37b7c8257e4fe937417d981e49101b8c
 
 ---
-
 # Suche und „Auf Seite suchen“
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Die Suche ist eine der besten Möglichkeiten, um Inhalte in Ihrer App zu finden. In diesem Artikel werden Elemente der Suche sowie Suchbereiche, die Implementierung und Beispiele für die Suche im Kontext behandelt.
 
-**Wichtige APIs**
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn633874"><strong>AutoSuggestBox-Klasse (XAML)</strong></a></li>
+</ul>
 
--   [**AutoSuggestBox-Klasse (XAML)**](https://msdn.microsoft.com/library/windows/apps/dn633874)
+</div>
+</div>
 
 
 
-## <span id="Elements_of_the_search_experience"></span><span id="elements_of_the_search_experience"></span><span id="ELEMENTS_OF_THE_SEARCH_EXPERIENCE"></span>Elemente der Suche
+
+
+
+
+
+## Elemente der Suche
 
 
 **Eingabe.**  Die Texteingabe ist der am häufigsten verwendete Suchmodus und steht daher bei diesem Leitfaden im Mittelpunkt. Andere gängige Eingabemodi sind Spracheingabe und Kamera. Für diese sind jedoch in der Regel eine Verknüpfung mit der Gerätehardware sowie ggf. zusätzliche Steuerelemente oder benutzerdefinierte UI-Elemente in der App erforderlich.
@@ -43,15 +55,14 @@ Eine Möglichkeit für eine wirksame Bearbeitung der vorherigen Abfrage oder die
 
 Der Ergebnissatz kann zur bestmöglichen Vermittlung des Inhalts in einem beliebigen Format angezeigt werden: Eine [Listenansicht](lists.md) ist ziemlich flexibel und für die meisten Suchvorgänge geeignet. Eine Rasteransicht eignet sich gut für Bilder oder andere Medien, und eine Karte gibt Aufschluss über räumliche Verteilung.
 
-## <span id="Search_scopes"></span><span id="search_scopes"></span><span id="SEARCH_SCOPES"></span>Suchbereiche
+## Suchbereiche
 
 
 Die Suche ist ein gängiges Feature, und die entsprechenden UI-Elemente begegnen dem Benutzer sowohl in der Shell als auch in vielen Apps. Sucheinstiegspunkte werden zwar in der Regel auf ähnliche Weise visualisiert, können aber Zugriff auf verschiedene Ergebnisse bieten – von breit gefächerten (Web- oder Gerätesuche) bis hin zu spezifischen Ergebnissen (Kontaktliste eines Benutzers). Der Sucheinstiegspunkt muss dem gesuchten Inhalt gegenübergestellt werden.
 
 Im Anschluss finden Sie einige gängige Suchbereiche:
 
-
-            **Global** und **Kontext/Eingrenzung**  Übergreifende Suche für mehrere Quellen mit Cloud-basierten und lokalen Inhalten. Zu den unterschiedlichen Ergebnisse zählen beispielsweise URLs, Dokumente, Medien, Aktionen und Apps.
+**Global** und **Kontext/Eingrenzung**  Übergreifende Suche für mehrere Quellen mit Cloud-basierten und lokalen Inhalten. Zu den unterschiedlichen Ergebnisse zählen beispielsweise URLs, Dokumente, Medien, Aktionen und Apps.
 
 **Web.**  Suche nach einem Webindex. Die Ergebnisse können unter anderem Seiten, Entitäten und Antworten umfassen.
 
@@ -75,7 +86,7 @@ Verwenden Sie Hinweistext, um den Suchbereich zu kommunizieren. Beispiele:
 
 Durch eine effektive Vermittlung des Bereichs für den Sucheingabepunkt können Sie sicherstellen, dass die Suchfunktionen die Erwartungen erfüllen, die der Benutzer an sie stellt, und dass er sich nicht über die Suche ärgert.
 
-## <span id="Implementation"></span><span id="implementation"></span><span id="IMPLEMENTATION"></span>Implementierung
+## Implementierung
 
 
 Bei den meisten Apps empfiehlt sich die Verwendung eines Textfelds als Sucheinstiegspunkt, da es sich hierbei um ein markantes visuelles Element handelt. Darüber hinaus können Sie mit Hinweistext dazu beitragen, dass die Suchfunktion leichter zu finden und der Benutzer über den Suchbereich informiert ist. Wenn es sich bei der Suche eher um eine sekundäre Aktion handelt oder nur wenig Platz zur Verfügung steht, kann das Suchsymbol auch ohne das dazugehörige Eingabefeld als Einstiegspunkt verwendet werden. Achten Sie bei Verwendung eines Symbols darauf, dass genügend Platz für ein modales Suchfeld verfügbar ist, wie in den Beispielen weiter unten zu sehen.
@@ -102,7 +113,7 @@ Bei bildlauffähigen Listen empfiehlt es sich, darauf zu achten, dass die Suchei
 
 Die Funktion für Nulleingabe und Abfrageformulierung ist bei kontextbezogenen/eingegrenzten Suchvorgängen, bei denen die Liste in Echtzeit auf der Grundlage der Benutzereingabe gefiltert wird, optional. Hiervon ausgenommen sind Fälle, bei denen möglicherweise Abfrageformatierungsvorschläge verfügbar sind. Hierzu zählen beispielsweise Filteroptionen für den Posteingang (An:&lt;Eingabezeichenfolge&gt;, Von: &lt;Eingabezeichenfolge&gt;, Betreff: &lt;Eingabezeichenfolge&gt; usw.).
 
-## <span id="examples"></span><span id="EXAMPLES"></span>Beispiel
+## Beispiel
 
 
 Die Beispiele in diesem Abschnitt zeigen die Suche im Kontext.
@@ -135,7 +146,7 @@ Inlinesuche eignet sich am besten für seltener verwendete oder stark kontextori
 
 Die Funktion „Auf Seite suchen“ bietet Benutzern die Möglichkeit, im aktuellen Text nach Übereinstimmungen zu suchen. Dokumentviewer, Leser und Browser sind die typischsten Apps, die die Funktion „Auf Seite suchen“ bereitstellen.
 
-## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Empfehlungen
+## Empfehlungen
 
 
 -   Platzieren Sie eine Befehlsleiste in Ihrer App mit der Funktion „Auf Seite suchen“, damit Benutzer Suchvorgänge für Text auf einer Seite ausführen können. Platzierungsdetails dazu finden Sie im Abschnitt „Beispiele“.
@@ -148,67 +159,65 @@ Die Funktion „Auf Seite suchen“ bietet Benutzern die Möglichkeit, im aktuel
 
     -   Aktivieren Sie die Tastenkombination (STRG+F). Implementieren Sie die Tastenkombination STRG+F, um das schnelle Öffnen der Befehlsleiste für „Auf Seite suchen“ zu ermöglichen.
 
-    -   Binden Sie die Basiselemente der Funktion "Auf Seite suchen" ein. Hierbei handelt es sich um die UI-Elemente, die benötigt werden, um „Auf Seite suchen“ zu implementieren.
+    -   Binden Sie die Basiselemente der Funktion "Auf Seite suchen" ein. Hierbei handelt es sich um die UI-Elemente, die benötigt werden, um "Auf Seite suchen" zu implementieren.
 
         -   Eingabefeld
-        -   Die Schaltflächen „Zurück“ und „Weiter“
-        -   Übereinstimmungszähler -   Schließen (nur Desktop) -   In der Ansicht sollten Übereinstimmungen hervorgehoben werden, und es sollte ein Bildlauf erfolgen, sodass die nächste Übereinstimmung auf dem Bildschirm angezeigt wird.
-        -   Die Schaltflächen **Zurück** und **Weiter** sowie Bildlaufleisten oder die direkte Manipulation mittels Fingereingabe ermöglichen den Benutzern die schnelle Navigation innerhalb des Dokuments.
+        -   Die Schaltflächen "Zurück" und "Weiter"
+        -   Übereinstimmungszähler
+        -   Schließen (nur Desktop)
+    -   In der Ansicht sollten Übereinstimmungen hervorgehoben werden, und es sollte ein Bildlauf erfolgen, sodass die nächste Übereinstimmung auf dem Bildschirm angezeigt wird. Die Schaltflächen **Zurück** und **Weiter** sowie Bildlaufleisten oder die direkte Manipulation mittels Fingereingabe ermöglichen den Benutzern die schnelle Navigation innerhalb des Dokuments.
+
     -   Funktionalität zum Suchen und Ersetzen sollte mit den Basisfunktionen von "Auf Seite suchen" zusammenarbeiten. Sorgen Sie bei Apps, die eine Funktion zum Suchen und Ersetzen bereitstellen, dafür, dass sich diese Funktion und „Auf Seite suchen“ nicht gegenseitig behindern.
 
-    -   Fügen Sie einen Übereinstimmungszähler ein, damit der Benutzer weiß, wie viele Textübereinstimmungen auf der Seite vorhanden sind. Aktivieren Sie die Tastenkombination (STRG+F).
+-   Fügen Sie einen Übereinstimmungszähler ein, damit der Benutzer weiß, wie viele Textübereinstimmungen auf der Seite vorhanden sind.
+-   Aktivieren Sie die Tastenkombination (STRG+F).
 
--   Beispiele
--   Stellen Sie eine einfache Möglichkeit zur Verfügung, um das Feature „Auf Seite suchen“ zuzugreifen.
-
-## <span id="Examples"></span><span id="examples"></span><span id="EXAMPLES"></span>In diesem Beispiel auf einer mobilen Benutzeroberfläche wird „Auf Seite suchen“ hinter zwei „Hinzufügen zu…“-Befehlen in einem erweiterbarem Menü angezeigt:
+## Beispiele
 
 
-„Auf Seite suchen“ (Beispiel 1) Nach der Auswahl von „Auf Seite suchen“ gibt der Benutzer einen Suchbegriff ein.
+Stellen Sie eine einfache Möglichkeit zur Verfügung, um das Feature „Auf Seite suchen“ zuzugreifen. In diesem Beispiel auf einer mobilen Benutzeroberfläche wird „Auf Seite suchen“ hinter zwei „Hinzufügen zu…“-Befehlen in einem erweiterbarem Menü angezeigt:
 
-![Textvorschläge können angezeigt werden, wenn ein Suchbegriff eingegeben wird:](images/findinpage-01.png)
+![„Auf Seite suchen“ (Beispiel 1)](images/findinpage-01.png)
 
  
 
-„Auf Seite suchen“ (Beispiel 2) Wenn keine Textübereinstimmung in der Suche vorliegt, sollte die Textzeichenfolge „Keine Ergebnisse“ im Ergebnisfeld angezeigt werden:
+Nach der Auswahl von „Auf Seite suchen“ gibt der Benutzer einen Suchbegriff ein. Textvorschläge können angezeigt werden, wenn ein Suchbegriff eingegeben wird:
 
-![„Auf Seite suchen“ (Beispiel 3)](images/findinpage-02.png)
+![„Auf Seite suchen“ (Beispiel 2)](images/findinpage-02.png)
+
+ 
+
+Wenn keine Textübereinstimmung in der Suche vorliegt, sollte die Textzeichenfolge „Keine Ergebnisse“ im Ergebnisfeld angezeigt werden:
+
+![„Auf Seite suchen“ (Beispiel 3)](images/findinpage-03.png)
 
  
 
 Wenn eine Textübereinstimmung in der Suche vorliegt, sollte der erste Begriff in einer eindeutigen Farbe hervorgehoben werden, wobei die nachfolgenden Übereinstimmungen in einem dezenteren Ton derselben Farbpalette gehalten werden sollten, wie dies in diesem Beispiel ersichtlich ist:
 
-![„Auf Seite suchen“ (Beispiel 4)](images/findinpage-03.png)
+![„Auf Seite suchen“ (Beispiel 4)](images/findinpage-04.png)
 
  
 
 „Auf Seite suchen“ weist einen Übereinstimmungszähler auf:
 
-![Beispiel des Suchindikators von „Auf Seite suchen“](images/findinpage-04.png)
-
- 
-
-Implementieren von "Auf Seite suchen"
-
-![Bei Dokumentviewern, Lesern und Browsern handelt es sich um die wahrscheinlichsten App-Typen für die Bereitstellung von „Auf Seite suchen“, was Benutzern eine vollständige Bildschirmanzeige-/-leseerfahrung ermöglicht.](images/findinpage-counter.png)
+![Beispiel des Suchindikators von „Auf Seite suchen“](images/findinpage-counter.png)
 
 
 
 
-## <span id="implementing_find_in_page"></span><span id="IMPLEMENTING_FIND_IN_PAGE"></span>
+## **Implementieren von "Auf Seite suchen"**
 
-**Die Funktion „Auf Seite suchen“ ist sekundär und sollte auf einer Befehlsleiste platziert werden.**
+-   Bei Dokumentviewern, Lesern und Browsern handelt es sich um die wahrscheinlichsten App-Typen für die Bereitstellung von „Auf Seite suchen“, was Benutzern eine vollständige Bildschirmanzeige-/-leseerfahrung ermöglicht.
+-   Die Funktion „Auf Seite suchen“ ist sekundär und sollte auf einer Befehlsleiste platziert werden.
 
--   Weitere Informationen zum Hinzufügen von Befehlen zur Befehlsleiste finden Sie unter [Command bar](app-bars.md) (Befehlsleiste).
--   Verwandte Artikel
-
-Feld mit automatischen Vorschlägen
+Weitere Informationen zum Hinzufügen von Befehlen zur Befehlsleiste finden Sie unter [Command bar](app-bars.md) (Befehlsleiste).
 
 
 
-## <span id="related_topics"></span>Related articles
+## Verwandte Artikel
 
-* [**Auto-suggest box**](auto-suggest-box.md)
+* [**Feld mit automatischen Vorschlägen**](auto-suggest-box.md)
 
 
  
@@ -217,10 +226,6 @@ Feld mit automatischen Vorschlägen
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

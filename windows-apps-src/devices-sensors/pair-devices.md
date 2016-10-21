@@ -5,7 +5,7 @@ title: "Koppeln von Geräten"
 description: "Einige Geräte müssen gekoppelt werden, bevor sie verwendet werden können. Der Windows.Devices.Enumeration-Namespace unterstützt drei verschiedene Verfahren zum Koppeln von Geräten"
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: e719e0ff5f97822f3d0dc937182131bf7f4224eb
+ms.openlocfilehash: 502a1a650d327e914ffef049278581851ad4ec3b
 
 ---
 # Koppeln von Geräten
@@ -23,8 +23,7 @@ Einige Geräte müssen gekoppelt werden, bevor sie verwendet werden können. Der
 -   Einfache Kopplung
 -   Benutzerdefinierte Kopplung
 
-
-              **Tipp**  Einige Geräte müssen nicht gekoppelt werden, um verwendet werden zu können. Dies wird im Abschnitt zur automatischen Kopplung behandelt.
+**Tipp**  Einige Geräte müssen nicht gekoppelt werden, um verwendet werden zu können. Dies wird im Abschnitt zur automatischen Kopplung behandelt.
 
  
 
@@ -77,6 +76,6 @@ Wenn Sie ein Beispiel zur Verwendung der [**Windows.Devices.Enumeration**](https
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

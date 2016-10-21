@@ -3,8 +3,9 @@ author: mtoepke
 title: "Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel"
 description: "UWP-Spiele können auf den verschiedensten Geräten ausgeführt werden, beispielsweise auf Desktopcomputern, Laptops und Tablets."
 ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 563ee292ec7189b0c365ae5ee0d1c41fd6fd1a09
+ms.openlocfilehash: ddaa13c6bf7d1bcf5a01d7525389a893a077f4f4
 
 ---
 
@@ -16,8 +17,7 @@ ms.openlocfilehash: 563ee292ec7189b0c365ae5ee0d1c41fd6fd1a09
 
 UWP-Spiele können auf den verschiedensten Geräten ausgeführt werden, beispielsweise auf Desktopcomputern, Laptops und Tablets. Für ein Gerät sind viele verschiedene Eingabe- und Steuerungsmechanismen möglich. Unterstützen Sie mehrere Eingabegeräte, damit die Kunden Ihr Spiel ganz nach ihren persönlichen Vorlieben und Fähigkeiten spielen können. In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücksichtigen sollten, wenn Sie mit Eingabegeräten arbeiten. Außerdem erfahren Sie, wie diese Methoden in Marble Maze angewendet werden.
 
-> 
-            **Hinweis**  Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Hinweis**  Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 Hier sind einige der wichtigsten in diesem Dokument erörterten Punkte für das Arbeiten mit Eingaben in Ihrem Spiel:
@@ -34,13 +34,11 @@ Hier sind einige der wichtigsten in diesem Dokument erörterten Punkte für das 
 
 Marble Maze unterstützt allgemeine Xbox360-Controllergeräte, Maus und Toucheingabe zum Auswählen von Menüelementen und Xbox360-Controller, Maus, Toucheingabe und Beschleunigungsmesser zum Steuern des Spielverlaufs. Marble Maze ruft die Eingaben vom Controller mithilfe der XInput-API ab. Bei der Toucheingabe können Anwendungen Eingaben mit der Fingerspitze nachverfolgen und darauf reagieren. Ein Beschleunigungsmesser ist ein Sensor, der die Kraft misst, die entlang der X-, Y- und Z-Achsen angewendet wird. Mit der Windows-Runtime können Sie den aktuellen Zustand des Beschleunigungsmessers abrufen und Touchereignisse über den Ereignisbehandlungsmechanismus der Windows-Runtime empfangen.
 
-> 
-            **Hinweis**  In diesem Dokument wird der Begriff Toucheingabe für Touch- und Mauseingabe sowie Zeigereingabe verwendet. Damit sind alle Geräte gemeint, die Zeigerereignisse verwenden. Da bei der Touch- und Mauseingabe Standardzeigerereignisse verwendet werden, können Sie jedes der Geräte verwenden, um Menüelemente auszuwählen und den Spielverlauf zu steuern.
+> **Hinweis**  In diesem Dokument wird der Begriff Toucheingabe für Touch- und Mauseingabe sowie Zeigereingabe verwendet. Damit sind alle Geräte gemeint, die Zeigerereignisse verwenden. Da bei der Touch- und Mauseingabe Standardzeigerereignisse verwendet werden, können Sie jedes der Geräte verwenden, um Menüelemente auszuwählen und den Spielverlauf zu steuern.
 
  
 
-> 
-            **Hinweis**  Das Paketmanifest legt das Querformat als unterstützte Drehung für das Spiel fest. Damit wird verhindert, dass sich die Ausrichtung ändert, wenn Sie das Gerät drehen, um die Murmel zu bewegen.
+> **Hinweis**  Das Paketmanifest legt das Querformat als unterstützte Drehung für das Spiel fest. Damit wird verhindert, dass sich die Ausrichtung ändert, wenn Sie das Gerät drehen, um die Murmel zu bewegen.
 
  
 
@@ -448,8 +446,7 @@ for (DWORD userIndex = 0; userIndex < XUSER_MAX_COUNT; ++userIndex)
 
 XInput definiert die **XINPUT\_GAMEPAD\_LEFT\_THUMB\_DEADZONE**-Konstante für den linken Ministick. Dieser Schwellenwert für den inaktiven Bereich eignet sich für die meisten Spiele.
 
-> 
-            **Wichtig**  Berücksichtigen Sie immer den inaktiven Bereich, wenn Sie mit dem Xbox 360-Controller arbeiten. Der inaktive Bereich bezieht sich auf die unterschiedliche Empfindlichkeit von Gamepads für die ersten Bewegungen. Bei manchen Controllern ergibt eine kleine Bewegung keinen Messwert, während sie bei anderen zu einem messbaren Ergebnis führt. Berücksichtigen Sie dies in Ihrem Spiel, indem Sie für die ersten Bewegungen des Ministicks einen Bereich für Nichtbewegungen erstellen. Weitere Informationen zum inaktiven Bereich finden Sie unter [Erste Schritte mit XInput](https://msdn.microsoft.com/library/windows/desktop/ee417001).
+> **Wichtig**  Berücksichtigen Sie immer den inaktiven Bereich, wenn Sie mit dem Xbox 360-Controller arbeiten. Der inaktive Bereich bezieht sich auf die unterschiedliche Empfindlichkeit von Gamepads für die ersten Bewegungen. Bei manchen Controllern ergibt eine kleine Bewegung keinen Messwert, während sie bei anderen zu einem messbaren Ergebnis führt. Berücksichtigen Sie dies in Ihrem Spiel, indem Sie für die ersten Bewegungen des Ministicks einen Bereich für Nichtbewegungen erstellen. Weitere Informationen zum inaktiven Bereich finden Sie unter [Erste Schritte mit XInput](https://msdn.microsoft.com/library/windows/desktop/ee417001).
 
  
 
@@ -457,8 +454,7 @@ XInput definiert die **XINPUT\_GAMEPAD\_LEFT\_THUMB\_DEADZONE**-Konstante für d
 
 Geräte melden Eingabewerte auf unterschiedliche Weise. So wird eine Zeigereingabe möglicherweise in Bildschirmkoordinaten angegeben, eine Controllereingabe aber in einem völlig anderen Format. Beim Kombinieren der Eingaben von mehreren Geräten in einem Satz von Eingabewerten besteht eine Herausforderung darin, die Werte in ein gemeinsames Format zu normalisieren oder konvertieren. Marble Maze normalisiert Werte durch Skalieren auf einen Bereich \[-1,0, 1,0\]. Beim Normalisieren von Xbox 360-Controllereingaben teilt Marble Maze die Eingabewerte durch 32768, da Eingabewerte von Ministicks immer zwischen -32768 und 32767 liegen. Mit der weiter oben in diesem Abschnitt beschriebenen **PointToTouch**-Funktion wird ein ähnliches Ergebnis erzielt, indem Bildschirmkoordinaten in normalisierte Werte konvertiert werden. Diese Werte liegen ungefähr zwischen -1,0 und +1,0.
 
-> 
-            **Tipp**  Auch wenn Ihre Anwendung eine einzige Eingabemethode verwendet, sollten Sie die Eingabewerte immer normalisieren. Auf diese Weise können Sie die Interpretation der Eingabe durch andere Komponenten des Spiels wie beispielsweise die Simulation von Physikeffekten vereinfachen und leichter Spiele schreiben, die sich für unterschiedliche Bildschirmauflösungen eignen.
+> **Tipp**  Auch wenn Ihre Anwendung eine einzelne Eingabemethode verwendet, sollten Sie die Eingabewerte immer normalisieren. Auf diese Weise können Sie die Interpretation der Eingabe durch andere Komponenten des Spiels wie beispielsweise die Simulation von Physikeffekten vereinfachen und leichter Spiele schreiben, die sich für unterschiedliche Bildschirmauflösungen eignen.
 
  
 
@@ -531,6 +527,6 @@ Lesen Sie [Hinzufügen von Audio zum Marble Maze-Beispiel](adding-audio-to-the-m
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

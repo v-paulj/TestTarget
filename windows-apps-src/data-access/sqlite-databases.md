@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 5A47301A-2291-4FC8-8BA7-55DB2A5C653F
 title: SQLite-Datenbanken
 description: "SQLite ist ein eingebettetes Datenbankmodul ohne Server. In diesem Artikel wird erläutert, wie die im SDK enthaltene SQLite-Bibliothek verwendet wird und wie Sie Ihre eigene SQLite-Bibliothek in einer Universellen Windows-App verpacken oder aus der Quelle erstellen können."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: dd628d16b3ee230ddc0c56b47fd381a518b8af00
+ms.openlocfilehash: 33148e8cfe301c6016d3f8a16bbcc904ca403d0e
 
 ---
 # SQLite-Datenbanken
@@ -38,7 +39,7 @@ Um auf das SDK SQLite zu verweisen, schließen Sie den folgenden Header in Ihrem
 
 `#include <winsqlite/winsqlite3.h>`
 
-Konfigurieren Sie das Projekt zur Verknüpfung mit winsqlite3.lib. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften**&gt;**Linker**&gt;**Eingabe**. Fügen Sie dann winsqlite3.lib in **Zusätzliche Abhängigkeiten** hinzu.
+Konfigurieren Sie das Projekt zur Verknüpfung mit winsqlite3.lib. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften** &gt; **Linker** &gt; **Eingabe** aus. Fügen Sie dann winsqlite3.lib zu **Zusätzliche Abhängigkeiten** hinzu.
 
 ### 2. Einschließen von SQLite im App-Paket
 
@@ -94,6 +95,6 @@ Es gibt sechs Schnittstellen zum Ausführen von Datenbankvorgängen für diese O
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

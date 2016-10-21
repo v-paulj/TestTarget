@@ -5,20 +5,19 @@ title: "Auswählen einer Methode für die Übermittlung von Benachrichtigungen"
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: b79a6f771afe63c9a42567875db5ef8107611afc
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: a61c9ce609856ff3addba557558c6bffec504ed7
 
 ---
-
 # Auswählen einer Methode für die Übermittlung von Benachrichtigungen
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 In diesem Artikel werden die vier Benachrichtigungsoptionen – lokal, geplant, periodisch und Push – behandelt, die Kachel- und Signalaktualisierungen sowie Popupbenachrichtigungsinhalte bereitstellen. Eine Kachel oder eine Popupbenachrichtigung kann dem Benutzer Informationen anzeigen, auch wenn der Benutzer nicht direkt mit Ihrer App beschäftigt ist. Basierend auf der Art und dem Inhalt Ihrer App sowie den Informationen, die Sie bereitstellen möchten, können Sie die am besten geeignete Benachrichtigungsmethode bzw. -methoden für Ihr Szenario bestimmen.
 
-## <span id="Notification_delivery_methods__overview"></span><span id="notification_delivery_methods__overview"></span><span id="NOTIFICATION_DELIVERY_METHODS__OVERVIEW"></span>Übersicht über Methoden für die Benachrichtigungsübermittlung
+## Übersicht über Methoden für die Benachrichtigungsübermittlung
 
 
 Es gibt vier Mechanismen, die von einer App zum Übermitteln einer Benachrichtigung verwendet werden können:
@@ -90,7 +89,7 @@ In dieser Tabelle sind die Benachrichtigungsübermittlungstypen zusammengefasst.
 
  
 
-## <span id="Local_notifications"></span><span id="local_notifications"></span><span id="LOCAL_NOTIFICATIONS"></span>Lokale Benachrichtigungen
+## Lokale Benachrichtigungen
 
 
 Das Aktualisieren der App-Kachel oder des Signals oder das Auslösen einer Popupbenachrichtigung, während die App ausgeführt wird, stellt den einfachsten der Mechanismen zur Benachrichtigungsübermittlung dar. Dafür werden nur lokale API-Aufrufe benötigt. Für jede App kann es hilfreiche oder interessante Informationen zum Anzeigen auf der Kachel geben – auch dann, wenn sich dieser Inhalt erst ändert, nachdem der Benutzer die App gestartet hat und mit ihr interagiert. Lokale Benachrichtigungen sind auch eine gute Möglichkeit, die App-Kachel aktuell zu halten, selbst wenn Sie auch einen der anderen Benachrichtigungsmechanismen verwenden. Auf der Kachel einer Foto-App könnten z.B. Fotos aus einem kürzlich hinzugefügten Album angezeigt werden.
@@ -109,7 +108,7 @@ Weitere Informationen finden Sie unter folgenden Themen:
 -   [Senden einer lokalen Kachelbenachrichtigung](tiles-and-notifications-sending-a-local-tile-notification.md)
 -   [Codebeispiele für UWP (universelle Windows-Plattform)-Benachrichtigungen](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Scheduled_notifications"></span><span id="scheduled_notifications"></span><span id="SCHEDULED_NOTIFICATIONS"></span>Geplante Benachrichtigungen
+## Geplante Benachrichtigungen
 
 
 Geplante Benachrichtigungen sind lokale Benachrichtigungen, die den genauen Zeitpunkt angeben können, zu dem eine Kachel aktualisiert oder eine Popupbenachrichtigung angezeigt werden soll. Geplante Benachrichtigungen eignen sich ideal für Situationen, in denen der zu aktualisierende Inhalt im Voraus bekannt ist (z.B. eine Besprechungseinladung). Wenn Sie den Benachrichtigungsinhalt vorher nicht kennen, müssen Sie eine Pushbenachrichtigung oder eine lokale Benachrichtigung verwenden.
@@ -121,7 +120,7 @@ Weitere Informationen finden Sie unter folgenden Themen:
 -   [Richtlinien für geplante Benachrichtigungen](https://msdn.microsoft.com/library/windows/apps/hh761464)
 -   [Codebeispiele für UWP (universelle Windows-Plattform)-Benachrichtigungen](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Periodic_notifications"></span><span id="periodic_notifications"></span><span id="PERIODIC_NOTIFICATIONS"></span>Periodische Benachrichtigungen
+## Periodische Benachrichtigungen
 
 
 Periodische Benachrichtigungen bieten Ihnen Livekachelaktualisierungen mit minimaler Investition in Clouddienst und Client. Sie stellen auch eine exzellente Methode zum Verteilen desselben Inhalts an eine große Zielgruppe dar. Ihr Clientcode gibt die URL eines Cloudspeicherorts an, von dem Windows Kachel- und Signalaktualisierungen abruft, und die Häufigkeit, mit der der Speicherort abgerufen wird. In jedem Abrufintervall wird die URL von Windows aufgerufen, um den angegebene XML-Inhalt herunterzuladen und auf der Kachel anzuzeigen.
@@ -135,7 +134,7 @@ Weitere Informationen finden Sie unter folgenden Themen:
 -   [Übersicht über regelmäßige Benachrichtigungen](tiles-and-notifications-periodic-notification-overview.md)
 -   [Codebeispiele für UWP (universelle Windows-Plattform)-Benachrichtigungen](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
-## <span id="Push_notifications"></span><span id="push_notifications"></span><span id="PUSH_NOTIFICATIONS"></span>Pushbenachrichtigungen
+## Pushbenachrichtigungen
 
 
 Pushbenachrichtigungen eignen sich ideal zum Kommunizieren von Echtzeitdaten oder für den Benutzer personalisierten Daten. Pushbenachrichtigungen werden auch für Inhalte verwendet, die zu unvorhersehbaren Zeiten generiert werden (z.B. Eilmeldungen oder Chatnachrichten). Pushbenachrichtigungen sind auch in Situationen hilfreich, in denen Daten so zeitempfindlich sind, dass periodische Benachrichtigungen nicht geeignet wären (z.B. Spielstände während eines Spiels).
@@ -151,7 +150,7 @@ Weitere Informationen finden Sie unter:
 -   [Codebeispiele für UWP (Universelle Windows-Plattform)-Benachrichtigungen](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
-## <span id="related_topics"></span>Verwandte Themen
+## Verwandte Themen
 
 
 * [Senden einer lokalen Kachelbenachrichtigung](tiles-and-notifications-sending-a-local-tile-notification.md)
@@ -171,6 +170,6 @@ Weitere Informationen finden Sie unter:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

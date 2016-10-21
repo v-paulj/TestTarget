@@ -7,7 +7,7 @@ label: Layout panels
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: a8abaf9e272af3e9563ddb48a1a53993a762c675
+ms.openlocfilehash: 58187f34de283b407278a75f1b7b6de61908387f
 
 ---
 # Layoutpanels
@@ -35,8 +35,7 @@ Hier sehen Sie ein Beispiel für das Festlegen der angefügten Eigenschaft [**Ca
 
 Weitere Informationen zu angefügten Eigenschaften finden Sie unter [Übersicht über angefügte Eigenschaften](../xaml-platform/attached-properties-overview.md).
 
-> 
-              **Hinweis**&nbsp;&nbsp;Eine angefügte Eigenschaft ist ein XAML-Konzept, das eine spezielle Syntax zum Abrufen oder Festlegen aus Code erfordert. Informationen zur Verwendung angefügter Eigenschaften in Code finden Sie im Abschnitt *Angefügte Eigenschaften in Code* des Artikels *Übersicht über angefügte Eigenschaften*.
+> **Hinweis**&nbsp;&nbsp;Eine angefügte Eigenschaft ist ein XAML-Konzept, das eine spezielle Syntax zum Abrufen oder Festlegen aus Code erfordert. Informationen zur Verwendung angefügter Eigenschaften in Code finden Sie im Abschnitt *Angefügte Eigenschaften in Code* des Artikels *Übersicht über angefügte Eigenschaften*.
 
 **Panelrahmen**
 
@@ -56,9 +55,7 @@ Durch Verwendung der integrierten Rahmeneigenschaften kann die Anzahl der XAML-E
 
 ## RelativePanel
 
-
-              [
-              **RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) ermöglicht Ihnen das Layout von UI-Elementen, indem Sie angeben, an welcher Position sie relativ zu anderen Elementen und zum Panel platziert werden sollen. Standardmäßig wird ein Element in der oberen linken Ecke des Panels positioniert. Sie können [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) und [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) verwenden, um die Benutzeroberfläche für unterschiedliche Fenstergrößen neu anzuordnen.
+[**RelativePanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.relativepanel.aspx) ermöglicht Ihnen das Layout von UI-Elementen, indem Sie angeben, an welcher Position sie relativ zu anderen Elementen und zum Panel platziert werden sollen. Standardmäßig wird ein Element in der oberen linken Ecke des Panels positioniert. Sie können [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstatemanager.aspx) und [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.adaptivetrigger.aspx) verwenden, um die Benutzeroberfläche für unterschiedliche Fenstergrößen neu anzuordnen.
 
 Die folgende Tabelle zeigt die angefügten Eigenschaften, mit denen Sie ein Element auf die Kante oder die Mitte des Panels ausrichten und in Bezug auf andere Elemente ausrichten und positionieren können.
 
@@ -105,9 +102,7 @@ Die folgenden Aspekte müssen in Bezug auf das Ändern der Rechtecksgrößen bea
 
 ## StackPanel
 
-
-              [
-              **StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) ist ein einfaches Layoutpanel, dessen untergeordnete Elemente in einer einzelnen Zeile angeordnet sind. Die Zeile kann horizontal oder vertikal ausgerichtet werden. StackPanel-Steuerelemente werden i.d.R. verwendet, wenn Sie nur einen kleinen Teil der UI auf der Seite anordnen möchten.
+[**StackPanel**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) ist ein einfaches Layoutpanel, dessen untergeordnete Elemente in einer einzelnen Zeile angeordnet sind. Die Zeile kann horizontal oder vertikal ausgerichtet werden. StackPanel-Steuerelemente werden i.d.R. verwendet, wenn Sie nur einen kleinen Teil der UI auf der Seite anordnen möchten.
 
 Mit der [**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.orientation.aspx)-Eigenschaft können Sie die Richtung der untergeordneten Elemente angeben. Die Standardausrichtung ist [**Vertikal**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.orientation.aspx).
 
@@ -168,9 +163,7 @@ In diesem Beispiel funktioniert die Festlegung der Größe wie folgt:
 
 ## VariableSizedWrapGrid
 
-
-              [
-              **VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) stellt ein Layoutpanel im Rasterstil zur Verfügung, in dem Elemente in Zeilen oder Spalten angeordnet werden, die automatisch in eine neue Zeile oder Spalte umbrochen werden, wenn der [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx)-Wert erreicht wird. 
+[**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.aspx) stellt ein Layoutpanel im Rasterstil zur Verfügung, in dem Elemente in Zeilen oder Spalten angeordnet werden, die automatisch in eine neue Zeile oder Spalte umbrochen werden, wenn der [**MaximumRowsOrColumns**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns.aspx)-Wert erreicht wird. 
 
 Mit der [**Orientation**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.variablesizedwrapgrid.orientation.aspx)-Eigenschaft wird angegeben, ob Elemente im Raster vor dem Umbrechen in Zeilen oder Spalten hinzugefügt werden. Die Standardausrichtung ist **Vertikal**, d.h., das Raster fügt Elemente von oben nach unten hinzu, bis eine Spalte voll ist, dann erfolgt ein Umbruch in eine neue Spalte. Wenn der Wert **Horizontal** lautet, fügt das Raster Elemente von links nach rechts hinzu und fügt dann einen Umbruch in eine neue Zeile ein.
 
@@ -232,6 +225,6 @@ Es gibt verschiedene spezielle Panels, die nur als [**ItemsPanel**](https://msdn
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

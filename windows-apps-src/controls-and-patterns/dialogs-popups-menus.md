@@ -1,23 +1,37 @@
 ---
 author: Jwmsft
+redirect_url: https://msdn.microsoft.com/windows/uwp/controls-and-patterns/dialogs
 Description: "Ein Flyout ist ein kleines Popupmenü, das vorübergehend UI zu aktuellen Benutzeraktionen anzeigt."
 title: "Kontextmenüs und Dialogfelder"
 ms.assetid: 7CA2600C-A1DB-46AE-8F72-24C25E224417
 label: Menus, dialogs, and popups
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: e268a5facebbdb80d7cc5cdd52c1a6f944ef7d00
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 6572acefa25e464b6edaca9fee5b2b3e3b46ff3f
 
 ---
 # Menüs, Dialogfelder, Flyouts und Popups
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Menüs, Dialogfelder, Flyouts und Popups zeigen vorübergehende UI-Elemente an, die angezeigt werden, wenn der Benutzer sie anfordert oder eine Aktion erfolgt, die eine Benachrichtigung oder Genehmigung erfordert.
 
-<span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn299030">MenuFlyout-Klasse</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Flyout-Klasse</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">ContentDialog-Klasse</a></li>
+</ul>
 
--   [MenuFlyout-Klasse](https://msdn.microsoft.com/library/windows/apps/dn299030)
--   [Flyout-Klasse](https://msdn.microsoft.com/library/windows/apps/dn279496)
--   [ContentDialog-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)
+</div>
+</div>
+
+
+
+
+
 
 Ein Kontextmenü stellt sofortige Aktionen für den Benutzer bereit. Es kann mit Textbefehlen gefüllt werden. Kontextmenüs können einfach ausgeblendet werden, indem Benutzer auf eine Stelle außerhalb des Menüs tippen oder klicken.
 
@@ -73,8 +87,7 @@ Hier ist ein Beispiel eines Dialogfelds mit zwei Schaltflächen, bei dem der Ben
 
 Dialogfelder sind modal, was bedeutet, dass sie alle Interaktionen mit der App blockieren, bis der Benutzer eine Dialogfeldschaltfläche auswählt. Um das modale Verhalten von Dialogfeldern visuell zu unterstreichen, zeichnen sie eine Overlay-Ebene, welche die vorübergehend nicht erreichbare App-UI teilweise verdeckt.
 
-
-            **Hinweis** Ist „Abbrechen“ eine der verfügbaren Dialogfeldoptionen, können Apps Benutzer das Dialogfeld durch Drücken der ESC-Taste schließen lassen. Dieses Verhalten ist nicht in das Steuerelement integriert, stellt aber einen häufig implementierten Shortcut dar.
+**Hinweis** Ist „Abbrechen“ eine der verfügbaren Dialogfeldoptionen, können Apps Benutzer das Dialogfeld durch Drücken der ESC-Taste schließen. Dieses Verhalten ist nicht in das Steuerelement integriert, stellt aber einen häufig implementierten Shortcut dar.
 
 Flyouts und Kontextmenüs sind einfach auszublendende Steuerelemente, was bedeutet, dass Benutzer eine Reihe von Aktionen auswählen können, um vorübergehend angezeigte Benutzeroberflächen schnell zu schließen. Diese Interaktionen sollen leicht sein und den Benutzer nicht blockieren. Aktionen zum einfachen Ausblenden sind folgende
 - Klicken oder Tippen außerhalb der vorübergehend angezeigten Benutzeroberfläche
@@ -100,29 +113,9 @@ Flyouts und Kontextmenüs sind einfach auszublendende Steuerelemente, was bedeut
 -   Bei Fehlerdialogfeldern wird die Fehlermeldung im Dialogfeld zusammen mit allen relevanten Informationen angezeigt. Die einzige in einem Fehlerdialogfeld verwendete Schaltfläche sollte „Schließen“ oder eine ähnliche Aktion sein.
 -   Kontextbezogene Fehler, die sich auf eine bestimmte Stelle auf der Seite beziehen, beispielsweise Validierungsfehler (wie in Kennwortfeldern), verwenden die Canvas der App selbst zum Anzeigen von Inlinefehlern.
 
-## Kontextmenüs und Flyouts
+## Flyout
 
-Kontextmenüs und Flyouts sind eng verwandte Steuerelemente mit gemeinsamem Interaktionsverhalten. Der Hauptunterschied zwischen diesen Steuerelementen ist der Typ des Inhalts, den sie akzeptieren.
-
-### MenuFlyout
-Ein Kontextmenü, das mit der MenuFlyout-Klasse implementiert wurde, kann [**MenuFlyoutItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutitem.aspx), [**ToggleMenuFlyoutItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.togglemenuflyoutitem.aspx), [**MenuFlyoutSubItem**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutsubitem.aspx) und [**MenuFlyoutSeparator**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.menuflyoutseparator.aspx) enthalten. Verwenden Sie zum Anzeigen von anderen UI-Typen Flyout.
-
-- **Nutzungsrichtlinien**
-  - Verwenden Sie für folgende Aktionen Trennlinien zwischen Gruppen von Befehlen in einem Kontextmenü:
-    - Trennen von Gruppen verwandter Befehle
-    - Gruppieren von Befehlen
-    - Trennen von spezifischen Befehlen für eine App oder Ansicht von Standardbefehlen, z.B. für die Zwischenablage, (Ausschneiden/Kopieren/Einfügen)
-  -   Auf Laptops und Desktops sind Kontextmenüs und QuickInfos nicht auf das Anwendungsfenster begrenzt und können teilweise außerhalb davon gezeichnet werden. Wenn die App versucht, ein Kontextmenü vollständig außerhalb des Fensters darzustellen, wird eine Ausnahme ausgelöst.
-
-- **Empfohlene und nicht empfohlene Vorgehensweisen**
-  -   Achten Sie darauf, dass Kontextmenübefehle kurz sind. Längere Befehle werden abgeschnitten.
-  -   Verwenden Sie die Großschreibung am Anfang für jeden Befehlsnamen.
-  -   Zeigen Sie in jedem Kontextmenü die Obergrenze für die Anzahl möglicher Befehle.
-  -   Wenn die direkte Manipulation eines Benutzeroberflächenelements möglich ist, vermeiden Sie es, diesen Befehl in einem Kontextmenü zu platzieren. Ein Kontextmenü sollte für Kontextbefehle reserviert werden, die andernfalls auf dem Bildschirm nicht sichtbar sind.
-
-### Flyout
-
-Ein Flyout ist ein offener Container, der beliebige UI als Inhalt anzeigen kann.  Flyouts weisen selbst keine visuellen Teile auf. Sie sind einfach ein Inhaltssteuerelement. Flyouts verfügen über einen Rand und optionale Bildlaufleisten, die sie zu ihren Inhalten hinzufügen. Um ein Flyout zu formatieren, ändern Sie den `FlyoutPresenterStyle`.
+Ein Flyout ist ein offener Container, der beliebige UI als Inhalt anzeigen kann.  Flyouts weisen selbst keine visuellen Teile auf. Sie sind einfach ein Inhaltssteuerelement. Flyouts verfügen über einen Rand und optionale Bildlaufleisten, die sie zu ihren Inhalten hinzufügen. Um ein Flyout zu formatieren, ändern Sie den [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx).
 
 Der folgende Code zeigt einen Absatz mit Textumbruch und macht den Textblock für ein Bildschirmleseprogramm zugänglich.
 
@@ -144,7 +137,7 @@ Der folgende Code zeigt einen Absatz mit Textumbruch und macht den Textblock fü
 
 Flyouts und Kontextmenüs sind bestimmten Steuerelementen angefügt. Wenn sie sichtbar sind, sollten sie am aufrufenden Objekt verankert sein und ihre bevorzugte relative Position zum Objekt angeben: oben, links, unten oder rechts. Flyout verfügt außerdem über einen vollständigen Platzierungsmodus, der versucht, das Flyout zu strecken und innerhalb des App-Fensters zu zentrieren.
 
-Die [Schaltflächen-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) enthält eine `Flyout`-Eigenschaft, mit der Sie die vorübergehend angezeigte Benutzeroberfläche angeben können, die geöffnet wird, wenn der Benutzer auf die Schaltfläche klickt oder tippt.
+Die [Schaltflächen-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) enthält eine [**Fylout**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx)-Eigenschaft, mit der Sie die vorübergehend angezeigte Benutzeroberfläche angeben können, die geöffnet wird, wenn der Benutzer auf die Schaltfläche klickt oder tippt.
 
 ````xaml
 <Button Content="Click me">
@@ -156,24 +149,6 @@ Die [Schaltflächen-Klasse](https://msdn.microsoft.com/library/windows/apps/wind
 </Button>
 ````
 
-Um ein Kontextmenü zu öffnen, können Benutzer eine der folgenden Aktionen ausführen:
-- Rechtsklicken mit der Maus
-- Drücken und Halten mit dem Finger
-- Eingeben von UMSCHALT + F10
-- Drücken der Menü-Taste auf der Tastatur
-- Drücken der Gamepad-Menütaste
-
-Um ein Kontextmenü oder Flyout als Reaktion auf einen der oben genannten Schritte leicht zu öffnen, können Apps die neue [`ContextFlyout`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.contextflyout.aspx)-Eigenschaft auf [UIElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.aspx), die Basisklasse für die meisten Steuerelemente, verwenden.
-
-````xaml
-<Rectangle Height="100" Width="100" Fill="Red">
-  <Rectangle.ContextFlyout>
-     <MenuFlyout>
-        <MenuFlyoutItem Text="Close"/>
-     </MenuFlyout>
-  </Rectangle.Flyout>
-</Rectangle>
-````
 
 ## Verwandte Artikel
 
@@ -184,6 +159,6 @@ Um ein Kontextmenü oder Flyout als Reaktion auf einen der oben genannten Schrit
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -6,11 +6,13 @@ ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Lists
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: adf8e449cff846caebff3a80b772f801430871e5
+ms.sourcegitcommit: 508a09e0c12006c00dbdf7675516b41119eab8a6
+ms.openlocfilehash: 8b8820c9ab82ce0789fbe2fb9f62309e48f4ce9d
 
 ---
 # Listen
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Listen zeigen und ermöglichen die Interaktion mit sammlungsbasierten Inhalten. Zu den in diesem Artikel behandelten vier Listenmustern gehören:
 
@@ -21,11 +23,18 @@ Listen zeigen und ermöglichen die Interaktion mit sammlungsbasierten Inhalten. 
 
 Für jedes Listenmuster sind Entwurfsrichtlinien, Features und Beispiele aufgeführt. Am Ende des Artikels befinden sich Links zu verwandten Themen und APIs.
 
-## Wichtige APIs
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br242878"><strong>ListView-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br242705"><strong>GridView-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br209348"><strong>ComboBox-Klasse</strong></a></li>
+</ul>
 
--   [**ListView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242878)
--   [**GridView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242705)
--   [**ComboBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209348)
+</div>
+</div>
+
+
 
 
 ## Listenansichten
@@ -42,20 +51,50 @@ Mit einer Listenansicht können Sie:
 
 ### Beispiele
 
-Bei der Verwendung eines [Master-/Detailmusters](master-details.md) können Sie den Masterbereich mit einer Listenansicht organisieren. Der Masterbereich zeigt eine Liste mit auswählbaren Elementen an. Wenn der Benutzer ein Element im Masterbereich auswählt, werden zusätzliche Informationen zum gewählten Element im Detailbereich angezeigt. Der Detailbereich enthält häufig eine Rasteransicht.
+Dies ist eine einfache Listenansicht mit gruppierten Daten auf einem Telefon.
 
-![Beispiel für das Master/Details-Muster](images/Stock_Tracker/uap_finance_desktop700.png)
-
-Sie können mehrere Listen miteinander verketten, um komplexe Master-/Detailhierarchien zu erstellen. Weitere Informationen finden Sie unter [Master-/Detailmuster](master-details.md).
-
-Das Beispiel für ein Listenlayout enthält Gruppenheader und wird als einzelne Spalte angezeigt:
-
-![Beispiel für eine Listenansicht mit vier Haupteinheitentypen](images/controls_listview_4types.png)
+![Eine Listenansicht mit gruppierten Daten](images/simple-list-view-phone.png)
 
 ### Empfehlungen
 
 -   Elemente in einer Liste sollten das gleiche Verhalten aufweisen.
 -   Wenn Ihre Liste in Gruppen unterteilt ist, verwenden Sie den [semantischen Zoom](semantic-zoom.md), mit dem Benutzern die Navigation in gruppierten Inhalten erleichtert wird.
+
+### Artikel zur Listenansicht
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Thema</th>
+<th align="left">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>[Listenansicht und Rasteransicht](listview-and-gridview.md)</p></td>
+<td align="left"><p>Lernen Sie die Grundlagen der Verwendung einer Listen- oder Rasteransicht in Ihrer App kennen.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[Vorlagen für Listenansichtselemente](listview-item-templates.md)</p></td>
+<td align="left"><p>Die Elemente, die Sie in einer Liste oder Raster anzeigen, können eine wichtige Rolle für das Gesamtdesign Ihrer App spielen. Ändern Sie Steuerelementvorlagen und Datenvorlagen, um das Erscheinungsbild der Elemente zu definieren, damit Ihre App gut aussieht.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[Invertierte Listen](inverted-lists.md)</p></td>
+<td align="left"><p>Bei invertierten Listen werden neue Elemente am Ende hinzugefügt, z.B. bei einer Chat-App. Befolgen Sie diese Richtlinien, um in Ihrer App eine invertierte Liste zu verwenden.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[Aktualisieren durch Ziehen](pull-to-refresh.md)</p></td>
+<td align="left"><p>Dank des Musters „Aktualisieren durch Ziehen“ können Benutzer aktuelle Daten in einer Liste durch das Ausführen einer Ziehbewegung von oben nach unten auf der Liste abrufen. Verwenden Sie diese Anleitung, um „Aktualisieren durch Ziehen“ in der Listenansicht zu implementieren.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[Geschachtelte UI](nested-ui.md)</p></td>
+<td align="left"><p>Eine geschachtelte UI ist eine Benutzeroberfläche (User Interface, UI) mit geschachtelten Steuerelementen, die in einem Container eingeschlossen sind, die ein Benutzer ebenfalls aktivieren kann. Beispielsweise gibt es möglicherweise ein Listenansichtelement, das eine Schaltfläche enthält. Benutzer können das Listenelement auswählen oder die Schaltfläche verwenden, die darin geschachtelt ist. Befolgen Sie diese bewährten Methoden, um eine optimal geschachtelte Benutzeroberfläche (UI) für Ihre Benutzer bereitzustellen.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## Rasteransichten
 
@@ -83,6 +122,34 @@ Eine Rasteransicht eignet sich ideal für eine Inhaltsbibliothek, die häufig ve
 
 -   Elemente in einer Liste sollten das gleiche Verhalten aufweisen.
 -   Wenn Ihre Liste in Gruppen unterteilt ist, verwenden Sie den [semantischen Zoom](semantic-zoom.md), mit dem Benutzern die Navigation in gruppierten Inhalten erleichtert wird.
+
+### Artikel zur Rasteransicht
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Thema</th>
+<th align="left">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>[Listenansicht und Rasteransicht](listview-and-gridview.md)</p></td>
+<td align="left"><p>Lernen Sie die Grundlagen der Verwendung einer Listen- oder Rasteransicht in Ihrer App kennen.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>[Vorlagen für Listenansichtselemente](listview-item-templates.md)</p></td>
+<td align="left"><p>Die Elemente, die Sie in einer Liste oder Raster anzeigen, können eine wichtige Rolle für das Gesamtdesign Ihrer App spielen. Ändern Sie Steuerelementvorlagen und Datenvorlagen, um das Erscheinungsbild der Elemente zu definieren, damit Ihre App gut aussieht.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>[Geschachtelte UI](nested-ui.md)</p></td>
+<td align="left"><p>Eine geschachtelte UI ist eine Benutzeroberfläche (User Interface, UI) mit geschachtelten Steuerelementen, die in einem Container eingeschlossen sind, die ein Benutzer ebenfalls aktivieren kann. Beispielsweise gibt es möglicherweise ein Listenansichtelement, das eine Schaltfläche enthält. Benutzer können das Listenelement auswählen oder die Schaltfläche verwenden, die darin geschachtelt ist. Befolgen Sie diese bewährten Methoden, um eine optimal geschachtelte Benutzeroberfläche (UI) für Ihre Benutzer bereitzustellen.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## Dropdownlisten
 
@@ -187,6 +254,7 @@ Empfehlungen für die Befehlsleiste finden Sie unter [Richtlinien für Befehlsle
 - [Master/Details](master-details.md)
 - [Navigationsbereich](nav-pane.md)
 - [Semantischer Zoom](semantic-zoom.md)
+- [Drag & Drop](https://msdn.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
 
 **Für Entwickler**
 - [**ListView-Klasse**](https://msdn.microsoft.com/library/windows/apps/br242878)
@@ -196,6 +264,6 @@ Empfehlungen für die Befehlsleiste finden Sie unter [Richtlinien für Befehlsle
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

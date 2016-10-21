@@ -3,15 +3,16 @@ author: mcleanbyron
 ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
 description: "Erfahren Sie mehr über die unterstützten Größen für Banneranzeigen."
 title: "Unterstützte Größen für Banneranzeigen"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: f83febcb6c96ad85329633e652978f5c7724e743
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 488c47e7fd3ab55c51454e867d802d632a0b4df2
 
 
 ---
 
 # Unterstützte Größen für Banneranzeigen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Microsoft Advertising unterstützt die folgenden Größen für Banneranzeigen.
 
@@ -38,8 +39,7 @@ Microsoft Advertising unterstützt die folgenden Größen für Banneranzeigen.
 <td align="left"><img src="images/13-f6f413da-ddde-4424-9364-41d8ba536d21.jpg" alt="AdSizesPhone320x50" /></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>480 x 80</p><p>
-            **Hinweis** diese Größe wird nur für Windows Phone Silverlight unterstützt.</p></td>
+<td align="left"><p>480 x 80</p><p>**Hinweis**&nbsp;&nbsp;Diese Größe wird nur für Windows Phone Silverlight unterstützt.</p></td>
 <td align="left"><img src="images/13-0f11f562-0624-40d6-9720-400420f0a486.jpg" alt="AdSizesPhone480x80" /></td>
 </tr>
 <tr class="even">
@@ -92,6 +92,6 @@ Microsoft Advertising unterstützt die folgenden Größen für Banneranzeigen.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

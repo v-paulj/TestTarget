@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: Betatests
 description: "Betatests bieten Ihnen die Möglichkeit zum Verbessern Ihrer App anhand des Feedbacks von Personen außerhalb Ihres App-Entwicklungsteams, die die noch nicht freigegebene App auf ihren eigenen Geräten testen."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7404a90fc9efc05d4e2bb83321bb2ba80b8378ce
+ms.openlocfilehash: 13857b2ba5946149d04ad4f6eda6828cc11a0640
 
 ---
 # Betatests
@@ -12,8 +13,7 @@ ms.openlocfilehash: 7404a90fc9efc05d4e2bb83321bb2ba80b8378ce
 \[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
-
-            *Betatests* bieten Ihnen die Möglichkeit zum Verbessern Ihrer App anhand des Feedbacks von Personen außerhalb Ihres App-Entwicklungsteams, die die noch nicht freigegebene App auf ihren eigenen Geräten testen.
+*Betatests* bieten Ihnen die Möglichkeit zum Verbessern Ihrer App anhand des Feedbacks von Personen außerhalb Ihres App-Entwicklungsteams, die die noch nicht freigegebene App auf ihren eigenen Geräten testen.
 
 In diesem Abschnitt werden Ihre Optionen zum Durchführen von Betatests für universelle Windows-Apps beschrieben.
 
@@ -50,6 +50,6 @@ Informationen zum Übermitteln Ihrer App an den Store für Betatests finden Sie 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

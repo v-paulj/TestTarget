@@ -1,17 +1,16 @@
 ---
 description: "Erfahren Sie, wie Sie Ihre App inklusiv entwickeln und für Personen auf der ganzen Welt zugänglich machen."
-keywords: uwp app accessibility, globalization, design inclusive apps, accessibility app requirements
+keywords: "Eingabehilfen für UWP-Apps, Globalisierung, Apps mit inklusivem Design, Anforderungen für App-Eingabehilfen"
 title: "Benutzerfreundlichkeit in UWP-Apps – Entwicklung von Windows-Apps"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 5370dd078db81de606b7a4bbfcf6dd36b2280a17
-ms.openlocfilehash: 457ddacd80b3f9308b2eb66ce0ac2d448bb59ed2
+ms.sourcegitcommit: 589e3290a47a9245ddb5e43f64d13bae1244ac8b
+ms.openlocfilehash: d7246bc898e36155996941875b6c00da7891809d
 
 ---
-
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
 # Benutzerfreundlichkeit in UWP-Apps
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css">
 
 Es sind die Kleinigkeiten und Details, die eine gute Benutzerumgebung zu einer wirklich inklusiven Benutzerumgebung machen, die die Anforderungen von Benutzern auf der ganzen Welt erfüllt.
 
@@ -104,7 +103,7 @@ Bei der Barrierefreiheit geht es darum, die App so zu gestalten, dass sie auch v
 
 ## Globalisierung und Lokalisierung
 
-Windows wird auf der ganzen Welt von Benutzern mit unterschiedlicher Kultur, Herkunft und Sprache verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können das Marktpotenzial Ihrer App erweitern, indem Sie eine mithilfe von Globalisierung und Lokalisierung leicht anpassbare App entwickeln. 
+Windows wird auf der ganzen Welt von Benutzern mit unterschiedlicher Kultur, Herkunft und Sprache verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können das Marktpotenzial Ihrer App erweitern, indem Sie eine mithilfe von Globalisierung und Lokalisierung leicht anpassbare App entwickeln.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -154,7 +153,7 @@ Windows wird auf der ganzen Welt von Benutzern mit unterschiedlicher Kultur, Her
 
 ## App-Einstellungen
 
-Mithilfe von App-Einstellungen kann der Benutzer Ihre App anpassen und entsprechend den eigenen Anforderungen und Wünschen optimieren. Die Bereitstellung der richtigen Einstellungen und ihr ordnungsgemäßes Speichern können eine großartige Benutzerumgebung sogar noch weiter verbessern. 
+Mithilfe von App-Einstellungen kann der Benutzer Ihre App anpassen und entsprechend den eigenen Anforderungen und Wünschen optimieren. Die Bereitstellung der richtigen Einstellungen und ihr ordnungsgemäßes Speichern können eine großartige Benutzerumgebung sogar noch weiter verbessern.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
@@ -168,16 +167,16 @@ Mithilfe von App-Einstellungen kann der Benutzer Ihre App anpassen und entsprech
 </div>
 
 ## In-App-Hilfe
-Unabhängig davon, wie optimal Sie Ihre App gestaltet haben, werden einige Benutzer etwas zusätzliche Hilfe benötigen. 
+Unabhängig davon, wie optimal Sie Ihre App gestaltet haben, werden einige Benutzer etwas zusätzliche Hilfe benötigen.
 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[Anleitungen für die App-Hilfe](../app-help-guidelines/guidelines-for-app-help.md)</b><br/>Anwendungen können sehr komplex sein. Sie können die Erfahrung für die Benutzer durch die Bereitstellung einer effektiven Hilfe erheblich verbessern. 
+<p><b>[Anleitungen für die App-Hilfe](../in-app-help/guidelines-for-app-help.md)</b><br/>Anwendungen können sehr komplex sein. Sie können die Erfahrung für die Benutzer durch die Bereitstellung einer effektiven Hilfe erheblich verbessern.
 </p>
   </div>
   <div class="side-by-side-content-right">
-<p><b>[Benutzeroberfläche mit Anleitungen](../app-help-guidelines/instructional-ui.md)</b><br/>Manchmal kann es hilfreich sein, Anleitungen bereitzustellen, um Benutzern Funktionen in Ihrer App zu zeigen, die möglicherweise nicht offensichtlich sind, z.B. bestimmte Touchinteraktionen. In diesen Fällen müssen Sie Anleitungen auf der Benutzeroberfläche für die Benutzer bereitstellen, damit sie diese Funktionen, die sie möglicherweise übersehen haben, finden und nutzen können.</p>
+<p><b>[Benutzeroberfläche mit Anleitungen](../in-app-help/instructional-ui.md)</b><br/>Manchmal kann es hilfreich sein, Anleitungen bereitzustellen, um Benutzern Funktionen in Ihrer App zu zeigen, die möglicherweise nicht offensichtlich sind, z.B. bestimmte Touchinteraktionen. In diesen Fällen müssen Sie Anleitungen auf der Benutzeroberfläche für die Benutzer bereitstellen, damit sie diese Funktionen, die sie möglicherweise übersehen haben, finden und nutzen können.</p>
   </div>
 </div>
 </div>
@@ -185,19 +184,16 @@ Unabhängig davon, wie optimal Sie Ihre App gestaltet haben, werden einige Benut
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-<p><b>[In-App-Hilfe](../app-help-guidelines/in-app-help.md)</b><br/>In den meisten Fällen empfiehlt es sich, dass die Hilfe innerhalb der App angezeigt wird, wenn der Benutzer sie anzeigen möchte. Beachten Sie beim Erstellen der In-App-Hilfe die folgenden Anleitungen.</p>
+<p><b>[In-App-Hilfe](../in-app-help/in-app-help.md)</b><br/>In den meisten Fällen empfiehlt es sich, dass die Hilfe innerhalb der App angezeigt wird, wenn der Benutzer sie anzeigen möchte. Beachten Sie beim Erstellen der In-App-Hilfe die folgenden Anleitungen.</p>
   </div>
   <div class="side-by-side-content-right">
-<p><b>[Externe Hilfe](../app-help-guidelines/external-help.md)</b><br/>In den meisten Fällen empfiehlt es sich, dass die Hilfe innerhalb der App angezeigt wird, wenn der Benutzer sie anzeigen möchte. Beachten Sie beim Erstellen der In-App-Hilfe die folgenden Anleitungen.</p>
+<p><b>[Externe Hilfe](../in-app-help/external-help.md)</b><br/>In den meisten Fällen empfiehlt es sich, dass die Hilfe innerhalb der App angezeigt wird, wenn der Benutzer sie anzeigen möchte. Beachten Sie beim Erstellen der In-App-Hilfe die folgenden Anleitungen.</p>
   </div>
 </div>
 </div>
 
 
 
-
-
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

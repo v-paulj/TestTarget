@@ -3,8 +3,9 @@ author: mcleblanc
 description: "Sie beginnen den Portierungsprozess, indem Sie zunächst in Visual Studio ein neues Windows 10-Projekt erstellen und Ihre Dateien in das Projekt kopieren."
 title: Portieren eines Windows Phone Silverlight-Projekts zu einem UWP-Projekt
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 74cbd9789636383e6d04798435780dcda6b897d0
+ms.openlocfilehash: ffcc7a76a8604deb4f7cb57ac32b9a29de7be46d
 
 ---
 
@@ -30,7 +31,7 @@ Die meisten UWP (Universelle Windows-Plattform)-APIs, die von Ihrer portierten A
 
 Im Fall von Kompilierungsfehlern, die auf nicht gefundene Namespaces, Typen oder Member zurückzuführen sind, ist dies wahrscheinlich die Ursache. Öffnen Sie in der API-Referenzdokumentation das entsprechende API-Thema, und navigieren Sie zum Abschnitt mit den Anforderungen. Hier erfahren Sie, von welcher Gerätefamilie die API implementiert wird. Handelt es sich dabei nicht um Ihre Zielgerätefamilie, benötigen Sie einen Verweis auf das Erweiterungs-SDK für diese Gerätefamilie, um die API für Ihr Projekt verfügbar zu machen.
 
-Klicken Sie auf **Projekt**&gt;**Verweis hinzufügen**&gt;**Windows Universal**&gt;**Erweiterungen**, und wählen Sie das entsprechende Erweiterungs-SDK aus. Wenn die gewünschten APIs also beispielsweise nur in der Familie für mobile Geräte verfügbar sind und in Version 10.0.x.y eingeführt wurden, wählen Sie **Windows Mobile-Erweiterungen für die UWP** aus.
+Klicken Sie auf **Projekt** &gt; **Verweis hinzufügen** &gt; **Windows Universal** &gt; **Erweiterungen**, und wählen Sie das entsprechende Erweiterungs-SDK aus. Wenn die gewünschten APIs also beispielsweise nur in der Familie für mobile Geräte verfügbar sind und in Version 10.0.x.y eingeführt wurden, wählen Sie **Windows Mobile-Erweiterungen für die UWP** aus.
 
 Dadurch wird Ihrer Projektdatei folgender Verweis hinzugefügt:
 
@@ -112,8 +113,7 @@ Unter Umständen haben Sie die bedingte Kompilierung verwendet, um die Behandlun
 
 ```
 
-Unter Umständen haben Sie die bedingte Kompilierung verwendet, um die Behandlung der Hardwaretaste „Kamera“ auf Windows Phone zu begrenzen. In Windows10 ist die Hardwaretaste für die Kamera ein spezielles Konzept für die Familie mobiler Geräte. Da auf allen Geräten ein einzelnes App-Paket ausgeführt wird, ändern wir unsere Kompilierzeitbedingung mithilfe von so genanntem adaptivem Code in eine Laufzeitbedingung. Hierzu fragen wir zur Laufzeit mithilfe der [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001)-Klasse ab, ob die [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557)-Klasse vorhanden ist. 
-            **HardwareButtons** ist im SDK für mobile Erweiterungen definiert. Daher müssen wir unserem Projekt einen Verweis auf dieses SDK hinzufügen, um den Code kompilieren zu können. Beachten Sie jedoch, dass der Handler nur auf einem Gerät ausgeführt wird, das die im mobilen Erweiterungs-SDK definierten Typen implementiert und somit der Familie mobiler Geräte angehört. Im folgenden Code wird also sorgfältig darauf geachtet, dass nur die vorhandenen Features verwendet werden, auch wenn dies auf andere Art als bei der bedingten Kompilierung erreicht wird.
+Unter Umständen haben Sie die bedingte Kompilierung verwendet, um die Behandlung der Hardwaretaste „Kamera“ auf Windows Phone zu begrenzen. In Windows10 ist die Hardwaretaste für die Kamera ein spezielles Konzept für die Familie mobiler Geräte. Da auf allen Geräten ein einzelnes App-Paket ausgeführt wird, ändern wir unsere Kompilierzeitbedingung mithilfe von so genanntem adaptivem Code in eine Laufzeitbedingung. Hierzu fragen wir zur Laufzeit mithilfe der [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001)-Klasse ab, ob die [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557)-Klasse vorhanden ist. **HardwareButtons** ist im SDK für mobile Erweiterungen definiert. Daher müssen wir unserem Projekt einen Verweis auf dieses SDK hinzufügen, um den Code kompilieren zu können. Beachten Sie jedoch, dass der Handler nur auf einem Gerät ausgeführt wird, das die im mobilen Erweiterungs-SDK definierten Typen implementiert und somit der Familie mobiler Geräte angehört. Im folgenden Code wird also sorgfältig darauf geachtet, dass nur die vorhandenen Features verwendet werden, auch wenn dies auf andere Art als bei der bedingten Kompilierung erreicht wird.
 
 ```csharp
        // Note: Cache the value instead of querying it more than once.
@@ -149,6 +149,6 @@ Das nächste Thema ist [Problembehandlung](wpsl-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

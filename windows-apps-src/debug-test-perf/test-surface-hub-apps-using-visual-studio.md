@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: A5320094-DF53-42FC-A6BA-A958F8E9210B
 title: Testen von Surface Hub-Apps mit Visual Studio
 description: "Der Visual Studio-Simulator bietet eine Umgebung für das Entwerfen, Entwickeln, Debuggen und Testen von UWP-Apps, einschließlich Apps für Surface Hub."
+translationtype: Human Translation
 ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: 655dffb5f1948724c894de291e119be1322f6e77
+ms.openlocfilehash: 1939508e8ace2fe3ed9210d6969d1c68843c32a9
 
 ---
 
@@ -56,18 +57,13 @@ So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:
 
 3. Kopieren Sie die zwei XML-Dateien in **C:\Programme (x86)\Gemeinsame Dateien\Microsoft Shared\Windows Simulator\\&lt;Versionsnummer&gt;\HardwareConfigurations**.
 
-   > 
-            **Hinweis**
-            &nbsp;&nbsp;Zum Speichern der Dateien in diesem Ordner werden Administratorrechte benötigt.
+   > **Hinweis**&nbsp;&nbsp;Zum Speichern der Dateien in diesem Ordner werden Administratorrechte benötigt.
 
 4. Führen Sie Ihre App im Visual Studio-Simulator aus. Klicken Sie in der Palette auf die Schaltfläche **Change Resolution**, und wählen Sie in der Liste eine Surface Hub-Konfiguration aus.
 
     ![Auflösungen des Visual Studio-Simulators](images/vs-simulator-resolutions.png)
 
-   > 
-            **Tipp**
-            &nbsp;&nbsp;
-            [Schalten Sie den Tablet-Modus ein](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet), um das Verhalten auf einem Surface Hub besser zu simulieren.
+   > **Tipp**&nbsp;&nbsp;[Schalten Sie den Tablet-Modus ein](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet), um das Verhalten auf einem Surface Hub besser zu simulieren.
 
 ## Bereitstellen von Apps aus Visual Studio auf einem Surface Hub
 Das manuelle Bereitstellen einer App ist ein einfacher Vorgang.
@@ -75,15 +71,11 @@ Das manuelle Bereitstellen einer App ist ein einfacher Vorgang.
 ### Aktivieren des Entwicklermodus
 Standardmäßig installiert Surface Hub nur Apps aus dem Windows Store. Um Apps, die von einer anderen Quelle signiert wurden, zu installieren, müssen Sie den Entwicklermodus aktivieren.
 
-> 
-            **Hinweis**
-            &nbsp;&nbsp;Nachdem der Entwicklermodus aktiviert wurde, müssen Sie den Surface Hub zurücksetzen, um den Entwicklermodus wieder zu deaktivieren. Durch das Zurücksetzen des Geräts werden alle lokalen Benutzerdateien und die Konfiguration gelöscht, und anschließend wird Windows neu installiert.
+> **Hinweis**&nbsp;&nbsp;Nachdem der Entwicklermodus aktiviert wurde, müssen Sie den Surface Hub zurücksetzen, um den Entwicklermodus wieder zu deaktivieren. Durch das Zurücksetzen des Geräts werden alle lokalen Benutzerdateien und die Konfiguration gelöscht, und anschließend wird Windows neu installiert.
 
 1. Öffnen Sie im **Startmenü** des Surface Hub die Einstellungs-App.
 
-   >  
-            **Hinweis**
-            &nbsp;&nbsp;Für den Zugriff auf die Einstellungs-App werden Administratorrechte benötigt.
+   >  **Hinweis**&nbsp;&nbsp;Für den Zugriff auf die Einstellungs-App werden Administratorrechte benötigt.
 
 2. Navigieren Sie zu **Update und Sicherheit > Für Entwickler**.
 
@@ -92,9 +84,7 @@ Standardmäßig installiert Surface Hub nur Apps aus dem Windows Store. Um Apps,
 ### Bereitstellen Ihrer App aus Visual Studio
 Weitere Informationen finden Sie unter [Bereitstellen und Debuggen von Apps für die Universelle Windows-Plattform (UWP)](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
 
-   > 
-            **Hinweis**
-            &nbsp;&nbsp;Dieses Feature erfordert mindestens **Visual Studio 2015 Update 1**.
+   > **Hinweis**&nbsp;&nbsp;Dieses Feature erfordert mindestens **Visual Studio 2015 Update 1**.
 
 1. Zur Auswahl eines Ziels navigieren Sie zur Dropdownliste mit Debugzielen neben der Schaltfläche **Debugging starten** und wählen **Remotecomputer** aus.
 
@@ -104,18 +94,14 @@ Weitere Informationen finden Sie unter [Bereitstellen und Debuggen von Apps für
 
 2. Geben Sie die IP-Adresse des Surface Hub ein. Stellen Sie sicher, dass der Authentifizierungsmodus **Universell** ausgewählt ist.
 
-   > 
-            **Tipp**
-            &nbsp;&nbsp;Nachdem Sie den Entwicklermodus aktiviert haben, sehen Sie die IP-Adresse des Surface Hub auf dem Willkommensbildschirm.
+   > **Tipp**&nbsp;&nbsp;Nachdem Sie den Entwicklermodus aktiviert haben, sehen Sie die IP-Adresse des Surface Hub auf dem Willkommensbildschirm.
 
 3. Wählen Sie entweder **Debugging starten (F5)** aus, um die Bereitstellung und das Debugging Ihrer App auf dem Surface Hub auszuführen, oder drücken Sie STRG+F5, um nur die Bereitstellung Ihrer App auszuführen.
 
-   > 
-            **Tipp**
-            &nbsp;&nbsp;Sollte auf dem Surface Hub der Willkommensbildschirm angezeigt werden, können Sie diesen durch Drücken einer beliebigen Schaltfläche schließen.
+   > **Tipp**&nbsp;&nbsp;Sollte auf dem Surface Hub der Willkommensbildschirm angezeigt werden, können Sie diesen durch Drücken einer beliebigen Schaltfläche schließen.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

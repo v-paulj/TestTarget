@@ -8,19 +8,28 @@ title: Steuerelementvorlagen
 ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 071ba59af02b860e9fe58133eb5f1c2a7207ed2b
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 2aa257fa422ed954206dffb5ac68461e4e3a544f
 
 ---
-
 # Steuerelementvorlagen
 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br209391"><strong>ControlTemplate-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx"><strong>Control.Template-Eigenschaft</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
-**Wichtige APIs**
 
--   [**ControlTemplate-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209391)
--   [**Control.Template-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.control.template.aspx)
+
 
 Durch Erstellen einer Steuerelementvorlage im XAML-Framework können Sie die visuelle Struktur und das visuelle Verhalten eines Steuerelements anpassen. Steuerelemente besitzen zahlreiche Eigenschaften wie [**Background**](https://msdn.microsoft.com/library/windows/apps/br209395), [**Foreground**](https://msdn.microsoft.com/library/windows/apps/br209414) und [**FontFamily**](https://msdn.microsoft.com/library/windows/apps/br209404). Damit können Sie verschiedene Aspekte der Steuerelementdarstellung angeben. Die Anpassungen, die Sie mit diesen Eigenschaften vornehmen können, sind jedoch begrenzt. Weitere Anpassungen können Sie durch Erstellen einer Vorlage mit der [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)-Klasse angeben. Hier erfahren Sie, wie Sie eine **ControlTemplate** erstellen, um das Erscheinungsbild eines [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)-Steuerelements anzupassen.
 
@@ -95,10 +104,7 @@ Diese Tabelle enthält die möglichen Werte von [**IsChecked**](https://msdn.mic
 
 |                     |                    |                         |
 |---------------------|--------------------|-------------------------|
-| 
-            **IsChecked**-Wert | 
-            **CheckBox**-Zustand | 
-            **CheckBox**-Darstellung |
+| **IsChecked**-Wert | **CheckBox**-Zustand | **CheckBox**-Darstellung |
 | **true**            | `Checked`          | Enthält ein „X“.        |
 | **false**           | `Unchecked`        | Leer.                  |
 | **Null**            | `Indeterminate`    | Enthält einen Kreis.      |
@@ -216,6 +222,6 @@ Dieser Artikel ist für Windows10-Entwickler gedacht, die UWP-Apps schreiben. We
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

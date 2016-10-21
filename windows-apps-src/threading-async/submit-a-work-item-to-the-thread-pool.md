@@ -5,7 +5,7 @@ title: Senden einer Arbeitsaufgabe an den Threadpool
 description: "Hier erfahren Sie, wie Sie Arbeit in einem separaten Thread erledigen können, indem Sie eine Arbeitsaufgabe an den Threadpool übermitteln."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: d8b0f512d075510fae527e563ef99f24cc201577
+ms.openlocfilehash: d41f53a40c46087c5a1c21367a34c0f60486f24d
 
 ---
 # Senden einer Arbeitsaufgabe an den Threadpool
@@ -25,8 +25,7 @@ Erstellen Sie eine Arbeitsaufgabe, indem Sie [**RunAsync**](https://msdn.microso
 
 Drei Versionen von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) sind verfügbar. Damit können Sie optional die Priorität der Arbeitsaufgabe angeben und steuern, ob sie gleichzeitig mit anderen Arbeitsaufgaben ausgeführt wird.
 
-
-              **Hinweis**  Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und den Fortschritt der Arbeitsaufgabe anzuzeigen.
+**Hinweis:** Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317), um auf den Benutzeroberflächenthread zuzugreifen und den Fortschritt der Arbeitsaufgabe anzuzeigen.
 
 Im folgenden Beispiel werden eine Arbeitsaufgabe erstellt und ein Lambda für die Verarbeitung angegeben:
 
@@ -264,6 +263,6 @@ Weitere Informationen erhalten Sie durch das Herunterladen des Codes in dieser S
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

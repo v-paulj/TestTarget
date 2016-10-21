@@ -5,7 +5,7 @@ title: Asynchrone Programmierung
 description: "In diesem Thema werden die asynchrone Programmierung auf der universellen Windows-Plattform (UWP) und ihre Darstellung in C#, Microsoft Visual Basic.NET, VisualC\\+\\+-Komponentenerweiterungen (C\\+\\+/CX) und JavaScript erläutert."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 36300453bbffd06c675ff63e6e9cb4cafe3a56f5
+ms.openlocfilehash: c033c1d985b9373d9cbadf38463610aa1922163e
 
 ---
 # Asynchrone Programmierung
@@ -45,12 +45,9 @@ Mit asynchronen UWP-Mustern können Sie möglicherweise die explizite Verwaltung
 
 | Programmiersprache | Asynchrone Darstellung           |
 |----------------------|---------------------------------------|
-| C#                  | 
-              **async**-Schlagwort, **await**-Operator |
-| Visual Basic         | 
-              **Async**-Schlagwort, **Await**-Operator |
-| C++/CX               | 
-              **task**-Klasse, **.then**-Methode      |
+| C#                  | **async**-Schlagwort, **await**-Operator |
+| Visual Basic         | **Async**-Schlagwort, **Await**-Operator |
+| C++/CX               | **task**-Klasse, **.then**-Methode      |
 | JavaScript           | zugesagtes Objekt, **then**-Funktion     |
 
  
@@ -84,6 +81,6 @@ Asynchrone Funktionen können häufig genauso einfach wie konventionelle Funktio
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: mtoepke
 title: "Definieren des UWP-App-Frameworks (Universelle Windows-Plattform) für das Spiel"
 description: "Wenn Sie Code für ein UWP-Spiel mit DirectX erstellen, müssen Sie zunächst das Framework erstellen, das die Interaktion der Spielobjekte mit Windows ermöglicht."
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 2ebc7bca06454f78ab375058e49f012cacb00cc8
+ms.openlocfilehash: 9dea19c87c4049c73a938b1cd5576644f7b0f8b9
 
 ---
 
@@ -218,10 +219,7 @@ In unserem Spielbeispiel starten wir eine While-Schleife, die beendet wird, wenn
 
 Wenn Ihr Spiel den Fokus hat, müssen Sie jedes in der Meldungswarteschlange eingehende Ereignis behandeln. Daher müssen Sie [**CoreWindowDispatch.ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) mit der Option **ProcessAllIfPresent** aufrufen. Andere Optionen können zu einer verzögerten Verarbeitung von Meldungsereignissen führen. So entsteht der Eindruck, dass das Spiel nicht reagiert oder Toucheingaben nur träge umgesetzt werden.
 
-Wenn die App nicht sichtbar ist, angehalten oder angedockt wurde, möchten wir natürlich nicht, dass sie Meldungen ausgibt, die niemals ankommen, und dabei auch noch Ressourcen beansprucht. Daher muss das Spiel **ProcessOneAndAllPending** verwenden, was eine Blockierung bis zum Eingang eines Ereignisses zur Folge hat. Dieses Ereignis wird dann zusammen mit anderen Ereignissen verarbeitet, die während der Verarbeitung des ersten Ereignisses in der Prozesswarteschlange eingehen. 
-            [
-              **ProcessEvents**
-            ](https://msdn.microsoft.com/library/windows/apps/br208215) springt nach der Verarbeitung der Warteschlange sofort wieder zurück.
+Wenn die App nicht sichtbar ist, angehalten oder angedockt wurde, möchten wir natürlich nicht, dass sie Meldungen ausgibt, die niemals ankommen, und dabei auch noch Ressourcen beansprucht. Daher muss das Spiel **ProcessOneAndAllPending** verwenden, was eine Blockierung bis zum Eingang eines Ereignisses zur Folge hat. Dieses Ereignis wird dann zusammen mit anderen Ereignissen verarbeitet, die während der Verarbeitung des ersten Ereignisses in der Prozesswarteschlange eingehen. [**ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) springt nach der Verarbeitung der Warteschlange sofort wieder zurück.
 
 Das Spiel läuft! Die Ereignisse, die es für den Wechsel des Spielzustands nutzt, werden verteilt und verarbeitet. Die Grafik wird im Rahmen der Spielschleifendurchläufe aktualisiert. Wir hoffen, der Spieler hat Spaß. Aber jeder Spaß ist einmal zu Ende...
 
@@ -362,12 +360,9 @@ In **Run** wird innerhalb der Spielschleife des Beispiels ein einfacher Zustands
 
 Im Spielbeispiel kann sich das Spiel in drei Hauptzuständen (UpdateEngineState) befinden:
 
--   
-            **Waiting for resources**. Die Spielschleife wird durchlaufen, und ein Übergang ist erst möglich, wenn Ressourcen (insbesondere Grafikressourcen) verfügbar sind. Nach Abschluss der asynchronen Aufgaben zum Laden der Ressourcen wird der Zustand zu **ResourcesLoaded** aktualisiert. Dieser Fall tritt üblicherweise zwischen Leveln ein, wenn für ein Level neue Ressourcen von einem Datenträger geladen werden müssen. Im Spielbeispiel simulieren wir dieses Verhalten, da an dieser Stelle keine zusätzlichen levelspezifischen Ressourcen für das Spiel geladen werden müssen.
--   
-            **Waiting for press**. Die Spielschleife wird durchlaufen, bis eine bestimmte Benutzereingabe erfolgt. Bei der Eingabe handelt es sich um eine Spieleraktion zum Laden eines Spiels, zum Starten eines Levels oder zum Fortsetzen eines Levels. Diese untergeordneten Zustände sind im Beispielcode als PressResultState-Aufzählungswerte enthalten.
--   
-            **Dynamics**. Die Spielschleife wird ausgeführt, und der Spieler spielt. Während dieser Zeit prüft das Spiel dreiBedingungen, bei deren Erfüllung ein Übergang erfolgen kann: Ablauf des Zeitlimits für ein Level, Abschluss eines Levels durch den Spieler oder Abschluss aller Level durch den Spieler.
+-   **Waiting for resources**. Die Spielschleife wird durchlaufen, und ein Übergang ist erst möglich, wenn Ressourcen (insbesondere Grafikressourcen) verfügbar sind. Nach Abschluss der asynchronen Aufgaben zum Laden der Ressourcen wird der Zustand zu **ResourcesLoaded** aktualisiert. Dieser Fall tritt üblicherweise zwischen Leveln ein, wenn für ein Level neue Ressourcen von einem Datenträger geladen werden müssen. Im Spielbeispiel simulieren wir dieses Verhalten, da an dieser Stelle keine zusätzlichen levelspezifischen Ressourcen für das Spiel geladen werden müssen.
+-   **Waiting for press**. Die Spielschleife wird durchlaufen, bis eine bestimmte Benutzereingabe erfolgt. Bei der Eingabe handelt es sich um eine Spieleraktion zum Laden eines Spiels, zum Starten eines Levels oder zum Fortsetzen eines Levels. Diese untergeordneten Zustände sind im Beispielcode als PressResultState-Aufzählungswerte enthalten.
+-   **Dynamics**. Die Spielschleife wird ausgeführt, und der Spieler spielt. Während dieser Zeit prüft das Spiel dreiBedingungen, bei deren Erfüllung ein Übergang erfolgen kann: Ablauf des Zeitlimits für ein Level, Abschluss eines Levels durch den Spieler oder Abschluss aller Level durch den Spieler.
 
 Hier sehen Sie die Codestruktur. Den vollständigen Code finden Sie unter [Vollständiger Code für diesen Abschnitt](#code_sample).
 
@@ -1432,6 +1427,6 @@ int main(Platform::Array<Platform::String^>^)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

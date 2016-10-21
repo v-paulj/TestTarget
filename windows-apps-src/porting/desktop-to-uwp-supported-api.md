@@ -32,8 +32,10 @@ Einige UWP-APIs, die für vollständige Desktop-Anwendungen verfügbar sind, wer
 
 Im folgenden finden Sie eine vollständige Liste der UWP-APIs, die in konvertierten Apps unterstützt werden. Sie können [In konvertierten Apps neu unterstützte APIs](#new) oder [In konvertierten Apps und Desktopanwendungen unterstützte APIs](#both) anzeigen. 
 
+Beispiele für das Aufrufen von UWP-APIs in konvertierten Apps finden Sie in den [Codebeispielen zur Desktop-Brücke auf GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples).
+
 <span id="new" />
-### n konvertierten Apps neu unterstützte APIs
+### In konvertierten Apps neu unterstützte APIs
 
 * [Windows.ApplicationModel.DataTransfer.DataProviderHandler](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataProviderHandler)
 * [Windows.ApplicationModel.DataTransfer.DataRequest](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataRequest)
@@ -1028,6 +1030,6 @@ Im folgenden finden Sie eine vollständige Liste der UWP-APIs, die in konvertier
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO5-->
 
 

@@ -3,8 +3,9 @@ author: mtoepke
 title: DirectX-Spielprojektvorlagen
 description: "Hier erhalten Sie Informationen zu den Vorlagen zum Erstellen eines DirectX-Spiels für die Universelle Windows-Plattform (UWP)."
 ms.assetid: 41b6cd76-5c9a-e2b7-ef6f-bfbf6ef7331d
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b7d01fda0bc8dbafebb7485ec01acb5c7431a815
+ms.openlocfilehash: 1e91814825a0944f9a70fdc7bbc6e8ef78215f29
 
 ---
 
@@ -20,8 +21,7 @@ Mit Vorlagen für DirectX und die universelle Windows-Plattform (UWP) können Si
 
 Gehen Sie wie folgt vor, um das Projekt zu erstellen:
 
--   
-            [Laden Sie Microsoft Visual Studio2015 herunter](https://www.visualstudio.com/vs-2015-product-editions). Visual Studio2015 enthält Tools für die Grafikprogrammierung (beispielsweise Debugtools). Eine Übersicht über DirectX-Grafik- und -Spielefeatures/-tools finden Sie unter [VisualStudio-Tools für die Entwicklung von DirectX-Spielen](set-up-visual-studio-for-game-development.md).
+-   [Laden Sie Microsoft Visual Studio2015 herunter](https://www.visualstudio.com/vs-2015-product-editions). Visual Studio2015 enthält Tools für die Grafikprogrammierung (beispielsweise Debugtools). Eine Übersicht über DirectX-Grafik- und -Spielefeatures/-tools finden Sie unter [VisualStudio-Tools für die Entwicklung von DirectX-Spielen](set-up-visual-studio-for-game-development.md).
 
 ## Auswählen einer Vorlage
 
@@ -90,6 +90,6 @@ Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

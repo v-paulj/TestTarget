@@ -1,163 +1,134 @@
 ---
-author: martinekuan
+author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: "Erstellen der App „Hello, world“ (XAML)"
 description: "In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows10 abzielt."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 0a524d51f713c37ce2069b4e750bf3ed20fe19ab
+ms.sourcegitcommit: 275c5cf8f8960f2be7cd9566e59eeb3bf4ee8f46
+ms.openlocfilehash: 272eb87e47c398218df85fa33f70bf9fbf240a3e
 
 ---
 
 # Erstellen der App „Hello, world“ (XAML)
 
-In diesem Lernprogramm erfahren Sie, wie Sie XAML (Extensible Application Markup Language) mit C# zum Erstellen einer einfachen „Hello, World“-App verwenden, die auf die universelle Windows Plattform (UWP) unter Windows10 abzielt. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows10 ausgeführt werden kann. In diesem Thema geht es um die Erstellung einer App, die für Desktops und mobile Geräte gleichermaßen gut geeignet ist.
-
-
-              **Wichtig:** Dieses Lernprogramm ist für Microsoft Visual Studio2015 und Windows10 konzipiert. Die korrekte Funktionsweise mit früheren Versionen ist nicht sichergestellt.
+In diesem Lernprogramm erfahren Sie, wie Sie XAML und C# zum Erstellen einer einfachen „Hello, World“-App für die universelle Windows-Plattform (UWP) unter Windows10 verwenden. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows10 ausgeführt werden kann.
 
 Hier erfahren Sie Folgendes:
 
--   Erstellen Sie ein neues Visual Studio-Projekt für Windows10 und die UWP.
--   Hinzufügen von XAML-Inhalt zu Ihrer Startseite
--   Behandeln von Touch-, Stift- und Mauseingaben
--   Ausführen des Projekts auf dem lokalen Desktop und auf dem Smartphone-Emulator in Visual Studio
--   Anpassen der UI an unterschiedliche Bildschirmgrößen
+-   Erstellen Sie ein neues **Visual Studio 2015**-Projekt für **Windows 10** und die **UWP**.
+-   Schreiben Sie XAML zum Ändern der UI auf der Startseite.
+-   Führen Sie das Projekt auf dem lokalen Desktop und auf dem Smartphone-Emulator in Visual Studio aus.
+-   Verwenden Sie einen SpeechSynthesizer, um die App sprechen zu lassen, wenn Sie auf eine Schaltfläche klicken.
 
 ## Vorbereitung
 
-
--   Wir beginnen direkt mit den Schritten zum Erstellen einer einfachen universellen App. Daher empfehlen wir Ihnen dringend, sich die Informationen unter [Neues in Windows10](https://dev.windows.com/whats-new-windows-10-dev-preview) und [Was ist eine universelle Windows-App](whats-a-uwp.md) gründlich durchzulesen, bevor Sie sich diesem Lernprogramm widmen.
--   Zum Durcharbeiten dieses Lernprogramms benötigen Sie Windows 10 und Visual Studio 2015. Weitere Informationen finden Sie unter [Vorbereiten](get-set-up.md) .
--   Es wird davon ausgegangen, dass Sie über Grundkenntnisse in XAML verfügen und mit den Konzepten in der [XAML-Übersicht](https://msdn.microsoft.com/library/windows/apps/Mt185595) vertraut sind.
+-   [Was ist eine universelle Windows-App](whats-a-uwp.md)?
+-   [Neuigkeiten in Windows10](https://dev.windows.com/whats-new-windows-10-dev-preview)
+-   Zum Durcharbeiten dieses Lernprogramms benötigen Sie Windows 10 und Visual Studio 2015. [Vorbereiten](get-set-up.md).
 -   Außerdem wird davon ausgegangen, dass Sie das Standardfensterlayout in Visual Studio verwenden. Wenn Sie das Standardlayout ändern, können Sie es im Menü **Fenster** mit dem Befehl **Fensterlayout zurücksetzen** wiederherstellen.
 
-##  Schritt 1: Erstellen eines neuen Projekts in Visual Studio
 
+## Wenn Sie sich lieber ein Video ansehen möchten...
+
+<iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Writing-Your-First-Windows-10-App/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
+
+Falls Sie einen visuellen Ansatz statt eine Schritt-für-Schritt-Anleitung wünschen, wird in diesem Video dasselbe Material behandelt, jedoch mit einem schönen Soundtrack.
+
+## Schritt 1: Erstellen eines neuen Projekts in Visual Studio
 
 1.  Starten Sie Visual Studio 2015.
 
-   Der Visual Studio 2015-Startbildschirm wird angezeigt. (Hinweis: Im weiteren Verlauf wird Visual Studio 2015 kurz als Visual Studio bezeichnet.)
+2.  Wählen Sie im Menü **Datei** die Befehle **Neu > Projekt...** aus, um das Dialogfeld *Neues Projekt* anzuzeigen.
 
-2.  Klicken Sie im Menü **Datei** auf **Neu** > **Projekt**.
+3.  Öffnen Sie in der Liste der Vorlagen auf der linken Seite **Installiert > Vorlagen > Visual C# > Windows**, und wählen Sie dann **Universell** aus, um eine Liste der UWP-Projektvorlagen anzuzeigen.
 
-   Das Dialogfeld **Neues Projekt** wird geöffnet. Im linken Bereich des Dialogfelds können Sie die Art der anzuzeigenden Vorlagen auswählen.
+    (Wenn keine universellen Vorlagen angezeigt wird, verfügen Sie möglicherweise nicht über Visual Studio 2015, oder die Komponenten zum Erstellen von UWP-Apps fehlen. Informationen zum Reparieren der Tools finden Sie unter [Vorbereiten](get-set-up.md).)
 
-3.  Erweitern Sie im linken Bereich die Option **Installiert > Vorlagen > Visual C# > Windows**, und wählen Sie anschließend die Vorlagengruppe **Universal**. Im mittleren Bereich des Dialogfelds sehen Sie eine Liste mit Projektvorlagen für Apps der universellen Windows-Plattform (UWP).
+4.  Wählen Sie die Vorlage **Leere App (universelle Windows-App)** aus, und geben Sie „HelloWorld“ als **Name** ein. Wählen Sie **OK** aus.
 
-   ![Das Fenster „Neues Projekt“ ](images/newproject-cs.png)
-   
-   (Sollten diese Optionen nicht angezeigt werden, vergewissern Sie sich, dass die Entwicklungstools für universelle Windows-Apps installiert sind. Weitere Informationen finden Sie unter [Vorbereiten](get-set-up.md).)
+    ![Das Fenster für ein neues Projekt](images/win10-cs-01.png)
 
-4.  Wählen Sie im mittleren Bereich die Projektvorlage **Leere App (universelle Windows-App)** aus.
+5.  Das Dialogfeld für die Zielversion/mindestens erforderliche Version wird angezeigt. Die Standardeinstellungen sind in Ordnung, wählen Sie daher **OK** aus, um das Projekt zu erstellen.
 
-   Die Vorlage **Leere App** stellt eine minimale UWP-App bereit, die kompiliert und ausgeführt wird, aber keine Steuerelemente oder Daten für die Benutzeroberfläche enthält. Die App wird später in diesem Lernprogramm noch mit Steuerelementen versehen.
+    ![Das Fenster „Projektmappen-Explorer“](images/win10-cs-02.png)
 
-5.  Geben Sie im Textfeld **Name** den Namen „HelloWorld“ ein.
-6.  Klicken Sie auf **OK**, um das Projekt zu erstellen.
+6.  Wenn das neue Projekt geöffnet wird, werden die Dateien im Bereich **Projektmappen-Explorer** auf der rechten Seite angezeigt. Möglicherweise müssen Sie die Registerkarte **Projektmappen-Explorer** anstelle der Registerkarte **Eigenschaften** auswählen, um die Dateien anzuzeigen.
 
-   Visual Studio erstellt Ihr Projekt und zeigt es im **Projektmappen-Explorer**an.
+    ![Das Fenster „Projektmappen-Explorer“](images/win10-cs-03.png)
 
-   ![Visual Studio-Projektmappen-Explorer für das „HelloWorld“-Projekt](images/solutionexplorer-cs.png)
-
-**Leere App** ist zwar nur eine Minimalvorlage, umfasst aber trotzdem eine Reihe von Dateien:
-
--   Eine Manifestdatei (Package.appxmanifest), die Ihre App beschreibt (Name, Beschreibung, Kachel, Startseite, Begrüßungsbildschirm usw.) und die in der App enthaltenen Dateien aufführt
--   Einen Satz mit Logobildern („Assets/Square150x150Logo.scale-200.png“, „Assets/Square44x44Logo.scale-200.png“ und „Assets/Wide310x150Logo.scale-200.png“), die im Startmenü angezeigt werden
--   Ein Bild der App für den Windows Store (Assets/StoreLogo.png)
--   Einen Begrüßungsbildschirm (Assets/SplashScreen.scale-200.png), der beim Start der App angezeigt wird
--   XAML- und Codedateien für die App („App.xaml“ und „App.Xaml.cs“)
--   Eine Startseite (MainPage.xaml) und eine entsprechende Codedatei (MainPage.xaml.cs), die beim Start der App ausgeführt werden
-
-Diese Dateien werden für alle UWP-Apps mit C# benötigt. Sie sind Teil jedes Projekts, das Sie mit Visual Studio erstellen.
-
-## Schritt2: Anpassen der Startseite
+**Leere App (universelle Windows-App)** ist zwar nur eine Minimalvorlage, umfasst aber trotzdem eine Reihe von Dateien. Diese Dateien werden für alle UWP-Apps mit C# benötigt. Sie sind Teil jedes Projekts, das Sie mit Visual Studio erstellen.
 
 
 ### Inhalt der Dateien
 
-Doppelklicken Sie zum Anzeigen und Bearbeiten einer Datei im Projekt im **Projektmappen-Explorer** auf die gewünschte Datei. Um die zugeordnete Codedatei anzuzeigen, können Sie eine XAML-Datei standardmäßig genauso wie einen Ordner erweitern. XAML-Dateien werden in einer geteilten Ansicht geöffnet, die sowohl die Entwurfsoberfläche als auch den XAML-Editor enthält.
+Doppelklicken Sie zum Anzeigen und Bearbeiten einer Datei im Projekt im **Projektmappen-Explorer** auf die gewünschte Datei. Erweitern Sie eine XAML-Datei genau wie einen Ordner, um die zugeordnete Codedatei anzuzeigen. XAML-Dateien werden in einer geteilten Ansicht geöffnet, die sowohl die Entwurfsoberfläche als auch den XAML-Editor enthält.
+> [!NOTE]
+> Was ist XAML? Extensible Application Markup Language (XAML) ist die Sprache, die zum Definieren der Benutzeroberfläche Ihrer App verwendet wird. Sie kann manuell eingegeben oder mit den Visual Studio-Entwicklungstools erstellt wurden. Eine XAML-Datei verfügt über eine CodeBehind-Datei („.xaml.cs“), die die Logik enthält. Zusammen bilden XAML und CodeBehind eine vollständige Klasse. Weitere Informationen finden Sie in der [XAML-Übersicht](https://msdn.microsoft.com/library/windows/apps/Mt185595).
 
-In diesem Lernprogramm verwenden Sie lediglich einige der zuvor aufgeführten Dateien: „App.xaml“, „MainPage.xaml“ und „MainPage.xaml.cs“.
+*„App.xaml“ und „App.xaml.cs“*
 
-### „App.xaml“ und „App.xaml.cs“
+-   In „App.xaml“ deklarieren Sie Ressourcen, die in der gesamten App zur Anwendung kommen.
+-   „App.xaml.cs“ ist die CodeBehind-Datei für „App.xaml“. Sie enthält wie alle CodeBehind-Seiten einen Konstruktor, der die `InitializeComponent`-Methode aufruft. Die `InitializeComponent`-Methode wird nicht von Ihnen geschrieben. Sie wird von Visual Studio generiert und dient in erster Linie dazu, die in der XAML-Datei deklarierten Elemente zu initialisieren.
+-   „App.xaml.cs“ ist der Einstiegspunkt für Ihre App.
+-   „App.xaml.cs“ enthält außerdem Methoden zum Behandeln der Aktivierung und Unterbrechung der App.
 
-In „App.xaml“ deklarieren Sie Ressourcen, die in der gesamten App zur Anwendung kommen. „App.xaml.cs“ ist die CodeBehind-Datei für „App.xaml“. CodeBehind ist der Code, der mit der partiellen Klassen der XAML-Seite verknüpft wird. Zusammen bilden XAML und CodeBehind eine vollständige Klasse. „App.xaml.cs“ ist der Einstiegspunkt für Ihre App. Sie enthält wie alle CodeBehind-Seiten einen Konstruktor, der die `InitializeComponent`-Methode aufruft. Die `InitializeComponent`-Methode wird nicht von Ihnen geschrieben. Sie wird von Visual Studio generiert und dient in erster Linie dazu, die in der XAML-Datei deklarierten Elemente zu initialisieren. „App.xaml.cs“ enthält außerdem Methoden zum Behandeln der Aktivierung und Unterbrechung der App.
+*MainPage.xaml*
 
-### MainPage.xaml
+-   In „MainPage.xaml“ definieren Sie die Benutzeroberfläche für Ihre App. Sie können Elemente direkt per XAML-Markup hinzufügen oder die Designtools von Visual Studio verwenden.
+-   „MainPage.xaml.cs“ ist die CodeBehind-Seite für „MainPage.xaml“. Hier fügen Sie Ihre App-Logik und Ereignishandler hinzu.
+-   Zusammen definieren diese beiden Dateien im `HelloWorld`-Namespace eine neue Klasse mit dem Namen `MainPage`, die von [**Page**](https://msdn.microsoft.com/library/windows/apps/BR227503) erbt.
 
-In der Datei „MainPage.xaml“ definieren Sie die Benutzeroberfläche für Ihre App. Sie können Elemente direkt per XAML-Markup hinzufügen oder die Designtools von Visual Studio verwenden. „MainPage.xaml.cs“ ist die CodeBehind-Seite für „MainPage.xaml“. Hier fügen Sie Ihre App-Logik und Ereignishandler hinzu.
+*Package.appxmanifest*
+-   Eine Manifestdatei, die Ihre App beschreibt (Name, Beschreibung, Kachel, Startseite usw.)
+-   Umfasst eine Liste der Dateien, die Ihre App enthält.
 
-Zusammen definieren diese beiden Dateien im `HelloWorld`-Namespace eine neue Klasse mit dem Namen `MainPage`, die von [**Page**](https://msdn.microsoft.com/library/windows/apps/BR227503) erbt.
+*Ein Satz mit Logobildern*
+-   „Assets/Square150x150Logo.scale-200.png“ stellt Ihre App im Startmenü dar.
+-   „Assets/StoreLogo.png“ stellt Ihre App im Windows Store dar.
+-   „Assets/SplashScreen.scale-200.png“ ist der Begrüßungsbildschirm, der beim Start der App angezeigt wird.
 
-MainPage.xaml
+## Schritt 2: Hinzufügen von Schaltflächen
 
-```xml
-    <Page
-    x:Class="HelloWorld.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:HelloWorld"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+### Mithilfe der Entwurfsansicht
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+Fügen wir nun der Seite eine Schaltfläche hinzu. In diesem Lernprogramm verwenden Sie lediglich einige der zuvor aufgeführten Dateien: „App.xaml“, „MainPage.xaml“ und „MainPage.xaml.cs“.
 
-    </Grid>
-</Page>
+1.  Doppelklicken Sie auf die Datei **MainPage.xaml**, um sie in der Entwurfsansicht zu öffnen.
+
+    Sie werden feststellen, dass eine grafische Ansicht im oberen Teil des Bildschirms und die XAML-Codeansicht darunter vorhanden ist. Sie können jeweils Änderungen vornehmen, wir verwenden jetzt jedoch die grafische Ansicht.
+
+    ![Das Fenster „Projektmappen-Explorer“](images/win10-cs-04.png)
+
+2.  Klicken Sie auf die vertikale Registerkarte **Toolbox** auf der linken Seite, um die Liste der UI-Steuerelemente zu öffnen. (Sie können auf das Reißzweckensymbol in der Titelleiste klicken, damit sie sichtbar bleibt.)
+
+    ![Das Fenster „Projektmappen-Explorer“](images/win10-cs-05.png)
+
+3.  Erweitern Sie **Häufig verwendete XAML-Steuerelemente**, und ziehen Sie die **Schaltfläche** in die Mitte der Design-Canvas.
+
+    ![Das Fenster „Projektmappen-Explorer“](images/win10-cs-06.png)
+
+    Wenn Sie das Fenster mit dem XAML-Code betrachten, sehen Sie, dass die Schaltfläche auch dort hinzugefügt wurde:
+
+    ```XAML
+<Button x:name="button" Content="Button" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
 ```
 
-MainPage.xaml.cs
+4.  Ändern Sie den Text der Schaltfläche.
 
-```csharp
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+    Klicken Sie in der XAML-Codeansicht, und ändern Sie den Inhalt von „Schaltfläche“ in „Hello, World!“.
 
-namespace HelloWorld
-{
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class MainPage : Page
-    {
-        public MainPage()
-        {
-            this.InitializeComponent();
-        }
-    }
-}
+    ```XAML
+<Button x:name="button" Content="Hello, world!" HorizontalAlignment="Left" Margin = "152,293,0,0" VerticalAlignment="Top"/>
 ```
 
-### Anpassen der Startseite
+    Beachten Sie, wie die in der Design-Canvas angezeigte Schaltfläche aktualisiert wird, um den neuen Text anzuzeigen.
 
-Lassen Sie uns nun der App einige Inhalte hinzufügen.
-
-**So passen Sie die Startseite an**
-
-1.  Doppelklicken Sie im **Projektmappen-Explorer** auf die Datei „MainPage.xaml“, um sie zu öffnen.
-2.  Fügen Sie im XAML-Editor die Steuerelemente für die UI hinzu.
-
-   Fügen Sie den folgenden XAML-Code im [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)-Stammelement hinzu. Darin sind ein [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635)-Element mit [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652) als Titel, ein **TextBlock**-Element, das den Namen des Benutzers anfordert, ein [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Element zum Akzeptieren des Benutzernamens, ein [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)-Element sowie ein weiteres **TextBlock**-Element zum Anzeigen einer Begrüßung enthalten. Einige dieser Steuerelemente haben Namen, damit Sie später im Code darauf verweisen können.
-
-```xml    
-    <StackPanel x:Name="contentPanel" Margin="8,32,0,0">
-        <TextBlock Text="Hello, world!" Margin="0,0,0,40"/>
-        <TextBlock Text="What' s your name?"/>
-        <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
-            <TextBox x:Name="nameInput" Width="280" HorizontalAlignment="Left"/>
-            <Button x:Name="inputButton" Content="Say &quot;Hello&quot;"/>
-        </StackPanel>
-        <TextBlock x:Name="greetingOutput"/>
-    </StackPanel>
-```    
-
-    The controls that you added in the XAML editor show up in the design view.
+    ![Das Fenster „Projektmappen-Explorer“](images/win10-cs-07.png)
 
 ## Schritt3: Starten der App
 
 
-Sie haben nun eine sehr einfache App erstellt. Dies ist eine guter Zeitpunkt zum Erstellen, Bereitstellen und Starten Ihrer App, um sie in Aktion zu sehen. Sie können Ihre App auf dem lokalen Computer, in einem Simulator oder Emulator oder auf einem Remotegerät debuggen. Dies ist das Zielgerätmenü in Visual Studio.
+Sie haben nun eine sehr einfache App erstellt. Dies ist ein guter Zeitpunkt zum Erstellen, Bereitstellen und Starten Ihrer App, um sie in Aktion zu sehen. Sie können Ihre App auf dem lokalen Computer, in einem Simulator oder Emulator oder auf einem Remotegerät debuggen. Dies ist das Zielgerätmenü in Visual Studio.
 
 ![Dropdownliste mit Zielgeräten zum Debuggen Ihrer App](images/uap-debug.png)
 
@@ -186,15 +157,15 @@ Die App wird in einem Fenster geöffnet, und zuerst wird ein standardmäßiger B
 
 Nach dem Ausblenden des Begrüßungsbildschirms wird Ihre App angezeigt. Sie sieht ungefähr wie folgt aus:
 
-![Erster App-Bildschirm](images/helloworld-1-cs.png)
+![Erster App-Bildschirm](images/win10-cs-08.png)
 
-Drücken Sie die WINDOWS-TASTE, um das Menü **Start** zu öffnen, und zeigen Sie alle Apps an. Beachten Sie, dass beim lokalen Bereitstellen der App dem Menü **Start** die dazugehörige Kachel hinzugefügt wird. Wenn Sie die App erneut ausführen möchten (nicht im Debugmodus), tippen oder klicken Sie im Menü **Start** auf die Kachel.
+Drücken Sie die WINDOWS-TASTE, um das Menü **Start** zu öffnen, und zeigen Sie alle Apps an. Beachten Sie, dass beim lokalen Bereitstellen der App dem Menü **Start** die dazugehörige Kachel hinzugefügt wird. Wenn Sie die App später erneut ausführen möchten (nicht im Debugmodus), tippen oder klicken Sie im Menü **Start** auf die Kachel.
 
 Viel zu bieten hat die App zwar noch nicht, aber trotzdem: Herzlichen Glückwunsch! Sie haben Ihre erste UWP-App erstellt!
 
 **So beenden Sie das Debuggen**
 
--   Klicken Sie auf der Symbolleiste auf die Schaltfläche **Debuggen beenden** (![Schaltfläche „Debuggen beenden“](images/stopdebug.png)).
+   Klicken Sie auf der Symbolleiste auf die Schaltfläche **Debuggen beenden** (![Schaltfläche „Debuggen beenden“](images/stopdebug.png)).
 
    oder
 
@@ -215,13 +186,13 @@ Zusätzlich zu den Optionen zum Debuggen auf einem Desktopgerät enthält Visual
 -   **Emulator <SDK version> WVGA 4Zoll 1GB**
 -   usw. (verschiedene Emulatoren mit anderen Konfigurationen)
 
-(Sollten diese Emulatoren nicht angezeigt werden, vergewissern Sie sich, dass die Entwicklungstools für universelle Windows-Apps installiert sind. Weitere Informationen finden Sie unter [Vorbereiten](get-set-up.md).)
+(Werden die Emulatoren nicht angezeigt? Unter [Vorbereiten](get-set-up.md) finden Sie Informationen dazu, wie Sie sicherstellen, dass die Entwicklungstools für universelle Windows-Apps installiert sind.)
 
-Es empfiehlt sich, Ihre App auf einem Gerät mit kleinem Bildschirm und begrenztem Arbeitsspeicher zu testen. Wählen Sie also die Option **Emulator 10.0.10240.0 WVGA 4Zoll 512MB** aus
 **So beginnen Sie mit dem Debuggen in einem Emulator für mobile Geräte**
 
-1.  Wählen Sie auf der **Standardsymbolleiste** im Menü mit den Zielgeräten (![Menü „Debuggen starten“](images/startdebug-full.png)) die Option **Emulator 10.0.10240.0 WVGA 4 inch 512MB**.
-2.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Debuggen starten** (![Schaltfläche „Debuggen starten“](images/startdebug-sm.png)).
+1.  Es empfiehlt sich, Ihre App auf einem Gerät mit kleinem Bildschirm und begrenztem Arbeitsspeicher zu testen. Wählen Sie daher im Menü (![Debuggen starten](images/startdebug-full.png)) des Zielgeräts in der Symbolleiste **Standard** die Option **Emulator 10.0.14393.0 WVGA 4 inch 512MB**.
+
+2.  Klicken Sie in der Symbolleiste auf die Schaltfläche **Debuggen starten** (![Schaltfläche „Debuggen starten“](images/startdebug-sm.png)).
 
    oder
 
@@ -231,103 +202,61 @@ Es empfiehlt sich, Ihre App auf einem Gerät mit kleinem Bildschirm und begrenzt
 
    Drücken Sie F5.
 
-Visual Studio startet den ausgewählten Emulator und stellt die App bereit und startet sie. Im Emulator für mobile Geräte sieht die App wie folgt aus.
+Visual Studio startet den ausgewählten Emulator, stellt dann die App bereit und startet sie. Beim ersten Start dauert dies möglicherweise etwas Zeit. Im Emulator für mobile Geräte sieht die App wie folgt aus.
 
-![Erster App-Bildschirm auf dem mobilen Gerät](images/helloworld-1-cs-phone.png)
+![Erster App-Bildschirm auf dem mobilen Gerät](images/win10-cs-09.png)
 
-Als Erstes Ihnen auffallen, dass die Schaltfläche vom kleineren Bildschirms eines mobilen Geräts geschoben wird. Später in diesem Lernprogramm erfahren Sie, wie Sie die UI an unterschiedliche Bildschirmgrößen anpassen, damit die App immer gut aussieht.
-
-Sie merken vielleicht auch, dass Sie Text im [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Element eingeben können. Wenn Sie jetzt jedoch auf [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265) klicken oder tippen, passiert noch nichts. In den nächsten Schritten erstellen Sie einen Ereignishandler für das [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737)-Ereignis der Schaltfläche, um eine personalisierte Begrüßung einzublenden. Sie fügen den Code für den Ereignishandler der Datei „MainPage.xaml.cs“ hinzu.
-
-## Schritt4: Erstellen eines Ereignishandlers
+Wenn Sie über ein Windows Phone mit Windows10 verfügen, können Sie es auch mit dem Computer verbinden, die App bereitstellen und direkt darauf ausführen (zuerst müssen Sie jedoch den [Entwicklermodus aktivieren](enable-your-device-for-development.md)).
 
 
-XAML-Elemente können Meldungen senden, wenn bestimmte Ereignisse eintreten. Dank dieser Ereignismeldungen können Sie mit einer Aktion auf das Ereignis reagieren. Sie fügen Ihren Code zum Reagieren auf das Ereignis in eine Ereignishandlermethode ein. Eines der am häufigsten auftretenden Ereignisse in vielen Apps ist das Klicken eines Benutzers auf ein [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)-Element.
+## Schritt3: Ereignishandler
 
-Wir definieren nun einen Ereignishandler für das [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737)-Ereignis Ihrer Schaltfläche. Der Ereignishandler ruft den Namen des Benutzers aus dem [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Steuerelement `nameInput` ab und gibt unter Verwendung dieser Informationen eine Begrüßung an das [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)-Element `greetingOutput` aus.
+„Ereignishandler“ klingt kompliziert, dies ist jedoch nur ein anderer Namen für den Code, der aufgerufen wird, wenn ein Ereignis auftritt (z.B. wenn der Benutzer auf die Schaltfläche klickt).
 
-### Verwenden von Ereignissen für Touch-, Maus- und Stifteingaben
+1.  Beenden Sie die Ausführung der App, sofern nicht bereits geschehen.
 
-Welche Ereignisse sollten behandelt werden? Windows Store-Apps können auf unterschiedlichsten Geräten ausgeführt werden. Berücksichtigen Sie bei der App-Gestaltung also auch die Nutzung der Toucheingabe. Ihre App muss zudem mit Maus- und Stifteingaben zurechtkommen. Praktischerweise sind Ereignisse wie [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737) und [**DoubleTapped**](https://msdn.microsoft.com/library/windows/apps/BR208922) aber geräteunabhängig. Wenn Sie mit der Programmierung für Microsoft .NET vertraut sind, sind Ihnen möglicherweise separate Ereignisse für Maus-, Touch- und Stifteingaben (wie **MouseMove**, **TouchMove** und **StylusMove**) geläufig. Bei WindowsStore-Apps werden diese separaten Ereignisse durch ein einzelnes [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/BR208970)-Ereignis ersetzt, das gleichzeitig für Touch-, Maus- und Stifteingaben verwendet werden kann.
+2.  Doppelklicken Sie auf das Schaltflächen-Steuerelement auf die Design-Canvas, damit Visual Studio einen Ereignishandler für die Schaltfläche erstellt.
 
-**So fügen Sie einen Ereignishandler hinzu**
+  Natürlich können Sie den gesamten Code auch manuell erstellen. Oder Sie klicken zum Auswählen auf die Schaltfläche und suchen im Bereich **Eigenschaften** unten rechts. Wenn Sie zu **Ereignisse** (kleiner Gewitterblitz) wechseln, können Sie den Namen des Ereignishandlers hinzufügen.
 
-1.  Wählen Sie in der XAML- oder Designansicht das [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)-Element „Say Hello“ aus, das Sie „MainPage.xaml“ hinzugefügt haben.
-2.  Klicken Sie im **Eigenschaftenfenster** auf die Ereignisschaltfläche (![Ereignisschaltfläche](images/eventsbutton.png)).
-3.  Suchen Sie am Anfang der Ereignisliste nach dem [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737)-Ereignis. Geben Sie im Textfeld für das Ereignis den Namen der Funktion ein, die das **Click**-Ereignis behandelt. Geben Sie für dieses Beispiel „Button\_Click“ ein.
+3.  Bearbeiten Sie den Ereignishandlercode in *MainPage.xaml.cs*, der CodeBehind-Seite. An dieser Stelle wird die Sache interessant. Der Standard-Ereignishandler sieht wie folgt aus:
 
-   ![Ereignisliste im Eigenschaftenfenster](images/xaml-hw-event.png)
+```C#
+private void button_Click(object sender, RouteEventArgs e)
+{
 
-4.  Drücken Sie die EINGABETASTE. Die Ereignishandlermethode wird erstellt und im Code-Editor geöffnet, damit Sie den Code hinzufügen können, der beim Auftreten des Ereignisses ausgeführt werden soll.
+}
+```
 
-    Im XAML-Editor wird der XAML-Code für das [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)-Element aktualisiert, sodass der [**Click**](https://msdn.microsoft.com/library/windows/apps/BR227737)-Ereignishandler wie folgt deklariert wird:
+  Wir ändern ihn, damit er wie folgt aussieht:
 
-```xml   
-   <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
-```    
+```C#
+private async void button_Click(object sender, RoutedEventArgs e)
+        {
+            MediaElement mediaElement = new MediaElement();
+            var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
+            Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync("Hello, World!");
+            mediaElement.SetSource(stream, stream.ContentType);
+            mediaElement.Play();
+        }
+```
 
-5.  Fügen Sie dem Ereignishandler, den Sie auf der CodeBehind-Seite erstellt haben, Code hinzu. Rufen Sie im Ereignishandler den Namen des Benutzers aus dem [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Steuerelement `nameInput` ab, und erstellen Sie damit eine Begrüßung. Verwenden Sie das [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)-Element `greetingOutput` zum Anzeigen des Ergebnisses.
-    
-```csharp    
-    private void Button_Click(object sender, RoutedEventArgs e)
-    {
-        greetingOutput.Text = "Hello, " + nameInput.Text + "!";
-    }
-```    
+Geben Sie unbedingt auch das **async**-Schlüsselwort an, oder Sie erhalten beim Versuch, die App auszuführen, einen Fehler.
 
-6.  Debuggen Sie die App auf dem lokalen Computer. Wenn Sie Ihren Namen in das Textfeld eingeben und anschließend auf die Schaltfläche klicken, zeigt die App eine personalisierte Begrüßung an.
+### Was haben wir gerade gemacht?
 
-## Schritt5: Anpassen der UI an verschiedene Fenstergrößen
+Dieser Code verwendet Windows-APIs zum Erstellen eines Sprachsyntheseobjekts und gibt dann zu sprechenden Text an. (Weitere Informationen zur Verwendung von SpeechSynthesis finden Sie in den Dokumenten zum [SpeechSynthesis-Namespace](https://msdn.microsoft.com/library/windows/apps/windows.media.speechsynthesis.aspx).)
 
+Wenn Sie die App ausführen und auf die Schaltfläche klicken, sagt Ihr Computer (oder das Handy) wörtlich „Hello, World!“.
 
-Als Nächstes sorgen wir dafür, dass sich die UI verschiedenen Bildschirmgrößen anpasst, damit sie auch auf mobilen Geräten gut aussieht. Dazu fügen Sie ein [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)-Element hinzu und legen Eigenschaften fest, die für die unterschiedlichen Ansichtszustände angewendet werden.
-
-**So passen Sie das UI-Layout an**
-
-1.  Fügen Sie im XAML-Editor nach dem Starttag des [**Grid**](https://msdn.microsoft.com/library/windows/apps/BR242704)-Stammelements den folgenden XAML-Block hinzu:
-
-```xml    
-    <VisualStateManager.VisualStateGroups>
-        <VisualStateGroup>
-            <VisualState x:Name="wideState">
-                <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowWidth="641" />
-                </VisualState.StateTriggers>
-            </VisualState>
-            <VisualState x:Name="narrowState">
-                <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowWidth="0" />
-                </VisualState.StateTriggers>
-                <VisualState.Setters>
-                    <Setter Target="inputPanel.Orientation" Value="Vertical"/>
-                    <Setter Target="inputButton.Margin" Value="0,4,0,0"/>
-                </VisualState.Setters>
-            </VisualState>
-        </VisualStateGroup>
-    </VisualStateManager.VisualStateGroups>
-```    
-
-2.  Debuggen Sie die App auf dem lokalen Computer. Sie sehen, dass die UI genauso wie vorher aussieht, es sei denn, die Fensterbreite sinkt unter 641Pixel.
-3.  Debuggen Sie die App auf dem Emulator für mobile Geräte. Beachten Sie, dass für die UI die Eigenschaften verwendet werden, die Sie unter `narrowState` definiert haben, und dass die Benutzeroberfläche auf dem kleinen Bildschirm korrekt angezeigt wird.
-
-![Bildschirm der mobilen App](images/helloworld-2-cs-phone.png)
-
-Wenn Sie bereits in früheren Versionen von XAML ein [**VisualStateManager**](https://msdn.microsoft.com/library/windows/apps/BR209021)-Element genutzt haben, fällt Ihnen vielleicht auf, dass für den XAML-Code hier eine vereinfachte Syntax verwendet wird.
-
-Das [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)-Element mit dem Namen `wideState` verfügt über ein [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)-Element, für das die [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth)-Eigenschaft auf den Wert641 festgelegt ist. Dies bedeutet, dass der Zustand nur angewendet wird, wenn die Fensterbreite nicht kleiner als die Mindestgröße von 641Pixeln ist. Da Sie keine [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817)-Objekte für diesen Zustand definieren, werden die Layouteigenschaften verwendet, die Sie im XAML-Code für den Seiteninhalt festgelegt haben.
-
-Das zweite [**VisualState**](https://msdn.microsoft.com/library/windows/apps/BR209007)-Element `narrowState` verfügt über ein [**AdaptiveTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn890382)-Element, für das die [**MinWindowWidth**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.adaptivetrigger.minwindowwidth)-Eigenschaft auf0 festgelegt ist. Dieser Zustand wird angewendet, wenn die Fensterbreite größer als 0 und kleiner als 641Pixel ist. (Bei 641Pixeln wird `wideState` angewendet.) In diesem Zustand definieren Sie einige [**Setter**](https://msdn.microsoft.com/library/windows/apps/BR208817)-Objekte, um die Layouteigenschaften der Steuerelemente in der UI zu ändern:
-
--   Ändern Sie das [**Orientation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.orientation)-Element des `inputPanel`-Elements von **Horizontal** in **Vertical**.
--   Sie fügen dem `inputButton`-Element einen oberen Rand mit einer Breite von 4DIP hinzu.
 
 ## Zusammenfassung
 
 
-Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows 10 und die UWP erstellt!
+Herzlichen Glückwunsch, Sie haben Ihre erste App für Windows10 und die UWP erstellt!
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO1-->
 
 

@@ -3,16 +3,16 @@ author: jnHs
 Description: "Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Ihre In-App-Produkte (IAPs) und Ihren Microsoft Advertising-Verdienst bezahlt werden"
 title: Bezahlung
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: b7c9bcf36aaee0344c6916fcc81aca189ef0f481
+translationtype: Human Translation
+ms.sourcegitcommit: eaf2c2d7032d7df1184a988afce7dbd4f28d3622
+ms.openlocfilehash: 76bce0070da266cc2bc53cda785136a372e2f3bc
 
 ---
 
 # Bezahlung
-Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Ihre In-App-Produkte (IAPs) und Ihren Microsoft Advertising-Verdienst bezahlt werden
+Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Add-Ons und Ihren Microsoft Advertising-Verdienst bezahlt werden.
 
-> 
-            **Wichtig**  Bevor Sie Geld aus App-Verkäufen im WindowsStore erhalten können, müssen Sie [Ihr Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen](setting-up-your-payout-account-and-tax-forms.md).
+> **Wichtig**  Bevor Sie Geld aus App-Verkäufen im WindowsStore erhalten können, müssen Sie [Ihr Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen](setting-up-your-payout-account-and-tax-forms.md).
 
 ## Store-Gebühr
 
@@ -20,14 +20,13 @@ Wenn Sie sich [für ein Entwicklerkonto registrieren](http://go.microsoft.com/fw
 
 In den meisten Fällen beträgt die Store-Gebühr 30%. Die Gebühren sind in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) offiziell definiert. Lesen Sie bei Fragen immer in diesem Dokument nach.
 
-Die WindowsStore-Gebühr gilt für alle vom WindowsStore erfassten App-Verkäufe einschließlich IAPs.
+Die WindowsStore-Gebühr gilt für alle vom WindowsStore erfassten App-Verkäufe einschließlich Add-Ons.
 
 ## Preisniveaus
 
 Das Preisniveau bestimmt den Verkaufspreis in allen Ländern, in denen Sie Ihre App vertreiben möchten. Sie können die App kostenlos anbieten oder einen Preis auswählen, den Kunden zahlen müssen, um die App zu erwerben. Das Preisniveau beginnt bei 0,99USD und steigen schrittweise (1,29USD, 1,49USD, 1,99USD usw.). Die Schritte zwischen den Preisniveaus werden mit der Höhe des Preises größer.
 
-> 
-            **Hinweis**  Diese Preisniveaus gelten auch für alle IAPs, die Sie in der App anbieten.
+> **Hinweis**  Diese Preisniveaus gelten auch für alle Add-Ons, die Sie in der App anbieten.
 
 Jedes Preisniveau hat einen entsprechenden Wert in jeder der über 60vom Store angebotenen Währungen. Diese Werte sollten Ihnen helfen, Ihre Apps weltweit zu vergleichbaren Preisen zu verkaufen. Aufgrund von Wechselkursschwankungen kann der genaue Verkaufsbetrag von Währung zu Währung jedoch geringfügig abweichen.
 
@@ -39,7 +38,7 @@ Sie haben Zugriff auf ausführliche Auszahlungsinformationen und können die Ber
 
 ## Auszahlungszeitraum
 
-Zahlungen erfolgen monatlich (vorausgesetzt, der entsprechende Zahlungsschwellenwert wurde erreicht, und Sie haben die Auszahlung nicht gesperrt, wie unten beschrieben). In der Regel senden wir Zahlungen, die in einem bestimmten Monat fällig sind, bis zum 15. Tag dieses Monats. Beachten Sie, dass es in der Regel zwischen 3 und 10 zusätzliche Werktage dauern kann, bis die Zahlungen auf Ihrem Konto eingehen.
+Zahlungen erfolgen monatlich (vorausgesetzt, der entsprechende Zahlungsschwellenwert wurde erreicht, und Sie haben die Auszahlung nicht gesperrt, wie unten beschrieben). In der Regel senden wir Zahlungen, die in einem bestimmten Monat fällig sind, bis zum 15. Tag dieses Monats. Beachten Sie, dass Zahlungen in der Regel zwischen drei und zehn zusätzliche Werktage benötigen, um Ihr Konto zu erreichen. Weitere Informationen finden Sie unter [Auszahlungsschwellenwerte, Methoden und Zeiträume](payment-thresholds-methods-and-timeframes.md).
 
 ##  Auszahlungssperre
 
@@ -49,8 +48,7 @@ Um Ihre Zahlungen zu sperren, wechseln Sie zu **Kontoeinstellungen**. Setzen Sie
 
 Nachdem Sie die Auszahlungssperre auf **Ein** festgelegt haben, werden alle Auszahlungen gesperrt, bis Sie den Schieberegler wieder auf **Aus** setzen. Dann werden Sie im nächsten monatlichen Auszahlungszyklus berücksichtigt (vorausgesetzt, der entsprechende Zahlungsschwellenwert wurde erreicht). Wenn Sie zum Beispiel Ihre Auszahlungen gesperrt haben, aber eine Auszahlung im Juni generieren möchten, sollten Sie die Auszahlungssperre noch vor Ende Mai auf **Aus** setzen.
 
-> 
-            **Wichtig** Die festgelegte Option für **Payout hold status** gilt für **alle** Umsatzquellen, die über Windows Dev Center (Windows Store, Microsoft Advertising, Azure Marketplace usw.) bezahlt werden. Es ist nicht möglich, für jede Umsatzquelle eine separate Option für die Auszahlungssperre festzulegen.
+> **Wichtig** Die festgelegte Option für **Auszahlungssperre** gilt für **alle** Umsatzquellen, die über Windows Dev Center (Windows Store, Microsoft Advertising, Azure Marketplace usw.) bezahlt werden. Es ist nicht möglich, für jede Umsatzquelle eine separate Option für die Auszahlungssperre festzulegen.
 
 
  
@@ -63,6 +61,6 @@ Nachdem Sie die Auszahlungssperre auf **Ein** festgelegt haben, werden alle Ausz
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

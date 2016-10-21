@@ -3,14 +3,15 @@ author: Xansky
 description: "Mit dem Windows.ApplicationModel.Appointments-Namespace können Sie in der Kalender-App eines Benutzers Termine erstellen und verwalten."
 title: Verwalten von Terminen
 ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
+translationtype: Human Translation
 ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 020b020d90a52d45fa989e0f630320b4630b955e
+ms.openlocfilehash: ae7fe9075a4c49c99a572087bf4b7b176555caef
 
 ---
 
 # Verwalten von Terminen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Mit dem [**Windows.ApplicationModel.Appointments**](https://msdn.microsoft.com/library/windows/apps/Dn263359)-Namespace können Sie in der Kalender-App eines Benutzers Termine erstellen und verwalten. Hier erfahren Sie, wie Sie einen Termin erstellen, einer Kalender-App hinzufügen, in der Kalender-App ersetzen und aus der Kalender-App entfernen. Außerdem wird erläutert, wie Sie eine Zeitspanne für eine Kalender-App anzeigen und ein Terminwiederholungsobjekt erstellen.
@@ -278,7 +279,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Hinweis**  Bei Windows Phone Store-Apps funktioniert [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) insofern genau wie [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync), als das zum Hinzufügen des Termins angezeigte Dialogfeld bearbeitet werden kann.
+**Hinweis**  Bei WindowsPhone Store-Apps funktioniert [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) insofern genau wie [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync), als das zum Hinzufügen des Termins angezeigte Dialogfeld bearbeitet werden kann.
 
 ## Ersetzen eines Termins im Kalender des Benutzers
 
@@ -503,9 +504,7 @@ private void Create-Click(object sender, RoutedEventArgs e)
 
 ## Hinzufügen neuer bearbeitbarer Termine
 
-[
-              **ShowEditNewAppointmentAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) funktioniert wie [**ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync), nur dass das Dialogfeld für das Hinzufügen des Termins bearbeitbar ist, sodass der Benutzer die Termindaten vor dem Speichern ändern kann.
+[**ShowEditNewAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) funktioniert wie [**ShowAddAppointmentAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync). Das Dialogfeld für das Hinzufügen des Termins ist hier jedoch bearbeitbar, sodass der Benutzer die Termindaten vor dem Speichern ändern kann.
 
 ``` cs
 private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
@@ -540,9 +539,7 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
 
 ## Anzeigen von Termindetails
 
-[
-              **ShowAppointmentDetailsAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) dient zum Anzeigen von Details für den angegebenen Termin durch das System. Für Apps mit App-Kalendern kann das Anzeigen von Termindetails in den Kalendern aktiviert werden. Andernfalls werden vom System die Termindetails angezeigt. Eine Überladung der Methode, die ein Startdatumargument akzeptiert, wird zum Anzeigen von Details für eine Instanz einer Terminserie bereitgestellt.
+[**ShowAppointmentDetailsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) dient zum Anzeigen von Details für den angegebenen Termin durch das System. Für Apps mit App-Kalendern kann das Anzeigen von Termindetails in den Kalendern aktiviert werden. Andernfalls werden vom System die Termindetails angezeigt. Eine Überladung der Methode, die ein Startdatumargument akzeptiert, wird zum Anzeigen von Details für eine Instanz einer Terminserie bereitgestellt.
 
 ```cs
 private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e)
@@ -576,6 +573,6 @@ Sie verfügen nun über Grundkenntnisse zur Terminverwaltung. Laden Sie die [Bei
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

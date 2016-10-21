@@ -3,8 +3,9 @@ author: mcleblanc
 description: "Bei einer universellen8.1-App – ob für Windows8.1, Windows Phone8.1 oder beides – werden Sie feststellen, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows10 portieren lassen."
 title: Wechsel von Windows-Runtime 8.x zu UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3aa24e61482054dadd9b798063d46abf36623e9b
+ms.openlocfilehash: e1f0e9727a36536fe292902fa7313dcc851932f6
 
 ---
 
@@ -49,12 +50,9 @@ Die in den vorherigen Abschnitten gewählte Option bestimmt das Gerätespektrum,
 
 Beim Portieren einer universellen8.1-App zum Modell für UWP-Apps können Sie auf nahezu alle Ihre Kenntnisse und Erfahrungen sowie einen Großteil Ihres Quellcodes, Markups und Ihrer Softwaremuster zurückgreifen.
 
--   
-            **Ansicht**. Die Ansicht und das Ansichtsmodell bilden die UI Ihrer App. Im Idealfall besteht die Ansicht aus Markup, das an feststellbare Eigenschaften eines Ansichtsmodells gebunden ist. Ein weiteres gängiges, aber nur auf kurze Sicht zweckmäßiges Muster ist das direkte Ändern von UI-Elementen mit imperativem Code in einer CodeBehind-Datei. In beiden Fällen lassen sich Ihre UI-Markups und -Designs–und sogar imperativer Code zum Ändern von UI-Elementen–einfach portieren.
--   
-            **Ansichtsmodelle und Datenmodelle**. Auch wenn Sie Muster zur Trennung der Zuständigkeiten (z.B. MVVM) nicht ausdrücklich anwenden, gibt es in Ihrer App zwangsläufig Code, der die Funktion des Ansichts- und Datenmodells übernimmt. Code für das Ansichtsmodell nutzt Typen in den Namespaces des Benutzeroberflächenframeworks. Sowohl der Code für das Ansichtsmodell als auch der Code für das Datenmodell nutzen zudem nicht visuelle Betriebssystem- und .NETFramework-APIs (darunter APIs für den Datenzugriff). Und diese APIs sind [auch für UWP-Apps verfügbar](https://msdn.microsoft.com/library/windows/apps/br211369), sodass der Großteil dieses Codes, wenn nicht gar der gesamte Code, ohne Änderung portiert wird.
--   
-            **Clouddienste**. Höchstwahrscheinlich werden einige (oder sogar die meisten) Teile Ihrer App in Form von Diensten in der Cloud ausgeführt. Der auf dem Clientgerät ausgeführte Teil der App stellt eine Verbindung mit diesen Diensten her. Dies ist der Teil einer verteilten App, bei dem es am wahrscheinlichsten ist, dass er beim Portieren des Clientteils unverändert bleibt. Falls Sie noch keine Clouddienste nutzen, sind [Microsoft Azure Mobile Services](http://azure.microsoft.com/services/mobile-services/) eine gute Wahl für Ihre UWP-App. Sie bieten leistungsstarke Back-End-Komponenten, die Ihre App für verschiedenste Dienste aufrufen kann– angefangen bei einfachen Benachrichtigungen für Live-Kachelaktualisierungen bis hin zur komplexen Skalierbarkeit, die eine Serverfarm bereitstellen kann.
+-   **Ansicht**. Die Ansicht und das Ansichtsmodell bilden die UI Ihrer App. Im Idealfall besteht die Ansicht aus Markup, das an feststellbare Eigenschaften eines Ansichtsmodells gebunden ist. Ein weiteres gängiges, aber nur auf kurze Sicht zweckmäßiges Muster ist das direkte Ändern von UI-Elementen mit imperativem Code in einer CodeBehind-Datei. In beiden Fällen lassen sich Ihre UI-Markups und -Designs–und sogar imperativer Code zum Ändern von UI-Elementen–einfach portieren.
+-   **Ansichtsmodelle und Datenmodelle**. Auch wenn Sie Muster zur Trennung der Zuständigkeiten (z.B. MVVM) nicht ausdrücklich anwenden, gibt es in Ihrer App zwangsläufig Code, der die Funktion des Ansichts- und Datenmodells übernimmt. Code für das Ansichtsmodell nutzt Typen in den Namespaces des Benutzeroberflächenframeworks. Sowohl der Code für das Ansichtsmodell als auch der Code für das Datenmodell nutzen zudem nicht visuelle Betriebssystem- und .NETFramework-APIs (darunter APIs für den Datenzugriff). Und diese APIs sind [auch für UWP-Apps verfügbar](https://msdn.microsoft.com/library/windows/apps/br211369), sodass der Großteil dieses Codes, wenn nicht gar der gesamte Code, ohne Änderung portiert wird.
+-   **Clouddienste**. Höchstwahrscheinlich werden einige (oder sogar die meisten) Teile Ihrer App in Form von Diensten in der Cloud ausgeführt. Der auf dem Clientgerät ausgeführte Teil der App stellt eine Verbindung mit diesen Diensten her. Dies ist der Teil einer verteilten App, bei dem es am wahrscheinlichsten ist, dass er beim Portieren des Clientteils unverändert bleibt. Falls Sie noch keine Clouddienste nutzen, sind [Microsoft Azure Mobile Services](http://azure.microsoft.com/services/mobile-services/) eine gute Wahl für Ihre UWP-App. Sie bieten leistungsstarke Back-End-Komponenten, die Ihre App für verschiedenste Dienste aufrufen kann– angefangen bei einfachen Benachrichtigungen für Live-Kachelaktualisierungen bis hin zur komplexen Skalierbarkeit, die eine Serverfarm bereitstellen kann.
 
 Überlegen Sie vor oder während der Portierung, ob Ihre App dadurch verbessert werden könnte, wenn Sie sie umgestalten und Code mit einem ähnlichen Zweck in Ebenen zusammenfassen, anstatt ihn willkürlich zu verteilen. Die Aufteilung Ihrer App in Ebenen wie die oben beschriebenen erleichtert Ihnen das Ausschließen von Fehlern, Testen und spätere Lesen und Warten Ihrer App. Sie können Funktionalität stärker wiederverwendbar machen, indem Sie dem Model-View-ViewModel ([MVVM](http://msdn.microsoft.com/magazine/dd419663.aspx))-Muster folgen. Dieses Muster trennt die Daten-, Geschäfts- und UI-Teile der App voneinander. Auch innerhalb der UI kann das Muster Zustand und Verhalten von den visuellen Elementen getrennt halten, sodass diese separat getestet werden können. Das MVVM-Muster bietet Ihnen die Möglichkeit, Ihre Daten und Geschäftslogik einmal zu schreiben und auf allen Geräten, unabhängig von der UI, zu verwenden. Es ist wahrscheinlich, dass Sie auch einen Großteil des Ansichtsmodells und der Ansichtselemente auf verschiedenen Geräten wiederverwenden können.
 
@@ -82,6 +80,6 @@ Besitzen Sie ein Windows10-Projekt, das Sie mit Microsoft Visual Studio2015 RC e
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

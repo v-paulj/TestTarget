@@ -1,61 +1,71 @@
-﻿---
+---
 author: jnHs
-Description: The Add-on acquisitions report in the Windows Dev Center dashboard lets you see how many add-ons you've sold, along with demographic and platform details.
-title: Add-on acquisitions report
+Description: "Im Bericht zu Add-On-Käufen im Windows Dev Center-Dashboard sehen Sie, wie viele Add-Ons Sie verkauft haben, und Sie können demografische und plattformspezifische Details einsehen."
+title: "Bericht zu Add-On-Käufen"
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
+translationtype: Human Translation
+ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
+ms.openlocfilehash: 144a8400acf0333fcd50e698b333c02942081ef3
+
 ---
 
-# Add-on acquisitions report
+# Bericht zu Add-On-Käufen
 
 
-The **Add-on acquisitions** report in the Windows Dev Center dashboard lets you see how many add-ons you've sold, along with demographic and platform details. You can view this data in your dashboard, or [download the report](download-analytic-reports.md) to view offline. Alternatively, you can programmatically retrieve this data by using the [Windows Store analytics REST API](../monetize/access-analytics-data-using-windows-store-services.md).
+Im Bericht **Add-On-Käufe** im Windows Dev Center-Dashboard sehen Sie, wie viele Add-Ons Sie verkauft haben, und Sie können demografische und plattformspezifische Details einsehen. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um die Daten offline anzuzeigen. Sie können diese Daten aber auch programmgesteuert mit der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
-In this report, an add-on acquisition means a customer has purchased an add-on from you. Multiple purchases of the same consumable add-on by the same customer are counted as separate add-on acquisitions.
+In diesem Bericht steht „Add-On-Kauf“ für einen Kunden, der ein Add-On von Ihnen erworben hat. Wenn ein Kunde mehrere Käufe desselben konsumierbaren Add-Ons getätigt hat, werden diese als separate Add-On-Käufe aufgeführt.
 
-> **Important**  The **Add-on acquisitions** report does not include data about refunds, reversals, chargebacks, etc. To estimate your app proceeds, visit [Payout summary](payout-summary.md). In the **Reserved** section, click the **Download reserved transactions** link.
+> **Wichtig**  Im Bericht **Add-On-Käufe** sind keine Daten über Erstattungen, Rückbuchungen, Rückvergütungen usw. enthalten. Informationen zum Schätzen der Erträge aus Ihren Apps finden Sie unter [Auszahlungszusammenfassung](payout-summary.md). Klicken Sie im Abschnitt **Reserviert** auf den Link **Reservierte Transaktionen herunterladen**.
 
-## Apply filters
-
-
-Near the top of the page, you can expand **Apply filters** to filter all of the data on this page by date range and/or by device type. You can also filter to show only data for a specific add-on.
-
--   **Date**: The default filter is **Last 30 days**, but you can expand this up to **Last 12 months**.
--   **Add-on**: The default filter is **All add-ons**. If you want to show acquisition data for only one of your add-ons, you can choose a specific one here.
--   **Device type**: The default setting is **All devices**. If you want to show data for add-on acquisitions from a certain device type only, you can choose a specific one here.
-
-The info in the charts listed below will reflect the period of time selected in the **Apply filters** section.
-
-The info in all of the charts listed below will reflect the period of time selected in the **Apply filters** section. By default this will include data for all device types, unless you've used **Apply filters** to choose only one.
-
-## Add-on acquisitions
+## Anwenden von Filtern
 
 
-The **Add-on acquisitions** chart shows the number of daily or weekly acquisitions of your add-ons over the selected period of time. (When you use **Apply filters** to filter the data over a longer duration, the data will be grouped by week.)
+Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten auf dieser Seite nach Datumsbereich und/oder Gerätetyp zu filtern. Sie können auch Daten nach einem bestimmten Add-On filtern.
 
-You can also see the lifetime number of acquisitions for your add-ons. This shows the cumulative total of all acquisitions, starting from when your app was first published.
+-   **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, aber er kann bis auf **Letzte 12 Monate** erweitert werden.
+-   **Add-On**: Der Standardfilter ist **Alle Add-Ons**. Wenn Sie Daten zu Käufen nur für eines Ihrer Add-Ons anzeigen möchten, können Sie hier ein bestimmtes Add-On angeben.
+-   **Gerätetyp**: Die Standardeinstellung ist **Alle Geräte**. Wenn Daten für Add-On-Käufe nur für einen bestimmten Gerätetyp angezeigt werden sollen, können Sie hier einen bestimmten Typ auswählen.
 
-The chart also shows the price that a customer paid to acquire the add-on.
+Die Informationen in den unten angezeigten Diagrammen beziehen sich auf den unter **Filter anwenden** ausgewählten Zeitraum.
 
-You can optionally filter the results by market and/or by OS version.
+Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den im Abschnitt **Filter anwenden** ausgewählten Zeitraum. Standardmäßig gehören dazu Daten für alle Gerätetypen, sofern Sie nicht mithilfe von **Filter anwenden** einen bestimmten Gerätetyp herausgefiltert haben.
 
-## Top add-ons
+## Add-On-Käufe
 
-The **Top add-ons** chart shows the total number of acquisitions for each of your add-ons over the selected period of time by market. By default, we show you the add-on which had the most acquisitions on top and continue downward from there. You can reverse this order by toggling the arrow in the **Acquisitions** column of this chart.
 
-## Markets
+Das Diagramm **Add-On-Käufe** zeigt, wie oft Ihre Add-Ons im ausgewählten Zeitraum pro Tag oder Woche gekauft wurde. (Wenn Sie die Daten über einen längeren Zeitraum mithilfe von **Filter anwenden** filtern, werden die Daten nach Woche gruppiert.)
 
-The **Markets** chart shows the total number of add-on acquisitions over the selected period of time by market. By default, we show you the market which had the most acquisitions on top and continue downward from there. You can reverse this order by toggling the arrow in the **Acquisitions** column of this chart.
+Sie können auch anzeigen, wie oft Add-Ons während ihrer gesamten Lebensdauer gekauft wurden. Zeigt den kumulierten Gesamtwert aller Käufe an (ab der ersten Veröffentlichung Ihrer App).
 
-## Customer demographic
+Das Diagramm enthält auch den Preis, den ein Kunde für das Add-On entrichtet hat.
 
-The **Customer demographic** chart shows demographic info about the people who acquired your add-on. You can see how many acquisitions (over the selected period of time) were made by people in a certain age group and by which gender.
+Optional können Sie die Ergebnisse nach Markt und/oder Betriebssystemversion filtern.
 
-> **Note**  Some customers have opted not to share this info. If we were unable to determine the age group or gender, the acquisition is categorized as **Unknown**.
+## Wichtigste Add-Ons
 
-## OS version
+Das Diagramm **Wichtigste Add-Ons** zeigt die Gesamtanzahl von Käufen für jedes Ihrer Add-Ons im ausgewählten Zeitraum nach Markt an. Standardmäßig wird das Add-On mit den meisten Käufen an oberster Stelle vor den Märkten mit weniger Käufen angezeigt. Sie können die Reihenfolge umkehren, indem Sie auf den Pfeil in der Spalte **Käufe** des Diagramms klicken.
 
-The **OS version** chart shows the total number of acquisitions based on the customer's operating system (or via [volume acquisition by organizations](organizational-licensing.md)). In some cases we may not be able to determine this info. In that case, the OS version will be listed as **Unknown**.
+## Märkte
 
- 
+Das Diagramm **Märkte** zeigt die Gesamtzahl von Add-On-Käufen im ausgewählten Zeitraum nach Markt. Standardmäßig wird der Markt mit den meisten Käufen an oberster Stelle vor den Märkten mit weniger Käufen angezeigt. Sie können die Reihenfolge umkehren, indem Sie auf den Pfeil in der Spalte **Käufe** des Diagramms klicken.
 
- 
+## Kundendemografie
+
+Das Diagramm **Kundendemografie** zeigt demografische Informationen zu den Personen, die Ihr Add-On erworben haben. Sie können sehen, wie viele Käufe (im ausgewählten Zeitraum) von Personen einer bestimmten Altersgruppe getätigt wurden und welches Geschlecht die Käufer hatten.
+
+> **Hinweis**  Einige Kunden haben festgelegt, dass sie diese Informationen nicht freigeben möchten. Falls die Altergruppe oder das Geschlecht nicht ermittelt werden konnten, wird der Kauf als **Unbekannt** kategorisiert.
+
+## Betriebssystemversion
+
+Im Diagramm **Betriebssystemversion** wird die Gesamtzahl der Käufe entsprechend dem Betriebssystem des Kunden angezeigt (bzw. über [großvolumige Käufe durch Organisationen](organizational-licensing.md)). In einigen Fällen können diese Informationen jedoch nicht ermittelt werden. Die Betriebssystemversion wird dann als **Unbekannt** angegeben.
+
+ 
+
+ 
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

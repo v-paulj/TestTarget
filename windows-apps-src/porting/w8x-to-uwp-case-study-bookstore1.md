@@ -5,7 +5,7 @@ ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
 description: "Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen universellen8.1-App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10."
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 43536aacb37a79b3e8507896474be67423a0b9fe
+ms.openlocfilehash: fdb5414a0831d6bff607cc8cec9188d3861651fb
 
 ---
 
@@ -19,16 +19,13 @@ Die portierte App besteht aus einem **ListBox**-Element, das an ein Ansichtsmode
 
 Die vorherigen Themen in diesem Abschnitt beschreiben die Unterschiede zwischen den Plattformen und bieten umfassende Informationen und Anleitungen zum Portierungsprozess für verschiedene Aspekte einer App, vom XAML-Markup über die Bindung an ein Ansichtsmodell bis hin zum Zugreifen auf Daten. Dieser Leitfaden soll anhand einer Fallstudie ergänzt werden, indem ein praktisches Beispiel vorgestellt wird. Bei den Fallstudien wird davon ausgegangen, dass Sie die Anleitung gelesen haben. Sie wird nicht wiederholt.
 
-
-            **Hinweis**   Wenn beim Öffnen von „Bookstore1Universal\_10“ in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
+**Hinweis**   Wenn beim Öffnen von Bookstore1Universal\_10 in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
 
 ## Downloads
 
+[Laden Sie die universelle8.1-App „Bookstore1\_81“ herunter](http://go.microsoft.com/fwlink/?linkid=532946).
 
-            [Laden Sie die universelle8.1-App „Bookstore1\_81“ herunter](http://go.microsoft.com/fwlink/?linkid=532946).
-
-
-            [Laden Sie die Windows 10-App „Bookstore1Universal\_10“ herunter](http://go.microsoft.com/fwlink/?linkid=532950).
+[Laden Sie die Windows 10-App „Bookstore1Universal\_10“ herunter](http://go.microsoft.com/fwlink/?linkid=532950).
 
 ## Die universelle8.1-App
 
@@ -112,7 +109,7 @@ Fügen Sie ein neues **ResourceDictionary**-Projektelement hinzu, und geben Sie 
 Bearbeiten Sie eine Kopie der Steuerelementvorlage für das Listenfeld, und speichern Sie sie mit dem Schlüssel von `BookstoreListBoxStyle` im neuen Ressourcenwörterbuch „BookstoreStyles.DeviceFamily-Mobile.xaml“. Jetzt nehmen wir einfache Änderungen an drei der Setter vor.
 
 -   Ändern Sie im Vordergrundsetter den Wert in `"{x:Null}"`. Beachten Sie, dass das direkte Festlegen einer Eigenschaft auf `"{x:Null}"` für ein Element identisch mit der Einstellung `null` im Code ist. Der Wert `"{x:Null}"` in einem Setter hat jedoch einen einzigartigen Effekt: Der Setter im Standardstil (für dieselbe Eigenschaft) wird überschrieben, und der Standardwert der Eigenschaft wird für das Zielelement wiederhergestellt.
--   Ändern Sie im Hintergrundsetter den Wert in `"Transparent"` , um den hellen Hintergrund zu entfernen.
+-   Ändern Sie im Hintergrundsetter den Wert in `"Transparent"`, um den hellen Hintergrund zu entfernen.
 -   Suchen Sie im Vorlagensetter den visuellen Zustand mit dem Namen `Focused`, und löschen Sie das Storyboard, damit sie ein leeres Tag erhalten.
 -   Löschen Sie alle anderen Setter aus dem Markup.
 
@@ -132,6 +129,6 @@ Die nächsten Fallstudie ist [Bookstore2](w8x-to-uwp-case-study-bookstore2.md), 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

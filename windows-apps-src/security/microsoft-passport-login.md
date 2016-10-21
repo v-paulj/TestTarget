@@ -3,8 +3,9 @@ title: Erstellen einer Microsoft Passport-Anmelde-App
 description: "Dies ist der erste Teil der umfassenden exemplarischen Vorgehensweise zum Erstellen einer Windows 10-App für die Universelle Windows-Plattform (UWP), die Microsoft Passport als Alternative zu herkömmlichen Authentifizierungssystemen mit Benutzername und Kennwort verwendet."
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: af8ae79f67d77195d5ed4801d040b2f1aafe8a97
-ms.openlocfilehash: d28f0b9ea08d35a220cdb58367f03af95966e282
+ms.openlocfilehash: 1b0a510592002cf869dac06b55d377d790c06cac
 
 ---
 
@@ -972,6 +973,6 @@ Neben der Implementierung der Microsoft Passport-Unterstützung sind für Entwic
 * [Microsoft Passport-Anmeldedienst](microsoft-passport-login-auth-service.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

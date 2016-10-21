@@ -3,8 +3,9 @@ author: mtoepke
 title: Entwickeln von Marble Maze, einem UWP-Spiel in C++ und DirectX
 description: In diesem Abschnitt der Dokumentation wird das Erstellen von UWP-3D-Spielen (Universelle Windows-Plattform) mit DirectX und Visual C++ beschrieben.
 ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c74a455f84618cb57147c8f0c9baf343b41b02be
+ms.openlocfilehash: d660e05ab43f1c45f21b028a78c6cfa3e0897164
 
 ---
 
@@ -16,13 +17,11 @@ ms.openlocfilehash: c74a455f84618cb57147c8f0c9baf343b41b02be
 
 In diesem Abschnitt der Dokumentation wird das Erstellen von UWP-3D-Spielen (Universelle Windows-Plattform) mit DirectX und Visual C++ beschrieben. Die vorliegende Dokumentation veranschaulicht, wie Sie das 3D-Spiel Marble Maze erstellen, das auf neuen Formfaktoren wie Tablet PCs genau wie auf herkömmlichen Desktopcomputern und Laptops gespielt werden kann.
 
-> 
-            **Hinweis**   Den Quellcode für Marble Maze können Sie auf der Webseite für das [DirectX-Spielebeispiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011) herunterladen.
+> **Hinweis**   Den Quellcode für Marble Maze können Sie auf der Webseite für das [DirectX-Spielebeispiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011) herunterladen.
 
  
 
-> 
-            **Wichtig**  Aus Marble Maze werden Entwurfsmuster ersichtlich, die als bewährte Methoden zum Erstellen von UWP-Spielen empfohlen werden. Viele der Implementierungsdetails können Sie an Ihre eigenen Vorgehensweisen und die konkreten Anforderungen des von Ihnen entwickelten Spiels anpassen. Wenn es Ihren Anforderungen besser entgegenkommt, können Sie natürlich auch andere Verfahren oder Bibliotheken verwenden. (Achten Sie jedoch stets darauf, dass Ihr Code die Anforderungen des Zertifizierungskits für Windows-Apps erfüllt.) Wenn eine Marble Maze-Implementierung als unerlässlich für die erfolgreiche Spieleentwicklung erachtet wird, ist dies in der vorliegenden Dokumentation entsprechend gekennzeichnet.
+> **Wichtig**  Aus Marble Maze werden Entwurfsmuster ersichtlich, die als bewährte Methoden zum Erstellen von UWP-Spielen empfohlen werden. Viele der Implementierungsdetails können Sie an Ihre eigenen Vorgehensweisen und die konkreten Anforderungen des von Ihnen entwickelten Spiels anpassen. Wenn es Ihren Anforderungen besser entgegenkommt, können Sie natürlich auch andere Verfahren oder Bibliotheken verwenden. (Achten Sie jedoch stets darauf, dass Ihr Code die Anforderungen des Zertifizierungskits für Windows-Apps erfüllt.) Wenn eine Marble Maze-Implementierung als unerlässlich für die erfolgreiche Spieleentwicklung erachtet wird, ist dies in der vorliegenden Dokumentation entsprechend gekennzeichnet.
 
  
 
@@ -107,6 +106,6 @@ Es wird empfohlen, mit den Grundlagen des Marble Maze-Beispiels zu beginnen, um 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

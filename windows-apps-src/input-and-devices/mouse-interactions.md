@@ -5,8 +5,9 @@ title: Mausinteraktionen
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 10deda7b44d4cfb5c65b425bf82ceaf6654aab95
+ms.openlocfilehash: 5a26ff6380383965d51a6938db68ad8406941229
 
 ---
 
@@ -23,7 +24,7 @@ Optimieren Sie das Design Ihrer UWP-Apps für die Toucheingabe, und freuen Sie s
 
 Die Mauseingabe eignet sich am besten für Benutzerinteraktionen, die Präzision beim Zeigen und Klicken erfordern. Naturgemäß unterstützt die Benutzeroberfläche von Windows diese Präzision, auch wenn sie für die ungenaue Toucheingabe optimiert wurde.
 
-Die Maus- und Toucheingabe unterscheiden sich dahingehend, dass bei der Toucheingabe die direkte Manipulation von UI-Elementen auf dem Bildschirm durch physische Gesten für diese Objekte (z. B. Streifen, Ziehen, Drehen usw.) emuliert werden kann. Manipulationen mit der Maus erfordern in der Regel einigen UI-Aufwand, wie z. B. die Verwendung von Handles für das Anpassen der Größe oder Drehen eines Objekts.
+Die Maus- und Toucheingabe unterscheiden sich dahingehend, dass bei der Toucheingabe die direkte Manipulation von UI-Elementen auf dem Bildschirm durch physische Gesten für diese Objekte (z.B. Streifen, Ziehen, Drehen usw.) emuliert werden kann. Manipulationen mit der Maus erfordern in der Regel einigen UI-Aufwand, wie z. B. die Verwendung von Handles für das Anpassen der Größe oder Drehen eines Objekts.
 
 In diesem Thema werden Designüberlegungen für Mausinteraktionen behandelt.
 
@@ -50,7 +51,7 @@ Ein kompakter Satz von Mausinteraktionen wird durchgängig im ganzen System verw
 </tr>
 <tr class="even">
 <td align="left"><p>Linksklick, um primäre Aktion auszuführen</p></td>
-<td align="left"><p>Klicken Sie mit der linken Maustaste auf ein Element, um dessen primäre Aktion aufzurufen (z. B. das Starten einer App oder das Ausführen eines Befehls).</p></td>
+<td align="left"><p>Klicken Sie mit der linken Maustaste auf ein Element, um dessen primäre Aktion aufzurufen (z.B. das Starten einer App oder das Ausführen eines Befehls).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Bildlauf, um Ansicht zu ändern</p></td>
@@ -68,7 +69,7 @@ Ein kompakter Satz von Mausinteraktionen wird durchgängig im ganzen System verw
 </tr>
 <tr class="odd">
 <td align="left"><p>Benutzeroberflächenbefehle zum Zoomen</p></td>
-<td align="left"><p>Zeigen Sie Benutzeroberflächenbefehle auf der App-Leiste an (z. B. "+" und "-"), oder drücken Sie STRG und drehen Sie das Mausrad, um Zusammendrück- und Aufziehbewegungen zum Zoomen zu emulieren.</p></td>
+<td align="left"><p>Zeigen Sie Benutzeroberflächenbefehle auf der App-Leiste an (z.B. "+" und "-"), oder drücken Sie STRG und drehen Sie das Mausrad, um Zusammendrück- und Aufziehbewegungen zum Zoomen zu emulieren.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Benutzeroberflächenbefehle zum Drehen</p></td>
@@ -91,7 +92,7 @@ Reagieren Sie in Ihren Apps auf Mauseingaben, indem Sie die gleichen einfachen Z
 
 Verwenden Sie [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)-Ereignisse, um grundlegende Eingabefunktionen zu implementieren, ohne separaten Code für jedes Zeigereingabegerät schreiben zu müssen. Sie können aber trotzdem die speziellen Funktionen jedes Geräts nutzen (z. B. die Ereignisse des Mausrads), indem Sie die Zeiger-, Gestik- und Manipulationsereignisse dieses Objekts verwenden.
 
-**Beispiele:**  Sehen Sie sich unter [Beispiele für Apps](http://go.microsoft.com/fwlink/p/?LinkID=264996) diese Funktionalität in Aktion an.
+**Beispiele:  **Sehen Sie sich unter [Beispiele für Apps](http://go.microsoft.com/fwlink/p/?LinkID=264996) diese Funktionalität in Aktion an.
 
 
 - [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
@@ -105,7 +106,7 @@ Verwenden Sie [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br
 
 -   Wenn eine Maus erkannt wird (durch Bewegungs- oder Daraufzeigen-Ereignisse), zeigen Sie eine für Mausinteraktionen spezifische Benutzeroberfläche an, um auf vom Element verfügbar gemachte Funktionen hinzuweisen. Wenn die Maus für eine bestimmte Zeit nicht bewegt wird oder der Benutzer eine Fingereingabeinteraktion auslöst, blenden Sie die für Mausinteraktionen spezifische Benutzeroberfläche schrittweise aus. Somit bleibt die Benutzeroberfläche sauber und aufgeräumt.
 -   Verwenden Sie nicht den Cursor für Zeigefeedback, das Feedback des Elements reicht aus (siehe Cursor unten).
--   Zeigen Sie kein visuelles Feedback an, wenn ein Element keine Interaktionen unterstützt (z. B. statischer Text).
+-   Zeigen Sie kein visuelles Feedback an, wenn ein Element keine Interaktionen unterstützt (z.B. statischer Text).
 -   Verwenden Sie keine Fokusrechtecke für Mausinteraktionen. Diese sind ausschließlich für Tastaturinteraktionen vorgesehen.
 -   Zeigen Sie für alle Elemente, die das gleiche Eingabeziel darstellen, das gleiche visuelle Feedback an.
 -   Stellen Sie Schaltflächen (z. B. „+“ und „-“) zur Verfügung, um fingereingabebasierte Manipulationen wie etwa Schwenken, Drehen, Zoomen usw. zu emulieren.
@@ -155,6 +156,6 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

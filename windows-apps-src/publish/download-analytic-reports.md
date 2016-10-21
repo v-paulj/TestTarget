@@ -3,8 +3,9 @@ author: jnHs
 Description: "Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Informationen offline anzuzeigen."
 title: Herunterladen von Analyseberichten
 ms.assetid: BCA61ABF-16ED-42C3-9014-68629CB5A24F
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 959007d6d7c4e4c768f196fe04c2fa4a8ac6fc2e
+ms.openlocfilehash: 99b751146adc2394e10c6deae58bd0fdb124888d
 
 ---
 
@@ -17,8 +18,7 @@ Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Inform
 
 1.  Wählen Sie zunächst die App aus, für die Sie Informationen herunterladen möchten.
 
-    > 
-            **Tipp**  Sie können Informationen für alle Apps oder für eine bestimmte App herunterladen. Beim Herunterladen von Berichten sind Sie nicht auf die App beschränkt, in der Sie gearbeitet haben, als Sie die Seite **Berichte herunterladen** im Abschnitt **Analyse** geöffnet haben.
+    > **Tipp** Sie können Informationen für alle Apps oder für eine bestimmte App herunterladen. Beim Herunterladen von Berichten sind Sie nicht auf die App beschränkt, in der Sie gearbeitet haben, als Sie die Seite **Berichte herunterladen** im Abschnitt **Analyse** geöffnet haben.
 
 2.  Wählen Sie einen der verfügbaren Berichte aus.
 
@@ -28,6 +28,6 @@ Sie können Dateien mit Analysedaten herunterladen, um Statistikdaten und Inform
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

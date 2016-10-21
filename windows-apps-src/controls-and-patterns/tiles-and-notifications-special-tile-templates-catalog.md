@@ -5,11 +5,12 @@ title: Spezielle Kachelvorlagen
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 label: TBD
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: ab7366b8b3cbf75f1f7e9fe35ca83077ac21d081
+translationtype: Human Translation
+ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
+ms.openlocfilehash: b03ea68ea2a0f66edac81a4c7e2671b2f756aa45
 
 ---
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # Spezielle Kachelvorlagen
 
 
@@ -18,14 +19,14 @@ ms.openlocfilehash: ab7366b8b3cbf75f1f7e9fe35ca83077ac21d081
 
 Spezielle Kachelvorlagen sind individuelle Vorlagen, die animiert sind oder mit denen Sie Vorgänge durchführen können, die mit adaptiven Kacheln nicht möglich sind. Jede spezielle Kachelvorlage wurde speziell für Windows10 erstellt, mit Ausnahme der Iconic-Kachelvorlage, einer klassischen Spezialvorlage, die für Windows10 aktualisiert wurde. In diesem Artikel werden drei spezielle Kachelvorlagen behandelt: Iconic, Fotos und Kontakte.
 
-## <span id="Iconic_tile_template"></span><span id="iconic_tile_template"></span><span id="ICONIC_TILE_TEMPLATE"></span>Iconic-Kachelvorlage
+## Iconic-Kachelvorlage
 
 
 Mit der Iconic-Vorlage (auch als „IconWithBadge“-Vorlage bezeichnet) können Sie ein kleines Bild in der Mitte der Kachel anzeigen. Windows10 unterstützt die Vorlage sowohl auf Telefonen als auch auf Tablets/Desktops.
 
 ![Kleine und mittelgroße E-Mail-Kacheln](images/iconic-template-mail-2sizes.png)
 
-### <span id="How_to_create_an_iconic_tile"></span><span id="how_to_create_an_iconic_tile"></span><span id="HOW_TO_CREATE_AN_ICONIC_TILE"></span>Erstellen einer ikonischen Kachel
+### Erstellen einer ikonischen Kachel
 
 In den folgenden Schritten wird alles erläutert, was Sie zum Erstellen einer Iconic-Kachel für Windows10 wissen müssen. Auf hoher Ebene benötigen Sie Ihre Iconic-Bildressource. Dann senden Sie mithilfe der Iconic-Vorlage eine Benachrichtigung an die Kachel und senden schließlich eine Signalbenachrichtigung, die die auf der Kachel anzuzeigende Zahl bereitstellt.
 
@@ -43,7 +44,7 @@ Windows 10 auf Tablet, Laptop und Desktop unterstützt nur quadratische Symbolre
 
 **Schritt 2: Erstellen der Basiskachel**
 
-Sie können die Iconic-Vorlage für primäre und sekundäre Kacheln verwenden. Wenn Sie sie für eine sekundäre Kachel verwenden, müssen Sie zuerst die sekundäre Kachel erstellen oder eine bereits angeheftete sekundäre Kachel verwenden . Primäre Kacheln sind implizit angeheftet, und Sie können jederzeit Benachrichtigungen an sie senden.
+Sie können die Iconic-Vorlage für primäre und sekundäre Kacheln verwenden. Wenn Sie sie für eine sekundäre Kachel verwenden, müssen Sie zuerst die sekundäre Kachel erstellen oder eine bereits angeheftete sekundäre Kachel verwenden. Primäre Kacheln sind implizit angeheftet, und Sie können jederzeit Benachrichtigungen an sie senden.
 
 **Schritt 3: Senden einer Benachrichtigung an die Kachel**
 
@@ -90,14 +91,14 @@ Die folgende Abbildung zeigt, wie die verschiedenen APIs und Nutzlasten den einz
 
 ![APIs und Nutzlasten, die der Iconic-Kachelvorlage zugeordnet sind](images/iconic-template-properties-info.png)
 
-## <span id="Photos_tile_template"></span><span id="photos_tile_template"></span><span id="PHOTOS_TILE_TEMPLATE"></span>Kachelvorlage „Fotos“
+## Kachelvorlage „Fotos“
 
 
 Mit der Kachelvorlage „Fotos“ können Sie eine Diashow von Fotos auf der Live-Kachel anzeigen. Die Vorlage wird für alle Kachelgrößen, einschließlich klein, unterstützt und verhält sich für jede Kachelgröße gleich. Das folgende Beispiel zeigt fünf Frames einer mittelgroßen Kachel, die die Vorlage „Fotos“ verwendet. Die Vorlage verfügt über eine Zoom- und Überblendanimation, die ausgewählte Fotos in einer Endlosschleife durchläuft.
 
 ![Bilddiashow mit Kachelvorlage „Fotos“](images/photo-tile-template-image01.jpg)
 
-### <span id="How_to_use_the_photos_template"></span><span id="how_to_use_the_photos_template"></span><span id="HOW_TO_USE_THE_PHOTOS_TEMPLATE"></span>Verwenden der Kachelvorlage „Fotos“
+### Verwenden der Kachelvorlage „Fotos“
 
 Das Verwenden der Kachelvorlage „Fotos“ ist einfach, wenn Sie die [Windows 10-Version von NotificationExtensions](http://blogs.msdn.com/b/tiles_and_toasts/archive/2015/08/20/introducing-notificationsextensions-for-windows-10.aspx) installiert haben. Obwohl Sie unformatierte XML-Daten verwenden können, empfehlen wir dringend die Verwendung von NotificationExtensions, damit Sie sich keine Gedanken zum Generieren gültiger XML- oder XML-Escapesequenzinhalte machen müssen.
 
@@ -105,7 +106,7 @@ Windows Phone zeigt bis zu 9 Fotos in einer Diashow an. Auf Tablet, Laptop und D
 
 Informationen zum Senden der Kachelbenachrichtigung finden Sie im [Artikel zum Senden von Benachrichtigungen](tiles-badges-notifications.md).
 
-<span codelanguage="XML"></span>
+
 ```XML
 <colgroup>
 <col width="100%" />
@@ -181,29 +182,26 @@ TileContent content = new TileContent()
 };
 ```
 
-## <span id="People_tile_template"></span><span id="people_tile_template"></span><span id="PEOPLE_TILE_TEMPLATE"></span>Kachelvorlage „Kontakte“
+## Kachelvorlage „Kontakte“
 
 
 Die Kontakte-App in Windows 10 verwendet eine spezielle Kachelvorlage, die eine Sammlung von Bildern in Kreisen anzeigt, die sich auf der Kachel vertikal oder horizontal verschieben. Diese Kachelvorlage ist seit Windows10 Build10572 verfügbar und kann jederzeit in Apps verwendet werden.
 
 Die Kachelvorlage „Kontakte“ funktioniert auf Kacheln folgender Größen:
 
-
-            **Mittelgroße Kachel** (TileMedium)
+**Mittelgroße Kachel** (TileMedium)
 
 ![Mittelgroße Kachel „Kontakte“](images/people-tile-medium.png)
 
  
 
-
-            **Breite Kachel** (TileWide)
+**Breite Kachel** (TileWide)
 
 ![Breite Kachel „Kontakte“](images/people-tile-wide.png)
 
  
 
-
-            **Große Kachel (nur Desktop)** (TileLarge)
+**Große Kachel (nur Desktop)** (TileLarge)
 
 ![Große Kachel „Kontakte“](images/people-tile-large.png)
 
@@ -272,7 +270,7 @@ Durch die Anzahl der Fotos werden einige leere Kreise ermöglicht, was bedeutet,
 
 Informationen zum Senden der Benachrichtigung finden Sie unter [Auswählen einer Methode für die Übermittlung von Benachrichtigungen](tiles-and-notifications-choosing-a-notification-delivery-method.md).
 
-## <span id="related_topics"></span>Verwandte Themen
+## Verwandte Themen
 
 
 * [Vollständiges Codebeispiel auf GitHub](https://github.com/WindowsNotifications/quickstart-people-tile-template)
@@ -290,6 +288,6 @@ Informationen zum Senden der Benachrichtigung finden Sie unter [Auswählen einer
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

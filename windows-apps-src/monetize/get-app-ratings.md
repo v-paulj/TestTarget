@@ -4,28 +4,26 @@ ms.assetid: DD4F6BC4-67CD-4AEF-9444-F184353B0072
 description: "Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Bewertungsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
 title: Abrufen von App-Bewertungen
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 6f6a94e030f1733ca4224766526386ef1956ff03
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: 8ec588ceb0a7c8bd6a75f72bf0a2d48c697a8e6a
 
 ---
 
 # Abrufen von App-Bewertungen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Bewertungsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Methode gibt die Daten im JSON-Format zurück.
 
 ## Voraussetzungen
 
 
-Sie benötigen Folgendes, um diese Methode verwenden zu können:
+Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
--   Ordnen Sie die AzureAD-Anwendung, die Sie zum Aufrufen dieser Methode verwenden, Ihrem Dev Center-Konto zu.
+* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](access-analytics-data-using-windows-store-services.md#prerequisites) für die Windows Store-Analyse-API.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 
--   Rufen Sie ein Azure AD-Zugriffstoken für Ihre Anwendung ab.
-
-Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows Store-Diensten](access-analytics-data-using-windows-store-services.md).
 
 ## Anforderung
 
@@ -42,7 +40,7 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | Zeichenfolge | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;. |
+| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -66,13 +64,13 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 <tbody>
 <tr class="odd">
 <td align="left">applicationId</td>
-<td align="left">Zeichenfolge</td>
+<td align="left">string</td>
 <td align="left">Die Store-ID der App, für die Sie Bewertungsdaten abrufen möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="even">
 <td align="left">startDate</td>
-<td align="left">Datum</td>
+<td align="left">date</td>
 <td align="left">Das Startdatum im Datumsbereich der Bewertungsdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum.</td>
 <td align="left">Nein</td>
 </tr>
@@ -218,8 +216,8 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
 |-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| date            | string  | Das erste Datum im Datumsbereich für die Bewertungsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist das erste Datum in diesem Datumsbereich dieser Wert. |
-| applicationId   | Zeichenfolge  | Die Store-ID der App, für die Sie Bewertungsdaten abrufen.                                                                                                                                                                 |
+| date            | string  | Das erste Datum im Datumsbereich für die Bewertungsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
+| applicationId   | string  | Die Store-ID der App, für die Sie Bewertungsdaten abrufen.                                                                                                                                                                 |
 | applicationName | string  | Der Anzeigename der App.                                                                                                                                                                                                         |
 | market          | string  | Die ISO 3166-Ländervorwahl für den Markt, in dem die Bewertung übermittelt wurde.                                                                                                                                                              |
 | osVersion       | string  | Die Version des Betriebssystems, auf dem die Bewertung übermittelt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                               |
@@ -263,14 +261,14 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 ## Verwandte Themen
 
-* [Zugreifen auf Analysedaten mit Windows Store-Diensten](access-analytics-data-using-windows-store-services.md)
+* [Zugreifen auf Analysedaten mit WindowsStore-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von App-Käufen](get-app-acquisitions.md)
-* [Abrufen von IAP-Käufen](get-in-app-acquisitions.md)
+* [Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)
 * [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)
 * [Abrufen von App-Rezensionen](get-app-reviews.md)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

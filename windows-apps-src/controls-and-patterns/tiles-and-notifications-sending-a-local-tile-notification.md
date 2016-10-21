@@ -5,11 +5,12 @@ title: Senden einer lokalen Kachelbenachrichtigung
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 label: TBD
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: cc2f86f2a56aae5ee9e3019dafa3417a25e7d610
+translationtype: Human Translation
+ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
+ms.openlocfilehash: a4f654b286db44d4054be296e76114024616f632
 
 ---
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # Senden einer lokalen Kachelbenachrichtigung
 
 
@@ -20,19 +21,18 @@ Primäre App-Kacheln in Windows 10 werden im App-Manifest definiert, sekundäre 
 
 ![Standardkachel und Kachel mit Benachrichtigung](images/sending-local-tile-01.png)
 
-
-            **Hinweis**  Hier erhalten Sie weitere Informationen über das [Erstellen von adaptiven Kacheln](tiles-and-notifications-create-adaptive-tiles.md) und das [Vorlageschema für adaptive Kacheln](tiles-and-notifications-adaptive-tiles-schema.md).
+**Hinweis**   Hier erhalten Sie weitere Informationen über das [Erstellen von adaptiven Kacheln](tiles-and-notifications-create-adaptive-tiles.md) und das [Vorlageschema für adaptive Kacheln](tiles-and-notifications-adaptive-tiles-schema.md).
 
  
 
-## <span id="Install_the_NuGet_package"></span><span id="install_the_nuget_package"></span><span id="INSTALL_THE_NUGET_PACKAGE"></span>Installieren des NuGet-Pakets
+## Installieren des NuGet-Pakets
 
 
 Wir empfehlen die Installation des [NuGet-Pakets „NotificationsExtensions”](https://www.nuget.org/packages/NotificationsExtensions.Win10/), das Kachelnutzlasten mit Objekten anstelle von unformatiertem XML generiert und dadurch vieles erleichtert.
 
 Die Inlinecodebeispiele in diesem Artikel betreffen C# mit dem installierten NuGet-Paket [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki). (Wenn Sie eigenen XML-Code erstellen möchten, finden Sie Codebeispiele ohne [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) am Ende des Artikels.)
 
-## <span id="Add_namespace_declarations"></span><span id="add_namespace_declarations"></span><span id="ADD_NAMESPACE_DECLARATIONS"></span>Hinzufügen von Namespacedeklarationen
+## Hinzufügen von Namespacedeklarationen
 
 
 Um auf die Kachel-APIs zuzugreifen, beziehen Sie den [**Windows.UI.Notifications**](https://msdn.microsoft.com/library/windows/apps/br208661)-Namespace ein. Sie sollten auch den **NotificationsExtensions.Tiles**-Namespace einbeziehen, damit Sie die Kachel-Hilfs-APIs nutzen können (Sie müssen das NuGet-Paket [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) installieren, um auf diese APIs zugreifen zu können).
@@ -42,7 +42,7 @@ using Windows.UI.Notifications;
 using NotificationsExtensions.Tiles; // NotificationsExtensions.Win10
 ```
 
-## <span id="Create_the_notification_content"></span><span id="create_the_notification_content"></span><span id="CREATE_THE_NOTIFICATION_CONTENT"></span>Erstellen des Benachrichtigungsinhalts
+## Erstellen des Benachrichtigungsinhalts
 
 
 In Windows10 werden Kachelnutzlasten mit adaptiven Kachelvorlagen definiert, mit denen Sie benutzerdefinierte visuelle Layouts für Ihre Benachrichtigungen erstellen können. (Informationen darüber, was mit adaptiven Kacheln möglich ist, finden Sie in den Artikeln [Erstellen adaptiver Kacheln](tiles-and-notifications-create-adaptive-tiles.md) und [Vorlagen für adaptive Kacheln](tiles-and-notifications-adaptive-tiles-schema.md).)
@@ -121,7 +121,7 @@ Auf einer mittelgroßen Kachel wird der Inhalt der Benachrichtigung wie folgt an
 
 ![Inhalt der Benachrichtigung auf einer mittelgroßen Kachel](images/sending-local-tile-02.png)
 
-## <span id="Create_the_notification"></span><span id="create_the_notification"></span><span id="CREATE_THE_NOTIFICATION"></span>Erstellen der Benachrichtigung
+## Erstellen der Benachrichtigung
 
 
 Wenn Sie den Inhalt der Benachrichtigung erstellt haben, müssen Sie eine neue [**TileNotification**](https://msdn.microsoft.com/library/windows/apps/br208616)-Klasse erstellen. Der **TileNotification**-Konstruktor akzeptiert ein Windows-Runtime-[**XmlDocument**](https://msdn.microsoft.com/library/windows/apps/br208620)-Objekt, das Sie aus der **TileContent.GetXml**-Methode ermitteln können, wenn Sie [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) verwenden.
@@ -133,7 +133,7 @@ Mit diesem Codebeispiel wird eine Benachrichtigung für eine neue Kachel erstell
 var notification = new TileNotification(content.GetXml());
 ```
 
-## <span id="Set_an_expiration_time_for_the_notification__optional_"></span><span id="set_an_expiration_time_for_the_notification__optional_"></span><span id="SET_AN_EXPIRATION_TIME_FOR_THE_NOTIFICATION__OPTIONAL_"></span>Festlegen einer Ablaufzeit für die Benachrichtigung (optional)
+## Festlegen einer Ablaufzeit für die Benachrichtigung (optional)
 
 
 Standardmäßig laufen lokale Kachel- und Signalbenachrichtigungen nicht ab, während Pushbenachrichtigungen sowie regelmäßige und geplante Benachrichtigungen nach drei Tagen ablaufen. Weil Kachelinhalt nur so lange wie notwendig beibehalten werden soll, sollten Sie, insbesondere für lokale Kachel- und Signalbenachrichtigungen, eine Gültigkeitsdauer festlegen, die für Ihre App sinnvoll ist.
@@ -147,7 +147,7 @@ tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddMinutes(10);</code></
 </table>
 ```
 
-## <span id="Send_the_notification"></span><span id="send_the_notification"></span><span id="SEND_THE_NOTIFICATION"></span>Senden der Benachrichtigung
+## Senden der Benachrichtigung
 
 
 Das lokale Senden einer Kachelbenachrichtigung ist einfach, das Senden der Benachrichtigung an eine primäre oder sekundäre Kachel weicht aber etwas davon ab.
@@ -158,7 +158,7 @@ Verwenden Sie zum Senden einer Benachrichtigung an eine primäre Kachel den [**T
 
 Mit diesem Codebeispiel wird eine Benachrichtigung an eine primäre Kachel gesendet.
 
-<span codelanguage=""></span>
+
 ```
 <colgroup>
 <col width="100%" />
@@ -189,7 +189,7 @@ if (SecondaryTile.Exists("MySecondaryTile"))
 
 ![Standardkachel und Kachel mit Benachrichtigung](images/sending-local-tile-01.png)
 
-## <span id="Clear_notifications_on_the_tile__optional_"></span><span id="clear_notifications_on_the_tile__optional_"></span><span id="CLEAR_NOTIFICATIONS_ON_THE_TILE__OPTIONAL_"></span>Löschen von Benachrichtigungen auf der Kachel (optional)
+## Löschen von Benachrichtigungen auf der Kachel (optional)
 
 
 In den meisten Fällen sollten Sie eine Benachrichtigung löschen, sobald der Benutzer mit diesem Inhalt interagiert hat. Zum Beispiel sollten Sie alle Benachrichtigungen auf der Kachel löschen, wenn der Benutzer die App startet. Falls die Benachrichtigungen zeitabhängig sind, sollten Sie eine Ablaufzeit für die Benachrichtigung festlegen, anstatt sie explizit zu löschen.
@@ -209,7 +209,7 @@ Durch regelmäßige oder Push-Benachrichtigungen können nur neue Benachrichtigu
 
 ![Kachel mit Benachrichtigung und Kachel nach dem Löschen](images/sending-local-tile-03.png)
 
-## <span id="Next_steps"></span><span id="next_steps"></span><span id="NEXT_STEPS"></span>Nächste Schritte
+## Nächste Schritte
 
 
 **Verwenden der Benachrichtigungswarteschlange**
@@ -224,7 +224,7 @@ In diesem Artikel wird erläutert, wie die Kachelaktualisierung als Benachrichti
 
 Wenn Sie [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) nicht verwenden, bietet diese Methode für die Benachrichtigungsübermittlung eine weitere Alternative.
 
-<span codelanguage=""></span>
+
 ```
 <colgroup>
 <col width="100%" />
@@ -243,7 +243,7 @@ public string XmlEncode(string text)
 }
 ```
 
-## <span id="Code_examples_without_NotificationsExtensions"></span><span id="code_examples_without_notificationsextensions"></span><span id="CODE_EXAMPLES_WITHOUT_NOTIFICATIONSEXTENSIONS"></span>Codebeispiele ohne NotificationsExtensions
+## Codebeispiele ohne NotificationsExtensions
 
 
 Wenn Sie lieber mit unformatiertem XML anstatt mit dem NuGet-Paket [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) arbeiten, verwenden Sie diese alternativen Codebeispiele für die ersten drei Beispiele in diesem Artikel. Die restlichen Codebeispiele können entweder mit [NotificationsExtensions](https://github.com/WindowsNotifications/NotificationsExtensions/wiki) oder mit unformatiertem XML verwendet werden.
@@ -299,7 +299,7 @@ doc.LoadXml(content);
 var notification = new TileNotification(doc);
 ```
 
-## <span id="related_topics"></span>Verwandte Themen
+## Verwandte Themen
 
 
 * [Erstellen adaptiver Kacheln](tiles-and-notifications-create-adaptive-tiles.md)
@@ -320,6 +320,6 @@ var notification = new TileNotification(doc);
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

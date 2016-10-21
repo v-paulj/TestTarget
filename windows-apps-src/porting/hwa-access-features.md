@@ -5,7 +5,7 @@ description: "Greifen Sie auf systemeigene Features der Universellen Windows-Pla
 kw: Hosted Web Apps, Accessing Windows 10 features from remote JavaScript, Building a Win10 Web Application, Windows JavaScript Apps, Microsoft Web Apps, HTML5 app for PC, ACUR URI Rules for Windows App, Call Live Tiles with web app, Use Cortana with web app, Access Cortana from website, msapplication-cortanavcd
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: a7f7dccb9c7461e482bd43c8f370a2a7244eb735
+ms.openlocfilehash: fb74bfc40750941860dae0a8f811fde4a614e403
 
 ---
 
@@ -48,7 +48,7 @@ Wenn eine URL innerhalb der App-Grenzen (ACURs) definiert ist, kann sie mithilfe
 Geben Sie dazu das Attribut `(WindowsRuntimeAccess="<<level>>")` in den ACURs mit einem dieser Werte an:
 
 - **all**: Remote-JavaScript-Code hat Zugriff auf alle UWP-APIs und alle lokal verpackten Komponenten.
-- **allowForWeb**: Remote-JavaScript-Cpde hat nur Zugriff auf benutzerdefinierte Komponenten im Paketcode. Lokaler Zugriff auf benutzerdefinierte C++/C#-Komponenten.
+- **allowForWeb**: Remote-JavaScript-Code hat nur Zugriff auf benutzerdefinierte Komponenten im Paketcode. Lokaler Zugriff auf benutzerdefinierte C++/C#-Komponenten.
 - **none**: Standard. Die angegebene URL hat keinen Plattformzugriff.
 
 Dies ist ein Beispiel für einen Regeltyp:
@@ -129,7 +129,7 @@ Wenn Ihre App programmgesteuerten Zugriff auf Benutzerressourcen wie Bilder oder
 
 - [Funktionen zur allgemeinen Verwendung](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#General-use_capabilities), die auf die meisten allgemeinen App-Szenarien zutreffen. 
 - [Gerätefunktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Device_capabilities), die Ihrer App den Zugriff auf Peripheriegeräte und interne Geräte ermöglichen. 
-- [Sonderfunktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Special_and_restricted_capabilities) die ein spezielles Unternehmenskonto für die Einreichung beim Store erfordern. 
+- [Sonderfunktionen](https://msdn.microsoft.com/library/windows/apps/Mt270968.aspx#Special_and_restricted_capabilities), die ein spezielles Unternehmenskonto für die Einreichung beim Store erfordern. 
 
 Weitere Informationen zu Unternehmenskonten finden Sie unter [Kontotypen, Standorte und Gebühren](https://msdn.microsoft.com/library/windows/apps/jj863494.aspx).
 
@@ -153,6 +153,6 @@ Eine einfache Möglichkeit, Ihre Website in eine UWP-App zu verwandeln, ist die 
 - [Deklarationen der App-Funktionen](https://msdn.microsoft.com/ibrary/windows/apps/hh464936.aspx)
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

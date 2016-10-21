@@ -6,20 +6,30 @@ ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: 1d19cfa9c272ee511fbaf89ac0076697ede470b9
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 71749f09eb11f779427bc450ae607f3fa99c2490
 
 ---
 # Hyperlinks
 
-Über Hyperlinks können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten. Sie haben zwei Möglichkeiten, einer XAML-App einen Link hinzuzufügen: über das Textelement **Link** oder das Steuerelement **HyperlinkButton**.
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+Über Hyperlinks können Benutzer zu einem anderen Teil der App oder zu einer anderen App navigieren oder mit einer separaten Browser-App einen bestimmten URI (Uniform Resource Identifier) starten. Sie haben zwei Möglichkeiten, einer XAML-App einen Link hinzuzufügen: über das **Link**textelement oder das **HyperlinkButton**-Steuerelement.
 
 ![Eine Linkschaltfläche](images/controls/hyperlink-button.png)
 
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279356"><strong>Linktextelement</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br242739"><strong>HyperlinkButton-Steuerelement</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
--   [**Ein Linktextelement**](https://msdn.microsoft.com/library/windows/apps/dn279356)
--   [**HyperlinkButton-Steuerelement**](https://msdn.microsoft.com/library/windows/apps/br242739)
+
 
 ## Ist dies das richtige Steuerelement?
 
@@ -54,9 +64,7 @@ Der Link wird inline angezeigt und mit dem umgebenden Text umbrochen:
 
 ![Beispiel für einen Link als Textelement](images/controls_hyperlink-element.png) 
 
-> 
-            **Tipp**
-            &nbsp;&nbsp;Wenn Sie einen Link in einem Textsteuerelement mit anderen Textelementen in XAML verwenden, platzieren Sie den Inhalt in einem [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx)-Container and wenden das Attribut `xml:space="preserve"` auf den Span-Container an, um die Leerstelle zwischen dem Link und anderen Elementen beizubehalten.
+> **Tipp:**&nbsp;&nbsp;Wenn Sie einen Link in einem Textsteuerelement mit anderen Textelementen in XAML verwenden, platzieren Sie den Inhalt in einem [Span](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.aspx)-Container und wenden das Attribut `xml:space="preserve"` auf den Span-Container an, um die Leerstelle zwischen dem Link und anderen Elementen beizubehalten.
 
 ## Erstellen eines HyperlinkButton-Elements
 
@@ -87,9 +95,7 @@ Die Navigation wird bei beiden Linktypen gleich gehandhabt. Sie können die Eige
 
 Wenn Sie mit dem Link zu einem URI navigieren möchten, legen Sie die NavigateUri-Eigenschaft fest. Wenn ein Benutzer auf den Link klickt oder tippt, wird der angegebene URI im Standardbrowser geöffnet. Der Standardbrowser wird in einem separaten Prozess von Ihrer App ausgeführt.
 
-> 
-            **Note**
-            &nbsp;&nbsp;Sie müssen nicht das Schema „http:“ oder „https:“ verwenden. Sie können Schemas wie „ms-appx:“, „ms-appdata:“ oder „ms-resources:“ verwenden, falls Ressourceninhalte vorhanden sind, die in einem Browser geladen werden können. Das Schema „file:“ ist ausdrücklich blockiert. Weitere Informationen finden Sie unter [URI-Schemas](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
+> **Hinweis**&nbsp;&nbsp;Sie müssen nicht das Schema „http:“ oder „https:“ verwenden. Sie können Schemas wie „ms-appx:“, „ms-appdata:“ oder „ms-resources:“ verwenden, falls Ressourceninhalte vorhanden sind, die in einem Browser geladen werden können. Das Schema „file:“ ist ausdrücklich blockiert. Weitere Informationen finden Sie unter [URI-Schemas](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx).
 
 > Wenn ein Benutzer auf den Link klickt, wird der Wert der NavigateUri-Eigenschaft an einen Systemhandler für URI-Typen und -Schemas übergeben. Das System startet dann die App, die für das Schema des URIs registriert ist, der für „NavigateUri“ angegeben wird.
 
@@ -131,8 +137,7 @@ Da es sich bei einem Link nicht um ein [UIElement](https://msdn.microsoft.com/li
 
 **Inhalt**
 
-Für den Link liegen Einschränkungen in Bezug auf den Inhalt vor, der in der [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx)-Sammlung enthalten sein darf. Genauer gesagt: Ein Link lässt nur [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx)- und andere [Span]()-Typen zu, die keinen anderen Link darstellen. 
-            [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) darf nicht in der Inlines-Sammlung eines Links enthalten sein. Beim Versuch, eingeschränkte Inhalte hinzuzufügen, wird eine Ausnahme für ein ungültiges Argument oder eine XAML-Analyseausnahme ausgelöst.
+Für den Link liegen Einschränkungen in Bezug auf den Inhalt vor, der in der [Inlines](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.span.inlines.aspx)-Sammlung enthalten sein darf. Genauer gesagt: Ein Link lässt nur [Run](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.run.aspx)- und andere [Span]()-Typen zu, die keinen anderen Link darstellen. [InlineUIContainer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.inlineuicontainer.aspx) darf nicht in der Inlines-Sammlung eines Links enthalten sein. Beim Versuch, eingeschränkte Inhalte hinzuzufügen, wird eine Ausnahme für ein ungültiges Argument oder eine XAML-Analyseausnahme ausgelöst.
 
 **Links und Design-/Formatvorlagenverhalten**
 
@@ -160,6 +165,6 @@ Die Standardfarbe des Links ist die Akzentfarbe des Systems. Dieses Verhalten k�
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

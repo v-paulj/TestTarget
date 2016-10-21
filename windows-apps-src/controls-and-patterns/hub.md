@@ -6,11 +6,13 @@ ms.assetid: F1319960-63C6-4A8B-8DA1-451D59A01AC2
 label: Hub
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: fdff043aa92842adb6ac2d572794bf02fdd5c6b3
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 6c27d9b968dfca6d0c1db37eb7779d9ff3744f41
 
 ---
 # Hub-Steuerelement/-Muster
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Mit einem Hub-Steuerelement können Sie App-Inhalte in unterschiedlichen, jedoch zusammenhängenden Abschnitten oder Kategorien organisieren. Abschnitte in einem Hub sind für das Durchlaufen in einer bevorzugten Reihenfolge vorgesehen und können als Ausgangspunkt für den Zugriff auf detaillierte Inhalte dienen.
@@ -19,9 +21,19 @@ Mit einem Hub-Steuerelement können Sie App-Inhalte in unterschiedlichen, jedoch
 
 Inhalte in einem Hub können in einer Panoramaansicht dargestellt werden, die Benutzern einen schnellen Überblick über Neuigkeiten sowie verfügbare und wichtige Inhalte bietet. Hubs verfügen in der Regel über eine Seitenüberschrift. Die einzelnen Inhaltsabschnitte erhalten jeweils eine Abschnittsüberschrift.
 
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251843"><strong>Hub-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn251845"><strong>HubSection-Klasse</strong></a></li>
+</ul>
 
--   [**Hub-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn251843)
--   [**HubSection-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn251845)
+</div>
+</div>
+
+
+
+
 
 ## Ist dies das richtige Steuerelement?
 
@@ -112,6 +124,6 @@ Auf mobilen Geräten ist jeweils ein Hub-Abschnitt sichtbar.
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

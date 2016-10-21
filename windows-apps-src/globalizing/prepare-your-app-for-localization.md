@@ -7,7 +7,7 @@ label: Prepare your app for localization
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 4f9bc1d14db7c348e2b4dc9db2440f94d44ab4a5
+ms.openlocfilehash: d3f389830fd4f21eae93aae661db86f9df479383
 
 ---
 
@@ -31,8 +31,7 @@ Geben Sie Bilddateien oder andere Dateiressourcen in deren Datei oder Ordner mit
 
 Fügen Sie den Ressourcendateien Ihrer App Lokalisierungskommentare hinzu. Die Kommentare können vom Lokalisierer gelesen werden und sollten Informationen zum Kontext enthalten, die als Hilfestellung für eine präzise Übersetzung der Ressourcen dienen. Die Kommentare sollten auch ausreichend auf Beschränkungen hinweisen, sodass die Übersetzung die Funktionalität der Software nicht beeinträchtigt. Optional können die Kommentare auch mit dem Tool "Makepri.exe" protokolliert werden.
 
-
-              **XAML:** RESW-Dateien (in Visual Studio mithilfe von XAML erstellte App-Ressourcen) verfügen über ein Kommentarelement. Beispiel:
+**XAML:** RESW-Dateien (in Visual Studio mithilfe von XAML erstellte App-Ressourcen) verfügen über ein Kommentarelement. Beispiel:
 
 ```XML
 <data name="String1">
@@ -41,8 +40,7 @@ Fügen Sie den Ressourcendateien Ihrer App Lokalisierungskommentare hinzu. Die K
 </data>
 ```
 
-
-              **HTML:** RESJSON-Dateien (in Visual Studio mithilfe von HTML erstellte App-Ressourcen) ermöglichen die Aufnahme von Metadaten in Felder, die mit einem Unterstrich beginnen, z.B. Kommentare:
+**HTML:** RESJSON-Dateien (in Visual Studio mithilfe von HTML erstellte App-Ressourcen) ermöglichen die Aufnahme von Metadaten in Felder, die mit einem Unterstrich beginnen, z.B. Kommentare:
 
 ```json
 {
@@ -194,6 +192,6 @@ Die Sortierung folgt dem **regionalen Format der Systemsteuerung**:
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,55 +1,41 @@
 ---
 author: Jwmsft
-Description: Befolgen Sie bei der Auswahl von Schriftarten und der Angabe von Schriftgraden und Schriftfarben die folgenden Richtlinien.
-title: Schriftarten
+Description: "Befolgen Sie bei der Auswahl von Schriftarten und der Angabe von Schriftgraden und Schriftfarben für UWP-Apps die folgenden Richtlinien."
+title: "Schriftarten für UWP-Apps"
 ms.assetid: 1B8B90AD-CDC4-4997-ACDE-871C1E94A929
 label: Fonts
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7db364240dd98f59a4a4d1d0c23cee1195682de2
-ms.openlocfilehash: 52de4d9517c7f3064ad9e589a95e6f96400524cc
+ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
+ms.openlocfilehash: b79a6f3ee32494f04fa472c0531c06aa0a60098b
 
 ---
 
-# Richtlinien für Schriftarten
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-**Wichtige APIs**
+# Schriftarten für UWP-Apps
 
--   [**FontFamily-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/br209655)
+In diesem Artikel sind die empfohlenen Schriftarten für UWP-Apps aufgeführt. Diese Schriftarten sind garantiert in allen Editionen von Windows10 verfügbar, die UWP-Apps unterstützen.
 
-Die richtige Verwendung von Schriftgraden, -breiten, -farben, Laufweite und Abstand kann Ihrer UWP-App (Universelle Windows-Plattform) ein klares und übersichtliches Erscheinungsbild verleihen und damit ihre Verwendung erleichtern. Befolgen Sie bei der Auswahl von Schriftarten und der Angabe von Schriftgraden und Schriftfarben die folgenden Richtlinien.
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/br209655"><strong>FontFamily-Eigenschaft</strong></a></li>
+</ul>
 
-Eine Liste der Segoe UI Symbol-Symbole finden Sie unter [**Richtlinien für Segoe UI Symbol-Symbole**](segoe-ui-symbol-font.md).
+</div>
+</div>
 
-## Der Typenverlauf von Windows 10
 
 
-Die Typhierarchie stellt eine wichtige gestalterische Beziehung zwischen Überschrift und Textkörper her und schafft damit eine klare und verständliche Hierarchie zwischen den verschiedenen Ebenen. Benutzer verstehen sofort, wo sie Informationen finden und wie Sie die Seite analysieren können.
+Der [UWP-Typografieleitfaden](typography.md) empfiehlt für Apps die Schriftart „SegoeUI“. Zwar eignet sich SegoeUI für zahlreiche Apps, muss jedoch nicht überall verwendet werden. Sie können andere Schriftarten für bestimmte Szenarien verwenden, z.B. zum Lesen oder wenn Sie Text in bestimmten Sprachen anzeigen. 
 
-Hier ist die Typhierarchie, die wir für UWP-Apps empfehlen:
 
-| Textstil | Schriftart | Breite    | Größe (Epx) | Zeilenabstand (Epx) | Wortabstand | Laufweite (1/1000 Geviert) | XAML-Stilschlüssel          |
-|------------|----------|-----------|------------|--------------------|--------------|----------------------|-------------------------|
-| Header     | Segoe UI | Light     | 46         | 56                 | 100%         | 0                    | HeaderTextBlockStyle    |
-| Unterüberschrift  | Segoe UI | Light     | 34         | 40                 | 100%         | 0                    | SubheaderTextBlockStyle |
-| Überschrift      | Segoe UI | Semilight | 24         | 28                 | 100%         | 0                    | TitleTextBlockStyle     |
-| Untertitel   | Segoe UI | Regular   | 20         | 24                 | 100%         | 0                    | SubtitleTextBlockStyle  |
-| Basis       | Segoe UI | SemiBold  | 15         | 20                 | 100%         | 0                    | BaseTextBlockStyle      |
-| Textkörper       | Segoe UI | Regular   | 15         | 20                 | 100%         | 0                    | BodyTextBlockStyle      |
-| Aufnahme    | Segoe UI | Regular   | 12         | 14                 | 100%         | 0                    | CaptionTextBlockStyle   |
 
  
+## Serifenlose Schriftarten
 
-## Empfohlene Schriftarten
-
-
-Sie müssen die Segoe UI-Schriftart nicht für alles verwenden. Sie können andere Schriftarten für bestimmte Szenarien verwenden, z. B. zum Lesen oder wenn Sie Text in anderen Sprachen anzeigen.
-
-Dies ist die Liste der Schriftarten, die garantiert in allen Editionen von Windows10 verfügbar sind, die UWP-Apps unterstützen.
-
-**Hinweis**  Wenn Sie eine Schriftart verwenden, die nicht in dieser Liste enthalten ist, löst Ihre App möglicherweise einen automatischen Download der Schriftartdaten von einem Microsoft-Dienst aus. Dies kann die Leistung und andere Faktoren beeinträchtigen, die insbesondere für mobile Geräte möglicherweise ein Problem darstellen. Beachten Sie zudem, dass dabei möglicherweise der mobile Datentarif eines Benutzers in Anspruch genommen wird oder Kosten für die Nutzung mobiler Daten anfallen. UWP-Apps, die auf mobilen Geräten verfügbar sind, sollten nie andere Schriftarten für UI-Content als in dieser Liste verwenden.
-
- 
+Serifenlose Schriftarten eignen sich für Überschriften und UI-Elemente. 
 
 <table>
 <colgroup>
@@ -61,54 +47,147 @@ Dies ist die Liste der Schriftarten, die garantiert in allen Editionen von Windo
 <tr class="header">
 <th align="left">Schriftfamilie</th>
 <th align="left">Stile</th>
-<th align="left">Kommentar</th>
+<th align="left">Hinweise</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Arial</td>
+<td align="left" style="font-family: Arial;">Arial</td>
 <td align="left">Normal, kursiv, fett, fett kursiv, schwarz</td>
-<td align="left"></td>
+<td align="left">Unterstützung für europäische und nahöstliche Schriften (Lateinisch, Griechisch, Kyrillisch, Arabisch, Armenisch und Hebräisch). Die Schriftbreite „Black“ unterstützt nur europäische Schriften.</td>
 </tr>
 <tr class="even">
-<td align="left">Calibri</td>
+<td align="left" style="font-family: Calibri;">Calibri</td>
 <td align="left">Normal, kursiv, fett, fett kursiv, dünn, dünn kursiv</td>
-<td align="left"></td>
+<td align="left">Unterstützung für europäische und nahöstliche Schriften (Lateinisch, Griechisch, Kyrillisch, Arabisch und Hebräisch). Arabisch nur in gerader Schrift verfügbar.</td>
+</tr>
+<td style="font-family: Consolas;">Consolas</td>
+<td>Normal, kursiv, fett, fett kursiv</td>
+<td>Schriftart mit fester Breite mit Unterstützung für europäische Schriften (Lateinisch, Griechisch und Kyrillisch).</td>
+</tr>
+
+<tr>
+<td style="font-family: Segoe UI;">Segoe UI</td>
+<td>Normal, kursiv, Light kursiv, Black kursiv, fett, fett kursiv, Light, Semilight, Semibold, Black</td>
+<td>Benutzeroberflächen-Schriftart für europäische und nahöstliche Schriften (Arabisch, Armenisch, Kyrillisch, Georgisch, Griechisch, Hebräisch, Lateinisch) und auch Lisu-Schrift.</td>
+</tr>
+
+<tr class="odd">
+<td>Segoe UI historisch</td>
+<td align="left">Regular</td>
+<td align="left">Fallbackschriftart für historische Schriften</td>
+</tr>
+
+<tr class="even">
+<td style="font-family: Selawik;">Selawik</td>
+<td align="left">Normal, Semilight, Light, fett, Semibold</td>
+<td align="left">Open-Source-Schriftart, die metrisch kompatibel mit SegoeUI ist. Vorgesehen für Apps auf anderen Plattformen, auf denen SegoeUI nicht verfügbar ist. [Laden Sie Selawik über GitHub herunter.](https://github.com/Microsoft/Selawik)</td>
+</tr>
+
+<tr class="even">
+<td style="font-family: Verdana;">Verdana</td>
+<td align="left">Normal, kursiv, fett, fett kursiv</td>
+<td align="left">Unterstützung für europäische Schriften (Lateinisch, Griechisch, Kyrillisch und Armenisch).</td>
+</tr>
+
+</tbody>
+</table>
+
+
+## Serifenschriftarten
+
+Mit Serifenschriftarten lassen sich größere Textmengen gut darstellen. 
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">Schriftfamilie</th>
+<th align="left">Stile</th>
+<th align="left">Hinweise</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="font-family: Cambria;">Cambria</td>
+<td align="left">Regular</td>
+<td align="left">Serifenschriftart mit Unterstützung für europäischen Schriften (Lateinisch, Griechisch, Kyrillisch).</td>
+</tr>
+<tr class="even">
+<td style="font-family: Courier New;">Courier New</td>
+<td align="left">Normal, kursiv, fett, fett kursiv</td>
+<td align="left">Serifenschriftart mit fester Breite und Unterstützung für europäische und nahöstliche Schriften (Lateinisch, Griechisch, Kyrillisch, Arabisch, Armenisch und Hebräisch).</td>
 </tr>
 <tr class="odd">
-<td align="left">Cambria</td>
+<td style="font-family: Georgia;">Georgia</td>
+<td align="left">Normal, kursiv, fett, fett kursiv</td>
+<td align="left">Unterstützung für europäische Schriften (Lateinisch, Griechisch und Kyrillisch).</td>
+</tr>
+
+
+<tr class="even">
+<td style="font-family: Times New Roman;">Times New Roman</td>
+<td align="left">Normal, kursiv, fett, fett kursiv</td>
+<td align="left">Ältere Schriftart mit Unterstützung für europäische Schriften (Lateinisch, Griechisch, Kyrillisch, Arabisch, Armenisch, Hebräisch).</td>
+</tr>
+
+</tbody>
+</table>
+
+## Symbole
+
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">Schriftfamilie</th>
+<th align="left">Stile</th>
+<th align="left">Hinweise</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Segoe MDL2-Ressourcen</td>
+<td align="left">Regular</td>
+<td align="left">Benutzeroberflächen-Schriftart für App-Symbole. Weitere Informationen finden Sie im Artikel [Segoe MDL2 Assets](segoe-ui-symbol-font.md).</td>
+</tr>
+<tr class="even">
+<td align="left">Segoe UI-Emoji</td>
 <td align="left">Regular</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">Cambria Math</td>
+<td align="left">Segoe UI Symbol</td>
 <td align="left">Regular</td>
-<td align="left"></td>
+<td align="left">Fallbackschriftart für Symbole</td>
 </tr>
+</tbody>
+</table>
+
+
+
+## Schriftarten für nicht lateinische Sprachen
+
+Obwohl viele dieser Schriftarten auch lateinische Zeichen anbieten.
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">Schriftfamilie</th>
+<th align="left">Stile</th>
+<th align="left">Hinweise</th>
+</tr>
+</thead>
+<tbody>
+
 <tr class="odd">
-<td align="left">Comic Sans MS</td>
-<td align="left">Normal, kursiv, fett, fett kursiv</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Courier New</td>
-<td align="left">Normal, kursiv, fett, fett kursiv</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Ebrima</td>
+<td style="font-family: Embrima;">Ebrima</td>
 <td align="left">Normal, fett</td>
-<td align="left">Benutzeroberflächen-Schriftart für afrikanische Schriften (Äthiopisch, N'Ko, Osmanisch, Tifinagh, Vai)</td>
+<td align="left">Benutzeroberflächen-Schriftart für afrikanische Schriften (Äthiopisch, N'Ko, Osmanya, Tifinagh, Vai).</td>
 </tr>
 <tr class="even">
-<td align="left">Gadugi</td>
-<td align="left">Regular</td>
-<td align="left">Benutzeroberflächen-Schriftart für nordamerikanische Schriften (Kanadische Silbenschrift, Cherokee)</td>
-</tr>
-<tr class="odd">
-<td align="left">Georgia</td>
-<td align="left">Normal, kursiv, fett, fett kursiv</td>
-<td align="left"></td>
+<td style="font-family: Gadugi;">Gadugi</td>
+<td align="left">Normal, fett</td>
+<td align="left">Benutzeroberflächen-Schriftart für nordamerikanische Schriften (Kanadische Silbenschrift, Cherokee).</td>
 </tr>
 <tr class="even">
 <td align="left">Javanischer Text Normal Fallbackschriftart für javanische Schrift</td>
@@ -116,175 +195,126 @@ Dies ist die Liste der Schriftarten, die garantiert in allen Editionen von Windo
 <td align="left">Fallbackschriftart für javanische Schrift</td>
 </tr>
 <tr class="odd">
-<td align="left">LeelawadeeUI</td>
+<td align="left" style="font-family: Leelawadee UI;">LeelawadeeUI</td>
 <td align="left">Normal, Semilight, fett</td>
-<td align="left">Benutzeroberflächen-Schriftart für südostasiatische Schriften (Buginesisch, Laotisch, Khmer, Thailändisch)</td>
+<td align="left">Benutzeroberflächen-Schriftart für südostasiatische Schriften (Buginesisch, Laotisch, Khmer, Thailändisch).</td>
+</tr>
+
+<tr class="odd">
+<td align="left" style="font-family: Malgun Gothic;">Malgun Gothic</td>
+<td align="left">Regular</td>
+<td align="left">Benutzeroberflächen-Schriftart für Koreanisch.</td>
 </tr>
 <tr class="even">
-<td align="left">Lucida Console</td>
+<td align="left" style="font-family: Microsoft Himalaya;">Microsoft Himalaya</td>
+<td align="left">Regular</td>
+<td align="left">Fallbackschriftart für die tibetische Schrift.</td>
+</tr>
+<!--
+<tr class="odd">
+<td align="left" style="font-family: Microsoft JhengHei;">Microsoft JhengHei</td>
 <td align="left">Regular</td>
 <td align="left"></td>
 </tr>
+-->
+<tr class="even">
+<td align="left" style="font-family: Microsoft JhengHei UI;">Microsoft JhengHei UI</td>
+<td align="left">Normal, fett, Light</td>
+<td align="left">Benutzeroberflächen-Schriftart für Chinesisch (traditionell).</td>
+</tr>
 <tr class="odd">
-<td align="left">Malgun Gothic</td>
+<td align="left" style="font-family: Microsoft New Tai Lue;">Microsoft Neu-Tai-Lue</td>
 <td align="left">Regular</td>
-<td align="left">Benutzeroberflächen-Schriftart für Koreanisch</td>
+<td align="left">Fallbackschriftart für die Neu-Tai-Lue-Schrift.</td>
 </tr>
 <tr class="even">
-<td align="left">Microsoft Himalaya</td>
+<td align="left" style="font-family: Microsoft PhagsPa;">Microsoft PhagsPa</td>
 <td align="left">Regular</td>
-<td align="left">Fallbackschriftart für tibetische Schrift</td>
+<td align="left">Fallbackschriftart für die Phags-pa-Schrift.</td>
 </tr>
 <tr class="odd">
-<td align="left">Microsoft JhengHei</td>
+<td align="left" style="font-family: Microsoft Tai Le;">Microsoft Tai Le</td>
+<td align="left">Regular</td>
+<td align="left">Fallbackschriftart für die Tai Le-Schrift.</td>
+</tr>
+<!--
+<tr class="even">
+<td align="left" style="font-family: Microsoft YaHei;">Microsoft YaHei</td>
 <td align="left">Regular</td>
 <td align="left"></td>
 </tr>
+-->
+<tr class="odd">
+<td align="left" style="font-family: Microsoft YaHei UI;">Microsoft YaHei UI</td>
+<td align="left">Normal, fett, Light</td>
+<td align="left">Benutzeroberflächen-Schriftart für Chinesisch (vereinfacht).</td>
+</tr>
 <tr class="even">
-<td align="left">Microsoft JhengHei UI</td>
+<td align="left" style="font-family: Microsoft Yi Baiti;">Microsoft Yi Baiti</td>
 <td align="left">Regular</td>
-<td align="left">Benutzeroberflächen-Schriftart für Chinesisch (traditionell)</td>
+<td align="left">Fallbackschriftart für die Yi-Schrift.</td>
 </tr>
 <tr class="odd">
-<td align="left">Microsoft Neu-Tai-Lue</td>
+<td align="left" style="font-family: Mongolian Baiti;">Mongolisches Baiti</td>
 <td align="left">Regular</td>
-<td align="left">Fallback-Schriftart für Neu-Tai-Lue-Schrift</td>
+<td align="left">Fallbackschriftart für die mongolische Schrift.</td>
 </tr>
 <tr class="even">
-<td align="left">Microsoft PhagsPa</td>
+<td align="left" style="font-family: MV Boli;">MV Boli</td>
 <td align="left">Regular</td>
-<td align="left">Fallbackschriftart für Phags-pa-Schrift</td>
+<td align="left">Fallbackschriftart für die Thaana-Schrift.</td>
 </tr>
 <tr class="odd">
-<td align="left">Microsoft Tai Le</td>
+<td align="left" style="font-family: Myanmar Text;">Myanmar Text</td>
 <td align="left">Regular</td>
-<td align="left">Fallbackschriftart Tai Le-Schrift</td>
+<td align="left">Fallbackschriftart für die Myanmar-Schrift.</td>
 </tr>
 <tr class="even">
-<td align="left">Microsoft YaHei</td>
-<td align="left">Regular</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Microsoft YaHei UI</td>
-<td align="left">Regular</td>
-<td align="left">Benutzeroberflächen-Schriftart für Chinesisch (vereinfacht)</td>
-</tr>
-<tr class="even">
-<td align="left">Microsoft Yi Baiti</td>
-<td align="left">Regular</td>
-<td align="left">Fallbackschriftart für Yi-Schrift</td>
-</tr>
-<tr class="odd">
-<td align="left">Mongolisches Baiti</td>
-<td align="left">Regular</td>
-<td align="left">Fallbackschriftart für mongolische Schrift</td>
-</tr>
-<tr class="even">
-<td align="left">MV Boli</td>
-<td align="left">Regular</td>
-<td align="left">Fallbackschriftart für Thaana-Schrift</td>
-</tr>
-<tr class="odd">
-<td align="left">Myanmar Text</td>
-<td align="left">Regular</td>
-<td align="left">Fallbackschriftart für Myanmar-Schrift</td>
-</tr>
-<tr class="even">
-<td align="left">Nirmala UI</td>
+<td align="left" style="font-family: Nirmala UI;">Nirmala UI</td>
 <td align="left">Normal, Semilight, fett</td>
 <td align="left">Benutzeroberflächen-Schriftart für südasiatische Schriften (Bangla, Devanagari, Gujarati, Gurmukhi, Kannada, Malayalam, Odia, Ol Chiki, Singhalesisch, Sora Sompeng, Tamil, Telugu)</td>
 </tr>
+
 <tr class="odd">
-<td align="left">Segoe MDL2-Ressourcen</td>
+<td align="left" style="font-family: SimSun;">SimSun</td>
 <td align="left">Regular</td>
-<td align="left">Benutzeroberflächen-Schriftart für App-Symbole</td>
-</tr>
-<tr class="even">
-<td align="left">Segoe-Druck</td>
-<td align="left">Regular</td>
-<td align="left"></td>
+<td align="left">Eine ältere chinesische UI-Schriftart. </td>
 </tr>
 <tr class="odd">
-<td align="left">Segoe UI</td>
-<td align="left">Normal, kursiv, fett, fett kursiv, dünn, Semilight, Semibold, schwarz</td>
-<td align="left">Benutzeroberflächen-Schriftart für europäische und nahöstliche Schriften (Arabisch, Armenisch, Kyrillisch, Georgisch, Griechisch, Hebräisch, Lateinisch) und auch Lisu-Schrift</td>
-</tr>
-<tr class="even">
-<td align="left">Segoe UI-Emoji</td>
-<td align="left">Regular</td>
-<td align="left">In der in Windows Phone enthaltenen Version ist jedes Emoticon mit einem weißen Rand versehen, um sicherzustellen, dass es auf allen Hintergrundfarben angezeigt werden kann. Sie ist metrisch kompatibel mit der in Windows enthaltenen Version.</td>
-</tr>
-<tr class="odd">
-<td align="left">Segoe UI historisch</td>
-<td align="left">Regular</td>
-<td align="left">Fallbackschriftart für historische Schriften</td>
-</tr>
-<tr class="even">
-<td align="left">Segoe UI Symbol</td>
-<td align="left">Regular</td>
-<td align="left">Fallbackschriftart für Symbole</td>
-</tr>
-<tr class="odd">
-<td align="left">SimSun</td>
-<td align="left">Regular</td>
+<td align="left" style="font-family: Yu Gothic;">Yu Gothic</td>
+<td align="left">Mittel</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">Times New Roman</td>
-<td align="left">Normal, kursiv, fett, fett kursiv</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Trebuchet MS</td>
-<td align="left">Normal, kursiv, fett, fett kursiv</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Verdana</td>
-<td align="left">Normal, kursiv, fett, fett kursiv</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Webdings</td>
+<td align="left" style="font-family: Yu Gothic UI;">Yu Gothic UI</td>
 <td align="left">Regular</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Wingdings</td>
-<td align="left">Regular</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Yu Gothic</td>
-<td align="left">Medium</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Yu Gothic UI</td>
-<td align="left">Regular</td>
-<td align="left">Benutzeroberflächen-Schriftart für Japanisch</td>
+<td align="left">Benutzeroberflächen-Schriftart für Japanisch.</td>
 </tr>
 </tbody>
 </table>
 
- 
 
-## Verwandte Themen
+## Globalisierung/Lokalisierung von Schriftarten
+Verwenden Sie die [LanguageFont-Schriftartenersetzungs-APIs](https://msdn.microsoft.com/library/windows/apps/br206864) für den programmgesteuerten Zugriff auf die Empfohlenen Einstellungen für Familie, Grad, Breite und Schnitt der Schriftart für eine spezielle Sprache. Das LanguageFont-Objekt ermöglicht den Zugriff auf die richtigen Schriftartinformationen für verschiedene Inhaltskategorien: UI-Kopfzeilen, Benachrichtigungen, Textkörper und Schriftarten für den Textkörper, die vom Benutzer bearbeitet werden können. Weitere Informationen finden Sie unter [Anpassen von Layout und Schriftarten zur Globalisierungsunterstützung](https://msdn.microsoft.com/windows/uwp/globalizing/adjust-layout-and-fonts--and-support-rtl).
 
-**Für Designer**
-* [Beschriftung (oder Textblock)](../controls-and-patterns/labels.md)
-* [Segoe UI Symbol-Symbole](segoe-ui-symbol-font.md)
-**Für Entwickler (XAML)**
+<!--
+## Triggering a font download
+If you use a font that's not listed in this article, your app might trigger an automatic download of the font data from a Microsoft service. This can have performance and other impacts that may be a concern, particularly for mobile devices. In particular, note that this might consume some of a user's mobile data plan or result in mobile data usage costs. UWP apps that will available on mobile devices should never use fonts for UI content other than fonts in this list.
+-->
+
+## Beispiele herunterladen
+
+* [Beispiel: Herunterladbare Schriftarten](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlCloudFontIntegration)
+* [Beispiel: UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
+* [Zeilenabstand mit DirectWrite-Beispiel](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/DWriteLineSpacingModes) 
+
+## Verwandte Artikel
+
+* [Anpassen von Layout und Schriftarten zur Globalisierungsunterstützung](https://msdn.microsoft.com/windows/uwp/globalizing/adjust-layout-and-fonts--and-support-rtl)
+* [Segoe MDL2](segoe-ui-symbol-font.md)
+* [Textsteuerelemente](../controls-and-patterns/text-controls.md)
 * [XAML-Designressourcen](https://msdn.microsoft.com/library/windows/apps/mt187274)
-* [Gestalten einer App-Seite](https://msdn.microsoft.com/library/windows/apps/hh872191)
-* [Segoe UI Symbol-Symbole](segoe-ui-symbol-font.md)
-* [**TextBlock.FontFamily-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/br209655)
 
-**Beispiele**
-* [Beispiel für die XAML-Textanzeige](http://go.microsoft.com/fwlink/p/?linkid=238578)
-* [CSS-Formatvorlagen: Beispiel für das Branding Ihrer App](http://go.microsoft.com/fwlink/p/?linkid=231641)
-* [Beispiel für Sprachschriftartzuordnung](http://go.microsoft.com/fwlink/p/?linkid=231603)
  
 
  
@@ -295,6 +325,6 @@ Dies ist die Liste der Schriftarten, die garantiert in allen Editionen von Windo
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -6,8 +6,9 @@ title: "Richtlinien für Globalisierung und Lokalisierung"
 ms.assetid: 0342DC3F-DDD1-4DD4-872E-A4EC340CAE79
 label: Do's and don'ts
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: bdbe6b3e319aa90a78660c664f1603bac93399ca
+ms.openlocfilehash: 9d16e553eb38526b4ae1f5aa827132e130cd05c7
 
 ---
 
@@ -192,6 +193,6 @@ Bereiten Sie Ihre App für die einfache Anpassung an verschiedene Märkte vor, i
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

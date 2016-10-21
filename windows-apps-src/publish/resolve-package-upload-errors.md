@@ -3,8 +3,9 @@ author: jnHs
 Description: "Wenn während der App-Übermittlung Fehler beim Hochladen von App-Paketen auftreten, müssen Sie diese beheben, bevor Sie die App an den Store übermitteln können."
 title: "Beheben von Paketübertragungsfehlern"
 ms.assetid: 0D01E43C-F3A7-4FA2-B479-1B5579FF531A
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: afd2a08ed637502827e3207702d7659ed70148a0
+ms.openlocfilehash: c55314d6da819100cc3ed6782cc151d55dc1f8cb
 
 ---
 
@@ -27,21 +28,20 @@ Informationen zum Beheben von Fehlern im Zusammenhang mit Versionsnummern und zu
 
 Beachten Sie außerdem, falls Ihre Übermittlung mehr als eine Windows Phone 8.1-XAP besitzt, müssen sie die gleichen Versionsnummern aufweisen.
 
-
-            **Hinweis**  Weiteren Fragen und Antworten zu anderen Fehlermeldungen finden Sie in unseren [Foren](http://go.microsoft.com/fwlink/p/?LinkId=224196).
-
- 
+**Hinweis**  Weitere Fragen und Antworten zu anderen Fehlermeldungen und Hilfe zur Lösung finden Sie in unseren [Foren](http://go.microsoft.com/fwlink/p/?LinkId=224196).
 
  
 
  
 
+ 
 
 
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO3-->
 
 

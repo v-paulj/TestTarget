@@ -1,10 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 12ECEA89-59D2-4BCE-B24C-5A4DD525E0C7
 title: Zugriff auf Inhalte in der Heimnetzgruppe
 description: "Greifen Sie auf Inhalte zu, die sich im Heimnetzgruppenordner des Benutzers befinden, einschließlich Bildern, Musik und Videos."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c4853e2ed73f11637b45729bc04b1c089cd1f86e
+translationtype: Human Translation
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: d8f755b64d9a8b0a87dc7d37fb24ffd6ea1b5044
 
 ---
 # Zugreifen auf Inhalte in der Heimnetzgruppe
@@ -28,8 +29,7 @@ Greifen Sie auf Inhalte zu, die sich im Heimnetzgruppenordner des Benutzers befi
 
     Damit auf Heimnetzgruppeninhalte zugegriffen werden kann, muss auf dem Computer des Benutzers eine Heimnetzgruppe eingerichtet sein, und Ihre App muss mindestens eine der folgenden Funktionen unterstützen: **picturesLibrary**, **musicLibrary** oder **videosLibrary**. Wenn Ihre App auf den Heimnetzgruppenordner zugreift, sieht sie nur die Bibliotheken, die den im Manifest Ihrer App deklarierten Funktionen entsprechen. Weitere Informationen finden Sie unter [Berechtigungen für den Dateizugriff](file-access-permissions.md).
 
-    
-            **Hinweis**  Inhalte der Dokumentbibliothek einer Heimnetzgruppe sind für Ihre App nicht sichtbar, unabhängig von den deklarierten Funktionen in ihrem Manifest und den Freigabeeinstellungen des Benutzers.
+    **Hinweis**  Inhalte der Dokumentbibliothek einer Heimnetzgruppe sind für Ihre App nicht sichtbar, unabhängig von den deklarierten Funktionen in ihrem Manifest und den Freigabeeinstellungen des Benutzers.
 
      
 
@@ -57,7 +57,7 @@ Führen Sie die folgenden Schritte durch, um eine Instanz der Dateiauswahl zu ö
     picker.FileTypeFilter.Clear();
     picker.FileTypeFilter.Add("*");
     ```
-  
+
 2.  **Blenden Sie die Dateiauswahl ein und verarbeiten Sie die ausgewählte Datei.**
 
     Lassen Sie den Benutzer eine Datei auswählen, indem Sie [**FileOpenPicker.PickSingleFileAsync**](https://msdn.microsoft.com/library/windows/apps/jj635275) aufrufen, oder mehrere Dateien auswählen, indem Sie [**FileOpenPicker.PickMultipleFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br207851) aufrufen, nachdem Sie die Dateiauswahl erstellt und angepasst haben.
@@ -93,11 +93,11 @@ In diesem Beispiel wird erläutert, wie Elemente in der Heimnetzgruppe gefunden 
 
     In diesem Beispiel werden Abfrageoptionen festgelegt, die die Suchergebnisse nach Relevanz und dem Änderungsdatum sortieren. Beim Suchfilter handelt es sich um den Abfrageausdruck, den der Benutzer im vorherigen Schritt eingegeben hat:
     ```csharp
-    Windows.Storage.Search.QueryOptions queryOptions = 
+    Windows.Storage.Search.QueryOptions queryOptions =
             new Windows.Storage.Search.QueryOptions
                 (Windows.Storage.Search.CommonFileQuery.OrderBySearchRank, null);
     queryOptions.UserSearchFilter = queryTerm.Text;
-    Windows.Storage.Search.StorageFileQueryResult queryResults = 
+    Windows.Storage.Search.StorageFileQueryResult queryResults =
             Windows.Storage.KnownFolders.HomeGroup.CreateFileQueryWithOptions(queryOptions);    
     ```
 
@@ -105,7 +105,7 @@ In diesem Beispiel wird erläutert, wie Elemente in der Heimnetzgruppe gefunden 
 
     Im folgenden Beispiel wird die Suchabfrage in der Heimnetzgruppe ausgeführt, und die Namen aller passenden Dateien werden in einer Liste mit Zeichenfolgen gespeichert.
     ```csharp
-    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFile> files = 
+    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFile> files =
         await queryResults.GetFilesAsync();
 
     if (files.Count > 0)
@@ -127,7 +127,7 @@ In diesem Abschnitt erfahren Sie, wie Sie nach Heimnetzgruppendateien suchen, di
 
     Jeder Ordner auf oberster Ebene in der Heimnetzgruppe repräsentiert einen bestimmten Heimnetzgruppenbenutzer. Um die Sammlung der Heimnetzgruppenbenutzer zu erhalten, rufen Sie also [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227279) auf, um die Heimnetzgruppenordner der obersten Ebene abzurufen.
     ```csharp
-    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFolder> hgFolders = 
+    System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFolder> hgFolders =
         await Windows.Storage.KnownFolders.HomeGroup.GetFoldersAsync();    
     ```
 
@@ -142,7 +142,7 @@ In diesem Abschnitt erfahren Sie, wie Sie nach Heimnetzgruppendateien suchen, di
         {
             // Found the target user's folder, now find all files in the folder.
             userFound = true;
-            Windows.Storage.Search.QueryOptions queryOptions = 
+            Windows.Storage.Search.QueryOptions queryOptions =
                 new Windows.Storage.Search.QueryOptions
                     (Windows.Storage.Search.CommonFileQuery.OrderBySearchRank, null);
             queryOptions.UserSearchFilter = "*";
@@ -190,11 +190,7 @@ Gehen Sie wie folgt vor, um Videoinhalte aus der Heimnetzgruppe zu streamen:
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  
-            **Öffnen Sie die Dateiauswahl des Benutzers für den Lesezugriff, und legen Sie den Dateidatenstrom als Quelle für das**
-            [
-              **MediaElement**
-            ](https://msdn.microsoft.com/library/windows/apps/br242926) fest. Spielen Sie die Datei anschließend ab.
+3.  **Öffnen Sie die Dateiauswahl des Benutzers für den Lesezugriff, und legen Sie den Dateidatenstrom als Quelle für das** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926) fest. Spielen Sie die Datei anschließend ab.
     ```csharp
     if (file != null)
     {
@@ -215,10 +211,6 @@ Gehen Sie wie folgt vor, um Videoinhalte aus der Heimnetzgruppe zu streamen:
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

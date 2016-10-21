@@ -3,8 +3,9 @@ author: jwmsft
 description: "Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource aus einer benutzerdefinierten Ressourcennachschlage-Implementierung untersucht wird. Das Nachschlagen der Ressource erfolgt mithilfe einer Implementierung der CustomXamlResourceLoader-Klasse."
 title: CustomResource-Markuperweiterung
 ms.assetid: 3A59A8DE-E805-4F04-B9D9-A91E053F3642
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4758f67c7bcbc58fda47faf1e872998302086c10
+ms.openlocfilehash: a0a4edc8d59219aea3a47a18ea991e4267782026
 
 ---
 
@@ -28,8 +29,7 @@ Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis au
 
 ## Hinweise
 
-
-            **CustomResource** ist eine Methode zum Abrufen von Werten, die an anderer Stelle in einem benutzerdefinierten Ressourcenrepository definiert sind. Diese Technik ist relativ komplex und wird in den meisten Szenarien für Windows-Runtime-App-Szenarien nicht verwendet.
+**CustomResource** ist eine Methode zum Abrufen von Werten, die an anderer Stelle in einem benutzerdefinierten Ressourcenrepository definiert sind. Diese Technik ist relativ komplex und wird in den meisten Szenarien für Windows-Runtime-App-Szenarien nicht verwendet.
 
 Die Auflösung einer **CustomResource** in ein Ressourcenwörterbuch wird in diesem Thema nicht beschrieben, da diese sehr unterschiedlich sein kann, abhängig von der Implementierung von [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327).
 
@@ -41,8 +41,7 @@ Eine `{CustomResource}`-Syntax funktioniert standardmäßig nicht (die Basisimpl
 2.  Legen Sie [**CustomXamlResourceLoader.Current**](https://msdn.microsoft.com/library/windows/apps/br243328) fest, um auf Ihre Klasse in der Initialisierungslogik zu verweisen. Dies muss erfolgen, bevor XAML-Code auf Seitenebene geladen wird, der die `{CustomResource}`-Erweiterungssyntax enthält. Eine Stelle, an der **CustomXamlResourceLoader.Current** festgelegt werden kann, ist im [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Unterklassenkonstruktor, der in den App.xaml-CodeBehind-Vorlagen für Sie generiert wird.
 3.  Jetzt können Sie `{CustomResource}`-Erweiterungen in dem XAML-Code, den Ihre App als Seiten lädt, oder in XAML-Ressourcenverzeichnissen verwenden.
 
-
-            **CustomResource** ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn für Attributwerte Escapezeichen verwendet werden müssen, damit sie keine Literalwerte oder Handlernamen darstellen, und es nicht ausreicht, Typkonverter für bestimmte Typen oder Eigenschaften zu verwenden. Alle Markuperweiterungen in XAML verwenden die Zeichen „\{” und „\}” in ihrer Attributsyntax. Anhand dieser Konvention erkennt ein XAML-Prozessor, dass eine Markuperweiterung das Attribut verarbeiten muss.
+**CustomResource** ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn für Attributwerte Escapezeichen verwendet werden müssen, damit sie keine Literalwerte oder Handlernamen darstellen, und es nicht ausreicht, Typkonverter für bestimmte Typen oder Eigenschaften zu verwenden. Alle Markuperweiterungen in XAML verwenden die Zeichen „\{” und „\}” in ihrer Attributsyntax. Anhand dieser Konvention erkennt ein XAML-Prozessor, dass eine Markuperweiterung das Attribut verarbeiten muss.
 
 ## Verwandte Themen
 
@@ -53,6 +52,6 @@ Eine `{CustomResource}`-Syntax funktioniert standardmäßig nicht (die Basisimpl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,8 +4,8 @@ title: Spiele und DirectX
 description: "Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen, Verteilen und Monetisieren von Spielen. Hier erhalten Sie Informationen zum Starten eines neuen Spiels oder Portieren eines vorhandenen Spiels."
 ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 translationtype: Human Translation
-ms.sourcegitcommit: 41ee0d2a45408b5b1a0dbc0b102f1b59843814b2
-ms.openlocfilehash: e5447f6238ece768513d160579e1c7e89b04e509
+ms.sourcegitcommit: adaff9abeb0ae8f9c9deb964b18e673c4d4c5f73
+ms.openlocfilehash: fccc85584e84bf3364130fe80c61b75c6377c0c8
 
 ---
 
@@ -32,7 +32,8 @@ Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen
 | [Audio für Spiele](working-with-audio-in-your-directx-game.md) | Hier erfahren Sie, wie Sie Musik und Sound entwickeln und in Ihr DirectX-Spiel integrieren. Außerdem erfahren Sie, wie Sie Audiosignale verarbeiten, um dynamischen und positionsbezogenen Sound zu erzeugen. |
 | [Toucheingabesteuerelemente für Spiele](tutorial--adding-touch-controls-to-your-directx-game.md) | Hier erfahren Sie, wie Sie Ihrem UWP-Spiel mit DirectX und C++ einfache touchbasierte Steuerelemente hinzufügen. Wir zeigen Ihnen, wie Sie touchbasierte Steuerelemente hinzufügen, um eine Kamera mit fester Ebene in einer Direct3D-Umgebung zu bewegen, indem die Kameraperspektive durch Bewegen des Fingers oder Eingabestifts geändert wird. |
 | [Bewegungs-/Blicksteuerungen für Spiele](tutorial--adding-move-look-controls-to-your-directx-game.md) | Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen. |
-| [Optimieren von Eingabe und Renderschleife](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) | Die Eingabelatenz kann das Spielerlebnis erheblich beeinträchtigen, und Spiele wirken professioneller, wenn in diesem Bereich eine Optimierung vorgenommen wird. Außerdem kann eine richtige Optimierung der Eingabeereignisse zu einer besseren Akkulaufzeit führen. Hier erfahren Sie, wie Sie die richtigen Verarbeitungsoptionen für [CoreDispatcher](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md)-Eingabeereignisse auswählen, um sicherzustellen, dass die Eingaben im Spiel so reibungslos wie möglich verarbeitet werden. |
+| [Relative Mausbewegung](relative-mouse-movement.md) | Erfahren Sie, wie Sie relative Maussteuerungen hinzufügen, die nicht den Systemcursor verwenden und keine absoluten Bildschirmkoordinaten zurückgeben, sondern stattdessen das Pixeldelta zwischen Mausbewegungen nachverfolgen. |
+| [Optimieren von Eingabe und Renderschleife](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md) | Die Eingabelatenz kann das Spielerlebnis erheblich beeinträchtigen. Spiele wirken professioneller, wenn in diesem Bereich eine Optimierung vorgenommen wird. Außerdem kann eine richtige Optimierung der Eingabeereignisse zu einer besseren Akkulaufzeit führen. Hier erfahren Sie, wie Sie die richtigen Verarbeitungsoptionen für [CoreDispatcher](optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md)-Eingabeereignisse auswählen, um sicherzustellen, dass die Eingaben im Spiel so reibungslos wie möglich verarbeitet werden. |
 | [Swapchainskalierung und Überlagerungen](multisampling--scaling--and-overlay-swap-chains.md) | Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern. |
 | [Reduzieren der Latenz mit DXGI1.3-Swapchains](reduce-latency-with-dxgi-1-3-swap-chains.md) | Verwenden Sie DXGI1.3 zum Reduzieren der geltenden Framelatenz, indem Sie warten, bis die Swapchain den geeigneten Zeitpunkt zum Beginnen mit dem Rendern eines neuen Frames signalisiert. |
 | [Multisampling in UWP-Apps](multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md) | Hier erfahren Sie, wie Sie das Multisampling in UWP-Apps verwenden, die mit Direct3D erstellt wurden. |
@@ -43,6 +44,7 @@ Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen
 | [Cloud für Spiele](cloud-for-games.md) | Erfahren Sie, wie Sie Cloudtechnologien für die Entwicklung von Spielen nutzen können. |
 | [Interoperabilität von DirectX und XAML](directx-and-xaml-interop.md) | In Ihrem UWP-Spiel können Sie eine Kombination aus Extensible Application Markup Language (XAML) und Microsoft DirectX verwenden. |
 | [Packen Ihres Spiels](package-your-windows-store-directx-game.md) | Umfangreichere UWP-Spiele können leicht relativ groß werden. Dies gilt besonders für Spiele, bei denen mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt werden oder die über optionale HD-Ressourcen verfügen. In diesem Thema erfahren Sie, wie Sie App-Pakete und App-Bündel zum Anpassen der App verwenden, damit Kunden nur die wirklich benötigten Ressourcen erhalten. |
+| [Konzeptgenehmigung](concept-approval.md) | Hier erfahren Sie, wie Sie Ihr Produkt zur Konzeptgenehmigung übermitteln, die Sie benötigen, wenn das Produkt auf der Xbox ausgeführt wird oder Xbox Live verwendet. |
 | [Handbücher zum Portieren von Spielen](porting-guides.md) | Hier finden Sie Anleitungen zum Portieren von vorhandenen Spielen zu Direct3D11, UWP und Windows10. |
 | [Ressourcen für die Spieleprogrammierung](additional-directx-game-programming-resources.md) | Weitere Informationen zur Spieleprogrammierung unter Windows finden Sie in den folgenden Ressourcen. |
 
@@ -70,6 +72,6 @@ Damit Sie die Übersichten und Lernprogramme zur Spieleentwicklung optimal nutze
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -5,8 +5,9 @@ title: "Einführung in das UWP-App-Design"
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 label: Intro to UWP app design
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: ec154ec64ba18badb5f81b59e76fc04e539de1a8
+ms.openlocfilehash: 06925bc42aab6d2ca7bf97c48161cca5e1cf840b
 
 ---
 
@@ -46,8 +47,7 @@ Die nächste Abbildung zeigt Designelemente, die nicht an das 4 x 4-Raster anged
 
 ![Designelemente, die nicht am 4x4-Pixelraster ausgerichtet werden](images/rsp-design/offthegridillustration.png)
 
-
-            **Tipp**   Legen Sie beim Erstellen von Bildschirmmodellen in Bildbearbeitungsprogrammen die DPI auf 72 und die Bildgröße auf effektive Auflösung für die Zielgrößenklasse fest. (Eine Liste der Größenklassen und effektiven Auflösungen finden Sie im Abschnitt [Empfehlungen für bestimmte Größenklassen](#sizeclasses) dieses Artikels.)
+**Tipp** Legen Sie beim Erstellen von Bildschirmmodellen in Bildbearbeitungsprogrammen die DPI auf 72 und die Bildgröße auf die effektive Auflösung für die Zielgrößenklasse fest. (Eine Liste der Größenklassen und effektiven Auflösungen finden Sie im Abschnitt [Empfehlungen für bestimmte Größenklassen](#sizeclasses) dieses Artikels.)
 
 
 ### Universelle Eingabe und Smart-Interaktionen
@@ -220,6 +220,6 @@ Hier sehen Sie ein Beispiel für diese Methode, die beim Entwerfen einer Smart H
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

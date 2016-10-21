@@ -3,8 +3,9 @@ author: msatranjr
 Description: "Mithilfe des Kartensteuerelements können Straßenkarten und Luftansichten, Wegbeschreibungen, Suchergebnisse und Verkehrsinformationen angezeigt werden."
 title: "Richtlinien für Karten"
 ms.assetid: 7B5B6BC9-D1EC-4978-8876-20B78EF44797
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: 3c1d37a119eca88ee443772292f8cfe97cb3c1ac
+ms.openlocfilehash: e094e29220a0f8fcae6ca2af36ab86ecd22b520d
 
 ---
 
@@ -23,8 +24,7 @@ Mithilfe des Kartensteuerelements können Straßenkarten, Luftbilder, 3D-Ansicht
 
 Verwenden Sie ein Kartensteuerelement, wenn Sie in Ihrer App eine Karte benötigen, auf der Benutzer App-spezifische oder allgemeine geografische Informationen anzeigen können. Wenn die App ein Kartensteuerelement enthält, müssen Benutzer die App für diese Informationen nicht verlassen.
 
-
-            **Hinweis**  Wenn es Ihnen nichts ausmacht, dass Benutzer die App für diese Informationen verlassen, können Sie diese Informationen auch mit der Windows-Karten-App bereitstellen. Ihre App kann die Windows-Karten-App starten, um bestimmte Karten, Wegbeschreibungen und Suchergebnisse anzuzeigen. Weitere Informationen finden Sie unter [Starten der Windows-Karten-App](https://msdn.microsoft.com/library/windows/apps/mt228341).
+**Hinweis**  Wenn es Ihnen nichts ausmacht, dass Benutzer die App für diese Informationen verlassen, können Sie diese Informationen auch mit der Windows-Karten-App bereitstellen. Ihre App kann die Windows-Karten-App starten, um bestimmte Karten, Wegbeschreibungen und Suchergebnisse anzuzeigen. Weitere Informationen finden Sie unter [Starten der Windows-Karten-App](https://msdn.microsoft.com/library/windows/apps/mt228341).
 
 ## Beispiele
 
@@ -74,6 +74,6 @@ Dieses Beispiel zeigt eine App mit einem 3D-Luftbild und einer Streetside-Ansich
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

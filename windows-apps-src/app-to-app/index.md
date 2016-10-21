@@ -3,8 +3,9 @@ ms.assetid: E0728EB0-DFC3-4203-A367-8997B16E2328
 description: "In diesem Abschnitt wird erläutert, wie Sie Daten für UWP-Apps (Universelle Windows-Plattform) freigeben. Dabei geht es unter anderem um den Freigabe-Vertrag, das Kopieren und Einfügen und Drag&Drop."
 title: App-zu-App-Kommunikation
 author: awkoren
-ms.sourcegitcommit: dcd542257761083f3ec04eb0da2b13d5d68a19e2
-ms.openlocfilehash: 63550064b6f31b85cd3b6fa2a09bac4b7cfcf895
+translationtype: Human Translation
+ms.sourcegitcommit: 94e1586a73743e8918ef160897b1b22c8c545ea0
+ms.openlocfilehash: 05ac668e0e3c33f6dd9da9f578335bab96c6429c
 
 ---
 
@@ -27,11 +28,13 @@ Zusätzlich zum Freigabe-Vertrag können in Apps auch herkömmliche Verfahren zu
 | [Freigeben von Daten](share-data.md) | In diesem Artikel wird erläutert, wie der Freigabe-Vertrag in einer UWP-App unterstützt wird. Der Freigabe-Vertrag ist eine einfache Möglichkeit, Daten wie z.B. Text, Links, Fotos und Videos schnell für andere Apps freizugeben. Ein Benutzer möchte beispielsweise mit einer App für ein soziales Netzwerk eine Webseite mit seinen Freunden teilen, oder er möchte in einer Notiz-App einen Link zum späteren Aufrufen speichern. |
 | [Empfangen von Daten](receive-data.md) | In diesem Artikel wird erläutert, wie Sie in Ihrer UWP-App Inhalte empfangen, die in einer anderen App mithilfe des Freigabe-Vertrags freigegeben wurden. Mit diesem Freigabe-Vertrag kann Ihre App als Option angezeigt werden, wenn der Benutzer „Freigeben“ aufruft. |
 | [Kopieren und Einfügen](copy-and-paste.md) | In diesem Artikel wird erläutert, wie das Kopieren und Einfügen mit der Zwischenablage in UWP-Apps unterstützt wird. Kopieren und Einfügen ist die klassische Methode zum Austausch von Daten zwischen Apps oder in einer App, und nahezu jede App kann Zwischenablageaktionen bis zu einem gewissen Grad unterstützen. |
-| [Drag&Drop](drag-and-drop.md) | In diesem Artikel erfahren Sie, wie Sie Ihrer UWP-App Drag&Drop hinzufügen. Drag&Drop ist ein klassisches, natürliches Interaktionsmodell für Inhalte wie Bilder und Dateien. Nach der Implementierung stehen Drag&Drop-Vorgänge für sämtliche Richtungen (App zu App, App zu Desktop und Desktop zu App) zur Verfügung. |
-| [Schützen von zwischen Apps übertragenen Unternehmensdaten mithilfe von EDP](use-edp-to-protect-enterprise-data-transferred-between-apps.md) | Dieses Thema enthält Beispiele für Programmieraufgaben, die in einigen der gängigsten EDP-Szenarien mit Datenübertragung durchgeführt werden müssen. |
+| [Drag&Drop](drag-and-drop.md) | In diesem Artikel erfahren Sie, wie Sie Ihrer UWP-App Drag&Drop hinzufügen. Drag&Drop ist ein klassisches, natürliches Interaktionsmodell für Inhalte wie Bilder und Dateien. Nach der Implementierung stehen Drag & Drop-Vorgänge für sämtliche Richtungen (App zu App, App zu Desktop und Desktop zu App) zur Verfügung. |
+
+## Siehe auch
+- [Entwickeln von UWP-Apps](https://developer.microsoft.com/en-us/windows/develop)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

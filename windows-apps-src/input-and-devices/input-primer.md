@@ -6,8 +6,8 @@ ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: c65bb525e953228e95286d5c6a5bffdb11475e53
-ms.openlocfilehash: 6084a49a8d8d9884c3bd777160ca219059d1654b
+ms.sourcegitcommit: fe012189566a20203b2bf8cae72f80655eeadfd1
+ms.openlocfilehash: 29a33550c3b8c80c1ae2c8349fc0b771717325f1
 
 ---
 
@@ -102,8 +102,7 @@ Das Diktieren wird in der Regel verwendet, wenn eine App die Bedeutung oder die 
 
 Ein (Eingabe-)Stift kann ähnlich wie eine Maus als pixelgenaues Zeigegerät verwendet werden, und er eignet sich optimal für die Freihandeingabe.
 
-
-            **Hinweis**  Es gibt zwei Arten von Stiften: aktive und passive.
+**Hinweis**  Es gibt zwei Arten von Stiften: aktive und passive.
   -   Passive Stifte enthalten keine Elektronik, und sie emulieren effektiv die Toucheingabe über einen Finger. Sie benötigen eine Basisgerätanzeige, welche die Eingabe basierend auf dem Berührungsdruck erkennt. Da Benutzer beim Schreiben auf der Eingabeoberfläche häufig die Hand ablegen, können Eingabedaten wegen des nicht erfolgreichen Ablehnens der Handfläche verzerrt werden.
   -   Aktive Stifte enthalten Elektronik und können mit komplexen Gerätedisplays zusammenwirken und viel umfassendere Eingabedaten (u.a. Daten bei Daraufzeigen oder Näherung) für das System und die App liefern. Die Handflächenablehnung ist sehr viel robuster.
 
@@ -217,8 +216,7 @@ Bei der Bildschirmtastatur handelt es sich um eine visuelle Softwaretastatur, di
 
 Bei der Bildschirmtastatur handelt es sich um eine visuelle Softwaretastatur für die Texteingabe per Touchscreen. Die Touchtastatur ist kein Ersatz für die Bildschirmtastatur. Sie wird nur für die Texteingabe (ohne Emulierung der Hardwaretastatur) verwendet und nur angezeigt, wenn der Fokus auf einem Textfeld oder einem anderen bearbeitbaren Textsteuerelement liegt. Die Bildschirmtastatur unterstützt keine App- oder Systembefehle.
 
-
-            **Hinweis**  Die Bildschirmtastatur hat Vorrang vor der Touchtastatur. Ist die Bildschirmtastatur vorhanden, wird die Touchtastatur nicht angezeigt.
+**Hinweis**  Die Bildschirmtastatur hat Vorrang vor der Touchtastatur. Ist die Bildschirmtastatur vorhanden, wird die Touchtastatur nicht angezeigt.
 
 Im Allgemeinen weist eine Tastatur folgende Merkmale auf:
 
@@ -334,6 +332,6 @@ Personen kommunizieren untereinander mit einer Mischung aus Sprache und Gesten, 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

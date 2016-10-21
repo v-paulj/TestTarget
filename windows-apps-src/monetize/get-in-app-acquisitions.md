@@ -1,31 +1,28 @@
 ---
 author: mcleanbyron
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
-description: "Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein In-App-Produkt (IAP) während eines bestimmten Zeitraums und andere optionale Filter abzurufen."
-title: "Abrufen von IAP-Käufen"
+description: "Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein Add-On während eines bestimmten Zeitraums und andere optionale Filter abzurufen."
+title: "Abrufen von Add-On-Käufen"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: bff5eb8ecf5a11067a590393d443343dc6ed94bc
+ms.sourcegitcommit: ecb0f5263b7f7f470484e9bd579b7bdb6efcdfa4
+ms.openlocfilehash: 9d895200e6d1bc823ebcb52e0b034883f5a059e0
 
 ---
 
-# Abrufen von IAP-Käufen
+# Abrufen von Add-On-Käufen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein In-App-Produkt (IAP) während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Methode gibt die Daten im JSON-Format zurück.
+
+Verwenden Sie diese Methode in der Windows Store-Analyse-API, um die aggregierten Kaufdaten für ein Add-On (auch als In-App-Produkte (IAPs) bezeichnet) während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Methode gibt die Daten im JSON-Format zurück.
 
 ## Voraussetzungen
 
 
-Sie benötigen Folgendes, um diese Methode verwenden zu können:
+Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
--   Ordnen Sie die AzureAD-Anwendung, die Sie zum Aufrufen dieser Methode verwenden, Ihrem Dev Center-Konto zu.
-
--   Rufen Sie ein Azure AD-Zugriffstoken für Ihre Anwendung ab.
-
-Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows Store-Diensten](access-analytics-data-using-windows-store-services.md).
+* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](access-analytics-data-using-windows-store-services.md#prerequisites) für die Windows Store-Analyse-API.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 
 ## Anforderung
 
@@ -42,13 +39,13 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;. |
+| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
 ### Anforderungsparameter
 
-Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufdaten für alle für die App registrierten IAPs abzurufen, geben Sie den Parameter *applicationId* an. Um Kaufdaten für ein einzelnes für die App registriertes IAP abzurufen, geben Sie den Parameter *inAppProductId* an. Wenn Sie beide Parameter angeben, wird der Parameter *inAppProductId* ignoriert.
+Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufdaten für alle für die App registrierten Add-Ons abzurufen, geben Sie den Parameter *applicationId* an. Um Kaufdaten für ein einzelnes für die App registriertes Add-On abzurufen, geben Sie den Parameter *inAppProductId* an. Wenn Sie beide Parameter angeben, wird der Parameter *applicationId* ignoriert.
 
 <table>
 <colgroup>
@@ -69,25 +66,25 @@ Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufda
 <tr class="odd">
 <td align="left">applicationId</td>
 <td align="left">string</td>
-<td align="left">Die Store-ID der App, für die Sie IAP-Kaufdaten abrufen möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
+<td align="left">Die Store-ID der App, für die Sie die Add-On-Kaufdaten abrufen möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="even">
 <td align="left">inAppProductId</td>
 <td align="left">string</td>
-<td align="left">Die Produkt-ID des IAPs, für das Sie Kaufdaten abrufen möchten.</td>
+<td align="left">Die Store-ID des Add-Ons, für das Sie Kaufdaten abrufen möchten. Die Store-ID ist in der URL der Übersicht für das Add-On im Windows Dev Center-Dashboard verfügbar. Wenn die URL für eine Dashboardseite eines Add-Ons beispielsweise ```https://developer.microsoft.com/en-us/dashboard/iaps/9NBLGGH4SCZS?appId=9NBLGGH29DM8``` lautet, hat die Store-ID für das Add-On die Zeichenfolge 9NBLGGH4SCZS.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="odd">
 <td align="left">startDate</td>
 <td align="left">date</td>
-<td align="left">Das Startdatum im Datumsbereich der IAP-Kaufdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum.</td>
+<td align="left">Das Startdatum im Datumsbereich der Add-On-Kaufdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum.</td>
 <td align="left">Nein</td>
 </tr>
 <tr class="even">
 <td align="left">endDate</td>
 <td align="left">date</td>
-<td align="left">Das Enddatum im Datumsbereich der IAP-Kaufdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum.</td>
+<td align="left">Das Enddatum im Datumsbereich der Add-On-Kaufdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum.</td>
 <td align="left">Nein</td>
 </tr>
 <tr class="odd">
@@ -117,7 +114,7 @@ Die Parameter *applicationId* oder *inAppProductId* sind erforderlich. Um Kaufda
 <tr class="odd">
 <td align="left">orderby</td>
 <td align="left">string</td>
-<td align="left">Eine Anweisung, die die Ergebnisdatenwerte für die einzelnen IAP-Käufe anfordert. Die Syntax ist <em>orderby=field [order],field [order],...</em>. Der Parameter <em>field</em> kann eine der folgenden Zeichenfolgen sein:
+<td align="left">Eine Anweisung, die die Ergebnisdatenwerte für die einzelnen Add-On-Käufe anfordert. Die Syntax ist <em>orderby=field [order],field [order],...</em>. Der Parameter <em>field</em> kann eine der folgenden Zeichenfolgen sein:
 <ul>
 <li><strong>date</strong></li>
 <li><strong>acquisitionType</strong></li>
@@ -247,7 +244,7 @@ Die Liste der unterstützten Felder finden Sie in der folgenden Tabelle. Zeichen
 
 ### Anforderungsbeispiel
 
-Die folgenden Beispiele zeigen verschiedene Anforderungen für den Abruf von IAP-Kaufdaten für Apps. Ersetzen Sie die Werte *inAppProductId* und *applicationId* durch die entsprechende Produkt-ID für Ihr IAP und die entsprechende Store-ID für Ihre App.
+Die folgenden Beispiele zeigen verschiedene Anforderungen für den Abruf von Add-On-Kaufdaten. Ersetzen Sie die Werte *inAppProductId* und *applicationId* durch die entsprechende Store-ID für Ihre App oder Ihr Add-On.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/inappacquisitions?inAppProductId=9NBLGGGZ5QDR&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -267,22 +264,23 @@ Authorization: Bearer <your access token>
 
 | Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                                |
 |------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Wert      | Array  | Ein Array von Objekten, die aggregierte IAP-Kaufdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [IAP-Kaufwerte](#iap-acquisition-values).                                                                                                              |
-| @nextLink  | string | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit IAP-Kaufdaten für die Abfrage gibt. |
+| Wert      | Array  | Ein Array von Objekten, die aggregierte Add-On-Kaufdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Add-On-Kaufwerte](#add-on-acquisition-values).                                                                                                              |
+| @nextLink  | string | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Add-On-Kaufdaten für die Abfrage gibt. |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                                                                                                                                                                                                                                 |
 
 <span/>
 
-### IAP-Kaufwerte
+<span id="add-on-acquisition-values" />
+### Add-On-Kaufwerte
 
 Elemente im Array *Value* enthalten die folgenden Werte.
 
 | Wert               | Typ    | Beschreibung                                                                                                                                                                                                                              |
 |---------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| date                | string  | Das erste Datum im Datumsbereich für die Kaufdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist das erste Datum in diesem Datumsbereich dieser Wert. |
-| inAppProductId      | string  | Die Produkt-ID des IAP, für das Sie Kaufdaten abrufen.                                                                                                                                                                 |
-| inAppProductName    | string  | Der Anzeigename des IAPs.                                                                                                                                                                                                             |
-| applicationId       | string  | Die Store-ID der App, für die Sie IAP-Kaufdaten abrufen möchten.                                                                                                                                                           |
+| date                | string  | Das erste Datum im Datumsbereich für die Kaufdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
+| inAppProductId      | string  | Die Store-ID des Add-Ons, für das Sie Kaufdaten abrufen.                                                                                                                                                                 |
+| inAppProductName    | string  | Der Anzeigename des Add-Ons.                                                                                                                                                                                                             |
+| applicationId       | string  | Die Store-ID der App, für die Sie die Add-On-Kaufdaten abrufen möchten.                                                                                                                                                           |
 | applicationName     | string  | Der Anzeigename der App.                                                                                                                                                                                                             |
 | deviceType          | string  | Der Typ des Geräts, auf dem der Kauf ausgeführt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                                  |
 | orderName           | string  | Der Name der Bestellung.                                                                                                                                                                                                                   |
@@ -306,7 +304,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
     {
       "date": "2015-01-02",
       "inAppProductId": "9NBLGGH3LHKL",
-      "inAppProductName": "Contoso IAP 7",
+      "inAppProductName": "Contoso add-on 7",
       "applicationId": "9NBLGGGZ5QDR",
       "applicationName": "Contoso Demo",
       "deviceType": "Phone",
@@ -316,7 +314,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
       "market": "GB",
       "gender": "m",
       "ageGroup": "50orover",
-      "acquisitionType": "Iap",
+      "acquisitionType": "iap",
       "acquisitionQuantity": 1
     }
   ],
@@ -339,6 +337,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

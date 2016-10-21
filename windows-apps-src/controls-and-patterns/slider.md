@@ -5,21 +5,34 @@ title: Schieberegler
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: 64ae11c8c7e46d973c13cacb69482fd957e0488d
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 9b21a15edcead96fdc1a335a1c6e58cc0a279858
 
 ---
 # Schieberegler
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Ein Schieberegler ist ein Steuerelement, über das der Benutzer aus einer Reihe von Werten auswählen kann, indem er ein Schiebereglersteuerelement über einen Bereich verschiebt.
 
 ![Schiebereglersteuerelement](images/controls/slider.png)
 
-<span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx"><strong>Slider-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx"><strong>Value-Eigenschaft</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx"><strong>ValueChanged-Ereignis</strong></a></li>
+</ul>
 
--   [**Slider-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.slider.aspx)
--   [**Value-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.value.aspx)
--   [**ValueChanged-Ereignis**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.rangebase.valuechanged.aspx)
+</div>
+</div>
+
+
+
+
+
 
 ## Ist dies das richtige Steuerelement?
 
@@ -94,7 +107,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 -   Passen Sie das Steuerelement an, sodass Benutzer den Wert einfach anpassen können. Stellen Sie für Einstellungen mit separaten Werten sicher, dass der Benutzer jeden Wert einfach mithilfe der Maus auswählen kann. Stellen Sie sicher, dass die Endpunkte des Schiebereglers immer in die Bereiche einer Ansicht passen.
 -   Geben Sie während oder nach der Benutzerauswahl ein sofortiges Feedback (sofern umsetzbar). Beispielsweise gibt die Windows-Lautstärkeregelung einen Signalton aus, um die ausgewählte Audiolautstärke anzuzeigen.
--   Verwenden Sie Bezeichnungen, um den Wertebereich anzuzeigen. Eine Ausnahme liegt vor, wenn der Schieberegler vertikal ausgerichtet ist und die obere Beschriftung "Maximum", "Hoch", "Mehr" oder ähnlich lautet, ist die Bedeutung klar, und Sie können die anderen Beschriftungen weglassen.
+-   Verwenden Sie Bezeichnungen, um den Wertebereich anzuzeigen. Eine Ausnahme liegt vor, wenn der Schieberegler vertikal ausgerichtet ist und die obere Beschriftung „Maximum”, „Hoch”, „Mehr” oder ähnlich lautet, ist die Bedeutung klar, und Sie können die anderen Beschriftungen weglassen.
 -   Deaktivieren Sie alle zugeordneten Beschriftungen und das visuelle Feedback, wenn Sie den Schieberegler deaktivieren.
 -   Bedenken Sie beim Festlegen der Flussrichtung bzw. Ausrichtung Ihres Schiebereglers die Textrichtung. In einigen Sprachen fließt das Skript von links nach rechts, und in anderen von rechts nach links.
 -   Verwenden Sie einen Schieberegler nicht als Statusanzeige.
@@ -166,16 +179,12 @@ Ziehen Sie beim Entwerfen eines benutzerdefinierten Schiebereglers Möglichkeite
 ## Verwandte Themen
 
 **Für Designer**
-- 
-            [Richtlinien für Umschalter](toggles.md)
-            
-          
-            **Für Entwickler (XAML)**
-          
+- [Richtlinien für Umschalter](toggles.md)
+**Für Entwickler (XAML)**
 - [**Slider-Klasse**](https://msdn.microsoft.com/library/windows/apps/br209614)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

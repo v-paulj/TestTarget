@@ -3,8 +3,9 @@ author: jnHs
 title: "Bericht „Anzeigen für die App-Installation“"
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
 description: 
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: acd91c578d7222e5fb115a4784f3360333f2a063
+ms.openlocfilehash: 45dd0b2cb34e724313fe431a5b8b7a6df9b5a5cf
 
 ---
 
@@ -12,8 +13,8 @@ ms.openlocfilehash: acd91c578d7222e5fb115a4784f3360333f2a063
 
 Es gibt zwei Möglichkeiten, die Seite **Berichte „Anzeigen für die App-Installation“** im Dev Center aufzurufen:
 
--   Klicken Sie im linken Navigationsmenü der App-Seite auf **Analyse**&gt;**Anzeigen für die App-Installation**.
--   Klicken Sie im linken Navigationsmenü der App-Seite auf **Monetarisierung**&gt;**Bewerben Ihrer App**, und klicken Sie dann auf den Link **Bericht** einer Kampagne.
+-   Klicken Sie im linken Navigationsmenü der App-Seite auf **Analyse** &gt; **Anzeigen für die App-Installation**.
+-   Klicken Sie im linken Navigationsmenü der App-Seite auf **Monetarisierung** &gt; **Bewerben Ihrer App**, und klicken Sie dann auf den Link **Bericht** einer Kampagne.
 
 Sie sehen die beiden folgenden Abschnitte: **Anzeigenleistung** und **Verlauf der Rechnungsstellung für das Konto**.
 
@@ -21,12 +22,9 @@ Sie sehen die beiden folgenden Abschnitte: **Anzeigenleistung** und **Verlauf de
 
 Hier wird die Leistungsmetrik grafisch in Linienform dargestellt. Die ausgewählte Metrik befindet sich auf der Y-Achse und der Zeitstrahl auf der X-Achse. Der Standardbericht enthält die Aufrufe. Klicken Sie auf die Registerkartenüberschriften, um Daten für weitere Leistungsmetriken anzuzeigen. Die folgenden Metriken werden nachverfolgt:
 
--   
-            **Aufrufe**: Gibt an, wie häufig Ihre Anzeige aufgerufen wurde.
--   
-            **Klicks**: Gibt an, wie häufig auf Ihre Anzeige geklickt wurde.
--   
-            **Installationen**: Gibt an, wie häufig Benutzer auf Ihre Anzeige geklickt und Ihre App installiert haben. Im Folgenden finden Sie weitere Informationen zum Nachverfolgen von Installationen.
+-   **Aufrufe**: Gibt an, wie häufig Ihre Anzeige aufgerufen wurde.
+-   **Klicks**: Gibt an, wie häufig auf Ihre Anzeige geklickt wurde.
+-   **Installationen**: Gibt an, wie häufig Benutzer auf Ihre Anzeige geklickt und Ihre App installiert haben. Im Folgenden finden Sie weitere Informationen zum Nachverfolgen von Installationen.
 
 Sie können jeweils Leistungsdaten für bis zu vier verschiedene Anzeigenkampagnen anzeigen. Klicken Sie auf **Weitere Kampagnen**, um Kampagnen zur Anzeige auszuwählen. Sie können auch auf das Minuszeichen neben einer angezeigten Kampagne klicken, um sie zu entfernen.
 
@@ -40,8 +38,7 @@ Indem Entwickler Installationen für ihre Anzeigenkampagnen überwachen, können
 
 ### Wie werden Installationen gemessen?
 
-
-            Anzeigenkampagnen über **Bewerben Ihrer App** liefern Zahlen zu Anzeigenaufrufen innerhalb anderer Apps. Benutzer, für die die Anzeige sichtbar ist, installieren die App wahrscheinlich auf eine der folgenden Weisen: durch Klicken auf die Anzeige oder basierend auf der Anzeige von Anzeigenaufrufen.
+Anzeigenkampagnen über **Bewerben Ihrer App** liefern Zahlen zu Anzeigenaufrufen innerhalb anderer Apps. Benutzer, für die die Anzeige sichtbar ist, installieren die App wahrscheinlich auf eine der folgenden Weisen: durch Klicken auf die Anzeige oder basierend auf der Anzeige von Anzeigenaufrufen.
 
 Wenn ein Benutzer eine Anzeige sieht und die App binnen 24 Stunden installiert – indem er auf die Anzeige klickt oder direkt zur App-Seite im Store wechselt – wird diese Installation der Kampagne zugeordnet, die den Aufruf generiert hat.
 
@@ -73,6 +70,6 @@ Hier können Sie alle Transaktionen in Zusammenhang mit Ihrem Konto einsehen. F�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

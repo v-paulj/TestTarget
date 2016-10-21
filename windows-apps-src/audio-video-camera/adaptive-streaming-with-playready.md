@@ -1,10 +1,11 @@
 ---
 author: eliotcowley
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
-description: "In diesem Artikel wird beschrieben, wie Sie einer App für die universelle Windows-Plattform (UWP) adaptives Streaming von Multimediainhalten mit Microsoft PlayReady-Inhaltsschutz hinzufügen."
+description: "In diesem Artikel wird beschrieben, wie Sie einer UWP-App (Universelle Windows-Plattform) adaptives Streaming von Multimediainhalten mit Microsoft PlayReady-Inhaltsschutz hinzufügen."
 title: Adaptives Streaming mit PlayReady
-ms.sourcegitcommit: 176f8989aea5402106e3c14144948cec87a5dc27
-ms.openlocfilehash: d76f50e97f16699f34f138fcd25af8a90696085a
+translationtype: Human Translation
+ms.sourcegitcommit: 8534598b1f3cf49b15a73d03f6f19e67877b25d0
+ms.openlocfilehash: 22e430fd6dafe49fb3bf599fec91a9ab3dbd6b95
 
 ---
 
@@ -22,9 +23,9 @@ Smooth Streaming wird zurzeit ebenfalls nicht nativ unterstützt. PlayReady ist 
 
 Dieser Artikel befasst sich nur mit den Aspekten des für PlayReady spezifischen adaptiven Streamings. Informationen zur allgemeinen Implementierung des adaptiven Streamings finden Sie unter [Adaptives Streaming](adaptive-streaming.md).
 
-In diesem Artikel wird Code aus dem [Beispiel zu adaptivem Streaming](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) im Microsoft-Repository **Beispiele für die Universelle Windows-Plattform** auf GitHub verwendet. Szenario 4 behandelt adaptives Streaming mit PlayReady. Sie können die Repo in einer ZIP-Datei herunterladen, indem Sie auf die Stammebene des Repository navigieren und auf die Schaltfläche **ZIP-Datei herunterladen** klicken.
+In diesem Artikel wird Code aus dem [Beispiel zu adaptivem Streaming](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) im Microsoft-Repository **Beispiele für die Universelle Windows-Plattform** auf GitHub verwendet. Szenario 4 behandelt adaptives Streaming mit PlayReady. Sie können das Repository als ZIP-Datei herunterladen, indem Sie auf die Stammebene des Repository navigieren und die Schaltfläche **ZIP-Datei herunterladen** wählen.
 
-Sie benötigen die folgenden using-Anweisungen:
+Sie benötigen die folgenden **using**-Anweisungen:
 
 ```csharp
 using LicenseRequest;
@@ -176,7 +177,7 @@ async Task<bool> ReactiveIndivRequest(
 }
 ```
 
-Alternativ soll vielleicht proaktiv eine Individualisierungsdienstanforderung gesendet werden. In diesem Fall wird anstelle des Codes, der `ReactiveIndivRequest` in `ProtectionManager_ServiceRequested` aufruft, die folgende Funktion aufgerufen:
+Alternativ soll vielleicht proaktiv eine Individualisierungsdienstanforderung gesendet werden. In diesem Fall wird anstelle des Codes, mit dem `ReactiveIndivRequest` in `ProtectionManager_ServiceRequested` aufgerufen wird, die folgende Funktion aufgerufen:
 
 ```csharp
 async void ProActiveIndivRequest()
@@ -188,7 +189,7 @@ async void ProActiveIndivRequest()
 
 ## Lizenzerwerb-Dienstanforderungen
 
-Falls es sich bei der Anforderung stattdessen um [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285) handelt, rufen wir die folgende Funktion auf, um die PlayReady-Lizenz anzufordern und zu erwerben. Wir informieren das übergebene MediaProtectionServiceCompletion-Objekt, ob die Anforderung erfolgreich war, und schließen die Anforderung ab:
+Falls es sich bei der Anforderung stattdessen um [PlayReadyLicenseAcquisitionServiceRequest](https://msdn.microsoft.com/library/windows/apps/dn986285) handelt, rufen wir die folgende Funktion auf, um die PlayReady-Lizenz anzufordern und zu erwerben. Wir teilen dem übergebenen **MediaProtectionServiceCompletion**-Objekt mit, ob die Anforderung erfolgreich war, und schließen die Anforderung ab:
 
 ```csharp
 async void LicenseAcquisitionRequest(
@@ -289,18 +290,17 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 }
 ```
 
-Sie können diese Funktion in jedem Ereignis aufrufen, das den Start des adaptiven Streamings behandelt, z. B. in einem Click-Ereignis für eine Schaltfläche.
+Sie können diese Funktion in jedem Ereignis aufrufen, das den Start des adaptiven Streamings behandelt, z.B. in einem Click-Ereignis für eine Schaltfläche.
 
- 
-
- 
-
+## Weitere Informationen
+- [PlayReady DRM](playready-client-sdk.md)
 
 
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO3-->
 
 

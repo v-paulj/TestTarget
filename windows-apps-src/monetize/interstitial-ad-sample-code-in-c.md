@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 7a16b0ca-6b8e-4ade-9853-85690e06bda6
 description: "Erfahren Sie, wie Sie mithilfe von C# eine interstitielle Anzeige veröffentlichen."
 title: "Beispielcode für interstitielle Anzeigen in C#"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: e83730c60eada273aee4f3bca4ff28cf6feccbf8
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 5969bfacd34bcfab5f1bebd2cfbade4fd16c5a39
 
 
 ---
@@ -12,9 +13,9 @@ ms.openlocfilehash: e83730c60eada273aee4f3bca4ff28cf6feccbf8
 # Beispielcode für interstitielle Anzeigen in C\# #  
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-In diesem Thema wird die Veröffentlichung interstitieller Anzeigen mithilfe von C# beschrieben. Schritt-für-Schritt-Anweisungen für die Konfigurierung Ihres Projekts zur Verwendung dieses Codes finden Sie unter [Interstitialanzeigen](interstitial-ads.md). Ein vollständiges Beispielprojekt, das die Hinzufügung von Videointerstitialanzeigen zu einer XAML-App mithilfe von C# zeigt, finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
+
+In diesem Thema wird die Veröffentlichung interstitieller Anzeigen mithilfe von C# beschrieben. Schritt-für-Schritt-Anweisungen für die Konfigurierung Ihres Projekts zur Verwendung dieses Codes finden Sie unter [Interstitielle Anzeigen](interstitial-ads.md). Ein vollständiges Beispielprojekt, das die Hinzufügung von Videointerstitialanzeigen zu einer XAML-App mithilfe von C# zeigt, finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
 
 ## Codebeispiel
@@ -105,6 +106,6 @@ namespace BasicCSharpInterstitialUWP
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

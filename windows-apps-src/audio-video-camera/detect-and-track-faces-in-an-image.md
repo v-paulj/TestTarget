@@ -3,8 +3,9 @@ author: drewbatgit
 ms.assetid: 84729E44-10E9-4D7D-8575-6A9D97467ECD
 description: "In diesem Thema erfahren Sie, wie mit dem FaceDetector Gesichter in einem Bild erkannt werden. Der FaceTracker ist für die Verfolgung von Gesichtern im zeitlichen Verlauf einer Sequenz von Videoframes optimiert."
 title: Erkennen von Gesichtern in Bildern oder Videos
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 66730fcbaad2e3e059f2972475625d278d235002
+translationtype: Human Translation
+ms.sourcegitcommit: 7526d5ddfbaa6f5128ef5775bc75cc48768f647d
+ms.openlocfilehash: 4f0fa85639711302a2f6eb187cde8f7a94de70df
 
 ---
 
@@ -45,8 +46,7 @@ In der aktuellen Version unterstützt die **FaceDetector**-Klasse nur Bilder im 
 
 [!code-cs[Format](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetFormat)]
 
-Instanziieren Sie das **FaceDetector**-Objekt, indem Sie [**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132) und dann [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134) aufrufen, und übergeben Sie die Bitmap, die auf eine geeignete Größe skaliert und in ein unterstütztes Pixelformat konvertiert wurde. Diese Methode gibt eine Liste von [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123)-Objekten zurück. 
-            **ShowDetectedFaces** ist eine Hilfsmethode (unten dargestellt), die Quadrate um die Gesichter im Bild zeichnet.
+Instanziieren Sie das **FaceDetector**-Objekt, indem Sie [**CreateAsync**](https://msdn.microsoft.com/library/windows/apps/dn974132) und dann [**DetectFacesAsync**](https://msdn.microsoft.com/library/windows/apps/dn974134) aufrufen, und übergeben Sie die Bitmap, die auf eine geeignete Größe skaliert und in ein unterstütztes Pixelformat konvertiert wurde. Diese Methode gibt eine Liste von [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123)-Objekten zurück. **ShowDetectedFaces** ist eine Hilfsmethode (unten dargestellt), die Quadrate um die Gesichter im Bild zeichnet.
 
 [!code-cs[Erkennen](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetDetect)]
 
@@ -88,7 +88,7 @@ Die [**FaceTracker**](https://msdn.microsoft.com/library/windows/apps/dn974150) 
 
 **FaceDetector** unterstützt wie **FaceTracker** eine begrenzte Anzahl von Pixelformaten. In diesem Beispiel wird die Gesichtserkennung abgebrochen, wenn der bereitgestellte Frame nicht das Format Nv12 aufweist.
 
-Rufen Sie [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn974157) auf, um eine Liste von [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123)-Objekten, die die Gesichter im Frame darstellen, abzurufen. Sobald Sie über die Liste der Gesichter verfügen, können Sie sie auf die gleiche Weise wie weiter oben für die Gesichtserkennung beschrieben anzeigen. Beachten Sie, dass alle UI-Aktualisierungen in einem Aufruf von [**CoredDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) erfolgen müssen, da die Hilfsmethode für die Gesichtsverfolgung nicht im UI-Thread aufgerufen wird.
+Rufen Sie [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn974157) auf, um eine Liste von [**DetectedFace**](https://msdn.microsoft.com/library/windows/apps/dn974123)-Objekten, die die Gesichter im Frame darstellen, abzurufen. Sobald Sie über die Liste der Gesichter verfügen, können Sie sie (auf die gleiche Weise wie weiter oben für die Gesichtserkennung beschrieben) anzeigen. Beachten Sie, dass alle UI-Aktualisierungen in einem Aufruf von [**CoredDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317) erfolgen müssen, da die Hilfsmethode für die Gesichtsverfolgung nicht im UI-Thread aufgerufen wird.
 
 [!code-cs[ProcessCurrentVideoFrame](./code/FaceDetection_Win10/cs/MainPage.xaml.cs#SnippetProcessCurrentVideoFrame)]
 
@@ -97,10 +97,12 @@ Rufen Sie [**ProcessNextFrameAsync**](https://msdn.microsoft.com/library/windows
 * [Szenenanalyse für die Medienaufnahme](scene-analysis-for-media-capture.md)
 * [Beispiel „Basic Face Detection“](http://go.microsoft.com/fwlink/p/?LinkId=620512&clcid=0x409)
 * [Beispiel „Basic Face Tracking“](http://go.microsoft.com/fwlink/p/?LinkId=620513&clcid=0x409)
-* [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Kamera](camera.md)
+* [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Medienwiedergabe](media-playback.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,21 +1,23 @@
 ---
 author: mcleanbyron
-Description: "Wenn Sie Kunden die kostenlose Nutzung Ihrer App während eines Testzeitraums ermöglichen möchten, können Sie Ihre Kunden motivieren, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features während des Testzeitraums einschränken oder ausschließen."
+Description: "Durch einen kostenlose, zeitlich begrenzte Testversion Ihrer App mit eingeschränkten Features können Sie Ihre Kunden motivieren, auf die Vollversion Ihrer App zu aktualisieren."
 title: "Ausschließen oder Einschränken von Features in einer Testversion"
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
-keywords: free trial code sample
+keywords: kostenlose Testversion, Beispielcode
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9c38784325f4dc51052f70a819012508f2a0bdbb
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: fdca95a6e925ca2238fdcd8791ade2ed4ea5a310
 
 ---
 
 # Ausschließen oder Einschränken von Features in einer Testversion
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Wenn Sie Kunden die kostenlose Nutzung Ihrer App während eines Testzeitraums ermöglichen möchten, können Sie Ihre Kunden motivieren, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features während des Testzeitraums einschränken oder ausschließen. Bestimmen Sie die einzuschränkenden Features, bevor Sie mit dem Codieren beginnen, und stellen Sie dann sicher, dass diese nur beim Erwerb einer Lizenz für die Vollversion der App verfügbar sind. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
+
+>**Hinweis**&nbsp;&nbsp;In diesem Artikel wird die Verwendung von Mitgliedern des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace erläutert. Wenn Ihre App auf Windows10, Version1607 oder höher ausgerichtet ist, wird empfohlen, den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zu verwenden, statt des **Windows.ApplicationModel.Store**-Namespace, um eine Testversion zu installieren. Weitere Informationen finden Sie unter [Implementieren einer Testversion der App](implement-a-trial-version-of-your-app.md).
+
+Durch einen kostenlose, zeitlich begrenzte Testversion Ihrer App mit eingeschränkten Features können Sie Ihre Kunden motivieren, auf die Vollversion Ihrer App zu aktualisieren. Bestimmen Sie die einzuschränkenden Features, bevor Sie mit dem Codieren beginnen, und stellen Sie dann sicher, dass diese nur beim Erwerb einer Lizenz für die Vollversion der App verfügbar sind. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
 
 Hier finden Sie Informationen dazu, wie Sie dies Ihrer App hinzufügen.
 
@@ -73,7 +75,7 @@ void initializeLicense()
     // Initialize the license info for testing.
     // comment the next line for release
     licenseInformation = CurrentAppSimulator.LicenseInformation;
-      
+
 }
 ```
 
@@ -144,8 +146,8 @@ void DisplayTrialVersionExpirationTime()
         if (licenseInformation.IsTrial)
         {
             var longDateFormat = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longdate");
-                                                
-            // Display the expiration date using the DateTimeFormatter. 
+
+            // Display the expiration date using the DateTimeFormatter.
             // For example, longDateFormat.Format(licenseInformation.ExpirationDate)
 
             var daysRemaining = (licenseInformation.ExpirationDate - DateTime.Now).Days;
@@ -168,9 +170,7 @@ void DisplayTrialVersionExpirationTime()
 
 Testen Sie nun die App mithilfe simulierter Aufrufe an den Lizenzserver. Ersetzen Sie in JavaScript, C#, Visual Basic oder Visual C++ im Initialisierungscode der App Verweise auf [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) durch [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766).
 
-[
-              **CurrentAppSimulator**
-            ](https://msdn.microsoft.com/library/windows/apps/hh779766) ruft testspezifische Lizenzierungsinformationen aus einer XML-Datei mit dem Namen "WindowsStoreProxy.xml" ab, die sich in %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData befindet. Sind dieser Pfad und diese Datei nicht vorhanden, müssen Sie diese bei der Installation oder während der Laufzeit erstellen. Wenn die Datei WindowsStoreProxy.xml nicht am angegebenen Speicherort vorhanden ist, und Sie versuchen, auf die [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768)-Eigenschaft zuzugreifen, erhalten Sie eine Fehlermeldung.
+[**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766) ruft testspezifische Lizenzierungsinformationen aus einer XML-Datei mit dem Namen "WindowsStoreProxy.xml" ab, die sich in "%userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData" befindet. Sind dieser Pfad und diese Datei nicht vorhanden, müssen Sie diese bei der Installation oder während der Laufzeit erstellen. Wenn die Datei WindowsStoreProxy.xml nicht am angegebenen Speicherort vorhanden ist, und Sie versuchen, auf die [**CurrentAppSimulator.LicenseInformation**](https://msdn.microsoft.com/library/windows/apps/hh779768)-Eigenschaft zuzugreifen, erhalten Sie eine Fehlermeldung.
 
 Dieses Beispiel veranschaulicht das Hinzufügen von Code, um die App in unterschiedlichen Lizenzierungszuständen zu testen.
 
@@ -224,7 +224,7 @@ Weitere Informationen zum Beschreiben Ihrer App finden Sie unter [Erstellen von 
 
 ## Verwandte Themen
 
-* [Store-Beispiel (zeigt Testversionen und In-App-Käufe)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
+* [Store-Beispiel (zeigt Testversionen und In-App-Käufe)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [Festlegen von Preisen und Verfügbarkeit von Apps](https://msdn.microsoft.com/library/windows/apps/mt148548)
 * [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)
 * [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)
@@ -234,10 +234,6 @@ Weitere Informationen zum Beschreiben Ihrer App finden Sie unter [Erstellen von 
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

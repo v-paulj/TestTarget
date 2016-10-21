@@ -1,111 +1,121 @@
-﻿---
+---
 author: jnHs
-Description: The Store listings section of the app submission process is where you provide the text and images that customers will see in your app's Store listing.
-title: Create app Store listings
+Description: "Im Abschnitt „Store-Einträge“ des App-Übermittlungsprozesses stellen Sie den Text und die Bilder bereit, die den Kunden im Store-Eintrag Ihrer App angezeigt werden."
+title: "Erstellen von Store-Einträgen für Apps"
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
+translationtype: Human Translation
+ms.sourcegitcommit: d24294583d1ec0186cd63138979d40a06b0c7351
+ms.openlocfilehash: 9ef2a465cb8f9143775feab163ee1d66d135a6b3
+
 ---
 
-# Create app Store listings
+# Erstellen von Store-Einträgen für Apps
 
 
-The **Store listings** section of the [app submission process](app-submissions.md) is where you provide the text and [images](app-screenshots-and-images.md) that customers will see in your app's Store listing.
+Im Abschnitt **Store-Einträge** des [App-Übermittlungsprozesses](app-submissions.md) stellen Sie den Text und die [Bilder](app-screenshots-and-images.md) bereit, die den Kunden im Store-Eintrag Ihrer App angezeigt werden.
 
-Many of the fields in a **Store listing** are optional, but we suggest providing multiple images and as much info as possible to make your listing stand out. The minimum required for the **Store listings** step to be considered complete is a text description and at least one [screenshot](app-screenshots-and-images.md).
+Viele der Felder in einem **Store-Eintrag** sind optional. Es wird jedoch empfohlen, mehrere Bilder und so viele Infos wie möglich bereitzustellen, damit Ihr Eintrag auffällt. Im Schritt **Store-Eintrag** sollten Sie mindestens eine Textbeschreibung und mindestens einen [Screenshot](app-screenshots-and-images.md) angeben.
 
-By default, we'll use the same Store listing (per language) for all of your targeted operating systems. If you'd like to use a customized Store listing for a specific operating system, you can [create platform-specific Store listings](create-platform-specific-store-listings.md).
+Standardmäßig verwenden wir denselben Store-Eintrag (pro Sprache) für alle Ihre Zielbetriebssysteme. Wenn Sie einen benutzerdefinierten Store-Eintrag für ein bestimmtes Betriebssystem verwenden möchten, können Sie [plattformspezifische Store-Einträge erstellen](create-platform-specific-store-listings.md).
 
-## Store listing languages
+## Sprachen für Store-Einträge
 
-You must complete the **Store listing** page for at least one language. We recommend providing a Store listing in each language that your packages support, but you have flexibility to remove languages for which you don’t wish to provide a Store listing. You can also create Store listings in additional languages which aren’t supported by your packages.
+Sie müssen die Seite **Store-Eintrag** für mindestens eine Sprache ausfüllen. Es wird empfohlen, einen Store-Eintrag in jeder Sprache bereitzustellen, die Ihre Pakete unterstützen. Sie haben jedoch die Möglichkeit, Sprachen zu entfernen, für die Sie keinen Store-Eintrag bereitstellen möchten. Sie können auch Store-Einträge in zusätzlichen Sprachen bereitstellen, die von Ihren Paketen nicht unterstützt werden.
 
-> **Note**  If your submission includes packages already, we’ll show the [languages](supported-languages.md) supported in your packages on the submission overview page (unless you remove any of them).
+> **Hinweis:** Wenn Ihre Übermittlung bereits Pakete enthält, werden die in Ihren Paketen unterstützten [Sprachen](supported-languages.md) in der Übermittlungsübersicht angezeigt (es sei denn, Sie entfernen diese).
 
-To add or remove languages for your Store listings, click **Manage Store listing languages** from the submission overview page. If you‘ve already uploaded packages, you’ll see their languages listed in the **Languages supported by your packages** section. To remove one or more of these languages, click **Remove**. If you later decide to include a language that you previously removed from this section, you can click **Add**.
+Klicken Sie zum Hinzufügen oder Entfernen von Sprachen für Ihre Store-Einträge in der Übermittlungsübersicht auf **Manage Store listing languages**. Wenn Sie bereits Pakete hochgeladen haben, sind die Sprachen dafür im Abschnitt **Languages supported by your packages** aufgeführt. Klicken Sie zum Entfernen einer oder mehrerer dieser Sprachen auf **Entfernen**. Wenn Sie später eine Sprache angeben möchten, die Sie zuvor aus diesem Abschnittentfernt haben, können Sie auf **Hinzufügen** klicken.
 
-In the **Additional Store listing languages** section, you can click **Manage additional languages** to add or remove languages that are *not* included in your packages. Check the boxes for the languages that you’d like to add, then click **Update**. The languages you’ve selected will be displayed in the **Additional Store listing languages** section. To remove one or more of these languages, click **Remove** (or click **Manage additional languages** and uncheck the box for languages you’d like to remove).
+Im Abschnitt **Additional Store listing languages** können Sie auf **Manage additional languages** klicken, um Sprachen hinzuzufügen oder zu entfernen, die  *nicht* in Ihren Paketen enthalten sind. Aktivieren Sie die Kontrollkästchen für die Sprachen, die Sie hinzufügen möchten, und klicken Sie dann auf **Aktualisieren**. Die ausgewählten Sprachen werden im Abschnitt **Additional Store listing languages** angezeigt. Klicken Sie zum Entfernen einer oder mehrerer dieser Sprachen auf **Entfernen** (oder klicken Sie auf **Manage additional languages**, und deaktivieren Sie die Kontrollkästchen für die Sprachen, die Sie entfernen möchten).
 
-When you have finished making your selections, click **Save** to return to the submission overview page.
+Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren.
 
-> **Note** When creating a Store listing in a language that isn't supported by your packages, you'll need to indicate which of your reserved app names should be displayed in that Store listing, since there isn't an associated package in that language from which to pull the name. The name you choose here only applies to the Store listing for this language and does not impact the name displayed when a customer installs the app.
+> **Hinweis:** Wenn Sie einen Store-Eintrag in einer Sprache erstellen, die von Ihren Paketen nicht unterstützt wird, müssen Sie angeben, welcher Ihrer reservierten App-Namen in diesem Store-Eintrag angezeigt werden soll, da für diese Sprache kein verknüpftes Paket vorliegt, von dem der Name abgerufen werden könnte. Der Name, den Sie hier wählen, gilt nur für den Store-Eintrag für diese Sprache und wirkt sich nicht auf den Namen aus, der angezeigt wird, wenn ein Kunde die App installiert.
 
-To edit a Store listing, click the language name from the Submission overview. The sections of the **Store listing** page are described below.
+Klicken Sie zum Bearbeiten eines Store-Eintrags in der Übermittlungsübersicht auf den Namen der Sprache. Die Abschnitte der Seite **Store-Eintrag** werden nachstehend beschrieben.
 
-## Default Store listing fields
+## Standardmäßige Store-Eintrags-Felder
 
-At the top of the **Store listing** page are the fields associated with your default Store listing for the selected language. These fields will be shown to all of your customers, unless you have packages targeting earlier OS versions (Windows 8.x or earlier; Windows Phone 8.x or earlier) and create platform-specific Store listings to include different screenshots or info to display to customers on specified OS versions. For more info, see [Create platform-specific Store listings](create-platform-specific-store-listings.md).
+Oben auf der Seite **Store-Eintrag** sehen Sie die Felder, die dem standardmäßigen Store-Eintrag für die ausgewählte Sprache zugeordnet sind. Diese Felder sind für alle Kunden sichtbar, sofern keine Pakete für frühere Betriebssystemversionen (Windows8.x oder früher, Windows Phone8.x oder früher) vorhanden sind und Sie keine plattformspezifischen Store-Einträge mit verschiedenen Screenshots oder Informationen erstellt haben, die Kunden unter den angegebenen Betriebssystemversionen angezeigt werden. Weitere Informationen finden Sie unter [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md).
 
-### Description
+### Beschreibung
 
-The description field is where you can tell customers what your app does. This field is required, and will accept up to 10,000 characters of plain text.
+Über das Beschreibungsfeld können Sie Ihren Kunden den Zweck der App mitteilen. Dieses Feld ist erforderlich und kann bis zu 10.000 Zeichen reinen Text enthalten.
 
-For some tips on making your description stand out, see [Write a great app description](write-a-great-app-description.md).
+Tipps zum Erstellen einer aussagekräftigen Beschreibung finden Sie unter [Erstellen einer interessanten App-Beschreibung](write-a-great-app-description.md).
 
-### Release notes
+### Versionshinweise
 
-If this is the first time you're submitting your app, you'll probably want to leave this field blank. For an update to an existing app, this is where you can let customer know what's changed in the latest release. This field has a 1500 character limit.
+Wenn Sie Ihre App erstmalig einrichten, werden Sie dieses Feld wahrscheinlich leer lassen. Bei Updates einer vorhandenen App teilen Sie dem Kunden hier mit, was sich in der aktuellen Version geändert hat. Dieses Feld ist auf 1.500 Zeichen beschränkt.
 
 ### Screenshots
 
-In most cases, you'll see multiple fields to provide screenshots for different types of devices. You are not required to provide separate screenshots for each device type; only one screenshot is required for your submission (though you can provide up to nine per device type). In most cases we suggest providing screenshots on as many device types as your app supports, so that customers will see images that resemble how the app will look on their device.
+In den meisten Fällen sehen Sie mehrere Felder zur Bereitstellung von Screenshots für unterschiedliche Gerätetypen. Es ist nicht erforderlich, separate Screenshots für unterschiedliche Gerätetypen bereitzustellen. Für die Einreichung ist ein Screenshot ausreichend (Sie können jedoch bis zu neun Screenshots pro Gerätetyp hinzufügen). In den meisten Fällen empfehlen wir, Screenshots für so viele Gerätetypen hinzuzufügen, wie von Ihrer App unterstützt werden, damit die Kunden sehen, wie die App auf ihrem Gerät aussieht.
 
-For more info, see [App screenshots and images](app-screenshots-and-images.md).
+Weitere Informationen finden Sie unter [App-Screenshots und -Bilder](app-screenshots-and-images.md).
 
-### App tile icon
+### Symbol für App-Kachel
 
-The app tile icon is used when displaying your app's Store listing to customers on Windows Phone 8.1 and earlier (and in some Store layouts for customers on Windows 10). This must be a .png file measuring 300 x 300 pixels.
+Das Symbol für die App-Kachel wird verwendet, wenn der Store-Eintrag der App Kunden mit Windows Phone8.1 und früher angezeigt wird (und in bestimmten Store-Layouts für Kunden mit Windows10). Sie müssen eine PNG-Datei mit 300 x 300 Pixel bereitstellen.
 
-For more info, see [App tile icon](app-screenshots-and-images.md#app-tile-icon).
+Weitere Informationen finden Sie unter [Symbol für App-Kachel](app-screenshots-and-images.md#app-tile-icon).
 
-### App features
+### App-Features
 
-These are short summaries of your app's key features. They are displayed to the customer as a bulleted list in your app's Store listing, along with the Description. Keep these brief, with just a few words (and no more than 200 characters) per feature. You may include up to 20 features.
+Hierbei handelt es sich um kurze Zusammenfassungen der wichtigsten App-Features. Diese werden dem Kunden neben der Beschreibung als Aufzählung im Store-Eintrag Ihrer App angezeigt. Die Beschreibung sollte pro Feature nur wenige Wörter (und nicht mehr als 200Zeichen) enthalten. Sie können bis zu 20Features hinzufügen.
 
-**Note**  These will appear bulleted in your Store listing, so don't add your own bullets.
+**Hinweis:** Diese werden im Store-Eintrag mit Aufzählungszeichen versehen. Fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
 
-### Additional system requirements
+### Weitere Systemanforderungen
 
-If needed, you can describe the hardware configurations that your app requires to work properly (beyond the info you provided in the **System requirements** section in [App properties](enter-app-properties.md#system-requirements). This is especially important if your app requires hardware that might not be available on every computer.
+Bei Bedarf können Sie die Hardwarekonfigurationen beschreiben, die für die ordnungsgemäße Funktionsweise der App erforderlich sind, über die Informationen hinaus, die Sie im Abschnitt **Systemanforderungen** unter [App-Eigenschaften](enter-app-properties.md#system-requirements) angegeben haben. Dies ist besonders wichtig, wenn Ihre App Hardware benötigt, die u.U. nicht auf jedem Computer vorhanden ist.
 
- You can enter up to 11 items for both **Minimum hardware** and **Recommended hardware**.  They are displayed to the customer as a bulleted list in your app's listing. Keep these brief, with just a few words (and no more than 200 characters) per item. The info you enter here will be shown to customers viewing your app's Store listing on Windows 10, version 1607 or later, along with the requirements you indicated on the product's properties page.
+ Sie können bis zu 11Elemente sowohl für **Mindesthardwareanforderungen** als auch für **Empfohlene Hardware** eingeben.  Diese werden dem Kunden im App-Eintrag als Aufzählung angezeigt. Die Beschreibung sollte pro Element nur wenige Wörter (und nicht mehr als 200Zeichen) enthalten. Die Informationen, die Sie hier eingeben, werden Kunden im Store-Eintrag Ihrer App unter Windows10, Version 1607 oder höher, zusammen mit den auf der Eigenschaftenseite des Produkts angegebenen Anforderungen angezeigt.
 
-**Note**  These will appear bulleted in the listing, so don't add your own bullets.
+**Hinweis:** Diese werden im Eintrag mit Aufzählungszeichen versehen. Fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
 
-## Shared fields
+## Freigegebene Felder
 
-The items described below are all shared fields and will apply to all of your Store listings in a given language, regardless of operating system, even if you [create platform-specific Store listings](create-platform-specific-store-listings.md).
+Die unten beschriebenen Elemente sind freigegebene Felder, die unabhängig vom Betriebssystem für alle Store-Einträge einer bestimmten Sprache gelten, auch wenn Sie [plattformspezifische Store-Einträge erstellen](create-platform-specific-store-listings.md).
 
-### Keywords
+### Schlüsselwörter
 
-Keywords are single words or short phrases that are not displayed to customers, but can help your app appear in search results related to the keyword. You can include up to 7 keywords with a maximum of 30 characters each.
+Schlüsselwörter sind einzelne Wörter oder kurze Ausdrücke, die für Kunden nicht angezeigt werden, jedoch dazu beitragen, dass Ihre App in Suchergebnissen erscheint. Sie können bis zu sieben Schlüsselwörter mit maximal 30 Zeichen einschließen.
 
-If you want to add keywords, think about the words that customers might use when searching for apps like yours, especially if they're not part of your app's name. Be sure not to use any keywords that are not actually relevant to your app.
+Wenn Sie Schlüsselwörter hinzufügen möchten, sollten Sie überlegen, mit welchen Begriffen Kunden nach Ihrer App suchen würden, insbesondere, wenn sie nicht im App-Namen vorkommen. Verwenden Sie nur Schlüsselwörter, die wirklich für Ihre App relevant sind.
 
-### Copyright and trademark info
+### Urheberrecht- und Markeninformationen
 
-If you'd like to provide additional copyright and/or trademark info, enter it here. This field has a 200 character limit.
+Zusätzliche Urheberrecht- und Markeninformationen können Sie bei Bedarf hier eingeben. Dieses Feld ist auf 200 Zeichen beschränkt.
 
-### Additional license terms
+### Zusätzliche Lizenzbedingungen
 
-Leave this field blank if you want your app to be licensed to customers under the terms of the **Standard Application License Terms** (which are linked to from the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058)).
+Lassen Sie dieses Feld leer, wenn Sie möchten, dass Ihre App für Kunden gemäß den **Standardbedingungen für anwendungsbezogene Lizenzen** (am Ende der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058)) lizenziert wird.
 
-If your license terms are different from the **Standard Application License Terms**, enter them here.
+Wenn sich Ihre Lizenzbedingungen von den **Standardbedingungen für anwendungsbezogene Lizenzen** unterscheiden, geben Sie sie hier ein.
 
-If you enter a single URL into this field, it will be displayed to customers as a link that they can click to read your additional license terms. This is useful if your additional license terms are very long, or if you want to include clickable links or formatting in your additional license terms.
+Wenn Sie einen einzelnen URL in dieses Feld eingeben, wird dieser für Kunden als Link angezeigt, auf den sie klicken können, um Ihre zusätzlichen Lizenzbedingungen zu lesen. Dies ist hilfreich, wenn Ihre zusätzlichen Lizenzbedingungen sehr lang sind, oder wenn Sie Links oder Formatierungen in die zusätzlichen Lizenzbedingungen einschließen möchten, auf die geklickt werden kann.
 
-You can also up to 10,000 characters of text in this field. If you do that, customers will see these additional license terms displayed as plain text.
+Sie können auch bis zu 10.000 Zeichen Texts in dieses Feld eingeben. Wenn Sie dies tun, werden Kunden die zusätzlichen Lizenzbedingungen als reiner Text angezeigt.
 
 ### Website
 
-Enter the URL of the web page for your app. This URL must point to a page on your own website, not your app's web listing in the Store.
+Geben Sie die URL der Webseite für Ihre App ein. Diese URL muss auf eine Seite Ihrer eigenen Website verweisen, nicht auf den Webeintrag Ihrer App im Store.
 
-### Support contact info
+### Support – Kontaktinfos
 
-Enter the URL of the web page where your customers can go for support on your app, or an email address that customers can contact for support.
+Geben Sie die URL der Webseite ein, auf der Ihre Kunden Support für die App erhalten, oder eine E-Mail-Adresse, unter der Kunden den Support erreichen können.
 
-**Important**  Microsoft doesn't provide your customers with support for your app.
+**Wichtig:** Microsoft bietet keinen App-Support für Ihre Kunden.
 
-### Privacy policy
+### Datenschutzrichtlinie
 
-If you have a privacy policy for your app, enter its URL here. You are responsible for ensuring your app complies with privacy laws and regulations and for providing a privacy policy, if required.
+Wenn Ihre App über eine Datenschutzrichtlinie verfügt, geben Sie die URL hier ein. Sie müssen sicherstellen, dass die geltenden Datenschutzgesetze eingehalten werden und müssen bei Bedarf eine Datenschutzrichtlinie bereitstellen.
 
-**Important**  Microsoft doesn't provide a default privacy policy for your app. Likewise, your app is not covered by any Microsoft privacy policy. To determine if your app requires a privacy policy, review the [App Developer Agreement](https://msdn.microsoft.com/library/windows/apps/hh694058) and the [Windows Store Policies](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
+**Wichtig:** Microsoft stellt keine standardmäßigen Datenschutzrichtlinien für Ihre App bereit. Außerdem ist Ihre App nicht durch Datenschutzrichtlinien von Microsoft abgedeckt. Um festzustellen, ob Ihre App eine Datenschutzrichtlinie benötigt, lesen Sie die [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und die [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944.aspx#pol_10_5_1).
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

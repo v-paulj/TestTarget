@@ -3,8 +3,9 @@ title: "Schließfach für Anmeldeinformationen"
 description: "In diesem Artikel wird beschrieben, wie Apps für die universelle Windows-Plattform (UWP) mit dem Schließfach für Anmeldeinformationen Benutzeranmeldeinformationen sicher speichern und abrufen können und sie zwischen den Geräten mit dem Microsoft-Konto des Benutzers per Roaming übertragen können."
 ms.assetid: 7BCC443D-9E8A-417C-B275-3105F5DED863
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: ba3f4fc8584108fefe25de146ae7fc84ee7c9e2c
+ms.openlocfilehash: 2d5e1fada82e0c39ad0dce31c779ac80005aff17
 
 ---
 
@@ -131,6 +132,6 @@ Speichern Sie Kennwörter nur unter den folgenden Bedingungen im Schließfach f�
 Speichern Sie Anmeldeinformationen niemals als Nur-Text mit App-Daten oder Roamingeinstellungen.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

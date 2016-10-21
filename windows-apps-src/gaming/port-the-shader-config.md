@@ -3,8 +3,9 @@ author: mtoepke
 title: Portieren der Shaderobjekte
 description: "Beim Portieren des einfachen Renderers aus OpenGL ES 2.0 ist der erste Schritt das Einrichten der äquivalenten Vertex- und Fragmentshaderobjekte in Direct3D 11. Stellen Sie außerdem sicher, dass das Hauptprogramm mit den Shaderobjekten kommunizieren kann, nachdem diese kompiliert wurden."
 ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 17d66e217e40eca0653078820746746eb23185e1
+ms.openlocfilehash: 478b5615834ea946a6a327fc2cbf54651e21b695
 
 ---
 
@@ -21,8 +22,7 @@ ms.openlocfilehash: 17d66e217e40eca0653078820746746eb23185e1
 
 Beim Portieren des einfachen Renderers aus OpenGL ES 2.0 ist der erste Schritt das Einrichten der äquivalenten Vertex- und Fragmentshaderobjekte in Direct3D 11. Stellen Sie außerdem sicher, dass das Hauptprogramm mit den Shaderobjekten kommunizieren kann, nachdem diese kompiliert wurden.
 
-> 
-            **Hinweis**  Haben Sie ein neues Direct3D-Projekt erstellt? Falls nicht, befolgen Sie die Anleitung unter [Erstellen eines neuen DirectX 11-Projekts für die Universelle Windows-Plattform (UWP)](user-interface.md). Bei dieser exemplarischen Vorgehensweise wird vorausgesetzt, dass Sie die DXGI- und Direct3D-Ressourcen zum Zeichnen auf den Bildschirm erstellt haben, die auch in der Vorlage bereitgestellt werden.
+> **Hinweis**   Haben Sie ein neues Direct3D-Projekt erstellt? Falls nicht, befolgen Sie die Anleitung unter [Erstellen eines neuen DirectX 11-Projekts für die Universelle Windows-Plattform (UWP)](user-interface.md). Bei dieser exemplarischen Vorgehensweise wird vorausgesetzt, dass Sie die DXGI- und Direct3D-Ressourcen zum Zeichnen auf den Bildschirm erstellt haben, die auch in der Vorlage bereitgestellt werden.
 
  
 
@@ -75,8 +75,7 @@ GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
 
 In Direct3D werden Shader nicht während der Laufzeit kompiliert. Sie werden immer in CSO-Dateien kompiliert, wenn auch die restlichen Daten des Programms kompiliert werden. Wenn Sie die App mit Microsoft Visual Studio kompilieren, werden die HLSL-Dateien in CSO-Dateien (.cso) kompiliert, die von der App geladen werden müssen. Achten Sie darauf, diese CSO-Dateien der App beim Verpacken hinzuzufügen!
 
-> 
-            **Hinweis**  Im folgenden Beispiel wird das asynchrone Laden und Kompilieren des Shaders mit dem **auto**-Schlüsselwort und der Lambdasyntax durchgeführt. ReadDataAsync() ist eine für die Vorlage implementierte Methode, mit der eine CSO-Datei als Array mit Bytedaten (fileData) eingelesen wird.
+> **Hinweis**   Im folgenden Beispiel wird das asynchrone Laden und Kompilieren des Shaders mit dem **auto**-Schlüsselwort und der Lambdasyntax durchgeführt. ReadDataAsync() ist eine für die Vorlage implementierte Methode, mit der eine CSO-Datei als Array mit Bytedaten (fileData) eingelesen wird.
 
  
 
@@ -186,15 +185,12 @@ m_d3dContext->PSSetShader(
 
 Im OpenGL ES 2.0-Beispiel wird ein **uniform**-Element für die Shaderpipeline deklariert:
 
--   
-            **u\_mvpMatrix**: Ein 4x4-Array mit Float-Werten, welches die endgültige Modell-Ansicht-Projektion-Transformationsmatrix darstellt, das die Modellkoordinaten für den Würfel verwendet und sie in 2D-Projektionskoordinaten für die Scankonvertierung transformiert.
+-   **u\_mvpMatrix**: Ein 4x4-Array mit Float-Werten, welches die endgültige Modell-Ansicht-Projektion-Transformationsmatrix darstellt, das die Modellkoordinaten für den Würfel verwendet und sie in 2D-Projektionskoordinaten für die Scankonvertierung transformiert.
 
 Zusätzlich zwei **attribute**-Werte für die Vertexdaten:
 
--   
-            **a\_position**: Ein 4-Float-Vektor für die Modellkoordinaten eines Vertex.
--   
-            **a\_color**: Ein 4-Float-Vektor für den RGBA-Farbwert, der dem Vertex zugeordnet ist.
+-   **a\_position**: Ein 4-Float-Vektor für die Modellkoordinaten eines Vertex.
+-   **a\_color**: Ein 4-Float-Vektor für den RGBA-Farbwert, der dem Vertex zugeordnet ist.
 
 OpenGLES2.0: GLSL-Definitionen für die uniform-Elemente und Attribute
 
@@ -327,6 +323,6 @@ Nächster Schritt
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

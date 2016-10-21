@@ -3,8 +3,9 @@ author: TylerMSFT
 title: Starten der Einstellungs-App von Windows
 description: "Erfahren Sie, wie Sie die Windows-Einstellungs-App aus Ihrer App starten können. In diesem Thema wird das ms-settings-URI-Schema beschrieben. Verwenden Sie dieses URI-Schema, um die Windows-Einstellungs-App mit bestimmten Einstellungsseiten zu starten."
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
-ms.sourcegitcommit: 3cf9dd4ab83139a2b4b0f44a36c2e57a92900903
-ms.openlocfilehash: e52a4245e8697a68bfc5c5605dc54e5ea510c662
+translationtype: Human Translation
+ms.sourcegitcommit: f90ba930db60f338ee0ebcc80934281363de01ee
+ms.openlocfilehash: 249e485f74364475ff96a8256ee88bdb79749259
 
 ---
 
@@ -24,12 +25,9 @@ Erfahren Sie, wie Sie die Windows-Einstellungs-App aus Ihrer App starten können
 
 Das Starten der Einstellungs-App ist ein wichtiger Bestandteil beim Schreiben einer datenschutzbewussten App. Wenn Ihre App nicht auf eine sensible Ressource zugreifen kann, wird empfohlen, dem Benutzer einen praktischen Link zu den Datenschutzeinstellungen für diese Ressource bereitzustellen. Weitere Informationen finden Sie unter [Richtlinien für Apps mit Berücksichtigung von Datenschutz](https://msdn.microsoft.com/library/windows/apps/hh768223).
 
-## So wird's gemacht: Starten der Einstellungs-App
+## So starten Sie die Einstellungs-App
 
-
-Wenn Ihre App aufgrund von Datenschutzeinstellungen nicht auf eine sensible Ressource zugreifen kann, empfehlen wir, in der **Einstellungs**-App einen praktischen Link zu den Datenschutzeinstellungen anzugeben. Dadurch können Benutzer ihre Einstellungen leichter ändern.
-
-Um direkt die **Einstellungs**-App zu starten, verwenden Sie das in den folgenden Beispielen beschriebene `ms-settings:`-URI-Schema.
+Um die **Einstellungs**-App zu starten, verwenden Sie das in den folgenden Beispielen beschriebene URI-Schema `ms-settings:`.
 
 In diesem Beispiel wird ein Hyperlink-XAML-Steuerelement verwendet, um die Datenschutzeinstellungsseite für das Mikrofon mit der `ms-settings:privacy-microphone`-URI zu starten.
 
@@ -45,7 +43,7 @@ In diesem Beispiel wird ein Hyperlink-XAML-Steuerelement verwendet, um die Daten
 </TextBlock>
 ```
 
-Alternativ kann Ihre App die [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)-Methode aufrufen, um die **Einstellungs**-App per Code zu starten.
+Alternativ kann Ihre App die [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)-Methode aufrufen, um die **Einstellungs**-App per Code zu starten. In diesem Beispiel wird gezeigt, wie die Datenschutzeinstellungsseite für die Kamera mit dem `ms-settings:privacy-webcam`-URI gestartet werden kann.
 
 ```cs
 using Windows.System;
@@ -53,9 +51,11 @@ using Windows.System;
 bool result = await Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-webcam"));
 ```
 
-In diesem Beispiel wird gezeigt, wie die Datenschutzeinstellungsseite für die Kamera mit dem `ms-settings:privacy-webcam`-URI gestartet werden kann.
+Der eben gezeigte Code startet die Datenschutzeinstellungsseite für die Kamera:
 
 ![Datenschutzeinstellungen für die Kamera.](images/privacyawarenesssettingsapp.png)
+
+
 
 Weitere Informationen zum Starten von URIs finden Sie unter [Starten der Standard-App für einen URI](launch-default-app.md).
 
@@ -71,9 +71,9 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 |                    | Benachrichtigungen & Infos                | Beide           | ms-settings:notifications                 |
 |                    | Telefon                                  | nur Mobile    | ms-settings:phone                         |
 |                    | Nachrichten                              | nur Mobile    | ms-settings:messaging                     |
-|                    | Stromsparmodus                          | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z.B. Tablet    | ms-settings:batterysaver                  |
+|                    | Stromsparmodus                          | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z.B. Tablet | ms-settings:batterysaver                  |
 |                    | Stromsparmodus/Einstellungen für Stromsparmodus | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z.B. Tablet | ms-settings:batterysaver-settings         |
-|                    | Stromsparmodus/Akkunutzung            | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z.B. Tablet    | ms-settings:batterysaver-usagedetails     |
+|                    | Stromsparmodus/Akkunutzung            | Mobil- und Desktopeditionen auf Geräten mit einem Akku, z.B. Tablet | ms-settings:batterysaver-usagedetails     |
 |                    | Ein/Aus/Ruhezustand                          | nur Desktop   | ms-settings:powersleep                    |
 |                    | Desktop: Info                         | Beide           | ms-settings:deviceencryption              |
 |                    |                                        |                |                                           |
@@ -90,14 +90,19 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 |                    | Mobilfunk und SIM                         | Beide           | ms-settings:network-cellular              |
 |                    | Mobiler Hotspot                         | Beide           | ms-settings:network-mobilehotspot         |
 |                    | Proxy                                  | Beide           | ms-settings:network-proxy                 |
+|                    | Status                                 | Nur Desktop   | ms-settings:network-status                |
 | Personalisierung    | Personalisierung (Kategorie)             | Beide           | ms-settings:personalization               |
 |                    | Hintergrund                             | nur Desktop   | ms-settings:personalization-background    |
 |                    | Farben                                 | Beide           | ms-settings:personalization-colors        |
 |                    | Sounds                                 | nur Mobile    | ms-settings:sounds                        |
 |                    | Sperrbildschirm                            | Beide           | ms-settings:lockscreen                    |
-| Konten           | E-Mail und Konten                | Beide           | ms-settings:emailandaccounts              |
-|                    | Arbeitsplatzzugriff                            | Beide           | ms-settings:workplace                     |
-|                    | Einstellungen synchronisieren                     | Beide           | ms-settings:sync                          |
+| Konten           | Geschäfts- oder Schulkonto öffnen                  | Beide           | ms-settings:workplace                     |
+|                    | E-Mail- & App-Konten                   | Beide           | ms-settings:emailandaccounts              |
+|                    | Familie und andere Personen                  | Beide           | ms-settings:otherusers                    |
+|                    | Anmeldeoptionen                        | Beide           | ms-settings:signinoptions                 |
+|                    | Synchronisieren von Einstellungen                     | Beide           | ms-settings:sync                          |
+|                    | Andere Personen                           | Beide           | ms-settings:otherusers                    |
+|                    | Ihre Informationen                              | Beide           | ms-settings:yourinfo                      |
 | Zeit und Sprache  | Datum und Uhrzeit                            | Beide           | ms-settings:dateandtime                   |
 |                    | Region & Sprache                      | nur Desktop   | ms-settings:regionlanguage                |
 | Erleichterte Bedienung     | Sprachausgabe                               | Beide           | ms-settings:easeofaccess-narrator         |
@@ -127,6 +132,6 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

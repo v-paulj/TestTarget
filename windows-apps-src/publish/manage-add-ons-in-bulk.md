@@ -1,48 +1,58 @@
-﻿---
+---
 author: jnHs
-Description: Managing your add-ons in bulk allows you to make changes to multiple add-ons at once rather than submitting each update individually.
-title: Manage add-ons in bulk
+Description: "Das Massenverwalten Ihrer Add-Ons ermöglicht Ihnen, Änderungen für mehrere Add-Ons auf einmal durchzuführen, anstatt jedes Update einzeln übermitteln zu müssen."
+title: Massenverwalten von Add-Ons
+translationtype: Human Translation
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: 9d387cf3a7850301660a672e3255a762ecd3bd4a
+
 
 ---
 
-# Manage add-ons in bulk
+# Massenverwalten von Add-Ons
 
-> **Important** This feature is currently only available to developer accounts which have joined the [Dev Center Insider Program](dev-center-insider-program.md). The implementation of this feature may change before it becomes available to all developers. This preliminary documentation provides some basic info about how the feature works.
+> **Wichtig** Dieses Feature ist zurzeit nur für Entwicklerkonten verfügbar, die Mitglied des [Dev Center-Insider-Programms](dev-center-insider-program.md) sind. Die Implementierung dieses Features wird möglicherweise geändert, bevor es für alle Entwickler verfügbar ist. Diese vorläufige Dokumentation enthält einige grundlegende Informationen zur Funktionsweise des Features.
 
-Managing your add-ons in bulk allows you to make changes to multiple add-ons at once rather than submitting each update individually. You can access this functionality from your app’s overview page by clicking **Manage add-ons in bulk**.
+Das Massenverwalten Ihrer Add-Ons ermöglicht Ihnen, Änderungen für mehrere Add-Ons auf einmal durchzuführen, anstatt jedes Update einzeln übermitteln zu müssen. Sie können auf der Übersichtsseite Ihrer App auf diese Funktionalität zugreifen, indem Sie auf **Massenverwalten von Add-Ons** klicken.
 
-## Export current add-on info
+## Exportieren aktueller Add-On-Informationen
 
-To get started, you’ll first need to download a .csv template file. If you’ve already created add-ons, this file will include info about them. If not, it will be a blank file that you can use to enter info for new add-ons.
+Zunächst müssen Sie eine Vorlagendatei im CSV-Format herunterladen, um die ersten Schritte zu machen. Wenn Sie bereits Add-Ons erstellt haben, enthält diese Datei Informationen über diese. Wenn dies nicht der Fall ist, ist die Datei leer, und Sie können sie verwenden, um Informationen für neue Add-Ons einzugeben.
 
-To generate and download this template file, click **Export add-ons** and save the .csv file to your computer.
+Um diese Vorlagendatei zu generieren und herunterzuladen, klicken Sie auf **Add-Ons exportieren** und speichern die CSV-Datei auf Ihrem Computer.
 
-The .csv file contains the following columns. 
+Die CSV-Datei enthält die folgenden Spalten. 
 
-| Column name               | Description                            | Required?      |
+| Name der Spalte               | Beschreibung                            | Erforderlich?      |
 |---------------------------|----------------------------------|----------------------|
-| Product ID	|  The unique [product ID](set-your-add-on-product-id.md#product-id) of the add-on.  | Yes. Can’t be changed after the add-on is published. |
-| Action |The action you want to apply when you import the template. Supported values are **Submit** (to submit a new add-on or update a previously-published add-on) and **CreateDraft** (to save the changes without submitting them to the Store). |	 Yes |
-| Product type	| The [product type](set-your-add-on-product-id.md#product-type) of the add-on. Supported values are **Consumable** or **Durable**. |	Yes. Can’t be changed after add-on is published. |
-| Product lifetime	| For a Durable add-on, this is either **Forever** (for a product that never expires) or a set duration. Acceptable duration values are: **1day, 3days, 5days, 7days, 14days, 30days, 60days, 90days, 180days, 365days**	| Yes (if Product type is Durable) |
-| Content type	| The [content type](enter-add-on-properties.md#content-type) of the add-on. For most add-ons. this should be **ElectronicSoftwareDownload**. Other acceptable values are: **ElectronicBooks, ElectronicMagazineSingleIssue, ElectronicNewspaperSingleIssue, MusicDownload, MusicStreaming, OnlineDataStorageServices, VideoDownload, VideoStreaming, SoftwareAsAService** |	Yes |
-| Tag	| Optional [Tag](enter-add-on-properties.md#custom-developer-data) (also known as **Custom developer data**) info used in your app’s implementation. | No |
-| Base price	| The [price tier](set-add-on-pricing-and-availability.md#base-price) at which you want to offer the add-on. Must either be **Free** or a valid price tier in the format **0.99USD**. |	Yes |
-| Release date	| The date at which you want to publish the add-on. Acceptable values are **Immediate**, **Manual**, or a date string that complies with the [ISO 8601 standard](http://go.microsoft.com/fwlink/p/?LinkId=817237). | Yes |
-| Titles	| The name that customers will see for the add-on, preceded by the language code and a semicolon. For example, to use the title “Example Title” in English/United States, you would *enter en-us;Example Title*. Additional titles for other languages can be separated by semicolons. Each title must be 100 characters or fewer. 	| Yes |
-|Descriptions	| Optional additional info to display to customers, preceded by the language-locale code and a semicolon. For example, to use the description “This is an example” in English/United States, you would enter *en-us;This is an example*. Additional titles for other languages can be separated by semicolons. Each description must be 200 characters or fewer.	| No |
-| Markets |	One or more [markets](define-pricing-and-market-selection.md#windows-store-consumer-markets) in which you want to offer the add-on. Separate each market by a semicolon. |	Yes |
-|Keywords |	Optional [keywords](enter-add-on-properties.md#keywords) used in your app’s implementation. | No |
+| Produkt-ID    |  Die eindeutige [Produkt-ID](set-your-add-on-product-id.md#product-id) des Add-Ons.  | Ja. Kann nach der Veröffentlichung des Add-Ons nicht mehr geändert werden. |
+| Action |Die Aktion, die Sie anwenden möchten, wenn Sie die Vorlage importieren. Unterstützte Werte sind **Submit** (um ein neues Add-On zu übermitteln oder ein zuvor veröffentlichtes Add-On zu aktualisieren) und **CreateDraft** (um die Änderungen zu speichern, ohne sie an den Store zu übermitteln). |  Ja. |
+| Produkttyp  | Der [Produkttyp](set-your-add-on-product-id.md#product-type) des Add-Ons. Unterstützte Werte sind **Consumable** oder **Durable**. |   Ja. Kann nach der Veröffentlichung des Add-Ons nicht mehr geändert werden. |
+| Produktlebensdauer  | Für ein langlebiges Add-On ist dies entweder **Forever** (für ein Produkt, das niemals abläuft) oder eine festgelegte Dauer. Zulässige Werte für die Dauer sind: **1day, 3days, 5days, 7days, 14days, 30days, 60days, 90days, 180days, 365days**.    | Ja (wenn der Produkttyp „Durable“ ist). |
+| Inhaltstyp  | Der [Inhaltstyp](enter-add-on-properties.md#content-type) des Add-Ons. Für die Mehrzahl der Add-Ons sollte dies **ElectronicSoftwareDownload** sein. Weitere zulässige Werte sind: **ElectronicBooks, ElectronicMagazineSingleIssue, ElectronicNewspaperSingleIssue, MusicDownload, MusicStreaming, OnlineDataStorageServices, VideoDownload, VideoStreaming, SoftwareAsAService**. |    Ja. |
+| Tag   | Optionale Informationen in Form eines [Tag](enter-add-on-properties.md#custom-developer-data) (auch bekannt als **benutzerdefinierte Entwicklerdaten**), die in der Implementierung Ihrer App verwendet werden. | Nein. |
+| Grundpreis    | Das [Preisniveau](set-add-on-pricing-and-availability.md#base-price), auf dem Sie das Add-On anbieten möchten. Dieses muss entweder **Free** oder ein gültiges Preisniveau im Format **0,99USD** sein. | Ja. |
+| Datum der Veröffentlichung  | Das Datum, an dem Sie das Add-On veröffentlichen möchten. Zulässige Werte sind **Direkt**, **Manuell** oder eine Datumszeichenfolge, die dem [ISO8601-Standard](http://go.microsoft.com/fwlink/p/?LinkId=817237) entspricht. | Ja. |
+| Titel    | Der Name des Add-On, der Kunden angezeigt wird und dem der Sprachcode und ein Semikolon vorausgehen. Um beispielsweise den Titel „Beispieltitel“ in deutscher Sprache zu verwenden, würden Sie *de-de;Beispieltitel* eingeben. Zusätzliche Titel für weitere Sprachen können jeweils durch ein Semikolon getrennt werden. Jeder Titel darf maximal 100Zeichen enthalten.  | Ja |
+|Beschreibungen   | Optionale zusätzliche Informationen, die Kunden angezeigt werden und denen der Gebietsschemacode der Sprache und ein Semikolon vorausgehen. Um beispielsweise die Beschreibung „Dies ist ein Beispiel.“ in deutscher Sprache zu verwenden, würden Sie *de-de;Dies ist ein Beispiel.* eingeben. Zusätzliche Titel für weitere Sprachen können jeweils durch ein Semikolon getrennt werden. Jede Beschreibung darf maximal 200Zeichen enthalten.    | Nein. |
+| Märkte | Ein oder mehrere [Märkte](define-pricing-and-market-selection.md#windows-store-consumer-markets), in dem Sie das Add-On anbieten möchten. Trennen Sie die einzelnen Märkte jeweils durch ein Semikolon. |  Ja. |
+|Schlüsselwörter | Optionale [Schlüsselwörter](enter-add-on-properties.md#keywords), die in der Implementierung Ihrer App verwendet werden. | Nein. |
 
-## Import add-ons
+## Importieren von Add-Ons
 
-Before you can import changes, you’ll need to update the downloaded .csv file with the changes you’d like to make.
+Bevor Sie Änderungen importieren können, müssen Sie die heruntergeladene CSV-Datei mit den Änderungen aktualisieren, die Sie durchführen möchten.
 
-To make changes to add-ons that you’ve already published, update the values you wish to change in your copy of the spreadsheet. You can remove any rows for add-ons that you don’t want to update, or leave them as is. Note that if there is already a submission in progress for that add-on, you won’t be able to make changes using the .csv file.
+Um Add-Ons zu ändern, die Sie bereits veröffentlicht haben, aktualisieren Sie die gewünschten Werte in Ihrer Kopie der Tabelle. Sie können Zeilen für Add-Ons, die Sie nicht aktualisieren möchten, entfernen oder in der Tabelle belassen. Beachten Sie, dass Sie keine Änderungen mittels der CSV-Datei durchführen können, wenn bereits eine Übermittlung für das betreffende Add-On bearbeitet wird.
 
-> **Important** When submitting updates to add-ons that you’ve already published, you can’t change the **Product ID** and **Product type** fields.
+> **Wichtig** Wenn Sie Aktualisierungen für Add-Ons übermitteln, die Sie bereits veröffentlicht haben, können Sie die Felder **Produkt-ID** und **Produkttyp** nicht ändern.
 
-To submit a new add-on, add a new row and enter the info for your new add-on. Be sure to enter all of the required info. 
+Um ein neues Add-On hinzuzufügen, fügen Sie eine neue Zeile ein und geben die Informationen für Ihr neues Add-On ein. Achten Sie darauf, dass Sie alle erforderlichen Informationen eingeben. 
 
-When you have made all of the changes, save the .csv file (with the same filename), then upload the file by dragging it to the specified field (or click **Browse your files**). A summary of your changes will be shown, along with any errors that must be fixed before submitting. After you’ve verified that the info is correct, you can click **Submit to the Store**. Each add-on will go through the submission process using the info that you’ve provided.
+Wenn Sie alle Änderungen durchgeführt haben, speichern Sie die CSV-Datei (mit dem gleichen Dateinamen) und laden anschließend die Datei hoch, indem Sie sie auf das angegebene Feld ziehen (oder auf **Dateien durchsuchen** klicken). Anschließend wird eine Übersicht über die Änderungen zusammen mit allen Fehlern angezeigt, die vor der Übermittlung behoben werden müssen. Nachdem Sie überprüft haben, ob die Informationen korrekt sind, klicken Sie auf **An Store übermitteln**. Jedes Add-On durchläuft den Übermittlungsvorgang auf der Basis der von Ihnen bereitgestellten Informationen.
+
+
+
+
+<!--HONumber=Aug16_HO3-->
+
 

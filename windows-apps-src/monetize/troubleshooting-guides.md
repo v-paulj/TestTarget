@@ -1,10 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: 05b10814-4548-4dd4-bf71-72157a50986c
-description: "Informieren Sie sich über Lösungen für gängige Entwicklungsprobleme bei den Microsoft Advertising-Bibliotheken."
+description: "Informieren Sie sich über Lösungen für gängige Entwicklungsprobleme in den Microsoft Advertising-Bibliotheken."
 title: "Handbücher zur Problembehandlung"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 4a006cbd1a1f38e2410098d074a35df4a2468963
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 4a8b43ac0b6752b78e998ac16776b84e9ddda09f
 
 
 ---
@@ -12,9 +13,9 @@ ms.openlocfilehash: 4a006cbd1a1f38e2410098d074a35df4a2468963
 # Handbücher zur Problembehandlung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-In diesem Abschnitt werden Lösungen für gängige Entwicklungsprobleme bei den Microsoft Advertising-Bibliotheken beschrieben.
+
+In diesem Abschnitt werden Lösungen für gängige Entwicklungsprobleme in den Microsoft Advertising-Bibliotheken beschrieben.
 
 | Thema                                                                                                       | Beschreibung                 |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------|
@@ -28,6 +29,6 @@ In diesem Abschnitt werden Lösungen für gängige Entwicklungsprobleme bei den 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

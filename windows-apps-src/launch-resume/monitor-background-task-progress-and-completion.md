@@ -4,8 +4,8 @@ title: "Überwachen des Status und Abschlusses von Hintergrundaufgaben"
 description: Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Status und Abschluss erkennt.
 ms.assetid: 17544FD7-A336-4254-97DC-2BF8994FF9B2
 translationtype: Human Translation
-ms.sourcegitcommit: 6e6e28bc339364e70282a9db84593188c70a59c4
-ms.openlocfilehash: 153895a3ce41e5f4d22067e33cb5e874e89c6069
+ms.sourcegitcommit: b877ec7a02082cbfeb7cdfd6c66490ec608d9a50
+ms.openlocfilehash: 0488e47c35b2f7c8a8db2b2aca4527c4c3b67d28
 
 ---
 
@@ -21,7 +21,9 @@ ms.openlocfilehash: 153895a3ce41e5f4d22067e33cb5e874e89c6069
 -   [**BackgroundTaskProgressEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224785)
 -   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
 
-Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Status und Abschluss erkennt. Hintergrundaufgaben sind zwar von der App entkoppelt und werden getrennt ausgeführt, Status und Abschluss können jedoch vom App-Code überwacht werden. Hierzu abonniert die App Ereignisse der Hintergrundaufgaben, die sie im System registriert hat.
+Erfahren Sie, wie Ihre App einen von einer Hintergrundaufgabe gemeldeten Status und Abschluss erkennt, der in einem getrennten Vorgang ausgeführt wird. (Für Hintergrundaufgaben mit einem einzelnen Vorgang können Sie gemeinsame Variablen festlegen, um Status und Abschluss anzugeben.)
+
+ Hintergrundaufgaben sind zwar von der App entkoppelt und werden getrennt ausgeführt, Status und Abschluss können jedoch vom App-Code überwacht werden. Hierzu abonniert die App Ereignisse der Hintergrundaufgaben, die sie im System registriert hat.
 
 -   In diesem Thema wird vorausgesetzt, dass Sie über eine App verfügen, die Hintergrundaufgaben registriert. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie die Infos unter [Erstellen und Registrieren einer Hintergrundaufgabe](create-and-register-a-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
@@ -210,7 +212,6 @@ Hier erfahren Sie, wie Ihre App den von einer Hintergrundaufgabe gemeldeten Stat
 
 
 
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

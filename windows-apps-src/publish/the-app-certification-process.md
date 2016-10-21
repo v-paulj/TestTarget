@@ -3,15 +3,16 @@ author: jnHs
 Description: "Nachdem Sie die App-Einreichung fertig gestellt haben und auf „An Store übermitteln” klicken, tritt die App in die Zertifizierungsphase ein."
 title: Der App-Zertifizierungsprozess
 ms.assetid: 0DCB4344-224D-4E5A-899F-FF7A89F23DBC
-ms.sourcegitcommit: 4ea19e85d1e151dd1e03d5acf085c186613be35f
-ms.openlocfilehash: 579d1ef306123f765e19fc9ab3b02c064b690aee
+translationtype: Human Translation
+ms.sourcegitcommit: 865d71374cf7d678804ce16548edd819faafed33
+ms.openlocfilehash: 07b3631ccc875222b8d2ea30a2b69e2995a09e23
 
 ---
 
 # Der App-Zertifizierungsprozess
 
 
-Nachdem Sie die App-Einreichung fertig gestellt haben und auf **An Store übermitteln** klicken, tritt die App in die Zertifizierungsphase ein. Dieser Vorgang ist in der Regel innerhalb weniger Stunden abgeschlossen, kann in einigen Fällen aber bis zu einem Werktag dauern. Nach der Zertifizierung der Übermittlung kann es bis zu 16Stunden dauern, bis der App-Eintrag (oder ein Update für eine bereits veröffentlichte App) für Kunden im Store sichtbar wird. Eine Benachrichtigung wird angezeigt, wenn Ihre Übermittlung veröffentlicht wurde und für Kunden verfügbar ist, und der App-Status im Dashboard lautet **Im Store**.
+Nachdem Sie die App-Einreichung fertig gestellt haben und auf **An Store übermitteln** klicken, tritt die App in die Zertifizierungsphase ein. Dieser Vorgang ist in der Regel innerhalb weniger Stunden abgeschlossen, kann in Einzelfällen aber bis zu drei Arbeitstage dauern. Nach der Zertifizierung der Übermittlung kann es bis zu 16Stunden dauern, bis der App-Eintrag (oder ein Update für eine bereits veröffentlichte App) für Kunden im Store sichtbar wird. Eine Benachrichtigung wird angezeigt, wenn Ihre Übermittlung veröffentlicht wurde und für Kunden verfügbar ist, und der App-Status im Dashboard lautet **Im Store**.
 
 ## Vorverarbeitung
 
@@ -21,12 +22,9 @@ Nach dem erfolgreichen Hochladen der App-Pakete und dem Übermitteln der App zur
 
 Während dieser Phase werden mehrere Tests durchgeführt:
 
--   
-            **Sicherheitstests:** Dieser erste Test überprüft die Pakete Ihrer App auf Viren und Schadsoftware. Besteht Ihre App diesen Test nicht, müssen Sie Ihr Entwicklungssystem überprüfen, indem Sie die aktuelle Antivirensoftware ausführen und Ihr App-Paket anschließend in einem bereinigten System neu erstellen.
--   
-            **Tests bezgl. der Erfüllung technischer Anforderungen:** Die Erfüllung technischer Anforderungen wird mithilfe des Zertifizierungskits für Windows-Apps getestet. (Achten Sie immer darauf, [Ihre App mit dem Zertifizierungskit für Windows-Apps zu testen](../debug-test-perf/windows-app-certification-kit.md), bevor Sie sie im Store einreichen.)
--   
-            **Erfüllung inhaltlicher Anforderungen:** Die dafür benötigte Zeit hängt von der Komplexität Ihrer App, der Menge an visuellem Inhalt sowie der Anzahl von kürzlich übermittelten Apps ab. Achten Sie darauf, auf der Seite [Hinweise für Zertifizierung](notes-for-certification.md) alle für Tester erforderlichen Informationen bereitzustellen.
+-   **Sicherheitstests:** Dieser erste Test überprüft die Pakete Ihrer App auf Viren und Schadsoftware. Besteht Ihre App diesen Test nicht, müssen Sie Ihr Entwicklungssystem überprüfen, indem Sie die aktuelle Antivirensoftware ausführen und Ihr App-Paket anschließend in einem bereinigten System neu erstellen.
+-   **Tests bezgl. der Erfüllung technischer Anforderungen:** Die Erfüllung technischer Anforderungen wird mithilfe des Zertifizierungskits für Windows-Apps getestet. (Achten Sie immer darauf, [Ihre App mit dem Zertifizierungskit für Windows-Apps zu testen](../debug-test-perf/windows-app-certification-kit.md), bevor Sie sie im Store einreichen.)
+-   **Erfüllung inhaltlicher Anforderungen:** Die dafür benötigte Zeit hängt von der Komplexität Ihrer App, der Menge von visuellem Inhalt sowie der Anzahl von kürzlich übermittelten Apps ab. Achten Sie darauf, auf der Seite [Hinweise für Zertifizierung](notes-for-certification.md) alle für Tester erforderlichen Informationen bereitzustellen.
 
 Nach Abschluss des Zertifizierungsprozesses erhalten Sie einen Zertifizierungsbericht, der Aufschluss darüber gibt, ob Ihre App die Zertifizierung bestanden hat. War die Zertifizierung nicht erfolgreich, ist im Bericht angegeben, welcher Test nicht bestanden bzw. welche [Richtlinie](https://msdn.microsoft.com/library/windows/apps/dn764944) nicht erfüllt wurde. Nachdem Sie das Problem behoben haben, können Sie eine neue Einreichung für Ihre App erstellen, um den Zertifizierungsprozess erneut einzuleiten.
 
@@ -44,21 +42,20 @@ Während sich Ihre App in der Veröffentlichungsphase befindet, erfahren Sie üb
 
 Nach erfolgreicher Absolvierung der obigen Schritte ändert sich der Status der Übermittlung von **Veröffentlichung** in **Im Store**. Ihre Übermittlung steht den Kunden nun im Windows Store zum Download zur Verfügung (sofern Sie unter [Verteilung und Sichtbarkeit](set-app-pricing-and-availability.md#distribution-and-visibility) keine andere Option ausgewählt haben). 
 
-
-            **Hinweis**  Außerdem führen wir Stichprobenkontrollen für bereits veröffentlichte Apps durch, um potenzielle Probleme zu ermitteln und sicherzustellen, dass Ihre App alle [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944) erfüllt. Falls Probleme gefunden werden, werden Sie benachrichtigt, dass ein Problem aufgetreten ist und wie Sie es ggf. beheben können, oder dass die App aus dem Store entfernt wurde.
-
- 
+**Hinweis**  Außerdem führen wir Stichprobenkontrollen für bereits veröffentlichte Apps durch, um potenzielle Probleme zu ermitteln und sicherzustellen, dass Ihre App alle [Windows Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/dn764944) erfüllt. Falls Probleme gefunden werden, werden Sie benachrichtigt, dass ein Problem aufgetreten ist und wie Sie es ggf. beheben können, oder dass die App aus dem Store entfernt wurde.
 
  
 
  
 
+ 
 
 
 
 
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

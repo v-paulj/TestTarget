@@ -5,8 +5,9 @@ ms.assetid: 2091883C-5D0C-44ED-936A-709022926A42
 title: Steuerelementmuster und Schnittstellen
 label: Control patterns and interfaces
 template: detail.hbs
-ms.sourcegitcommit: 50c37d71d3455fc2417d70f04e08a9daff2e881e
-ms.openlocfilehash: 9f38c3bd26ef7b409d4c743abf25a5b0a6455f20
+translationtype: Human Translation
+ms.sourcegitcommit: 74e5af4c3eb5a2e17c95afce156474b613e966c5
+ms.openlocfilehash: d2ae98f95538c014ef256f5d4a400aabb36c3118
 
 ---
 
@@ -27,19 +28,19 @@ Beim Implementieren eines Steuerelementmusters sollten Sie auch die Dokumentatio
 | **Annotation** | [**IAnnotationProvider**](https://msdn.microsoft.com/library/windows/apps/Hh738493) | Damit werden die Eigenschaften einer Anmerkung in einem Dokument verfügbar gemacht. |
 | **Dock** | [**IDockProvider**](https://msdn.microsoft.com/library/windows/apps/BR242565) | Wird für Steuerelemente verwendet, die in einem Andockcontainer angedockt werden können. Beispiele: Symbolleisten oder Toolpaletten. |
 | **Drag** | [**IDragProvider**](https://msdn.microsoft.com/library/windows/apps/Hh750322) | Wird zum Unterstützen von ziehbaren Steuerelementen bzw. Steuerelementen mit ziehbaren Elementen verwendet. |
-| **DropTarget** | [**IDropTargetProvider**](https://msdn.microsoft.com/library/windows/apps/Hh750327) | Wird zum Unterstützen von Steuerelementen verwendet, die Ziel eines Drag & Drop-Vorgangs sein können. |
+| **DropTarget** | [**IDropTargetProvider**](https://msdn.microsoft.com/library/windows/apps/Hh750327) | Wird zum Unterstützen von Steuerelementen verwendet, die Ziel eines Drag&Drop-Vorgangs sein können. |
 | **ExpandCollapse** | [**IExpandCollapseProvider**](https://msdn.microsoft.com/library/windows/apps/BR242568) | Wird zum Unterstützen von Steuerelementen verwendet, die visuell erweitert oder reduziert werden, um mehr bzw. weniger Inhalt anzuzeigen. |
 | **Grid** | [**IGridProvider**](https://msdn.microsoft.com/library/windows/apps/BR242578) | Wird für Steuerelemente verwendet, von denen Rasterfunktionen wie etwa Größenanpassung und Verschieben in eine angegebene Zelle unterstützt werden. Beachten Sie, dass dieses Muster nicht vom Raster selbst implementiert wird. Dies liegt daran, dass das Raster zwar ein Layout bereitstellt, aber kein Steuerelement ist. |
 | **GridItem** | [**IGridItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242572) | Wird für Steuerelemente verwendet, die innerhalb von Rastern über Zellen verfügen. |
 | **Invoke** | [**IInvokeProvider**](https://msdn.microsoft.com/library/windows/apps/BR242582) | Wird für Steuerelemente verwendet, die aufgerufen werden können, beispielsweise ein [**Button**](https://msdn.microsoft.com/library/windows/apps/BR209265)-Steuerelement. |
-| **ItemContainer** | [**IItemContainerProvider**](https://msdn.microsoft.com/library/windows/apps/BR242583) | Ermöglicht es Anwendungen, Elemente in einem Container (z. B. in einer virtualisierten Liste) zu finden. |
+| **ItemContainer** | [**IItemContainerProvider**](https://msdn.microsoft.com/library/windows/apps/BR242583) | Ermöglicht es Anwendungen, Elemente in einem Container (z.B. in einer virtualisierten Liste) zu finden. |
 | **MultipleView** | [**IMultipleViewProvider**](https://msdn.microsoft.com/library/windows/apps/BR242585) | Wird für Steuerelemente verwendet, in denen zwischen verschiedenen Darstellungen des gleichen Informationssatzes, Datensatzes oder Satzes von untergeordneten Elementen umgeschaltet werden kann. |
 | **ObjectModel** | [**IObjectModelProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251815) | Wird verwendet, um für das zugrunde liegende Objektmodell eines Dokuments einen Zeiger verfügbar zu machen. |
-| **RangeValue** | [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) | Wird für Steuerelemente verwendet, die über einen Wertebereich verfügen, der auf das Steuerelement angewendet werden kann. So verfügt ein Drehfeld, das Jahre enthält, beispielsweise über einen Bereich von 1900 bis zum aktuellen Jahr. Ein anderes Drehfeld, das für Monate steht, würde jedoch über einen Bereich von 1 bis 12 verfügen. |
+| **RangeValue** | [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) | Wird für Steuerelemente verwendet, die über einen Wertebereich verfügen, der auf das Steuerelement angewendet werden kann. So verfügt ein Drehfeld, das Jahre enthält, beispielsweise über einen Bereich von 1900 bis zum aktuellen Jahr. Ein anderes Drehfeld, das für Monate steht, würde jedoch über einen Bereich von1 bis12 verfügen. |
 | **Scroll** | [**IScrollProvider**](https://msdn.microsoft.com/library/windows/apps/BR242601) | Wird für Steuerelemente verwendet, für die ein Bildlauf durchgeführt werden kann. Beispiel: ein Steuerelement mit Bildlaufleisten, die aktiv sind, wenn mehr Informationen vorhanden sind, als im Anzeigebereich des Steuerelements angezeigt werden können. |
 | **ScrollItem** | [**IScrollItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242599) | Wird für Steuerelemente verwendet, die über einzelne Elemente in einer Liste mit Bildlauf verfügen. Beispiel: ein Steuerelement für eine Liste, das über einzelne Elemente in der Bildlaufliste verfügt, wie etwa ein Steuerelement für ein Kombinationsfeld. |
 | **Selection** | [**ISelectionProvider**](https://msdn.microsoft.com/library/windows/apps/BR242616) | Wird für Steuerelemente für Auswahlcontainer verwendet. Beispiel: [**ListBox**](https://msdn.microsoft.com/library/windows/apps/BR242868) und [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/BR209348). |
-| **SelectionItem** | [**ISelectionItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242610) | Wird für einzelne Elemente in Steuerelementen für Auswahlcontainer verwendet, z. B. Listen- und Kombinationsfelder. |
+| **SelectionItem** | [**ISelectionItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242610) | Wird für einzelne Elemente in Steuerelementen für Auswahlcontainer verwendet, z.B. Listen- und Kombinationsfelder. |
 | **Spreadsheet** | [**ISpreadsheetProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251821) | Wird verwendet, um den Inhalt einer Tabellenkalkulation oder eines anderen rasterbasierten Dokuments verfügbar zu machen. |
 | **SpreadsheetItem** | [**ISpreadsheetItemProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251817) | Wird verwendet, um die Eigenschaften einer Zelle in einer Tabellenkalkulation oder einem anderen rasterbasierten Dokument verfügbar zu machen. |
 | **Styles** | [**IStylesProvider**](https://msdn.microsoft.com/library/windows/apps/Dn251823) | Wird verwendet, um ein UI-Element zu beschreiben, das in Bezug auf Stil, Füllfarbe, Füllmuster oder Form über bestimmte Einstellungen verfügt. |
@@ -54,7 +55,7 @@ Beim Implementieren eines Steuerelementmusters sollten Sie auch die Dokumentatio
 | **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Wird für Steuerelemente verwendet, deren Größe geändert werden kann und die verschoben und gedreht werden können. Gewöhnlich wird das Steuerelementmuster für Transformation in Designern, Formen, Grafikeditoren und Zeichenanwendungen verwendet. |
 | **Value** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Ermöglicht es Clients, einen Wert von Steuerelementen abzurufen, die keinen Wertebereich unterstützen, oder einen Wert dafür festzulegen. |
 | **VirtualizedItem** | [**IVirtualizedItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242668) | Macht Elemente in Containern verfügbar, die virtualisiert sind und vollständig als Benutzeroberflächenautomatisierungs-Elemente zur Verfügung stehen müssen. |
-| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Macht für bestimmte Fenster spezifische Informationen verfügbar. Hierbei handelt es sich um ein grundlegendes Konzept des Microsoft Windows-Betriebssystems. Beispiele für Steuerelemente als Fenster: untergeordnete Fenster und Dialogfelder. |
+| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Macht für bestimmte Fenster spezifische Informationen verfügbar. Hierbei handelt es sich um ein grundlegendes Konzept des MicrosoftWindows-Betriebssystems. Beispiele für Steuerelemente als Fenster: untergeordnete Fenster und Dialogfelder. |
 
 > [!NOTE]
 > Implementierungen all dieser Muster sind in vorhandenen XAML-Steuerelementen nicht immer enthalten. Einige Muster verfügen nur über Schnittstellen, um die Parität mit der allgemeinen Benutzeroberflächenautomatierungs-Frameworkdefinition für Muster sowie Automatisierungspeerszenarien zu unterstützen, die für die Unterstützung dieses Musters eine rein benutzerdefinierte Implementierung benötigen.
@@ -65,10 +66,10 @@ Beim Implementieren eines Steuerelementmusters sollten Sie auch die Dokumentatio
 <span id="related_topics"/>
 ## Verwandte Themen  
 * [Benutzerdefinierte Automatisierungspeers](custom-automation-peers.md)
-* [Barrierefreiheit](accessibility.md)
+* [Barrierefreiheit](accessibility.md) 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

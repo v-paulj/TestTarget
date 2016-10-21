@@ -3,8 +3,9 @@ author: jnHs
 Description: "Erfahren Sie, wie Sie Ihre Apps und Inhalte im Windows Store bewerben. In diesen Richtlinien wird erläutert, wie Sie die verfügbaren Ressourcen in Kombination mit Empfehlungen für die Vermarktung von Apps in gedruckter und digitaler Werbung, in TV-Werbung und Werbung auf sozialen Plattformen verwenden."
 title: "Marketingrichtlinien für Windows Store-Apps"
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 64c6dd45053070096ff7d7e932bac1c560194518
+ms.openlocfilehash: b6662344996a83c3f1460af8b7387bf7cfd4b087
 
 ---
 
@@ -16,30 +17,23 @@ Erfahren Sie, wie Sie Ihre Apps und Inhalte im Windows Store bewerben. In diesen
 
 Wir haben spezielle Werbe-Badges erstellt, mit denen Sie mehr Kunden zum Eintrag Ihrer App im Windows Store lenken können. Diese Badges sind in 44Sprachen verfügbar. Bedenken Sie, dass es bestimmte Anforderungen gibt, die Sie bei Verwendung dieser Bilder beachten müssen. Diese Vorgaben sowie Verwendungsbeispiele und Richtlinien sind in einer PDF-Datei verfügbar.
 
-
-            [
-              ![Schaltfläche „Herunterladen“](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) Windows Store-Marketingrichtlinien (PDF, Englisch)
+[![Schaltfläche „Herunterladen“](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) Windows Store-Marketingrichtlinien (PDF, Englisch)
 
 ## Badge-Generator und Bilder
 
 Sie können unseren [Badge-Generator](http://go.microsoft.com/fwlink/p/?LinkID=534236) verwenden, um HTML zu generieren, das den Store-Badge (in der gewünschten Sprache) anzeigt, sowie Links, die direkt zu dem Store-Eintrag Ihrer App führen. Von folgendem Link können Sie auch den vollständigen Satz von Badge-Bildern (im PNG- und PDF-Format) herunterladen.
 
-
-            [
-              ![Schaltfläche „Herunterladen“](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529771) Alle Badge-Bilder
+[![Schaltfläche „Herunterladen“](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529771) Alle Badge-Bilder
 
 ## Gerätebilder
 
 Zur Vermarktung Ihrer App möchten Sie vielleicht zeigen, wie sie aussieht, wenn sie auf einem Windows-Gerät ausgeführt wird. Ihnen steht eine Vielzahl von Gerätechassisbildern zur Auswahl, darunter Telefone, Tablets, Laptops und PCs. Bewährte Methoden und technische Spezifikationen für die Verwendung dieser Bilder finden Sie in den [Windows Store-Marketingrichtlinien](http://go.microsoft.com/fwlink/p/?LinkId=529769).
 
-
-            [
-              ![Schaltfläche „Herunterladen“](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) Grafiken für Windows-Geräte
+[![Schaltfläche „Herunterladen“](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) Grafiken für Windows-Geräte
 
 ## Lizenz für MicrosoftMarks
 
-
-            *Microsoft Marks* bezeichnet das *Microsoft-Badge* und die *Windows Store-Kachel*, die auf der Seite [Badge-Generator](http://go.microsoft.com/fwlink/p/?LinkID=534236) beschrieben werden. Die Verwendung dieser Badges setzt Folgendes voraus:
+*Microsoft Marks* bezeichnet das *Microsoft-Badge* und die *Windows Store-Kachel*, die auf der Seite [Badge-Generator](http://go.microsoft.com/fwlink/p/?LinkID=534236) beschrieben werden. Die Verwendung dieser Badges setzt Folgendes voraus:
 
 -   Ihre App oder andere Inhalte sind im Windows Store oder als Teil von des [Microsoft-Partnerprogramms](http://go.microsoft.com/fwlink/p/?LinkId=624463) verfügbar.
 
@@ -61,6 +55,6 @@ Microsoft ist der alleinige Eigentümer der Microsoft Marks und des damit verbun
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

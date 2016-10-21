@@ -4,8 +4,8 @@ ms.assetid: 7bb9fd81-8ab5-4f8d-a854-ce285b0669a4
 description: "Technologien für den Zugriff auf das Netzwerk und Webdienste."
 title: Netzwerk und Webdienste
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: b4e291c0948a7734b8ba188bc060dfba2e9a83d1
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: 03a5ce2b8d5f501d4254cbe0ee3d47f575775f7a
 
 ---
 
@@ -25,10 +25,9 @@ Die folgenden Netzwerk- und Webdiensttechnologien sind für Entwickler von UWP (
 | [HttpClient](httpclient.md)                                                             | Verwenden Sie die [Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace-API zum Senden und Empfangen von Informationen über das HTTP-Protokoll 1.1 und 2.0.             |
 | [RSS/Atom-Feeds](web-feeds.md)                                                          | Mithilfe von Fremdanbieterfeeds, die entsprechend den RSS- und Atom-Standards mit Features im [Windows.Web.Syndication](https://msdn.microsoft.com/library/windows/apps/br243632)-Namespace generiert werden, können Sie die aktuellsten und beliebtesten Webinhalte abrufen oder erstellen.                   |
 | [Hintergrundübertragungen](background-transfers.md)                                         | Verwenden Sie die Hintergrundübertragungs-API zum zuverlässigen Kopieren von Dateien im Netzwerk.           |
-| [Markieren von Netzwerkverbindungen mit EDP-Identität](tagging_network_connections_with_edp_identity.md) | In diesem Thema wird veranschaulicht, wie Sie einen geschützten Threadkontext erstellen, bevor Sie in einem Unternehmensdatenschutz-Szenario (Enterprise Data Protection, EDP) Netzwerkverbindungen erstellen. |
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

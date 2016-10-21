@@ -3,8 +3,9 @@ author: mtoepke
 title: Einrichten des Spieleprojekts
 description: "Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben."
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d4d7864f9689df0919b53ee70b8e18f8d812b2b0
+ms.openlocfilehash: fd8e676e66c1df530aca41e05f2ea68d96d01a32
 
 ---
 
@@ -30,7 +31,7 @@ Sie können ein Spiel natürlich von Grund auf neu entwickeln. Dafür brauchen S
 
 Eine Visual Studio-Vorlage ist eine Sammlung von Einstellungen und Codedateien, die abhängig von der bevorzugten Sprache und Technologie auf eine bestimmte Art von App ausgerichtet sind. In Microsoft Visual Studio2015 stehen einige Vorlagen zur Verfügung, die die Entwicklung des Spiels und der Grafik deutlich vereinfachen können. Ohne Verwendung einer Vorlage müssen Sie einen Großteil des grundlegenden Rendering- und Anzeigeframeworks für die Grafik selbst entwickeln, was insbesondere für neue Spieleentwickler recht mühsam sein kann.
 
-Die richtige Vorlage für dieses Tutorial ist die Vorlage „DirectX 11-App (Universelle Windows-App)“. Klicken Sie in Visual Studio2015 auf **Datei...**&gt;**Neues Projekt** und gehen Sie anschließend wie folgt vor:
+Die richtige Vorlage für dieses Tutorial ist die Vorlage „DirectX 11-App (Universelle Windows-App)“. Klicken Sie in Visual Studio 2015 auf **Datei...** &gt; **Neues Projekt**, und gehen Sie anschließend wie folgt vor:
 
 1.  Navigieren Sie unter **Vorlagen** zu **Visual C++**> **Windows**> **Universell**.
 2.  Wählen Sie im mittleren Bereich **DirectX11-App (universelle Windows-App)**aus.
@@ -168,6 +169,6 @@ Im nächsten Lernprogramm, [Definieren des UWP-App-Frameworks für das Spiel](tu
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

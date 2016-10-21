@@ -3,8 +3,9 @@ author: jnHs
 Description: "Dem Bericht „Bewertungen“ im Windows Dev Center-Dashboard können Sie entnehmen, wie Kunden Ihre App im Windows Store bewerten."
 title: "Bericht „Bewertungen“"
 ms.assetid: CAFEC20B-04FB-48C8-B663-1238C0B85ECD
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: e0258bc9402772d0a036b32563348d11acd0fdb7
+ms.openlocfilehash: 1613c8a5e5a28ba431fcfb186a0fcd5fe9bd7582
 
 ---
 
@@ -20,12 +21,9 @@ Eine Bewertung wird in diesem Bericht anhand der Anzahl von Sternen (von 1 bis 5
 
 Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten auf dieser Seite nach Datumsbereich und/oder Markt zu filtern.
 
--   
-            **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
--   
-            **Markt**: Der Standardfilter ist **Alle Märkte**. Sie können einen bestimmten Markt auswählen, wenn auf dieser Seite nur Bewertungen der in diesem Markt ansässigen Kunden angezeigt werden sollen.
--   
-            **Gerätetyp**: Der Standardfilter ist **Alle Geräte**. Sie können einen bestimmten Gerätetyp auswählen, wenn auf dieser Seite nur Bewertungen von Kunden angezeigt werden sollen, die ein Gerät dieses Typs verwenden.
+-   **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, aber er kann bis auf **Letzte 12 Monate** erweitert werden.
+-   **Markt**: Der Standardfilter ist **Alle Märkte**. Sie können einen bestimmten Markt auswählen, wenn auf dieser Seite nur Bewertungen der in diesem Markt ansässigen Kunden angezeigt werden sollen.
+-   **Gerätetyp**: Der Standardfilter ist **Alle Geräte**. Sie können einen bestimmten Gerätetyp auswählen, wenn auf dieser Seite nur Bewertungen von Kunden angezeigt werden sollen, die ein Gerät dieses Typs verwenden.
 
 Die Informationen in allen unten aufgeführten Diagrammen beziehen sich auf den im Bereich **Filter anwenden** ausgewählten Zeitraum und entsprechen den von Ihnen hier ausgewählten Filtern.
 
@@ -44,13 +42,10 @@ Das Diagramm **Anzahl der Bewertungen** zeigt die Gesamtanzahl der App-Bewertung
 
 Das Diagramm **Neue und überarbeitete Bewertungen** enthält die Anzahl der Bewertungen für jeden Bewertungstyp (neu oder überarbeitet) im ausgewählten Zeitraum.
 
--   
-            **Neue Bewertungen** sind Bewertungen, die Kunden abgegeben, aber nicht geändert haben.
--   
-            **Überarbeitete Bewertungen** sind Bewertungen, die vom Kunden geändert wurden.
+-   **Neue Bewertungen** sind Bewertungen, die Kunden abgegeben, aber nicht geändert haben.
+-   **Überarbeitete Bewertungen** sind Bewertungen, die vom Kunden geändert wurden.
 
->
-            **Hinweis**  Eine Bewertung wird hier selbst dann als überarbeitet angezeigt, wenn der Kunde nur den Text oder Titel seiner Rezension geändert oder hinzugefügt hat, die tatsächliche Bewertung aber unverändert ist.
+>**Hinweis**  Eine Bewertung wird hier selbst dann als überarbeitet angezeigt, wenn der Kunde nur den Text oder Titel seiner Rezension geändert oder hinzugefügt hat, die tatsächliche Bewertung aber unverändert ist.
 
 ## Durchschnittliche Bewertung im Laufe der Zeit
 
@@ -66,13 +61,11 @@ Wenn Sie die Informationen nach **Letzte 30 Tage** oder **Letzte 3 Monate** gefi
 
 Das Diagramm **Märkte** zeigt die durchschnittliche Bewertung und die Anzahl der Bewertungen im ausgewählten Zeitraum nach Markt.
 
-> 
-            **Hinweis**  Wenn Sie mithilfe der **Seitenfilter** einen bestimmten Markt angegeben haben, wird dieses Diagramm im Bericht **Bewertungen** nicht angezeigt. Um dieses Diagramm anzuzeigen, ändern Sie die **Seitenfilter** so, dass alle Märkte angezeigt werden.
+> **Hinweis**  Wenn Sie mithilfe der **Seitenfilter** einen bestimmten Markt angegeben haben, wird dieses Diagramm im Bericht **Bewertungen** nicht angezeigt. Um dieses Diagramm anzuzeigen, ändern Sie die **Seitenfilter** so, dass alle Märkte angezeigt werden.
 
 Standardmäßig wird der Markt mit den meisten Rezensionen zuerst angezeigt, gefolgt von weiteren Märkten in absteigender Reihenfolge. Sie können die Reihenfolge mithilfe des Pfeils in der Diagrammspalte **Anzahl der Bewertungen** aber auch umkehren. Sie können die Daten auch nach **Durchschnittliche Bewertung** oder **Markt** sortieren, indem Sie auf diese Spalten klicken.
 
-> 
-            **Hinweis**  Wenn Sie den Bericht **Rezensionen** im Windows Dev Center mit dem Bericht „Rezensionen“ in der älteren mobilen Dev Center-App vergleichen, werden Sie wahrscheinlich eine unterschiedliche Anzahl von Bewertungen finden. Dies liegt daran, dass die App nur Daten für Rezensionen von Kunden unter Windows Phone 8.1 und früheren Versionen anzeigt. Eine weitere Möglichkeit besteht darin, dass Rezensionen mit Spam, unangemessenen oder beleidigenden Inhalten oder Rezensionen, die auf andere Weise Richtlinien verletzen, von Microsoft aus dem Windows Store entfernt wurden. Diese Verfahrensweise soll die Benutzerfreundlichkeit für unsere Kunden erhöhen.
+> **Hinweis**  Wenn Sie den Bericht **Rezensionen** im Windows Dev Center mit dem Bericht „Rezensionen“ in der älteren mobilen Dev Center-App vergleichen, werden Sie wahrscheinlich eine unterschiedliche Anzahl von Bewertungen finden. Dies liegt daran, dass die App nur Daten für Rezensionen von Kunden unter Windows Phone 8.1 und früheren Versionen anzeigt. Eine weitere Möglichkeit besteht darin, dass Rezensionen mit Spam, unangemessenen oder beleidigenden Inhalten oder Rezensionen, die auf andere Weise Richtlinien verletzen, von Microsoft aus dem Windows Store entfernt wurden. Diese Verfahrensweise soll die Benutzerfreundlichkeit für unsere Kunden erhöhen.
 
  
 
@@ -80,6 +73,6 @@ Standardmäßig wird der Markt mit den meisten Rezensionen zuerst angezeigt, gef
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

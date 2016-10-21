@@ -4,8 +4,8 @@ Description: "Neben den normalen, für alle UWP-Apps verfügbaren APIs gibt es a
 Search.Product: eADQiWindows 10XVcnh
 title: "Erweiterungen für konvertierte Desktop-Apps"
 translationtype: Human Translation
-ms.sourcegitcommit: aa64c39c452beb2356186789a0d8bc44f79d82d2
-ms.openlocfilehash: 0ad7e8d0fe63ffbfa8668be8955859258887d6f0
+ms.sourcegitcommit: 09ddc8cad403a568a43e08f32abeaf0bbd40d59a
+ms.openlocfilehash: 2aa55797ed3a6588b3a27158282a02827fbd2109
 
 ---
 
@@ -26,18 +26,12 @@ Fügen Sie dem Manifest Ihrer App Folgendes hinzu, um eine Startaufgabe zu dekla
     <desktop:StartupTask TaskId="MyStartupTask" Enabled="true" DisplayName="My App Service" />
 </desktop:Extension>
 ```
-- 
-            *Extension Category* muss immer den Wert „windows.startupTask“ besitzen.
-- 
-            *Extension Executable* ist der relative Pfad zu der ausführbaren Datei, die gestartet werden soll.
-- 
-            *Extension EntryPoint* muss immer den Wert „Windows.FullTrustApplication“ besitzen.
-- 
-            *StartupTask TaskId* ist ein eindeutiger Bezeichner für die Aufgabe. Mit diesem Bezeichner kann Ihre App die APIs in der **Windows.ApplicationModel.StartupTask**-Klasse aufrufen, um eine Startaufgabe programmgesteuert zu aktivieren oder zu deaktivieren.
-- 
-            *StartupTask Enabled* gibt an, ob die Aufgabe erstmals aktiviert oder deaktiviert startet. Aktivierte Aufgaben werden bei der nächsten Anmeldung des Benutzers ausgeführt (es sei denn, der Benutzer deaktiviert sie). 
-- 
-            *StartupTask DisplayName* ist der im Task-Manager angezeigte Name der Aufgabe. Diese Zeichenfolge kann mithilfe von ```ms-resource``` lokalisiert werden. 
+- *Extension Category* muss immer den Wert „windows.startupTask“ besitzen.
+- *Extension Executable* ist der relative Pfad zu der ausführbaren Datei, die gestartet werden soll.
+- *Extension EntryPoint* muss immer den Wert „Windows.FullTrustApplication“ besitzen.
+- *StartupTask TaskId* ist ein eindeutiger Bezeichner für die Aufgabe. Mit diesem Bezeichner kann Ihre App die APIs in der **Windows.ApplicationModel.StartupTask**-Klasse aufrufen, um eine Startaufgabe programmgesteuert zu aktivieren oder zu deaktivieren.
+- *StartupTask Enabled* gibt an, ob die Aufgabe erstmals aktiviert oder deaktiviert startet. Aktivierte Aufgaben werden bei der nächsten Anmeldung des Benutzers ausgeführt (es sei denn, der Benutzer deaktiviert sie). 
+- *StartupTask DisplayName* ist der im Task-Manager angezeigte Name der Aufgabe. Diese Zeichenfolge kann mithilfe von ```ms-resource``` lokalisiert werden. 
 
 Apps können mehrere Startaufgaben deklarieren. Diese werden jeweils unabhängig ausgelöst und ausgeführt. Alle Startaufgaben werden im Task-Manager auf der Registerkarte **Autostart** mit dem Namen aus Ihrem App-Manifest und dem Symbol Ihrer App angezeigt. Der Task-Manager analysiert automatisch die Startauswirkungen Ihrer Aufgaben. Benutzer können die Startaufgaben Ihrer App über den Task-Manager manuell deaktivieren. Vom Benutzer deaktivierte Aufgaben können nicht programmgesteuert reaktiviert werden.
 
@@ -50,19 +44,15 @@ Fügen Sie dem Manifest Ihrer App Folgendes hinzu, um einen App-Ausführungsalia
 ```XML 
 <uap3:Extension Category="windows.appExecutionAlias" Executable="exes\launcher.exe" EntryPoint="Windows.FullTrustApplication">
     <uap3:AppExecutionAlias>
-        <desktop:ExecutionAlias Alias="Foo.exe">
+        <desktop:ExecutionAlias Alias="Foo.exe" />
     </uap3:AppExecutionAlias>
 </uap3:Extension>
 ```
 
-- 
-            *Extension Category* muss immer den Wert „windows.appExecutionAlias“ besitzen.
-- 
-            *Extension Executable* ist der relative Pfad zu der ausführbaren Datei, die gestartet werden soll, wenn der Alias aufgerufen wird.
-- 
-            *Extension EntryPoint* muss immer den Wert „Windows.FullTrustApplication“ besitzen.
-- 
-            *ExecutionAlias Alias* ist der Kurzname für Ihre App. Er muss immer mit der Erweiterung „.exe“ enden. 
+- *Extension Category* muss immer den Wert „windows.appExecutionAlias“ besitzen.
+- *Extension Executable* ist der relative Pfad zu der ausführbaren Datei, die gestartet werden soll, wenn der Alias aufgerufen wird.
+- *Extension EntryPoint* muss immer den Wert „Windows.FullTrustApplication“ besitzen.
+- *ExecutionAlias Alias* ist der Kurzname für Ihre App. Er muss immer mit der Erweiterung „.exe“ enden. 
 
 Für die einzelnen Anwendungen im Paket kann immer nur einzelner App-Ausführungsalias angegeben werden. Wenn sich mehrere Apps mit dem gleichen Alias registrieren, ruft das System die zuletzt registrierte App auf. Wählen Sie daher einen eindeutigen Alias, um die Wahrscheinlichkeit einer Überschreibung durch andere Apps möglichst gering zu halten.
 
@@ -78,12 +68,9 @@ Fügen Sie dem Manifest Ihrer App Folgendes hinzu, um eine Protokollzuordnung zu
 </uap3:Extension>
 ```
 
-- 
-            *Extension Category* muss immer den Wert „windows.protocol“ besitzen. 
-- 
-            *Protocol Name* ist der Name des Protokolls. 
-- 
-            *Protocol Parameter* ist die Liste der Parameter und Werte, die bei der Aktivierung als Ereignisargumente an Ihre App übergeben werden sollen. Hinweis: Wenn eine Variable einen Pfad enthalten kann, sollten Sie den Wert in Anführungszeichen einschließen, damit auch Pfade mit Leerzeichen ordnungsgemäß übergeben werden.
+- *Extension Category* muss immer den Wert „windows.protocol“ besitzen. 
+- *Protocol Name* ist der Name des Protokolls. 
+- *Protocol Parameter* ist die Liste der Parameter und Werte, die bei der Aktivierung als Ereignisargumente an Ihre App übergeben werden sollen. Hinweis: Wenn eine Variable einen Pfad enthalten kann, sollten Sie den Wert in Anführungszeichen einschließen, damit auch Pfade mit Leerzeichen ordnungsgemäß übergeben werden.
 
 ## Dateien und Datei-Explorer-Integration
 
@@ -99,10 +86,8 @@ Fügen Sie dem Manifest Ihrer App zunächst Folgendes hinzu:
 </uap3:Extension>
 ```
 
-- 
-            *Extension Category* muss immer den Wert „windows.fileTypeAssociation“ besitzen. 
-- 
-            *FileTypeAssociation Name* ist eine eindeutige ID. Diese ID wird intern zum Generieren einer Programm-ID mit Hash verwendet, die mit Ihrer Dateitypzuordnung verknüpft ist. Mithilfe dieser ID können Sie Änderungen in zukünftigen Versionen Ihrer App verwalten. Wenn Sie also beispielsweise das Symbol für eine Dateierweiterung ändern möchten, können Sie sie in eine neue Dateitypzuordnung mit einem anderen Namen verschieben.  
+- *Extension Category* muss immer den Wert „windows.fileTypeAssociation“ besitzen. 
+- *FileTypeAssociation Name* ist eine eindeutige ID. Diese ID wird intern zum Generieren einer Programm-ID mit Hash verwendet, die mit Ihrer Dateitypzuordnung verknüpft ist. Mithilfe dieser ID können Sie Änderungen in zukünftigen Versionen Ihrer App verwalten. Wenn Sie also beispielsweise das Symbol für eine Dateierweiterung ändern möchten, können Sie sie in eine neue Dateitypzuordnung mit einem anderen Namen verschieben.  
 
 Fügen Sie dem Eintrag als Nächstes zusätzliche untergeordnete Elemente für die spezifischen Features hinzu, die Sie benötigen. Die verfügbaren Optionen werden im Anschluss beschrieben.
 
@@ -119,8 +104,7 @@ Beispiel:
 </uap:SupportedFileTypes>
 ```
 
-- 
-            *FileType* ist die von Ihrer App unterstützte Erweiterung.
+- *FileType* ist die von Ihrer App unterstützte Erweiterung.
 
 ### Kontextmenüverben 
 
@@ -137,26 +121,19 @@ Beispiel:
 </uap2:SupportedVerbs>
 ```
 
-- 
-            *Verb Id* ist eine eindeutige ID des Verbs. Bei UWP-Apps wird sie im Rahmen der Aktivierungsereignisargumente übergeben, um eine entsprechende Behandlung der Benutzerauswahl zu ermöglichen. Bei vertrauenswürdigen konvertierten Apps werden dagegen Parameter übergeben (siehe nächster Aufzählungspunkt). 
-- 
-            *Verb Parameters* ist die Liste mit Argumentparametern und -werten für das Verb. Bei vertrauenswürdigen konvertierten Apps werden diese bei der Aktivierung als Ereignisargumente übergeben, um eine Anpassung des Verhaltens für unterschiedliche Aktivierungsverben zu ermöglichen. Wenn eine Variable einen Pfad enthalten kann, sollten Sie den Wert in Anführungszeichen einschließen, damit auch Pfade mit Leerzeichen ordnungsgemäß übergeben werden. Beachten Sie, dass bei UWP-Apps keine Parameter übergeben werden können. Diese erhalten stattdessen die ID (siehe vorheriger Aufzählungspunkt). 
-- 
-            *Verb Extended* gibt an, dass das Verb nur angezeigt werden soll, wenn der Benutzer UMSCHALT**** gedrückt hält, wenn er zum Anzeigen des Kontextmenüs mit der rechten Maustaste auf die Datei klickt. Dieses Attribut ist optional und standardmäßig auf *False* (Verb soll immer angezeigt werden) festgelegt. Dieses Verhalten muss für jedes Verb einzeln angegeben werden – mit Ausnahme von „Öffnen“: Bei diesem Verb ist der Wert immer *False*. 
-- 
-            *Verb* ist der Name, der im Kontextmenü des Datei-Explorers angezeigt wird. Diese Zeichenfolge kann mithilfe von ```ms-resource``` lokalisiert werden.
+- *Verb Id* ist eine eindeutige ID des Verbs. Bei UWP-Apps wird sie im Rahmen der Aktivierungsereignisargumente übergeben, um eine entsprechende Behandlung der Benutzerauswahl zu ermöglichen. Bei vertrauenswürdigen konvertierten Apps werden dagegen Parameter übergeben (siehe nächster Aufzählungspunkt). 
+- *Verb Parameters* ist die Liste mit Argumentparametern und -werten für das Verb. Bei vertrauenswürdigen konvertierten Apps werden diese bei der Aktivierung als Ereignisargumente übergeben, um eine Anpassung des Verhaltens für unterschiedliche Aktivierungsverben zu ermöglichen. Wenn eine Variable einen Pfad enthalten kann, sollten Sie den Wert in Anführungszeichen einschließen, damit auch Pfade mit Leerzeichen ordnungsgemäß übergeben werden. Beachten Sie, dass bei UWP-Apps keine Parameter übergeben werden können. Diese erhalten stattdessen die ID (siehe vorheriger Aufzählungspunkt). 
+- *Verb Extended* gibt an, dass das Verb nur angezeigt werden soll, wenn der Benutzer **UMSCHALT** gedrückt hält, wenn er zum Anzeigen des Kontextmenüs mit der rechten Maustaste auf die Datei klickt. Dieses Attribut ist optional und standardmäßig auf *False* (Verb soll immer angezeigt werden) festgelegt. Dieses Verhalten muss für jedes Verb einzeln angegeben werden – mit Ausnahme von „Öffnen“: Bei diesem Verb ist der Wert immer *False*. 
+- *Verb* ist der Name, der im Kontextmenü des Datei-Explorers angezeigt wird. Diese Zeichenfolge kann mithilfe von ```ms-resource``` lokalisiert werden.
 
 ### Mehrfachauswahlmodell
 
 Mit der Mehrfachauswahl können Sie angeben, wie sich die App verhalten soll, wenn ein Benutzer mehrere Dateien gleichzeitig öffnet, indem er beispielsweise im Datei-Explorer zehn Dateien markiert und anschließend auf „Öffnen“ tippt.
 
 Bei konvertierten Desktop-Apps stehen die gleichen drei Optionen zur Verfügung wie bei regulären Desktop-Apps. 
-- 
-            *Player*: Ihre App wird einmal aktiviert, und alle markierten Dateien werden als Argumentparameter übergeben.
-- 
-            *Single*: Ihre App wird einmal für die erste markierte Datei aktiviert. Andere Dateien werden ignoriert. 
-- 
-            *Document*: Für die markierten Dateien wird jeweils eine neue (eigene) Instanz Ihrer App aktiviert.
+- *Player*: Ihre App wird einmal aktiviert, und alle markierten Dateien werden als Argumentparameter übergeben.
+- *Single*: Ihre App wird einmal für die erste markierte Datei aktiviert. Andere Dateien werden ignoriert. 
+- *Document*: Für die markierten Dateien wird jeweils eine neue (eigene) Instanz Ihrer App aktiviert.
 
 Für unterschiedliche Dateitypen und Aktionen können unterschiedliche Einstellungen festgelegt werden. So können beispielsweise *Dokumente* im Modus *Document* und *Bilder* im Modus *Player* geöffnet werden.
 
@@ -197,11 +174,11 @@ Im Anschluss finden Sie ein vollständiges Beispiel mit vielen der oben beschrie
 </uap3:Extension>
 ```
 
-## Siehe auch
+## Weitere Informationen
 
 - [App-Paketmanifest](https://msdn.microsoft.com/library/windows/apps/br211474.aspx)
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

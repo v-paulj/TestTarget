@@ -1,70 +1,74 @@
 ---
 author: mcleanbyron
 ms.assetid: 8C1E9E36-13AF-4386-9D0F-F9CB320F02F5
-description: Use this method in the Windows Store submission API to create a package flight for an app that is registered to your Windows Dev Center account.
-title: Create a package flight using the Windows Store submission API
+description: "Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API zum Erstellen eines Flight-Pakets für eine App, die für Ihr Windows Dev Center-Konto registriert ist."
+title: "Erstellen eines Flight-Pakets mit der Windows Store-Übermittlungs-API"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 35823bd1fd0c059ebc9b2107c31400a7ad788a1e
+
 ---
 
-# Create a package flight using the Windows Store submission API
+# Erstellen eines Flight-Pakets mit der Windows Store-Übermittlungs-API
 
 
 
 
-Use this method in the Windows Store submission API to create a package flight for an app that is registered to your Windows Dev Center account.
+Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API zum Erstellen eines Flight-Pakets für eine App, die für Ihr Windows Dev Center-Konto registriert ist.
 
->**Note**&nbsp;&nbsp;This method creates a package flight without any submissions. To create a submission for package flight, see the methods in [Manage package flight submissions](manage-flight-submissions.md).
+>**Hinweis**&nbsp;&nbsp;Durch diese Methode wird ein Flight-Paket ohne Übermittlungen erstellt. Verwenden Sie zum Erstellen einer Übermittlung für ein Flight-Paket die Methoden unter [Verwalten von Flight-Paketübermittlungen](manage-flight-submissions.md).
 
-## Prerequisites
+## Voraussetzungen
 
-To use this method, you need to first do the following:
+Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
+* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
-## Request
+## Anforderung
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
 
-| Method | Request URI                                                      |
+| Methode | Anforderungs-URI                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Anforderungsheader
 
-| Header        | Type   | Description                                                                 |
+| Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Anforderungsparameter
 
-| Name        | Type   | Description                                                                 |
+| Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Required. The Store ID of the app for which you want to create a package flight. For more information about the Store ID, see [View app identity details](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
+| applicationId | string | Erforderlich. Die Store-ID der App, für die Sie ein Flight-Paket erstellen möchten. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
 
 <span/>
 
-### Request body
+### Anforderungstext
 
-The request body has the following parameters.
- 
-|  Parameter  |  Type  |  Description  |  Required  |
+Der Anforderungstext hat folgende Parameter.
+ 
+|  Parameter  |  Typ  |  Beschreibung  |  Erforderlich  |
 |------|------|------|------|
-|  friendlyName  |  string  |  The name of the package flight, as specified by the developer.  |  No  |
-|  groupIds  |  array  |  An array of strings that contain the IDs of the flight groups that are associated with the package flight. For more information about flight groups, see [Package flights](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |  No  |
-|  rankHigherThan  |  string  |  The friendly name of the package flight that is ranked immediately lower than the current package flight. If you do not set this parameter, the new package flight will have the highest rank of all package flights. For more information about ranking flight groups, see [Package flights](https://msdn.microsoft.com/windows/uwp/publish/package-flights).    |  No  |
+|  friendlyName  |  string  |  Der Name des Flight-Pakets nach Vorgabe des Entwicklers.  |  Nein  |
+|  groupIds  |  array  |  Ein Array von Zeichenfolgen, die die IDs der Test-Flight-Gruppen enthalten, die dem Flight-Paket zugeordnet sind. Weitere Informationen zu Test-Flight-Gruppen finden Sie unter [Flight-Pakete](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |  Nein  |
+|  rankHigherThan  |  string  |  Der Anzeigename des Flight-Pakets, das den unmittelbar niedrigeren Rang als das aktuelle Flight-Paket erhält. Wenn Sie diesen Parameter nicht festlegen, erhält das neue Flight-Paket den höchsten Rang aller Flight-Pakete. Weitere Informationen zur Bewertung von Test-Flight-Gruppen finden Sie unter [Flight-Pakete](https://msdn.microsoft.com/windows/uwp/publish/package-flights).    |  Nein  |
 
 <span/>
 
-### Request example
+### Anforderungsbeispiel
 
-The following example demonstrates how to create a new package flight for an app that has the Store ID 9WZDNCRD911W.
+Im folgenden Beispiel wird gezeigt, wie Sie ein neues Flight-Paket für eine App mit der Store-ID 9WZDNCRD911W erstellen.
 
 ```syntax
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights HTTP/1.1
@@ -80,9 +84,9 @@ Content-Type: application/json
 
 ```
 
-## Response
+## Antwort
 
-The following example demonstrates the JSON response body for a successful call to this method. For more details about the values in the response body, see the following sections.
+Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Weitere Informationen zu den Werten im Antworttext finden Sie in den folgenden Abschnitten.
 
 ```json
 {
@@ -95,29 +99,35 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-### Response body
+### Antworttext
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| flightId            | string  | The ID for the package flight. This value is supplied by Dev Center.  |
-| friendlyName           | string  | The name of the package flight, as specified in the request.   |  
-| groupIds           | array  | An array of strings that contain the IDs of the flight groups that are associated with the package flight, as specified in the request. For more information about flight groups, see [Package flights](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
-| rankHigherThan           | string  | The friendly name of the package flight that is ranked immediately lower than the current package flight, as specified in the request. For more information about ranking flight groups, see [Package flights](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
+| flightId            | string  | Die ID für das Flight-Paket. Dieser Wert wird von Dev Center bereitgestellt.  |
+| friendlyName           | string  | Der Name des Flight-Pakets gemäß der Angabe in der Anforderung.   |  
+| groupIds           | array  | Ein Array von Zeichenfolgen, die die IDs der Test-Flight-Gruppen enthalten, die dem Flight-Paket zugeordnet sind, gemäß der Angabe in der Anforderung. Weitere Informationen zu Test-Flight-Gruppen finden Sie unter [Flight-Pakete](https://msdn.microsoft.com/windows/uwp/publish/package-flights).   |
+| rankHigherThan           | string  | Der Anzeigename des Flight-Pakets, das den unmittelbar niedrigeren Rang als das aktuelle Flight-Paket erhält, gemäß der Angabe in der Anforderung. Weitere Informationen zur Bewertung von Test-Flight-Gruppen finden Sie unter [Flight-Pakete](https://msdn.microsoft.com/windows/uwp/publish/package-flights).  |
 
 <span/>
 
-## Error codes
+## Fehlercodes
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
 
-| Error code |  Description   |
+| Fehlercode |  Beschreibung   |
 |--------|------------------|
-| 400  | The request is invalid. |
-| 409  | The package flight could not be created because of its current state, or the app uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 400  | Die Anforderung ist ungültig. |
+| 409  | Das Flight-Paket konnte im aktuellen Zustand nicht erstellt werden, oder in der App wird ein Dev Center-Dashboard-Feature verwendet, das [derzeit nicht von der Windows Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported) wird. |   
 <span/>
 
-## Related topics
+## Verwandte Themen
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Get a package flight](get-a-flight.md)
-* [Delete a package flight](delete-a-flight.md)
+* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Abrufen eines Flight-Pakets](get-a-flight.md)
+* [Löschen eines Flight-Pakets](delete-a-flight.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

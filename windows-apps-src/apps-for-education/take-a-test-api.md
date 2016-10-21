@@ -1,268 +1,271 @@
 ---
 author: TylerMSFT
-Description: The JavaScript API for the Microsoft Take a Test app allows you to do secure assessments. Take a Test provides a secure browser that prevents students from using other computer or internet resources during a test.
-title: Microsoft Take a Test JavaScript API.
+Description: "Mit der JavaScript-API für die App „Prüfung“ von Microsoft können Sie zuverlässige Bewertungen durchführen. „Prüfung“ stellt einen sicheren Browser bereit, der die Lernenden daran hindert, während eines Tests andere Computer- oder Internet-Ressourcen zu verwenden."
+title: "JavaScript-API für Microsoft Prüfung."
+translationtype: Human Translation
+ms.sourcegitcommit: f2838d95da66eda32d9cea725a33fc4084d32359
+ms.openlocfilehash: d7f185e83e81583fd6d7920e5412f76f3a97edd0
+
 ---
 
-# Microsoft Take a Test JavaScript API
+# JavaScript-API für Microsoft Prüfung
 
-**Take a Test** is a browser-based app that renders locked down online assessments for high-stakes testing. It supports the SBAC browser API standard for high stakes common core testing and allows you to focus on the assessment content rather than how to lock down Windows.
+Bei **Prüfung** handelt es sich um eine browserbasierte App, die gesperrte Onlinebewertungen für wichtige Prüfungen rendert. Es werden API-Standards des SBAC-Browsers für wichtige Tests nach dem Common-Core-Bildungsplan unterstützt. Sie können sich auf den Inhalt der Bewertung anstatt auf das Sperren von Windows konzentrieren.
 
-**Take a Test**, powered by Microsoft's Edge browser, provides a JavaScript API that Web applications can use to provide a locked down experience for taking tests.
+**Prüfung** wird vom Microsoft-Browser Edge unterstützt und bietet eine JavaScript-API, mit der Webanwendungen Geräte für Tests sperren können.
 
-The API (based on the [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) provides text to speech and the capability to query if the device is locked down, what the running user and system running processes are, and more.
+Die API (basierend auf der [Common Core SBAC API](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)) stellt Text-zu-Sprache und die Möglichkeit von diversen Abfragen bereit (z.B. ob das Gerät gesperrt ist, wer der ausführende Benutzer ist oder welche Prozesse auf dem System ausgeführt werden).
 
-See the [Take a Test app technical reference](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) for information about the app itself.
+Weitere Informationen zur App selbst finden Sie unter [Technische Referenz zur App „Prüfung“](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396).
 
-**Important**
+**Wichtig**
 
-The APIs do not work in a remote session.  
-Take a Test does not handle HTTP new window requests.
+Die APIs funktionieren nicht in Remotesitzungen.  
+„Prüfung“ behandelt keine HTTP-Anforderungen für neue Fenster.
 
-For troubleshooting help, see [Troubleshoot Microsoft Take a Test with the event viewer](troubleshooting.md).
+Hilfe zur Problembehandlung finden Sie unter [Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige](troubleshooting.md).
 
-**The Take a Test API consists of the following namespaces:**  
+**Das API von „Prüfung“ umfasst die folgenden Namespaces:**  
 
-| Namespace | Description |
+| Namespace | Beschreibung |
 |-----------|-------------|
-|[security namespace](#security-namespace)| Text to speech functionality|
-|[tts namespace](#tts-namespace)|Enables you to lock down the device|
+|[Sicherheitsnamespace](#security-namespace)| Text-zu-Sprache-Funktion|
+|[TTS-Namespace](#tts-namespace)|Ermöglicht das Sperren des Geräts|
 
 
- ## security namespace
+ ## Sicherheitsnamespace
 
-Enables you to lock down the device, check the list of user and system processes, obtain MAC and IP addresses, and clear cached web resources.
+Ermöglicht das Sperren des Geräts, das Überprüfen der Liste der Benutzer- und Systemprozesse, das Abrufen von MAC- und IP-Adressen und das Löschen von zwischengespeicherten Webressourcen.
 
-| Method | Description   |
+| Methode | Beschreibung   |
 |--------|---------------|
-|[clearCache](#clearCache) | Clears cached web resources |
-|[close](#close) | Closes the browser and unlocks the device |
-|[enableLockDown](#enableLockDown) | Locks down the device. Also used to unlock the device |
-|[getIPAddressList](#getIPAddressList) | Gets the list of IP addresses for the device |
-|[getMACAddress](#getMACAddress)|Gets the list of MAC addresses for the device|
-|[getProcessList](#getProcessList)|Gets the list of running user and system processes|
-|[isEnvironmentSecure](#isEnvironmentSecure)|Determines whether the lockdown context is still applied to the device|
+|[clearCache](#clearCache) | Löscht zwischengespeicherte Webressourcen |
+|[close](#close) | Schließt den Browser und entsperrt das Gerät |
+|[enableLockDown](#enableLockDown) | Sperrt das Gerät. Wird auch zum Entsperren des Geräts verwendet |
+|[getIPAddressList](#getIPAddressList) | Ruft die Liste der IP-Adressen für das Gerät ab |
+|[getMACAddress](#getMACAddress)|Ruft die Liste der MAC-Adressen für das Gerät ab|
+|[getProcessList](#getProcessList)|Ruft die Liste der ausgeführten Benutzer- und Systemprozesse ab|
+|[isEnvironmentSecure](#isEnvironmentSecure)|Stellt fest, ob auf das Gerät noch der Sperrmodus-Kontext angewendet wird|
 
 <span id="clearCache" />
 ### void clearCache()
-Clear cached web resources.
+Löscht zwischengespeicherte Webressourcen.
 
 **Syntax**  
 `browser.security.clearCache();`
 
-**Parameters**  
+**Parameter**  
 `None`
 
-**Return value**  
+**Rückgabewert**  
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
 
 ---
 
 <span id="close"/>
 ### close(boolean restart)
-Closes the browser and unlocks the device.
+Schließt den Browser und entsperrt das Gerät.
 
 **Syntax**  
 `browser.security.close(false);`
 
-**Parameters**  
-`restart` - this parameter is ignored but must be provided.
+**Parameter**  
+`restart` - Dieser Parameter wird ignoriert, muss aber angegeben werden.
 
-**Return value**  
+**Rückgabewert**  
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
 
 ---
 
 <span id="enableLockDown"/>
 ### enableLockdown(boolean lockdown)
-Locks down the device. Also used to unlock the device.
+Sperrt das Gerät. Wird auch zum Entsperren des Geräts verwendet.
 
 **Syntax**  
 `browser.security.enableLockDown(true|false);`
 
-**Parameters**  
-`lockdown` - `true` to run the Take-a-Test app above the lock screen and apply policies discussed in this [document](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). `False` stops running Take-a-Test above the lock screen and closes it unless the app is not locked down; in which case there is no effect.
+**Parameter**  
+`lockdown` - `true` wenn die App „Prüfung“ auf dem Sperrbildschirm ausgeführt werden soll und die in dem folgenden[Dokument](https://technet.microsoft.com/en-us/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) behandelten Richtlinien angewendet werden sollen. `False` hält die Ausführung von „Prüfung“ auf dem Sperrbildschirm an und beendet sie. Wirkungslos, wenn die App nicht gesperrt ist.
 
-**Return value**  
+**Rückgabewert**  
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
 
 ---
 
 <span id="getIPAddressList"/>
 ### string[] getIPAddressList()
-Gets the list of IP addresses for the device.
+Ruft die Liste der IP-Adressen für das Gerät ab.
 
 **Syntax**  
 `browser.security.getIPAddressList();`
 
-**Parameters**  
+**Parameter**  
 `None`
 
-**Return value**  
+**Rückgabewert**  
 `An array of IP addresses.`
 
 <span id="getMACAddress" />
 ### string[] getMACAddress()
-Gets the list of MAC addresses for the device.
+Ruft die Liste der MAC-Adressen für das Gerät ab.
 
 **Syntax**  
 `browser.security.getMACAddress();`
 
-**Parameters**  
+**Parameter**  
 `None`
 
-**Return value**  
+**Rückgabewert**  
 `An array of MAC addresses.`
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
 
 ---
 
 <span id="getProcessList" />
 ### string[] getProcessList()
-Gets the list the user’s running processes.
+Ruft die Liste der ausgeführten Benutzerprozesse ab.
 
 **Syntax**  
 `browser.security.getProcessList();`
 
-**Parameters**  
+**Parameter**  
 `None`
 
-**Return value**  
+**Rückgabewert**  
 `An array of running process names.`
 
-**Remarks**
-The list does not include system processes.
+**Anmerkung** Diese Liste enthält keine Systemprozesse.
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
 
 ---
 
 <span id="isEnvironmentSecure" />
 ### boolean isEnvironmentSecure()
-Determines whether the lockdown context is still applied to the device.
+Stellt fest, ob auf das Gerät noch der Sperrmodus-Kontext angewendet wird.
 
 **Syntax**  
 `browser.security.isEnvironmentSecure();`
 
-**Parameters**  
+**Parameter**  
 `None`
 
-**Return value**  
+**Rückgabewert**  
 `True indicates that the lockdown context is applied to the device; otherwise false.`
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
 
 ---
 
-## tts namespace
-| Method | Description |
+## TTS-Namespace
+| Methode | Beschreibung |
 |--------|-------------|
-|[getStatus](#getStatus) | Gets the speech playback status|
-|[getVoices](#getVoices) | Gets a list of available voice packs|
-|[pause](#pause)|Pauses speech synthesis|
-|[resume](#resume)|Resume paused speech synthesis|
-|[speak](#speak)|Client-side text to speech synthesis|
-|[stop](#stop)|Stops speech synthesis|
+|[getStatus](#getStatus) | Ruft den Status der Sprachwiedergabe ab|
+|[getVoices](#getVoices) | Ruft eine Liste der verfügbaren Sprachbefehlpakete ab|
+|[pause](#pause)|Hält die Sprachsynthese an|
+|[resume](#resume)|Setzt die angehaltene Sprachsynthese fort|
+|[speak](#speak)|Clientseitige Text-zu-Sprache-Synthese|
+|[stop](#stop)|Beendet die Sprachsynthese|
 
 > [!Tip]
-> The [Microsoft Edge Speech Synthesis API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/) is an implementation of the [W3C Speech Api](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html) and we recommend that developers use that API when possible.
+> Die [Microsoft Edge Speech Synthesis API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/) ist eine Implementierung der [W3C-Sprach-API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html). Wir empfehlen Entwicklern, diese API nach Möglichkeit zu verwenden.
 
 <span id="getStatus" />
 ### string getStatus()
-Gets the speech playback status.
+Ruft den Status der Sprachwiedergabe ab.
 
 **Syntax**  
 `browser.tts.getStatus();`
 
-**Parameters**  
+**Parameter**  
 `None`
 
-**Return value**  
+**Rückgabewert**  
 `The speech playback status. Possible values are: “available”, “idle”, “paused”, and “speaking”.`
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
 
 ---
 
 <span id="getVoices" />
 ### string[] getVoices()
-Gets a list of available voice packs.
+Ruft eine Liste der verfügbaren Sprachbefehlpakete ab.
 
 **Syntax**  
 `browser.tts.getVoices();`
 
-**Parameters**  
+**Parameter**  
 `None`
 
-**Return value**  
+**Rückgabewert**  
 `The available voice packs. For example: “Microsoft Zira Mobile”, “Microsoft Mark Mobile”`
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
 
 ---
 
 <span id="pause" />
 ### void pause()
 
-Pauses speech synthesis.
+Hält die Sprachsynthese an.
 
 **Syntax**  
 `browser.tts.pause();`
 
-**Parameters**
+**Parameter**
 
 `None`
 
-**Return value**
+**Rückgabewert**
 
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
 
 ---
 
 <span id="resume" />
 ### void resume()
-Resume paused speech synthesis.
+Setzt die angehaltene Sprachsynthese fort.
 
 **Syntax**  
 `browser.tts.resume();`
 
-**Parameters**
+**Parameter**
 `None`
 
-**Return value**
+**Rückgabewert**
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
 
 ---
 
 <span id="speak" />
 ### void speak(string text, object options, function callback)
-Client-side text to speech synthesis.
+Clientseitige Text-zu-Sprache-Synthese.
 
 **Syntax**  
 `void browser.tts.speak(“Hello world”, options, callback);`
 
-**Parameters**  
+**Parameter**  
 `Speech options such as gender, pitch, rate, volume. For example:`  
 ```
 var options = {
@@ -275,31 +278,36 @@ var options = {
 };
 ```
 
-**Return value**  
+**Rückgabewert**  
 `None`
 
-**Remarks**
-Option variables must be lowercase. The gender, language, and voice parameters take strings.
-Volume, pitch, and rate must be marked up within the speech synthesis markup language file (SSML), not within the options object.
+**Anmerkung** Optionsvariablen müssen mit Kleinbuchstaben geschrieben werden. Die Parameter „gender“, „language“ und „voice“ müssen als Zeichenfolgen angegeben werden.
+Das Markup für Lautstärke und Tonhöhe muss innerhalb der SSML-Datei (Speech Synthesis Markup Language) und nicht innerhalb des options-Objekts erfolgen.
 
-The options object must follow the order, naming, and casing shown in the example above.
+Beim options-Objekt müssen Reihenfolge, Bezeichnung und Groß-/Kleinschreibung dem obigen Beispiel entsprechen.
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
 
 ---
 <span id="stop" />
 ### void stop()
-Stops speech synthesis.
+Beendet die Sprachsynthese.
 
 **Syntax**  
 `void browser.tts.speak(“Hello world”, options, callback);`
 
-**Parameters**  
+**Parameter**  
 `None`
 
-**Return value**  
+**Rückgabewert**  
 `None`
 
-**Requirements**  
-Windows 10, version 1607
+**Anforderungen**  
+Windows10, Version1607
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

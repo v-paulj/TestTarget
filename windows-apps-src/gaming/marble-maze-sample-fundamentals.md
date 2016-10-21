@@ -3,8 +3,9 @@ author: mtoepke
 title: Grundlagen am Beispiel von Marble Maze
 description: In diesem Dokument werden die fundamentalen Eigenschaften des Marble Maze-Projekts beschrieben, beispielsweise wie Visual C++ in der Windows Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5a9df995078763df73542a4101e73e147517b1eb
+ms.openlocfilehash: c9aafbf7d8061893180a1a823c2c1cafd9ef7a7f
 
 ---
 
@@ -16,8 +17,7 @@ ms.openlocfilehash: 5a9df995078763df73542a4101e73e147517b1eb
 
 In diesem Dokument werden die fundamentalen Eigenschaften des Marble Maze-Projekts beschrieben, beispielsweise wie Visual C++ in der Windows Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist. Das Dokument enthält auch eine Beschreibung verschiedener Konventionen, die im Code verwendet werden.
 
-> 
-            **Hinweis**   Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
+> **Hinweis**   Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
 
  
 ## 
@@ -38,8 +38,7 @@ Beim Erstellen des Visual Studio-Projekts für Marble Maze haben wir mit einem b
 
 Eine wichtige Projekteinstellung in der Voralge **DirectX 11-App (Universelle Windows-App)** ist die Option **/ZW**. Diese Option ermöglicht dem Programm die Verwendung der Windows-Runtime-Spracherweiterungen. Sie ist standardmäßig aktiviert, wenn Sie die Visual Studio-Vorlage verwenden.
 
-> 
-            **Achtung**   Die Option **/ZW** ist nicht kompatibel mit Optionen wie **/clr**. Im Fall von **/clr** bedeutet dies, dass Sie ein Visual C++-Projekt nicht gleichzeitig auf das .NET Framework und die Windows-Runtime ausrichten können.
+> **Achtung**   Die Option **/ZW** ist nicht kompatibel mit Optionen wie **/clr**. Im Fall von **/clr** bedeutet dies, dass Sie ein Visual C++-Projekt nicht gleichzeitig auf das .NET Framework und die Windows-Runtime ausrichten können.
 
  
 
@@ -148,6 +147,6 @@ Lesen Sie die Informationen unter [Marble Maze-Anwendungsstruktur](marble-maze-a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

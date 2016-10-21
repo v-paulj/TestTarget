@@ -3,8 +3,9 @@ author: jnHs
 Description: "Im WindowsDevCenter-Dashboard können Sie Details zu einzelnen Apps anzeigen und verwalten sowie Dienste wie Pushbenachrichtigungen und Karten konfigurieren."
 title: App-Verwaltung und -Dienste
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 71077ac3f64e10734021e5fb655168f7273e3cb6
+translationtype: Human Translation
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: 9787ef724622a95d291b4631196b3e13bcb1298a
 
 ---
 
@@ -22,14 +23,11 @@ Im Abschnitt **Dienste** können Sie verschiedene Dienste für Ihre Apps verwalt
 
 Abhängig vom Pakettyp Ihrer App und den jeweiligen Anforderungen können Sie eine der folgenden Optionen für Pushbenachrichtigungen verwenden:
 
--   
-            **Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)** ermöglichen es, Popup-, Kachel- und Badgeupdates sowie unformatierte Updates von ihren eigenen Clouddiensten aus zu senden. Weitere Informationen finden Sie unter [Übersicht über den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Service, WNS)](https://msdn.microsoft.com/library/windows/apps/mt187203).
+-   **Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)** ermöglichen es, Popup-, Kachel- und Badgeupdates sowie unformatierte Updates von Ihren eigenen Clouddiensten aus zu senden. Weitere Informationen finden Sie unter [Übersicht über den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Service, WNS)](https://msdn.microsoft.com/library/windows/apps/mt187203).
 
--   
-            **Microsoft Azure Mobile Apps** ermöglichen das Senden von Pushbenachrichtigungen, die Authentifizierung und Verwaltung von App-Benutzern und das Speichern von App-Daten in der Cloud. Weitere Informationen finden Sie in der [MobileApps-Dokumentation](http://go.microsoft.com/fwlink/p/?LinkId=221116).
+-   **Microsoft Azure Mobile Apps** ermöglichen das Senden von Pushbenachrichtigungen, die Authentifizierung und Verwaltung von App-Benutzern und das Speichern von App-Daten in der Cloud. Weitere Informationen finden Sie in der [MobileApps-Dokumentation](http://go.microsoft.com/fwlink/p/?LinkId=221116).
 
--   
-            Der **Microsoft-Pushbenachrichtigungsdienst (Microsoft Push Notification Service, MPNS)** kann mit Ihren XAP-Paketen für Windows Phone verwendet werden. Sie können eine begrenzte Anzahl nicht authentifizierter Benachrichtigungen senden, ohne hier eine Konfiguration vorzunehmen. Zur Vermeidung von Drosselungslimits wird jedoch empfohlen, authentifizierte Benachrichtigungen zu verwenden. Wenn Sie diesen Dienst verwenden, müssen Sie ein Zertifikat in das auf der Seite **Pushbenachrichtigungen** bereitgestellte Feld hochladen. Weitere Informationen finden Sie unter [Einrichten eines authentifizierten Webdiensts zum Senden von Pushbenachrichtigungen für Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
+-   Der **Microsoft-Pushbenachrichtigungsdienst (Microsoft Push Notification Service, MPNS)** kann mit Ihren XAP-Paketen für Windows Phone verwendet werden. Sie können eine begrenzte Anzahl nicht authentifizierter Benachrichtigungen senden, ohne hier eine Konfiguration vorzunehmen. Zur Vermeidung von Drosselungslimits wird jedoch empfohlen, authentifizierte Benachrichtigungen zu verwenden. Wenn Sie diesen Dienst verwenden, müssen Sie ein Zertifikat in das auf der Seite **Pushbenachrichtigungen** bereitgestellte Feld hochladen. Weitere Informationen finden Sie unter [Einrichten eines authentifizierten Webdiensts zum Senden von Pushbenachrichtigungen für Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
 
 ### Experimentation
 
@@ -41,14 +39,13 @@ Weitere Informationen finden Sie unter [Ausführen von App-Experimenten mit A/B-
 
 Wenn Sie Kartendienste in Apps unter Windows Phone8.1 und früheren Versionen verwenden möchten, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihren App-Code einfügen. Sie finden das Token auf der Seite **Karten** im Abschnitt **Dienste**.
 
-> 
-            **Hinweis:**  Um Kartendienste in Apps zu verwenden, die auf andere Betriebssysteme ausgerichtet sind, besuchen Sie das [Bing Maps Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](https://msdn.microsoft.com/library/windows/apps/mt219694).
+> **Hinweis**  Um Kartendienste in Apps zu verwenden, die auf andere Betriebssysteme ausgerichtet sind, besuchen Sie das [Bing Maps Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](https://msdn.microsoft.com/library/windows/apps/mt219694).
 
 Weitere Informationen finden Sie unter [Verwenden von Kartendiensten](use-map-services.md).
 
 ### Produktsammlungen und Einkäufe
 
-Zur Verwendung der Windows Store-Sammlungs-API und der Windows Store-Einkaufs-API für den Zugriff auf Besitzerinformationen für Apps und IAPs müssen Sie die hier die zugehörigen Azure AD-Client-IDs eingeben. Beachten Sie, dass es bis zu 16 Stunden dauern kann, bis diese Änderungen wirksam werden.
+Zur Verwendung der Windows Store-Sammlungs-API und der Windows Store-Einkaufs-API für den Zugriff auf Besitzerinformationen für Apps und Add-Ons müssen Sie hier die zugehörigen Azure AD-Client-IDs eingeben. Beachten Sie, dass es bis zu 16 Stunden dauern kann, bis diese Änderungen wirksam werden.
 
 Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von Produktansprüchen aus einem Dienst](https://msdn.microsoft.com/library/windows/apps/mt609002).
 
@@ -72,8 +69,7 @@ Weitere Informationen finden Sie unter [Verwalten von App-Namen](manage-app-name
 
 Auf dieser Seite können Sie Details zu allen veröffentlichten Paketen anzeigen.
 
-> 
-            **Hinweis**  Hier werden erst Informationen angezeigt, nachdem Ihre App veröffentlicht wurde.
+> **Hinweis**  Hier werden erst Informationen angezeigt, nachdem Ihre App veröffentlicht wurde.
 
 Der Name, die Version und die Architektur der einzelnen Pakete werden angezeigt. Klicken Sie auf **Details**, um zusätzliche Informationen wie z. B. unterstützte Sprache, App-Funktionen und Dateigrößen anzuzeigen.
 
@@ -87,6 +83,6 @@ Entwickler mit OEM-Berechtigungen können auf der Seite **Aktuelle Pakete** auß
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

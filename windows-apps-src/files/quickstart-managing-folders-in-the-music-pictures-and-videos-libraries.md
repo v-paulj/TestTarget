@@ -1,10 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: Dateien und Ordner in den Musik-, Bild- und Videobibliotheken
 description: "Fügen Sie vorhandene Musik-, Bilder- oder Video-Ordner den entsprechenden Bibliotheken hinzu. Sie können auch Ordner aus Bibliotheken entfernen, die Liste der Ordner in einer Bibliothek abrufen und gespeicherte Fotos, Musik und Videos untersuchen."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 332f89f53a55d5783f7497ca5c6cd601dcee5217
+translationtype: Human Translation
+ms.sourcegitcommit: affe6002e22bd10e714dc4782a60ef528c31a407
+ms.openlocfilehash: def1c5c8d9d062a81731744e1e1465472225494a
 
 ---
 
@@ -38,8 +39,7 @@ Eine Bibliothek ist eine virtuelle Sammlung von Ordnern, die standardmäßig ein
 ## Abrufen eines Verweises auf eine Bibliothek
 
 
-
-            **Hinweis**  Denken Sie daran, die entsprechende Funktion zu deklarieren.
+**Hinweis**  Denken Sie daran, die entsprechende Funktion zu deklarieren.
  
 
 Rufen Sie die [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725)-Methode auf, um einen Verweis auf die Musik-, Bild- oder Videobibliothek des Benutzers zu erhalten. Geben Sie den entsprechenden Wert der [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399)-Enumeration ein.
@@ -62,7 +62,7 @@ Um die Liste der Ordner in einer Bibliothek abzurufen, rufen den Wert der [**Sto
     using Windows.Foundation.Collections;
 
     // ...
-            
+
     IObservableVector<Windows.Storage.StorageFolder> myPictureFolders = myPictures.Folders;
 ```
 
@@ -122,25 +122,47 @@ Ein Gerät bietet fünf vordefinierte Speicherorte, an denen Benutzer und Apps M
 
 Die Speicherorte lauten:
 
--   
-            Ordner **Bilder**. Enthält Bilder.
+-   Ordner **Bilder**. Enthält Bilder.
 
-    -   
-            Ordner **Eigene Aufnahmen**. Enthält Fotos und Videos, die mit der integrierten Kamera aufgenommen wurden.
+    -   Ordner **Eigene Aufnahmen**. Enthält Fotos und Videos, die mit der integrierten Kamera aufgenommen wurden.
 
-    -   
-            Ordner **Gespeicherte Bilder**. Enthält Bilder, die der Benutzer aus anderen Apps gespeichert hat.
+    -   Ordner **Gespeicherte Bilder**. Enthält Bilder, die der Benutzer aus anderen Apps gespeichert hat.
 
--   
-            Ordner **Musik**. Enthält Songs, Podcasts und Hörbücher.
+-   Ordner **Musik**. Enthält Songs, Podcasts und Hörbücher.
 
--   
-            Ordner **Video**. Enthält Videos.
+-   Ordner **Video**. Enthält Videos.
 
 Mediendateien können von Benutzern und Apps auch außerhalb der Medienbibliothekordner auf der SD-Karte gespeichert werden. Durchsuchen Sie den Inhalt der SD-Karte, um eine Mediendatei auf der SD-Karte auf zuverlässige Weise zu finden, oder bitten Sie den Benutzer, mithilfe einer Dateiauswahl auf die Datei zuzugreifen. Weitere Informationen finden Sie unter [Zugreifen auf die SD-Karte](access-the-sd-card.md).
 
 ## Abfragen der Medienbibliotheken
 
+Um eine Sammlung von Dateien zu erhalten, geben Sie die Bibliothek und den Typ der gewünschten Dateien an.
+
+```cs
+...
+using Windows.Storage;
+using Windows.Storage.Search;
+...
+
+private async void getSongs()
+{
+    QueryOptions queryOption = new QueryOptions
+        (CommonFileQuery.OrderByTitle, new string[] { ".mp3", ".mp4", ".wma" });
+
+    queryOption.FolderDepth = FolderDepth.Deep
+
+    Queue<IStorageFolder> folders = new Queue<IStorageFolder>();
+
+    var files = await KnownFolders.MusicLibrary.CreateFileQueryWithOptions
+      (queryOption).GetFilesAsync();
+
+    foreach (var file in files)
+    {
+        // do something with the music files.
+    }
+
+}
+```
 
 ### Abfrageergebnisse umfassen sowohl internen Speicher als auch Wechselmedien
 
@@ -152,140 +174,35 @@ Beachten Sie den Status des Gerätespeichers, der in der folgenden Abbildung dar
 
 ![Bilder auf dem Smartphone und der SD-Karte](images/phone-media-locations.png)
 
-Wenn Sie den Inhalt der Bildbibliothek abfragen, indem Sie `await KnownFolders.PicturesLibrary.GetFilesAsync()` aufrufen, ist sowohl "internalPic.jpg" als auch "SDPic.jpg" in den Ergebnissen enthalten.
+Wenn Sie den Inhalt der Bildbibliothek abfragen, indem Sie `await KnownFolders.PicturesLibrary.GetFilesAsync()` aufrufen, ist sowohl „internalPic.jpg“ als auch „SDPic.jpg“ in den Ergebnissen enthalten.
 
-### Tiefe Abfragen
 
-Verwenden Sie tiefe Abfragen, um den gesamten Inhalt einer Medienbibliothek schnell aufzuzählen.
+## Verwenden von Fotos
 
-Mit tiefen Abfragen werden nur Dateien des angegebenen Medientyps zurückgegeben. Wenn Sie beispielsweise die Musikbibliothek mit einer tiefen Abfrage abfragen, enthalten die Abfrageergebnisse keine Bilddateien, die im Ordner „Musik“ gefunden wurden.
 
-Auf Geräten, auf denen jedes Bild von der Kamera sowohl in niedriger als auch in hoher Auflösung gespeichert wird, wird mit tiefen Abfragen nur das Bild mit niedriger Auflösung zurückgegeben.
+Auf Geräten, auf denen jedes Bild von der Kamera sowohl in niedriger als auch in hoher Auflösung gespeichert wird, wird bei tiefen Abfragen nur das Bild mit niedriger Auflösung zurückgegeben.
 
 Für die Ordner „Eigene Aufnahmen“ und „Gespeicherte Bilder“ werden keine tiefen Abfragen unterstützt.
 
-Die folgenden tiefen Abfragen sind verfügbar:
+**Öffnen eines Fotos in der App, mit der es aufgenommen wurde**
 
-**Bildbibliothek**
-
--   `GetFilesAsync(CommonFileQuery.OrderByDate)`
-
-**Musikbibliothek**
-
--   `GetFilesAsync(CommonFileQuery.OrderByName)`
--   `GetFoldersAsync(CommonFolderQuery.GroupByArtist)`
--   `GetFoldersAysnc(CommonFolderQuery.GroupByAlbum)`
--   `GetFoldersAysnc(CommonFolderQuery.GroupByAlbumArtist)`
--   `GetFoldersAsync(CommonFolderQuery.GroupByGenre)`
-
-**Videobibliothek**
-
--   `GetFilesAsync(CommonFileQuery.OrderByDate)`
-
-### Flache Abfragen
-
-Rufen Sie `GetFilesAsync(CommonFileQuery.DefaultQuery)` auf, um eine vollständige Liste aller Dateien und Ordner in einer Bibliothek abzurufen. Mit dieser Methode werden unabhängig vom Typ alle Dateien der Bibliothek zurückgegeben. Dies ist keine tiefe Abfrage, sodass Sie den Inhalt von Unterordnern rekursiv aufzählen müssen, falls der Benutzer in der Bibliothek Unterordner erstellt hat.
-
-Verwenden Sie flache Abfragen zum Zurückgeben von Mediendateitypen, die von integrierten Abfragen nicht erkannt werden, oder zum Zurückgeben aller Dateien einer Bibliothek (einschließlich der Dateien, die nicht den angegebenen Typ aufweisen). Wenn Sie eine flache Abfrage beispielsweise auf die Musikbibliothek anwenden, enthalten die Abfrageergebnisse alle Bilddateien, die von der Abfrage im Ordner „Musik“ gefunden wurden.
-
-### Beispielabfragen
-
-Angenommen, das Gerät und die optionale SD-Karte enthalten die Ordner und Dateien, die in der folgenden Abbildung dargestellt sind:
-
-![Dateien auf ](images/phone-media-queries.png)
-
-Hier sind einige Beispiele für Abfragen und die jeweils zurückgegebenen Ergebnisse aufgeführt.
-
-| Abfrage | Ergebnisse |
-|--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| KnownFolders.PicturesLibrary.GetItemsAsync();  | – Ordner „Eigene Aufnahmen“ im internen Speicher <br>– Ordner „Eigene Aufnahmen“ auf der SD-Karte <br>– Ordner „Gespeicherte Bilder“ im internen Speicher <br>– Ordner „Gespeicherte Bilder“ auf der SD-Karte <br><br>Dies ist eine flache Abfrage, mit der nur direkt untergeordnete Elemente des Ordners „Bilder“ zurückgegeben werden. |
-| KnownFolders.PicturesLibrary.GetFilesAsync();  | Keine Ergebnisse. <br><br>Dies ist eine flache Abfrage, und der Ordner „Bilder“ enthält keine Dateien als direkt untergeordnete Elemente. |
-| KnownFolders.PicturesLibrary.GetFilesAsync(CommonFileQuery.OrderByDate); | – Datei „4-3-2012.jpg“ auf der SD-Karte <br>– Datei „1-1-2014.jpg“ im internen Speicher <br>– Datei „1-2-2014.jpg“ im internen Speicher <br>–Datei „1-6-2014.jpg“ auf der SD-Karte <br><br>Da dies eine tiefe Abfrage ist, wird der Inhalt des Ordners „Bilder“ und seiner untergeordneten Ordner zurückgegeben. |
-| KnownFolders.CameraRoll.GetFilesAsync(); | – Datei „1-1-2014.jpg“ im internen Speicher <br>– Datei „4-3-2012.jpg“ auf der SD-Karte <br><br>Dies ist eine flache Abfrage. Die Sortierung der Ergebnisse kann nicht garantiert werden. |
-
- 
-## Funktionen und Dateitypen der Medienbibliothek
-
-
-Hier sind die Funktionen aufgeführt, die Sie in der App-Manifestdatei angeben können, um in der App auf Mediendateien zuzugreifen.
-
--   
-            **Musik**. Geben Sie die **Music Library**-Funktion in der App-Manifestdatei an, damit Dateien der folgenden Dateitypen für die App sichtbar sind und darauf zugegriffen werden kann:
-
-    -   .qcp
-    -   .wav
-    -   .mp3
-    -   .m4r
-    -   .m4a
-    -   .aac
-    -   .amr
-    -   .wma
-    -   .3g2 -   .3gp -   .mp4 -   .wm -   .asf -   .3gpp -   .3gp2 -   .mpa -   .adt -   .adts -   .pya -   **Fotos**.
-    -   Geben Sie die **Pictures Library**-Funktion in der App-Manifestdatei an, damit Dateien der folgenden Dateitypen für die App sichtbar sind und darauf zugegriffen werden kann:
-    -   -   .jpeg -   .jpe -   .jpg -   .gif -   .tiff -   .tif -   .png -   .bmp -   .wdp -   .jxr -   .hdp -   **Videos**.
-    -   Geben Sie die **Video Library**-Funktion in der App-Manifestdatei an, damit Dateien der folgenden Dateitypen für die App sichtbar sind und darauf zugegriffen werden kann:
-    -   -   .wm -   .m4v -   .wmv -   .asf -   .mov -   .mp4 -   .3g2 -   .3gp -   .mp4v -   .avi -   .pyv -   .3gpp -   .3gp2
-    -   Verwenden von Fotos
-    -   Auf Geräten, auf denen jedes Bild von der Kamera sowohl in niedriger als auch in hoher Auflösung gespeichert wird, wird bei tiefen Abfragen nur das Bild mit niedriger Auflösung zurückgegeben.
-    -   Für die Ordner „Eigene Aufnahmen“ und „Gespeicherte Bilder“ werden keine tiefen Abfragen unterstützt.
-    -   Öffnen eines Fotos in der App, mit der es aufgenommen wurde
-    -   Wenn Sie es Benutzern ermöglichen möchten, ein Foto später erneut in der App zu öffnen, mit der es aufgenommen wurde, können Sie die **CreatorAppId** mit den Metadaten des Fotos speichern. Verwenden Sie hierzu ähnlichen Code wie im folgenden Beispiel.
-    -   In diesem Beispiel ist **testPhoto** eine [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
--   Verwenden von Datenstrommethoden zum Hinzufügen einer Datei zur Medienbibliothek Wenn Sie auf eine Medienbibliothek zugreifen, indem Sie einen bekannten Ordner wie **KnownFolders.PictureLibrary** verwenden, und der Medienbibliothek mithilfe von Datenstrommethoden eine Datei hinzufügen, müssen Sie darauf achten, alle von Ihrem Code geöffneten Datenströme wieder zu schließen.
-
-    -   Andernfalls wird die Datei der Medienbibliothek mit diesen Methoden nicht wie erwartet hinzugefügt, weil mindestens ein Stream weiterhin über einen Handle für die Datei verfügt.
-    -   Wenn Sie beispielsweise den folgenden Code ausführen, wird die Datei nicht der Medienbibliothek hinzugefügt.
-    -   In der Codezeile `using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))` wird sowohl mit der **OpenAsync**-Methode als auch mit der **GetOutputStreamAt**-Methode ein Datenstrom geöffnet.
-    -   Es wird aber nur der mit der **GetOutputStreamAt**-Methode geöffnete Datenstrom aufgrund der **using**-Anweisung wieder geschlossen.
-    -   Der andere Datenstrom bleibt geöffnet und verhindert das Speichern der Datei.
-    -   Um Streammethoden erfolgreich zum Hinzufügen einer Datei zur Medienbibliothek zu verwenden, müssen Sie alle Datenströme schließen, die von Ihrem Code geöffnet werden. Dies ist im folgenden Beispiel dargestellt.
-    -   .png
-    -   .bmp
-    -   .wdp
-    -   .jxr
-    -   .hdp
--   <bpt id="p1">**</bpt>Videos<ept id="p1">**</ept>. Specify the <bpt id="p1">**</bpt>Video Library<ept id="p1">**</ept> capability in the app manifest file to let your app see and access files of the following file types:
-
-    -   .wm
-    -   .m4v
-    -   .wmv
-    -   .asf
-    -   .mov
-    -   .mp4
-    -   .3g2
-    -   .3gp
-    -   .mp4v
-    -   .avi
-    -   .pyv
-    -   .3gpp
-    -   .3gp2
-
-## Working with photos
-
-
-On devices where the camera saves both a low-resolution image and a high-resolution image of every picture, the deep queries return only the low-resolution image.
-
-The Camera Roll and the Saved Pictures folder do not support the deep queries.
-
-**Opening a photo in the app that captured it**
-
-If you want to let the user open a photo again later in the app that captured it, you can save the <bpt id="p1">**</bpt>CreatorAppId<ept id="p1">**</ept> with the photo's metadata by using code similar to the following example. In this example, <bpt id="p1">**</bpt>testPhoto<ept id="p1">**</ept> is a <bpt id="p2">[</bpt><bpt id="p3">**</bpt>StorageFile<ept id="p3">**</ept><ept id="p2">](https://msdn.microsoft.com/library/windows/apps/br227171)</ept>.
+Wenn Sie es Benutzern ermöglichen möchten, ein Foto später erneut in der App zu öffnen, mit der es aufgenommen wurde, können Sie die **CreatorAppId** mit den Metadaten des Fotos speichern. Verwenden Sie hierzu ähnlichen Code wie im folgenden Beispiel. In diesem Beispiel ist **testPhoto** eine [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171).
 
 ```CSharp
   IDictionary<string, object> propertiesToSave = new Dictionary<string, object>();
 
   propertiesToSave.Add("System.CreatorOpenWithUIOptions", 1);
   propertiesToSave.Add("System.CreatorAppId", appId);
- 
+
   testPhoto.Properties.SavePropertiesAsync(propertiesToSave).AsyncWait();   
 ```
 
-## Using stream methods to add a file to a media library
+## Verwenden von Datenstrommethoden zum Hinzufügen einer Datei zur Medienbibliothek
 
 
-When you access a media library by using a known folder such as <bpt id="p1">**</bpt>KnownFolders.PictureLibrary<ept id="p1">**</ept>, and you use stream methods to add a file to the media library, you have to make sure to close all the streams that your code opens. Otherwise these methods fail to add the file to the media library as expected because at least one stream still has a handle to the file.
+Wenn Sie auf eine Medienbibliothek zugreifen, indem Sie einen bekannten Ordner wie **KnownFolders.PictureLibrary** verwenden, und der Medienbibliothek mithilfe von Datenstrommethoden eine Datei hinzufügen, müssen Sie darauf achten, alle von Ihrem Code geöffneten Datenströme wieder zu schließen. Andernfalls wird die Datei der Medienbibliothek mit diesen Methoden nicht wie erwartet hinzugefügt, weil mindestens ein Stream weiterhin über einen Handle für die Datei verfügt.
 
-For example, when you run the following code, the file is not added to the media library. In the line of code, <ph id="ph1">`using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))`</ph>, both the <bpt id="p1">**</bpt>OpenAsync<ept id="p1">**</ept> method and the <bpt id="p2">**</bpt>GetOutputStreamAt<ept id="p2">**</ept> method open a stream. However only the stream opened by the <bpt id="p1">**</bpt>GetOutputStreamAt<ept id="p1">**</ept> method is disposed as a result of the <bpt id="p2">**</bpt>using<ept id="p2">**</ept> statement. The other stream remains open and prevents saving the file.
+Wenn Sie beispielsweise den folgenden Code ausführen, wird die Datei nicht der Medienbibliothek hinzugefügt. In der Codezeile `using (var destinationStream = (await destinationFile.OpenAsync(FileAccessMode.ReadWrite)).GetOutputStreamAt(0))` wird sowohl mit der **OpenAsync**-Methode als auch mit der **GetOutputStreamAt**-Methode ein Datenstrom geöffnet. Es wird aber nur der mit der **GetOutputStreamAt**-Methode geöffnete Datenstrom aufgrund der **using**-Anweisung wieder geschlossen. Der andere Datenstrom bleibt geöffnet und verhindert das Speichern der Datei.
 
 ```CSharp
 StorageFolder testFolder = await StorageFolder.GetFolderFromPathAsync(@"C:\test");
@@ -301,7 +218,7 @@ using (var sourceStream = (await sourceFile.OpenReadAsync()).GetInputStreamAt(0)
 
 ```
 
-To use stream methods successfully to add a file to the media library, make sure to close all the streams that your code opens, as shown in the following example.
+Um Streammethoden erfolgreich zum Hinzufügen einer Datei zur Medienbibliothek zu verwenden, müssen Sie alle Datenströme schließen, die von Ihrem Code geöffnet werden. Dies ist im folgenden Beispiel dargestellt.
 
 ```CSharp
 StorageFolder testFolder = await StorageFolder.GetFolderFromPathAsync(@"C:\test");
@@ -329,10 +246,6 @@ using (var sourceStream = await sourceFile.OpenReadAsync())
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

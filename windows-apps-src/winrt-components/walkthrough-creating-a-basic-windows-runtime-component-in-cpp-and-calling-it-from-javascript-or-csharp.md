@@ -3,8 +3,9 @@ author: msatranjr
 title: "Windows-Runtime-Komponenten in C++ erstellen und Aufruf über JavaScript oder C#"
 description: "In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie eine einfache Komponenten-DLL-Datei für Windows-Runtime erstellen, die von JavaScript, C# oder Visual Basic aufgerufen werden kann."
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 860333e3239198cd54eea061195e2a51d786821b
+ms.openlocfilehash: 0085d3edb2ec1fbe14ce268c54532cd246a73dde
 
 ---
 
@@ -634,6 +635,6 @@ Wenn Sie ein C++-Komponentenprojekt für Windows-Runtime aus einer Projektmappe 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,15 +4,15 @@ ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: "Verwenden Sie diese Methode in der Windows Store-Sammlungs-API, um alle Produkte, die sich im Besitz eines Kunden befinden, für Apps abzurufen, die Ihrer Azure AD-Client-ID zugeordnet sind. Sie können die Abfrage auf ein bestimmtes Produkt beschränken oder weitere Filter verwenden."
 title: Produktabfrage
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 93ed2b850de22d562b16f3f10f4ca409054910d3
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: ea517d66dbb6f373b191937de8c1cbe42c74846f
 
 ---
 
 # Produktabfrage
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Verwenden Sie diese Methode in der Windows Store-Sammlungs-API, um alle Produkte, die sich im Besitz eines Kunden befinden, für Apps abzurufen, die Ihrer Azure AD-Client-ID zugeordnet sind. Sie können die Abfrage auf ein bestimmtes Produkt beschränken oder weitere Filter verwenden.
 
@@ -42,8 +42,8 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorisierung  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
-| Host           | Zeichenfolge | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
+| Autorisierung  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.                           |
+| Host           | string | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
 | Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
 
@@ -57,7 +57,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | continuationToken | string       | Bei mehreren Produktgruppen gibt der Antworttext ein Fortsetzungstoken zurück, sobald das Seitenlimit erreicht ist. Geben Sie das Fortsetzungstoken hier bei nachfolgenden Aufrufen an, um die verbleibenden Produkte abzurufen.                                                      | Nein       |
 | maxPageSize       | number       | Die maximale Anzahl von Produkten, die in einer Antwort zurückgegeben werden sollen. Der standardmäßige Höchstwert ist 100.                                                                                                                                                                      | Nein       |
 | modifiedAfter     | datetime     | Falls angegeben, gibt der Dienst nur Produkte zurück, die nach diesem Datum geändert wurden.                                                                                                                                                                             | Nein       |
-| parentProductId   | string       | Falls angegeben, gibt der Dienst nur IAPs zurück, die der angegebenen App entsprechen.                                                                                                                                                                                    | Nein       |
+| parentProductId   | string       | Falls angegeben, gibt der Dienst nur Add-Ons zurück, die der angegebenen App entsprechen.                                                                                                                                                                                    | Nein       |
 | productSkuIds     | ProductSkuId | Falls angegeben, gibt der Dienst nur Produkte für die angegebenen Produkt-SKU-Paare zurück.                                                                                                                                                                        | Nein       |
 | productTypes      | string       | Falls angegeben, gibt der Dienst nur Produkte zurück, die den angegebenen Produkttypen entsprechen. Unterstützte Produkttypen sind **Application**, **Durable** und **UnmanagedConsumable**.                                                                                       | Nein       |
 | validityType      | string       | Bei Festlegung auf **Alle** werden alle Produkte für einen Benutzer, einschließlich abgelaufener Elemente, zurückgegeben. Bei Festlegung auf **Valid** werden nur Produkte zurückgegeben, die zum aktuellen Zeitpunkt gültig sind (aktiver Status, Startdatum &lt; Istdatum und Enddatum &gt; Istdatum). | Nein       |
@@ -93,25 +93,25 @@ Content-Length: 2531
 Content-Type: application/json
 
 {
-    "maxPageSize": 100,
-    "beneficiaries": [
-            {
-                "localTicketReference": "1055521810674918",
-                "identityValue": "eyJ0eXAiOiJ……",
-                "identityType": "b2b"
-            }
-        ],
-    "modifiedAfter": "\/Date(-62135568000000)\/",
-    "productSkuIds": [
-            {
-                "productId": "9NBLGGH5WVP6",
-                "skuId": "0010"
-            }
-        ],
-    "productTypes": [
-            "UnmanagedConsumable"
-        ],
-    "validityType": "All"
+  "maxPageSize": 100,
+  "beneficiaries": [
+    {
+      "localTicketReference": "1055521810674918",
+      "identityValue": "eyJ0eXAiOiJ……",
+      "identityType": "b2b"
+    }
+  ],
+  "modifiedAfter": "\/Date(-62135568000000)\/",
+  "productSkuIds": [
+    {
+      "productId": "9NBLGGH5WVP6",
+      "skuId": "0010"
+    }
+  ],
+  "productTypes": [
+    "UnmanagedConsumable"
+  ],
+  "validityType": "All"
 }
 ```
 
@@ -147,12 +147,12 @@ Das CollectionItemContractV6-Objekt enthält die folgenden Parameter.
 | Produkttyp          | string             | Einer der folgenden Produkttypen: **Application**, **Durable** oder **UnmanagedConsumable**.                                                     | Ja      |
 | purchasedCountry     | string             | N/V                                                                                                                                               | Nein       |
 | purchaser            | IdentityContractV6 | Die Identität des Artikelkäufers (sofern vorhanden). Details zu diesem Objekt finden Sie weiter unten.                                      | Nein       |
-| Quantity             | number             | Die Artikelmenge. Derzeit beträgt die Menge immer 1.                                                                                        | Nein       |
+| quantity             | number             | Die Artikelmenge. Derzeit beträgt die Menge immer 1.                                                                                        | Nein       |
 | skuId                | string             | Die SKU-ID aus dem Windows Store-Katalog. Beispiel für eine SKU-ID: 0010.                                                                            | Ja      |
 | skuType              | string             | Der SKU-Typ. Mögliche Werte sind **Trial**, **Full** und **Rental**.                                                                      | Ja      |
 | startDate            | datetime           | Das Datum, ab dem der Artikel gültig ist.                                                                                                         | Ja      |
-| Status               | string             | Der Status des Elements. Mögliche Werte sind **Active**, **Expired**, **Revoked** und **Banned**.                                              | Ja      |
-| Tags                 | string             | N/V                                                                                                                                                | Ja      |
+| status               | string             | Der Status des Elements. Mögliche Werte sind **Active**, **Expired**, **Revoked** und **Banned**.                                              | Ja      |
+| Tags                 | string             | Nicht verfügbar                                                                                                                                                | Ja      |
 | transactionId        | guid               | Die aus dem Artikelkauf resultierende Transaktions-ID. Kann verwendet werden, um zu melden, dass der Artikelkauf abgewickelt wurde.                                       | Ja      |
 
 <span/> 
@@ -179,32 +179,32 @@ MS-ServerId: 020022359
 Date: Tue, 22 Sep 2015 20:28:18 GMT
 
 {
-    "items" : [
-        {
-            "acquiredDate" : "2015-09-22T19:22:51.2068724+00:00",
-            "devOfferId" : "f9587c53-540a-498b-a281-8a349491ed47",
-            "endDate" : "9999-12-31T23:59:59.9999999+00:00",
-            "fulfillmentData" : [],
-            "inAppOfferToken" : "consumable2",
-            "itemId" : "4b8fbb13127a41f299270ea668681c1d",
-            "localTicketReference" : "1055521810674918",
-            "modifiedDate" : "2015-09-22T19:22:51.2513155+00:00",
-            "orderId" : "4ba5960d-4ec6-4a81-ac20-aafce02ddf31",
-            "ownershipType" : "OwnedByBeneficiary",
-            "productId" : "9NBLGGH5WVP6",
-            "productType" : "UnmanagedConsumable",
-            "purchaser" : {
-                "identityType" : "pub",
-                "identityValue" : "user123"
-            },
-            "skuId" : "0010",
-            "skuType" : "Full",
-            "startDate" : "2015-09-22T19:22:51.2068724+00:00",
-            "status" : "Active",
-            "tags" : [],
-            "transactionId" : "4ba5960d-4ec6-4a81-ac20-aafce02ddf31"
-        }
-    ]
+  "items" : [
+    {
+      "acquiredDate" : "2015-09-22T19:22:51.2068724+00:00",
+      "devOfferId" : "f9587c53-540a-498b-a281-8a349491ed47",
+      "endDate" : "9999-12-31T23:59:59.9999999+00:00",
+      "fulfillmentData" : [],
+      "inAppOfferToken" : "consumable2",
+      "itemId" : "4b8fbb13127a41f299270ea668681c1d",
+      "localTicketReference" : "1055521810674918",
+      "modifiedDate" : "2015-09-22T19:22:51.2513155+00:00",
+      "orderId" : "4ba5960d-4ec6-4a81-ac20-aafce02ddf31",
+      "ownershipType" : "OwnedByBeneficiary",
+      "productId" : "9NBLGGH5WVP6",
+      "productType" : "UnmanagedConsumable",
+      "purchaser" : {
+        "identityType" : "pub",
+        "identityValue" : "user123"
+      },
+      "skuId" : "0010",
+      "skuType" : "Full",
+      "startDate" : "2015-09-22T19:22:51.2068724+00:00",
+      "status" : "Active",
+      "tags" : [],
+      "transactionId" : "4ba5960d-4ec6-4a81-ac20-aafce02ddf31"
+    }
+  ]
 }
 ```
 
@@ -217,6 +217,6 @@ Date: Tue, 22 Sep 2015 20:28:18 GMT
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

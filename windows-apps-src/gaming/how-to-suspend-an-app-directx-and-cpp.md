@@ -1,14 +1,18 @@
 ---
 author: mtoepke
-title: So wird's gemacht: Anhalten einer App (DirectX und C++)
-description: In diesem Thema wird gezeigt, wie wichtige Systemzustände und App-Daten gespeichert werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) anhält.
+title: 'So wird&quot;s gemacht: Anhalten einer App (DirectX und C++)'
+description: "In diesem Thema wird gezeigt, wie wichtige Systemzustände und App-Daten gespeichert werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) anhält."
 ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
+translationtype: Human Translation
+ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
+ms.openlocfilehash: dd7319b254dcaaa5da7a7055bbde299f5e7e62a3
+
 ---
 
 # So wird's gemacht: Anhalten einer App (DirectX und C++)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Thema wird gezeigt, wie wichtige Systemzustände und App-Daten gespeichert werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) anhält.
 
@@ -90,7 +94,7 @@ void App::Run()
 ## Aufrufen von „Trim()“
 
 
-Ab Windows 8.1 muss von allen DirectX-Windows Store-Apps beim Anhalten [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) aufgerufen werden. Dieser Aufruf weist den Grafiktreiber an, alle für die App zugeordneten temporären Puffer freizugeben. Dadurch wird die Wahrscheinlichkeit verringert, dass die angehaltene App beendet wird, um Arbeitsspeicherressourcen freizugeben. Dies ist eine Zertifizierungsanforderung für Windows 8.1.
+Ab Windows8.1 muss von allen DirectX-Windows Store-Apps beim Anhalten [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) aufgerufen werden. Dieser Aufruf weist den Grafiktreiber an, alle für die App zugeordneten temporären Puffer freizugeben. Dadurch wird die Wahrscheinlichkeit verringert, dass die angehaltene App beendet wird, um Arbeitsspeicherressourcen freizugeben. Dies ist eine Zertifizierungsanforderung für Windows8.1.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)
@@ -150,6 +154,7 @@ Das System benachrichtigt eine App nicht, wenn sie beendet wird. Wenn Ihre App a
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

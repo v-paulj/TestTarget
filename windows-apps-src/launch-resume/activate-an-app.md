@@ -3,20 +3,17 @@ author: TylerMSFT
 title: Behandeln der App-Aktivierung
 description: "Erfahren Sie, wie Sie die App-Aktivierung durch Überschreiben der OnLaunched-Methode behandeln."
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
-ms.sourcegitcommit: fb83213a4ce58285dae94da97fa20d397468bdc9
-ms.openlocfilehash: f47a3b7fcb4bec4138e11a079c3d10e918c1eb95
+translationtype: Human Translation
+ms.sourcegitcommit: a1bb0d5d24291fad1acab41c149dd9d763610907
+ms.openlocfilehash: e41a683026a4543545556e98f6b4e9194099b362
 
 ---
 
 # Behandeln der App-Aktivierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
-
-**Wichtige APIs**
-
--   [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)
 
 Erfahren Sie, wie Sie die App-Aktivierung durch Überschreiben der [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode behandeln.
 
@@ -36,8 +33,7 @@ Definieren Sie die Klasse für Ihre Anwendung.
 
 Überschreiben Sie die [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode. Diese Methode wird immer dann aufgerufen, wenn der Benutzer die App startet. Der [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731)-Parameter enthält den vorherigen Status der App sowie die Aktivierungsargumente.
 
-
-            **Hinweis**  Für Windows Phone Store-Apps wird diese Methode jedes Mal aufgerufen, wenn der Benutzer die App über die Startkachel oder App-Liste startet. Dies ist auch dann der Fall, wenn die App derzeit im Arbeitsspeicher angehalten ist. Unter Windows wird beim Starten einer angehaltenen App über die Startkachel oder die App-Liste diese Methode nicht aufgerufen.
+**Hinweis**  Für Windows Phone Store-Apps wird diese Methode jedes Mal aufgerufen, wenn der Benutzer die App über die Startkachel oder App-Liste startet. Dies ist auch dann der Fall, wenn die App derzeit im Arbeitsspeicher angehalten ist. Unter Windows wird beim Starten einer angehaltenen App über die Startkachel oder die App-Liste diese Methode nicht aufgerufen.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -101,10 +97,10 @@ Definieren Sie die Klasse für Ihre Anwendung.
 > }
 > ```
 
-## [!div class="tabbedCodeSnippets"]
+## Wiederherstellen von App-Daten, wenn die App angehalten und dann beendet wurde
 
 
-Wiederherstellen von App-Daten, wenn die App angehalten und dann beendet wurde Wenn der Benutzer zur beendeten App wechselt, sendet das System das [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis, wobei [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) auf **Launch** und [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) auf **Terminated** oder **ClosedByUser** festgelegt ist.
+Wenn der Benutzer zur beendeten App wechselt, sendet das System das [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis, wobei [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) auf **Launch** und [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) auf **Terminated** oder **ClosedByUser** festgelegt ist. Von der App werden die gespeicherten Anwendungsdaten geladen, und der angezeigte Inhalt wird aktualisiert.
 
 > [!div class="tabbedCodeSnippets"]
 > ```cs
@@ -159,31 +155,30 @@ Wiederherstellen von App-Daten, wenn die App angehalten und dann beendet wurde W
 > }
 > ```
 
-Von der App werden die gespeicherten Anwendungsdaten geladen, und der angezeigte Inhalt wird aktualisiert.
+Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) gleich **NotRunning** ist, konnten die Anwendungsdaten von der App nicht erfolgreich gespeichert werden. Die App muss in diesem Fall neu gestartet werden, als ob sie erstmalig gestartet wird.
 
-## [!div class="tabbedCodeSnippets"]
+## Anmerkungen
 
-> Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) gleich **NotRunning** ist, konnten die Anwendungsdaten von der App nicht erfolgreich gespeichert werden. Die App muss in diesem Fall neu gestartet werden, als ob sie erstmalig gestartet wird. Anmerkungen 
-            **Hinweis**  Für Windows Phone Store-Apps folgt auf das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis immer [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), auch wenn Ihre App derzeit angehalten ist und der Benutzer Ihre App über eine primäre Kachel oder die App-Liste neu startet.
+> **Hinweis**  Für Windows Phone Store-Apps folgt auf das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis immer [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), auch wenn Ihre App derzeit angehalten ist und der Benutzer Ihre App über eine primäre Kachel oder die App-Liste neu startet. Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden. Überprüfen Sie die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736)-Eigenschaft, um zu ermitteln, ob die App über eine primäre oder sekundäre Kachel gestartet wurde. Entscheiden Sie basierend auf dieser Information, ob die App neu gestartet oder fortgesetzt werden soll.
 
-## Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden.
+## Verwandte Themen
 
-* [Überprüfen Sie die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736)-Eigenschaft, um zu ermitteln, ob die App über eine primäre oder sekundäre Kachel gestartet wurde. Entscheiden Sie basierend auf dieser Information, ob die App neu gestartet oder fortgesetzt werden soll.](suspend-an-app.md)
-* [Verwandte Themen](resume-an-app.md)
-* [Behandeln des Anhaltens von Apps](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [Behandeln der App-Fortsetzung](app-lifecycle.md)
+* [Behandeln des Anhaltens von Apps](suspend-an-app.md)
+* [Behandeln der App-Fortsetzung](resume-an-app.md)
+* [Richtlinien für das Anhalten und Fortsetzen von Apps](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [App-Lebenszyklus](app-lifecycle.md)
 
-**Richtlinien für das Anhalten und Fortsetzen von Apps**
+**Referenzen**
 
-* [**App-Lebenszyklus**](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [**Referenzen**](https://msdn.microsoft.com/library/windows/apps/br242324)
-
- 
+* [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)
+* [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324)
 
  
 
+ 
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

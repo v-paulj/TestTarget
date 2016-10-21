@@ -65,11 +65,11 @@ Um die Zugriffstasten-APIs zu verstehen, müssen Sie sich zunächst das Benutzer
     - Durch die ESC-TASTE wird die Zugriffstastenabfolge geschlossen, wenn sie dem Hauptbereich angehört und nicht gefiltert ist.
         > [!NOTE]
         > Der Anschlag der ESC-TASTE wird an die UI-Ebene übergeben und auch dort verarbeitet.
-– Mit der TAB-TASTE schließen Sie die Zugriffstastenabfolge und kehren zur TAB-Navigation zurück.
-– Durch die EINGABETASTE wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
-– Durch die Pfeiltasten wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
-– Durch ein Zeiger-nach-unten-Ereignis – z. B. ein Mausklick oder eine Toucheingabe – wird die Zugriffstastenabfolge geschlossen.
-– Wenn eine Zugriffstaste aufgerufen wird, wird die Zugriffstastenabfolge standardmäßig geschlossen.  Sie können dieses Verhalten jedoch überschreiben, indem Sie die [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx)-Eigenschaft auf **false** festlegen.
+- Mit der TAB-TASTE schließen Sie die Zugriffstastenabfolge und kehren zur TAB-Navigation zurück.
+- Durch die EINGABETASTE wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
+- Durch die Pfeiltasten wird die Zugriffstastenabfolge geschlossen, und der Tastenanschlag wird an das Element gesendet, das den Fokus hat.
+- Durch ein Zeiger-nach-unten-Ereignis – z. B. ein Mausklick oder eine Toucheingabe – wird die Zugriffstastenabfolge geschlossen.
+- Wenn eine Zugriffstaste aufgerufen wird, wird die Zugriffstastenabfolge standardmäßig geschlossen.  Sie können dieses Verhalten jedoch überschreiben, indem Sie die [ExitDisplayModeOnAccessKeyInvoked](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.exitdisplaymodeonaccesskeyinvoked.aspx)-Eigenschaft auf **false** festlegen.
 - Zugriffstastenkonflikte treten auf, wenn kein DEA (deterministischer endlicher Automat) möglich ist. Zugriffstastenkonflikte lassen sich nicht immer vermeiden und können bei einer großen Anzahl von Befehlen oder Lokalisierungsproblemen auftreten oder dann, wenn Zugriffstasten während der Laufzeit generiert werden.
 
  Es gibt zwei Fälle, in denen Konflikte auftreten:

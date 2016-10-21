@@ -5,8 +5,9 @@ description: .
 ms.assetid: BF42E810-CDC8-47D2-9C30-BAA19DCBE2DA
 label: Screen sizes and break points
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 153652c9fcc9745bdee087033d65eec2bc860e53
+ms.openlocfilehash: 5977b6253e2ee10fa0153d79053f89b705c2e1a3
 
 ---
 
@@ -14,8 +15,7 @@ ms.openlocfilehash: 153652c9fcc9745bdee087033d65eec2bc860e53
 
 Die Anzahl der Geräteziele und Bildschirmgrößen bei Windows 10 ist zu groß, um alle beim Optimieren der Benutzeroberfläche zu bedenken. Stattdessen wird empfohlen, für ein paar wichtige Breiten (auch als „Haltepunkte“ bezeichnet) zu entwickeln: 360, 640, 1024 und 1366 Epx.
 
-
-            **Tipp**  Beim Entwerfen für bestimmte Haltepunkte sollten Sie den für Ihre App verfügbaren Bildschirmbereich (App-Fenster) berücksichtigen. Wenn die App im Vollbildmodus ausgeführt wird, hat das App-Fenster die gleiche Bildschirmgröße zur Verfügung, in anderen Fällen ist es jedoch kleiner.
+**Tipp** Beim Entwerfen für bestimmte Haltepunkte sollten Sie den für Ihre App verfügbaren Bildschirmbereich (App-Fenster) berücksichtigen. Wenn die App im Vollbildmodus ausgeführt wird, hat das App-Fenster die gleiche Bildschirmgröße zur Verfügung, in anderen Fällen ist es jedoch kleiner.
  
 
 In dieser Tabelle werden die verschiedenen Größenklassen beschrieben und allgemeine Empfehlungen für die Anpassung für diese Größenklassen aufgeführt.
@@ -99,6 +99,6 @@ Mit [**Continuum for Phones**](http://go.microsoft.com/fwlink/p/?LinkID=699431),
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

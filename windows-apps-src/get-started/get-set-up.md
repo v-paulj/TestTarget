@@ -1,16 +1,20 @@
 ---
-author: martinekuan
+author: GrantMeStrength
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
-title: Vorbereiten
+title: Vorbereitung
 description: "Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen."
 translationtype: Human Translation
-ms.sourcegitcommit: a47dc36129daaed02cb181dde625d440fa4cf6e4
-ms.openlocfilehash: f20707cab08998d86142f7d657b51faa78d9a777
+ms.sourcegitcommit: 75c036fc934a8071f17a8690a22a03e10c4fe1d4
+ms.openlocfilehash: 729c71fbe0db202bd4f5ce15bea87caa973adf80
 
 ---
 # Vorbereitung
 
-Die Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen.
+Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen.
+
+> [!NOTE]
+> Sind Sie Mac-Benutzer? Oder möchten Sie derzeit nichts auf Ihrem PC installieren? Testen Sie die [webbasierten virtuellen Computer für Build2016-Codierungsaufgaben](https://developer.microsoft.com/windows/projects/events/build2016/all/codingchallenges).
+
 
 ## 1. Laden Sie Windows10 herunter.
 
@@ -21,6 +25,8 @@ Zum Entwickeln von UWP-Apps benötigen Sie die aktuelle Windows-Version.
 Sind Sie MSDN-Abonnent? ISO-Dateien stehen hier zum Download zur Verfügung:
 
 -   Laden Sie Windows10 von [Downloads für MSDN-Abonnenten](http://go.microsoft.com/fwlink/p/?LinkId=266384) herunter.
+
+
 
 ## 2. Laden Sie Visual Studio herunter, oder aktualisieren Sie es.
 
@@ -50,8 +56,7 @@ Sie können jetzt mit der Entwicklung von Apps beginnen. Zum Übermitteln an den
 
 Nachdem Sie die Tools installiert und eine Entwicklerlizenz abgerufen bzw. ein Entwicklerkonto eingerichtet haben, können Sie unsere Lernprogramme zum Erstellen Ihrer ersten App nutzen:
 
--   
-            Lernprogramme zum Thema [Erstellen Ihrer ersten App](your-first-app.md)
+-   Lernprogramme zum Thema [Erstellen Ihrer ersten App](your-first-app.md)
 
 ## Benötigen Sie mehr Tools und Downloads?
 
@@ -60,7 +65,6 @@ Die vollständige Liste der Tools und Downloads finden Sie unter [Downloads](htt
 
 
 
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

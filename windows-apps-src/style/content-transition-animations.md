@@ -3,8 +3,9 @@ author: mijacobs
 Description: "Mithilfe von Inhaltsübergangsanimationen können Sie den Inhalt eines Bildschirmbereichs ändern und gleichzeitig den Container oder Hintergrund unverändert lassen. Neuer Inhalt wird eingeblendet. Muss vorhandener Inhalt ersetzt werden, wird dieser Inhalt ausgeblendet."
 title: "Richtlinien für Inhaltsübergangsanimationen"
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
+translationtype: Human Translation
+ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
+ms.openlocfilehash: 2b3e0196b573fb426c9cd71fc613819a2dd2d615
 
 ---
 
@@ -21,7 +22,7 @@ ms.openlocfilehash: dc233ef821259701eb93c09d1bdefcfa3d9bb69f
 
 Mithilfe von Inhaltsübergangsanimationen können Sie den Inhalt eines Bildschirmbereichs ändern und gleichzeitig den Container oder Hintergrund unverändert lassen. Neuer Inhalt wird eingeblendet. Muss vorhandener Inhalt ersetzt werden, wird dieser Inhalt ausgeblendet.
 
-## <span id="Recommendations"></span><span id="recommendations"></span><span id="RECOMMENDATIONS"></span>Empfohlene und nicht empfohlene Vorgehensweisen
+## Empfohlene und nicht empfohlene Vorgehensweisen
 
 
 -   Verwenden Sie eine Eingangsanimation, wenn mehrere neue Elemente in einen leeren Container aufgenommen werden sollen. Beispielsweise ist nach dem anfänglichen Laden einer App ein Teil des Inhalts nicht sofort für die Anzeige verfügbar. Wenn der Inhalt bereit zum Anzeigen ist, nehmen Sie diesen verzögerten Inhalt mithilfe einer Inhaltsübergangsanimation in die Ansicht auf.
@@ -34,7 +35,7 @@ Mithilfe von Inhaltsübergangsanimationen können Sie den Inhalt eines Bildschir
 
 
 
-## <span id="related_topics"></span>Verwandte Artikel
+## Verwandte Artikel
 
 **Für Entwickler (XAML)**
 * [Übersicht über Animationen](https://msdn.microsoft.com/library/windows/apps/mt187350)
@@ -52,6 +53,6 @@ Mithilfe von Inhaltsübergangsanimationen können Sie den Inhalt eines Bildschir
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

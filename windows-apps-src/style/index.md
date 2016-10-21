@@ -1,24 +1,21 @@
 ---
 description: "Erfahren Sie, wie Sie Farbe, Typografie und Bewegung verwenden, um den Charakter Ihrer UWP-App mithilfe der Windows Dev Center-Formatanleitungen für UWP zu definieren."
-keywords: uwp style guide, design guidance, typography, motion, sound, motion, app development
+keywords: UWP-Formatanleitungen, Designanleitungen, Typografie, Bewegung, Ton, Bewegung, App-Entwicklung
 title: "UWP-Formatanleitungen – Entwicklung von Windows-Apps"
 author: mijacobs
 translationtype: Human Translation
-ms.sourcegitcommit: 0a7f655a6f122787873adac76ac4dec9d775a154
-ms.openlocfilehash: d55aab04696441dbbcba0cbda61fd599fdacec67
+ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
+ms.openlocfilehash: 4a96db626f6f3682248e7e720c956fa343186b4a
 
 ---
+# UWP-Formatanleitungen
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-<div class="uwpd-banner">
-<h1 class="uwpd-ruledheader">UWP-Formatanleitungen</h1>
-</div>
 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-  <p>Entwerfen Sie Anleitungen und Codebeispiele, die Ihnen zeigen, wie Sie den Charakter Ihrer UWP-App mithilfe von Farben, Typografie und Bewegung definieren können.</p>
+  <p>Designanleitungen und Codebeispiele, die Ihnen zeigen, wie Sie den Charakter Ihrer UWP-App mithilfe von Farben, Typografie und Bewegung definieren können.</p>
   </div>
   <div class="side-by-side-content-right">
     ![Richtlinien für Farben, Symbole, Bewegungen, Audio und Typografie](images/style-header-v2.png)
@@ -77,6 +74,6 @@ Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darst
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

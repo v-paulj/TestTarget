@@ -3,8 +3,9 @@ author: mtoepke
 title: Zusammensetzen des Renderingframeworks
 description: Jetzt ist es Zeit, einen Blick darauf zu werfen, wie diese Struktur und der Zustand im Beispielspiel zum Anzeigen der Grafiken verwendet werden.
 ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 5eb6ea7ad1a30f020c155007396383b88d10c0a8
+ms.openlocfilehash: c0c935af257fe52e22cadaffb6e008ddbf9629a8
 
 ---
 
@@ -20,18 +21,12 @@ Mittlerweile wissen Sie, wie ein Spiel für die universelle Windows-Plattform (U
 
 -   Einrichten eines einfachen Renderingframeworks zum Anzeigen der Grafikausgabe für ein UWP-DirectX-Spiel
 
-> 
-            **Hinweis**    Die folgenden Codedateien werden hier nicht näher erläutert, enthalten aber Klassen und Methoden, die in diesem Thema verwendet werden. Den entsprechenden Code finden Sie [am Ende dieses Themas](#code_sample):
--   
-            **Animate.h/.cpp**.
--   
-            **BasicLoader.h/.cpp**. Enthält Methoden zum synchronen und asynchronen Laden von Gittern, Shadern und Texturen. Sehr nützlich!
--   
-            **MeshObject.h/.cpp**, **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** und **WorldMesh.h/.cpp**. Enthalten die Definitionen der im Spiel verwendeten Objektgrundtypen – etwa die Munition, die zylinder- und kegelförmigen Hindernisse sowie die Wände des Schießstands. (**GameObject.cpp**enthält die Methode zum Rendern dieser Grundtypen und wird in diesem Thema kurz erläutert.)
--   
-            **Level.h/.cpp** und **Level\[1-6\].h/.cpp**. Enthalten die Konfiguration für jeden der sechs Spiellevels (einschließlich Erfolgskriterien sowie Anzahl und Position der Ziele und Hindernisse).
--   
-            **TargetTexture.h/.cpp**. Enthält einen Satz von Methoden zum Zeichnen der Bitmaps, die als Texturen für die Ziele verwendet werden.
+> **Hinweis**   Die folgenden Codedateien werden hier nicht näher erläutert, enthalten aber Klassen und Methoden, die in diesem Thema verwendet werden. Den entsprechenden Code finden Sie [am Ende dieses Themas](#code_sample):
+-   **Animate.h/.cpp**.
+-   **BasicLoader.h/.cpp**. Enthält Methoden zum synchronen und asynchronen Laden von Gittern, Shadern und Texturen. Sehr nützlich!
+-   **MeshObject.h/.cpp**, **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** und **WorldMesh.h/.cpp**. Enthalten die Definitionen der im Spiel verwendeten Objektgrundtypen – etwa die Munition, die zylinder- und kegelförmigen Hindernisse sowie die Wände des Schießstands. (**GameObject.cpp**enthält die Methode zum Rendern dieser Grundtypen und wird in diesem Thema kurz erläutert.)
+-   **Level.h/.cpp** und **Level\[1-6\].h/.cpp**. Enthalten die Konfiguration für jeden der sechs Spiellevels (einschließlich Erfolgskriterien sowie Anzahl und Position der Ziele und Hindernisse).
+-   **TargetTexture.h/.cpp**. Enthält einen Satz von Methoden zum Zeichnen der Bitmaps, die als Texturen für die Ziele verwendet werden.
 
 Der Code in diesen Dateien ist kein Code speziell für UWP-DirectX-Spiele. Sie können die Dateien aber für sich durchgehen, wenn Sie mehr Details zur Implementierung benötigen.
 
@@ -133,14 +128,10 @@ Da Direct3D11-APIs als COM-APIs definiert sind, müssen Sie [**ComPtr**](https:/
 
 Im Beispielspiel werden vier spezifische Konstantenpuffer deklariert:
 
--   
-            **m\_constantBufferNeverChanges**. Dieser Konstantenpuffer enthält die Beleuchtungsparameter. Er wird einmalig festgelegt und ändert sich nicht mehr.
--   
-            **m\_constantBufferChangeOnResize**. Dieser Konstantenpuffer enthält die Projektionsmatrix. Die Projektionsmatrix hängt von der Größe und dem Seitenverhältnis des Fensters ab. Sie wird nur aktualisiert, wenn sich die Fenstergröße ändert.
--   
-            **m\_constantBufferChangesEveryFrame**. Dieser Konstantenpuffer enthält die Ansichtsmatrix. Diese Matrix hängt von der Kameraposition und der Blickrichtung (der Projektionsnormalen) ab und ändert sich nur einmal pro Frame.
--   
-            **m\_constantBufferChangesEveryPrim**. Dieser Konstantenpuffer enthält die Modellmatrix und die Materialeigenschaften jedes Grundtyps. Die Modellmatrix transformiert Scheitelpunkte aus lokalen Koordinaten in globale Koordinaten. Diese Konstanten gelten speziell für die einzelnen Grundtypen und werden für jeden Draw-Aufruf aktualisiert.
+-   **m\_constantBufferNeverChanges**. Dieser Konstantenpuffer enthält die Beleuchtungsparameter. Er wird einmalig festgelegt und ändert sich nicht mehr.
+-   **m\_constantBufferChangeOnResize**. Dieser Konstantenpuffer enthält die Projektionsmatrix. Die Projektionsmatrix hängt von der Größe und dem Seitenverhältnis des Fensters ab. Sie wird nur aktualisiert, wenn sich die Fenstergröße ändert.
+-   **m\_constantBufferChangesEveryFrame**. Dieser Konstantenpuffer enthält die Ansichtsmatrix. Diese Matrix hängt von der Kameraposition und der Blickrichtung (der Projektionsnormalen) ab und ändert sich nur einmal pro Frame.
+-   **m\_constantBufferChangesEveryPrim**. Dieser Konstantenpuffer enthält die Modellmatrix und die Materialeigenschaften jedes Grundtyps. Die Modellmatrix transformiert Scheitelpunkte aus lokalen Koordinaten in globale Koordinaten. Diese Konstanten gelten speziell für die einzelnen Grundtypen und werden für jeden Draw-Aufruf aktualisiert.
 
 Durch die Verwendung mehrerer Konstantenpuffer mit unterschiedlichen Häufigkeiten soll die Menge an Daten reduziert werden, die pro Frame an die GPU gesendet werden müssen. Daher werden die Konstanten im Beispiel basierend auf der Häufigkeit, mit der sie aktualisiert werden müssen, auf verschiedene Puffer verteilt. Dies ist die empfohlene Methode für die Direct3D-Programmierung.
 
@@ -199,8 +190,7 @@ Bei jedem Spiel müssen zunächst folgende Aufgaben erledigt werden: Herstellen 
 
 Im Beispielspiel überschreiben wir nun zwei dieser Methoden (**CreateDeviceIndependentResources** und **CreateDeviceResources**). Diese werden in der **DirectXBase**-Klasse (implementiert in der Vorlage **DirectX 11-App (Universelle Windows-App)**) bereitgestellt. Für jede dieser Methoden rufen wir zunächst die **DirectXBase**-Implementierungen auf, die von ihnen überschrieben werden, und fügen dann weitere spezifische Implementierungsdetails für das Beispielspiel hinzu. Beachten Sie, dass die im Beispielspiel enthaltene Implementierung der **DirectXBase**-Klasse, die in der Visual Studio-Vorlage bereitgestellt wird, so geändert wurde, dass nun die stereoskopische Sicht sowie die Vorabdrehung des **SwapBuffer**-Objekts unterstützt werden.
 
-
-            **CreateWindowSizeDependentResources** wird nicht durch das **GameRenderer**-Objekt überschrieben. Wir verwenden die in der **DirectXBase**-Klasse bereitgestellte Implementierung.
+**CreateWindowSizeDependentResources** wird nicht durch das **GameRenderer**-Objekt überschrieben. Wir verwenden die in der **DirectXBase**-Klasse bereitgestellte Implementierung.
 
 Weitere Informationen zu den **DirectXBase**-Basisimplementierungen dieser Methoden finden Sie unter [Einrichten Ihrer UWP-DirectX-App für das Anzeigen einer Ansicht](https://msdn.microsoft.com/library/windows/apps/hh465077).
 
@@ -672,13 +662,11 @@ void GameRenderer::FinalizeCreateGameDeviceResources()
 }
 ```
 
-
-            **CreateDeviceResourcesAsync** ist eine Methode, die als gesonderte Reihe asynchroner Aufgaben ausgeführt wird, um die Spielressourcen zu laden. Da sie in einem gesonderten Thread ausgeführt werden soll, kann sie nur auf die Direct3D11-Gerätemethoden (definiert in [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)) und nicht auf die Gerätekontextmethoden (definiert in [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) zugreifen und hat somit die Option, keinerlei Rendering durchzuführen. Die **FinalizeCreateGameDeviceResources**-Methode wird im Hauptthread ausgeführt und kann auf die Direct3D11-Gerätekontextmethoden zugreifen.
+**CreateDeviceResourcesAsync** ist eine Methode, die als gesonderte Reihe asynchroner Aufgaben ausgeführt wird, um die Spielressourcen zu laden. Da sie in einem gesonderten Thread ausgeführt werden soll, kann sie nur auf die Direct3D11-Gerätemethoden (definiert in [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379)) und nicht auf die Gerätekontextmethoden (definiert in [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) zugreifen und hat somit die Option, keinerlei Rendering durchzuführen. Die **FinalizeCreateGameDeviceResources**-Methode wird im Hauptthread ausgeführt und kann auf die Direct3D11-Gerätekontextmethoden zugreifen.
 
 Die Abfolge der Ereignisse zum Laden von Spielgeräteressourcen sieht wie folgt aus:
 
-
-            **CreateDeviceResourcesAsync** initialisiert zuerst Konstantenpuffer für die Grundtypen. Konstantenpuffer sind Puffer mit geringer Latenzzeit und fester Breite. Sie enthalten Daten, die während der Shaderausführung von einem Shader verwendet werden. (Diese Puffer übergeben Daten an den Shader, die während der Ausführung des jeweiligen Draw-Aufrufs konstant sind.) In diesem Beispiel enthalten die Puffer die Daten, mit denen die Shader folgende Aufgaben ausführen:
+**CreateDeviceResourcesAsync** initialisiert zuerst Konstantenpuffer für die Grundtypen. Konstantenpuffer sind Puffer mit geringer Latenzzeit und fester Breite. Sie enthalten Daten, die während der Shaderausführung von einem Shader verwendet werden. (Diese Puffer übergeben Daten an den Shader, die während der Ausführung des jeweiligen Draw-Aufrufs konstant sind.) In diesem Beispiel enthalten die Puffer die Daten, mit denen die Shader folgende Aufgaben ausführen:
 
 -   Platzieren der Lichtquellen und Festlegen ihrer Farben bei der Initialisierung des Renderers
 -   Berechnen der Ansichtsmatrix bei jeder Änderung der Fenstergröße
@@ -693,8 +681,7 @@ Danach initiiert **CreateDeviceResourcesAsync** asynchrone Aufgaben zum Laden al
 
 Schließlich wird eine Aufgabengruppe mit allen von der Methode erstellten asynchronen Aufgaben zurückgegeben. Die aufrufende Funktion wartet auf den Abschluss dieser asynchronen Aufgaben und ruft dann **FinalizeCreateGameDeviceResources** auf.
 
-
-            **FinalizeCreateGameDeviceResources** lädt die Anfangsdaten in die Konstantenpuffer mit einem Aufruf der Gerätekontextmethode von [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486): `m_deviceContext->UpdateSubresource`. Diese Methode erstellt die Gitterobjekte für Kugel-, Zylinder-, Flächen- und Spielweltobjekte sowie zugehörige Materialien. Sie durchläuft dann die Liste der Spielobjekte, die die jeweiligen Geräteressourcen den einzelnen Objekten zuordnet.
+**FinalizeCreateGameDeviceResources** lädt die Anfangsdaten in die Konstantenpuffer mit einem Aufruf der Gerätekontextmethode von [**ID3D11DeviceContext::UpdateSubresource**](https://msdn.microsoft.com/library/windows/desktop/ff476486): `m_deviceContext->UpdateSubresource`. Diese Methode erstellt die Gitterobjekte für Kugel-, Zylinder-, Flächen- und Spielweltobjekte sowie zugehörige Materialien. Sie durchläuft dann die Liste der Spielobjekte, die die jeweiligen Geräteressourcen den einzelnen Objekten zuordnet.
 
 Die Texturen für die mit Ringen und Nummern versehenen Zielobjekte werden mithilfe von Prozeduren mit dem Code in **TargetTexture.cpp** generiert. Der Renderer erstellt eine Instanz des **TargetTexture**-Typs, die die Bitmaptextur für die Zielobjekte im Spiel erstellt, wenn wir die **TargetTexture::CreateTextureResourceView**-Methode aufrufen. Die resultierende Textur besteht aus konzentrischen farbigen Ringen, auf denen oben ein numerischer Wert angegeben ist. Diese generierten Ressourcen werden den entsprechenden Zielspielobjekten zugeordnet.
 
@@ -869,8 +856,7 @@ Jetzt wollen wir untersuchen, wie das Spiel das Framework zum Zeichnen der Grafi
 
 Im Code des Beispielspiels definieren und implementieren wir die Grundtypen in zwei Basisklassen und die entsprechenden Spezialisierungen für die einzelnen Grundtypen.
 
-
-            **MeshObject.h/.cpp** definiert die Basisklasse für alle Gitterobjekte. Die Dateien **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** und **WorldMesh.h/.cpp** enthalten den Code, der die Konstantenpuffer für jeden Grundtyp mit den Daten für den Vertex und die Vertexnormale auffüllt, die die Geometrie des Grundtyps bestimmen. Diese Codedateien sind ein guter Ausgangspunkt, wenn Sie erfahren möchten, wie Sie Direct3D-Grundtypen in Ihrer eigenen Spiel-App erstellen. Da sie für die Implementierung dieses Spiels zu spezifisch sind, werden wir sie jedoch hier nicht behandeln. Für unsere Zwecke gehen wir einfach davon aus, dass die Scheitelpunktpuffer für jeden Grundtyp aufgefüllt wurden, und untersuchen, wie diese Puffer im Beispielspiel verwendet werden, um das Spiel selbst zu aktualisieren.
+**MeshObject.h/.cpp** definiert die Basisklasse für alle Gitterobjekte. Die Dateien **SphereMesh.h/.cpp**, **CylinderMesh.h/.cpp**, **FaceMesh.h/.cpp** und **WorldMesh.h/.cpp** enthalten den Code, der die Konstantenpuffer für jeden Grundtyp mit den Daten für den Vertex und die Vertexnormale auffüllt, die die Geometrie des Grundtyps bestimmen. Diese Codedateien sind ein guter Ausgangspunkt, wenn Sie erfahren möchten, wie Sie Direct3D-Grundtypen in Ihrer eigenen Spiel-App erstellen. Da sie für die Implementierung dieses Spiels zu spezifisch sind, werden wir sie jedoch hier nicht behandeln. Für unsere Zwecke gehen wir einfach davon aus, dass die Scheitelpunktpuffer für jeden Grundtyp aufgefüllt wurden, und untersuchen, wie diese Puffer im Beispielspiel verwendet werden, um das Spiel selbst zu aktualisieren.
 
 Die Basisklasse für Objekte, die die Grundtypen aus der Perspektive des Spiels darstellen, wird in **GameObject.h./.cpp** definiert. Diese Klasse **GameObject** definiert die Felder und Methoden für das allgemeinen Verhalten aller Grundtypen. Von diesem übergeordneten Objekt werden alle Grundtypenobjekte abgeleitet. Werfen wir einen Blick auf die Definition:
 
@@ -967,16 +953,11 @@ protected private:
 
 Die meisten Felder enthalten Daten zum Zustand, zu visuellen Eigenschaften oder zur Position des Grundtyps in der Spielwelt. Einige Methoden sind in fast allen Spielen erforderlich:
 
--   
-            **Mesh**. Ruft die (in **m\_mesh** gespeicherte) Gittergeometrie für den Grundtyp ab. Diese Geometrie ist in **MeshObject.h/.cpp** definiert.
--   
-            **IsTouching**. Diese Methode bestimmt, ob sich der Grundtyp in einem bestimmten Abstand zu einem Punkt befindet, und gibt den nächstgelegenen Punkt auf der Oberfläche sowie die Normale zur Oberfläche des Objekts an diesem Punkt zurück. Da es im Beispiel nur um Kollisionen mit dem Munitionsgrundtyp geht, genügt dies für die Dynamik des Spiels. Dies ist keine Universalfunktion für den Schnittpunkt zwischen Grundtypen, kann aber als Grundlage für eine solche Funktion verwendet werden.
--   
-            **AnimatePosition**. Aktualisiert die Bewegung und Animation für den Grundtyp.
--   
-            **UpdatePosition**. Aktualisiert die Position des Objekts im Koordinatenbereich der Spielwelt.
--   
-            **Render**. Fügt die Materialeigenschaften des Grundtyps in den Grundtypkonstantenpuffer ein und rendert (zeichnet) anschließend anhand des Gerätekontextes die Geometrie des Grundtyps.
+-   **Mesh**. Ruft die (in **m\_mesh** gespeicherte) Gittergeometrie für den Grundtyp ab. Diese Geometrie ist in **MeshObject.h/.cpp** definiert.
+-   **IsTouching**. Diese Methode bestimmt, ob sich der Grundtyp in einem bestimmten Abstand zu einem Punkt befindet, und gibt den nächstgelegenen Punkt auf der Oberfläche sowie die Normale zur Oberfläche des Objekts an diesem Punkt zurück. Da es im Beispiel nur um Kollisionen mit dem Munitionsgrundtyp geht, genügt dies für die Dynamik des Spiels. Dies ist keine Universalfunktion für den Schnittpunkt zwischen Grundtypen, kann aber als Grundlage für eine solche Funktion verwendet werden.
+-   **AnimatePosition**. Aktualisiert die Bewegung und Animation für den Grundtyp.
+-   **UpdatePosition**. Aktualisiert die Position des Objekts im Koordinatenbereich der Spielwelt.
+-   **Render**. Fügt die Materialeigenschaften des Grundtyps in den Grundtypkonstantenpuffer ein und rendert (zeichnet) anschließend anhand des Gerätekontextes die Geometrie des Grundtyps.
 
 Es empfiehlt sich, einen Basisobjekttyp zu erstellen, der die mindestens erforderlichen Methoden für einen Grundtyp definiert, da die meisten Spiele viele Grundtypen enthalten und sich die Verwaltung des Codes dadurch schwierig gestalten kann. Zudem vereinfacht es den Spielcode, wenn die Aktualisierungsschleife die Grundtypen auf verschiedene Weise behandeln kann und die Objekte ihre Aktualisierungs- und Renderingverhalten selbst definieren.
 
@@ -1027,8 +1008,7 @@ Wird eine Kollision (Treffer) erkannt, überprüft **GameObject::Render** den ak
 
 Hier sehen Sie, wie **Material::RenderSetup** die Konstantenpuffer konfiguriert und die Shaderressourcen zuweist. Auch hier wird der Konstantenpuffer speziell für Änderungen an Grundtypen verwendet.
 
-> 
-            **Hinweis**   Die **Material**-Klasse wird in **Material.h/.cpp** definiert.
+> **Hinweis**   Die **Material**-Klasse wird in **Material.h/.cpp** definiert.
 
  
 
@@ -1078,8 +1058,7 @@ Für das Spielbeispiel sind jetzt die zu zeichnenden Grundtypen und die Konstant
 
 Der Shadercode wird mit High-Level Shader Language (HLSL) definiert, einer Programmiersprache, die in Direct3D11 aus einem mit C-ähnlicher Syntax erstellten Programm kompiliert wird. ((Die vollständige Syntax finden Sie [hier](https://msdn.microsoft.com/library/windows/desktop/bb509635).) Die beiden Hauptshader für das Beispielspiel sind in **PixelShader.hlsl** und **VertexShader.hlsl** definiert. (Für weniger leistungsfähige Geräte stehen mit **PixelShaderFlat.hlsl** und **VertexShaderFlat.hlsl** auch zwei „abgespeckte“ Shader zur Verfügung. Diese beiden Shader verfügen über weniger Effekte und bieten etwa keine Glanzlichteffekte für Texturoberflächen.) Das Format der Konstantenpuffer befindet sich in der HLSLI-Datei **ConstantBuffers.hlsli**.
 
-
-            **ConstantBuffers.hlsli** ist wie folgt definiert:
+**ConstantBuffers.hlsli** ist wie folgt definiert:
 
 ```cpp
 Texture2D diffuseTexture : register(t0);
@@ -1137,8 +1116,7 @@ struct PixelShaderFlatInput
 };
 ```
 
-
-            **VertexShader.hlsl** ist wie folgt definiert:
+**VertexShader.hlsl** ist wie folgt definiert:
 
 VertexShader.hlsl
 
@@ -6348,6 +6326,6 @@ Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die universe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,21 +1,22 @@
 ---
 author: drewbatgit
 ms.assetid: E0189423-1DF3-4052-AB2E-846EA18254C4
-description: "In diesem Thema werden die Effekte für Videoaufnahmeszenarien beschrieben. Dazu zählt auch der Videostabilisierungseffekt."
+description: In diesem Thema wird die Verwendung des Videostabilisierungseffekts beschrieben.
 title: "Effekte für die Videoaufnahme"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3af5ed7146f2420c2a6d3035c26290cbeaff8375
+translationtype: Human Translation
+ms.sourcegitcommit: 367ab34663d66d8c454ff305c829be66834e4ebe
+ms.openlocfilehash: 3fe7abcc417db76b4375243d66b1c0ecb9092147
 
 ---
 
 # Effekte für die Videoaufnahme
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
-In diesem Thema werden die Effekte für Videoaufnahmeszenarien beschrieben. Dazu zählt auch der Videostabilisierungseffekt.
+In diesem Thema wird die Verwendung des Videostabilisierungseffekts beschrieben.
 
-**Hinweis**  
-Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.
+> [!NOTE] 
+> Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Wir empfehlen Ihnen, sich mit dem grundlegenden Medienaufnahmemuster in diesem Artikel vertraut zu machen, bevor Sie sich komplexeren Aufnahmeszenarien zuwenden. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.
 
 ## Videostabilisierungseffekt
 
@@ -33,7 +34,7 @@ Deklarieren Sie eine Membervariable zum Speichern des [**VideoStabilizationEffec
 
 [!code-cs[DeclareVideoStabilizationEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareVideoStabilizationEffect)]
 
-In der grundlegenden Implementierung der Videoaufnahme, die im Artikel [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md) beschrieben wird, wird das Mediencodierungsprofil-Objekt einer lokalen Variablen zugewiesen, da es an keiner anderen Stelle im Code verwendet wird. Für dieses Szenario sollten Sie das Objekt einer Membervariablen zuweisen, damit Sie später darauf zugreifen können.
+Für dieses Szenario sollten Sie einer Membervariablen das Profilobjekt für die Mediencodierung zuweisen, damit Sie später darauf zugreifen können.
 
 [!code-cs[EncodingProfileMember](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetEncodingProfileMember)]
 
@@ -77,7 +78,8 @@ Rufen Sie zum Bereinigen des Videostabilisierungseffekts [**ClearEffectsAsync**]
 
 ## Verwandte Themen
 
-* [Aufnehmen von Fotos und Videos mit „MediaCapture“](capture-photos-and-video-with-mediacapture.md)
+* [Kamera](camera.md)
+* [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -88,6 +90,6 @@ Rufen Sie zum Bereinigen des Videostabilisierungseffekts [**ClearEffectsAsync**]
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

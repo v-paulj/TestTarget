@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
 title: Verbessern der Leistung bei der Garbage Collection
 description: "In C# und VisualBasic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NETGarbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten des .NETGarbage Collectors sowie über die bewährten Methoden zur Leistungssteigerung für den Garbage Collector in UWP-Apps."
+translationtype: Human Translation
 ms.sourcegitcommit: 5f9626c644315884ea8605a4e69e7e580a44010b
-ms.openlocfilehash: 3fb6a0469a0e7488c40fc03bce8c90780b524656
+ms.openlocfilehash: 32290820d4732f1a8b28fd18682514e3948e0356
 
 ---
 # Verbessern der Leistung bei der Garbage Collection
@@ -13,8 +14,7 @@ ms.openlocfilehash: 3fb6a0469a0e7488c40fc03bce8c90780b524656
 
 In C# und VisualBasic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NETGarbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten des .NETGarbage Collectors sowie über die bewährten Methoden zur Leistungssteigerung für den Garbage Collector in UWP-Apps. Weitere Informationen zur Funktionsweise des .NETGarbage Collectors sowie zu Debugging- und Leistungsanalysetools für den Garbage Collector finden Sie unter [Garbage Collection](https://msdn.microsoft.com/library/windows/apps/xaml/0xy59wtx.aspx).
 
-
-            **Hinweis**  Die Notwendigkeit, in das Standardverhalten des Garbage Collector eingreifen zu müssen, ist ein starkes Indiz für allgemeine Speicherprobleme mit Ihrer App. Weitere Informationen finden Sie unter [Speichernutzungstool beim Debuggen in Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Dieses Thema betrifft ausschließlich C# und Visual Basic.
+**Hinweis**  Die Notwendigkeit, in das Standardverhalten des Garbage Collector eingreifen zu müssen, ist ein starkes Indiz für allgemeine Speicherprobleme mit Ihrer App. Weitere Informationen finden Sie unter [Speichernutzungstool beim Debuggen in Visual Studio 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/13/memory-usage-tool-while-debugging-in-visual-studio-2015.aspx). Dieses Thema betrifft ausschließlich C# und Visual Basic.
 
  
 
@@ -38,8 +38,7 @@ Lösen Sie eine Garbage Collection nur aus, nachdem Sie die Leistung Ihrer App e
 
 Rufen Sie zum Auslösen der Garbage Collection einer Generation [**GC.Collect(n)**](https://msdn.microsoft.com/library/windows/apps/xaml/y46kxc5e.aspx) auf, wobei „n“ für die Generation steht, die Sie erfassen möchten (0, 1 oder 2).
 
-
-            **Hinweis**  Wir empfehlen, in Ihrer App keine Garbage Collection zu erzwingen, da der Garbage Collector den besten Zeitpunkt für eine Collection anhand einer Vielzahl heuristischer Daten ermittelt und die Erzwingung einer Collection somit häufig eine unnötige Belastung der CPU darstellt. Falls Ihre App allerdings eine große Anzahl von Objekten enthält, die nicht mehr verwendet werden, und Sie den entsprechenden Arbeitsspeicher wieder für das System freigeben möchten, ist die Erzwingung einer Garbage Collection unter Umständen dennoch angemessen. So können Sie beispielsweise in einem Spiel eine Bereinigung am Ende einer Ladesequenz auslösen, um vor Spielbeginn Arbeitsspeicher freizugeben.
+**Hinweis**  Wir empfehlen, in Ihrer App keine Garbage Collection zu erzwingen, da der Garbage Collector den besten Zeitpunkt für eine Collection anhand einer Vielzahl heuristischer Daten ermittelt und die Erzwingung einer Collection somit häufig eine unnötige Belastung der CPU darstellt. Falls Ihre App allerdings eine große Anzahl von Objekten enthält, die nicht mehr verwendet werden, und Sie den entsprechenden Arbeitsspeicher wieder für das System freigeben möchten, ist die Erzwingung einer Garbage Collection unter Umständen dennoch angemessen. So können Sie beispielsweise in einem Spiel eine Bereinigung am Ende einer Ladesequenz auslösen, um vor Spielbeginn Arbeitsspeicher freizugeben.
  
 Damit Sie nicht versehentlich zu viele Garbage Collections auslösen, können Sie [**GCCollectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/bb495757.aspx) auf **Optimized** festlegen. Dadurch wird der Garbage Collector angewiesen, nur dann eine Garbage Collection zu starten, wenn eine ausreichend hohe Produktivität dies rechtfertigt.
 
@@ -85,6 +84,6 @@ Das Ersetzen von Objektverweisen durch Indizes kann sich für Ihre App als kompl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

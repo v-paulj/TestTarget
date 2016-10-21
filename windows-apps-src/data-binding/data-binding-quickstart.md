@@ -4,8 +4,8 @@ ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: "Übersicht Datenbindung"
 description: "In diesem Thema erfahren Sie, wie Sie in einer UWP-App (Universelle Windows-Plattform) ein Steuerelement (oder ein anderes Benutzeroberflächenelement) an ein einzelnes Element oder ein Elementsteuerelement an eine Sammlung von Elementen binden."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 092df9799982dc5da5cc085b2e73a5dd376c0eb8
+ms.sourcegitcommit: e89580ef62d5d6ae095aa27628181181aaac9666
+ms.openlocfilehash: d452751fd4ab0cc422c3eae94507923440ec45df
 
 ---
 Übersicht Datenbindung
@@ -19,7 +19,7 @@ In diesem Thema erfahren Sie, wie Sie in einer UWP-App (Universelle Windows-Plat
 Voraussetzungen
 -------------------------------------------------------------------------------------------------------------
 
-In diesem Thema wird vorausgesetzt, dass Sie eine UWP-App erstellen können. Anweisungen zum Erstellen Ihrer ersten UWP-App finden Sie unter [Erstellen Ihrer ersten UWP-App mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/Hh974581).
+In diesem Thema wird vorausgesetzt, dass Sie mit dem Erstellen von UWP-Apps vertraut sind. Eine Anleitung zum Erstellen Ihrer ersten UWP-App finden Sie unter [Erste Schrittemit Windows-Apps](https://developer.microsoft.com/en-us/windows/getstarted).
 
 Erstellen des Projekts
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -31,8 +31,9 @@ Binden an ein einzelnes Element
 
 Jede Bindung besteht aus einem Bindungsziel und einer Bindungsquelle. In der Regel ist das Ziel eine Eigenschaft eines Steuerelements oder anderen Benutzeroberflächenelements, und die Quelle ist eine Eigenschaft einer Klasseninstanz (ein Datenmodell oder ein Ansichtsmodell). In diesem Beispiel wird veranschaulicht, wie Sie ein Steuerelement an ein einzelnes Element binden. Das Ziel ist die **Text**-Eigenschaft eines **TextBlock**. Die Quelle ist eine Instanz einer einfachen Klasse namens **Recording**, die eine Audioaufnahme darstellt. Befassen wir uns zuerst mit der Klasse.
 
-Fügen Sie Ihrem Projekt eine neue Klasse hinzu, nennen Sie sie "Recording.cs" (bei Verwendung von C#), und fügen Sie ihr diesen Code hinzu.
+Fügen Sie Ihrem Projekt eine neue Klasse hinzu, nennen Sie sie „Recording.cs“ (bei Verwendung von C#, im Folgenden finden Sie auch C++-Codeausschnitte), und fügen Sie ihr diesen Code hinzu.
 
+> [!div class="tabbedCodeSnippets"]
 ```csharp
 namespace Quickstart
 {
@@ -41,14 +42,12 @@ namespace Quickstart
         public string ArtistName { get; set; }
         public string CompositionName { get; set; }
         public DateTime ReleaseDateTime { get; set; }
-
         public Recording()
         {
             this.ArtistName = "Wolfgang Amadeus Mozart";
             this.CompositionName = "Andante in C for Piano";
             this.ReleaseDateTime = new DateTime(1761, 1, 1);
         }
-
         public string OneLineSummary
         {
             get
@@ -58,7 +57,6 @@ namespace Quickstart
             }
         }
     }
-
     public class RecordingViewModel
     {
         private Recording defaultRecording = new Recording();
@@ -66,130 +64,117 @@ namespace Quickstart
     }
 }
 ```
-
 ```cpp
-#include <sstream>
-
-namespace Quickstart
-{
-    public ref class Recording sealed
+    #include <sstream>
+    namespace Quickstart
     {
-    private:
-        Platform::String^ artistName;
-        Platform::String^ compositionName;
-        Windows::Globalization::Calendar^ releaseDateTime;
-
-    public:
-        Recording(Platform::String^ artistName, Platform::String^ compositionName,
-            Windows::Globalization::Calendar^ releaseDateTime) :
-            artistName{ artistName },
-            compositionName{ compositionName },
-            releaseDateTime{ releaseDateTime } {}
-
-        property Platform::String^ ArtistName
+        public ref class Recording sealed
         {
-            Platform::String^ get() { return this->artistName; }
-        }
-
-        property Platform::String^ CompositionName
-        {
-            Platform::String^ get() { return this->compositionName; }
-        }
-
-        property Windows::Globalization::Calendar^ ReleaseDateTime
-        {
-            Windows::Globalization::Calendar^ get() { return this->releaseDateTime; }
-        }
-
-        property Platform::String^ OneLineSummary
-        {
-            Platform::String^ get()
+        private:
+            Platform::String^ artistName;
+            Platform::String^ compositionName;
+            Windows::Globalization::Calendar^ releaseDateTime;
+        public:
+            Recording(Platform::String^ artistName, Platform::String^ compositionName,
+                Windows::Globalization::Calendar^ releaseDateTime) :
+                artistName{ artistName },
+                compositionName{ compositionName },
+                releaseDateTime{ releaseDateTime } {}
+            property Platform::String^ ArtistName
             {
-                std::wstringstream wstringstream;
-                wstringstream << this->CompositionName->Data();
-                wstringstream << L" by " << this->ArtistName->Data();
-                wstringstream << L", released: " << this->ReleaseDateTime->MonthAsNumericString()->Data();
-                wstringstream << L"/" << this->ReleaseDateTime->DayAsString()->Data();
-                wstringstream << L"/" << this->ReleaseDateTime->YearAsString()->Data();
-                return ref new Platform::String(wstringstream.str().c-str());
+                Platform::String^ get() { return this->artistName; }
             }
-        }
-    };
-
-    public ref class RecordingViewModel sealed
-    {
-    private:
-        Recording^ defaultRecording;
-
-    public:
-        RecordingViewModel()
+            property Platform::String^ CompositionName
+            {
+                Platform::String^ get() { return this->compositionName; }
+            }
+            property Windows::Globalization::Calendar^ ReleaseDateTime
+            {
+                Windows::Globalization::Calendar^ get() { return this->releaseDateTime; }
+            }
+            property Platform::String^ OneLineSummary
+            {
+                Platform::String^ get()
+                {
+                    std::wstringstream wstringstream;
+                    wstringstream << this->CompositionName->Data();
+                    wstringstream << L" by " << this->ArtistName->Data();
+                    wstringstream << L", released: " << this->ReleaseDateTime->MonthAsNumericString()->Data();
+                    wstringstream << L"/" << this->ReleaseDateTime->DayAsString()->Data();
+                    wstringstream << L"/" << this->ReleaseDateTime->YearAsString()->Data();
+                    return ref new Platform::String(wstringstream.str().c-str());
+                }
+            }
+        };
+        public ref class RecordingViewModel sealed
         {
-            Windows::Globalization::Calendar^ releaseDateTime = ref new Windows::Globalization::Calendar();
-            releaseDateTime->Month = 1;
-            releaseDateTime->Day = 1;
-            releaseDateTime->Year = 1761;
-            this->defaultRecording = ref new Recording{ L"Wolfgang Amadeus Mozart", L"Andante in C for Piano", releaseDateTime };
-        }
-
-        property Recording^ DefaultRecording
-        {
-            Recording^ get() { return this->defaultRecording; };
-        }
-    };
-}
+        private:
+            Recording^ defaultRecording;
+        public:
+            RecordingViewModel()
+            {
+                Windows::Globalization::Calendar^ releaseDateTime = ref new Windows::Globalization::Calendar();
+                releaseDateTime->Month = 1;
+                releaseDateTime->Day = 1;
+                releaseDateTime->Year = 1761;
+                this->defaultRecording = ref new Recording{ L"Wolfgang Amadeus Mozart", L"Andante in C for Piano", releaseDateTime };
+            }
+            property Recording^ DefaultRecording
+            {
+                Recording^ get() { return this->defaultRecording; };
+            }
+        };
+    }
 ```
 
 Machen Sie als Nächstes die Bindungsquellklasse aus der Klasse verfügbar, die die Markupseite darstellt. Zu diesem Zweck fügen Sie eine Eigenschaft vom Typ **RecordingViewModel** zu **MainPage** hinzu.
 
+> [!div class="tabbedCodeSnippets"]
 ```csharp
-namespace Quickstart
-{
-    public sealed partial class MainPage : Page
+    namespace Quickstart
     {
-        public MainPage()
+        public sealed partial class MainPage : Page
         {
-            this.InitializeComponent();
-            this.ViewModel = new RecordingViewModel();
+            public MainPage()
+            {
+                this.InitializeComponent();
+                this.ViewModel = new RecordingViewModel();
+            }
+            public RecordingViewModel ViewModel { get; set; }
         }
-
-        public RecordingViewModel ViewModel { get; set; }
     }
-}
 ```
-
 ```cpp
-namespace Quickstart
-{
-    public ref class MainPage sealed
+    namespace Quickstart
     {
-    private:
-        RecordingViewModel^ viewModel;
-
-    public:
-        MainPage()
+        public ref class MainPage sealed
         {
-            InitializeComponent();
-            this->viewModel = ref new RecordingViewModel();
-        }
-
-        property RecordingViewModel^ ViewModel
-        {
-            RecordingViewModel^ get() { return this->viewModel; };
-        }
-    };
-}
+        private:
+            RecordingViewModel^ viewModel;
+        public:
+            MainPage()
+            {
+                InitializeComponent();
+                this->viewModel = ref new RecordingViewModel();
+            }
+            property RecordingViewModel^ ViewModel
+            {
+                RecordingViewModel^ get() { return this->viewModel; };
+            }
+        };
+    }
 ```
 
 Der letzte Codeteil ist das Binden eines **TextBlock** an die **ViewModel.DefaultRecording.OneLiner**-Eigenschaft.
 
 ```xml
-<Page x:Class="Quickstart.MainPage" ... >
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="{x:Bind ViewModel.DefaultRecording.OneLineSummary}"
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"/>
-    </Grid>
-</Page>
+    <Page x:Class="Quickstart.MainPage" ... >
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <TextBlock Text="{x:Bind ViewModel.DefaultRecording.OneLineSummary}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+        </Grid>
+    </Page>
 ```
 
 Dies ist das Ergebnis.
@@ -203,14 +188,13 @@ Ein häufiges Szenario ist das Binden an eine Sammlung von Geschäftsobjekten. I
 
 In diesem nächsten Beispiel wird eine [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) an eine Sammlung von `Recording`-Objekten gebunden. Beginnen wir, indem wir die Sammlung zum Ansichtsmodell hinzufügen. Fügen Sie einfach diese neuen Member zur **RecordingViewModel**-Klasse hinzu.
 
+> [!div class="tabbedCodeSnippets"]
 ```csharp
     public class RecordingViewModel
     {
         ...
-        
         private ObservableCollection<Recording> recordings = new ObservableCollection<Recording>();
         public ObservableCollection<Recording> Recordings { get { return this.recordings; } }
-
         public RecordingViewModel()
         {
             this.recordings.Add(new Recording() { ArtistName = "Johann Sebastian Bach",
@@ -222,33 +206,28 @@ In diesem nächsten Beispiel wird eine [**ListView**](https://msdn.microsoft.com
         }
     }
 ```
-
 ```cpp
     public ref class RecordingViewModel sealed
     {
     private:
         ...
         Windows::Foundation::Collections::IVector<Recording^>^ recordings;
-
     public:
         RecordingViewModel()
         {
             ...
-
             releaseDateTime = ref new Windows::Globalization::Calendar();
             releaseDateTime->Month = 7;
             releaseDateTime->Day = 8;
             releaseDateTime->Year = 1748;
             Recording^ recording = ref new Recording{ L"Johann Sebastian Bach", L"Mass in B minor", releaseDateTime };
             this->Recordings->Append(recording);
-
             releaseDateTime = ref new Windows::Globalization::Calendar();
             releaseDateTime->Month = 2;
             releaseDateTime->Day = 11;
             releaseDateTime->Year = 1805;
             recording = ref new Recording{ L"Ludwig van Beethoven", L"Third Symphony", releaseDateTime };
             this->Recordings->Append(recording);
-
             releaseDateTime = ref new Windows::Globalization::Calendar();
             releaseDateTime->Month = 12;
             releaseDateTime->Day = 3;
@@ -256,9 +235,7 @@ In diesem nächsten Beispiel wird eine [**ListView**](https://msdn.microsoft.com
             recording = ref new Recording{ L"George Frideric Handel", L"Serse", releaseDateTime };
             this->Recordings->Append(recording);
         }
-
         ...
-
         property Windows::Foundation::Collections::IVector<Recording^>^ Recordings
         {
             Windows::Foundation::Collections::IVector<Recording^>^ get()
@@ -329,10 +306,10 @@ Hinzufügen einer Detailansicht
 
 Sie können auch alle Details der **Recording**-Objekte in [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-Elementen anzeigen. Dies nimmt jedoch sehr viel Platz in Anspruch. Stattdessen können Sie gerade so viele Daten im Element anzeigen, um es zu identifizieren, und wenn der Benutzer dann eine Auswahl vornimmt, können Sie alle Details des ausgewählten Elements in einem separaten Teil der Benutzeroberfläche anzeigen, der als „Detailansicht“ bezeichnet wird. Diese Anordnung wird auch als „Haupt-/Detailansicht“ oder „Listen-/Detailansicht“ bezeichnet.
 
-Sie haben zwei Möglichkeiten, dieses Verhalten zu implementieren. Sie können die Detailansicht an die [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770)-Eigenschaft der [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) binden. Alternativ können Sie eine [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) verwenden: Binden Sie sowohl die **ListView** als auch die Detailansicht an die **CollectionViewSource** (dies behandelt das derzeit ausgewählte Elements für Sie). Die beiden Methoden sind unten aufgeführt und haben dieselben Ergebnisse, wie in der Abbildung dargestellt.
+Sie haben zwei Möglichkeiten, dieses Verhalten zu implementieren. Sie können die Detailansicht an die [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770)-Eigenschaft der [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) binden. Alternativ können Sie eine [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833) verwenden: Binden Sie sowohl die **ListView** als auch die Detailansicht an die **CollectionViewSource** (dies behandelt das derzeit ausgewählte Elements für Sie). Die beiden Methoden sind unten aufgeführt, und haben dieselben Ergebnisse, wie in der Abbildung dargestellt.
 
-
-              **Hinweis:** Bisher haben wir in diesem Thema nur die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) verwendet. Für die beiden weiter unten aufgeführten Methoden wird dagegen die flexiblere (aber weniger leistungsfähige) [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) benötigt.
+> [!NOTE]
+> Bisher haben wir in diesem Thema nur die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) verwendet. Die beiden weiter unten aufgeführten Methoden benötigen jedoch die flexiblere (aber weniger leistungsfähige) [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782).
 
 Sehen wir uns zuerst die [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770)-Methode an. Bei Verwendung von Komponentenerweiterungen für Visual C++ (C++/CX) muss dann– da wir [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden– das [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872)-Attribut zur **Recording**-Klasse hinzugefügt werden.
 
@@ -453,10 +430,14 @@ Dies ist das Ergebnis.
 
 ![Anzeigen eines Datums mit benutzerdefinierter Formatierung](images/xaml-databinding5.png)
 
+> [!NOTE]
+> Ab Windows10, Version1607, wird über das XAML-Framework ein integrierter Konverter für die Konvertierung eines booleschen Operanden in einen Sichtbarkeitszustand bereitgestellt. Der Konverter verknüpft **true** mit dem Enumerationswert **Visible** und **false** mit dem Wert **Collapsed**, sodass Sie eine Visibility-Eigenschaft an einen booleschen Wert binden können, ohne einen Konverter zu erstellen. Für die Verwendung des integrierten Konverters muss die SDK-Zielversion der App mindestens 14393 lauten. Die Verwendung ist nicht möglich, wenn Ihre App für frühere Versionen von Windows10 bestimmt ist. Weitere Informationen zu Zielversionen finden Sie unter [Versionsadaptiver Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+
+## Weitere Informationen
+- [Datenbindung](index.md)
 
 
 
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO1-->
 
 

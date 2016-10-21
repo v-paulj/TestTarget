@@ -3,8 +3,9 @@ title: Webauthentifizierungsbroker
 description: "In diesem Artikel wird erläutert, wie Ihre App für die universelle Windows-Plattform (UWP) eine Verbindung mit einem Onlineidentitätsanbieter herstellen kann, der Authentifizierungsprotokolle wie OpenID oder OAuth verwendet, z. B. Twitter, Facebook, Flickr, Instagram usw."
 ms.assetid: 05F06961-1768-44A7-B185-BCDB74488F85
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd
+ms.openlocfilehash: ea3d3e1df07c8cf9701e7bd39af006cd681ef1fe
 
 ---
 
@@ -16,8 +17,7 @@ ms.openlocfilehash: 96ca8d019fe6cbf742c98edf0b8bf04b35f71dfd
 
 In diesem Artikel wird erläutert, wie Ihre App für die universelle Windows-Plattform (UWP) eine Verbindung mit einem Onlineidentitätsanbieter herstellen kann, der Authentifizierungsprotokolle wie OpenID oder OAuth verwendet, z. B. Twitter, Facebook, Flickr, Instagram usw. Die [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066)-Methode sendet eine Anforderung an den Onlineidentitätsanbieter und erhält als Antwort ein Zugriffstoken, das die für die App zugänglichen Anbieterressourcen beschreibt.
 
-
-            **Hinweis**  Um ein vollständiges, funktionsfähiges Codebeispiel zu erhalten, klonen Sie [WebAuthenticationBroker-Repository auf GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
+**Hinweis**  Um ein vollständiges, funktionsfähiges Codebeispiel zu erhalten, klonen Sie [WebAuthenticationBroker-Repository auf GitHub](http://go.microsoft.com/fwlink/p/?LinkId=620622).
 
  
 
@@ -152,22 +152,7 @@ Der Fiddler-Webdebugger kann Apps verwendet werden.
 
 1.  Da AuthHost in einem eigenen App-Container ausgeführt wird, um Funktionen für private Netzwerke zu ermöglichen, müssen Sie einen Registrierungsschlüssel festlegen: Windows Registry Editor Version 5.00
 
-    
-            **HKEY\_LOCAL\_MACHINE**
-            \\
-            **SOFTWARE**
-            \\
-            **Microsoft**
-            \\
-            **Windows NT**
-            \\
-            **CurrentVersion**
-            \\
-            **Image File Execution Options**
-            \\
-            **authhost.exe**
-            \\
-            **EnablePrivateNetwork** = 00000001
+    **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Image File Execution Options**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
 
                          Data type  
                          DWORD
@@ -193,6 +178,6 @@ Der Fiddler-Webdebugger kann Apps verwendet werden.
 3.  Fügen Sie Fiddler eine Firewallregel für eingehenden Datenverkehr hinzu.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

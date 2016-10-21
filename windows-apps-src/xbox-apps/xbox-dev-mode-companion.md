@@ -1,38 +1,48 @@
 ---
 author: payzer
-title: Xbox Dev Mode Companion
-description: Provides information about the Xbox Dev Mode Companion app.
+title: "Begleitung für Xbox-Entwicklermodus"
+description: "Enthält Informationen über die App „Begleitung für Xbox-Entwicklermodus“."
+translationtype: Human Translation
+ms.sourcegitcommit: 87ebc9ec01b349af033984b17d150e56d7a8cb2f
+ms.openlocfilehash: 036a581481888373249857ee21fe339819779dd0
+
 ---
 
-# Xbox Dev Mode Companion
+# Begleitung für Xbox-Entwicklermodus
 
-Xbox Dev Mode Companion allows you to remotely connect to an Xbox One console and control it. This tool was created for developers using Xbox Developer Mode.
+Mit „Begleitung für Xbox-Entwicklermodus“ können Sie eine Remoteverbindung mit einer Xbox One-Konsole herstellen und diese steuern. Dieses Tool wurde für Entwickler erstellt, die den Xbox-Entwicklermodus verwenden.
 
-## How to get the app  
-Download the [Xbox Dev Mode Companion (Preview)](https://www.microsoft.com/store/p/xbox-dev-mode-companion/9nblggh519cp).
+## So erhalten Sie die App  
+Herunterladen von [Begleitung für Xbox-Entwicklermodus (Vorschau)](https://www.microsoft.com/store/p/xbox-dev-mode-companion/9nblggh519cp).
 
-## How to connect   
-To connect to your console:
+## Herstellen einer Verbindung   
+So stellen Sie eine Verbindung mit der Konsole her:
 
-1. Launch the app.   
-2. If you don't see your console listed in the connection dialog, type your console's IP address in the text box at the bottom of the dialog, and then select **Connect**.
+1. Starten Sie die App.   
+2. Wenn die Konsole nicht im Verbindungsdialogfeld aufgeführt wird, geben Sie die IP-Adresse der Konsole in das Textfeld am unteren Rand des Dialogfelds ein, und wählen Sie dann **Verbinden** aus.
 
-## Streaming controls
-After you have connected, you can access the streaming controls by hovering over the streaming area with your mouse. These controls allow you to:
-* Toggle between full screen and windowed mode.
-* Launch the Windows Device Portal.
-* Turn the console on and off.
-* Disconnect.
+## Streaming-Steuerelemente
+Nachdem die Verbindung hergestellt wurde, können Sie auf Streaming Steuerelemente durch Zeigen mit der Maus auf den Streaming Bereich zugreifen. Mit diesen Steuerelementen haben Sie folgende Möglichkeiten:
+* Zwischen Vollbildmodus und Fenstermodus umschalten.
+* Das Windows Device Portal aufrufen.
+* Die Konsole ein- und ausschalten.
+* Trennen.
 
-## Input
-To send input to your console through the app, you can plug in an Xbox One controller to your PC.   
+## Eingabe
+Um Eingaben für die Konsole über die App zu senden, können Sie einen Xbox One-Controller an den PC anschließen.   
     
-You can also use the arrow, enter, and escape keys on the keyboard to navigate console UI and apps that support keyboard navigation. The Help page has a full keyboard mapping.   
+Sie können auch mithilfe der Pfeiltasten, der Eingabetaste und der Escape-Taste Elemente und Apps, die Tastaturnavigation unterstützen, auf der Konsole bedienen. Auf der Hilfeseite finden Sie eine vollständige Tastaturzuordnung.   
    
-Finally, in text boxes, you can type on your keyboard to send text to the console.   
+Sie können mit der Tastatur in Textfelder eingeben, um Text an die Konsole zu senden.   
 
-## Help
-You can view the help page by clicking the ? icon on either the connect dialog or the command bar.
+## Hilfe
+Sie können die Hilfeseite anzeigen, indem Sie im Verbindungsdialogfeld oder auf der Befehlsleiste auf das ?- Symbol klicken.
 
-## See also
-- [UWP on Xbox One](index.md)
+## Weitere Informationen finden Sie unter
+- [UWP auf XboxOne](index.md)
+
+
+
+<!--HONumber=Sep16_HO1-->
+
+

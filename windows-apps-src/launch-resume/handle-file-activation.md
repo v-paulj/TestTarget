@@ -3,8 +3,9 @@ author: TylerMSFT
 title: Behandeln der Dateiaktivierung
 description: "Eine App kann als Standardhandler für einen bestimmten Dateityp registriert werden."
 ms.assetid: A0F914C5-62BC-4FF7-9236-E34C5277C363
-ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 9c6358bccdea55a7c3749388c35aa770f4325960
+translationtype: Human Translation
+ms.sourcegitcommit: 0e0fa6cf082034110e11b9bde910564de8f5048c
+ms.openlocfilehash: dffbccad62f48667a0495ceb205c751ccce0a3e0
 
 ---
 
@@ -19,14 +20,13 @@ ms.openlocfilehash: 9c6358bccdea55a7c3749388c35aa770f4325960
 -   [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
 -   [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
 
-Eine App kann als Standardhandler für einen bestimmten Dateityp registriert werden. Sowohl CWP-Apps (Klassische Windows-Plattform) als auch UWP-Apps (Universelle Windows-Plattform) können als Standarddateihandler registriert werden. Wenn Ihre App vom Benutzer als Standardhandler für einen bestimmten Dateityp ausgewählt wird, wird sie dann aktiviert, wenn der Dateityp gestartet wird.
+Eine App kann als Standardhandler für einen bestimmten Dateityp registriert werden. Sowohl Windows-Desktopanwendungen als auch UWP-Apps (Universelle Windows-Plattform) können als Standarddateihandler registriert werden. Wenn Ihre App vom Benutzer als Standardhandler für einen bestimmten Dateityp ausgewählt wird, wird sie dann aktiviert, wenn der Dateityp gestartet wird.
 
 Wir empfehlen, die Registrierung für einen Dateityp nur durchzuführen, wenn davon auszugehen ist, dass alle entsprechenden Vorgänge für einen bestimmten Dateityp verarbeitet werden. Wenn der Dateityp von Ihrer App nur intern verwendet wird, ist die Registrierung eines Standardhandlers nicht erforderlich. Wenn Sie sich entscheiden, die Registrierung für eine bestimmten Dateityp durchzuführen, müssen Sie die entsprechenden Funktionen bereitstellen, die vom Benutzer bei der Aktivierung für diesen Dateityp erwartet werden. Beispielsweise kann eine Bildanzeige-App für das Anzeigen des Dateityps JPG registriert werden. Weitere Informationen zu Dateizuordnungen finden Sie unter [Richtlinien für Dateitypen und URIs](https://msdn.microsoft.com/library/windows/apps/hh700321).
 
 Die folgenden Schritte zeigen, wie Sie den benutzerdefinierten Dateityp „.alsdk“ registrieren und Ihre App aktivieren, wenn der Benutzer eine ALSDK-Datei startet.
 
-> 
-            **Hinweis**  In UWP-Apps sind bestimmte URIs und Dateierweiterungen für die Verwendung durch vorinstallierte Apps und das Betriebssystem reserviert. Versuche, die App mit einem reservierten URI oder einer reservierten Dateierweiterung zu registrieren, werden ignoriert. Weitere Informationen finden Sie unter [Reservierte Datei- und URI-Schemanamen](reserved-uri-scheme-names.md).
+> **Hinweis**  In UWP-Apps sind bestimmte URIs und Dateierweiterungen für die Verwendung durch vorinstallierte Apps und das Betriebssystem reserviert. Versuche, die App mit einem reservierten URI oder einer reservierten Dateierweiterung zu registrieren, werden ignoriert. Weitere Informationen finden Sie unter [Reservierte Datei- und URI-Schemanamen](reserved-uri-scheme-names.md).
 
 ## Schritt 1: Angeben des Erweiterungspunkts im Paketmanifest
 
@@ -42,12 +42,9 @@ Die App empfängt nur für die im Paketmanifest angegebenen Dateierweiterungen A
 | **Anzeigename** | Geben Sie den Anzeigenamen für eine Gruppe von Dateitypen an. Anhand des Anzeigenamens wird in der **Systemsteuerung** unter [Standardprogramme festlegen](https://msdn.microsoft.com/library/windows/desktop/cc144154) der Dateityp identifiziert. |
 | **Logo** | Geben Sie das Logo zur Identifikation des Dateityps auf dem Desktop in der **Systemsteuerung** unter [Standardprogramme festlegen](https://msdn.microsoft.com/library/windows/desktop/cc144154) an. Wenn kein Logo angegeben wird, wird das kleine Logo der Anwendung verwendet. |
 | **Infotipp** | Geben Sie den [Infotipp](https://msdn.microsoft.com/library/windows/desktop/cc144152) für eine Gruppe von Dateitypen an. Diese QuickInfo wird angezeigt, wenn Benutzer mit der Maus auf das Symbol für eine Datei dieses Typs zeigen. |
-| **Name** | Wählen Sie einen Namen für eine Gruppe von Dateitypen aus, die identische Anzeigenamen, Logos, Infotipps und Bearbeitungsflags verwenden. Wählen Sie einen Gruppennamen aus, der auch nach App-Updates unverändert bleiben kann. 
-            **Hinweis**  Der Name darf nur aus Kleinbuchstaben bestehen. |
-| **Inhaltstyp** | Geben Sie den MIME-Inhaltstyp, z.B. **image/jpeg**, für einen bestimmten Dateityp an. 
-            **Wichtiger Hinweis zu zulässigen Inhaltstypen:**  Dies ist eine alphabetische Liste der MIME-Inhaltstypen, die Sie nicht in das Paketmanifest eingeben können, da sie entweder reserviert oder unzulässig sind: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
-| **Dateityp** | Geben Sie den Dateityp, für den die Registrierung durchgeführt werden soll, mit einem vorangestellten Punkt an, z.B. „.jpeg“. 
-            **Reservierte und verbotene Dateitypen** Eine alphabetische Liste der Dateitypen für integrierte Apps, die Sie nicht für Ihre UWP-Apps registrieren können, da diese entweder reserviert oder verboten sind, finden Sie unter [Reservierte URI-Schemanamen und Dateitypen](reserved-uri-scheme-names.md). |
+| **Name** | Wählen Sie einen Namen für eine Gruppe von Dateitypen aus, die identische Anzeigenamen, Logos, Infotipps und Bearbeitungsflags verwenden. Wählen Sie einen Gruppennamen aus, der auch nach App-Updates unverändert bleiben kann. **Hinweis**  Der Name darf nur aus Kleinbuchstaben bestehen. |
+| **Inhaltstyp** | Geben Sie den MIME-Inhaltstyp, z.B. **image/jpeg**, für einen bestimmten Dateityp an. **Wichtiger Hinweis zu zulässigen Inhaltstypen:  **Dies ist eine alphabetische Liste der MIME-Inhaltstypen, die Sie nicht in das Paketmanifest eingeben können, da sie entweder reserviert oder unzulässig sind: **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
+| **Dateityp** | Geben Sie den Dateityp, für den die Registrierung durchgeführt werden soll, mit einem vorangestellten Punkt an, z.B. „.jpeg“. **Reservierte und unzulässige Dateitypen** Eine alphabetische Liste der Dateitypen für vorinstallierte Apps, die Sie nicht für Ihre UWP-Apps registrieren können, da diese entweder reserviert oder unzulässig sind, finden Sie unter [Reservierte URI-Schemanamen und Dateitypen](reserved-uri-scheme-names.md). |
 
 2.  Geben Sie `alsdk` in das Feld **Name** ein.
 3.  Geben Sie `.alsdk` als **Dateityp** ein.
@@ -114,50 +111,49 @@ protected override void OnFileActivated(FileActivatedEventArgs args)
 
     > **Note**  When launched via File Contract, make sure that Back button takes the user back to the screen that launched the app and not to the app's previous content.
 
-[!div class="tabbedCodeSnippets"] Apps sollten für jedes Aktivierungsereignis, durch das eine neue Seite geöffnet wird, einen neuen XAML-Frame erstellen. So enthält der Navigationsbackstack für den neuen XAML-Frame keinen vorherigen Inhalt, der beim Anhalten der App im aktuellen Fenster angezeigt wurde.
+Apps sollten für jedes Aktivierungsereignis, durch das eine neue Seite geöffnet wird, einen neuen XAML-Frame erstellen. So enthält der Navigationsbackstack für den neuen XAML-Frame keinen vorherigen Inhalt, der beim Anhalten der App im aktuellen Fenster angezeigt wurde. Apps, für die ein einziger XAML-Frame für Start- und Dateiverträge verwendet wird, sollten vor dem Navigieren zu einer neuen Seite die Seiten im Navigationsjournal des Frames löschen.
 
-Apps, für die ein einziger XAML-Frame für Start- und Dateiverträge verwendet wird, sollten vor dem Navigieren zu einer neuen Seite die Seiten im Navigationsjournal des Frames löschen.
+Per Dateiaktivierung gestartete Apps sollten ggf. eine Benutzeroberfläche enthalten, über die der Benutzer zur ersten Seite der App zurückkehren kann.
 
-## Per Dateiaktivierung gestartete Apps sollten ggf. eine Benutzeroberfläche enthalten, über die der Benutzer zur ersten Seite der App zurückkehren kann.
+## Anmerkungen
 
 
-Anmerkungen Die empfangenen Dateien stammen unter Umständen aus einer nicht vertrauenswürdigen Quelle. Wir empfehlen, den Inhalt einer Datei zu überprüfen, bevor Sie sie weiter verarbeiten.
+Die empfangenen Dateien stammen unter Umständen aus einer nicht vertrauenswürdigen Quelle. Wir empfehlen, den Inhalt einer Datei zu überprüfen, bevor Sie sie weiter verarbeiten. Weitere Informationen zur Eingabeüberprüfung finden Sie unter [Schreiben von sicherem Code](http://go.microsoft.com/fwlink/p/?LinkID=142053).
 
-> Weitere Informationen zur Eingabeüberprüfung finden Sie unter [Schreiben von sicherem Code](http://go.microsoft.com/fwlink/p/?LinkID=142053). 
-            **Hinweis**  Dieser Artikel ist für Windows 10-Entwickler bestimmt, die UWP-Apps (Apps für die universelle Windows-Plattform) schreiben.
-
- 
-
-## Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
-**Verwandte Themen**
-
-* [Vollständiges Beispiel](http://go.microsoft.com/fwlink/p/?LinkID=231484)
-
-**Beispiel für Assoziationsstart**
-
-* [Konzepte](https://msdn.microsoft.com/library/windows/desktop/cc144154)
-* [Standardprogramme](https://msdn.microsoft.com/library/windows/desktop/hh848047)
-
-**Dateityp- und Protokollzuordnungsmodell**
-
-* [Aufgaben](launch-the-default-app-for-a-file.md)
-* [Starten der Standard-App für eine Datei](handle-uri-activation.md)
-
-**Behandeln der URI-Aktivierung**
-
-* [Richtlinien](https://msdn.microsoft.com/library/windows/apps/hh700321)
-
-**Richtlinien für Dateitypen und URIs**
-* [**Referenz**](https://msdn.microsoft.com/library/windows/apps/br224716)
-* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br242331)
+> **Hinweis**: Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
+## Verwandte Themen
+
+**Vollständiges Beispiel**
+
+* [Beispiel für Assoziationsstart](http://go.microsoft.com/fwlink/p/?LinkID=231484)
+
+**Konzepte**
+
+* [Standardprogramme](https://msdn.microsoft.com/library/windows/desktop/cc144154)
+* [Dateityp- und Protokollzuordnungsmodell](https://msdn.microsoft.com/library/windows/desktop/hh848047)
+
+**Aufgaben**
+
+* [Starten der Standard-App für eine Datei](launch-the-default-app-for-a-file.md)
+* [Behandeln der URI-Aktivierung](handle-uri-activation.md)
+
+**Richtlinien**
+
+* [Richtlinien für Dateitypen und URIs](https://msdn.microsoft.com/library/windows/apps/hh700321)
+
+**Referenz**
+* [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224716)
+* [**Windows.UI.Xaml.Application.OnFileActivated**](https://msdn.microsoft.com/library/windows/apps/br242331)
+
+ 
+
  
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

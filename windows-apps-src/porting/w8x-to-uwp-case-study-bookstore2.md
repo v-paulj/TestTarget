@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: Diese Fallstudie baut auf den Informationen in Bookstore1 auf, beginnend mit einer universellen8.1-App, die gruppierte Daten in einem SemanticZoom-Steuerelement anzeigt.
 title: "Windows Runtime 8.x zu UWP – Fallstudie Bookstore2"
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 97682b2b914707874dcac998f7db5f2029ad433e
+ms.openlocfilehash: 2d142ddb5522daf5467ce5690b3fe8e7a356ac0a
 
 ---
 
@@ -14,16 +15,13 @@ ms.openlocfilehash: 97682b2b914707874dcac998f7db5f2029ad433e
 
 Diese Fallstudie baut auf den Informationen in [Bookstore1](w8x-to-uwp-case-study-bookstore1.md) auf und beginnt mit einer universellen8.1-App, die gruppierte Daten in einem [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)-Steuerelement anzeigt. Im Ansichtsmodell stellt jede Instanz der **Author**-Klasse die Gruppe der vom betreffenden Autor verfassten Titel dar. In **SemanticZoom** können wir dann entweder die Bücherliste nach Autoren gruppiert anzeigen oder die Liste verkleinern, um eine Sprungliste der Autoren zu erhalten. Die Sprungliste ermöglicht eine wesentlich schnellere Navigation im Vergleich zum Blättern in der Bücherliste. Wir führen Sie durch die Schritte zum Portieren der App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10.
 
-
-            **Hinweis**   Wenn beim Öffnen von „Bookstore2Universal\_10“ in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
+**Hinweis**   Wenn beim Öffnen von „Bookstore2Universal\_10“ in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md#targetplatformversion) aus.
 
 ## Downloads
 
+[Laden Sie die universelle 8.1-App „Bookstore2\_81“ herunter](http://go.microsoft.com/fwlink/?linkid=532951).
 
-            [Laden Sie die universelle 8.1-App „Bookstore2\_81“ herunter](http://go.microsoft.com/fwlink/?linkid=532951).
-
-
-            [Laden Sie die Windows10-App „Bookstore2Universal\_10“ herunter](http://go.microsoft.com/fwlink/?linkid=532952).
+[Laden Sie die Windows10-App „Bookstore2Universal\_10“ herunter](http://go.microsoft.com/fwlink/?linkid=532952).
 
 ## Die universelle8.1-App
 
@@ -176,6 +174,6 @@ Die nächsten Fallstudie ist [QuizGame](w8x-to-uwp-case-study-quizgame.md), in d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

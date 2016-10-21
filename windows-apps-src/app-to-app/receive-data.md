@@ -3,8 +3,9 @@ description: "In diesem Artikel wird erläutert, wie Sie in Ihrer UWP-App (Unive
 title: Empfangen von Daten
 ms.assetid: 0AFF9E0D-DFF4-4018-B393-A26B11AFDB41
 author: awkoren
-ms.sourcegitcommit: 7069e55b92e69a0af9ba23a0a737b61d427c615c
-ms.openlocfilehash: 806bcb591ec3b7c786f8aa98d854863539d723e2
+translationtype: Human Translation
+ms.sourcegitcommit: b8d627da82da463b87ace2a2ef6e739b1caafaa2
+ms.openlocfilehash: 0092fe2832eeafbc4e7cfa36a3444b9551a4f672
 
 ---
 
@@ -21,7 +22,7 @@ Das System zeigt eine Liste der möglichen Ziel-Apps, wenn ein Benutzer „Freig
 
 1.  Öffnen Sie die Manifestdatei. Ihr Name lautet in etwa **package.appxmanifest**.
 2.  Öffnen Sie die Registerkarte **Deklarationen**.
-3.  Wählen Sie in der Liste **Verfügbare Deklarationen** die Option **Zielfreigabe** aus, und klicken Sie auf **Hinzufügen**.
+3.  Wählen Sie in der Liste **Verfügbare Deklarationen** die Option **Ziel freigeben** aus, und klicken Sie auf **Hinzufügen**.
 
 ## Auswählen von Dateitypen und Formaten
 
@@ -33,17 +34,17 @@ So legen Sie Dateitypen fest
 
 1.  Öffnen Sie die Manifestdatei. Ihr Name lautet in etwa **package.appxmanifest**.
 2.  Klicken Sie im Abschnitt **Unterstützte Dateitypen** der Seite **Deklarationen** auf **Neue Hinzufügen**.
-3.  Geben Sie die zu unterstützenden Dateierweiterungen ein. Beispiel: .docx Sie müssen den Punkt angeben. Wenn Sie alle Dateitypen unterstützen möchten, aktivieren Sie das Feld **SupportsAnyFileType**.
+3.  Geben Sie die zu unterstützenden Dateierweiterungen ein, beispielsweise „.docx“, Sie müssen den Punkt angeben. Wenn Sie alle Dateitypen unterstützen möchten, aktivieren Sie das Kontrollkästchen **SupportsAnyFileType**.
 
 So richten Sie Datenformate ein
 
 1.  Öffnen Sie die Manifestdatei.
 2.  Öffnen Sie den Abschnitt **Datenformate** der Seite **Deklarationen**, und klicken Sie auf **Neue Hinzufügen**.
-3.  Geben Sie den Namen des unterstützten Datenformats ein. Beispiel: „Text“
+3.  Geben Sie den Namen des Datenformats ein, das Sie unterstützen, zum Beispiel „Text“.
 
 ## Handhabung der Freigabeaktivierung
 
-Wenn ein Benutzer Ihre App auswählt (i. d. R. durch die Auswahl aus einer Liste verfügbarer Ziel-Apps auf der Benutzeroberfläche für das Freigeben), wird ein [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Application.OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs))-Ereignis ausgelöst. Ihre App muss dieses Ereignis behandeln, um die Daten, die der Benutzer freigeben möchte, verarbeiten zu können.
+Wenn ein Benutzer Ihre App auswählt (i.d.R. durch die Auswahl aus einer Liste verfügbarer Ziel-Apps auf der Benutzeroberfläche für das Freigeben), wird ein [**OnShareTargetActivated**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Application.OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs))-Ereignis ausgelöst. Ihre App muss dieses Ereignis behandeln, um die Daten, die der Benutzer freigeben möchte, verarbeiten zu können.
 
 <!-- For some reason, the snippets in this file are all inline in the WDCML topic. Suggest moving to VS project with rest of snippets. -->
 ```cs
@@ -53,7 +54,7 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 } 
 ```
 
-Die Daten, die ein Benutzer teilen möchte, sind in einem [**ShareOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation)-Objekt enthalten. Mithilfe dieses Objekts können Sie das Format der enthaltenen Daten ermitteln.
+Die Daten, die ein Benutzer freigeben möchte, sind in einem [**ShareOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation)-Objekt enthalten. Mithilfe dieses Objekts können Sie das Format der enthaltenen Daten ermitteln.
 
 ```cs
 ShareOperation shareOperation = args.ShareOperation;
@@ -95,7 +96,7 @@ Rufen Sie zum Abschluss der erfolgreichen Verarbeitung der freigegebenen Daten d
 shareOperation.ReportCompleted();
 ```
 
-Halten Sie bei Verwendung dieser Methoden unbedingt die angegebene Reihenfolge ein, und rufen Sie die Methoden nicht mehrmals auf. Unter bestimmten Umständen kann [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved) von einer Ziel-App vor [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted) aufgerufen werden. Beispielweise können die Daten von der App im Rahmen einer Aufgabe des Aktivierungshandlers aufgerufen werden. **ReportStarted** wird jedoch erst aufgerufen, wenn der Benutzer auf eine Schaltfläche zum Teilen klickt.
+Halten Sie bei Verwendung dieser Methoden unbedingt die angegebene Reihenfolge ein, und rufen Sie die Methoden nicht mehrmals auf. Unter bestimmten Umständen kann [**ReportDataRetrieved**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportDataRetrieved) von einer Ziel-App vor [**ReportStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation.ReportStarted) aufgerufen werden. Beispielweise können die Daten von der App im Rahmen einer Aufgabe des Aktivierungshandlers aufgerufen werden. **ReportStarted** wird jedoch erst aufgerufen, wenn der Benutzer auf eine **Freigeben**-Schaltfläche klickt.
 
 ## Zurückgeben eines QuickLink-Objekts nach erfolgreicher Freigabe
 
@@ -129,6 +130,7 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 
 ## Siehe auch 
 
+* [App-zu-App-Kommunikation](index.md)
 * [Freigeben von Daten](share-data.md)
 * [OnShareTargetActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onsharetargetactivated.aspx)
 * [ReportStarted](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.shareoperation.reportstarted.aspx)
@@ -140,6 +142,7 @@ async void ReportCompleted(ShareOperation shareOperation, string quickLinkId, st
 * [QuickLInkId](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.sharetarget.quicklink.id.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

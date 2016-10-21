@@ -1,74 +1,78 @@
 ---
 author: mcleanbyron
 ms.assetid: C09F4B7C-6324-4973-980A-A60035792EFC
-description: Use this method in the Windows Store submission API to create a new add-on submission for an app that is registered to your Windows Dev Center account.
-title: Create an add-on submission using the Windows Store submission API
+description: "Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API zum Erstellen einer neuen Add-On-Übermittlung für eine App, die für Ihr Windows Dev Center-Konto registriert ist."
+title: "Erstellen einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: b7de4b00fb4d48b9f4c542437c38e0282e155a29
+
 ---
 
-# Create an add-on submission using the Windows Store submission API
+# Erstellen einer Add-On-Übermittlung mit der Windows Store-Übermittlungs-API
 
 
 
 
-Use this method in the Windows Store submission API to create a new add-on (also known as in-app product or IAP) submission for an app that is registered to your Windows Dev Center account. After you successfully create a new submission by using this method, [update the submission](update-an-add-on-submission.md) to make any necessary changes to the submission data, and then [commit the submission](commit-an-add-on-submission.md) for ingestion and publishing.
+Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, um eine neue Übermittlung für ein Add-On (auch als In-App-Produkt oder IAP bezeichnet) für eine App zu erstellen, die für Ihr Windows Dev Center-Konto registriert ist. Nachdem Sie erfolgreich eine neue Übermittlung mit dieser Methode erstellt haben, [aktualisieren Sie die Übermittlung](update-an-add-on-submission.md), um erforderliche Änderungen an den Übermittlungsdaten vorzunehmen, und führen Sie ein [Commit für die Übermittlung](commit-an-add-on-submission.md) zur Aufnahme und Veröffentlichung durch.
 
-For more information about how this method fits into the process of creating an add-on submission by using the Windows Store submission API, see [Manage add-on submissions](manage-add-on-submissions.md).
+Weitere Informationen dazu, wie diese Methode zum Erstellen einer Add-On-Übermittlung mithilfe der Windows Store-Übermittlungs-API passt, finden Sie unter [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md).
 
->**Note**&nbsp;&nbsp;This method creates a submission for an existing add-on. To create an add-on, use the [Create an add-on](create-an-add-on.md) method.
+>**Hinweis**&nbsp;&nbsp;Durch diese Methode wird eine Übermittlung für ein vorhandenes Add-On erstellt. Um ein Add-On zu erstellen, verwenden Sie die Methode zum [Erstellen eines Add-Ons](create-an-add-on.md).
 
-## Prerequisites
+## Voraussetzungen
 
-To use this method, you need to first do the following:
+Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
-* Create an add-on for an app in your Dev Center account. You can do this in the Dev Center dashboard, or you can do this by using the [Create an add-on](create-an-add-on.md) method.
+* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+* Erstellen Sie ein Add-On für eine App im Dev Center-Konto. Verwenden Sie hierzu das Dev Center-Dashboard oder die Methode zum [Erstellen eines Add-Ons](create-an-add-on.md).
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
-## Request
+## Anforderung
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
 
-| Method | Request URI                                                      |
+| Methode | Anforderungs-URI                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}/submissions``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Anforderungsheader
 
-| Header        | Type   | Description                                                                 |
+| Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Authorization | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Anforderungsparameter
 
-| Name        | Type   | Description                                                                 |
+| Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | string | Required. The Store ID of the add-on for which you want to create a submission. The Store ID is available on the Dev Center dashboard, and it is included in the response data for requests to [Create an add-on](create-an-add-on.md) or [get add-on details](get-all-add-ons.md).  |
+| inAppProductId | string | Erforderlich. Die Store-ID des Add-Ons, für das Sie eine Übermittlung erstellen möchten. Die Store-ID ist im Windows Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen eines Add-Ons](create-an-add-on.md) und zum [Abrufen von Add-On-Details](get-all-add-ons.md) enthalten.  |
 
 <span/>
 
-### Request body
+### Anforderungstext
 
-Do not provide a request body for this method.
+Stellen Sie keinen Anforderungstext für diese Methode bereit.
 
-### Request example
+### Anforderungsbeispiel
 
-The following example demonstrates how to create a new submission for an add-on.
+Im folgenden Beispiel wird gezeigt, wie Sie eine neue Übermittlung für ein Add-On erstellen.
 
 ```
 POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/9NBLGGH4TNMP/submissions HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Antwort
 
-The following example demonstrates the JSON response body for a successful call to this method. The response body contains information about the new submission. For more details about the values in the response body, see [add-on submission resource](manage-add-on-submissions.md#add-on-submission-object).
+Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Der Antworttext enthält Informationen zur neuen Übermittlung. Weitere Informationen zu den Werten im Antworttext finden Sie unter [Add-On-Übermittlungsressource](manage-add-on-submissions.md#add-on-submission-object).
 
 ```json
 {
@@ -142,24 +146,30 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-## Error codes
+## Fehlercodes
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
 
-| Error code |  Description   |
+| Fehlercode |  Beschreibung   |
 |--------|------------------|
-| 400  | The submission could not be created because the request is invalid. |
-| 409  | The submission could not be created because of the current state of the app, or the app uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 400  | Die Übermittlung konnte nicht erstellt werden, da die Anforderung ungültig ist. |
+| 409  | Die Übermittlung konnte im aktuellen Zustand der App nicht erstellt werden, oder in der App wird ein Dev Center-Dashboard-Feature verwendet, das [derzeit nicht von der Windows Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported) wird. |   
 
 <span/>
 
 
-## Related topics
+## Verwandte Themen
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage add-on submissions](manage-add-on-submissions.md)
-* [Get an add-on submission](get-an-add-on-submission.md)
-* [Commit an add-on submission](commit-an-add-on-submission.md)
-* [Update an add-on submission](update-an-add-on-submission.md)
-* [Delete an add-on submission](delete-an-add-on-submission.md)
-* [Get the status of an add-on submission](get-status-for-an-add-on-submission.md)
+* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md)
+* [Abrufen einer Add-On-Übermittlung](get-an-add-on-submission.md)
+* [Ausführen eines Commit für eine Add-On-Übermittlung](commit-an-add-on-submission.md)
+* [Aktualisieren einer Add-On-Übermittlung](update-an-add-on-submission.md)
+* [Löschen einer Add-On-Übermittlung](delete-an-add-on-submission.md)
+* [Abrufen des Status einer Add-On-Übermittlung](get-status-for-an-add-on-submission.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

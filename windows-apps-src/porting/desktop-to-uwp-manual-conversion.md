@@ -2,8 +2,9 @@
 Description: Zeigt, wie Sie eine Windows-Desktopanwendung (z. B. Win32, WPF und Windows Forms) manuell in eine UWP-App (Universelle Windows-Plattform) konvertieren.
 Search.Product: eADQiWindows 10XVcnh
 title: Manuelles Konvertieren einer Windows-Desktopanwendung in eine UWP-App (Universelle Windows-Plattform)
-ms.sourcegitcommit: 606d5237cb67cb4439704f81b180c3c48cc1556f
-ms.openlocfilehash: be7599403e78c8db7ba91fe5a7c25b1c1a1ab644
+translationtype: Human Translation
+ms.sourcegitcommit: 2c1a8ea38081c947f90ea835447a617c388aec08
+ms.openlocfilehash: 646a5b88cb7ca97f18bf4552950979a2ceead398
 
 ---
 
@@ -13,7 +14,7 @@ ms.openlocfilehash: be7599403e78c8db7ba91fe5a7c25b1c1a1ab644
 
 Die Verwendung des Konverters ist praktisch und automatisch, und es ist hilfreich, wenn Unsicherheiten darüber bestehen, was das Installationsprogramm tut. Wenn Ihre App aber mithilfe von Xcopy installiert wurde, oder wenn Sie mit den Änderungen vertraut sind, die das Installationsprogramm Ihrer App am System vornimmt, können Sie sich entscheiden, ein App-Paket und -Manifest manuell zu erstellen.
 
-Im Folgenden sind die Schritte zum manuellen Erstellen eines Centennial-Pakets beschrieben:
+Im Folgenden sind die Schritte zum manuellen Erstellen eines Pakets beschrieben:
 
 ## Erstellen Sie manuell ein Manifest.
 
@@ -102,6 +103,6 @@ Wenn Sie beim Ausführen von MakeCert.exe zum Eingeben eines Kennworts aufgeford
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

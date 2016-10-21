@@ -3,8 +3,9 @@ author: TylerMSFT
 title: "Starten einer App für Ergebnisse"
 description: "Hier erfahren Sie, wie Sie eine App aus einer anderen App heraus starten und Daten zwischen den beiden Apps austauschen. Dieser Vorgang wird als Starten einer App für Ergebnisse bezeichnet."
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
+translationtype: Human Translation
 ms.sourcegitcommit: 213384a194513a0f98a5f37e7f0e0849bf0a66e2
-ms.openlocfilehash: 5826b370df3dccd1590e3f67c15126b4e78c2c32
+ms.openlocfilehash: d8d7f73e06d627eaa53deaf26f778c122113a9d6
 
 ---
 
@@ -32,12 +33,9 @@ Fügen Sie in der Datei „Package.appxmanifest“ der gestarteten App dem Absch
 
 Das **ReturnResults**-Attribut in der Protokollerweiterung akzeptiert einen der folgenden Werte:
 
--   
-            **optional**: Die App kann mit der [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)-Methode für Ergebnisse oder mit der [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)-Methode nicht für Ergebnisse gestartet werden. Bei der Verwendung von **optional** muss die gestartete App ermitteln, ob sie für Ergebnisse gestartet wurde. Sie überprüft dazu das [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Ereignisargument. Wenn die [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728)-Eigenschaft des Arguments[**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693) zurückgibt oder der Typ des Ereignisarguments [**ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742) ist, wurde die App über **LaunchUriForResultsAsync** gestartet.
--   
-            **always**: Die App kann nur für Ergebnisse gestartet werden, d.h. sie kann nur auf [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) reagieren.
--   
-            **none**: Die App kann nicht für Ergebnisse gestartet werden, d.h. sie kann nur auf [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) reagieren.
+-   **optional**: Die App kann mit der [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)-Methode für Ergebnisse oder mit der [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)-Methode nicht für Ergebnisse gestartet werden. Bei der Verwendung von **optional** muss die gestartete App ermitteln, ob sie für Ergebnisse gestartet wurde. Sie überprüft dazu das [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Ereignisargument. Wenn die [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728)-Eigenschaft des Arguments[**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693) zurückgibt oder der Typ des Ereignisarguments [**ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742) ist, wurde die App über **LaunchUriForResultsAsync** gestartet.
+-   **always**: Die App kann nur für Ergebnisse gestartet werden, d.h. sie kann nur auf [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) reagieren.
+-   **none**: Die App kann nicht für Ergebnisse gestartet werden, d.h. sie kann nur auf [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) reagieren.
 
 Im folgenden Beispiel für eine Protokollerweiterung kann die App nur für Ergebnisse gestartet werden. Dadurch wird die im Folgenden erläuterte Logik innerhalb der **OnActivated**-Methode vereinfacht, da wir nur das „Starten für Ergebnisse“ behandeln müssen und nicht die anderen Möglichkeiten zum Aktivieren der App.
 
@@ -206,6 +204,6 @@ Anschließend übergeben Sie sie über **LaunchUriForResultsAsync** an die gesta
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

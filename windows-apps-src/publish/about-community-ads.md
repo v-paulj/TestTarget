@@ -3,8 +3,9 @@ author: jnHs
 Description: "Sie können Ihre App mit Apps von anderen Entwicklern bewerben. Dieses Feature wird Community-Anzeigen genannt."
 title: Informationen zu Community-Anzeigen
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
+translationtype: Human Translation
 ms.sourcegitcommit: 90e63d53c68e25816fd1f7b532792d9ad6dc2cc6
-ms.openlocfilehash: 582b26d2dde6cf4f3c7dd6f6d7b182ec4b7002ea
+ms.openlocfilehash: db771fbd56db55b5767e4e335dcb10514f7a0bae
 
 ---
 
@@ -25,13 +26,11 @@ Das funktioniert wie folgt:
 
 So melden Sie sich für Community-Anzeigen an:
 
-1. Navigieren Sie im Windows Dev Center-Dashboard zu **Monetisierung**&gt;**Monetisierung durch Werbeanzeigen**.
+1. Navigieren Sie im WindowsDevCenter-Dashboard zu **Monetarisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen**.
 2. Aktivieren Sie im Abschnitt **Community ads** das Kontrollkästchen **Show community ads in my app**.
-   > 
-            **Hinweis:**  Nach dem Aktivieren oder Deaktivieren dieses Kontrollkästchens müssen Sie Ihre App nicht neu veröffentlichen, damit die Änderungen wirksam werden.
+   > **Hinweis**  Nach dem Aktivieren oder Deaktivieren dieses Kontrollkästchens müssen Sie Ihre App nicht neu veröffentlichen, damit die Änderungen wirksam werden.
 
-3. 
-            [Erstellen Sie eine Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) für Ihre App. Wählen Sie den Kampagnentyp **Kostenlose Community-Anzeigen** aus.
+3. [Erstellen Sie eine Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) für Ihre App. Wählen Sie den Kampagnentyp **Kostenlose Community-Anzeigen** aus.
 
 
 ## Verwandte Themen
@@ -41,6 +40,6 @@ So melden Sie sich für Community-Anzeigen an:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -6,25 +6,36 @@ ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 7d438080e2e8533f1148c07e27143d4d1fcacf5d
-ms.openlocfilehash: b075820275d7b5e592cdae736ed92beef67a7b9a
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 201244521f8110181e268af47d52c1ac1315e9d3
 
 ---
 # Textsteuerelemente
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Textsteuerelemente bestehen aus Texteingabefeldern, Kennwortfeldern, Feldern mit automatischen Vorschlägen und Textblöcken. Das XAML-Framework stellt mehrere Steuerelemente für die Darstellung, Eingabe und Bearbeitung von Text sowie eine Reihe von Eigenschaften für die Formatierung von Text bereit.
 
 - Für die Anzeige von schreibgeschütztem Text stehen die Steuerelemente [TextBlock](text-block.md) und [RichTextBlock](rich-text-block.md) zur Verfügung.
 - Die Steuerelemente für Texteingabe und Textbearbeitung sind: [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) und [RichEditBox](rich-edit-box.md).
 
 
-**Wichtige APIs**
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx"><strong>AutoSuggestBox-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx"><strong>PasswordBox-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx"><strong>RichEditBox-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx"><strong>RichTextBlock-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx"><strong>TextBlock-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx"><strong>TextBox-Klasse</strong></a></li>
+</ul>
 
--   [**AutoSuggestBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx)
--   [**PasswordBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
--   [**RichEditBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx)
--   [**RichTextBlock-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx)
--   [**TextBlock-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx)
--   [**TextBox-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
+</div>
+</div>
+
+
+
 
 ## Ist dies das richtige Steuerelement?
 
@@ -103,8 +114,7 @@ Richtlinien für Schriftarten finden Sie in den folgenden Artikeln:
 
 ## Auswählen der richtigen Tastatur für Ihr Textsteuerelement
 
-
-            **Gilt für:** TextBox, PasswordBox, RichEditBox
+**Gilt für:** TextBox, PasswordBox, RichEditBox
 
 Um Benutzern die Eingabe von Daten mit der Bildschirmtastatur oder dem Soft Input Panel (SIP) zu erleichtern, können Sie den Eingabeumfang des Textsteuerelements an die Art der Daten anpassen, die der Benutzer vermutlich eingeben wird.
 
@@ -121,8 +131,7 @@ Weitere Informationen finden Sie unter [Verwenden des Eingabeumfangs zum Ändern
 
 ## Farbige Schriftarten
 
-
-            **Gilt für:** TextBlock, RichTextBlock, TextBox, RichEditBox
+**Gilt für:** TextBlock, RichTextBlock, TextBox, RichEditBox
 
 Windows bietet bei Schriftarten die Möglichkeit, für jede Glyphe mehrere farbige Schichten zu verwenden. Die Segoe UI Emoji-Schriftart definiert z.B. farbige Versionen der Emoticon- und anderer Emoji-Zeichen.
 
@@ -140,8 +149,7 @@ Weitere Informationen finden Sie unter der [**IsColorFontEnabled**](https://msdn
 
 ## Richtlinien für Zeilen- und Absatztrennzeichen
 
-
-            **Gilt für:** TextBlock, RichTextBlock, mehrzeilige TextBox, RichEditBox
+**Gilt für:** TextBlock, RichTextBlock, mehrzeilige TextBox, RichEditBox
 
 Verwenden Sie das Zeilentrennzeichen (0x2028) und das Absatztrennzeichen (0x2029), um Nur-Text zu trennen. Nach jeder Zeilentrennung wird eine neue Zeile begonnen. Nach jedem Absatztrennzeichen wird ein neuer Absatz begonnen.
 
@@ -153,8 +161,7 @@ Ihre App kann zwischen Textabsätzen ein Absatztrennzeichen einfügen. Die Verwe
 
 ## Richtlinien für die Rechtschreibprüfung
 
-
-            **Gilt für:** TextBox, RichEditBox
+**Gilt für:** TextBox, RichEditBox
 
 Während der Texteingabe und -bearbeitung wird der Benutzer durch die Rechtschreibprüfung darauf aufmerksam gemacht, dass ein Wort falsch geschrieben ist, indem das Wort mit einer roten Wellenlinie unterstrichen wird. Außerdem wird dem Benutzer eine Korrekturmöglichkeit angeboten.
 
@@ -192,6 +199,6 @@ Für TextBox- und RichEditBox-Steuerelemente ist die Rechtschreibprüfung standa
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

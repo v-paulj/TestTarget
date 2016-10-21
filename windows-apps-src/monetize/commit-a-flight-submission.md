@@ -1,74 +1,78 @@
 ---
 author: mcleanbyron
 ms.assetid: F94AF8F6-0742-4A3F-938E-177472F96C00
-description: Use this method in the Windows Store submission API to commit a new or updated package flight submission to Windows Dev Center.
-title: Commit a package flight submission using the Windows Store submission API
+description: "Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, um eine neue oder aktualisierte Flight-Paketübermittlung in Windows Dev Center zu übernehmen."
+title: "Übernehmen einer Flight-Paketübermittlung mit der Windows Store-Übermittlungs-API"
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: a9ea8de7b92b254c7bb8d63a5a3ea41afdd2d966
+
 ---
 
-# Commit a package flight submission using the Windows Store submission API
+# Übernehmen einer Flight-Paketübermittlung mit der Windows Store-Übermittlungs-API
 
 
 
 
-Use this method in the Windows Store submission API to commit a new or updated package flight submission to Windows Dev Center. The commit action alerts Dev Center that the submission data has been uploaded (including any related packages). In response, Dev Center commits the changes to the submission data for ingestion and publishing. After the commit operation succeeds, the changes to the submission are shown in the Dev Center dashboard.
+Verwenden Sie diese Methode in der Windows Store-Übermittlungs-API, um eine neue oder aktualisierte Flight-Paketübermittlung in Windows Dev Center zu übernehmen. Durch die Übernahmeaktion wird Dev Center darüber benachrichtigt, dass die Übermittlungsdaten (darunter alle zugehörigen Pakete) hochgeladen wurden. Als Reaktion übernimmt Dev Center die Änderungen der Übermittlungsdaten zur Aufnahme und Veröffentlichung. Nachdem der Übernahmevorgang erfolgreich ausgeführt wurde, werden die Änderungen der Übermittlung im Dev Center-Dashboard angezeigt.
 
-For more information about how the commit operation fits into the process of creating a package flight submission by using the Windows Store submission API, see [Manage package flight submissions](manage-flight-submissions.md).
+Weitere Informationen dazu, wie der Übernahmevorgang in den Prozess zum Erstellen einer Flight-Paketübermittlung mit der Windows Store-Übermittlungs-API passt, finden Sie unter [Verwalten von Flight-Paketübermittlungen](manage-flight-submissions.md).
 
-## Prerequisites
+## Voraussetzungen
 
-To use this method, you need to first do the following:
+Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
-* If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Windows Store submission API.
-* [Obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) to use in the request header for this method. After you obtain an access token, you have 60 minutes to use it before it expires. After the token expires, you can obtain a new one.
-* [Create a package flight submission](create-a-flight-submission.md) and then [update the submission](update-a-flight-submission.md) with any necessary changes to the submission data.
+* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Windows Store-Übermittlungs-API.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
+* [Erstellen Sie eine Flight-Paketübermittlung](create-a-flight-submission.md), und [aktualisieren Sie die Übermittlung](update-a-flight-submission.md) mit allen erforderlichen Änderungen der Übermittlungsdaten.
 
->**Note**&nbsp;&nbsp;This method can only be used for Windows Dev Center accounts that have been given permission to use the Windows Store submission API. Not all accounts have this permission enabled.
+>**Hinweis**&nbsp;&nbsp;Diese Methode kann nur für Windows Dev Center-Konten verwendet werden, die eine Berechtigung zur Verwendung der Windows Store-Übermittlungs-API erhalten haben. Diese Berechtigung ist nicht für alle Konten aktiviert.
 
-## Request
+## Anforderung
 
-This method has the following syntax. See the following sections for usage examples and descriptions of the header and request body.
+Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie Verwendungsbeispiele und Beschreibungen des Header und Anforderungstexts.
 
-| Method | Request URI                                                      |
+| Methode | Anforderungs-URI                                                      |
 |--------|------------------------------------------------------------------|
 | POST    | ```https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit``` |
 
 <span/>
- 
+ 
 
-### Request header
+### Anforderungsheader
 
-| Header        | Type   | Description                                                                 |
+| Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | Required. The Azure AD access token in the form **Bearer** &lt;*token*&gt;. |
+| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
 
 <span/>
 
-### Request parameters
+### Anforderungsparameter
 
-| Name        | Type   | Description                                                                 |
+| Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | Required. The Store ID of the app that contains the package flight submission you want to commit. The Store ID for the app is available on the Dev Center dashboard.  |
-| flightId | string | Required. The ID of the package flight that contains the submission to commit. This ID is available in the Dev Center dashboard, and it is included in the response data for requests to [create a package flight](create-a-flight.md) and [get package flights for an app](get-flights-for-an-app.md).  |
-| submissionId | string | Required. The ID of the submission to commit. This ID is available in the Dev Center dashboard, and it is included in the response data for requests to [create a package flight submission](create-a-flight-submission.md).  |
+| applicationId | string | Erforderlich. Die Store-ID der App, die die Flight-Paketübermittlung enthält, die Sie übernehmen möchten. Die Store-ID für die App ist im Dev Center-Dashboard verfügbar.  |
+| flightId | string | Erforderlich. Die ID des Flight-Pakets, das die zu übernehmende Übermittlung enthält. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten.  |
+| submissionId | string | Erforderlich. Die ID der zu übernehmenden Übermittlung. Diese ID ist im Dev Center-Dashboard verfügbar und in den Antwortdaten für Anforderungen zum [Erstellen einer Flight-Paketübermittlung](create-a-flight-submission.md) enthalten.  |
 
 <span/>
 
-### Request body
+### Anforderungstext
 
-Do not provide a request body for this method.
+Stellen Sie keinen Anforderungstext für diese Methode bereit.
 
-### Request example
+### Anforderungsbeispiel
 
-The following example demonstrates how to commit a package flight submission.
+Im folgenden Beispiel wird veranschaulicht, wie eine Flight-Paketübermittlung übernommen wird.
 
 ```
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/flights/43e448df-97c9-4a43-a0bc-2a445e736bcd/submissions/1152921504621243649/commit HTTP/1.1
 Authorization: Bearer <your access token>
 ```
 
-## Response
+## Antwort
 
-The following example demonstrates the JSON response body for a successful call to this method. For more details about the values in the response body, see the following sections.
+Das folgende Beispiel veranschaulicht den JSON-Antworttext für einen erfolgreichen Aufruf dieser Methode. Weitere Informationen zu den Werten im Antworttext finden Sie in den folgenden Abschnitten.
 
 ```json
 {
@@ -76,33 +80,39 @@ The following example demonstrates the JSON response body for a successful call 
 }
 ```
 
-### Response body
+### Antworttext
 
-| Value      | Type   | Description                                                                                                                                                                                                                                                                         |
+| Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                         |
 |------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| status           | string  | The status of the submission. This can be one of the following values: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>  |
+| status           | string  | Der Status der Übermittlung. Folgende Werte sind möglich: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>  |
 
 <span/>
 
-## Error codes
+## Fehlercodes
 
-If the request cannot be successfully completed, the response will contain one of the following HTTP error codes.
+Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die Antwort einen der folgenden HTTP-Fehlercodes.
 
-| Error code |  Description   |
+| Fehlercode |  Beschreibung   |
 |--------|------------------|
-| 400  | The request parameters are invalid. |
-| 404  | The specified submission could not be found. |
-| 409  | The specified submission was found but it could not be committed in its current state, or the app uses a Dev Center dashboard feature that is [currently not supported by the Windows Store submission API](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 400  | Die Anforderungsparameter sind ungültig. |
+| 404  | Die angegebene Übermittlung konnte nicht gefunden werden. |
+| 409  | Die angegebene Übermittlung wurde gefunden, konnte jedoch nicht in ihrem aktuellen Zustand übernommen werden. Oder die App verwendet ein Dev Center-Dashboard-Feature, das [derzeit nicht von der Windows Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
 
 <span/>
 
 
-## Related topics
+## Verwandte Themen
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage package flight submissions](manage-flight-submissions.md)
-* [Get a package flight submission](get-a-flight-submission.md)
-* [Create a package flight submission](create-a-flight-submission.md)
-* [Update a package flight submission](update-a-flight-submission.md)
-* [Delete a package flight submission](delete-a-flight-submission.md)
-* [Get the status of a package flight submission](get-status-for-a-flight-submission.md)
+* [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+* [Verwalten von Flight-Paketübermittlungen](manage-flight-submissions.md)
+* [Abrufen einer Flight-Paketübermittlung](get-a-flight-submission.md)
+* [Erstellen einer Flight-Paketübermittlung](create-a-flight-submission.md)
+* [Aktualisieren einer Flight-Paketübermittlung](update-a-flight-submission.md)
+* [Löschen einer Flight-Paketübermittlung](delete-a-flight-submission.md)
+* [Abrufen des Status einer Flight-Paketübermittlung](get-status-for-a-flight-submission.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

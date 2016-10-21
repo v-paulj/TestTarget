@@ -4,28 +4,25 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: "Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen."
 title: Abrufen von Fehlerberichtsdaten
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 682f727a21d74f5cea8fddc4886c873d537e1cfb
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: 64bd3491bc8ff37f5eb7ca852ad6dc738f6e2711
 
 ---
 
 # Abrufen von Fehlerberichtsdaten
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Mittels dieser Methode in der Windows Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Methode gibt die Daten im JSON-Format zurück.
 
 ## Voraussetzungen
 
 
-Sie benötigen Folgendes, um diese Methode verwenden zu können:
+Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
--   Ordnen Sie die AzureAD-Anwendung, die Sie zum Aufrufen dieser Methode verwenden, Ihrem Dev Center-Konto zu.
-
--   Rufen Sie ein Azure AD-Zugriffstoken für Ihre Anwendung ab.
-
-Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows Store-Diensten](access-analytics-data-using-windows-store-services.md).
+* Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](access-analytics-data-using-windows-store-services.md#prerequisites) für die Windows Store-Analyse-API.
+* [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken erhalten haben, haben Sie 60Minuten Zeit, das Token zu verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 
 ## Anforderung
 
@@ -42,7 +39,7 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 
 | Header        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Autorisierung | Zeichenfolge | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;. |
+| Autorisierung | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;. |
 
 <span/> 
 
@@ -66,13 +63,13 @@ Weitere Informationen finden Sie unter [Zugreifen auf Analysedaten mit Windows S
 <tbody>
 <tr class="odd">
 <td align="left">applicationId</td>
-<td align="left">Zeichenfolge</td>
+<td align="left">string</td>
 <td align="left">Die Store-ID der App, für die Fehlerberichtsdaten abgerufen werden sollen. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.</td>
 <td align="left">Ja</td>
 </tr>
 <tr class="even">
 <td align="left">startDate</td>
-<td align="left">Datum</td>
+<td align="left">date</td>
 <td align="left">Das Startdatum im Datumsbereich der Fehlerberichtsdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum.</td>
 <td align="left">Nein</td>
 </tr>
@@ -264,7 +261,7 @@ Authorization: Bearer <your access token>
 
 | Wert      | Typ    | Beschreibung                                                                                                                                                                                                                                                                    |
 |------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Value      | array   | Ein Array von Objekten, die gesammelte Fehlerberichtsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Fehlerwerte](#error-values).                                                                                                          |
+| Wert      | array   | Ein Array von Objekten, die gesammelte Fehlerberichtsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Fehlerwerte](#error-values).                                                                                                          |
 | @nextLink  | string  | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Fehlern für die Abfrage gibt. |
 | TotalCount | inumber | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                                                                                                                                                                                                                     |
 
@@ -276,8 +273,8 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung                                                                                                                                                                                                                              |
 |-----------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| date            | string  | Das erste Datum im Datumsbereich für die Kaufdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist das erste Datum in diesem Datumsbereich dieser Wert. |
-| applicationId   | Zeichenfolge  | Die Store-ID der App, für die Sie IAP-Kaufdaten abrufen möchten.                                                                                                                                                           |
+| date            | string  | Das erste Datum im Datumsbereich für die Kaufdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
+| applicationId   | string  | Die Store-ID der App, für die Sie die Add-On-Kaufdaten abrufen möchten.                                                                                                                                                           |
 | applicationName | string  | Der Anzeigename der App.                                                                                                                                                                                                             |
 | failureName     | string  | Der Name des Fehlers.                                                                                                                                                                                                                 |
 | failureHash     | string  | Der eindeutige Bezeichner des Fehlers.                                                                                                                                                                                                   |
@@ -325,14 +322,14 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 ## Verwandte Themen
 
-* [Zugreifen auf Analysedaten mit Windows Store-Diensten](access-analytics-data-using-windows-store-services.md)
+* [Zugreifen auf Analysedaten mit WindowsStore-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von App-Käufen](get-app-acquisitions.md)
-* [Abrufen von IAP-Käufen](get-in-app-acquisitions.md)
+* [Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)
 * [Abrufen von App-Bewertungen](get-app-ratings.md)
 * [Abrufen von App-Rezensionen](get-app-reviews.md)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

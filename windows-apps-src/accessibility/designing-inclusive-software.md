@@ -6,8 +6,8 @@ title: Entwerfen inklusiver Software unter Windows 10
 label: Designing inclusive software
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: cdd41595ee2727c0eeefab7b041c1adfefc15dfa
+ms.sourcegitcommit: c5ccae0e095b7c8e403a230fe8f3442754aa2ad7
+ms.openlocfilehash: 94848fd1acf51e7ab8dab0f45584d3214be58830
 
 ---
 
@@ -26,17 +26,13 @@ Mithilfe des inklusiven Designs werden bessere Produkte für alle erstellt. Es g
 ## Grundlagen des inklusiven Designs  
 Die folgenden 4 Grundsätze gelten für den Wechsel von Microsoft zum inklusiven Design:
 
+**Think Universal (Universalität)**: Wir konzentrieren uns auf das, was Menschen verbindet – menschliche Motivationen, Beziehungen und Fähigkeiten. Dies spornt uns an, an die breiteren sozialen Auswirkungen unserer Arbeit zu denken. Das Ergebnis ist eine Umgebung, die zahlreiche Möglichkeiten bietet, damit alle Menschen teilnehmen können.
 
-              **Think Universal (Universalität)**: Wir konzentrieren uns auf das, was Menschen verbindet – menschliche Motivationen, Beziehungen und Fähigkeiten. Dies spornt uns an, an die breiteren sozialen Auswirkungen unserer Arbeit zu denken. Das Ergebnis ist eine Umgebung, die zahlreiche Möglichkeiten bietet, damit alle Menschen teilnehmen können.
+**Make it personal (Personalisierung)**: Als Nächstes stellen wir uns der Herausforderung, emotionale Verbindungen herzustellen. Zwischenmenschliche Interaktionen können bessere Interaktionen zwischen Menschen und Technologien inspirieren. Die einzigartigen Umstände eines Menschen können ein Design für alle Menschen verbessern. Das Ergebnis ist eine Umgebung, die wirkt, als wäre sie nur für eine einzige Person entwickelt worden.
 
+**Keep it simple (Einfachheit)**: Einfachheit ist das alles verbindende Element. Wenn wir die Umgebung übersichtlicher gestalten, wissen Menschen, was sie als Nächstes tun müssen. Sie sind inspiriert, sich Bereiche zu erschließen, die aufgeräumt, hell und offen sind. Das Ergebnis ist eine ehrliche und zeitlose Umgebung.
 
-              **Make it personal (Personalisierung)**: Als Nächstes stellen wir uns der Herausforderung, emotionale Verbindungen herzustellen. Zwischenmenschliche Interaktionen können bessere Interaktionen zwischen Menschen und Technologien inspirieren. Die einzigartigen Umstände eines Menschen können ein Design für alle Menschen verbessern. Das Ergebnis ist eine Umgebung, die wirkt, als wäre sie nur für eine einzige Person entwickelt worden.
-
-
-              **Keep it simple (Einfachheit)**: Einfachheit ist das alles verbindende Element. Wenn wir die Umgebung übersichtlicher gestalten, wissen Menschen, was sie als Nächstes tun müssen. Sie sind inspiriert, sich Bereiche zu erschließen, die aufgeräumt, hell und offen sind. Das Ergebnis ist eine ehrliche und zeitlose Umgebung.
-
-
-              **Create delight (Begeisterung)**: Begeisternde Umgebungen rufen Staunen und Entdeckertum hervor. Manchmal ist es Magie. Manchmal ist es ein Detail, das einfach nur richtig ist. Wir entwerfen diese Momente, damit sie sich wie willkommene Änderungen des Tempos anfühlen. Das Ergebnis ist eine Umgebung, die Dynamik und Fluss besitzt.
+**Create delight (Begeisterung)**: Begeisternde Umgebungen rufen Staunen und Entdeckertum hervor. Manchmal ist es Magie. Manchmal ist es ein Detail, das einfach nur richtig ist. Wir entwerfen diese Momente, damit sie sich wie willkommene Änderungen des Tempos anfühlen. Das Ergebnis ist eine Umgebung, die Dynamik und Fluss besitzt.
 
 ## Benutzer des inklusiven Designs  
 Es gibt im Wesentlichen zwei Arten von Benutzern von Hilfstechnologien (Assistive Technologies, AT):
@@ -107,10 +103,11 @@ Befolgen Sie diese sieben Schritte, um sicherzustellen, dass Ihre Software inklu
 * [Inklusives Design](http://design.microsoft.com/inclusive)
 * [Entwickeln von barrierefreier Software](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft-Hub für die barrierefreie Entwicklung](https://developer.microsoft.com/windows/accessible-apps)
-* [Entwickeln von barrierefreien Windows-Apps](developing-inclusive-windows-apps.md)  
+* [Entwickeln von barrierefreien Windows-Apps](developing-inclusive-windows-apps.md) 
+* [Barrierefreiheit](accessibility.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

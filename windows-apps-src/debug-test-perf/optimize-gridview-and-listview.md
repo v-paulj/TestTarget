@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 26DF15E8-2C05-4174-A714-7DF2E8273D32
 title: "Optimieren der ListView- und GridView-Benutzeroberfläche"
 description: Verbessern Sie die Leistung und Startzeit von ListView und GridView durch UI-Virtualisierung, Elementreduzierung und die progressive Aktualisierung von Elementen.
+translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 362fbb6b733e855a2126196f12c650bdf2a7665d
+ms.openlocfilehash: 1aba484afcb704b0b28ceee6027f5ae05d8e420d
 
 ---
 # Optimieren der ListView- und GridView-Benutzeroberfläche
@@ -26,10 +27,7 @@ Für reibungslose Verschiebungen/Bildläufe ist es wichtig, dass der UI-Thread e
 
 ## UI-Virtualisierung
 
-Die Virtualisierung der Benutzeroberfläche ist die wichtigste Verbesserung, die Sie vornehmen können. Dies bedeutet, dass die Benutzeroberflächenelemente, die die Objekte darstellen, bei Bedarf erstellt werden. Für ein an eine Sammlung von 1000 Elementen gebundenes Elementsteuerelement wäre es eine Verschwendung von Ressourcen, die Benutzeroberfläche für alle Elemente gleichzeitig zu erstellen, da sie nicht alle auf einmal angezeigt werden können. 
-            [
-              **ListView**
-            ](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) (und andere von [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) abgeleitete Standardsteuerelemente) führen die Virtualisierung der Benutzeroberfläche für Sie durch. Wenn Elemente kurz davor sind, per Bildlauf in der Ansicht angezeigt zu werden (einige Seiten davon entfernt), generiert das Framework die Benutzeroberfläche für die Elemente und speichert sie zwischen. Wenn es unwahrscheinlich ist, dass die Elemente erneut angezeigt werden, gibt das Framework den Arbeitsspeicher wieder frei.
+Die Virtualisierung der Benutzeroberfläche ist die wichtigste Verbesserung, die Sie vornehmen können. Dies bedeutet, dass die Benutzeroberflächenelemente, die die Objekte darstellen, bei Bedarf erstellt werden. Für ein an eine Sammlung von 1000 Elementen gebundenes Elementsteuerelement wäre es eine Verschwendung von Ressourcen, die Benutzeroberfläche für alle Elemente gleichzeitig zu erstellen, da sie nicht alle auf einmal angezeigt werden können. [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) (und andere von [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) abgeleitete Standardsteuerelemente) führen die Virtualisierung der Benutzeroberfläche für Sie durch. Wenn Elemente kurz davor sind, per Bildlauf in der Ansicht angezeigt zu werden (einige Seiten davon entfernt), generiert das Framework die Benutzeroberfläche für die Elemente und speichert sie zwischen. Wenn es unwahrscheinlich ist, dass die Elemente erneut angezeigt werden, gibt das Framework den Arbeitsspeicher wieder frei.
 
 Wenn Sie eine benutzerdefinierte ItemsPanel-Vorlage bereitstellen (siehe [**ItemsPanel**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.itemscontrol.itemspanel.aspx)), ist es wichtig, dass Sie ein Virtualisierungspanel wie [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) oder [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795) verwenden. Wenn Sie [**VariableSizedWrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227651), [**WrapGrid**](https://msdn.microsoft.com/library/windows/apps/BR227717) oder [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/BR209635) verwenden, erhalten Sie keine Virtualisierung. Darüber hinaus werden die folgenden [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-Ereignisse nur ausgelöst, wenn [**ItemsWrapGrid**](https://msdn.microsoft.com/library/windows/apps/Dn298849) oder [**ItemsStackPanel**](https://msdn.microsoft.com/library/windows/apps/Dn298795) verwendet werden: [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer), [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) und [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.containercontentchanging).
 
@@ -247,14 +245,7 @@ In einigen Anwendungen benötigen Sie verschiedene Benutzeroberflächen für unt
 
 **Das ChoosingItemContainer-Ereignis**
 
-
-            [
-              **ChoosingItemContainer**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) ist ein Ereignis, mit dem Sie ein Element (**ListViewItem**/**GridViewItem**) für [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) bereitstellen können, wenn ein neues Element beim Starten oder Wiederverwenden erforderlich ist. Sie können einen Container basierend auf dem Typ des Datenelements erstellen, das der Container anzeigen soll (im folgenden Beispiel dargestellt). 
-            **ChoosingItemContainer** ist die leistungsfähigere Möglichkeit zur Verwendung unterschiedlicher Datenvorlagen für verschiedene Elemente. Die Containerzwischenspeicherung kann mit **ChoosingItemContainer** erzielt werden. Wenn Sie beispielsweise fünf verschiedene Vorlagen besitzen, wobei eine Vorlage um eine Größenordnung häufiger als die anderen verwendet wird, können Sie mit ChoosingItemContainer nicht nur Elemente im benötigten Verhältnis erstellen, sondern auch eine passende Anzahl von Elementen im Zwischenspeicher speichern, die dann zur Wiederverwendung zur Verfügung stehen. 
-            [
-              **ChoosingGroupHeaderContainer**
-            ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) bietet die gleiche Funktionalität für Gruppenheader.
+[**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) ist ein Ereignis, mit dem Sie ein Element (**ListViewItem**/**GridViewItem**) für [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)/[**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) bereitstellen können, wenn ein neues Element beim Starten oder Wiederverwenden erforderlich ist. Sie können einen Container basierend auf dem Typ des Datenelements erstellen, das der Container anzeigen soll (im folgenden Beispiel dargestellt). **ChoosingItemContainer** ist die leistungsfähigere Möglichkeit zur Verwendung unterschiedlicher Datenvorlagen für verschiedene Elemente. Die Containerzwischenspeicherung kann mit **ChoosingItemContainer** erzielt werden. Wenn Sie beispielsweise fünf verschiedene Vorlagen besitzen, wobei eine Vorlage um eine Größenordnung häufiger als die anderen verwendet wird, können Sie mit ChoosingItemContainer nicht nur Elemente im benötigten Verhältnis erstellen, sondern auch eine passende Anzahl von Elementen im Zwischenspeicher speichern, die dann zur Wiederverwendung zur Verfügung stehen. [**ChoosingGroupHeaderContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) bietet die gleiche Funktionalität für Gruppenheader.
 
 ```csharp
 // Example shows how to use ChoosingItemContainer to return the correct
@@ -329,6 +320,6 @@ Bei einer ungleichmäßigen Verteilung von Elementen, die unterschiedliche Eleme
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

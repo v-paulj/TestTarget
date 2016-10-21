@@ -7,7 +7,7 @@ label: Speech interactions
 template: detail.hbs
 translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: ecd002e6f3a92702459426858693dd7547b0ca02
+ms.openlocfilehash: d32c38c2f939e03375630439f2aa512004601a70
 
 ---
 
@@ -22,14 +22,11 @@ Integrieren Sie Spracherkennung und Text-zu-Sprache, auch als Text-to-Speech (TT
 -   Weitere Hinweise, um App-Funktionen in der **Cortana**-UI verfügbar machen, finden Sie in den [Cortana-Entwurfsrichtlinien](cortana-interactions.md).
 
 
+**Spracherkennung: **Konvertiert vom Benutzer gesprochene Wörter in Text für die Formulareingabe, für die Diktierfunktion, zum Angeben einer Aktion oder eines Befehls und zum Ausführen von Aufgaben. Unterstützt werden sowohl vordefinierte Grammatiken für das Freitext-Diktieren und die Websuche als auch benutzerdefinierte Grammatiken, die mithilfe von Speech Recognition Grammar Specification (SRGS) Version 1.0 erstellt werden.
 
-            **Spracherkennung:  **Konvertiert vom Benutzer gesprochene Wörter in Text für die Formulareingabe, für die Diktierfunktion, zum Angeben einer Aktion oder eines Befehls und zum Ausführen von Aufgaben. Unterstützt werden sowohl vordefinierte Grammatiken für das Freitext-Diktieren und die Websuche als auch benutzerdefinierte Grammatiken, die mithilfe von Speech Recognition Grammar Specification (SRGS) Version 1.0 erstellt werden.
+**TTS: **Verwendet ein Sprachsynthesemodul (Sprache), um eine Textzeichenfolge in gesprochene Wörter zu konvertieren. Bei der Eingabezeichenfolge kann es sich um einfachen, schlichten Text oder komplexere Speech Synthesis Markup Language (SSML) handeln. SSML stellt eine Standardmethode zum Steuern der Eigenschaften der Sprachausgabe bereit, z.B. Aussprache, Lautstärke, Stimmlage, Rate bzw. Geschwindigkeit und Betonung.
 
-
-            **TTS:  **Verwendet ein Sprachsynthesemodul (Sprache), um eine Textzeichenfolge in gesprochene Wörter zu konvertieren. Bei der Eingabezeichenfolge kann es sich um einfachen, schlichten Text oder komplexere Speech Synthesis Markup Language (SSML) handeln. SSML stellt eine Standardmethode zum Steuern der Eigenschaften der Sprachausgabe bereit, z.B. Aussprache, Lautstärke, Stimmlage, Rate bzw. Geschwindigkeit und Betonung.
-
-
-            **Hinweis** Mit **Cortana** und angepassten Sprachbefehlen kann Ihre App im Vordergrund gestartet (die App erhält wie beim Starten über das Startmenü den Fokus) oder als Hintergrunddienst aktiviert werden (der Fokus bleibt auf **Cortana**, es werden aber Ergebnisse aus der App angezeigt). Befehle, die zusätzlichen Kontext oder Benutzereingaben erfordern (z.B. das Senden einer Nachricht an einen bestimmten Kontakt), lassen sich am besten in einer Vordergrund-App verarbeiten, während einfache Befehle in **Cortana** durch eine Hintergrund-App behandelt werden können.
+**Hinweis:** Mit **Cortana** und angepassten Sprachbefehlen kann Ihre App im Vordergrund gestartet (die App erhält wie beim Starten über das Startmenü den Fokus) oder als Hintergrunddienst aktiviert werden (der Fokus bleibt auf **Cortana**, es werden aber Ergebnisse aus der App angezeigt). Befehle, die zusätzlichen Kontext oder Benutzereingaben erfordern (z.B. das Senden einer Nachricht an einen bestimmten Kontakt), lassen sich am besten in einer Vordergrund-App verarbeiten, während einfache Befehle in **Cortana** durch eine Hintergrund-App behandelt werden können.
 Falls Sie Funktionen als Hintergrunddienst über Sprachbefehle in der **Cortana**-UI verfügbar machen, finden Sie in den [Cortana-Entwurfsrichtlinien](cortana-design-guidelines.md) weitere Informationen.
 
  
@@ -162,8 +159,7 @@ Mit vordefinierten Diktier- und Websuchgrammatiken können Sie eine Spracherkenn
 -   Die Standardgrammatik der Freitext-Diktierfunktion erkennt die meisten Wörter und Ausdrücke, die Benutzer in einer bestimmten Sprache sagen können, und ist für die Erkennung kurzer Ausdrücke optimiert. Die Freitext-Diktierfunktion ist nützlich, wenn Sie nicht einschränken möchten, was Benutzer sagen können. Typische Verwendungsmöglichkeiten sind das Erstellen von Notizen oder das Diktieren eines Nachrichtentexts.
 -   Die Grammatik für die Websuche enthält wie die Diktiergrammatik eine große Anzahl von Wörtern und Ausdrücken, die Benutzer sagen können. Sie ist allerdings für die Erkennung von Begriffen optimiert, die beim Suchen im Web häufig verwendet werden.
 
-
-            **Hinweis**  Da vordefinierte Diktier- und Websuchgrammatiken sehr umfangreich sein können und online bereitgestellt werden (nicht auf dem Gerät), kann die Leistung schlechter sein als bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.
+**Hinweis:** Da vordefinierte Diktier- und Websuchgrammatiken sehr umfangreich sein können und online bereitgestellt werden (nicht auf dem Gerät), kann die Leistung schlechter sein als bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.
 
  
 
@@ -185,8 +181,7 @@ Eine benutzerdefinierte Grammatik ist eine von Ihnen entworfene und erstellte Gr
     -   Definieren Sie in Ihrer Grammatik nach Möglichkeit keine einsilbigen Ausdrücke. Die Erkennung funktioniert bei Ausdrücken mit zwei oder mehr Silben meist genauer.
     -   Vermeiden Sie Ausdrücke, die ähnlich klingen. Ausdrücke wie „Geld“, „Held“ und „fällt“ können das Erkennungsmodul z. B. verwirren und zu einer schlechten Erkennungsgenauigkeit führen.
 
-
-            **Hinweis**  Der von Ihnen verwendete Einschränkungstyp richtet sich nach der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
+**Hinweis:** Der von Ihnen verwendete Einschränkungstyp richtet sich nach der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
 
  
 
@@ -236,12 +231,8 @@ Beide Probleme können durch Verwendung von SSML anstelle von Nur-Text als Synth
 ## Verwandte Artikel
 
 * [Sprachinteraktionen](https://msdn.microsoft.com/library/windows/apps/mt185614)
-* 
-             [Cortana-Interaktionen](https://msdn.microsoft.com/library/windows/apps/mt185598)
-            
-          
-            **Beispiele**
-          
+* [Cortana-Interaktionen](https://msdn.microsoft.com/library/windows/apps/mt185598)
+ **Beispiele**
 * [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
  
 
@@ -252,6 +243,6 @@ Beide Probleme können durch Verwendung von SSML anstelle von Nur-Text als Synth
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

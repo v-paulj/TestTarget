@@ -1,19 +1,19 @@
 ---
 author: QuinnRadich
-title: Neuigkeiten in Windows10
-description: "Windows10 Anniversary SDK Preview Build und neue Entwicklungstools stellen Werkzeuge, Features und Umgebungen zur Verfügung, die durch die neue universelle Windows-Plattform unterstützt werden."
+title: Neuigkeiten in Windows 10, Version 1607 Preview
+description: "Windows10, Version1607 Preview, und neue Entwicklertools stellen Werkzeuge, Features und Umgebungen zur Verfügung, die von der neuen universellen Windows-Plattform unterstützt werden."
+keywords: Neuigkeiten, was neu ist, Aktualisierung, Updates, Features, neu, Windows 10 1607 Preview
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 9623e10b15dbc5f9480d1cd9bd740fa8e914b3c6
+ms.sourcegitcommit: 5646bf7681b5b028031eab02f8dd5c352d4b9cc1
+ms.openlocfilehash: 33c1888620d4e3c2d95cbf701e9128ce006961da
 
 ---
 
 # Neuigkeiten in Windows
 
-Windows10 Anniversary SDK Preview Build14295 und Updates für Windows-Entwicklungstools stellen weiterhin Tools, Features und Umgebungen bereit, die durch die universelle Windows-Plattform unterstützt werden. 
-              Nach der [Installation der Tools und des SDKs](https://developer.microsoft.com/windows/downloads#_blank) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](https://msdn.microsoft.com/library/windows/apps/bg124288) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](https://msdn.microsoft.com/library/windows/apps/mt238321) vertraut machen.
+Windows10, Version 1607 Preview, und Updates für Windows-Entwicklertools stellen weiterhin Tools, Features und Umgebungen bereit, die von der universellen Windows-Plattform unterstützt werden. Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](https://msdn.microsoft.com/library/windows/apps/bg124288) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](https://msdn.microsoft.com/library/windows/apps/mt238321) vertraut machen.
 
-## Windows10 Anniversary SDK Preview Build12295
+## Windows10, Version 1607 Preview
 
 Feature | Beschreibung
  :---- | :----
@@ -30,6 +30,6 @@ Karten-APIs | [MapControl](https://msdn.microsoft.com/library/windows/apps/windo
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

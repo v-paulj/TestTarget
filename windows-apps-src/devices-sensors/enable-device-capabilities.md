@@ -5,7 +5,7 @@ title: "Aktivieren von Gerätefunktionen"
 description: "In diesem Lernprogramm wird beschrieben, wie Gerätefunktionen in Microsoft Visual Studio deklariert werden. Diese Funktionen bieten Ihnen die Möglichkeit, in Ihrer App Kameras, Mikrofone, Positionssensoren und andere Geräte zu verwenden."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 306e10ee9349f3742ac5a06229d22aad04457d7a
+ms.openlocfilehash: b36dd4d77821a65b1f435d755f7bb415b2e386ee
 
 ---
 # Aktivieren von Gerätefunktionen
@@ -35,8 +35,7 @@ Einige Gerätetypen (z.B. Drucker, Scanner und Sensoren) müssen nicht im App-Pa
 | Codegenerierung | ![Verfügbar im Manifest-Designer](images/ap-tools.png) | Ermöglicht Apps das dynamische Generieren von Code. |
 | Unternehmensauthentifizierung | ![Verfügbar im Manifest-Designer](images/ap-tools.png) | Diese Funktion betrifft die Windows Store-Richtlinie. Sie bietet die Möglichkeit zum Herstellen einer Verbindung mit Intranetressourcen im Unternehmen, die Domänenanmeldeinformationen erfordern. Diese Funktion ist in der Regel für die meisten Apps nicht erforderlich. | 
 | Internet (Client) | ![Verfügbar im Manifest-Designer](images/ap-tools.png) | Bietet ausgehenden Zugriff auf das Internet und auf Netzwerke an öffentlichen Orten wie Flughäfen und Cafés. Beispielsweise Intranetnetzwerke, für die der Benutzer das Netzwerk als „öffentlich“ festgelegt hat. Die Funktion sollte von den meisten Apps verwendet werden, die den Internetzugriff benötigen. |
-| Internet (Client &amp; Server) | ![Verfügbar im Manifest-Designer](images/ap-tools.png) | Bietet ein- und ausgehenden Zugriff auf das Internet und auf Netzwerke an öffentlichen Orten wie Flughäfen und Cafés. Diese Funktion ist eine Obermenge von **Internet (Client)**. 
-              **Internet (Client)** muss nicht aktiviert sein, wenn diese Funktion ebenfalls aktiviert ist. Der eingehende Zugriff auf kritische Ports ist immer blockiert. |
+| Internet (Client &amp; Server) | ![Verfügbar im Manifest-Designer](images/ap-tools.png) | Bietet ein- und ausgehenden Zugriff auf das Internet und auf Netzwerke an öffentlichen Orten wie Flughäfen und Cafés. Diese Funktion ist eine Obermenge von **Internet (Client)**. **Internet (Client)** muss nicht aktiviert sein, wenn diese Funktion ebenfalls aktiviert ist. Der eingehende Zugriff auf kritische Ports ist immer blockiert. |
 | Ort| ![Verfügbar im Manifest-Designer](images/ap-tools.png) | Bietet Zugriff auf die aktuelle Position. Die Position wird von spezieller Hardware (z.B. einem GPS-Sensor im PC) abgerufen oder aus verfügbaren Netzwerkinformationen abgeleitet. | 
 | Mikrofon | ![Verfügbar im Manifest-Designer](images/ap-tools.png) | Bietet Zugriff auf den Audiofeed des Mikrofons. Mit dieser Funktion kann die App Audio von angeschlossenen Mikrofonen aufzeichnen. | 
 | Musikbibliothek | ![Verfügbar im Manifest-Designer](images/ap-tools.png) | Ermöglicht das Hinzufügen, Ändern oder Löschen von Dateien in der **Musikbibliothek** für den lokalen PC und die PCs der **Heimnetzgruppe**. | 
@@ -78,6 +77,6 @@ In der folgende Tabelle werden einige der Funktionen mit Windows-Runtime-APIs ve
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

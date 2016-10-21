@@ -1,23 +1,34 @@
 ---
 author: Jwmsft
+Description: "Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Aktion."
 label: Buttons
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: de5af77435b34b8f28005351a7de125f211ca522
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 845aa9935908aa68b64c856ee5e263490a3340c4
 
 ---
 # Schaltflächen
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
 Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Aktion.
 
 ![Beispiel für Schaltflächen](images/controls/button.png)
 
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx"><strong>Button-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx"><strong>RepeatButton-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx"><strong>Click-Ereignis</strong></a></li>
+</ul>
 
-<span class="sidebar_heading" style="font-weight: bold;">Wichtige APIs</span>
+</div>
+</div>
 
--   [**Button-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
--   [**RepeatButton-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.repeatbutton.aspx)
--   [**Click-Ereignis**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)
+
+
+
 
 ## Ist dies das richtige Steuerelement?
 
@@ -71,7 +82,7 @@ private async void SubmitButton_Click(object sender, RoutedEventArgs e)
 
 Wenn Sie mit einem Finger oder Stift auf eine Schaltfläche tippen oder mit der linken Maustaste darauf klicken, löst die Schaltfläche das [**Click**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.click.aspx)-Ereignis aus. Bei einer Schaltfläche mit Tastaturfokus wird das Click-Ereignis auch durch Drücken der Eingabe- oder Leertaste ausgelöst.
 
-Sie können für Schaltflächen generell keine [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx)-Ereignisse auf niedriger Ebene verarbeiten, da diese stattdessen mit dem Click-Verhalten konfiguriert sind. Weitere Informationen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/library/windows/apps/mt185584.aspx).
+Sie können für Schaltflächen generell keine [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.uielement.pointerpressed.aspx)-Ereignisse auf niedriger Ebene verarbeiten, da diese stattdessen mit dem Click-Verhalten konfiguriert sind. Weitere Informationen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](https://msdn.microsoft.com/en-us/library/windows/apps/mt185584.aspx).
 
 Sie können durch Ändern der [**ClickMode**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.primitives.buttonbase.clickmode.aspx)-Eigenschaft festlegen, wie eine Schaltfläche das Click-Ereignis auslöst. Der ClickMode-Standardwert lautet **Release**. Wenn als ClickMode-Wert **Hover** festgelegt ist, kann das Click-Event nicht über die Tastatur oder durch Berührung ausgelöst werden. 
 
@@ -150,86 +161,24 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 -   Überfrachten Sie eine Schaltfläche nicht mit Inhalt. Inhalte von Steuerelementen sollten kurz und prägnant sein (nicht mehr als ein Bild und ein kurzer Text).
 
 ## Zurück-Schaltflächen
-Die Zurück-Schaltfläche ist ein durch das System bereitgestelltes UI-Angebot, das die Rückwärtsnavigation über den Back-Stapel oder den Navigationsverlauf des Benutzers ermöglicht.
+Die Zurück-Schaltfläche ist ein durch das System bereitgestelltes UI-Element, das die Rückwärtsnavigation über den Back-Stapel oder den Navigationsverlauf des Benutzers ermöglicht. Sie müssen keine eigene Zurück-Schaltfläche erstellen, aber unter Umständen ist etwas Aufwand erforderlich, um eine gute Rückwärtsnavigation zu ermöglichen. Weitere Informationen finden Sie unter [Verlauf und Rückwärtsnavigation](../layout/navigation-history-and-backwards-navigation.md).
 
-Der Bereich des Navigationsverlaufs (in der App oder global) ist vom Gerät und vom Gerätemodus abhängig.
+## Beispiele herunterladen
+*   [Beispiel für XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
+    Hier sind alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
 
-## <span id="examples"></span><span id="EXAMPLES"></span>Beispiel
-
-
-Die Benutzeroberfläche für die Zurück-Schaltfläche des Systems ist für jedes Gerät und jeden Eingabetyp optimiert. Die Navigationsfunktion hingegen ist auf allen Geräten und UWP-Apps (Universelle Windows-Plattform) global und einheitlich gültig. Zu diesen Unterschieden zählen:
-
-Geräte Smartphone ![Zurück-Funktion des Systems auf einem Smartphone](images/nav-back-phone.png)
--   Immer vorhanden.
--   Eine Software- oder Hardwareschaltfläche am unteren Rand des Geräts.
--   Globale Rückwärtsnavigation innerhalb der App und zwischen Apps.
-
-<span id="Tablet"></span><span id="tablet"></span><span id="TABLET"></span>Tablet ![Zurück-Funktion des Systems auf einem Tablet (im Tablet-Modus)](images/nav-back-tablet.png)
--   Im Tablet-Modus immer vorhanden.
-
-    In Desktopmodus nicht verfügbar. Stattdessen kann die Zurück-Schaltfläche in der Titelleiste aktiviert werden. Weitere Infos finden Sie unter [PC, Laptop, Tablet](#PC).
-
-    Benutzer können zwischen dem Tablet- und dem Desktopmodus wechseln, indem sie unter **Einstellungen &gt; System &gt; Tablet-Modus** die Option **Durch die Verwendung des Geräts als Tablet wird die Toucheingabe in Windows verbessert** aktivieren.
-
--   Eine Softwareschaltfläche in der Navigationsleiste am unteren Rand des Geräts.
--   Globale Rückwärtsnavigation innerhalb der App und zwischen Apps.
-
-<span id="PC"></span><span id="pc"></span>PC, Laptop, Tablet ![Zurück-Funktion des Systems auf einem PC oder Laptop](images/nav-back-pc.png)
--   Optional im Desktopmodus.
-
-    Im Tablet-Modus nicht verfügbar. Weitere Infos finden Sie unter [Tablet](#Tablet).
-
-    Standardmäßig deaktiviert. Muss zur Verwendung aktiviert werden.
-
-    Benutzer können zwischen dem Tablet- und dem Desktopmodus wechseln, indem sie unter **Einstellungen &gt; System &gt; Tablet-Modus** die Option **Durch die Verwendung des Geräts als Tablet wird die Toucheingabe in Windows verbessert** aktivieren.
-
--   Eine Softwareschaltfläche in der Titelleiste der App.
--   Ermöglicht die Rückwärtsnavigation nur innerhalb der App. Unterstützt keine App-zu-App-Navigation.
-
-Surface Hub ![Zurück-Funktion des Systems auf einem Surface Hub](images/nav-back-surfacehub.png)
--   Immer vorhanden.
--   Eine Softwareschaltfläche am unteren Rand des Geräts.
--   Ermöglicht die Rückwärtsnavigation innerhalb der App und zwischen Apps.
-
- 
-
-## Empfohlene und nicht empfohlene Vorgehensweisen
-
-
--   Ermöglichen Sie eine Rückwärtsnavigation.
-
-    Ohne Rückwärtsnavigation ist die App zwar im globalen Back-Stapel enthalten, der In-App-Seitennavigationsverlauf wird jedoch nicht gespeichert.
-
--   Aktivieren Sie die Zurück-Schaltfläche der Titelleiste im Desktopmodus.
-
-    Der In-App-Seitennavigationsverlauf wird beibehalten, die Rückwärtsnavigation von App zu App wird nicht unterstützt.
-
-    
-              **Hinweis:** Im Tablet-Modus wird die Titelleiste angezeigt, wenn ein Benutzer vom oberen Rand des Geräts nach unten wischt oder den Mauszeiger an den oberen Rand des Geräts bewegt. Um eine Duplizierung und Missverständnisse zu vermeiden, wird die Zurück-Schaltfläche für die Titelleiste im Tablet-Modus nicht angezeigt.
-
-     
-
--   Blenden Sie die Zurück-Schaltfläche für die Titelleiste im Desktop-Modus aus, oder deaktivieren Sie sie, wenn ein In-App-Navigationsverlauf leer oder nicht verfügbar ist.
-
-    Teilt dem Benutzer klar und deutlich mit, dass es nicht möglich ist, weiter zurück zu navigieren.
-
--   Jeder Zurück-Befehl sollte im Back-Stapel eine Seite nach hinten oder zu der unmittelbar vorangehenden App zurück navigieren, wenn nicht der Desktopmodus aktiv ist.
-
-    Wenn die Rückwärtsnavigation nicht intuitiv, konsistent und vorhersagbar ist, könnte dies beim Benutzer zu Verwirrungen führen.
 
 ## Verwandte Artikel
 
 - [Optionsfelder](radio-button.md)
 - [Umschalter](toggles.md)
 - [Kontrollkästchen](checkbox.md)
-
-**Für Entwickler (XAML)**
 - [**Button-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx)
 
 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

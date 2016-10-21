@@ -3,8 +3,9 @@ author: mtoepke
 title: Vergleichen des EGL-Codes mit DXGI und Direct3D
 description: "Die DirectX-Grafikschnittstelle (DXGI) und verschiedene Direct3D-APIs erfüllen die gleiche Rolle wie EGL. In diesem Thema werden die DXGI und Direct3D11 aus Sicht von EGL erläutert."
 ms.assetid: 90f5ecf1-dd5d-fea3-bed8-57a228898d2a
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 461983b646148c21aba7da2adb703510d95b0343
+ms.openlocfilehash: 599196300a393352540abf1154d1508af7b4caa1
 
 ---
 
@@ -24,8 +25,7 @@ Die DirectX-Grafikschnittstelle (DXGI) und verschiedene Direct3D-APIs erfüllen 
 
 Mit der DXGI und Direct3D werden, wie bei EGL, Methoden zum Konfigurieren von Grafikressourcen, Beschaffen eines Renderkontexts, in den von den Shadern gezeichnet werden kann, und Anzeigen der Ergebnisse in einem Fenster bereitgestellt. Für die DXGI und Direct3D sind jedoch deutlich mehr Optionen vorhanden. Zudem ist beim Portieren aus EGL das richtige Einrichten mit mehr Aufwand verbunden.
 
-> 
-            **Hinweis**   Diese Anleitung basiert auf der offenen Spezifikation der Khronos Group für EGL1.4 unter [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). In dieser Anleitung wird nicht auf Unterschiede eingegangen, die sich auf die spezielle Syntax für andere Plattformen und Entwicklungssprachen beziehen.
+> **Hinweis**   Diese Anleitung basiert auf der offenen Spezifikation der Khronos Group für EGL1.4 unter [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). In dieser Anleitung wird nicht auf Unterschiede eingegangen, die sich auf die spezielle Syntax für andere Plattformen und Entwicklungssprachen beziehen.
 
  
 
@@ -69,8 +69,7 @@ Im Folgenden ist der grundlegende Prozess zum Einrichten einer einfachen Grafika
 6.  Nachdem die Pipeline ausgeführt und ein Frame in den Hintergrundpuffer gezeichnet wurde, können Sie ihn mit der [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)-Methode auf dem Bildschirm darstellen.
 
 Ausführlichere Informationen zu diesem Prozess finden Sie unter [Erste Schritte mit DirectX-Grafiken](https://msdn.microsoft.com/library/windows/desktop/hh309467). Die restlichen Informationen in diesem Artikel beziehen sich auf diverse allgemeine Schritte zur Einrichtung und Verwaltung der Grafikpipeline.
-> 
-            **Hinweis**   Windows-Desktop-Apps verfügen über unterschiedliche APIs zum Abrufen einer Direct3D-Swapchain, wie beispielsweise [**D3D11Device::CreateDeviceAndSwapChain**](https://msdn.microsoft.com/library/windows/desktop/ff476083). Sie verwenden dabei kein [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt.
+> **Hinweis**   Windows-Desktop-Apps verfügen über unterschiedliche APIs zum Abrufen einer Direct3D-Swapchain, wie beispielsweise [**D3D11Device::CreateDeviceAndSwapChain**](https://msdn.microsoft.com/library/windows/desktop/ff476083). Sie verwenden dabei kein [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt.
 
  
 
@@ -417,6 +416,6 @@ In einer UWP-App können Sie das CoreWindow-Element mit der [**CoreWindow::Close
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

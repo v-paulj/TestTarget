@@ -1,26 +1,27 @@
 ---
 author: drewbatgit
 ms.assetid: 831123A7-1F40-4B74-AE9F-69AC9883B4AD
-description: "In diesem Artikel erfahren Sie, wie Sie Steuerelemente eines Videoaufnahmegeräts verwenden, um erweiterte Foto- und Videoaufnahmeszenarien (einschließlich optischer Bildstabilisierung und fließendem Zoom) zu ermöglichen."
-title: "Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c70f3e54ae5c83ccc28c47cb1e0ec236f75c3775
+description: "In diesem Artikel wird veranschaulicht, wie Sie manuelle Gerätesteuerelemente verwenden, um erweiterte Foto- und Videoaufnahmeszenarien (einschließlich optischer Bildstabilisierung und fließendem Zoom) zu ermöglichen."
+title: "Manuelle Kamerasteuerelemente für Foto- und Videoaufnahmen"
+translationtype: Human Translation
+ms.sourcegitcommit: 4c6a7aabb39b3835e042481ccae7da60e899e7cf
+ms.openlocfilehash: 13a767d8e75a64dc0e65bbfbc85f6c6cd2491f38
 
 ---
 
-# Steuerelemente des Aufnahmegeräts für Foto- und Videoaufnahmen
+# Manuelle Kamerasteuerelemente für Foto- und Videoaufnahmen
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
-
-
-In diesem Artikel erfahren Sie, wie Sie Steuerelemente eines Videoaufnahmegeräts verwenden, um erweiterte Foto- und Videoaufnahmeszenarien (einschließlich optischer Bildstabilisierung und fließendem Zoom) zu ermöglichen.
-
-Die in diesem Artikel beschriebenen Steuerelemente werden alle mithilfe desselben Musters zu Ihrer App hinzugefügt. Überprüfen Sie zunächst, ob das Steuerelement auf dem aktuellen Gerät unterstützt wird, auf dem Ihre App ausgeführt wird. Wenn das Steuerelement unterstützt wird, legen Sie den gewünschten Modus für das Steuerelement fest. Wenn ein bestimmtes Steuerelement auf dem aktuellen Gerät nicht unterstützt wird, sollten Sie das UI-Element, über das der Benutzer das Feature aktivieren kann, deaktivieren oder ausblenden.
-
-Der Code in diesem Artikel wurde aus dem [Camera Manual Controls SDK-Beispiel](http://go.microsoft.com/fwlink/?LinkId=619479) übernommen und angepasst. Sie können das Beispiel herunterladen, um den verwendeten Code im Kontext anzuzeigen oder das Beispiel als Ausgangspunkt für Ihre eigene App zu verwenden.
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
-            **Hinweis:**  Dieser Artikel baut auf Konzepten und Code auf, die unter [Aufnehmen von Fotos und Videos mit „MediaCapture“](capture-photos-and-video-with-mediacapture.md), erläutert werden. Darin werden die Schritte für die Implementierung einer einfachen Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits über eine ordnungsgemäß initialisierte MediaCapture-Instanz verfügt.
+In diesem Artikel wird veranschaulicht, wie Sie manuelle Gerätesteuerelemente verwenden, um erweiterte Foto- und Videoaufnahmeszenarien (einschließlich optischer Bildstabilisierung und fließendem Zoom) zu ermöglichen.
+
+Die in diesem Artikel beschriebenen Steuerelemente werden Ihrer App alle mithilfe desselben Musters hinzugefügt. Überprüfen Sie zunächst, ob das Steuerelement auf dem aktuellen Gerät unterstützt wird, auf dem Ihre App ausgeführt wird. Wenn das Steuerelement unterstützt wird, legen Sie den gewünschten Modus für das Steuerelement fest. Wenn ein bestimmtes Steuerelement auf dem aktuellen Gerät nicht unterstützt wird, sollten Sie das UI-Element, über das der Benutzer das Feature aktivieren kann, deaktivieren oder ausblenden.
+
+Der Code in diesem Artikel wurde aus dem [Camera Manual Controls SDK-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=619479) übernommen und angepasst. Sie können das Beispiel herunterladen, um den verwendeten Code im Kontext anzuzeigen oder das Beispiel als Ausgangspunkt für Ihre eigene App zu verwenden.
+
+> [!NOTE]
+> Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Wir empfehlen Ihnen, sich mit dem grundlegenden Medienaufnahmemuster in diesem Artikel vertraut zu machen, bevor Sie sich komplexeren Aufnahmeszenarien zuwenden. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.
 
 Alle in diesem Artikel beschriebenen Gerätesteuerelement-APIs gehören dem [**Windows.Media.Devices**](https://msdn.microsoft.com/library/windows/apps/br206902)-Namespace an.
 
@@ -50,8 +51,8 @@ Aktivieren oder deaktivieren Sie im **CheckedChanged**-Ereignishandler des Kontr
 
 [!code-cs[ExposureCheckBox](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetExposureCheckBox)]
 
-
-            **Wichtig** Der automatische Belichtungsmodus wird nur während der Verwendung des Vorschaudatenstroms unterstützt. Vergewissern Sie sich, dass der Vorschaudatenstrom aktiv ist, bevor Sie die automatische Belichtung aktivieren.
+> [!IMPORTANT]
+> Der automatische Belichtungsmodus wird nur unterstützt, während der Vorschaudatenstrom ausgeführt wird. Vergewissern Sie sich, dass der Vorschaudatenstrom aktiv ist, bevor Sie die automatische Belichtung aktivieren.
 
 ## Belichtungskorrektur
 
@@ -63,7 +64,7 @@ In diesem Beispiel wird ein [**Slider**](https://msdn.microsoft.com/library/wind
 
 Überprüfen Sie anhand der [Supported](supported-codecs.md)-Eigenschaft, ob das aktuelle Aufnahmegerät **ExposureCompensationControl** unterstützt. Wenn das Steuerelement unterstützt wird, können Sie die UI für dieses Feature anzeigen und aktivieren.
 
-Der Belichtungskorrekturwert muss innerhalb des vom Gerät unterstützten Bereichs liegen und muss ein inkrementeller Wert der unterstützten Schrittgröße sein. Ermitteln Sie die unterstützten Werte für das aktuelle Gerät anhand der Eigenschaften [**Min**](https://msdn.microsoft.com/library/windows/apps/dn278901), [**Max**](https://msdn.microsoft.com/library/windows/apps/dn278899) und [**Step**](https://msdn.microsoft.com/library/windows/apps/dn278904). Sie werden verwendet, um die entsprechenden Eigenschaften des Schieberegler-Steuerelements festzulegen.
+Der Belichtungskorrekturwert muss innerhalb des vom Gerät unterstützten Bereichs liegen und ein inkrementeller Wert der unterstützten Schrittgröße sein. Ermitteln Sie die unterstützten Werte für das aktuelle Gerät anhand der Eigenschaften [**Min**](https://msdn.microsoft.com/library/windows/apps/dn278901), [**Max**](https://msdn.microsoft.com/library/windows/apps/dn278899) und [**Step**](https://msdn.microsoft.com/library/windows/apps/dn278904). Sie werden verwendet, um die entsprechenden Eigenschaften des Schieberegler-Steuerelements festzulegen.
 
 Legen Sie den Wert des Schieberegler-Steuerelements auf den aktuellen Wert von **ExposureCompensationControl** fest, nachdem Sie die Registrierung des [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/br209737)-Ereignishandlers aufgehoben haben. Das Ereignis wird dann nicht ausgelöst, wenn der Wert festgelegt wird.
 
@@ -97,8 +98,8 @@ Legen Sie schließlich im Handler des Kontrollkästchens für die Videotaschenla
 
 [!code-cs[Taschenlampe](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
 
-
-            **Hinweis:** Auf einigen Geräten wird die Taschenlampe erst aktiviert, wenn [**TorchControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) auf „true“ festgelegt ist, für das Gerät ein Vorschaudatenstrom ausgeführt wird und die Videoaufnahme aktiv ist. Folgende Reihenfolge wird empfohlen: Schalten Sie die Videovorschau ein, und aktivieren Sie dann die Taschenlampe, indem Sie **Enabled** auf „true“ festlegen. Initiieren Sie anschließend die Videoaufnahme. Auf einigen Geräten wird das Licht der Taschenlampe aktiviert, nachdem die Vorschau gestartet wurde. Auf anderen Geräten kann es sein, dass die Taschenlampe erst aufleuchtet, wenn die Videoaufnahme gestartet wird.
+> [!NOTE] 
+>  Auf einigen Geräten sendet die Taschenlampe auch dann kein Licht aus, wenn [**TorchControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) auf „true“ festgelegt ist. Es sei denn, für das Gerät wird ein Vorschaudatenstrom ausgeführt, und die Videoaufnahme ist aktiv. Folgende Reihenfolge wird empfohlen: Schalten Sie die Videovorschau ein, und aktivieren Sie dann die Taschenlampe, indem Sie **Enabled** auf „true“ festlegen. Initiieren Sie anschließend die Videoaufnahme. Auf einigen Geräten wird das Licht der Taschenlampe aktiviert, nachdem die Vorschau gestartet wurde. Auf anderen Geräten kann es sein, dass die Taschenlampe erst aufleuchtet, wenn die Videoaufnahme gestartet wird.
 
 ## Fokus
 
@@ -110,7 +111,7 @@ Wenn der fortlaufende Autofokus aktiviert wird, wird die Kamera angewiesen, den 
 
 [!code-xml[CAFXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetCAFXAML)]
 
-Überprüfen Sie anhand der [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn297785)-Eigenschaft, ob das aktuelle Aufnahmegerät **FocusControl** unterstützt. Prüfen Sie anschließend anhand der [**SupportedFocusModes**](https://msdn.microsoft.com/library/windows/apps/dn608079)-Liste, ob der fortlaufende Autofokus unterstützt wird. Wenn sie den Wert [**FocusMode.Continuous**](https://msdn.microsoft.com/library/windows/apps/dn608084) enthält, zeigen Sie das Optionsfeld für den fortlaufenden Autofokus an.
+Überprüfen Sie anhand der [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn297785)-Eigenschaft, ob das aktuelle Aufnahmegerät **FocusControl** unterstützt. Prüfen Sie als Nächstes anhand der [**SupportedFocusModes**](https://msdn.microsoft.com/library/windows/apps/dn608079)-Liste, ob der fortlaufende Autofokus unterstützt wird. Wenn sie den Wert [**FocusMode.Continuous**](https://msdn.microsoft.com/library/windows/apps/dn608084) enthält, zeigen Sie das Optionsfeld für den fortlaufenden Autofokus an.
 
 [!code-cs[CAF](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCAF)]
 
@@ -120,8 +121,8 @@ Erstellen Sie ein neues [**FocusSettings**](https://msdn.microsoft.com/library/w
 
 [!code-cs[CafFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetCafFocusRadioButton)]
 
-
-            **Wichtig:**  Der Autofokusmodus wird nur während der Ausführung des Vorschaudatenstroms unterstützt. Vergewissern Sie sich, dass der Vorschaudatenstrom ausgeführt wird, bevor Sie den fortlaufenden Autofokus aktivieren.
+> [!IMPORTANT]
+> Der Autofokusmodus wird nur unterstützt, während der Vorschaudatenstrom ausgeführt wird. Vergewissern Sie sich, dass der Vorschaudatenstrom ausgeführt wird, bevor Sie den fortlaufenden Autofokus aktivieren.
 
 ### Tippen zum Scharfstellen
 
@@ -135,7 +136,7 @@ In diesem Beispiel wird ein Optionsfeld verwendet, um den Modus „Tippen zum Sc
 
 [!code-cs[TapFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocus)]
 
-Verwenden Sie im [**Checked**](https://msdn.microsoft.com/library/windows/apps/br209796)-Ereignishandler für das Optionsfeld für „Tippen zum Scharfstellen“ die [**VideoDeviceController.FocusControl**](https://msdn.microsoft.com/library/windows/apps/dn279091)-Eigenschaft, um eine Instanz des Steuerelements abzurufen. Rufen Sie [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) auf, um das Steuerelement zu sperren, falls Ihre App [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081) aufgerufen hat, um den fortlaufenden Autofokus zu aktivieren. Warten Sie anschließend, bis der Benutzer auf den Bildschirm tippt, um den Fokus zu ändern.
+Verwenden Sie im [**Checked**](https://msdn.microsoft.com/library/windows/apps/br209796)-Ereignishandler für das Optionsfeld für „Tippen zum Scharfstellen“ die [**VideoDeviceController.FocusControl**](https://msdn.microsoft.com/library/windows/apps/dn279091)-Eigenschaft, um eine Instanz des Steuerelements abzurufen. Rufen Sie [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) auf, um das Steuerelement zu sperren, falls die App bereits [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081) aufgerufen hat, um den fortlaufenden Autofokus zu aktivieren. Dann wird darauf gewartet, dass der Benutzer auf den Bildschirm tippt, um den Fokus zu ändern.
 
 [!code-cs[TapFocusRadioButton](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocusRadioButton)]
 
@@ -165,27 +166,12 @@ Rufen Sie als Nächstes das [**RegionsOfInterestControl**](https://msdn.microsof
 
 Rufen Sie schließlich [**FocusAsync**](https://msdn.microsoft.com/library/windows/apps/dn297794) für **FocusControl** auf, um mit dem Scharfstellen zu beginnen.
 
-
-            **Wichtig:** Beim Implementieren von „Tippen zum Scharfstellen“ ist die Reihenfolge der Vorgänge wichtig. Die APIs müssen in folgender Reihenfolge aufgerufen werden:
-
-
-            **1.**
-            [
-              **FocusControl.Configure**
-            ](https://msdn.microsoft.com/library/windows/apps/dn608067)
-            
-          
-            **2.**
-            [
-              **RegionsOfInterestControl.SetRegionsAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/dn279070)
-            
-          
-            **3.**
-            [
-              **FocusControl.FocusAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/dn297794)
-          
+> [!IMPORTANT]
+> Beim Implementieren von „Tippen zum Scharfstellen“ ist die Reihenfolge der Vorgänge wichtig. Die APIs müssen in folgender Reihenfolge aufgerufen werden:
+>
+> 1. [**FocusControl.Configure**](https://msdn.microsoft.com/library/windows/apps/dn608067)
+> 2. [**RegionsOfInterestControl.SetRegionsAsync**](https://msdn.microsoft.com/library/windows/apps/dn279070)
+> 3. [**FocusControl.FocusAsync**](https://msdn.microsoft.com/library/windows/apps/dn297794)
 
 [!code-cs[TapToFocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapToFocus)]
 
@@ -193,7 +179,7 @@ Rufen Sie in der **TapUnfocus**-Hilfsmethode das **RegionsOfInterestControl**-El
 
 [!code-cs[TapUnfocus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapUnfocus)]
 
-Für die **GetPreviewStreamRectInControl**-Hilfsmethode werden die Auflösung des Vorschaudatenstroms und die Ausrichtung des Geräts verwendet, um das Rechteck im Vorschauelement zu bestimmen, das den Vorschaudatenstrom enthält. Letterbox-Abstandselemente, die vom Steuerelement ggf. bereitgestellt werden, werden gekürzt, um das Seitenverhältnis des Datenstroms beizubehalten. Bei dieser Methode werden Klassenmembervariablen verwendet, die im Beispielcode für einfache Medienaufnahmen unter [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md) definiert sind.
+Für die **GetPreviewStreamRectInControl**-Hilfsmethode werden die Auflösung des Vorschaudatenstroms und die Ausrichtung des Geräts verwendet, um das Rechteck im Vorschauelement zu bestimmen, das den Vorschaudatenstrom enthält. Letterbox-Abstandselemente, die vom Steuerelement ggf. bereitgestellt werden, werden gekürzt, um das Seitenverhältnis des Datenstroms beizubehalten. Bei dieser Methode werden Klassenmembervariablen verwendet, die im Beispielcode für einfache Medienaufnahmen unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) definiert sind.
 
 [!code-cs[GetPreviewStreamRectInControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetGetPreviewStreamRectInControl)]
 
@@ -209,7 +195,7 @@ Für das Verfahren „Manueller Fokus“ wird ein **Slider**-Steuerelement verwe
 
 Überprüfen Sie anhand der [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn297837)-Eigenschaft, ob das aktuelle Aufnahmegerät **FocusControl** unterstützt. Wenn das Steuerelement unterstützt wird, können Sie die UI für dieses Feature anzeigen und aktivieren.
 
-Der Fokuswert muss innerhalb des vom Gerät unterstützten Bereichs liegen und muss ein inkrementeller Wert der unterstützten Schrittgröße sein. Ermitteln Sie die unterstützten Werte für das aktuelle Gerät anhand der Eigenschaften [**Min**](https://msdn.microsoft.com/library/windows/apps/dn297808), [**Max**](https://msdn.microsoft.com/library/windows/apps/dn297802) und [**Step**](https://msdn.microsoft.com/library/windows/apps/dn297833). Sie werden verwendet, um die entsprechenden Eigenschaften des Schieberegler-Steuerelements festzulegen.
+Der Fokuswert muss innerhalb des vom Gerät unterstützten Bereichs liegen und ein inkrementeller Wert der unterstützten Schrittgröße sein. Ermitteln Sie die unterstützten Werte für das aktuelle Gerät anhand der Eigenschaften [**Min**](https://msdn.microsoft.com/library/windows/apps/dn297808), [**Max**](https://msdn.microsoft.com/library/windows/apps/dn297802) und [**Step**](https://msdn.microsoft.com/library/windows/apps/dn297833). Sie werden verwendet, um die entsprechenden Eigenschaften des Schieberegler-Steuerelements festzulegen.
 
 Legen Sie den Wert des Schieberegler-Steuerelements auf den aktuellen Wert von **FocusControl** fest, nachdem Sie die Registrierung des [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/br209737)-Ereignishandlers aufgehoben haben. Das Ereignis wird dann nicht ausgelöst, wenn der Wert festgelegt wird.
 
@@ -273,6 +259,13 @@ Legen Sie [**OpticalImageStabilizationControl.Mode**](https://msdn.microsoft.com
 
 [!code-cs[SetOpticalImageStabilizationMode](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetOpticalImageStabilizationMode)]
 
+## Leitungsfrequenz
+Einige Kamerageräte unterstützen die Anti-Flacker-Verarbeitung. Hierfür muss die Wechselstromfrequenz der Stromleitungen in der derzeitigen Umgebung bekannt sein. Einige Geräte unterstützen die automatische Ermittlung der Leitungsfrequenz, und bei anderen Geräten muss die Frequenz manuell festgelegt werden. Im folgenden Codebeispiel wird veranschaulicht, wie Sie die Unterstützung der Leitungsfrequenz für das Gerät ermitteln und, falls erforderlich, die Frequenz manuell festlegen. 
+
+Rufen Sie zuerst die **VideoDeviceController**-Methode auf [**TryGetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206898), indem Sie einen Ausgabeparameter vom Typ [**PowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.PowerlineFrequency) übergeben. Wenn dieser Aufruf nicht erfolgreich ist, wird die Steuerung der Leitungsfrequenz auf dem aktuellen Gerät nicht unterstützt. Wenn die Funktion unterstützt wird, können Sie ermitteln, ob der automatische Modus auf dem Gerät verfügbar ist, indem Sie versuchen, den automatischen Modus festzulegen. Rufen Sie hierzu [**TrySetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206899) auf, und übergeben Sie den Wert **Auto**. Wenn der Aufruf erfolgreich ist, bedeutet dies, dass die automatische Leitungsfrequenz unterstützt wird. Wenn die Steuerung der Leitungsfrequenz auf dem Gerät unterstützt wird, die automatische Frequenzerkennung aber nicht, können Sie die Frequenz trotzdem manuell mit **TrySetPowerlineFrequency** festlegen. In diesem Beispiel ist **MyCustomFrequencyLookup** eine benutzerdefinierte Methode, die Sie implementieren, um für die aktuelle Position des Geräts die richtige Frequenz zu ermitteln. 
+
+[!code-cs[PowerlineFrequency](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetPowerlineFrequency)]
+
 ## Weißabgleich
 
 Mit [**WhiteBalanceControl**](https://msdn.microsoft.com/library/windows/apps/dn279104) können Sie den Weißabgleich für Foto- und Videoaufnahmen festlegen.
@@ -297,11 +290,11 @@ Rufen Sie im **ValueChanged**-Ereignishandler den aktuellen Wert des Steuereleme
 
 [!code-cs[WhiteBalanceSlider](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetWhiteBalanceSlider)]
 
+> [!IMPORTANT]
+> Das Anpassen des Weißabgleichs wird nur unterstützt, während der Vorschaudatenstrom ausgeführt wird. Vergewissern Sie sich, dass der Vorschaudatenstrom ausgeführt wird, bevor Sie den Wert oder die Voreinstellung für den Weißabgleich festlegen.
 
-            **Wichtig:** Das Anpassen des Weißabgleichs wird nur während der Ausführung des Vorschaudatenstroms unterstützt. Vergewissern Sie sich, dass der Vorschaudatenstrom ausgeführt wird, bevor Sie den Wert oder die Voreinstellung für den Weißabgleich festlegen.
-
-
-            **Wichtig:** Mit dem **ColorTemperaturePreset.Auto**-Voreinstellungswert wird das System angewiesen, die Einstellung des Weißabgleichs automatisch anzupassen. Für einige Szenarien (etwa beim Aufnehmen einer Bildserie, bei der die Weißabgleicheinstellungen für jedes Bild gleich sein sollen) kann es ratsam sein, das Steuerelement mit dem aktuellen automatischen Wert zu sperren. Rufen Sie hierzu [**SetPresetAsync**](https://msdn.microsoft.com/library/windows/apps/dn279113) auf, und geben Sie die Voreinstellung **Manual** an. Legen Sie für das Steuerelement keinen Wert mit [**SetValueAsync**](https://msdn.microsoft.com/library/windows/apps/dn279114) fest. Das Gerät wird dann mit dem aktuellen Wert gesperrt. Versuchen Sie nicht, den Wert des aktuellen Steuerelements auszulesen. Übergeben Sie den zurückgegebenen Wert anschließend an **SetValueAsync**, da nicht garantiert ist, dass dieser Wert stimmt.
+> [!IMPORTANT]
+> Mit dem **ColorTemperaturePreset.Auto**-Voreinstellungswert wird das System angewiesen, die Einstellung des Weißabgleichs automatisch anzupassen. Für einige Szenarien (etwa beim Aufnehmen einer Bildserie, bei der die Weißabgleicheinstellungen für jedes Bild gleich sein sollen) kann es ratsam sein, das Steuerelement mit dem aktuellen automatischen Wert zu sperren. Rufen Sie hierzu [**SetPresetAsync**](https://msdn.microsoft.com/library/windows/apps/dn279113) auf, und geben Sie die Voreinstellung **Manual** an. Legen Sie für das Steuerelement keinen Wert mit [**SetValueAsync**](https://msdn.microsoft.com/library/windows/apps/dn279114) fest. Das Gerät wird dann mit dem aktuellen Wert gesperrt. Versuchen Sie nicht, den Wert des aktuellen Steuerelements auszulesen. Übergeben Sie den zurückgegebenen Wert anschließend an **SetValueAsync**, da nicht garantiert ist, dass dieser Wert stimmt.
 
 ## Zoom
 
@@ -313,7 +306,7 @@ In diesem Beispiel wird ein [**Slider**](https://msdn.microsoft.com/library/wind
 
 Überprüfen Sie anhand der [**Supported**](https://msdn.microsoft.com/library/windows/apps/dn633819)-Eigenschaft, ob das aktuelle Aufnahmegerät **ZoomControl** unterstützt. Wenn das Steuerelement unterstützt wird, können Sie die UI für dieses Feature anzeigen und aktivieren.
 
-Der Zoomfaktorwert muss innerhalb des vom Gerät unterstützten Bereichs liegen und muss ein inkrementeller Wert der unterstützten Schrittgröße sein. Ermitteln Sie die unterstützten Werte für das aktuelle Gerät anhand der Eigenschaften [**Min**](https://msdn.microsoft.com/library/windows/apps/dn633817), [**Max**](https://msdn.microsoft.com/library/windows/apps/dn608150) und [**Step**](https://msdn.microsoft.com/library/windows/apps/dn633818). Sie werden verwendet, um die entsprechenden Eigenschaften des Schieberegler-Steuerelements festzulegen.
+Der Zoomfaktorwert muss innerhalb des vom Gerät unterstützten Bereichs liegen und ein inkrementeller Wert der unterstützten Schrittgröße sein. Ermitteln Sie die unterstützten Werte für das aktuelle Gerät anhand der Eigenschaften [**Min**](https://msdn.microsoft.com/library/windows/apps/dn633817), [**Max**](https://msdn.microsoft.com/library/windows/apps/dn608150) und [**Step**](https://msdn.microsoft.com/library/windows/apps/dn633818). Sie werden verwendet, um die entsprechenden Eigenschaften des Schieberegler-Steuerelements festzulegen.
 
 Legen Sie den Wert des Schieberegler-Steuerelements auf den aktuellen Wert von **ZoomControl** fest, nachdem Sie die Registrierung des [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/br209737)-Ereignishandlers aufgehoben haben. Das Ereignis wird dann nicht ausgelöst, wenn der Wert festgelegt wird.
 
@@ -347,10 +340,11 @@ Legen Sie den Zoomfaktor auf dem Aufnahmegerät fest, indem Sie ein neues [**Zoo
 
 ## Verwandte Themen
 
-* [Aufnehmen von Fotos und Videos mit „MediaCapture“](capture-photos-and-video-with-mediacapture.md)
+* [Kamera](camera.md)
+* [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

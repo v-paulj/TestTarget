@@ -1,45 +1,55 @@
-﻿---
+---
 author: jnHs
-Description: When you create a new add-on in the Windows Dev Center dashboard, you need to specify a product type and assign it a product ID.
-title: Set your add-on product type and product ID
+Description: "Beim Erstellen eines neuen Add-Ons im WindowsDevCenter-Dashboard müssen Sie einen Produkttyp angeben und eine Produkt-ID zuweisen."
+title: "Festlegen von Produkt-ID und Produkttyp für das Add-On"
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
+translationtype: Human Translation
+ms.sourcegitcommit: e59324aca65cf8baacb085da22a20d952fdb8c9a
+ms.openlocfilehash: 2a469506c8b440e1aa8555ac57b88f2026ae4d8e
+
 ---
 
-# Set your add-on product type and product ID
+# Festlegen von Produkt-ID und Produkttyp für das Add-On
 
-An add-on must be associated with an app that you've created in the dashboard already (even if you haven't submitted it yet). You can find the button to **Create a new add-on** on either your app's **Overview** page or its **Add-ons** page.
+Ein Add-On muss einer App zugeordnet sein, die bereits im Dashboard erstellt (aber noch nicht unbedingt übermittelt) wurde. Die Schaltfläche zum **Erstellen eines neuen Add-Ons** finden Sie auf der App-Seite **Übersicht** oder **Add-Ons**.
 
-Once you've clicked the button, you'll see the **Create a new add-on** page. Here, you'll need to specify a product type and assign it a product ID.
+Nachdem Sie auf die Schaltfläche geklickt haben, wird die Seite **Neues Add-On erstellen** angezeigt. Hier müssen Sie einen Produkttyp angeben und eine Produkt-ID zuweisen.
 
-## Product type
+## Produkttyp
 
-First, you'll need to indicate which type of add-on you are offering. This selection refers to how the customer can use your add-on.
+Zunächst müssen Sie angeben, welche Art von Add-On Sie anbieten. Diese Auswahloption bezieht sich darauf, wie das Add-On vom Kunden genutzt werden kann.
 
-> **Note** You won't be able to change the product type after you save this page to create the add-on. If you did choose the wrong product type, you can always delete your in-progress add-on submission and start over by creating a new add-on.
+> **Hinweis:** Nachdem Sie diese Seite gespeichert haben, um das Add-On zu erstellen, kann der Produkttyp nicht mehr geändert werden. Sollten Sie den falschen Produkttyp ausgewählt haben, können Sie die in Bearbeitung befindliche Add-On-Übermittlung jederzeit löschen und ein neues Add-On erstellen.
 
-If the product can be purchased, used (consumed), and then purchased again, you'll want to select one of the **consumable** proudct types. Consumable add-ons are often used for things like in-game currency (gold, coins, etc.) which can be purchased in set amounts and then used up by the customer. For more info on including consumable add-ons in your app, see [Enable consumable add-on purchases](../monetize/enable-consumable-add-on-purchases.md).
+Wenn das Produkt erworben werden kann, verwendet (verbraucht) und dann erneut gekauft wird, sollten Sie einen der **konsumierbaren** Produkttypen wählen. Konsumierbare Add-Ons bzw. Endverbraucher-Add-Ons werden häufig für Dinge wie spielinterne Währungen (Gold, Münzen usw.) verwendet, die in bestimmten Mengen erworben und vom Kunden aufgebraucht werden. Weitere Informationen zum Hinzufügen von konsumierbaren Add-Ons in Ihrer App finden Sie unter [Unterstützen von Endverbraucher-Add-On-Käufen](../monetize/enable-consumable-add-on-purchases.md).
 
-There are two types of consumable add-ons that you can select:
+Es gibt zwei Arten von konsumierbaren Add-Ons, die Sie auswählen können:
 
-- **Developer-managed consumable**: Supported on all OS versions. Balance and fulfillment must be managed within your app. 
-- **Store-managed consumable:** Balance will be tracked by Microsoft across all of the customer’s devices running Windows 10, version 1607 or later; not supported on any earlier OS versions. To use this option, the parent product must be compiled using Windows 10 SDK version 14393 or later. Also note that you cannot submit a Store-managed consumable add-on to the Store until the parent product has been published (though you can create the submission in your dashboard and begin working on it at any time). You'll need to enter the quantity for your Store-managed consumable add-on in the **Properties** page.
+- **Von Entwicklern verwaltetes Endverbraucher-Add-On**: Unterstützt unter allen Betriebssystemversionen. Saldo und Erfüllung müssen in der App verwaltet werden. 
+- **Vom Store verwaltetes Endverbraucher-Add-On:** Der Saldo wird von Microsoft für alle Geräte des Kunden verfolgt, auf denen Windows10 (Version 1607 oder höher) ausgeführt wird; nicht unterstützt unter früheren Betriebssystemversionen. Um diese Option zu verwenden, muss das übergeordnete Produkt mit Windows10 SDK Version14393 oder höher kompiliert werden. Beachten Sie außerdem, dass Sie erst dann vom Store verwaltete Endverbraucher-Add-Ons zum Store übermitteln können, wenn das übergeordnete Produkt veröffentlicht wurde (es ist jedoch möglich, jederzeit die Übermittlung in Ihrem Dashboard zu erstellen und damit bereits zu arbeiten). Sie müssen die Menge für Ihr vom Store verwaltetes Endverbraucher-Add-on auf der **Eigenschaften**-Seite eingeben.
 
-You should select **Durable** if your product can be purchased only once. Durable add-ons are often used to unlock additional functionality in an app. Durable add-ons are not consumed, but you can set the **Product lifetime** so that they expire after a set duration (with options from 1-365 days). The default **Product lifetime** for a durable add-on is **Forever**, which means the add-on never expires. You can change this to a different duration in the [Add-on properties](enter-add-on-properties.md) step of the add-on submission process.
+Sie müssen **Dauerhaft** auswählen, wenn das Produkt nur einmal erworben werden kann. Dauerhafte Add-Ons werden häufig verwendet, um zusätzliche Funktionen in einer App freizuschalten. Dauerhafte Add-Ons werden nicht aufgebraucht, Sie können jedoch eine **Produktlebenszeit** festlegen, sodass sie nach einer festgelegten Zeitspanne (von 1 bis 365Tagen) ablaufen. Die standardmäßige **Produktlebenszeit** dauerhafter Add-Ons ist **Unbegrenzt**. Das Add-On läuft also niemals ab. Diese Einstellung kann im Schritt [Add-On-Eigenschaften](enter-add-on-properties.md) der Add-On-Übermittlung geändert werden.
 
-## Product ID
+## Produkt-ID
 
-Enter a unique product ID for your add-on. This is the same identifier that you will need to reference in [your app's code to call the add-on](https://msdn.microsoft.com/library/windows/apps/mt219684).
+Geben Sie eine eindeutige Produkt-ID für das Add-On ein. Dies ist der gleiche Bezeichner, den Sie für den Verweis im [App-Code zum Aufrufen des Add-Ons](https://msdn.microsoft.com/library/windows/apps/mt219684) benötigen.
 
-Here are a few things to keep in mind when choosing a product ID:
+Folgende Dinge sollten bei der Wahl einer Produkt-ID beachtet werden:
 
--   Customers won't see this product ID. (Later, you can enter a [title and description](create-add-on-descriptions.md) to be displayed to customers.)
--   You can’t change or delete an add-on's product ID after it's been published.
--   A product ID can't be more than 100 characters in length.
--   A product ID cannot include any of the following characters: **&lt; &gt; \* % & : \\ ? + ,**
--   To offer your add-on on all devices, you must only use alphanumeric characters, periods, and/or underscores. If you use any other types of characters, the add-on will not be available for purchase to customers running Windows Phone 8.1 or earlier.
--   A product ID doesn't have to be unique within the Windows Store, but it must be unique to your developer account.
- 
+-   Die Produkt-ID ist für Kunden nicht sichtbar. (Sie können später [einen Titel und eine Beschreibung](create-add-on-descriptions.md) eingeben, die für Kunden sichtbar sind.)
+-   Sie können die Produkt-ID eines Add-Ons nach der Veröffentlichung nicht ändern oder löschen.
+-   Eine Produkt-ID darf maximal 100 Zeichen umfassen.
+-   Folgende Zeichen dürfen nicht in der Produkt-ID enthalten sein: **&lt; &gt; \* % & : \\ ? + ,**
+-   Um das Add-On auf allen Geräten anzubieten, dürfen nur alphanumerische Zeichen, Punkte und/oder Unterstriche verwendet werden. Bei Verwendung anderer Zeichen kann das Add-On von Kunden mit Windows Phone8.1 oder früheren Versionen nicht erworben werden.
+-   Eine Produkt-ID muss zwar nicht im Windows Store, aber für Ihr Entwicklerkonto eindeutig sein.
+ 
 
 
+
+
+
+
+
+<!--HONumber=Aug16_HO5-->
 
 

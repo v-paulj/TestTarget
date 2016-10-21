@@ -3,8 +3,9 @@ author: mtoepke
 title: Rendern der Schattenmap zum Tiefenpuffer
 description: "Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine zweidimensionale Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird."
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 644e2084baa750965a5283208fde1cea24ecfdea
+ms.openlocfilehash: 337aa63ee30b05da51d5b224cb0013519e11504d
 
 ---
 
@@ -121,8 +122,7 @@ void ShadowSceneRenderer::RenderShadowMap()
 }
 ```
 
-
-            **Optimieren des Frustums:**  Stellen Sie sicher, dass in Ihrer Implementierung ein exaktes Frustum berechnet wird, damit Sie mit dem Tiefenpuffer die größtmögliche Präzision erzielen. Weitere Tipps zu Schattenmethoden finden Sie unter [Häufig verwendete Methoden zur Verbesserung von Tiefenmaps für Schatten](https://msdn.microsoft.com/library/windows/desktop/ee416324).
+**Optimieren des Ansichts-Frustums:**  Stellen Sie sicher, dass in Ihrer Implementierung ein exaktes Ansichts-Frustum berechnet wird, damit Sie mit dem Tiefenpuffer die größtmögliche Präzision erzielen. Weitere Tipps zu Schattenmethoden finden Sie unter [Häufig verwendete Methoden zur Verbesserung von Tiefenmaps für Schatten](https://msdn.microsoft.com/library/windows/desktop/ee416324).
 
 ## Vertex-Shader für Schattendurchlauf
 
@@ -157,6 +157,6 @@ Im nächsten Teil dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie Sch
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: drewbatgit
 ms.assetid: D20C8E01-4E78-4115-A2E8-07BB3E67DDDC
 description: "In diesem Artikel wird beschrieben, wie Sie auf die Taschenlampe eines Geräts zugreifen und diese verwenden, sofern vorhanden. Die Taschenlampenfunktion wird unabhängig von der Kamera des Geräts und der Blitzfunktion der Kamera verwaltet."
 title: "Kameraunabhängige Taschenlampe"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 022ca2848c575f545402b13e19c0854a9e3ec74a
+translationtype: Human Translation
+ms.sourcegitcommit: 1b32633abc9365bf88137dff7c36ba0f2ad05d72
+ms.openlocfilehash: 8c256d8aba08d42fa00b46a01c8b7e773a0ab40c
 
 ---
 
@@ -13,7 +14,7 @@ ms.openlocfilehash: 022ca2848c575f545402b13e19c0854a9e3ec74a
 \[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
-In diesem Artikel wird beschrieben, wie Sie auf die Taschenlampe eines Geräts zugreifen und diese verwenden, sofern vorhanden. Die Taschenlampenfunktion wird unabhängig von der Kamera des Geräts und der Blitzfunktion der Kamera verwaltet. Neben dem Abrufen eines Verweises auf die Leuchte und dem Anpassen ihrer Einstellungen erfahren Sie in diesem Artikel auch, wie die Leuchtenressourcen korrekt freigegeben werden, wenn sie nicht verwendet wird, und wie Sie ermitteln können, wann sich die Verfügbarkeit der Leuchte ändert, falls sie von einer anderen App verwendet wird.
+In diesem Artikel wird beschrieben, wie Sie auf die Taschenlampe eines Geräts zugreifen und diese verwenden, sofern vorhanden. Die Taschenlampenfunktion wird unabhängig von der Kamera des Geräts und der Blitzfunktion der Kamera verwaltet. Neben dem Abrufen eines Verweises auf die Leuchte und dem Anpassen ihrer Einstellungen erfahren Sie in diesem Artikel auch, wie die Leuchtenressourcen korrekt freigegeben werden, wenn sie nicht verwendet wird. Außerdem wird beschrieben, wie Sie ermitteln können, wann sich die Verfügbarkeit der Leuchte ändert, falls sie von einer anderen App verwendet wird.
 
 ## Abrufen der Standardleuchte des Geräts
 
@@ -41,7 +42,7 @@ Beachten Sie, dass sich die [**DeviceInformation**](https://msdn.microsoft.com/l
 
 ## Anpassen der Leuchteneinstellungen
 
-Sobald Sie eine Instanz der [**Lamp**](https://msdn.microsoft.com/library/windows/apps/dn894310)-Klasse haben, aktivieren Sie die Leuchte, indem Sie die [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn894330)-Eigenschaft auf **true** setzen.
+Nachdem Sie über eine Instanz der [**Lamp**](https://msdn.microsoft.com/library/windows/apps/dn894310)-Klasse verfügen, aktivieren Sie die Leuchte, indem Sie die [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/dn894330)-Eigenschaft auf **true** setzen.
 
 [!code-cs[LampSettingsOn](./code/Lamp/cs/MainPage.xaml.cs#SnippetLampSettingsOn)]
 
@@ -69,7 +70,8 @@ Wenn Sie die Leuchte nicht mehr verwenden, sollten Sie sie deaktivieren und [**L
 
 [!code-cs[DisposeLamp](./code/Lamp/cs/MainPage.xaml.cs#SnippetDisposeLamp)]
 
- 
+## Verwandte Themen
+- [Medienwiedergabe](media-playback.md)
 
  
 
@@ -79,6 +81,6 @@ Wenn Sie die Leuchte nicht mehr verwenden, sollten Sie sie deaktivieren und [**L
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -2,8 +2,9 @@
 author: msatranjr
 title: Bluetooth-Werbung
 description: "Dieser Abschnitt enthält Artikel zur Integration von Bluetooth Low Energie-Ankündigungen (LE-Ankündigungen) in Apps für die Universelle Windows-Plattform (UWP) mithilfe der AdvertisementWatcher and AdvertisementPublisher APIs."
+translationtype: Human Translation
 ms.sourcegitcommit: 62e97bdb8feb78981244c54c76a00910a8442532
-ms.openlocfilehash: a419ad04fe4f21867f2f1bd1664fbce39a7da792
+ms.openlocfilehash: c8210fd07cdea4095d1f989fe5f55cda529d8de1
 
 ---
 
@@ -21,15 +22,13 @@ Dieser Artikel enthält eine Übersicht über Bluetooth-Werbung (Beacons) für A
 
 Es gibt zwei Hauptfunktionen, die ein Entwickler mithilfe der Advertisement APIs ausführen kann:
 
--   
-            [Überwachung für Werbung](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): auf Beacons in der Nähe überwachen und sie basierend auf Nutzlast oder Nähe herauszufiltern.  
--   
-            [Ankündigung Publisher](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): eine Nutzlast für Windows definieren, um im Auftrag eines Entwicklers zu werben.  
+-   [Überwachung für Werbung](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.aspx): auf Beacons in der Nähe überwachen und sie basierend auf Nutzlast oder Nähe herausfiltern.  
+-   [Ankündigung Publisher](https://msdn.microsoft.com/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher.aspx): eine Nutzlast für Windows definieren, um im Auftrag eines Entwicklers zu werben.  
 
 Ein vollständiges Codebeispiel finden Sie unter [Beispiel für Bluetooth-Werbung](http://go.microsoft.com/fwlink/p/?LinkId=619990) bei Github.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

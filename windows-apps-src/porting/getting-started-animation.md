@@ -3,8 +3,9 @@ author: mcleblanc
 title: Erste Schritte mit Animationen
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: In diesem Projekt verschieben wir ein Rechteck, wenden einen Ausblendeeffekt an und blenden es wieder ein
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 6e0b92af1d3c5f61aa2341d43ca40330fcc359f4
+ms.openlocfilehash: ae08bb25d8ac56ca6e03a5c200e8a0d4e05fbfe3
 
 ---
 
@@ -122,8 +123,7 @@ Wenn Sie die Datei MainPage.xaml in der **XAML**-Ansicht öffnen, können Sie de
 
 Sie können diesen XAML-Code manuell bearbeiten oder zu Blend zurückkehren, um dort weiter an diesem zu arbeiten. Mit Blend können Sie spielerisch interessante Benutzeroberflächen erstellen und sie mit einem Grafiktool animieren, was die Entwicklung erheblich beschleunigt. Weitere Informationen zu Animationen finden Sie unter [Übersicht über Animationen](https://msdn.microsoft.com/library/windows/apps/mt187350).
 
-
-            **Hinweis**  Informationen zu Animationen für WindowsStore-Apps, die JavaScript und HTML verwenden, finden Sie unter [Animieren der Benutzeroberfläche (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
+**Hinweis**  Informationen zu Animationen für WindowsStore-Apps, die JavaScript und HTML verwenden, finden Sie unter [Animieren der Benutzeroberfläche (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
 
 ### Nächster Schritt
 
@@ -131,6 +131,6 @@ Sie können diesen XAML-Code manuell bearbeiten oder zu Blend zurückkehren, um 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

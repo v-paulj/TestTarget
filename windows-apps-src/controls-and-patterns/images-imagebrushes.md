@@ -5,25 +5,38 @@ title: Bilder und Bildpinsel
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
 template: detail.hbs
-ms.sourcegitcommit: 485f3069ff92995082550366839f14be50f674a5
-ms.openlocfilehash: f37f609d87b48a39b958a8e32470488689a3e68c
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: bcb23963bfe59006efff2df01bb5ea3d98525497
 
 ---
 # Bilder und Bildpinsel
 
-Sie können zum Anzeigen von Bildern das **Image**-Objekt oder das **ImageBrush**-Objekt verwenden. Ein Image-Objekt rendert ein Bild. Ein ImageBrush-Objekt zeichnet ein anderes Objekt mit einem Bild. 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+Sie können zum Anzeigen von Bildern das **Image**-Objekt oder das **ImageBrush**-Objekt verwenden. Ein Image-Objekt rendert ein Bild, und ein ImageBrush-Objekt zeichnet ein anderes Objekt mit einem Bild. 
+
+<div class="important-apis" >
+<b>Wichtige APIs</b><br/>
+<ul>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx"><strong>Image-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx"><strong>Source-Eigenschaft</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx"><strong>ImageBrush-Klasse</strong></a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx"><strong>ImageSource-Eigenschaft</strong></a></li>
+</ul>
+
+</div>
+</div>
 
 
 
--   [**Image-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx)
--   [**Source-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)
--   [**ImageBrush-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)
--   [**ImageSource-Eigenschaft**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)
+
+
 
 ## Sind dies die richtigen Elemente?
 Verwenden Sie ein **Image**-Element, um ein eigenständiges Bild in Ihrer App anzuzeigen.
 
-Verwenden Sie **ImageBrush**, um ein Image auf ein anderes Objekt anzuwenden. „ImageBrush“ kann u. a. für dekorative Effekte für Text oder unterteilte Hintergründe für Steuerelemente oder Layoutcontainer verwendet werden. Sie können steuern, wie das Bild gestreckt, ausgerichtet und unterteilt wird, um Muster und andere Effekte zu erzeugen. 
+Verwenden Sie **ImageBrush**, um ein Image auf ein anderes Objekt anzuwenden. „ImageBrush“ kann u.a. für dekorative Effekte für Text oder unterteilte Hintergründe für Steuerelemente oder Layoutcontainer verwendet werden. Sie können steuern, wie das Bild gestreckt, ausgerichtet und unterteilt wird, um Muster und andere Effekte zu erzeugen. 
 
 
 ## Erstellen eines Bilds
@@ -40,7 +53,7 @@ Hier ist das gerenderte Image-Objekt.
 
 ![Beispiel für ein Image-Element](images/Image_Licorice.jpg)
 
-Die [**Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)-Eigenschaft in diesem Beispiel gibt den Speicherort des Bilds an, das Sie anzeigen möchten. Sie können die Quelle festlegen, indem Sie die absolute URL (z. B. „http://contoso.com/myPicture.jpg“) oder eine URL relativ zu Ihrer App-Verpackungsstruktur angeben. In unserem Beispiel legen wir die Bilddatei „licorice.jpg“ im Stammverzeichnis unseres Projekts ab und deklarieren Projekteinstellungen, die die Bilddatei als Inhalt einbeziehen.
+Die [**Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)-Eigenschaft in diesem Beispiel gibt den Speicherort des Bilds an, das Sie anzeigen möchten. Sie können die Quelle festlegen, indem Sie die absolute URL (z.B. „http://contoso.com/myPicture.jpg“) oder eine URL relativ zu Ihrer App-Verpackungsstruktur angeben. In unserem Beispiel legen wir die Bilddatei „licorice.jpg“ im Stammverzeichnis unseres Projekts ab und deklarieren Projekteinstellungen, die die Bilddatei als Inhalt einbeziehen.
 
 ### ImageBrush
 
@@ -75,7 +88,7 @@ Wenn Sie den [**Width**](https://msdn.microsoft.com/library/windows/apps/xaml/wi
 
 Mit der [**Clip**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.clip.aspx)-Eigenschaft können Sie einen Bildausgabebereich beschneiden. Die Clip-Eigenschaft wird für eine [**Geometry**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.geometry.aspx)-Klasse festgelegt. Das Beschneiden wird derzeit nur für Rechtecke unterstützt.
 
-Im nächsten Beispiel erfahren Sie, wie Sie eine [**RectangleGeometry**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.rectanglegeometry.aspx)-Klasse als Zuschneidebereich für ein Bild verwenden. In diesem Beispiel definieren wir ein **Image**-Objekt mit einer Höhe von 200. Eine **RectangleGeometry**-Klasse definiert ein Rechteck für den Bereich des Bilds, der angezeigt wird. Die [**Rect**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.rectanglegeometry.rect.aspx)-Eigenschaft ist auf „25,25,100,150“ festgelegt, wodurch ein Rechteck definiert ist, das bei Position 25,25 mit einer Breite von 100 und einer Höhe von 150 startet. Nur der Teil des Bilds, der sich innerhalb des Rechteckbereichs befindet, wird angezeigt.
+Im nächsten Beispiel erfahren Sie, wie Sie eine [**RectangleGeometry**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.rectanglegeometry.aspx)-Klasse als Zuschneidebereich für ein Bild verwenden. In diesem Beispiel definieren wir ein **Image**-Objekt mit einer Höhe von200. Eine **RectangleGeometry**-Klasse definiert ein Rechteck für den Bereich des Bilds, der angezeigt wird. Die [**Rect**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.rectanglegeometry.rect.aspx)-Eigenschaft ist auf „25,25,100,150“ festgelegt, wodurch ein Rechteck definiert ist, das bei Position 25,25 mit einer Breite von 100 und einer Höhe von 150 startet. Nur der Teil des Bilds, der sich innerhalb des Rechteckbereichs befindet, wird angezeigt.
 
 ```xaml
 <Image Source="licorice.jpg" Height="200">
@@ -99,7 +112,7 @@ Sie können [**Opacity**](https://msdn.microsoft.com/library/windows/apps/xaml/w
 
 Dies ist das gerenderte Bild mit einer Transparenz von 0,5 und einem schwarzen Hintergrund, der durch das teilweise durchlässige Bild zu sehen ist.
 
-![Ein Image-Objekt mit einer Transparenz von 0,5.](images/Image_Opacity.jpg)
+![Ein Image-Objekt mit einer Transparenz von0,5.](images/Image_Opacity.jpg)
 
 ### Bilddateiformate
 
@@ -115,12 +128,15 @@ Dies ist das gerenderte Bild mit einer Transparenz von 0,5 und einem schwarzen H
 
 Die APIs für [**Image**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.aspx), [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx) und [**BitmapSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.aspx) enthalten keine dedizierten Methoden für das Codieren und Decodieren von Medienformaten. Sämtliche Codier- und Decodiervorgänge sind integriert. Aspekte dieser Vorgänge sind auf der Oberfläche allenfalls als Bestandteil von Ereignisdaten für Load-Ereignisse sichtbar. Falls Sie gezielt mit der Codierung und Decodierung von Bildern arbeiten möchten, weil Ihre App beispielsweise Bildkonvertierungen oder Bildbearbeitungsfunktionen ausführt, sollten Sie die im [**Windows.Graphics.Imaging**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.graphics.imaging.aspx)-Namespace verfügbaren APIs verwenden. Die APIs werden außerdem von der Windows-Bilderstellungskomponente (Windows Imaging Component, WIC) unterstützt.
 
+Ab Windows10, Version 1607, unterstützt das **Image**-Element animierte GIF-Bilder. Bei Verwendung eines **BitmapImage** als **Source** für das Bild können Sie auf BitmapImage-APIs zugreifen, um die Wiedergabe des animierten GIF-Bilds zu steuern. Weitere Informationen finden Sie in den Anmerkungen auf der Seite für die [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx)-Klasse.
+
+> **Hinweis**&nbsp;&nbsp;Die Unterstützung für animierte GIFs ist verfügbar, wenn Ihre App für Windows10, Version1607, kompiliert wurde und auf Version1607 (oder höher) ausgeführt wird. Wenn Ihre App für frühere Versionen kompiliert wurde oder auf früheren Versionen ausgeführt wird, wird der erste Frame des GIF-Bilds angezeigt, ist jedoch nicht animiert.
+
 Weitere Informationen zu App-Ressourcen und zum Packen von Bildquellen in einer App finden Sie unter [Definieren von App-Ressourcen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965321).
 
 ### WriteableBitmap
 
-[
-            **WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.aspx) stellt eine [**BitmapSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.aspx) bereit, die geändert werden kann und nicht die grundlegende dateibasierte Decodierung aus der WIC verwendet. Sie können Bilder dynamisch bearbeiten und das aktualisierte Bild erneut rendern. Verwenden Sie zum Definieren des Pufferinhalts eines **WriteableBitmap**-Elements die [**PixelBuffer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx)-Eigenschaft, um auf den Puffer zuzugreifen, und einen Datenstrom oder sprachspezifischen Puffertyp, um ihn zu füllen. Beispielcode finden Sie unter [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.aspx).
+[**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.aspx) stellt eine [**BitmapSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.aspx) bereit, die geändert werden kann und nicht die grundlegende dateibasierte Decodierung aus der WIC verwendet. Sie können Bilder dynamisch bearbeiten und das aktualisierte Bild erneut rendern. Verwenden Sie zum Definieren des Pufferinhalts eines **WriteableBitmap**-Elements die [**PixelBuffer**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx)-Eigenschaft, um auf den Puffer zuzugreifen, und einen Datenstrom oder sprachspezifischen Puffertyp, um ihn zu füllen. Beispielcode finden Sie unter [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.writeablebitmap.aspx).
 
 ### RenderTargetBitmap
 
@@ -138,8 +154,7 @@ In der Regel werden das Image- und das ImageBrush-Element mit XAML und nicht mit
 
 Wenn Sie „Image“ oder „ImageBrush“ mit Code definieren, verwenden Sie die Standardkonstruktoren, und legen Sie dann die relevanten Eigenschaften ([**Image.Source**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx) oder [**ImageBrush.ImageSource**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imagesource.aspx)) fest. Die Quelleigenschaften erfordern ein [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapimage.aspx)-Objekt (keinen URI), wenn Sie sie mithilfe von Code festlegen. Falls es sich bei Ihrer Quelle um einen Datenstrom handelt, initialisieren Sie den Wert mit der [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync.aspx)-Methode. Ist Ihre Quelle ein (URI), der Ihrer App Inhalt mit dem **ms-appx**- oder dem **ms-resource**-Schema hinzufügt, verwenden Sie den [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/xaml/br243238.aspx)-Konstruktor, für den ein URI angegeben wird. Wenn beim Abrufen oder Decodieren der Bildquelle Probleme mit der Zeitsteuerung auftreten und Sie alternativen Inhalt anzeigen müssen, bis die Bildquelle verfügbar ist, können Sie auch das [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.bitmapimage.imageopened.aspx)-Ereignis behandeln. Beispielcode finden Sie unter [Beispiel für XAML-Bilder](http://go.microsoft.com/fwlink/p/?linkid=238575).
 
-> **Hinweis**
-            &nbsp;&nbsp;Wenn Sie Bilder mithilfe von Code festlegen, können Sie die automatische Behandlung für den Zugriff auf nicht qualifizierte Ressourcen mit den aktuellen Skalierungs- und Kulturqualifizierern verwenden. Alternativ können Sie auch [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) und [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) mit Qualifizierern für Kultur und Skalierung verwenden, um die Ressourcen direkt abzurufen. Weitere Informationen finden Sie unter [Ressourcenverwaltungssystem](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
+> **Hinweis**&nbsp;&nbsp;Wenn Sie Bilder mithilfe von Code festlegen, können Sie die automatische Behandlung für den Zugriff auf nicht qualifizierte Ressourcen mit den aktuellen Skalierungs- und Kulturqualifizierern verwenden. Alternativ können Sie auch [**ResourceManager**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemanager.aspx) und [**ResourceMap**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.applicationmodel.resources.core.resourcemap.aspx) mit Qualifizierern für Kultur und Skalierung verwenden, um die Ressourcen direkt abzurufen. Weitere Informationen finden Sie unter [Ressourcenverwaltungssystem](https://msdn.microsoft.com/library/windows/apps/xaml/jj552947.aspx).
 
 ## Verwandte Artikel
 
@@ -148,6 +163,6 @@ Wenn Sie „Image“ oder „ImageBrush“ mit Code definieren, verwenden Sie di
 -   [**ImageBrush-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

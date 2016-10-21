@@ -4,8 +4,8 @@ title: Erstellen barrierefreier Spiele
 description: Erfahren Sie, wie Sie barrierefreie Spiele erstellen. Verwenden Sie das inklusive Spielentwurfsprinzip, um ein barrierefreies Spiel zu entwickeln.
 ms.assetid: f5ba1e60-0d7c-11e6-91ec-0002a5d5c51b
 translationtype: Human Translation
-ms.sourcegitcommit: 2492ff5c8b3ba0331e831234943a1db124f8fa4f
-ms.openlocfilehash: 2b78d767a7ac75e27f759c0eb06953e6158fb88b
+ms.sourcegitcommit: d61b834adb50e71ba67ea32662069f257c33a676
+ms.openlocfilehash: 185e79b96cdc64f3ead6c85d067659b9087ec082
 
 ---
 #  Erstellen barrierefreier Spiele
@@ -20,7 +20,7 @@ Grundsätzlich betrachtet, ist es nicht schwierig, die Entwicklung barrierefreie
 
 Sie multiplizieren die Zahl der Benutzer, die Ihr Spiel spielen können, mit der Qualität Ihres Spiels und erhalten so die Verkaufszahlen für Ihr Spiel.
 
-Wenn Sie ein beeindruckendes Spiel entwickelt haben, das so kompliziert oder komplex ist, dass es nur von sehr wenigen Menschen gespielt werden kann, begrenzen Sie Ihre Verkaufszahlen. Und wenn Sie ein Spiel entwickeln, das von Menschen mit physischen, sensorischen oder kognitiven Behinderungen nicht gespielt werden kann, entgehen Ihnen ebenfalls mögliche Umsätze. Angesichts der Tatsache, dass [19% der Bevölkerung der Vereinigten Staaten über eine Art von Behinderung verfügen](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), kann dies potenziell einen großen Einfluss auf den Umsatz haben, den Sie mit Ihrem Spiel erzielen können. 
+Wenn Sie ein beeindruckendes Spiel entwickelt haben, das so kompliziert oder komplex ist, dass es nur von sehr wenigen Menschen gespielt werden kann, begrenzen Sie Ihre Verkaufszahlen. Und wenn Sie ein Spiel entwickeln, das von Menschen mit physischen, sensorischen oder kognitiven Behinderungen nicht gespielt werden kann, entgehen Ihnen ebenfalls mögliche Umsätze. Angesichts der Tatsache, dass beispielsweise [19% der Bevölkerung der Vereinigten Staaten über eine Art von Behinderung verfügen](http://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html), kann dies potenziell einen großen Einfluss auf den Umsatz haben, den Sie mit Ihrem Spiel erzielen können. 
 
 Weitere geschäftliche Begründungen finden Sie unter [Erstellen barrierefreier Videospiele](https://msdn.microsoft.com/library/windows/desktop/ee415219).
 
@@ -89,7 +89,7 @@ Das inklusive Design konzentriert sich auf das Erstellen von Produkten und Diens
 
 Um erfolgreich zu sein, müssen die Spieledesigner von heute über die Entwicklung von unterhaltsamen Spielen für eine kleine, ausgewählte Zielgruppe hinaus denken. Spieledesigner müssen die Auswirkungen ihrer Designentscheidungen auf die allgemeine Barrierefreiheit des Spiels berücksichtigen, d.h. die Spielbarkeit des Spiels für ihre potenzielle Zielgruppe insgesamt, einschließlich Menschen mit Behinderungen.
 
-Es muss daher ein Paradigmenwechsel vom herkömmlichen Spieledesign hin zum inklusiven Konzept für das Design von Spielen stattfinden. Das inklusive Spieledesign geht über das einfache Spieledesign hinaus, das der Zielgruppe Unterhaltung bietet. Es bedeutet, zusätzliche oder geänderte Personas zu entwickeln, um eine breitere Zielgruppe anzusprechen. 
+Es muss daher ein Paradigmenwechsel vom herkömmlichen Spieledesign hin zum inklusiven Konzept für das Design von Spielen stattfinden. Das inklusive Spieledesign geht über das einfache Spieledesign hinaus, das der Zielgruppe Unterhaltung bietet. Es bedeutet, zusätzliche oder geänderte Personas zu entwickeln, um eine breitere Gruppe von Spielern anzusprechen. 
 
 Dieser zusätzliche Schritt hilft Ihnen, Lücken im ursprünglichen Design zu ermitteln. Indem Sie diese Lücken identifizieren, können Sie das ursprüngliche Designkonzept überarbeiten und verbessern. Wenn Sie sich Zeit nehmen und den inklusiven Designansatz für Ihr Spiel berücksichtigen, wird Ihr Spiel letzten Endes besser zugänglich.
 
@@ -139,7 +139,7 @@ Die Netzhaut des Auges besitzt zwei Arten von lichtempfindlichen Zellen: die Zap
     * Ähnliche Farben: alle Abstufungen von Rot und Grün sowie von Braun und Orange
     * Farben, die sich abheben: Blau und Gelb
     
-  + Verlassen Sie sich nicht ausschließlich auf Farben, um Spielobjekte zu unterscheiden; verwenden Sie auch Formen und Muster.
+  + Verlassen Sie sich nicht ausschließlich auf Farben, um Spielobjekte zu unterscheiden. Verwenden Sie auch Formen und Muster.
   
 ### Untertitelungen und Untertitel
 
@@ -217,6 +217,6 @@ Im Folgenden finden Sie einige externe Websites, die zusätzliche Informationen 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

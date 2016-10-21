@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
 title: Binden von hierarchischen Daten und Erstellen einer Master/Details-Ansicht
 description: "Sie können eine Master/Detailansicht mit mehreren Ebenen (auch bekannt als Listendetailansicht) hierarchischer Daten erstellen, indem Sie Elementsteuerelemente an CollectionViewSource-Instanzen binden, die in einer Kette verbunden sind."
+translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 2ff66a1d6a80bb085f54dec8e35371ba0c9e6b27
+ms.openlocfilehash: 91786a785eece1448a36ebf48b8c8ef5c131e609
 
 ---
 # Binden von hierarchischen Daten und Erstellen einer Master/Details-Ansicht
@@ -12,8 +13,7 @@ ms.openlocfilehash: 2ff66a1d6a80bb085f54dec8e35371ba0c9e6b27
 \[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
-> 
-            **Hinweis**  Weitere Informationen finden Sie im [Master/Details-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619991).
+> **Hinweis**  Weitere Informationen finden Sie im [Master/Detail-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619991).
 
 Sie können eine Master/Details-Ansicht mit mehreren Ebenen (auch bekannt als Listen-Details-Ansicht) von hierarchischen Daten erstellen, indem Sie Elementsteuerelemente an [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)-Instanzen binden, die in einer Kette verbunden sind. In diesem Thema verwenden wir nach Möglichkeit die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) und die flexiblere (aber weniger leistungsfähige) [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782), wenn nötig.
 
@@ -225,6 +225,6 @@ Beachten Sie, dass Sie durch die direkte Bindung an die [**CollectionViewSource*
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

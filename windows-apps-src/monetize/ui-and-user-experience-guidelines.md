@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: "Erfahren Sie mehr über UI- und Benutzererfahrungsrichtlinien in App-Anzeigen."
 title: UI- und Benutzererfahrungsrichtlinien in App-Anzeigen
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: d464a2de442e6f1833f429c8460c27bf85e577d1
 
 
 ---
@@ -12,11 +13,11 @@ ms.openlocfilehash: 87be9f0f0a19094085d5c4ecbcfb8d40ceb20d2a
 # UI- und Benutzererfahrungsrichtlinien in App-Anzeigen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 ## Allgemeine UI-Ressourcen für Windows-Apps
 
-Finden Sie Informationen zur Gestaltung des Erscheinungsbilds von Apps unter [Design und UI](https://developer.microsoft.com/windows/design).
+Informationen zur Gestaltung des Erscheinungsbilds von Apps finden Sie unter [Design und UI](https://developer.microsoft.com/windows/design).
 
 ## Bewährte Methoden für AdControl
 
@@ -142,6 +143,6 @@ Wir bemühen uns, Ihnen bei der geschickten Umsetzung behilflich zu sein. Da Sie
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

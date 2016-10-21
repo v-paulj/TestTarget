@@ -1,20 +1,29 @@
 ---
 author: eliotcowley
-title: Concept approval
-description: Learn how to submit your product for concept approval, which you will need if your product runs on Xbox or uses Xbox Live.
+title: Konzeptgenehmigung
+description: "Hier erfahren Sie, wie Sie Ihr Produkt zur Konzeptgenehmigung übermitteln, die Sie benötigen, wenn das Produkt auf der Xbox ausgeführt wird oder Xbox Live verwendet."
 ms.assetid: 
+translationtype: Human Translation
+ms.sourcegitcommit: fbd08666fa70af2806f2a0afa2f1823005ce8801
+ms.openlocfilehash: e9915282da1c611037402d149555246819becf89
+
 ---
 
-# Concept approval
+# Konzeptgenehmigung
 
-When you begin creating a game that will run on Xbox, you will need to submit a proposal concerning that game to Microsoft for *concept approval* before you can publish it. This up-front, high-level submission benefits both Microsoft and you by identifying at the very beginning of the process any likely difficulties or drawbacks in the overall plan for the game. Try to make sure that your content isn't overly vulgar, offensive, or objectionable, and that it feels at home on the target platform. Once you submit your proposal, Microsoft will review it and then notify you of the result.
+Wenn Sie ein Spiel erstellen, das auf der Xbox ausgeführt wird, müssen Sie vor der Veröffentlichung an Microsoft einen Vorschlag für das Spiel zur *Konzeptgenehmigung* übermitteln. Diese allgemeine Übermittlung im Vorfeld bietet Microsoft und Ihnen Vorteile, indem zu Beginn des Prozesses wahrscheinliche Probleme oder Nachteile bei der Gesamtplanung für das Spiel erkannt werden. Stellen Sie sicher, dass der Content nicht übermäßig vulgär, beleidigend oder anstößig und für die Zielplattform geeignet ist. Nachdem Sie den Vorschlag übermittelt haben, wird er von Microsoft geprüft, und Sie werden dann über das Ergebnis informiert.
 
-If you are developing a Universal Windows Platform (UWP) game, you only need concept approval if you want to allow customers to download it on Xbox devices. If you only want to make your UWP game available to Windows desktop or mobile devices (or if you're publishing a UWP app that's *not* a game, targeting any device), all you need is a [developer account](https://go.microsoft.com/fwlink/?LinkId=817223), and you can freely configure and submit your app to the Store through the dashboard.
+Wenn Sie ein Spiel für die universelle Windows Plattform (UWP) entwickeln, benötigen Sie die Konzeptgenehmigung nur dann, wenn Sie Kunden die Möglichkeit bieten möchten, das Spiel auf Xbox-Geräte herunterzuladen. Wenn Sie Ihr UWP-Spiel nur für Windows-Desktopgeräte oder -Mobilgeräte verfügbar machen möchten (oder wenn Sie eine UWP-App veröffentlichen, die *kein* für alle Geräte bestimmtes Spiel ist), benötigen Sie lediglich ein [Entwicklerkonto](https://go.microsoft.com/fwlink/?LinkId=817223). Sie können dann die App frei konfigurieren und über das Dashboard an den Store übermitteln.
 
-## Submit your concept for approval
+## Übermitteln des Konzepts zur Genehmigung
 
-If you are an independent game developer or publisher, you can submit your concept for approval through the ID@Xbox program. Learn more about ID@Xbox and apply [here](http://www.xbox.com/en-US/Developers/id).
+Als unabhängiger Spieleentwickler oder Spieleherausgeber können Sie Ihr Konzept über das ID@Xbox-Programm zur Genehmigung übermitteln. Weitere Informationen über ID@Xbox und zur Anwendung finden Sie [hier](http://www.xbox.com/en-US/Developers/id).
 
-If you are already an ID@Xbox developer, you should have been sent a link to the Game Information Form (GIF) where you can submit your game concept. If you have questions, contact [idgames@xbox.com](mailto:idgames@xbox.com).
+Wenn Sie bereits ID@Xbox-Entwickler sind, sollten Sie einen Link zum Spieleinformationsformular (Game Information Form, GIF) erhalten haben, wo Sie Ihr Spielkonzept übermitteln können. Wenn Sie Fragen haben, wenden Sie sich an [idgames@xbox.com](mailto:idgames@xbox.com).
 
-If you have an existing license agreement with Microsoft, contact your Microsoft account team for information on submitting your concept.
+Wenn Sie über einen Lizenzvertrag mit Microsoft verfügen, wenden Sie sich an Ihr Microsoft-Kontoteam, um Informationen zum Übermitteln des Konzepts zu erhalten.
+
+
+<!--HONumber=Aug16_HO5-->
+
+

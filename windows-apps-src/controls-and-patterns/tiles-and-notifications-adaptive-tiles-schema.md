@@ -5,19 +5,21 @@ title: "Adaptive Kacheln – Schema und Vorlagen"
 ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
 label: Adaptive tile schema and templates
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: a5d061515eee1ab64f17e4f5aab8846adbd1c8f1
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 08bdb46dba6fc93ada20b3fc585d3e24e29023a0
 
 ---
-
 # Vorlagen für adaptive Kacheln: Schema und Richtlinien
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive Kacheln erstellen können. Anweisungen und Beispiele finden Sie unter [Erstellen adaptiver Kacheln](tiles-and-notifications-create-adaptive-tiles.md).
 
-## <span id="tile_element"></span><span id="TILE_ELEMENT"></span>Kachel-Element
+## Kachel-Element
 
 
-``` syntax
+``` xml
 <tile>
   
   <!-- Child elements -->
@@ -26,10 +28,10 @@ Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive K
 </tile>
 ```
 
-## <span id="visual_element"></span><span id="VISUAL_ELEMENT"></span>Visuelles Element
+## Visuelles Element
 
 
-``` syntax
+``` xml
 <visual
   version? = integer
   lang? = string
@@ -45,10 +47,10 @@ Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive K
 </visual>
 ```
 
-## <span id="binding_element"></span><span id="BINDING_ELEMENT"></span>Bindungselement
+## Bindungselement
 
 
-``` syntax
+``` xml
 <binding
   template = tileTemplateNameV3
   fallback? = tileTemplateNameV1
@@ -70,10 +72,10 @@ Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive K
 </binding>
 ```
 
-## <span id="image_element"></span><span id="IMAGE_ELEMENT"></span>Bildelement
+## Bildelement
 
 
-``` syntax
+``` xml
 <image
   src = string
   placement? = "inline" | "background" | "peek"
@@ -84,10 +86,10 @@ Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive K
   hint-align? = "stretch" | "left" | "center" | "right" />
 ```
 
-## <span id="text_element"></span><span id="TEXT_ELEMENT"></span>Textelement
+## Textelement
 
 
-``` syntax
+``` xml
 <text
   lang? = string
   hint-style? = textStyle
@@ -103,10 +105,10 @@ Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive K
 
 textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumber
 
-## <span id="group_element"></span><span id="GROUP_ELEMENT"></span>Gruppenelement
+## Gruppenelement
 
 
-``` syntax
+``` xml
 <group>
 
   <!-- Child elements -->
@@ -115,10 +117,10 @@ textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle
 </group>
 ```
 
-## <span id="subgroup_element"></span><span id="SUBGROUP_ELEMENT"></span>Untergruppenelement
+## Untergruppenelement
 
 
-``` syntax
+``` xml
 <subgroup
   hint-weight? = [0-100]
   hint-textStacking? = "top" | "center" | "bottom" >
@@ -131,7 +133,7 @@ textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle
 </subgroup>
 ```
 
-## <span id="related_topics"></span>Verwandte Themen
+## Verwandte Themen
 
 
 * [Erstellen adaptiver Kacheln](tiles-and-notifications-create-adaptive-tiles.md)
@@ -145,6 +147,6 @@ textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

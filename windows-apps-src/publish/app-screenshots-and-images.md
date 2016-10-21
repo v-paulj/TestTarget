@@ -4,8 +4,8 @@ Description: Ihre App muss verschiedene Logos, Screenshots und Bilder enthalten.
 title: App-Screenshots und -Bilder
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
 translationtype: Human Translation
-ms.sourcegitcommit: ecb030b7c529f765eded46e4e3e9db99ad0c27e8
-ms.openlocfilehash: 9eac5658e2ac04b2abc1bf06abf5c73b16260bc7
+ms.sourcegitcommit: 70020d3c6e0fb0fea321ce1951720803fd25f9c0
+ms.openlocfilehash: eb61c9bca6b8ddfba5287482508e7d04b240d29f
 
 ---
 
@@ -14,17 +14,16 @@ ms.openlocfilehash: 9eac5658e2ac04b2abc1bf06abf5c73b16260bc7
 
 Ihre App muss verschiedene Logos, Screenshots und Bilder enthalten. Einige dieser Elemente sind erforderlich, während andere optional sind. Beachten Sie, dass die Bilder eine der wichtigsten Möglichkeiten zur Darstellung Ihrer App sind. Durch aussagekräftige Bilder kann die Aufmerksamkeit der Kunden auf Ihre App gelenkt werden.
 
-Während der [App-Einreichung](app-submissions.md) geben Sie Ihre [Screenshots](#screenshots) und [Werbebilder](#promotional-artwork) im Schritt [Beschreibungen](create-app-descriptions.md) an. Diese Bilder werden verwendet, um Ihre App im Store zu präsentieren.
+Während der [App-Übermittlung](app-submissions.md) geben Sie Ihre [Screenshots](#screenshots) und [Werbebilder](#promotional-artwork) im Schritt [Store-Einträge](create-app-store-listings.md) an. Diese Bilder werden verwendet, um Ihre App im Store zu präsentieren.
 
 Der Store verwendet außerdem Ihre App-Kachel und andere Bilder, die Sie in Ihr App-Paket einschließen. Führen Sie das [Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt186449) aus, um zu ermitteln, ob erforderliche Bilder fehlen. Anleitungen und Empfehlungen zu diesen Bildern finden Sie unter [Ressourcen für Kacheln und Symbole](../controls-and-patterns/tiles-and-notifications-app-assets.md).
 
-> 
-            **Hinweis**  Es hängt vom Betriebssystem des Kunden und weiteren Faktoren ab, wie Bilder im Store, auf dem Startbildschirm des Kunden und in der App selbst angezeigt werden.
+> **Hinweis**  Es hängt vom Betriebssystem des Kunden und weiteren Faktoren ab, wie Bilder im Store, auf dem Startbildschirm des Kunden und in der App selbst angezeigt werden.
 
 
-## Während der Einreichung bereitgestellte Bilder
+## Während der Übermittlung bereitgestellte Bilder
 
-Bei der Eingabe der App-Beschreibungsinfos haben Sie die Möglichkeit, mehrere Screenshots (mindestens einer ist erforderlich) und Werbebilder bereitzustellen. Diese Bilder werden nicht aus Ihrem App-Paket übernommen, sondern müssen im Schritt **Beschreibung** für jede Sprache bereitgestellt werden.
+Bei der Eingabe von Informationen zum Store-Eintrag der App haben Sie die Möglichkeit, mehrere Screenshots (mindestens einer ist erforderlich) und Werbebilder bereitzustellen. Diese Bilder werden nicht aus Ihrem App-Paket übernommen, sondern müssen im Schritt **Store-Eintrag** für jede Sprache bereitgestellt werden.
 
 In der folgenden Tabelle sind die verschiedenen Bilder aufgeführt, die Sie hochladen können, und ihre Verwendung wird erläutert. Weitere Details finden Sie in den folgenden Abschnitten.
 
@@ -43,12 +42,11 @@ In der folgenden Tabelle sind die verschiedenen Bilder aufgeführt, die Sie hoch
 
 Screenshots sind die Bilder Ihrer App, die Ihren Kunden im Store-Eintrag der App angezeigt werden.
 
-Sie sehen mehrere Felder auf der Seite **Beschreibung**. Dort können Sie Screenshots für verschiedene Gerätefamilien bereitstellen. Die Anzeige erfolgt, wenn ein Kunde den Store-Eintrag Ihrer App auf dem entsprechenden Gerätetyp aufruft.
+Sie sehen mehrere Felder auf der Seite **Store-Eintrag**. Dort können Sie Screenshots für verschiedene Gerätefamilien bereitstellen. Die Anzeige erfolgt, wenn ein Kunde den Store-Eintrag Ihrer App auf dem entsprechenden Gerätetyp aufruft.
 
 Für die Übermittlung ist nur ein Screenshot erforderlich. Sie können jedoch bis zu neun Desktop-Screenshots und bis zu acht Screenshots für mobile Geräte und Hologramm-Geräte bereitstellen. Es ist nicht erforderlich, separate Screenshots für jede Gerätefamilie bereitzustellen. Wir empfehlen jedoch die Bereitstellung von Screenshots für jeden Gerätetyp, den Ihre App unterstützt, damit die Kunden sehen, wie die App auf ihrem Gerät aussieht.
 
-> 
-            **Hinweis**  Microsoft Visual Studio enthält ein [Tool zum Erstellen von Screenshots](http://go.microsoft.com/fwlink/p/?LinkId=221135).
+> **Hinweis**  Microsoft Visual Studio enthält ein [Tool zum Erstellen von Screenshots](http://go.microsoft.com/fwlink/p/?LinkId=221135).
 
 Jeder Screenshot muss einer PNG-Datei im Quer- oder Hochformat entsprechen, und die Datei darf nicht größer als 2 MB sein.
 
@@ -57,15 +55,16 @@ Die Größenanforderungen hängen von der Gerätefamilie ab:
 - Desktopgerät: 1366x768 Pixel oder größer
 - Geräte für Hologramme: 1268x720 Pixel oder größer
 
-Sie können eine Kurzbeschreibung von maximal 200 Zeichen für die einzelnen Screenshots angeben.
+Sie können eine Kurzbeschreibung von maximal 200Zeichen für die einzelnen Screenshots angeben.
 
-> 
-            **Hinweis**  Wenn Sie Beschreibungen für [mehrere Sprachen](supported-languages.md) erstellen, erhalten Sie für jede Sprache eine Seite vom Typ **Beschreibung**. Sie müssen Bilder für jede Sprache separat hochladen (auch wenn Sie dieselben Bilder verwenden), einschließlich Beschriftungen, die für die einzelnen Sprachen verwendet werden.
+> **Hinweis**  Wenn Sie Store-Einträge für [mehrere Sprachen](supported-languages.md) erstellen, erhalten Sie für jede Sprache eine Seite vom Typ **Store-Eintrag**. Sie müssen Bilder für jede Sprache separat hochladen (auch wenn Sie dieselben Bilder verwenden), einschließlich Beschriftungen, die für die einzelnen Sprachen verwendet werden.
 
 
 ## Symbol für App-Kachel
 
-Dies ist nicht für alle Übermittlungen erforderlich, wird jedoch dringend empfohlen, wenn Ihre App unter WindowsPhone8.1 oder früheren Versionen ausgeführt wird. Das Symbol für die App-Kachel wird verwendet, wenn Ihr App-Eintrag für Kunden unter WindowsPhone8.1 und früheren Versionen angezeigt wird. Wenn Sie dieses Bild nicht bereitstellen, sehen Kunden unter Windows Phone 8.1 und früheren Versionen im Eintrag für Ihre App ein leeres Symbol. (Dies gilt auch für Kunden unter Windows 10, wenn Ihre App nur über Pakete für Windows Phone 8.1 oder frühere Versionen verfügt.)
+Dies ist nicht für alle Übermittlungen erforderlich, wird jedoch dringend empfohlen, wenn Ihre App unter WindowsPhone8.1 oder früheren Versionen ausgeführt wird. Das Symbol für die App-Kachel wird verwendet, wenn der Store-Eintrag der App für Kunden unter WindowsPhone8.1 und früheren Versionen angezeigt wird. Wenn Sie dieses Bild nicht bereitstellen, sehen Kunden unter Windows Phone8.1 und früheren Versionen im Eintrag für Ihre App ein leeres Symbol. (Dies gilt auch für Kunden unter Windows10, wenn Ihre App nur über Pakete für Windows Phone8.1 oder frühere Versionen verfügt.)
+
+Falls Ihre Übermittlung **nur** UWP-Pakete enthält, müssen Sie dieses Bild nicht bereitstellen. Beachten Sie Folgendes: Wenn Ihre Übermittlung UWP-Pakete enthält und Sie ein Symbol für die App-Kachel bereitstellen, kann es in einigen Store-Layouts zusammen mit dem Eintrag der App unter Windows10 angezeigt werden. Um vollständig zu verhindern, dass das Symbol für die App-Kachel für Kunden unter Windows10 angezeigt wird, können Sie einen [plattformspezifischen Eintrag](create-platform-specific-descriptions.md) für die früheren Betriebssystemversionen erstellen und das Symbol für die App-Kachel nur dort einbinden.
 
 Das Symbol für die App-Kachel muss eine PNG-Datei mit 300x300 Pixel sein.
 
@@ -73,8 +72,7 @@ Das Symbol für die App-Kachel muss eine PNG-Datei mit 300x300 Pixel sein.
 
 Die Windows Store-Redaktion verwendet verschiedene Bilder, um Apps im Store zu bewerben. Wenn Sie Werbebilder übermitteln, zieht das Windows Store-Team Ihre App für Werbelayouts in Betracht.
 
-> 
-            **Wichtig**  Das Bereitstellen von Werbebildern für Ihre App garantiert nicht, dass die App präsentiert wird. Ohne Bilder kann die App jedoch nicht für Werbemöglichkeiten in Betracht gezogen werden. (Weitere Informationen finden Sie unter [Einfaches Bewerben Ihrer App](make-your-app-easier-to-promote.md).)
+> **Wichtig**  Das Bereitstellen von Werbebildern für Ihre App garantiert nicht, dass die App präsentiert wird. Ohne Bilder kann die App aber nicht für Werbemöglichkeiten in Betracht gezogen werden. (Weitere Informationen finden Sie unter [Einfaches Bewerben Ihrer App](make-your-app-easier-to-promote.md).)
 
 Es empfiehlt sich, Werbebilder in verschiedenen Größen bereitzustellen, je nachdem auf welches Betriebssystemversion(en) Ihre App ausgerichtet ist. Bilder müssen für alle Größen im PNG-Format vorliegen.
 
@@ -103,8 +101,7 @@ Die folgende Abbildung zeigt, welche wichtigen Proportionen zu berücksichtigen 
 
 Im Store unter WindowsPhone8.1 und früheren Versionen können zwei Bildgrößen in Werbelayouts verwendet werden: 1000x800 Pixel und 358x358 Pixel. Wenn Ihre App unter Windows Phone 8.1 oder einer früheren Version ausgeführt wird, wird die Bereitstellung von Bildern in diesen beiden Größen empfohlen, damit sie für Werbung in Frage kommen.
 
-> 
-            **Tipp**  Achten Sie auch darauf, ein [App-Kachel-Symbolbild](#app-tile-icon) mit 300x300 Pixel bereitzustellen, damit Ihre App im Store nicht mit einem leeren Symbol angezeigt wird.
+> **Tipp**  Achten Sie auch darauf, ein [App-Kachel-Symbolbild](#app-tile-icon) mit 300x300 Pixel bereitzustellen, damit Ihre App im Store nicht mit einem leeren Symbol angezeigt wird.
 
 ### Für Windows 8.1 und frühere Versionen: 414 x 180
 
@@ -112,6 +109,6 @@ Im Store unter Windows 8.1 und früheren Versionen wird für Werbelayouts mögli
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

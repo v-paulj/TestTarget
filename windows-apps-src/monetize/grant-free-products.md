@@ -1,19 +1,19 @@
 ---
 author: mcleanbyron
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
-description: "Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem bestimmten Benutzer eine kostenlose App oder ein kostenloses In-App-Produkt (IAP) zu gewähren."
+description: "Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem bestimmten Benutzer eine kostenlose App oder ein kostenloses Add-On zu gewähren."
 title: "Gewähren kostenloser Produkte"
 translationtype: Human Translation
-ms.sourcegitcommit: f7e67a4ff6cb900fb90c5d5643e2ddc46cbe4dd2
-ms.openlocfilehash: 64c600460c1cbcbd6bb486649e2bc98298ca9dbe
+ms.sourcegitcommit: 6d0fa3d3b57bcc01234aac7d6856416fcf9f4419
+ms.openlocfilehash: a04918a562d132f6a721b96c7f4ad78218eb8819
 
 ---
 
 # Gewähren kostenloser Produkte
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem bestimmten Benutzer eine kostenlose App oder ein kostenloses In-App-Produkt (IAP) zu gewähren.
+
+Verwenden Sie diese Methode in der Windows Store-Einkaufs-API, um einem Benutzer eine kostenlose App oder ein kostenloses Add-On (auch In-App-Produkt oder IAP genannt) zu gewähren.
 
 Derzeit können Sie nur kostenlose Produkte gewähren. Wenn Ihr Dienst versucht, diese Methode zum Gewähren eines nicht kostenlosen Produkts zu verwenden, gibt diese Methode einen Fehler zurück.
 
@@ -41,7 +41,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 
 | Header         | Typ   | Beschreibung                                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------------------------------|
-| Autorisierung  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer**&lt;*token*&gt;.                           |
+| Autorisierung  | string | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*token*&gt;.                           |
 | Host           | string | Muss auf den Wert **collections.mp.microsoft.com** festgelegt werden.                                            |
 | Content-Length | number | Die Länge des Anforderungstexts.                                                                       |
 | Inhaltstyp   | string | Gibt den Anforderungs- und Antworttyp an. Derzeit wird als einziger Wert **application/json** unterstützt. |
@@ -58,7 +58,7 @@ Weitere Informationen finden Sie unter [Anzeigen von Produkten und Gewähren von
 | language       | string | Die Sprache des Benutzers.                                                                                                                                                                                                                                                                                              | Ja      |
 | market         | string | Der Markt des Benutzers.                                                                                                                                                                                                                                                                                                | Ja      |
 | orderId        | guid   | Eine für den Auftrag generierte GUID. Dieser Wert muss für den Benutzer eindeutig sein, aber nicht auftragsübergreifend.                                                                                                                                                                                              | Ja      |
-| Produkt-ID      | string | Die Store-ID aus dem Windows Store-Katalog. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. | Ja      |
+| productId      | string | Die Store-ID aus dem WindowsStore-Katalog. Die Store-ID einer App ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Die Store-ID eines Add-Ons ist in der URL der Übersicht für das Add-On im Windows Dev Center-Dashboard verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. | Ja      |
 | quantity       | int    | Die Kaufmenge. Derzeit wird als einziger Wert 1 unterstützt. Ohne Angabe wird standardmäßig der Wert1 verwendet.                                                                                                                                                                                                                | Nein       |
 | skuId          | string | Die SKU-ID aus dem Windows Store-Katalog. Beispiel für eine SKU-ID: 0010.                                                                                                                                                                                                                                                | Ja      |
 
@@ -128,7 +128,7 @@ Das OrderLineItemV6-Objekt enthält die folgenden Parameter.
 | billingState            | string         | Der Abrechnungszustand des Auftrags. Dieser wird bei Beendigung auf **Charged** festgelegt.                                   | Nein       |
 | campaignId              | string         | Die Kampagnen-ID für diesen Auftrag.                                                                              | Nein       |
 | currencyCode            | string         | Der verwendete Währungscode für die Preisdetails.                                                                    | Ja      |
-| Beschreibung             | string         | Eine lokalisierte Beschreibung der Position.                                                                    | Ja      |
+| description             | string         | Eine lokalisierte Beschreibung der Position.                                                                    | Ja      |
 | devofferId              | string         | Die Auftrags-ID für diesen Auftrag, sofern vorhanden.                                                           | Nein       |
 | fulfillmentDate         | datetimeoffset | Das Erfüllungsdatum.                                                                           | Nein       |
 | fulfillmentState        | string         | Der Erfüllungszustand dieses Artikels. Dieser wird bei Beendigung auf **Fulfilled** festgelegt.                      | Nein       |
@@ -137,9 +137,9 @@ Das OrderLineItemV6-Objekt enthält die folgenden Parameter.
 | legacyBillingOrderId    | string         | Die alte Abrechnungs-ID.                                                                                       | Nein       |
 | lineItemId              | string         | Die Positions-ID für den Artikel in diesem Auftrag.                                                                 | Ja      |
 | listPrice               | decimal        | Der Listenpreis des Artikels in diesem Auftrag.                                                                    | Ja      |
-| Produkt-ID               | string         | Die Windows Store-Produkt-ID der Position.                                                               | Ja      |
-| Produkttyp             | string         | Die Art des Produkts. Die unterstützten Werte sind **Durable**, **Application** und **UnmanagedConsumable**. | Ja      |
-| Quantity                | int            | Die Menge des bestellten Artikels.                                                                            | Ja      |
+| productId               | string         | Die Store-ID der Position.                                                               | Ja      |
+| productType             | string         | Die Art des Produkts. Die unterstützten Werte sind **Durable**, **Application** und **UnmanagedConsumable**. | Ja      |
+| quantity                | int            | Die Menge des bestellten Artikels.                                                                            | Ja      |
 | retailPrice             | decimal        | Der Einzelhandelspreis des bestellten Artikels.                                                                        | Ja      |
 | revenueRecognitionState | string         | Der Zustand der Umsatzrealisierung.                                                                               | Ja      |
 | skuId                   | string         | Die Windows Store-SKU-ID der Position.                                                                   | Ja      |
@@ -245,6 +245,6 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

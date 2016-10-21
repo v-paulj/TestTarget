@@ -1,19 +1,21 @@
 ---
 author: mcleanbyron
-Description: "Sie können konsumierbare In-App-Produkte – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um Ihren Kunden eine robuste und zuverlässige Kaufumgebung bereitzustellen."
-title: "Käufe konsumierbarer In-App-Produkte aktivieren"
+Description: "Sie können konsumierbare In-App-Produkte – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um Ihren Kunden eine stabile und zuverlässige Kaufumgebung bereitzustellen."
+title: "Käufe von konsumierbaren In-App-Produkten aktivieren"
 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
-keywords: in-app offer code sample
+keywords: In-App-Angebot, Codebeispiel
 translationtype: Human Translation
-ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 25f09e043d61f1705f9f0a4fa34114fd06166fa4
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 15092f726283f36c8dc5970157d3cd54dea9b837
 
 ---
 
-# Käufe konsumierbarer In-App-Produkte aktivieren
+# Käufe von konsumierbaren In-App-Produkten aktivieren
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+
+
+>**Hinweis**&nbsp;&nbsp;In diesem Artikel wird die Verwendung von Mitgliedern des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx) Namespace erläutert. Wenn Ihre App für Windows10, Version 1607 oder höher, vorgesehen ist, empfehlen wir die Verwendung von Mitgliedern des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zum Verwalten von Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) anstelle des **Windows.ApplicationModel.Store**-Namespace. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).
 
 Sie können In-App-Käufe von konsumierbaren Produkten – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um den Kunden beim Kauf Stabilität und Zuverlässigkeit zu bieten. Dies ist besonders nützlich für Dinge wie spielinterne Währungen (Gold, Münzen usw.), die gekauft und dann zum Erwerben bestimmter Power-Ups verwendet werden können.
 
@@ -21,7 +23,7 @@ Sie können In-App-Käufe von konsumierbaren Produkten – Artikel, die gekauft,
 
 -   In diesem Thema erfahren Sie, wie In-App-Produktkäufe von Consumables erfüllt und gemeldet werden. Wenn Sie mit In-App-Produkten noch nicht vertraut sind, lesen Sie [Aktivieren von In-App-Produktkäufen](enable-in-app-product-purchases.md). Dort finden Sie Lizenzinformationen und eine Anleitung zur richtigen Eintragung Ihrer In-App-Produkte im Store.
 -   Wenn Sie Code für neue In-App-Produkte erstmalig schreiben und testen, müssen Sie anstelle des [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)-Objekts das [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)-Objekt verwenden. Auf diese Weise können Sie überprüfen, ob die Lizenzlogik simulierte Aufrufe an den Lizenzserver und nicht an den Liveserver verwendet. Dazu müssen Sie die Datei mit dem Namen „WindowsStoreProxy.xml“ in %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData anpassen. Diese Datei wird vom Simulator in Microsoft Visual Studio erstellt, wenn Sie Ihre App erstmalig ausführen. Sie können jedoch auch eine benutzerdefinierte Version dieser Datei zur Laufzeit laden. Weitere Informationen finden Sie unter **CurrentAppSimulator**.
--   In diesem Thema wird auch auf Codebeispiele verwiesen, die im [Store-Beispiel](http://go.microsoft.com/fwlink/p/?LinkID=627610) zu finden sind. Dieses Beispiel bietet eine hervorragende Möglichkeit, die verschiedenen Monetarisierungsoptionen zu testen, die für Universelle Windows-Plattform (UWP)-Apps verfügbar sind.
+-   In diesem Thema wird auch auf Codebeispiele verwiesen, die im [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store) zu finden sind. Dieses Beispiel bietet eine hervorragende Möglichkeit, die verschiedenen Monetarisierungsoptionen zu testen, die für Universelle Windows-Plattform (UWP)-Apps verfügbar sind.
 
 ## Schritt 1: Durchführen der Kaufanforderung
 
@@ -73,7 +75,7 @@ private void GrantFeatureLocally(string productId, Guid transactionId)
 
 Im folgenden Beispiel wird die Verwendung des Arrays aus dem vorhergehenden Beispiel gezeigt, um auf Produkt-ID/Transaktions-ID-Paare zuzugreifen, die später beim Melden der Erfüllung an den Store verwendet werden.
 
-**Wichtig**  Welche Methode Ihre App auch immer verwendet, um die Erfüllung nachzuverfolgen und zu bestätigen – die App muss gebührende Sorgfalt demonstrieren, um sicherzustellen, dass Ihren Kunden keine Produkte in Rechnung gestellt werden, die sie nicht erhalten haben.
+**Wichtig**  Welche Methode Ihre App auch immer verwendet, um die Erfüllung nachzuverfolgen und zu bestätigen – die App muss die erforderliche Sorgfalt aufweisen, sodass Ihren Kunden keine Produkte in Rechnung gestellt werden, die sie nicht erhalten haben.
 
 ```CSharp
 private Boolean IsLocallyFulfilled(string productId, Guid transactionId)
@@ -115,7 +117,7 @@ private async void GetUnfulfilledConsumables()
 ## Verwandte Themen
 
 * [Unterstützen von Käufen von In-App-Produkten](enable-in-app-product-purchases.md)
-* [Store-Beispiel (zeigt Testversionen und In-App-Käufe)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
+* [Store-Beispiel (zeigt Testversionen und In-App-Käufe)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [**Windows.ApplicationModel.Store**](https://msdn.microsoft.com/library/windows/apps/br225197)
  
 
@@ -123,10 +125,6 @@ private async void GetUnfulfilledConsumables()
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

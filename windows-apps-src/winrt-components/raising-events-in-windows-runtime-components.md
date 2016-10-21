@@ -3,8 +3,9 @@ author: msatranjr
 title: "Auslösen von Ereignissen in Komponenten für Windows-Runtime"
 ms.assetid: 3F7744E8-8A3C-4203-A1CE-B18584E89000
 description: 
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 54934cba0e26da547e09b95a63d2c63363eaf85d
+ms.openlocfilehash: cd1d92e584616a642a20d3df3ec52f3609061021
 
 ---
 
@@ -139,8 +140,7 @@ Fügen Sie der Projektmappe eine C#-Komponente für Windows-Runtime hinzu: Öffn
 
 Öffnen Sie im Projektmappen-Explorer das Kontextmenü für die Projektmappe, und wählen Sie dann **Eigenschaften** aus. Wählen Sie im Dialogfeld **Eigenschaftenseiten** im linken Bereich **Konfigurationseigenschaften** aus, und legen Sie dann oben im Dialogfeld die **Konfiguration** auf **Debuggen** und die **Plattform** auf „x86”, „x64” oder „ARM” fest. Klicken Sie auf die Schaltfläche **OK**.
 
-
-            **Wichtig:** „Plattform = Any CPU“ funktioniert nicht, da dies für die Win32-DLL in systemeigenem Code, die Sie der Projektmappe später hinzufügen, ungültig ist.
+**Wichtig** „Plattform = Any CPU“ funktioniert nicht, da dies für die Win32-DLL in systemeigenem Code, die Sie später der Projektmappe hinzufügen, ungültig ist.
 
 Benennen Sie im Projektmappen-Explorer die Datei „class1.cs” in „ToasterComponent.cs” um, sodass sie dem Namen des Projekts entspricht. Visual Studio benennt die Klasse in der Datei entsprechend dem neuen Dateinamen automatisch um.
 
@@ -148,8 +148,7 @@ Fügen Sie der CS-Datei eine using-Direktive für den Namespace Windows.Foundati
 
 Wenn Sie Proxys und Stubs benötigen, muss die Komponente mit Schnittstellen ihre öffentlichen Member verfügbar machen. Definieren Sie in „ToasterComponent.cs” eine Schnittstelle für den Toaster und eine andere für den „Toast” (Popup), den der Toaster erzeugt.
 
-
-            **Hinweis:** In C# können Sie diesen Schritt überspringen. Erstellen Sie stattdessen zuerst eine Klasse, öffnen Sie das Kontextmenü, und wählen Sie **Umgestalten &gt; Schnittstelle extrahieren** aus. Ordnen Sie den Schnittstellen im generierten Code manuell öffentlichen Zugriff zu.
+**Hinweis** In C# können Sie diesen Schritt überspringen. Erstellen Sie stattdessen zuerst eine Klasse, öffnen Sie das Kontextmenü, und wählen Sie **Umgestalten &gt; Schnittstelle extrahieren** aus. Ordnen Sie den Schnittstellen im generierten Code manuell öffentlichen Zugriff zu.
 
 ```csharp
     public interface IToaster
@@ -217,8 +216,7 @@ Als Nächstes müssen Klassen angelegt werden, die diese Schnittstellen implemen
 
 Im vorhergehenden Code wird das Popup erstellt und eine Arbeitsaufgabe im Threadpool ausgeführt, um die Benachrichtigung auszulösen. Auch wenn die IDE vorschlagen sollte, das „await“-Schlüsselwort dem asynchronen Aufruf zuzuweisen, ist dies in diesem Fall nicht nötig, da die Methode keine Aktionen ausführt, die von den Ergebnissen des Vorgangs abhängig sind.
 
-
-            **Hinweis:** Der asynchrone Aufruf im vorhergehenden Code verwendet „ThreadPool.RunAsync“ nur, um auf einfache Weise zu veranschaulichen, dass das Ereignis in einem Hintergrundthread ausgelöst wird. Sie könnten diese spezielle Methode auch schreiben wie im folgenden Beispiel gezeigt. Dies funktioniert, da der .NET-Taskplaner automatisch „async/await“-Aufrufe zurück an den UI-Thread marshallt.
+**Hinweis** Der asynchrone Aufruf im vorhergehenden Code verwendet ThreadPool.RunAsync nur, um auf einfache Weise zu veranschaulichen, dass das Ereignis in einem Hintergrundthread ausgelöst wird. Sie könnten diese spezielle Methode auch schreiben wie im folgenden Beispiel gezeigt. Dies funktioniert, da der .NET-Taskplaner automatisch „async/await“-Aufrufe zurück an den UI-Thread marshallt.
   
 ````csharp
     public async void MakeToast(string message)
@@ -431,6 +429,6 @@ The project should now build. Run the project and verify that you can make toast
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

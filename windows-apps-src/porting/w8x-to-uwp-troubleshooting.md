@@ -3,8 +3,9 @@ author: mcleblanc
 description: "Wir empfehlen dringend, dieses Handbuch für das Portieren vollständig zu lesen. Wir wissen aber auch, dass Sie möglichst schnell die Phase erreichen möchten, in der Ihr Projekt erstellt und ausgeführt wird."
 title: Behandeln von Problemen beim Portieren von Windows-Runtime 8.x zu UWP
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: e5758472d303f4baaf80d45d6b23b54f2a21e002
+ms.openlocfilehash: a6901946f873b751515cb5d9805158e4b78b92bb
 
 ---
 
@@ -53,6 +54,6 @@ Das nächste Thema ist [Portieren von XAML und UI](w8x-to-uwp-porting-xaml-and-u
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,157 +1,164 @@
 ---
-title: Application development for Windows as a service (Windows 10)
-description: Decouple app release and support from specific Windows builds.
+title: "Anwendungsentwicklung für Windows as a Service (Windows10)"
+description: "Entkoppeln Sie die App-Freigabe und -Unterstützung von bestimmten Windows-Builds."
 author: jdeckerMS
+translationtype: Human Translation
+ms.sourcegitcommit: a86002c944841536d37735bb8c4b657905582144
+ms.openlocfilehash: 72ac67b17fc519d374798e5121b309f664ff6b1b
+
 ---
 
-# Application development for Windows as a service
+# Anwendungsentwicklung für Windows as a Service
 
-**Applies to**
--   Windows 10
--   Windows 10 Mobile
--   Windows 10 IoT Core 
+**Betrifft**
+-   Windows 10
+-   Windows10Mobile
+-   Windows10 IoT Core 
 
-In today’s environment, where user expectations frequently are set by device-centric experiences, complete product cycles need to be measured in months, not years. Additionally, new releases must be made available on a continual basis, and must be deployable with minimal impact on users. Microsoft designed Windows 10 to meet these requirements by implementing a new approach to innovation, development, and delivery called [Windows as a service (WaaS)](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing). The key to enabling significantly shorter product cycles while maintaining high quality levels is an innovative community-centric approach to testing that Microsoft has implemented for Windows 10. The community, known as Windows Insiders, is comprised of millions of users around the world. When Windows Insiders opt in to the community, they test many builds over the course of a product cycle and provide feedback to Microsoft through an iterative methodology called flighting.
+Heute basieren die Erwartungen von Benutzern häufig auf geräteorientierten Umgebungen, und vollständige Produktzyklen dürfen daher höchstens in Monaten und nicht in Jahren gemessen werden. Darüber hinaus müssen neue Versionen auf kontinuierlicher Basis verfügbar gemacht und mit minimalen Auswirkungen auf die Benutzer bereitgestellt werden können. Microsoft hat Windows10 so entwickelt, dass diese Anforderungen erfüllt werden, und dazu ein neues Konzept für die Entwicklung und Bereitstellung von Innovationen implementiert, das als [Windows as a Service (WaaS)](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing) (also „Windows als Dienst“) bezeichnet wird. Der Schlüssel zu deutlich kürzeren Produktzyklen bei gleichzeitiger Beibehaltung eines hohen Qualitätsniveaus ist ein innovatives, Community-orientiertes Testkonzept, das Microsoft für Windows10 entwickelt hat. Die Community, die „Windows-Insider“, besteht aus Millionen von Benutzern auf der ganzen Welt. Wenn sich Windows-Insider an der Community beteiligen, testen sie im Laufe eines Produktzyklus viele Builds und geben Microsoft ihr Feedback im Rahmen eines iterativen Prozesses, der als Test-Flighting bezeichnet wird.
 
-Builds distributed as flights provide the Windows engineering team with significant data regarding how well builds are performing in actual use. Flighting with Windows Insiders also enables Microsoft to test builds in much more diverse hardware, application, and networking environments than in the past, and to identify issues far more quickly. As a result, Microsoft believes that community-focused flighting will enable both a faster pace of innovation delivery and better public release quality than ever.
+Als so genannte Test-Flights verteilte Builds versorgen das Windows-Technikteam mit wichtigen Daten dazu, wie gut die Builds im tatsächlichen Einsatz wirklich funktionieren. Windows-Insider-Programme für Windows-Insider ermöglichen Microsoft auch das Testen von Builds auf mehr Hardwareprodukten, in mehr Anwendungen und in mehr Netzwerkumgebungen, als dies früher möglich war, um potenzielle Probleme schneller zu erkennen. Microsoft ist daher überzeugt, dass das community-orientierte Test-Flighting sowohl die schnellere Bereitstellung von Innovationen, als auch eine höhere Qualität bei öffentlichen Freigaben als je zuvor ermöglichen wird.
 
-## Windows 10 release types and cadences
+## Versionstypen und -häufigkeiten von Windows10
 
-Although Microsoft releases flight builds to Windows Insiders, Microsoft will publish two types of Windows 10 releases broadly to the public on an ongoing basis:
+Obwohl Microsoft Test-Flight-Builds für Windows-Insider veröffentlicht, werden kontinuierlich zwei Arten von Windows10-Versionen für die allgemeine Öffentlichkeit eingeführt:
 
-**Feature updates** install the latest new features, experiences, and capabilities on devices that are already running Windows 10. Because feature updates contain an entire copy of Windows, they are also what customers use to install Windows 10 on existing devices running Windows 7 or Windows 8.1, and on new devices where no operating system is installed. Microsoft expects to publish an average of one to two new feature updates per year.
+Mit **Funktionsupdates** werden die neuesten Features, Umgebungen und Funktionen auf Geräten installiert, auf denen bereits Windows10 ausgeführt wird. Da Funktionsupdates eine vollständige Version von Windows enthalten, installieren Benutzer damit auch Windows10 auf Geräten, auf denen Windows7 oder Windows8.1 ausgeführt wird, und auf neuen Geräten, auf denen noch kein Betriebssystem installiert ist. Microsoft geht davon aus, durchschnittlich ein bis zwei neue Funktionsupdates pro Jahr zu veröffentlichen.
 
-**Quality updates** deliver security issue resolutions and other important bug fixes. Quality updates will be provided to improve each feature currently in support, on a cadence of one or more times per month. Microsoft will continue publishing quality updates on Update Tuesday (sometimes referred to as Patch Tuesday). Additionally, Microsoft may publish additional quality updates for Windows 10 outside the Update Tuesday process when required to address customer needs.
+**Qualitätsupdates** bieten Lösungen für Sicherheitsprobleme und andere wichtige Programmfehlerbehebungen. Qualitätsupdates werden mindestens einmal monatlich zur Optimierung der derzeit unterstützten Features bereitgestellt. Microsoft wird weiterhin Qualitätsupdates am „Update-Dienstag“ (oder „Patch-Dienstag“) veröffentlichen. Darüber hinaus kann es sein, dass Microsoft zusätzliche Qualitätsupdates für Windows10 außerhalb dieses Rhythmus veröffentlicht, um damit auf die Anforderungen von Kunden zu reagieren.
 
-During Windows 10 development, Microsoft streamlined the Windows product engineering and release cycle so that we can deliver the features, experiences, and functionality customers want, more quickly than ever. We also created new ways to deliver and install feature updates and quality updates that simplify deployments and on-going management, broaden the base of employees who can be kept current with the latest Windows capabilities and experiences, and lower total cost of ownership. Hence we have implemented new servicing options – referred to as Current Branch (CB), Current Branch for Business (CBB), and Long-Term Servicing Branch (LTSB) – that provide pragmatic solutions to keep more devices more current in enterprise environments than was previously possible.
+Während der Entwicklung von Windows10 hat Microsoft den Windows-Produktengineering- und -freigabezyklus optimiert, sodass die von Kunden angeregten Features, Umgebungen und Funktionen schneller als je zuvor bereitgestellt werden können. Außerdem bieten wir neue Möglichkeiten für die Bereitstellung und Installation von Funktions- und Qualitätsupdates, die die Implementierung und laufende Verwaltung vereinfachen, die Zahl der Mitarbeiter erhöhen, die auf die neuesten Windows-Funktionen und -Umgebungen zugreifen können, und die Gesamtbetriebskosten verringern. Daher haben wir neue Wartungsoptionen implementiert (Current Branch (CB), Current Branch for Business (CBB) und Long-Term Servicing Branch (LTSB)), die praktische Lösungen bieten, um in Unternehmensumgebungen mehr Geräte stets aktuell zu halten, als dies bisher möglich war.
 
-The following table shows describes the various servicing branches and their key attributes.
+In der folgenden Tabelle sind die verschiedenen Wartungszweige und ihre wichtigsten Attribute beschrieben.
 
-| Servicing option                  | Availability of new feature upgrades for installation     | Minimum length of servicing lifetime | Key benefits                                                                              | Supported editions                                                                         |
+| Wartungsoption                  | Verfügbarkeit von neuen Featureupgrades zur Installation     | Mindestlänge der Wartungslebensdauer | Wichtigste Vorteile                                                                              | Unterstützte Editionen                                                                         |
 |-----------------------------------|-----------------------------------------------------------|--------------------------------------|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| Current Branch (CB)               | Immediately after first published by Microsoft            | Approximately 4 months               | Makes new features available to users as soon as possible                                 | Home, Pro, Education, Enterprise, Mobile, IoT Core, Windows 10 IoT Core Pro (IoT Core Pro) |
-| Current Branch for Business (CBB) | Approximately 4 months after first published by Microsoft | Approximately 8 months               | Provides additional time to test new feature upgrades before deployment                   | Pro, Education, Enterprise, Mobile Enterprise, IoT Core Pro                                |
-| Long-Term Servicing Branch (LTSB) | Immediately after published by Microsoft                  | 10 Years                             | Enables long-term deployment of selected Windows 10 releases in low-change configurations | Enterprise LTSB                                                                            |
- 
-For more information, see [Windows 10 servicing options for updates and upgrades](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing).
+| Current Branch (CB)               | Unmittelbar nach der ersten Veröffentlichung durch Microsoft            | Ungefähr 4 Monate               | Stellt Benutzern neue Features so schnell wie möglich zur Verfügung                                 | Home, Pro, Education, Enterprise, Mobile, IoT Core, Windows 10 IoT Core Pro (IoT Core Pro) |
+| Current Branch for Business (CBB) | Ungefähr vier Monate nach der ersten Veröffentlichung durch Microsoft | Ungefähr 8 Monate               | Ermöglicht zusätzliche Zeit zum Testen der neuen Featureupgrades vor der Bereitstellung                   | Pro, Education, Enterprise, Mobile Enterprise, IoT Core Pro                                |
+| Long-Term Servicing Branch (LTSB) | Unmittelbar nach der Veröffentlichung durch Microsoft                  | 10 Jahre                             | Ermöglicht die langfristige Bereitstellung ausgewählter Windows10-Versionen in Konfigurationen mit geringen Änderungen | Enterprise LTSB                                                                            |
+ 
+Weitere Informationen finden Sie unter [Windows10-Wartungsoptionen für Updates und Upgrades](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing).
 
-## Supporting apps in Windows as a service
+## Unterstützen von Apps in Windows als Dienst
 
-The traditional approach for supporting apps has been to release a new app version in response to a Windows release. This assumes that there are breaking changes in the underlying OS that could potentially cause a regression with the application. This model involves a dedicated development and validation cycle that requires our ISV partners to align with the Windows release cadence.
+Ursprünglich bestand die Unterstützung von Apps darin, mit jeder neuen Windows-Version eine neue App-Version zu veröffentlichen. Dabei wurde davon ausgegangen, dass am zugrunde liegenden Betriebssystem bedeutende Änderungen vorgenommen wurden, die in der Anwendung zu einem Rückschritt führen konnten. Dieses Modell umfasste einen dedizierten Entwicklungs- und Validierungszyklus, der von unseren ISV-Partnern eine Anpassung an den Freigaberhythmus der Windows-Versionen verlangte.
 
-In the Windows as a service model, Microsoft is making a commitment to maintaining the compatibility of the underlying OS. This means Microsoft will make a concerted effort to ensure that there are no breaking changes that impact the app ecosystem negatively. In this scenario, when there is a release of a Windows build, most apps (those with no kernel dependencies) will continue to work.
+Im WaaS-Modell (Windows als Dienst) verpflichtet sich Microsoft, die Kompatibilität des zugrunde liegenden Betriebssystems zu gewährleisten. Das bedeutet, dass Microsoft alle Anstrengungen unternehmen wird, damit dass App-Ökosystem nicht durch bedeutende Änderungen negativ beeinflusst wird. In diesem Szenario bleiben die meisten Apps (die nicht vom Kernel abhängig sind) bei Freigabe eines Windows-Builds funktionsfähig.
 
-In view of this change, Microsoft recommends that our ISV partners decouple their app release and support from specific Windows builds. Our mutual customers are better served by an application lifecycle approach. This means when an application version is released it will be supported for a certain period of time irrespective of however many Windows builds are released in the interim. The ISV makes a commitment to provide support for that specific version of the app as long as it is supported in the lifecycle. Microsoft follows a similar lifecycle approach for Windows that can be referenced [here](http://go.microsoft.com/fwlink/?LinkID=780549).
+Aufgrund dieser Änderung empfiehlt Microsoft ISV-Partnern, die App-Freigabe und -Unterstützung von bestimmten Windows-Builds zu entkoppeln. Unsere gemeinsamen Kunden profitieren mehr von einem Modell, das auf dem Anwendungslebenszyklus basiert. Dies bedeutet Folgendes: Wenn eine Anwendungsversion veröffentlicht wird, wird sie für einen bestimmten Zeitraum unterstützt, und zwar unabhängig davon, wie viele Windows-Builds in der Zwischenzeit veröffentlicht wurden. Der ISV verpflichtet sich, die spezifische App-Version so lange zu unterstützen, wie sie im Lebenszyklus unterstützt wird. Microsoft verfolgt bei Windows einen ähnlichen Lebenszyklus-basierten Ansatz, der [hier](http://go.microsoft.com/fwlink/?LinkID=780549) beschrieben wird.
 
-This approach will reduce the burden of maintaining an app schedule that aligns with Windows releases. ISV partners should be free to release features or updates at their own cadence. We feel that our partners can keep their customer base updated with the latest app updates independent of a Windows release. In addition, our customers do not have to seek an explicit support statement whenever a Windows build is released. Here is an example of a support statement that covers how an app may be supported across different versions of the OS:
+Dadurch entfällt auch die Notwendigkeit, den App-Freigabezeitplan auf den der veröffentlichten Windows-Versionen abzustimmen. ISV-Partner sollten die Möglichkeit haben, Features oder Updates in ihrer eigenen Geschwindigkeit freizugeben. Wir sind überzeugt, dass unsere Partner ihre Kunden unabhängig von den Windows-Versionen mit neuesten App-Updates auf dem Laufenden halten können. Außerdem ist es nicht erforderlich, dass unsere Kunden bei jeder Freigabe eines Windows-Builds eine explizite Supportzusage einholen. Im folgenden Beispiel für eine Supportzusage wird beschrieben, wie eine App unter verschiedenen Betriebssystemversionen unterstützt werden kann:
 
-| Example of an application lifecycle support statement                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Beispiel für eine Supportzusage zum Anwendungslebenszyklus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Contoso is a software development company and is the owner of the popular Mojave app which has a major share in the enterprise space. Contoso releases its next major release Mojave 14.0 and declares mainstream support for a period of three years from the release date. During mainstream support all updates and support are complimentary for the licensed product. Contoso also declares an additional two years of extended support where customers can purchase updates and support for a grace period. Beyond the extended support end date this product version is no longer supported. During the period of mainstream support Contoso will support Mojave 14.0 on all released builds of Windows. Contoso will also release updates to Mojave as necessary and independent of the Windows product releases. |
- 
-In the following sections, you will find additional information about the steps Microsoft takes to maintain the compatibility of the underlying OS. You will also find guidance on steps you can take to help maintain the compatibility of the combined OS and app ecosystem. There is a section on how to leverage Windows flighting builds to detect app regressions before a Windows build is released. Lastly, we describe how we use an instrumentation and telemetry-driven approach to increase the quality of Windows builds. We recommend ISVs adopt a similar approach with their app portfolio.
+| Das Unternehmen Contoso ist Softwareentwickler und Herausgeber der beliebten Mojave-App, die im Bereich Unternehmens-Apps einen beachtlichen Marktanteil hat. Contoso veröffentlicht mit Mojave 14.0 die nächste Hauptversion und erklärt, dass der grundlegende Produktsupport für einen Zeitraum von drei Jahren ab dem Tag der Markteinführung gilt. Während des grundlegenden Supports sind alle Updates und Supportleistungen für das lizenzierte Produkt kostenlos erhältlich. Contoso bietet außerdem einen zweijährigen erweiterten Support. Während dieser Nachfrist können Kunden Updates und Supportleistungen gegen eine Gebühr in Anspruch nehmen. Mit dem Enddatum des erweiterten Supports wird diese Produktversion nicht mehr unterstützt. Während des grundlegenden Supports unterstützt Contoso Mojave 14.0 in allen veröffentlichten Windows-Builds. Darüber hinaus veröffentlicht Contoso nach Bedarf und unabhängig von Windows-Produktversionen Updates für Mojave. |
+ 
+In den folgenden Abschnitten finden Sie weitere Informationen dazu, wie Microsoft die Kompatibilität des zugrunde liegenden Betriebssystems sicherstellt. Außerdem wird ausführlich erläutert, wie Sie die Kompatibilität des kombinierten Ökosystems aus Betriebssystem und App gewährleisten können. In einem Abschnitt wird beschrieben, wie Sie mit Test-Flighting-Builds von Windows beeinträchtigte App-Funktionalität erkennen, bevor ein Windows-Build freigegeben wird. Zuletzt erfahren Sie, welche Instrumente und telemetrischen Daten uns helfen, die Qualität von Windows-Builds zu verbessern. ISVs wird empfohlen, einen vergleichbaren Ansatz bei ihrem App-Portfolio zu verfolgen.
 
-## Key changes since Windows 7 to ensure app compatibility
+## Wichtige Änderungen seit Windows7 zur Gewährleistung der App-Kompatibilität
 
-We understand that compatibility matters to developers. ISVs and developers want to ensure their apps will run as expected on all supported versions of the Windows OS. Consumers and businesses have a key investment here—they want to ensure that the apps they have paid for will continue to work. We know that compatibility is the primary criteria for purchase decisions. Apps that are well written based on best practices will lead to much less code churn when 
-a new Windows version is released and will reduce fragmentation—these apps have a reduced engineering investment to maintain, and a faster time to market.
+Kompatibilität hat für Entwickler einen hohen Stellenwert. ISVs und Entwickler möchten sicherstellen, dass ihre Apps unter allen unterstützten Versionen des Windows-Betriebssystems erwartungsgemäß ausgeführt werden. Verbraucher und Unternehmen haben ebenfalls ein Interesse daran, dass die von ihnen erworbenen Apps weiterhin funktionieren. Wir wissen, dass Kompatibilität das Hauptkriterium für die Kaufentscheidung ist. Zuverlässige Apps, die unter Berücksichtigung bewährter Methoden programmiert wurden, verursachen bei der Veröffentlichung einer neuen Windows-Version wesentlich weniger Codeänderungen und verringern die Fragmentierung. Solche Apps reduzieren nicht nur den technischen Wartungsaufwand, sondern sind auch schneller marktreif.
 
-In the Windows 7 timeframe, compatibility was very much a reactive approach. In Windows 8, we started looking at this differently, working within Windows to ensure that compatibility was by design rather than an afterthought. 
-Windows 10 is the most compatible-by-design version of the OS to date. Here are some key ways we accomplished this:
--   **App telemetry**: This helps us understand app popularity in the Windows ecosystem to inform compatibility testing.
--   **ISV partnerships**: Work directly with external partners to provide them with data and help fix issues that our users experience.
--   **Design reviews, upstream detection**: Partner with feature teams to reduce the number of breaking changes in Windows. Compatibility review is a gate that our feature teams must pass.
--   **Communication**: Tighter control over API changes and improved communication.
--   **Flighting and feedback loop**: Windows insiders receive flighted builds that help improve our ability to find compatibility issues before a final build is released to customers. This feedback process not only exposes bugs, but ensures we are shipping features our users want.
+Zu Zeiten von Windows7 ging es vielmehr darum, auf Kompatibilitätsprobleme zu reagieren. In Windows8 haben wir umgedacht und direkt innerhalb des Windows-Betriebssystems und nicht erst im Nachhinein für Kompatibilität gesorgt. Windows10 ist entwurfsbedingt die bisher kompatibelste Betriebssystemversion. Hier einige wichtige Aspekte, die uns bei der Umsetzung geholfen haben:
+-   **App-Telemetrie**: Telemetriedaten informieren uns über die Bedeutung der App im Windows-Ökosystem und helfen bei Kompatibilitätstests.
+-   **ISV-Partnerschaften**: Externe Partner erhalten durch die direkte Zusammenarbeit Informationen, die zur Behebung der von Endbenutzern gemeldeten Probleme beitragen.
+-   **Entwurfsprüfung, vorgeschaltete Erkennungsmechanismen**: Die Zusammenarbeit mit Featureteams reduziert die Anzahl bedeutender Änderungen in Windows. Kompatibilitätsprüfungen sind für jedes Featureteam ein Muss.
+-   **Kommunikation**: Engmaschigere Kontrolle von API-Änderungen und verbesserte Kommunikation.
+-   **Test-Flighting und Feedbackschleife**: Die von Windows-Insidern getesteten Flight-Builds verbessern unsere Chancen, Kompatibilitätsprobleme bereits vor Freigabe des endgültigen Builds für die Öffentlichkeit auszumachen. Unser Feedbackverfahren sorgt nicht nur für die Fehlererkennung, sondern auch dafür, dass Benutzer die Features erhalten, die sie brauchen.
 
-## Best practices for app compatibility
+## Bewährte Methoden für die App-Kompatibilität
 
-Microsoft uses diagnostic and usage data to identify and troubleshoot problems, improve our products and services, and provide our users with personalized experiences. The usage data we collect also extends to the apps that PCs in the Windows ecosystem are running. Based on what our customers use, we build our list to test these apps, devices, and drivers against new versions of the Windows OS. Windows 10 has been the most compatible version of Windows to-date, with over 90% compatibility against thousands of popular apps. The Windows Compatibility team commonly reaches out to our ISV partners to provide feedback if issues are discovered, so that we can partner together on solutions. Ideally, we’d like our common customers to be able to update Windows seamlessly and without losing functionality in either their OS or the apps they depend on for their productivity or entertainment.
+Microsoft verwendet Diagnose- und Nutzungsdaten, mit deren Hilfe Probleme identifiziert und behoben, Produkte und Dienste verbessert und Benutzern personalisierte Funktionen zur Verfügung gestellt werden können. Die gesammelten Nutzungsdaten erstrecken sich auch auf Apps, die auf den PCs im Windows-Ökosystem ausgeführt werden. Wir ermitteln die von unseren Kunden genutzten Features und testen neue Versionen des Windows-Betriebssystems unter Verwendung der entsprechenden Apps, Geräte und Treiber. Dank der über 90-prozentigen Kompatibilität mit Tausenden beliebter Apps ist Windows10 die kompatibelste Windows-Version aller Zeiten. Falls Probleme gefunden werden, wendet sich das Windows-Kompatibilitätsteam in der Regel mit Feedback an unsere ISV-Partner, um gemeinsam Lösungen zu erarbeiten. Wir möchten unseren gemeinsamen Kunden eine reibungslose Updateerfahrung bieten und dafür sorgen, dass die gesamte Funktionalität sowohl des Windows-Betriebssystems als auch ihrer Produktivitäts- oder Unterhaltungs-Apps erhalten bleibt.
 
-The following sections contain some best practices Microsoft recommends so you can ensure your apps are compatible with Windows 10.
+Die folgenden Abschnitte enthalten von Microsoft empfohlene bewährte Methoden, mit denen Sie sicherstellen können, dass Ihre Apps mit Windows10 kompatibel sind.
 
-### Windows version check
+### Prüfung der Windows-Version
 
-The OS version has been incremented with Windows 10. This means that the internal version number has been changed to 10.0. As in the past, we go to great lengths to maintain application and device compatibility after an OS version change. For most app categories (without any kernel dependencies), the change will not negatively impact app functionality, and existing apps will continue to work fine on Windows 10.
+Die Betriebssystemversion wurde mit Windows10 erhöht. Das bedeutet, dass die interne Versionsnummer in 10.0 geändert wurde. Die Anwendungs- und Gerätekompatibilität nach einer Änderung der Betriebssystemversion aufrechtzuerhalten, war uns schon immer sehr wichtig. Für die meisten App-Kategorien (ohne Kernelabhängigkeiten) hat die Änderung keine negativen Auswirkungen auf die App-Funktionen. Bereits vorhandene Apps laufen unter Windows10 weiterhin einwandfrei.
 
-The manifestation of this change is app-specific. This means any app that specifically checks for the OS version will get a higher version number, which can lead to one or more of the following situations:
--   App installers might not be able to install the app, and apps might not be able to start.
--   Apps might become unstable or crash.
--   Apps might generate error messages, but continue to function properly.
+Inwieweit sich diese Änderung auswirkt, richtet sich nach der jeweiligen App. Dies bedeutet, dass alle Apps, die die Betriebssystemversion überprüfen, eine höhere Versionsnummer erhalten, was sich wie folgt äußern kann:
+-   Apps können von App-Installern u. U. nicht installiert werden und nicht starten.
+-   Apps können instabil werden oder abstürzen.
+-   Apps können Fehlermeldungen ausgeben, aber weiterhin ordnungsgemäß funktionieren.
 
-Some apps perform a version check and simply pass a warning to users. However, there are apps that are bound very tightly to a version check (in the drivers, or in kernel mode to avoid detection). In these cases, the app will fail if an incorrect version is found. Rather than a version check, we recommend one of the following approaches:
--   If the app is dependent on specific API functionality, ensure you target the correct API version.
--   Ensure you detect the change via APISet or another public API, and do not use the version as a proxy for some feature or fix. If there are breaking changes and a proper check is not exposed, then that is a bug.
--   Ensure the app does NOT check for version in odd ways, such as via the registry, file versions, offsets, kernel mode, drivers, or other means. If the app absolutely needs to check the version, use the GetVersion APIs, which should return the major, minor, and build number.
--   If you are using the [GetVersion](http://go.microsoft.com/fwlink/?LinkID=780555) API, remember that the behavior of this API has changed since Windows 8.1.
+Einige Apps überprüfen die Version und geben einfach eine Warnung an den Benutzer aus. Es gibt jedoch auch Apps, für die eine Versionsprüfung unumgänglich ist (in den Treibern oder im Kernelmodus, um eine Erkennung zu vermeiden). In diesen Fällen verursacht die App beim Auffinden einer falschen Version einen Fehler. Wir empfehlen statt einer Versionsprüfung eines der folgenden Verfahren:
+-   Wenn die App von bestimmten API-Funktionen abhängig ist, stellen Sie sicher, dass sie auf die richtige API-Version ausgerichtet ist.
+-   Die Änderung muss über APISet oder eine andere öffentliche API erkannt werden. Die Version darf nicht stellvertretend für ein Feature oder einen Fix verwendet werden. Wenn für bedeutende Änderungen keine ordnungsgemäße Prüfung verfügbar gemacht wird, liegt ein Fehler vor.
+-   Achten Sie darauf, dass die App KEINE ungewöhnliche Versionsprüfung vornimmt, z. B. über die Registrierung, Dateiversionen, Offsets, den Kernelmodus, Treiber oder auf andere Weise. Wenn eine Versionsprüfung für die App unverzichtbar ist, verwenden Sie die GetVersion-APIs, die die Hauptversion, Nebenversion und Buildnummer zurückgeben sollten.
+-   Beachten Sie bei Verwendung der [GetVersion](http://go.microsoft.com/fwlink/?LinkID=780555)-API, dass sich ihr Verhalten seit Windows8.1 geändert hat.
 
-If you own apps such as antimalware or firewall apps, you should work through your usual feedback channels and via the Windows Insider program.
+Als Entwickler von Antischadsoftware- oder Firewall-Apps sollten Sie sich über Ihre üblichen Feedbackkanäle und über das Windows-Insider-Programm informieren.
 
-### Undocumented APIs
+### Nicht dokumentierte APIs
 
-Your apps should not call undocumented Windows APIs, or take dependency on specific Windows file exports or registry keys. This can lead to broken functionality, data loss, and potential security issues. If there is functionality your app requires that is not available, this is an opportunity to provide feedback through your usual feedback channels and via the Windows Insider program.
+Ihre Apps sollten keine nicht dokumentierten Windows-APIs aufrufen oder von bestimmten Windows-Dateiexporten oder Registrierungsschlüsseln abhängig sein. Dies kann fehlerhafte Funktionen, Datenverlust und potenzielle Sicherheitsprobleme zur Folge haben. Wenn Sie für Ihre App Funktionen benötigen, die nicht verfügbar sind, nutzen Sie Ihre üblichen Feedbackkanäle und das Windows-Insider-Programm, um Feedback zu übermitteln.
 
-### Develop Universal Windows Platform (UWP) and Centennial apps
+### Entwickeln von UWP (Universelle Windows-Plattform)- und Centennial-Apps
 
-We encourage all Win32 app ISVs to develop [Universal Windows Platform (UWP)](http://go.microsoft.com/fwlink/?LinkID=780560) and, specifically, [Centennial](http://go.microsoft.com/fwlink/?LinkID=780562) apps moving forward. There are great benefits to developing these app packages rather than using traditional Win32 installers. UWP apps are also supported in the [Windows Store](http://go.microsoft.com/fwlink/?LinkID=780563), so it’s easier for you to update your users to a consistent version automatically, lowering your support costs.
+Wir empfehlen allen ISVs von Win32-Apps, zukünftig [UWP (Universelle Windows-Plattform)-Apps](http://go.microsoft.com/fwlink/?LinkID=780560) und insbesondere [Centennial](http://go.microsoft.com/fwlink/?LinkID=780562)-Apps zu entwickeln. Die Entwicklung dieser App-Pakete birgt deutliche Vorteile gegenüber der Verwendung herkömmlicher Win32-Installationsprogramme. Da UWP-Apps außerdem im [Windows Store](http://go.microsoft.com/fwlink/?LinkID=780563) unterstützt werden, ist es für Sie einfacher, Ihrer Benutzerbasis ein automatisches Update auf eine konsistente Version zu bieten und Ihre Supportkosten zu senken.
 
-If your Win32 app types do not work with the Centennial model, we highly recommend that you use the right installer and ensure this is fully tested. An installer is your user or customer’s first experience with your app, so ensure that this works well. All too often, this doesn’t work well or it hasn’t been fully tested for all scenarios. The [Windows App Certification Kit](http://go.microsoft.com/fwlink/?LinkID=780565) can help you test the install and uninstall of your Win32 app and help you identify use of undocumented APIs, as well as other basic performance-related best-practice issues, before your users do.
+Wenn das Centennial-Modell von Ihren Win32-App-Typen nicht unterstützt wird, sollten Sie unbedingt das richtige Installationsprogramm verwenden und sicherstellen, dass es eingehend getestet wurde. Das Installationsprogramm ist der erste Berührungspunkt Ihrer Benutzer oder Kunden mit der App und sollte einwandfrei funktionieren. Dies ist häufig nicht der Fall, u. a. auch, weil das Programm nicht für alle Szenarien getestet wurde. Mit dem [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/?LinkID=780565) können Sie die Installation und Deinstallation Ihrer Win32-App testen, ermitteln, ob nicht dokumentierte APIs verwendet werden, und andere allgemeine Leistungsprobleme aufdecken, die nicht den bewährten Methoden entsprechen, bevor dies Ihre Benutzer tun.
 
-**Best practices:**
--   Use installers that work for both 32-bit and 64-bit versions of Windows.
--   Design your installers to run on multiple scenarios (user or machine level).
--   Keep all Windows redistributables in the original packaging – if you repackage these, it’s possible that this will break the installer.
--   Schedule development time for your installers—these are often overlooked as a deliverable during the software development lifecycle.
+**Bewährte Methoden:**
+-   Verwenden Sie Installationsprogramme, die die 32-Bit- und 64-Bit-Version von Windows unterstützen.
+-   Achten Sie beim Entwickeln Ihrer Installationsprogramme darauf, dass sie mehrere Szenarien (sowohl benutzer- als auch computerspezifisch) abdecken.
+-   Alle weitervertreibbaren Windows-Komponenten sollten im Originalpaket verbleiben. Durch ein Umpacken kann das Installationsprogramm beschädigt werden.
+-   Planen Sie Entwicklungszeit für Ihre Installationsprogramme ein. Häufig wird im Lebenszyklus der Softwareentwicklung übersehen, dass sie zum Lieferumfang dazugehören.
 
-## Optimized test strategies and flighting
+## Optimierte Teststrategien und Test-Flighting
 
-Windows OS flighting refers to the interim builds available to Windows Insiders before a final build is released to the general population. The more Insiders that flight these interim builds, the more feedback we receive on the build quality, compatibility, etc., and this helps improve quality of the final builds. You can participate in this flighting program to ensure that your apps work as expected on iterative builds of the OS. We also encourage you to provide feedback on how these flighted builds are working for you, issues you run into, and so on.
+Test-Flights des Windows-Betriebssystems sind Zwischenbuilds, die Windows-Insidern vor der allgemeinen Veröffentlichung eines endgültigen Builds zur Verfügung gestellt werden. Je mehr Insider diese Zwischenbuilds testen, umso mehr Feedback erhalten wir zur Buildqualität, Kompatibilität usw. und umso besser fällt die Qualität der endgültigen Builds aus. Durch Ihre Teilnahme am Test-Flighting-Programm können Sie sicherstellen, dass Ihre Apps unter iterativen Betriebssystembuilds erwartungsgemäß funktionieren. Wir würden uns freuen, wenn Sie uns Ihre Meinung zur Funktionsweise der Test-Flight-Builds, zu Problemen und anderen Aspekten mitteilen würden.
 
-If your app is in the Store, you can flight your app via the Store, which means that your app will be available for our Windows Insider population to install. Users can install your app and you can receive preliminary feedback on your app before you release it to the general population. The follow sections outline the steps for testing your apps against Windows flighted builds.
+Wenn Sie Ihre App im Store anbieten, können Sie sie über den Store für Test-Flights bereitstellen, wodurch sie von Windows-Insidern installiert werden kann. Benutzer können Ihre App installieren und vorläufiges Feedback dazu abgeben, bevor Sie sie für die Allgemeinheit freigeben. In den folgenden Abschnitten erfahren Sie, wie Sie ihre Apps unter Verwendung von Windows-Test-Flight-Builds testen.
 
-### Step 1: Become a Windows Insider and participate in flighting
-As a [Windows Insider,](http://go.microsoft.com/fwlink/p/?LinkId=521639) you can help shape the future of Windows—your feedback will help us improve features and functionality in the platform. This is a vibrant community where you can connect with other enthusiasts, join forums, trade advice, and learn about upcoming Insider-only events.
+### Schritt 1: Windows-Insider werden und am Test-Flighting teilnehmen
+Als [Windows-Insider](http://go.microsoft.com/fwlink/p/?LinkId=521639) können Sie die Zukunft von Windows mitgestalten – Ihr Feedback hilft uns, Plattformfeatures und -funktionen zu optimieren. Als Mitglied dieser lebendigen Community können Sie sich mit anderen Interessierten vernetzen, Foren beitreten, Tipps und Tricks austauschen und alles über anstehende Veranstaltungen nur für Insider erfahren.
 
-Since you’ll have access to preview builds of Windows 10, Windows 10 Mobile, and the latest Windows SDK and Emulator, you’ll have all the tools at your disposal to develop great apps and explore what's new in the Universal Windows Platform and the Windows Store.
+Sie haben Zugriff auf Vorabversionen von Windows10, Windows10 Mobile, das aktuelle Windows SDK und den Emulator und verfügen über alle Tools, die Sie zum Entwickeln großartiger Apps benötigen. Außerdem erfahren Sie Neuigkeiten über die universelle Windows-Plattform und den Windows Store.
 
-This is also a great opportunity to build great hardware, with preview builds of the hardware development kits so you can develop universal drivers for Windows. The IoT Core Insider Preview is also available on supported IoT development boards, so you can build amazing connected solutions using the Universal Windows Platform.
+Darüber hinaus können Sie mit den Vorabversionen der Hardwareentwicklungskits überragende Hardwarelösungen erstellen und universelle Treiber für Windows entwickeln. IoT Core Insider Preview ist auch auf unterstützten IoT-Entwicklungsboards verfügbar, sodass Sie faszinierende vernetzte Lösungen auf Basis der universellen Windows-Plattform erstellen können.
 
-Before you become a Windows Insider, please note that participation is intended for users who:
--   Want to try out software that’s still in development.
--   Want to share feedback about the software and the platform.
--   Don’t mind lots of updates or a UI design that might change significantly over time.
--   Really know their way around a PC and feel comfortable troubleshooting problems, backing up data, formatting a hard drive, installing an operating system from scratch, or restoring an old one if necessary.
--   Know what an ISO file is and how to use it.
--   Aren't installing it on their everyday computer or device.
+Beachten Sie vor Ihrer Teilnahme Folgendes: Das Windows-Insider-Programm richtet sich an alle, die
+-   Software testen möchten, die sich noch in der Entwicklung befindet.
+-   Feedback zur Software und Plattform geben möchten.
+-   keine Probleme mit häufigen Updates oder einem UI-Design haben, das sich im Laufe der Zeit signifikant verändern kann.
+-   sich auf ihrem PC auskennen und problemlos Fehler beheben, Daten sichern, Festplatten formatieren, ein Betriebssystem von Grund auf neu installieren oder ein altes Betriebssystem ggf. wiederherstellen können.
+-   wissen, was eine ISO-Datei ist und wie sie verwendet wird.
+-   die Datei nicht auf Ihrem Hauptcomputer oder -gerät installieren.
 
-### Step 2: Test your scenarios
+### Schritt 2: Szenarien testen
 
-Once you have updated to a flighted build, the following are some sample test cases to help you get started on testing and gathering feedback. For most of these tests, ensure you cover both x86 and AMD64 systems.
-**Clean install test:** On a clean install of Windows 10, ensure your app is fully functional. If your app fails this test and the upgrade test, then it’s likely that the issue is caused by underlying OS changes or bugs in the app. 
-If after investigation, the former is the case, be sure to use the Windows Insider program to provide feedback and partner on solutions.
+Nach dem Update auf einen Test-Flight-Build sollen Ihnen die folgenden Beispieltestfälle den Einstieg erleichtern und aufzeigen, wie Sie Feedback sammeln. Achten Sie bei den meisten Tests darauf, x86- und AMD64-Systeme abzudecken.
+**Saubere Installation testen:** Stellen Sie bei einer sauberen Installation von Windows10 sicher, dass Ihre App voll funktionsfähig ist. Wenn Ihre App diesen Test und den Upgradetest nicht besteht, wird das Problem wahrscheinlich durch Änderungen am zugrunde liegenden Betriebssystem oder Fehler in der App verursacht. Falls sich die oben genannten Ursachen nach einer Prüfung bestätigen, sollten Sie das Windows-Insider-Programm nutzen, um Feedback abzugeben und gemeinsam mit anderen Insidern eine Lösung zu suchen.
 
-**Upgrade Test:** Check that your app works after upgrading from a down-level version of Windows (i.e. Windows 7 or Windows 8.1) to Windows 10. Your app shouldn’t cause roll backs during upgrade, and should continue to work as expected after upgrade—this is crucial to achieve a seamless upgrade experience.
+**Upgrade testen:** Überprüfen Sie nach dem Upgrade von einer kompatiblen Windows-Version (z.B. Windows7 oder Windows8.1) auf Windows10, ob Ihre App funktioniert. Die App sollte während des Upgrades keine Rollbacks verursachen und danach weiter ordnungsgemäß funktionieren – eine wichtige Voraussetzung für eine reibungslose Upgradeerfahrung.
 
-**Reinstall Test:** Ensure that app functionality can be restored by reinstalling your app after you upgrade the PC to Windows 10 from a down-level OS. If your app didn’t pass the upgrade test and you have not been able to narrow down the cause of these issues, it’s possible that a reinstall can restore lost functionality. A passing reinstall test indicates that parts of the app may not have been migrated to Windows 10.
+**Neuinstallation testen:** Stellen Sie sicher, dass die Funktionen der App wiederhergestellt werden können, indem Sie sie nach dem Upgrade des PCs von einem kompatiblen Betriebssystem auf Windows10 neu installieren. Wenn die App den Upgradetest nicht bestanden hat und Sie die Problemursache nicht eingrenzen konnten, lassen sich die ausgefallenen Funktionen u. U. durch eine Neuinstallation wiederherstellen. Falls beim Neuinstallationstest keine Probleme auftreten, ist dies ein Hinweis darauf, dass Teile der App ggf. nicht zu Windows10 migriert wurden.
 
-**OS\\Device Features Test:** Ensure that your app works as expected if your app relies on specific functionality in the OS. Common areas for testing include the following, often against a selection of the commonly used PC models to ensure coverage:
+**Betriebssystem-/Gerätefeatures testen:** Vergewissern Sie sich, dass Ihre App erwartungsgemäß funktioniert, wenn sie von bestimmten Betriebssystemfunktionen abhängig ist. Im Folgenden einige allgemeine Testbereiche. Die Verwendung verschiedener gängiger PC-Modelle gewährleistet eine breite Abdeckung:
 -   Audio
--   USB device functionality (keyboard, mouse, memory stick, external hard disk, and so on)
+-   USB-Gerätefunktionen (Tastatur, Maus, Speicherstick, externe Festplatte usw.)
 -   Bluetooth
--   Graphics\\display (multi-monitor, projection, screen rotation, and so on)
--   Touch screen (orientation, on-screen keyboard, pen, gestures, and so on)
--   Touchpad (left\\right buttons, tap, scroll, and so on)
--   Pen (single\\double tap, press, hold, eraser, and so on)
--   Print\\Scan
--   Sensors (accelerometer, fusion, and so on)
--   Camera
+-   Grafik/Anzeige (mehrere Monitore, Projektion, automatische Ausrichtung usw.)
+-   Touchscreen (Ausrichtung, Bildschirmtastatur, Stift, Gesten usw.)
+-   Touchpad (linke/rechte Taste, Tippen, Scrollen usw.)
+-   Stift (Einfach-/Doppeltippen, Drücken, Halten, Radierer usw.)
+-   Drucken/Scannen
+-   Sensoren (Beschleunigungsmesser, Fusion usw.)
+-   Kamera
 
-### Step 3: Provide feedback
+### Schritt 3: Feedback bereitstellen
 
-Let us know how your app is performing against flighted builds. As you discover issues with your app during testing, please log bugs via the partner portal if you have access, or through your Microsoft representative. We encourage this information so that we can build a quality experience for our users together.
+Lassen Sie uns wissen, wie Ihre App mit Test-Flight-Builds funktioniert. Wenn die App während der Tests Fehler verursacht, sollten Sie diese über das Partnerportal melden (sofern Sie Zugriff haben) oder Kontakt zu Microsoft aufnehmen. Ihr Feedback ist uns wichtig, da es hilft, gemeinsam mit unseren Partnern eine optimale Benutzererfahrung zu schaffen.
 
-### Step 4: Register on Windows 10
-The [Ready for Windows 10](http://go.microsoft.com/fwlink/?LinkID=780580) website is a directory of software that supports Windows 10. It’s intended for IT administrators at companies and organizations worldwide that are considering Windows 10 for their deployments. IT administrators can check the site to see whether software deployed in their enterprise is supported in Windows 10.
+### Schritt 4: Für Windows10 registrieren
+Auf der Website [Bereit für Windows10](http://go.microsoft.com/fwlink/?LinkID=780580) finden Sie ein Verzeichnis der Softwarelösungen, die Windows10 unterstützen. Sie richtet sich an IT-Administratoren in Unternehmen und Organisationen weltweit, die die Bereitstellung von Windows10 auf ihren Systemen in Betracht ziehen. IT-Administratoren können anhand der Website feststellen, ob die in ihrem Unternehmen bereitgestellte Software unter Windows10 unterstützt wird.
 
-## Related topics
-[Windows 10 servicing options for updates and upgrades](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)
+## Verwandte Themen
+[Windows10-Wartungsoptionen für Updates und Upgrades](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

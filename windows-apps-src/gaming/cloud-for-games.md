@@ -4,8 +4,8 @@ title: "Nutzen von Clouddiensten für UWP-Spiele"
 description: "Erfahren Sie mehr über die Implementierung der Cloud als Back-End für Ihre UWP-Spiele."
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 8bf42e9c2c2e074240eb8e7b94efdfbca65cc7f9
+ms.sourcegitcommit: 0b2d81daa8bd0fd5694b81fa14fcd064e1600d35
+ms.openlocfilehash: b23c33fac9ac8fe5e2d5563a0af6824c82a3969b
 
 ---
 #  Nutzen von Clouddiensten für UWP-Spiele
@@ -48,8 +48,7 @@ Hier erfahren Sie, wie andere Entwickler Cloudlösungen in ihre Spiele implement
     </tr>
     <tr>
         <td>[343 Industries](https://www.halowaypoint.com/)</td>
-        <td>
-              _Halo 5: Guardians_ implementierte [Halo: Spartan Companies](https://www.halowaypoint.com/spartan-companies) mithilfe von Microsoft Azure DocumentDB als Social-Gaming-Plattform. Microsoft Azure DocumentDB wurde aufgrund der schnellen und flexiblen Funktionen für die automatische Indizierung ausgewählt.</td>
+        <td>_Halo 5: Guardians_ implementierte [Halo: Spartan Companies](https://www.halowaypoint.com/spartan-companies) mithilfe von Microsoft Azure DocumentDB als Social-Gaming-Plattform. Microsoft Azure DocumentDB wurde aufgrund der schnellen und flexiblen Funktionen für die automatische Indizierung ausgewählt.</td>
         <td>
             <ul>
                 <li>Skalierbare Datenebene zur Verarbeitung der Erstellung und Verwaltung von Gruppen beim Multiplayer-Gameplay <li>Integration des Spiels mit sozialen Medien <li>Echtzeit-Datenabfragen über mehrere Attribute <li>Synchronisierung von Erfolgen und Statistiken im Spiel </ul>
@@ -89,8 +88,7 @@ Hier erfahren Sie, wie andere Entwickler Cloudlösungen in ihre Spiele implement
     </tr>
     </td>
         <td>[Pixel Squad](http://www.crimecoast.com/)</td>
-        <td>Pixel Squad entwickelte mit der Unity-Engine und Azure das Spiel _Crime Coast_. 
-              _Crime Coast_ ist ein Social-Strategiespiel für Android, iOS und Windows. Für das Spiel wurden Azure Blob Speicher, Managed Azure Redis Cache und mehrere IIS-VMs mit Lastenausgleich sowie der Microsoft Notification-Hub eingesetzt. Erfahren Sie, wie die Skalierung und Handhabung der Spieler bei 5.000 gleichzeitigen Spielern möglich ist.
+        <td>Pixel Squad entwickelte mit der Unity-Engine und Azure das Spiel _Crime Coast_. _Crime Coast_ ist ein Social-Strategiespiel für Android, iOS und Windows. Für das Spiel wurden Azure Blob Speicher, Managed Azure Redis Cache und mehrere IIS-VMs mit Lastenausgleich sowie der Microsoft Notification-Hub eingesetzt. Erfahren Sie, wie die Skalierung und Handhabung der Spieler bei 5.000 gleichzeitigen Spielern möglich ist.
         </td>
         <td>
             <ul>
@@ -135,7 +133,7 @@ Zunächst müssen Sie entscheiden, welche Dienstform für Spiel am besten geeign
 
 * Software-as-a-Service (SaaS)
 
-    SaaS-Dienste sind normale Anwendungen, die Ihnen über eine vorhandene Cloudplattform bereitgestellt werden. Diese Dienste vereinfachen Ihre Bereitstellung des Spiels über die entsprechenden Dienste.
+    Software-as-a-Service ist gewöhnlich eine Anwendung, die Ihnen über eine vorhandene Cloudplattform bereitgestellt wird. Diese Dienste vereinfachen Ihre Bereitstellung des Spiels über die entsprechenden Dienste.
 
 
 ### Entwerfen der Spieleinfrastruktur mit Azure
@@ -154,7 +152,7 @@ In diesem Abschnitt lernen Sie Möglichkeiten zur Nutzung der Azure Cloudangebot
 | Skalierbare relationale Spieldatenbank| Strukturierte Speicherung von relationalen Daten wie In-Game-Transaktionen zur Datenbank | [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/)| SQL-Datenbank als Dienst ([Vergleich mit SQL auf einem virtuellen Computer](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/))  |
 | Skalierbare verteilte Spieldatenbank mit geringer Latenz| Schnelles Lesen, Schreiben und Abfragen von Spiel- und Spielerdaten mit Schemaflexibilität | [Azure DocumentDB](https://azure.microsoft.com/services/documentdb/)| NoSQL-Dokumentdatenbank als Dienst mit geringer Latenz   |
 | Nutzung eines eigenen Datencenters mit Azure-Diensten | Spiel aus dem eigenen Datacenter abgerufen und an die Client-Geräte gesendet | [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) | Ermöglicht Ihrer Organisation die Bereitstellung von Azure-Diensten über Ihr eigenes Datacenter  |
-| Übertragung großer Datenmengen| Große Dateien wie Bilder, Audio- und Videodateien können mit Azure CDN über den nächstgelegenen CDN-Pop-Standort (Content Delivery Network) an die Benutzer gesendet werden  | [Azure Content Delivery Network](https://azure.microsoft.com/services/cdn/) | Azure CDN basiert auf einer modernen Netzwerktopologie mit großen, zentralen Knoten und verarbeitet auch plötzliche Verkehrsspitzen und hohe Lasten. So steigen die Geschwindigkeit und Verfügbarkeit deutlich, und das Benutzererlebnis wird verbessert  |
+| Übertragung großer Datenmengen| Große Dateien wie Bilder, Audio und Videos können mit Azure CDN über den nächstgelegenen CDN-Pop-Standort (Content Delivery Network) an die Benutzer gesendet werden.    | [Azure Content Delivery Network](https://azure.microsoft.com/services/cdn/) | Azure CDN basiert auf einer modernen Netzwerktopologie mit großen, zentralen Knoten und verarbeitet auch plötzliche Verkehrsspitzen und hohe Lasten. So steigen die Geschwindigkeit und Verfügbarkeit deutlich, und das Benutzererlebnis wird verbessert  |
 | Niedrige Latenz               | Nutzen Sie die Zwischenspeicherung, um schnelle und skalierbare Spiele mit mehr Kontrolle und einer garantierten Isolation der Daten zu erstellen. Verbessern Sie außerdem die Mach-Making-Funktion des Spiels. | [Azure Redis Cache](https://azure.microsoft.com/services/cache/) | Datenzugriff mit hohem Durchsatz und einer konsistent geringen Latenz für schnelle und skalierbare Azure-Anwendungen  |
 | Hohe Skalierbarkeit, geringe Latenz | Verarbeitung von Fluktuationen bei der Anzahl der Benutzer im Spiel mit geringer Latenz für Lese- und Schreibvorgänge | [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) | Für die komplexesten und datenintensiven Szenarien mit geringer Latenz und zuverlässiger Skalierung für viele gleichzeitige Benutzer geeignet. Service Fabric ermöglicht Ihnen die Entwicklung von Spielen, ohne einen für statuslose Apps erforderlichen separaten Speicher oder Zwischenspeicher erstellen zu müssen |
 | Sammeln von mehreren Millionen Ereignissen pro Sekunde von Geräten                         | Protokollieren von mehreren Millionen Ereignissen pro Sekunde von Geräten | [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/) | Telemetrieaufnahme von Spielen, Websites, Apps und Geräten auf Cloud-Niveau  |
@@ -204,6 +202,6 @@ Dieser Abschnitt stellt einige Unternehmen vor, die Cloud-Back-Ends über wichti
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

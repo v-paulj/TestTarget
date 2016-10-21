@@ -5,7 +5,7 @@ title: "Systemeigene DirectX- und Direct2D-Interoperabilität mit „BeginDraw�
 description: "Die Windows.UI.Composition-API bietet systemeigene Interoperabilitätsschnittstellen, mit deren Hilfe Inhalte direkt in den Kompositor verschoben werden können."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: c2086e703e3972d4dd38dc1b7147bfa5f01231cf
+ms.openlocfilehash: 4d1bf75fee06c8f4c31ce23c89bf6267ab9e6394
 
 ---
 # Systemeigene DirectX- und Direct2D-Interoperabilität mit „BeginDraw“ und „EndDraw“
@@ -28,8 +28,7 @@ Um Pixel in eine Oberfläche zu laden, muss die Anwendung die [**BeginDraw**](ht
 
 Die Anwendung kann „BeginDraw“ nur jeweils auf einer Oberfläche für ein bestimmtes [**CompositionGraphicsDevice**](https://msdn.microsoft.com/library/windows/apps/Dn706749)-Element aufrufen. Nach dem Aufruf von [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx) muss die Anwendung [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) auf dieser Oberfläche aufrufen, bevor sie auf einer anderen **BeginDraw** aufrufen kann. Da die API agil ist, muss die Anwendung diese Aufrufe synchronisiert durchführen, wenn das Rendering aus mehreren Workerthreads ausgeführt werden soll. Mit der [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx) kann die Anwendung das Rendern einer Oberfläche unterbrechen und vorübergehend zu einer anderen wechseln. Dadurch kann eine weitere **BeginDraw**-Methode erfolgreich ausgeführt werden, während das erste Update der Oberfläche nicht für die Komposition auf dem Bildschirm bereitgestellt wird. So kann die Anwendung mehrere Transaktionsupdates ausführen. Sobald eine Oberfläche angehalten wird, kann die Anwendung das Update fortführen, indem sie die [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062)-Methode aufruft. Alternativ kann das Update durch Aufrufen von **EndDraw** als beendet erklärt werden. Dies bedeutet, dass für ein bestimmtes **CompositionGraphicsDevice**-Element jeweils nur eine Oberfläche gleichzeitig aktiv aktualisiert werden kann. Jedes Grafikgerät behält diesen Zustand unabhängig von den anderen bei, damit eine Anwendung zwei Oberflächen gleichzeitig rendern kann, wenn sie zu unterschiedlichen Grafikgeräten gehören. Allerdings kann der Videospeicher für diese beiden Oberflächen unter diesen Umständen nicht zusammengelegt werden, was eine weniger effiziente Speichernutzung zur Folge hat.
 
-Die Methoden [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx), [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) und [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) geben Fehler zurück, wenn die Anwendung einen falschen Vorgang ausführt (z.B. das Übergeben ungültiger Argumente oder das Aufrufen von **BeginDraw** auf einer Oberfläche, bevor auf einer anderen **EndDraw** aufgerufen wurde). Bei diesen Arten von Fehlern handelt es sich um Anwendungsfehler. Daher wird erwartet, dass sie mit der Fail-Fast-Funktion verarbeitet werden. 
-              **BeginDraw** gibt möglicherweise auch einen Fehler zurück, wenn das zugrunde liegende DirectX-Gerät verloren geht. Dieser Fehler ist nicht schwerwiegend, da die Anwendung das DirectX-Gerät neu erstellen und den Vorgang wiederholen kann. Es wird also erwartet, dass die Anwendung verloren gegangene Geräte behandelt, indem Sie das Rendering einfach überspringt. Falls **BeginDraw** aus irgendeinem Grund fehlschlägt, sollte die Anwendung nicht **EndDraw** aufrufen, da „BeginDraw“ gar nicht erst erfolgreich ausgeführt wurde.
+Die Methoden [**BeginDraw**](https://msdn.microsoft.com/library/windows/apps/mt620059.aspx), [**SuspendDraw**](https://msdn.microsoft.com/library/windows/apps/mt620064.aspx), [**ResumeDraw**](https://msdn.microsoft.com/library/windows/apps/mt620062) und [**EndDraw**](https://msdn.microsoft.com/library/windows/apps/mt620060) geben Fehler zurück, wenn die Anwendung einen falschen Vorgang ausführt (z.B. das Übergeben ungültiger Argumente oder das Aufrufen von **BeginDraw** auf einer Oberfläche, bevor auf einer anderen **EndDraw** aufgerufen wurde). Bei diesen Arten von Fehlern handelt es sich um Anwendungsfehler. Daher wird erwartet, dass sie mit der Fail-Fast-Funktion verarbeitet werden. **BeginDraw** gibt möglicherweise auch einen Fehler zurück, wenn das zugrunde liegende DirectX-Gerät verloren geht. Dieser Fehler ist nicht schwerwiegend, da die Anwendung das DirectX-Gerät neu erstellen und den Vorgang wiederholen kann. Es wird also erwartet, dass die Anwendung verloren gegangene Geräte behandelt, indem Sie das Rendering einfach überspringt. Falls **BeginDraw** aus irgendeinem Grund fehlschlägt, sollte die Anwendung nicht **EndDraw** aufrufen, da „BeginDraw“ gar nicht erst erfolgreich ausgeführt wurde.
 
 ## Bildlauf
 
@@ -271,6 +270,6 @@ private:
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

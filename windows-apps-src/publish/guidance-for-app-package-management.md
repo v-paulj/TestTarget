@@ -3,8 +3,9 @@ author: jnHs
 Description: "Erfahren Sie, wie App-Pakete für Ihre Kunden verfügbar gemacht werden und bestimmte Paketszenarien verwaltet werden."
 title: "Leitfaden für die Verwaltung von App-Paketen"
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: ac8d150f426c7d32e8a3b61b7f08cc0b84feedb8
+ms.openlocfilehash: 68ed87147ed3cc3e1155eb1ab6d301867ba1ae55
 
 ---
 
@@ -76,20 +77,17 @@ In der Beispiel-App4 können Geräte unter Windows10 die App abrufen. Sie steht 
 
 Wenn Sie über eine App im Store verfügen und Sie die App für Windows10 aktualisieren möchten, müssen Sie eine neue Übermittlung erstellen und die UWP-Pakete „.appxupload“ während des Schritts [Pakete](upload-app-packages.md) hochladen. Nachdem Ihre App den Zertifizierungsprozess durchlaufen hat, können Kunden, die Ihre App bereits vor dem Upgrade auf Windows 10 besaßen, die UWP-Pakete als Update aus dem Store abrufen. Das UWP-Paket steht auch für Käufe von Neukunden unter Windows 10 zur Verfügung.
 
-> 
-            **Wichtig**  Nachdem ein Kunde unter Windows 10 das UWP-Paket erhalten hat, können Sie für diesen Kunden kein Rollback auf ein Paket für eine frühere Betriebssystemversion mehr ausführen. Stellen Sie sicher, dass Sie Ihre UWP-Pakete unter Windows 10 gründlich getestet haben, bevor Sie sie Ihrer Übermittlung hinzufügen.
+> **Wichtig**  Nachdem ein Kunde unter Windows 10 das UWP-Paket erhalten hat, können Sie für diesen Kunden kein Rollback auf ein Paket für eine frühere Betriebssystemversion mehr ausführen. Stellen Sie sicher, dass Sie Ihre UWP-Pakete unter Windows 10 gründlich getestet haben, bevor Sie sie Ihrer Übermittlung hinzufügen.
 
 Sie können gleichzeitig andere Pakete aktualisieren oder andere Änderungen an der Übermittlung (beispielsweise möchten Sie möglicherweise [plattformspezifische Beschreibungen erstellen](create-platform-specific-descriptions.md), die Kunden von früheren Betriebssystemversionen angezeigt werden sollen) vornehmen. Sie können nach Bedarf auch alles andere unverändert lassen.
 
-> 
-            **Hinweis**  Die Versionsnummer des entsprechenden Windows10-Pakets muss höher sein als die der Pakete für Windows8, Windows8.1 und/oder WindowsPhone8.1, die Sie für die gleiche App veröffentlichen (oder der Pakete für diese Betriebssystemversionen, die Sie zuvor veröffentlicht haben). Weitere Informationen über die Versionsnummerierung bei Windows10 finden Sie unter [Paketversionsnummern](package-version-numbering.md).
+> **Hinweis**  Die Versionsnummer des entsprechenden Windows10-Pakets muss höher sein als die der Pakete für Windows8, Windows8.1 und/oder WindowsPhone8.1, die Sie für die gleiche App veröffentlichen (oder der Pakete für diese Betriebssystemversionen, die Sie zuvor veröffentlicht haben). Weitere Informationen über die Versionsnummerierung bei Windows10 finden Sie unter [Paketversionsnummern](package-version-numbering.md).
 
 Nachdem die neue Übermittlung den Zertifizierungsprozess abgeschlossen hat, stehen die UWP-Pakete zusammen mit anderen von Ihnen für diese Kunden, die noch nicht über Windows10 verfügen, zur Verfügung gestellten Pakete zur Verfügung.
 
 Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter [Verpacken universeller Windows-Apps für Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=620193 ).
 
-> 
-            **Wichtig**  Beachten Sie beim Bereitstellen von Paketen für die universelle Gerätefamilie, dass jeder Kunde, der Ihre App bereits auf einem früheren Betriebssystem (WindowsPhone8, Windows8.1 usw.) verwendet hat und anschließend ein Upgrade auf Windows10 vornimmt, auf Ihr universelles Windows10-Paket aktualisiert wird.
+> **Wichtig**  Beachten Sie beim Bereitstellen von Paketen für die universelle Gerätefamilie, dass jeder Kunde, der Ihre App bereits auf einem früheren Betriebssystem (WindowsPhone8, Windows8.1 usw.) verwendet hat und anschließend ein Upgrade auf Windows10 ausführt, auf Ihr universelles Windows10-Paket aktualisiert wird.
 > 
 > Dies erfolgt auch dann, wenn Sie eine bestimmte Gerätefamilie im Schritt [Preise und Verfügbarkeit](set-app-pricing-and-availability.md#windows-10-device-families) der Übermittlung ausgeschlossen haben, da die Auswahl **Gerätefamilien** nur auf neue Käufe zutrifft. Wenn Sie nicht möchten, dass jeder vorherige Kunden Ihr neues Windows10-Paket abrufen kann, müssen Sie das [**TargetDeviceFamily**](https://msdn.microsoft.com/library/windows/apps/dn986903)-Element in Ihrem APPX-Manifest so aktualisieren, dass nur die bestimmte Gerätefamilie einbezogen wird, die Sie unterstützen möchten.
 > 
@@ -114,15 +112,13 @@ Wenn diese Regeln nicht beachtet werden, führt dies zu Problemen beim Hochladen
 
 Manchmal möchten Sie Kunden eine App vielleicht überhaupt nicht mehr anbieten, d.h. Sie heben die Veröffentlichung der App auf. Klicken Sie hierzu in der App-Übersicht auf **Make app unavailable**. Nachdem Sie bestätigt haben, dass die App nicht mehr verfügbar sein soll, wird sie innerhalb weniger Stunden nicht mehr im Store angezeigt, und neue Kunden haben keine Möglichkeit, sie herunterzuladen (auch nicht mit Werbecodes).
 
-> 
-            **Wichtig**  Hierdurch werden alle in den Übermittlungen ausgewählten Einstellungen für [Verteilung und Sichtbarkeit](set-app-pricing-and-availability.md#distribution-and-visibility) außer Kraft gesetzt.
+> **Wichtig**  Hierdurch werden alle in den Übermittlungen ausgewählten Einstellungen für [Verteilung und Sichtbarkeit](set-app-pricing-and-availability.md#distribution-and-visibility) außer Kraft gesetzt.
 
 Beachten Sie, dass Kunden, die die App bereits besitzen, sie weiterhin verwenden können (und sogar Updates erhalten können, wenn Sie zu einem späteren Zeitpunkt neue Pakete übermitteln).
 
 Nachdem die Bereitstellung der App aufgehoben wurde, wird sie weiterhin in Ihrem Dashboard angezeigt. Wenn Sie die App Kunden erneut anbieten möchten, klicken Sie in der App-Übersicht auf **Make app available**. Nach dem Bestätigen ist die App für Neukunden innerhalb weniger Stunden verfügbar (es sei denn, es liegen Einschränkungen durch Einstellungen in der letzten Übermittlung vor).
 
-> 
-            **Hinweis**  Wenn die App verfügbar bleiben, Kunden mit bestimmten Betriebssystemversionen jedoch nicht mehr angeboten werden soll, können Sie eine neue Übermittlung erstellen und alle Pakete für die Betriebssystemversion entfernen, unter der Sie neue Verkäufe verhindern möchten. Wenn Sie beispielsweise bisher Pakete für WindowsPhone8, WindowsPhone8.1 und Windows10 hatten, die App jedoch keinen Neukunden mit WindowsPhone8 mehr anbieten möchten, entfernen Sie Ihre WindowsPhone8-Pakete aus der Übermittlung. Nach der Veröffentlichung des Updates können keine neuen Kunden unter WindowsPhone8 die App mehr erwerben (Kunden, die sie bereits haben, können sie jedoch weiterhin nutzen). Für neue Kunden unter WindowsPhone8.1 und Windows10 ist die App weiterhin verfügbar.
+> **Hinweis**  Wenn die App verfügbar bleiben, Kunden mit bestimmten Betriebssystemversionen jedoch nicht mehr angeboten werden soll, können Sie eine neue Übermittlung erstellen und alle Pakete für die Betriebssystemversion entfernen, unter der Sie neue Verkäufe verhindern möchten. Wenn Sie beispielsweise bisher Pakete für WindowsPhone8, WindowsPhone8.1 und Windows10 hatten, die App jedoch keinen Neukunden mit WindowsPhone8 mehr anbieten möchten, entfernen Sie Ihre WindowsPhone8-Pakete aus der Übermittlung. Nach der Veröffentlichung des Updates können keine neuen Kunden unter WindowsPhone8 die App mehr erwerben (Kunden, die sie bereits haben, können sie jedoch weiterhin nutzen). Für neue Kunden unter WindowsPhone8.1 und Windows10 ist die App weiterhin verfügbar.
 
 ## Entfernen von Paketen für eine zuvor unterstützte Gerätefamilie
 
@@ -143,6 +139,6 @@ Hinweis: Auch wenn Sie alle Pakete entfernen, die eine bestimmte Gerätefamilie 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: mtoepke
 title: Portieren des GLSL-Codes
 description: "Nachdem Sie sich um den Code gekümmert haben, mit dem die Puffer und Shaderobjekte erstellt und konfiguriert werden, muss der in diesen Shadern enthaltene Code von der GL Shader Language (GLSL) von OpenGL ES 2.0 in die High-Level Shader Language (HLSL) von Direct3D 11 portiert werden."
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d1d203fa74bd80fe26401e64d4e15bb11e5c1050
+ms.openlocfilehash: 883f4423f72f044435ffc0ee9eccdcd5b0d63bfa
 
 ---
 
@@ -152,12 +153,10 @@ Die Farbe für das Pixel an der Position wird in das Renderziel geschrieben. Das
 ## Vorheriger Schritt
 
 
-
-            [Portieren der Vertexpuffer und -daten](port-the-vertex-buffers-and-data-config.md) Nächster Schritt
+[Portieren der Vertexpuffer und -daten](port-the-vertex-buffers-and-data-config.md) Nächster Schritt
 ---------
 
-
-            [Zeichnen auf den Bildschirm](draw-to-the-screen.md) Anmerkungen
+[Zeichnen auf den Bildschirm](draw-to-the-screen.md) Anmerkungen
 -------
 
 Wenn Sie mit der HLSL-Semantik und dem Packen von Konstantenpuffern vertraut sind, können Sie einigen Debugaufwand vermeiden und Möglichkeiten zur Optimierung schaffen. Lesen Sie sich nach Möglichkeit die Themen [Variablensyntax (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Einführung in Puffer in Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476898) und [Erstellen eines Konstantenpuffers](https://msdn.microsoft.com/library/windows/desktop/ff476896) durch. Hier sind als Anfang schon einmal einige Tipps aufgeführt, die in Verbindung mit der Semantik und Konstantenpuffern zu beachten sind:
@@ -190,6 +189,6 @@ Wenn Sie mit der HLSL-Semantik und dem Packen von Konstantenpuffern vertraut sin
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

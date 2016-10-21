@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: EAC34672-5C12-402D-920B-6F2835EA5ACE
 title: "Tools für Profilerstellung und Leistung"
 description: "Microsoft bietet verschiedene Tools zur Verbesserung der Leistung Ihrer App für die Universelle Windows-Plattform (UWP)."
+translationtype: Human Translation
 ms.sourcegitcommit: 5bbd14fb53cae67bbb827f94e695b2703e07fc34
-ms.openlocfilehash: f7f9821be7d1423b2f89367bd20c09981eca24eb
+ms.openlocfilehash: 3d0cf5f983efdee116bcf8b87398fe376efca3c6
 
 ---
 # Tools für Profilerstellung und Leistung
@@ -13,8 +14,7 @@ ms.openlocfilehash: f7f9821be7d1423b2f89367bd20c09981eca24eb
 
 Microsoft bietet verschiedene Tools zur Verbesserung der Leistung Ihrer App für die universelle Windows-Plattform (UWP). Unter den folgenden Links finden Sie weitere Informationen zur Verwendung dieser Tools.
 
-
-            **Tool „XAML-UI-Reaktionsfähigkeit“ in Visual Studio 2015**. Eines der besten Tools zum Ermitteln der Leistungsauswirkungen innerhalb Ihrer App ist das Tool „XAML-UI-Reaktionsfähigkeit“. Die im Lieferumfang enthaltene Version wurde [für Visual Studio2015 aktualisiert](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) und unterstützt nun noch mehr Szenarien.
+**Tool „XAML-UI-Reaktionsfähigkeit“ in Visual Studio 2015**. Eines der besten Tools zum Ermitteln der Leistungsauswirkungen innerhalb Ihrer App ist das Tool „XAML-UI-Reaktionsfähigkeit“. Die im Lieferumfang enthaltene Version wurde [für Visual Studio2015 aktualisiert](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) und unterstützt nun noch mehr Szenarien.
 
 Weitere Informationen:
 
@@ -30,6 +30,6 @@ Weitere Informationen:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

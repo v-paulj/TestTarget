@@ -2,10 +2,9 @@
 author: Mtoepke
 title: "Häufig gestellte Fragen"
 description: "Häufig gestellte Fragen zu UWP auf Xbox."
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 01173aeabb74d6d703597a9bd7a48c179c688c07
+ms.sourcegitcommit: 07e7ec6a5816d4b8d33322b2b1af05ffc3e1b820
+ms.openlocfilehash: 38e5d48b2b0303b5f7d13fdaf6f71e1b3fa56978
 
 ---
 
@@ -19,12 +18,12 @@ Wenn Ihre Spiele und Apps nicht funktionieren oder Sie keinen Zugriff auf den St
 
 ### Warum kann ich über Visual Studio keine Verbindung zu meiner Xbox One herstellen?
 
-Vergewissern Sie sich zunächst, dass der Entwicklermodus und nicht der Einzelhandelsmodus aktiviert ist. Im Einzelhandelsmodus können Sie keine Verbindung mit der Xbox One herstellen. Dies können Sie einfach überprüfen, indem Sie auf die Schaltfläche **Home** klicken und auf der rechten Seite des Bildschirms nach der Dev Home-Kachel suchen. Wenn die Kachel nicht vorhanden ist und stattdessen Gold-/Live-Inhalte angezeigt werden, befinden Sie sich im Einzelhandelsmodus. Sie müssen die DevMode-Aktivierungs-App ausführen, um in den Entwicklermodus zu wechseln.
+Vergewissern Sie sich zunächst, dass der Entwicklermodus und nicht der Einzelhandelsmodus aktiviert ist. Im Einzelhandelsmodus können Sie keine Verbindung mit der Xbox One herstellen. Dies können Sie einfach überprüfen, indem Sie auf die Schaltfläche **Home** klicken und auf der rechten Seite des Bildschirms nach der Dev Home-Kachel suchen. Wenn die Kachel nicht vorhanden ist und stattdessen Gold-/Live-Inhalte angezeigt werden, befinden Sie sich im Einzelhandelsmodus. Sie müssen die DevMode-Aktivierungsapp ausführen, um in den Entwicklermodus zu wechseln.
 
-> 
-              **Hinweis**&nbsp;&nbsp;Damit Sie eine App bereitstellen können, muss ein Benutzer angemeldet sein.
+> [!NOTE]
+> Damit Sie eine App bereitstellen können, muss ein Benutzer angemeldet sein.
 
-Weitere Informationen finden Sie unter [Beheben von Bereitstellungsfehlern](frequently-asked-questions.md#fixing-deployment-failures) weiter unten auf dieser Seite.
+Weitere Informationen finden Sie unter [Beheben von Bereitstellungsfehlern](#fixing-deployment-failures) weiter unten auf dieser Seite.
 
 ### Wie wechsle ich zwischen Einzelhandels- und Entwicklermodus?
 
@@ -40,40 +39,35 @@ Sie können dies einfach überprüfen, indem Sie auf die Schaltfläche **Home** 
 
 Ja, Sie können vom Entwicklermodus in den Einzelhandelsmodus wechseln, in dem Sie Ihre Spiele spielen können. Weitere Informationen finden Sie auf der Seite zur [Aktivierung des Xbox One-Entwicklermodus](devkit-activation.md). 
 
-<!-- > **CAUTION**&nbsp;&nbsp;The Xbox Developer Preview System Update includes experimental and early pre-release software. 
-This means that some popular games and apps will not work as expected and you may experience occasional crashes and data loss. -->
+### Gehen meine Spiele und Apps oder gespeicherte Änderungen verloren?
 
-### Werden meine Spiele und Apps oder gespeicherte Änderungen verloren gehen?
+Wenn Sie das Entwicklerprogramm verlassen, gehen dabei installierte Spiele und Apps nicht verloren. Außerdem: Wenn Sie beim Spielen online waren, werden Ihre gespeicherten Spiele im Cloudprofil Ihres Live-Kontos gespeichert und gehen nicht verloren.
 
-Wenn Sie das Developer Preview-Programm verlassen, müssen Sie möglicherweise eine Zurücksetzung auf die Werkseinstellungen durchführen, bei der alle Inhalte Ihrer Konsole gelöscht werden. In diesem Fall müssen Sie sämtliche Spiele und Apps erneut installieren. Wenn Sie beim Spielen online waren, werden Ihre gespeicherten Spiele im Cloudprofil Ihres Live-Kontos gespeichert und gehen nicht verloren.
+### Wie verlasse ich das Entwicklerprogramm?
 
-### Wie verlasse ich die Entwicklervorschau?
-
-Weitere Informationen dazu, wie Sie die Entwicklervorschau verlassen, finden Sie im Thema zur [Deaktivierung des Xbox One-Entwicklermodus](devkit-deactivation.md).
+Weitere Informationen dazu, wie Sie das Entwicklerprogramm verlassen, finden Sie im Thema zur [Deaktivierung des Xbox One-Entwicklermodus](devkit-deactivation.md).
 
 ### Ich habe meine Xbox One verkauft und im Entwicklermodus belassen. Wie deaktiviere ich den Entwicklermodus?
 
 Wenn Sie keinen Zugriff mehr auf Ihre Xbox One haben, können Sie sie in Windows Dev Center deaktivieren. Weitere Informationen finden Sie im Abschnitt **Deaktivieren Ihrer Konsole mit Windows Dev Center** im Thema zur [Deaktivierung des Xbox One-Entwicklermodus](devkit-deactivation.md#deactivate-your-console-through-windows-dev-center).
 
-### Ich habe die Entwicklervorschau mithilfe von Windows Dev Center verlassen, der Entwicklermodus ist aber weiterhin aktiviert. Wie gehe ich vor?
+### Ich habe das Entwicklerprogramm mithilfe von Windows Dev Center verlassen, der Entwicklermodus ist aber weiterhin aktiviert. Wie gehe ich vor?
 
 Starten Sie Dev Home, und wählen Sie die Schaltfläche **Leave developer mode** aus. Dadurch wird die Konsole im Einzelhandelsmodus neu gestartet. 
 
 ### Kann ich meine App veröffentlichen?
 
-Das Veröffentlichen von Apps wird später in diesem Jahr über Dev Center möglich sein. Die auf einer Xbox One Einzelhandels-Konsole erstellten und getesteten UWP-Apps durchlaufen denselben Aufnahme-, Überprüfungs- und Veröffentlichungsprozess, den Windows heutzutage durchführt. Mithilfe zusätzlicher Überprüfungen werden die aktuellen Xbox One-Standards erfüllt.
+Sie können [Apps im Dev Center veröffentlichen](../publish/index.md), wenn Sie ein [Entwicklerkonto](https://developer.microsoft.com/store/register) besitzen. Die auf einer Xbox One im Einzelhandelsmodus erstellten und getesteten UWP-Apps durchlaufen denselben Aufnahme-, Überprüfungs- und Veröffentlichungsprozess, den Windows heutzutage durchführt. Mithilfe zusätzlicher Überprüfungen werden die aktuellen Xbox One-Standards erfüllt.
 
 ### Kann ich mein Spiel veröffentlichen?
 
 Sie können UWP und die Xbox One im Entwicklermodus verwenden, um Ihre Spiele auf der Xbox One zu erstellen und zu testen. Um UWP-Spiele veröffentlichen zu können, müssen Sie sich bei [ID@XBOX](http://www.xbox.com/Developers/id) registrieren. 
-
-              [ID@Xbox](http://www.xbox.com/Developers/id) bietet Entwicklern den vollständigen Zugriff auf Xbox Live-APIs für ihre Spiele, einschließlich Gamerscore und Erfolgen sowie der Möglichkeit, Multiplayer über Geräte, Cloudspeicherung und alle Features von Xbox Live auf Xbox One hinweg zu nutzen. 
-
-              [ID@XBOX](http://www.xbox.com/Developers/id) kann darüber hinaus den Zugriff auf Xbox One-Entwicklungskits für Spiele bereitstellen, die das maximale Potenzial der Xbox One Hardware benötigen.
+[ID@Xbox](http://www.xbox.com/Developers/id) bietet Entwicklern den vollständigen Zugriff auf Xbox Live-APIs für ihre Spiele, einschließlich Gamerscore und Erfolgen sowie der Möglichkeit, Multiplayer über Geräte, Cloudspeicherung und alle Features von Xbox Live auf Xbox One hinweg zu nutzen. 
+[ID@XBOX](http://www.xbox.com/Developers/id) kann darüber hinaus den Zugriff auf Xbox One-Entwicklungskits für Spiele bereitstellen, die das maximale Potenzial der Xbox One Hardware benötigen.
 
 ### Können die standardmäßigen Spielengines verwendet werden?
 
-Informationen hierzu finden Sie auf der Seite [Bekannte Probleme](known-issues.md) für diese Vorschauversion.
+Informationen hierzu finden Sie auf der Seite [Bekannte Probleme](known-issues.md) für diese Version.
 
 ### Welche Funktionen und Systemressourcen sind für UWP-Spiele auf Xbox One verfügbar? 
 
@@ -85,14 +79,14 @@ Informationen hierzu finden Sie unter [Systemressourcen für UWP-Apps und -Spiel
 
 ### Wird die gesamte UWP-API-Oberfläche auf Xbox verfügbar sein?
 
-Informationen hierzu finden Sie auf der Seite [Bekannte Probleme](known-issues.md) für diese Vorschauversion.
+Informationen hierzu finden Sie auf der Seite [Bekannte Probleme](known-issues.md) für diese Version.
 
 ### Beheben von Bereitstellungsfehlern
 
-Wenn die Bereitstellung Ihrer App in Visual Studio fehlschlägt, können Ihnen die folgenden Schritte beim Beheben des Problems helfen. Wenn Sie nicht vorankommen, bitten Sie im Forum um Hilfe.
+Wenn die Bereitstellung Ihrer App in Visual Studio fehlschlägt, können Ihnen die folgenden Schritte beim Beheben des Problems helfen. Wenn Sie nicht weiterkommen, bitten Sie im Forum um Hilfe.
 
-> 
-              **Hinweis**&nbsp;&nbsp;Damit Sie eine App bereitstellen können, muss ein Benutzer angemeldet sein. Wenn Sie eine 0x87e10008-Fehlermeldung erhalten, vergewissern Sie sich, dass ein Benutzer angemeldet ist, und versuchen Sie es noch einmal.
+> [!NOTE]
+> Damit Sie eine App bereitstellen können, muss ein Benutzer angemeldet sein. Wenn Sie die Fehlermeldung 0x87e10008 erhalten, vergewissern Sie sich, dass ein Benutzer angemeldet ist, und versuchen Sie es noch einmal.
 
 Wenn Visual Studio keine Verbindung mit Ihrer Xbox One herstellen kann:
 
@@ -102,8 +96,8 @@ Wenn Visual Studio keine Verbindung mit Ihrer Xbox One herstellen kann:
 3. Ist dies nicht der Fall, lesen Sie sich das Thema zur [Einrichtung der Entwicklungsumgebung](development-environment-setup.md) und das Thema zur [Einführung in Xbox One-Tools](introduction-to-xbox-tools.md) durch.
 
 4. Vergewissern Sie sich, dass Sie von Ihrem Entwicklungscomputer aus einen Pingbefehl an die IP-Adresse Ihrer Konsole senden können.
-> 
-              **Hinweis**&nbsp;&nbsp;Es wird empfohlen, eine Kabelverbindung mit Ihrer Konsole zu verwenden, um die bestmögliche Leistung bei der Bereitstellung zu erzielen.
+  > [!NOTE]
+  > Es wird empfohlen, eine Kabelverbindung zu Ihrer Konsole zu verwenden, um die bestmögliche Leistung bei der Bereitstellung zu erzielen.
 
 5. Stellen Sie sicher, dass in der Dropdownliste für die Authentifizierung auf der Registerkarte **Debuggen** die Option „Universell (unverschlüsseltes Protokoll)“ ausgewählt ist. Weitere Informationen finden Sie unter [Einrichtung der Entwicklungsumgebung](development-environment-setup.md).
 
@@ -125,7 +119,7 @@ Go to Settings > System > Console info & updates > Reset console, and select the
 > **Caution**&nbsp;&nbsp;Doing this will delete all saved settings on your Xbox One including wireless settings, user accounts and any game progress that has not been saved to cloud storage.
 
 > **Caution**&nbsp;&nbsp;DO NOT select the **Reset and remove everything** button.
-This will delete all of your games, apps, settings and content, deactivate Developer Mode, and remove you console from the Developer Preview group.
+This will delete all of your games, apps, settings and content and deactivate Developer Mode.
 -->
 
 ### Wie kann ich beim Erstellen einer App mit HTML/JavaScript die Gamepad-Navigation aktivieren?
@@ -134,12 +128,12 @@ TVHelpers ist ein Satz von JavaScript- und XAML-/C#-Beispielen und -Bibliotheken
 
 Weitere Informationen finden Sie im Projekt [TVHelpers](https://github.com/Microsoft/TVHelpers) und im Projekt [wiki](https://github.com/Microsoft/TVHelpers/wiki).
 
-## Siehe auch
-- [Bekannte Probleme mit UWP auf Xbox One – Developer Preview](known-issues.md)
-- [UWP auf Xbox One](index.md)
+## Weitere Informationen
+- [Bekannte Probleme mit UWP auf Xbox One](known-issues.md)
+- [UWP auf XboxOne](index.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

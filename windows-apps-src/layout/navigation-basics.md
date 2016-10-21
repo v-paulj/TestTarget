@@ -5,8 +5,9 @@ title: "Navigationsdesigngrundlagen für Universal Windows Platform (UWP)-Apps"
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 6926d70c7140b1545a8b5492981d6d0b61af3784
+translationtype: Human Translation
+ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
+ms.openlocfilehash: 2a4005aa12a123c0f9e98486fa1c69839a14276c
 
 ---
 
@@ -22,8 +23,7 @@ Damit sie fehlerlos und intuitiv von den Benutzern verwendet werden kann, umfass
 
     Das Erstellen einer für Benutzer sinnvollen Navigationsstruktur ist für die Entwicklung einer intuitiven Navigationsfunktionalität entscheidend.
 
--   
-            **Kompatible Navigationselemente**, die die ausgewählte Struktur unterstützen.
+-   **Kompatible Navigationselemente**, die die ausgewählte Struktur unterstützen.
 
     Navigationselemente können dem Benutzer helfen, zum gewünschten Inhalt zu gelangen, und sie können auch anzeigen, wo sich der Benutzer in der App befindet. Allerdings belegen sie auch Platz, der für Inhalte oder Steuerungselemente genutzt werden könnte. Daher ist es wichtig, dass Sie die für Ihre App-Struktur geeigneten Navigationselemente verwenden.
 
@@ -99,13 +99,13 @@ Wann sollten Sie also Seiten in Hierarchien und wann als Peers anordnen? Zur Bea
 
 Navigationselemente können zwei Aufgaben erfüllen: Dadurch kann der Benutzer den gewünschten Inhalt abrufen, und einige Elemente zeigen Benutzern auch an, wo sie sich in der App befinden. Allerdings benötigen diese auch Platz, den die App für Inhalte oder Steuerungselemente nutzen könnte, daher ist es wichtig, dass Sie die für Ihre App-Struktur geeigneten Navigationselemente verwenden.
 
-### <span id="Peer-to-peer_navigation_elements"></span><span id="peer-to-peer_navigation_elements"></span><span id="PEER-TO-PEER_NAVIGATION_ELEMENTS"></span>Peer-to-Peer-Navigationselemente
+### <span id="Peer_navigation_elements"></span><span id="peer_navigation_elements"></span><span id="PEER_NAVIGATION_ELEMENTS"></span>Peernavigationselemente
 
-Peer-zu-Peer-Navigationselemente ermöglichen die Navigation zwischen Seiten auf der gleichen Ebene in der gleichen Unterstruktur.
+Peernavigationselemente ermöglichen die Navigation zwischen Seiten auf der gleichen Ebene in der gleichen Unterstruktur.
 
-![Peer-to-Peer-Navigation](images/nav/nav-lateralmovement.png)
+![Peernavigation](images/nav/nav-lateralmovement.png)
 
-Bei der Peer-to-Peer-Navigation empfehlen wir die Nutzung von Registerkarten oder eines Navigationsbereichs.
+Bei der Peernavigation empfehlen wir die Nutzung von Registerkarten oder eines Navigationsbereichs.
 
 <table>
 <colgroup>
@@ -151,11 +151,11 @@ Bei der Peer-to-Peer-Navigation empfehlen wir die Nutzung von Registerkarten ode
 
  
 
-Wenn die Navigationsstruktur über mehrere Ebenen verfügt, empfehlen wir, dass Peer-to-Peer-Navigationselemente nur mit den Peers innerhalb der aktuellen Unterstruktur verknüpft sind. Beachten Sie die folgende Abbildung, die eine Navigationsstruktur mit drei Ebenen zeigt:
+Wenn die Navigationsstruktur über mehrere Ebenen verfügt, empfehlen wir, dass Peernavigationselemente nur mit den Peers innerhalb der aktuellen Unterstruktur verknüpft sind. Beachten Sie die folgende Abbildung, die eine Navigationsstruktur mit drei Ebenen zeigt:
 
 ![App mit zwei Unterstrukturen](images/nav/nav-subtrees.png)
--   Auf Ebene 1 sollte das Peer-to-Peer-Navigationselement Zugriff auf die Seiten A, B, C und D ermöglichen.
--   Auf Ebene 2 sollten die Peer-to-Peer Navigationselemente für die A2-Seiten nur mit den anderen A2-Seiten verknüpft werden. Sie sollten nicht mit Seiten auf Ebene 2 in der C-Unterstruktur verknüpft sein.
+-   Auf Ebene1 sollte das Peernavigationselement Zugriff auf die Seiten A, B, C und D ermöglichen.
+-   Auf Ebene 2 sollten die Peernavigationselemente für die A2-Seiten nur mit den anderen A2-Seiten verknüpft werden. Sie sollten nicht mit Seiten auf Ebene 2 in der C-Unterstruktur verknüpft sein.
 
 ![App mit zwei Unterstrukturen](images/nav/nav-subtrees2.png)
 
@@ -265,10 +265,6 @@ Sie können Navigationselemente kombinieren, um eine für Ihre App geeignete Nav
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,27 +1,30 @@
 ---
 author: mcleanbyron
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
-description: "Erfahren Sie mehr über bekannte Probleme mit der aktuellen Version der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK."
+description: "Erfahren Sie mehr über bekannte Probleme mit der aktuellen Version der Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK."
 title: Bekannte Probleme mit den Microsoft Advertising-Bibliotheken
-ms.sourcegitcommit: 5b6d3e034b73e6ae693fbeab3ecd3b2b81f38bb1
-ms.openlocfilehash: cfaa108cc93b6bae903e86ad141656bf613f185d
+translationtype: Human Translation
+ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
+ms.openlocfilehash: 7d0eeda4deac304fb9b573b6ed206a191f037a3e
 
 ---
 
 # Bekannte Probleme mit den Microsoft Advertising-Bibliotheken
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-In diesem Thema werden bekannte Probleme mit der aktuellen Version der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK aufgelistet.
 
-## Installation erfordert Visual Studio-Tools für universelle Windows-Apps
+Dieses Thema listet alle bekannten Probleme für die aktuelle Version der Microsoft Advertising-Bibliotheken im Microsoft Store-Services-SDK (für UWP-Apps) und im Microsoft Advertising-SDK für Windows und Windows Phone8.x (für Windows8.1- und Windows Phone8.x-Apps) auf.
 
-Um das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) mit Visual Studio2015 zu installieren, muss Version1.1 oder höher der Visual Studio-Tools für universelle Windows-Apps installiert sein. Weitere Informationen finden Sie in den [Versionshinweisen](http://go.microsoft.com/fwlink/?LinkID=624516) für Visual Studio.
+## Die Installation des Microsoft Store Services SDK erfordert Visual Studio-Tools für universelle Windows-Apps.
+
+Um den [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) mit Visual Studio2015 zu installieren, muss Version1.1 oder höher der Visual Studio-Tools für universelle Windows-Apps installiert sein. Weitere Informationen finden Sie in den [Versionshinweisen](http://go.microsoft.com/fwlink/?LinkID=624516) für Visual Studio.
 
 ## Windows Phone8.x Silverlight-Projekte
 
-Um die Microsoft Advertising-Assemblys für Windows Phone8.x Silverlight-Projekte zu erhalten, installieren Sie das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk), öffnen das Projekt in Visual Studio und wechseln anschließend zu **Projekt** > **Verbundenen Dienst hinzufügen** > **Ad Mediator**. Die Assemblys werden anschließend automatisch heruntergeladen. Im Anschluss daran können Sie die Ad Mediator-Referenzen aus Ihrem Projekt entfernen, wenn Sie Ad Mediator nicht verwenden möchten. Weitere Informationen finden Sie unter [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md).
+Der Microsoft Advertising SDK for Windows and Windows Phone8.x verfügt nur über begrenzte Unterstützung für Windows Phone8.x Silverlight-Projekte. Weitere Informationen finden Sie unter [Anzeigen von Werbung in Ihrer App](display-ads-in-your-app.md#silverlight_support).
+
+Um die Microsoft Advertising-Assemblys für Windows Phone 8.x Silverlight-Projekte abzurufen, installieren Sie den [Microsoft Advertising SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk), öffnen das Projekt in Visual Studio und wechseln dann zu **Projekt** > **Verbundenen Dienst hinzufügen** > **Ad Mediator**. Die Assemblys werden anschließend automatisch geladen. Im Anschluss daran können Sie die Ad Mediator-Referenzen aus Ihrem Projekt entfernen, wenn Sie Ad Mediator nicht verwenden möchten. Weitere Informationen finden Sie unter [AdControl in Windows Phone Silverlight](adcontrol-in-windows-phone-silverlight.md).
 
 ## AdControl-Schnittstelle in XAML nicht bekannt
 
@@ -116,6 +119,6 @@ Um sich an den Produktsupport für Probleme mit den Microsoft Advertising-Biblio
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

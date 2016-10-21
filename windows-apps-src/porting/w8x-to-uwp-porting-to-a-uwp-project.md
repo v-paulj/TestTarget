@@ -3,8 +3,9 @@ author: mcleblanc
 description: "Sie haben zwei Möglichkeiten, wenn Sie mit dem Portierungsprozess beginnen."
 title: Portieren eines Windows-Runtime 8.x-Projekts zu einem UWP-Projekt
 ms.assetid: 2dee149f-d81e-45e0-99a4-209a178d415a
+translationtype: Human Translation
 ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: 60f59c58aedc56da58350a050acd184a376b8067
+ms.openlocfilehash: 97b187b5e1ee988d4e1d514f139cec48088be3f2
 
 ---
 
@@ -43,7 +44,7 @@ Die meisten der Windows-Runtime-APIs, die Ihre universelle8.1-App bereits aufruf
 
 Im Fall von Kompilierungsfehlern, die auf nicht gefundene Namespaces, Typen oder Member zurückzuführen sind, ist dies wahrscheinlich die Ursache. Öffnen Sie in der API-Referenzdokumentation das entsprechende API-Thema, und navigieren Sie zum Abschnitt mit den Anforderungen. Hier erfahren Sie, von welcher Gerätefamilie die API implementiert wird. Handelt es sich dabei nicht um Ihre Zielgerätefamilie, benötigen Sie einen Verweis auf das Erweiterungs-SDK für diese Gerätefamilie, um die API für Ihr Projekt verfügbar zu machen.
 
-Klicken Sie auf **Projekt**&gt;**Verweis hinzufügen**&gt;**Windows Universal**&gt;**Erweiterungen**, und wählen Sie das entsprechende Erweiterungs-SDK aus. Wenn die gewünschten APIs also beispielsweise nur in der Familie für mobile Geräte verfügbar sind und in Version 10.0.x.y eingeführt wurden, wählen Sie **Windows Mobile-Erweiterungen für die UWP** aus.
+Klicken Sie auf **Projekt** &gt; **Verweis hinzufügen** &gt; **Windows Universal** &gt; **Erweiterungen**, und wählen Sie das entsprechende Erweiterungs-SDK aus. Wenn die gewünschten APIs also beispielsweise nur in der Familie für mobile Geräte verfügbar sind und in Version 10.0.x.y eingeführt wurden, wählen Sie **Windows Mobile-Erweiterungen für die UWP** aus.
 
 Dadurch wird Ihrer Projektdatei folgender Verweis hinzugefügt:
 
@@ -67,8 +68,7 @@ Weitere Informationen finden Sie auch unter [App-Paketmanifest](#appxpackage).
 
 Wenn Sie eine bedingte Kompilierung (mit C#-Präprozessordirektiven) verwenden, damit Ihre Codedateien sowohl für Windows8.1 als auch für Windows Phone8.1 geeignet sind, können Sie die bedingte Kompilierung nun anhand der Konvergenzmaßnahmen in Windows10 überprüfen. Konvergenz (Convergence) bedeutet, dass einige Bedingungen in Ihrer Windows 10-App vollständig entfernt werden können. Bei anderen werden Laufzeitprüfungen verwendet, wie in den folgenden Beispielen veranschaulicht.
 
-
-            **Hinweis:**   Wenn Sie Windows8.1, Windows Phone8.1 und Windows10 in einer einzelnen Codedatei unterstützen möchten, ist auch das möglich. Wenn Sie in Ihrem Windows10-Projekt die Seiten mit den Projekteigenschaften aufrufen, sehen Sie, dass für das Projekt „WINDOWS\_UAP“ als Symbol für die bedingte Kompilierung definiert ist. Das Projekt kann also in Kombination mit „WINDOWS\_APP“ und „WINDOWS\_PHONE\_APP“ verwendet werden. In diesen Beispielen sehen Sie den einfacheren Fall, in dem die bedingte Kompilierung aus einer universellen8.1-App entfernt und der entsprechende Code für eine Windows10-App eingefügt wird.
+**Hinweis:**   Wenn Sie Windows8.1, Windows Phone8.1 und Windows10 in einer einzelnen Codedatei unterstützen möchten, ist auch das möglich. Wenn Sie in Ihrem Windows10-Projekt die Seiten mit den Projekteigenschaften aufrufen, sehen Sie, dass für das Projekt „WINDOWS\_UAP“ als Symbol für die bedingte Kompilierung definiert ist. Das Projekt kann also in Kombination mit „WINDOWS\_APP“ und „WINDOWS\_PHONE\_APP“ verwendet werden. In diesen Beispielen sehen Sie den einfacheren Fall, in dem die bedingte Kompilierung aus einer universellen8.1-App entfernt und der entsprechende Code für eine Windows10-App eingefügt wird.
 
 Das erste Beispiel zeigt das Verwendungsmuster für die **PickSingleFileAsync**-API (gilt nur für Windows8.1) und die **PickSingleFileAndContinue**-API (gilt nur für die WindowsPhone8.1).
 
@@ -134,8 +134,7 @@ void HardwareButtons_CameraPressed(object sender, Windows.Phone.UI.Input.CameraE
 #endif // WINDOWS_PHONE_APP
 ```
 
-In Windows10 ist die Hardwaretaste für die Kamera ein spezielles Konzept für die Familie mobiler Geräte. Da auf allen Geräten ein einzelnes App-Paket ausgeführt wird, ändern wir unsere Kompilierzeitbedingung mithilfe von so genanntem adaptivem Code in eine Laufzeitbedingung. Hierzu fragen wir zur Laufzeit mithilfe der [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001)-Klasse ab, ob die [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557)-Klasse vorhanden ist. 
-            **HardwareButtons** ist im SDK für mobile Erweiterungen definiert. Daher müssen wir unserem Projekt einen Verweis auf dieses SDK hinzufügen, um den Code kompilieren zu können. Beachten Sie jedoch, dass der Handler nur auf einem Gerät ausgeführt wird, das die im mobilen Erweiterungs-SDK definierten Typen implementiert und somit der Familie mobiler Geräte angehört. Dieser Code entspricht also grundsätzlich dem universellen 8.1-Code, da sichergestellt wird, dass nur Features verwendet werden, die tatsächlich vorhanden sind (auch wenn dies auf andere Weise bewerkstelligt wird).
+In Windows10 ist die Hardwaretaste für die Kamera ein spezielles Konzept für die Familie mobiler Geräte. Da auf allen Geräten ein einzelnes App-Paket ausgeführt wird, ändern wir unsere Kompilierzeitbedingung mithilfe von so genanntem adaptivem Code in eine Laufzeitbedingung. Hierzu fragen wir zur Laufzeit mithilfe der [**ApiInformation**](https://msdn.microsoft.com/library/windows/apps/dn949001)-Klasse ab, ob die [**HardwareButtons**](https://msdn.microsoft.com/library/windows/apps/jj207557)-Klasse vorhanden ist. **HardwareButtons** ist im SDK für mobile Erweiterungen definiert. Daher müssen wir unserem Projekt einen Verweis auf dieses SDK hinzufügen, um den Code kompilieren zu können. Beachten Sie jedoch, dass der Handler nur auf einem Gerät ausgeführt wird, das die im mobilen Erweiterungs-SDK definierten Typen implementiert und somit der Familie mobiler Geräte angehört. Dieser Code entspricht also grundsätzlich dem universellen 8.1-Code, da sichergestellt wird, dass nur Features verwendet werden, die tatsächlich vorhanden sind (auch wenn dies auf andere Weise bewerkstelligt wird).
 
 ```csharp
     // Note: Cache the value instead of querying it more than once.
@@ -178,6 +177,6 @@ Das nächste Thema ist [Problembehandlung](w8x-to-uwp-troubleshooting.md).
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

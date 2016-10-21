@@ -3,8 +3,9 @@ description: "In diesem Artikel erfahren Sie, wie Sie Ihrer UWP-App (Universelle
 title: Drag & Drop
 ms.assetid: A15ED2F5-1649-4601-A761-0F6C707A8B7E
 author: awkoren
-ms.sourcegitcommit: 03f3f86ed1310e6e3ac5f53cc5e81ebef708a1a2
-ms.openlocfilehash: ffa2f0f368a61ef4f3003c1fa03e143b26c6859b
+translationtype: Human Translation
+ms.sourcegitcommit: f2133ca15e30f7451a61f78b48e883db1a5687a6
+ms.openlocfilehash: ee3d0c40effc12382f6fd31154016953f172be70
 
 ---
 # Drag & Drop
@@ -22,7 +23,7 @@ Das folgende Markup veranschaulicht, wie Sie mithilfe von [**AllowDrop**](https:
 
 [!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
 
-Beim Ziehen sollten Sie in der Regel genau festlegen, was gezogen werden kann. Benutzer möchten meist nur bestimmte Elemente ziehen, z.B. Bilder, jedoch nicht alle Elemente in Ihrer App. Nachfolgend sehen Sie, wie Sie [**CanDrag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag) mithilfe von XAML festlegen.
+Beim Ziehen sollten Sie in der Regel genau festlegen, was gezogen werden kann. Benutzer möchten meist nicht alle Elemente Ihrer App ziehen, sondern nur bestimmte Elemente wie beispielsweise Bilder. Nachfolgend sehen Sie, wie Sie [**CanDrag**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.CanDrag) mithilfe von XAML festlegen.
 
 [!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]
 
@@ -48,17 +49,34 @@ Das System bietet eine Standardbenutzeroberfläche für Drag&Drop. Sie können j
 
 [!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
 
-## Siehe auch
+## Öffnen eines Kontextmenüs für ein Element, das per Toucheingabe gezogen werden kann
 
+Bei der Toucheingabe erfordern das Ziehen eines [**UI-Elements**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement) und das Öffnen des Kontextmenüs ähnliche Touchgesten. Beide beginnen mit Drücken und Halten. Hier erfahren Sie, wie das System zwischen den beiden Aktionen für Elemente unterscheidet, die beide unterstützen: 
+
+* Wenn der Benutzer ein Element drückt und hält und es innerhalb von 500Millisekunden zu ziehen beginnt, wird es gezogen. Das Kontextmenü wird nicht angezeigt. 
+* Wenn der Benutzer drückt und hält, jedoch nicht innerhalb von 500Millisekunden zieht, wird das Kontextmenü geöffnet. 
+* Wenn der Benutzer bei geöffnetem Kontextmenü versucht, das Element zu ziehen (ohne den Finger anzuheben), wird das Kontextmenü geschlossen und das Ziehen gestartet.
+
+## Festlegen eines Elements in einer ListView oder GridView als Ordner
+
+Sie können ein [**ListViewItem**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.ListViewItem) oder [**GridViewItem**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridViewItem) als Ordner festlegen. Dies ist besonders hilfreich für TreeView- und Datei-Explorer-Szenarien. Setzen Sie hierzu für das Element die [**AllowDrop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.AllowDrop)-Eigenschaft auf **True**. 
+
+Das System zeigt automatisch die entsprechenden Animationen zum Ablegen in einen Ordner anstelle eines Nicht-Ordner-Elements an. Der App-Code muss für das Ordnerelement (sowie das Nicht-Ordner-Element) auch weiterhin das Ereignis [**Drop**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.UIElement.Drop) beinhalten, damit die Datenquelle aktualisiert und das abgelegte Element im Zielordner hinzugefügt wird.
+
+## Weitere Informationen
+
+* [App-zu-App-Kommunikation](index.md)
 * [AllowDrop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.allowdrop.aspx)
 * [CanDrag](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.candrag.aspx)
 * [DragOver](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.dragover.aspx)
 * [AcceptedOperation](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.acceptedoperation.aspx)
 * [DataView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.dataview.aspx)
-* [DragUiOverride](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.draguioverride.aspx)
+* [DragUIOverride](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.drageventargs.draguioverride.aspx)
 * [Drop](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.uielement.drop.aspx)
+* [IsDragSource](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.isdragsource.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

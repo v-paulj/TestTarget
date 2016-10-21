@@ -4,8 +4,8 @@ Description: "Der Windows Store ermöglicht die „Abrechnung über den Mobilfun
 title: "Abrechnung über den Mobilfunkanbieter"
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 translationtype: Human Translation
-ms.sourcegitcommit: 80a20f4f87ce2ef40ce4ff7c6551d74ac375da1c
-ms.openlocfilehash: bd70a3c5990909351f04ca4200f4ea522989d1e9
+ms.sourcegitcommit: 3afac16fb79262dd6a75cd44804747d173e60edf
+ms.openlocfilehash: 114783cb93d1d49eb1b2cd0d5218a35318a02df0
 
 ---
 
@@ -14,8 +14,7 @@ ms.openlocfilehash: bd70a3c5990909351f04ca4200f4ea522989d1e9
 
 Der Windows Store ermöglicht die „Abrechnung über den Mobilfunkanbieter“ als Zahlungsmethode für Mobilfunkanbieter, die diese Funktion unterstützen. Wenn der Mobilfunkanbieter eines Kunden diese Funktion unterstützt, kann der Kunde Store-Käufe über sein Mobilfunkkonto tätigen.
 
-> 
-            **Hinweis**  Wenn der Mobilfunkanbieter eines Kunden die Abrechnung über das Mobilfunkkonto anbietet, diese Option auf dem Gerät des Kunden aber nicht verfügbar ist, finden Sie hier [Schritte zur Problembehandlung](http://go.microsoft.com/fwlink/p/?LinkId=523993).
+> **Hinweis**  Wenn der Mobilfunkanbieter eines Kunden die Abrechnung über das Mobilfunkkonto anbietet, diese Option auf dem Gerät des Kunden jedoch nicht verfügbar ist, finden Sie hier [Schritte zur Problembehandlung](http://go.microsoft.com/fwlink/p/?LinkId=523993).
 
  
 
@@ -28,14 +27,16 @@ Unter Windows 10 wird eine neue Implementierung der Abrechnung über den Mobilfu
 
 Die Windows 10-Implementierung der Abrechnung über den Mobilfunkanbieter wird derzeit von den folgenden Mobilfunkanbietern unterstützt:
 
-| Land/Region | Mobilfunkanbieter |
-|----------------|------------------|
-| Finnland        | DNA, Elisa       |
-| Deutschland        | O2               |
-| Italien          | Wind             |
-| Norwegen         | Telenor          |
-| Schweiz    | Swisscom         |
-| Vereinigte Staaten  | Sprint           |
+| Land/Region  | Mobilfunkanbieter |
+|-----------------|------------------|
+| Finnland         | DNA, Elisa       |
+| Deutschland         | O2               |
+| Ungarn         | Telenor          |
+| Italien           | Wind             |
+| Norwegen          | Telenor          |
+| Schweiz     | Swisscom         |
+| Vereinigte Staaten   | Sprint           |
+| Vereinigtes Königreich  | O2               |
 
  
 
@@ -51,10 +52,10 @@ Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von de
 | Australien            | Telstra                                                            |
 | Österreich              | A1 Telekom, T-Mobile                                               |
 | Bahrain              | Zain, VIVA                                                         |
-| Belgien              | BASE, Mobistar, Proximus                                                     |
+| Belgien              | BASE, Mobistar, Proximus                                           |
 | Brasilien               | Claro                                                              |
 | Bulgarien             | Telenor                                                            |
-| Kanada               | Fido, Rogers, Telus                                                |
+| Kanada               | Fido, Rogers                                                       |
 | Chile                | Claro                                                              |
 | China                | China Mobile                                                       |
 | Kolumbien             | Claro, Movistar                                                    |
@@ -71,26 +72,25 @@ Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von de
 | Guatemala            | Claro                                                              |
 | Ungarn              | Telenor, T-Mobile                                                  |
 | Indien                | Idea                                                               |
-| Indonesien            | Indosat, Telkomsel, XL Axiata, AXIS                                |
-| Irland              | O2, Vodafone, Three                                                      |
+| Indonesien            | Indosat, Telkomsel, XL Axiata, Hutchinson CP Telecommunications (HCPT)     |
+| Irland              | O2, Vodafone, Three                                                |
 | Italien                | Telecom Italia, Vodafone, Wind, 3 Italia                           |
 | Jordanien               | Zain, Umniah                                                       |
 | Kenia                | Safaricom                                                          |
-| Kuwait               | Zain, Viva                                                         |
+| Kuwait               | Zain, Viva, Ooredoo                                                |
 | Lettland               | Tele2                                                              |
 | Litauen            | Tele2                                                              |
 | Malaysia             | DiGi                                                               |
-| Mexiko               | Iusacell, Telcel, Unefon, Movistar                                 |
+| Mexiko               | Iusacell, Telcel, Movistar                                         |
 | Niederlande          | T-Mobile, Vodafone                                                 |
 | Norwegen               | Telenor                                                            |
 | Oman                 | Ooredoo                                                            |
 | Pakistan             | Telenor                                                            |
 | Peru                 | Claro                                                              |
-| Philippinen          | Globus, Sonne                                                         |
-| Polen               | T-Mobile, Orange, Polkomtel (Plus)                                 |
-| Puerto Rico          | Claro                                                              |
+| Philippinen          | Globe, Sun, Smart Communications                                   |
+| Polen               | T-Mobile, Orange, Polkomtel (Plus), Play                           |
 | Rumänien              | Orange, Vodafone                                                   |
-| Russische Föderation               | Beeline, MTS                                                          |
+| Russland               | Beeline, MTS                                                       |
 | Saudi-Arabien         | Zain                                                               |
 | Singapur            | M1, SingTel, StarHub                                               |
 | Slowakei             | T-Mobile                                                           |
@@ -99,7 +99,6 @@ Die Legacyimplementierung der Abrechnung über den Mobilfunkanbieter wird von de
 | Spanien                | Movistar, Vodafone, Orange                                         |
 | Schweden               | Telenor, Tele2                                                     |
 | Schweiz          | Swisscom                                                           |
-| Thailand             | DTAC                                                               |
 | Vereinigte Arabische Emirate | Etisalat, Du                                                       |
 | Vereinigtes Königreich       | Everything Everywhere (T-Mobile), Telefonica (O2), Three, Vodafone |
 | Vereinigte Staaten        | AT&T, Sprint, T-Mobile, Verizon                                    |
@@ -119,6 +118,6 @@ Diese Liste wird regelmäßig aktualisiert, wenn wir die Unterstützung für die
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

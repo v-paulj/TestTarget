@@ -1,76 +1,86 @@
 ---
 author: jnHs
-Description: Add-ons are published through the Windows Dev Center dashboard.
-title: Add-on submissions
+Description: "Add-Ons werden über das Windows Dev Center-Dashboard veröffentlicht."
+title: "Add-On-Übermittlungen"
 ms.assetid: E175AF9E-A1D4-45DF-B353-5E24E573AE67
+translationtype: Human Translation
+ms.sourcegitcommit: d67931b4ab23d2b6aef945e839d193e140240cf9
+ms.openlocfilehash: 400c2e2ee65e408c996193230b05c68264830f0d
+
 ---
 
-# Add-on submissions
+# Add-On-Übermittlungen
 
-Add-ons (also sometimes referred to as in-app products) are supplementary items for your app that can be purchased by customers. An add-on can be a fun new add-on feature, a new game level, or anything else you think will keep users engaged. Not only are add-ons a great way to make money, but they help to drive customer interaction and engagement.
+Add-Ons (auch als In-App-Produkte bezeichnet) sind ergänzende Elemente für Ihre App, die von Kunden erworben werden können. Ein Add-On kann ein lustiges neues Add-On-Feature, ein neues Gamelevel oder etwas anderes sein, von dem Sie denken, dass Benutzer Spaß daran haben. Add-Ons sind nicht nur eine gute Möglichkeit, um Geld zu verdienen, sondern fördern zudem die Kundeninteraktion und -bindung.
 
-Add-ons are published through the Windows Dev Center dashboard. You'll also need to [enable the add-ons](../monetize/in-app-purchases-and-trials.md) in your app's code.
+Add-Ons werden über das Windows Dev Center-Dashboard veröffentlicht. Sie müssen die [Add-Ons außerdem im Code Ihrer App aktivieren](../monetize/in-app-purchases-and-trials.md).
 
-The first step in the add-on submission process is to create the add-on in the dashboard by [defining its product type and product ID](set-your-add-on-product-id.md). After that, you can create a submission so that your add-on can be purchased via the Windows Store. You can submit an add-on at the same time you [submit your app](app-submissions.md), or you can work on it independently. And you can make [updates](#updating-an-add-on-after-submission) to add-ons after the app is in the Store without having to resubmit the app again.
+Der erste Schritt bei der Add-On-Übermittlung besteht darin, das Add-On im Dashboard zu erstellen, indem Sie den [Produkt-Typ und die Produkt-ID definieren](set-your-add-on-product-id.md). Danach können Sie eine Übermittlung erstellen, damit Ihr Add-On über den Windows Store erworben werden kann. Sie können ein Add-On gleichzeitig mit [Ihrer App einreichen](app-submissions.md) oder unabhängig vorgehen. Außerdem können Sie [Updates](#updating-an-add-on-after-submission) für Add-Ons ausführen, nachdem die App im Store eingetragen wurde, ohne dass die App erneut übermittelt werden muss.
 
-> **Note**&nbsp;&nbsp;This section of the documentation describes how to create an add-on submission on the Dev Center dashboard. Alternatively, you can use the [Windows Store submission API](../monetize/create-and-manage-submissions-using-windows-store-services.md) to automate add-on submissions.
+> **Hinweis**&nbsp;&nbsp;In diesem Abschnitt der Dokumentation wird das Erstellen einer Add-On-Übermittlung über das Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Windows Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um Add-On-Übermittlungen zu automatisieren.
 
-## Checklist for submitting an add-on
+## Prüfliste für die Übermittlung eines Add-Ons
 
-Here's a list of the info that you provide when creating your add-on submission. The items that you are required to provide are noted below. Some of these are optional, or have default values already provided that you can change as desired.
+Hier finden Sie eine Liste mit den Informationen, die Sie beim Erstellen Ihrer Add-On-Übermittlung angeben können. Die erforderlichen Elemente sind im Folgenden aufgeführt. Einige Elemente sind optional oder verfügen bereits über Standardwerte, die Sie nach Bedarf ändern können.
 
-### Create a new add-on page
-| Field name                    | Notes                            |
+### Erstellen einer neuen Add-On-Seite
+| Feldname                    | Hinweise                            |
 |-------------------------------|----------------------------------|
-| [**Product type**](set-your-add-on-product-id.md#product-type)      | Required. If **Durable**, a **Product lifetime** is required. |  
-| [**Product ID**](set-your-add-on-product-id.md#product-id)          | Required |        
+| [**Produkttyp**](set-your-add-on-product-id.md#product-type)      | Erforderlich. Bei **Gebrauchsgut** muss **Produktlebenszeit** angegeben werden. |  
+| [**Produkt-ID**](set-your-add-on-product-id.md#product-id)          | Erforderlich |        
 
 <span/>
 
-### Properties page
-| Field name                    | Notes                              |   
+### Seite „Eigenschaften“
+| Feldname                    | Hinweise                              |   
 |-------------------------------|------------------------------------|
-| [**Product lifetime**](enter-add-on-properties.md#product-lifetime)  | Required if the product type is **Durable**. Not applicable to other product types. |
-| [**Quantity**](enter-add-on-properties.md#quantity)  | Required if the product type is **Store-managed consumable**. Not applicable to other product types.
-| [**Content type**](enter-add-on-properties.md#content-type)          | Required       |               
-| [**Keywords**](enter-add-on-properties.md#keywords)                  | Optional (up to 10 keywords, 30 character limit each) |
-| [**Custom developer data**](enter-add-on-properties.md#custom-developer-data)                               | Optional (3000 character limit)             |
+| [**Produktlebensdauer**](enter-add-on-properties.md#product-lifetime)  | Erforderlich, wenn der Produkttyp **Gebrauchsgut** lautet. Gilt nicht für andere Produkttypen. |
+| [**Menge**](enter-add-on-properties.md#quantity)  | Erforderlich, wenn der Produkttyp **Vom Store verwalteter Verbrauchsartikel** lautet. Gilt nicht für andere Produkttypen.
+| [**Inhaltstyp**](enter-add-on-properties.md#content-type)          | Erforderlich       |               
+| [**Schlüsselwörter**](enter-add-on-properties.md#keywords)                  | Optional (bis zu zehnSchlüsselwörter mit jeweils maximal 30Zeichen) |
+| [**Benutzerdefinierte Entwicklerdaten**](enter-add-on-properties.md#custom-developer-data)                               | Optional (maximal 3.000Zeichen)             |
 
 <span/>
 
-### Pricing and availability page
-| Field name                    | Notes                                       |
+### Seite „Preise und Verfügbarkeit“
+| Feldname                    | Hinweise                                       |
 |-------------------------------|---------------------------------------------|
-| [**Base price**](set-add-on-pricing-and-availability.md#base-price)                | Required                                    |
-| [**Markets and custom pricing**](set-add-on-pricing-and-availability.md#markets-and-custom-prices)  | Default: available in all possible markets |
-| [**Sale pricing**](put-apps-and-add-ons-on-sale.md)               | Optional                             |
-| [**Distribution and visibility**](set-add-on-pricing-and-availability.md#distribution-and-visibility)   | Default: add-on can be found by customers browsing or searching the Store |
-| [**Publish date**](set-add-on-pricing-and-availability.md#publish-date)                | Default: Publish as soon as the add-on passes certification |
+| [**Grundpreis**](set-add-on-pricing-and-availability.md#base-price)                | Erforderlich                                    |
+| [**Märkte und angepasste Preise**](set-add-on-pricing-and-availability.md#markets-and-custom-prices)  | Standard: in allen möglichen Märkten verfügbar |
+| [**Sonderangebotsverkaufspreise**](put-apps-and-add-ons-on-sale.md)               | Optional                             |
+| [**Verteilung und Sichtbarkeit**](set-add-on-pricing-and-availability.md#distribution-and-visibility)   | Standard: Das Add-On kann von Kunden beim Browsen oder Suchen im Store gefunden werden. |
+| [**Veröffentlichungsdatum**](set-add-on-pricing-and-availability.md#publish-date)                | Standard: Das Add-On wird direkt nach der Zertifizierung veröffentlicht. |
 
 <span/>
 
-### Store listings
-One Store listing required. We recommend providing Store listings for every [language](create-add-on-descriptions.md#languages) your app supports.
+### Store-Einträge
+Ein Store-Eintrag ist erforderlich. Es wird empfohlen, für jede von der App unterstützte [Sprache](create-add-on-descriptions.md#languages) Store-Einträge anzugeben.
 
-| Field name                    | Notes                                       |
+| Feldname                    | Hinweise                                       |
 |-------------------------------|---------------------------------------------|
-| [**Title**](create-add-on-store-listings.md#title)                    | Required (100 character limit)              |
-| [**Description**](create-add-on-store-listings.md#description)       | Optional (200 character limit)              |
-| [**Icon**](create-add-on-store-listings.md#icon)                    | Optional (.png, 300x300 pixels)             |
+| [**Titel**](create-add-on-store-listings.md#title)                    | Erforderlich (max. 100 Zeichen)              |
+| [**Beschreibung**](create-add-on-store-listings.md#description)       | Optional (max. 200 Zeichen)              |
+| [**Symbol**](create-add-on-store-listings.md#icon)                    | Optional (PNG, 300x300 Pixel)             |
 
 <span/>
 
-When you've finished entering this info, click **Submit to the Store**. In most cases, the certification process takes about an hour. After that, your add-on will be published to the Store and ready for customers to purchase.
+Nachdem Sie diese Informationen eingegeben haben, klicken Sie auf **An Store einreichen**. In den meisten Fällen dauert der Zertifizierungsprozess etwa eine Stunde. Danach wird Ihr Add-On im Store veröffentlicht und steht für Kunden zum Kauf bereit.
 
-**Note**  The add-on must also be implemented in your app's code. For more info, see [Enable in-app product purchases](../monetize/enable-in-app-product-purchases.md).
+**Hinweis**  Das Add-On muss außerdem im Code Ihrer App implementiert werden. Weitere Informationen finden Sie unter [Ermöglichen von In-App-Produktkäufen](../monetize/enable-in-app-product-purchases.md).
 
 
-## Updating an add-on after publication
+## Aktualisieren eines Add-Ons nach der Veröffentlichung
 
-You can make changes to a published add-on at any time. add-on changes are submitted and published independently of your app, so you generally don't need to update the entire app in order to make changes to an add-on such as updating its price or description.
+Sie können ein veröffentlichtes Add-On jederzeit ändern. Add-On-Änderungen werden unabhängig von Ihrer App eingereicht und veröffentlicht. Sie müssen daher in der Regel nicht die gesamte App aktualisieren, um Änderungen an einem Add-On vorzunehmen, z.B. das Aktualisieren des Preises oder der Beschreibung.
 
-> **Important**  If your app is available to customers on Windows 8.x, you will need to create and publish a new app submission in order to make the add-on updates visible to those customers. Similarly, if you add new add-ons to an app targeting Windows 8.x after the app has been published, you'll need to update your app's code to reference those add-ons, then resubmit the app. Otherwise, the new add-ons won't be visible to customers on Windows 8.x.
+> **Wichtig**  Wenn die App für Kunden unter Windows8.x verfügbar ist, müssen Sie eine neue App-Übermittlung erstellen und veröffentlichen, um die Add-On-Updates für diese Kunden sichtbar zu machen. Auch wenn Sie neue Add-Ons einer App für Windows 8.x hinzufügen, nachdem die App veröffentlicht wurde, müssen Sie den App-Code aktualisieren, um auf diese Add-Ons zu verweisen, und die App dann erneut übermitteln. Andernfalls sind die neuen Add-Ons nicht für Kunden unter Windows 8.x sichtbar.
 
-To submit updates, go to the add-on's page in your dashboard and click **Update**. This will create a new submission for the add-on using the info from your previous submission as a starting point. Change the info you'd like, and then click **Submit to the Store**.
+Wechseln Sie zum Übermitteln von Updates im Dashboard zur Seite des Add-Ons, und klicken Sie auf **Aktualisieren**. Dadurch wird eine neue Übermittlung für das Add-On erstellt, wobei die Informationen aus der vorherigen Übermittlung als Ausgangspunkt verwendet werden. Ändern Sie die gewünschten Informationen, und klicken Sie dann auf **An Store übermitteln**.
 
-If you'd like to remove an add-on you've previously offered, you can do this by creating a new submission and changing the [Distribution and visibility](set-add-on-pricing-and-availability.md) option to **No longer available for purchase. Not displayed in your app's listing**. Be sure to update your app's code as needed to also remove references to the add-on.
+Wenn Sie ein zuvor angebotenes Add-On entfernen möchten, können Sie dies tun, indem Sie eine neue Übermittlung erstellen und die Option [Verteilung und Sichtbarkeit](set-add-on-pricing-and-availability.md) in **Nicht mehr zum Kauf erhältlich. Wird nicht im App-Eintrag angezeigt.** ändern. Achten Sie darauf, den App-Code entsprechend zu aktualisieren, um auch Verweise auf das Add-On zu entfernen.
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

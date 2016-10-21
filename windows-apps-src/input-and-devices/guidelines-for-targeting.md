@@ -5,8 +5,9 @@ title: Zielbestimmung
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 50a285b484f7e9ed7b349921c3460bd7c9c81603
+ms.openlocfilehash: 5707d36533e1b6566efb23ca9b6bf2bbf659cc63
 
 ---
 
@@ -31,13 +32,13 @@ Um die Konsistenz bei unterschiedlichen Bildschirmgrößen und Pixeldichten zu w
 
 Pixel = Pixeldichte × Maße
 
-Die folgenden Beispiele verwenden diese Formel, um eine Zielgröße von 9 mm auf einem Display mit 135 PPI (Pixel Per Inch, Pixel pro Zoll) und einem einfachen Skalierungsplateau in die Pixelgröße umrechnen:
+Die folgenden Beispiele verwenden diese Formel, um eine Zielgröße von 9mm auf einem Display mit 135PPI (Pixel Per Inch, Pixel pro Zoll) und einem einfachen Skalierungsplateau in die Pixelgröße umrechnen:
 
 Pixel = 135 PPI × 9 mm
 
-Pixel = 135 PPI × (0,03937 Zoll pro mm × 9 mm)
+Pixel = 135PPI×(0,03937Zoll pro mm×9mm)
 
-Pixel = 135 PPI × 0,35433 Zoll
+Pixel = 135PPI×0,35433Zoll
 
 Pixel = 48 Pixel
 
@@ -53,7 +54,7 @@ Wenn zum Beispiel ein Aufsetzen erkannt wird, wird ein Tippen registriert, wenn 
 ## Zielgrößen
 
 
-Verwenden Sie für Ihr Touchziel grundsätzlich mindestens eine Fläche von 9 x 9 mm (48 x 48-Pixel auf einem 135 PPI-Display bei einem Skalierungsplateau von 1,0). Verwenden Sie keine Touchziele mit weniger als 7 x 7 mm.
+Verwenden Sie für Ihr Touchziel grundsätzlich mindestens eine Fläche von 9x9mm (48x48-Pixel auf einem 135PPI-Display bei einem Skalierungsplateau von1,0). Verwenden Sie keine Touchziele mit weniger als 7x7mm.
 
 Im folgenden Diagramm wird gezeigt, dass die Größe eines Ziels in der Regel eine Kombination aus visuellem Ziel, tatsächlicher Zielgröße und dem Abstand zwischen dem tatsächlichen Ziel und den anderen potenziellen Zielen ist.
 
@@ -77,23 +78,23 @@ Die folgende Tabelle enthält die Mindestgrößen und die empfohlenen Größen f
 <tbody>
 <tr class="odd">
 <td align="left">Abstand</td>
-<td align="left">2 mm</td>
+<td align="left">2mm</td>
 <td align="left">Nicht zutreffend</td>
 </tr>
 <tr class="even">
 <td align="left">Visuelle Zielgröße</td>
-<td align="left">&lt; 60 % der tatsächlichen Größe</td>
-<td align="left">90 – 100 % der tatsächlichen Größe
-<p>Visuelle Ziele mit weniger als 4,2 x 4,2 mm (60 % der empfohlenen Mindestgröße von 7 x 7 mm) werden von den meisten Benutzern nicht als toucheingabefähiges Element erkannt.</p></td>
+<td align="left">&lt; 60% der tatsächlichen Größe</td>
+<td align="left">90 – 100% der tatsächlichen Größe
+<p>Visuelle Ziele mit weniger als 4,2x 4,2mm (60% der empfohlenen Mindestgröße von 7x7mm) werden von den meisten Benutzern nicht als toucheingabefähiges Element erkannt.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">Tatsächliche Zielgröße</td>
-<td align="left">7 x 7 mm</td>
-<td align="left">Mindestens 9 x 0 mm (48 x 48 Pixel @ 1x)</td>
+<td align="left">7x7mm</td>
+<td align="left">Mindestens 9x0mm (48x48Pixel @ 1x)</td>
 </tr>
 <tr class="even">
 <td align="left">Gesamtzielgröße</td>
-<td align="left">11 x 11 mm (ca. 60 px: drei 20-px-Rastereinheiten @ 1x)</td>
+<td align="left">11 x 11 mm (ca. 60px: drei 20-px-Rastereinheiten @1x)</td>
 <td align="left">13,5 x 13,5 mm (72 x 72 px @ 1x)
 <p>Dies impliziert, dass die Größe des tatsächlichen Ziels und des Abstands zusammen größer sein muss als die jeweiligen Mindestgrößen.</p></td>
 </tr>
@@ -139,7 +140,7 @@ Beim Scrubbing wird eine beliebige Stelle in einem Feld mit Zielen berührt, und
 Halten Sie sich an die folgenden Richtlinien, wenn Sie Scrubbinginteraktionen entwerfen:
 
 -   Scrubbing wird in Verbindung mit der Mehrdeutigkeitsvermeidungs-UI verwendet. Weitere Informationen finden Sie unter [Richtlinien für visuelles Feedback](guidelines-for-visualfeedback.md).
--   Die empfohlene Mindestgröße für ein Scrubbing-Fingereingabeziel beträgt 20 px (3,75 mm @ 1x Größe).
+-   Die empfohlene Mindestgröße für ein Scrubbing-Fingereingabeziel beträgt 20px (3,75mm @1xGröße).
 -   Scrubbing hat Vorrang, wenn es auf einer Oberfläche ausgeführt wird, die Verschieben unterstützt (beispielsweise eine Webseite).
 -   Scrubbingziele sollten nah beieinander liegen.
 -   Eine Aktion wird abgebrochen, wenn Benutzer einen Finger vom Scrubbingziel wegziehen.
@@ -161,7 +162,7 @@ Halten Sie sich an die folgenden Richtlinien, wenn Sie Scrubbinginteraktionen en
 * [Eingabe: Beispiel für Fingereingabe-Treffertests](http://go.microsoft.com/fwlink/p/?linkid=231590)
 * [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoomen](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Eingabe: vereinfachtes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [Eingabe: Beispiel für Windows 8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [Eingabe: Beispiel für Windows8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
  
@@ -174,6 +175,6 @@ Halten Sie sich an die folgenden Richtlinien, wenn Sie Scrubbinginteraktionen en
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

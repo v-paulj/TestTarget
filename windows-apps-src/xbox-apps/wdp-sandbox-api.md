@@ -2,8 +2,9 @@
 author: payzer
 title: "Device Portal - Referenz zur API für den Xbox Live-Sandkasten"
 description: Erfahren Sie, wie Sie programmgesteuert auf den Xbox Live-Sandkasten zugreifen.
+translationtype: Human Translation
 ms.sourcegitcommit: a857ba338a971e651653193ff2149f08b1665a36
-ms.openlocfilehash: c1671db55dcb05ab7a126fad271a5e49146fe9ac
+ms.openlocfilehash: 2a0bfa2eecffb2b0f5ed0bc691cb90bcd7191321
 
 ---
 
@@ -89,6 +90,6 @@ HTTP-Statuscode      | Beschreibung
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

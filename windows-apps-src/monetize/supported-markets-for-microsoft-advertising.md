@@ -3,15 +3,16 @@ author: mcleanbyron
 ms.assetid: 4804e371-065e-4d5a-ab1a-9c5732f52a9e
 description: "Erfahren Sie mehr über die unterstützten Länder und Regionen für interstitielle und Banneranzeigen."
 title: "Unterstützte Märkte für Microsoft Advertising"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 2d17a3936a4932b0aa30c80a38bb492f3f21fb37
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 297659aa33d37bd8da29b0cb4e0d43ce29e5e7c0
 
 ---
 
 # Unterstützte Märkte für Microsoft Advertising
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Interstitielle Anzeigen und Banner werden in den folgenden Ländern und Regionen unterstützt.
 
@@ -314,6 +315,6 @@ Interstitielle Anzeigen und Banner werden in den folgenden Ländern und Regionen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

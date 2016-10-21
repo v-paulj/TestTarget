@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: Planen der Leistung
 description: "Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen."
+translationtype: Human Translation
 ms.sourcegitcommit: afb508fcbc2d4ab75188a2d4f705ea0bee385ed6
-ms.openlocfilehash: 39d57811a07b4c404da4b7e369e3bf5441fa99c0
+ms.openlocfilehash: a53434223585d2c36fe30f4c2a49f019c7552662
 
 ---
 # Planen der Leistung
@@ -160,7 +161,7 @@ Verwenden Sie diese Verfahren und Tools zum Testen, wie Ihre App gegenüber den 
 -   Führen Sie den Test für eine Vielzahl von Hardwarekonfigurationen durch, einschließlich All-in-One- und Desktop-PCs, Laptops, Ultrabooks und Tablets sowie anderer mobiler Geräte.
 -   Führen Sie die Tests für eine Vielzahl von Bildschirmgrößen durch. Bei breiteren Bildschirmen kann zwar mehr Inhalt angezeigt werden, die Darstellung dieses zusätzlichen Inhalts kann sich jedoch negativ auf die Leistung auswirken.
 -   Schließen Sie so viele Testvariablen wie möglich aus.
-    -   Deaktivieren Sie auf dem Testgerät die Hintergrund-Apps. Wählen Sie dazu in Windows im Startmenü **Einstellungen** &gt;**Personalisierung**&gt;**Sperrbildschirm** aus. Wählen Sie jede aktive App aus, und wählen Sie dann **Keine**.
+    -   Deaktivieren Sie auf dem Testgerät die Hintergrund-Apps. Wählen Sie dazu in Windows aus dem Startmenü **Einstellungen** &gt; **Personalisierung** &gt; **Sperrbildschirm** aus. Wählen Sie jede aktive App aus, und wählen Sie dann **Keine**.
     -   Kompilieren Sie Ihre App in systemeigenen Code, indem Sie sie in der Releasekonfiguration erstellen, bevor sie auf dem Testgerät bereitgestellt wird.
     -   Um sicherzustellen, dass die automatische Wartung keinen Einfluss auf die Leistung des Testgeräts hat, lösen Sie es manuell aus und warten Sie, bis der Vorgang abgeschlossen ist. Suchen Sie in Windows im Startmenü nach **Sicherheit und Wartung**. Wählen Sie im Bereich **Wartung** unter **Automatische Wartung** die Option **Wartung starten** aus, und warten Sie, bis sich der Status **Wartung wird durchgeführt** ändert.
     -   Führen Sie die App mehrmals aus, um zufällige Testvariablen so gut es geht auszuschließen und dadurch konsistente Messungen zu ermöglichen.
@@ -193,6 +194,6 @@ Optimieren Sie nur die leistungskritischen Codepfade in Ihrer App. Dies sind die
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

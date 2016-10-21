@@ -3,15 +3,16 @@ author: mcleanbyron
 ms.assetid: 4a311d20-ba8c-4816-8091-35726428dc94
 description: Weitere Beispiele, die veranschaulichen, wie Sie Eigenschaften, Methoden und Ereignisse der Klassen AdControl und InterstitialAd verwenden, finden Sie in den Microsoft Advertising-Bibliotheken.
 title: Codebeispiele
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 1a7bf9ed90ed2dadf6de7a141fa03972b06ef144
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 0a852a4bf8404d7ab0d8a2a169a16451c0388122
 
 ---
 
 # Codebeispiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie Sie die Eigenschaften, Methoden und Ereignisse der Klassen [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) und [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx) in den Microsoft Advertising-Bibliotheken verwenden, um Benutzer anzusprechen, Anzeigen manuell zu aktualisieren und Ereignisse zu behandeln. Einführende exemplarische Vorgehensweisen, die veranschaulichen, wie Sie Ihrer App diese Steuerelemente hinzufügen, finden Sie unter [Exemplarische Vorgehensweisen für Entwickler](developer-walkthroughs.md).
 
@@ -40,6 +41,6 @@ Vollständige Beispielprojekte, die veranschaulichen, wie Sie JavaScript-/HTML- 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,12 +4,12 @@ Description: Bereitstellen und Debuggen einer unter Verwendung der Desktop-Konve
 Search.Product: eADQiWindows 10XVcnh
 title: Bereitstellen und Debuggen einer von einer Windows-Desktopanwendung konvertierten UWP-App (Universelle Windows-Plattform)
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 618b129449d285054604008615c32de74c8bfd9b
+ms.sourcegitcommit: 2c1a8ea38081c947f90ea835447a617c388aec08
+ms.openlocfilehash: 75e176f17845bdbd618c6ca63fbbb5765bef54fb
 
 ---
 
-# Bereitstellen und Debuggen der konvertierten UWP-App (Project Centennial)
+# Bereitstellen und Debuggen der konvertierten UWP-App
 
 \[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
 
@@ -17,7 +17,7 @@ Dieses Thema enthält Informationen, die Sie beim erfolgreichen Bereitstellen un
 
 ## Debuggen der konvertierten UWP-App
 
-Sie verfügen über zwei grundlegende Optionen für das Debuggen der konvertierten App mit Visual Studio.
+Sie haben mehrere Optionen zum Debuggen der konvertierten App.
 
 ### Anhängen an den Prozess
 
@@ -29,7 +29,7 @@ Visual Studio unterstützt jetzt ein neues Paketprojekt, mit dem Sie die beim Er
 
 Erste Schritte 
 
-1. Stellen Sie zunächst sicher, dass Sie Centennial für die Verwendung eingerichtet haben. Eine Anleitung hierzu finden Sie unter [Vorschau für den Desktop-App-Konverter (Project Centennial)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter). 
+1. Stellen Sie zunächst sicher, dass Desktop App Converter verwendet werden kann. Eine Anleitung hierzu finden Sie unter [Vorschau für Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter). 
 
 2. Führen Sie den Konverter und dann den Installer für die Win32-Anwendung aus. Der Konverter erfasst das Layout und alle an der Registrierung vorgenommenen Änderungen und gibt ein Appx-Paket mit einem Manifest und die Datei „Registry.dat“ aus, um die Registrierung zu virtualisieren:
 
@@ -164,7 +164,30 @@ Sie können auch die bedingte Kompilierung zum Aktivieren bestimmter Codepfade v
 
 4.  Sie können jetzt das Buildziel zu DesktopUWP ändern, wenn Sie für die hinzugefügte UWP-API erstellen möchten.
 
+### PLMDebug 
+
+In Visual Studio können Sie mit der Taste F5 sowie mithilfe der Option „An den Prozess anhängen“ Ihre App debuggen, während sie ausgeführt wird. In einigen Fällen empfiehlt sich jedoch eine differenziertere Steuerung des Debugging-Vorgangs, wenn z.B. das Debuggen erfolgen soll, bevor die App gestartet wird. Verwenden Sie in diesen komplexeren Szenarien [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396). Mit diesem Tool können Sie die konvertierte App mit dem Windows-Debugger debuggen. Zudem verfügen Sie über die vollständige Steuerung des App-Lebenszyklus, einschließlich Anhalten, Fortsetzen und Beenden. 
+
+PLMDebug ist im Windows SDK enthalten. Weitere Informationen finden Sie unter [**PLMDebug**](https://msdn.microsoft.com/library/windows/hardware/jj680085%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396). 
+
+### Ausführen eines anderen Prozesses im vollständig vertrauenswürdigen Container 
+
+Sie können benutzerdefinierte Prozesse im Container eines angegebenen App-Pakets aufrufen. Dies kann nützlich sein, um Szenarien zu testen (z.B., wenn Sie über eine benutzerdefinierte Testumgebung verfügen und die Ausgabe der App testen möchten). Verwenden Sie hierzu das PowerShell-Cmdlet ```Invoke-CommandInDesktopPackage```: 
+
+```CMD
+Invoke-CommandInDesktopPackage [-PackageFamilyName] <string> [-AppId] <string> [-Command] <string> [[-Args]
+    <string>]  [<CommonParameters>]
+```
+
 ## Bereitstellen der konvertierten UWP-App
+
+Es gibt zwei Möglichkeiten zum Bereitstellen der konvertierten App: Registrieren loser Dateien sowie Bereitstellen des APPX-Pakets. 
+
+Das Registrieren loser Dateien eignet sich für das Debuggen, wenn sich die Dateien auf dem Datenträger an einem Ort befinden, der mühelos aktualisiert werden kann, und auf den Sie einfach sowie ohne Signatur und Zertifikat zugreifen können.  
+
+Das Bereitstellen des APPX-Pakets ist eine einfache Möglichkeit, die Anwendung auf mehreren Computern bereitzustellen und querzuladen. Das Paket muss jedoch signiert werden und das Zertifikat auf dem Computer als vertrauenswürdig gelten.
+
+### Registrieren loser Dateien
 
 Führen Sie zum Bereitstellen der App während der Entwicklung das folgende PowerShell-Cmdlet aus: 
 
@@ -174,16 +197,25 @@ Ersetzen Sie zum Aktualisieren der EXE- oder DLL-Dateien Ihrer App die vorhanden
 
 Hinweis: 
 
-Das Laufwerk, auf dem Sie die konvertierte App installieren, muss das NTFS-Format aufweisen.
+* Das Laufwerk, auf dem Sie die konvertierte App installieren, muss das NTFS-Format aufweisen.
 
-Eine konvertierte App wird immer als interaktiver Benutzer ausgeführt. Dies ist insbesondere für eine .NET-App von Bedeutung, deren Manifest die Ausführungsebene von __requireAdministrator__ angibt. Wenn der interaktive Benutzer über Administratorrechte verfügt, wird _bei jedem App-Start_ eine UAC-Aufforderung angezeigt. Bei Standardbenutzern tritt beim Starten der App ein Fehler auf.
+* Eine konvertierte App wird immer als interaktiver Benutzer ausgeführt.
 
-Wenn Sie versuchen das Add-AppxPackage-Cmdlet auf einem Computer auszuführen, auf dem Sie das erstellte Zertifikat noch nicht importiert haben, tritt ein Fehler auf.
+### Bereitstellen des APPX-Pakets 
 
 Bevor Sie Ihre App bereitstellen, müssen Sie sie mit einem Zertifikat signieren. Informationen zum Erstellen eines Zertifikats finden Sie unter [Signieren des Appx-Pakets](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter#deploy-your-converted-appx). 
 
-Im Folgenden wird beschrieben, wie Sie ein Zertifikat importieren, das Sie zuvor erstellt haben. Sie können es direkt oder wie der Kunde von einem Appx-Projekt installieren, das Sie signiert haben.
-1.  Klicken Sie im Datei-Explorer mit der rechten Maustaste auf ein Appx-Projekt, das Sie mit einem Testzertifikat signiert haben, und wählen Sie im Kontextmenü **Eigenschaften** aus.
+Im Folgenden wird beschrieben, wie Sie ein Zertifikat importieren, das Sie zuvor erstellt haben. Sie können das Zertifikat mit CERTUTIL direkt importieren oder wie der Kunde von einem APPX-Projekt installieren, das Sie signiert haben. 
+
+Um das Zertifikat über CERTUTIL zu installieren, führen Sie über eine Eingabeaufforderung mit Administratorrechten folgenden Befehl aus:
+
+```cmd
+Certutil -addStore TrustedPeople <testcert.cer>
+```
+
+So importieren Sie das Zertifikat wie ein Kunde aus dem APPX-Projekt:
+
+1.  Klicken Sie im Datei-Explorer mit der rechten Maustaste auf ein APPX-Projekt, das Sie mit einem Testzertifikat signiert haben, und wählen Sie im Kontextmenü **Eigenschaften** aus.
 2.  Klicken oder tippen Sie auf die Registerkarte **Digitale Signaturen**.
 3.  Klicken oder tippen Sie auf das Zertifikat, und wählen Sie **Details**.
 4.  Klicken oder tippen Sie auf **Zertifikat anzeigen**.
@@ -195,7 +227,7 @@ Im Folgenden wird beschrieben, wie Sie ein Zertifikat importieren, das Sie zuvor
 10. Klicken oder tippen Sie auf **Weiter**. Ein neuer Bildschirm wird angezeigt. Klicken oder tippen Sie auf **Fertig stellen**.
 11. Ein Bestätigungsdialogfeld sollte angezeigt werden. Wenn dies der Fall ist, klicken Sie auf **OK**. Gibt ein anderes Dialogfeld an, dass ein Problem mit dem Zertifikat vorliegt, müssen Sie mögliche Zertifikatfehler behandeln.
 
-Damit Windows dem Zertifikat vertraut, muss sich das Zertifikat entweder im Knoten **Zertifikate (lokaler Computer) > Vertrauenswürdige Stammzertifizierungsstellen > Zertifikate** oder **Zertifikate (lokaler Computer) > Vertrauenswürdige Personen > Zertifikate** befinden. Nur Zertifikaten, die sich in diesen Speicherorten befinden, können auf dem lokalen Computer als vertrauenswürdige Zertifikate festgelegt werden. Andernfalls wird eine Fehlermeldung angezeigt, die der folgenden ähnelt:
+Hinweis: Damit Windows dem Zertifikat vertraut, muss sich das Zertifikat entweder im Knoten **Zertifikate (lokaler Computer) > Vertrauenswürdige Stammzertifizierungsstellen > Zertifikate** oder **Zertifikate (lokaler Computer) > Vertrauenswürdige Personen > Zertifikate** befinden. Nur Zertifikaten, die sich in diesen Speicherorten befinden, können auf dem lokalen Computer als vertrauenswürdige Zertifikate festgelegt werden. Andernfalls wird eine Fehlermeldung angezeigt, die der folgenden ähnelt:
 ```CMD
 "Add-AppxPackage : Deployment failed with HRESULT: 0x800B0109, A certificate chain processed,
 but terminated in a rootcertificate which is not trusted by the trust provider.
@@ -203,7 +235,13 @@ but terminated in a rootcertificate which is not trusted by the trust provider.
 in the app package must be trusted."
 ```
 
-### Im Hintergrund
+Nachdem das Zertifikat nun als vertrauenswürdig eingestuft wird, gibt es zwei Möglichkeiten, das Paket zu installieren: über PowerShell oder einfach durch Doppelklicken auf die APPX-Paketdatei.  Führen Sie das folgende Cmdlet aus, um über PowerShell zu installieren:
+
+```powershell
+Add-AppxPackage <MyApp>.appx
+```
+
+## Im Hintergrund
 
 Wenn Sie die konvertierte App ausführen, wird das UWP-App-Paket von \Programme\WindowsApps\\&lt;_Paketname_&gt;\\&lt;_App-Name_&gt;.exe gestartet. Wenn Sie dort nachschauen, stellen Sie fest, dass Ihre App über ein App-Paketmanifest („AppxManifest.xml“) verfügt, das auf einen speziellen XML-Namespace für konvertierte Apps verweist. In die Manifestdatei ist ein __&lt;EntryPoint&gt;__-Element enthalten, das auf eine vertrauenswürdige App verweist. Wenn die App gestartet wird, wird sie nicht im App-Container, sondern stattdessen wie gewohnt als Benutzer ausgeführt.
 
@@ -211,16 +249,37 @@ Die App wird jedoch in einer speziellen Umgebung ausgeführt, in der alle Zugrif
 
 In einem Ordner mit dem Namen „VFS“ sehen Sie Ordner, die die DLL-Dateien enthalten, von denen die App abhängig ist. Diese DLL-Dateien werden in den Systemordnern für die klassische Desktopversion Ihrer App installiert. Bei der UWP-App sind die DLL-Dateien für Ihre App lokal gespeichert. Auf diese Weise treten bei der Installation und Deinstallation von UWP-Apps keine Versionsprobleme auf.
 
-## Siehe auch
+### Gepackte VFS-Speicherorte
+
+Der folgenden Tabelle können Sie entnehmen, wo Dateien, die zu Ihrem Paket gehören, für die App im System überlagert sind. Die App geht davon aus, dass sich diese Dateien in den aufgeführten Systemspeicherorten befinden, während sie sich tatsächlich in den umgeleiteten Speicherorten unter [Paketstammverzeichnis]\VFS\ befinden. Die FOLDERID-Speicherorte stammen von der [**KNOWNFOLDERID**](https://msdn.microsoft.com/en-us/library/windows/desktop/dd378457.aspx)-Konstante.
+
+Systemspeicherort | Umgeleiteter Speicherort (unter [Paketstammverzeichnis]\VFS\) | Gültig für Architekturen
+ :---- | :---- | :---
+FOLDERID_SystemX86 | SystemX86 | x86, amd64 
+FOLDERID_System | SystemX64 | amd64 
+FOLDERID_ProgramFilesX86 | ProgramFilesX86 | x86, amd6 
+FOLDERID_ProgramFilesX64 | ProgramFilesX64 | amd64 
+FOLDERID_ProgramFilesCommonX86 | ProgramFilesCommonX86 | x86, amd64
+FOLDERID_ProgramFilesCommonX64 | ProgramFilesCommonX64 | amd64 
+FOLDERID_Windows | Windows | x86, amd64 
+FOLDERID_ProgramData | Gemeinsamer AppData-Ordner | x86, amd64 
+FOLDERID_System\catroot | AppVSystem32Catroot | x86, amd64 
+FOLDERID_System\catroot2 | AppVSystem32Catroot2 | x86, amd64 
+FOLDERID_System\drivers\etc | AppVSystem32DriversEtc | x86, amd64 
+FOLDERID_System\driverstore | AppVSystem32Driverstore | x86, amd64 
+FOLDERID_System\logfiles | AppVSystem32Logfiles | x86, amd64 
+FOLDERID_System\spool | AppVSystem32Spool | x86, amd64 
+
+## Weitere Informationen
 [Konvertieren der Desktopanwendung in eine UWP-App (Universelle Windows-Plattform)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)
 
-[Vorschau für den Desktop-App-Konverter (Project Centennial)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter)
+[Vorschau für Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter)
 
 [Manuelles Konvertieren Ihrer Windows-Desktopanwendung in eine UWP-App (Universelle Windows-Plattform)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion)
 
 [Desktop-App-Bridge zu UWP-Codebeispielen auf GitHub](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO2-->
 
 

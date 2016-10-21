@@ -5,7 +5,7 @@ description: "Verwenden Sie einen Mac-Computer, um Ihrer Website in eine App fü
 kw: Hosted Web Apps with a Mac, Porting to Windows 10 with a Mac, Convert website to Windows with Mac, Packaging web application with ManfoldJS for Windows Store, Add website to Windows Store with App Studio
 translationtype: Human Translation
 ms.sourcegitcommit: 0458dcd2aab862ccdecf1ebbc51e883405a929a6
-ms.openlocfilehash: 775963ae3d12023488c79ded1cc83d464e84169c
+ms.openlocfilehash: 3ba820e2ec8a3556874c0c7c7e328831bab783ca
 
 ---
 
@@ -23,7 +23,7 @@ Erstellen Sie schnell eine App für die Universelle Windows-Plattform für Windo
 
 ## Option1: ManifoldJS
 
-[ManifoldJS](http://manifoldjs.com/) ist eine Node.js-App, die leicht über NPM installiert werden kann. Sie verwendet die Metadaten über Ihre Website und generiert systemeigene gehostete Apps für Android, iOS und Windows. Wenn Ihre Website kein [Web-App-Manifest](https://www.w3.org/TR/appmanifest/) besitzt, wird ein Manifest automatisch für Sie generiert.
+[ManifoldJS](http://manifoldjs.com/) ist eine Node.js-App, die problemlos über NPM installiert werden kann. Sie verwendet die Metadaten über Ihre Website und generiert systemeigene gehostete Apps für Android, iOS und Windows. Wenn Ihre Website kein [Web-App-Manifest](https://www.w3.org/TR/appmanifest/) besitzt, wird ein Manifest automatisch für Sie generiert.
 
 1. Installieren Sie [NodeJS](https://nodejs.org/), das NPM (Node Package Manager) enthält. <br>
 
@@ -39,14 +39,11 @@ manifoldjs http://codepen.io/seksenov/pen/wBbVyb/?editors=101
 
 4. Befolgen Sie die im Video unten angezeigten Schritte aus, um die Verpackung durchzuführen und Ihre gehostete Web-App im Windows Store zu veröffentlichen.
 
-[
-              ![Veröffentlichen einer UWP-Web-App auf einem Mac-Computer mit ManifoldJS]
-            (images/hwa-to-uwp/mac_manifoldjs_video.png)](https://sec.ch9.ms/ch9/0a67/9b06e5c7-d7aa-478d-b30d-f99e145a0a67/ManifoldJS_high.mp4 "Veröffentlichen einer UWP-Web-App auf einem Mac-Computer mit ManifoldJS")
-          
+[![Veröffentlichen einer UWP-Web-App auf einem Mac-Computer mit ManifoldJS](images/hwa-to-uwp/mac_manifoldjs_video.png)](https://sec.ch9.ms/ch9/0a67/9b06e5c7-d7aa-478d-b30d-f99e145a0a67/ManifoldJS_high.mp4 "Veröffentlichen einer UWP-Web-App auf einem Mac-Computer mit ManifoldJS")
 
 ## Option2: App Studio
 
-[App Studio](http://appstudio.windows.com/) ist ein kostenloses Onlinetool, mit dem Sie schnell Windows10-Apps erstellen können.
+[App Studio](http://appstudio.windows.com/) ist ein kostenloses Onlinetool, mit dem Sie Windows10-Apps rasch erstellen können.
 
 1. Öffnen Sie [App Studio](http://appstudio.windows.com/) in Ihrem Webbrowser.
 
@@ -64,6 +61,6 @@ manifoldjs http://codepen.io/seksenov/pen/wBbVyb/?editors=101
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ description: "Konvertieren Sie Ihre Chrome-App oder Chrome-Erweiterung in eine A
 kw: Package Chrome Extension for Windows Store tutorial, Port Chrome Extension to Windows 10, How to convert Chrome App to Windows, How to add Chrome Extension to Windows Store, hwa-cli, Hosted Web Apps Command Line Interface CLI Tool, Install Chrome Extension on Windows 10 Device, convert .crx to .AppX
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7d1cceb931d3ee9d128c6ba47113f501625830da
+ms.openlocfilehash: 7847f69c85708cb42b878253839b06929f837708
 
 ---
 
@@ -59,7 +59,7 @@ Passen Sie Ihre Web-App nach dem Verpacken für den Windows Store an, damit sie 
 
 ### Regeln für den Anwendungsinhalt-URI
 
-[Regeln für den Anwendungsinhalt-URI (Application Content URI Rules, ACURs)](/hwa-access-features.md#keep-your-app-secure-setting-application-content-uri-rules-acurs) bzw. Inhalts-URIs definieren den Bereich Ihrer gehosteten Web-App über eine URL-Zulassungsliste im Manifest für das App-Paket. Um die Kommunikation zu und von Remoteinhalten zu steuern, müssen Sie die URLs definieren, die in dieser Liste enthalten oder von dieser Liste ausgeschlossen werden. Wenn ein Benutzer auf eine URL klickt, die nicht explizit enthalten ist, öffnet Windows den Zielpfad im Standardbrowser. Mit ACURs können Sie einer URL auch Zugriff auf [universelle Windows-APIs](https://msdn.microsoft.com/library/windows/apps/br211377.aspx) gewähren.
+[Regeln für Anwendungsinhalt-URIs (Application Content URI Rules, ACURs)](/hwa-access-features.md#keep-your-app-secure-setting-application-content-uri-rules-acurs) bzw. Inhalts-URIs definieren den Bereich Ihrer gehosteten Web-App über eine URL-Zulassungsliste im Manifest für das App-Paket. Um die Kommunikation zu und von Remoteinhalten zu steuern, müssen Sie die URLs definieren, die in dieser Liste enthalten oder von dieser Liste ausgeschlossen werden. Wenn ein Benutzer auf eine URL klickt, die nicht explizit enthalten ist, öffnet Windows den Zielpfad im Standardbrowser. Mit ACURs können Sie einer URL auch Zugriff auf [universelle Windows-APIs](https://msdn.microsoft.com/library/windows/apps/br211377.aspx) gewähren.
 
 Ihre Regeln sollten mindestens die Startseite Ihrer App enthalten. Das Konvertierungstool erstellt automatisch einen Satz von ACURs für Sie, basierend auf Ihrer Startseite und deren Domäne. Wenn es jedoch programmbasierte Umleitungen gibt, ob auf dem Server oder auf dem Client, müssen diese Ziele der Zulassungsliste hinzugefügt werden.
 
@@ -101,6 +101,6 @@ Chrome stellt Apps [spezielle APIs](https://developer.chrome.com/apps/api_index)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

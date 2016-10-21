@@ -3,8 +3,9 @@ author: mtoepke
 title: "Tools für die Grafikdiagnose"
 description: "Hier erfahren Sie, wie Sie in Visual Studio die Grafikdiagnosefeatures, einschließlich Grafikdebugging, Analyse von Grafikframes und GPU-Verwendung, abrufen und verwenden."
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f266cb50893fd37162f21be169d6daf6e37c6bb9
+translationtype: Human Translation
+ms.sourcegitcommit: 765cde8afe32cef6515ee6ca9750365aa35984a2
+ms.openlocfilehash: 5d8f7a8dbba2da76c6093d034c2ca8c2b4592c7e
 
 ---
 
@@ -15,8 +16,9 @@ ms.openlocfilehash: f266cb50893fd37162f21be169d6daf6e37c6bb9
 
 Unter Windows10 stehen die Grafikdiagnosetools jetzt als optionales Feature in Windows zur Verfügung. Installieren Sie das optionale Grafiktoolfeature, um die in der Runtime und in VisualStudio bereitgestellten Grafikdiagnosefeatures für die Entwicklung von DirectX-Apps oder -Spielen zu nutzen:
 
-1.  Klicken Sie unter **Einstellungen**>**System**> **Optionale Features** auf **Feature hinzufügen**. Klicken Sie unter **Einstellungen**> **System**> **Apps & Features**> **Optionale Features verwalten** auf **Feature hinzufügen**.
-2.  Klicken Sie in der Liste **Feature hinzufügen** auf **Grafiktools**.
+1.  Klicken Sie unter **Einstellungen**> **System**> **Apps und Features** auf **Optionale Features verwalten**.
+2.  Klicken Sie auf **Feature hinzufügen**.   
+3.  Wählen Sie in der Liste **Optionale Features** **Grafiktools** aus, und klicken Sie dann auf **Installieren**.
 
 Die Grafikdiagnosefeatures ermöglichen das Erstellen von Direct3D-Debugging-Geräten (über Direct3D-SDK-Ebenen) in der DirectX-Runtime sowie das Grafikdebugging, die Frame-Analyse und die GPU-Verwendung.
 
@@ -39,6 +41,6 @@ Die Grafikdiagnosefeatures ermöglichen das Erstellen von Direct3D-Debugging-Ger
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

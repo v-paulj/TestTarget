@@ -3,8 +3,9 @@ author: mcleblanc
 title: "Auswählen einer Programmiersprache"
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
 description: "Auswählen einer Programmiersprache"
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 10fa4a349621c8e7b248c7daf4d7cdf967e25255
+ms.openlocfilehash: c7d99923a0deac61e289d3a2796b8dd1720430b4
 
 ---
 
@@ -26,8 +27,7 @@ Obwohl wir uns in diesem Artikel auf C# konzentrieren, bieten die restlichen Spr
 -   [Erstellen Ihrer ersten WindowsPhoneStore-App mit C# oder Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=397877)
 -   [WinJS unter WindowsPhone8.1](http://go.microsoft.com/fwlink/p/?LinkID=397879)
 
-
-            **Hinweis**  Bei Apps mit 3D-Grafiken sind die Standards OpenGL und OpenGL ES für UWP-Apps nicht verfügbar. Wenn Sie Ihren OpenGL ES-Code in Microsoft DirectX nicht neu schreiben möchten, könnte **Angle** von Interesse für Sie sein. Angle ist ein laufendes Projekt, das zum Konvertieren von OpenGL in DirectX entwickelt wurde, indem OpenGL-API-Aufrufe in DirectX-API-Aufrufe übersetzt werden. Weitere Informationen hierzu finden Sie unter den folgenden Themen:
+**Hinweis**  Bei Apps mit 3D-Grafiken sind die Standards OpenGL und OpenGL ES für UWP-Apps nicht nativ verfügbar. Wenn Sie Ihren OpenGL ES-Code in Microsoft DirectX nicht neu schreiben möchten, könnte **Angle** von Interesse für Sie sein. Angle ist ein laufendes Projekt, das zum Konvertieren von OpenGL in DirectX entwickelt wurde, indem OpenGL-API-Aufrufe in DirectX-API-Aufrufe übersetzt werden. Weitere Informationen hierzu finden Sie unter den folgenden Themen:
 -   [Angle](https://code.google.com/p/angleproject/)
 -   [Erstellen Ihrer ersten WindowsStore-App mit DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
 -   [Beispiele für Windows Store-Apps mit DirectX](http://go.microsoft.com/fwlink/p/?LinkId=263603)
@@ -145,6 +145,6 @@ C# ist eine einfach erlernbare Sprache und verfügt über viele Unterstützungsk
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: msatranjr
 title: "Verteilen einer verwalteten Komponente für Windows-Runtime"
 description: "Sie können Ihre Windows-Runtime-Komponente durch Kopieren der Dateien verteilen."
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 3d7a51ed13f63ca9d6070fbbe860c653c4deaf07
+ms.openlocfilehash: 3a82ee44b748c2c8748ed063cbc67e02200a4e31
 
 ---
 
@@ -36,15 +37,13 @@ Die Entscheidung darüber, wie Sie Ihre Komponente verteilen, hängt von Komplex
 
 Ein Erweiterungs-SDK ist besonders nützlich, wenn mindestens einer der oben genannten Punkte zutrifft.
 
-> 
-            **Hinweis**  Für komplexe Komponenten bietet das NuGet-Paketverwaltungssystem eine Open-Source-Alternative zu Erweiterungs-SDKs. Wie mit Erweiterungs-SDKs können Sie mit NuGet Pakete erstellen, die die Installation komplexer Komponenten vereinfachen. Ein Vergleich von NuGet-Paketen und Visual Studio-Erweiterungs-SDKs finden Sie unter [Hinzufügen von Referenzen mithilfe von NuGet im Vergleich zu einer SDK-Erweiterung](https://msdn.microsoft.com/library/jj161096.aspx) in der MSDN Library.
+> **Hinweis**  Für komplexe Komponenten bietet das NuGet-Paketverwaltungssystem eine Open-Source-Alternative zu Erweiterungs-SDKs. Wie mit Erweiterungs-SDKs können Sie mit NuGet Pakete erstellen, die die Installation komplexer Komponenten vereinfachen. Ein Vergleich von NuGet-Paketen und Visual Studio-Erweiterungs-SDKs finden Sie unter [Hinzufügen von Referenzen mithilfe von NuGet im Vergleich zu einer SDK-Erweiterung](https://msdn.microsoft.com/library/jj161096.aspx) in der MSDN Library.
 
 ## Verteilung durch Kopieren von Dateien
 
 Wenn Ihre Komponente aus einer einzigen WINMD-Datei oder einer WINMD-Datei und einer Ressourcenindexdatei (PRI) besteht, können Sie einfach die WINMD-Datei so bereitstellen, dass Benutzer sie kopieren können. Benutzer können die Datei an einer beliebige Position in ein Projekt einfügen, im Dialogfeld **Vorhandenes Element hinzufügen** die WINMD-Datei dem Projekt hinzufügen und dann mit dem Dialogfeld „Verweis-Manager” einen Verweis erstellen. Wenn Sie eine PRI-Datei oder eine XML-Datei einbeziehen, sollten Sie die Benutzer anweisen, diese Dateien in dasselbe Verzeichnis wie die WINMD-Datei zu kopieren.
 
-> 
-            **Hinweis**  Visual Studio erzeugt stets eine PRI-Datei, wenn Sie Ihre Windows-Runtime-Komponente erstellen, auch wenn Ihr Projekt keine Ressourcen enthält. Wenn Sie über eine Test-App für Ihre Komponente verfügen, können Sie feststellen, ob die PRI-Datei verwendet wird, indem Sie den Inhalt des App-Pakets im Ordner bin\\debug\\AppX" überprüfen. Wenn die PRI-Datei Ihrer Komponente dort nicht angezeigt wird, müssen Sie sie nicht verteilen. Sie können auch mit dem Tool [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) die Ressourcendatei aus Ihrem Komponentenprojekt für Windows-Runtime ausgeben. Geben Sie z.B. im Eingabeaufforderungsfenster von Visual Studio Folgendes ein: makepri dump /if MyComponent.pri /of MyComponent.pri.xml. Weitere Informationen zu PRI-Dateien finden Sie unter [Ressourcenverwaltungssystem (Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
+> **Hinweis**  Visual Studio erzeugt stets eine PRI-Datei, wenn Sie Ihre Windows-Runtime-Komponente erstellen, auch wenn Ihr Projekt keine Ressourcen enthält. Wenn Sie über eine Test-App für Ihre Komponente verfügen, können Sie feststellen, ob die PRI-Datei verwendet wird, indem Sie den Inhalt des App-Pakets im Ordner bin\\debug\\AppX" überprüfen. Wenn die PRI-Datei Ihrer Komponente dort nicht angezeigt wird, müssen Sie sie nicht verteilen. Sie können auch mit dem Tool [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) die Ressourcendatei aus Ihrem Komponentenprojekt für Windows-Runtime ausgeben. Geben Sie z.B. im Eingabeaufforderungsfenster von Visual Studio Folgendes ein: makepri dump /if MyComponent.pri /of MyComponent.pri.xml. Weitere Informationen zu PRI-Dateien finden Sie unter [Ressourcenverwaltungssystem (Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
 
 ## Verteilung durch Erweiterungs-SDK
 
@@ -56,12 +55,9 @@ Eine komplexe Komponente enthält in der Regel Windows-Ressourcen, aber lesen Si
 2.  Erstellen eines neues Projekts mit der VSIX-Projektvorlage Sie finden die Vorlage in der Kategorie „Erweiterbarkeit” unter Visual C# oder Visual Basic. Diese Vorlage wird als Teil des Visual Studio-SDK installiert. ([Exemplarische Vorgehensweise: Erstellen eines SDK mit C# oder Visual Basic](https://msdn.microsoft.com/library/jj127119.aspx) oder [Exemplarische Vorgehensweise: Erstellen eines SDK mit C++](https://msdn.microsoft.com/library/jj127117.aspx) zeigt die Verwendung dieser Vorlage in einem sehr einfachen Szenario. )
 3.  Legen Sie die Ordnerstruktur für Ihr SDK fest. Die Ordnerstruktur beginnt auf der Stammebene des VSIX-Projekts mit den Ordnern **References**, **Redist** und **DesignTime**.
 
-    -   
-            **References** ist der Speicherort für Binärdateien, die Ihre Benutzer für die Programmierung verwenden können. Das Erweiterungs-SDK erstellt in den Visual Studio-Projekten Ihrer Benutzer Verweise auf diese Dateien.
-    -   
-            **Redist** ist der Speicherort für andere Dateien, die mit Ihren Binärdateien in Apps, die mit Ihrer Komponente erstellt werden, verteilt werden müssen.
-    -   
-            **DesignTime** ist der Speicherort für Dateien, die nur verwendet werden, wenn Entwickler Apps erstellen, die Ihre Komponente verwenden.
+    -   **References** ist der Speicherort für Binärdateien, die Ihre Benutzer für die Programmierung verwenden können. Das Erweiterungs-SDK erstellt in den Visual Studio-Projekten Ihrer Benutzer Verweise auf diese Dateien.
+    -   **Redist** ist der Speicherort für andere Dateien, die mit Ihren Binärdateien in Apps, die mit Ihrer Komponente erstellt werden, verteilt werden müssen.
+    -   **DesignTime** ist der Speicherort für Dateien, die nur verwendet werden, wenn Entwickler Apps erstellen, die Ihre Komponente verwenden.
 
     In jedem dieser Ordner können Sie Konfigurationsordner erstellen. Die zulässigen Namen sind „debug”, „retail” und „CommonConfiguration”. Der Ordner „CommonConfiguration” ist für Dateien vorgesehen, die für „retail”- und „debug”-Builds identisch sind. Wenn Sie nur „retail”-Builds Ihrer Komponente verteilen, können Sie alles in „CommonConfiguration” einfügen und die beiden anderen Ordner weglassen.
 
@@ -80,6 +76,6 @@ Eine komplexe Komponente enthält in der Regel Windows-Ressourcen, aber lesen Si
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

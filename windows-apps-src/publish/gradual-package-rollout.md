@@ -1,35 +1,45 @@
 ---
 author: JnHs
-Description: If your app uses an AdMediatorControl or AdControl to display banner ads, you could increase your ad fill rate and revenue by showing Microsoft affiliate ads in your app.
-title: Gradual package rollout
+Description: "Wenn Ihre App ein AdMediatorControl- oder ein AdControl-Element zum Anzeigen von Werbebannern verwendet, können Sie Ihre Anzeigenfüllrate und Ihren Umsatz steigern, indem Sie in Ihrer App Microsoft-Partneranzeigen anzeigen."
+title: Schrittweises Paketrollout
+translationtype: Human Translation
+ms.sourcegitcommit: ac9eed95edba99cdba914ff21b25383f35a20012
+ms.openlocfilehash: 3ec642ef0a21d06b20cabb12a47d2abcfd19fe59
+
 ---
 
-# Gradual package rollout
+# Schrittweises Paketrollout
 
-When you publish an update to a submission, you can choose to gradually roll out the updated packages to a percentage of your app’s customers on Windows 10. This allows you to monitor feedback and analytic data for the specific packages to make sure you’re confident about the update before rolling it out more broadly. You can increase the percentage (or halt the update) any time without having to create a new submission. 
+Wenn Sie ein Update für eine Übermittlung veröffentlichen möchten, können Sie die aktualisierten Pakete schrittweise an Kunden Ihrer App unter Windows10 bereitstellen. So können Sie Feedback und Analysedaten für die jeweiligen Pakete überwachen und vor einem umfassenden Rollout sicherstellen, dass das Update ordnungemäß funktioniert. Sie können den Prozentsatz jederzeit erhöhen (oder das Update stoppen), ohne eine neue Übermittlung zu erstellen. 
 
-> **Important** Your rollout selections apply to all of your packages, but will only apply to your customers running OS versions that support package flights (Windows.Desktop build 10586 or later; Windows.Mobile build 10586.63 or later, and Xbox), including any customers who get the app via [Store-managed (online) licensing](organizational-licensing.md) via the [Windows Store for Business](https://www.microsoft.com/business-store). When using gradual package rollout, customers on earlier OS versions will not get packages from the latest submission until you finalize the package rollout as described below.
+> **Wichtig** Ihre Rolloutauswahl gilt für alle Pakete, wird jedoch nur bei Kunden mit Betriebssystemversionen mit Unterstützung für Flight-Pakete (Windows.Desktop Build 10586 oder höher, Windows.Mobile Build 10586.63 oder höher und Xbox) übernommen, einschließlich bei Kunden, die Ihre App über [Vom Store verwaltete (Online-)Lizenzierung](organizational-licensing.md) aus dem [Windows Store für Unternehmen](https://www.microsoft.com/business-store) beziehen. Beim schrittweisen Paketrollout erhalten Kunden mit älteren Betriebssystemversionen keine Pakete aus der aktuellen Übermittlung, bis Sie das Paketrollout wie nachfolgend beschrieben abschließen.
 
-Note that all of your customers will see the Store listing details that you entered with your latest submission. The rollout settings only apply to the packages that customers receive, both for new acquisitions and for updates to existing customers.
+Beachten Sie, dass alle Ihre Kunden den mit Ihrer letzten Übermittlung eingegebenen Store-Eintrag anzeigen können. Die Rollout-Einstellungen gelten nur für die Pakete, die Kunden erhalten (Neukunden und Updates für vorhandene Kunden).
 
-> **Tip** Package rollout distributes packages to a random selection of customers in the percentages that you specify. To distribute specific packages to selected customers that you specify, you can use package flights.  You can also combine rollout with your package flights if you want to gradually distribute an update to one of your flight groups.
+> **Tipp** Beim Paketrollout werden Pakete an eine zufällige Auswahl von Kunden in Höhe des von Ihnen angegebenen Prozentsatzes verteilt. Um bestimmte Pakete an von Ihnen ausgewählte Kunden zu verteilen, können Sie Flight-Pakete verwenden.  Sie können das Rollout auch mit Ihren Flight-Paketen kombinieren, wenn Sie ein Update schrittweise auf eine Ihrer Test-Flight-Gruppen verteilen möchten.
 
-## Setting the rollout percentage
+## Festlegen eines Rollout-Prozentsatzes
 
-You can select to roll out your update on the **Packages** page of an updated submission. To do so, check the box that says **Roll out update gradually after this submission is published (to Windows 10 customers only)**. Then enter the percentage of customers who should get the update when the submission is first published. For example, you might enter 5 if you want to start by rolling the update out to only a small percentage of your app’s customers.
+Sie können das Rollout eines Updates auf der Seite **Pakete** einer aktualisierten Einreichung auswählen. Aktivieren Sie hierfür das Kontrollkästchen **Update-Rollout schrittweise nach Veröffentlichung dieser Übermittlung (nur für Windows10-Kunden)**. Geben Sie den Prozentsatz an Kunden an, die das Update bei erster Veröffentlichung der Übermittlung erhalten sollen. Geben Sie z.B. 5 ein, wenn Sie das Update zunächst nur für einen kleinen Teil Ihrer App-Kunden veröffentlichen möchten.
 
-Click **Update** to save your selections. After your app completes the certification process, the packages will be distributed to customers according to the percentage that you specified, both for new acquisitions and for updates to existing customers.
+Klicken Sie auf **Update**, um Ihre Auswahl zu speichern. Nachdem Ihre App den Zertifizierungsprozess abgeschlossen hat, werden die Pakete an Kunden gemäß dem von Ihnen angegebenen Prozentsatz verteilt (dies gilt für Neukunden und Updates für vorhandene Kunden).
 
-## Adjusting the rollout after the submission is published
+## Anpassen des Rollouts, nachdem die Übermittlung veröffentlicht wurde
 
-To adjust the rollout after the submission has been published, go to your app’s Overview page. You can drag the selector to change the percentage of customers getting the packages from your newest submission. Click **Update** to save your selections. The packages will then start to be distributed to customers according to the percentage that you specified, both for new acquisitions and for updates to existing customers.
+Sie können das Rollout, nachdem die Übermittlung veröffentlicht wurde, in der App-Übersicht anpassen. Sie können den Prozentsatz der Kunden, die das Paket Ihrer aktuellen Übermittlung erhalten, über den Schieberegler ändern. Klicken Sie auf **Update**, um Ihre Auswahl zu speichern. Die Pakete werden gemäß dem von Ihnen angegebenen Prozentsatz an Kunden verteilt (dies gilt für Neukunden und Updates für vorhandene Kunden).
 
-## Completing the rollout
+## Abschließen des Rollouts
 
-Before you can create a new submission, you'll need to complete the package rollout. You can **finalize** the rollout and distribute the latest packages to all of your customers, or **halt** the rollout to stop distributing the latest packages.
+Bevor Sie eine neue Übermittlung erstellen können, müssen Sie das Paketrollout abschließen. Sie können das Rollout **abschließen** und die aktuellen Pakete an alle Ihre Kunden verteilen, oder das Rollout **anhalten**, um die Verteilung der aktuellen Pakete zu stoppen.
 
-If you have confidence in the update and would like to make it available to all of your customers, click **Finalize package rollout** to distribute the newest packages to all of your customers.
+Wenn Sie das Update für zuverlässig halten und dieses all Ihren Kunden verfügbar machen möchten, klicken Sie auf **Paketrollout abschließen**. Dann werden die neuesten Pakete an alle Kunden verteilt.
 
-> **Tip** Changing the rollout percentage to 100% does not ensure that all of your customers will get the packages from the latest submissions, because some customers may be on OS versions that don’t support rollout. You must finalize the rollout in order to stop distributing the older packages and update all existing customers to the newer ones.
+> **Tipp** Wenn Sie den Prozentsatz für das Rollout auf 100% festlegen, wird dadurch nicht sichergestellt, dass alle Ihre Kunden die Pakete von der aktuellen Übermittlung erhalten, da einige Kunden möglicherweise Betriebssystemversionen verwenden, die ein Rollout nicht unterstützen. Sie müssen das Rollout abschließen, um die Verteilung von älteren Pakete zu beenden, und allen vorhandenen Kunden das Update bereitstellen.
 
-If you find that there are problems with the update and you don’t want to distribute it any further, you can click **Halt package rollout** to stop distributing packages from the latest submission. Once you halt a package rollout, those packages will no longer be distributed to any customers; only the packages from the previous submission will be used for any new or updating customers. However, any customers who already had the newer packages will keep those packages; they won’t be rolled back to the previous version. To provide an update to these customers, you’ll need to create a new submission with the packages you’d like them to get. Note that if you use a gradual rollout in your next submission, customers who had the package you halted will be offered the new update in the same order they were offered the halted package. The new rollout will be between your last finalized submission and your newest submission; once you halt a package rollout, those packages will no longer be distributed to any customers.
+Wenn Sie feststellen, dass ein Problem mit dem Update besteht, und Sie dieses nicht mehr verbreiten möchten, klicken Sie auf **Paketrollout anhalten**, um die Verteilung von Paketen der letzten Übermittlung zu beenden. Wenn Sie ein Paketrollout anhalten, werden diese Pakete nicht mehr an Kunden verteilt. Nur die Pakete aus der vorherigen Übermittlung werden an neue oder vorhandene Kunden verteilt. Alle Kunden, die bereits über die neueren Pakete verfügen, behalten diese Pakete auch. Ein Rollback auf die vorherige Version wird nicht ausgeführt. Um diesen Kunden ein Update bereitzustellen, müssen Sie eine neue Übermittlung mit den Paketen erstellen, die Sie bereitstellen möchten. Beachten Sie, dass bei einem schrittweisen Rollout bei der nächsten Übermittlung Kunden mit Paketen, die Sie angehalten haben, neue Updates in der gleichen Reihenfolge angeboten werden wie bei der ursprünglichen Verteilung. Das neue Rollout liegt zwischen der letzten abgeschlossenen Übermittlung und Ihrer aktuellen Übermittlung. Nachdem Sie einen Paketrollout anhalten, werden diese Pakete nicht mehr an Kunden verteilt.
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

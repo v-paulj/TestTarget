@@ -1,10 +1,11 @@
 ---
-author: TylerMSFT
+author: normesta
 ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: "Aufzählen und Abfragen von Dateien und Ordnern"
 description: "Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Bibliothek, auf einem Gerät oder an einer Netzwerkadresse befinden. Sie können auch durch Erstellen von Datei- und Ordnerabfragen Dateien und Ordner an bestimmten Speicherorten abrufen."
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 6ecad1bbd3c08dcd7aa1d3b82739931f20fc4ee2
+translationtype: Human Translation
+ms.sourcegitcommit: de0b23cfd8f6323d3618c3424a27a7d0ce5e1374
+ms.openlocfilehash: a7a8ba7166cf8c6778003396b13b7098578097ca
 
 ---
 # Aufzählen und Abfragen von Dateien und Ordnern
@@ -15,8 +16,7 @@ ms.openlocfilehash: 6ecad1bbd3c08dcd7aa1d3b82739931f20fc4ee2
 
 Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Bibliothek, auf einem Gerät oder an einer Netzwerkadresse befinden. Sie können auch durch Erstellen von Datei- und Ordnerabfragen Dateien und Ordner an bestimmten Speicherorten abrufen.
 
-
-            **Hinweis**  Weitere Informationen finden Sie im [Beispiel für Ordnerenumeration](http://go.microsoft.com/fwlink/p/?linkid=619993).
+**Hinweis**  Weitere Informationen finden Sie im [Beispiel für Ordnerenumeration](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
  
 ## Voraussetzungen
@@ -31,13 +31,12 @@ Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Biblio
 
 ## Auflisten der Dateien und Ordner an einem Speicherort
 
-> 
-            **Hinweis**  Denken Sie daran, die **picturesLibrary**-Funktion anzugeben.
+> **Hinweis**  Denken Sie daran, die **picturesLibrary**-Funktion anzugeben.
 
 In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276)-Methode, um alle Dateien im Stammordner der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (nicht in den Unterordnern) abzurufen und die Namen der einzelnen Dateien aufzulisten. Als Nächstes verwenden wir die [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227280)-Methode, um alle Unterordner in der **PicturesLibrary** abzurufen und die Namen der einzelnen Unterordner aufzulisten.
 
 <!--BUGBUG: IAsyncOperation<IVectorView<StorageFolder^>^>^  causes build to flake out-->
-> [!div class="tabbedCodeSnippets"] 
+> [!div class="tabbedCodeSnippets"]
 > ```cpp
 > //#include <ppltasks.h>
 > //#include <string>
@@ -46,19 +45,19 @@ In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**]
 > using namespace Platform::Collections;
 > using namespace concurrency;
 > using namespace std;
-> 
+>
 > // Be sure to specify the Pictures Folder capability in the appxmanifext file.
 > StorageFolder^ picturesFolder = KnownFolders::PicturesLibrary;
-> 
+>
 > // Use a shared_ptr so that the string stays in memory
 > // until the last task is complete.
 > auto outputString = make_shared<wstring>();
 > *outputString += L"Files:\n";
-> 
+>
 > // Get a read-only vector of the file objects
-> // and pass it to the continuation. 
+> // and pass it to the continuation.
 > create_task(picturesFolder->GetFilesAsync())        
->    // outputString is captured by value, which creates a copy 
+>    // outputString is captured by value, which creates a copy
 >    // of the shared_ptr and increments its reference count.
 >    .then ([outputString] (IVectorView\<StorageFile^>^ files)
 >    {        
@@ -68,9 +67,9 @@ In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**]
 >            *outputString += L"\n";
 >       }
 >    })
->    // We need to explicitly state the return type 
+>    // We need to explicitly state the return type
 >    // here: -> IAsyncOperation<...>
->    .then([picturesFolder]() -> IAsyncOperation\<IVectorView\<StorageFolder^>^>^ 
+>    .then([picturesFolder]() -> IAsyncOperation\<IVectorView\<StorageFolder^>^>^
 >    {
 >        return picturesFolder->GetFoldersAsync();
 >    })
@@ -78,13 +77,13 @@ In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**]
 >    .then([this, outputString](IVectorView\<StorageFolder^>^ folders)
 >    {        
 >        *outputString += L"Folders:\n";
-> 
+>
 >        for ( unsigned int i = 0; i < folders->Size; i++)
 >        {
 >           *outputString += folders->GetAt(i)->Name->Data();
 >           *outputString += L"\n";
 >        }
-> 
+>
 >        // Assume m_OutputTextBlock is a TextBlock defined in the XAML.
 >        m_OutputTextBlock->Text = ref new String((*outputString).c_str());
 >     });
@@ -92,17 +91,17 @@ In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**]
 > ```cs
 > StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
 > StringBuilder outputText = new StringBuilder();
-> 
-> IReadOnlyList<StorageFile> fileList = 
+>
+> IReadOnlyList<StorageFile> fileList =
 >     await picturesFolder.GetFilesAsync();
-> 
+>
 > outputText.AppendLine("Files:");
 > foreach (StorageFile file in fileList)
 > {
 >     outputText.Append(file.Name + "\n");
 > }
-> 
-> IReadOnlyList<StorageFolder> folderList = 
+>
+> IReadOnlyList<StorageFolder> folderList =
 >     await picturesFolder.GetFoldersAsync();
 >            
 > outputText.AppendLine("Folders:");
@@ -114,41 +113,40 @@ In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**]
 > ```vb
 > Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
 > Dim outputText As New StringBuilder
-> 
+>
 > Dim fileList As IReadOnlyList(Of StorageFile) =
 >     Await picturesFolder.GetFilesAsync()
-> 
+>
 > outputText.AppendLine("Files:")
 > For Each file As StorageFile In fileList
-> 
+>
 >     outputText.Append(file.Name & vbLf)
-> 
+>
 > Next file
-> 
+>
 > Dim folderList As IReadOnlyList(Of StorageFolder) =
 >     Await picturesFolder.GetFoldersAsync()
-> 
+>
 > outputText.AppendLine("Folders:")
 > For Each folder As StorageFolder In folderList
-> 
+>
 >     outputText.Append(folder.DisplayName & vbLf)
-> 
+>
 > Next folder
 > ```
 
 
-> [!div class="tabbedCodeSnippets"]
+> **Hinweis**  Denken Sie in C# oder Visual Basic daran, das **async**-Schlüsselwort in der Methodendeklaration aller Methoden anzugeben, in denen Sie den **await**-Operator verwenden.
  
 
+Alternativ können Sie die [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286)-Methode verwenden, um alle Elemente (Dateien und Ordner) an einem bestimmten Speicherort abzurufen. Im folgenden Beispiel wird die **GetItemsAsync**-Methode verwendet, um alle Dateien und Unterordner im Stammordner der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) abzurufen (nicht in den Unterordnern). Anschließend werden die Namen der einzelnen Dateien und Unterordner aufgelistet. Wenn das Element ein Unterordner ist, wird dem Namen die Zeichenfolge `"folder"` angefügt.
 
-            **Hinweis**  Denken Sie in C# oder Visual Basic daran, das **async**-Schlüsselwort in der Methodendeklaration aller Methoden anzugeben, in denen Sie den **await**-Operator verwenden. Alternativ können Sie die [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286)-Methode verwenden, um alle Elemente (Dateien und Ordner) an einem bestimmten Speicherort abzurufen. Im folgenden Beispiel wird die **GetItemsAsync**-Methode verwendet, um alle Dateien und Unterordner im Stammordner der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) abzurufen (nicht in den Unterordnern). Anschließend werden die Namen der einzelnen Dateien und Unterordner aufgelistet.
-
-> [!div class="tabbedCodeSnippets"] 
+> [!div class="tabbedCodeSnippets"]
 > ```cpp
 > // See previous example for comments, namespace and #include info.
 > StorageFolder^ picturesFolder = KnownFolders::PicturesLibrary;
 > auto outputString = make_shared<wstring>();
-> 
+>
 > create_task(picturesFolder->GetItemsAsync())        
 >     .then ([this, outputString] (IVectorView<IStorageItem^>^ items)
 > {        
@@ -170,53 +168,53 @@ In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**]
 > ```cs
 > StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
 > StringBuilder outputText = new StringBuilder();
-> 
-> IReadOnlyList<IStorageItem> itemsList = 
+>
+> IReadOnlyList<IStorageItem> itemsList =
 >     await picturesFolder.GetItemsAsync();
-> 
+>
 > foreach (var item in itemsList)
 > {
 >     if (item is StorageFolder)
 >     {
 >         outputText.Append(item.Name + " folder\n");
-> 
+>
 >     }
 >     else
 >     {
 >         outputText.Append(item.Name + "\n");
-> 
+>
 >     }
 > }
 > ```
 > ```vb
 > Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
 > Dim outputText As New StringBuilder
-> 
+>
 > Dim itemsList As IReadOnlyList(Of IStorageItem) =
 >     Await picturesFolder.GetItemsAsync()
-> 
+>
 > For Each item In itemsList
-> 
+>
 >     If TypeOf item Is StorageFolder Then
-> 
+>
 >         outputText.Append(item.Name & " folder" & vbLf)
-> 
+>
 >     Else
-> 
+>
 >         outputText.Append(item.Name & vbLf)
-> 
+>
 >     End If
-> 
+>
 > Next item
 > ```
 
-## Wenn das Element ein Unterordner ist, wird dem Namen die Zeichenfolge `"folder"` angefügt.
+## Abfragen von Dateien an einem Speicherort und Auflisten der entsprechenden Dateien
 
-[!div class="tabbedCodeSnippets"] Abfragen von Dateien aus einem Speicherort und Auflisten der entsprechenden Dateien In diesem Beispiel erfolgt eine Abfrage nach allen Dateien in der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156), die nach Monat gruppiert werden, wobei das Beispiel dieses Mal auch die Unterordner rekursiv durchsucht.
+In diesem Beispiel erfolgt eine Abfrage nach allen Dateien in der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156), die nach Monat gruppiert werden, wobei das Beispiel dieses Mal auch die Unterordner rekursiv durchsucht. Zunächst wird [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) aufgerufen und der [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957)-Wert an die Methode übergeben. Dadurch erhalten wir ein [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066)-Objekt.
 
-Zunächst wird [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) aufgerufen und der [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957)-Wert an die Methode übergeben. Dadurch erhalten wir ein [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066)-Objekt.
+Als Nächstes wird [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br208074) aufgerufen, das [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Objekte zurückgibt, die virtuelle Ordner darstellen. In diesem Fall wird nach Monat gruppiert, sodass die virtuellen Ordner jeweils eine Gruppe von Dateien mit der gleichen Monatsangabe darstellen.
 
-> [!div class="tabbedCodeSnippets"] 
+> [!div class="tabbedCodeSnippets"]
 > ```cpp
 > //#include <ppltasks.h>
 > //#include <string>
@@ -227,17 +225,17 @@ Zunächst wird [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/
 > using namespace Platform::Collections;
 > using namespace Windows::Foundation::Collections;
 > using namespace std;
-> 
+>
 > StorageFolder^ picturesFolder = KnownFolders::PicturesLibrary;
-> 
-> StorageFolderQueryResult^ queryResult = 
+>
+> StorageFolderQueryResult^ queryResult =
 >     picturesFolder->CreateFolderQuery(CommonFolderQuery::GroupByMonth);
-> 
+>
 > // Use shared_ptr so that outputString remains in memory
 > // until the task completes, which is after the function goes out of scope.
 > auto outputString = std::make_shared<wstring>();
-> 
-> create_task( queryResult->GetFoldersAsync()).then([this, outputString] (IVectorView<StorageFolder^>^ view) 
+>
+> create_task( queryResult->GetFoldersAsync()).then([this, outputString] (IVectorView<StorageFolder^>^ view)
 > {        
 >     for ( unsigned int i = 0; i < view->Size; i++)
 >     {
@@ -262,22 +260,22 @@ Zunächst wird [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/
 > ```
 > ```cs
 > StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
-> 
-> StorageFolderQueryResult queryResult = 
+>
+> StorageFolderQueryResult queryResult =
 >     picturesFolder.CreateFolderQuery(CommonFolderQuery.GroupByMonth);
 >         
-> IReadOnlyList<StorageFolder> folderList = 
+> IReadOnlyList<StorageFolder> folderList =
 >     await queryResult.GetFoldersAsync();
-> 
+>
 > StringBuilder outputText = new StringBuilder();
-> 
+>
 > foreach (StorageFolder folder in folderList)
 > {
 >     IReadOnlyList<StorageFile> fileList = await folder.GetFilesAsync();
-> 
+>
 >     // Print the month and number of files in this group.
 >     outputText.AppendLine(folder.Name + " (" + fileList.Count + ")");
-> 
+>
 >     foreach (StorageFile file in fileList)
 >     {
 >         // Print the name of the file.
@@ -288,32 +286,32 @@ Zunächst wird [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/
 > ```vb
 > Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
 > Dim outputText As New StringBuilder
-> 
+>
 > Dim queryResult As StorageFolderQueryResult =
 >     picturesFolder.CreateFolderQuery(CommonFolderQuery.GroupByMonth)
-> 
+>
 > Dim folderList As IReadOnlyList(Of StorageFolder) =
 >     Await queryResult.GetFoldersAsync()
-> 
+>
 > For Each folder As StorageFolder In folderList
-> 
+>
 >     Dim fileList As IReadOnlyList(Of StorageFile) =
 >         Await folder.GetFilesAsync()
-> 
+>
 >     ' Print the month and number of files in this group.
 >     outputText.AppendLine(folder.Name & " (" & fileList.Count & ")")
-> 
+>
 >     For Each file As StorageFile In fileList
-> 
+>
 >         ' Print the name of the file.
 >         outputText.AppendLine("   " & file.Name)
-> 
+>
 >     Next file
-> 
+>
 > Next folder
 > ```
 
-Als Nächstes wird [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br208074) aufgerufen, das [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Objekte zurückgibt, die virtuelle Ordner darstellen.
+Die Ausgabe des Beispiels sieht in etwa wie folgt aus:
 
 ``` syntax
 July ‎2015 (2)
@@ -326,7 +324,6 @@ July ‎2015 (2)
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

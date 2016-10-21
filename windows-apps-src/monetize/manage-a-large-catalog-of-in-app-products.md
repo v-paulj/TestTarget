@@ -3,15 +3,18 @@ author: mcleanbyron
 ms.assetid: 5E722AFF-539D-456E-8C4A-ADE90CF7674A
 description: "Wenn Ihre App einen großen In-App-Produktkatalog enthält, können Sie optional das in diesem Thema beschriebene Verfahren zum Verwalten des Katalogs ausführen."
 title: "Verwalten eines großen Katalogs mit In-App-Produkten"
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0927df3cd696e5a6fbd3a235d2b87074f1d63929
+translationtype: Human Translation
+ms.sourcegitcommit: 5f975d0a99539292e1ce91ca09dbd5fac11c4a49
+ms.openlocfilehash: 529735319848fc0b8fac12e51b8536b178db0646
 
 ---
 
 # Verwalten eines großen Katalogs mit In-App-Produkten
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
+
+>**Hinweis**&nbsp;&nbsp;In diesem Artikel wird die Verwendung von Mitgliedern des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace erläutert. Wenn Ihre App für Windows10, Version 1607 oder höher, vorgesehen ist, empfehlen wir die Verwendung von Mitgliedern des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace zum Verwalten von Add-Ons (auch als In-App-Produkte oder IAPs bezeichnet) anstelle des **Windows.ApplicationModel.Store**-Namespace. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).
 
 Wenn Ihre App einen großen In-App-Produktkatalog enthält, können Sie optional das in diesem Thema beschriebene Verfahren zum Verwalten des Katalogs ausführen. Sie erstellen einige wenige Produkteinträge für bestimmte Preisniveaus, mit denen im Katalog jeweils Hunderte von Produkten dargestellt werden können.
 
@@ -19,14 +22,13 @@ Zur Aktivierung dieser Funktion verwenden Sie die [**RequestProductPurchaseAsync
 
 Im Store wird nur die *offerId* aus der Kaufanforderung des entsprechenden [**PurchaseResults**](https://msdn.microsoft.com/library/windows/apps/dn263392) verwendet. Mit diesem Verfahren werden die Informationen, die ursprünglich bei der [Eintragung des In-App-Produkts im Store](https://msdn.microsoft.com/library/windows/apps/mt148551) bereitgestellt wurden, nicht direkt geändert.
 
-
-            **Hinweis**  Ab Windows10 ist die Anzahl von Produkteinträgen pro Entwicklerkonto im Store nicht länger eingeschränkt. In früheren Versionen galt eine Store-Beschränkung von 200 Produkteinträgen pro Entwicklerkonto; mit dem in diesem Thema beschriebenen Verfahren kann diese Beschränkung umgangen werden.
+**Hinweis**  Ab Windows10 ist die Anzahl von Produkteinträgen pro Entwicklerkonto im Store nicht länger eingeschränkt. In früheren Versionen galt eine Store-Beschränkung von 200 Produkteinträgen pro Entwicklerkonto; mit dem in diesem Thema beschriebenen Verfahren kann diese Beschränkung umgangen werden.
 
 ## Voraussetzungen
 
 -   In diesem Thema wird die Store-Unterstützung für die Darstellung mehrerer In-App-Angebote mithilfe eines einzelnen im Store aufgeführten In-App-Produkts erläutert. Wenn Sie mit In-App-Käufen noch nicht vertraut sind, lesen Sie [Aktivieren von In-App-Produktkäufen](enable-in-app-product-purchases.md). Dort finden Sie Lizenzinformationen und eine Anleitung zur richtigen Eintragung Ihres In-App-Kaufs im Store.
 -   Wenn Sie Code für neue In-App-Angebote erstmalig schreiben und testen, müssen Sie anstelle des [**CurrentAppSimulator**](https://msdn.microsoft.com/library/windows/apps/hh779766)-Objekts das [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)-Objekt verwenden. Auf diese Weise können Sie überprüfen, ob die Lizenzlogik simulierte Aufrufe an den Lizenzserver und nicht an den Liveserver verwendet. Dazu müssen Sie die Datei mit dem Namen „WindowsStoreProxy.xml“ in %userprofile%\\AppData\\local\\packages\\&lt;package name&gt;\\LocalState\\Microsoft\\Windows Store\\ApiData anpassen. Diese Datei wird vom Simulator in Microsoft Visual Studio erstellt, wenn Sie Ihre App erstmalig ausführen. Sie können jedoch auch eine benutzerdefinierte Version dieser Datei zur Laufzeit laden. Weitere Informationen finden Sie unter **CurrentAppSimulator**.
--   In diesem Thema wird auch auf Codebeispiele verwiesen, die im [Store-Beispiel](http://go.microsoft.com/fwlink/p/?LinkID=627610) zu finden sind. Dieses Beispiel bietet eine hervorragende Möglichkeit, die verschiedenen Monetarisierungsoptionen zu testen, die für universelle Windows-Plattform (UWP)-Apps verfügbar sind.
+-   In diesem Thema wird auch auf Codebeispiele verwiesen, die im [Store-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store) zu finden sind. Dieses Beispiel bietet eine hervorragende Möglichkeit, die verschiedenen Monetarisierungsoptionen zu testen, die für universelle Windows-Plattform (UWP)-Apps verfügbar sind.
 
 ## Durchführen der Kaufanforderung für das In-App-Produkt
 
@@ -112,12 +114,12 @@ switch (result)
 
 * [Unterstützen von In-App-Produktkäufen](enable-in-app-product-purchases.md)
 * [Unterstützen von Käufen konsumierbarer In-App-Produkte](enable-consumable-in-app-product-purchases.md)
-* [Store-Beispiel (zeigt Testversionen und In-App-Einkäufe)](http://go.microsoft.com/fwlink/p/?LinkID=627610)
+* [Store-Beispiel (zeigt Testversionen und In-App-Einkäufe)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [**RequestProductPurchaseAsync**](https://msdn.microsoft.com/library/windows/apps/dn263382)
 * [**ProductPurchaseDisplayProperties**](https://msdn.microsoft.com/library/windows/apps/dn263384)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

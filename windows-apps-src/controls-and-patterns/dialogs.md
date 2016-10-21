@@ -1,21 +1,25 @@
 ---
 author: mijacobs
-Description: Dialogs and flyouts display transient UI elements that appear when the user requests them or when something happens that requires notification or approval.
-title: Dialogs and flyouts
+Description: "Dialogfelder und Flyouts zeigen vorübergehende UI-Elemente an, die angezeigt werden, wenn der Benutzer sie anfordert oder eine Aktion erfolgt, die eine Benachrichtigung oder Genehmigung erfordert."
+title: Dialogfelder und Flyouts
 label: Dialogs
 template: detail.hbs
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: ff9940c06276165dc139e120c4e9cdeb005ff125
+
 ---
+# Dialogfelder und Flyouts
+
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-# Dialogs and flyouts
-
-Dialogs and flyouts are transient UI elements that appear when something happens that requires notification, approval, or additional information from the user.
+Dialogfelder und Flyouts sind vorübergehende UI-Elemente, die angezeigt werden, wenn Ereignisse Benachrichtigungen, Genehmigungen oder zusätzliche Informationen vom Benutzer erfordern.
 
 <div class="important-apis" >
-<b>Important APIs</b><br/>
+<b>Wichtige APIs</b><br/>
 <ul>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">ContentDialog class</a></li>
-<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Flyout class</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx">ContentDialog-Klasse</a></li>
+<li><a href="https://msdn.microsoft.com/library/windows/apps/dn279496">Flyout-Klasse</a></li>
 </ul>
 
 </div>
@@ -43,40 +47,40 @@ Dialogs and flyouts are transient UI elements that appear when something happens
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-   <p><b>Dialogs</b> <br/><br/>
-   ![Example of a full-button dialog](images/controls_dialog_twobutton.png)</p>
-<p>Dialogs are modal UI overlays that provide contextual app information. Dialogs block interactions with the app window until being explicitly dismissed. They often request some kind of action from the user.   
+   <p><b>Dialogfelder</b> <br/><br/>
+   ![Beispiel für ein Dialogfeld mit einer Schaltfläche](images/controls_dialog_twobutton.png)</p>
+<p>Dialogfelder sind modale Benutzeroberflächenüberlagerungen, die kontextbezogene App-Informationen enthalten. Dialogfelder blockieren Interaktionen mit dem App-Fenster, bis sie explizit geschlossen werden. Sie verlangen häufig eine Aktion vom Benutzer.   
 </p><br/>
 
   </div>
   <div class="side-by-side-content-right">
    <p><b>Flyouts</b> <br/><br/>
-   ![Example of a flyout](images/flyout-example.png)</p>
-<p>A flyout is a lightweight contextual popup that displays UI related to what the user is doing. It includes placement and sizing logic, and can be used to reveal a hidden control, show more detail about an item, or ask the user to confirm an action. 
-</p><p>Unlike a dialog, a flyout can be quickly dismissed by tapping or clicking somewhere outside the flyout, pressing the Escape key or Back button, resizing the app window, or changing the device's orientation.
+   ![Flyout-Beispiel](images/flyout-example.png)</p>
+<p>Ein Flyout ist ein einfaches kontextbezogenes Popupmenü zum Anzeigen der Benutzeroberfläche, die im Zusammenhang mit den Aktionen des Benutzers steht. Es umfasst die Platzierung und Größe und kann ein ausgeblendetes Steuerelement oder weitere Details zu einem Element anzeigen oder den Benutzer zum Bestätigen einer Aktion auffordern. 
+</p><p>Im Gegensatz zu einem Dialogfeld kann ein Flyout durch Tippen oder Klicken auf eine Stelle außerhalb des Flyouts schnell geschlossen werden. Das Drücken der ESC- oder Zurück-Taste sowie das Ändern der Größe des App-Fensters oder der Ausrichtung des Geräts haben denselben Effekt.
 </p><br/>
 
   </div>
 </div>
 </div>
 
-## Is this the right control?
+## Ist dies das richtige Steuerelement?
 
-* Use dialogs and flyouts to notify users of important information or to request confirmation or additional info before an action can be completed. 
-* Don't use a flyout instead of [tooltip](tooltips.md) or [context menu](menus.md). Use a tooltip to show a short description that hides after a specified time. Use a context menu for contextual actions related to a UI element, such as copy and paste.  
-
-
-Dialogs and flyouts make sure that users are aware of important information, but they also disrupt the user experience. Because dialogs are modal (blocking), they interupt users, preventing them from doing anything else until they interact with the dialog. Flyouts provide a less jarring experience, but displaying too many flyouts can be distracting. 
-
-Consider the importance of the information you want to share: is it important enough to interupt the user? Also consider how frequently the information needs to be shown; if you're showing a dialog or notification every few minutes, you might want to allocate space for this info in the primary UI instead. For example, in a chat client, rather than showing a flyout every time a friend logs in, you might display a list of friends who are online at the moment and highlight friends as they log on. 
-
-Flyouts and dialogs are frequently used to confirm an action (such as deleting a file) before executing it. If you expect the user to perform a particular action frequently, consider providing a way for the user to undo the action if it was a mistake, rather than forcing users to confirm the action every time. 
+* Verwenden Sie Dialogfelder und Flyouts, um Benutzern wichtige Informationen zu melden oder deren Bestätigung oder zusätzliche Informationen anzufordern, bevor eine Aktion abgeschlossen werden kann. 
+* Verwenden Sie keine Flyouts anstelle von [QuickInfos](tooltips.md) oder [Kontextmenüs](menus.md). Verwenden Sie QuickInfos, um kurze Beschreibungen anzuzeigen, die nach einer festgelegten Zeit ausgeblendet werden. Verwenden Sie ein Kontextmenü für kontextbezogene Aktionen im Zusammenhang mit UI-Elementen (beispielsweise Kopieren und Einfügen).  
 
 
+Dialogfelder und Flyouts stellen sicher, dass den Benutzern wichtige Informationen bekannt sind, sie stellen jedoch auch eine Unterbrechung dar. Da Dialogfelder modal (gesperrt) sind, unterbrechen sie die Benutzer und verhindern, dass diese bis zur Interaktion mit dem Dialogfeld andere Schritte durchführen können. Flyouts sind weniger störend, das Anzeigen zu vieler Flyouts kann jedoch eine ablenkende Wirkung haben. 
 
-## Dialogs vs. flyouts
+Berücksichtigen Sie die Bedeutung der zu vermittelnden Informationen: Sind sie wichtig genug, um den Benutzer zu unterbrechen? Berücksichtigen Sie zudem, wie häufig die Informationen angezeigt werden müssen. Wenn ein Dialogfeld oder eine Benachrichtigung alle paar Minuten angezeigt wird, sollten Sie diese Informationen stattdessen in die primäre UI einbinden. So können Sie z.B. in einem Chat-Client anstatt eines Flyouts, der jedes Mal angezeigt wird, wenn sich ein Freund anmeldet, eine Liste der Freunde anzeigen, die derzeit online sind, und diejenigen Freunde hervorheben, die sich gerade anmelden. 
 
-Once you've determined that you want to use a dialog or flyout, you need to choose which one to use. 
+Flyouts und Dialogfelder werden häufig zum Bestätigen einer Aktion vor deren Ausführung verwendet (z.B. vor dem Löschen einer Datei). Wenn Sie davon ausgehen, dass die Benutzer häufig eine bestimmte Aktion ausführen, sollten Sie eine Möglichkeit bereitstellen, versehentliche Aktionen rückgängig zu machen, anstatt jedes Mal die Bestätigung der Aktion zu erzwingen. 
+
+
+
+## Dialogfelder im Vergleich zu Flyouts
+
+Wenn ein Dialogfeld oder Flyout eingesetzt werden soll, müssen Sie sich für eine der beiden Optionen entscheiden. 
 
 <!--
 Dialogs are modal, which means they block all interaction with the app until the user selects a dialog button. To visually reinforce their modal behavior, dialogs draw an overlay layer which partially obscures the temporarily unreachable app UI.
@@ -91,34 +95,34 @@ A flyout is a light dismiss control, meaning that users can choose from a variet
 
 -->
 
-Given that dialogs block interactions and flyouts do not, dialogs should be reserved for situations where you want the user to drop everything to focus on a specific bit of information or answer a question. Flyouts, on the other hand, can be used when you want to call attention to something, but it's ok if the user wants to ignore it. 
+Angesichts der Tatsache, dass Dialogfelder im Gegensatz zu Flyouts Interaktionen blockieren, sollten Dialogfelder auf Situationen beschränkt bleiben, in denen der Benutzer unterbrochen werden soll, um sich auf eine bestimmte Information oder die Beantwortung einer Frage zu konzentrieren. Flyouts hingegen können verwendet werden, wenn Sie auf etwas aufmerksam machen möchten, das der Benutzer jedoch ignorieren kann. 
 
 <div class="side-by-side">
 <div class="side-by-side-content">
   <div class="side-by-side-content-left">
-   <p><b>Use a dialog for...</b> <br/>
+   <p><b>Fälle, in denen ein Dialogfeld verwendet werden sollte:</b> <br/>
 <ul>
-<li>Expressing important information that the user **must** read and acknowledge before proceeding. Examples include:
+<li>Für wichtige Informationen, die der Benutzer vor dem Fortsetzen lesen und bestätigen **muss**. Beispiele:
 <ul>
-  <li>When the user's security might be compromised</li>
-  <li>When the user is about to permanently alter a valuable asset</li>
-  <li>When the user is about to delete a valuable asset</li>
-  <li>To confirm an in-app purchase</li>
+  <li>Die Sicherheit des Benutzers ist möglicherweise gefährdet.</li>
+  <li>Der Benutzer möchte eine wertvolle Ressource endgültig ändern.</li>
+  <li>Der Benutzer möchte eine wertvolle Ressource löschen.</li>
+  <li>Bestätigen eines In-App-Einkaufs</li>
 </ul>
 
 </li>
-<li>Error messages that apply to the overall app context, such as a connectivity error.</li>
-<li>Questions, when the app needs to ask the user a blocking question, such as when the app can't choose on the user's behalf. A blocking question can't be ignored or postponed, and should offer the user well-defined choices.</li>
+<li>Fehlermeldungen, die sich auf den Gesamtkontext der App beziehen, z. B. Verbindungsfehler.</li>
+<li>Fragen, wenn dem Benutzer eine blockierende Frage gestellt werden muss, z. B. wenn die App nicht im Auftrag des Benutzers eine Auswahl treffen kann. Eine blockierende Frage kann nicht ignoriert oder verschoben werden und sollte dem Benutzer klar definierte Auswahlmöglichkeiten bieten.</li>
 </ul> 
 </p>
   </div>
   <div class="side-by-side-content-right">
-   <p><b>Use a flyout for...</b> <br/>
+   <p><b>Fälle, in denen ein Flyout verwendet werden sollte:</b> <br/>
 <ul>
-<li>Collecting additional information needed before an action can be completed.</li>
-<li>Displaying info that's only relevent some of the time. For example, in a photo gallery app, when the user clicks an image thumbnail, you might use a flyout to display a large version of the image.</li>
-<li>Warnings and confirmations, including ones related to potentially destructive actions.</li>
-<li>Displaying more information, such as details or longer descriptions of an item on the page.</li>
+<li>Erfassen zusätzlicher Informationen, die erforderlich sind, bevor eine Aktion abgeschlossen werden kann.</li>
+<li>Anzeigen von Informationen, die nur vorübergehend relevant sind. So können Sie z.B. in einer Fotogalerie-App ein Flyout einsetzen, damit eine große Version des Bilds angezeigt wird, wenn der Benutzer auf eine Miniaturansicht klickt.</li>
+<li>Warnungen und Bestätigungen, z. B. im Zusammenhang mit möglicherweise schädlichen Aktionen.</li>
+<li>Anzeigen weiterer Informationen, z. B. von Details oder ausführlicheren Beschreibungen eines Elements auf der Seite.</li>
 </ul></p>
   </div>
 </div>
@@ -126,24 +130,24 @@ Given that dialogs block interactions and flyouts do not, dialogs should be rese
 
 
 
-## Dialog usage guidelines
+## Nutzungsrichtlinien zur Verwendung von Dialogfeldern
 
--   Clearly identify the issue or the user's objective in the first line of the dialog's text.
--   The dialog title is the main instruction and is optional.
-    -   Use a short title to explain what people need to do with the dialog. Long titles do not wrap and are truncated.
-    -   If you're using the dialog to deliver a simple message, error or question, you can optionally omit the title. Rely on the content text to deliver that core information.
-    -   Make sure that the title relates directly to the button choices.
--   The dialog content contains the descriptive text and is required.
-    -   Present the message, error, or blocking question as simply as possible.
-    -   If a dialog title is used, use the content area to provide more detail or define terminology. Don't repeat the title with slightly different wording.
--   At least one dialog button must appear.
-    -   Buttons are the only mechanism for users to dismiss the dialog.
-    -   Use buttons with text that identifies specific responses to the main instruction or content. An example is, "Do you want to allow AppName to access your location?", followed by "Allow" and "Block" buttons. Specific responses can be understood more quickly, resulting in efficient decision making.
--   Error dialogs display the error message in the dialog box, along with any pertinent information. The only button used in an error dialog should be “Close” or a similar action.
--   Don't use dialogs for errors that are contextual to a specific place on the page, such as validation errors (in password fields, for example), use the app's canvas itself to show inline errors.
+-   Sie sollten das Problem oder das Ziel direkt in der ersten Zeile des Dialogfeldtexts deutlich benennen.
+-   Der Dialogfeldtitel ist die Hauptanweisung und optional.
+    -   Verwenden Sie einen kurzen Titel, um dem Benutzer die erforderlichen Aktionen im Dialogfeld zu erklären. Lange Titel werden nicht umgebrochen und daher abgeschnitten.
+    -   Wenn Sie mit dem Dialogfeld eine einfache Meldung, einen Fehler oder eine Frage anzeigen möchten, können Sie den Titel optional auslassen. Vermitteln Sie dann im Inhalt die wichtigsten Informationen.
+    -   Stellen Sie sicher, dass sich der Titel direkt auf die Auswahlmöglichkeiten der Schaltflächen bezieht.
+-   Der Inhalt des Dialogfelds enthält den beschreibenden Text und ist erforderlich.
+    -   Stellen Sie die Meldung, den Fehler oder die blockierende Frage so einfach wie möglich dar.
+    -   Stellen Sie bei Verwendung eines Dialogfeldtitels mithilfe des Inhaltsbereichs weitere Details bereit, oder definieren Sie Terminologie. Wiederholen Sie nicht den Titel mit anderen Worten.
+-   Mindestens eine Dialogfeldschaltfläche muss angezeigt werden.
+    -   Schaltflächen sind die einzigen Mechanismen, mit denen Benutzer das Dialogfeld schließen können.
+    -   Verwenden Sie Schaltflächen mit Text, die eine konkrete Reaktion auf die Hauptanweisung oder den Inhalt repräsentieren. Beispiel: "Möchten Sie AppName den Zugriff auf Ihren Standort erlauben?", gefolgt von den Schaltflächen "Zulassen" und "Blockieren". Klare Antworten erleichtern das Verständnis und damit die schnelle Entscheidungsfindung.
+-   Bei Fehlerdialogfeldern wird die Fehlermeldung im Dialogfeld zusammen mit allen relevanten Informationen angezeigt. Die einzige in einem Fehlerdialogfeld verwendete Schaltfläche sollte „Schließen“ oder eine ähnliche Aktion sein.
+-   Kontextbezogene Fehler, die sich auf eine bestimmte Stelle auf der Seite beziehen, beispielsweise Validierungsfehler (wie in Kennwortfeldern), verwenden die Canvas der App selbst zum Anzeigen von Inlinefehlern.
 
-## Create a dialog
-To create a dialog, you use the [ContentDialog class](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx). You can create a dialog in code or markup. Although its usually easier to define UI elements in XAML, in the case of a simple dialog, it's actually easier to just use code. This example creates a dialog to notify the user that there's no WiFi connection, and then uses the [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) method to display it.
+## Erstellen eines Dialogfelds
+Um ein Dialogfeld zu erstellen, verwenden Sie die [ContentDialog-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx). Sie können ein Dialogfeld im Code oder Markup erstellen. Obwohl es in der Regel leichter ist, UI-Elemente in XAML zu definieren, ist es bei einem einfachen Dialogfeld unkomplizierter, Code zu verwenden. In diesem Beispiel wird ein Dialogfeld erstellt, um dem Benutzer mitzuteilen, dass keine WLAN-Verbindung vorhanden ist. Für die Anzeige wird die Methode [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) verwendet.
 
 ```csharp
 private async void displayNoWifiDialog()
@@ -159,9 +163,9 @@ private async void displayNoWifiDialog()
 }
 ```
 
-When the user clicks a dialog button, the [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) method returns a [ContentDialogResult](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialogresult.aspx) to let you know which button the user clicks. 
+Wenn der Benutzer auf eine Dialogfeldschaltfläche klickt, gibt die Methode [ShowAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialog.showasync.aspx) ein [ContentDialogResult](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialogresult.aspx) zurück, damit Sie wissen, auf welche Schaltfläche der Benutzer klickt. 
 
-The dialog in this example asks a question and uses the returned [ContentDialogResult](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialogresult.aspx) to determine the user's response. 
+Das Dialogfeld in diesem Beispiel stellt eine Frage und verwendet das zurückgegebene [ContentDialogResult](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.contentdialogresult.aspx), um die Antwort des Benutzers zu ermitteln. 
 
 ```csharp
 private async void displayDeleteFileDialog()
@@ -186,13 +190,13 @@ private async void displayDeleteFileDialog()
 ```
 
 
-##  Create a flyout
+##  Erstellen eines Flyouts
 
-A flyout is an open-ended container that can show arbitrary UI as its content.  
+Ein Flyout ist ein offener Container, der beliebige UI als Inhalt anzeigen kann.  
 
-Flyouts are attached to specific controls. You can use the [Placement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx) property to specify where flyout appears: Top, Left, Bottom, Right, or Full. If you select the [Full placement mode](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx), the app stretches the flyout and centers it inside the app window. When visible, they should be anchored to the invoking object and specify their preferred relative position to the object: Top, Left, Bottom, or Right. Flyout also has a Full placement mode which attempts to stretch the flyout and center it inside the app window. Some controls, such as [Button](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx), provide a [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx) property that you can use to associate a flyout. 
+Flyouts sind an bestimmte Steuerelemente angefügt. Sie können mit der [Placement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.placement.aspx)-Eigenschaft angeben, wo das Flyout angezeigt wird: oben, links, unten, rechts oder als Vollbild. Wenn Sie den [vollständigen Platzierungsmodus](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutplacementmode.aspx) auswählen, streckt die App das Flyout und zentriert es innerhalb des App-Fensters. Wenn sie sichtbar sind, sollten sie am aufrufenden Objekt verankert sein und ihre bevorzugte relative Position zum Objekt angeben: oben, links, unten oder rechts. Flyout verfügt außerdem über einen vollständigen Platzierungsmodus, der versucht, das Flyout zu strecken und innerhalb des App-Fensters zu zentrieren. Einige Steuerelemente wie z.B. [Schaltflächen](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.aspx) verfügen über die Eigenschaft [Flyout](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.button.flyout.aspx), mit der Sie ein Flyout zuordnen können. 
 
-This example creates a simple flyout that displays some text when the button is pressed. 
+In diesem Beispiel wird ein einfaches Flyout erstellt, das Text angezeigt, wenn die Schaltfläche gedrückt wird. 
 ````xaml
 <Button Content="Click me">
   <Button.Flyout>
@@ -203,9 +207,9 @@ This example creates a simple flyout that displays some text when the button is 
 </Button>
 ````
 
-If the control doesn't have a flyout property, you can use the [FlyoutBase.AttachedFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) attached property instead. When you do this, you also need to call the [FlyoutBase.ShowAttachedFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.showattachedflyout) method to show the flyout. 
+Wenn das Steuerelement nicht über eine Flyout-Eigenschaft verfügt, können Sie stattdessen die angefügte Eigenschaft [FlyoutBase.AttachedFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.attachedflyout.aspx) verwenden. In diesem Fall müssen Sie zudem die [FlyoutBase.ShowAttachedFlyout](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.primitives.flyoutbase.showattachedflyout)-Methode aufrufen, um das Flyout anzuzeigen. 
 
-This example adds a simple flyout to an image. When the user taps the image, the app shows the flyout. 
+In diesem Beispiel wird einem Bild ein einfaches Flyout hinzugefügt. Wenn der Benutzer auf das Bild tippt, zeigt die App das Flyout an. 
 
 ````xaml
 <Image Source="Assets/cliff.jpg" Width="50" Height="50" 
@@ -225,7 +229,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-The previous examples defined their flyouts inline. You can also define a flyout as a static resource and then use it with multiple elements. This example creates a more complicated flyout that displays a larger version of an image when its thumbnail is tapped. 
+In den vorherigen Beispielen wurden die Flyouts inline definiert. Sie können ein Flyout auch als statische Ressource definieren und sie dann mit mehreren Elementen verwenden. In diesem Beispiel wird ein komplizierteres Flyout erstellt, mit dem eine größere Version eines Bilds angezeigt wird, wenn auf die Miniaturansicht getippt wird. 
 
 ````xaml
 <!-- Declare the shared flyout as a resource. -->
@@ -274,8 +278,8 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ````
 
-## Style a flyout
-To style a Flyout, modify its [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx). This example shows a paragraph of wrapping text and makes the text block accessible to a screen reader.
+## Gestalten eines Flyouts
+Um ein Flyout zu formatieren, ändern Sie den [FlyoutPresenterStyle](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.flyout.flyoutpresenterstyle.aspx). In diesem Beispiel wird ein Absatz mit Textumbruch dargestellt. Zudem wird der Textblock für ein Bildschirmleseprogramm zugänglich gemacht.
 
 ````xaml
 <Flyout>
@@ -292,12 +296,18 @@ To style a Flyout, modify its [FlyoutPresenterStyle](https://msdn.microsoft.com/
 </Flyout>
 ````
 
-## Get the samples
-*   [XAML UI basics](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
-    See all of the XAML controls in an interactive format.
+## Beispiele herunterladen
+*   [XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)<br/>
+    Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.
 
-## Related articles
-- [Tooltips](tooltips.md)
-- [Menus and context menu](menus.md)
-- [**Flyout class**](https://msdn.microsoft.com/library/windows/apps/dn279496)
-- [**ContentDialog class**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)
+## Verwandte Artikel
+- [QuickInfos](tooltips.md)
+- [Menüs und Kontextmenü](menus.md)
+- [**Flyout-Klasse**](https://msdn.microsoft.com/library/windows/apps/dn279496)
+- [**ContentDialog-Klasse**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.contentdialog.aspx)
+
+
+
+<!--HONumber=Aug16_HO3-->
+
+

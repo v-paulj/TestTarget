@@ -4,8 +4,8 @@ ms.assetid: b307fc7d-0424-459d-8c20-e37e5cfec0d0
 description: "Erfahren Sie mehr über die Anforderungen, die Apps, in denen die Microsoft Advertising-Bibliotheken verwendet werden, erfüllen müssen, bevor sie im Store veröffentlicht werden können."
 title: "Übermitteln einer App mit Werbung an den Windows Store"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 24a4608692c0a996c86d8b74aee38f931fdaf557
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: cf9cc2d9ed59e80d5e9a5222d17c277aa79c7814
 
 
 ---
@@ -13,7 +13,7 @@ ms.openlocfilehash: 24a4608692c0a996c86d8b74aee38f931fdaf557
 # Übermitteln einer App mit Werbung an den Windows Store
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Nach Abschluss der Entwicklung Ihrer App mit Werbung können Sie Ihre App über das Windows Dev Center-Dashboard veröffentlichen, damit sie im Windows Store verfügbar ist. Weitere Informationen zu diesem Vorgang finden Sie unter [Veröffentlichen von Windows-Apps](https://developer.microsoft.com/windows/publish).
 
@@ -30,6 +30,6 @@ Alle an den Windows Store übermittelten Apps müssen den [Windows Store-Richtli
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

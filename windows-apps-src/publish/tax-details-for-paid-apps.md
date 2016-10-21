@@ -3,8 +3,9 @@ author: jnHs
 Description: Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen auf Auszahlungen sowie zu Steuerpflichten finden Sie in der folgenden Tabelle unter dem Land bzw. der Region der Verteilung.
 title: Steuerinformationen zu kostenpflichtigen Apps
 ms.assetid: 97F77EBA-EBA1-4308-8F64-F40988BCBB2C
+translationtype: Human Translation
 ms.sourcegitcommit: a59d999ac36e04fbfa53d5b8992b235bff2d3818
-ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
+ms.openlocfilehash: 3efc5a575a7ed81b4dfb8e2349e252e61355cfc2
 
 ---
 
@@ -13,11 +14,9 @@ ms.openlocfilehash: 364608e1452ddff7aae261bb0f29ec14ee4fb0a3
 
 Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen auf Auszahlungen sowie zu Steuerpflichten finden Sie in der folgenden Tabelle unter dem Land bzw. der Region der Verteilung.
 
-> 
-            **Hinweis**  Die Regulierung zur Markterweiterung (Commerce Expansion Adjustment) hat in einigen wenigen Ländern/Regionen möglicherweise Auswirkungen auf die Auszahlung. Weitere Informationen über die Regulierung zur Markterweiterung (Commerce Expansion Adjustment) und die entsprechenden Märkte finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und in der Liste der [betreffenden Länder/Regionen](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+> **Hinweis**  Die Regulierung zur Markterweiterung (Commerce Expansion Adjustment) hat in einigen wenigen Ländern/Regionen möglicherweise Auswirkungen auf die Auszahlung. Weitere Informationen über die Regulierung zur Markterweiterung (Commerce Expansion Adjustment) und die entsprechenden Märkte finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058) und in der Liste der [betreffenden Länder/Regionen](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
-> 
-            **Hinweis**  Steuersätze können jederzeit geändert werden. Microsoft kann nicht garantieren, dass die Steuersätze in den folgenden Tabellen immer exakt stimmen.
+> **Hinweis**  Steuersätze können sich jederzeit ändern. Microsoft kann nicht garantieren, dass die Steuersätze in den folgenden Tabellen immer exakt stimmen.
 
  
 
@@ -284,6 +283,6 @@ Die einzelnen Zeilen des Berichts enthalten das Datum und die Uhrzeit der Transa
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,8 +5,9 @@ title: Drehung
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: a43bdd27ff7b79f561789a14d1a8e6caed08dc89
+ms.openlocfilehash: 2fe8814d98dd5ce4471530c7367b8ad266cc6b05
 
 ---
 
@@ -61,7 +62,7 @@ In dieser letzten Abbildung wurde der Mittelpunkt der Drehung durch die Anwendun
 
  
 
-Windows 8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
+Windows8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
 
 <table>
 <colgroup>
@@ -77,7 +78,7 @@ Windows 8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
 <tbody>
 <tr class="odd">
 <td align="left">Freie Drehung</td>
-<td align="left"><p>Bei der freien Drehung können Benutzer Inhalte frei um bis zu 360 Grad drehen. Wenn das Objekt losgelassen wird, bleibt es in der ausgewählten Position. Die freie Drehung ist hilfreich in Zeichen- und Layoutanwendungen wie beispielsweise Microsoft PowerPoint, Word, Visio und Paint sowie Adobe Photoshop, Illustrator und Flash.</p></td>
+<td align="left"><p>Bei der freien Drehung können Benutzer Inhalte frei um bis zu 360Grad drehen. Wenn das Objekt losgelassen wird, bleibt es in der ausgewählten Position. Die freie Drehung ist hilfreich in Zeichen- und Layoutanwendungen wie beispielsweise MicrosoftPowerPoint, Word, Visio und Paint sowie Adobe Photoshop, Illustrator und Flash.</p></td>
 </tr>
 <tr class="even">
 <td align="left">Eingeschränkte Drehung</td>
@@ -127,6 +128,6 @@ Windows 8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

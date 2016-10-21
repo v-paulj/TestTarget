@@ -3,8 +3,9 @@ author: mtoepke
 title: Zuordnung von DirectX9-Funktionen zu DirectX11-APIs
 description: Erfahren Sie, wie die Features Ihres Direct3D9-Spiels zu Direct3D11 und zur Universellen Windows-Plattform (UWP) zugeordnet werden.
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3a9e9c32ed2d892674592f32d0f067fed668d9d1
+ms.openlocfilehash: 6ab76921f1e8b613010f99eba6a141daca128ea5
 
 ---
 
@@ -25,8 +26,7 @@ Erfahren Sie, wie die Features Ihres Direct3D9-Spiels zu Direct3D11 und zur Univ
 ## Zuordnen von Direct3D9-Features zu DirectX11-APIs
 
 
-
-            [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) ist nach wie vor die Grundlage von DirectX-Grafiken, die API wurde seit DirectX 9 jedoch geändert:
+[Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) ist nach wie vor die Grundlage von DirectX-Grafiken, die API wurde seit DirectX 9 jedoch geändert:
 
 -   Zum Einrichten von Grafikadaptern wird die Microsoft DirectX Graphics Infrastructure (DXGI) verwendet. Verwenden Sie [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534) zum Auswählen von Pufferformaten, Erstellen von Swapchains, Darstellen von Frames und Erstellen freigegebener Ressourcen. Siehe [Übersicht über DXGI](https://msdn.microsoft.com/library/windows/desktop/bb205075).
 -   Ein Direct3D-Gerätekontext wird zum Festlegen des Pipelinestatus und Generieren von Renderbefehlen verwendet. In den meisten unserer Beispiele wird ein unmittelbarer Kontext verwendet, um direkt auf dem Gerät zu rendern. Direct3D11 unterstützt auch das Multithread-Rendering, wobei dann verzögerte Kontexte verwendet werden. Siehe [Einführung in ein Gerät in Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476880).
@@ -37,8 +37,7 @@ Eine vollständige Liste der Direct3D11-Funktionen finden Sie unter [Features vo
 ## Umstellung von Direct2D9 auf Direct2D11
 
 
-
-            [Direct2D (Windows)](https://msdn.microsoft.com/library/windows/desktop/dd370990) ist weiterhin ein wichtiger Bestandteil von DirectX-Grafiken und Windows. Sie können mit Direct2D weiterhin 2D-Spiele und Direct3D-basierte Überlagerungen (HUDs) zeichnen.
+[Direct2D (Windows)](https://msdn.microsoft.com/library/windows/desktop/dd370990) ist weiterhin ein wichtiger Bestandteil von DirectX-Grafiken und Windows. Sie können mit Direct2D weiterhin 2D-Spiele und Direct3D-basierte Überlagerungen (HUDs) zeichnen.
 
 Direct2D baut auf Direct3D auf. 2D-Spiele können mit beiden APIs implementiert werden. Ein mit Direct3D implementiertes 2D-Spiel kann z.B. die orthografische Projektion verwenden, Z-Werte zum Steuern der Zeichnungsreihenfolge von Grundtypen festlegen und mit Pixelshadern Spezialeffekte hinzufügen.
 
@@ -92,8 +91,7 @@ DirectInput wird für UWP nicht unterstützt:
 ## Verwenden von Microsoft Media Foundation anstelle von DirectShow
 
 
-DirectShow ist nicht mehr in der DirectX-API (oder der Windows-API) enthalten. 
-            [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) stellt Videoinhalte mithilfe von freigegebenen Oberflächen für Direct3D bereit. Siehe [Direct3D11-Video-APIs](https://msdn.microsoft.com/library/windows/desktop/hh447677).
+DirectShow ist nicht mehr in der DirectX-API (oder der Windows-API) enthalten. [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) stellt Videoinhalte mithilfe von freigegebenen Oberflächen für Direct3D bereit. Siehe [Direct3D11-Video-APIs](https://msdn.microsoft.com/library/windows/desktop/hh447677).
 
 ## Ersetzen von DirectPlay durch Netzwerkcode
 
@@ -676,6 +674,6 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

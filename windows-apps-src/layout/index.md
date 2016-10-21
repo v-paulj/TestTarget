@@ -2,18 +2,15 @@
 description: "Erfahren Sie, wie Sie eine UWP-App entwerfen und kodieren, die eine einfache Navigation besitzt und auf vielen Geräten und Bildschirmen verschiedener Größen großartig aussieht."
 title: "Layoutdesign von UWP-Apps – Entwicklung von Windows-Apps"
 author: mijacobs
-keywords: uwp app layout, universal windows platform, app design, interface
+keywords: Layout von UWP-Apps, universelle Windows-Plattform, App-Design, Schnittstelle
 translationtype: Human Translation
-ms.sourcegitcommit: fa1567d3ff80dc9c9376736c7d25c2bb06e79cc9
-ms.openlocfilehash: 7a1233724b9b0fd9af709bbf114669fe102e6f0d
+ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
+ms.openlocfilehash: 72c4b957c98956965c773b4c2182796880f59a1d
 
 ---
-
+# Layout für UWP-Apps
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
-<div class="uwpd-banner">
-<h1 class="uwpd-ruledheader">Layout für UWP-Apps</h1>
-</div>
 
 App-Struktur, Seitenlayout und Navigation bilden die Grundlage der Benutzerumgebung Ihrer App. Die Artikel in diesem Abschnitt helfen Ihnen, eine App zu erstellen, in der Benutzer leicht navigieren können und die auf einer Vielzahl von Geräten und Bildschirmgrößen hervorragend aussieht.
 
@@ -86,6 +83,6 @@ Neben Abmessungseigenschaften (Breite, Höhe und Beschränkungen) können Elemen
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

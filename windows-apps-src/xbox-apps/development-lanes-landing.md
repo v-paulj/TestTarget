@@ -1,28 +1,32 @@
 ---
-title: "Portieren vorhandener Spiele für Xbox"
-author: JordanEllis6809
+title: Portieren vorhandener Spiele zu Xbox
+description: Portieren vorhandener Spiele zu Xbox mit UWP.
 translationtype: Human Translation
-ms.sourcegitcommit: e0c273495321689e37df6b36d97870327cff6c5a
-ms.openlocfilehash: 54db2390b5df3b5c6bc7ca6f7d6e36454435c543
+ms.sourcegitcommit: eec992d19d63778a46f97b76f3c8dea252a6a87b
+ms.openlocfilehash: 383e0f77ff9b810d5e5627b8df9ca09b03f4d0ae
 
 ---
 
-# Portieren vorhandener Spiele für Xbox
+# Portieren vorhandener Spiele zu Xbox
 
 
-Je nach den Technologien, die Sie im Spiel verwenden, können Sie Ihr Spiel mit einigen Schritten für UWP auf Xbox portieren.
+Abhängig von den im Spiel verwendeten Technologien können Sie Ihr Spiel mithilfe der folgenden Schritte für UWP auf Xbox portieren.
 
-=======
-**Hinweis: Es werden nicht alle Game-Engines aufgeführt, die die Universelle Windows-Plattform (UWP) unterstützen. Ist eine in Ihrem Spiel verwendete Technologie nicht aufgeführt, wenden Sie sich für Informationen zur Unterstützung von UWP an den Produktentwickler.**
+> [!NOTE]
+> Es werden nicht alle Spielengines aufgeführt, die die UWP unterstützen. Ist eine in Ihrem Spiel verwendete Technologie nicht aufgeführt, wenden Sie sich für Informationen zur Unterstützung von UWP an den Produktentwickler.
 
 | Engine      | Beschreibung |
 |------------|-------------|
-|[Angepasstes C++](development-lanes-custom-cpp.md)| Informationen zur C++ Spieleentwicklung auf Xbox unter Verwendung der Universellen Windows-Plattform (UWP). |
+|[Angepasstes C++](development-lanes-custom-cpp.md)| Informationen zur C++-Spieleentwicklung auf Xbox mit UWP. |
 |[Unity](development-lanes-unity.md)| Lernprogramm, das Ihnen dabei hilft, vorhandene Spiele von Unity zu Xbox zu portieren. |
 |[HTML/JS](development-lanes-html.md)| Informationen zur HTML-Spieleentwicklung auf Xbox. |
 
+## Weitere Informationen
+
+- [UWP auf XboxOne](index.md)
 
 
-<!--HONumber=Jul16_HO1-->
+
+<!--HONumber=Aug16_HO3-->
 
 

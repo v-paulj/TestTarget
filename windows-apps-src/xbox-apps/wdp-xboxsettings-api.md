@@ -3,8 +3,8 @@ author: payzer
 title: "Device Portal - Referenz zur API für Xbox-Entwicklereinstellungen"
 description: Erfahren Sie, wie Sie auf Xbox-Entwicklereinstellungen zugreifen.
 translationtype: Human Translation
-ms.sourcegitcommit: a9a2b6e58dfa0d1e77164a59f204deabf8f5c3e0
-ms.openlocfilehash: e3637f5a8481c0800af42c011fb811b908b946b1
+ms.sourcegitcommit: c51eff41e63d815f6298b4fc46a9b11314bc8bc9
+ms.openlocfilehash: 5a983714cda9b5a5f45e555e2cb6f980f082a003
 
 ---
 
@@ -60,15 +60,15 @@ Mit der folgenden Anforderung können Sie Informationen zu einer einzelnen Einst
 
 Methode      | Anforderungs-URI
 :------     | :-----
-GET | /ext/settings/<setting name>
+GET | /ext/settings/\<setting name\>
 <br />
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**
 
@@ -101,15 +101,15 @@ Mit der folgenden Anforderung können Sie den Wert für eine Einstellung festleg
 
 Methode      | Anforderungs-URI
 :------     | :-----
-PUT | /ext/settings/<setting name>
+PUT | /ext/settings/\<setting name\>
 <br />
 **URI-Parameter**
 
-- Keine
+- Keiner
 
 **Anforderungsheader**
 
-- Keine
+- Keiner
 
 **Anforderungstext**   
 Der Anforderungstext ist ein JSON-Objekt mit dem folgenden Feld:   
@@ -137,6 +137,6 @@ HTTP-Statuscode      | Beschreibung
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

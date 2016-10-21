@@ -3,8 +3,9 @@ author: jnHs
 Description: "Der Windows Store erreicht Kunden in über 200Ländern und Regionen in aller Welt."
 title: "Festlegen des Preises und Auswählen der Märkte"
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
+translationtype: Human Translation
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: 3fb8594748d303216a4437983604b5d78c993934
 
 ---
 
@@ -13,8 +14,7 @@ ms.openlocfilehash: 9a1d8b8fb57989091fe7b82ad34066240f62cb8b
 
 Der Windows Store erreicht Kunden in über 200Ländern und Regionen in aller Welt. Sie können bestimmen, in welchen Märkten und zu welchem Preis Ihre App angeboten werden soll, und außerdem Preise marktabhängig anpassen.
 
-
-            **Hinweis:** Beachten Sie unsere [Richtlinien zum Globalisieren von Apps](https://msdn.microsoft.com/library/windows/apps/hh969150).
+**Hinweis** Beachten Sie unsere [Richtlinien zum Globalisieren von Apps](https://msdn.microsoft.com/library/windows/apps/hh969150).
 
  
 
@@ -25,8 +25,7 @@ Wenn Sie den **Grundpreis** für Ihre App auswählen, wird dieser Preis in sämt
 
 Sie können den **Grundpreis** auf **Kostenlos** festlegen oder ein verfügbares Preisniveau auswählen. Diese bestimmt den Verkaufspreis in allen Ländern, in denen Sie Ihre App vertreiben möchten. Das Preisniveau beginnt bei 0,99USD und steigen schrittweise (1,29USD, 1,49USD, 1,99USD usw.). Die Schritte steigen mit der Höhe des Preises.
 
-> 
-            **Hinweis:** Diese Preisniveaus gelten auch für [In-App-Produkte (IAPs)](iap-submissions.md).
+> **Hinweis** Diese Preisniveaus gelten auch für [Add-Ons](add-on-submissions.md).
 
 Jedes Preisniveau hat einen entsprechenden Wert in jeder der über 60vom Store angebotenen Währungen. Diese Werte sollten Ihnen helfen, Ihre Apps weltweit zu vergleichbaren Preisen zu verkaufen. Aufgrund von Wechselkursschwankungen kann der genaue Verkaufsbetrag von Währung zu Währung jedoch geringfügig abweichen.
 
@@ -39,25 +38,22 @@ Die App wird standardmäßig in allen möglichen Märkten, einschließlich zukü
 
 Um diese Einstellungen zu ändern, erweitern Sie auf der Seite **Preise und Verfügbarkeit** Ihrer App-Einreichung den Abschnitt **Märkte und angepasste Preise**. Sie können die Auswahl einzelner Märkte aufheben, um sie auszuschließen, oder auf **Auswahl aufheben** klicken und dann die gewünschten Märkte einzeln hinzufügen.
 
-> 
-            **Wichtig:**   Sie sind dafür verantwortlich, alle lokalen gesetzlichen Anforderungen zu erfüllen – auch wenn diese Anforderungen hier oder im Windows Dev Center-Dashboard nicht genannt sind.
+> **Wichtig** Sie sind dafür verantwortlich, alle lokalen gesetzlichen Anforderungen zu erfüllen – auch wenn diese Anforderungen hier oder im Windows Dev Center-Dashboard nicht genannt sind.
 
 Hier können Sie für Ihre App auch angepasste Preise in bestimmten Märkten festlegen. Andernfalls wird Ihre App standardmäßig zum Grundpreis (in der lokalen Währung des jeweiligen Markts) angeboten.
 
-> 
-            **Hinweis:** Sie können auch angepasste Preise für bestimmte Märkte für [IAP-Einreichungen](iap-submissions.md) festlegen.
+> **Hinweis** Sie können auch angepasste Preise für bestimmte Märkte für [Add-On-Übermittlungen](add-on-submissions.md) festlegen.
 
 Bestimmte Apps werden u.U. aufgrund von örtlich geltenden Gesetzen und Beschränkungen oder anderen Faktoren in bestimmten Märkten nicht angeboten, obwohl Sie alle Märkte ausgewählt haben. Außerdem haben einige Märkte möglicherweise spezifische Anforderungen für Altersfreigaben. Wenn Ihre App diese Anforderungen nicht erfüllt, können wir sie auf diesem Markt nicht anbieten. Weitere Informationen finden Sie unter [Altersfreigaben](age-ratings.md).
 
-> 
-            **Hinweis:** Für Apps für Windows8 oder Windows8.1 werden einige einzelne Märkte zusammen als „Restliche Welt“ behandelt. Weitere Informationen finden Sie unter [Märkte "Restliche Welt" für Windows 8.x](#rest-of-world-markets-for-windows-8-x). Bedenken Sie außerdem, dass Kunden mit Windows8 oder Windows8.1 die App nur zum Grundpreis angezeigt wird, auch wenn Sie den Preis in ihrem Markt ändern.
+> **Hinweis** Für Windows8- oder Windows8.1-Apps werden einige Einzelmärkte als „Restliche Welt“ zusammengefasst. Weitere Informationen finden Sie unter [Märkte "Restliche Welt" für Windows 8.x](#rest-of-world-markets-for-windows-8-x). Bedenken Sie außerdem, dass Kunden mit Windows8 oder Windows8.1 die App nur zum Grundpreis angezeigt wird, auch wenn Sie den Preis in ihrem Markt ändern.
 
  
 
 ## Windows Store-Verbrauchermärkte
 
 
-Sie können Ihre App (oder Ihr IAP) für mindestens einen der folgenden Märkte eintragen.
+Sie können Ihre App (oder Ihr Add-On) für mindestens einen der folgenden Märkte eintragen.
 
 -   Afghanistan
 -   Ålandinseln
@@ -555,11 +551,10 @@ Folgende Märkte sind in "Restliche Welt" für Windows 8.x enthalten:
 -   Sambia
 -   Simbabwe
 
-> 
-            **Hinweis:** Eine Liste der Länder und Regionen, in denen Sie sich für ein Entwicklerkonto registrieren können, finden Sie unter [Kontotypen, Standorte und Gebühren](https://msdn.microsoft.com/library/windows/apps/jj863494).
+> **Hinweis** Eine Liste der Länder und Regionen, in denen Sie sich für ein Entwicklerkonto registrieren können, finden Sie unter [Kontotypen, Standorte und Gebühren](https://msdn.microsoft.com/library/windows/apps/jj863494).
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

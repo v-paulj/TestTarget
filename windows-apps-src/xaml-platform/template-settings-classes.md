@@ -3,8 +3,9 @@ author: jwmsft
 description: Vorlageneinstellungsklassen
 title: Vorlageneinstellungsklassen
 ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 1ae6ca45808eae8943f471cceaf78fc5e8d81410
+ms.openlocfilehash: 8a52535e54a321bab6b34b6a73c53222e88d2151
 
 ---
 
@@ -18,47 +19,20 @@ Es wird davon ausgegangen, dass Sie Ihrer Benutzeroberfläche Steuerelemente hin
 
 ## Das Szenario für **TemplateSettings**-Klassen
 
-
-            **TemplateSettings**-Klassen bieten eine Reihe von Eigenschaften, die bei der Definition einer neuen Steuerelementvorlage für ein Steuerelement verwendet werden. Die Eigenschaften haben Werte wie Pixelmaße für die Größe bestimmter Teile des UI-Elements. Bei diesen Werten handelt es sich manchmal um berechnete Werte, die aus der Steuerelementlogik stammen; sie zu überschreiben oder darauf zuzugreifen, ist in der Regel nicht einfach. Einige der Eigenschaften dienen als **From**- und **To**-Werte, die Übergänge und Animationen von Teilen steuern; daher treten die relevanten **TemplateSettings**-Eigenschaften paarweise auf.
+**TemplateSettings**-Klassen bieten eine Reihe von Eigenschaften, die bei der Definition einer neuen Steuerelementvorlage für ein Steuerelement verwendet werden. Die Eigenschaften haben Werte wie Pixelmaße für die Größe bestimmter Teile des UI-Elements. Bei diesen Werten handelt es sich manchmal um berechnete Werte, die aus der Steuerelementlogik stammen; sie zu überschreiben oder darauf zuzugreifen, ist in der Regel nicht einfach. Einige der Eigenschaften dienen als **From**- und **To**-Werte, die Übergänge und Animationen von Teilen steuern; daher treten die relevanten **TemplateSettings**-Eigenschaften paarweise auf.
 
 Es gibt mehrere **TemplateSettings**-Klassen. Alle sind im [**Windows.UI.Xaml.Controls.Primitives**](https://msdn.microsoft.com/library/windows/apps/br209818)-Namespace enthalten. Im Anschluss finden Sie eine Liste der Klassen und einen Link zur **TemplateSettings**-Eigenschaft des entsprechenden Steuerelements. Mit dieser **TemplateSettings**-Eigenschaft greifen Sie auf die **TemplateSettings**-Werte für das Steuerelement zu und können Vorlagenbindungen an seine Eigenschaften festlegen:
 
--   
-            [
-              **ComboBoxTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/br227752): Wert von [**ComboBox.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209364)
--   
-            [
-              **GridViewItemTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/hh738499): Wert von [**GridViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh738503)
--   
-            [
-              **ListViewItemTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/hh701948): Wert von [**ListViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br242923)
--   
-            [
-              **ProgressBarTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/br227856): Wert von [**ProgressBar.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227537)
--   
-            [
-              **ProgressRingTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/hh702248): Wert von [**ProgressRing.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh702581)
--   
-            [
-              **SettingsFlyoutTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/dn298721): Wert von [**SettingsFlyout.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/dn252826)
--   
-            [
-              **ToggleSwitchTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/br209804): Wert von [**ToggleSwitch.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209731)
--   
-            [
-              **ToolTipTemplateSettings**
-            ](https://msdn.microsoft.com/library/windows/apps/br209813): Wert von [**ToolTip.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227629)
+-   [**ComboBoxTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227752): Wert von [**ComboBox.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209364)
+-   [**GridViewItemTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh738499): Wert von [**GridViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh738503)
+-   [**ListViewItemTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh701948): Wert von [**ListViewItem.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br242923)
+-   [**ProgressBarTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227856): Wert von [**ProgressBar.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227537)
+-   [**ProgressRingTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh702248): Wert von [**ProgressRing.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/hh702581)
+-   [**SettingsFlyoutTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/dn298721): Wert von [**SettingsFlyout.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/dn252826)
+-   [**ToggleSwitchTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209804): Wert von [**ToggleSwitch.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209731)
+-   [**ToolTipTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br209813): Wert von [**ToolTip.TemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227629)
 
-
-            **TemplateSettings**-Eigenschaften müssen immer in XAML und nicht im Code verwendet werden. Es handelt sich dabei um schreibgeschützte Untereigenschaften einer schreibgeschützten **TemplateSettings**-Eigenschaft eines übergeordneten Steuerelements. Für ein Szenario mit erweiterten benutzerdefinierten Steuerelementen, in dem Sie eine neue [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390)-basierte Klasse erstellen und daher die Steuerelementlogik beeinflussen können, empfiehlt es sich, eine benutzerdefinierte **TemplateSettings**-Eigenschaft für das Steuerelement zu definieren, um hilfreiche Informationen für das Ändern der Vorlage eines Steuerelements zu kommunizieren. Als schreibgeschützten Wert dieser Eigenschaft definieren Sie eine neue **TemplateSettings**-Klasse im Zusammenhang mit Ihrem Steuerelement, das schreibgeschützte Eigenschaften für alle Informationselemente aufweist, die für Vorlagenmaße, Animationspositionierung usw. relevant sind, und geben Aufrufern die Runtime-Instanz dieser Klasse, die mit Ihrer Steuerelementlogik initialisiert wird. 
-            **TemplateSettings**-Klassen werden von [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) abgeleitet, sodass die Eigenschaften das Abhängigkeitseigenschaftensystem für Rückrufe für Eigenschaftsänderungen verwenden können. Die Bezeichner von Abhängigkeitseigenschaften für die Eigenschaften sind jedoch nicht als öffentliche API verfügbar, da die **TemplateSettings**-Eigenschaften für Aufrufer schreibgeschützt sein sollen.
+**TemplateSettings**-Eigenschaften sind zur Verwendung in XAML und nicht im Code bestimmt. Es handelt sich dabei um schreibgeschützte Untereigenschaften einer schreibgeschützten **TemplateSettings**-Eigenschaft eines übergeordneten Steuerelements. Für ein Szenario mit erweiterten benutzerdefinierten Steuerelementen, in dem Sie eine neue [**Control**](https://msdn.microsoft.com/library/windows/apps/br209390)-basierte Klasse erstellen und daher die Steuerelementlogik beeinflussen können, empfiehlt es sich, eine benutzerdefinierte **TemplateSettings**-Eigenschaft für das Steuerelement zu definieren, um hilfreiche Informationen für das Ändern der Vorlage eines Steuerelements zu kommunizieren. Als schreibgeschützten Wert dieser Eigenschaft definieren Sie eine neue **TemplateSettings**-Klasse im Zusammenhang mit Ihrem Steuerelement, das schreibgeschützte Eigenschaften für alle Informationselemente aufweist, die für Vorlagenmaße, Animationspositionierung usw. relevant sind, und geben Aufrufern die Runtime-Instanz dieser Klasse, die mit Ihrer Steuerelementlogik initialisiert wird. **TemplateSettings**-Klassen werden von [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) abgeleitet, sodass die Eigenschaften das Abhängigkeitseigenschaftensystem für Rückrufe für Eigenschaftsänderungen verwenden können. Die Bezeichner von Abhängigkeitseigenschaften für die Eigenschaften sind jedoch nicht als öffentliche API verfügbar, da die **TemplateSettings**-Eigenschaften für Aufrufer schreibgeschützt sein sollen.
 
 ## Verwendung von **TemplateSettings** in einer Steuerelementvorlage
 
@@ -128,6 +102,6 @@ Wenn Sie **TemplateSettings**-Werte als Teil Ihrer Steuerelementvorlage verwende
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

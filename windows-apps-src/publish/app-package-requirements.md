@@ -3,8 +3,9 @@ author: jnHs
 Description: "Halten Sie die folgenden Richtlinien ein, wenn Sie die App-Pakete für die Übermittlung an den Windows Store vorbereiten."
 title: App-Paketanforderungen
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 951c00f9fd2c945ac44d47bfae701049e937b98f
+translationtype: Human Translation
+ms.sourcegitcommit: c15d4153f6ae83cc7bf1ae02d834bd07189e38ab
+ms.openlocfilehash: 250e94c2766227cabad791db6d994bcfb1a2ac33
 
 ---
 
@@ -20,11 +21,10 @@ Denken Sie daran, [Ihre App mit dem Zertifizierungskit für Windows-Apps zu test
 
 Wenn Sie Microsoft Visual Studio als Entwicklungsumgebung verwenden, verfügen Sie bereits über integrierte Tools zum schnellen und einfachen Erstellen eines App-Pakets. Weitere Informationen finden Sie unter [Verpacken von Apps](https://msdn.microsoft.com/library/windows/apps/mt270969).
 
-> 
-            **Hinweis**  Achten Sie darauf, für alle Dateinamen ANSI zu verwenden. 
+> **Hinweis**  Achten Sie darauf, für alle Dateinamen ANSI zu verwenden. 
 
 
-Um Ihr Paket in Visual Studio zu erstellen, müssen Sie sich mit demselben Microsoft-Konto anmelden, das Ihrem Entwicklerkonto zugeordnet ist. Einige Teile des Paketmanifests enthalten spezifische kontobezogene Details. Diese Informationen werden erkannt und automatisch hinzugefügt.
+Um Ihr Paket in Visual Studio zu erstellen, müssen Sie sich mit demselben Konto anmelden, das Ihrem Entwicklerkonto zugeordnet ist. Einige Teile des Paketmanifests enthalten spezifische kontobezogene Details. Diese Informationen werden erkannt und automatisch hinzugefügt.
 
 Beim Erstellen der App-Pakete kann Visual Studio eine APPX-Datei oder eine APPXUPLOAD-Datei erstellen (bzw. eine XAP-Datei für Windows Phone 8.1 und frühere Versionen). Bei Apps für Windows 10 laden Sie immer die APPXUPLOAD-Datei auf die Seite [Pakete](upload-app-packages.md) hoch. Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter [Verpacken universeller Windows-Apps für Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=620193 ).
 
@@ -34,8 +34,7 @@ App-Pakete müssen nicht mit einem Stammzertifikat einer vertrauenswürdigen Zer
 
 Für Apps, die für Windows 8.1, Windows Phone 8.1 und höhere Versionen entwickelt werden, kann Visual Studio ein App-Bündel (.appxbundle) erzeugen, um die Downloadgröße der App für den Benutzer zu reduzieren. Dieser Schritt ist in der Regel sinnvoll, wenn Sie sprachspezifische Ressourcen, mehrere Ressourcen für die Bildgröße oder Ressourcen für bestimmte Versionen von Microsoft DirectX definiert haben.
 
-> 
-            **Hinweis**  Ein App-Bündel kann Ihre Pakete für alle Architekturen enthalten. Pro Zielbetriebssystem sollte nur ein App-Bündel eingereicht werden.
+> **Hinweis**  Ein App Bundle kann Ihre Pakete für alle Architekturen enthalten. Pro Zielbetriebssystem sollte nur ein App-Bündel eingereicht werden.
 
 
 Bei einem App-Bündel lädt der Benutzer nicht alle vorhandenen Ressourcen, sondern nur relevante Dateien herunter. Weitere Informationen zu App-Bündeln finden Sie unter [Verpacken von Apps](https://msdn.microsoft.com/library/windows/apps/mt270969) und [Verpacken universeller Windows-Apps für Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=620193 ).
@@ -48,14 +47,12 @@ Ausführliche Informationen und die Anforderungen für Manifeste finden Sie in d
 
 Ihr Manifest muss spezifische konto- und App-bezogene Informationen enthalten. Sie finden diese Informationen unter [Anzeigen von Details zur App-Identität](view-app-identity-details.md) im Abschnitt **App-Verwaltung** der App-Übersichtsseite im Dashboard.
 
-> 
-            **Hinweis**  Bei den Werten im Manifest wird die Groß-/Kleinschreibung berücksichtigt. Leerzeichen und Satzzeichen müssen ebenfalls übereinstimmen. Geben Sie die Werte richtig ein, und überprüfen Sie sie anschließend auf ihre Korrektheit.
+> **Hinweis**  Bei den Werten im Manifest wird die Groß-/Kleinschreibung berücksichtigt. Leerzeichen und Satzzeichen müssen ebenfalls übereinstimmen. Geben Sie die Werte richtig ein, und überprüfen Sie sie anschließend auf ihre Korrektheit.
 
 
 App-Bündel verwenden ein anderes Manifest. Ausführliche Informationen und die Anforderungen für App-Bündel finden Sie in der Dokumentation zum [Bündelmanifest](https://msdn.microsoft.com/library/windows/apps/dn263089).
 
-> 
-            **Tipp**  Führen Sie vor dem Übermitteln Ihrer Pakete unbedingt das [Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt186449) aus. So können Sie feststellen, ob es mit Ihrem Manifest Probleme gibt, die Zertifizierungs- oder Einreichungsfehler verursachen können.
+> **Tipp**  Führen Sie vor dem Übermitteln Ihrer Pakete unbedingt das [Zertifizierungskit für Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt186449) aus. So können Sie feststellen, ob es mit Ihrem Manifest Probleme gibt, die Zertifizierungs- oder Einreichungsfehler verursachen können.
 
 
 Wenn Ihre App mehrere Pakete enthält, müssen die folgenden App-Manifestelemente in allen Paketen gleich sein (pro Zielbetriebssystem):
@@ -88,6 +85,6 @@ Ihre App-Pakete müssen die folgenden Anforderungen erfüllen:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

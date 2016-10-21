@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
 description: "Erfahren Sie, wie Sie eine Interstitialanzeige mithilfe von JavaScript/HTML veröffentlichen."
 title: "Beispielcode für interstitielle Anzeigen in JavaScript"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: d6a561aaff834cd782118abb72b4770985176bf0
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 5317895c2f28166c2905d0d49c5e98da5567943a
 
 
 ---
@@ -12,7 +13,7 @@ ms.openlocfilehash: d6a561aaff834cd782118abb72b4770985176bf0
 # Beispielcode für interstitielle Anzeigen in JavaScript
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 In diesem Thema wird die Veröffentlichung interstitieller Anzeigen mithilfe von JavaScript/HTML beschrieben. Schritt-für-Schritt-Anweisungen für die Konfigurierung Ihres Projekts zur Verwendung dieses Codes finden Sie unter [Interstitialanzeigen](interstitial-ads.md). Ein vollständiges Beispielprojekt, das die Hinzufügung von Videointerstitialanzeigen zu einer JavaScript/HTML.-App zeigt, finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
@@ -237,6 +238,6 @@ ad.</b>");
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

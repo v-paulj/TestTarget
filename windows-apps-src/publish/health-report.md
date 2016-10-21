@@ -3,8 +3,9 @@ author: jnHs
 Description: "Über den Bericht „Integrität“ im Windows Dev Center-Dashboard können Sie Daten zur Leistung und Qualität Ihrer App einschließlich App-Abstürzen abrufen."
 title: "Bericht „Integrität“"
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 78bedc3e0551feef8efe61b3b664145e29281714
+ms.openlocfilehash: 72c5974da441e76f2fad8e844d3391999e42cd72
 
 ---
 
@@ -13,18 +14,15 @@ ms.openlocfilehash: 78bedc3e0551feef8efe61b3b664145e29281714
 
 Über den Bericht **Integrität** im Windows Dev Center-Dashboard können Sie Daten zur Leistung und Qualität Ihrer App, einschließlich App-Abstürzen, abrufen. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um Ihre Daten offline anzuzeigen. Bei Bedarf können Sie Stapelüberwachungen für weitere Debugzwecke anzeigen. Sie können diese Daten jedoch auch programmgesteuert mit der [Windows Store-REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
-> 
-            **Hinweis**  Wenn Sie in den früheren Dashboards bereits Apps veröffentlicht und Leistungsdaten angezeigt haben, werden Sie möglicherweise feststellen, dass hier eine höhere Anzahl von Abstürzen und Ereignissen gemeldet wird. Das liegt daran, dass wir in diesem Bericht mehr Daten angeben können, sodass Sie ein vollständiges Bild erhalten.
+> **Hinweis**  Wenn Sie in den früheren Dashboards bereits Apps veröffentlicht und Leistungsdaten angezeigt haben, werden Sie möglicherweise feststellen, dass hier eine höhere Anzahl von Abstürzen und Ereignissen gemeldet wird. Das liegt daran, dass wir in diesem Bericht mehr Daten angeben können, sodass Sie ein vollständiges Bild erhalten.
 
 ## Anwenden von Filtern
 
 
 Im oberen Seitenbereich können Sie **Filter anwenden** erweitern, um alle Daten auf dieser Seite nach Datumsbereich und/oder Paketversion zu filtern.
 
--   
-            **Datum**: Der Standardfilter lautet **Letzte 72 Stunden**, er kann jedoch bis auf **Letzte 6 Monate** erweitert werden.
--   
-            **Paketversion**: Die Standardeinstellung ist **Alle Versionen**. Wenn Ihre App mehr als eine Paketversion enthält, können Sie eine spezifische Version auswählen.
+-   **Datum**: Der Standardfilter lautet **Letzte 72 Stunden**, er kann jedoch bis auf **Letzte 6 Monate** erweitert werden.
+-   **Paketversion**: Die Standardeinstellung ist **Alle Versionen**. Wenn Ihre App mehr als eine Paketversion enthält, können Sie eine spezifische Version auswählen.
 
 Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den im Abschnitt **Filter anwenden** ausgewählten Zeitraum. Standardmäßig gehören dazu Daten für alle Paketversionen, sofern Sie nicht mithilfe von **Filter anwenden** eine Version herausgefiltert haben.
 
@@ -66,6 +64,6 @@ Diese Informationen basieren auf dem Prozentsatz der Gesamtereignisse. Im oberen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

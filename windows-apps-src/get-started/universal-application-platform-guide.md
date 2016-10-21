@@ -1,18 +1,15 @@
 ---
 author: TylerMSFT
-title: "Anleitung für Apps für die Universelle Windows-Plattform (UWP)"
-description: "Erfahren Sie mehr über Apps für die Universelle Windows-Plattform (UWP), die auf einer Vielzahl von Geräten ausgeführt werden können."
+title: "Einführung in die Universelle Windows-Plattform"
+description: "Erfahren Sie mehr über Apps für die Universelle Windows-Plattform (UWP), die auf einer Vielzahl von Geräten unter Windows 10 ausgeführt werden können."
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
 translationtype: Human Translation
-ms.sourcegitcommit: 2df873ad451e2bb1196a1ce42e3fcd40f8c3ac8e
-ms.openlocfilehash: 925db2c5242eb49229f41298f1db4e2653f3499d
+ms.sourcegitcommit: 0f2ed552898f7cbb476055a6d6b7aa76545113b1
+ms.openlocfilehash: c433bd2eba2a5be114680f52a8da0b5c7b563186
 
 ---
 
-# Anleitung für Apps für die Universelle Windows-Plattform (UWP)
-
-
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+# Einführung in die Universelle Windows-Plattform
 
 In dieser Anleitung wird Folgendes behandelt:
 
@@ -284,6 +281,6 @@ Unter [Verwenden des einheitlichen Windows Dev Center-Dashboards](../publish/usi
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 

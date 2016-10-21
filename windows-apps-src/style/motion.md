@@ -5,8 +5,9 @@ title: Bewegung und Animation in UWP-Apps
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
-ms.sourcegitcommit: c183f7390c5b4f99cf0f31426c1431066e1bc96d
-ms.openlocfilehash: aa1283ed9dbb895854b8d7b2bb16eb485b377fce
+translationtype: Human Translation
+ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
+ms.openlocfilehash: 1cdbb81c783d17af16743a4ff5f82dc1c92df6b4
 
 ---
 
@@ -14,7 +15,7 @@ ms.openlocfilehash: aa1283ed9dbb895854b8d7b2bb16eb485b377fce
 
 Gut gestaltete Animationen machen Apps lebhaft und lassen sie realistisch und perfekt erscheinen. Helfen Sie Benutzern dabei, Kontextänderungen zu verstehen, und verbinden Sie Interaktionen mit visuellen Übergängen.
 
-## <span id="Benefits_of_animation"></span><span id="benefits_of_animation"></span><span id="BENEFITS_OF_ANIMATION"></span>Vorteile der Animation
+## Vorteile der Animation
 
 
 Animation bedeutet nicht nur, Dinge beweglich zu machen. Durch Animation lässt sich ein physisches Ökosystem für den Benutzer erstellen, in dem er leben und das er durch Berührungen verändern kann. Die Qualität der Erfahrung hängt davon ab, wie gut die App auf den Benutzer reagiert und welche Art von Persönlichkeit die Benutzeroberfläche vermittelt.
@@ -61,7 +62,7 @@ Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App ko
         </td>
         <td>Mit Listenanimationen können Sie einzelne oder mehrere Elemente in einer Sammlung wie z. B. einem Fotoalbum oder einer Liste mit Suchergebnissen einfügen oder entfernen.
         </td>
-    </tr> 
+    </tr>
     <tr>
         <td>[Drag & Drop](motion-dragdrop.md)
         </td>
@@ -110,10 +111,6 @@ Wenn ein Benutzer mehr Zeit in Ihrer App verbringt oder Aufgaben in Ihrer App ko
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

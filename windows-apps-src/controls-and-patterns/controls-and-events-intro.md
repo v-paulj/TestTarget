@@ -1,17 +1,26 @@
 ---
 author: Jwmsft
 Description: "Sie erstellen die Benutzeroberfläche für Ihre App mit Steuerelementen wie Schaltflächen, Textfeldern und Kombinationsfeldern, um Daten anzuzeigen und Benutzereingaben zu erhalten. Hier zeigen wir Ihnen, wie Sie Ihrer App Steuerelemente hinzufügen."
-title: "Hinzufügen von Steuerelementen und Verarbeiten von Ereignissen"
+title: "Einführung in Steuerelemente und Muster"
 ms.assetid: 64740BF2-CAA1-419E-85D1-42EE7E15F1A5
-label: Intro to controls and events
+label: Intro to controls and patterns
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 709771424daba7c034dc6f19d6998469705a24da
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: c597b2e5a1da23247a2100aeae88beaf1bfdaa64
 
 ---
-# Einführung in Steuerelemente und Ereignisse
+# Einführung in Steuerelemente und Muster
 
-Sie erstellen die Benutzeroberfläche für Ihre App mit Steuerelementen wie Schaltflächen, Textfeldern und Kombinationsfeldern, um Daten anzuzeigen und Benutzereingaben zu erhalten. Hier zeigen wir Ihnen, wie Sie Ihrer App Steuerelemente hinzufügen. Es gibt drei wichtige Schritte zum Hinzufügen von Steuerelementen zur App: 
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
+
+In der UWP-App-Entwicklung ist ein *Steuerelement* ein UI-Element, das Inhalte anzeigt oder Interaktionen ermöglicht. Sie erstellen die Benutzeroberfläche für Ihre App mit Steuerelementen wie Schaltflächen, Textfeldern und Kombinationsfeldern, um Daten anzuzeigen und Benutzereingaben zu erhalten.
+
+Ein *Muster* ist eine Anleitung zum Ändern eines Steuerelements oder zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen. Das [Navigationsbereichsmuster](nav-pane.md) ist z.B. eine Möglichkeit, mit der Sie ein [SplitView](split-view.md)-Steuerelement zur App-Navigation verwenden können. Ebenso können Sie die Vorlage eines [Pivot](tabs-pivot.md)-Steuerelements zum Implementieren des Registerkartenmusters anpassen.
+
+In vielen Fällen können Sie ein Steuerelement unverändert verwenden. XAML-Steuerelemente trennen jedoch die Funktion von der Struktur und Darstellung, sodass Sie diese über verschiedene Änderungsebenen an Ihre Bedürfnisse anpassen können. Im Abschnitt [Stil](../style/index.md) erfahren Sie, wie Sie mithilfe von [XAML-Formatvorlagen](xaml-styles.md) und [Steuerelementvorlagen](control-templates.md) Steuerelemente ändern.
+
+In diesem Abschnitt erhalten Sie Anleitungen zu jedem XAML-Steuerelement, das Sie zum Erstellen Ihrer App-UI verwenden können. Zu Beginn wird in diesem Artikel beschrieben, wie Sie der App Steuerelemente hinzufügen. Es gibt drei wichtige Schritte zum Hinzufügen von Steuerelementen zur App: 
 
 - Fügen Sie Ihrer App-UI ein Steuerelement hinzu. 
 - Legen Sie Eigenschaften für das Steuerelement fest, z.B. Breite, Höhe und Vordergrundfarbe. 
@@ -131,12 +140,14 @@ Button1.Click += new RoutedEventHandler(Button_Click);
 
 ## Verwandte Themen
 
--   [**Befehlsleisten**](app-bars.md)
--   [Suche](search.md)
--   [Flyouts](dialogs-popups-menus.md)
+-   [Index der Steuerelemente nach Funktion](controls-by-function.md)
+-   [Windows.UI.Xaml.Controls-Namespace](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
+-   [Layout](../layout/index.md)
+-   [Stil](../style/index.md)
+-   [Nutzbarkeit](../usability/index.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

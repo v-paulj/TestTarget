@@ -3,8 +3,9 @@ author: jwmsft
 description: "Stellt durch Auswerten eines Verweises auf eine bereits definierte Quelle einen Wert für ein beliebiges XAML-Attribut bereit. Ressourcen sind in einem ResourceDictionary definiert, und mit der Verwendung einer StaticResource wird auf den Schlüssel dieser Ressource im ResourceDictionary verwiesen."
 title: StaticResource-Markuperweiterung
 ms.assetid: D50349B5-4588-4EBD-9458-75F629CCC395
+translationtype: Human Translation
 ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: 3f486a8ac56e37a7401b9a87a4d560cac6b68f6f
+ms.openlocfilehash: 48cdfd86705ff29e4ffc7e9f69de2f01e75f7f2a
 
 ---
 
@@ -26,13 +27,11 @@ Stellt durch Auswerten eines Verweises auf eine bereits definierte Quelle einen 
 |------|-------------|
 | Schlüssel | Der Schlüssel für die angeforderte Ressource. Dieser Schlüssel wird anfänglich durch das [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) zugewiesen. Ein Ressourcenschlüssel kann eine beliebige in der XamlName-Grammatik definierte Zeichenfolge sein. |
 
-## Hinweise
+## Anmerkungen
 
+**StaticResource** ist eine Methode zum Abrufen von Werten für ein XAML-Attribut, die an anderer Stelle in einem XAML-Ressourcenwörterbuch definiert sind. Werte können in einem Ressourcenwörterbuch definiert werden, da sie von mehreren Eigenschaftswerten gemeinsam verwendet werden sollen oder ein XAML-Ressourcenwörterbuch als Teil einer XAML-Verpackungs- oder Gestaltungsmethode verwendet wird. Ein Beispiel für eine XAML-Verpackungsmethode ist das Designwörterbuch für ein Steuerelement. Ein weiteres Beispiel ist die Verwendung von zusammengeführten Ressourcenwörterbüchern für das Ressourcenfallback.
 
-            **StaticResource** ist eine Methode zum Abrufen von Werten für ein XAML-Attribut, die an anderer Stelle in einem XAML-Ressourcenwörterbuch definiert sind. Werte können in einem Ressourcenwörterbuch definiert werden, da sie von mehreren Eigenschaftswerten gemeinsam verwendet werden sollen oder ein XAML-Ressourcenwörterbuch als Teil einer XAML-Verpackungs- oder Gestaltungsmethode verwendet wird. Ein Beispiel für eine XAML-Verpackungsmethode ist das Designwörterbuch für ein Steuerelement. Ein weiteres Beispiel ist die Verwendung von zusammengeführten Ressourcenwörterbüchern für das Ressourcenfallback.
-
-
-            **StaticResource** akzeptiert ein Argument, das den Schlüssel für die angeforderte Ressource angibt. Ein Ressourcenschlüssel ist immer eine Zeichenfolge in der Windows-Runtime-XAML. Weitere Informationen zum anfänglichen Festlegen des Ressourcenschlüssels finden Sie unter [x:Key-Attribut](x-key-attribute.md).
+**StaticResource** akzeptiert ein Argument, das den Schlüssel für die angeforderte Ressource angibt. Ein Ressourcenschlüssel ist immer eine Zeichenfolge in der Windows-Runtime-XAML. Weitere Informationen zum anfänglichen Festlegen des Ressourcenschlüssels finden Sie unter [x:Key-Attribut](x-key-attribute.md).
 
 Die Regeln, nach denen die Auflösung einer **StaticResource** zu einem Element in einem Ressourcenwörterbuch erfolgt, wird in diesem Thema nicht beschrieben. Dies hängt davon ab, ob sowohl der Verweis als auch die Ressource in einer Vorlage vorhanden sind, ob zusammengeführte Ressourcenwörterbücher verwendet werden usw. Weitere Informationen dazu, wie Sie Ressourcen und Eigenschaften mithilfe eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) definieren, und zusätzlichen Beispielcode finden Sie unter [ResourceDictionary- und XAML-Ressourcenverweise](https://msdn.microsoft.com/library/windows/apps/mt187273).
 
@@ -41,14 +40,11 @@ Eine **StaticResource** darf nicht versuchen, einen Vorwärtsverweis auf eine Re
 
 Wenn Sie versuchen, eine **StaticResource** für einen Schlüssel anzugeben, die nicht aufgelöst werden kann, führt dies zu einer XAML-Analyseausnahme zur Laufzeit. Entwicklungstools geben unter Umständen auch Warnungen oder Fehler aus.
 
-Die XAML-Prozessorimplementierung der Windows-Runtime enthält keine Sicherungsklassendarstellung für **StaticResource**-Funktionen. 
-            **StaticResource** ist ausschließlich für die Verwendung in XAML vorgesehen. Die weitestgehende Entsprechung im Code ist die Verwendung der Auflistungs-API eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), z.B. der Aufruf von [**Contains**](https://msdn.microsoft.com/library/windows/apps/jj635925) oder [**TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj603139).
+Die XAML-Prozessorimplementierung der Windows-Runtime enthält keine Sicherungsklassendarstellung für **StaticResource**-Funktionen. **StaticResource** ist ausschließlich für die Verwendung in XAML vorgesehen. Die weitestgehende Entsprechung im Code ist die Verwendung der Auflistungs-API eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), z.B. der Aufruf von [**Contains**](https://msdn.microsoft.com/library/windows/apps/jj635925) oder [**TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj603139).
 
+Die [{ThemeResource}-Markuperweiterung](themeresource-markup-extension.md) ist eine ähnliche Markuperweiterung, die auf benannte Ressourcen an einer andere Position verweist. Der Unterschied besteht darin, dass die {ThemeResource}-Markuperweiterung je nach aktivem Systemdesign verschiedene Ressourcen zurückgeben kann. Weitere Informationen finden Sie unter [{ThemeResource}-Markuperweiterung](themeresource-markup-extension.md).
 
-            Die [{ThemeResource}-Markuperweiterung](themeresource-markup-extension.md) ist eine ähnliche Markuperweiterung, die auf benannte Ressourcen an einer andere Position verweisen. Der Unterschied besteht darin, dass die {ThemeResource}-Markuperweiterung je nach aktivem Systemdesign verschiedene Ressourcen zurückgeben kann. Weitere Informationen finden Sie unter [{ThemeResource}-Markuperweiterung](themeresource-markup-extension.md).
-
-
-            **StaticResource** ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn für Attributwerte Escapezeichen verwendet werden müssen, damit sie keine Literalwerte oder Handlernamen darstellen, und es nicht ausreicht, Typkonverter für bestimmte Typen oder Eigenschaften zu verwenden. Alle Markuperweiterungen in XAML verwenden die Zeichen „\{” und „\}” in ihrer Attributsyntax. Anhand dieser Konvention erkennt ein XAML-Prozessor, dass eine Markuperweiterung das Attribut verarbeiten muss.
+**StaticResource** ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn für Attributwerte Escapezeichen verwendet werden müssen, damit sie keine Literalwerte oder Handlernamen darstellen, und es nicht ausreicht, Typkonverter für bestimmte Typen oder Eigenschaften zu verwenden. Alle Markuperweiterungen in XAML verwenden die Zeichen „\{” und „\}” in ihrer Attributsyntax. Anhand dieser Konvention erkennt ein XAML-Prozessor, dass eine Markuperweiterung das Attribut verarbeiten muss.
 
 ### {StaticResource}-Beispielverwendung
 
@@ -91,6 +87,6 @@ Sobald ein Ressourcenschlüssel als Teil einer **{StaticResource}**-Verwendung v
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

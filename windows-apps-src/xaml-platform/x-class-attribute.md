@@ -3,8 +3,9 @@ author: jwmsft
 description: "Konfiguriert die XAML-Kompilierung, um partielle Klassen zwischen Markup und CodeBehind zu verknüpfen. Die partielle Codeklasse wird in einer separaten Codedatei definiert, die partielle Markupklasse wird von der Codegenerierung während der XAML-Kompilierung erstellt."
 title: xClass-Attribut
 ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 83267df025baeb802bfdd0ec03ecd3bf7b01db76
+translationtype: Human Translation
+ms.sourcegitcommit: 3144758352b99f8c145a3c7be8a6c43d6a002104
+ms.openlocfilehash: 1d04755cc9a2b7689d5373772803b6697227b18a
 
 ---
 
@@ -32,8 +33,7 @@ Konfiguriert die XAML-Kompilierung, um partielle Klassen zwischen Markup und Cod
 
 ## Hinweise
 
-
-            **x:Class** kann als Attribut für ein beliebiges Element deklariert werden, das als Stamm einer XAML-Datei-/-Objektstruktur fungiert und durch Buildvorgänge kompiliert wird, oder für den [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Stamm in der Anwendungsdefinition einer kompilierten Anwendung. Wenn Sie **x:Class** für ein Element, bei dem es sich nicht um einen Seiten- oder Anwendungsstamm handelt, oder unter beliebigen Umständen für eine nicht mit der Buildaktion **Seite** kompilierte XAML-Datei deklarieren, tritt zur Kompilierzeit ein Fehler auf.
+**x:Class** kann als Attribut für ein beliebiges Element deklariert werden, das als Stamm einer XAML-Datei-/-Objektstruktur fungiert und durch Buildvorgänge kompiliert wird, oder für den [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Stamm in der Anwendungsdefinition einer kompilierten Anwendung. Wenn Sie **x:Class** für ein Element, bei dem es sich nicht um einen Stammknoten handelt, oder unter beliebigen Umständen für eine nicht mit der Buildaktion **Seite** kompilierte XAML-Datei deklarieren, tritt zur Kompilierzeit ein Fehler auf.
 
 Die als **x:Class** verwendete Klasse darf keine geschachtelte Klasse sein.
 
@@ -46,6 +46,6 @@ Ihre CodeBehind-Datei kann zwar eine C++-Datei sein, bestimmte Konventionen rich
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

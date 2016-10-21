@@ -3,8 +3,8 @@ title: "Gehostete Web-Apps – Konvertieren Ihrer Webanwendung in eine App für 
 description: "Erstellen Sie eine App für die Universelle Windows-Plattform (UWP) über die URL Ihrer Website. Greifen Sie über Code innerhalb Ihrer Web-App auf systemeigene Windows10-Gerätefeatures zu. Mithilfe von Microsoft Windows-Brücken für gehostete Web-Apps, zuvor Projekt Westminster, können Sie Ihre Web-Apps schnell und einfach Sie dem Windows Store hinzufügen."
 author: seksenov
 translationtype: Human Translation
-ms.sourcegitcommit: 765789ef83f9b6a845ab79505b1b9ecbfd987126
-ms.openlocfilehash: 491665558f713dcbaae7ea20739ed72c61a12cd2
+ms.sourcegitcommit: 7fe6e240e4ef221b49f9b103cf30192449ce4502
+ms.openlocfilehash: 95d50aa37f349f494f260ea3af97211a085623a9
 
 ---
 
@@ -35,8 +35,7 @@ Unabhängig davon, ob Sie auf einem Mac oder einen PC arbeiten, können Sie in w
 
 ## Konvertieren Ihrer vorhandenen Chrome-App
 
-Wir haben das [Konvertieren Ihrer vorhandenen gehosteten Chrome-App](hwa-chrome-conversion.md) in eine gehostete Windows-Web-App einfach gemacht. 
-            [ManifoldJS](http://manifoldjs.com/) akzeptiert nun Chrome-Manifeste als Eingaben. Es wurde außerdem ein [CLI-Tool](https://github.com/MicrosoftEdge/hwa-cli) entwickelt, das ein `.appx`-Paket aus Ihren vorhandenen `.zip` oder `.crx` Dateien generiert.
+Wir haben das [Konvertieren Ihrer vorhandenen gehosteten Chrome-App](hwa-chrome-conversion.md) in eine gehostete Windows-Web-App einfach gemacht. [ManifoldJS](http://manifoldjs.com/) akzeptiert nun Chrome-Manifeste als Eingaben. Es wurde außerdem ein [CLI-Tool](https://github.com/MicrosoftEdge/hwa-cli) entwickelt, das ein `.appx`-Paket aus Ihren vorhandenen `.zip` oder `.crx` Dateien generiert.
 
 ## Demos
 
@@ -46,6 +45,6 @@ Wir haben das [Konvertieren Ihrer vorhandenen gehosteten Chrome-App](hwa-chrome-
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

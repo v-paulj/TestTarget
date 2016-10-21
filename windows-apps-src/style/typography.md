@@ -1,21 +1,18 @@
 ---
 author: mijacobs
-Description: "Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient. Ihr Stil darf diesem Ziel nie im Wege stehen. Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit dieses Designs aus."
+description: "Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient. Ihr Stil darf diesem Ziel nie im Wege stehen. Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit des Designs aus."
 title: Typografie
 ms.assetid: ca35f78a-e4da-423d-9f5b-75896e0b8f82
-label: Typography
 template: detail.hbs
-extraBodyClass: style-typography
-brief: "As the visual representation of language, typography’s main task is to be clear. Its style should never get in the way of that goal. But typography also has an important role as a layout component—with a powerful effect on the density and complexity of the design—and on the user’s experience of that design."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 7ec2c80fd571de98060282d2b321d1895e2b3dc8
+ms.sourcegitcommit: 8338b4ebcdd73f1b7ebf1dedafe68d861cd9d93b
+ms.openlocfilehash: 481c66e3edd42722cfd59bf420fe5b6286706245
 
 ---
 
-# Typografie für UWP-Apps
+# Typografie
 
-Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient. Ihr Stil darf diesem Ziel nie im Wege stehen. Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit dieses Designs aus.
+Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient. Ihr Stil darf diesem Ziel nie im Wege stehen. Typografie spielt jedoch auch als Layoutkomponente eine wichtige Rolle und wirkt sich maßgeblich auf die Dichte und Komplexität des Designs und damit auf die Benutzerfreundlichkeit des Designs aus.
 
 ## Schriftart
 
@@ -39,9 +36,9 @@ Wird sich größere Schrift über kleinerer Schrift befindet, muss der Abstand z
 
 ![Große Schrift über kleinerer Schrift](images/line-height-stacking.png)
 
-Im XAML-Code wird dies durch Stapeln zweier [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)-Elemente sowie durch Festlegen des entsprechenden Rands erreicht.
+Im XAML-Code wird dies durch Stapeln zweier [TextBlock](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)-Elemente sowie durch Festlegen des entsprechenden Rands erreicht.
 
-```xaml
+```xml
 <StackPanel Width="200">
     <!-- Setting a bottom margin of 3px on the header
          puts the baseline of the body text exactly 24px
@@ -61,7 +58,7 @@ Im XAML-Code wird dies durch Stapeln zweier [TextBlock](https://msdn.microsoft.c
 </StackPanel>
 ```
 
-<!-- OP version -->
+
 
 ## Kerning und Laufweite
 
@@ -69,7 +66,10 @@ Segoe ist eine humanistische Schriftart mit weicher, ansprechender Optik und org
 
 Kerning muss auf „Metrik“ und die Laufweite auf„0“ festgelegt werden.
 
-<img src="images/kerning-tracking.png" alt="Shows the difference between kerning and tracking" />
+
+![Zeigt den Unterschied zwischen Kerning und Laufweite](images/kerning-tracking.png)
+
+
 
 ## Wort- und Zeichenabstand
 
@@ -77,29 +77,29 @@ Kerning muss auf „Metrik“ und die Laufweite auf„0“ festgelegt werden.
 
 Der Wortabstand beträgt standardmäßig immer 100Prozent. Der Zeichenabstand muss auf„0“ festgelegt werden.
 
-<img src="images/word-letter.png" alt="Shows the difference between word and letter spacing" />
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-Verwenden Sie in einem XAML-Textsteuerelement [Typogrphy.Kerning](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx), um das Kerning zu steuern, und [FontStretch](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx). um die Nachverfolgung zu steuern. Typography.Kerning ist standardmäßig auf „true“ und FontStretch ist standardmäßig auf „Normal“ festgelegt. Dies sind die empfohlenen Werte.
-    </div>
-</aside>
+![Zeigt den Unterschied zwischen Wort- und Zeichenabstand](images/word-letter.png)
+
+**Hinweis**&nbsp;&nbsp;Verwenden Sie in einem XAML-Textsteuerelement [Typogrphy.Kerning](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.documents.typography.kerning.aspx) zur Steuerung des Kernings und [FontStretch](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.control.fontstretch.aspx) zur Steuerung der Laufweite. Typography.Kerning ist standardmäßig auf „true“ und FontStretch ist standardmäßig auf „Normal“ festgelegt. Dies sind die empfohlenen Werte.
 
 
-<!-- OP version -->
+
+
 ## Ausrichtung
 
 Im Allgemeinen wird die linksbündige Ausrichtung visueller Elemente und Spalten mit Schrift empfohlen. In den meisten Fällen sorgt das Konzept „links bündig, rechts mit Flatterrand“ für eine konsistente Verankerung des Inhalts und für ein einheitliches Layout.
 
-<img src="images/alignment.png" alt="Shows flush-left text" />
+
+![Zeigt linksbündigen Text](images/alignment.png)
+
+
 
 ## Zeilenenden
 
 Wenn Typografie nicht linksbündig mit rechtem Flatterrand positioniert wird, versuchen Sie, gleichmäßige Zeilenenden zu erreichen, und vermeiden Sie die Verwendung von Silbentrennung.
 
-<img src="images/line-endings.png" alt="Shows even line endings" />
+
+![Zeigt gleichmäßige Zeilenenden](images/line-endings.png)
 
 ## Absätze
 
@@ -125,13 +125,7 @@ Sobald die Höhe des Texts die Höhe des Symbols übersteigt, muss die erste Tex
 
 ![Mehrere Kombinationen aus Symbol und Text](images/hanging-text-alignment.png)
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-Die XAML-Eigenschaft [TextBlock.TextLineBounds](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) stellt den Zugriff auf die Höhe von Großbuchstaben und die Basisschriftartmetrik bereit. Sie kann verwendet werden, um visuell vertikal zu zentrieren oder oben ausgerichtet einzugeben.
-    </div>
-</aside>
+**Hinweis**&nbsp;&nbsp;Die XAML-Eigenschaft [TextBlock.TextLineBounds](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.textblock.textlinebounds.aspx) stellt den Zugriff auf die Höhe von Großbuchstaben und die Basisschriftartmetrik bereit. Sie kann verwendet werden, um visuell vertikal zu zentrieren oder oben ausgerichtet einzugeben.
 
 ## Beschnitt und Ellipsen
 
@@ -141,22 +135,13 @@ Ausnahme: Bei Containern, die nicht klar definiert sind (also sich etwa nicht du
 
 ![Gerät mit abgeschnittenem Text](images/clipping.png)
 
-# Typhierarchie
+## Typhierarchie
+Die Typhierarchie stellt eine wichtige gestalterische Beziehung zwischen Überschrift und Textkörper her und schafft damit eine klare und verständliche Hierarchie zwischen den verschiedenen Ebenen. Diese Hierarchie bildet eine Struktur, die Benutzern die Navigation durch schriftliche Kommunikation erleichtert.
 
-Mithilfe unterschiedlicher Größen von „SegoeUI“ muss eine Typhierarchie erstellt werden. Diese Hierarchie bildet eine Struktur, die Benutzern die Navigation durch schriftliche Kommunikation erleichtert.
+![Zeigt die Typhierarchie](images/type-ramp.png) Die Größen sind in effektiven Pixeln angegeben. 
 
-<figure class="figure-img" >
-    <img src="images/type-ramp.png" alt="Shows the type ramp"  />
-        <figcaption>Die Größe wird jeweils in effektiven Pixeln angegeben. Ausführlichere Informationen finden Sie unter „TODO: link“.</figcaption>
-</figure>
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-Die meisten Ebenen der Typhierarchie sind in XAML als [statische Ressourcen](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) verfügbar, die der `*TextBlockStyle`-Benennungskonvention folgen (z.B.: `HeaderTextBlockStyle`). 
-    </div>
-</aside>
+**Hinweis**&nbsp;&nbsp;Die meisten Ebenen der Typhierarchie sind in XAML als [statische Ressourcen](https://msdn.microsoft.com/en-us/library/windows/apps/Mt187274.aspx#the_xaml_type_ramp) verfügbar, die der `*TextBlockStyle`-Namenskonvention folgen (z.B. `HeaderTextBlockStyle`).
 
 
 ## Primärer und sekundärer Text
@@ -171,13 +156,25 @@ Bestimmte Seitentitel sollten in GROSSBUCHSTABEN angegeben werden, um die Hierar
 In bestimmten Sprachen ändert sich durch eine Großschreibung jedoch die Bedeutung von Eigennamen. Daher dürfen auf Namen oder Benutzereingaben basierende Seitentitel *nicht* in Großbuchstaben umgewandelt werden.
 
 
-## Empfohlene und nicht empfohlene Vorgehensweisen
+**Empfohlen**
+
+
+
 * Verwenden Sie „Body“ für die meisten Texte.
 * Verwenden Sie „Base“ für Titel mit begrenztem Platz.
 * Integrieren Sie „SubtitleAlt“, um durch Hervorhebung des übergeordneten Inhalts einen Kontrast und eine Hierarchie zu schaffen.
+
+
+
+**Nicht empfohlen**
+
+
+
 * Verwenden Sie „Caption“ nicht für lange Zeichenfolgen oder Hauptaktionen.
-* Verwenden Sie „Header“ oder „Subheader“ nicht, wenn der Text umgebrochen werden muss.
+* Verwenden Sie „Header“ oder „Subheader“ nicht, wenn der Text umbrochen werden muss.
 * Verwenden Sie „Subtitle“ und „SubtitleAlt“ nicht auf der gleichen Seite.
+
+
 
 ## Verwandte Artikel
 
@@ -185,6 +182,6 @@ In bestimmten Sprachen ändert sich durch eine Großschreibung jedoch die Bedeut
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

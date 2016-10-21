@@ -4,8 +4,8 @@ Description: "In diesem Thema werden Leistungsrichtlinien für Apps beschrieben,
 title: "Richtlinien für Apps mit Standortbestimmung"
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
 translationtype: Human Translation
-ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: bbdd4d5a54deba11161c1865cd8f6f2fb47bcad4
+ms.sourcegitcommit: 7159aea3feef96781575825d019a379e0eadc603
+ms.openlocfilehash: 133add15e0e5681ec85a0800c52605262a82f8b4
 
 ---
 
@@ -100,7 +100,8 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
 
     Mit Ausnahme des Magnetometers können die Windows-Runtime-APIs auf all diese Sensoren zugreifen. Fusionssensoren sind genauer und stabiler als Rohdatensensoren, sie benötigen jedoch auch mehr Energie. Verwenden Sie die richtigen Sensoren für den richtigen Zweck. Weitere Informationen finden Sie unter [Sensoren](https://msdn.microsoft.com/library/windows/apps/mt187358).
 
-**Verbindungsstandby:  **Wenn sich der PC im Verbindungsstandby befindet, können [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekte immer instanziiert werden. Das **Geolocator**-Objekt findet jedoch keine zu aggregierenden Sensoren, sodass für Aufrufe von [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) nach 7 Sekunden ein Timeout auftritt. [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540)-Ereignislistener werden niemals aufgerufen, und [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542)-Ereignislistener werden einmal mit dem **NoData**-Status aufgerufen.
+**Verbundener Standbymodus** 
+- Wenn sich der PC im Verbindungsstandby befindet, können [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekte immer instanziiert werden. Das **Geolocator**-Objekt findet jedoch keine zu aggregierenden Sensoren, sodass für Aufrufe von [**GetGeopositionAsync**](https://msdn.microsoft.com/library/windows/apps/hh973536) nach 7 Sekunden ein Timeout auftritt. [**PositionChanged**](https://msdn.microsoft.com/library/windows/apps/br225540)-Ereignislistener werden niemals aufgerufen, und [**StatusChanged**](https://msdn.microsoft.com/library/windows/apps/br225542)-Ereignislistener werden einmal mit dem **NoData**-Status aufgerufen.
 
 ## Weitere Hinweise zur Verwendung
 
@@ -172,6 +173,6 @@ Der geografische Standort eines Benutzers gehört zu den personenbezogenen Infor
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 

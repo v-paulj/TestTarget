@@ -3,14 +3,15 @@ author: eliotcowley
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
 description: "In diesem Abschnitt wird beschrieben, wie Sie Ihre Web-App mit PlayReady ändern, um die Änderungen zu unterstützen, die gegenüber der Windows 8.1-Version in der Version für Windows 10 vorgenommen wurden."
 title: "Verschlüsselte Medienerweiterung von PlayReady"
-ms.sourcegitcommit: 965443672e52938d39069f14fe23b0c5dbd0ffa8
-ms.openlocfilehash: c575125f1d35f44b873fd3db46d62f89bb726b0b
+translationtype: Human Translation
+ms.sourcegitcommit: 15b8c2cac08e59cfd9bd2c97c3a146cbc2be5548
+ms.openlocfilehash: eb85d9ea29917788612e0aa755465dbd6d1b9ba9
 
 ---
 
 # Verschlüsselte Medienerweiterung von PlayReady
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 In diesem Abschnitt wird beschrieben, wie Sie Ihre Web-App mit PlayReady ändern, um die Änderungen zu unterstützen, die gegenüber der Windows 8.1-Version in der Version für Windows 10 vorgenommen wurden.
@@ -19,7 +20,7 @@ Die Verwendung von PlayReady-Medienelementen in Internet Explorer ermöglicht En
 
 ## Neuigkeiten in der verschlüsselten Medienerweiterung von PlayReady
 
-Dieser Abschnitt enthält eine Liste der Änderungen, die an der verschlüsselten Medienerweiterung von PlayReady vorgenommen wurden, um PlayReady-Inhaltsschutz unter Windows 10 bereitzustellen.
+Dieser Abschnitt enthält eine Liste der Änderungen, die an der verschlüsselten Medienerweiterung (EME) von PlayReady vorgenommen wurden, um PlayReady-Inhaltsschutz unter Windows 10 bereitzustellen.
 
 In der folgenden Liste werden die neuen Features und Änderungen der verschlüsselten Medienerweiterung von PlayReady unter Windows 10 beschrieben:
 
@@ -32,10 +33,8 @@ In der folgenden Liste werden die neuen Features und Änderungen der verschlüss
 
     Sie können entweder wie in Windows 8.1 ein PlayReady-Objekt mit mehreren Schlüsselkennungen (KeyIDs) oder [Content Decryption Model (CDM)-Daten (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) mit mehreren KeyIDs verwenden.
 
-    
-            **Hinweis**  In Windows 10 werden mehrere Schlüsselkennungen unter &lt;KeyID&gt; in CDMData unterstützt.
-
-     
+    > [!NOTE]
+    > In Windows10 werden mehrere Schlüsselkennungen unter &lt;KeyID&gt; in CDMData unterstützt.
 
 -   Unterstützung für den Echtzeitablauf, d. h. einer Lizenz mit begrenzter Dauer (Limited Duration License, LDL), wurde hinzugefügt.
 
@@ -69,10 +68,8 @@ Um das Hardware-DRM mit PlayReady zu verwenden, sollte Ihre JavaScript-Web-App d
 
 Mitunter werden Inhalte jedoch nicht vom Hardware-DRM unterstützt. Cocktail-Inhalte werden nie vom Hardware-DRM unterstützt. Wenn Sie Cocktail-Inhalte wiedergeben möchten, müssen Sie das Hardware-DRM außer Kraft setzen. Einige Hardware-DRM-Typen unterstützen HEVC, andere dagegen nicht. Wenn Sie HEVC-Inhalte wiedergeben möchten und diese nicht vom Hardware-DRM unterstützt werden, sollten Sie das Hardware-DRM in diesem Fall ebenfalls außer Kraft setzen.
 
-
-            **Hinweis**  Um festzustellen, ob HEVC-Inhalte unterstützt werden, verwenden Sie nach der Instanziierung von `com.microsoft.playready` die [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441)-Methode.
-
- 
+> [!NOTE]
+> Um festzustellen, ob HEVC-Inhalte unterstützt werden, verwenden Sie nach der Instanziierung von `com.microsoft.playready` die [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441)-Methode.
 
 ## Hinzufügen des sicheren Beendens zur Web-App
 
@@ -261,8 +258,8 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 }
 ```
 
-
-            **Hinweis**  Für die `<SessionID>B64 encoded session ID</SessionID>` der Daten für sicheres Beenden im obigen Beispiel kann ein Sternchen (\*) angegeben werden. Das Sternchen ist ein Platzhalter für alle aufgezeichneten Sitzungen für sicheres Beenden. Beim **SessionID**-Tag kann es sich also um eine bestimmte Sitzung oder einen Platzhalter (\*) zur Auswahl aller Sitzungen für sicheres Beenden handeln.
+> [!NOTE]
+> Für die Sitzungs-ID `<SessionID>B64 encoded session ID</SessionID>` der Daten für sicheres Beenden im obigen Beispiel kann ein Sternchen (\*) angegeben werden. Das Sternchen ist ein Platzhalter für alle aufgezeichneten Sitzungen für sicheres Beenden. Beim **SessionID**-Tag kann es sich also um eine bestimmte Sitzung oder einen Platzhalter (\*) zur Auswahl aller Sitzungen für sicheres Beenden handeln.
 
 ## Überlegungen zur Programmierung für verschlüsselte Medienerweiterungen (Encrypted Media Extensions, EME)
 
@@ -296,18 +293,17 @@ function foo() {
 }
 ```
 
-Weitere Informationen finden Sie in den [Beispielanwendungen](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738) .
+Weitere Informationen finden Sie in den [Beispielanwendungen](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738).
 
- 
-
- 
-
+## Siehe auch
+- [PlayReady DRM](playready-client-sdk.md)
 
 
 
 
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

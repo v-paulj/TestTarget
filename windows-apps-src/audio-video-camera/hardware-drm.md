@@ -4,8 +4,8 @@ ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: "Dieses Thema enthält eine Übersicht über das Hinzufügen der hardwarebasierten Verwaltung digitaler Rechte (Digital Rights Management, DRM) mit PlayReady zu Ihrer App für die Universelle Windows-Plattform (UWP)."
 title: Hardwarebasiertes DRM
 translationtype: Human Translation
-ms.sourcegitcommit: 22ce05ab6f24c3ee41798732c35314b3dad87ea8
-ms.openlocfilehash: b7867317c37edf44d9edfaaf28d97a3f23b22814
+ms.sourcegitcommit: 56d79a93704021fc18d3e72d00738d0ce7acba91
+ms.openlocfilehash: 643b67c3975a8aea6791c834a9ca3178b9762257
 
 ---
 
@@ -22,7 +22,7 @@ Inhaltsanbieter verwenden zunehmend hardwarebasierten Schutz, um die Berechtigun
 
 ## Windows-TEE-Implementierung
 
-Dieses Thema enthält eine kurze Übersicht über die Implementierung der vertrauenswürdigen Ausführungsumgebung (Trusted Execution Environment, TEE) in Windows10.
+Dieses Thema enthält eine kurze Übersicht über die Implementierung der vertrauenswürdigen Ausführungsumgebung (Trusted Execution Environment, TEE) unter Windows 10.
 
 Auf die Details der Windows-TEE-Implementierung gehen wir in diesem Dokument nicht ein. Eine kurze Erläuterung des Unterschieds zwischen dem Standard-TEE-Port des Porting Kits und dem Windows-Port ist jedoch sinnvoll. Windows implementiert die OEM-Proxyschicht und überträgt die serialisierten PRITEE-Funktionsaufrufe an einen Benutzermodustreiber im Windows Media Foundation-Subsystem. Diese werden letztendlich an den Windows-TrEE (Trusted Execution Environment)-Treiber oder den Grafiktreiber des OEMs weitergeleitet. Die Details dieser Ansätze werden in diesem Dokument nicht erläutert. Das folgende Diagramm zeigt die allgemeine Komponenteninteraktion für den Windows-Port. Wenn Sie eine Windows PlayReady-TEE-Implementierung entwickeln möchten, können Sie sich an <WMLA@Microsoft.com> wenden.
 
@@ -30,12 +30,11 @@ Auf die Details der Windows-TEE-Implementierung gehen wir in diesem Dokument nic
 
 ## Überlegungen zur Verwendung des hardwarebasierten DRM
 
-Dieses Thema enthält eine kurze Liste der Punkte, die Sie beim Entwickeln von Apps mit Verwendung des Hardware-DRM berücksichtigen sollten. Wie unter [PlayReady DRM](playready-client-sdk.md#output-protection) erläutert, wird bei PlayReady HWDRM für Windows10 der gesamte Ausgabeschutz innerhalb der Windows-TEE-Implementierung erzwungen. Dies wirkt sich auf das Verhalten des Ausgabeschutzes aus:
+Dieses Thema enthält eine kurze Liste der Punkte, die Sie beim Entwickeln von Apps, die Hardware-DRM verwenden, berücksichtigen sollten. Wie unter [PlayReady DRM](playready-client-sdk.md#output-protection) erläutert, wird bei PlayReady HWDRM für Windows10 der gesamte Ausgabeschutz innerhalb der Windows-TEE-Implementierung erzwungen. Dies wirkt sich auf das Verhalten des Ausgabeschutzes aus:
 
--   
-            **Unterstützung für Ausgabeschutzebene (Output Protection Level, OPL) 270 für nicht komprimierte digitale Videos:** PlayReady HWDRM für Windows10 unterstützt nicht die Abwärtsauflösung und erzwingt den Einsatz von HDCP. Microsoft empfiehlt, dass für HD-Inhalte für HWDRM ein OPL-Wert verwendet wird, der größer als270 ist (obwohl dies nicht zwingend erforderlich ist). Darüber hinaus empfiehlt Microsoft die Festlegung einer HDCP-Typeinschränkung in der Lizenz (HDCP-Version 2.2 unter Windows10).
--   Im Gegensatz zum Software-DRM wird der Ausgabeschutz für alle Monitore basierend auf dem langsamsten Monitor erzwungen. Wenn der Benutzer beispielsweise zwei Monitore angeschlossen hat und nur einer davon HDCP unterstützt, ist die Wiedergabe nicht möglich, falls die Lizenz HDCP erfordert. Dies gilt auch dann, wenn der Inhalt nur auf dem Monitor gerendert wird, der HDCP unterstützt. Beim Software-DRM (SWDRM) wird der Inhalt wiedergegeben, solange das Rendering nur auf dem Monitor erfolgt, der HDCP unterstützt.
--   Es ist nicht garantiert, dass das HWDRM vom Client verwendet wird und dass das Verfahren sicher ist, es sei denn, von den Inhaltsschlüsseln und -lizenzen werden die folgenden Bedingungen erfüllt:
+-   **Unterstützung für Ausgabeschutzebene (Output Protection Level, OPL) 270 für nicht komprimierte digitale Videos:** PlayReady HWDRM für Windows10 unterstützt nicht die Abwärtsauflösung und erzwingt den Einsatz von HDCP. Es empfiehlt sich, bei HD-Inhalten für das HWDRM einen OPL-Wert zu verwenden, der größer als270 ist (dies ist jedoch nicht zwingend erforderlich). Darüber hinaus empfiehlt Microsoft die Festlegung einer HDCP-Typeinschränkung in der Lizenz (HDCP-Version 2.2 unter Windows10).
+-   **Im Gegensatz zum Software-DRM (SWDRM) wird der Ausgabeschutz für alle Monitore basierend auf dem langsamsten Monitor erzwungen.** Wenn der Benutzer beispielsweise zwei Monitore angeschlossen hat und nur einer davon HDCP unterstützt, ist die Wiedergabe nicht möglich, falls die Lizenz HDCP erfordert. Dies gilt auch dann, wenn der Inhalt nur auf dem Monitor gerendert wird, der HDCP unterstützt. Beim Software-DRM wird der Inhalt wiedergegeben, solange das Rendering nur auf dem Monitor erfolgt, der HDCP unterstützt.
+-   **Es ist nicht garantiert, dass das HWDRM vom Client verwendet wird und dass das Verfahren sicher ist,** es sei denn, von den Inhaltsschlüsseln und -lizenzen werden die folgenden Bedingungen erfüllt:
     -   Die für den Videoinhaltsschlüssel verwendete Lizenz muss als Mindestsicherheitsstufe3.000 aufweisen.
     -   Audiodaten müssen mit einem anderen Inhaltsschlüssel verschlüsselt werden als Videodaten, und für die für Audiodaten verwendete Lizenz muss als Mindestsicherheitsstufe 2.000 festgelegt werden. Alternativ können Audiodaten auch unverschlüsselt bleiben.
     
@@ -53,7 +52,7 @@ Sehen Sie sich das folgende Szenario an, bei dem es um die Behandlung von persis
 4.  Der Kunde installiert dann eine neue Grafikkarte.
 5.  Alle Lizenzen im Datenspeicher mit Hash (HDS) sind an die integrierte Grafikkarte gebunden, aber der Kunde möchte jetzt geschützte Inhalte mit der neu installierten Grafikkarte wiedergeben.
 
-Um Fehler bei der Wiedergabe zu verhindern, weil die Lizenzen von der Hardware nicht entschlüsselt werden können, nutzt PlayReady für jede erkannte Grafikkarte einen separaten HDS. Daher versucht PlayReady, eine Lizenz für ein Inhaltselement zu beschaffen, für das PlayReady normalerweise bereits über eine Lizenz verfügen würde (beim Software-DRM oder in einem Fall ohne Wechsel der Hardware müsste PlayReady also nicht erneut eine Lizenz beschaffen). Falls die App eine persistente Lizenz beschafft, während Hardware-DRM genutzt wird, muss Ihre App also den Fall behandeln können, in dem diese Lizenz praktisch als „verloren“ gilt, wenn der Endbenutzer eine Grafikkarte installiert (oder deinstalliert). Da dies nicht ein häufiger Fall ist, können Sie sich auch für die Bearbeitung der Supportanfragen entscheiden, wenn Inhalte nach einem Wechsel der Hardware nicht mehr wiedergegeben werden können, anstatt nach einer Lösung für den Umgang mit einem Hardwarewechsel im Client-/Servercode zu suchen.
+Um Fehler bei der Wiedergabe zu verhindern, weil die Lizenzen von der Hardware nicht entschlüsselt werden können, nutzt PlayReady für jede erkannte Grafikkarte einen separaten HDS. Daher versucht PlayReady, eine Lizenz für ein Inhaltselement zu beschaffen, für das PlayReady normalerweise bereits über eine Lizenz verfügen würde (beim Software-DRM oder in einem Fall ohne Wechsel der Hardware müsste PlayReady also nicht erneut eine Lizenz beschaffen). Falls die App eine persistente Lizenz beschafft, während Hardware-DRM genutzt wird, muss Ihre App also den Fall behandeln können, in dem diese Lizenz praktisch als „verloren“ gilt, wenn der Endbenutzer eine Grafikkarte installiert (oder deinstalliert). Da dies ein seltener Fall ist, können Sie sich auch für die Bearbeitung der Supportanfragen entscheiden, wenn Inhalte nach einem Wechsel der Hardware nicht mehr wiedergegeben werden können, anstatt nach einer Lösung für den Umgang mit einem Hardwarewechsel im Client-/Servercode zu suchen.
 
 ## Außerkraftsetzen des Hardware-DRM
 
@@ -77,29 +76,31 @@ Wenn Sie das Hardware-DRM wieder verwenden möchten, legen Sie den **SoftwareOve
 mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectionLayer"] = true;
 ```
 
-Die beste Möglichkeit, herauszufinden, ob Sie ein hardwarebasiertes DRM oder ein softwarebasiertes DRM verwenden, besteht darin, C:\\Users\\&lt;username&gt;\\AppData\\Local\\Packages\\&lt;application name&gt;\\LocalState\\PlayReady\\\* zu betrachten.
+Die beste Möglichkeit, herauszufinden, ob Sie ein hardwarebasiertes DRM oder ein softwarebasiertes DRM verwenden, besteht darin, „C:\\Users\\&lt;username&gt;\\AppData\\Local\\Packages\\&lt;application name&gt;\\LocalState\\PlayReady\\\*“ zu überprüfen.
 
--   Wenn eine Datei mit der Erweiterung „mspr.hds“ vorhanden ist, verwenden Sie ein softwarebasiertes DRM.
--   Ist eine weitere Datei mit der Erweiterung „\*.hds“ vorhanden, ist Hardware-DRM ausgewählt.
+-   Wenn dort die Datei „mspr.hds“ vorhanden ist, verwenden Sie ein softwarebasiertes DRM.
+-   Ist eine weitere Datei mit der Erweiterung „\*.hds“ vorhanden, ist Hardware-DRM aktiv.
 -   Sie können auch den gesamten PlayReady-Ordner löschen und den Test wiederholen.
 
 ## Erkennen des Hardware-DRM-Typs
 
 In diesem Abschnitt wird beschrieben, wie Sie den auf dem System unterstützten Hardware-DRM-Typ erkennen.
 
-Sie können die [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441)-Methode verwenden, um festzustellen, ob das System eine bestimmte Hardwarefunktion für die Verwaltung digitaler Rechte (Digital Rights Management, DRM) unterstützt. Beispiel:
+Sie können die [**PlayReadyStatics.CheckSupportedHardware**](https://msdn.microsoft.com/library/windows/apps/dn986441)-Methode verwenden, um festzustellen, ob das System ein bestimmtes Hardware-DRM-Feature unterstützt. Beispiel:
 
 ```cpp
 boolean PlayReadyStatics->CheckSupportedHardware(PlayReadyHardwareDRMFeatures enum);
 ```
 
-Die [**PlayReadyHardwareDRMFeatures**](https://msdn.microsoft.com/library/windows/apps/dn986265)-Enumeration enthält die Liste gültige Hardware-DRM-Featurewerte, die abgefragt werden können. Um festzustellen, ob das Hardware-DRM unterstützt wird, verwenden Sie den **HardwareDRM**-Member in der Abfrage. Um festzustellen, ob die Hardware den High Efficiency Video Coding (HEVC)/H.265-Codec unterstützt, verwenden Sie den **HEVC**-Member in der Abfrage.
+Die [**PlayReadyHardwareDRMFeatures**](https://msdn.microsoft.com/library/windows/apps/dn986265)-Enumeration enthält die Liste gültiger Werte für das Hardware-DRM-Feature, die abgefragt werden können. Um festzustellen, ob das Hardware-DRM unterstützt wird, verwenden Sie den **HardwareDRM**-Member in der Abfrage. Um festzustellen, ob die Hardware den High Efficiency Video Coding (HEVC)/H.265-Codec unterstützt, verwenden Sie den **HEVC**-Member in der Abfrage.
 
-Sie können auch die [**PlayReadyStatics.PlayReadyCertificateSecurityLevel**](https://msdn.microsoft.com/library/windows/apps/windows.media.protection.playready.playreadystatics.playreadycertificatesecuritylevel.aspx)-Eigenschaft zum Abrufen der Sicherheitsstufe des Clientzertifikats verwenden, um festzustellen, ob das Hardware-DRM unterstützt wird. Sofern die zurückgegebene Zertifikatssicherheitsstufe nicht größer oder gleich 3000 ist, ist entweder der Client nicht individualisiert oder bereitgestellt (in diesem Fall gibt die Eigenschaft 0 zurück) oder das Hardware-DRM wird nicht verwendet (in diesem Fall gibt die Eigenschaft einen Wert kleiner 3000 zurück).
+Sie können auch die [**PlayReadyStatics.PlayReadyCertificateSecurityLevel**](https://msdn.microsoft.com/library/windows/apps/windows.media.protection.playready.playreadystatics.playreadycertificatesecuritylevel.aspx)-Eigenschaft zum Abrufen der Sicherheitsstufe des Clientzertifikats verwenden, um festzustellen, ob das Hardware-DRM unterstützt wird. Sofern die zurückgegebene Zertifikatssicherheitsstufe nicht größer oder gleich 3000 ist, ist entweder der Client nicht individualisiert oder bereitgestellt (in diesem Fall gibt die Eigenschaft 0 zurück) oder das Hardware-DRM wird nicht verwendet (in diesem Fall gibt die Eigenschaft einen Wert unter 3000 zurück).
+
+## Weitere Informationen
+- [PlayReady DRM](playready-client-sdk.md)
 
 
 
-
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

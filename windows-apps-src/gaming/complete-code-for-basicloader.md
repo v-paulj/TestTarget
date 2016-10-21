@@ -1,10 +1,11 @@
 ---
 author: mtoepke
-title: "Vollständiger Code für \"BasicLoader\""
+title: "Vollständiger Code für &quot;BasicLoader&quot;"
 description: "Vollständiger Code für eine Klasse und Methoden, die allgemeine Grafikressourcen wie Gitter, Texturen und verschiedene Shader-Objekte konvertieren und laden."
 ms.assetid: b37f5852-278c-57b8-0834-002fb837e158
+translationtype: Human Translation
 ms.sourcegitcommit: 8a7202f2b860a4b7aa52f44ebd630d73889544a2
-ms.openlocfilehash: 355e5a65a16e5e2df9bb039383f68dda16ff23a2
+ms.openlocfilehash: ab16033c05273a0cd483fdc7a5302a3ff461e4b1
 
 ---
 
@@ -29,17 +30,13 @@ Dieses Beispiel kann nicht heruntergeladen werden.
 
 ## Technologien
 
-
-            **Programmiersprachen** – C++  
-
-            **Programmiermodelle** – Windows-Runtime
+**Programmiersprachen** – C++  
+**Programmiermodelle** – Windows-Runtime
 
 ## Anforderungen
 
-
-            **Unterstützte Mindestversion (Client)** – Windows 10                              
-
-            **Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview 
+**Unterstützte Mindestversion (Client)** – Windows 10                              
+**Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview 
 
 
 ## Anzeigen des Codes (C++)
@@ -1114,6 +1111,6 @@ task<void> BasicLoader::LoadMeshAsync(
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

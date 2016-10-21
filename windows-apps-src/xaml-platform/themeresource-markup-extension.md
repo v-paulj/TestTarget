@@ -3,8 +3,9 @@ author: jwmsft
 description: "Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource ausgewertet wird. Dabei wird zusätzliche Systemlogik genutzt, mit der unterschiedliche Ressourcen je nach derzeit aktivem Design abgerufen werden."
 title: ThemeResource-Markuperweiterung
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
+translationtype: Human Translation
 ms.sourcegitcommit: 9c657f906e6dedb259b8a98373f56ac5a63bd845
-ms.openlocfilehash: 246c991bbdbc95e73ea8d4884cd4d617592bfc51
+ms.openlocfilehash: 803c62987c3a019fc576c6f1d0c343e042ba947b
 
 ---
 
@@ -32,8 +33,7 @@ Eine **ThemeResource** ist eine Methode zum Abrufen von Werten für ein XAML-Att
 
 Nach dem ersten Starten der App werden alle Ressourcenverweise eines **ThemeResource**-Verweises anhand des Designs ausgewertet, das beim Starten aktiv war. Wenn Benutzer das aktive Design zur Laufzeit dann jedoch ändern, werden vom System alle **ThemeResource**-Verweise neu ausgewertet und ggf. andere designspezifische Ressourcen abgerufen. Die App wird an allen relevanten Stellen der visuellen Struktur mit neuen Ressourcenwerten angezeigt. Eine **StaticResource** wird zur XAML-Ladezeit bzw. beim Starten der App bestimmt und zur Laufzeit nicht neu ausgewertet. (Es gibt andere Verfahren, z.B. visuelle Zustände, bei denen XAML dynamisch neu geladen wird. Diese Verfahren finden jedoch auf einer höheren Ebene als die grundlegende Ressourcenauswertung statt, die mit der [{StaticResource}-Markuperweiterung](staticresource-markup-extension.md) möglich ist.)
 
-
-            **ThemeResource** akzeptiert ein Argument, das den Schlüssel für die angeforderte Ressource angibt. Ein Ressourcenschlüssel ist immer eine Zeichenfolge in der Windows-Runtime-XAML. Weitere Informationen zum anfänglichen Festlegen des Ressourcenschlüssels finden Sie unter [x:Key-Attribut](x-key-attribute.md).
+**ThemeResource** akzeptiert ein Argument, das den Schlüssel für die angeforderte Ressource angibt. Ein Ressourcenschlüssel ist immer eine Zeichenfolge in der Windows-Runtime-XAML. Weitere Informationen zum anfänglichen Festlegen des Ressourcenschlüssels finden Sie unter [x:Key-Attribut](x-key-attribute.md).
 
 Weitere Informationen dazu, wie Sie Ressourcen und Eigenschaften mithilfe eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) definieren, und zusätzlichen Beispielcode finden Sie unter [ResourceDictionary- und XAML-Ressourcenverweise](https://msdn.microsoft.com/library/windows/apps/mt187273).
 
@@ -44,8 +44,7 @@ Wenn Sie versuchen, eine **ThemeResource** für einen Schlüssel anzugeben, die 
 
 Die XAML-Prozessorimplementierung der Windows-Runtime enthält keine Sicherungsklassendarstellung für **ThemeResource**-Funktionen. Die weitestgehende Entsprechung im Code ist die Verwendung der Auflistungs-API eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794), z.B. der Aufruf von [**Contains**](https://msdn.microsoft.com/library/windows/apps/jj635925) oder [**TryGetValue**](https://msdn.microsoft.com/library/windows/apps/jj603139).
 
-
-            **ThemeResource** ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn für Attributwerte Escapezeichen verwendet werden müssen, damit sie keine Literalwerte oder Handlernamen darstellen, und es nicht ausreicht, Typkonverter für bestimmte Typen oder Eigenschaften zu verwenden. Alle Markuperweiterungen in XAML verwenden die Zeichen „{” und „}” in ihrer Attributsyntax. Anhand dieser Konvention erkennt ein XAML-Prozessor, dass eine Markuperweiterung das Attribut verarbeiten muss.
+**ThemeResource** ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn für Attributwerte Escapezeichen verwendet werden müssen, damit sie keine Literalwerte oder Handlernamen darstellen, und es nicht ausreicht, Typkonverter für bestimmte Typen oder Eigenschaften zu verwenden. Alle Markuperweiterungen in XAML verwenden die Zeichen „{” und „}” in ihrer Attributsyntax. Anhand dieser Konvention erkennt ein XAML-Prozessor, dass eine Markuperweiterung das Attribut verarbeiten muss.
 
 ### Zeitpunkt und Art der Verwendung von {ThemeResource} anstelle von {StaticResource}
 
@@ -65,12 +64,9 @@ Die Windows-Runtime stellt einen Satz von Ressourcen bereit, die ausdrücklich f
 
 Für die XAML-Definitionen von Ansichtszuständen in einer Steuerelementvorlage sollten immer **ThemeResource**-Verweise verwendet werden, wenn eine zugrunde liegende Ressource vorhanden ist, die sich aufgrund einer Designänderung ändern kann. Eine Systemdesignänderung führt normalerweise nicht gleichzeitig auch zu einer Änderung des Ansichtszustands. In diesem Fall müssen für die Ressourcen **ThemeResource**-Verweise verwendet werden, damit Werte für den weiterhin aktiven Ansichtszustand neu ausgewertet werden können. Falls Sie beispielsweise über einen Ansichtszustand verfügen, mit dem eine Pinselfarbe eines bestimmten Teils der UI und eine der dazugehörigen Eigenschaften geändert wird, und diese Pinselfarbe jeweils von Design zu Design unterschiedlich ist, sollten Sie einen **ThemeResource**-Verweis verwenden. Damit stellen Sie den Wert dieser Eigenschaft in der Standardvorlage und außerdem alle Änderungen des Ansichtszustands für diese Standardvorlage bereit.
 
+Die Verwendung von **ThemeResource** kann als eine Reihe abhängiger Werte verstanden werden. Beispielsweise kann für einen [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723)-Wert, der von einem [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)-Element verwendet wird, bei dem es sich außerdem um eine Ressource mit Schlüssel handelt, ein **ThemeResource**-Verweis verwendet werden. Für alle UI-Eigenschaften, von denen die **SolidColorBrush**-Ressource mit Schlüssel verwendet wird, würde jedoch auch ein **ThemeResource**-Verweis verwendet werden. Eine dynamische Änderung des Werts bei einer Designänderung wird also jeweils speziell von den Eigenschaften vom Typ [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) ermöglicht.
 
-            Die Nutzung von **ThemeResource** lässt sich ggf. in eine Reihe abhängiger Werte erkennen. Beispielsweise kann für einen [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723)-Wert, der von einem [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)-Element verwendet wird, bei dem es sich außerdem um eine Ressource mit Schlüssel handelt, ein **ThemeResource**-Verweis verwendet werden. Für alle UI-Eigenschaften, von denen die **SolidColorBrush**-Ressource mit Schlüssel verwendet wird, würde jedoch auch ein **ThemeResource**-Verweis verwendet werden. Eine dynamische Änderung des Werts bei einer Designänderung wird also jeweils speziell von den Eigenschaften vom Typ [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) ermöglicht.
-
-
-            **Hinweis**
-            Die Auswertung von `{ThemeResource}` und Laufzeitressourcen beim Wechseln von Designs wird in Windows 8.1-XAML-Code unterstützt, jedoch nicht in XAML-Code für Apps, die auf Windows 8 ausgerichtet sind.
+**Hinweis**  Die Auswertung von `{ThemeResource}` und Laufzeitressourcen beim Wechseln von Designs wird in Windows 8.1-XAML-Code unterstützt, jedoch nicht in XAML-Code für Apps, die für Windows 8 bestimmt sind.
 
 ### Systemressourcen
 
@@ -160,6 +156,6 @@ Sobald ein Ressourcenschlüssel als Teil einer **{ThemeResource}**-Verwendung vo
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

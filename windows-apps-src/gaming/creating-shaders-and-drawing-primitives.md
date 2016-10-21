@@ -3,8 +3,9 @@ author: mtoepke
 title: Erstellen von Shadern und Zeichnen von Grundtypen
 description: Im Folgenden wird das Kompilieren und Erstellen von Shadern mit HLSL-Quelldateien veranschaulicht, die zum Zeichnen von Grundtypen auf dem Bildschirm verwendet werden.
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 15b5f83b45b928baaa484c10dc6e7bfe9c27a924
+ms.openlocfilehash: 36ce1c3c0df0dd9dd4f5cf3d31282d5b15050f5c
 
 ---
 
@@ -17,8 +18,7 @@ Im Folgenden wird das Kompilieren und Erstellen von Shadern mit HLSL-Quelldateie
 
 Ein gelbes Dreieck wird mit Vertex- und Pixelshadern erstellt. Nach dem Erstellen des Direct3D-Geräts, der Swapchain und der Renderingzielansicht werden Daten aus Binärshaderobjektdateien auf dem Datenträger gelesen.
 
-
-            **Ziel:**  Shader erstellen und Grundtypen zeichnen.
+**Ziel:** Shader erstellen und Grundtypen zeichnen.
 
 ## Voraussetzungen
 
@@ -27,8 +27,7 @@ Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem 
 
 Ferner wird davon ausgegangen, dass Sie sich mit dem Dokument [Schnellstart: Einrichten von DirectX-Ressourcen und Anzeigen eines Bilds](setting-up-directx-resources.md) vertraut gemacht haben.
 
-
-            **Zeitaufwand:** 20 Minuten.
+**Zeitaufwand:** 20Minuten.
 
 ## Anweisungen
 
@@ -297,6 +296,6 @@ Als Nächstes wird ein kreisender 3D-Würfel erstellt, und Lichteffekte werden a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

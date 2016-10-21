@@ -5,7 +5,7 @@ title: Sensoren
 description: "Mithilfe von Sensoren können Apps die Beziehung zwischen einem Gerät und der physischen Umgebung ermitteln. Sensoren können für die App die Richtung, Ausrichtung und Bewegung des Geräts erfassen."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 15f9fbdc48d43feb02f46313cea4001392d7f0fe
+ms.openlocfilehash: 73ee42a275d0c0f0a08ddf19ddde4eabd21a7191
 
 ---
 # Sensoren
@@ -129,6 +129,6 @@ Einige Beispiele zur Verwendung verschiedener Sensoren finden Sie unter [Beispie
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

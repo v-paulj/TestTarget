@@ -4,8 +4,9 @@ Description: "Diese Richtlinien unterstützen Sie beim Gestalten von effektiven 
 title: "Richtlinien für die App-Hilfe"
 label: Guidelines for app help
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 0aa2db498ab7ec25839da259dd0026b0a7cd2b13
-ms.openlocfilehash: f2522afa91abe26303a85cbfbabd5ec5b3dba59c
+ms.openlocfilehash: 0ca099b0acfcba16d62c6158c7a829adaf475891
 
 ---
 
@@ -29,20 +30,15 @@ Ein Benutzer wird erst dann nach Hilfeinhalten suchen, wenn bereits ein Problem 
 
 Jede Hilfe sollte unabhängig von ihrer Art den folgenden allgemeinen Prinzipien entsprechen:
 
--   
-            **Leicht verständlich:** Hilfe, die den Benutzer verwirrt, ist schlimmer als gar keine Hilfe.
+-   **Leicht verständlich:** Hilfe, die den Benutzer verwirrt, ist schlimmer als gar keine Hilfe.
 
--   
-            **Geradlinig:** Benutzer, die Hilfe benötigen, möchten klare Antworten, die ihnen direkt angezeigt werden.
+-   **Geradlinig:** Benutzer, die Hilfe benötigen, möchten klare Antworten, die ihnen direkt angezeigt werden.
 
--   
-            **Relevant:** Benutzer möchten nicht nach ihrem spezifischen Problem suchen müssen. Sie möchten, dass ihnen möglichst relevante Hilfe unmittelbar angezeigt wird (man spricht von „kontextbezogener Hilfe“), oder sie möchten eine leicht zu bedienende Oberfläche.
+-   **Relevant:** Benutzer möchten nicht nach ihrem spezifischen Problem suchen müssen. Sie möchten, dass ihnen möglichst relevante Hilfe unmittelbar angezeigt wird (man spricht von „kontextbezogener Hilfe“), oder sie möchten eine leicht zu bedienende Oberfläche.
 
--   
-            **Direkt:** Wenn ein Benutzer nach Hilfe sucht, möchte er auch Hilfe bekommen. Enthält die App Seiten zum Melden von Fehlern, für Feedback, zum Anzeigen der Nutzungsbedingungen oder ähnliche Funktionen, sollten sie als Links oder Fußnoten auf der Haupthilfeseite und nicht als wichtige Elemente eingefügt werden.
+-   **Direkt:** Wenn ein Benutzer nach Hilfe sucht, möchte er auch Hilfe bekommen. Enthält die App Seiten zum Melden von Fehlern, für Feedback, zum Anzeigen der Nutzungsbedingungen oder ähnliche Funktionen, sollten sie als Links oder Fußnoten auf der Haupthilfeseite und nicht als wichtige Elemente eingefügt werden.
 
--   
-            **Konsistent:** Die Hilfe ist unabhängig von ihrer Art ein Teil der App und sollte wie jeder andere Teil der Benutzeroberfläche behandelt werden. Für die von Ihnen angebotene Hilfe sollten die gleichen Gestaltungsprinzipien gelten wie für die eigentliche App, nämlich Benutzerfreundlichkeit, Barrierefreiheit und Stil.
+-   **Konsistent:** Die Hilfe ist unabhängig von ihrer Art ein Teil der App und sollte wie jeder andere Teil der Benutzeroberfläche behandelt werden. Für die von Ihnen angebotene Hilfe sollten die gleichen Gestaltungsprinzipien gelten wie für die eigentliche App, nämlich Benutzerfreundlichkeit, Barrierefreiheit und Stil.
 
 ## <span id="types_of_help"></span><span id="TYPES_OF_HELP"></span>Arten von Hilfe
 
@@ -66,10 +62,10 @@ Für ausführliche Lernprogramme, erweiterte Funktionen oder Bibliotheken mit Hi
 
 [Siehe „Richtlinien für externe Hilfe“](external-help.md)
 
-\[Dieser Artikel enthält spezielle Informationen zu Apps für die Universelle Windows-Plattform (UWP) und Windows10. Laden Sie für Windows8.1 die [PDF-Datei mit Windows8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
+\[Dieser Artikel enthält spezielle Informationen zu Apps für die Universelle Windows-Plattform (UWP) und Windows10. Wenn Sie Anleitungen für Windows8.1 benötigen, laden Sie die [PDF-Datei mit Windows8.1-Richtlinien](https://go.microsoft.com/fwlink/p/?linkid=258743) herunter.\]
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

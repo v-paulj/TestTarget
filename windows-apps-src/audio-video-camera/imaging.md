@@ -2,21 +2,21 @@
 author: drewbatgit
 ms.assetid: 3FD2AA71-EF67-47B2-9332-3FFA5D3703EA
 description: "In diesem Artikel wird das Laden und Speichern von Bilddateien mit BitmapDecoder und BitmapEncoder sowie das Verwenden des SoftwareBitmap-Objekts zum Darstellen von Bitmapbildern erläutert."
-title: Bildverarbeitung
+title: Erstellen, Bearbeiten und Speichern von Bitmapbildern
 translationtype: Human Translation
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8da8c78a848c4eea565d432bdf62d3d1528c5a85
+ms.sourcegitcommit: c61bad4b4a5440531c0177247c425addaf452920
+ms.openlocfilehash: ff6bff692c4e0e73b2c99e06b46e8a3050ba12c4
 
 ---
 
-# Bildverarbeitung
+# Erstellen, Bearbeiten und Speichern von Bitmapbildern
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 In diesem Artikel wird das Laden und Speichern von Bilddateien mit [**BitmapDecoder**](https://msdn.microsoft.com/library/windows/apps/br226176) und [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) sowie das Verwenden des [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358)-Objekts zum Darstellen von Bitmapbildern erläutert.
 
-Die **SoftwareBitmap**-Klasse ist eine vielseitige API, die aus mehreren Quellen, z.B. Bilddateien, [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/br243259)-Objekten, Direct3D-Oberflächen und Code erstellt werden kann. **SoftwareBitmap** ermöglicht Ihnen die einfache Konvertierung zwischen verschiedenen Pixelformaten und Alphamodi und Zugriff auf niedriger Ebene auf Pixeldaten. **SoftwareBitmap** stellt des Weiteren eine gemeinsame Schnittstelle dar, die von mehreren Features von Windows verwendet wird, darunter:
+Die **SoftwareBitmap**-Klasse ist eine vielseitige API, die aus mehreren Quellen, z.B. Bilddateien, [**WriteableBitmap**](https://msdn.microsoft.com/library/windows/apps/br243259)-Objekten, Direct3D-Oberflächen und Code erstellt werden kann. **SoftwareBitmap** ermöglicht Ihnen die einfache Konvertierung zwischen verschiedenen Pixelformaten und Alphamodi und einen Zugriff auf niedriger Ebene auf Pixeldaten. **SoftwareBitmap** stellt des Weiteren eine gemeinsame Schnittstelle dar, die von mehreren Features von Windows verwendet wird, darunter:
 
 -   [**CapturedFrame**](https://msdn.microsoft.com/library/windows/apps/dn278725) ermöglicht Ihnen das Abrufen von durch die Kamera erfassten Frames als **SoftwareBitmap**.
 
@@ -44,8 +44,7 @@ Rufen Sie zum Speichern eines **SoftwareBitmap**-Objekts in einer Datei eine Ins
 
 [!code-cs[PickOuputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickOuputFile)]
 
-Rufen Sie die [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116)-Methode des **StorageFile**-Objekts auf, um einen Datenstrom mit wahlfreiem Zugriff abzurufen, in den das Bild geschrieben wird. Rufen Sie die statische [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211)-Methode auf, um eine Instanz der [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)-Klasse für den angegebenen Datenstrom abzurufen. Der erste Parameter für **CreateAsync** ist eine GUID, die den zum Codieren des Bilds zu verwendenden Codec darstellt. 
-            Die **BitmapEncoder**-Klasse stellt eine Eigenschaft bereit, die die ID für jeden vom Encoder unterstützten Codec enthält, z.B. [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226).
+Rufen Sie die [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116)-Methode des **StorageFile**-Objekts auf, um einen Datenstrom mit wahlfreiem Zugriff abzurufen, in den das Bild geschrieben wird. Rufen Sie die statische [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211)-Methode auf, um eine Instanz der [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)-Klasse für den angegebenen Datenstrom abzurufen. Der erste Parameter für **CreateAsync** ist eine GUID, die den zum Codieren des Bilds zu verwendenden Codec darstellt. Die **BitmapEncoder**-Klasse stellt eine Eigenschaft bereit, die die ID für jeden vom Encoder unterstützten Codec enthält, z.B. [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226).
 
 Verwenden Sie die [**SetSoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887337)-Methode zum Festlegen des Bilds, das codiert werden soll. Sie können auch Werte der [**BitmapTransform**](https://msdn.microsoft.com/library/windows/apps/br226254)-Eigenschaft festlegen, um grundlegende Transformationen auf das Bild anzuwenden, während es codiert wird. Die [**IsThumbnailGenerated**](https://msdn.microsoft.com/library/windows/apps/br226225)-Eigenschaft bestimmt, ob eine Miniaturansicht vom Encoder generiert wird. Beachten Sie, dass nicht alle Dateiformate die Miniaturansicht unterstützen. Deshalb sollten Sie bei Verwendung dieses Features die Fehler zu nicht unterstützten Vorgängen auffangen, die ausgelöst werden, wenn die Miniaturansicht nicht unterstützt wird.
 
@@ -62,6 +61,8 @@ Sie können beim Erstellen von **BitmapEncoder** zusätzliche Codierungsoptionen
 Um ein Bild unter Verwendung des [**Image**](https://msdn.microsoft.com/library/windows/apps/br242752)-Steuerelements auf einer XAML-Seite anzuzeigen, definieren Sie zunächst ein **Image**-Steuerelement in der XAML-Seite.
 
 [!code-xml[ImageControl](./code/ImagingWin10/cs/MainPage.xaml#SnippetImageControl)]
+
+Zurzeit unterstützt das Steuerelement **Image** nur Bilder, die BGRA8-Codierung und einen vormultiplizierten oder No-Alpha-Kanal verwenden. Bevor Sie versuchen, ein Bild anzuzeigen, sollten Sie einen Test durchführen, um sicherzustellen, dass es das richtige Format hat. Wenn dies nicht der Fall ist, verwenden Sie die statische [**Convert**](https://msdn.microsoft.com/library/windows/apps/dn887362)-Methode von **SoftwareBitmap**, um das Bild in das unterstützte Format zu konvertieren.
 
 Erstellen Sie ein neues [**SoftwareBitmapSource**](https://msdn.microsoft.com/library/windows/apps/dn997854)-Objekt. Legen Sie den Inhalt des Quellobjekts durch Aufrufen von [**SetBitmapAsync**](https://msdn.microsoft.com/library/windows/apps/dn997856) fest, und übergeben Sie dabei ein **SoftwareBitmap**-Objekt. Anschließend können Sie die [**Source**](https://msdn.microsoft.com/library/windows/apps/br242760)-Eigenschaft des **Image**-Steuerelements auf das neu erstellte **SoftwareBitmapSource**-Objekt festlegen.
 
@@ -131,6 +132,6 @@ Sie können eine Bilddatei direkt von einem [**BitmapDecoder**](https://msdn.mic
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

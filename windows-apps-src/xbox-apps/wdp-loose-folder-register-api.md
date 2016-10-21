@@ -2,8 +2,9 @@
 author: WilliamsJason
 title: Device Portal - Referenz zu den APIs zum Registrieren loser Ordner
 description: Erfahren Sie, wie Sie programmgesteuert auf die APIs zum Registrieren loser Ordner zugreifen.
+translationtype: Human Translation
 ms.sourcegitcommit: ef0f1339b77a8d1f60a677b2ff19a63b68f0d6cd
-ms.openlocfilehash: 41e4cc67120b9e32fac34404ca918edcf58ba267
+ms.openlocfilehash: 42dc5e16065f1a2252f63743269970cf85fb0b95
 
 ---
 
@@ -61,6 +62,6 @@ Die dritte Möglichkeit besteht darin, einen vollständigen Ordner über [/api/a
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

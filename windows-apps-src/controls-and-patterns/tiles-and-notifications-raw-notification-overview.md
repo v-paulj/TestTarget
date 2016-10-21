@@ -5,11 +5,12 @@ title: "Übersicht über unformatierte Benachrichtigungen"
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
 label: TBD
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 4b487e44c7acd882a86c0b24dd9994092d976b06
+translationtype: Human Translation
+ms.sourcegitcommit: 2c50b2be763a0cc7045745baeef6e6282db27cc7
+ms.openlocfilehash: 6d0f2460e6b65173445cdf7c1fea207e6bdbd149
 
 ---
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 # Übersicht über unformatierte Benachrichtigungen
 
 
@@ -20,8 +21,7 @@ Unformatierte Benachrichtigungen sind kurze, allgemeine Pushbenachrichtigungen. 
 
 Unformatierte Benachrichtigungen können für verschiedenste Zwecke verwendet werden, z.B. zum Auslösen einer Hintergrundaufgabe in der App, wenn der Benutzer der App die entsprechende Berechtigung erteilt hat. Durch die Verwendung von WNS für die Kommunikation mit der App entfällt der Verarbeitungsaufwand für das Erstellen dauerhafter Socketverbindungen, Senden von HTTPGET-Nachrichten und andere Verbindungen zwischen Dienst und App.
 
-
-            **Wichtig**   Um die Funktionsweise von unformatierten Benachrichtigungen verstehen zu können, sollten Sie mit den in [Übersicht über den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Service, WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md) erörterten Konzepten vertraut sein.
+**Wichtig**   Um die Funktionsweise von unformatierten Benachrichtigungen verstehen zu können, sollten Sie mit den in [Übersicht über den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Service, WNS)](tiles-and-notifications-windows-push-notification-services--wns--overview.md) erörterten Konzepten vertraut sein.
 
  
 
@@ -29,7 +29,7 @@ Wie bei Popup-, Kachel- und Signalpushbenachrichtigungen wird eine unformatierte
 
 Als Beispiel für eine App, die von der Verwendung unformatierter Benachrichtigungen profitieren könnte, nehmen wir hier eine theoretische Zusammenarbeits-App für Dokumente. Angenommen, zwei Benutzer bearbeiten gleichzeitig das gleiche Dokument. Der Clouddienst, der das freigegebene Dokument hostet, könnte jeden Benutzer mithilfe von unformatierten Benachrichtigungen informieren, wenn Änderungen vom anderen Benutzer vorgenommen werden. Die unformatierten Benachrichtigungen müssen dabei nicht die Änderungen am Dokument enthalten. Stattdessen weisen sie die App-Instanzen der beiden Benutzer an, eine Verbindung mit dem zentralen Speicherort herzustellen und die verfügbaren Änderungen zu synchronisieren. Durch die Verwendung von unformatierten Benachrichtigungen entfällt für die App und ihren Clouddienst der Mehraufwand, während der gesamten Zeit, in der das Dokument geöffnet ist, dauerhafte Verbindungen aufrecht zu erhalten.
 
-## <span id="How_raw_notifications_work"></span><span id="how_raw_notifications_work"></span><span id="HOW_RAW_NOTIFICATIONS_WORK"></span>Funktionsweise von unformatierten Benachrichtigungen
+## Funktionsweise von unformatierten Benachrichtigungen
 
 
 Alle unformatierten Benachrichtigungen sind Pushbenachrichtigungen. Daher gilt die zum Senden und Empfangen von Pushbenachrichtigungen erforderliche Konfiguration auch für unformatierte Benachrichtigungen:
@@ -43,7 +43,7 @@ Wenn der Client offline ist, werden unformatierte Benachrichtigungen nur dann vo
 
 Auf dem Client gibt es nur drei Möglichkeiten für die Verarbeitung einer unformatierten Benachrichtigung: Sie wird durch ein Benachrichtigungsübermittlungsereignis an die aktive App übermittelt, an eine Hintergrundaufgabe gesendet oder verworfen. Ist der Client offline, wenn WNS versucht, eine unformatierte Benachrichtigung zu übermitteln, wird die Benachrichtigung daher verworfen.
 
-## <span id="Creating_a_raw_notification"></span><span id="creating_a_raw_notification"></span><span id="CREATING_A_RAW_NOTIFICATION"></span>Erstellen einer unformatierten Benachrichtigung
+## Erstellen einer unformatierten Benachrichtigung
 
 
 Mit Ausnahme der folgenden Unterschiede ist das Senden einer unformatierten Benachrichtigung mit dem einer Kachel-, Popup- oder Signalpushbenachrichtigung identisch:
@@ -56,7 +56,7 @@ Unformatierte Benachrichtigungen sollen als Kurznachrichten verwendet werden, di
 
 Weitere Informationen zum Senden von Pushbenachrichtigungen finden Sie unter [Schnellstart: Senden einer Pushbenachrichtigung](https://msdn.microsoft.com/library/windows/apps/xaml/hh868252).
 
-## <span id="Receiving_a_raw_notification"></span><span id="receiving_a_raw_notification"></span><span id="RECEIVING_A_RAW_NOTIFICATION"></span>Empfangen einer unformatierten Benachrichtigung
+## Empfangen einer unformatierten Benachrichtigung
 
 
 Es sind zwei Mechanismen verfügbar, über die Ihre App unformatierte Benachrichtigungen empfangen kann:
@@ -69,21 +69,17 @@ Eine App kann beide Mechanismen zum Empfangen von unformatierten Benachrichtigun
 -   Ist die App aktiv, hat das Benachrichtigungsübermittlungsereignis Vorrang vor der Hintergrundaufgabe, und die App erhält als Erstes die Gelegenheit, die Benachrichtigung zu verarbeiten.
 -   Der Benachrichtigungsübermittlungs-Ereignishandler kann festlegen, dass die unformatierte Benachrichtigung bei der Beendigung des Handlers nicht an die Hintergrundaufgabe übergeben werden soll, indem er die [**PushNotificationReceivedEventArgs.Cancel**](https://msdn.microsoft.com/library/windows/apps/br241297)-Eigenschaft des Ereignisses auf **true** festlegt. Wenn die **Cancel**-Eigenschaft auf **false** oder nicht festgelegt ist (der Standardwert ist **false**), löst die unformatierte Benachrichtigung die Hintergrundaufgabe aus, nachdem der Benachrichtigungsübermittlungs-Ereignishandler beendet wurde.
 
-### <span id="notification_delivery_events"></span><span id="NOTIFICATION_DELIVERY_EVENTS"></span>Benachrichtigungsübermittlungsereignisse
+### Benachrichtigungsübermittlungsereignisse
 
 Ihre App kann über ein Benachrichtigungsübermittlungsereignis ([**PushNotificationReceived**](https://msdn.microsoft.com/library/windows/apps/br241292)) unformatierte Benachrichtigungen erhalten, während die App verwendet wird. Wenn der Clouddienst eine unformatierte Benachrichtigung sendet, kann die aktive App die Benachrichtigung empfangen, indem sie das Benachrichtigungsübermittlungsereignis für den Kanal-URI behandelt.
 
 Falls die App nicht aktiv ist und keine [Hintergrundaufgaben](#bg_tasks) verwendet, werden alle an sie gesendeten unformatierten Benachrichtigungen beim Empfang von WNS verworfen. Um zu verhindern, dass Ressourcen des Clouddiensts vergeudet werden, sollten Sie ggf. eine Logik implementieren, mit der der Dienst nachverfolgen kann, ob die App aktiv ist. Für diese Informationen kommen zwei Quellen in Frage: Eine App kann dem Dienst explizit mitteilen, dass sie für den Empfang von Benachrichtigungen bereit ist, und WNS kann dem Dienst mitteilen, wann er die Übermittlung beenden soll.
 
--   
-            **Die App benachrichtigt den Clouddienst**: Die App kann eine Verbindung mit dem Dienst herstellen, um ihm mitzuteilen, dass sie im Vordergrund ausgeführt wird. Der Nachteil bei diesem Ansatz ist, dass die App u.U. sehr oft eine Verbindung mit dem Dienst herstellt. Der Vorteil ist jedoch, dass der Dienst immer weiß, wann die App für den Empfang eingehender unformatierter Benachrichtigungen bereit ist. Ein weiterer Vorteil: Wenn die App eine Verbindung mit dem Dienst herstellt, kann der Dienst unformatierte Benachrichtigungen an die spezifische Instanz der App senden, anstatt einen Broadcast zu senden.
--   
-            **Der Clouddienst antwortet auf WNS-Antwortnachrichten**: Der App-Dienst kann anhand der von WNS zurückgegebenen Informationen [X-WNS-NotificationStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_notification) und [X-WNS-DeviceConnectionStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_dcs) feststellen, wann keine unformatierten Benachrichtigungen mehr an die App gesendet werden sollen. Wenn Ihr Dienst eine Benachrichtigung als HTTP-POST an einen Kanal sendet, kann er als Antwort eine der folgenden Nachrichten erhalten:
+-   **Die App benachrichtigt den Clouddienst**: Die App kann eine Verbindung mit dem Dienst herstellen, um ihm mitzuteilen, dass sie im Vordergrund ausgeführt wird. Der Nachteil bei diesem Ansatz ist, dass die App u.U. sehr oft eine Verbindung mit dem Dienst herstellt. Der Vorteil ist jedoch, dass der Dienst immer weiß, wann die App für den Empfang eingehender unformatierter Benachrichtigungen bereit ist. Ein weiterer Vorteil: Wenn die App eine Verbindung mit dem Dienst herstellt, kann der Dienst unformatierte Benachrichtigungen an die spezifische Instanz der App senden, anstatt einen Broadcast zu senden.
+-   **Der Clouddienst antwortet auf WNS-Antwortnachrichten**: Der App-Dienst kann anhand der von WNS zurückgegebenen Informationen [X-WNS-NotificationStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_notification) und [X-WNS-DeviceConnectionStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_dcs) feststellen, wann keine unformatierten Benachrichtigungen mehr an die App gesendet werden sollen. Wenn Ihr Dienst eine Benachrichtigung als HTTP-POST an einen Kanal sendet, kann er als Antwort eine der folgenden Nachrichten erhalten:
 
-    -   
-            **X-WNS-NotificationStatus: dropped**: Gibt an, dass die Benachrichtigung nicht vom Client empfangen wurde. Die **dropped**-Antwort ist in der Regel darauf zurückzuführen, dass die App auf dem Gerät des Benutzers nicht mehr im Vordergrund ausgeführt wird.
-    -   
-            **X-WNS-DeviceConnectionStatus: disconnected** oder **X-WNS-DeviceConnectionStatus: tempconnected**: Gibt an, dass der Windows-Client nicht mehr mit WNS verbunden ist. Diese Nachricht von WNS kann nur empfangen werden, wenn Sie sie durch Festlegen des [X-WNS-RequestForStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_request)-Headers in der HTTP-POST-Nachricht der Benachrichtigung anfordern.
+    -   **X-WNS-NotificationStatus: dropped**: Gibt an, dass die Benachrichtigung nicht vom Client empfangen wurde. Die **dropped**-Antwort ist in der Regel darauf zurückzuführen, dass die App auf dem Gerät des Benutzers nicht mehr im Vordergrund ausgeführt wird.
+    -   **X-WNS-DeviceConnectionStatus: disconnected** oder **X-WNS-DeviceConnectionStatus: tempconnected**: Gibt an, dass der Windows-Client nicht mehr mit WNS verbunden ist. Diese Nachricht von WNS kann nur empfangen werden, wenn Sie sie durch Festlegen des [X-WNS-RequestForStatus](https://msdn.microsoft.com/library/windows/apps/hh465435.aspx#pncodes_x_wns_request)-Headers in der HTTP-POST-Nachricht der Benachrichtigung anfordern.
 
     Der Clouddienst Ihrer App kann die Informationen in diesen Statusnachrichten verwenden, um Kommunikationsversuche durch unformatierte Benachrichtigungen zu beenden. Der Dienst kann das Senden von unformatierten Benachrichtigungen fortsetzen, wenn die App wieder im Vordergrund ausgeführt wird und eine Verbindung mit ihm herstellt.
 
@@ -91,10 +87,9 @@ Falls die App nicht aktiv ist und keine [Hintergrundaufgaben](#bg_tasks) verwend
 
     Weitere Informationen finden Sie unter [Anforderungs- und Antwortheader des Pushbenachrichtigungsdiensts](https://msdn.microsoft.com/library/windows/apps/hh465435).
 
-### <span id="bg_tasks"></span><span id="BG_TASKS"></span>Von unformatierten Benachrichtigungen ausgelöste Hintergrundaufgaben
+### Von unformatierten Benachrichtigungen ausgelöste Hintergrundaufgaben
 
-
-            **Wichtig**   Vor der Verwendung von Hintergrundaufgaben für unformatierte Benachrichtigungen muss einer App über [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) die Berechtigung zum Ausführen von Hintergrundaufgaben erteilt werden.
+**Wichtig**   Vor der Verwendung von Hintergrundaufgaben für unformatierte Benachrichtigungen muss einer App über [**BackgroundExecutionManager.RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) die Berechtigung zum Ausführen von Hintergrundaufgaben erteilt werden.
 
  
 
@@ -113,12 +108,12 @@ Die Hintergrundaufgabe wird dann jedes Mal als Reaktion auf den [**PushNotificat
 
 Für jede App kann jeweils nur eine Hintergrundaufgabe ausgeführt werden. Wird eine Hintergrundaufgabe für eine App ausgelöst, für die bereits eine Hintergrundaufgabe ausgeführt wird, muss die erste Hintergrundaufgabe abgeschlossen werden, bevor die neue Aufgabe ausgeführt wird.
 
-## <span id="Other_resources"></span><span id="other_resources"></span><span id="OTHER_RESOURCES"></span>Weitere Ressourcen
+## Weitere Ressourcen
 
 
 Weitere Informationen erhalten Sie, indem Sie das [Beispiel für unformatierte Benachrichtigungen](http://go.microsoft.com/fwlink/p/?linkid=241553) für Windows8.1 und das [Beispiel für Pushbenachrichtigungen und regelmäßige Benachrichtigungen](http://go.microsoft.com/fwlink/p/?LinkId=231476) für Windows8.1 herunterladen und den Quellcode in Ihrer Windows10-App wiederverwenden.
 
-## <span id="related_topics"></span>Verwandte Themen
+## Verwandte Themen
 
 
 * [Richtlinien für unformatierte Benachrichtigungen](https://msdn.microsoft.com/library/windows/apps/hh761463)
@@ -136,6 +131,6 @@ Weitere Informationen erhalten Sie, indem Sie das [Beispiel für unformatierte B
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -2,8 +2,9 @@
 author: WilliamsJason
 title: Xbox Live-Test - Referenz zu den Benutzerverwaltungs-APIs
 description: Erfahren Sie, wie Sie programmgesteuert auf die Benutzerverwaltungs-APIs zugreifen.
+translationtype: Human Translation
 ms.sourcegitcommit: 67f158b1d3d5ece14c36483a2513a2db2f478660
-ms.openlocfilehash: ad01d4daf089c61fc50c7927cfbf123d7d7ee4df
+ms.openlocfilehash: 66fe038fdb54ac5cb9086bf9225d0a5d573b39c8
 
 ---  
 
@@ -71,6 +72,6 @@ Diese API hat die folgenden erwarteten Statuscodes:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

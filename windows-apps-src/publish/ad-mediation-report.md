@@ -3,8 +3,9 @@ author: jnHs
 Description: "Der Bericht „Anzeigenvermittlung“ gibt Aufschluss über Ihre effektive Füllrate und die jeweiligen Füllraten für die verwendeten Anzeigennetzwerke."
 title: "Bericht „Anzeigenvermittlung“"
 ms.assetid: 18A33928-B9F2-4F76-9A9C-F01FEE42FEA1
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 1597e21414dbb5d1b540a2dd67478fbcc83d574e
+ms.openlocfilehash: 07b4e34cc5e91ec70b88631560dd1429f11d2d6b
 
 ---
 
@@ -13,8 +14,7 @@ ms.openlocfilehash: 1597e21414dbb5d1b540a2dd67478fbcc83d574e
 
 Der Bericht **Anzeigenvermittlung** gibt Aufschluss über Ihre effektive Füllrate und die jeweiligen Füllraten für die verwendeten Anzeigennetzwerke. Außerdem finden Sie hier die Übernahmeraten Ihrer jeweiligen Vermittlungskonfigurationen sowie Informationen zu Fehlern, die von Anzeigennetzwerken oder vom Vermittler gemeldet wurden. Sie können diese Informationen in Ihrem Dashboard anzeigen oder [den Bericht herunterladen](download-analytic-reports.md), um die Daten offline anzuzeigen.
 
-
-            **Wichtig**  Der Bericht **Anzeigenvermittlung** enthält nur Daten, wenn Sie die [Windows-Anzeigenvermittlung](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359) in Ihrer App verwenden.
+**Wichtig**  Der Bericht **Anzeigenvermittlung** enthält nur Daten, wenn Sie die [Windows-Anzeigenvermittlung](https://msdn.microsoft.com/library/windows/apps/xaml/dn864359) in Ihrer App verwenden.
 
  
 
@@ -23,12 +23,9 @@ Der Bericht **Anzeigenvermittlung** gibt Aufschluss über Ihre effektive Füllra
 
 Im oberen Seitenbereich können Sie die **Seitenfilter** erweitern, um alle Daten auf dieser Seite nach Datumsbereich und/oder Markt zu filtern.
 
--   
-            **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, er kann jedoch bis auf **Letzte 12 Monate** erweitert werden.
--   
-            **Markt**: Die Standardeinstellung ist **Alle Märkte**. Sie können einen bestimmten Markt auswählen, wenn auf dieser Seite nur Bewertungen der in diesem Markt ansässigen Kunden angezeigt werden sollen.
--   
-            **Plattform**: Die Standardeinstellung ist **Alle Plattformen**. Wenn Ihre App auf mehrere Plattformen ausgerichtet ist, können Sie eine bestimmte Plattform auswählen.
+-   **Datum**: Der Standardfilter lautet **Letzte 30 Tage**, aber er kann bis auf **Letzte 12 Monate** erweitert werden.
+-   **Markt**: Die Standardeinstellung ist **Alle Märkte**. Sie können einen bestimmten Markt auswählen, wenn auf dieser Seite nur Bewertungen der in diesem Markt ansässigen Kunden angezeigt werden sollen.
+-   **Plattform**: Die Standardeinstellung ist **Alle Plattformen**. Wenn Ihre App auf mehrere Plattformen ausgerichtet ist, können Sie eine bestimmte Plattform auswählen.
 
 Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den unter **Seitenfilter** ausgewählten Zeitraum. Standardmäßig gehören dazu Daten aus allen Märkten und Plattformen, unter denen Ihre App aufgeführt ist, sofern Sie nicht den **Seitenfilter** ausgewählt haben, um einen bestimmten Markt und/oder eine bestimmte Plattform festzulegen.
 
@@ -71,6 +68,6 @@ Das Diagramm **Fehler nach Typ** zeigt die spezifischen Fehler, die in den einze
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

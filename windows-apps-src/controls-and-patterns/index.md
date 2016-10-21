@@ -2,16 +2,14 @@
 description: "Hier finden Sie einen Designleitfaden und Codierungsanweisungen für das Hinzufügen von Steuerelementen und Mustern zu Ihrer UWP-App. Sie finden mehr als 45leistungsstarke Steuerelemente für die Verwendung mit Ihrer App."
 title: "UWP-Steuerelemente und -Muster – Entwicklung von Windows-Apps"
 author: mijacobs
-keywords: uwp controls, user interface, app controls
+keywords: "UWP-Steuerelemente, Benutzeroberfläche, App-Steuerelemente"
 translationtype: Human Translation
-ms.sourcegitcommit: 7c45a464be250e210df48d3fdef35f00d77e16d5
-ms.openlocfilehash: 23fdd3513d11a0fa0171e50fe71d49c8e3db7376
+ms.sourcegitcommit: 2f9d2059399efd949fc8a1d90a5b6c8c106a478e
+ms.openlocfilehash: ef383e46f2c610b57eec1c7767d5100e42075f6c
 
 ---
-<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-
 # Steuerelemente und Muster für UWP-Apps
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 In der UWP-App-Entwicklung ist ein <i>Steuerelement</i> ein UI-Element, das Inhalte anzeigt oder Interaktionen ermöglicht. Steuerelemente sind die Bausteine der Benutzeroberfläche. Wir stellen Ihnen mehr als 45Steuerelemente bereit, angefangen bei einfachen Schaltflächen bis hin zu leistungsstarken Datensteuerelementen wie der Rasteransicht. Ein <i>Muster</i> ist eine Anleitung zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen.
 
@@ -62,12 +60,12 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 
 <li>[Datumsauswahl](date-picker.md)</li>
 
-<li>[Uhrzeitauswahl](time-picker.md)</li>
+<li>[Zeitauswahl](time-picker.md)</li>
 </ul>
 </li>
 
 
-<li>[Dialogfelder, Popups und Menüs](dialogs-popups-menus.md)</li>
+<li>[Dialogfelder und Flyouts](dialogs.md)</li>
 
 <li>[Flip-Ansicht](flipview.md)</li>
 
@@ -88,6 +86,8 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 <li>[Benutzerdefinierte Transportsteuerelemente](custom-transport-controls.md)</li>
 </ul>
 </li>
+
+<li>[Menüs und Kontextmenüs](menus.md)</li>
 
 <li>[Navigationsbereich](nav-pane.md)</li>
 
@@ -143,7 +143,9 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 
 <li>[Adaptive und interaktive Popupbenachrichtigungen](tiles-and-notifications-adaptive-interactive-toasts.md)</li>
 
-<li>[Notifications Visualizer](tiles-and-notifications-notifications-visualizer.md)</li>
+<li>[Signalbenachrichtigungen](tiles-and-notifications-badges.md)</li>
+
+<li>[Visualisierungstool für Benachrichtigungen](tiles-and-notifications-notifications-visualizer.md)</li>
 
 <li>[Methoden für die Benachrichtigungsübermittlung](tiles-and-notifications-choosing-a-notification-delivery-method.md)</li>
 
@@ -167,6 +169,6 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern.
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

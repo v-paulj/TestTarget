@@ -2,8 +2,9 @@
 title: "CPUSets für die Entwicklung von Spielen"
 description: "Dieser Artikel enthält eine Übersicht über die CPUSets-API,die in der universellen Windows-Plattform (UWP) neu ist, und liefert grundlegende Informationen zur Entwicklung von Spielen und Anwendungen."
 author: hammondsp
-ms.sourcegitcommit: 3cefaf4e527d2a0da412dab474a348b55ad409c9
-ms.openlocfilehash: f125ae7e268a8d35b477a1557c498762869f859b
+translationtype: Human Translation
+ms.sourcegitcommit: 9f15d551715d9ccf23e4eb397637f4fafacec350
+ms.openlocfilehash: 6065435dc3add0d9bde15dc6bdd355935b8f53cd
 
 ---
 
@@ -16,10 +17,8 @@ Die universelle Windows-Plattform (UWP) ist das Herzstück einer Vielzahl von el
 ## CPUSets-API
 
 Die CPUSets-API bietet Kontrolle darüber, welche CPU-Sätze zur Verfügung stehen, um die Ausführung von Threads darauf zu planen. Zwei Funktionen sind verfügbar, um zu steuern, wo Threads geplant werden:
-- 
-            **SetProcessDefaultCpuSets**: Diese Funktion kann zum Angeben der CPU-Sätze verwendet werden, auf denen neue Threads ausgeführt werden können, wenn sie nicht bestimmten CPU-Sätze zugeordnet sind.
-- 
-            **SetThreadSelectedCpuSets**: Mit dieser Funktion können Sie die CPU-Sätze beschränken, auf denen ein bestimmter Thread ausgeführt wird.
+- **SetProcessDefaultCpuSets**: Diese Funktion kann zum Angeben der CPU-Sätze verwendet werden, auf denen neue Threads ausgeführt werden können, wenn sie nicht bestimmten CPU-Sätze zugeordnet sind.
+- **SetThreadSelectedCpuSets**: Mit dieser Funktion können Sie die CPU-Sätze beschränken, auf denen ein bestimmter Thread ausgeführt wird.
 
 Wenn die Funktion **SetProcessDefaultCpuSets** niemals verwendet wird, können neu erstellte Threads auf jeder CPU geplant werden, die für Ihren Prozess verfügbar ist. Dieser Abschnitt behandelt die Grundlagen der CPUSets-API.
 
@@ -97,9 +96,7 @@ Wie wir bereits gesehen haben, bietet die CPUSets-API viele Informationen und Fl
 
 Diese Methode ist effektiv, wenn Ihr Spiel einige Threads aufweist, die in Echtzeit zusammen mit anderen Arbeitsthreads ausgeführt werden müssen, die relativ wenig CPU-Zeit in Anspruch nehmen. Manche Aufgaben, z. B. fortlaufende Hintergrundmusik, müssen für ein optimales Spielerlebnis ohne Unterbrechung ausgeführt werden. Bereits ein einzelner Frame mit Audio-Threadzurückstellung kann eine Störung verursachen, sodass es wichtig ist, dass für jeden Frame die erforderliche Menge an CPU-Zeit zur Verfügung steht.
 
-Mithilfe von **SetThreadSelectedCpuSets** in Verbindung mit **SetProcessDefaultCpuSets** können Sie sicherstellen, dass Ihre rechenintensiven Threads nicht von Arbeitsthreads unterbrochen werden. 
-            **SetThreadSelectedCpuSets** können verwendet werden, um Ihre rechenintensiven Threads bestimmten CPU-Sätzen zuzuweisen. 
-            **SetProcessDefaultCpuSets** kann dann verwendet werden, um sicherzustellen, dass alle erstellten nicht zugewiesenen Threads auf anderen CPU-Sätzen geplant werden. Im Fall von CPUs, die Hyperthreading nutzen, ist es auch wichtig, logische Kerne auf dem gleichen physischen Kern zu berücksichtigen. Arbeitsthreads sollten nicht auf logischen Kernen ausgeführt werden dürfen, die den gleichen physischen Kern wie ein Thread verwenden, den Sie mit Echtzeit-Reaktionsfähigkeit ausführen möchten. Der folgende Code veranschaulicht, wie Sie bestimmen, ob ein PC Hyperthreading verwendet.
+Mithilfe von **SetThreadSelectedCpuSets** in Verbindung mit **SetProcessDefaultCpuSets** können Sie sicherstellen, dass Ihre rechenintensiven Threads nicht von Arbeitsthreads unterbrochen werden. **SetThreadSelectedCpuSets** kann verwendet werden, um Ihre rechenintensiven Threads bestimmten CPU-Sätzen zuzuweisen. **SetProcessDefaultCpuSets** kann dann verwendet werden, um sicherzustellen, dass alle erstellten nicht zugewiesenen Threads auf anderen CPU-Sätzen geplant werden. Im Fall von CPUs, die Hyperthreading nutzen, ist es auch wichtig, logische Kerne auf dem gleichen physischen Kern zu berücksichtigen. Arbeitsthreads sollten nicht auf logischen Kernen ausgeführt werden dürfen, die den gleichen physischen Kern wie ein Thread verwenden, den Sie mit Echtzeit-Reaktionsfähigkeit ausführen möchten. Der folgende Code veranschaulicht, wie Sie bestimmen, ob ein PC Hyperthreading verwendet.
 
 ```
 unsigned long retsize = 0;
@@ -193,10 +190,11 @@ Die für UWP-Entwicklung verfügbare CPUSets-API bietet eine beträchtliche Meng
 ## Weitere Ressourcen
 - [CPU-Sätze (MSDN)](https://msdn.microsoft.com/library/windows/desktop/mt186420(v=vs.85).aspx)
 - [Von ATG bereitgestelltes CPUSets-Beispiel](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/CPUSets)
+- [UWP auf XboxOne](index.md)
 
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

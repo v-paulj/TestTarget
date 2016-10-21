@@ -5,8 +5,9 @@ title: Verwalten von Sprache und Region
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 label: Manage language and region
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 294f087fffeefda67ddacd09636915144bf18ff4
+ms.openlocfilehash: 5a7519d9ea7a121e3e3087debba6d6193b1d8155
 
 ---
 
@@ -46,7 +47,7 @@ Eine Liste mit speziell vom WindowsStore unterstützten Sprachtags finden Sie un
 
 Die Liste mit den Spracheinstellungen des Benutzers enthält dessen bevorzugte Sprachen in der vom Benutzer angegebenen Reihenfolge.
 
-Benutzer legen die Liste unter **Einstellungen**&gt;**Zeit und Sprache**&gt;**Region und Sprache** fest. Alternativ können sie **Systemsteuerung**&gt;**Zeit, Sprache und Region** verwenden.
+Benutzer legen die Liste unter **Einstellungen** &gt; **Zeit und Sprache** &gt; **Region und Sprache** fest. Alternativ können sie **Systemsteuerung** &gt; **Zeit, Sprache und Region** verwenden.
 
 Die Liste mit den Spracheinstellungen des Benutzers kann mehrere Sprachen sowie regionale und andere spezielle Varianten enthalten. So bevorzugt der Benutzer beispielsweise vielleicht „fr-CA“, versteht aber auch „en-GB“.
 
@@ -88,10 +89,7 @@ In manchen Situationen müssen nicht alle Ressourcen lokalisiert werden.
 
 ### <span id="Create_the_application_language_list."></span><span id="create_the_application_language_list."></span><span id="CREATE_THE_APPLICATION_LANGUAGE_LIST."></span>Erstellen Sie die Anwendungssprachenliste.
 
-Das System ermittelt zur Laufzeit die bevorzugten Benutzersprachen, für die die App im Manifest Unterstützung deklariert, und erstellt eine *Anwendungssprachenliste*. Anhand dieser Liste werden die Sprachen bestimmt, in denen die App erscheinen soll. Diese Liste bestimmt die Sprachen, die für die App und Systemressourcen, Datumsangaben, Uhrzeiten, Zahlen und andere Komponenten verwendet werden. Das Ressourcenverwaltungssystem ([**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) und [**WinJS.Resources Namespace**](https://msdn.microsoft.com/library/windows/apps/br229779)) lädt beispielsweise UI-Ressourcen gemäß der Anwendungssprache. 
-            [
-              **Windows.Globalization**
-            ](https://msdn.microsoft.com/library/windows/apps/br206813) wählt ebenfalls Formate basierend auf der Anwendungssprachenliste aus. Die Anwendungssprachenliste ist über [**Windows.Globalization.ApplicationLanguages.Languages**](https://msdn.microsoft.com/library/windows/apps/hh972396) verfügbar.
+Das System ermittelt zur Laufzeit die bevorzugten Benutzersprachen, für die die App im Manifest Unterstützung deklariert, und erstellt eine *Anwendungssprachenliste*. Anhand dieser Liste werden die Sprachen bestimmt, in denen die App erscheinen soll. Diese Liste bestimmt die Sprachen, die für die App und Systemressourcen, Datumsangaben, Uhrzeiten, Zahlen und andere Komponenten verwendet werden. Das Ressourcenverwaltungssystem ([**Windows.ApplicationModel.Resources**](https://msdn.microsoft.com/library/windows/apps/br206022), [**Windows.ApplicationModel.Resources.Core**](https://msdn.microsoft.com/library/windows/apps/br225039) und [**WinJS.Resources Namespace**](https://msdn.microsoft.com/library/windows/apps/br229779)) lädt beispielsweise UI-Ressourcen gemäß der Anwendungssprache. [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) wählt ebenfalls Formate basierend auf der Anwendungssprachenliste aus. Die Anwendungssprachenliste ist über [**Windows.Globalization.ApplicationLanguages.Languages**](https://msdn.microsoft.com/library/windows/apps/hh972396) verfügbar.
 
 Die Zuordnung zwischen Sprachen und Ressourcen ist schwierig. Wir empfehlen, Windows die Zuordnung zu überlassen, da die Priorität einer Zuordnung von vielen optionalen Komponenten eines Sprachtags beeinflusst wird, die in der Praxis tatsächlich auftreten können.
 
@@ -118,8 +116,7 @@ Die Anwendungssprachenliste wird auf die regionale Variante des Benutzers festge
 
 Die Anwendungssprachenliste umfasst die folgenden Elemente:
 
-1.  
-            **(Optional) Überschreibung der primären Sprache** [**PrimaryLanguageOverride**](https://msdn.microsoft.com/library/windows/apps/hh972398) ist eine einfache Überschreibungseinstellung für Apps, bei denen Benutzer eine eigene Sprachauswahl treffen können, oder für Apps, bei denen die Standardsprachauswahl aus einem speziellen Grund überschrieben werden sollte. Weitere Informationen dazu finden Sie unter [Anwendungsressourcen und Lokalisierung – Beispiel](http://go.microsoft.com/fwlink/p/?linkid=231501).
+1.  **(Optional) Überschreibung der primären Sprache** [**PrimaryLanguageOverride**](https://msdn.microsoft.com/library/windows/apps/hh972398) ist eine einfache Überschreibungseinstellung für Apps, bei denen Benutzer eine eigene Sprachauswahl treffen können, oder für Apps, bei denen die Standardsprachauswahl aus einem speziellen Grund überschrieben werden sollte. Weitere Informationen dazu finden Sie unter [Anwendungsressourcen und Lokalisierung – Beispiel](http://go.microsoft.com/fwlink/p/?linkid=231501).
 2.  **Die von der App unterstützten Sprachen des Benutzers.** Hierbei handelt es sich um eine Liste der nach Präferenz geordneten bevorzugten Sprachen des Benutzers. Sie wird anhand der Liste der unterstützten Sprachen im App-Manifest gefiltert. Das Filtern der Benutzersprachen anhand der von der App unterstützten Sprachen sorgt für dauerhafte Konsistenz zwischen den Software Development Kits (SDKs), Klassenbibliotheken, abhängigen Frameworkpaketen und der App.
 3.  **Wenn 1 und 2 leer sind, die Standardsprache oder erste von der App unterstützte Sprache.** Wenn der Benutzer keine der von der App unterstützten Anwendungssprachen versteht, wird die erste von der App unterstützte Sprache ausgewählt.
 
@@ -127,25 +124,19 @@ Beispiele finden Sie unten im Abschnitt "Anmerkungen".
 
 ### <span id="Set_the_HTTP_Accept_Language_header."></span><span id="set_the_http_accept_language_header."></span><span id="SET_THE_HTTP_ACCEPT_LANGUAGE_HEADER."></span>Legen Sie den HTTP-Header „Accept Language“ fest.
 
-HTTP-Anforderungen, die von Windows Store-Apps und Desktop-Apps in typischen Webanforderungen und XHR-Anforderungen (XMLHttpRequest) gesendet werden, verwenden den standardmäßigen HTTP-Header "Accept-Language". Der HTTP-Header ist standardmäßig auf die bevorzugte Sprache des Benutzers festgelegt, entsprechend der bevorzugten Reihenfolge des Benutzers, die unter **Einstellungen**&gt;**Zeit und Sprache**&gt;**Region und Sprache** angegeben ist. Jede Sprache in der Liste wird zudem um die regionsneutralen Varianten der Sprache sowie um eine Gewichtung (q) erweitert. Beispielsweise ergibt eine Benutzersprachenliste, die aus „fr-FR“ und „en-US“ besteht, einen HTTP Accept-Language-Header mit „fr-FR“, „fr“, „en-US“, „en“ („fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3“).
+HTTP-Anforderungen, die von Windows Store-Apps und Desktop-Apps in typischen Webanforderungen und XHR-Anforderungen (XMLHttpRequest) gesendet werden, verwenden den standardmäßigen HTTP-Header "Accept-Language". Der HTTP-Header ist standardmäßig auf die bevorzugte Sprache des Benutzers (gemäß der bevorzugten Reihenfolge des Benutzers) festgelegt, die unter **Einstellungen** &gt; **Zeit & Sprache** &gt; **Region & Sprache** angegeben ist. Jede Sprache in der Liste wird zudem um die regionsneutralen Varianten der Sprache sowie um eine Gewichtung (q) erweitert. Beispielsweise ergibt eine Benutzersprachenliste, die aus „fr-FR“ und „en-US“ besteht, einen HTTP Accept-Language-Header mit „fr-FR“, „fr“, „en-US“, „en“ („fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3“).
 
 ### <span id="Use_the_APIs_in_the_Windows.Globalization_namespace."></span><span id="use_the_apis_in_the_windows.globalization_namespace."></span><span id="USE_THE_APIS_IN_THE_WINDOWS.GLOBALIZATION_NAMESPACE."></span>Verwenden Sie die APIs im Windows.Globalization-Namespace.
 
-In der Regel verwenden die API-Elemente im [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)-Namespace die Anwendungssprachenliste zur Bestimmung der Sprache. Hat keine der Sprachen ein übereinstimmendes Format, wird das Benutzergebietsschema verwendet. Hierbei handelt es sich um das von der Systemuhr verwendete Gebietsschema. Das Benutzergebietsschema ist in **Einstellungen**&gt;**Zeit und Sprache**&gt;**Region und Sprache**&gt;**Zusätzliche Datums-, Uhrzeit- und Ländereinstellungen**&gt;**Region: Datums-, Uhrzeit- oder Zahlenformat ändern** verfügbar. Die **Windows.Globalization-APIs** akzeptieren auch eine Überschreibung, wenn Sie eine Liste mit Sprachen angeben möchten, die anstelle der Anwendungssprachenliste verwendet werden soll.
+In der Regel verwenden die API-Elemente im [**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813)-Namespace die Anwendungssprachenliste zur Bestimmung der Sprache. Hat keine der Sprachen ein übereinstimmendes Format, wird das Benutzergebietsschema verwendet. Hierbei handelt es sich um das von der Systemuhr verwendete Gebietsschema. Das Benutzergebietsschema ist in **Einstellungen** &gt; **Zeit und Sprache** &gt; **Region und Sprache** &gt; **Zusätzliche Datums-, Uhrzeit- und Ländereinstellungen** &gt; **Region: Datums-, Uhrzeit- oder Zahlenformat ändern** verfügbar. Die **Windows.Globalization-APIs** akzeptieren auch eine Überschreibung, wenn Sie eine Liste mit Sprachen angeben möchten, die anstelle der Anwendungssprachenliste verwendet werden soll.
 
-
-            [
-              **Windows.Globalization**
-            ](https://msdn.microsoft.com/library/windows/apps/br206813) besitzt ebenfalls ein [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804)-Objekt, das als Hilfsobjekt bereitgestellt wird. Damit können Apps die Details der Sprache überprüfen, wie das Skript der Sprache, den Anzeigenamen und den systemeigenen Namen.
+[**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) besitzt ebenfalls ein [**Language**](https://msdn.microsoft.com/library/windows/apps/br206804)-Objekt, das als Hilfsobjekt bereitgestellt wird. Damit können Apps die Details der Sprache überprüfen, wie das Skript der Sprache, den Anzeigenamen und den systemeigenen Namen.
 
 ### <span id="Use_geographic_region_when_appropriate."></span><span id="use_geographic_region_when_appropriate."></span><span id="USE_GEOGRAPHIC_REGION_WHEN_APPROPRIATE."></span>Verwenden einer geografischen Region, falls erforderlich.
 
 Verwenden Sie zur Auswahl der Inhalte, die dem Benutzer angezeigt werden sollen, nicht die Sprache, sondern die Einstellung für den geografischen Standort des Benutzers. So kann eine Nachrichten-App beispielsweise standardmäßig Inhalte für den Wohnort eines Benutzers anzeigen, der bei der Installation von Windows festgelegt wird und auf der Benutzeroberfläche von Windows unter **Region: Datums-, Uhrzeit- oder Zahlenformat ändern** zu finden ist (wie in der vorherigen Aufgabe beschrieben). Die aktuelle Wohnorteinstellung kann mit [**Windows.System.UserProfile.GlobalizationPreferences.HomeGeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br241829) abgerufen werden.
 
-
-            [
-              **Windows.Globalization**
-            ](https://msdn.microsoft.com/library/windows/apps/br206813) besitzt ebenfalls ein [**GeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br206795)-Objekt, das als Hilfsobjekt bereitgestellt wird. Damit können Apps Details zu einer bestimmten Region (wie Anzeigename, systemeigener Name und verwendete Währungen) überprüfen.
+[**Windows.Globalization**](https://msdn.microsoft.com/library/windows/apps/br206813) besitzt ebenfalls ein [**GeographicRegion**](https://msdn.microsoft.com/library/windows/apps/br206795)-Objekt, das als Hilfsobjekt bereitgestellt wird. Damit können Apps Details zu einer bestimmten Region (wie Anzeigename, systemeigener Name und verwendete Währungen) überprüfen.
 
 ## <span id="Remarks"></span><span id="remarks"></span><span id="REMARKS"></span>Hinweise
 
@@ -233,6 +224,6 @@ Die folgende Tabelle enthält Beispiele für die Elemente, die dem Benutzer unte
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

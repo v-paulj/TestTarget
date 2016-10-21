@@ -4,8 +4,8 @@ ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: "Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“"
 description: "Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows10-Computer auf jedem Windows10-Gerät bereitstellen können."
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 5f6bfb13e2e80f21902ec923e32f68046f313a13
+ms.sourcegitcommit: 7b04e2e9980da4bbdd6d9d10fc493eb05e21afc4
+ms.openlocfilehash: 87af49dc04a94bac8896b33a1d7e8b4993b0f2c3
 
 ---
 # Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
@@ -139,8 +139,19 @@ Registriert die App im Verzeichnis app1_F5 am Bereitstellungspfad des PCs oder d
 WinAppDeployCmd registerfiles -file app1_F5 -ip 192.168.0.1
 ```
 
+## Verwenden von WinAppDeployCmd für die Einrichtung von über einen PC ausgeführten Bereitstellungen auf Xbox One
+
+Das Ausführen über einen PC ermöglicht Ihnen die Bereitstellung einer UWP-Anwendung auf einer Xbox One, ohne die Binärdateien zu kopieren. Die Binärdateien werden stattdessen in einer Netzwerkfreigabe im selben Netzwerk wie die Xbox gehostet.  Dazu benötigen Sie eine für Entwickler entsperrte Xbox One und eine UWP-Anwendung mit loser Datei in einem Netzlaufwerk, das auf die Xbox zugreifen kann.
+
+Führen Sie Folgendes aus, um die App zu registrieren:
+``` syntax
+WinAppDeployCmd registerfiles -ip <Xbox One IP> -remotedeploydir <location of app> -username <user for network> -password <password for user>
+
+ex. WinAppDeployCmd register files -ip 192.168.0.1 -remotedeploydir \\driveA\myAppLocation -username admin -password A1B2C3
+```
 
 
-<!--HONumber=Jul16_HO2-->
+
+<!--HONumber=Aug16_HO3-->
 
 

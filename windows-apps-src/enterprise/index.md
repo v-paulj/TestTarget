@@ -1,23 +1,22 @@
 ---
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
-description: "Diese Roadmap enthält eine Übersicht über wichtige Unternehmensfeatures für Universelle Windows-Plattform (UWP)-Apps unter Windows 10."
-title: Enterprise
+description: "Diese Roadmap enthält eine Übersicht über wichtige Unternehmensfeatures für Windows10-Apps und Apps für die universelle Windows-Plattform (UWP)."
+title: Unternehmen
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 58f7c9739a000b6cac1c000570807587233018ce
+ms.sourcegitcommit: 8f4b9e7b1b30beb8974a17af77e4d7138bd8f829
+ms.openlocfilehash: 75a7723fb8934a59d44da2f075184dd6bbd85d45
 
 ---
 
-# Enterprise
+# Unternehmen
 
 
 \[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Diese Roadmap enthält eine Übersicht über wichtige Unternehmensfeatures für Universelle Windows-Plattform (UWP)-Apps unter Windows 10. Mit Windows 10 können Sie eine App schreiben, die auf allen Geräten bereitgestellt werden kann. So können Sie die großartigen Umgebungen erstellen, die die Benutzer erwarten, und gleichzeitig die im Unternehmen erforderliche Kontrolle über die Sicherheit, Verwaltung und Konfiguration bereitstellen.
 
-
-              **Hinweis**  Dieser Artikel ist für Entwickler bestimmt, die UWP-Apps für Unternehmen schreiben. Informationen zur allgemeinen UWP-Entwicklung finden Sie unter [Anleitungen für Windows 10-Apps](https://msdn.microsoft.com/library/windows/apps/mt244352). Informationen zur WPF-, Windows Forms- und Win32-Entwicklung finden Sie unter [Desktop Dev Center](https://dev.windows.com/desktop). Ressourcen für IT-Experten, z.B. Bereitstellen von Windows 10 oder Verwalten von Unternehmenssicherheitsfeatures finden Sie unter [Windows 10 auf TechNet](https://msdn.microsoft.com/library/dn986868).
+**Hinweis**  Dieser Artikel ist für Entwickler bestimmt, die UWP-Apps für Unternehmen schreiben. Informationen zur allgemeinen UWP-Entwicklung finden Sie unter [Anleitungen für Windows 10-Apps](https://msdn.microsoft.com/library/windows/apps/mt244352). Informationen zur WPF-, Windows Forms- und Win32-Entwicklung finden Sie unter [Desktop Dev Center](https://dev.windows.com/desktop). Ressourcen für IT-Experten, z.B. Bereitstellen von Windows 10 oder Verwalten von Unternehmenssicherheitsfeatures finden Sie unter [Windows 10 auf TechNet](https://msdn.microsoft.com/library/dn986868).
 
  
 
@@ -30,8 +29,8 @@ Windows 10 bietet eine Suite von Sicherheitsfeatures für App-Entwickler zum Sch
 |-------|-------------|
 | [Einführung in die Entwicklung sicherer Windows-Apps](https://msdn.microsoft.com/library/windows/apps/mt622741) | Dieser einführende Artikel erläutert verschiedene Windows-Sicherheitsfeatures, die auf verschiedenen Stufen verfügbar sind, d.h. Authentifizierung, In-Flight-Daten und At-Rest-Daten. Außerdem wird hier beschrieben, wie Sie diese Stufen in Ihren Apps integrieren können. Er umfasst eine Vielzahl an Themen und enthält in erster Linie weitere Informationen für App-Architekten zu den Windows-Features, die die Entwicklung von Universellen Windows-Plattform-Apps beschleunigen. |
 | [Authentifizierung und Benutzeridentität](https://msdn.microsoft.com/library/windows/apps/mt270184) | UWP-Apps verfügen über verschiedene Optionen zur Benutzerauthentifizierung, die in diesem Artikel beschrieben werden. Für Unternehmen wird dringend das neue Microsoft Passport-Feature empfohlen. MicrosoftPassport ersetzt Kennwörter mit der sicheren zweistufigen Authentifizierung (Two-Factor Authentication, 2FA), indem vorhandene Anmeldeinformationen überprüft und gerätespezifische Anmeldeinformationen erstellt werden, die eine Benutzergeste (entweder Biometrie- oder PIN-basiert) schützen, und schafft so eine bequeme und sichere Umgebung. |
-| [Kryptografie](https://msdn.microsoft.com/library/windows/apps/mt270191) | Der Abschnitt „Kryptografie“ bietet eine Übersicht über die für UWP-Apps verfügbaren Kryptografie-Features. Die Artikel reichen von einführenden exemplarischen Vorgehensweisen zum einfachen Verschlüsseln sensibler Daten bis hin zu erweiterten Themen, z. B. Bearbeiten von kryptografischen Schlüsseln und Arbeiten mit MACs, Hashes und Signaturen. |
-| [Unternehmensdatenschutz (Enterprise Data Protection, EDP)](edp-hub.md) | Dies ist ein Übersichtsthema mit umfassenden Informationen zum Zusammenhang zwischen dem Unternehmensdatenschutz (Enterprise Data Protection, EDP) und Dateien, Puffern, Zwischenablage, Netzwerk, Hintergrundaufgaben und dem Schutz von Daten bei Sperre. |
+| [Kryptografie](https://msdn.microsoft.com/library/windows/apps/mt270191) | Der Abschnitt „Kryptografie“ bietet eine Übersicht über die für UWP-Apps verfügbaren Kryptografie-Features. Die Artikel reichen von einführenden exemplarischen Vorgehensweisen zum einfachen Verschlüsseln sensibler Daten bis hin zu erweiterten Themen, z.B. Bearbeiten von kryptografischen Schlüsseln und Arbeiten mit MACs, Hashes und Signaturen. |
+| [Windows Information Protection (WIP)](wip-hub.md) | Dies ist ein Übersichtsthema mit umfassenden Informationen für Entwickler zum Zusammenhang zwischen der Windows Information Protection (WIP) und Dateien, Puffern, der Zwischenablage, dem Netzwerk, Hintergrundaufgaben und dem Schutz von Daten bei Sperre. |
 
  
 
@@ -114,9 +113,6 @@ Weitere Informationen zu Prism finden Sie im [GitHub-Repository](https://github.
 
 
 
-
-
-
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

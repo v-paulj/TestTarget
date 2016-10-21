@@ -3,8 +3,9 @@ author: jwmsft
 description: Dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt und referenziert werden und innerhalb eines ResourceDictionary-Elements vorhanden sind.
 title: xKey-Attribut
 ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
-ms.sourcegitcommit: ba620bc89265cbe8756947e1531759103c3cafef
-ms.openlocfilehash: 00d801dc3ebb8894f8e21ba0c1b9f3aecc981f30
+translationtype: Human Translation
+ms.sourcegitcommit: ebda34ce4d9483ea72dec3bf620de41c98d7a9aa
+ms.openlocfilehash: 35d4e02ce477757e1a97a54fd9d200dd31675f4d
 
 ---
 
@@ -34,7 +35,7 @@ Dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt 
 
 | Benennung | Beschreibung |
 |------|-------------|
-| Objekt | Beliebige Objekte, die freigegeben werden können. Weitere Informationen finden Sie unter [ResourceDictionary- und XAML-Ressourcenverweise](https://msdn.microsoft.com/library/windows/apps/mt187273). |
+| object | Beliebige Objekte, die freigegeben werden können. Weitere Informationen finden Sie unter [ResourceDictionary- und XAML-Ressourcenverweise](https://msdn.microsoft.com/library/windows/apps/mt187273). |
 | stringKeyValue | Eine als Schlüssel verwendete echte Zeichenfolge, die der _XamlName_-Grammatik entsprechen muss. Weitere Informationen erhalten Sie in "XamlName-Grammatik" unten. | 
 
 ##  XamlName-Grammatik
@@ -58,9 +59,7 @@ CombiningCharacter::= none
 
 Zu den untergeordneten Elementen eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)-Elements gehört im Allgemeinen ein **x:Key**-Attribut zum Angeben eines eindeutigen Schlüsselwerts innerhalb des Wörterbuchs. Die Eindeutigkeit von Schlüsseln wird beim Laden durch den XAML-Prozessor erzwungen. Nicht eindeutige **x:Key**-Werte haben XAML-Analyseausnahmen zur Folge. Auf Anforderung der [{StaticResource}-Markuperweiterung](staticresource-markup-extension.md) haben auch nicht aufgelöste Schlüssel XAML-Analyseausnahmen zur Folge.
 
-
-            **x:Key** und [x:Name](x-name-attribute.md) sind nicht identisch. 
-            **x:Key** wird ausschließlich in Ressourcenwörterbüchern verwendet. x:Name wird in allen XAML-Bereichen verwendet. Durch einen [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)-Aufruf mit einem Schlüsselwert wird keine Ressource mit Schlüssel abgerufen.
+**x:Key** und [x:Name](x-name-attribute.md) sind nicht identisch. **x:Key** wird ausschließlich in Ressourcenwörterbüchern verwendet. x:Name wird in allen XAML-Bereichen verwendet. Durch einen [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)-Aufruf mit einem Schlüsselwert wird keine Ressource mit Schlüssel abgerufen. Objekte, die in einem Ressourcenwörterbuch definiert sind, verfügen über **x: Key** oder **x: Name** oder über beide. „Key“ und „Name“ müssen nicht übereinstimmen.
 
 Beachten Sie, dass das [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)-Objekt in der gezeigten impliziten Syntax dahingehend implizit ist, wie der XAML-Prozessor ein neues Objekt erzeugt, um eine [**Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)-Sammlung aufzufüllen.
 
@@ -71,6 +70,6 @@ Ein Element in einem Ressourcenwörterbuch kann einen Wert für **x:Key** auslas
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

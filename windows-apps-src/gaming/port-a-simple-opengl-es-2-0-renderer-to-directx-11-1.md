@@ -3,8 +3,9 @@ author: mtoepke
 title: Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
 description: "Bei der ersten Portierungsübung beginnen wir mit den Grundlagen - Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGLES2.0 auf Direct3D, damit er der Vorlage DirectX 11-App (Universelle Windows-App) aus Visual Studio2015 entspricht."
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
+translationtype: Human Translation
 ms.sourcegitcommit: 814f056eaff5419b9c28ba63cf32012bd82cc554
-ms.openlocfilehash: f70d4ec46743d930f8cb45084e55cce2e60e2460
+ms.openlocfilehash: 307b611eece3de6288d67e1e340368763f26fa2e
 
 ---
 
@@ -76,8 +77,7 @@ typedef struct
 
 Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komponenten zum Rendern eines sehr einfach aufgebauten Gitters mit Vertexschattierung.
 
-> 
-            **Hinweis**  Der in diesem Thema verwendete OpenGL ES 2.0-Code basiert auf der Windows-API-Implementierung der Khronos Group, und es wird die Programmiersyntax von Windows C verwendet.
+> **Hinweis**  Der in diesem Thema verwendete OpenGL ES 2.0-Code basiert auf der Windows-API-Implementierung der Khronos Group, und es wird die Programmiersyntax von Windows C verwendet.
 
  
 
@@ -146,6 +146,6 @@ Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komp
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

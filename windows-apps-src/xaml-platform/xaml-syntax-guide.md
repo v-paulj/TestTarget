@@ -3,8 +3,9 @@ author: jwmsft
 description: "In diesem Thema werden die XAML-Syntaxregeln und die Terminologie erläutert, mit der die in der XAML-Syntax geltenden Einschränkungen bzw. die verfügbaren Optionen beschrieben werden."
 title: Anleitung zur XAML-Syntax
 ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
+translationtype: Human Translation
 ms.sourcegitcommit: 07058b48a527414b76d55b153359712905aa9786
-ms.openlocfilehash: 8e7819b02d7a22a16cf16091d08bef0aabc8d36e
+ms.openlocfilehash: 1fb5f64b5fe58843c06603045a3de9576887d1c7
 
 ---
 
@@ -30,10 +31,8 @@ Eine XAML-Datei enthält immer genau ein Stammelement. Dieses Stammelement dekla
 
 Für die XAML-Syntax gibt es drei Möglichkeiten zum Deklarieren von Objekten in XAML:
 
--   
-            **Direkt, mithilfe der Objektelementsyntax:** Hierbei werden öffnende und schließende Tags zum Instanziieren eines Objekts als XML-Formularelement verwendet. Mit dieser Syntax können Sie Stammobjekte deklarieren oder geschachtelte Objekte erstellen, die Eigenschaftswerte festlegen.
--   
-            **Indirekt, mithilfe der Attributsyntax:** Hierbei wird ein Inlinezeichenfolgenwert verwendet, der Anweisungen zum Erstellen eines Objekts enthält. Der XAML-Parser legt mithilfe dieser Zeichenfolge den Wert einer Eigenschaft auf einen neu erstellten Referenzwert fest. Diese Technik wird nur für bestimmte allgemeine Objekte und Eigenschaften unterstützt.
+-   **Direkt, mithilfe der Objektelementsyntax:** Hierbei werden öffnende und schließende Tags zum Instanziieren eines Objekts als XML-Formularelement verwendet. Mit dieser Syntax können Sie Stammobjekte deklarieren oder geschachtelte Objekte erstellen, die Eigenschaftswerte festlegen.
+-   **Indirekt, mithilfe der Attributsyntax:** Hierbei wird ein Inlinezeichenfolgenwert verwendet, der Anweisungen zum Erstellen eines Objekts enthält. Der XAML-Parser legt mithilfe dieser Zeichenfolge den Wert einer Eigenschaft auf einen neu erstellten Referenzwert fest. Diese Technik wird nur für bestimmte allgemeine Objekte und Eigenschaften unterstützt.
 -   Mithilfe einer Markuperweiterung.
 
 Dies bedeutet nicht, dass Sie zur Objekterstellung immer jede beliebige Syntax in einem XAML-Vokabular verwenden können. Einige Objekte können nur mithilfe der Objektelementsyntax erstellt werden. Andere Objekte können nur erstellt werden, indem Sie sie zu Beginn in einem Attribut festlegen. Tatsächlich sind Objekte, die mit der Objektelement- oder Attributsyntax erstellt werden können, im XAML-Vokabular vergleichsweise selten. Selbst wenn beide Syntaxformen möglich sind, ist eine von ihnen aufgrund des Stils allgemeiner.
@@ -85,8 +84,7 @@ Im folgenden gekürzten Beispiel wird Initialisierungstext verwendet, um Werte f
 </UserControl ...>
 ```
 
-
-            **Hinweis**  Manche Strukturen können nicht als Objektelemente deklariert werden. Initialisierungstext wird nicht unterstützt, und die Strukturen können nicht als Ressourcen verwendet werden. Sie müssen eine Attributsyntax verwenden, um in XAML Eigenschaften auf diese Werte festzulegen. Diese Typen sind: [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) und [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995).
+**Hinweis**  Manche Strukturen können nicht als Objektelemente deklariert werden. Initialisierungstext wird nicht unterstützt, und die Strukturen können nicht als Ressourcen verwendet werden. Sie müssen eine Attributsyntax verwenden, um in XAML Eigenschaften auf diese Werte festzulegen. Diese Typen sind: [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) und [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995).
 
 ## Festlegen von Eigenschaften
 
@@ -124,23 +122,15 @@ Wenn Sie eine Eigenschaftselementsyntax verwenden möchten, erstellen Sie XAML-E
 
 In der folgenden Grammatik ist *property* der Name der Eigenschaft, die Sie festlegen möchten, und *propertyValueAsObjectElement* ist ein einzelnes Objektelement, das die Anforderungen bezüglich des Werttyps der Eigenschaft erfüllt.
 
-`<`*Objekt*`>`
+`<`*object*`>`
 
-`<`
-            *object*
-            `.`
-            *property*
-          `>`
+`<`*object*`.`*property*`>`
 
 *propertyValueAsObjectElement*
 
-`</`
-            *object*
-            `.`
-            *property*
-          `>`
+`</`*object*`.`*property*`>`
 
-`</`*Objekt*`>`
+`</`*object*`>`
 
 Im folgenden Beispiel wird eine Eigenschaftselementsyntax verwendet, um [**Fill**](https://msdn.microsoft.com/library/windows/apps/br243378) von [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371) mit einem [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)-Objektelement festzulegen. (Innerhalb von **SolidColorBrush** ist [**Color**](https://msdn.microsoft.com/library/windows/apps/br242963) als Attribut festgelegt.) Das analysierte Ergebnis dieses XAML ist mit dem vorherigen XAML-Beispiel identisch, bei dem **Fill** mithilfe einer Attributsyntax festgelegt wurde.
 
@@ -245,8 +235,7 @@ Zunächst gibt das Vorhandensein des Objektelements an, dass ein neues *objectNa
 
 Eine weitere XAML-Regel ist, dass es möglich sein muss, Attribute eines Elements in beliebiger Reihenfolge festzulegen. Zwischen `<Rectangle Height="50" Width="100" />` und `<Rectangle Width="100"  Height="50" />` besteht z. B. kein Unterschied. Welche Reihenfolge Sie verwenden, ist eine Frage des Programmierstils.
 
-
-            **Hinweis**  Wenn Sie andere Entwurfsoberflächen als den XML-Editor verwenden, geben XAML-Designer oft Sortierungskonventionen vor. Sie können diesen XAML-Code später jedoch beliebig bearbeiten, um die Reihenfolge der Attribute zu ändern oder neue Attribute hinzuzufügen.
+**Hinweis**  Wenn Sie andere Entwurfsoberflächen als den XML-Editor verwenden, geben XAML-Designer oft Sortierungskonventionen vor. Sie können diesen XAML-Code später jedoch beliebig bearbeiten, um die Reihenfolge der Attribute zu ändern oder neue Attribute hinzuzufügen.
 
 ## Angefügte Eigenschaften
 
@@ -275,8 +264,7 @@ Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschafte
 
 Da die öffnende geschweifte Klammer „\{“ der Anfang der Markuperweiterungssequenz ist, können Sie mithilfe einer Escapesequenz einen Literalzeichenfolgenwert angeben, der mit „\{“ beginnt. Die Escapesequenz ist „\{\}“. Geben Sie beispielsweise zum Angeben eines Zeichenfolgenwerts, der eine einzelne öffnende geschweifte Klammer ist, den Attributwert als „\{\}\{“ an. Sie können auch die alternativen Anführungszeichen (z.B. **'** innerhalb eines durch **""** getrennten Attributwerts) verwenden, um einen „\{“-Wert als Zeichenfolge anzugeben.
 
-
-            **Hinweis**  „\\}“ kann auch in einem Attribut in Anführungszeichen verwendet werden.
+**Hinweis**  „\\}“ kann auch in einem Attribut in Anführungszeichen verwendet werden.
  
 ## Enumerationswerte
 
@@ -285,8 +273,7 @@ Viele Eigenschaften in der Windows-Runtime-API verwenden als Werte Enumerationen
 -   Verwenden Sie keine qualifizierte Form, weil dies nicht funktioniert. Folgende XAML-Syntax ist z.B. ungültig: `<Button Visibility="Visibility.Visible"/>`.
 -   Verwenden Sie nicht den Wert der Konstante. Anders ausgedrückt: Verlassen Sie sich nicht auf den ganzzahligen Wert der Enumeration, die explizit oder implizit von der Definitionsweise der Enumeration abhängt. Auch wenn dies scheinbar funktioniert, ist in XAML bzw. im Code davon abzuraten, weil Sie sich auf ein potenziell kurzlebiges Implementierungsdetail verlassen. Verwenden Sie beispielsweise nicht Folgendes: `<Button Visibility="1"/>`.
 
-
-            **Hinweis**  Klicken Sie in Referenzthemen zu einer API, die XAML und Enumerationen verwendet, im Abschnitt **Eigenschaftswert** unter **Syntax** auf den Link zu dem Enumerationstyp. So gelangen Sie auf die Enumerationsseite, auf der Sie die benannten Konstanten für diese Enumeration ermitteln können.
+**Hinweis**  Klicken Sie in Referenzthemen zu einer API, die XAML und Enumerationen verwendet, im Abschnitt **Eigenschaftswert** unter **Syntax** auf den Link zu dem Enumerationstyp. So gelangen Sie auf die Enumerationsseite, auf der Sie die benannten Konstanten für diese Enumeration ermitteln können.
 
 Enumerationen können flagspezifisch sein. In diesem Fall wird ihnen **FlagsAttribute** zugeordnet. Wenn Sie eine Kombination von Werten für eine flagspezifische Enumeration als XAML-Attributwert angeben müssen, verwenden Sie die Namen der einzelnen Enumerationskonstanten getrennt durch Kommas (,) und ohne Leerzeichen. Flagspezifische Attribute kommen im Windows-Runtime-XAML-Vokabular nicht häufig vor, aber [**ManipulationModes**](https://msdn.microsoft.com/library/windows/apps/br227934) ist ein Beispiel für einen Fall, in dem das Festlegen eines flagspezifischen Enumerationswerts im XAML-Code unterstützt wird.
 
@@ -310,17 +297,11 @@ Viele XAML-Syntaxabschnitte enthalten Platzhalter unter "Verwendung", die dann i
 
 In den XAML-Verwendungsabschnitten werden ebenfalls verschiedene generalisierte Platzhalter verwendet. Diese Platzhalter werden nicht jedes Mal unter **XAML-Werte** neu definiert, da Sie irgendwann wissen, wofür sie stehen. Die meisten Leser bevorzugen es unserer Meinung nach, wenn sie nicht immer wieder unter **XAML-Werte** aufgeführt werden. Daher haben wir sie nicht in die Definitionen aufgenommen. Zu Referenzzwecken finden Sie im Folgenden eine Liste mit einigen dieser Platzhalter und Informationen zu ihrer allgemeinen Bedeutung:
 
--   
-            *object*: Dies ist theoretisch ein beliebiger Objektwert, der jedoch häufig auf bestimmte Objekttypen, z.B. die Wahl zwischen einer Zeichenfolge und einem Objekt, beschränkt ist. Weitere Informationen finden Sie in den Anmerkungen auf der Referenzseite.
--   
-            *object*
-            *property*: *object**property* wird zusammen verwendet, wenn es sich bei der angezeigten Syntax um die Syntax für einen Typ handelt, der als Attributwert für viele Eigenschaften verwendet werden kann. So enthält z. B. die **XAML-Attributsyntax**, die für [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) angezeigt wird, Folgendes: <*object**property*="*predefinedColorName*"/>
--   
-            *eventhandler*: Dieses Objekt stellt den Attributwert für jede XAML-Syntax dar, die für ein Ereignisattribut angezeigt wird. In diesem Fall geben Sie den Funktionsnamen für eine Ereignishandlerfunktion an. Diese Funktion muss im CodeBehind für die XAML-Seite definiert werden. Auf Programmierungsebene muss die Funktion der Delegatsignatur des behandelten Ereignisses entsprechen. Andernfalls kann der App-Code nicht kompiliert werden. Dies muss jedoch nur bei der Programmierung und nicht im XAML berücksichtigt werden, daher enthält die XAML-Syntax keine Hinweise zum Delegattyp. Wenn Sie wissen möchten, welcher Delegat für ein Ereignis implementiert werden sollte, finden Sie Informationen hierzu im Abschnitt **Ereignisinformationen** im Referenzthema für das Ereignis (in einer Tabellenspalte mit der Bezeichnung **Delegat**).
--   
-            *enumMemberName*: Wird in der Attributsyntax für alle Enumerationen angezeigt. Es gibt einen ähnlichen Platzhalter für Eigenschaften, die einen Enumerationswert verwenden. In der Regel wird dem Platzhalter jedoch ein Präfix mit einem Hinweis auf den Namen der Enumeration vorangestellt. So lautet beispielsweise die Syntax für [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716) <*frameworkElement***FlowDirection**="*flowDirectionMemberName*"/>. Klicken Sie auf einer der Eigenschaftenreferenzseiten auf den Link zum Enumerationstyp, der im Abschnitt **Eigenschaftswert** neben **Typ:** angezeigt wird. Für den Attributwert einer Eigenschaft, die diese Enumeration verwendet, können Sie eine der Zeichenfolgen verwenden, die in der Liste **Member** in der Spalte **Member** aufgeführt sind.
--   
-            *double*, *int*, *string*, *bool*: Hierbei handelt es sich um primitive Typen, die in der Programmiersprache XAML bekannt sind. Bei der Programmierung mit C# oder VisualBasic werden diese in entsprechende Typen für Microsoft .NET umgewandelt, z.B. [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx), [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) und [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx). Sie können alle Member für diese .NET-Typen verwenden, wenn Sie mit Ihren XAML-definierten Werten in .NET-CodeBehind arbeiten. Bei der Programmierung mit C++/CX verwenden Sie die primitiven C++-Typen. Diese können jedoch auch als äquivalent zu durch den [**Platform**](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx)-Namespace definierten Typen betrachtet werden, z.B. [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx). Für bestimmte Eigenschaften liegen manchmal zusätzliche Werteinschränkungen vor. Diese werden aber in der Regel in dem Abschnitt **Eigenschaftswert** oder "Anmerkungen" und nicht in einem XAML-Abschnitt erwähnt, da solche Einschränkungen sowohl für Code- als auch für XAML-Verwendungen gelten.
+-   *object*: Dies ist theoretisch ein beliebiger Objektwert, der jedoch häufig auf bestimmte Objekttypen, z.B. die Wahl zwischen einer Zeichenfolge und einem Objekt, beschränkt ist. Weitere Informationen finden Sie in den Anmerkungen auf der Referenzseite.
+-   *object* *property*: *object* *property* wird zusammen verwendet, wenn es sich bei der angezeigten Syntax um die Syntax für einen Typ handelt, der als Attributwert für viele Eigenschaften verwendet werden kann. So enthält z. B. die **XAML-Attributverwendung**, die für [**Brush**](https://msdn.microsoft.com/library/windows/apps/br228076) angezeigt wird, Folgendes: <*object* *property*="*predefinedColorName*"/>
+-   *eventhandler*: Dieses Objekt stellt den Attributwert für jede XAML-Syntax dar, die für ein Ereignisattribut angezeigt wird. In diesem Fall geben Sie den Funktionsnamen für eine Ereignishandlerfunktion an. Diese Funktion muss im CodeBehind für die XAML-Seite definiert werden. Auf Programmierungsebene muss die Funktion der Delegatsignatur des behandelten Ereignisses entsprechen. Andernfalls kann der App-Code nicht kompiliert werden. Dies muss jedoch nur bei der Programmierung und nicht im XAML berücksichtigt werden, daher enthält die XAML-Syntax keine Hinweise zum Delegattyp. Wenn Sie wissen möchten, welcher Delegat für ein Ereignis implementiert werden sollte, finden Sie Informationen hierzu im Abschnitt **Ereignisinformationen** im Referenzthema für das Ereignis (in einer Tabellenspalte mit der Bezeichnung **Delegat**).
+-   *enumMemberName*: Wird in der Attributsyntax für alle Enumerationen angezeigt. Es gibt einen ähnlichen Platzhalter für Eigenschaften, die einen Enumerationswert verwenden. In der Regel wird dem Platzhalter jedoch ein Präfix mit einem Hinweis auf den Namen der Enumeration vorangestellt. So lautet beispielsweise die Syntax für [**FrameworkElement.FlowDirection**](https://msdn.microsoft.com/library/windows/apps/br208716) <*frameworkElement***FlowDirection**="*flowDirectionMemberName*"/>. Klicken Sie auf einer der Eigenschaftenreferenzseiten auf den Link zum Enumerationstyp, der im Abschnitt **Eigenschaftswert** neben **Typ:** angezeigt wird. Für den Attributwert einer Eigenschaft, die diese Enumeration verwendet, können Sie eine der Zeichenfolgen verwenden, die in der Liste **Member** in der Spalte **Member** aufgeführt sind.
+-   *double*, *int*, *string*, *bool*: Hierbei handelt es sich um primitive Typen, die in der Programmiersprache XAML bekannt sind. Bei der Programmierung mit C# oder VisualBasic werden diese in entsprechende Typen für Microsoft .NET umgewandelt, z.B. [**Double**](https://msdn.microsoft.com/library/windows/apps/xaml/system.double.aspx), [**Int32**](https://msdn.microsoft.com/library/windows/apps/xaml/system.int32.aspx), [**String**](https://msdn.microsoft.com/library/windows/apps/xaml/system.string.aspx) und [**Boolean**](https://msdn.microsoft.com/library/windows/apps/xaml/system.boolean.aspx). Sie können alle Member für diese .NET-Typen verwenden, wenn Sie mit Ihren XAML-definierten Werten in .NET-CodeBehind arbeiten. Bei der Programmierung mit C++/CX verwenden Sie die primitiven C++-Typen. Diese können jedoch auch als äquivalent zu durch den [**Platform**](https://msdn.microsoft.com/library/windows/apps/xaml/hh710417.aspx)-Namespace definierten Typen betrachtet werden, z.B. [**Platform::String**](https://msdn.microsoft.com/library/windows/apps/xaml/hh755812.aspx). Für bestimmte Eigenschaften liegen manchmal zusätzliche Werteinschränkungen vor. Diese werden aber in der Regel in dem Abschnitt **Eigenschaftswert** oder "Anmerkungen" und nicht in einem XAML-Abschnitt erwähnt, da solche Einschränkungen sowohl für Code- als auch für XAML-Verwendungen gelten.
 
 ## Tipps, Tricks und Hinweise zum Stil
 
@@ -337,6 +318,6 @@ In den XAML-Verwendungsabschnitten werden ebenfalls verschiedene generalisierte 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

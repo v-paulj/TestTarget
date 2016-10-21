@@ -1,13 +1,13 @@
 ---
 author: mijacobs
-Description: "Farben tragen dazu bei, dass sich Benutzer intuitiv in den verschiedenen Informationsebenen einer App zurechtfinden, und spielen eine wichtige Rolle für das Interaktionsmodell."
+description: "Farben tragen dazu bei, dass sich Benutzer intuitiv in den verschiedenen Informationsebenen einer App zurechtfinden, und spielen eine wichtige Rolle für das Interaktionsmodell."
 title: Farben
 ms.assetid: 3ba7176f-ac47-498c-80ed-4448edade8ad
-label: Color
 template: detail.hbs
 extraBodyClass: style-color
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 878470a7cbf44862c47a1428a1d25d332db32fdc
+translationtype: Human Translation
+ms.sourcegitcommit: d7236006f2c620a4ff0de4e0f413f32a2eaf5687
+ms.openlocfilehash: 8e253c93f932e04b825478cf0801e4c8c0d43b9d
 
 ---
 
@@ -27,34 +27,19 @@ Benutzer können eine einzelne Farbe, die sogenannte Akzentfarbe, auswählen: *E
 ![Xbox-Akzentfarben](images/accentcolorswatch_xbox.png) Xbox-Akzentfarben
 
 
-
 Wenn der Benutzer eine Akzentfarbe auswählt, wird sie Teil des Systemdesigns. Davon sind dann Startseite, Taskleiste, Fensterchrom, bestimmte Interaktionszustände und Links mit [allgemeinen Steuerelementen](https://dev.windows.com/design/controls-patterns) betroffen. Bei Apps besteht zudem die Möglichkeit, die Akzentfarbe in die Typografie, Hintergründe und Interaktionen zu integrieren – oder sie zu ignorieren, um das Branding der jeweiligen App nicht zu verändern.
 
-## Farbe auf Farbe
+## Farbpaletten-Bausteine
 
 Nachdem eine Akzentfarbe ausgewählt wurde, werden auf der Grundlage der HSB-Werte für die Leuchtdichte helle und dunkle Schattierungen der Akzentfarbe erstellt. Mithilfe von Schattierungsvarianten können Apps eine visuelle Hierarchie erstellen und Interaktionen darstellen.
 
 Standardmäßig werden Hyperlinks in der Akzentfarbe des Benutzers dargestellt. Zeichnet sich der Hintergrund der Seite durch eine ähnliche Farbe aus, können Sie den Hyperlinks für einen besseren Kontrast einen helleren (oder dunkleren) Akzent-Farbton zuweisen.
 
-<figure class="figure-img" >
-    <img src="images/shades.png" alt="A single accent color with its 6 shades"  />
-        <figcaption><p>Die unterschiedlichen Hell/Dunkel-Töne der Standard-Akzentfarbe.</p>
-</figcaption>
-</figure>
+![Eine einzelne Akzentfarbe mit sechs Schattierungen](images/shades.png) Die unterschiedlichen Hell/Dunkel-Töne der Standard-Akzentfarbe.
 
-<figure class="figure-img" >
-    <img src="images/action_center_redline_zoom.png" alt="Redlines for Colored Action Center"  />
-        <figcaption><p>Ein Beispiel dafür, wie Farblogik auf eine Designspezifikation angewendet wird.</p>
-</figcaption>
-</figure>
+![Redlines für ein farbiges Info-Center](images/action_center_redline_zoom.png) Ein Beispiel dafür, wie Farblogik auf eine Designspezifikation angewendet wird.
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-In XAML wird die primäre Akzentfarbe verfügbar gemacht als eine [Designressource](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx) mit dem Namen `SystemAccentColor`. Die Farbtöne stehen als `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2` und `SystemAccentColorDark3` zur Verfügung. Auch programmgesteuert verfügbar über die Enumeration[UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) und [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx).
-    </div>
-</aside>
+**Hinweis**&nbsp;&nbsp;In XAML wird die primäre Akzentfarbe verfügbar gemacht als eine [Designressource](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx) mit dem Namen `SystemAccentColor`. Die Farbtöne stehen als `SystemAccentColorLight3`, `SystemAccentColorLight2`, `SystemAccentColorLight1`, `SystemAccentColorDark1`, `SystemAccentColorDark2` und `SystemAccentColorDark3` zur Verfügung. Auch programmgesteuert verfügbar über die Enumeration [UISettings.GetColorValue](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uisettings.getcolorvalue.aspx) und [UIColorType](https://msdn.microsoft.com/library/windows/apps/windows.ui.viewmanagement.uicolortype.aspx).
 
 ## Farbdesigns
 
@@ -88,20 +73,37 @@ Zur Vereinfachung der Designentwicklung bietet Windows eine zusätzliche Farbpal
 #### Chrom
 ![Das dunkle Chromdesign](images/themes-dark-chrome.png)
 
-<aside class="aside-dev">
-    <div class="aside-dev-title">
-    </div>
-    <div class="aside-dev-content">
-Jede Farbe steht als eine XAML-[Designressource](https://msdn.microsoft.com/library/windows/apps/Mt187274.aspx#the_xaml_color_ramp_and_theme-dependent_brushes) zur Verfügung und folgt der `System*Color`-Benennungskonvention (z. B.: `SystemChromeHighColor`). Sie können Ihr App-Design über [Application.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.requestedtheme.aspx) oder [FrameworkElement.RequestedTheme](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.requestedtheme.aspx) steuern.
-    </div>
-</aside>
+
+## Ändern des Designs
+
+Sie können Designs einfach ändern, indem Sie die **RequestedTheme**-Eigenschaft in „App.xaml“ ändern:
+
+```XAML
+<Application
+    x:Class="App9.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App9"
+    RequestedTheme="Dark">
+
+</Application>
+```
+
+Das Entfernen von **RequestedTheme** bedeutet, dass Ihre Anwendung die App-Moduseinstellungen des Benutzers berücksichtigt. Dieser kann festlegen, dass die App im dunklen oder hellen Design angezeigt wird. 
+
+Berücksichtigen Sie beim Erstellen Ihrer App unbedingt das Design, da dieses einen großen Einfluss auf das Erscheinungsbild des App hat.
 
 ## Barrierefreiheit
 
-Unsere Palette ist für die Verwendung auf Bildschirmen optimiert. Zur optimalen Lesbarkeit von Text wird ein Mindestkontrastverhältnis gegenüber dem Hintergrund von 4,5:1 empfohlen. Es gibt viele kostenlose Tools, mit denen Sie testen können, ob Ihre Farben geeignet sind, z.B. [Kontrastverhältnis](http://leaverou.github.io/contrast-ratio/).
+Unsere Palette ist für die Verwendung auf Bildschirmen optimiert. Zur optimalen Lesbarkeit von Text wird ein Mindestkontrastverhältnis gegenüber dem Hintergrund von 4,5:1 empfohlen. Es gibt viele kostenlose Tools, mit denen Sie testen können, ob Ihre Farben geeignet sind, z.B. [Contrast Ratio](http://leaverou.github.io/contrast-ratio/).
+
+## Verwandte Artikel
+
+* [XAML-Formatvorlagen](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
+* [XAML-Designressourcen](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

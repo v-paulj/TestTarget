@@ -4,17 +4,18 @@ title: xDeferLoadStrategy-Attribut
 description: "„xDeferLoadStrategy“ verzögert die Erstellung eines Elements und seiner untergeordneten Elemente, verkürzt die Startzeit, erhöht aber leicht die Arbeitsspeicherauslastung. Jedes betroffene Element erhöht die Arbeitsspeicherauslastung um ca. 600 Bytes."
 ms.assetid: E763898E-13FF-4412-B502-B54DBFE2D4E4
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: a5230a92ad919fc52c40c19646ff799453e64fa4
+ms.sourcegitcommit: 82edf9c3ee7f7303788b7a1272ecb261d3748c5a
+ms.openlocfilehash: c1a0515ea4298b6eb870bdf69e452f774962cdd8
 
 ---
 
 # x:DeferLoadStrategy-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
+**x:DeferLoadStrategy="Lazy"** ist ein Feature, das zur Leistungsoptimierung des Starts oder von Strukturerstellungsszenarien einer XAML-App verwendet werden kann. Mit **X: DeferLoadStrategy = "Lazy"** wird die Erstellung eines Elements und seiner untergeordneten Elemente verzögert und damit Startzeit und Speicherverbrauch verringert, da die Elemente nicht erstellt werden müssen. Dies ist zur Reduzierung der Kosten für Elemente nützlich, die selten oder nur bedingt benötigt werden. Das Element wird verwirklicht, wenn Code oder VisualStateManager darauf verweist.
 
-              **x:DeferLoadStrategy="Lazy"** verzögert die Erstellung eines Elements und seiner untergeordneten Elemente und verkürzt die Startzeit, erhöht jedoch die Arbeitsspeicherauslastung etwas. Jedes betroffene Element erhöht die Arbeitsspeicherauslastung um ca. 600 Bytes. Je größer die verzögerte Elementstruktur, desto mehr Startzeit sparen Sie – aber auf Kosten eines größeren Arbeitsspeicherbedarfs. Daher ist es möglich, dass durch eine übermäßige Verwendung dieses Attributs die Leistung beeinträchtigt wird.
+Für die Verwaltung von Verzögerungen sind jedoch 600 Byte zusätzlicher Arbeitsspeicher für jedes betroffene Element erforderlich. Je größer die verzögerte Elementstruktur ist, desto mehr Startzeit sparen Sie – aber auf Kosten eines größeren Arbeitsspeicherbedarfs. Daher ist es möglich, dass durch eine übermäßige Verwendung dieses Attributs die Leistung beeinträchtigt wird.
 
 ## XAML-Attributsyntax
 
@@ -26,9 +27,9 @@ ms.openlocfilehash: a5230a92ad919fc52c40c19646ff799453e64fa4
 
 Die Einschränkungen für die Verwendung von **x:DeferLoadStrategy** sind:
 
--   Erfordert eine Definition von [x:Name](x-name-attribute.md) , da es eine Methode geben muss, um das Element später zu suchen.
+-   Erfordert eine Definition von [x:Name](x-name-attribute.md), da es eine Methode geben muss, um das Element später zu suchen.
 -   Nur ein [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) kann als verzögert markiert werden, mit Ausnahme der von [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249) abgeleiteten Typen.
--   Stammelemente können in [**Page**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol) oder [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) nicht verzögert werden.
+-   Stammelemente können in [**Page**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.page), [**UserControls**](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.usercontrol) oder [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) nicht verzögert werden.
 -   Elemente in einem [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) können nicht verzögert werden.
 -   Funktioniert nicht mit lose mit [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048) geladenem XAML-Code.
 -   Durch das Verschieben eines übergeordneten Elements werden alle Elemente gelöscht, die nicht erkannt wurden.
@@ -89,6 +90,6 @@ private void RealizeElements_Click(object sender, RoutedEventArgs e)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

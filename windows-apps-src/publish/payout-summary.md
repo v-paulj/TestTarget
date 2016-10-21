@@ -1,39 +1,35 @@
 ---
 author: jnHs
-Description: "Die Auszahlungsübersicht enthält Details zu den mit Ihren Apps und In-App-Produkten erzielten Erlösen. Sie werden auch darüber informiert, wann Sie Zahlungen erhalten und wie hoch diese Zahlungen sind."
+Description: "Die Auszahlungsübersicht enthält Details zu den mit Ihren Apps und Add-Ons erzielten Erlösen. Sie werden auch darüber informiert, wann Sie Zahlungen erhalten und wie hoch diese Zahlungen sind."
 title: "Auszahlungsübersicht"
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 translationtype: Human Translation
-ms.sourcegitcommit: 82ff562a192aa42d383f4cd7221c495c3bfbad0f
-ms.openlocfilehash: 86355a194eb61b8d13eba22d9f6e7c566339cd28
+ms.sourcegitcommit: 6b3b4480395d361397d508c576e1128a3278440e
+ms.openlocfilehash: 145fac07ca3c83d5441c0f43c5ad286163c03a8b
 
 ---
 
 # Auszahlungsübersicht
 
 
-Die **Auszahlungsübersicht** enthält Details zu den mit Ihren Apps und In-App-Produkten erzielten Erlösen. Sie werden auch darüber informiert, wann Sie Zahlungen erhalten und wie hoch diese Zahlungen sind.
+Die **Auszahlungsübersicht** enthält Details zu den mit Ihren Apps und Add-Ons erzielten Erlösen. Sie werden auch darüber informiert, wann Sie Zahlungen erhalten und wie hoch diese Zahlungen sind.
 
-Wenn Sie mit Microsoft Advertising Geld verdienen möchten, finden Sie seit 1 April 2016 in der **Auszahlungsübersicht** auch Zahlungsinformationen für Werbung. Wir geben die App an, in der diese Erlöse erzielt wurden, oder den Hinweis „nicht zugeordnet“ für Anzeigeneinheiten, die in mehreren Apps verwendet werden oder keiner bestimmten App zugeordnet werden können. Weitere Informationen zu Auszahlungen für Anzeigen finden Sie unter [Microsoft Advertising-Zahlungsprozess](https://msdn.microsoft.com/windows/uwp/publish/microsoft-advertising-payment-process).
+Wenn Sie mit Microsoft Advertising Geld verdienen möchten, finden Sie seit 1 April 2016 in der **Auszahlungsübersicht** auch Zahlungsinformationen für Werbung. Wir geben die App an, in der diese Erlöse erzielt wurden, oder den Hinweis „nicht zugeordnet“ für Anzeigeneinheiten, die in mehreren Apps verwendet werden oder keiner bestimmten App zugeordnet werden können. 
 
 Wenn Sie Produkte im Azure Marketplace verkaufen, werden Ihnen in der **Auszahlungsübersicht** auch Informationen zu erfolgreichen Auszahlungen ab dem 1.November2015 angezeigt. Weitere Informationen zur Bezahlung im Azure Marketplace finden Sie in den [Teilnahmerichtlinien für Microsoft Azure Marketplace](http://go.microsoft.com/fwlink/p/?LinkId=722436) und in der [Microsoft Azure Marketplace-Herausgebervereinbarung](http://go.microsoft.com/fwlink/p/?LinkID=699560 ). Weitere Informationen zum Anzeigen von früheren Azure Marketplace-Auszahlungsinformationen finden Sie [hier](http://go.microsoft.com/fwlink/p/?LinkID=722439).
 
-> 
-            **Hinweis**  Eine Auszahlung erfolgt erst, wenn Ihre App-Erlöse den gültigen Auszahlungsschwellenwert erreichen. Sind die Erlöse niedriger als der Auszahlungsschwellenwert, verbleiben sie in der Kategorie „Reserviert“, bis der Schwellenwert erreicht wurde. Weitere Informationen finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058).
+> **Hinweis**  Eine Auszahlung erfolgt erst, wenn Ihre App-Erlöse den gültigen Auszahlungsschwellenwert erreichen. Sind die Erlöse niedriger als der Auszahlungsschwellenwert, verbleiben sie in der Kategorie „Reserviert“, bis der Schwellenwert erreicht wurde. Weitere Informationen zur Auszahlungsschwelle für App-Erlöse finden Sie in der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058). Für Microsoft Advertising-Erlöse ist die Zahlungsschwelle 50 US-Dollar (oder die Entsprechung in der lokalen Währung). 
 >
-> Zahlungen erfolgen monatlich (vorausgesetzt, der entsprechenden Zahlungsschwellenwert wird erreicht). In der Regel senden wir Zahlungen, die in einem bestimmten Monat fällig sind, bis zum 15. Tag dieses Monats. Beachten Sie, dass Zahlungen in der Regel zwischen drei und zehn zusätzliche Werktage benötigen, um Ihr Konto zu erreichen.
+> Zahlungen erfolgen monatlich (vorausgesetzt, der entsprechenden Zahlungsschwellenwert wird erreicht). In der Regel senden wir Zahlungen, die in einem bestimmten Monat fällig sind, bis zum 15. Tag dieses Monats. Beachten Sie, dass Zahlungen in der Regel zwischen drei und zehn zusätzliche Werktage benötigen, um Ihr Konto zu erreichen. Weitere Informationen finden Sie unter [Auszahlungsschwellenwerte, Methoden und Zeiträume](payment-thresholds-methods-and-timeframes.md).
 
 ## Aktuelle Erlöse und Auszahlungen
 
 
 Oben auf der Seite finden Sie den Bereich **Aktuelle Einnahmen und Zahlungen**, der drei Abschnitte enthält: **Reserviert**, **Anstehende Zahlungen** und **Letzte Zahlung**.
 
--   
-            Unter **Reserviert** wird der Betrag angezeigt, der sich auf Ihrem Konto angesammelt hat, für den jedoch noch keine Auszahlung geplant ist. Darin sind Erlöse aus Werbung enthalten. (Azure Marketplace-Erlöse werden nicht im Abschnitt „Reserviert“ angezeigt. Wenn Sie nur am Azure Marketplace teilnehmen, sehen Sie hier 0,00 Euro.) Erlöse aus Ihren letzten Werbungs- und App-Verkäufen können erst nach ca. 30 Tagen ausgezahlt werden. Danach wird die Auszahlung für den folgenden Monat geplant (vorausgesetzt, der Zahlungsschwellenwert wurde erreicht). Beim Versuch einer Zahlung wird Ihr reservierter Kontostand um den Zahlungsbetrag verringert, und der Betrag wird in **Anstehende Zahlungen** angezeigt. Beachten Sie, dass der in **Reserviert** angezeigte Betrag nur ein Schätzwert ist, da die Wechselkurse für Verkäufe in anderen Währungen vor dem Erstellen der eigentlichen Zahlung schwanken können. Unter Umständen bemerken Sie, dass sich Ihr reservierter Kontostand am Anfang jedes Monats jeweils leicht ändert. Der reservierte Kontostand wird monatlich aktualisiert, um die monatlichen Wechselkurse widerzuspiegeln, damit eine präzisere Schätzung möglich ist. Sie können auf **Details anzeigen** klicken, um weitere Informationen anzuzeigen, oder auf den Link **Reservierte Transaktionen herunterladen**, um eine CSV-Datei mit Ihren gesamten **Reservierten** Transaktionen anzuzeigen.
--   
-            Unter **Anstehende Zahlungen** wird die Anzahl von bevorstehenden Auszahlungen, der Betrag Ihrer nächsten Auszahlung und das Erstellungsdatum der Auszahlung angezeigt. Haben Ihre Erlöse den Auszahlungsschwellenwert noch nicht erreicht, wird hier keine bevorstehende Auszahlung angezeigt. Sie können auf **Details anzeigen** klicken, um weitere Informationen, einschließlich Auszahlungsbeträgen und die jeweilige Einnahmequelle, anzuzeigen.
--   
-            Unter **Letzte Zahlung** wird der Betrag des letzten Auszahlungsversuchs angezeigt. Wenn die Zahlung erfolgreich war, wird der Link **Details anzeigen** blau dargestellt, und Sie können darauf klicken, um die Details für jede Zahlung anzuzeigen. Wenn mehrere Auszahlungen versucht wurden und nur eine Auszahlung erfolgreich war, wird hier nur der Betrag der erfolgreichen Auszahlung angezeigt. Ist bei mindestens einer Auszahlung ein Fehler aufgetreten, wird der Link **Details anzeigen** rot dargestellt, und die Anzahl fehlgeschlagener Auszahlungen wird angezeigt. Klicken Sie auf **Details anzeigen**, um weitere Details zum Problem anzuzeigen, damit Sie es beheben können.
+-   Unter **Reserviert** wird der Betrag angezeigt, der sich auf Ihrem Konto angesammelt hat, für den jedoch noch keine Auszahlung geplant ist. Darin sind Erlöse aus Werbung enthalten. (Azure Marketplace-Erlöse werden nicht im Abschnitt „Reserviert“ angezeigt. Wenn Sie nur am Azure Marketplace teilnehmen, sehen Sie hier 0,00 Euro.) Erlöse aus Ihren letzten Werbungs- und App-Verkäufen bleiben ausstehend und können erst nach ca. 30 Tagen ausgezahlt werden. Danach wird die Auszahlung für den folgenden Monat geplant (vorausgesetzt, der Zahlungsschwellenwert wurde erreicht). Beim Versuch einer Zahlung wird Ihr reservierter Kontostand um den Zahlungsbetrag verringert, und der Betrag wird in **Anstehende Zahlungen** angezeigt. Beachten Sie, dass der in **Reserviert** angezeigte Betrag nur ein Schätzwert ist, da die Wechselkurse für Verkäufe in anderen Währungen vor dem Erstellen der eigentlichen Zahlung schwanken können. Unter Umständen bemerken Sie, dass sich Ihr reservierter Kontostand am Anfang jedes Monats jeweils leicht ändert. Der reservierte Kontostand wird monatlich aktualisiert, um die monatlichen Wechselkurse widerzuspiegeln, damit eine präzisere Schätzung möglich ist. Sie können auf **Details anzeigen** klicken, um weitere Informationen anzuzeigen, oder auf den Link **Reservierte Transaktionen herunterladen**, um eine CSV-Datei mit Ihren gesamten **Reservierten** Transaktionen anzuzeigen.
+-   Unter **Anstehende Zahlungen** wird die Anzahl von bevorstehenden Auszahlungen, der Betrag Ihrer nächsten Auszahlung und das Erstellungsdatum der Auszahlung angezeigt. Haben Ihre Erlöse den Auszahlungsschwellenwert noch nicht erreicht, wird hier keine bevorstehende Auszahlung angezeigt. Sie können auf **Details anzeigen** klicken, um weitere Informationen, einschließlich Auszahlungsbeträgen und die jeweilige Einnahmequelle, anzuzeigen. Wenn ein Betrag angezeigt um Abschnitt **Anstehende Zahlungen** angezeigt wird, sehen Sie einen temporären Links zu **Transaktionen herunterladen**.  Wenn Sie auf den Link klicken, sehen Sie eine .csv-Datei mit allen Transaktionen, die zu Ihren anstehenden Zahlungen beitragen.  Beachten Sie: Wenn sich der Betrag der **anstehenden Zahlungen** zu **Letzte Zahlung** bewegt, wird der Link **Transaktionen herunterladen** nicht mehr angezeigt.
+-   Unter **Letzte Zahlung** wird der Betrag des letzten Auszahlungsversuchs angezeigt. Wenn die Zahlung erfolgreich war, wird der Link **Details anzeigen** blau dargestellt, und Sie können darauf klicken, um die Details für jede Zahlung anzuzeigen. Wenn mehrere Auszahlungen versucht wurden und nur eine Auszahlung erfolgreich war, wird hier nur der Betrag der erfolgreichen Auszahlung angezeigt. Ist bei mindestens einer Auszahlung ein Fehler aufgetreten, wird der Link **Details anzeigen** rot dargestellt, und die Anzahl fehlgeschlagener Auszahlungen wird angezeigt. Klicken Sie auf **Details anzeigen**, um weitere Details zum Problem anzuzeigen, damit Sie es beheben können.
 
 ## Erlöse nach App und Anpassungen
 
@@ -79,31 +75,32 @@ In der folgenden Tabelle werden die Felder der CSV-Datei erläutert. Beachten Si
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Umsatzquelle          | Die Quelle der Umsätze, basierend auf dem Transaktionsort (z. B. Windows Store, Windows Phone Store, Windows Store 8, Microsoft Advertising usw.). |
 | Bestellnummer          |  Eindeutiger Bezeichner für die Bestellung. Anhand dieser ID können Sie kaufbezogene Transaktionen und die entsprechenden Transaktionen, die sich nicht auf Käufe beziehen (z.B. Erstattungen, Rückvergütungen usw.), ermitteln. Beide Arten von Transaktionen besitzen die gleiche Bestell-ID. Im Fall einer aufgeteilten Belastung, bei der mehrere Zahlungsmethoden für einen einzelnen Einkauf verwendet wurden, können Sie die kaufbezogenen Transaktionen verknüpfen.                                                                                                          |
-| Transaktions-ID          |       Eindeutige Transaktions-ID  |
-| Datum/Uhrzeit der Transaktion   | Das Datum und die Uhrzeit der Transaktion (UTC)                                                                                         |
+| Transaktions-ID          |       Eindeutige Transaktions-ID.  |
+| Datum/Uhrzeit der Transaktion   | Das Datum und die Uhrzeit der Transaktion (UTC).                                                                                        |
 | Übergeordnete Produkt-ID       | Eindeutige übergeordnete Produkt-ID. Hinweis: Wenn für die Transaktion kein übergeordnetes Produkt vorhanden ist, lautet die ID des übergeordneten Produkts „Produkt-ID“. |
-| Produkt-ID              | Eindeutige Produkt-ID                                                                                                                |
-| Name des übergeordneten Produkts     | Name des übergeordneten Produkts Hinweis: Wenn für die Transaktion kein übergeordnetes Produkt vorhanden ist, lautet der Name des übergeordneten Produkts „Produktname“.   |
-| Produktname            | Name des Produkts                                                                                                                      |
+| Produkt-ID              | Eindeutige Produkt-ID.                                                                                                                |
+| Name des übergeordneten Produkts     | Name des übergeordneten Produkts. Hinweis: Wenn für die Transaktion kein übergeordnetes Produkt vorhanden ist, lautet der Name des übergeordneten Produkts „Produktname“.   |
+| Produktname            | Name des Produkts.                                                                                                                      |
 | Produkttyp            | Art des Produkts (z. B. App, In-App, Spiel usw.)                                                                                        |
 | Menge                | Wenn die Umsatzquelle „Windows Store für Unternehmen“ ist, gibt die Menge die Anzahl der erworben Lizenzen an. Für alle anderen Umsatzquellen ist die Menge immer 1. Hinweis: Auch wenn eine Transaktion in zwei Positionen unterteilt wird, weil zwei verschiedene Zahlungsmethoden verwendet wurden, wird für jede Position die Menge 1 angezeigt.                                                                     |
 | Transaktionstyp        | Art der Transaktion (z.B. Einkauf, Erstattung, Rückbuchung, Ausgleich usw.)                                                               |
 | Zahlungsmethode          | Kundenzahlungsmittel, das für die Transaktion verwendet wird (z.B. Kreditkarte, Mobilfunkanbieterrechnung, PayPal usw.)                                        |
-| Land/Region        | Land/Region, in dem die Transaktion durchgeführt wurde                                                                                            |
-| Lokaler Anbieter/Verkäufer | Eingetragener lokaler Anbieter/Verkäufer                                                                                                          |
-| Transaktionswährung    | Währung der Transaktion                                                                                                              |
-| Transaktionsbetrag      | Betrag der Transaktion                                                                                                                |
-| Tax Remitted (Bezahlte Steuern)            | Höhe der bezahlten Steuern (Verkaufssteuer, Gebrauchssteuer, Umsatzsteuer oder Waren-/Dienstleistungssteuer)                                                                                    |
-| Nettoeinnahmen            | Transaktionsbetrag minus bezahlter Steuern                                                                                                     |
-| Store-Gebühr               | Der Prozentsatz der Nettoeinnahmen, die von Microsoft als Gebühr für das Verfügbarmachen der App oder des In-App-Produkts im Store erhoben wird                |
-| App-Erlöse            | Nettoeinnahmen abzüglich der Store-Gebühr                                                                                                         |
-| Einbehaltene Steuern          | Höhe der einbehaltenen Einkommensteuer                                                                                                            |
-| Auszahlung                 | App-Erlöse abzüglich aller geltenden Steuereinbehaltungen (Betrag angezeigt in Transaktionswährung)                                           |
-| FX Rate (Wechselkurs)                 | Wechselkurs für die Umrechnung der Transaktionswährung in die Auszahlungswährung                                                           |
-| Auszahlungswährung        | Währung der Auszahlung                                                                                                         |
-| Converted Payment (Umgerechnete Auszahlung)       | Basierend auf dem Wechselkurs in die Auszahlungswährung umgerechneter Auszahlungsbetrag                                                                           |
-| Steuerzahlungsmodell         | Für die Überweisung von Steuern (Verkaufssteuer, Gebrauchssteuer, Umsatzsteuer oder Waren-/Dienstleistungssteuer) zuständige Partei                                                                     |
-| Gebühren                 | Zeigt eine Aufschlüsselung aller Gebührendetails, aggregiert in der Spalte „Transaktionsbetrag“. (Nur bereitgestellt für Azure Marketplace.)          |
+| Land/Region        | Land/Region, in dem die Transaktion durchgeführt wurde.                                                                                            |
+| Lokaler Anbieter/Verkäufer | Eingetragener lokaler Anbieter/Verkäufer.                                                                                                          |
+| Transaktionswährung    | Währung der Transaktion.                                                                                                              |
+| Transaktionsbetrag      | Betrag der Transaktion.                                                                                                                |
+| Bezahlte Steuern            | Höhe der bezahlten Steuern (Verkaufssteuer, Gebrauchssteuer, Umsatzsteuer oder Waren-/Dienstleistungssteuer).                                                                                    |
+| Nettoeinnahmen            | Transaktionsbetrag minus bezahlter Steuern.                                                                                                    |
+| Store-Gebühr               | Der Prozentsatz der Nettoeinnahmen, die von Microsoft als Gebühr für das Verfügbarmachen der App oder des Add-Ons im Store erhoben wird                |
+| App-Erlöse            | Nettoeinnahmen abzüglich der Store-Gebühr.                                                                                                         |
+| Einbehaltene Steuern          | Höhe der einbehaltenen Einkommensteuer. (Nicht enthalten in der **reservierten** .csv-Datei.)                                                                                                           |
+| Auszahlung                 | App-Erlöse abzüglich aller geltenden Steuereinbehaltungen (Betrag angezeigt in Transaktionswährung). (Nicht enthalten in der **reservierten** .csv-Datei.)                                           |
+| Wechselkurs                 | Wechselkurs für die Umrechnung der Transaktionswährung in die Auszahlungswährung.                                                           |
+| Auszahlungswährung        | Währung der Auszahlung.                                                                                                         |
+| Umgerechnete Auszahlung       | Basierend auf dem Wechselkurs in die Auszahlungswährung umgerechneter Auszahlungsbetrag.                                                                           |
+| Steuerzahlungsmodell         | Für die Überweisung von Steuern (Verkaufssteuer, Gebrauchssteuer, Umsatzsteuer oder Waren-/Dienstleistungssteuer) zuständige Partei.                                                                     |
+| Qualifikationsdatum/Uhrzeit   | Datum und Uhrzeit, an dem/zu der der Transaktionserlös zur Auszahlung qualifiziert wird (UTC). Wenn eine Auszahlung erstellt wird, enthält diese Transaktionserlöse, die einen Qualifizierungszeitpunkt enthalten, der vor dem Erstellungsdatum der Auszahlung liegt. (Nur enthalten in der **reservierten** .csv-Datei.)                                                                     |
+| Gebühren                 | Zeigt eine Aufschlüsselung aller Gebührendetails, aggregiert in der Spalte „Transaktionsbetrag“. (Nur für Azure Marketplace; nicht enthalten in der **reservierten** .csv-Datei.)          |
 
  
 
@@ -117,6 +114,6 @@ In der folgenden Tabelle werden die Felder der CSV-Datei erläutert. Beachten Si
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

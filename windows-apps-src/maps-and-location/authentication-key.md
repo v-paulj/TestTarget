@@ -3,8 +3,9 @@ author: msatranjr
 title: "Anfordern eines Kartenauthentifizierungsschlüssels"
 description: Ihre universelle Windows-App muss authentifiziert werden, bevor sie die MapControl-Klasse und Kartendienste im Windows.Services.Maps-Namespace verwenden kann.
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
+translationtype: Human Translation
 ms.sourcegitcommit: 92285ce32548bd6035c105e35c2b152432f8575a
-ms.openlocfilehash: b7c981e071f70ab0a76d73333a94580b3c497b0e
+ms.openlocfilehash: 4cbc0142e7d76795bb147ce4cc98b3da48715b85
 
 ---
 
@@ -16,8 +17,7 @@ ms.openlocfilehash: b7c981e071f70ab0a76d73333a94580b3c497b0e
 
 Ihre [universelle Windows-App](https://msdn.microsoft.com/library/windows/apps/dn894631) muss authentifiziert werden, bevor sie die [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Klasse und Kartendienste im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/windows/apps/dn636979)-Namespace verwenden kann. Zum Authentifizieren Ihrer App müssen Sie einen Kartenauthentifizierungsschlüssel angeben. In diesem Thema wird beschrieben, wie Sie einen Kartenauthentifizierungsschlüssel vom [Bing Maps Developer Center](https://www.bingmapsportal.com/) anfordern und Ihrer App hinzufügen.
 
-
-            **Tipp** Um mehr über das Verwenden von Karten in Ihrer App zu erfahren, laden Sie das folgende Beispiel aus den [API-Beispielen für die universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter:
+**Tipp** Um mehr über die Verwendung von Karten in Ihrer App zu erfahren, können Sie das folgende Beispiel aus den [API-Beispielen für die Universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunterladen.
 
 -   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 
@@ -42,14 +42,10 @@ So erstellen Sie einen neuen Schlüssel
 
 7.  Füllen Sie das Formular **Schlüssel erstellen** aus, und klicken Sie dann auf **Erstellen**.
 
-    -   
-            **Anwendungsname:** Der Name Ihrer Anwendung.
-    -   
-            **Anwendungs-URL (optional):** Die URL Ihrer Anwendung.
-    -   
-            **Schlüsseltyp:** Wählen Sie **Basic** oder **Enterprise** aus.
-    -   
-            **Anwendungstyp:** Wählen Sie **Universelle Windows-App** für die Verwendung in Ihrer universellen Windows-App aus.
+    -   **Anwendungsname:** Der Name Ihrer Anwendung.
+    -   **Anwendungs-URL (optional):** Die URL Ihrer Anwendung.
+    -   **Schlüsseltyp:** Wählen Sie **Basic** oder **Enterprise** aus.
+    -   **Anwendungstyp:** Wählen Sie **Universelle Windows-App** für die Verwendung in Ihrer universellen Windows-App aus.
 
     So sieht das Formular aus.
 
@@ -100,6 +96,6 @@ Um Dienste im [**Windows.Services.Maps**](https://msdn.microsoft.com/library/win
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

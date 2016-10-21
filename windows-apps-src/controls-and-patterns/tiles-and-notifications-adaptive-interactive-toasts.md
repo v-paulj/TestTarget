@@ -5,16 +5,14 @@ title: Adaptive und interaktive Popupbenachrichtigungen
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Adaptive and interactive toast notifications
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 17faf0ccb0207b318963e00655d7ac91b97e066b
+translationtype: Human Translation
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 55f5cd9e647e74d7861a7472872373d8949b79ba
 
 ---
-
 # Adaptive und interaktive Popupbenachrichtigungen
 
-
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Mit adaptiven und interaktiven Popupbenachrichtigungen können Sie flexible Popupbenachrichtigungen mit mehr Inhalt, optionalen Inlinebildern und optionaler Benutzerinteraktion erstellen.
 
@@ -24,12 +22,11 @@ Beim adaptiven und interaktiven Popupbenachrichtigungsmodell haben diese Updates
 -   Drei verschiedene Aktivierungstypen für die wichtigste Popupbenachrichtigung und für jede Aktion.
 -   Die Option zum Erstellen von Benachrichtigungen für bestimmte Szenarios wie Alarme, Erinnerungen und eingehende Anrufe.
 
-
-            **Hinweis**  Die Legacyvorlagen von Windows 8.1 und Windows Phone 8.1 finden Sie im [Legacy-Popupvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761494).
+**Hinweis**   Die Legacyvorlagen von Windows 8.1 und Windows Phone 8.1 finden Sie im [Legacy-Popupvorlagenkatalog](https://msdn.microsoft.com/library/windows/apps/hh761494).
 
  
 
-## <span id="toast_structure"></span><span id="TOAST_STRUCTURE"></span>Struktur der Popupbenachrichtigung
+## Struktur der Popupbenachrichtigung
 
 
 Popupbenachrichtigungen werden mit XML erstellt und enthalten in der Regel diese wichtigen Elemente:
@@ -61,7 +58,7 @@ Und eine visuelle Darstellung der Struktur:
 
 ![Struktur der Popupbenachrichtigung](images/adaptivetoasts-structure.jpg)
 
-### <span id="Visual"></span><span id="visual"></span><span id="VISUAL"></span>Visuelle Elemente
+### Visuelle Elemente
 
 Innerhalb des visuellen Elements benötigen Sie exakt ein Bindungselement, das den visuellen Inhalt des Popups aufweist.
 
@@ -72,7 +69,7 @@ Kachelbenachrichtigungen in Apps für die Universelle Windows-Plattform (UWP) un
 
 Alle Attribute, die im Abschnitt „Visuelle Elemente“ und dessen untergeordneten Elemente unterstützt werden, finden Sie im Abschnitt mit den Schemas. Weitere Beispiele finden Sie unten im Abschnitt mit den XML-Beispielen.
 
-### <span id="Actions"></span><span id="actions"></span><span id="ACTIONS"></span>Aktionen
+### Aktionen
 
 In UWP-Apps können Sie Ihren Popupbenachrichtigungen Schaltflächen und andere Eingaben hinzufügen, um Benutzern mehr Aktionen außerhalb der App zu ermöglichen. Diese Aktionen werden unter dem Element &lt;actions&gt; angegeben. Davon können Sie zwei Arten angeben:
 
@@ -90,7 +87,7 @@ Wenn vom Benutzer eine Aktion ausgeführt wird, können Sie eine der folgenden A
 
 Alle Attribute, die im Abschnitt „Visuelle Elemente“ und dessen untergeordneten Elemente unterstützt werden, finden Sie im Abschnitt mit den Schemas. Weitere Beispiele finden Sie unten im Abschnitt mit den XML-Beispielen.
 
-### <span id="Audio"></span><span id="audio"></span><span id="AUDIO"></span>Audio
+### Audio
 
 Benutzerdefinierte Töne werden derzeit nicht von UWP-Apps für die Desktop-Plattform unterstützt. Stattdessen können Sie aus der Liste „ms-winsoundevents“ für Ihre App auf dem Desktop wählen. UWP-Apps auf mobilen Plattformen unterstützen sowohl „ms-winsoundevents“ als auch benutzerdefinierte Töne in den folgenden Formaten:
 
@@ -99,7 +96,7 @@ Benutzerdefinierte Töne werden derzeit nicht von UWP-Apps für die Desktop-Plat
 
 Auf der [Seite mit den Audioschemas](https://msdn.microsoft.com/library/windows/apps/br230842) finden Sie Informationen zu Tönen für Popupbenachrichtigungen, darunter die vollständige Liste „ms-winsoundevents“.
 
-## <span id="Alarms__reminders__and_incoming_calls"></span><span id="alarms__reminders__and_incoming_calls"></span><span id="ALARMS__REMINDERS__AND_INCOMING_CALLS"></span>Alarme, Erinnerungen und eingehende Anrufe
+## Alarme, Erinnerungen und eingehende Anrufe
 
 
 Sie können Popupbenachrichtigungen für Alarme, Erinnerungen und eingehende Anrufe verwenden. Das Design dieser speziellen Popups stimmt mit dem von Standardpopups überein. Für einige benutzerdefinierte, szenariobasierte Benutzeroberflächen und Muster sind jedoch spezielle Popups möglich:
@@ -108,11 +105,10 @@ Sie können Popupbenachrichtigungen für Alarme, Erinnerungen und eingehende Anr
 -   Alarmbenachrichtigungen teilen nicht nur die oben genannten Verhaltensweisen mit Erinnerungsbenachrichtigungen, sondern können zudem automatisch Audioschleifen abspielen.
 -   Benachrichtigungen über eingehende Anrufe werden auf Windows Mobile-Geräten im Vollbildmodus angezeigt. Dies erfolgt durch Angabe des Szenarioattributs innerhalb des Stammelements einer &lt;Popupbenachrichtigung&gt;: &lt;Popupszenario = " {default | alarm | reminder | incomingCall }" &gt;
 
-## <span id="xml_examples"></span><span id="XML_EXAMPLES"></span>XML-Beispiele
+## XML-Beispiele
 
 
-
-            **Hinweis**  Die Screenshots für diese Beispiele zu Popupbenachrichtigungen stammen aus einer Desktop-App. Auf mobilen Geräten wird die Popupbenachrichtigung möglicherweise reduziert angezeigt. Über einen Ziehpunkt am unteren Rand des Popups kann sie vergrößert werden.
+**Hinweis**  Die Screenshots für diese Beispiele zu Popupbenachrichtigungen stammen aus einer Desktop-App. Auf mobilen Geräten wird die Popupbenachrichtigung möglicherweise reduziert angezeigt. Über einen Ziehpunkt am unteren Rand des Popups kann sie vergrößert werden.
 
  
 
@@ -291,7 +287,7 @@ Dieses Beispiel zeigt Folgendes:
 
  
 
-## <span id="Activation_samples"></span><span id="activation_samples"></span><span id="ACTIVATION_SAMPLES"></span>Aktivierungsbeispiele
+## Aktivierungsbeispiele
 
 
 Wie oben erwähnt, können über den Text und die Aktionen des Popups Apps auf unterschiedliche Weise aktiviert werden. Das folgende Beispiel zeigt, wie Sie über den Popuptext und/oder Popupaktionen verschiedene Arten von Aktivierungen vornehmen.
@@ -353,7 +349,7 @@ namespace ToastNotificationTask
 }
 ```
 
-## <span id="Schemas___visual__and__audio_"></span><span id="schemas___visual__and__audio_"></span><span id="SCHEMAS___VISUAL__AND__AUDIO_"></span>Schemas: &lt;visual&gt; und &lt;audio&gt;
+## Schemas: &lt;visual&gt; und &lt;audio&gt;
 
 
 In den folgenden Schemas bedeutet ein Suffix „?“, dass ein Attribut optional ist.
@@ -377,7 +373,7 @@ In den folgenden Schemas bedeutet ein Suffix „?“, dass ein Attribut optional
 
 launch?
 
--   launch? = Zeichenfolge
+-   launch? = string
 -   Dies ist ein optionales Attribut.
 -   Eine Zeichenfolge wird an die Anwendung übergeben, wenn sie durch das Popup aktiviert wird.
 -   Abhängig vom Wert für „activationType“ kann dieser Wert von der App im Vordergrund, innerhalb der Hintergrundaufgabe oder von einer anderen App empfangen werden, die per Protokollstart über die ursprüngliche App gestartet wird.
@@ -493,7 +489,7 @@ silent?
 
 -   In [diesem Artikel zu Elementschemas](https://msdn.microsoft.com/library/windows/apps/br230842) finden Sie ausführliche Informationen zu diesem optionalen Attribut.
 
-## <span id="Schemas___action_"></span><span id="schemas___action_"></span><span id="SCHEMAS___ACTION_"></span>Schemas: &lt;action&gt;
+## Schemas: &lt;action&gt;
 
 
 In den folgenden Schemas bedeutet ein Suffix „?“, dass ein Attribut optional ist.
@@ -585,7 +581,7 @@ hint-inputId
 -   Der Wert muss der ID entsprechen, die dem Eingabeelement zugeordnet werden soll.
 -   Auf Mobilgeräten und Desktops wird die Schaltfläche rechts neben dem Eingabefeld platziert.
 
-## <span id="Attributes_for_system-handled_actions"></span><span id="attributes_for_system-handled_actions"></span><span id="ATTRIBUTES_FOR_SYSTEM-HANDLED_ACTIONS"></span>Attribute für systemgesteuerte Aktionen
+## Attribute für systemgesteuerte Aktionen
 
 
 Das System kann Aktionen für die Funktionen zum erneuen Erinnern und zum Schließen von Benachrichtigungen auslösen, wenn Sie nicht wünschen, dass Ihre App das erneute Erinnern/Neuplanen von Benachrichtigungen im Hintergrund ausführt. Systemgesteuerte Aktionen können kombiniert (oder einzeln festgelegt) werden. Wir raten jedoch davon ab, eine erneute Erinnerung ohne Möglichkeit zum Schließen zu implementieren.
@@ -648,6 +644,6 @@ Gehen Sie wie folgt vor, um individuelle Aktionen zum erneuten Erinnern und Schl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -5,7 +5,7 @@ title: Sensorausrichtung
 description: "Sensordaten der Klassen Accelerometer, Gyrometer, Compass, Inclinometer und OrientationSensor sind durch ihre Referenzachsen definiert. Diese Achsen werden durch das Querformat des Geräts bestimmt und drehen sich mit dem Gerät, wenn es vom Benutzer gedreht wird."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 0f1123d3be66973d5b56a4789b1ff6e171f94900
+ms.openlocfilehash: f0f9c7184c81edf8136849bf8a7bd9d04c340f62
 
 ---
 # Sensorausrichtung
@@ -171,6 +171,6 @@ Die [**OrientationSensor**](https://msdn.microsoft.com/library/windows/apps/BR20
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

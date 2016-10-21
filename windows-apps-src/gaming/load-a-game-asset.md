@@ -3,8 +3,9 @@ author: mtoepke
 title: Laden von Ressourcen im DirectX-Spiel
 description: "In den meisten Spielen werden Ressourcen und Objekte (wie Shader, Texturen, vordefinierte Gitter oder andere Grafikdaten) an bestimmten Stellen aus dem lokalen Speicher oder über einen anderen Datenstrom geladen."
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: fd4d2162e9a0007df34b465f570820843b326d72
+ms.openlocfilehash: 09221cb853b3d327b5cb60cacec109032135eabc
 
 ---
 
@@ -235,8 +236,7 @@ task<void> BasicLoader::LoadMeshAsync(
 }
 ```
 
-
-            **CreateMesh** interpretiert die aus der Datei geladenen Bytedaten und erstellt einen Vertexpuffer und einen Indexpuffer für das Gitter, indem die Vertex- bzw. Indexliste an [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) übergeben und entweder D3D11\_BIND\_VERTEX\_BUFFER oder D3D11\_BIND\_INDEX\_BUFFER angegeben wird. In **BasicLoader** wird der folgende Code verwendet:
+**CreateMesh** interpretiert die aus der Datei geladenen Bytedaten und erstellt einen Vertex- und einen Indexpuffer für das Gitter, indem die Vertex- bzw. Indexliste an [**ID3D11Device::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) übergeben werden und entweder D3D11\_BIND\_VERTEX\_BUFFER oder D3D11\_BIND\_INDEX\_BUFFER angegeben wird. In **BasicLoader** wird der folgende Code verwendet:
 
 ```cpp
 void BasicLoader::CreateMesh(
@@ -317,9 +317,7 @@ Eine DDS-Datei ist eine Binärdatei mit den folgenden Informationen:
 
 -   Beschreibung der Daten in der Datei
 
-    Die Daten werden mit einer Headerbeschreibung per [**DDS\_HEADER**](https://msdn.microsoft.com/library/windows/desktop/bb943982) beschrieben. Das Pixelformat wird mit [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984) definiert. Beachten Sie, dass die Strukturen **DDS\_HEADER** und **DDS\_PIXELFORMAT** die veralteten DirectDraw7-Strukturen „DDSURFACEDESC2“, „DDSCAPS2“ und „DDPIXELFORMAT“ ersetzen. 
-            **DDS\_HEADER** ist die binäre Entsprechung von DDSURFACEDESC2 und DDSCAPS2. 
-            **DDS\_PIXELFORMAT** ist die binäre Entsprechung von DDPIXELFORMAT.
+    Die Daten werden mit einer Headerbeschreibung per [**DDS\_HEADER**](https://msdn.microsoft.com/library/windows/desktop/bb943982) beschrieben. Das Pixelformat wird mit [**DDS\_PIXELFORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb943984) definiert. Beachten Sie, dass die Strukturen **DDS\_HEADER** und **DDS\_PIXELFORMAT** die veralteten DirectDraw7-Strukturen „DDSURFACEDESC2“, „DDSCAPS2“ und „DDPIXELFORMAT“ ersetzen. **DDS\_HEADER** ist die binäre Entsprechung von DDSURFACEDESC2 und DDSCAPS2. **DDS\_PIXELFORMAT** ist die binäre Entsprechung von DDPIXELFORMAT.
 
     ```cpp
     DWORD               dwMagic;
@@ -712,6 +710,6 @@ Sie sollten jetzt mit den Methoden zum asynchronen Laden häufig verwendeter Res
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: msatranjr
 title: "Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime"
 description: "Dieser Artikel enthält zusätzliche Informationen zu Einschränkungen bei Komponenten für Windows-Runtime, die mit verwaltetem Code geschrieben wurden."
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
+translationtype: Human Translation
 ms.sourcegitcommit: 4c32b134c704fa0e4534bc4ba8d045e671c89442
-ms.openlocfilehash: 29199b7c94c4fecd173fb96f0d8fb43692d72464
+ms.openlocfilehash: 02cb16d88add782321ca86a27fcb8b5c6d1bab34
 
 ---
 
@@ -29,8 +30,7 @@ Verwaltete Komponenten für Windows-Runtime können die UWP-Schnittstellen (Univ
 
  
 
-> 
-            **Hinweis** In Fehlermeldungen, die auf die Windows-Runtime verweisen, wird ein alte Terminologie verwendet. Dies wird nun als die universelle Windows-Plattform (UWP) bezeichnet. Zum Beispiel werden Windows-Runtime-Typen jetzt als UWP-Typen bezeichnet.
+> **Hinweis** In Fehlermeldungen, die auf die Windows-Runtime verweisen, wird veraltete Terminologie verwendet. Dies wird nun als die universelle Windows-Plattform (UWP) bezeichnet. Zum Beispiel werden Windows-Runtime-Typen jetzt als UWP-Typen bezeichnet.
 
  
 
@@ -51,8 +51,7 @@ Dieses Problem tritt nur auf, wenn Sie Winmdexp.exe aus der Befehlszeile ausfüh
 
 In einer Komponente für Windows-Runtime, die in verwaltetem Code geschrieben wurde, können Sie keine überladenen Operatoren für öffentliche Typen verfügbar machen.
 
-> 
-            **Hinweis** In der Fehlermeldung wird der Operator über seinen Metadatennamen identifiziert, zum Beispiel op\_Addition, op\_Multiply, op\_ExclusiveOr, op\_Implicit (implizite Konvertierung) usw.
+> **Hinweis** In der Fehlermeldung wird der Operator über seinen Metadatennamen identifiziert, zum Beispiel op\_Addition, op\_Multiply, op\_ExclusiveOr, op\_Implicit (implizite Konvertierung) usw.
 
  
 
@@ -90,8 +89,7 @@ In der UWP können überladene Methoden nur dann über dieselbe Anzahl von Param
 
 In der universellen Windows-Plattform müssen sich alle öffentlichen Typen in einer Windows-Metadatendatei (WINMD) in einem Namespace mit demselben Namen wie die WINMD-Datei oder in Subnamespaces des Dateinamens befinden. Wenn Ihr Visual Studio-Projekt beispielsweise A.B heißt (d. h. die Komponente für Windows-Runtime ist A.B.WINMD), kann es die öffentlichen Klassen A.B.Class1 und A.B.C.Class2 enthalten, aber nicht A.Class3 (WME0006) oder D.Class4 (WME1044).
 
-> 
-            **Hinweis**  Diese Einschränkungen gelten nur für öffentliche Typen, nicht für private Typen, die in der Implementierung verwendet werden.
+> **Hinweis**  Diese Einschränkungen gelten nur für öffentliche Typen, nicht jedoch für bei der Implementierung verwendete private Typen.
 
  
 
@@ -105,8 +103,7 @@ Die Komponente muss mindestens einen **public sealed**-Typ (**Public NotInherita
 
 Ein Typ in einer Komponente für Windows-Runtime darf nicht wie ein Namespace benannt werden (WME1068).
 
-> 
-            **Achtung**  Wenn Sie Winmdexp.exe direkt aufrufen und für die Benennung der Komponente für Windows-Runtime nicht die Option „/out” verwenden, versucht Winmdexp.exe, einen Namen zu generieren, der alle Namespaces in der Komponente enthält. Die Umbenennung von Namespaces kann zur Änderung des Komponentennamens führen.
+> **Achtung**  Wenn Sie Winmdexp.exe direkt aufrufen und für die Benennung der Komponente für Windows-Runtime nicht die Option „/out” verwenden, versucht „Winmdexp.exe“, einen Namen zu generieren, der alle Namespaces in der Komponente enthält. Die Umbenennung von Namespaces kann zur Änderung des Komponentennamens führen.
 
  
 
@@ -130,11 +127,9 @@ Viele dieser Zuordnungen sind Schnittstellen. Zum Beispiel wird [IList&lt;T&gt;]
 
 Im Allgemeinen sollte die Schnittstelle ausgewählt werden, die dem Typ am nächsten ist. Für Dictionary&lt;int, string&gt; ist beispielsweise IDictionary&lt;int, string&gt; am besten geeignet.
 
-> 
-            **Wichtig**  JavaScript verwendet die Schnittstelle, die zuerst in der Liste der Schnittstellen angezeigt wird, die ein verwalteter Typ implementiert. Wenn Sie beispielsweise Dictionary&lt;int, string&gt; an JavaScript-Code zurückgeben, wird IDictionary&lt;int, string&gt; angezeigt, unabhängig davon, welche Schnittstelle Sie als Rückgabetyp angeben. Das bedeutet, dass die erste Schnittstelle Member enthalten muss, die in den nächsten Schnittstellen erscheinen, damit diese Member für JavaScript sichtbar sind.
+> **Wichtig** JavaScript verwendet die Schnittstelle, die zuerst in der Liste der Schnittstellen angezeigt wird, die von einem verwalteten Typ implementiert werden. Wenn Sie beispielsweise Dictionary&lt;int, string&gt; an JavaScript-Code zurückgeben, wird IDictionary&lt;int, string&gt; angezeigt, unabhängig davon, welche Schnittstelle Sie als Rückgabetyp angeben. Das bedeutet, dass die erste Schnittstelle Member enthalten muss, die in den nächsten Schnittstellen erscheinen, damit diese Member für JavaScript sichtbar sind.
 
-> 
-            **Achtung**  Vermeiden Sie die nicht generischen Schnittstellen [IList](https://msdn.microsoft.com/library/system.collections.ilist.aspx) und [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx), wenn die Komponente von JavaScript verwendet wird. Diese Schnittstellen werden [IBindableVector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindablevector.aspx) und [IBindableIterator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindableiterator.aspx) zugeordnet. Sie unterstützen die Bindung für XAML-Steuerelemente und sind für JavaScript nicht sichtbar. JavaScript generiert die Laufzeitfehlermeldung „Die Funktion '%s' kann aufgrund einer ungültigen Signatur nicht aufgerufen werden.”
+> **Achtung**  Vermeiden Sie die nicht generischen Schnittstellen [IList](https://msdn.microsoft.com/library/system.collections.ilist.aspx) und [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx), wenn die Komponente von JavaScript verwendet wird. Diese Schnittstellen werden [IBindableVector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindablevector.aspx) und [IBindableIterator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindableiterator.aspx) zugeordnet. Sie unterstützen die Bindung für XAML-Steuerelemente und sind für JavaScript nicht sichtbar. JavaScript generiert die Laufzeitfehlermeldung „Die Funktion '%s' kann aufgrund einer ungültigen Signatur nicht aufgerufen werden.”
 
  
 
@@ -161,8 +156,7 @@ Im Allgemeinen sollte die Schnittstelle ausgewählt werden, die dem Typ am näch
 <tr class="odd">
 <td align="left">WME1039</td>
 <td align="left"><p>Die Methode '{0}' weist in der Signatur einen Parameter vom Typ '{1}' auf. Obwohl es sich bei diesem generischen Typ nicht um einen gültigen Windows-Runtime-Typ handelt, werden von diesem Typ oder von dessen generischen Parametern Schnittstellen implementiert, die gültige Windows-Runtime-Typen sind. {2}</p>
-            
-> **Hinweis**  Für {2} fügt Winmdexp.exe eine Liste von Alternativen an, wie „Ändern Sie eventuell den Typ 'System.Collections.Generic.List&lt;T&gt;' in der Methodensignatur in einen der folgenden Typen: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'.”
+> **Hinweis**  Für {2} fügt „Winmdexp.exe“ eine Liste von Alternativen an, wie z.B. „Ändern Sie eventuell den Typ 'System.Collections.Generic.List&lt;T&gt;' in der Methodensignatur in einen der folgenden Typen: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'“.
 </td>
 </tr>
 <tr class="even">
@@ -190,8 +184,7 @@ In der UWP kann eine Struktur nur Felder enthalten, und nur Strukturen können F
 
 In der UWP müssen Arrays in Membersignaturen eindimensional sein und eine Untergrenze von 0 (null) aufweisen. Geschachtelte Arraytypen wie `myArray[][]` (`myArray()()` in Visual Basic) sind nicht zulässig.
 
-> 
-            **Hinweis** Diese Einschränkung gilt nicht für Arrays, die Sie intern in der Implementierung verwenden.
+> **Hinweis** Diese Einschränkung gilt nicht für Arrays, die Sie intern in der Implementierung verwenden.
 
  
 
@@ -242,25 +235,23 @@ In der UWP werden Rückgabewerte als Ausgabeparameter betrachtet, und die Namen 
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> [!div class="tabbedCodeSnippets"]
+> **Hinweis**  Wenn Sie den Namen des Rückgabewerts ändern und der neue Name mit dem Namen eines anderen Parameters in Konflikt steht, erhalten Sie die Fehlermeldung WME1091.
 
+JavaScript-Code kann auf die Ausgabeparameter einer Methode, einschließlich des Rückgabewerts, über den Namen zugreifen. Ein Beispiel finden Sie unter [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx).
 
-            **Hinweis**  Wenn Sie den Namen des Rückgabewerts ändern und der neue Namen mit dem Namen eines anderen Parameters in Konflikt steht, erhalten Sie die Fehlermeldung WME1091. JavaScript-Code kann auf die Ausgabeparameter einer Methode, einschließlich des Rückgabewerts, über den Namen zugreifen.
-
-| Ein Beispiel finden Sie unter [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx). | Fehlernummer |
+| Fehlernummer | Meldungstext |
 |---------------|------------|
-| Meldungstext | WME1091 Die Methode '\{0}' weist den Rückgabewert mit dem Namen '\{1}' auf, bei dem es sich um denselben Namen wie der Parametername handelt. |
-| Methodenparameter und Rückgabewerte müssen für Windows-Runtime eindeutige Namen aufweisen. | WME1092 Die Methode '\{0}' weist einen Parameter mit dem Namen '\{1}' auf, der mit dem Standardnamen des Rückgabewerts identisch ist.<br/>Verwenden Sie ggf. einen anderen Namen für den Parameter, oder verwenden Sie das System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute, um den Namen des Rückgabewerts explizit anzugeben. |
+| WME1091 | Die Methode '\{0}' weist den Rückgabewert mit dem Namen '\{1}' auf, bei dem es sich um denselben Namen wie der Parametername handelt. Methodenparameter und Rückgabewerte müssen für Windows-Runtime eindeutige Namen aufweisen. |
+| WME1092 | Die Methode '\{0}' weist einen Parameter mit dem Namen '\{1}' auf, der mit dem Standardnamen des Rückgabewerts identisch ist. Verwenden Sie ggf. einen anderen Namen für den Parameter, oder verwenden Sie das System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute, um den Namen des Rückgabewerts explizit anzugeben.<br/>**Hinweis**  Der Standardname lautet „returnValue" für Eigenschaftenaccessoren und „Value" für alle anderen Methoden. |
  
 
-## 
-            **Hinweis**  Der Standardname lautet „returnValue" für Eigenschaftenaccessoren und „Value" für alle anderen Methoden.
+## Verwandte Themen
 
-* [Verwandte Themen](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
-* [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](https://msdn.microsoft.com/library/hh925576.aspx)
-
+* [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md)
+* [Winmdexp.exe (Windows Runtime Metadata Export Tool)](https://msdn.microsoft.com/library/hh925576.aspx)
 
 
-<!--HONumber=Jun16_HO5-->
+
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,8 +3,9 @@ author: mtoepke
 title: "Packen Ihres UWP-DirectX-Spiels (DirectX-Spiels für die universelle Windows-Plattform)"
 description: "Umfangreichere UWP-Spiele (Universelle Windows-Plattform) können leicht relativ groß werden. Dies gilt besonders für Spiele, bei denen mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt werden oder die über optionale HD-Ressourcen verfügen."
 ms.assetid: 68254203-c43c-684f-010a-9cfa13a32a77
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 14043fffc22849ca8d31f85e1035c38c07f1cdd4
+ms.openlocfilehash: bc861d98563107b2c67e94281e79d97bed6dee9b
 
 ---
 
@@ -41,8 +42,7 @@ Inhaltskandidaten für Pakete mit Spielressourcen sind:
 
 All diese Ressourcen werden im "package.appxmanifest" definiert, das Bestandteil des UWP-Projekts ist, sowie in der Verzeichnisstruktur des fertigen Pakets. Wenn Sie sich an den in diesem Dokument beschriebenen Prozess halten, ist aufgrund der neuen Visual Studio-UI normalerweise keine manuelle Bearbeitung erforderlich.
 
-> 
-            **Wichtig**   Diese Ressourcen werden über die **Windows.ApplicationModel.Resources**\*-APIs geladen und verwaltet. Wenn Sie diese App-Modellressourcen-APIs zum Laden der richtigen Datei für ein Gebietsschema, einen Skalierungsfaktor oder eine DirectX-Featureebene verwenden, müssen Sie die Ressourcen nicht mithilfe expliziter Dateipfade laden. Stattdessen stellen Sie für die Ressourcen-APIs nur den generalisierten Dateinamen der gewünschten Ressource bereit und überlassen es dem Ressourcenverwaltungssystem, die richtige Variante der Ressource für die aktuelle Plattform und Gebietsschemakonfiguration (direkte Angabe ebenfalls mit diesen APIs) des Benutzers abzurufen.
+> **Wichtig**   Diese Ressourcen werden über die **Windows.ApplicationModel.Resources**\*-APIs geladen und verwaltet. Wenn Sie diese App-Modellressourcen-APIs zum Laden der richtigen Datei für ein Gebietsschema, einen Skalierungsfaktor oder eine DirectX-Featureebene verwenden, müssen Sie die Ressourcen nicht mithilfe expliziter Dateipfade laden. Stattdessen stellen Sie für die Ressourcen-APIs nur den generalisierten Dateinamen der gewünschten Ressource bereit und überlassen es dem Ressourcenverwaltungssystem, die richtige Variante der Ressource für die aktuelle Plattform und Gebietsschemakonfiguration (direkte Angabe ebenfalls mit diesen APIs) des Benutzers abzurufen.
 
  
 
@@ -50,8 +50,7 @@ Es gibt zwei grundlegende Möglichkeiten, Ressourcen für das Verpacken anzugebe
 
 -   Objektdateien weisen den gleichen Dateinamen auf, und die einzelnen Ressourcenpaketversionen werden in Verzeichnisse mit bestimmten Namen eingefügt. Diese Verzeichnisnamen werden vom System reserviert. Zum Beispiel; \\en-us, \\scale-140, \\dxfl-dx11.
 -   Objektdateien werden in Ordnern mit beliebigen Namen gespeichert. Die Dateien werden jedoch mit einer gemeinsamen Bezeichnung benannt, die mit Zeichenfolgen angehängt wird, die das System zum Angeben von Sprach- und anderen Qualifizierern reserviert. Diese Qualifiziererzeichenfolgen werden nach einem Unterstrich („\_“) an den generalisierten Dateinamen angehängt. Beispielsweise: \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds. Sie können diese Zeichenfolgen auch kombinieren. Beispielsweise: \\assets\\menu\_option1\_scale-140\_lang-en-us.png.
-    > 
-            **Hinweis** Wenn ein Sprachqualifizierer in einem Dateinamen statt nur in einem Verzeichnisnamen verwendet wird, muss er im Format „lang-<tag>“, z.B. „lang-en-us“, angegeben werden. Eine Beschreibung finden Sie unter [So wird's gemacht: Benennen von Ressourcen mit Qualifizierern](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
+    > **Hinweis**   Wenn ein Sprachqualifizierer in einem Dateinamen statt nur in einem Verzeichnisnamen verwendet wird, muss er im Format „lang-<tag>“, z.B. „lang-en-us“, angegeben werden. Eine Beschreibung finden Sie unter [Benennen von Ressourcen mithilfe von Qualifizierern](https://msdn.microsoft.com/library/windows/apps/xaml/hh965324).
 
      
 
@@ -79,8 +78,7 @@ Gehen Sie beim Konfigurieren der App für die Unterstützung lokalisierter Resso
 -   Erstellen Sie ein App-Unterverzeichnis (bzw. eine Dateiversion) für jede Sprache bzw. jedes Gebietsschema, die bzw. das unterstützt werden soll (z. B. en-us, jp-jp, zh-cn oder fr-fr).
 -   Fügen Sie während der Entwicklung Kopien ALLER Ressourcen (z.B. lokalisierte Audiodateien, Texturen und Menügrafiken) auch dann in das Unterverzeichnis für die entsprechende Sprache bzw. das Gebietsschema ein, wenn diese sich über die Sprachen/Gebietsschemas hinweg nicht unterscheiden. Stellen Sie mit Blick auf die bestmögliche Benutzerfreundlichkeit sicher, dass Benutzer darauf hingewiesen werden, falls diese ein verfügbares Sprachressourcenpaket für ihr Gebietsschema nicht abgerufen haben (oder es nach dem Herunterladen oder der Installation versehentlich gelöscht haben).
 -   Achten Sie darauf, dass die Ressourcen- und Zeichenfolgendateien (.resw) in jedem Verzeichnis gleich benannt sind. Die Datei „menu\_option1.png“ sollte beispielsweise in den Verzeichnissen „\\en-us“ und „\\jp-jp“ denselben Namen haben, auch wenn der Inhalt in verschiedenen Sprachen vorliegt. Die Dateien werden in diesem Fall als „\\en-us\\menu\_option1.png“ und „\\jp-jp\\menu\_option1.png“ angezeigt.
-    > 
-            **Hinweis**   Optional können Sie das Gebietsschema an den Dateinamen anhängen und die Dateien im selben Verzeichnis speichern. Beispiele: \\assets\\menu\_option1\_lang-en-us.png und \\assets\\menu\_option1\_lang-jp-jp.png.
+    > **Hinweis**   Optional können Sie das Gebietsschema an den Dateinamen anhängen und die Dateien im selben Verzeichnis speichern. Beispiele: \\assets\\menu\_option1\_lang-en-us.png und \\assets\\menu\_option1\_lang-jp-jp.png.
 
      
 
@@ -97,8 +95,7 @@ Konfigurieren Sie eine App, für die Ressourcenpakete für unterschiedliche Skal
 -   Erstellen Sie ein Unterverzeichnis (bzw. eine Dateiversion) für jeden zu unterstützenden Skalierungsfaktor (scale-100, scale-140 und scale-180).
 -   Fügen Sie während der Entwicklung auf den Skalierungsfaktor zugeschnittene Kopien ALLER Ressourcen in jedes Skalierungsfaktor-Ressourcenverzeichnis ein, auch wenn sich diese für die einzelnen Skalierungsfaktoren nicht unterscheiden.
 -   Achten Sie darauf, dass die Ressourcen in jedem Verzeichnis gleich benannt sind. Die Datei „menu\_option1.png“ sollte beispielsweise in den Verzeichnissen „\\scale-100“ und „\\scale-180“ denselben Namen haben, auch wenn der Inhalt unterschiedlich ist. Die Dateien sind werden in diesem Fall als „\\scale-100\\menu\_option1.pngֆ“ und „\\scale-140\\menu\_option1.png“ angezeigt.
-    > 
-            **Hinweis**   Auch hier können Sie das Skalierungsfaktorsuffix bei Bedarf an den Dateinamen anhängen und die Dateien im selben Verzeichnis ablegen, z.B. \\assets\\menu\_option1\_scale-100.png und \\assets\\menu\_option1\_scale-140.png.
+    > **Hinweis**   Auch hier können Sie das Skalierungsfaktorsuffix bei Bedarf an den Dateinamen anhängen und die Dateien im selben Verzeichnis ablegen, z.B. \\assets\\menu\_option1\_scale-100.png und \\assets\\menu\_option1\_scale-140.png.
 
      
 
@@ -131,8 +128,7 @@ Gehen Sie wie folgt vor, wenn Sie eine App konfigurieren, für die Ressourcenpak
 -   Erstellen Sie ein Unterverzeichnis (bzw. eine Dateiversion) für jede zu unterstützende DirectX-Featureebene (dxfl-dx9, dxfl-dx10 und dxfl-dx11).
 -   Fügen Sie für die Featureebene spezifische Ressourcen während der Entwicklung in jedes Ressourcenverzeichnis für Featureebenen ein. Im Gegensatz zu Gebietsschemas und Skalierungsfaktoren können Sie im Spiel für jede Featureebene unterschiedliche Rendercodeverzweigungen verwenden. Falls Sie über Texturen, kompilierte Shader oder andere Ressourcen verfügen, die nur für eine Featureebene oder eine Teilmenge aller unterstützten Featureebenen verwendet werden, fügen Sie die entsprechenden Ressourcen nur in die Verzeichnisse für die Featureebenen ein, von denen sie genutzt werden. Beachten Sie für Ressourcen, die über alle Featureebenen hinweg geladen werden, dass für jedes Featureebenen-Ressourcenverzeichnis davon eine Version gleichen Namens vorhanden ist. Fügen Sie für eine von der Featureebene unabhängige Textur mit dem Namen „coolsign.dds“ beispielsweise die BC3-komprimierte Version in das Verzeichnis „\\dxfl-dx9“ und die BC7-komprimierte Version in das Verzeichnis „\\dxfl-dx11“ ein.
 -   Stellen Sie sicher, dass alle Ressourcen (falls sie für mehrere Featureebenen verfügbar sind) in jedem Verzeichnis denselben Namen haben. Die Datei „coolsign.dds“ sollte beispielsweise in den Verzeichnissen „\\dxfl-dx9“ und „\\dxfl-dx11“ denselben Namen haben, auch wenn der Inhalt unterschiedlich ist. Die Dateien werden in diesem Fall als „\\dxfl-dx9\\coolsign.dds“ und „\\dxfl-dx11\\coolsign.dds“ angezeigt.
-    > 
-            **Hinweis**   Auch hier können Sie das Featureebenensuffix bei Bedarf an den Dateinamen anhängen und die Dateien im selben Verzeichnis ablegen, z.B. \\textures\\coolsign\_dxfl-dx9.dds und \\textures\\coolsign\_dxfl-dx11.dds.
+    > **Hinweis**   Auch hier können Sie das Featureebenensuffix bei Bedarf an den Dateinamen anhängen und die Dateien im selben Verzeichnis ablegen, z.B. \\textures\\coolsign\_dxfl-dx9.dds und \\textures\\coolsign\_dxfl-dx11.dds.
 
      
 
@@ -190,8 +186,7 @@ Gehen Sie wie folgt vor, wenn Sie eine App konfigurieren, für die Ressourcenpak
         ResourceContext::SetGlobalQualifierValue(L"DXFeatureLevel", dxFeatureLevel);
     ```
 
-    > 
-            **Hinweis**  Laden Sie die Textur im Code direkt entsprechend dem Namen (oder entsprechend dem Pfad unterhalb des Featureebenenverzeichnisses). Fügen Sie weder den Featureebenen-Verzeichnisnamen noch das Suffix ein. Laden Sie beispielsweise „textures\\coolsign.dds“ und nicht „dxfl-dx11\\textures\\coolsign.dds“ oder „textures\\coolsign\_dxfl-dx11.dds“.
+    > **Hinweis**  Laden Sie die Textur im Code direkt entsprechend dem Namen (oder entsprechend dem Pfad unterhalb des Featureebenenverzeichnisses). Fügen Sie weder den Featureebenen-Verzeichnisnamen noch das Suffix ein. Laden Sie beispielsweise „textures\\coolsign.dds“ und nicht „dxfl-dx11\\textures\\coolsign.dds“ oder „textures\\coolsign\_dxfl-dx11.dds“.
 
      
 
@@ -234,6 +229,6 @@ Gehen Sie wie folgt vor, wenn Sie eine App konfigurieren, für die Ressourcenpak
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

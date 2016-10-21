@@ -2,10 +2,9 @@
 author: Mtoepke
 title: "Einführung in Xbox One-Tools"
 description: Xbox One-spezifisches Tool Dev Home (unter Verwendung des Windows Device Portal).
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 4414677e942818506020888fa15e7e16ecaf4733
+ms.sourcegitcommit: b3e1a6f1dfe3537d0db8e917163cfbba7b8705fe
+ms.openlocfilehash: 6030f666f213865a92d071210fe66f587c1bffb1
 
 ---
 
@@ -15,8 +14,7 @@ In diesem Abschnitt wird das Xbox One-spezifische Tool _Dev Home_ unter Verwendu
 
 ## Dev Home
 
-
-              _Dev Home_ ist ein Tool im Xbox One Development Kit, das die Produktivität von Entwicklern unterstützen soll. Dev Home bietet Funktionen zum Verwalten und Konfigurieren Ihres Dev Kit.
+_Dev Home_ ist ein Tool im Xbox One Development Kit, das die Produktivität von Entwicklern unterstützen soll. Dev Home bietet Funktionen zum Verwalten und Konfigurieren Ihres Dev Kit.
 
 Wählen Sie zum Öffnen von Dev Home die Kachel **Dev Home** im Startbildschirm. Ist keine Kachel vorhanden, befindet sich die Konsole nicht im Entwicklermodus.
 
@@ -33,7 +31,7 @@ Der Header enthält wichtige globale Informationen über das Dev Kit „auf eine
 #### Tool-Fenster
 Unter dem Header befindet sich der Bereich der App, der eine Reihe von konfigurierbaren Tool-Fenstern enthält. Diese sollen Entwicklern die Anpassung der App ermöglichen, um Zugriff auf verschiedene Tools und Informationsgruppen zu bieten. Weitere Informationen zu den Tools finden Sie in den folgenden Beschreibungen der einzelnen Tools. Informationen zum Konfigurieren von Layout und Darstellung der Tool-Fenster finden Sie im Abschnitt [Anpassen von Dev Home](#customizing-dev-home) später auf dieser Seite.
 
-##### Hauptmenü
+#### Hauptmenü
 Durch Drücken auf die Schaltfläche **Menü** auf Ihrem Controller oder durch Navigieren zur Menüschaltfläche („Hamburger“) oben links im Bildschirm können Sie auf das Hauptmenü zugreifen, das Ihnen die Konfiguration der Designfarbe und des Hintergrundbilds für den App-Workspace ermöglicht, und Feedback zur App geben.
 
   ![Hauptmenü](images/devhome_mainmenu.png)
@@ -49,7 +47,7 @@ Dev Home wird rechts angedockt. Sie können den Kontext umschalten, indem Sie wi
 
   ![Nexus](images/devhome_nexus.png)
 
-##### Tool-Beschreibungen
+#### Tool-Beschreibungen
 | Tool  | Funktionen |
 |-------|--------------|
 | Spiele und Apps  | Listet die Titel und Anwendungen, die im Dev Kit installiert sind, sowie die Möglichkeit auf, sie schnell zu öffnen. Sie können auch den Status der Prozesslebensdauerverwaltung (PLM) von Spielen und Apps anzeigen und den PLM-Status in einem Kontextmenü ändern. |
@@ -58,10 +56,11 @@ Dev Home wird rechts angedockt. Sie können den Kontext umschalten, indem Sie wi
 | Visual Studio | Ermöglicht es Ihnen, die Konsole mit einer Instanz von Visual Studio zu koppeln, um die Bereitstellung zuzulassen. Deaktivieren Sie ggf. alle vorhandenen gekoppelten VS-Instanzen, um die UWP-App-Bereitstellung für ein Kit zu verhindern. |
 | [Windows Device Portal](#windows-device-portal) | Ermöglicht WDP (browserbasiertes Tool zur Geräteverwaltung) im Kit. |
 | Xbox Live-Status | Enthält den aktuellen Status des Xbox Live-Diensts. |
-
+<br/>
 ### Verwalten der Größe der Entwicklerspeicherzuteilung
 
 Um den Festplattenplatz zu vergrößern oder zu verkleinern, der für den Entwicklerspeicher verwendet wird, wählen Sie im Hauptmenü **Dev-Speicher verwalten** aus. Ändern Sie den Wert der Leiste **Dev-Speicher**, und wählen Sie dann **Speichern und neu starten** aus, um die Konsole neu zu starten.
+
   ![Verwalten der Entwicklerspeicherzuteilung](images/devhome_storage.png)
 
 ### Anpassen von Dev Home
@@ -89,17 +88,20 @@ Das Tool für Konsoleneinstellungen bietet schnellen Zugriff auf die Einstellung
 ### Festlegen eines Hostnamens für die Konsole
 Bei der Kommunikation mit der Konsole von Ihrem Entwicklungs-PC können Sie einen Anzeigenamen (_Hostname_) für das Xbox One Dev Kit als Alternative für die Konsolen-IP-Adresse festlegen. Ihr Entwicklungs-PC und das Dev Kit müssen sich für Hostnamen-Konnektivität im selben Subnetz befinden.  
 
-Um einen Hostnamen für ein Dev Kit zu definieren, navigieren Sie zum Tool für die Konsoleneinstellungen und geben im Feld __Hostname__ den Hostnamen ein.  
+Um einen Hostnamen für einen Dev Kit zu definieren, navigieren Sie zum Tool für die Konsoleneinstellungen und geben im Feld __Hostname__ den Hostnamen ein.  
 
-  > 
-              **Hinweis**&nbsp;&nbsp;Die Eindeutigkeit des Namens wird beim Erstellen des Hostnamens nicht erzwungen. Vermeiden Sie doppelte Namen. Eine Möglichkeit ist, den Hostnamen vom Namen Ihres Entwicklungscomputers abzuleiten, der in der Regel eindeutig in einer Organisation ist.
+> [!NOTE]
+> Die Eindeutigkeit des Namens wird beim Erstellen des Hostnamens nicht erzwungen. Vermeiden Sie doppelte Namen. Eine Möglichkeit ist, den Hostnamen vom Namen Ihres Entwicklungscomputers abzuleiten, der in der Regel eindeutig in einer Organisation ist.
 
 ## Windows Device Portal
 Das Windows Device Portal (WDP) ist ein OneCore-Tool zur Geräteverwaltung, das eine browserbasierte Geräteverwaltung ermöglicht.
 
-So aktivieren Sie WDP auf Ihrer Xbox One-Konsole:
+> [!NOTE]
+> Weitere Informationen zu WDP finden Sie unter [Übersicht über das Windows Device Portal](../debug-test-perf/device-portal.md).
 
-1. Wählen Sie die Kachel „Dev Home“ auf dem Startbildschirm.
+So aktivieren Sie WDP auf Ihrer Xbox One-Konsole
+
+1. Wählen Sie die Kachel „Dev Home“ auf dem Startbildschirm aus.
 
   ![Auswählen der Kachel „Dev Home“](images/windowsdeviceportal_1.png)
 
@@ -116,17 +118,19 @@ So aktivieren Sie WDP auf Ihrer Xbox One-Konsole:
 
   ![Sicherheitszertifikatwarnung](images/security_cert_warning.jpg)
 
-## Siehe auch
-- [Verwendung von Fiddler mit Xbox One bei der Entwicklung für UWP](uwp-fiddler.md)
-- [Microsoft-Entwicklertechnologien: Windows Device Portal](https://msdn.microsoft.com/windows/uwp/debug-test-perf/device-portal-xbox)
-- [UWP auf XboxOne](index.md)
+## Begleitung für den Xbox-Entwicklermodus
+Die Begleitung für den Xbox-Entwicklermodus ist ein Tool, mit dessen Hilfe Sie auf der Konsole arbeiten können, ohne den PC verlassen zu müssen. Die App ermöglicht Ihnen die Anzeige des Konsolenbildschirms und das Senden von Eingaben an diesen. Weitere Informationen finden Sie unter [Begleitung für den Xbox-Entwicklermodus](xbox-dev-mode-companion.md).
 
+## Siehe auch
+- [Verwenden von Fiddler mit Xbox One bei der Entwicklung für UWP](uwp-fiddler.md)
+- [Übersicht über das Windows Device Portal](../debug-test-perf/device-portal.md)
+- [UWP auf XboxOne](index.md)
 
 
 ----
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO1-->
 
 

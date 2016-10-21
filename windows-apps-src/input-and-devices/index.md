@@ -2,16 +2,15 @@
 description: "Passen Sie Ihre UWP-App für bestimmte Arten von Eingaben und Geräten an. Nutzen Sie die Vorteile von Touch- und Sprachbefehlen. Führen Sie Ihre Apps auf Xbox, Telefonen und sogar dem Fernseher aus."
 title: "Entwerfen von UWP-Apps für Eingabe- und Gerätearten – Entwicklung von Windows-Apps"
 author: mijacobs
-keywords: device primer, app inputs, customize UWP application
+keywords: "Einführung der Geräte, App-Eingaben, UWP-Anwendung anpassen"
 translationtype: Human Translation
-ms.sourcegitcommit: 350de23331f7fe951304ba877c40e07feb424adc
-ms.openlocfilehash: 2d3f0588b56b26e125652c12eeca3028bfe6573e
+ms.sourcegitcommit: 5a6666d4e706d4d49d646b5bb2e43b82394eb215
+ms.openlocfilehash: 85bcd15d4b9262188f0821642faf0d3d0cb7dbad
 
 ---
+# Eingaben und Geräte
 
 <link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
-
-# Eingaben und Geräte
 
 UWP-Apps verarbeiten automatisch eine Vielzahl von Eingaben und können auf zahlreichen Geräten ausgeführt werden. Sie müssen daher keine zusätzlichen Schritte zum Aktivieren der Toucheingabe oder zum Ausführen der App auf einem Smartphone ausführen. 
 
@@ -169,6 +168,6 @@ Wenn Sie sich mit den Geräten vertraut machen, die UWP-Apps unterstützen, kön
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -5,7 +5,7 @@ title: Optimieren von Animationen, Medien und Bildern
 description: "Erstellen Sie UWP-Apps (Universelle Windows-Plattform) mit flüssigen Animationen, hoher Bildfrequenz und leistungsstarker Medienaufzeichnung und -wiedergabe."
 translationtype: Human Translation
 ms.sourcegitcommit: 622df404dbf85740aa0029f53a0b4e0d541608f9
-ms.openlocfilehash: 8fd9ce5f43159ae00414d05ddb757c507aaa370d
+ms.openlocfilehash: 62e35ef31a5c2c4c3ca1ce6f6749057d59c22af3
 
 ---
 # Optimieren von Animationen, Medien und Bildern
@@ -49,9 +49,7 @@ Webinhalte innerhalb eines [**WebView**](https://msdn.microsoft.com/library/wind
 
 Auch das Animieren eines [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)-Objekts ist nicht empfehlenswert. Abgesehen von den Leistungsbeeinträchtigungen kann dies im wiedergegebenen Videoinhalt zu Bildstörungen und anderen Artefakten führen.
 
-> 
-            **Hinweis**   Die Empfehlungen in diesem Artikel für **MediaPlayerElement** gelten auch für [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). 
-            **MediaPlayerElement** ist nur in Windows10, Version 1607 verfügbar. Wenn Sie daher eine App für eine frühere Version von Windows verwenden, müssen Sie **MediaElement** verwenden.
+> **Hinweis**   Die Empfehlungen in diesem Artikel für **MediaPlayerElement** gelten auch für [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** ist nur in Windows10, Version 1607 verfügbar. Wenn Sie daher eine App für eine frühere Version von Windows verwenden, müssen Sie **MediaElement** verwenden.
 
 ### Setzen Sie Endlosanimationen sparsam ein.
 
@@ -63,8 +61,7 @@ Das Hinzufügen eines Handlers für [**CompositionTarget.Rendering**](https://ms
 
 Der [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/BR243232)-Namespace umfasst eine Bibliothek mit schnellen Hochleistungsanimationen, deren Erscheinungsbild mit anderen Windows-Animation konsistent ist. Die relevanten Klassen enthalten „Design“ in ihrem Namen und werden in [Übersicht über Animationen](https://msdn.microsoft.com/library/windows/apps/Mt187350) beschrieben. Diese Bibliothek unterstützt viele gängige Animationsszenarien, z.B. die Animation der ersten Ansicht einer App oder die Erstellung von Zustands- und Inhaltsübergängen. Wir empfehlen, die Animationsbibliothek so oft wie möglich zu nutzen, um die Leistung und Konsistenz für UWP-UI zu verbessern.
 
-> 
-            **Hinweis** Von der Animationsbibliothek können nicht alle möglichen Eigenschaften animiert werden. Informationen zu XAML-Szenarien, bei denen die Animationsbibliothek nicht verwendet werden kann, finden Sie unter [Storyboardanimationen](https://msdn.microsoft.com/library/windows/apps/Mt187354).
+> **Hinweis**   Von der Animationsbibliothek können nicht alle möglichen Eigenschaften animiert werden. Informationen zu XAML-Szenarien, bei denen die Animationsbibliothek nicht verwendet werden kann, finden Sie unter [Storyboardanimationen](https://msdn.microsoft.com/library/windows/apps/Mt187354).
 
 
 ### Eigenständiges Animieren von CompositeTransform3D-Eigenschaften
@@ -259,10 +256,7 @@ Ihre App sollte [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/
 
 ### Verwenden von „GetThumbnailAsync“ für Miniaturansichten
 
-Ein Anwendungsfall für die Bildskalierung ist die Erstellung von Miniaturansichten. Sie könnten kleine Bildversionen zwar auch mit [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) und [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) bereitstellen, aber die Universelle Windows-Plattform (UWP) bietet noch effizientere APIs zum Abrufen von Miniaturansichten. 
-            [
-              **GetThumbnailAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/BR227210) stellt die Miniaturansichten für Bilder bereit, bei denen das Dateisystem bereits zwischengespeichert wurde. Dadurch erhalten Sie eine noch bessere Leistung als bei den XAML-APIs, da das Bild weder geöffnet noch decodiert werden muss.
+Ein Anwendungsfall für die Bildskalierung ist die Erstellung von Miniaturansichten. Sie könnten kleine Bildversionen zwar auch mit [**DecodePixelWidth**](https://msdn.microsoft.com/library/windows/apps/BR243243) und [**DecodePixelHeight**](https://msdn.microsoft.com/library/windows/apps/BR243241) bereitstellen, aber die Universelle Windows-Plattform (UWP) bietet noch effizientere APIs zum Abrufen von Miniaturansichten. [**GetThumbnailAsync**](https://msdn.microsoft.com/library/windows/apps/BR227210) stellt die Miniaturansichten für Bilder bereit, bei denen das Dateisystem bereits zwischengespeichert wurde. Dadurch erhalten Sie eine noch bessere Leistung als bei den XAML-APIs, da das Bild weder geöffnet noch decodiert werden muss.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -309,6 +303,6 @@ Damit Bilder nicht mehrmals decodiert werden, weisen Sie die [**Image.Source**](
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

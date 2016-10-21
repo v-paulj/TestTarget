@@ -4,8 +4,9 @@ Description: "Entwerfen Sie externe Hilfeseiten mit ausführlichen Anweisungen u
 title: Richtlinien zum Entwerfen von externen Hilfeseiten
 label: External help
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 9da639dedf46068fb1f555f90b39ab979114ebf3
-ms.openlocfilehash: 0e21737e33f33d7239162ddcf9d4cdf39db17655
+ms.openlocfilehash: de371e39dc98049545b81329f240fbe94df78de5
 
 ---
 
@@ -38,10 +39,10 @@ Externe Hilfeseiten sind ideal, um für die Benutzer Lernprogramme und exemplari
 
 ## <span id="related_topics"></span>Verwandte Artikel
 
-* [Richtlinien für die App-Hilfe](guidelines-for-app-help.md)
+* [Anleitungen für die App-Hilfe](guidelines-for-app-help.md)
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

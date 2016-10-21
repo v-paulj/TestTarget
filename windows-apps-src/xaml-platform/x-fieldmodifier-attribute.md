@@ -3,8 +3,9 @@ author: jwmsft
 description: "Ändert das XAML-Kompilierungsverhalten, sodass Felder für Verweise auf benannte Objekte mit öffentlichem Zugriff definiert werden und nicht das private Standardverhalten aufweisen."
 title: xFieldModifier-Attribut
 ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 3f6c759d582d92aa33df5874186aeaa3a7c37b01
+translationtype: Human Translation
+ms.sourcegitcommit: 3144758352b99f8c145a3c7be8a6c43d6a002104
+ms.openlocfilehash: f812c9498d5519aac8ab750f0c55423966a63464
 
 ---
 
@@ -22,24 +23,21 @@ ms.openlocfilehash: 3f6c759d582d92aa33df5874186aeaa3a7c37b01
 
 ## Abhängigkeiten
 
-
-            [x:Name-Attribut](x-name-attribute.md) muss in demselben Element ebenfalls bereitgestellt werden.
+[x:Name-Attribut](x-name-attribute.md) muss in demselben Element ebenfalls bereitgestellt werden.
 
 ## Hinweise
 
-Der Wert für das **x:FieldModifier**-Attribut variiert je nach Programmiersprache. Welche Zeichenfolge verwendet wird, hängt davon ab, wie eine Sprache ihren **CodeDomProvider** implementiert und welche Typkonverter zurückgegeben werden, um die Bedeutungen für **TypeAttributes.Public** und **TypeAttributes.NotPublic** zu definieren. Für C#-, Microsoft Visual Basic- oder VisualC++-Komponentenerweiterungen (C++/CX) können Sie den Zeichenfolgenwert „public“ oder „Public“ angeben. Vom Parser wird die Groß-/Kleinschreibung für diesen Attributwert nicht berücksichtigt.
+Der Wert für das **x:FieldModifier**-Attribut variiert je nach Programmiersprache. Gültige Werte sind **private**, **public**, **protected**, **internal** oder **friend**. Für C#-, Microsoft Visual Basic- oder VisualC++-Komponentenerweiterungen (C++/CX) können Sie den Zeichenfolgenwert „public“ oder „Public“ angeben. Vom Parser wird die Groß-/Kleinschreibung für diesen Attributwert nicht berücksichtigt.
 
-Sie können auch **NonPublic** (**internal** in C# oder C++/CX, **Friend** in Visual Basic) angeben, aber dies ist unüblich. Der "interne" Zugriff gilt nicht für das Modell zur Generierung von Windows-Runtime-XAML-Code. Standardmäßig wird der „private“ Zugriff verwendet.
+**Private**-Zugriff ist die Standardeinstellung.
 
+**x:FieldModifier** ist nur für Elemente mit einem [x:Name-Attribut](x-name-attribute.md) relevant, weil unter diesem Namen auf das Feld verwiesen wird, nachdem dieses den Zustand „public“ erreicht hat.
 
-            **x:FieldModifier** ist nur für Elemente mit einem [x:Name-Attribut](x-name-attribute.md) relevant, weil unter diesem Namen auf das Feld verwiesen wird, nachdem dieses den Zustand „public“ erreicht hat.
-
-
-            **Hinweis**  Windows-Runtime-XAML unterstützt weder **x:ClassModifier** noch **x:Subclass**.
+**Hinweis**  Windows-Runtime-XAML unterstützt weder **x:ClassModifier** noch **x:Subclass**.
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

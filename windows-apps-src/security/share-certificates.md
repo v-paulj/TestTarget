@@ -3,8 +3,9 @@ title: Freigabe von Zertifikaten zwischen Apps
 description: "UWP-Apps, die über eine Kombination aus Benutzer-ID und Kennwort hinaus eine sichere Authentifizierung benötigen, können Zertifikate für die Authentifizierung verwenden."
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: 36bc5dcbefa6b288bf39aea3df42f1031f0b43df
-ms.openlocfilehash: 2bb1b601e1ab35115c88692f6c36dccc70836541
+ms.openlocfilehash: 189e95695be3621754414708f1a394fe4cea4ecf
 
 ---
 
@@ -31,7 +32,7 @@ In diesem Artikel werden die Microsoft-Internetinformationsdienste (Microsoft In
 ## Erstellen und Veröffentlichen eines sicheren Webdiensts
 
 
-1.  Führen Sie Microsoft Visual Studio als Administrator aus, und wählen Sie auf der Startseite die Option **Neues Projekt** aus. Für die Veröffentlichung eines Webdiensts auf einem IIS-Server ist Administratorzugriff erforderlich. Ändern Sie im Dialogfeld „Neues Projekt“ das Framework in **.NET Framework 3.5**. Wählen Sie **Visual C#** -&gt;**Web** -&gt;**Visual Studio** -&gt;**ASP.NET-Webdienstanwendung**. Geben Sie der Anwendung den Namen „FirstContosoBank“. Klicken Sie auf **OK**, um das Projekt zu erstellen.
+1.  Führen Sie Microsoft Visual Studio als Administrator aus, und wählen Sie auf der Startseite die Option **Neues Projekt** aus. Für die Veröffentlichung eines Webdiensts auf einem IIS-Server ist Administratorzugriff erforderlich. Ändern Sie im Dialogfeld „Neues Projekt“ das Framework in **.NET Framework 3.5**. Wählen Sie **Visual C#** -&gt; **Web** -&gt; **Visual Studio** -&gt; **ASP.NET-Webdienstanwendung** aus. Geben Sie der Anwendung den Namen „FirstContosoBank“. Klicken Sie auf **OK**, um das Projekt zu erstellen.
 2.  Ersetzen Sie in der Datei **Service1.asmx.cs** die standardmäßige Webmethode **HelloWorld** durch die folgende "Login"-Methode.
     ```cs
             [WebMethod]
@@ -70,8 +71,7 @@ Nachdem Sie nun über mindestens einen sicheren Webdienst verfügen, können Ihr
 
 Falls keine Clientzertifikate verfügbar sind, muss der Benutzer dem Zertifikatspeicher ein Zertifikat hinzufügen. Sie können Code in die App einfügen, der Benutzern die Auswahl einer PFX-Datei mit einem Clientzertifikat und das Importieren dieses Zertifikats in den Clientzertifikatspeicher ermöglicht.
 
-
-            **Tipp**  Verwenden Sie „makecert.exe“ zum Erstellen einer PFX-Datei zur Verwendung für diese Schnellstartanleitung. Informationen zur Verwendung von „makecert.exe“ finden Sie unter [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968).
+**Tipp** Verwenden Sie „makecert.exe“ zum Erstellen einer PFX-Datei zur Verwendung für diese Schnellstartanleitung. Informationen zur Verwendung von „makecert.exe“ finden Sie unter [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968).
 
  
 
@@ -205,6 +205,6 @@ Falls keine Clientzertifikate verfügbar sind, muss der Benutzer dem Zertifikats
 Mithilfe dieser Schritte können Sie mehrere Apps erstellen, für die dasselbe Benutzerzertifikat verwendet wird, um auf dieselben oder unterschiedliche sichere Webdienste zuzugreifen.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

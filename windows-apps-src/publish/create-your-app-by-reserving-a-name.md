@@ -4,8 +4,9 @@ Description: "Der erste Schritt beim Erstellen einer neuen App im Windows Dev Ce
 title: App-Erstellung durch Reservierung eines Namens
 keywords: 
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
+translationtype: Human Translation
 ms.sourcegitcommit: 3b65bbaf2498dde7484c055ff86ed09e89bf3405
-ms.openlocfilehash: 5e4933be456bc76eb5923f5c081e8376c43c118b
+ms.openlocfilehash: 1be7229086e1f2f932e0945334098d89a9978b70
 
 ---
 
@@ -14,8 +15,7 @@ ms.openlocfilehash: 5e4933be456bc76eb5923f5c081e8376c43c118b
 
 Der erste Schritt beim Erstellen einer neuen App im Windows Dev Center-Dashboard besteht darin, einen App-Namen zu reservieren. In diesem Thema wird erläutert, wie Sie App-Namen reservieren. Es enthält einige [Vorschläge zur Wahl aussagekräftiger App-Namen](#choosing-your-app-s-name). Jeder reservierter Name muss im gesamten Store eindeutig sein.
 
-> 
-            **Hinweis**  Wenn Sie über eine bereits erstellte Windows Phone-App verfügen, für die noch kein Name reserviert wurde, können Sie diese App trotzdem verwalten und einreichen. Um jedoch APPX-Pakete für die App hochzuladen oder [App-Identitätsdetails](view-app-identity-details.md) speziell für das Erstellen von APPX-Paketen anzuzeigen, müssen Sie anhand der folgenden Schritte einen eindeutigen Namen reservieren. Dadurch wird außerdem verhindert, dass eine andere Person diesen Namen für sich selbst reserviert.
+> **Hinweis**  Wenn Sie über eine bereits erstellte Windows Phone-App verfügen, für die noch kein Name reserviert wurde, können Sie diese App trotzdem verwalten und einreichen. Um jedoch APPX-Pakete für die App hochzuladen oder [App-Identitätsdetails](view-app-identity-details.md) speziell für das Erstellen von APPX-Paketen anzuzeigen, müssen Sie anhand der folgenden Schritte einen eindeutigen Namen reservieren. Dadurch wird außerdem verhindert, dass eine andere Person diesen Namen für sich selbst reserviert.
 
 Wenn Sie Ihre [App-Pakete hochladen](upload-app-packages.md), muss der [**Package/Properties/DisplayName**](https://msdn.microsoft.com/library/windows/apps/dn423240)-Wert dem Namen entsprechen, den Sie im **Dashboard** für Ihre App reserviert haben. Wenn Sie das App-Paket mit MicrosoftVisual Studio erstellen, wird dieses Attribut für Sie ausgefüllt.
 
@@ -29,8 +29,7 @@ Das Reservieren eines Namens ist der erste Schritt bei der App-Erstellung im Das
 
 Der Name ist jetzt für Sie reserviert, und Sie können mit der [Einreichung](app-submissions.md) beginnen, sobald Sie dazu bereit sind.
 
-> 
-            **Hinweis**  Da Namen für ein Jahr reserviert werden können, kann ein bestimmter Name u. U. nicht reserviert werden, obwohl keine Apps mit diesem Namen im Store gelistet sind. Das liegt normalerweise daran, dass ein anderer Entwickler den Namen für seine App reserviert, aber die entsprechende App noch nicht eingereicht hat. Wenn Sie einen Namen, den Sie markenrechtlich oder anderweitig geschützt haben, nicht reservieren können oder im WindowsStore eine andere App mit diesem Namen entdecken, [wenden Sie sich an Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).
+> **Hinweis**  Da Namen für ein Jahr reserviert werden können, kann ein bestimmter Name u.U. nicht reserviert werden, obwohl keine Apps mit diesem Namen im Store gelistet sind. Das liegt normalerweise daran, dass ein anderer Entwickler den Namen für seine App reserviert, aber die entsprechende App noch nicht eingereicht hat. Wenn Sie einen Namen, den Sie markenrechtlich oder anderweitig geschützt haben, nicht reservieren können oder im WindowsStore eine andere App mit diesem Namen entdecken, [wenden Sie sich an Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=233777).
 
 Nach dem Reservieren eines Namens haben Sie ein Jahr Zeit, um die App einzureichen. Wenn Sie sie nicht innerhalb eines Jahres einreichen, läuft die Reservierung ab, und ein anderer Entwickler kann den Namen für seine App verwenden. Wenn Sie versuchen, eine App unter einem abgelaufenen Namen einzureichen, tritt ein Fehler auf.
 
@@ -40,8 +39,7 @@ Es ist sehr wichtig, für Ihre App den richtigen Namen auszuwählen. Wählen Sie
 
 -   **Halten Sie den Namen kurz.** Für die Anzeige des App-Namens ist meist nur wenig Platz – lassen Sie sich also einen möglichst kurzen Namen einfallen. Der Name der App kann bis zu 256Zeichen haben, aber möglicherweise ist das Ende eines sehr langen Namens für Kunden nicht immer sichtbar.
 
-    > 
-            **Hinweis**  Die tatsächliche Anzahl von an unterschiedlichen Stellen angezeigten Zeichen kann je nach zugewiesener Länge und im App-Namen verwendetem Zeichentyp variieren. So benötigen beispielsweise in der von Windows verwendeten Schriftart „SegoeUI“ etwa 30I-Zeichen genauso viel Platz wie zehn W-Zeichen. Sie sollten die App aufgrund dieser Abweichungen also auf jeden Fall testen und prüfen, wie der Name auf den Kacheln (falls Sie sich für die Überlagerung mit dem App-Namen entscheiden), in Suchergebnissen und in der App selbst angezeigt wird, bevor Sie die App einreichen. Berücksichtigen Sie auch die Sprachen, in denen Sie die App anbieten möchten. Denken Sie daran, dass ostasiatische Zeichen im Allgemeinen breiter sind als lateinische Zeichen, sodass weniger Zeichen angezeigt werden.
+    > **Hinweis**  Die tatsächliche Anzahl von an unterschiedlichen Stellen angezeigten Zeichen kann je nach zugewiesener Länge und im App-Namen verwendetem Zeichentyp variieren. So benötigen beispielsweise in der von Windows verwendeten Schriftart „SegoeUI“ etwa 30I-Zeichen genauso viel Platz wie zehn W-Zeichen. Sie sollten die App aufgrund dieser Abweichungen also auf jeden Fall testen und prüfen, wie der Name auf den Kacheln (falls Sie sich für die Überlagerung mit dem App-Namen entscheiden), in Suchergebnissen und in der App selbst angezeigt wird, bevor Sie die App einreichen. Berücksichtigen Sie auch die Sprachen, in denen Sie die App anbieten möchten. Denken Sie daran, dass ostasiatische Zeichen im Allgemeinen breiter sind als lateinische Zeichen, sodass weniger Zeichen angezeigt werden.
 
 -   **Fügen Sie Informationen zur Unterscheidung nicht am Ende des Namens hinzu.** Wenn Infos zur Unterscheidung mehrerer Apps am Ende eines Namens angefügt werden, werden sie von den Kunden vor allem bei langen Namen vielleicht übersehen, und es scheint, als hätten alle Apps den gleichen Namen. Falls sich dies nicht vermeiden lässt, verwenden Sie unterschiedliche Logos und App-Bilder, um die Unterscheidung zwischen Apps zu erleichtern.
 -   **Seien Sie unverwechselbar.** Suchen Sie einen eindeutigen App-Namen aus, damit die App nicht so leicht mit einer anderen App verwechselt werden kann.
@@ -67,6 +65,6 @@ Weitere Informationen finden Sie unter [Verwalten von App-Namen](manage-app-name
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

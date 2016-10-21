@@ -5,7 +5,7 @@ title: Zeichnen von Formen
 description: "Erfahren Sie, wie Sie Formen wie Ellipsen, Rechtecke, Polygone und Pfade zeichnen. Mithilfe der Klasse Path visualisieren Sie eine ziemlich komplexe vektorbasierte Zeichnungssprache in einer XAML-Benutzeroberfläche. Beispielsweise können Sie auf diese Weise Bézierkurven zeichnen."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 3add60b9067f40c5d330bd66a84eea41b465e8d7
+ms.openlocfilehash: 2fd20e07c9b7e54559baeeb8324f11065a25444c
 
 ---
 # Zeichnen von Formen
@@ -25,15 +25,13 @@ Erfahren Sie, wie Sie Formen wie Ellipsen, Rechtecke, Polygone und Pfade zeichne
 
 Zwei Sätze von Klassen definieren einen Bereich in der XAML-Benutzeroberfläche: [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377)-Klassen und [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041)-Klassen. Der Hauptunterschied zwischen diesen Klassen besteht darin, dass einer **Shape**-Klasse ein Pinsel zugeordnet ist und diese auf dem Bildschirm gerendert werden kann, während eine **Geometry**-Klasse einfach einen Bereich definiert und nur gerendert wird, wenn sie Informationen zu einer anderen UI-Eigenschaft beiträgt. Sie können sich eine **Shape**-Klasse als [**UIElement**](https://msdn.microsoft.com/library/windows/apps/BR208911) vorstellen, dessen Umrandung durch eine **Geometry**-Klasse definiert ist. In diesem Thema werden hauptsächlich die **Shape**-Klassen behandelt.
 
-Die [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377)-Klassen sind [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345), [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343), [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371), [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359), [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) und [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355). 
-              **Path** ist interessant, da Sie mit dieser Klasse beliebige Geometrien definieren können, und die Klasse [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041) stellt eine Möglichkeit zum Definieren der Teile eines **Path** dar.
+Die [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377)-Klassen sind [**Line**](https://msdn.microsoft.com/library/windows/apps/BR243345), [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/BR243343), [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/BR243371), [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359), [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) und [**Path**](https://msdn.microsoft.com/library/windows/apps/BR243355). **Path** ist interessant, da Sie mit dieser Klasse beliebige Geometrien definieren können, und die Klasse [**Geometry**](https://msdn.microsoft.com/library/windows/apps/BR210041) stellt eine Möglichkeit zum Definieren der Teile eines **Path** dar.
 
 ## Füllungen und Striche für Formen
 
 Damit eine [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377)-Klasse auf dem App-Canvas gerendert wird, müssen Sie ihr einen [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076) zuweisen. Legen Sie die [**Fill**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.fill)-Eigenschaft der **Shape**-Klasse auf den gewünschten **Brush** fest. Weitere Informationen zu Pinseln finden Sie unter [Verwenden von Pinseln](using-brushes.md).
 
-Eine [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377)-Klasse kann auch einen [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) aufweisen. Dies ist eine Linie, die um den Rand der Form gezeichnet wird. Ein **Stroke** erfordert auch einen [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076). Dieser definiert die Darstellung und sollte einen Wert ungleich Null für [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness) aufweisen. 
-              **StrokeThickness** ist eine Eigenschaft, die die Stärke des Rands um die Form definiert. Wenn Sie keinen **Brush**-Wert für **Stroke** angeben oder **StrokeThickness** auf 0 festlegen, wird kein Rahmen um die Form gezeichnet.
+Eine [**Shape**](https://msdn.microsoft.com/library/windows/apps/BR243377)-Klasse kann auch einen [**Stroke**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.stroke) aufweisen. Dies ist eine Linie, die um den Rand der Form gezeichnet wird. Ein **Stroke** erfordert auch einen [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076). Dieser definiert die Darstellung und sollte einen Wert ungleich Null für [**StrokeThickness**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.shape.strokethickness) aufweisen. **StrokeThickness** ist eine Eigenschaft, die die Stärke des Rands um die Form definiert. Wenn Sie keinen **Brush**-Wert für **Stroke** angeben oder **StrokeThickness** auf 0 festlegen, wird kein Rahmen um die Form gezeichnet.
 
 ## Ellipse
 
@@ -100,8 +98,7 @@ Dies ist das gerenderte [**Polygon**](https://msdn.microsoft.com/library/windows
 
 ![Ein gerendertes Polygon](images/shapes-polygon.jpg)
 
-
-              **Tipp**  Ein [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870)-Wert wird in XAML oft als Typ für andere Szenarien als das Deklarieren der Scheitelpunkte von Formen verwendet. Ein **Point** ist beispielsweise Teil der Ereignisdaten für Fingereingabeereignisse, damit Sie ermitteln können, wo genau in Koordinatenbereich die Fingereingabeaktion stattgefunden hat. Weitere Informationen zu **Point** und dessen Verwendung in XAML oder Code finden Sie in der API-Referenz für [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
+**Tipp**  Ein [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870)-Wert wird in XAML oft als Typ für andere Szenarien als das Deklarieren der Scheitelpunkte von Formen verwendet. Ein **Point** ist beispielsweise Teil der Ereignisdaten für Fingereingabeereignisse, damit Sie ermitteln können, wo genau in Koordinatenbereich die Fingereingabeaktion stattgefunden hat. Weitere Informationen zu **Point** und dessen Verwendung in XAML oder Code finden Sie in der API-Referenz für [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
 
  
 
@@ -115,8 +112,7 @@ Sie verwenden keine [**Point**](https://msdn.microsoft.com/library/windows/apps/
 
 Eine [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) ähnelt einem [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359), da bei beiden die Grenze der Form durch eine Reihe von Punkten definiert wird. Bei einer **Polyline** wird jedoch der letzte Punkt nicht mit dem ersten verbunden.
 
-
-              **Hinweis**   Sie könnten zwar in den [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) explizit einen identischen Anfangs- und Endpunkt für [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) festlegen. In diesem Fall sollten Sie jedoch wahrscheinlich eher ein [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) verwenden.
+**Hinweis**   Sie könnten zwar in den [**Points**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.polyline.points.aspx) explizit einen identischen Anfangs- und Endpunkt für [**Polyline**](https://msdn.microsoft.com/library/windows/apps/BR243365) festlegen. In diesem Fall sollten Sie jedoch wahrscheinlich eher ein [**Polygon**](https://msdn.microsoft.com/library/windows/apps/BR243359) verwenden.
 
  
 
@@ -204,6 +200,6 @@ Durch die Verwendung von [**PathGeometry**](https://msdn.microsoft.com/library/w
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

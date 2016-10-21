@@ -4,8 +4,8 @@ Description: Vergleichen Sie Plattformfunktionen zwischen iOS, Android und Windo
 Search.Product: eADQiWindows 10XVcnh
 title: "Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler"
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 640ddc7b77d5a23562dba2ecd9812464beb8a422
+ms.sourcegitcommit: a55e7d0945902ce44ebad481475e8324c9859054
+ms.openlocfilehash: 8acd22c44cf6423aba01083d1e32d282c87f44cb
 
 ---
 
@@ -120,16 +120,16 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <td align="left">XAML bietet ein flexibles Layoutsystem, das aus <strong>Layoutpanel-Klassen</strong> wie <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.canvas.aspx">Canvas</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx">Grid</a></strong>, <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.relativepanel.aspx">RelativePanel</a></strong> und <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.stackpanel.aspx">StackPanel</a></strong> für statische und dynamische Layouts besteht. <strong><a href="https://msdn.microsoft.com/library/ms171352.aspx">Eigenschaften</a></strong> dienen zum Steuern der Größe und Position der Elemente.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt228350.aspx">Definieren von Layouts mit XAML</a><br/></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>Peer-to-Peer-Navigation.</strong> <br><br>Bereitstellen von Methoden für den Benutzer, um zwischen Seiten auf der gleichen Hierarchieebene zu navigieren.</td>
+<td align="left"><strong>Peernavigation.</strong> <br><br>Bereitstellen von Methoden für den Benutzer, um zwischen Seiten auf der gleichen Hierarchieebene zu navigieren.</td>
 <td align="left"><strong>Registerkarten</strong>, <strong>Wischbewegungen</strong> und <strong>Navigation Drawers</strong> stellen eine <strong>laterale Navigation</strong> bereit.</td>
 <td align="left"><strong>TabBarController</strong>, <strong>SplitViewController</strong> und <strong>PageViewController</strong> ermöglichen die Navigation zwischen Ansichten auf gleicher Hierarchieebene.</td>
-<td align="left">Sie können eine dauerhafte Liste von Links/Registerkarten über dem Inhalt mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">Registerkarten/Pivots</a></strong> anzeigen. Mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">Navigationsbereich/geteilter Ansicht</a></strong> können Sie neben dem Inhalt eine Liste von Links anzeigen.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187344.aspx">Navigation</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt465735.aspx">Peer-zu-Peer-Navigation zwischen zwei Seiten</a></td>
+<td align="left">Sie können eine dauerhafte Liste von Links/Registerkarten über dem Inhalt mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997788.aspx">Registerkarten/Pivots</a></strong> anzeigen. Mit <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997787.aspx">Navigationsbereich/geteilter Ansicht</a></strong> können Sie neben dem Inhalt eine Liste von Links anzeigen.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navigation</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navigieren zwischen zwei Seiten</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Hierarchische Navigation.</strong> <br><br>Navigieren zwischen über- und untergeordneten Seiten einer Hierarchie.</td>
 <td align="left"><strong>Listen</strong> und <strong>Rasterlisten</strong>, <strong>Schaltflächen</strong> und weitere Steuerelemente bieten eine <strong>absteigende Navigation</strong>, wenn Sie mit <strong>Intents</strong> zum Laden weiterer <strong>Aktivitäten</strong> verwendet werden.</td>
 <td align="left"><strong>Navigation Controller</strong> ermöglichen Benutzern die Navigation zwischen den Ebenen einer Hierarchie.</td>
-<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">Hubs</a></strong> zeigen dem Benutzer eine Vorschau von Inhalten an, die ausgewählt werden können, um zwischen untergeordneten Seiten zu navigieren. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">Master/Details</a></strong> ermöglicht dem Benutzer aus einer Liste von Elementübersichten auszuwählen, die neben dem entsprechenden Detailabschnitt angezeigt werden.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt187344.aspx">Navigation</a></td>
+<td align="left"><strong><a href="https://msdn.microsoft.com/library/windows/apps/dn449149.aspx">Hubs</a></strong> zeigen dem Benutzer eine Vorschau von Inhalten an, die ausgewählt werden können, um zwischen untergeordneten Seiten zu navigieren. <strong><a href="https://msdn.microsoft.com/library/windows/apps/dn997765.aspx">Master/Details</a></strong> ermöglicht dem Benutzer die Auswahl aus einer Liste mit Elementübersichten, die neben dem entsprechenden Detailabschnitt angezeigt werden.<br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigation-basics">Navigation</a><br/><br/><a href="https://msdn.microsoft.com/en-us/windows/uwp/layout/navigate-between-two-pages">Navigieren zwischen zwei Seiten</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>Navigation per Schaltfläche „Zurück“.</strong> <br><br>Rückwärtsnavigation in einer Anwendung.</td>
@@ -665,6 +665,6 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

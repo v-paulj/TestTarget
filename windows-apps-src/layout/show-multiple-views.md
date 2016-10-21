@@ -5,8 +5,9 @@ title: "Anzeigen mehrerer Ansichten für eine App"
 ms.assetid: BAF9956F-FAAF-47FB-A7DB-8557D2548D88
 label: Show multiple views for an app
 template: detail.hbs
-ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: 23e999f86fb0552b96cddbd3b9d11803106bf6c2
+translationtype: Human Translation
+ms.sourcegitcommit: 0d67e3cef26ca6aca07556312a18be93fe758c85
+ms.openlocfilehash: ccbcb1f3f5ee31724416f512138757865ffabc98
 
 ---
 
@@ -26,7 +27,7 @@ Wenn Sie für eine App mehrere Fenster erstellen, verhält sich jedes Fenster an
 
 Eine App-Ansicht ist die 1:1-Zuordnung eines Threads und eines Fensters, das die App zur Anzeige von Inhalten verwendet. Sie wird durch ein [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)-Objekt dargestellt.
 
-Ansichten werden vom [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016)-Objekt verwaltet. Sie rufen [**CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278) auf, um ein[**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)-Objekt zu erstellen. Die **CoreApplicationView** vereint ein [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) und einen [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) (der in den Eigenschaften [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) und [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/dn433264) gespeichert ist). Sie können sich **CoreApplicationView** als das Objekt vorstellen, das von der Windows-Runtime für die Interaktion mit dem zentralen Windows-System verwendet wird.
+Ansichten werden vom [**CoreApplication**](https://msdn.microsoft.com/library/windows/apps/br225016)-Objekt verwaltet. Sie rufen [**CoreApplication.CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278) auf, um ein [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017)-Objekt zu erstellen. Die **CoreApplicationView** vereint ein [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) und einen [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) (der in den Eigenschaften [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br225019) und [**Dispatcher**](https://msdn.microsoft.com/library/windows/apps/dn433264) gespeichert ist). Sie können sich **CoreApplicationView** als das Objekt vorstellen, das von der Windows-Runtime für die Interaktion mit dem zentralen Windows-System verwendet wird.
 
 In der Regel arbeiten Sie nicht direkt mit der [**CoreApplicationView**](https://msdn.microsoft.com/library/windows/apps/br225017). Stattdessen wird die [**ApplicationView**](https://msdn.microsoft.com/library/windows/apps/hh701658)-Klasse von der Windows-Runtime im [**Windows.UI.ViewManagement**](https://msdn.microsoft.com/library/windows/apps/br242295)-Namespace bereitgestellt. Diese Klasse stellt Eigenschaften, Methoden und Ereignisse bereit, die Sie bei der Interaktion zwischen App und Windowing-System verwenden. Wenn Sie mit einer **ApplicationView** arbeiten möchten, rufen Sie die statische [**ApplicationView.GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/hh701672)-Methode auf, die eine an den aktuellen Thread der **CoreApplicationView** gebundene Instanz von **ApplicationView** abruft.
 
@@ -93,7 +94,7 @@ int newViewId = 0;</code></pre></td>
 
     Mithilfe der [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/hh750317)-Methode können Sie die Arbeit am UI-Thread für die neue Ansicht planen. Mithilfe eines [Lambdaausdrucks](http://go.microsoft.com/fwlink/p/?LinkId=389615) übergeben Sie eine Funktion als Argument an die **RunAsync**-Methode. Die in der Lambdafunktion ausgeführten Arbeiten finden im Thread der neuen Ansicht statt.
 
-    In XAML fügen Sie der [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051)-Eigenschaft von [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) in der Regel einen [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) hinzu und navigieren dann den **Frame** zu einer XAML-[**Page**](https://msdn.microsoft.com/library/windows/apps/br227503), auf der Sie den App-Inhalt definiert haben. Weitere Informationen finden Sie unter [Peer-zu-Peer-Navigation zwischen zwei Seiten](peer-to-peer-navigation-between-two-pages.md).
+    In XAML fügen Sie der [**Content**](https://msdn.microsoft.com/library/windows/apps/br209051)-Eigenschaft von [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) in der Regel einen [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) hinzu und navigieren dann den **Frame** zu einer XAML-[**Seite**](https://msdn.microsoft.com/library/windows/apps/br227503), auf der Sie den App-Inhalt definiert haben. Weitere Informationen finden Sie unter [Navigieren zwischen zwei Seiten](navigate-between-two-pages.md).
 
     Nachdem das neue [**Window**](https://msdn.microsoft.com/library/windows/apps/br209041) aufgefüllt wurde, müssen Sie die [**Activate**](https://msdn.microsoft.com/library/windows/apps/br209046)-Methode von **Window** aufrufen, um das **Window** später anzuzeigen. Diese Arbeit findet im Thread der neuen Ansicht statt, sodass das neue **Window** aktiviert ist.
 
@@ -146,8 +147,7 @@ Wenn sekundäre Ansichten geöffnet sind, kann das Fenster der Hauptansicht ausg
 
 Andere Ansichten sind sekundäre Ansichten. Dies schließt auch Ansichten ein, die durch Aufrufen von [**CreateNewView**](https://msdn.microsoft.com/library/windows/apps/dn297278) im App-Code erstellt werden. Sowohl die Hauptansicht als auch sekundäre Ansichten werden in der [**CoreApplication.Views**](https://msdn.microsoft.com/library/windows/apps/br205861)-Auflistung gespeichert. Normalerweise erstellen Sie sekundäre Ansichten in Reaktion auf eine Benutzeraktion. In einigen Fällen erstellt das System sekundäre Ansichten für Ihre App.
 
-
-            **Hinweis**  Sie können das Windows-Feature *Zugewiesener Zugriff* verwenden, um eine App im [Kioskmodus](https://technet.microsoft.com/library/mt219050.aspx) auszuführen. In diesem Fall erstellt das System eine sekundäre Ansicht, um die App-Benutzeroberfläche über dem Sperrbildschirm darzustellen. Von der App erstellte sekundäre Ansichten sind nicht zulässig. Wenn Sie also versuchen, Ihre eigene sekundäre Ansicht im Kioskmodus anzuzeigen, wird eine Ausnahme ausgelöst.
+**Hinweis:** Sie können das Windows-Feature *Zugewiesener Zugriff* verwenden, um eine App im [Kioskmodus](https://technet.microsoft.com/library/mt219050.aspx) auszuführen. In diesem Fall erstellt das System eine sekundäre Ansicht, um die App-Benutzeroberfläche über dem Sperrbildschirm darzustellen. Von der App erstellte sekundäre Ansichten sind nicht zulässig. Wenn Sie also versuchen, Ihre eigene sekundäre Ansicht im Kioskmodus anzuzeigen, wird eine Ausnahme ausgelöst.
 
  
 
@@ -182,10 +182,6 @@ Wenn Sie [**SwitchAsync**](https://msdn.microsoft.com/library/windows/apps/dn281
 
 
 
-
-
-
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

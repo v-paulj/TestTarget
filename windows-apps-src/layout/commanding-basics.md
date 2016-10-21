@@ -5,8 +5,9 @@ title: "Befehlsdesigngrundlagen für Apps der universellen Windows-Plattform (UW
 ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a4e9a90edd2aae9d2fd5d7bead948422d43dad59
-ms.openlocfilehash: be7ff187df9800a8c2c47c4315f3f9b021e265f8
+ms.openlocfilehash: 736ab8ebe74a293efd48ffd7dcd9d2026089147a
 
 ---
 
@@ -32,8 +33,7 @@ Die Verwendung passender Elemente für die richtigen Interaktionen kann den Unte
 | Datums- und Zeitauswahl | [Kalenderdatumsauswahl, Kalenderansicht, Datumsauswahl, Zeitauswahl](https://msdn.microsoft.com/library/windows/apps/hh465466)                                                                                                                 | Ermöglicht dem Benutzer das Anzeigen und Ändern von Datums- und Uhrzeitinformationen (beispielsweise beim Eingeben des Ablaufdatums einer Kreditkarte oder beim Festlegen einer Weckzeit).                   |
 | Listen                 | [Dropdownliste, Listenfeld, Listen- und Rasteransicht](https://msdn.microsoft.com/library/windows/apps/mt186889)                                                                                                                                              | Stellt Elemente in einer interaktiven Liste oder in einem Raster dar. Verwenden Sie diese Elemente, um Benutzern die Auswahl eines Films aus einer Liste mit Neuerscheinungen oder die Verwaltung von Inventar zu ermöglichen. |
 | Textvorhersage | [Feld mit automatischen Vorschlägen](https://msdn.microsoft.com/library/windows/apps/dn997762)                                                                                                                                                                    | Liefert Vorschläge während der Eingabe durch den Benutzer und ermöglicht somit schnellere Dateneingaben und Abfragen.                                                   |
-| Auswahlsteuerelemente    | 
-            [Kontrollkästchen](https://msdn.microsoft.com/library/windows/apps/hh700393), [Optionsfeld](https://msdn.microsoft.com/library/windows/apps/hh700395), [Umschalter](https://msdn.microsoft.com/library/windows/apps/hh465475) | Gibt dem Benutzer die Wahl zwischen verschiedenen Optionen (beispielsweise bei einer Umfrage oder beim Konfigurieren von App-Einstellungen).                                      |
+| Auswahlsteuerelemente    | [das Kontrollkästchen](https://msdn.microsoft.com/library/windows/apps/hh700393), [Optionsfeld](https://msdn.microsoft.com/library/windows/apps/hh700395), [Umschalter](https://msdn.microsoft.com/library/windows/apps/hh465475) | Gibt dem Benutzer die Wahl zwischen verschiedenen Optionen (beispielsweise bei einer Umfrage oder beim Konfigurieren von App-Einstellungen).                                      |
 
  
 
@@ -135,8 +135,7 @@ Ganz gleich, wie gut die Benutzeroberfläche gestaltet ist und wie vorsichtig de
     -   Ändern des Inhalts oder Bearbeiten von Text
     -   Umbenennen einer Datei
 
-
-            **Tipp**  Verwenden Sie nicht zu viele Bestätigungsdialogfelder. Diese können zwar sehr hilfreich sein, wenn dem Benutzer ein Fehler unterläuft, bei bewusst durchgeführten Aktionen sind sie jedoch eher hinderlich.
+**Tipp**  Verwenden Sie nicht zu viele Bestätigungsdialogfelder. Diese können zwar sehr hilfreich sein, wenn dem Benutzer ein Fehler unterläuft, bei bewusst durchgeführten Aktionen sind sie jedoch eher hinderlich.
 
  
 
@@ -158,6 +157,6 @@ Ausführliche Informationen zum Optimieren der Benutzerfreundlichkeit bei einem 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

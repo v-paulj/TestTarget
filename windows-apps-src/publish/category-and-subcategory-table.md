@@ -3,8 +3,9 @@ author: jnHs
 Description: "Das Zuweisen der richtigen Kategorie und Unterkategorie trägt dazu bei, dass Kunden Ihre App leichter finden und mehr Informationen dazu erhalten."
 title: Kategorie- und Unterkategorietabelle
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 9f9f5da100109af5dc38f7ffbc3cadca842b1214
+translationtype: Human Translation
+ms.sourcegitcommit: b31e399d950a99f0cb6f1e912e391429b5463136
+ms.openlocfilehash: 40891ade1c3383f89eed99176b4e9cf979e1fb64
 
 ---
 
@@ -15,14 +16,13 @@ Das Zuweisen der richtigen Kategorie und Unterkategorie trägt dazu bei, dass Ku
 
 Wählen Sie die Kategorie aus, die Ihre App am besten beschreibt. Wählen Sie dann, falls verfügbar, eine Unterkategorie aus.
 
-> 
-            **Note**  Wenn Sie **Spiele** als Kategorie auswählen, ist eine Unterkategorie erforderlich.
-
- 
+> **Hinweis**  Wenn Sie **Spiele** als Kategorie auswählen, ist eine Unterkategorie erforderlich.
 
 Eine App kann jeweils nur in einer Kategorie (und ggf. einer Unterkategorie) aufgeführt sein. Falls Sie sich nicht sicher sind, welche Kategorie oder Unterkategorie Sie verwenden sollen, suchen Sie die Kategorie aus, in der Kunden Ihrer Meinung nach am ehesten nach einer App wie Ihrer suchen.
 
-Wenn Sie die Kategorie oder Unterkategorie einer bereits im Store enthaltenen App ändern möchten, können Sie dies durch [Erstellen einer neuen Einreichung](app-submissions.md) und Auswahl der neuen Kategorie erledigen.
+Wenn Sie die Kategorie oder Unterkategorie einer bereits im Store enthaltenen App ändern möchten, können Sie dies durch das [Erstellen einer neuen Übermittlung](app-submissions.md) und Auswählen der neuen Kategorie erledigen.
+
+> **Wichtig**  Wenn Sie die App in der Kategorie **Spiele** veröffentlichen, können Sie bei einer erneuten Übermittlung keine andere Kategorie wählen. Außerdem können Sie die Kategorie **Spiele** nicht für ein Update einer App auswählen, die Sie zuvor in einer anderen Kategorie veröffentlicht haben.
 
 Im Windows Store werden Apps in folgende Kategorien und Unterkategorien unterteilt.
 
@@ -59,12 +59,11 @@ Unterkategorien sind nur für einige Kategorien vorhanden. Denken Sie daran, das
 | Dienstprogramme + Tools           | Sichern + Verwalten <br> Datei-Manager                |
  
 
-> 
-            **Hinweis**  Informationen zu den Kategorien, die in Windows Store für Windows8.1 und früheren Versionen verwendet wurden, sowie die Kategorien im Windows Phone Store und wie diese mit der vorangehenden Kategorieliste zusammenhängen, finden Sie unter [Kategorieänderungen für Windows Phone-Apps](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
+> **Hinweis**  Informationen zu den Kategorien, die in Windows Store für Windows8.1 und früheren Versionen verwendet wurden, sowie die Kategorien im Windows Phone Store und wie diese mit der vorangehenden Kategorieliste zusammenhängen, finden Sie unter [Kategorieänderungen für Windows Phone-Apps](how-your-app-appears-in-the-store-for-windows-10-customers.md#category-changes).
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

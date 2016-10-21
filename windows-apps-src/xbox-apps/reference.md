@@ -2,10 +2,9 @@
 author: v-angraf
 title: "UWP auf Xbox One – API-Referenz"
 description: "API-Referenz für UWP auf Xbox One."
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: 1a8dc5bcfc619756696dd9892ca63d3ad92c3c16
-ms.openlocfilehash: 3e857501687f74eacbe863889d61d33fcdbcd086
+ms.sourcegitcommit: 3d1c06c556ac8d5bbb915bbfa9f023b0d2b4544f
+ms.openlocfilehash: 0d7fb9a2706dbcb1757c367c3e0b0c61c10eea9a
 
 ---
 
@@ -21,6 +20,7 @@ Dieser Abschnitt enthält Referenzthemen für die APIs für UWP auf Xbox One.
 |[/ext/settings](wdp-xboxsettings-api.md)| Greift auf Xbox One-Entwicklereinstellungen zu. |
 |[/ext/smb/developerfolder](wdp-smb-api.md)| Greift über den Datei-Explorer auf Ihrem Entwicklungscomputer auf den Entwicklerordner auf Ihrer Konsole zu. |
 |[/ext/user](wdp-user-management.md)| Verwaltet Benutzer auf der Xbox One-Konsole. |
+|[/ext/Update/Policy](wdp-updatepolicy-api.md)| Legt fest, welche Aktualisierungsrichtlinie auf Ihre Konsole angewendet wird. |
 |[/ext/xboxlive/sandbox](wdp-sandbox-api.md)| Verwaltet Ihren Xbox Live-Sandkasten. |
 
 ## Siehe auch
@@ -29,6 +29,6 @@ Dieser Abschnitt enthält Referenzthemen für die APIs für UWP auf Xbox One.
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

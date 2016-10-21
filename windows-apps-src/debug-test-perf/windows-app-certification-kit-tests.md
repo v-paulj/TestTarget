@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: "Tests im Zertifizierungskit für Windows-Apps"
 description: "Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, mit denen Sie sicherstellen können, dass eine App für die Veröffentlichung im Windows Store bereit ist."
+translationtype: Human Translation
 ms.sourcegitcommit: 0bf96b70a915d659c754816f4c115f3b3f0a5660
-ms.openlocfilehash: 816b147c91a340505348aa579c8b1540962a1df5
+ms.openlocfilehash: 78a1a2ad4aea11275aa3db1d13790c490a50c232
 
 ---
 ## Tests im Zertifizierungskit für Windows-Apps
@@ -159,8 +160,7 @@ Die BinScope-Tests des Analyzers für Binärdateien prüfen, ob die sicherheitsr
 
 ### <span id="binscope-1"></span>AllowPartiallyTrustedCallersAttribute
 
-
-            **Fehlermeldung des Zertifizierungskits für Windows-Apps:** Fehler beim APTCACheck-Test.
+**Fehlermeldung des Zertifizierungskits für Windows-Apps:** APTCACheck Test failed (Fehler beim APTCACheck-Test.)
 
 Das AllowPartiallyTrustedCallersAttribute-Attribut (kurz: APTCA-Attribut) ermöglicht den Zugriff auf vollständig vertrauenswürdigen Code aus teilweise vertrauenswürdigem Code in signierten Assemblys. Wenn Sie das APTCA-Attribut auf eine Assembly anwenden, können teilweise vertrauenswürdige Aufrufer diese Assembly aufrufen, solange die Assembly besteht. Dies kann ein Sicherheitsrisiko darstellen.
 
@@ -174,8 +174,7 @@ Dieser Test wird nur für verwalteten Code (C#, .NET usw.) ausgeführt.
 
 ### <span id="binscope-2"></span>/SafeSEH-Ausnahmebehandlungsschutz
 
-
-            **Fehlermeldung des Zertifizierungskits für Windows-Apps:** Fehler beim SafeSEHCheck-Test.
+**Fehlermeldung des Zertifizierungskits für Windows-Apps:** SafeSEHCheck Test failed (Fehler beim SafeSEHCheck-Test).
 
 Ein Ausnahmehandler wird ausgeführt, wenn in der App eine Ausnahmebedingung auftritt – beispielsweise bei einem Fehler aufgrund einer Division durch Null. Da die Adresse des Ausnahmehandlers beim Aufrufen einer Funktion im Stapel gespeichert wird, besteht das Risiko eines Pufferüberlaufangriffs, sollte Schadsoftware den Stapel überschreiben.
 
@@ -189,8 +188,7 @@ Für 64-Bit-Binärdateien oder für Binärdateien für den ARM-Chipsatz wird die
 
 ### <span id="binscope-3"></span>Datenausführungsverhinderung
 
-
-            **Fehlermeldung des Zertifizierungskits für Windows-Apps:** Fehler beim NXCheck-Test.
+**Fehlermeldung des Zertifizierungskits für Windows-Apps:** NXCheck Test failed (Fehler beim NXCheck-Test.)
 
 Dieser Test stellt sicher, dass die App keinen Code ausführt, der in einem Datensegment gespeichert ist.
 
@@ -204,8 +202,7 @@ Wir empfehlen, Apps auf einer DEP-fähigen CPU zu testen und alle DEP-bedingten 
 
 ### <span id="binscope-4"></span>Zufallsgestaltung des Adressraumlayouts
 
-
-            **Fehlermeldung des Zertifizierungskits für Windows-Apps:** Fehler beim DBCheck-Test.
+**Fehlermeldung des Zertifizierungskits für Windows-Apps:** DBCheck Test failed (Fehler beim DBCheck-Test.)
 
 Die Zufallsgestaltung des Adressraumlayouts (Address Space Layout Randomization, ASLR) lädt ausführbare Bilder in unvorhersehbare Speicherbereiche. Dadurch wird eine größere Hürde für Schadsoftware geschaffen, die erwartet, dass ein Programm an einer bestimmten virtuellen Adresse geladen wird. Ihre App und alle von der App verwendeten Komponenten müssen über ASLR-Unterstützung verfügen.
 
@@ -221,8 +218,7 @@ Dieser Test wird nur für Apps ausgeführt, die in verwaltetem Code geschrieben 
 
 ### <span id="binscope-5"></span>Lesen/Schreiben des freigegebenen PE-Abschnitts
 
-
-            **Fehlermeldung des Zertifizierungskits für Windows-Apps:** Fehler beim SharedSectionsCheck-Test.
+**Fehlermeldung des Zertifizierungskits für Windows-Apps:** SharedSectionsCheck Test failed (Fehler beim SharedSectionsCheck-Test).
 
 Binärdateien mit beschreibbaren Abschnitten, die als freigegeben gekennzeichnet sind, stellen eine Sicherheitsbedrohung dar. Erstellen Sie keine Apps mit freigegebenen beschreibbaren Abschnitten, wenn dies nicht notwendig ist. Verwenden Sie [**CreateFileMapping**](https://msdn.microsoft.com/library/windows/desktop/Aa366537) oder [**MapViewOfFile**](https://msdn.microsoft.com/library/windows/desktop/Aa366761), um ein freigegebenes Speicherobjekt zu erstellen, das korrekt gesichert ist.
 
@@ -236,8 +232,7 @@ Dieser Test wird nur für Apps ausgeführt, die in nicht verwalteten Sprachen ge
 
 ### AppContainerCheck
 
-
-            **Fehlermeldung des Zertifizierungskits für Windows-Apps:** Fehler beim AppContainerCheck-Test.
+**Fehlermeldung des Zertifizierungskits für Windows-Apps:** AppContainerCheck Test failed (Fehler beim AppContainerCheck-Test).
 
 Der AppContainerCheck-Test prüft, ob das **appcontainer**-Bit im PE-Header einer ausführbaren Binärdatei gesetzt ist. Für Apps muss das **appcontainer**-Bit für alle EXE-Dateien und nicht verwalteten DLLs gesetzt sein, damit diese korrekt ausgeführt werden.
 
@@ -253,8 +248,7 @@ Dieser Test wird für alle EXE-Dateien und nicht verwalteten DLLs ausgeführt.
 
 ### <span id="binscope-7"></span>ExecutableImportsCheck
 
-
-            **Fehlermeldung des Zertifizierungskits für Windows-Apps:** Fehler beim ExecutableImportsCheck-Test.
+**Fehlermeldung des Zertifizierungskits für Windows-Apps:** ExecutableImportsCheck Test failed (Fehler beim ExecutableImportsCheck-Test).
 
 Ein portierbares ausführbares Image (Portable Executable, PE) besteht diesen Test nicht, wenn es in einen Abschnitt mit ausführbaren Code eingefügt wurde. Dies kann auftreten, wenn Sie für das PE-Image das Zusammenführen von „.rdata“ ermöglicht haben, indem Sie das Kennzeichen */merge* des Visual C++-Linkers auf */merge:.rdata=.text* festgelegt haben.
 
@@ -268,8 +262,7 @@ Dieser Test wird für den gesamten Binärcode ausgeführt, außer für ausschlie
 
 ### <span id="binscope-8"></span>WXCheck
 
-
-            **Fehlermeldung des Zertifizierungskits für Windows-Apps:** Fehler beim WXCheck-Test.
+**Fehlermeldung des Zertifizierungskits für Windows-Apps:** WXCheck Test failed (Fehler beim WXCheck-Test).
 
 Mit dieser Überprüfung können Sie sicherstellen, dass eine Binärdatei keine Seiten enthält, die als schreibbar und ausführbar gekennzeichnet sind. Dies kann vorkommen, wenn die Binärdatei einen schreibbaren und ausführbaren Abschnitt enthält oder wenn *SectionAlignment* der Binärdatei kleiner als *PAGE\-SIZE* ist.
 
@@ -283,8 +276,7 @@ Dieser Test wird für alle EXE-Dateien und systemeigenen, nicht verwalteten DLLs
 
 Eine ausführbare Datei kann einen schreibbaren und ausführbaren Abschnitt enthalten, wenn bei ihrer Erstellung "Bearbeiten und Fortfahren" aktiviert wurden (/ZI). Bei Deaktivierung von „Bearbeiten und Fortfahren“ ist der ungültige Abschnitt nicht mehr enthalten.
 
-
-            *PAGE\-SIZE* ist der Standardwert von *SectionAlignment* für ausführbare Dateien.
+*PAGE\-SIZE* ist der Standardwert von *SectionAlignment* für ausführbare Dateien.
 
 ### Private Codesignatur
 
@@ -319,13 +311,11 @@ Apps müssen die APIs für Windows Store-Apps verwenden (Windows-Runtime- oder u
 
 Stellen Sie sicher, dass die App als Releasebuild und nicht als Debugbuild kompiliert wurde.
 
-> 
-            **Hinweis**  Der Debugbuild einer App besteht diesen Test nicht, auch wenn die App nur [APIs für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx) verwendet.
+> **Hinweis**  Der Debugbuild einer App besteht diesen Test nicht, auch wenn die App nur [APIs für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx) verwendet.
 
 Prüfen Sie die Fehlermeldungen, um die von der App verwendete API zu identifizieren, die keine [API für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx) ist.
 
-> 
-            **Hinweis**  C++-Apps, die unter einer Debugkonfiguration erstellt wurden, bestehen diesen Test nicht. Dies gilt auch, wenn für die Konfiguration nur APIs aus dem Windows SDK für Windows Store-Apps verwendet werden. Weitere Informationen finden Sie unter [Alternativen zu Windows-APIs in Windows Store-Apps](http://go.microsoft.com/fwlink/p/?LinkID=244022).
+> **Hinweis**  C++-Apps, die unter einer Debugkonfiguration erstellt wurden, bestehen diesen Test nicht. Dies gilt auch, wenn für die Konfiguration nur APIs aus dem Windows SDK für Windows Store-Apps verwendet werden. Weitere Informationen finden Sie unter [Alternativen zu Windows-APIs in Windows Store-Apps](http://go.microsoft.com/fwlink/p/?LinkID=244022).
 
 ## Leistungstests
 
@@ -553,8 +543,7 @@ Stellen Sie sicher, dass die App unter der Direct3D-Featureebene9\-1 richtig ger
 
 ### Direct3D-Kürzung nach dem Anhalten
 
-> 
-            **Hinweis**  Dieser Test gilt nur für Windows Store-Apps, die für Windows8.1 und höher entwickelt wurden.
+> **Hinweis**  Dieser Test gilt nur für Windows Store-Apps, die für Windows8.1 und höher entwickelt wurden.
 
 ### Hintergrund
 
@@ -603,18 +592,12 @@ Es wird überprüft, ob die **WINMD**-Dateien im Paket den UWP-Regeln entspreche
 
 ### Maßnahmen
 
--   
-            **ExclusiveTo-Attributtest:** Stellen Sie sicher, dass von UWP-Klassen keine Schnittstellen implementiert werden, die für eine andere Klasse als „ExclusiveTo” gekennzeichnet sind.
--   
-            **Test auf Anordnung von Typen:** Stellen Sie sicher, dass die Metadaten für alle UWP-Typen in der WINMD-Datei enthalten sind, die im App-Paket über den längsten Namen mit Namespaceübereinstimmung verfügt.
--   
-            **Test auf Groß-/Kleinschreibung von Typnamen:** Stellen Sie sicher, dass alle UWP-Typen im App-Paket eindeutige Namen aufweisen, bei denen die Groß-/Kleinschreibung nicht zu berücksichtigen ist. Vergewissern Sie sich außerdem, dass UWP-Typnamen im App-Paket nicht auch als Namespacename verwendet werden.
--   
-            **Test auf Korrektheit des Typnamens:** Stellen Sie sicher, dass im globalen Namespace oder im Windows-Namespace der obersten Ebene keine UWP-Typen vorhanden sind.
--   
-            **Test auf Korrektheit der allgemeinen Metadaten:** Stellen Sie sicher, dass der zum Generieren der Typen verwendete Compiler in Bezug auf die UWP-Spezifikationen auf dem neuesten Stand ist.
--   
-            **Eigenschaftentest:** Stellen Sie sicher, dass alle Eigenschaften einer UWP-Klasse über eine get-Methode verfügen (set-Methoden sind optional). Vergewissern Sie sich, dass der Typ des Rückgabewerts der get-Methode für alle Eigenschaften von UWP-Typen jeweils mit dem Typ des Eingabeparameters der set-Methode übereinstimmt.
+-   **ExclusiveTo-Attributtest:** Stellen Sie sicher, dass von UWP-Klassen keine Schnittstellen implementiert werden, die für eine andere Klasse als „ExclusiveTo” gekennzeichnet sind.
+-   **Test auf Anordnung von Typen:** Stellen Sie sicher, dass die Metadaten für alle UWP-Typen in der WINMD-Datei enthalten sind, die im App-Paket über den längsten Namen mit Namespaceübereinstimmung verfügt.
+-   **Test auf Groß-/Kleinschreibung von Typnamen:** Stellen Sie sicher, dass alle UWP-Typen im App-Paket eindeutige Namen aufweisen, bei denen die Groß-/Kleinschreibung nicht zu berücksichtigen ist. Vergewissern Sie sich außerdem, dass UWP-Typnamen im App-Paket nicht auch als Namespacename verwendet werden.
+-   **Test auf Korrektheit des Typnamens:** Stellen Sie sicher, dass im globalen Namespace oder im Windows-Namespace der obersten Ebene keine UWP-Typen vorhanden sind.
+-   **Test auf Korrektheit der allgemeinen Metadaten:** Stellen Sie sicher, dass der zum Generieren der Typen verwendete Compiler in Bezug auf die UWP-Spezifikationen auf dem neuesten Stand ist.
+-   **Eigenschaftentest:** Stellen Sie sicher, dass alle Eigenschaften einer UWP-Klasse über eine get-Methode verfügen (set-Methoden sind optional). Vergewissern Sie sich, dass der Typ des Rückgabewerts der get-Methode für alle Eigenschaften von UWP-Typen jeweils mit dem Typ des Eingabeparameters der set-Methode übereinstimmt.
 
 ## Tests für die Paketintegrität
 
@@ -678,8 +661,7 @@ Wenn für Apps im Manifest keine Hintergrundaufgabe angegeben ist, gilt der Test
 
 Aktualisieren Sie den JavaScript-Hintergrundcode so, dass „Close()” richtig aufgerufen wird.
 
-> 
-            **Hinweis**  Dieser Artikel ist für Windows10-Entwickler gedacht, die UWP-Apps schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**  Dieser Artikel ist für Windows10-Entwickler gedacht, die UWP-Apps schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
  
 
@@ -689,6 +671,6 @@ Aktualisieren Sie den JavaScript-Hintergrundcode so, dass „Close()” richtig 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

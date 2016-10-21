@@ -5,8 +5,9 @@ ms.assetid: C89D79C2-B830-493D-B020-F3FF8EB5FFDD
 title: Barrierefreiheit
 label: Accessibility
 template: detail.hbs
-ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 3bbd7ff5fac634a2d5b0f0cb2cf2db7b4315d3b3
+translationtype: Human Translation
+ms.sourcegitcommit: 13894c199a95060395886635ebb7c294f18c9d6b
+ms.openlocfilehash: 8974ea067e033796c491781997067aafea773d96
 
 ---
 
@@ -19,13 +20,12 @@ Es werden Barrierefreiheitskonzepte für UWP-Apps (Universelle Windows-Plattform
 Bei der Barrierefreiheit geht es darum, eine Anwendung so zu gestalten, dass sie auch von Menschen verwendet werden kann, bei denen bestimmte Beeinträchtigungen die Nutzung herkömmlicher Benutzeroberflächen verhindern oder erschweren. Für bestimmte Situationen gelten gesetzlich vorgeschriebene Vorgaben im Hinblick auf Barrierefreiheit. Es empfiehlt sich aber, dieses Thema auch unabhängig von den gesetzlichen Vorschriften zu berücksichtigen, um sicherzustellen, dass die Apps die größtmögliche Benutzergruppe erreichen. Es ist auch eine Windows Store-Deklaration zur Barrierefreiheit der App vorhanden.
 
 > [!NOTE]
-> 
-            [!NOTE]  Das Ausweisen der App als barrierefrei ist nur für den Windows Store relevant.
+> Das Deklarieren der App als barrierefrei ist nur für den Windows Store relevant.
 
 | Artikel | Beschreibung |
 |---------|-------------|
 | [Übersicht über die Barrierefreiheit](accessibility-overview.md) | Dieser Artikel bietet eine Übersicht über die Konzepte und Technologien in Barrierefreiheitsszenarien für UWP-Apps. |
-| [Entwerfen von inklusiver Software](designing-inclusive-software.md) | Erfahren Sie mehr über das Entwerfen inklusiver Apps für die Universelle Windows-Plattform (UWP) für Windows 10.  Entwerfen und erstellen Sie inklusive Software unter Berücksichtigung der Barrierefreiheit. |
+| [Entwerfen von barrierefreier Software](designing-inclusive-software.md) | Erfahren Sie mehr über das Entwerfen inklusiver UWP-Apps für Windows 10.  Entwerfen und erstellen Sie inklusive Software unter Berücksichtigung der Barrierefreiheit. |
 | [Entwickeln von inklusiven Windows-Apps](developing-inclusive-windows-apps.md) | Dieser Artikel dient als Orientierungshilfe bei der Entwicklung barrierefreier UWP-Apps. |
 | [Barrierefreiheitstests](accessibility-testing.md) | Testverfahren, mit denen Sie sicherstellen können, dass Ihre UWP-App barrierefrei ist. |
 | [Barrierefreiheit im Store](accessibility-in-the-store.md) | Hier werden die Anforderungen beschrieben, die Sie erfüllen müssen, wenn Sie Ihre UWP-App im WindowsStore als barrierefrei deklarieren möchten. |
@@ -40,10 +40,10 @@ Bei der Barrierefreiheit geht es darum, eine Anwendung so zu gestalten, dass sie
 
 <span id="related_topics"/>
 ## Verwandte Themen  
-* [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179)
+* [**Windows.UI.Xaml.Automation**](https://msdn.microsoft.com/library/windows/apps/BR209179) 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

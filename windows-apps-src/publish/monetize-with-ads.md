@@ -3,15 +3,16 @@ author: jnHs
 Description: Wenn Ihre App die Anzeigenvermittlung verwendet oder Banner- bzw. Videointerstitialanzeigen aus Microsoft Advertising anzeigt, verwalten Sie die Verwendung Ihrer Anzeigen auf der Seite Monetisierung &gt; Gewinnbringende Nutzung mit Anzeigen.
 title: Monetisierung durch Werbeanzeigen
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 97eeeedb9e73b6c67abe6e2ff8cadbc744a6a7c4
+ms.openlocfilehash: af322795be849bdaa2b1babeaec29d09f5d73fcf
 
 ---
 
 # Monetisierung durch Werbeanzeigen
 
 
-Wenn Ihre App ein **AdMediatorControl**-, **AdControl**- oder **InterstitialAd**-Steuerelement zum Anzeigen von Banner- oder Videointerstitialanzeigen verwendet, verwalten Sie die Verwendung Ihrer Anzeigen auf der Seite **Monetisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen**.
+Wenn Ihre App ein **AdMediatorControl**-, **AdControl**- oder **InterstitialAd**-Steuerelement zum Anzeigen von Banner- bzw. Video-Interstitialanzeigen verwendet, verwalten Sie die Verwendung Ihrer Anzeigen auf der Seite **Monetarisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen**.
 
 ## Windows-Anzeigenvermittlung
 
@@ -32,8 +33,7 @@ Aktivieren Sie das Kontrollkästchen in diesem Abschnitt, wenn Sie Microsoft-Par
 
 Wenn Sie diese Auswahl ändern, müssen Sie Ihre App nicht neu veröffentlichen, damit die Änderungen wirksam werden. Weitere Informationen zu Microsoft-Partneranzeigen finden Sie unter [Informationen zu Partneranzeigen](about-affiliate-ads.md).
 
-> 
-            **Hinweis**  Wenn Ihre App die Anzeigenvermittlung verwendet (d.h. ein **AdMediatorControl**-Steuerelement zum Anzeigen von Werbeanzeigen verwendet), kann Ihre App nur Partneranzeigen anzeigen, wenn die Einstellungen für die Anzeigenvermittlung zum Anzeigen von Werbeanzeigen von Microsoft konfiguriert sind.
+> **Hinweis**  Wenn Ihre App die Anzeigenvermittlung verwendet (d.h. ein **AdMediatorControl**-Steuerelement zum Anzeigen von Werbeanzeigen verwendet), kann Ihre App nur Partneranzeigen anzeigen, wenn die Einstellungen für die Anzeigenvermittlung zum Anzeigen von Werbeanzeigen von Microsoft konfiguriert sind.
 
 ## Community-Anzeigen
 
@@ -60,8 +60,7 @@ Ihre Anzeigeneinheiten werden in einer Tabelle am Ende dieses Abschnitts angezei
 -   Wenn Ihre App Werbebanner anzeigt, weisen Sie diese Werte den Eigenschaften [ApplicationId](https://msdn.microsoft.com/library/mt313174.aspx) und [AdUnitId](https://msdn.microsoft.com/library/mt313171.aspx) Ihres [AdControl](https://msdn.microsoft.com/library/mt313154.aspx)-Objekts hinzu.
 -   Wenn Ihre App Video-Interstitialanzeigen anzeigt, übergeben Sie diese Werte an die [RequestAd](https://msdn.microsoft.com/library/mt313192.aspx)-Methode Ihres [InterstitialAd](https://msdn.microsoft.com/library/mt313189.aspx)-Objekts.
 
-> 
-            **Hinweis**  Wenn Ihre App die Anzeigenvermittlung zum Anzeigen von Werbebannern aus Microsoft Advertising verwendet (d.h. ein **AdMediatorControl**-Objekt verwendet), müssen Sie keine Anzeigeneinheiten anfordern. In diesem Szenario werden Microsoft Advertising-Anzeigeeinheiten automatisch generiert.
+> **Hinweis**  Wenn Ihre App die Anzeigenvermittlung zum Anzeigen von Werbebannern aus Microsoft Advertising verwendet (d.h. ein **AdMediatorControl**-Objekt verwendet), müssen Sie keine Anzeigeneinheiten anfordern. In diesem Szenario werden Microsoft Advertising-Anzeigeeinheiten automatisch generiert.
 
  
 
@@ -71,6 +70,6 @@ Ihre Anzeigeneinheiten werden in einer Tabelle am Ende dieses Abschnitts angezei
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

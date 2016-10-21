@@ -3,8 +3,9 @@ author: msatranjr
 title: "Übersicht über Karten und Position"
 description: "In diesem Abschnitt wird erläutert, wie Sie in Ihrer App Karten anzeigen, Kartendienste verwenden, die Position suchen und einen Geofence einrichten. Außerdem erfahren Sie in diesem Abschnitt, wie die Windows-Karten-App mit einer bestimmten Karte, Route oder detaillierten Wegbeschreibung gestartet wird."
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
+translationtype: Human Translation
 ms.sourcegitcommit: a3240047ec77ada0c5f6b5586eee2404353889f6
-ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
+ms.openlocfilehash: 327185d655d8495901cfa9fa0a99c0af3a8cdae0
 
 ---
 
@@ -16,8 +17,7 @@ ms.openlocfilehash: 829a8d7eb4da810e2353593c03cd5aa4e047173a
 
 In diesem Abschnitt wird erläutert, wie Sie in Ihrer App Karten anzeigen, Kartendienste verwenden, die Position suchen und einen Geofence einrichten. Außerdem erfahren Sie in diesem Abschnitt, wie die Windows-Karten-App mit einer bestimmten Karte, Route oder detaillierten Wegbeschreibung gestartet wird.
 
-> 
-            **Tipp**  Um mehr über das Verwenden von Karten und Positionen in Ihrer App zu erfahren, laden Sie die folgenden Beispiele aus dem [Repository für Beispiele für die universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter:
+> **Tipp**  Um mehr über das Verwenden von Karten und Positionen in Ihrer App zu erfahren, laden Sie die folgenden Beispiele aus dem [Repository für Beispiele für die universelle Windows-Plattform](http://go.microsoft.com/fwlink/p/?LinkId=619979) auf GitHub herunter:
 -   [Kartenbeispiel für die Universelle Windows-Plattform (UWP)](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 -   [UWP-Geolocation-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=533278)
 
@@ -85,6 +85,6 @@ Ihre App kann die Windows-Karten-App starten, wie hier veranschaulicht, um besti
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

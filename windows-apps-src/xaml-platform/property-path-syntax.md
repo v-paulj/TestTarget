@@ -3,8 +3,9 @@ author: jwmsft
 description: "Sie können die PropertyPath-Klasse und die Zeichenfolgensyntax verwenden, um einen PropertyPath-Wert entweder in XAML oder in Code zu instanziieren."
 title: PropertyPath-Syntax
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0b1851bc9d19de5b678f8c6c3a255c0ba3057a85
+translationtype: Human Translation
+ms.sourcegitcommit: 3144758352b99f8c145a3c7be8a6c43d6a002104
+ms.openlocfilehash: 867fd859823c23cec9666095793871a4b78e7e52
 
 ---
 
@@ -12,8 +13,7 @@ ms.openlocfilehash: 0b1851bc9d19de5b678f8c6c3a255c0ba3057a85
 
 \[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Sie können die [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)-Klasse und die Zeichenfolgensyntax verwenden, um einen **PropertyPath**-Wert entweder in XAML oder in Code zu instanziieren. 
-            **PropertyPath**-Werte werden von Datenbindungen genutzt. Eine ähnliche Syntax kommt für die Ausrichtung von Storyboardanimationen zum Einsatz. Die Animationsausrichtung generiert jedoch keine zugrunde liegenden Property-path-Syntaxwerte. Sie behält die Informationen als Zeichenfolge bei. In beiden Szenarien beschreibt ein Eigenschaftspfad eine Traversierung von einer oder mehreren Objekt-Eigenschaft-Beziehungen, die schließlich in einer einzelnen Eigenschaft aufgelöst werden.
+Sie können die [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)-Klasse und die Zeichenfolgensyntax verwenden, um einen **PropertyPath**-Wert entweder in XAML oder in Code zu instanziieren. **PropertyPath**-Werte werden von Datenbindungen genutzt. Eine ähnliche Syntax kommt für die Ausrichtung von Storyboardanimationen zum Einsatz. In beiden Szenarien beschreibt ein Eigenschaftspfad eine Traversierung von einer oder mehreren Objekt-Eigenschaft-Beziehungen, die schließlich in einer einzelnen Eigenschaft aufgelöst werden.
 
 Sie können eine Eigenschaftspfad-Zeichenfolge in XAML direkt einem Attribut zuweisen. Sie haben die Möglichkeit, mit derselben Zeichenfolgensyntax entweder eine [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)-Klasse zu konstruieren, die ein [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)-Objekt im Code festlegt, oder mithilfe der [**SetTargetProperty**](https://msdn.microsoft.com/library/windows/apps/br210503)-Methode ein Animationsziel im Code zu bestimmen. Es bestehen zwei unterschiedliche Featurebereiche in der Windows-Runtime, die auf einen Eigenschaftspfad zurückgreifen: Datenbindung und Animationsausrichtung. Die Animationsausrichtung generiert keine zugrunde liegenden Property-path-Syntaxwerte in der Windows-Runtime-Implementierung. Sie behält die Informationen als Zeichenfolge bei. Die Konzepte der Objekt-Eigenschaft-Traversierung sind jedoch sehr ähnlich. Datenbindung und Animationsausrichtung werten einen Eigenschaftspfad auf leicht unterschiedliche Weise aus, daher behandeln wir die Eigenschaftspfadsyntax dafür getrennt.
 
@@ -28,7 +28,7 @@ Sie können eine Bindung zu einem einzelnen Eigenschaftswert oder zu einer solch
 Das Element der Syntax, das die Traversierung einer Objekt-Eigenschaft-Beziehung in einem Objektgraphen kennzeichnet, ist das Punktzeichen (**.**). Jeder Punkt in einer Eigenschaftspfad-Zeichenfolge gibt eine Trennung zwischen einem Objekt (auf der linken Seite des Punkts) und einer Eigenschaft dieses Objekts (auf der rechten Seite des Punkts) an. Die Zeichenfolge wird von links nach rechts ausgewertet, was ermöglicht, mehrere Objekt-Eigenschaft-Beziehungen zu durchlaufen. Sehen wir uns dazu ein Beispiel an:
 
 ``` syntax
-<Binding Path="Customer.Address.StreetAddress1"
+"{Binding Path=Customer.Address.StreetAddress1}"
 ```
 
 Dieser Pfad wird wie folgt ausgewertet:
@@ -51,8 +51,7 @@ Ein Eigenschaftspfad für Datenbindungen kann Verweise auf indizierte Eigenschaf
 
 Nehmen wir zum Beispiel ein Geschäftsobjekt, bei dem es eine Liste von „Teams“ gibt (geordnete Liste), von denen jedes ein Wörterbuch von „Players“ aufweist, wobei als Schlüssel für jeden Spieler der Nachname verwendet wird. Ein Beispiel eines Eigenschaftspfads zu einem bestimmen Spieler im zweiten Team lautet: „Teams\[1\].Players\[Smith\]“. (Sie verwenden 1, um das zweite Element in „Teams“ anzugeben, da die Liste nullindiziert ist.)
 
-
-            **Hinweis**  Die Unterstützung der Indizierung für C++-Datenquellen ist beschränkt. Informationen hierzu finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Hinweis**  Die Unterstützung der Indizierung für C++-Datenquellen ist beschränkt. Informationen hierzu finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### Angefügte Eigenschaften
 
@@ -90,8 +89,7 @@ Mithilfe des folgenden Eigenschaftspfads können Sie beispielsweise angeben, das
 
 Wenn auch dies selten vorkommt, kann eine angefügte Eigenschaft animiert werden, sofern die angefügte Eigenschaft einen Eigenschaftswert aufweist, der mit einem Animationstyp übereinstimmt. Da der Bezeichnername einer angefügten Eigenschaft bereits einen Punkt enthält, muss ein Name für die angefügte Eigenschaft in runden Klammern hinzugefügt werden, damit der Punkt nicht als Objekteigenschaftsschritt interpretiert wird. Verwenden Sie beispielsweise für die Zeichenfolge, die zum Animieren der angefügten [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795)-Eigenschaft auf einem Objekt angegeben werden muss, den Eigenschaftspfad „(Grid.Row)“.
 
-
-            **Hinweis**  In diesem Beispiel ist der Wert von [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) ein **Int32**-Eigenschaftstyp. Daher ist die Animation mit einer **Double**-Animation nicht möglich. Definieren Sie stattdessen eine [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320)-Klasse, die über [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132)-Komponenten verfügt, wobei [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) auf eine ganze Zahl wie „0“ oder „1“ festgelegt wird.
+**Hinweis**  In diesem Beispiel ist der Wert von [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) ein **Int32**-Eigenschaftstyp. Daher ist die Animation mit einer **Double**-Animation nicht möglich. Definieren Sie stattdessen eine [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320)-Klasse, die über [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132)-Komponenten verfügt, wobei [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) auf eine ganze Zahl wie „0“ oder „1“ festgelegt wird.
 
 ## Regeln für die Eigenschaften in einem Animationsausrichtungs-Eigenschaftspfad
 
@@ -106,9 +104,7 @@ Die [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)
 
 Meistens ist es in XAML möglich, eine [**PropertyPath**](https://msdn.microsoft.com/library/windows/apps/br244259)-Klasse ohne jeglichen Code anzuwenden. In einigen Fällen ist es jedoch sinnvoll, ein **PropertyPath**-Objekt mithilfe von Code zu definieren und dieses zur Laufzeit einer Eigenschaft zuzuordnen.
 
-
-            [
-              **PropertyPath**
+[**PropertyPath**
             ](https://msdn.microsoft.com/library/windows/apps/br244259) verfügt über einen [**PropertyPath(String)**](https://msdn.microsoft.com/library/windows/apps/br244261)-Konstruktor und hat keinen Standardkonstruktor. Die Zeichenfolge, die Sie diesem Konstruktor übergeben, wird mithilfe der zuvor beschriebenen Eigenschaftspfadsyntax definiert. Dies ist dieselbe Zeichenfolge, mit der Sie [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) als XAML-Attribut zuweisen können. Die einzige andere API der **PropertyPath**-Klasse ist die schreibgeschützte [**Path**](https://msdn.microsoft.com/library/windows/apps/br244260)-Eigenschaft. Sie können diese Eigenschaft als Konstruktionszeichenfolge für eine andere **PropertyPath**-Instanz verwenden.
 
 ## Verwandte Themen
@@ -124,6 +120,6 @@ Meistens ist es in XAML möglich, eine [**PropertyPath**](https://msdn.microsoft
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

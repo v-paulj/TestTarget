@@ -6,15 +6,13 @@ ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a6632c7b8fdee5320f35e316abd318193a254c51
-ms.openlocfilehash: 6cd4519007d1241cb7c411dade1a092140b598c4
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 38ee8ae177898e20d45545c1cfd51a0dd24f7858
 
 ---
-
 # Erstellen adaptiver Kacheln
 
-
-
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 
 Vorlagen für adaptive Kacheln sind ein neues Feature in Windows 10 und ermöglichen den Entwurf eigener Inhalte für Kachelbenachrichtigungen mithilfe einer einfachen, flexiblen Markupsprache, die sich an unterschiedliche Bildschirmdichten anpasst. Dieser Artikel beschreibt, wie Sie adaptive Live-Kacheln für Ihre UWP-App (Universelle Windows-Plattform) erstellen. Die vollständige Liste adaptiver Elemente und Attribute finden Sie unter [Adaptives Kachelschema](tiles-and-notifications-adaptive-tiles-schema.md).
@@ -202,8 +200,7 @@ TileContent content = new TileContent()
 
 Sie können das Branding am unteren Rand einer Live-Kachel (den Anzeigenamen und das Cornerlogo) mit dem branding-Attribut in der Benachrichtigungsnutzlast steuern. Mit „none“ wird nichts angezeigt, mit „name“ nur der Name, mit „logo“ nur das Logo, und mit „nameAndLogo“ werden Name und Logo angezeigt.
 
-
-            **Hinweis**  Da Windows Mobile kein Cornerlogo unterstützt, wird unter Mobile anstelle von „logo“ und „nameAndLogo“ standardmäßig „name” verwendet.
+**Hinweis**  Da Windows Mobile kein Cornerlogo unterstützt, wird unter Mobile anstelle von „logo“ und „nameAndLogo“ standardmäßig „name” verwendet.
 
  
 
@@ -281,8 +278,7 @@ TileContent content = new TileContent()
 
 Wenn Sie in der Benachrichtigungsnutzlast kein Branding angeben, wird das Branding durch die Eigenschaften der Basiskachel bestimmt. Wenn auf der Basiskachel der Anzeigename dargestellt ist, wird für das Branding standardmäßig „name“ verwendet. Wenn kein Anzeigename vorhanden ist, wird für das Branding standardmäßig „none“ verwendet.
 
-
-            **Hinweis**  Dies ist eine Änderung gegenüber Windows 8.x, wo das Standardbranding „logo“ lautete.
+**Hinweis**  Dies ist eine Änderung gegenüber Windows 8.x, wo das Standardbranding „logo“ lautete.
 
  
 
@@ -291,8 +287,7 @@ Wenn Sie in der Benachrichtigungsnutzlast kein Branding angeben, wird das Brandi
 
 Sie können den Anzeigenamen einer Benachrichtigung überschreiben, indem Sie für das **displayName**-Attribut die gewünschte Textzeichenfolge eingeben. Wie beim Branding können Sie dies für das [&lt;visual&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element angeben, was sich auf die gesamte Benachrichtigungsnutzlast auswirkt, oder für das [&lt;binding&gt;](tiles-and-notifications-adaptive-tiles-schema.md)-Element, was nur einzelne Kacheln betrifft.
 
-
-            **Bekanntes Problem**  Wenn Sie unter Windows Mobile „ShortName“ für die Kachel angeben, wird der in der Benachrichtigung angegebene Anzeigename nicht verwendet (stattdessen wird immer „ShortName“ angezeigt). 
+**Bekanntes Problem**  Wenn Sie unter Windows Mobile „ShortName“ für die Kachel angeben, wird der in der Benachrichtigung angegebene Anzeigename nicht verwendet (stattdessen wird immer „ShortName“ angezeigt). 
 
 ```XML
 <tile>
@@ -435,8 +430,7 @@ new TileText()
 
 ![Textstile adaptiver Kacheln](images/adaptive-tiles-textstyles.png)
 
-
-            **Hinweis**  Wenn „hint-style“ nicht angegeben ist, wird für den Stil standardmäßig „caption“ verwendet.
+**Hinweis**  Wenn „hint-style“ nicht angegeben ist, wird für den Stil standardmäßig „caption“ verwendet.
 
  
 
@@ -528,8 +522,7 @@ Mit Gruppen können Sie semantisch deklarieren, dass sich Inhalte in der Gruppe 
 
 Um optimale Ergebnisse auf unterschiedlichen Geräten und Bildschirmen zu erzielen, sollten Sie mehrere Gruppen bereitstellen. Mit mehreren Gruppen kann sich die Kachel an größere Bildschirme anpassen.
 
-
-            **Hinweis**  Das einzige gültige untergeordnete Element einer Gruppe ist eine Untergruppe.
+**Hinweis**  Das einzige gültige untergeordnete Element einer Gruppe ist eine Untergruppe.
 
  
 
@@ -730,8 +723,7 @@ Wenn Ihre erste Spalte 20% und die zweite Spalte 80% der gesamten Breite einnehm
 
 ![Untergruppen mit einer Gesamtgewichtung von 100](images/adaptive-tiles-subgroups03.png)
 
-
-            **Hinweis**  Zwischen Spalten wird automatisch ein Rand von 8 Pixeln eingefügt.
+**Hinweis**  Zwischen Spalten wird automatisch ein Rand von 8 Pixeln eingefügt.
 
  
 
@@ -855,8 +847,7 @@ private static TileSubgroup CreateSubgroup(string day, string image, string high
 
 Mithilfe des &lt;image&gt;-Elements werden Bilder auf der Kachelbenachrichtigung angezeigt. Bilder können als Inlinebilder im Kachelinhalt (Standard), als Hintergrundbild hinter dem Inhalt oder als animiertes Vorschaubild, das von oben in die Benachrichtigung hineingleitet, konfiguriert werden.
 
-
-            **Hinweis**  Für die [Dateigröße und Abmessungen von Bildern](https://msdn.microsoft.com/library/windows/apps/hh781198) gelten Einschränkungen.
+**Hinweis**   Für die [Dateigröße und Abmessungen von Bildern](https://msdn.microsoft.com/library/windows/apps/hh781198) gelten Einschränkungen.
 
  
 
@@ -1502,6 +1493,6 @@ TileWide = new TileBinding()
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

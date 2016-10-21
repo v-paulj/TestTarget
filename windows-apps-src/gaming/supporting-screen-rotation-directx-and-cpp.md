@@ -3,8 +3,9 @@ author: mtoepke
 title: "Unterstützen der Bildschirmausrichtung (DirectX und C++)"
 description: "An dieser Stelle erläutern wir die bewährten Methoden zum Umgang mit der Bildschirmausrichtung in Ihrer UWP-DirectX-App, sodass die Grafikhardware der Windows 10-Geräte effizient und effektiv verwendet wird."
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8da32494e0bb0bd48d485c946df1c9a5baec7fbe
+ms.openlocfilehash: 101ee7a6d0760abfc40145b21478947c0563a346
 
 ---
 
@@ -343,8 +344,7 @@ Für die einzelnen Prozesse ist die Arbeit ein wenig umfangreicher als bei einer
 
     Die Auswahl der richtigen Matrix erfolgt basierend auf den von Windows10 bereitgestellten Daten (beispielsweise basierend auf den Ergebnissen von [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)) zum Bestimmen der Bildschirmausrichtung. Sie wird mit den Koordinaten der einzelnen Pixel (Direct2D) oder Vertizes (Direct3D) in der Szene multipliziert, wodurch sie zur Anpassung an die Bildschirmausrichtung effektiv gedreht werden. (Beachten Sie, dass der Bildschirmursprung in Direct2D als obere linke Ecke und in Direct3D als logische Mitte des Fensters definiert ist.)
 
-> 
-            **Hinweis**  Weitere Informationen zu den für die Drehung verwendeten 2D-Transformationen und zu deren Definition finden Sie unter [Definieren von Matrizen für die Bildschirmdrehung (2D)](#defining_matrices_2d). Weitere Informationen zu den für die Drehung verwendeten 3D-Transformationen finden Sie unter [Definieren von Matrizen für die Bildschirmdrehung (3D)](#defining_matrices_3d).
+> **Hinweis:** Weitere Informationen zu den für die Drehung verwendeten 2D-Transformationen und zu deren Definition finden Sie unter [Definieren von Matrizen für die Bildschirmdrehung (2D)](#defining_matrices_2d). Weitere Informationen zu den für die Drehung verwendeten 3D-Transformationen finden Sie unter [Definieren von Matrizen für die Bildschirmdrehung (3D)](#defining_matrices_3d).
 
  
 
@@ -446,8 +446,7 @@ default:
 
 Nachdem Sie die richtige Drehungsmatrix und den Ursprung für das 2D-Bild ausgewählt haben, legen Sie sie bzw. ihn durch Aufrufen von [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) zwischen den Aufrufen von [**ID2D1DeviceContext::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371768) und [**ID2D1DeviceContext::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371924) fest.
 
-
-            **Warnung**   Direct2D hat keinen Transformationsstapel. Wenn die App zudem [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) als Teil des zugehörigen Zeichnungscodes verwendet, muss diese Matrix im Nachhinein für alle angewendeten Transformationen multipliziert werden.
+**Warnung** Direct2D hat keinen Transformationsstapel. Wenn die App zudem [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) als Teil des zugehörigen Zeichnungscodes verwendet, muss diese Matrix im Nachhinein für alle angewendeten Transformationen multipliziert werden.
 
  
 
@@ -559,6 +558,6 @@ Wenn Sie nun die Rendermethode aufrufen, wird die aktuelle Drehungsmatrix (gemä
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

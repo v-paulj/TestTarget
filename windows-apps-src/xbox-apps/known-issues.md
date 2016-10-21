@@ -1,93 +1,48 @@
 ---
 author: Mtoepke
-title: Bekannte Probleme mit UWP auf Xbox One Developer Preview
+title: Bekannte Probleme mit UWP im Zusammenhang mit dem Xbox One-Entwicklerprogramm
 description: 
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: e016be20af9a0d7a67fa383cbdc93083d12a1113
+ms.sourcegitcommit: 5774ada049e5f300e9cb990f5a079c8c21796f8b
+ms.openlocfilehash: 5892e00f4da74af5aa4e24fdd12b0df0e8a4a7d9
 
 ---
 
-# Bekannte Probleme mit UWP auf Xbox Developer Preview
+# Bekannte Probleme mit UWP im Zusammenhang mit dem Xbox-Entwicklerprogramm
 
-Dieses Thema beschreibt bekannte Probleme mit der UWP auf Xbox Developer Preview. Weitere Informationen zu dieser Developer Preview finden Sie unter [UWP auf Xbox](index.md). 
+Dieses Thema beschreibt bekannte Probleme im Zusammenhang mit dem Xbox One-Entwicklerprogramm. Weitere Informationen zu diesem Programm finden Sie unter [UWP auf Xbox](index.md). 
 
 \[Wenn Sie über einen Link in einem API-Referenzthema hierher gelangten und nach Informationen zu APIs für die Universal-Gerätefamilie suchen, lesen Sie bitte [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/?LinkID=760755).\]
 
-Das Xbox Developer Preview System Update ist eine Vorabversion der Software für Testzwecke. Dies bedeutet, dass einige beliebte Spiele und Apps nicht wie erwartet funktionieren und gelegentlich Abstürze und Datenverlust auftreten. Wenn Sie die Developer Preview verlassen, wird Ihre Konsole auf die Werkseinstellungen zurückgesetzt, und Sie müssen alle Spiele, Apps und Inhalte erneut installieren.
-
-Für Entwickler bedeutet dies, dass nicht alle Entwickler-Tools und -APIs wie erwartet funktionieren. Nicht alle für die endgültige Version vorgesehenen Features sind enthalten oder weisen die endgültige Qualität auf. 
-**Insbesondere spiegelt die Systemleistung in dieser Preview nicht die Systemleistung der endgültigen Version wider.**
-
 In der folgenden Liste werden einige bekannte Probleme aufgelistet, die in dieser Version auftreten können. Diese Liste ist jedoch nicht vollständig. 
 
-
-              **Wir möchten gerne Ihr Feedback erhalten.** Melden Sie daher alle festgestellten Probleme im Forum für das [Entwickeln von universellen Windows-Apps](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop). 
+**Wir möchten gerne Ihr Feedback erhalten.** Melden Sie daher alle festgestellten Probleme im Forum für das [Entwicklung von UWP-Apps (Apps für die universelle Windows-Plattform)](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop). 
 
 Wenn Sie Probleme haben, lesen Sie die Informationen in diesem Thema, informieren Sie sich in den [häufig gestellten Fragen](frequently-asked-questions.md), und nutzen Sie die Foren, um Hilfe zu erhalten.
 
 
 <!--## Developing games-->
-
-## Unterstützung des Mausmodus
-
-Ab dieser Preview-Version ist der _Mausmodus_ standardmäßig für XAML- und gehostete Web-Apps aktiviert. Alle Anwendungen, für die die Option nicht deaktiviert wurde, erhalten einen Mauszeiger (ähnlich dem Zeiger im Edge-Browser von Xbox).
-
-**Entwicklern wird dringend empfohlen, den Mausmodus zu deaktivieren und die Navigation per Controller (X-Y) zu optimieren.**
-
-Befolgen Sie für das Deaktivieren des Mausmodus in XAML folgendes Beispiel:
-
-```code
-public App() {
-    this.InitializeComponent();
-    this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
-    this.Suspending += OnSuspending;
-}
-```
-
-Befolgen Sie für das Deaktivieren des Mausmodus in einer HTML-/JavaScript-App folgendes Beispiel:
-
-```code
-// Turn off mouse mode
-navigator.gamepadInputEmulation = "keyboard";
-```
-
-Weitere Informationen einschließlich Informationen zum Aktivieren der direktionalen Navigation in einer HTML/JavaScript-App finden Sie unter [Deaktivieren des Mausmodus](how-to-disable-mouse-mode.md#html).
-
-> 
-              **Hinweis**&nbsp;&nbsp;Wenn der Mausmodus aktiviert ist, kann in dieser Developer Preview die Konsole bei der Verschiebung mit dem rechten Joystick am Controller einfrieren. Wenn dieses Problem auftritt, müssen Sie die Konsole neu starten.
-
-Weitere Informationen zur Unterstützung des Mausmodus finden Sie im Thema [Entwerfen für Xbox und Fernsehgeräte](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv?f=255&MSPPError=-2147217396#mouse-mode). Dieses Thema enthält Informationen zum Aktivieren und Deaktivieren des Mausmodus, sodass Sie das richtige Verhalten für Ihre App auswählen können.
-
-## Ein Benutzer muss angemeldet sein, damit Sie eine App bereitstellen können (Fehler 0x87e10008).
-
-Damit Apps gestartet werden können, muss jetzt ein Benutzer angemeldet sein (damit Sie das Debuggen (F5) in VS 2015 starten können, muss ein Benutzer angemeldet sein). Die von Visual Studio derzeit ausgegebene Fehlermeldung ist nicht intuitiv:
  
-![Die Windows Store-App kann nicht aktiviert werden.](images/windows-store-app-activation-error.jpg)
+## Speicherlimits für Hintergrund-Apps werden teilweise erzwungen.
  
-Um dieses Problem zu umgehen, melden Sie sich vor dem Bereitstellen Ihrer App als Benutzer über die Xbox-Shell oder DevHome an.
+Die maximale Speicherbedarf für im Hintergrund ausgeführte Apps beträgt 128MB. In der aktuellen Version von UWP auf Xbox One wird Ihre App ausgesetzt, wenn sie diese Begrenzung überschreitet und in den Hintergrund verschoben wird. Die Beschränkung wird zurzeit nicht erzwungen, wenn Ihre App die Grenze überschreitet, während sie bereits im Hintergrund ausgeführt wird. Das bedeutet, dass Ihre App weiterhin Speicher zuweisen kann, wenn sie während der Ausführung im Hintergrund die Begrenzung von 128MB überschreitet.
  
-## Speicherlimits für Hintergrund-Apps werden noch nicht erzwungen.
- 
-Das Limit von 128MB für im Hintergrund ausgeführte Apps wird in dieser Preview-Version nicht erzwungen. Wenn Ihre App bei ihrer Ausführung im Hintergrund 128MB überschreitet, kann sie dennoch Speicher zuweisen.
- 
-Zurzeit kann dieses Problem nicht umgangen werden. Legen Sie entsprechende Richtlinien für die Speichernutzung fest. In einer künftigen Preview-Version werden für Ihre App Speicherzuweisungsfehler ausgegeben, wenn sie das Limit von 128MB überschreitet.
+Zurzeit kann dieses Problem nicht umgangen werden. Apps sollten ihre Speicherauslastung entsprechend steuern und während der Ausführung im Hintergrund unter der Begrenzung von 128MB bleiben.
  
 ## Fehler bei der Bereitstellung aus VS bei aktiviertem Jugendschutz
 
 Beim Starten Ihrer App in VS tritt ein Fehler auf, wenn in den Einstellungen der Konsole der Jugendschutz aktiviert ist.
 
 Um dieses Problem zu umgehen, deaktivieren Sie vorübergehend den Jugendschutz. Alternative:
-1. Bereitstellen Ihrer App in der Konsole mit deaktiviertem Jugendschutz
+1. Stellen Sie Ihre App in der Konsole mit deaktiviertem Jugendschutz bereit.
 2. Aktivieren Sie den Jugendschutz.
-3. Starten Sie Ihre App von der Konsole.
+3. Starten Sie die App von der Konsole.
 4. Geben Sie eine PIN oder ein Kennwort ein, um das Starten der App zuzulassen.
 5. Die App wird gestartet.
 6. Schließen Sie die App.
 7. Starten Sie die App in VS mithilfe von F5. Sie wird ohne Benutzeraufforderung gestartet.
 
-Zu diesem Zeitpunkt bleibt die Berechtigung so lange bestehen, __bis Sie den Benutzer abmelden, auch wenn Sie die App deinstallieren und neu installieren.
+Zu diesem Zeitpunkt bleibt die Berechtigung so lange _bestehen_, bis Sie den Benutzer abmelden, auch wenn Sie die App deinstallieren und neu installieren.
  
 Es gibt eine weitere Ausnahme, die nur für Kinderkonten verfügbar ist. Bei einem Kinderkonto muss sich ein Elternteil anmelden, um die Berechtigung zu erteilen. In diesem Fall kann der Elternteil die Option **Immer** auswählen, um dem Kind das Starten der App zu erlauben. Diese Ausnahme wird in der Cloud gespeichert und bleibt bestehen, auch wenn sich das Kind abmeldet und wieder anmeldet.   
 
@@ -114,27 +69,14 @@ Please use the forum to report any issues you see.-->
 
 ## DirectX 12-Unterstützung
 
-UWP auf Xbox One unterstützt die DirectX11-Featureebene10. DirectX12 wird derzeit nicht unterstützt. Xbox One ist wie alle herkömmlichen Spielekonsolen ein spezielles Hardwaregerät, das ein spezielles SDK erfordert, um das Potenzial vollständig nutzen zu können. Wenn Sie an einem Spiel arbeiten, das Zugriff auf das maximale Potenzial der Xbox One-Hardware benötigt, können Sie sich beim [ID@XBOX](http://www.xbox.com/Developers/id)-Programm registrieren, um Zugriff auf das SDK zu erhalten, das DirectX 12-Unterstützung enthält.
+UWP auf Xbox One unterstützt die DirectX11-Featureebene10. DirectX12 wird derzeit nicht unterstützt. 
+
+Xbox One ist wie alle herkömmlichen Spielekonsolen ein spezielles Hardwaregerät, das ein spezielles SDK erfordert, um das Potenzial vollständig nutzen zu können. Wenn Sie an einem Spiel arbeiten, das Zugriff auf das maximale Potenzial der Xbox One-Hardware benötigt, können Sie sich beim [ID@XBOX](http://www.xbox.com/Developers/id)-Programm registrieren, um Zugriff auf das SDK zu erhalten, das DirectX 12-Unterstützung enthält.
 
 <!-- ### Xbox One Developer Preview disables game streaming to Windows 10
 
 Activating the Xbox One Developer Preview on your console will prevent you from streaming games from your Xbox One to the Xbox app on Windows 10, even if your console is set to retail mode. 
 To restore the game streaming feature, you must leave the developer preview. -->
-
-## Bekanntes Problem mit dem sicheren TV-Bereich
-
-Standardmäßig sollte der Anzeigebereich für UWP-Apps auf Xbox durch den sicheren TV-Bereich abgesenkt werden. Die Xbox One Developer Preview enthält jedoch ein bekanntes Problem, das dazu führt, dass der sichere TV-Bereich bei [0, 0] und nicht bei [_offset_, _offset_] beginnt.
-
-> 
-              **Hinweis**&nbsp;&nbsp;Dies gilt nur für UWP-Apps, die Javascript verwenden.
-
-Die einfachste Möglichkeit, dieses Problem zu umgehen, besteht darin, den sicheren TV-Bereich zu deaktivieren, wie im folgenden JavaScript-Beispiel gezeigt.
-
-    var applicationView = Windows.UI.ViewManagement.ApplicationView.getForCurrentView();
-
-    applicationView.setDesiredBoundsMode(Windows.UI.ViewManagement.ApplicationViewBoundsMode.useCoreWindow);
-
-Weitere Informationen zum sicheren TV-Bereich finden Sie unter [Entwerfen für Xbox und Fernsehgeräte](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv).
 
 <!--## System resources for UWP apps and games on Xbox One
 
@@ -149,10 +91,13 @@ In this developer preview, inbound and outbound network access from the console 
 Developers can still use HTTP and WebSockets.
 --> 
 
+## Gesperrte Netzwerkports auf Xbox One
+
+Universelle Windows-Plattform (UWP)-Apps auf Xbox One-Geräten sind im Bereich [49152, 65535]-von der Bindung an Ports ausgeschlossen. Obwohl die Bindung an diese Ports während der Laufzeit erfolgreich zu sein scheint, kann Netzwerkdatenverkehr im Hintergrund gelöscht werden, bevor er Ihre App erreicht. Ihre App sollte an den Port0 gebunden werden, wann immer möglich. Dieser ermöglicht dem System die Auswahl des lokalen Ports. Wenn Sie einen bestimmten Port verwenden müssen, muss sich die Portnummer im Bereich [1025, 49151] befinden, und Sie sollten Konflikte mit der IANA-Registrierung überprüfen und vermeiden. Weitere Informationen finden Sie in [Dienstname und Transportprotokoll-Portnummer-Registrierung](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
 
 ## UWP-API-Abdeckung
 
-Nicht alle UWP-APIs werden auf Xbox unterstützt. Unter [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/p/?LinkId=760755) finden Sie eine Liste der APIs, von denen bekannt ist, dass sie nicht funktionieren. Wenn Probleme mit anderen APIs auftreten, melden Sie dies bitte in den Foren. 
+Nicht alle UWP-APIs werden auf Xbox unterstützt. Die Liste der APIs, von denen bekannt ist, dass sie nicht funktionieren, finden Sie in [UWP-Funktionen, die noch nicht auf Xbox One unterstützt werden](http://go.microsoft.com/fwlink/p/?LinkId=760755). Wenn Sie Probleme mit anderen APIs feststellen, melden Sie dies bitte in den Foren. 
 
 <!--## XAML controls do not look like or behave like the controls in the Xbox One shell
 
@@ -191,7 +136,7 @@ It is possible to get into a state where the PIN pairing between Visual Studio a
 If PIN pairing fails, use the “Remove all pairings” button in Dev Home, restart Xbox One, restart your development PC, and then try again.--> 
 
 
-## Windows Device Portal (WDP)-Preview
+<!--## Windows Device Portal (WDP) preview-->
 
 <!--### Starting WDP from Dev Home crashes Dev Home
 
@@ -215,15 +160,11 @@ This will delete all of your games, apps, settings and content, deactivate Devel
 
 Sometimes this is resolved by sorting a column on the table.-->
 
-### Die WDP-UI wird in Internet Explorer 7 nicht ordnungsgemäß angezeigt. 
+## Navigieren zu WDP führt zu einer Zertifikatwarnung
 
-Standardmäßig wird die WDP-UI nicht ordnungsgemäß im Browser angezeigt, wenn Sie Internet Explorer 7 verwenden. Sie können dies durch Deaktivieren der Kompatibilitätsansicht von Internet Explorer 7 für WDP beheben.
+Sie erhalten eine Warnung zum Zertifikat, das bereitgestellt wurde, ähnlich wie folgender Screenshot, dass das von Ihrer Xbox One-Konsole signierte Sicherheitszertifikat nicht als bekannter vertrauenswürdiger Herausgeber betrachtet wird. Klicken Sie auf **Laden dieser Website fortsetzen**, um auf das Windows Device Portal zuzugreifen.
 
-### Navigieren zu WDP führt zu einer Zertifikatwarnung
-
-Sie erhalten eine Warnung zum Zertifikat, das bereitgestellt wurde, ähnlich wie folgender Screenshot, dass das von Ihrer Xbox One-Konsole signierte Sicherheitszertifikat nicht als bekannter vertrauenswürdiger Herausgeber betrachtet wird. Klicken Sie auf „Laden dieser Website fortsetzen“, um auf das Windows Device Portal zuzugreifen.
-
-![Warnung zu Website-Sicherheitszertifikat](images/security_cert_warning.jpg)
+![Warnung zum Sicherheitszertifikat der Website](images/security_cert_warning.jpg)
 
 <!--## Dev Home
 
@@ -236,6 +177,6 @@ This is caused by a failure in the WDP infrastructure on the console and can be 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

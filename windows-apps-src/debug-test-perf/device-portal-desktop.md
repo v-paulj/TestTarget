@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: "Device Portal für Desktop"
 description: "Hier erfahren Sie, wie das Windows Device Portal Diagnose und Automatisierung auf dem Windows-Desktop öffnet."
-ms.sourcegitcommit: f09f0233ec11b41989cf52da3c5e8cb37a97b607
-ms.openlocfilehash: 7be27f5fb15676c5330f22995dd044899eddfd3d
+translationtype: Human Translation
+ms.sourcegitcommit: b5d259172a7e3975d48a5ba669cfbe345869aebf
+ms.openlocfilehash: 3436a95124071045c8ec89ed8ddf644ccc80c29f
 
 ---
 # Device Portal für Desktop
@@ -73,8 +74,10 @@ Wenn Sie Portnummern für Device Portal auswählen möchten (z. B. 80 und 443), 
     - HttpPort: Ein erforderlicher DWORD-Wert. Enthält die Portnummer, an der Device Portal nach HTTP-Verbindungen lauscht.  
     - HttpsPort: Ein erforderlicher DWORD-Wert. Enthält die Portnummer, an der Device Portal nach HTTPS-Verbindungen lauscht.
 
-## Fehler beim Installieren des Entwicklermoduspakets
-In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzwerk oder der Kompatibilität nicht ordnungsgemäß installiert. Das Entwicklermoduspaket ist für Remote-Bereitstellung – Device Portal und SSH – aber nicht für lokale Entwicklung erforderlich.  
+## Fehler beim Installieren des Entwicklermoduspakets oder beim Starten von Device Portal
+In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzwerk oder der Kompatibilität nicht ordnungsgemäß installiert. Das Entwicklermoduspaket ist für die **Remote**-Bereitstellung (Device Portal und SSH), nicht jedoch für die lokale Entwicklung erforderlich.  Selbst wenn diese Probleme auftreten, können Sie Ihre App weiterhin mithilfe von Visual Studio bereitstellen. 
+
+Im Forum zu den [bekannten Problemen](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) finden Sie entsprechende Problemumgehungen und vieles mehr. 
 
 ### Das Paket konnte nicht gefunden werden
 
@@ -105,6 +108,6 @@ So beheben Sie dieses Problem:
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO5-->
 
 

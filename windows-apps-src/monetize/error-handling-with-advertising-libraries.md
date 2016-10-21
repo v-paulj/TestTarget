@@ -3,15 +3,16 @@ author: mcleanbyron
 ms.assetid: cb7380d0-bc14-4936-aa1c-206304b3dc70
 description: Hier erfahren Sie, wie Sie mit Fehlern umgehen, die in den Microsoft Advertising-Bibliotheken von der AdControl-Klasse generiert werden.
 title: Fehlerbehandlung mit den Microsoft Advertising-Bibliotheken
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 5e0c7e6328247e5f686b14b10c80d8aafc13e0e4
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: dedac33d86f50b63de300f78a9f9961efc1c016b
 
 ---
 
 # Fehlerbehandlung mit den Microsoft Advertising-Bibliotheken
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Dieses Thema enthält grundlegende Informationen zum Behandeln von Fehlern, die von der [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Klasse in den Microsoft Advertising-Bibliotheken generiert werden.
 
@@ -80,6 +81,6 @@ Unter [Exemplarische Vorgehensweise zur Fehlerbehandlung in XAML/C#](error-handl
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

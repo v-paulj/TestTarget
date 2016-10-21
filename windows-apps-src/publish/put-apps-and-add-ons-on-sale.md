@@ -1,63 +1,73 @@
-﻿---
+---
 author: jnHs
-Description: You can promote your app or add-on in the Windows Store by putting it on sale for a limited time.
-title: Put apps and add-ons on sale
+Description: "Sie können Ihre Apps oder Add-Ons im Windows Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen."
+title: "Anbieten vergünstigter Apps und Add-Ons"
 ms.assetid: 71ABA960-0CDC-4E35-A1C8-1D34B6673817
+translationtype: Human Translation
+ms.sourcegitcommit: 0edf45e997f36a82a8bfcb92c1d8fd2c79242461
+ms.openlocfilehash: d5884fc4be04de69132662ade7e42f69d36d2346
+
 ---
 
-# Put apps and add-ons on sale
+# Anbieten vergünstigter Apps und Add-Ons
 
-You can promote your app or add-on in the Windows Store by putting it on sale for a limited time.
+Sie können Ihre Apps oder Add-Ons im Windows Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen.
 
-When you schedule a sale to temporarily lower the price of your app or add-on, customers viewing your Store listing will see that the price has been reduced, and they'll be able to purchase it at the lower price during the time period that you have selected. If you lower the price to **Free**, they can download it without paying at all during the sale period.
+Wenn Sie ein Angebot mit einer vorübergehenden Preisreduzierung für Ihre Apps oder Add-Ons planen, können Kunden im Store sehen, dass der Preis reduziert wurde und sie während des von Ihnen ausgewählten Zeitraums zum reduzierten Preis kaufen. Wenn Sie den Preis auf **Kostenlos** senken, können Kunden die App bzw. das IAP während des Zeitraums für das Sonderangebot herunterladen, ohne dafür zu bezahlen.
 
-> **Note**  Sale pricing is only shown to your customers on Windows 10. On other operating systems, customers will see the regular price for your app or add-on. You can always change a price by choosing a different price tier in a new submission, but it will not be displayed as a limited-time sale.
+> **Hinweis**  Sonderpreise werden nur für Kunden mit Windows 10 angezeigt. Bei anderen Betriebssystemen wird den Kunden der reguläre Preis für Ihre App oder Ihr Add-On angezeigt. Sie können einen Preis jederzeit ändern, indem Sie ein anderes Preisniveau bei einer neuen Übermittlung auswählen, dieser wird jedoch nicht als Sonderangebot für einen begrenzten Zeitraum angezeigt.
 
-## Scheduling a sale
+## Planen eines Sonderangebots
 
-Sales are scheduled as part of the submission for an app or add-on. If you want to schedule a sale for an app or add-on that has already been published, you'll need to create a new submission, even if that is the only change you want to make.
+Sonderangebote werden im Rahmen der Übermittlung für Apps oder Add-Ons geplant. Wenn Sie ein Sonderangebot für bereits veröffentlichte Apps oder Add-Ons planen möchten, müssen Sie diese erneut übermitteln, selbst wenn dies die einzige vorzunehmende Änderung ist.
 
-**To schedule a sale**
+**So planen Sie ein Sonderangebot**
 
-1.  On the **Pricing and availability** page of an in-progress app or add-on submission, go to the **Sale pricing** section.
-2.  Click **New sale**.
-3.  Enter the date and time for the start and end of the sale period. The times shown are in UTC.
+1.  Wechseln Sie auf der Seite **Preise und Verfügbarkeit** einer aktiven App- oder Add-On-Übermittlung zum Abschnitt **Verkaufspreise**.
+2.  Klicken Sie auf **Neues Angebot**.
+3.  Geben Sie das Datum und die Uhrzeit für den Start und das Ende des Angebotszeitraums ein. Uhrzeiten werden in UTC angezeigt.
 
-   > **Note**  For add-ons, you can't schedule sales that overlap with each other.
+   > **Hinweis**  Für den Add-On-Verkauf können Sie keine Verkäufe planen, die sich gegenseitig überlappen.
 
-4.  Choose your sale price from the drop-down list. You can pick any price, including **Free**.
-5.  If you'd like to enter custom prices for this sale, click **Show custom market pricing options**. You can set custom sale prices per market (or exclude specific markets from the sale) here. For more info, see [Define pricing and market selection](define-pricing-and-market-selection.md).
+4.  Wählen Sie in der Dropdownliste den Verkaufspreis aus. Sie können einen beliebigen Preis einschließlich **kostenlos** wählen.
+5.  Klicken Sie zum Eingeben von angepassten Preisen für dieses Angebot auf **Benutzerdefinierte Marktpreisoptionen anzeigen**. Hier können Sie benutzerdefinierte Verkaufspreise pro Markt festlegen (oder bestimmte Märkte vom Verkauf ausschließen). Weitere Informationen erhalten Sie unter [Festlegen des Preises und Auswählen der Märkte](define-pricing-and-market-selection.md).
 
-    > **Note**  Market selections that you make in the **Sale pricing** section will not affect the markets in which the app is offered; these selections only determine whether a sale price is offered, and in which markets. If you set sale pricing for a market in which your app is not available, this won't cause the app to become available in that market.
+    > **Hinweis**  Die im Abschnitt **Angebotspreise** von Ihnen getroffene Marktauswahl hat keinen Einfluss auf die Märkte, in denen die App angeboten wird. Mit dieser Auswahl wird lediglich festgelegt, ob ein Angebotspreis erhältlich ist, und in welchen Märkten. Wenn Sie Angebotspreise für einen Markt festlegen, in dem Ihre App nicht verfügbar ist, steht die App in diesem Markt weiterhin nicht zur Verfügung.
 
-6.  Click **Done** to save the scheduled sale.
-7.  Click **Save** at the bottom of the **Pricing and availability** page, then click **Submit to the Store** from the submission overview.
+6.  Klicken Sie auf **Fertig**, um das geplante Sonderangebot zu speichern.
+7.  Klicken Sie im unteren Bereich der Seite **Preise und Verfügbarkeit** auf **Speichern**, und klicken Sie dann in der Übermittlungsübersicht auf **An Store übermitteln**.
 
-> **Note**  It's possible to select a price tier that is higher than your app's base price. However, sale pricing will only be shown to customers if the sale price is lower than the regular price of the app in that market. Selecting a price that is higher than your app's base price might be appropriate for your sale if you've already set custom prices in certain markets that are higher than your app's base price, and you want to temporarily lower the price in those markets (but the sale price is still higher than the app's base price). If your selections would result in the price of the app being raised in a certain market, we won't show that (higher) price to customers in that market; they will continue to see the app at its previous (lower) price. We'll also show customers the lowest price available if you schedule separate overlapping sales with different prices.
+> **Hinweis**  Es ist möglich, ein Preisniveau auszuwählen, das über dem Grundpreis der App liegt. Allerdings werden Sonderpreise nur für Kunden angezeigt, wenn der Verkaufspreis niedriger als der reguläre Preis der App auf diesem Markt ist. Einen Preis auszuwählen, der höher ist als Grundpreis für Ihrer App ist, kann als Sonderpreis angemessen sein, wenn Sie bereits angepasste Preise in bestimmten Märkten eingerichtet haben, die höher als der Grundpreis Ihrer App sind, und Sie vorübergehend den Preis in diesen Märkten senken möchten (der Sonderpreis ist jedoch weiterhin höher als der Grundpreis der App). Wenn die Auswahl des App-Preises in bestimmten Märkten zu einer Preiserhöhung führen würde, wird dieser (höhere) Preis den Kunden in diesem Markt nicht angezeigt; sie werden weiterhin den vorherigen (niedrigeren) Preis für die App sehen. Den Kunden wird auch dann der niedrigste verfügbare Preis angezeigt, wenn Sie einen Zeitplan für separate überlappende Sonderangebote mit unterschiedlichen Preisen festlegen.
 
-## Changing or canceling a scheduled sale
+## Ändern oder Abbrechen eines geplanten Sonderangebots
 
 
-To revise or cancel a sale that you've previously scheduled for an app or add-on, you'll need to create a new submission and submit it to the Store.
+Zum Bearbeiten oder Abbrechen eines bereits für Apps oder Add-Ons geplanten Sonderangebots müssen Sie sie erneut übermitteln und an den Store senden.
 
-**To edit a scheduled sale**
+**So bearbeiten Sie ein geplantes Sonderangebot**
 
-1.  On the **Pricing and availability** page of an in-progress app or add-on submission, go to the **Sale pricing** section.
-2.  Find the sale that you want to update, then click its price to edit the sale.
-3.  Make your changes and then click **Done**.
-4.  Click **Save** at the bottom of the **Pricing and availability** page, then click **Submit to the Store** from the submission overview.
+1.  Wechseln Sie auf der Seite **Preise und Verfügbarkeit** einer aktiven App- oder Add-On-Übermittlung zum Abschnitt **Verkaufspreise**.
+2.  Suchen Sie nach dem Sonderangebot, das Sie aktualisieren möchten, und klicken Sie dann zum Bearbeiten des Angebots auf den Preis.
+3.  Nehmen Sie die entsprechenden Änderungen vor, und klicken Sie dann auf **Fertig**.
+4.  Klicken Sie im unteren Bereich der Seite **Preise und Verfügbarkeit** auf **Speichern**, und klicken Sie dann in der Übermittlungsübersicht auf **An Store übermitteln**.
 
-After your submission goes through the certification process, the changes will take effect (even if the sale had already started).
+Nachdem Ihre Übermittlung den Zertifizierungsprozess erfolgreich durchlaufen hat, werden die Änderungen wirksam (auch wenn das Sonderangebot bereits begonnen hat).
 
-> **Tip**  You can reuse a completed sale in a new submission by editing its start and end dates. This is especially useful if you’ve configured a sale with complicated custom market pricing.
- 
-**To cancel a scheduled sale**
+> **Tipp**  Sie können ein abgeschlossenes Sonderangebot in einer neuen Übermittlung verwenden, indem Sie das Start- und Enddatum ändern. Dies ist besonders hilfreich, wenn Sie ein Sonderangebot mit komplexen angepassten Marktpreisen konfiguriert haben.
+ 
+**So brechen Sie ein geplantes Sonderangebot ab**
 
-1.  On the **Pricing and availability** page of an in-progress app or add-on submission, go to the **Sale pricing** section.
-2.  Find the sale that you want to cancel and click **Delete** to remove it.
-3.  Click **Save** at the bottom of the **Pricing and availability** page, then click **Submit to the Store** from the submission overview.
+1.  Wechseln Sie auf der Seite **Preise und Verfügbarkeit** einer aktiven App- oder Add-On-Übermittlung zum Abschnitt **Verkaufspreise**.
+2.  Navigieren Sie zum Sonderangebot, das Sie abbrechen möchten, und klicken Sie auf **Löschen**, um es zu entfernen.
+3.  Klicken Sie im unteren Bereich der Seite **Preise und Verfügbarkeit** auf **Speichern**, und klicken Sie dann in der Übermittlungsübersicht auf **An Store übermitteln**.
 
-As long as the sale hasn't started by the time the submission completes the certification process, the deleted sale won't run at all. If you delete a sale that has already ended, the sale will simply be removed from your **Pricing and availability** page.
+Solange das Sonderangebot zum Zeitpunkt des erfolgreichen Abschluss des Zertifizierungsprozesses noch nicht begonnen hat, wird das gelöschte Sonderangebot überhaupt nicht ausgeführt. Wenn Sie ein Sonderangebot löschen, das bereits beendet ist, wird es einfach auf Ihrer Seite **Preise und Verfügbarkeit** gelöscht.
 
-> **Important**   Since customers can see the scheduled end date when viewing your app's Store listing, we don't recommend deleting a sale after it's started. If you delete a sale that is already in progress, the sale will end when the submission completes the certification process, which can be frustrating to your potential customers.
+> **Wichtig**   Da Kunden beim Anzeigen des Store-Eintrags der App das geplante Enddatum sehen können, wird das Löschen eines Sonderangebots nach seinem Start nicht empfohlen. Wenn Sie ein Sonderangebot löschen, das bereits begonnen hat, wird es beendet, nachdem die Übermittlung den Zertifizierungsprozess erfolgreich durchlaufen hat, was für potenzielle Kunden frustrierend sein kann.
+
+
+
+
+<!--HONumber=Aug16_HO3-->
+
 

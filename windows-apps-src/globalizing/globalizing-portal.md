@@ -6,8 +6,9 @@ title: Globalisierung und Lokalisierung
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: 59e02840c72d8bccda7e318197e4bf45ed667fa4
-ms.openlocfilehash: 1fc82ff462a5c0af6b10e7dc8455adc215558b4e
+ms.openlocfilehash: a34b682cc903555b9d6f64636c3d1cf7bee75b5d
 
 ---
 
@@ -18,8 +19,7 @@ ms.openlocfilehash: 1fc82ff462a5c0af6b10e7dc8455adc215558b4e
 
 Windows wird auf der ganzen Welt in verschiedenen Märkten und von Anwendern unterschiedlicher Kulturen, Herkunft und Sprachen verwendet. Benutzer sprechen beliebige Sprache oder sogar mehrere Sprachen. Die Benutzer sind über die ganze Welt verteilt, und jede Sprache kann ortsabhängig überall gesprochen werden. Sie können die Marktchancen Ihrer App erweitern, indem Sie mithilfe der *Globalisierung* und *Lokalisierung* eine variable App entwickeln.
 
-
-            **Globalisierung** beschreibt den Entwurf und die Entwicklung der App für verschiedene globale Märkte, ohne dass Änderungen oder Anpassungen erforderlich sind.
+**Globalisierung** beschreibt den Entwurf und die Entwicklung der App für verschiedene globale Märkte, ohne dass Änderungen oder Anpassungen erforderlich sind.
 
 Sie haben u. a. folgende Möglichkeiten:
 
@@ -27,8 +27,7 @@ Sie haben u. a. folgende Möglichkeiten:
 -   Verwenden von Text und kulturspezifischen Bildern aus Ressourcen, die an verschiedene lokale Märkte angepasst werden können, anstatt hartcodierte Elemente im Code oder Markup der App zu programmieren
 -   Verwenden von Globalisierungs-APIs zum Anzeigen von Daten, die in verschiedenen Regionen unterschiedlich formatiert sind, z. B. numerische Werte, Datumsangaben, Uhrzeiten und Währungen
 
-
-            **Lokalisierung** beschreibt die Anpassung der App an die sprachlichen, kulturellen und politischen Anforderungen bestimmter lokaler Märkte.
+**Lokalisierung** beschreibt die Anpassung der App an die sprachlichen, kulturellen und politischen Anforderungen bestimmter lokaler Märkte.
 
 Beispiel:
 
@@ -100,6 +99,6 @@ Weitere Informationen finden Sie in der ursprünglich für Windows8.x erstellten
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

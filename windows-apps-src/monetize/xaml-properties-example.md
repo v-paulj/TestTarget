@@ -1,10 +1,11 @@
 ---
 author: mcleanbyron
 ms.assetid: d074e9d5-b3e0-4f16-b1e4-02b32ac99b2c
-description: Erfahren Sie, wie ** AdControl **-Eigenschaften Werten zugewiesen werden.
+description: Erfahren Sie, wie Werten ** AdControl **-Eigenschaften zugewiesen werden.
 title: "Beispiel für XAML-Eigenschaften"
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 43d579d2d0a92a8f03f17efa2ec42707357e99f9
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: fb0533aa0ea760bca686276f886f0afcb21bf6f7
 
 
 ---
@@ -12,9 +13,9 @@ ms.openlocfilehash: 43d579d2d0a92a8f03f17efa2ec42707357e99f9
 # Beispiel für XAML-Eigenschaften
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Im folgenden XAML-Beispiel wird veranschaulicht, wie [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Eigenschaften Werten zugewiesen werden. Wenn eine Eigenschaft nicht festgelegt ist, verwendet **AdControl** Standardwerte, um eine Anzeige zu erstellen, die mit der Benutzeroberfläche der App konsistent ist.
+
+Im folgenden XAML-Beispiel wird veranschaulicht, wie Werten [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Eigenschaften zugewiesen werden. Wenn eine Eigenschaft nicht festgelegt ist, verwendet **AdControl** Standardwerte, um eine Anzeige zu erstellen, die mit der Benutzeroberfläche der App konsistent ist.
 
 Die Werte dienen als Beispiele. In Ihrem Code legen Sie die Werte dieser Funktionen und Eigenschaften entsprechend für Ihre App fest.
 
@@ -37,6 +38,6 @@ IsEngagedChanged="OnAdEngagedChanged"
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

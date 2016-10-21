@@ -1,11 +1,11 @@
 ---
 author: mtoepke
-title: So wird's gemacht - Reaktivieren einer App (DirectX und C++)
+title: So wird&quot;s gemacht - Reaktivieren einer App (DirectX und C++)
 description: "In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die Universelle Windows-Plattform (UWP) fortsetzt."
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
 translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d5383da7332c80d4337f0e0b3eef0a6851fcd527
+ms.openlocfilehash: 978f779eaeb732b549657751c11cd2192728999b
 
 ---
 
@@ -100,6 +100,6 @@ Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum De
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

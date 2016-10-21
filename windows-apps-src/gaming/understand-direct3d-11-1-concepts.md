@@ -3,8 +3,9 @@ author: mtoepke
 title: "Wichtige Änderungen beim Wechsel von Direct3D9 zu Direct3D11"
 description: "In diesem Thema werden allgemeine Unterschiede zwischen DirectX9 und DirectX11 erläutert."
 ms.assetid: 35a9e388-b25e-2aac-0534-577b15dae364
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 8d63aebaf656b62481675eebf7c0bf9ea51784a8
+ms.openlocfilehash: 9812e3a4528b0ce8abd76b1bfcfb93b1268f362c
 
 ---
 
@@ -90,7 +91,7 @@ Im Spiel wird [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows
 
 Wenn Sie sich dafür entscheiden, für das Direct3D9-Spiel eine Erweiterung auf die Unterstützung höherer Direct3D-Featureebenen durchzuführen, ist es besser, zuerst das Portieren des vorhandenen Direct3D9-Grafikcodes abzuschließen. Nachdem das Spiel unter Direct3D11 funktioniert, können zusätzliche Renderpfade mit erweiterten Grafiken einfacher hinzugefügt werden.
 
-Eine ausführliche Erklärung der Unterstützung von Featureebenen finden Sie unter [Direct3D-Featureebenen](https://msdn.microsoft.com/library/windows/desktop/ff476876). Eine vollständige Liste mit Direct3D11-Features finden Sie unter [Features vonDirect3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476342) und [Features von Direct3D11.1](https://msdn.microsoft.com/library/windows/desktop/hh404562) .
+Eine ausführliche Erklärung der Unterstützung von Featureebenen finden Sie unter [Direct3D-Featureebenen](https://msdn.microsoft.com/library/windows/desktop/ff476876). Eine vollständige Liste mit Direct3D11-Features finden Sie unter [Features vonDirect3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476342) und [Features von Direct3D11.1](https://msdn.microsoft.com/library/windows/desktop/hh404562).
 
 ## Featureebenen und die programmierbare Pipeline
 
@@ -101,8 +102,7 @@ Alle Shader sind unter Verwendung von HLSL-Code mit einem Shaderprofil geschrieb
 
 Unter Direct3D9 wurden Konstanten für Shader mithilfe eines freigegebenen Arrays mit „SetVertexShaderConstant“ und „SetPixelShaderConstant“ verwaltet. Unter Direct3D11 werden Konstantenpuffer verwendet, bei denen es sich um Ressourcen handelt, z.B. ein Vertexpuffer oder ein Indexpuffer. Konstantenpuffer sind für eine effiziente Aktualisierung ausgelegt. Anstelle der Anordnung aller Shaderkonstanten in einem einzelnen globalen Array, ordnen Sie die Konstanten in logischen Gruppierungen an und verwalten sie mithilfe eines oder mehrerer Konstantenpuffer. Wenn Sie Ihr Direct3D9-Spiel zu Direct3D11 portieren, sollten Sie die Organisation der Konstantenpuffer so planen, dass diese entsprechend aktualisiert werden können. Gruppieren Sie Shaderkonstanten, die nicht für jeden Frame aktualisiert werden, in einem separaten Konstantenpuffer, damit diese Daten nicht ständig zusammen mit den dynamischeren Shaderkonstanten an den Grafikadapter hochgeladen werden müssen.
 
-> 
-            **Hinweis**   In den meisten Direct3D9-Anwendungen werden ausgiebig Shader eingesetzt. Gelegentlich werden sie aber auch mit älteren festen Funktionen kombiniert. Beachten Sie, dass von Direct3D11 nur ein programmierbares Shadermodell verwendet wird. Die Legacyfeatures von Direct3D9 mit festen Funktionen werden als veraltet angesehen.
+> **Hinweis**   In den meisten Direct3D9-Anwendungen werden ausgiebig Shader eingesetzt. Gelegentlich werden sie aber auch mit älteren festen Funktionen kombiniert. Beachten Sie, dass von Direct3D11 nur ein programmierbares Shadermodell verwendet wird. Die Legacyfeatures von Direct3D9 mit festen Funktionen werden als veraltet angesehen.
 
  
 
@@ -116,6 +116,6 @@ Unter Direct3D9 wurden Konstanten für Shader mithilfe eines freigegebenen Array
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

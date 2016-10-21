@@ -3,8 +3,9 @@ author: DBirtolo
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
 title: Verwenden des Beschleunigungsmessers
 description: "Hier erfahren Sie, wie Sie mithilfe des Beschleunigungsmessers auf Benutzerbewegungen reagieren können."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: f1ec749d7bec245632f1998ac5cc94b9bfcad533
+ms.openlocfilehash: 8ce3baf2b030096ae5cfc56f31b97ec58e138a44
 
 ---
 # Verwenden des Beschleunigungsmessers
@@ -129,11 +130,11 @@ Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen erset
 
 Sie müssen den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen. Wenn Sie etwa ein Projekt mit dem Namen **AccelerometerCS**erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="AccelerometerCS.MainPage"`. Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:AccelerometerCS"`.
 
--   Drücken Sie F5 oder wählen Sie **Debuggen**&gt;**Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
+-   Drücken Sie F5, oder wählen Sie **Debuggen** &gt; **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.
 
 Wenn die App ausgeführt wird, können Sie die Beschleunigungsmesserwerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.
 
--   Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen**&gt;**Debugging beenden** auswählen.
+-   Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** &gt; **Debugging beenden** auswählen.
 
 ### Erläuterung
 
@@ -174,6 +175,6 @@ Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieb
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

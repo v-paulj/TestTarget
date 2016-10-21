@@ -5,7 +5,7 @@ title: Verwenden von Pinseln
 description: "Mit Brush-Objekten werden Innenbereiche oder Ränder von Formen, Text und Teilen von Steuerelementen gezeichnet, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist."
 translationtype: Human Translation
 ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 38999529dda7f5e21ef7aee4a99b2420cb37bfa6
+ms.openlocfilehash: cc16b07931cf3f7740957c222e8c8821ddbab08a
 
 ---
 # Verwenden von Pinseln
@@ -17,9 +17,7 @@ ms.openlocfilehash: 38999529dda7f5e21ef7aee4a99b2420cb37bfa6
 
 -   [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)
 
-
-              [
-              **Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)-Objekte werden verwendet, um Innenbereiche oder Konturen von Formen, Texten und Teilen von Steuerelementen zu zeichnen, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist. Machen Sie sich im Folgenden mit den verfügbaren Pinseln und deren Verwendung vertraut.
+[**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)-Objekte werden verwendet, um Innenbereiche oder Konturen von Formen, Texten und Teilen von Steuerelementen zu zeichnen, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist. Machen Sie sich im Folgenden mit den verfügbaren Pinseln und deren Verwendung vertraut.
 
 ## Einführung in Pinsel
 
@@ -131,9 +129,7 @@ So sieht der gerenderte [**ImageBrush**](https://msdn.microsoft.com/library/wind
 
 ![Ein gerenderter ImageBrush](images/brushes-imagebrush.jpg)
 
-
-              [
-              **ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) und [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) verweisen beide mit einem URI (Uniform Resource Identifier) auf eine Bildquelldatei. Die Bildquelldatei liegt dabei in verschiedenen Formaten vor. Diese Bildquelldateien werden als URIs angegeben. Weitere Informationen zum Angeben von Bildquellen, zu den verwendbaren Bildformaten und zum Packen dieser Dateien in einer App finden Sie unter [„Image“ und „ImageBrush“](https://msdn.microsoft.com/library/windows/apps/Mt280382).
+[**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) und [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) verweisen beide mit einem URI (Uniform Resource Identifier) auf eine Bildquelldatei. Die Bildquelldatei liegt dabei in verschiedenen Formaten vor. Diese Bildquelldateien werden als URIs angegeben. Weitere Informationen zum Angeben von Bildquellen, zu den verwendbaren Bildformaten und zum Packen dieser Dateien in einer App finden Sie unter [„Image“ und „ImageBrush“](https://msdn.microsoft.com/library/windows/apps/Mt280382).
 
 ## Pinsel und Text
 
@@ -143,8 +139,7 @@ Achten Sie auch bei Volltonfarben immer darauf, dass die ausgewählte Textfarbe 
 
 ## WebViewBrush
 
-Bei einem [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) handelt es sich um einen besonderen Pinseltyp, mit dem auf die Inhalte zugegriffen werden kann, die normalerweise in einem [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702)-Steuerelement angezeigt werden. Anstatt den Inhalt im rechteckigen **WebView**-Steuerelementbereich zu rendern, zeichnet **WebViewBrush** diesen Inhalt in ein anderes Element mit einer [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)-Typeigenschaft für eine Renderingoberfläche. 
-              **WebViewBrush** ist nicht für jedes Pinselszenario geeignet, kann aber für Übergänge einer **WebView** nützlich sein. Weitere Informationen finden Sie unter **WebViewBrush**.
+Bei einem [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) handelt es sich um einen besonderen Pinseltyp, mit dem auf die Inhalte zugegriffen werden kann, die normalerweise in einem [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702)-Steuerelement angezeigt werden. Anstatt den Inhalt im rechteckigen **WebView**-Steuerelementbereich zu rendern, zeichnet **WebViewBrush** diesen Inhalt in ein anderes Element mit einer [**Brush**](https://msdn.microsoft.com/library/windows/apps/BR228076)-Typeigenschaft für eine Renderingoberfläche. **WebViewBrush** ist nicht für jedes Pinselszenario geeignet, kann aber für Übergänge einer **WebView** nützlich sein. Weitere Informationen finden Sie unter **WebViewBrush**.
 
 ## Pinsel als XAML-Ressourcen
 
@@ -170,9 +165,7 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
 
 Verwenden Sie für [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) und [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) den Standardkonstruktor, und rufen Sie dann andere APIs auf, bevor Sie diesen Pinsel für eine UI-Eigenschaft verwenden.
 
--   
-              [
-              **ImageSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imagebrush.imagesourceproperty.aspx) erfordert ein [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235) (keinen URI), wenn Sie einen [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) mithilfe von Code definieren. Falls es sich bei Ihrer Quelle um einen Datenstrom handelt, initialisieren Sie den Wert mit der [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522)-Methode. Ist Ihre Quelle ein (URI), der Ihrer App Inhalt mit dem **ms-appx**- oder dem **ms-resource**-Schema hinzufügt, verwenden Sie den [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/br243238.aspx)-Konstruktor, für den ein URI angegeben wird. Falls beim Abrufen oder Decodieren der Bildquelle Probleme mit der Zeitsteuerung auftreten und Sie alternativen Inhalt anzeigen müssen, bis die Bildquelle verfügbar ist, können Sie auch das [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imageopened.aspx)-Ereignis behandeln.
+-   [**ImageSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imagebrush.imagesourceproperty.aspx) erfordert ein [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/BR243235) (keinen URI), wenn Sie einen [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101) mithilfe von Code definieren. Falls es sich bei Ihrer Quelle um einen Datenstrom handelt, initialisieren Sie den Wert mit der [**SetSourceAsync**](https://msdn.microsoft.com/library/windows/apps/JJ191522)-Methode. Ist Ihre Quelle ein (URI), der Ihrer App Inhalt mit dem **ms-appx**- oder dem **ms-resource**-Schema hinzufügt, verwenden Sie den [**BitmapImage**](https://msdn.microsoft.com/library/windows/apps/br243238.aspx)-Konstruktor, für den ein URI angegeben wird. Falls beim Abrufen oder Decodieren der Bildquelle Probleme mit der Zeitsteuerung auftreten und Sie alternativen Inhalt anzeigen müssen, bis die Bildquelle verfügbar ist, können Sie auch das [**ImageOpened**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.imagebrush.imageopened.aspx)-Ereignis behandeln.
 -   Für [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) müssen Sie möglicherweise [**Redraw**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.redraw.aspx) aufrufen, wenn Sie kürzlich die [**SourceName**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webviewbrush.sourcename.aspx)-Eigenschaft zurückgesetzt haben oder der Inhalt von [**WebView**](https://msdn.microsoft.com/library/windows/apps/BR227702) ebenfalls mittels Code geändert wird.
 
 Codebeispiele finden Sie auf den Referenzseiten für [**WebViewBrush**](https://msdn.microsoft.com/library/windows/apps/BR227703) und [**ImageBrush**](https://msdn.microsoft.com/library/windows/apps/BR210101).
@@ -186,6 +179,6 @@ Codebeispiele finden Sie auf den Referenzseiten für [**WebViewBrush**](https://
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

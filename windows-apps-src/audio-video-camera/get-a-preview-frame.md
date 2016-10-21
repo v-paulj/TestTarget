@@ -1,21 +1,22 @@
 ---
 author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
-description: In diesem Thema wird das Abrufen eines Vorschauframes aus dem Vorschaustream der Medienaufnahme veranschaulicht.
+description: In diesem Thema wird das Abrufen eines einzelnen Vorschauframes aus dem Vorschaustream der Medienaufnahme beschrieben.
 title: Abrufen eines Vorschauframes
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c512ec92272ab03cfd8e91602018f09ef8225652
+translationtype: Human Translation
+ms.sourcegitcommit: e19fa2a574e6824941c89db1db1e7e69f9e38ae9
+ms.openlocfilehash: d8d5780672592b1888a9c894dcc3ed58ebc2be36
 
 ---
 
 # Abrufen eines Vorschauframes
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
-In diesem Thema wird das Abrufen eines Vorschauframes aus dem Vorschaustream der Medienaufnahme veranschaulicht.
+In diesem Thema wird das Abrufen eines einzelnen Vorschauframes aus dem Vorschaustream der Medienaufnahme beschrieben.
 
-**Hinweis**  
-Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Der Code in diesem Artikel geht davon aus, dass Ihre App bereits eine Instanz von MediaCapture besitzt, die ordnungsgemäß initialisiert wurde, und Sie ein [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) mit einem aktiven Videovorschaustream besitzen.
+> [!NOTE] 
+> Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Wir empfehlen Ihnen, sich mit dem grundlegenden Medienaufnahmemuster in diesem Artikel vertraut zu machen, bevor Sie sich komplexeren Aufnahmeszenarien zuwenden. Voraussetzung für den Code in diesem Artikel ist, dass Ihre App bereits über eine Instanz von MediaCapture verfügt, die ordnungsgemäß initialisiert wurde, und Sie ein [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278) mit einem aktiven Videovorschaustream besitzen.
 
 Neben den Namespaces, die für eine einfache Medienaufzeichnung erforderlich sind, erfordert das Aufzeichnen eines Vorschauframes den folgenden Namespace.
 
@@ -37,12 +38,12 @@ Sie können auch eine [**IDirect3DSurface**](https://msdn.microsoft.com/library/
 
 [!code-cs[GetPreviewSurface](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewSurface)]
 
-**Wichtig**  
-Die Eigenschaft [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) oder die Eigenschaft [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn930920) des zurückgegebenen **VideoFrame** ist möglicherweise Null, abhängig davon, wie Sie **GetPreviewFrameAsync** aufrufen, und von dem Gerät, auf dem Ihre App ausgeführt wird.
+> [!IMPORTANT]
+> Die Eigenschaft [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn930926) oder die Eigenschaft [**Direct3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn930920) des zurückgegebenen **VideoFrame** ist möglicherweise Null, abhängig davon, wie Sie **GetPreviewFrameAsync** aufrufen, und von dem Gerät, auf dem Ihre App ausgeführt wird.
 
--   Wenn Sie die Überladung von [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926713) aufrufen, die ein **VideoFrame**-Argument akzeptiert, dann ist für den zurückgegebenen **VideoFrame** der **SoftwareBitmap**-Wert nicht Null, und die Eigenschaft **Direct3DSurface** ist Null.
--   Wenn Sie auf einem Gerät, das eine Direct3D-Oberfläche verwendet, um den Frame intern darzustellen, die Überladung von [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712) aufrufen, das keine Argumente besitzt, ist die Eigenschaft **Direct3DSurface** nicht Null und die Eigenschaft **SoftwareBitmap** ist Null.
--   Wenn Sie auf einem Gerät, das keine Direct3D-Oberfläche verwendet, um den Frame intern darzustellen, die Überladung von [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712) aufrufen, das keine Argumente besitzt, ist die Eigenschaft **SoftwareBitmap** nicht Null und die Eigenschaft **Direct3DSurface** ist Null.
+> - Wenn Sie die Überladung von [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926713) aufrufen, die ein **VideoFrame**-Argument akzeptiert, dann ist für den zurückgegebenen **VideoFrame** der **SoftwareBitmap**-Wert nicht Null, und die Eigenschaft **Direct3DSurface** ist Null.
+> - Wenn Sie auf einem Gerät, das eine Direct3D-Oberfläche verwendet, um den Frame intern darzustellen, die Überladung von [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712) aufrufen, das keine Argumente besitzt, ist die Eigenschaft **Direct3DSurface** nicht Null und die Eigenschaft **SoftwareBitmap** ist Null.
+> - Wenn Sie auf einem Gerät, das keine Direct3D-Oberfläche verwendet, um den Frame intern darzustellen, die Überladung von [**GetPreviewFrameAsync**](https://msdn.microsoft.com/library/windows/apps/dn926712) aufrufen, das keine Argumente besitzt, ist die Eigenschaft **SoftwareBitmap** nicht Null und die Eigenschaft **Direct3DSurface** ist Null.
 
 Ihre App sollte stets nach einem Null-Wert suchen, bevor versucht wird, Vorgänge für Objekte auszuführen, die von den Eigenschaften **SoftwareBitmap** oder **Direct3DSurface** zurückgegeben werden.
 
@@ -52,7 +53,8 @@ Wenn Sie den Vorschauframe nicht mehr benötigen, rufen Sie auf jeden Fall die z
 
 ## Verwandte Themen
 
-* [Aufnehmen von Fotos und Videos mit "MediaCapture"](capture-photos-and-video-with-mediacapture.md)
+* [Kamera](camera.md)
+* [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -63,6 +65,6 @@ Wenn Sie den Vorschauframe nicht mehr benötigen, rufen Sie auf jeden Fall die z
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -1,27 +1,31 @@
 ---
 author: mcleanbyron
 ms.assetid: 8AC56AAF-8D8C-4193-A6B3-BB5D0669D994
-description: Use the Python code examples in this section to learn more about using the Windows Store submission API.
-title: Python code examples for the Windows Store submission API
+description: "Verwenden Sie die Python-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren."
+title: "Python-Codebeispiele für die Windows Store-Übermittlungs-API"
+translationtype: Human Translation
+ms.sourcegitcommit: bd8c8cbf6ed10a583d2008e8b01a499b4d400c11
+ms.openlocfilehash: 52fd41ca41628d41140c8c24047e2a50ea72bf40
+
 ---
 
-# Python code examples for the Windows Store submission API
+# Python-Codebeispiele für die Windows Store-Übermittlungs-API
 
-This article provides Python code examples for using the *Windows Store submission API*. For more information about this API, see [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md).
+Dieser Artikel enthält Python-Codebeispiele für das Verwenden der *Windows Store-Übermittlungs-API*. Weitere Informationen über diese API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit WindowsStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
-These code examples demonstrate the following tasks:
+Diese Codebeispiele veranschaulichen die folgenden Aufgaben:
 
-* [Obtain an Azure AD access token](python-code-examples-for-the-windows-store-submission-api.md#token).
-* [Create an add-on](python-code-examples-for-the-windows-store-submission-api.md#create-add-on).
-* [Create a package flight](python-code-examples-for-the-windows-store-submission-api.md#create-package-flight).
-* [Create and commit an app submission](python-code-examples-for-the-windows-store-submission-api.md#create-app-submission).
-* [Create and commit an add-on submission](python-code-examples-for-the-windows-store-submission-api.md#create-add-on-submission).
-* [Create and commit a package flight submission](python-code-examples-for-the-windows-store-submission-api.md#create-flight-submission).
+* [Abrufen eines Azure AD-Zugriffstokens](python-code-examples-for-the-windows-store-submission-api.md#token)
+* [Erstellen eines Add-Ons](python-code-examples-for-the-windows-store-submission-api.md#create-add-on)
+* [Erstellen eines Flight-Pakets](python-code-examples-for-the-windows-store-submission-api.md#create-package-flight)
+* [Erstellen und Ausführen eines Commit für eine App-Übermittlung](python-code-examples-for-the-windows-store-submission-api.md#create-app-submission)
+* [Erstellen und Ausführen eines Commit für eine Add-On-Übermittlung](python-code-examples-for-the-windows-store-submission-api.md#create-add-on-submission)
+* [Erstellen und Ausführen eines Commit für eine Flight-Paket-Übermittlung](python-code-examples-for-the-windows-store-submission-api.md#create-flight-submission)
 
 <span id="token" />
-## Obtain an Azure AD access token
+## Abrufen eines Azure AD-Zugriffstokens
 
-The following example demonstrates how to [obtain an Azure AD access token](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token).
+Das folgende Beispiel zeigt, wie Sie ein [Azure AD-Zugriffstoken abrufen](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token).
 
 ```python
 import http.client, json
@@ -47,9 +51,9 @@ tokenConnection.close()
 ```
 
 <span id="create-add-on" />
-## Create an add-on
+## Erstellen eines Add-Ons
 
-The following example demonstrates how to [create a new add-on](manage-add-ons.md) (add-ons are also known as in-app products or IAPs).
+Das folgende Beispiel zeigt, wie Sie ein [neues Add-On erstellen](manage-add-ons.md). (Add-Ons werden auch als In-App-Produkte oder IAPs bezeichnet.)
 
 ```python
 import http.client, json
@@ -82,9 +86,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-package-flight" />
-## Create a package flight
+## Erstellen eines Flight-Pakets
 
-The following example demonstrates how to [create a new package flight](manage-flights.md).
+Das folgende Beispiel zeigt, wie Sie ein [neues Flight-Paket erstellen](manage-flights.md).
 
 ```python
 import http.client, json, requests, time
@@ -121,9 +125,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-app-submission" />
-## Create and commit an app submission
+## Erstellen und Ausführen eines Commit für eine App-Übermittlung
 
-The following example demonstrates how to [create and commit a new app submission](manage-app-submissions.md).
+Das folgende Beispiel zeigt, wie Sie eine [neue App-Übermittlung erstellen und ein Commit ausführen](manage-app-submissions.md).
 
 ```python
 import http.client, json, requests, time
@@ -204,9 +208,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-add-on-submission" />
-## Create and commit an add-on submission
+## Erstellen und Ausführen eines Commit für eine Add-On-Übermittlung
 
-The following example demonstrates how to [create and commit a new add-on submission](manage-add-on-submissions.md) (add-ons are also known as in-app products or IAPs).
+Das folgende Beispiel zeigt, wie Sie eine [neue Add-On-Übermittlung erstellen und ein Commit ausführen](manage-add-on-submissions.md). (Add-Ons werden auch als In-App-Produkte oder IAPs bezeichnet.)
 
 ```python
 import http.client, json, requests, time
@@ -286,9 +290,9 @@ ingestionConnection.close()
 ```
 
 <span id="create-flight-submission" />
-## Create and commit a package flight submission
+## Erstellen und Ausführen eines Commit für eine Flight-Paket-Übermittlung
 
-The following example demonstrates how to [create and commit a new package flight submission](manage-flight-submissions.md).
+Das folgende Beispiel zeigt, wie Sie eine [neue Flight-Paket-Übermittlung erstellen und ein Commit ausführen](manage-flight-submissions.md).
 
 ```python
 import http.client, json, requests, time, zipfile
@@ -369,6 +373,12 @@ print(submissionJsonObject)
 ingestionConnection.close()
 ```
 
-## Related topics
+## Verwandte Themen
 
-* [Create and manage submissions using Windows Store services](create-and-manage-submissions-using-windows-store-services.md)
+* [Erstellen und Verwalten von Übermittlungen mit Windows Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
+
+
+
+<!--HONumber=Aug16_HO5-->
+
+

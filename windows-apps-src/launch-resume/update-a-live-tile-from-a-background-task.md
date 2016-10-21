@@ -4,8 +4,9 @@ title: "Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe"
 description: Verwenden Sie eine Hintergrundaufgabe, um die Live-Kachel Ihrer App mit neuen Inhalten zu aktualisieren.
 Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
+translationtype: Human Translation
 ms.sourcegitcommit: 39a012976ee877d8834b63def04e39d847036132
-ms.openlocfilehash: 5b11c3d4757d7da0c4c99d8f74a8988babfc26fd
+ms.openlocfilehash: d651a5dbf8478de238944cac36ea13429b0f1849
 
 ---
 
@@ -153,8 +154,7 @@ namespace BackgroundTasks
 6.  Klicken oder tippen Sie auf die Registerkarte **Anwendungsbenutzeroberfläche**.
 7.  Legen Sie die Option **Benachrichtigungen bei gesperrtem Bildschirm** auf **Text für Infoanzeiger und Kachel**fest.
 8.  Legen Sie im Feld **Infoanzeigerlogo** einen Pfad zu einem Symbol mit einer Größe von 24x24Pixel fest.
-    
-            **Wichtig**  Für dieses Symbol dürfen nur einfarbige und transparente Pixel verwendet werden.
+    **Wichtig**  Für dieses Symbol dürfen nur einfarbige und transparente Pixel verwendet werden.
 9.  Legen Sie im Feld **Kleines Logo** einen Pfad zu einem Symbol der Größe 30x30 Pixel fest.
 10. Legen Sie im Feld **Breites Logo** einen Pfad zu einem Symbol mit einer Größe von 310x150Pixel fest.
 
@@ -163,8 +163,7 @@ namespace BackgroundTasks
 
 Erstellen Sie zum Registrieren Ihrer Aufgabe ein [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Objekt.
 
-> 
-            **Hinweis**  Ab Windows8.1 werden Parameter für die Registrierung von Hintergrundaufgaben zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Ihre App muss Szenarien mit nicht erfolgreicher Registrierung von Hintergrundaufgaben problemlos verarbeiten können. Verwenden Sie beispielsweise eine Bedingungsanweisung, um die App auf Registrierungsfehler zu prüfen, und wiederholen Sie die nicht erfolgreiche Registrierung mit anderen Parameterwerten.
+> **Hinweis**  Ab Windows8.1 werden Parameter für die Registrierung von Hintergrundaufgaben zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Ihre App muss Szenarien mit nicht erfolgreicher Registrierung von Hintergrundaufgaben problemlos verarbeiten können. Verwenden Sie beispielsweise eine Bedingungsanweisung, um die App auf Registrierungsfehler zu prüfen, und wiederholen Sie die nicht erfolgreiche Registrierung mit anderen Parameterwerten.
  
 
 Fügen Sie auf der Hauptseite der App die **RegisterBackgroundTask**-Methode hinzu, und rufen Sie sie im **OnNavigatedTo**-Ereignishandler auf.
@@ -271,6 +270,6 @@ Legen Sie zum Debuggen der Hintergrundaufgabe in der Run-Methode der Aufgabe ein
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

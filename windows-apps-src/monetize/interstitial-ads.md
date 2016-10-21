@@ -1,19 +1,20 @@
 ---
 author: mcleanbyron
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
-description: "Erfahren Sie mehr über die Verwendung von interstitiellen Anzeigen in Windows10-, Windows8.1- oder Windows Phone8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK."
+description: "Erfahren Sie mehr über die Verwendung von interstitiellen Anzeigen in Windows10-, Windows8.1- oder Windows Phone8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Services SDK."
 title: Interstitielle Anzeigen
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 0f159409bb584aacaf66550efe8d147cd8fddd50
+translationtype: Human Translation
+ms.sourcegitcommit: 2f0835638f330de0ac2d17dae28347686cc7ed97
+ms.openlocfilehash: 4082fdd17ba42fd2b6a7659095b019c1ad4875a0
 
 ---
 
 # Interstitielle Anzeigen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-In dieser Schritt-für-Schritt-Einführung wird die Verwendung von interstitiellen Anzeigen in Windows10-, Windows8.1- oder Windows Phone8.1-Apps mithilfe der Microsoft Advertising-Bibliotheken im Microsoft Store Engagement and Monetization SDK gezeigt.
+
+In dieser Schritt-für-Schritt-Einführung wird die Verwendung von interstitiellen Anzeigen in Windows10-, Windows8.1- oder Windows Phone8.1-Apps mithilfe der Micrsosoft Advertising-Bibliotheken im Microsoft Store Services SDK gezeigt.
 
 Vollständige Beispielprojekte, die das Hinzufügen von interstitiellen Anzeigen zu JavaScript-/HTML- und XAML-Apps unter Verwendung von C# und C++ zeigen, finden Sie in den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
@@ -35,23 +36,19 @@ Im Gegensatz zu Banneranzeigen werden interstitielle Anzeigen (oder *Interstitia
 
 ### Voraussetzungen
 
-1.  Installieren Sie das [Microsoft Store Engagement and Monetization SDK](http://aka.ms/store-em-sdk) mit Visual Studio2015 oder Visual Studio2013.
-
-2.  Öffnen Sie in Visual Studio Ihr Projekt, oder erstellen Sie ein neues Projekt.
+* Für UWP-Apps: Installieren Sie den [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) mit Visual Studio2015.
+* Für Windows8.1- oder Windows Phone8.1-Apps: Installieren Sie den [Microsoft Advertising SDK for Windows and Windows Phone8.x](http://aka.ms/store-8-sdk) mit Visual Studio2015 oder Visual Studio2013.
 
 ### Codeentwicklung
 
 * [Schritte für eine XAML/.NET-App](#interstitialadsxaml10)
-
 * [Schritte für HTML/JavaScript](#interstitialadshtml10)
-
 * [Schritte für C++ (DirectX Interop)](#interstitialadsdirectx10)
 
 <span id="interstitialadsxaml10"/>
 ### Interstitialanzeigen (XAML/.NET)
 
-> 
-            **Hinweis**   Dieser Abschnitt enthält Beispiele für C#-. Visual Basic und C++ werden jedoch ebenfalls unterstützt.
+> **Hinweis**   Dieser Abschnitt enthält Beispiele für C#. Visual Basic und C++ werden jedoch ebenfalls unterstützt.
  
 1. Öffnen Sie das Projekt in Visual Studio.
 2. Wählen Sie im **Verweis-Manager** je nach Projekttyp einen der folgenden Verweise aus:
@@ -83,8 +80,7 @@ Im Gegensatz zu Banneranzeigen werden interstitielle Anzeigen (oder *Interstitia
 #endif
     ```
 
-    > 
-            **Hinweis**   Ersetzen Sie die Testwerte mit Livewerten, bevor Sie Ihre App übermitteln.
+    > **Hinweis**   Sie ersetzen die Testwerte durch Livewerte, bevor Sie Ihre App übermitteln.
 
 5.  Instanziieren Sie ein [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx), verbinden Sie alle Ereignishandler, und fordern Sie eine Anzeige an.
 
@@ -242,8 +238,7 @@ In diesem Beispiel wird angenommen, dass Sie ein Universal App-Projekt für Java
 
 In diesem Beispiel wird angenommen, dass Sie ein Universal App-Projekt für XAML in Visual Studio 2015 erstellt haben, das für eine bestimmte CPU-Architektur bestimmt ist.
 
-> 
-            **Wichtig**   Dieser Code wird in C++ geschrieben, wie für DirectX erforderlich.
+> **Wichtig**   Dieser Code ist in C++ geschrieben wie für DirectX erforderlich.
 
  
 1. Öffnen Sie das Projekt in Visual Studio.
@@ -356,12 +351,11 @@ In diesem Beispiel wird angenommen, dass Sie ein Universal App-Projekt für XAML
 
 ### Veröffentlichen von Apps mit Liveanzeigen mithilfe von Windows Dev Center
 
-1.  Rufen Sie für Ihre App im Dev Center-Dashboard die Seite **Monetisierung**&gt;**Gewinnbringende Nutzung mit Anzeigen** auf, und [erstellen Sie eine eigenständige Microsoft Advertising-Einheit](../publish/monetize-with-ads.md). Geben Sie für den Anzeigeneinheitentyp **Video-Interstitialanzeige** an. Notieren Sie sich die Anzeigeeinheits-ID und die Anwendungs-ID.
+1.  Rufen Sie für Ihre App im Dev Center-Dashboard die Seite **Monetarisierung** &gt; **Gewinnbringende Nutzung mit Anzeigen** auf, und [erstellen Sie eine eigenständige Microsoft Advertising-Einheit](../publish/monetize-with-ads.md). Geben Sie für den Anzeigeneinheitentyp **Video-Interstitialanzeige** an. Notieren Sie sich die Anzeigeeinheits-ID und die Anwendungs-ID.
 
 2.  Ersetzen Sie in Ihrem Code die Testanzeigen-Einheitenwerte mit den Livewerten, die Sie in Dev Center generiert haben.
 
-3.  
-            [Übermitteln Sie Ihre App](../publish/app-submissions.md) mithilfe des Windows Dev Center-Dashboards an den Store.
+3.  [Übermitteln Sie Ihre App](../publish/app-submissions.md) mithilfe des Windows Dev Center-Dashboards an den Store.
 
 4.  Überprüfen Sie die [Anzeigenvermittlungsberichte](../publish/advertising-performance-report.md) im Dev Center-Dashboard.
 
@@ -390,6 +384,6 @@ Wenn Sie die Microsoft Advertising-Bibliotheken verwenden, können Sie in Ihrem 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

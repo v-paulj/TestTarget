@@ -1,19 +1,17 @@
 ---
 author: TylerMSFT
-title: Erstellen und Registrieren einer Hintergrundaufgabe
+title: "Erstellen und Registrieren einer in einem separaten Prozess ausgeführten Hintergrundaufgabe"
 description: "Erstellen Sie eine Hintergrundaufgabenklasse, und registrieren Sie diese für die Ausführung, wenn sich die App nicht im Vordergrund befindet."
 ms.assetid: 4F98F6A3-0D3D-4EFB-BA8E-30ED37AE098B
 translationtype: Human Translation
-ms.sourcegitcommit: 579547b7bd2ee76390b8cac66855be4a9dce008e
-ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
+ms.sourcegitcommit: 95c34f70e9610907897cfe9a2bf82aaac408e486
+ms.openlocfilehash: 4eb67f8f63134ab33df79b0b98b252b2b27b2dda
 
 ---
 
-# Erstellen und Registrieren einer Hintergrundaufgabe
+# Erstellen und Registrieren einer in einem separaten Prozess ausgeführten Hintergrundaufgabe
 
-
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
-
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 **Wichtige APIs**
 
@@ -21,10 +19,12 @@ ms.openlocfilehash: e8da193f96709bdd87bd6a008eb5885cc5c819fd
 -   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
 -   [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)
 
-Erstellen Sie eine Hintergrundaufgabenklasse, und registrieren Sie sie für die Ausführung, wenn sich die App nicht im Vordergrund befindet.
+Erstellen Sie eine Hintergrundaufgabenklasse, und registrieren Sie diese für die Ausführung, wenn sich die App nicht im Vordergrund befindet. In diesem Thema wird gezeigt, wie Sie eine Hintergrundaufgabe erstellen und registrieren, die in einem vom Vordergrundprozess separaten Prozess ausgeführt wird. Informationen zum Ausführen von Hintergrundarbeit direkt in der Vordergrundanwendung finden Sie unter [Erstellen und Registrieren einer Einzelprozess-Hintergrundaufgabe](create-and-register-a-singleprocess-background-task.md).
+
+> [!Note]
+> Wenn Sie eine Hintergrundaufgabe zur Medienwiedergabe im Hintergrund verwenden, finden Sie unter [Wiedergeben von Medien im Hintergrund](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/background-audio) Informationen zu Verbesserungen in Windows 10, Version 1607, die dies erleichtern.
 
 ## Erstellen einer Hintergrundaufgabenklasse
-
 
 Sie können Code im Hintergrund ausführen, indem Sie Klassen schreiben, die die [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)-Schnittstelle implementieren. Dieser Code wird ausgeführt, wenn ein bestimmtes Ereignis beispielsweise durch [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) oder [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) ausgelöst wird.
 
@@ -110,9 +110,10 @@ Die folgenden Schritte zeigen, wie Sie eine neue Klasse zum Implementieren der [
 
     > [!div class="tabbedCodeSnippets"]
     > ```cs
-    >     BackgroundTaskDeferral _deferral = taskInstance.GetDeferral(); // Note: define at class scope
+    >     BackgroundTaskDeferral _deferral; // Note: defined at class scope so we can mark it complete inside the OnCancel() callback if we choose to support cancellation
     >     public async void Run(IBackgroundTaskInstance taskInstance)
     >     {
+    >         _deferral = taskInstance.GetDeferral()
     >         //
     >         // TODO: Insert code to start one or more asynchronous methods using the
     >         //       await keyword, for example:
@@ -124,7 +125,7 @@ Die folgenden Schritte zeigen, wie Sie eine neue Klasse zum Implementieren der [
     >     }
     > ```
     > ```cpp
-    >     BackgroundTaskDeferral^ deferral = taskInstance->GetDeferral(); // Note: define at class scope
+    >     BackgroundTaskDeferral^ deferral = taskInstance->GetDeferral(); // Note: defined at class scope so we can mark it complete inside the OnCancel() callback if we choose to support cancellation
     >     void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
     >     {
     >         //
@@ -150,7 +151,6 @@ Die folgenden Schritte werden in einer Ihrer App-Klassen durchgeführt (beispiel
 
 > [!NOTE]
 > Sie können auch eine Funktion erstellen, die sich nur um das Registrieren von Hintergrundaufgaben kümmert. Siehe dazu [Registrieren einer Hintergrundaufgabe](register-a-background-task.md). In einem solchen Fall können Sie die nächsten drei Schritte überspringen, einfach den Auslöser konstruieren und der Registrierungsfunktion zur Verfügung stellen, zusammen mit dem Aufgabennamen, dem entsprechenden Einstiegspunkt und, optional, einer Bedingung.
-
 
 ## Registrieren der auszuführenden Hintergrundaufgabe
 
@@ -242,10 +242,11 @@ Die folgenden Schritte werden in einer Ihrer App-Klassen durchgeführt (beispiel
 > [!NOTE]
 > Universelle Windows-Apps müssen jedoch [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen, bevor Hintergrundtriggertypen registriert werden.
 
-Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) und anschließend [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) auf, wenn die App nach der Aktualisierung gestartet wird, um sicherzustellen, dass Ihre universelle Windows-App nach der Veröffentlichung eines Updates weiterhin ordnungsgemäß ausgeführt wird. Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md).
+Verwenden Sie den **ServicingComplete**-Trigger (siehe [SystemTriggerType](https://msdn.microsoft.com/library/windows/apps/br224839)) zum Ausführen von Konfigurationsänderungen nach dem Update wie Migrieren der Datenbank der App und Registrieren von Hintergrundaufgaben, um sicherzustellen, dass Ihre universelle Windows-App nach der Veröffentlichung eines Updates weiterhin ordnungsgemäß ausgeführt wird. Es empfiehlt sich, die Registrierung von Hintergrundaufgaben im Zusammenhang mit der vorherigen Version der App aufzuheben (siehe [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471)) und die Hintergrundaufgaben für die neue Version der App zu registrieren (siehe [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485)).
+
+Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md).
 
 ## Behandeln des Abschlusses der Hintergrundaufgabe mithilfe von Ereignishandlern
-
 
 Sie sollten eine Methode mit dem [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)-Element registrieren, damit Ihre App Ergebnisse von der Hintergrundaufgabe abrufen kann. Beim Starten oder Fortsetzen der App wird die mark-Methode aufgerufen, wenn die Hintergrundaufgabe abgeschlossen wurde, seit sich die App zum letzten Mal im Vordergrund befand. (Die OnCompleted-Methode wird sofort aufgerufen, wenn die Hintergrundaufgabe abgeschlossen wird, während sich Ihre App im Vordergrund befindet.)
 
@@ -275,7 +276,6 @@ Sie sollten eine Methode mit dem [**BackgroundTaskCompletedEventHandler**](https
 
     > [!NOTE]
     > Aktualisierungen der Benutzeroberfläche sollten asynchron durchgeführt werden, um den Benutzeroberflächenthread nicht zu blockieren. Ein Beispiel dazu finden Sie in der UpdateUI-Methode im [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666).
-
 
 
 2.  Gehen Sie dorthin zurück, wo Sie die Hintergrundaufgabe registriert haben. Fügen Sie nach dieser Codezeile ein neues [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)-Objekt hinzu. Stellen Sie Ihre OnCompleted-Methode als Parameter für den **BackgroundTaskCompletedEventHandler**-Konstruktor zur Verfügung.
@@ -315,7 +315,6 @@ Bevor Ihre App Hintergrundaufgaben ausführen kann, müssen Sie alle Hintergrund
 
 ## Zusammenfassung und nächste Schritte
 
-
 Sie sollten jetzt über die Grundlagen verfügen, um eine Hintergrundaufgabenklasse zu schreiben, die Hintergrundaufgabe in Ihrer App zu registrieren und Ihre App so zu konfigurieren, dass Sie den Abschluss der Hintergrundaufgabe erkennt. Sie sollten auch mit der Aktualisierung des Anwendungsmanifests vertraut sein, damit Ihre App die Hintergrundaufgabe erfolgreich registrieren kann.
 
 > [!NOTE]
@@ -335,8 +334,10 @@ Eine API-Referenz, konzeptionelle Richtlinien zu Hintergrundaufgaben und ausfüh
 * [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)
 * [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)
 * [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)
-* [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
+* [Überwachen von Status und Durchführung von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
 * [Ausführen einer Hintergrundaufgabe für einen Timer](run-a-background-task-on-a-timer-.md)
+* [Erstellen und Registrieren einer Einzelprozess-Hintergrundaufgabe](create-and-register-a-singleprocess-background-task.md).
+[Konvertieren einer Multiprozess-Hintergrundaufgabe in eine Einzelprozess-Hintergrundaufgabe](convert-multiple-process-background-task.md)  
 
 **Ratschläge zu Hintergrundaufgaben**
 
@@ -350,6 +351,6 @@ Eine API-Referenz, konzeptionelle Richtlinien zu Hintergrundaufgaben und ausfüh
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

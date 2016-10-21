@@ -1,21 +1,22 @@
 ---
 author: payzer
-title: So wird's gemacht - Deaktivieren der Skalierung
-description: 
-area: Xbox
+title: So deaktivieren Sie die Skalierung
+description: Anleitung zum Deaktivieren des Standard-Skalierungsfaktors.
 translationtype: Human Translation
-ms.sourcegitcommit: 192de32bf3afd11cd375655ad92d194ccb09dae1
-ms.openlocfilehash: 307606bc290e9c5268fc5a37b72770d6b1ada4da
+ms.sourcegitcommit: 582f5677c15f7cd62c398103b48743ba4bea6c5b
+ms.openlocfilehash: 8079be9685558277565766fa8d0ebbfd4a555904
 
 ---
 
-# So wird's gemacht - Deaktivieren der Skalierung   
-Standardmäßig werden Anwendungen für XAML-Apps auf 200Prozent und für HTML-Apps auf 150Prozent skaliert. Der Standardskalierungsfaktor kann deaktiviert werden. Infolgedessen verwendet die Anwendung die tatsächlichen Pixelabmessungen des Geräts (1910 x 1080 Pixel).   
+# So deaktivieren Sie die Skalierung   
+Standardmäßig werden Anwendungen für XAML-Apps auf 200Prozent und für HTML-Apps auf 150Prozent skaliert. Der Standardskalierungsfaktor kann deaktiviert werden. Infolgedessen verwendet die Anwendung die tatsächlichen Pixelabmessungen des Geräts (1910 x 1080Pixel).   
    
 ## HTML   
 Sie können den Skalierungsfaktor deaktivieren, indem Sie den folgenden Codeausschnitt verwenden: 
    
-`var result = Windows.UI.ViewManagement.ApplicationViewScaling.trySetDisableLayoutScaling(true);` 
+```
+var result = Windows.UI.ViewManagement.ApplicationViewScaling.trySetDisableLayoutScaling(true);
+```
 
 Oder Sie können eine für das Web geeignete Methode verwenden:   
 
@@ -30,13 +31,19 @@ Oder Sie können eine für das Web geeignete Methode verwenden:
 ## XAML
 Sie können den Skalierungsfaktor deaktivieren, indem Sie den folgenden Codeausschnitt verwenden:   
    
-`bool result = Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayoutScaling(true);`   
+```
+bool result = Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayoutScaling(true);
+```
    
 ## DirectX/C++   
-DirectX-/C++-Anwendungen werden nicht skaliert. Die automatische Skalierung gilt nur für HTML- und XAML-Anwendungen.   
+DirectX-/C++-Anwendungen werden nicht skaliert. Die automatische Skalierung gilt nur für HTML- und XAML-Anwendungen.  
+
+## Weitere Informationen
+- [Bewährte Methoden für Xbox](tailoring-for-xbox.md)
+- [UWP auf XboxOne](index.md)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

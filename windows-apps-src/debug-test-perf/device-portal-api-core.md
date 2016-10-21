@@ -4,8 +4,8 @@ ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
 title: Referenz zu Kern-APIs des Device Portal
 description: "Hier erhalten Sie Informationen zu den Kern-REST-APIs für das Windows Device Portal, die Sie für den Zugriff auf die Daten und die programmatische Steuerung des Geräts verwenden können."
 translationtype: Human Translation
-ms.sourcegitcommit: 30aeffcf090c881f84331ced4f7199fd0092b676
-ms.openlocfilehash: 0fa515d28431d4256b977ee3c3c41169661f129f
+ms.sourcegitcommit: fae2c6b31c9c6c07026abc4718959b02a36e6600
+ms.openlocfilehash: 226ecaecd93e4996e438f56f780926ca63c184fd
 
 ---
 
@@ -36,17 +36,18 @@ package   | (**erforderlich**) Der Dateiname des zu installierenden Pakets.
 <br />
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
-- Keiner
+- Die APPX- oder APPXBUNDLE-Datei sowie alle von der App benötigten Abhängigkeiten. 
+- Das Zertifikat zum Signieren der App, wenn es sich um ein IoT- oder Windows-Desktop-Gerät handelt. Bei anderen Plattformen ist das Zertifikat nicht erforderlich. 
 
 **Antwort**
 
 **Statuscode**
 
-Diese API hat die folgenden erwarteten Statuscodes.
+Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
@@ -57,7 +58,8 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows-Desktop
+* Windows Desktop
+* Xbox
 * HoloLens
 * IoT
 
@@ -99,7 +101,8 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
-* Windows-Desktop
+* Windows Desktop
+* Xbox
 * HoloLens
 * IoT
 
@@ -117,11 +120,13 @@ DELETE | /api/app/packagemanager/package
 
 **URI-Parameter**
 
-- Keiner
+URI-Parameter | Beschreibung
+:---          | :---
+package   | (**Erforderlich**) PackageFullName (von GET /api/app/packagemanager/packages) der Ziel-App
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
@@ -895,8 +900,7 @@ Diese Befehle werden vom Client an den Server gesendet.
 
 Befehl | Beschreibung
 :----- | :-----
-Anbieter *{guid}* aktivieren *{level}* | Den durch *{guid}* (ohne Klammern) markierten Anbieter auf der angegebenen Ebene aktivieren. 
-              *{level}* ist ein **int** zwischen 1 (am wenigsten detailliert) und 5 (ausführlich).
+Anbieter *{guid}* aktivieren *{level}* | Den durch *{guid}* (ohne Klammern) markierten Anbieter auf der angegebenen Ebene aktivieren. *{level}* ist ein **int** zwischen 1 (am wenigsten detailliert) und 5 (ausführlich).
 Anbieter *{guid}* deaktivieren | Den durch *{guid}* (ohne Klammern) markierten Anbieter deaktivieren.
 
 Diese Antworten werden vom Server an den Client gesendet. Diese werden als Text gesendet, und erhalten Sie das folgende Format durch eine JSON-Analyse.
@@ -2718,8 +2722,7 @@ GET | /api/wpr/trace
 
 **Antwort**
 
-- Keine.  
-              **Hinweis:** Hierbei handelt es sich um einen Vorgang mit langer Ausführungsdauer.  Er wird wieder verfügbar, wenn der ETL-Schreibvorgang auf der Festplatte abgeschlossen ist.  
+- Keine.  **Hinweis** Hierbei handelt es sich um einen Vorgang mit langer Ausführungsdauer.  Er wird wieder verfügbar, wenn der ETL-Schreibvorgang auf der Festplatte abgeschlossen ist.  
 
 **Statuscode**
 
@@ -2971,8 +2974,7 @@ GET | /api/dns-sd/tags
 
 - Keiner
 
-
-              **Antwort** Die derzeit angewendeten Tags im folgenden Format: 
+**Antwort** Die derzeit angewendeten Tags im folgenden Format: 
 ```
  {
     "tags": [
@@ -3165,8 +3167,7 @@ GET | /api/filesystem/apps/knownfolders
 
 - Keiner
 
-
-              **Antwort** Die verfügbaren Ordner im folgenden Format: 
+**Antwort** Die verfügbaren Ordner im folgenden Format: 
 ```
  {"KnownFolders": [
     "folder0",
@@ -3220,8 +3221,7 @@ path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder P
 
 - Keiner
 
-
-              **Antwort** Die verfügbaren Ordner im folgenden Format: 
+**Antwort** Die verfügbaren Ordner im folgenden Format: 
 ```
 {"Items": [
     {
@@ -3296,6 +3296,58 @@ HTTP-Statuscode      | Beschreibung
 **Verfügbare Gerätefamilien**
 
 * Windows Mobile
+* Windows Desktop
+* HoloLens
+* Xbox
+* IoT
+
+---
+### Umbenennen einer Datei
+
+**Anforderung**
+
+Umbenennen einer Datei in einem Ordner.
+
+Methode      | Anforderungs-URI
+:------     | :-----
+POST | /api/filesystem/apps/rename
+
+<br />
+**URI-Parameter**
+
+URI-Parameter | Beschreibung
+:------     | :-----
+knownfolderid | (**Erforderlich**) Das übergeordnete Verzeichnis, in dem sich die Datei befindet. Verwenden Sie **LocalAppData** für den Zugriff auf quergeladene Apps. 
+filename | (**Erforderlich**) Der ursprüngliche Name der umzubenennenden Datei. 
+newfilename | (**erforderlich**) Der neue Name der Datei.
+packagefullname | (**Erforderlich, wenn *knownfolderid* == LocalAppData**) Der vollständige Name des Pakets der App, für die Sie sich interessieren. 
+path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder Paket. 
+
+**Anforderungsheader**
+
+- Keine
+
+**Anforderungstext**
+
+- Keiner
+
+**Antwort**
+
+- Keine
+
+**Statuscode**
+
+Diese API hat die folgenden erwarteten Statuscodes:
+
+HTTP-Statuscode      | Beschreibung
+:------     | :-----
+200 | OK. Datei umbenannt
+404 | Datei nicht gefunden
+5XX | Fehlercodes
+<br />
+**Verfügbare Gerätefamilien**
+
+* Windows Mobile
 * Windows-Desktop
 * HoloLens
 * Xbox
@@ -3323,13 +3375,15 @@ path | (**Optional**) Das Unterverzeichnis in dem oben angegebenen Ordner oder P
 
 **Anforderungsheader**
 
-- Keiner
+- Keine
 
 **Anforderungstext**
 
 - Keiner
 
 **Antwort**
+
+- Keine 
 
 **Statuscode**
 
@@ -3398,6 +3452,6 @@ HTTP-Statuscode      | Beschreibung
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

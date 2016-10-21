@@ -4,8 +4,8 @@ ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
 description: "In diesem Artikel wird aufgeführt, welche Audio- und Videocodecs und welche Formate für UWP-Apps unterstützt werden."
 title: "Unterstützte Codecs"
 translationtype: Human Translation
-ms.sourcegitcommit: b4d6a9f7cc8b343ee1cbd31bcfd8f19e329c82dc
-ms.openlocfilehash: 00fbbdde8d805ce7ae07df1d52dd8171de7d58ab
+ms.sourcegitcommit: 599e7dd52145d695247b12427c1ebdddbfc4ffe1
+ms.openlocfilehash: 0f6da61ba167328968694d240e250dbc454d5e7b
 
 ---
 
@@ -22,8 +22,8 @@ In den folgenden Tabellen steht "D" für Decoderunterstützung und "E" für Enco
 
 In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten für jede Gerätefamilie aufgeführt.
 
-**Hinweis**  
--   Wo AMR-NB-Unterstützung angegeben ist, wird dieser Codec nicht auf Server-SKUs unterstützt.
+> [!NOTE] 
+> Wo AMR-NB-Unterstützung angegeben ist, wird dieser Codec nicht auf Server-SKUs unterstützt.
 
  
 
@@ -1586,9 +1586,9 @@ In den folgenden Tabellen wird die Unterstützung von Audiocodecs und Formaten f
 
 In den folgenden Tabellen wird die Unterstützung von Videocodecs und Formaten für jede Gerätefamilie aufgeführt.
 
-**Hinweis**  
--   Wo H.265-Unterstützung angegeben ist, gilt diese nicht unbedingt für alle Geräten innerhalb der Gerätefamilie.
--   Wo MPEG-2/MPEG-1-Unterstützung angegeben ist, gilt diese nur mit der Installation der optionalen universellen Microsoft DVD-Windows-App.
+> [!NOTE] 
+> Wo H.265-Unterstützung angegeben ist, gilt diese nicht unbedingt für alle Geräten innerhalb der Gerätefamilie.
+> Wo MPEG-2/MPEG-1-Unterstützung angegeben ist, gilt diese nur mit der Installation der optionalen universellen Microsoft DVD-Windows-App.
 
  
 
@@ -2697,6 +2697,6 @@ In den folgenden Tabellen wird die Unterstützung von Videocodecs und Formaten f
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

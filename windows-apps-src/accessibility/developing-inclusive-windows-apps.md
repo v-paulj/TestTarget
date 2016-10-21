@@ -6,20 +6,19 @@ title: Entwickeln von barrierefreien Windows 10-Apps
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: 3de603aec1dd4d4e716acbbb3daa52a306dfa403
-ms.openlocfilehash: 826c6984962ecbe3b49ba3753e9cc795344f5057
+ms.sourcegitcommit: 9f68c2bdc92bfbdbc8328e4df161f7ecdfccf8e5
+ms.openlocfilehash: 19c90991ab86383fa259b05460cbd656d408e977
 
 ---
 
 # Entwickeln von barrierefreien Windows-Apps  
 
-Hier erfahren Sie, wie Sie barrierefreie UWP-Apps für Windows 10 entwickeln, die Tastaturnavigation, Farb- und Kontrasteinstellungen und Unterstützung für Hilfstechnologien enthalten.
+In diesem Artikel wird beschrieben, wie barrierefreie UWP-Apps (Universelle Windows-Plattform) entwickelt werden können. Insbesondere wird vorausgesetzt, dass Sie wissen, wie Sie die logische Hierarchie für Ihre App entwerfen können. Hier erfahren Sie, wie Sie barrierefreie UWP-Apps für Windows 10 entwickeln, die Tastaturnavigation, Farb- und Kontrasteinstellungen und Unterstützung für Hilfstechnologien enthalten.
 
-In diesem Artikel wird beschrieben, wie barrierefreie UWP-Apps (Universelle Windows-Plattform) entwickelt werden können. Insbesondere wird vorausgesetzt, dass Sie wissen, wie Sie die logische Hierarchie für Ihre App entwerfen können.  
-
-Wenn Sie dies noch nicht getan haben, beginnen Sie mit dem Lesen [Entwerfen inklusiver Software](designing-inclusive-software.md).
+Falls noch nicht geschehen, lesen Sie zunächst [Entwerfen von barrierefreier Software](designing-inclusive-software.md).
 
 Sie sollten drei Dinge tun, um sicherzustellen, dass Ihre App barrierefrei ist:
+
 1. Machen Sie Ihre UI-Elemente auf [programmgesteuerten Zugriff](#programmatic-access) verfügbar.
 2. Stellen Sie sicher, dass Ihre App [die Tastaturnavigation](#keyboard-navigation) für Personen unterstützt, die keine Maus oder keinen Touchscreen verwenden können.
 3. Stellen Sie sicher, dass Ihre App barrierefreie [Farbe und Kontrast](#color-and-contrast)-Einstellungen unterstützt.
@@ -53,7 +52,7 @@ XAML
 ```xml
 <Button Background="{ThemeResource ButtonBackgroundThemeBrush}">OK</Button>
 ```
-Weitere Informationen zur Verwendung von Systemfarben und Ressourcen finden Sie unter [XAML-Designressourcen](https://msdn.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources).
+Weitere Informationen zur Verwendung von Systemfarben und Ressourcen finden Sie unter [XAML-Designressourcen](../controls-and-patterns/xaml-theme-resources.md).
 
 Sofern Sie Systemfarben nicht außer Kraft gesetzt haben, unterstützt eine UWP-App Designs mit hohem Kontrast standardmäßig. Wenn sich ein Benutzer für die Verwendung eines Designs mit hohem Kontrast aus den Systemeinstellungen oder Tools für die Barrierefreiheit entscheidet, werden vom Framework automatisch Farben und Stileinstellungen verwendet, mit denen für Steuerelemente und Komponenten auf der Benutzeroberfläche ein Layout und Rendering mit hohem Kontrast entsteht.   
 
@@ -61,14 +60,13 @@ Weitere Informationen finden Sie unter [Designs mit hohem Kontrast](high-contras
 
 Beachten Sie diese Richtlinien, wenn Sie sich entschieden haben, Ihr eigenes Farbdesign anstelle von Systemfarben zu verwenden:  
 
+**Farbkontrastverhältnis:** Der aktualisierte Abschnitt508 des Gesetzes für Amerikaner mit Behinderung (Americans with Disability Act) sowie andere Rechtsvorschriften erfordern, dass der standardmäßige Farbkontrast zwischen Text und Hintergrund ein Verhältnis von5:1 besitzt. Für großen Text (Schriftgröße 18 oder 14 fett markiert) beträgt das erforderliche Kontrastverhältnis 3:1.  
 
-              **Farbkontrastverhältnis:** Der aktualisierte Abschnitt508 des Gesetzes für Amerikaner mit Behinderung (Americans with Disability Act) sowie andere Rechtsvorschriften erfordern, dass der standardmäßige Farbkontrast zwischen Text und Hintergrund ein Verhältnis von5:1 besitzt. Für großen Text (Schriftgröße 18 oder 14 fett markiert) beträgt das erforderliche Kontrastverhältnis 3:1.  
-
-
-              **Farbkombinationen:** Bei etwa sieben Prozent der Männer (und weniger als einem Prozent der Frauen) liegt eine Form von Farbwahrnehmungsstörung vor. Benutzer mit Farbenblindheit haben Probleme bei der Unterscheidung zwischen bestimmten Farben. Es ist daher wichtig, dass niemals nur Farben verwendet werden, um Status oder Bedeutung in einer Anwendung zu vermitteln. Für dekorative Bilder (wie Symbole oder Hintergründe) sollten Farbkombinationen so gewählt werden, dass die Wahrnehmung des Bilds durch den farbenblinden Benutzer maximiert wird.  
+**Farbkombinationen:** Bei etwa sieben Prozent der Männer (und weniger als einem Prozent der Frauen) liegt eine Form von Farbwahrnehmungsstörung vor. Benutzer mit Farbenblindheit haben Probleme bei der Unterscheidung zwischen bestimmten Farben. Es ist daher wichtig, dass niemals nur Farben verwendet werden, um Status oder Bedeutung in einer Anwendung zu vermitteln. Für dekorative Bilder (wie Symbole oder Hintergründe) sollten Farbkombinationen so gewählt werden, dass die Wahrnehmung des Bilds durch den farbenblinden Benutzer maximiert wird.  
 
 ## Prüfliste für die Barrierefreiheit  
-Es folgt nun eine gekürzte Version der Prüfliste für die Barrierefreiheit:  
+Es folgt nun eine gekürzte Version der Prüfliste für die Barrierefreiheit:
+
 1. Legen Sie den Namen (erforderlich) und die Beschreibung (optional) zur Verwendung durch Bildschirmleseprogramme für den Inhalt und die interaktiven UI-Elemente Ihrer App fest.
 2. Implementieren Sie Barrierefreiheit für den Tastaturzugriff.
 3. Schauen Sie sich die Benutzeroberfläche an, um sicherzustellen, dass der Textkontrast ausreicht, Elemente in Designs mit hohem Kontrast richtig dargestellt werden und Farben korrekt verwendet werden.
@@ -76,17 +74,18 @@ Es folgt nun eine gekürzte Version der Prüfliste für die Barrierefreiheit:
 5. Stellen Sie sicher, dass die App-Manifesteinstellungen den Richtlinien für Barrierefreiheit entsprechen.
 6. Deklarieren Sie Ihre App im Windows Store als barrierefrei. (Siehe das Thema [Eingabehilfen im Store](accessibility-in-the-store.md))
 
-Weitere Details finden Sie im vollständigen Thema [Prüfliste für Barrierefreiheit](accessibility-checklist.md).
+Weitere Details finden Sie im vollständigen Thema [Prüfliste für die Barrierefreiheit](accessibility-checklist.md).
 
 ## Verwandte Themen  
-* [Entwerfen von inklusiver Software](designing-inclusive-software.md)  
+* [Entwerfen von barrierefreier Software](designing-inclusive-software.md)  
 * [Inklusives Design](http://design.microsoft.com/inclusive)
 * [Nicht empfehlenswerte Praktiken für die Barrierefreiheit](practices-to-avoid.md)
 * [Entwickeln von barrierefreier Software](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft-Hub für die barrierefreie Entwicklung](https://msdn.microsoft.com/enable)
+* [Barrierefreiheit](accessibility.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

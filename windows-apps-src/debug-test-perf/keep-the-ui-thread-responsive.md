@@ -3,8 +3,9 @@ author: mcleblanc
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
 title: "Aufrechterhalten der Reaktionsfähigkeit des UI-Threads"
 description: "Benutzer erwarten, dass eine App beim Durchführen einer Berechnung reaktionsfähig bleibt, unabhängig vom jeweiligen Computertyp."
+translationtype: Human Translation
 ms.sourcegitcommit: 165105c141405cd752f876c822f76a5002d38678
-ms.openlocfilehash: 6144b5b60a0092efd1056dd5de166a64733356ec
+ms.openlocfilehash: 2a215264db018dfecff897b13b24ba535e7483ec
 
 ---
 # Aufrechterhalten der Reaktionsfähigkeit des UI-Threads
@@ -17,8 +18,7 @@ Ihre App ist ereignisgesteuert, was bedeutet, dass Ihr Code in Reaktion auf ein 
 
 Sie müssen den UI-Thread verwenden, um fast alle Änderungen am UI-Thread vorzunehmen, einschließlich der Erstellung von UI-Typen und des Zugriffs auf ihre Member. Sie können die UI nicht aus einem Hintergrundthread aktualisieren, können jedoch mit [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) eine Nachricht posten, damit der Code dort ausgeführt wird.
 
-> 
-            **Hinweis**  Die einzige Ausnahme besteht darin, dass es einen separaten Renderthread gibt, der UI-Änderungen ohne Auswirkungen auf die Eingabeverarbeitung oder auf das Basislayout anwenden kann. Viele Animationen und Übergänge, die sich nicht auf das Layout auswirken, können z. B. auf diesem Renderthread ausgeführt werden.
+> **Hinweis**  Die einzige Ausnahme besteht darin, dass es einen separaten Renderthread gibt, der UI-Änderungen ohne Auswirkungen auf die Eingabeverarbeitung oder auf das Basislayout anwenden kann. Viele Animationen und Übergänge, die sich nicht auf das Layout auswirken, können z. B. auf diesem Renderthread ausgeführt werden.
 
 ## Verzögern der Element-Instanziierung
 
@@ -27,10 +27,7 @@ Einige der langsamsten Phasen in einer App können der Start und das Wechseln zw
 -   Verwenden Sie [x:DeferLoadStrategy](https://msdn.microsoft.com/library/windows/apps/Mt204785) zum Verzögern instanziierter Elemente.
 -   Fügen Sie programmgesteuerte Elemente nach Bedarf in der Struktur ein.
 
-
-            [
-              **CoreDispatcher.RunIdleAsync**
-            ](https://msdn.microsoft.com/library/windows/apps/Hh967918)-Warteschlangen eignen sich für die Verarbeitung des UI-Threads, wenn er nicht aktiv ist.
+[**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918)-Warteschlangen eignen sich für die Verarbeitung des UI-Threads, wenn er nicht aktiv ist.
 
 ## Verwenden von asynchronen APIs
 
@@ -44,7 +41,7 @@ Mit dem Operator **await** in C#, dem Operator **Await** in Visual Basic oder mi
 
 Denken Sie daran, dass nur aus dem UI-Thread auf UI-Elemente zugegriffen werden kann. Verwenden Sie den UI-Thread für den Zugriff auf UI-Elemente vor dem Starten der Hintergrundverarbeitung und/oder der Verwendung von [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) oder [**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918) im Hintergrundthread.
 
-Ein Beispiel für Arbeit, die in einem Hintergrundthread ausgeführt werden kann, ist die Berechnung der Computer-KI in einem Spiel. Die Ausführung des Codes zur Berechnung des nächsten Zugs nimmt viel Zeit in Anspruch.
+Ein Beispiel für Arbeit, die in einem Hintergrundthread ausgeführt werden kann, ist die Berechnung der Computer-KI in einem Spiel. Die Ausführung des Codes zur Berechnung der nächsten Aktion des Computers nimmt viel Zeit in Anspruch.
 
 ```csharp
 public class AsyncExample
@@ -98,18 +95,17 @@ public class AsyncExample
 > End Class
 > ```
 
-[!div class="tabbedCodeSnippets"] In diesem Beispiel wird der `NextMove-Click`-Handler bei **await** zurückgegeben, damit der UI-Thread reaktionsfähig bleibt. Die Ausführung wird jedoch in diesem Handler fortgesetzt, nachdem `ComputeNextMove` abgeschlossen ist (in einem Hintergrundthread ausgeführt).
+In diesem Beispiel wird der `NextMove-Click`-Handler bei **await** zurückgegeben, damit der UI-Thread reaktionsfähig bleibt. Die Ausführung wird jedoch in diesem Handler fortgesetzt, nachdem `ComputeNextMove` abgeschlossen ist (in einem Hintergrundthread ausgeführt). Der restliche Code im Handler aktualisiert die UI mit den Ergebnissen.
 
-> Der restliche Code im Handler aktualisiert die UI mit den Ergebnissen. 
-            **Hinweis**  Es gibt darüber hinaus eine [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621)- und eine [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx)-API für die UWP, die für ähnliche Szenarien verwendet werden können.
+> **Hinweis**  Es gibt darüber hinaus eine [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621)- und eine [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx)-API für die UWP, die für ähnliche Szenarien verwendet werden können. Weitere Informationen finden Sie unter [Threading und asynchrone Programmierung](https://msdn.microsoft.com/library/windows/apps/Mt187340).
 
-## Weitere Informationen finden Sie unter [Threading und asynchrone Programmierung](https://msdn.microsoft.com/library/windows/apps/Mt187340).
+## Verwandte Themen
 
-* [Verwandte Themen](https://msdn.microsoft.com/library/windows/apps/Mt185599)
-
+* [Benutzerdefinierte Benutzerinteraktionen](https://msdn.microsoft.com/library/windows/apps/Mt185599)
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO3-->
 
 

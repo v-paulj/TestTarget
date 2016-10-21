@@ -3,8 +3,9 @@ author: mcleblanc
 description: Aufbau von Visual Studio
 title: Aufbau von Visual Studio
 ms.assetid: 7FBB50A2-6D22-4082-B333-5153DADDDE9A
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: d31e6e940f0b03667f1e19abec17804f6f3e16a6
+ms.openlocfilehash: 3f23745d161965d08a35abbef31b8e4342cf1ff6
 
 ---
 
@@ -125,6 +126,6 @@ Wenn Sie die App beenden möchten, tippen Sie in Visual Studio auf das Menü **D
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

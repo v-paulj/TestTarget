@@ -3,8 +3,9 @@ author: DBirtolo
 ms.assetid: ECE848C2-33DE-46B0-BAE7-647DB62779BB
 title: Kalibrieren von Sensoren
 description: "Für Sensoren in einem auf dem Magnetometer – Kompass, Neigungsmesser und Ausrichtungssensor – basierenden Gerät kann aufgrund von Umweltfaktoren eine Kalibrierung erforderlich sein."
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 4652d20b8dd0d04932dcbda330efa8e9367f53d1
+ms.openlocfilehash: 8b669d7f939da9ee93e5a49d2f6434d5573e23c0
 
 ---
 # Kalibrieren von Sensoren
@@ -33,6 +34,6 @@ Dieses kurze Video enthält eine Übersicht zu den Kalibrierungsverfahren für d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

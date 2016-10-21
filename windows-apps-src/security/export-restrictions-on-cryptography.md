@@ -3,8 +3,9 @@ title: "Exportbeschränkungen hinsichtlich Kryptografie"
 description: "Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App Kryptografiefunktionen in einer Weise verwendet, die unter Umständen dazu führt, dass sie im Windows Store nicht angezeigt wird."
 ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
 author: awkoren
+translationtype: Human Translation
 ms.sourcegitcommit: b41fc8994412490e37053d454929d2f7cc73b6ac
-ms.openlocfilehash: 37d6131891e93d73021c860df45d1b5fdd7cfa53
+ms.openlocfilehash: a6bd271ddfece1cc104243b8800f6473df14c275
 
 ---
 
@@ -17,8 +18,7 @@ Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App 
 
 Das Bureau of Industry and Security (BIS) im United States Department of Commerce kontrolliert den Export von Technologie, die bestimmte Arten von Verschlüsselung verwendet. Bei allen im Windows Store aufgelisteten Apps müssen diese Gesetze und Bestimmungen beachtet werden, da die App-Dateien in den USA gespeichert werden können. Sogar bei Apps, die von App-Entwicklern aus anderen Ländern zur Verteilung außerhalb der USA hochgeladen werden, müssen diese Bestimmungen befolgt werden. Daher müssen alle App-Entwickler beim Übermitteln einer App an den WindowsStore bestätigen, dass ihre Apps keine Technologien enthalten, die gemäß diesen Bestimmungen eingeschränkt sind.
 
-> 
-            **Hinweis**  Die hier bereitgestellten Informationen enthalten einige Richtlinien. Sie sind jedoch als App-Entwickler, der Apps im WindowsStore veröffentlicht, für die Einhaltung aller geltenden Gesetze und Bestimmungen verantwortlich.
+> **Hinweis**  In den hier bereitgestellten Informationen finden Sie einige Richtlinien. Sie sind jedoch als App-Entwickler, der Apps im WindowsStore veröffentlicht, für die Einhaltung aller geltenden Gesetze und Bestimmungen verantwortlich.
 
  
 
@@ -30,8 +30,7 @@ Informationen zu den Export Administration Regulations (EAR), die den Export von
 
 Ermitteln Sie zunächst, ob Ihre App eine Art von Kryptografie verwendet, die durch die Export Administration Regulations geregelt wird. Die Frage enthält die in der Liste enthaltenen Beispiele. Diese Liste enthält jedoch nicht alle möglichen Anwendungsmöglichkeiten von Kryptografie.
 
-> 
-            **Wichtig**  Berücksichtigen Sie hierbei nicht nur den Code, den Sie für die App geschrieben haben, sondern auch alle Softwarebibliotheken, Hilfsprogramme und Betriebssystemkomponenten, die Ihre App enthält oder mit denen sie verknüpft ist.
+> **Wichtig**  Berücksichtigen Sie hierbei nicht nur den Code, den Sie für die App geschrieben haben, sondern auch alle Softwarebibliotheken, Hilfsprogramme und Betriebssystemkomponenten, die Ihre App enthält oder mit denen sie verknüpft ist.
 
 -   Jede Verwendung einer digitalen Signatur, z.B. Authentifizierung oder Integritätsprüfung
 -   Verschlüsselung von Daten oder Dateien, die die App verwendet oder auf die sie zugreift
@@ -61,6 +60,6 @@ Wenn Sie keine ECCN besitzen, informieren Sie sich unter [Fragen und Antworten z
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

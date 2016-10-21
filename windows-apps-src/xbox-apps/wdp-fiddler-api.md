@@ -2,10 +2,9 @@
 author: WilliamsJason
 title: "Geräteportal – API-Referenz für Fiddler"
 description: Erfahren Sie, wie Sie die Fiddler-Ablaufverfolgung programmgesteuert aktivieren/deaktivieren.
-area: Xbox
 translationtype: Human Translation
-ms.sourcegitcommit: eeb3bc5c4843fe86c54930315d4e112166664e45
-ms.openlocfilehash: 435a00eaf9c1f0d8e0c0043229c2adc80638ace3
+ms.sourcegitcommit: 3cc2a4bd1859e46a73f3e806489eac7381fa6c17
+ms.openlocfilehash: bd215058c71118d8b3e5ce81e2302ce8b151c3f6
 
 ---
 
@@ -102,6 +101,6 @@ HTTP-Statuscode      | Beschreibung
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

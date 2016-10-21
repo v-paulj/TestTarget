@@ -6,11 +6,13 @@ ms.assetid: 556BC70D-CF5D-4295-A655-D58163CC1824
 label: Tabs and pivots
 template: detail.hbs
 translationtype: Human Translation
-ms.sourcegitcommit: a2f4e7a679ca47f2a034e19936c1115e87a2eb24
-ms.openlocfilehash: b6cf34346ad557ce53d3009afe8bc83bc7ed21aa
+ms.sourcegitcommit: eb6744968a4bf06a3766c45b73b428ad690edc06
+ms.openlocfilehash: 2a652e7bd8223a128fbd77d986c446fa7c74a34c
 
 ---
 # Pivot und Registerkarten
+
+<link rel="stylesheet" href="https://az835927.vo.msecnd.net/sites/uwp/Resources/css/custom.css"> 
 
 Das Pivot-Steuerelement und das verwandte Registerkartenmuster werden für die Navigation zwischen häufig genutzten verschiedenen Inhaltskategorien verwendet. Pivots ermöglichen die Navigation zwischen mindestens zwei Inhaltsbereichen und nutzen Textheader, um die verschiedenen Inhaltsabschnitte zu gliedern.
 
@@ -117,6 +119,6 @@ Das Steuerelement ist in zwei Modi verfügbar:
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

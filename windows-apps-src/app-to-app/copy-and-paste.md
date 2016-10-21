@@ -4,8 +4,8 @@ title: "Kopieren und Einfügen"
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
 author: awkoren
 translationtype: Human Translation
-ms.sourcegitcommit: 9a8fd6d34c4b89dae1ec4be2db69498b5d458b5a
-ms.openlocfilehash: 3e3ba8811f4fac283164143aad88913aaabbee49
+ms.sourcegitcommit: 0dceeb53737cc790e1c3810b0487e0a839968bef
+ms.openlocfilehash: 2655dc67b14ba665deabc879f13340202d97c494
 
 ---
 #Kopieren und Einfügen
@@ -16,7 +16,6 @@ ms.openlocfilehash: 3e3ba8811f4fac283164143aad88913aaabbee49
 In diesem Artikel wird erläutert, wie das Kopieren und Einfügen mit der Zwischenablage in Apps der universellen Windows-Plattform unterstützt wird. Kopieren und Einfügen ist die klassische Methode zum Austausch von Daten zwischen Apps oder in einer App, und nahezu jede App kann Zwischenablageaktionen bis zu einem gewissen Grad unterstützen.
 
 ## Überprüfen der integrierten Unterstützung für die Zwischenablage
-
 
 In vielen Fällen müssen Sie keinen Code für die Unterstützung von Zwischenablageaktionen schreiben. Viele der Standard-XAML-Steuerelemente, die Sie beim Erstellen Ihrer Apps verwenden können, unterstützen bereits Zwischenablageaktionen. 
 
@@ -29,11 +28,11 @@ Schließen Sie zunächst den [**Windows.ApplicationModel.DataTransfer**](https:/
 DataPackage dataPackage = new DataPackage();
 ```
 
-AuthenticateAsync
+<!-- AuthenticateAsync-->
 
 ## Kopieren und Ausschneiden
 
-Kopieren und Ausschneiden (auch als Verschieben bezeichnet) funktionieren nahezu identisch. Wählen Sie mit der [**RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation)-Eigenschaft den gewünschten Vorgang aus.
+Kopieren und Ausschneiden (auch als *Verschieben* bezeichnet) funktionieren nahezu identisch. Wählen Sie mit der [**RequestedOperation**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage.RequestedOperation)-Eigenschaft den gewünschten Vorgang aus.
 
 ```cs
 // copy 
@@ -41,7 +40,9 @@ dataPackage.RequestedOperation = DataPackageOperation.Copy;
 // or cut
 dataPackage.RequestedOperation = DataPackageOperation.Move;
 ```
-Drag&Drop Anschließend können Sie die vom Benutzer ausgewählten Daten in das [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)-Objekt einfügen. Wenn die Daten von der **DataPackage**-Klasse unterstützt werden, können Sie die entsprechenden Methoden aus dem **DataPackage**-Objekt verwenden. Gehen Sie zum Hinzufügen von Text wie folgt vor:
+## Drag & Drop
+
+Anschließend können Sie die vom Benutzer ausgewählten Daten in das [**DataPackage**](https://msdn.microsoft.com/library/windows/apps/Windows.ApplicationModel.DataTransfer.DataPackage)-Objekt einfügen. Wenn die Daten von der **DataPackage**-Klasse unterstützt werden, können Sie die entsprechenden Methoden aus dem **DataPackage**-Objekt verwenden. Gehen Sie zum Hinzufügen von Text wie folgt vor:
 
 ```cs
 dataPackage.SetText("Hello World!");
@@ -85,6 +86,7 @@ Clipboard.ContentChanged += (s, e) =>
 
 ## Siehe auch
 
+* [App-zu-App-Kommunikation](index.md)
 * [DataTransfer](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.aspx)
 * [DataPackage](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackage.aspx)
 * [DataPackageView](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.datatransfer.datapackageview.aspx)
@@ -104,6 +106,6 @@ Clipboard.ContentChanged += (s, e) =>
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

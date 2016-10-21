@@ -3,8 +3,9 @@ author: jnHs
 Description: "Neben dem Erstellen einer Anzeigenkampagne für Ihre App, die in Windows-Apps ausgeführt wird, können Sie Ihre App auch über andere Kanäle bewerben."
 title: "Erstellen einer benutzerdefinierten Werbekampagne für Apps"
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
-ms.sourcegitcommit: 98b9bca2528c041d2fdfc6a0adead321737932b4
-ms.openlocfilehash: b6fa63727ac636d37c52e2f3247c52efb1f8b763
+translationtype: Human Translation
+ms.sourcegitcommit: 3afdf00864e023d913b635beef0c506735881b23
+ms.openlocfilehash: a6e97968df4e9ab986d364b2573a31b4ba9d1958
 
 ---
 
@@ -21,10 +22,9 @@ Es gibt im Wesentlichen zwei Typen von Daten zu benutzerdefinierten Kampagnen: S
 Sie können Leistungsdaten einer benutzerdefinierten Kampagne für Ihre App auf folgende Arten abrufen:
 
 -   Wenn es sich bei Ihrer App um eine App für die universelle Windows-Plattform (UWP) handelt, kann sie mit der [**GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt186445)-Methode programmgesteuert die benutzerdefinierte Kampagnen-ID abrufen, die zu einer Konvertierung geführt hat.
--   Sie können Seitenaufrufe und Konvertierungen für Ihre App oder Ihr IAP aus dem Bericht [Kanäle und Konvertierungen](channels-and-conversions-report.md) im Dev Center-Dashboard abrufen.
+-   Sie können Seitenaufrufe und Konvertierungen für Ihre App oder Ihr Add-On aus dem Bericht [Kanäle und Konvertierungen](channels-and-conversions-report.md) im Dev Center-Dashboard abrufen.
 
-> 
-            **Wichtig**  Diese Daten werden nur für Kunden nachverfolgt, die Windows10 ausführen. Kunden, die andere Betriebssysteme verwenden, können trotzdem den Link zu Ihrem App-Eintrag aufrufen, es werden jedoch keine Daten über die Aktivitäten dieser Kunden eingeschlossen.
+> **Wichtig:**  Diese Daten werden nur für Kunden nachverfolgt, die Windows10 ausführen. Kunden, die andere Betriebssysteme verwenden, können trotzdem den Link zu Ihrem App-Eintrag aufrufen, es werden jedoch keine Daten über die Aktivitäten dieser Kunden eingeschlossen.
 
  
 
@@ -38,7 +38,7 @@ Um den Erfolg der einzelnen Werbekanäle nachzuverfolgen, erstellt der Entwickle
 -   Die URL, die er auf seiner Facebook-Seite postet, enthält die benutzerdefinierte Kampagnen-ID `my-facebook-campaign`.
 -   Die URL, die er auf Twitter postet, enthält die benutzerdefinierte Kampagnen-ID `my-twitter-campaign`.
 
-Wenn seine Facebook- und Twitter-Follower auf die URLs klicken, verfolgt Microsoft jeden Klick und ordnet ihn der entsprechenden benutzerdefinierten Kampagne zu. Nachfolgende qualifizierende Käufe des Spiels und Käufe von In-App-Produkten (IAP) werden der benutzerdefinierten Kampagne zugeordnet und als Konvertierungen gemeldet.
+Wenn seine Facebook- und Twitter-Follower auf die URLs klicken, verfolgt Microsoft jeden Klick und ordnet ihn der entsprechenden benutzerdefinierten Kampagne zu. Nachfolgende qualifizierende Käufe des Spiels und Käufe von Add-Ons werden der benutzerdefinierten Kampagne zugeordnet und als Konvertierungen gemeldet.
 
 ## Wann gelten App-Installationen als Konvertierungen?
 
@@ -49,8 +49,7 @@ Um als Konvertierung für den Bericht [Kanäle und Konvertierungen](channels-and
 
 -   Ein Kunde mit einem bekannten Microsoft-Konto klickt auf eine App-URL, die eine benutzerdefinierte Kampagnen-ID enthält, und wird auf die Windows Store-Seite für die App weitergeleitet.
 -   Der gleiche Kunde (identifiziert mit demselben Microsoft-Konto) installiert die App innerhalb von 24 Stunden, nachdem er auf die Windows Store-URL mit der benutzerdefinierten Kampagnen-ID geklickt hat. Dies gilt als eine Konvertierung, auch wenn der Kunde die App auf einem anderen Computer oder Gerät als auf dem installiert, auf dem auf die Windows Store-URL mit der benutzerdefinierten Kampagnen-ID geklickt wurde.
-    > 
-            **Hinweis**  Für App-Installationen, die als Konvertierungen für eine benutzerdefinierte Kampagne gezählt werden, werden IAP-Einkäufe in der App ebenfalls als Konvertierungen für dieselbe benutzerdefinierte Kampagne gezählt.
+    > **Hinweis**  Für App-Installationen, die als Konvertierungen für eine benutzerdefinierte Kampagne gezählt werden, werden Add-On-Einkäufe in der App ebenfalls als Konvertierungen für dieselbe benutzerdefinierte Kampagne gezählt.
 
      
 
@@ -67,8 +66,7 @@ So erstellen Sie eine Windows Store-Seiten-URL für Ihre App mit einer benutzerd
 1.  Erstellen Sie eine ID-Zeichenfolge für Ihre benutzerdefinierte Kampagne. Diese Zeichenfolge kann bis zu 100 Zeichen enthalten. Es wird jedoch empfohlen, kurze, leicht erkennbare Kampagnen-IDs zu definieren.
 2.  Rufen Sie die Windows Store-Seiten-URL für Ihre App im HTML- oder Protokollformat ab. Die HTML-Format-URL ist auf der Seite [**App-Identität** im Dev Center-Dashboard](link-to-your-app.md) verfügbar.
     -   Verwenden Sie das HTTP-Format, wenn Sie möchten, dass Kunden in einem Browser auf die Windows Store-Seite Ihrer App navigieren (diese URL startet auch die Windows Store-App mit Ihrem App-Eintrag, wenn die Windows Store-App installiert ist). Diese URL hat das Format **`https://www.microsoft.com/store/apps/*your app name*/*your app ID*`**. Die HTTP-URL für Skype lautet beispielsweise `https://www.microsoft.com/store/apps/skype/9wzdncrfj364`.
-        > 
-            **Hinweis**  URLs im HTTP-Format können zum Navigieren zum Windows Store in einem Browser auf Computern und Tablets unter Windows 7 und neueren Versionen sowie auf Smartphones mit mindestens Windows Phone 8 verwendet werden.
+        > **Hinweis**  URLs im HTTP-Format können zum Navigieren zum Windows Store in einem Browser auf Computern und Tablets unter Windows7 und neueren Versionen sowie auf Smartphones mit mindestens Windows Phone8 verwendet werden.
 -   Verwenden Sie das Protokollformat, wenn Sie Ihre App in anderen Windows-Apps bewerben, die auf einem Gerät oder Computer mit installierter WindowsStore-App ausgeführt werden, und Sie möchten, dass Kunden die Seite Ihrer App in der WindowsStore-App öffnen. Diese URL hat das Format **`ms-windows-store://pdp/?PRODUCTID=*your app id*`**. Die Protokoll-URL für Skype lautet beispielsweise `ms-windows-store://pdp/?PRODUCTID=9wzdncrfj364`.
 3.  Fügen Sie am Ende der URL für Ihre App die folgende Zeichenfolge an:
     -   Fügen Sie an eine HTTP-Format-URL **`?cid=*my custom campaign ID*`** an. Wenn Skype beispielsweise eine Kampagnen-ID mit dem Wert **custom\_campaign** einführt, würde die neue HTTP-URL einschließlich der Kampagnen-ID folgendermaßen lauten: `https://www.microsoft.com/store/apps/skype/9wzdncrfj364?cid=custom\_campaign`.
@@ -79,8 +77,7 @@ So erstellen Sie eine Windows Store-Seiten-URL für Ihre App mit einer benutzerd
 
 Wenn es sich bei Ihrer App um eine UWP-App handelt, können Sie die Ihrer App zugeordnete benutzerdefinierte Kampagnen-ID programmgesteuert mit der [**GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt186445)-Methode abrufen. Diese Methode ermöglicht viele Analysen und Monetarisierungsszenarien. Beispielsweise können Sie feststellen, ob der aktuelle Benutzer Ihre App erworben hat, nachdem er sie über Ihre Facebook-Kampagne entdeckt hat. Dann können Sie die App-Oberfläche entsprechend anpassen. Oder wenn Sie einen Drittanbieter für App-Marketing verwenden, können Sie Daten zurück an den Anbieter senden.
 
-> 
-            **Hinweis** Die [**GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt186445)-Methode gibt nur dann eine Kampagnen-ID-Zeichenfolge zurück, wenn der Kunde auf die URL mit der eingebetteten Kampagnen-ID klickt, auf die WindowsStore-Seite für Ihre App weitergeleitet wird und dann die App ohne Verlassen der Seite installiert. Wenn der Benutzer die Seite verlässt und dann später zurückkehrt und die App installiert, gilt dies bei der Verwendung von **GetAppPurchaseCampaignIdAsync** nicht als Konvertierung. Weitere Informationen finden Sie unter [Grundlegendes zu Konvertierungen](#conversions) in diesem Thema.
+> **Hinweis**  Die [**GetAppPurchaseCampaignIdAsync**](https://msdn.microsoft.com/library/windows/apps/mt186445)-Methode gibt nur dann eine Kampagnen-ID-Zeichenfolge zurück, wenn der Kunde auf die URL mit der eingebetteten Kampagnen-ID klickt, auf die WindowsStore-Seite für Ihre App weitergeleitet wird und dann die App ohne Verlassen der Seite installiert. Wenn der Benutzer die Seite verlässt und dann später zurückkehrt und die App installiert, gilt dies bei der Verwendung von **GetAppPurchaseCampaignIdAsync** nicht als Konvertierung. Weitere Informationen finden Sie unter [Grundlegendes zu Konvertierungen](#conversions) in diesem Thema.
 
  
 
@@ -138,6 +135,6 @@ Bevor Sie eine URL für eine benutzerdefinierte Kampagnen bewerben, empfehlen wi
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

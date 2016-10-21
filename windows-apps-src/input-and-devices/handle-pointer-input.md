@@ -5,8 +5,9 @@ title: Behandeln von Zeigereingaben
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
+translationtype: Human Translation
 ms.sourcegitcommit: a2ec5e64b91c9d0e401c48902a18e5496fc987ab
-ms.openlocfilehash: 2204e8f3ddce067cf2cbc24ce89cbdcea5b361bf
+ms.openlocfilehash: 2053062f6a5f850da8983bce2465cd10cdc01d56
 
 ---
 
@@ -30,7 +31,7 @@ Wenn Sie eine eigene Interaktionsunterstützung implementieren, sollten Sie dara
 
 Bei vielen Interaktionsfunktionen ist der Benutzer involviert, der das Objekt identifizieren muss, mit dem er interagieren möchte, indem er mithilfe von Eingabegeräten, z. B. Toucheingabe, Maus, Zeichen-/Eingabestift und Touchpad, darauf zeigt. Da die von diesen Eingabegeräten bereitgestellten HID-Rohdaten (Human Interface Device) viele allgemeine Eigenschaften enthalten, werden die Informationen an einen einheitlichen Eingabestapel weitergeleitet und als konsolidierte geräteunabhängige Zeigerdaten verfügbar gemacht. Ihre UWP-Apps können dann diese Daten ohne Rücksicht auf das verwendete Eingabegerät verwenden.
 
-**Hinweis**  Gerätespezifische Informationen werden auch von den HID-Rohdaten weitergeleitet, wenn dies für die App erforderlich ist.
+**Hinweis**  Gerätespezifische Informationen werden auch von den HID-Rohdaten weitergeleitet, wenn diese von der App abgerufen werden.
 
  
 
@@ -64,7 +65,7 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 <td align="left"><p>Tritt auf, wenn ein Zeiger von der Plattform abgebrochen wird.</p>
 <ul>
 <li>Touchzeiger werden abgebrochen, wenn ein Zeichenstift innerhalb des Bereichs der Eingabeoberfläche erkannt wird.</li>
-<li>Für mehr als 100 ms wird kein aktiver Kontakt erkannt.</li>
+<li>Für mehr als 100ms wird kein aktiver Kontakt erkannt.</li>
 <li>Monitor/Anzeige wird geändert (Auflösung, Einstellungen, Konfigurationen mit mehreren Bildschirmen).</li>
 <li>Der Desktop ist gesperrt, oder der Benutzer hat sich abgemeldet.</li>
 <li>Die Anzahl gleichzeitiger Kontakte hat die vom Gerät unterstützte Anzahl überschritten.</li>
@@ -249,10 +250,7 @@ Im nächsten Schritt wird UI-Feedback verwendet, um die Verwendung einfacher Zei
 
 -   Der folgende Handler kontrolliert ein [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971)-Ereignis. Das Ereignis wird zum Ereignisprotokoll hinzugefügt, der Zeiger wird zum Zeigerarray hinzugefügt, das zum Verfolgen der relevanten Zeiger verwendet wird, und die Zeigerdetails werden angezeigt.
 
-    **Hinweis**
-            [
-              **PointerPressed**
-            ](https://msdn.microsoft.com/library/windows/apps/br208971)- und [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972)-Ereignisse treten nicht immer paarweise auf. Die App sollte auf jedes Ereignis lauschen und dieses behandeln, das eine Zeiger-nach-unten-Aktion beenden könnte (beispielsweise [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) und [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).
+    **Hinweis**  Die Ereignisse [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) und [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) treten nicht immer paarweise auf. Die App sollte auf jedes Ereignis lauschen und dieses behandeln, das eine Zeiger-nach-unten-Aktion beenden könnte (beispielsweise [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) und [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).
 
      
 
@@ -522,10 +520,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
 
 -   Der folgende Handler kontrolliert ein [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)-Ereignis. Das Ereignis wird zum Ereignisprotokoll hinzugefügt, der Zeiger wird aus dem Zeigerarray entfernt, und die Zeigerdetails werden aktualisiert.
 
-    **Hinweis**
-            [
-              **PointerCaptureLost**
-            ](https://msdn.microsoft.com/library/windows/apps/br208965) kann anstelle von [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) eintreten. Die Zeigererfassung kann aus verschiedenen Gründen verloren gehen.
+    **Hinweis**  [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) kann anstelle von [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) eintreten. Die Zeigererfassung kann aus verschiedenen Gründen verloren gehen.
 
      
 
@@ -1111,6 +1106,6 @@ namespace PointerInput
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

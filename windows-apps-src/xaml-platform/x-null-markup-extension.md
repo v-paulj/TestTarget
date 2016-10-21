@@ -3,8 +3,9 @@ author: jwmsft
 description: "Gibt im XAML-Markup einen NULL-Wert für eine Eigenschaft an."
 title: xNull-Markuperweiterung
 ms.assetid: E6A4038E-4ADA-4E82-9824-582FC16AB037
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 96ec27fa36d5a30d6bcf3b3c4ad4a330bf799a09
+ms.openlocfilehash: c81acb985c54a8dc799df5ad9c811577777dbf9b
 
 ---
 
@@ -22,8 +23,7 @@ Gibt im XAML-Markup einen **NULL**-Wert für eine Eigenschaft an.
 
 ## Hinweise
 
-
-            **null** ist das Nullverweis-Schlüsselwort für C# und C++. Das Microsoft Visual Basic-Schlüsselwort für einen Nullverweis lautet **Nothing**.
+**null** ist das Nullverweis-Schlüsselwort für C# und C++. Das Microsoft Visual Basic-Schlüsselwort für einen Nullverweis lautet **Nothing**.
 
 Der anfängliche Standardwert kann zwischen Abhängigkeitseigenschaften variieren und ist nicht unbedingt **null**. Viele Abhängigkeitseigenschaften akzeptieren **null** außerdem aufgrund ihrer internen Implementierung nicht als Wert (weder per Markup noch per Code). In einem solchen Fall tritt unter Umständen eine Analyseausnahme auf, wenn ein XAML-Attributwert mit **{x:Null}** festgelegt wird.
 
@@ -38,6 +38,6 @@ Einige Windows-Runtime-Typen akzeptieren NULL-Werte. Sollte bei einem Typ, der N
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

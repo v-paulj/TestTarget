@@ -3,8 +3,9 @@ author: mcleanbyron
 ms.assetid: 48a1ef86-8514-4af8-9c93-81e869d36de7
 description: Hier erfahren Sie, wie Sie programmgesteuert ein **AdControl** (Anzeigensteuerelement) mit JavaScript erstellen.
 title: Erstellen eines Anzeigensteuerelements in JavaScript
-ms.sourcegitcommit: cf695b5c20378f7bbadafb5b98cdd3327bcb0be6
-ms.openlocfilehash: 481f9d785181ca197debdb807bb0b0c7b4168632
+translationtype: Human Translation
+ms.sourcegitcommit: 5bf07d3001e92ed16931be516fe059ad33c08bb9
+ms.openlocfilehash: 68bc124aea079bc60fa22e1e6a038caf95fe765c
 
 
 ---
@@ -12,7 +13,7 @@ ms.openlocfilehash: 481f9d785181ca197debdb807bb0b0c7b4168632
 # Erstellen eines Anzeigensteuerelements in JavaScript
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+
 
 Dieses Beispiel zeigt, wie Sie programmgesteuert ein [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Element mit JavaScript erstellen.
 
@@ -61,6 +62,6 @@ Wenn Sie diesen Code verwenden und keine Anzeigen angezeigt werden, können Sie 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -3,14 +3,15 @@ author: jwmsft
 description: "Informieren Sie sich über die Verschieben- und Zeichnen-Befehle (eine Minisprache), mit denen Sie Pfadgeometrien als XAML-Attributwert angeben können."
 title: "Syntax für die Verschieben- und Zeichnen-Befehle"
 ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
+translationtype: Human Translation
 ms.sourcegitcommit: 8a28765f5451e4303d6204070c38596773cb65b9
-ms.openlocfilehash: 49c3a061c51c07677ffb43a230e0900220ba0299
+ms.openlocfilehash: 832e757c5bbdc10c2f0f10db127d3f21932313b3
 
 ---
 
 # Syntax für die Verschieben- und Zeichnen-Befehle
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Informieren Sie sich über die Verschieben- und Zeichnen-Befehle (eine Minisprache), mit denen Sie Pfadgeometrien als XAML-Attributwert angeben können. Verschieben- und Zeichnen-Befehle werden von vielen Design- und Grafiktools, die eine Vektorgrafik oder Form ausgeben können, als Serialisierungs- und Austauschformat verwendet.
 
@@ -25,9 +26,7 @@ Die Windows-Runtime enthält zwei Eigenschaften, die eine Zeichenfolge verwenden
   Data="M4.12,0 L9.67,5.47 L4.12,10.94 L0,10.88 L5.56,5.47 L0,0.06" />
 ```
 
-[
-              **PathGeometry.Figures**
-            ](https://msdn.microsoft.com/library/windows/apps/br210169) kann ebenfalls Verschieben- und Zeichnen-Befehle verwenden. Sie können ein [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168)-Objekt, das Verschieben- und Zeichnen-Befehle verwendet, mit anderen [**Geometry**](https://msdn.microsoft.com/library/windows/apps/br210041)-Typen in einem [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/br210057)-Objekt kombinieren, das Sie dann als Wert für [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356) nutzen. Weitaus gängiger ist aber die Verwendung von Verschieben- und Zeichnen-Befehlen für durch Attribute definierte Daten.
+[**PathGeometry.Figures**](https://msdn.microsoft.com/library/windows/apps/br210169) kann ebenfalls Verschieben- und Zeichnen-Befehle verwenden. Sie können ein [**PathGeometry**](https://msdn.microsoft.com/library/windows/apps/br210168)-Objekt, das Verschieben- und Zeichnen-Befehle verwendet, mit anderen [**Geometry**](https://msdn.microsoft.com/library/windows/apps/br210041)-Typen in einem [**GeometryGroup**](https://msdn.microsoft.com/library/windows/apps/br210057)-Objekt kombinieren, das Sie dann als Wert für [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356) nutzen. Weitaus gängiger ist aber die Verwendung von Verschieben- und Zeichnen-Befehlen für durch Attribute definierte Daten.
 
 ## Verwenden von Verschieben- und Zeichnen-Befehlen oder einer **PathGeometry**-Klasse
 
@@ -49,17 +48,7 @@ Allgemeine Regeln für diese Syntax:
 -   Auf jeden Befehl mit Ausnahme des Schließen-Befehls folgt normalerweise mindestens eine Zahl.
 -   Wenn Sie für einen Befehl mehrere Zahlen angeben, trennen Sie diese durch Komma oder Leerzeichen.
 
-**\[**
-            _fillRule_
-            **\]**
-            _moveCommand_
-            _drawCommand_
-            **\[**
-            _drawCommand_
-            **\*\]**
-            **\[**
-            _closeCommand_
-            **\]**
+**\[**_fillRule_**\]** _moveCommand_ _drawCommand_ **\[**_drawCommand_**\*\]** **\[**_closeCommand_**\]**
 
 Viele der Zeichnen-Befehle verwenden Punkte, für die Sie einen _x,y_-Wert angeben. Wenn Sie einen \*_points_-Platzhalter sehen, können Sie davon ausgehen, dass Sie für den _x,y_-Wert eines Punkts zwei Dezimalwerte angeben müssen.
 
@@ -139,11 +128,7 @@ Erstellt eine kubische Bézierkurve zwischen dem aktuellen Punkt und dem angegeb
 
 | Syntax |
 |--------|
-| `C ` *controlPoint1*
-            *controlPoint2*
-            *endPoint* <br/> - oder - <br/> `c ` *controlPoint1*
-            *controlPoint2*
-            *endPoint* |
+| `C ` *controlPoint1* *controlPoint2* *endPoint* <br/> - oder - <br/> `c ` *controlPoint1* *controlPoint2* *endPoint* |
 
 | Benennung | Beschreibung |
 |------|-------------|
@@ -170,8 +155,7 @@ Erstellt eine kubische Bézierkurve zwischen dem aktuellen Punkt und dem angegeb
 
 | Syntax |
 |--------|
-| `S` *controlPoint2*
-            *endPoint* <br/> - oder - <br/>`s` *controlPoint2 endPoint* |
+| `S` *controlPoint2* *endPoint* <br/> - oder - <br/>`s` *controlPoint2 endPoint* |
 
 | Benennung | Beschreibung |
 |------|-------------|
@@ -184,9 +168,7 @@ Erstellt eine quadratische Bézierkurve zwischen dem aktuellen Punkt und dem ang
 
 | Syntax |
 |--------|
-| `T` *controlPoint*
-            *endPoint* <br/> - oder - <br/> `t` *controlPoint*
-            *endPoint* |
+| `T` *controlPoint* *endPoint* <br/> - oder - <br/> `t` *controlPoint* *endPoint* |
 
 | Benennung | Beschreibung |
 |------|-------------|
@@ -199,11 +181,7 @@ Erstellt einen Ellipsenbogen zwischen dem aktuellen Punkt und dem angegebenen En
 
 | Syntax |
 |--------|
-| `A ` *size*
-            *rotationAngle*
-            *isLargeArcFlag*
-            *sweepDirectionFlag*
-            *endPoint* <br/> - oder - <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
+| `A ` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> - oder - <br/>`a ` *sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
 
 | Benennung | Beschreibung |
 |------|-------------|
@@ -227,8 +205,7 @@ Beschreibt die x-Koordinate und y-Koordinate eines Punkts. Weitere Informationen
 
 | Syntax |
 |--------|
-| *x*,*y*<br/> - oder - <br/>*x*
-            *y* |
+| *x*,*y*<br/> - oder - <br/>*x* *y* |
 
 | Benennung | Beschreibung |
 |------|-------------|
@@ -263,6 +240,6 @@ Für andere häufig verwendete Vektorgrafik-Designtools, die den Vektor in XAML-
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

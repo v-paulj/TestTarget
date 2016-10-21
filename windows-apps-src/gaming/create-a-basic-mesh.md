@@ -3,8 +3,9 @@ author: mtoepke
 title: Erstellen und Anzeigen einfacher Gitter
 description: "In 3D-Spielen für die universelle Windows-Plattform (UWP) werden Spielobjekte und Oberflächen in der Regel durch Polygone dargestellt."
 ms.assetid: bfe0ed5b-63d8-935b-a25b-378b36982b7d
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada2
+ms.openlocfilehash: b8795438053adebfbd36cada86a8ef13afb3eef2
 
 ---
 
@@ -15,8 +16,7 @@ ms.openlocfilehash: c082456d5eb0cf1c5c697a6af5bc1d4de1f5ada2
 
 In 3D-Spielen für die universelle Windows-Plattform (UWP) werden Spielobjekte und Oberflächen in der Regel durch Polygone dargestellt. Die Liste der Vertizes, die die Struktur dieser polygonalen Objekte und Oberflächen darstellen, werden als Gitter bezeichnet. Hier erstellen wir ein einfaches Gitter für ein Würfelobjekt und stellen es zum Rendern und Anzeigen für die Shader-Pipeline bereit.
 
-> 
-            **Wichtig:**  Der hier enthaltene Beispielcode verwendet Typen (wie etwa „DirectX::XMFLOAT3“ und „DirectX::XMFLOAT4X4“) und Inlinemethoden, die in „DirectXMath.h“ deklariert werden. Wenn Sie diesen Code ausschneiden und einfügen, nehmen Sie auch &lt;DirectXMath.h&gt; in Ihr Projekt auf.
+> **Wichtig:**  Der hier enthaltene Beispielcode verwendet Typen (wie etwa „DirectX::XMFLOAT3“ und „DirectX::XMFLOAT4X4“) und Inlinemethoden, die in „DirectXMath.h“ deklariert werden. Wenn Sie diesen Code ausschneiden und einfügen, nehmen Sie auch &lt;DirectXMath.h&gt; in Ihr Projekt auf.
 
  
 
@@ -88,18 +88,15 @@ m_d3dDevice->CreateInputLayout(
 
 In diesem Code geben Sie ein Layout für die Vertizes an – genauer gesagt: welche Daten die einzelnen Elemente in der Vertexliste enthalten. In **basicVertexLayoutDesc** geben Sie zwei Datenkomponenten an:
 
--   
-            **POSITION**: Eine HLSL-Semantik für Positionsdaten, die für einen Shader bereitgestellt werden. In diesem Code ist dies ein DirectX::XMFLOAT3-Wert, oder genauer ausgedrückt, eine Struktur mit drei 32-Bit-Gleitkommazahlen, die einem 3D-Koordinatensystem (X, Y, Z) entsprechen. Sie könnten aber auch einen float4-Wert verwenden, wenn Sie die homogene W-Koordinate angeben. In diesem Fall müssten Sie dann „DXGI\_FORMAT\_R32G32B32A32\_FLOAT“ angeben. Ob Sie einen DirectX::XMFLOAT3- oder einen float4-Wert verwenden, ist von den speziellen Anforderungen Ihres Spiels abhängig. Stellen Sie lediglich sicher, dass die Vertexdaten für Ihr Gitter dem verwendeten Format entsprechen.
+-   **POSITION**: Eine HLSL-Semantik für Positionsdaten, die für einen Shader bereitgestellt werden. In diesem Code ist dies ein DirectX::XMFLOAT3-Wert, oder genauer ausgedrückt, eine Struktur mit drei 32-Bit-Gleitkommazahlen, die einem 3D-Koordinatensystem (X, Y, Z) entsprechen. Sie könnten aber auch einen float4-Wert verwenden, wenn Sie die homogene W-Koordinate angeben. In diesem Fall müssten Sie dann „DXGI\_FORMAT\_R32G32B32A32\_FLOAT“ angeben. Ob Sie einen DirectX::XMFLOAT3- oder einen float4-Wert verwenden, ist von den speziellen Anforderungen Ihres Spiels abhängig. Stellen Sie lediglich sicher, dass die Vertexdaten für Ihr Gitter dem verwendeten Format entsprechen.
 
     Jeder Koordinatenwert wird als Gleitkommawert zwischen -1 und 1 im Koordinatenbereich des Objekts ausgedrückt. Nach Abschluss des Vertex-Shaders befindet sich der transformierte Vertex im homogenen (korrigierte Perspektive) Anzeigeprojektionsbereich.
 
     „Aber der Enumerationswert gibt RGB und nicht XYZ an!“, wie Sie völlig zu Recht bemerkt haben. Gut aufgepasst! Sowohl für Farbdaten als auch für Koordinatendaten verwenden Sie in der Regel drei oder vier Komponentenwerte. Warum kann also nicht dasselbe Formate für beide verwendet werden? Nicht der Formatname, sondern die HLSL-Semantik gibt an, wie der Shader die Daten behandelt.
 
--   
-            **COLOR**: Eine HLSL-Semantik für Farbdaten. Genau wie **POSITION** besteht auch sie aus drei 32-Bit-Gleitkommawerten (DirectX::XMFLOAT3). Jeder Wert enthält eine Farbkomponente: rot (r), blau (b) oder grün (g). Diese werden als Gleitkommazahl zwischen0 und1 ausgedrückt.
+-   **COLOR**: Eine HLSL-Semantik für Farbdaten. Genau wie **POSITION** besteht auch sie aus drei 32-Bit-Gleitkommawerten (DirectX::XMFLOAT3). Jeder Wert enthält eine Farbkomponente: rot (r), blau (b) oder grün (g). Diese werden als Gleitkommazahl zwischen0 und1 ausgedrückt.
 
-    
-            **COLOR**-Werte werden in der Regel als RGBA-Wert aus vier Komponenten am Ende der Shader-Pipeline zurückgegeben. In diesem Beispiel legen Sie in der Shader-Pipeline für alle Pixel den Alpha-Wert „A“ auf „1,0“ (maximale Deckkraft) fest.
+    **COLOR**-Werte werden in der Regel als RGBA-Wert aus vier Komponenten am Ende der Shader-Pipeline zurückgegeben. In diesem Beispiel legen Sie in der Shader-Pipeline für alle Pixel den Alpha-Wert „A“ auf „1,0“ (maximale Deckkraft) fest.
 
 Die vollständige Formatliste finden Sie unter [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059). Die vollständige HLSL-Semantikliste finden Sie unter [Semantik](https://msdn.microsoft.com/library/windows/desktop/bb509647).
 
@@ -196,8 +193,7 @@ Konstante Puffer werden von der HLSL-Syntax nicht geändert. Sie können sie än
 
 Dieses Beispiel enthält nur eine Art von Daten, die sich nie ändern: die DirectX::XMFLOAT4X4-Daten für die drei Matrizen.
 
-> 
-            **Hinweis:**  In dem hier dargestellten Beispielcode werden spaltenweise absteigende Matrizen (column-major) verwendet. Sie können stattdessen zeilenweise absteigende Matrizen (row-major) verwenden, indem Sie das **row\_major**-Schlüsselwort in HLSL angeben und sicherstellen, dass die Quellmatrixdaten ebenfalls zeilenweise absteigend angeordnet sind. „DirectXMath“ verwendet zeilenweise absteigende Matrizen und kann direkt mit HLSL-Matrizen verwendet werden, die mit dem **row\_major**-Schlüsselwort definiert werden.
+> **Hinweis:**  In dem hier dargestellten Beispielcode werden spaltenweise absteigende Matrizen (column-major) verwendet. Sie können stattdessen zeilenweise absteigende Matrizen (row-major) verwenden, indem Sie das **row\_major**-Schlüsselwort in HLSL angeben und sicherstellen, dass die Quellmatrixdaten ebenfalls zeilenweise absteigend angeordnet sind. „DirectXMath“ verwendet zeilenweise absteigende Matrizen und kann direkt mit HLSL-Matrizen verwendet werden, die mit dem **row\_major**-Schlüsselwort definiert werden.
 
  
 
@@ -249,8 +245,7 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> 
-            **Hinweis:**  In der Regel deklarieren Sie die Projektionsmatrix beim Einrichten gerätespezifischer Ressourcen, da die Multiplikationsergebnisse mit den aktuellen 2D-Viewportgrößenparametern (die häufig der Pixelhöhe und -breite der Anzeige entsprechen) übereinstimmen müssen. Ändern sich diese, müssen Sie die Werte für die X- und die Y-Koordinate entsprechend skalieren.
+> **Hinweis:**  In der Regel deklarieren Sie die Projektionsmatrix beim Einrichten gerätespezifischer Ressourcen, da die Multiplikationsergebnisse mit den aktuellen 2D-Viewportgrößenparametern (die häufig der Pixelhöhe und -breite der Anzeige entsprechen) übereinstimmen müssen. Ändern sich diese, müssen Sie die Werte für die X- und die Y-Koordinate entsprechend skalieren.
 
  
 
@@ -372,8 +367,7 @@ PixelShaderInput SimpleVertexShader(VertexShaderInput input)
 
 Sehen Sie **cbuffer** ganz oben? Dieser HLSL-Code entspricht dem Konstantenpuffer, den wir zuvor in unserem C++-Code deklariert haben. Und wie sieht es mit **VertexShaderInputstruct** aus? Das sieht doch ganz nach der Deklaration Ihres Eingabelayouts und der Vertexdaten aus. Die Deklarationen des Konstantenpuffers und der Vertexdaten im C++-Code müssen mit den Deklarationen im HLSL-Code übereinstimmen – einschließlich Vorzeichen, Typen und Datenausrichtung.
 
-
-            **PixelShaderInput** gibt das Layout der Daten an, die von der Hauptfunktion des Vertex-Shaders zurückgegeben werden. Nach der Verarbeitung eines Vertex geben Sie eine Vertexposition im 2D-Projektionsbereich und eine für die Beleuchtung der einzelnen Vertizes verwendete Farbe zurück. Die Grafikkarte verwendet die Datenausgabe des Shaders zum Berechnen der Fragmente (mögliche Pixel), die koloriert werden müssen, wenn der Pixel-Shader im nächsten Abschnitt der Pipeline ausgeführt wird.
+**PixelShaderInput** gibt das Layout der Daten an, die von der Hauptfunktion des Vertex-Shaders zurückgegeben werden. Nach der Verarbeitung eines Vertex geben Sie eine Vertexposition im 2D-Projektionsbereich und eine für die Beleuchtung der einzelnen Vertizes verwendete Farbe zurück. Die Grafikkarte verwendet die Datenausgabe des Shaders zum Berechnen der Fragmente (mögliche Pixel), die koloriert werden müssen, wenn der Pixel-Shader im nächsten Abschnitt der Pipeline ausgeführt wird.
 
 ### Schritt7: Übergeben des Gitters durch den Pixel-Shader
 
@@ -456,6 +450,6 @@ Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die univers
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

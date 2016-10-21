@@ -1,95 +1,90 @@
 ---
 author: mcleanbyron
 Description: "Vor dem Ausführen eines Experiments in Ihrer Universellen Windows-Plattform(UWP)-App mit A/B-Test müssen Sie Ihr Experiment im Dev Center-Dashboard definieren."
-title: Definieren des Experiments im Dev Center-Dashboard
+title: Definieren Ihres Experiments im Dev Center-Dashboard
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 7462c23de58b44f897a1737d0d54913144b14f75
+translationtype: Human Translation
+ms.sourcegitcommit: ce0431243866125eff83569e3b9b1c75e0703358
+ms.openlocfilehash: df6744cb9f4dd60c9eef07dc89f2265ac4244aab
 
 ---
 
-# Definieren des Experiments im Dev Center-Dashboard
+# Definieren Ihres Experiments im Dev Center-Dashboard
 
-Zum Ausführen eines Experiments in Ihrer Universellen Windows-Plattform (UWP)-App mit einem A/B-Test sollten Sie zu Beginn Ihr Experiment im Dev Center-Dashboard definieren.
+Im Anschluss an die Schritte [Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) und [Codieren der App für das Experiment](code-your-experiment-in-your-app.md) können Sie im Projekt ein Experiment erstellen. Beim Erstellen des Experiments definieren Sie die Ziele und Abweichungen, die Ihre Benutzer erhalten.
 
-Die folgenden Abschnitte beschreiben die allgemeinen Schritte zum Definieren eines Experiments im Dashboard. Eine exemplarische Vorgehensweise des gesamten Erstellungs- und Ausführungsprozesses eines Experiments finden Sie unter [Erstellen und Durchführen Ihres ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
-
-## Erhalten Sie einen API-Schlüssel
-
-Die ersten Schritte finden Sie unter der Seite **Experimente** des Dev Center-Dashboard, auf der Sie einen *API-Schlüssel* für Ihr Experiment erhalten.
-
-Ein API-Schlüssel ist eine eindeutige ID, die Ihre App mit einem Experiment in Ihrem Dev Center-Konto verknüpft. Jedes Experiment ist genau mit einem API-Schlüssel verknüpft. Allerdings kann eine App über mehrere API-Schlüssel verfügen und jeder API-Schlüssel kann mit mehreren Experimenten verknüpft werden. Sie können API-Schlüssel verwenden, um zwischen verschiedenen Gruppen von Experimenten zu unterscheiden. Beispielsweise haben Sie möglicherweise einen Satz von Versuchen, den Sie für Tester in Ihrer Organisation freigeben, und einen anderen Satz von Versuchen, den Sie nur für externe Benutzer Ihrer App freigeben.
-
-Sie müssen diesen API-Schlüssel verwenden, um eine Verbindung mit dem A/B-Testdienst im App-Code herzustellen. Weitere Informationen finden Sie unter [Code Ihrer App für Experimente](code-your-experiment-in-your-app.md).
+<span id="get-an-api-key" />
+<span id="create-an-experiment" />
+## Erstellen Ihres Experiments
 
 1. Melden Sie sich beim [Dev Center-Dashboard](https://dev.windows.com/overview) an.
-2. Unter **Ihre Apps** wählen Sie die App, für die Sie ein Experiment erstellen möchten.
-3. Wählen Sie im Navigationsbereich **Dienste** und dann **Experimente**.
-4. Der Abschnitt **API-Schlüssel** enthält einen Standard-API-Schlüssel für Ihre App mit dem Namen **API-Schlüssel #1**. Wenn Sie diesen Schlüssel verwenden möchten, geben Sie optional einen Anzeigenamen für diesen Schlüssel ein und kopieren Sie ihn zur Verwendung in Ihrem App-Code. Um einen neuen API-Schlüssel zu generieren, wählen Sie **Neuer API-Schlüssel** aus und geben Sie einen Anzeigenamen für den API-Schlüssel ein.
+2. Wählen Sie unter **Ihre Apps** die App aus, für die Sie ein Experiment erstellen möchten.
+3. Wählen Sie im Navigationsbereich **Dienste** und dann **Experimentation** aus.
+4. Geben Sie auf der Seite **Experimentation** in der Projekttabelle das Projekt an, dem Sie ein Experiment hinzufügen möchten, und klicken Sie für dieses Projekt auf **Add Experiment**.
+5. Geben Sie im Feld **Name des Experiments** einen Namen ein, mit dem Sie das Experiment leicht ermitteln können. Nach dem Erstellen eines Experiments wird dieser Name auf der Seite **Experimentation** Ihrer App in der Liste der vorhandenen Experimente sowie auf der Seite des Projekts angezeigt.
+6. Wenn Sie ein aktives Experiment bearbeiten möchten, aktivieren Sie das Kontrollkästchen **Editable experiment**. Aktivieren Sie dieses Kontrollkästchen nur, wenn Sie ein Experiment zum Überprüfen aller Abweichungen im Rahmen interner Tests erstellen. Weitere Informationen finden Sie unter [Erstellen eines Experiments für interne Tests](define-your-experiment-in-the-dev-center-dashboard.md#test_experiments).
 
-## Experiment erstellen
-
-Erstellen Sie als Nächstes ein neues Experiment und definieren Sie die Ziele für das Experiment.
-
-1. Klicken Sie im Abschnitt **Experimente** auf die Schaltfläche **Neues Experiment**.
-2. Wählen Sie im Abschnitt **API-Schlüsselnamen** den API-Schlüssel aus, den Sie mit diesem Experiment verknüpfen möchten. Wenn Sie nur einen API-Schlüssel haben, wird dieser API-Schlüssel standardmäßig ausgewählt.
-3. Geben Sie im Feld **Name des Experiments** einen Namen ein, mit dem Sie das Experiment leicht ermitteln können. Nach der Erstellung eines Experiments erscheint dieser Name in der Liste der entworfenen, aktiven und abgeschlossenen Experimente auf der **Experimente**-Seite.
-4. Wenn Sie ein Testexperiment erstellen möchten, klicken Sie auf das Kontrollkästchen **Testexperiment**. Der Unterschied zwischen Testexperimenten und regulären Experimenten liegt darin, dass nur Testexperimente nach erfolgter Aktivierung noch geändert werden können.
-
-  Testexperimente sollen Ihnen dabei helfen, alle Variationen auf einem Client-Gerät zu testen, bevor Sie Ihr Experiment für Kunden freigeben. Um sicherzustellen, dass eine Variante erwartungsgemäß auf Clients bereitgestellt wird, können Sie ein Testexperiment mit 100 % Verteilung für eine Variante und 0 % für andere Varianten aktivieren. Nachdem Sie diese Variante überprüft haben, können Sie den Prozess für andere Varianten wiederholen.
-  > 
-            **Hinweis**  Überprüfen Sie dieses Kontrollkästchen nur, wenn Sie ein Testexperiment zum Überprüfen von Parametern über interne Tests erstellen. Aktivieren Sie dieses Kontrollkästchen nicht, wenn Sie eine Experiment erstellen, das Sie an Kunden freigegeben werden.
-
-5. Geben Sie im Feld **Ereignisnamen anzeigen** den Namen des *Anzeigeereignisses* für Ihr Experiment ein. Das Anzeigeereignis ist eine beliebige Zeichenfolge, die eine Aktivität darstellt, wenn der Benutzer beginnt, eine Variante anzusehen, die Teil Ihres Experiments ist. Der App-Code sendet die Zeichenfolge des Anzeigeereignisses an Dev Center, wenn der Benutzer beginnt, eine Variante anzusehen. Weitere Informationen finden Sie unter [Code Ihrer App für Experimente](code-your-experiment-in-your-app.md).
+  > **Hinweis**&nbsp;&nbsp;Aktivieren Sie dieses Kontrollkästchen nicht, wenn Sie ein Experiment erstellen, das Sie für Kunden veröffentlichen (d.h. ein Experiment, das einer Projekt-ID zugeordnet ist, die in einer für die Kunden verfügbaren App-Version verwendet wird). Wenn Sie ein aktives Experiment bearbeiten, werden die Ergebnisse des Experiments ungültig.
+4. Das aktuelle Projekt wird im Dropdown-Menü **Projektname** automatisch ausgewählt. Wenn Sie das neue Experiment einem anderen Projekt hinzufügen möchten, können Sie das Projekt hier auswählen. Nehmen Sie andernfalls keine Auswahl vor.
+5.   Notieren Sie sich den Wert der [Projekt-ID](run-app-experiments-with-a-b-testing.md#terms). Zum [Codieren der App für das Experiment](code-your-experiment-in-your-app.md) müssen Sie in Ihrem Code auf diese ID verweisen, damit Sie Abweichungsdaten erhalten sowie Anzeige- und Konvertierungsereignisse an das Dev Center melden können.
+5. Geben Sie im Abschnitt **Anzeigeereignis** den Namen des [Anzeigeereignisses](run-app-experiments-with-a-b-testing.md#terms) für das Experiment im Feld **Ereignisnamen anzeigen** ein.
 6. Definieren Sie im Abschnitt **Ziele und Umwandlungsereignisse** mindestens ein Ziel für Ihr Experiment:
   * Geben Sie im Feld **Name des Ziels** einen beschreibenden Namen für Ihr Ziel ein. Nach dem Ausführen eines Experiments erscheint dieser Name in der Ergebniszusammenfassung des Experiments.
-  * Geben Sie im Feld **Ereignisnamenumwandlung** den Namen des *Umwandlungsereignisses* für dieses Ziel ein. Eine Ereignisumwandlung ist eine beliebige Zeichenfolge, die ein Ziel für dieses Ziel darstellt. Ihr App-Code sendet diese Umwandlungsereignis-Zeichenfolge an Dev Center, wenn der Benutzer ein Ziel erreicht. Weitere Informationen finden Sie unter [Code Ihrer App für Experimente](code-your-experiment-in-your-app.md).
+  * Geben Sie im Feld **Ereignisnamenumwandlung** den Namen des [Umwandlungsereignisses](run-app-experiments-with-a-b-testing.md#terms) für dieses Ziel ein.
   * Wählen Sie im Feld **Ziel** **Maximieren** oder **Minimieren**aus, je nachdem, ob Sie das Vorkommen des Umwandlungsereignisses maximieren oder minimieren möchten. Diese Informationen werden in der Ergebniszusammenfassung des Experiments verwendet.
 
-  >
-            **Hinweis** Dev Center meldet nur das erste Umwandlungsereignis für jede Benutzeransicht innerhalb eines Zeitraums von 24Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer verfälscht werden, wenn das Ziel darin besteht, die Anzahl der Benutzer zu maximieren, die eine Umwandlung durchführen.
+  >**Hinweis**&nbsp;&nbsp;Dev Center meldet nur das erste Umwandlungsereignis für jede Benutzeransicht innerhalb eines Zeitraums von 24Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer verfälscht werden, wenn das Ziel darin besteht, die Anzahl der Benutzer zu maximieren, die eine Umwandlung durchführen.
 
-## Definieren Sie die Varianten und Einstellungen für das Experiment
+<span id="define-the-variations-and-settings-for-the-experiment" />
+### Definieren der Remotevariablen und Abweichungen für das Experiment
 
-Als Nächstes definieren Sie die Varianten und Standardeinstellungen für Ihr Experiment.
+Definieren Sie anschließend die [Remotevariablen](run-app-experiments-with-a-b-testing.md#terms) und [Abweichungen](run-app-experiments-with-a-b-testing.md#terms) für das Experiment.
 
-* Eine *Variante* ist eine Sammlung von einer Einstellung oder mehreren Einstellungen, die Sie in Ihrem Experiment testen. Jedes Experiment muss mindestens eine Einstellung und zwei Varianten umfassen (einschließlich des Steuerelements). Ein Experiment kann bis zu fünf Variationen aufweisen.
-* Eine *Einstellung* ist ein Wert, den Ihre App verwendet, um eine Programmvariable zu initialisieren. Während des Experiments ändert sich der Wert der Einstellung von Variante zu Variante. Nachdem Sie das Experiment beenden, wird die Einstellung dem Wert der Variante zugewiesen, den Sie für die Freigabe für alle Benutzer Ihrer App auswählen. Einstellungen können die folgenden Typen aufweisen: eine Zeichenfolge, Boolean, Double und ganze Zahl.
+1. Im Abschnitt **Remotevariablen und Abweichungen** sollten zwei Standardabweichungen angezeigt werden: **Variante A (Steuerelement)** und **Variante B**. Wenn Sie mehrere Abweichungen möchten, klicken Sie auf **Variante hinzufügen**. Optional können Sie jede Variante umbenennen.
+2. Standardmäßig werden Variationen gleichmäßig an Ihre App-Benutzer verteilt. Wenn Sie einen bestimmten Verteilungsprozentsatz auswählen möchten, deaktivieren Sie das Kontrollkästchen **Gleichmäßig verteilen**, und geben Sie die Prozentsätze in die Zeile **Verteilung (%)** ein.
+3. Fügen Sie Ihren Abweichungen Remotevariablen hinzu. Wählen Sie im Dropdown-Steuerelement am Ende dieses Abschnitts die einzelnen hinzuzufügenden Variablen aus, und klicken Sie auf **Variable hinzufügen**.
 
-Definition der Varianten und Standardeinstellungen für Ihr Experiment:
-1. Im Abschnitt **Varianten und Einstellungen** sollten Ihnen zwei standardmäßige Varianten angezeigt werden: **Variante A (Steuerelement)** und **Variante B**. Wenn Sie mehrere Varianten möchten, klicken Sie auf **Variante hinzufügen**. Optional können Sie jede Variante umbenennen.
-2. Als Nächstes erstellen Sie die Einstellungen für Ihre Varianten. Klicken Sie auf **Einstellung hinzufügen**, um jede neue Einstellung zu erstellen, und geben Sie den Einstellungsnamen und den Wert der Einstellung in jeder Variante ein.
-3. Standardmäßig werden Variationen gleichmäßig an Ihre App-Benutzer verteilt. Wenn Sie einen bestimmten Verteilungsprozentsatz auswählen möchten, deaktivieren Sie das Kontrollkästchen **Gleichmäßig verteilen** und geben Sie die Prozentsätze in die Zeile **Verteilung (%)** ein.
+  >**Hinweis**&nbsp;&nbsp; Die in diesem Steuerelement aufgeführten Variablen sind vom Projekt für das Experiment geerbt. Der Standardwert für die Variable (wie im Projekt definiert) wird der Steuerelementabweichung automatisch zugewiesen. Wenn Sie neue, hier nicht aufgeführte Variablen erstellen möchten, wechseln Sie zur entsprechenden Projektseite, und fügen Sie die Variablen dort hinzu.
+4. Bearbeiten Sie die Variablenwerte für jede eindeutige Abweichung des Experiments (d.h. alle Abweichungen mit Ausnahme der Steuerelementabweichung).
 
-## Speichern Sie Ihr Experiment
+<span id="save-and-activate-your-experiment" />
+### Speichern und Aktivieren des Experiments
 
 Wenn Sie die Eingabe in die erforderlichen Felder für Ihr Experiment abgeschlossen haben, klicken Sie auf **Speichern**, um Ihr Experiment zu speichern.
 
-> 
-            **Wichtig** Nach dem Speichern eines Experiments können Sie den API-Schlüssel für das Experiment nicht mehr ändern, auch wenn Sie das Experiment noch nicht aktiviert haben.
+Wenn Sie mit den Parametern für Ihr Experiment zufrieden sind und Sie bereit sind, es zu aktivieren, damit Sie mit der Datenerfassung von Ihrer App beginnen können, klicken Sie auf **Aktivieren**. Wenn das Experiment aktiv ist, kann Ihre App Abweichungsvariablen abrufen und Anzeige- und Umwandlungsereignisse im Dev Center melden. Weitere Informationen finden Sie unter [Führen Sie das Experiment im Dev Center-Dashboard aus, und verwalten Sie es](manage-your-experiment.md).
 
-Wenn Sie mit den Parametern für Ihr Experiment zufrieden sind Sie bereit sind, es zu aktivieren, damit Sie mit der Datenerfassung von Ihrer App beginnen können, klicken Sie auf **Aktivieren**. Wenn das Experiment aktiv ist, kann Ihre App Variationseinstellungen abrufen und Anzeige- und Umwandlungsereignisse im Dev Center melden.
+> **Wichtig** Ein Projekt kann jeweils nur ein aktives Experiment enthalten. Nach dem Aktivieren eines Experiments können Sie die Experimentparameter nicht mehr ändern, wenn beim Erstellen des Experiments das Kontrollkästchen **Editable experiment** nicht aktiviert wurde. Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
 
-> 
-            **Wichtig** Nach der Aktivierung eines Experiments können Sie die Experimentparameter nicht mehr ändern, sofern es sich nicht um ein Testexperiment handelt (d. h. Sie haben beim Erstellen des Experiments das Kontrollkästchen **Testexperiment** aktiviert). Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
+<span id="test_experiments"/>
+## Erstellen eines Experiments für interne Tests
+
+Sie können Ihr Experiment vor der Kundenaktivierung im Rahmen einer gesteuerten Zielgruppe (z.B. einer Reihe interner Prüfer) testen und sicherstellen, dass alle Abweichungen wie erwartet vorliegen. Dies ist möglich, wenn beim Erstellen des Experiments die Option **Editable experiment** ausgewählt wurde.
+
+Führen Sie diese Schritte durch, um Ihr Experiment vor der Freigabe für die Kunden zu testen:
+
+1. Erstellen Sie zwei Projekte: jeweils eins für den öffentlichen und privaten Build Ihrer App. Letzteres ist nur für Ihre Testzielgruppe verfügbar. Die folgenden Anweisungen beziehen sich auf diese Projekte, also jeweils auf das öffentliche und das Testprojekt.
+2. Verweisen Sie beim [Codieren der App für das Experiment](code-your-experiment-in-your-app.md) über Ihr öffentliches Projekt im öffentlichen Build Ihrer App auf die Projekt-ID. Verweisen Sie im privaten Build der App über Ihr Testprojekt auf die Projekt-ID.
+3. Erstellen Sie im Testprojekt ein Experiment, und wählen Sie die Option **Editable experiment** aus.
+4. Aktivieren Sie das Experiment im Testprojekt. Weisen Sie einer Abweichung 100% Verteilung zu, und stellen Sie sicher, dass diese Abweichung für Ihre Tester erwartungsgemäß auftritt. Wiederholen Sie den Vorgang für andere Abweichungen.
+5. Vergewissern Sie sich, dass die Abweichungen wie erwartet auftreten, und nehmen Sie anschließend endgültige Änderungen am Experiment des Testprojekts vor. Wenn Sie das Experiment für die Kunden freigeben möchten, klonen Sie das Experiment im öffentlichen Projekt. Wählen Sie für dieses Experiment nicht die Option **Editable experiment** aus.
+4. Stellen Sie sicher, dass die Verteilung der Zielabweichung im geklonten Experiment richtig ist.
+5. Aktivieren Sie das geklonte Experiment, um es für die Kunden freizugeben.
 
 ## Nächste Schritte
 
-Nachdem Sie Ihr Experiment im Dev Center-Dashboard definiert haben, sind Sie bereit für die folgenden Schritte:
-1. 
-            [Codieren Sie Ihre App für das Experiment](code-your-experiment-in-your-app.md). Verwenden Sie eine API im Microsoft Store Engagement and Monetization SDK, um Varianteneinstellungen für das Experiment abzurufen, ändern Sie mit diesen Daten das Verhalten des getesteten Features, und senden Sie das Anzeigeereignis und die Umwandlungsereignisse an Dev Center.
-2. 
-            [Führen Sie das Experiment im Dev Center-Dashboard aus, und verwalten Sie es](manage-your-experiment.md). Im Dashboard können Sie die Ergebnisse des Experiments überprüfen und das Experiment abschließen.
+Nachdem Sie Ihr Experiment im DevCenter-Dashboard definiert und in Ihrer App programmiert haben, können Sie das [Experiment im DevCenter-Dashboard ausführen und verwalten](manage-your-experiment.md).
 
 ## Verwandte Themen
 
-  * [Schreiben Sie den Code der App für Experimente](code-your-experiment-in-your-app.md)
-  * [Verwalten des Experiments im Dev Center-Dashboard](manage-your-experiment.md)
-  * [Erstellen und Ausführen eines ersten Experiments mit A/B-Test](create-and-run-your-first-experiment-with-a-b-testing.md)
-  * [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
+* [Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [Codieren Ihrer App für das Experiment](code-your-experiment-in-your-app.md)
+* [Verwalten Ihrer Experimente im Dev Center-Dashboard](manage-your-experiment.md)
+* [Erstellen und Ausführen eines ersten Experiments mit A/B-Test](create-and-run-your-first-experiment-with-a-b-testing.md)
+* [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

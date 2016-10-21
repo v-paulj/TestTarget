@@ -3,8 +3,9 @@ author: mcleblanc
 title: Erste Schritte mit der Navigation
 description: Erste Schritte mit der Navigation
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
+translationtype: Human Translation
 ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: c542faa6365c8558988162bee12f266d67474461
+ms.openlocfilehash: daf56299b3a5e81bb756bc9fcb8112da044b00f3
 
 ---
 
@@ -77,8 +78,7 @@ Sie können auch die [**CacheSize**](https://msdn.microsoft.com/library/windows/
 
 Weitere Informationen zur Navigation finden Sie unter [Navigation](https://msdn.microsoft.com/library/windows/apps/mt187344) und unter [XAML-Beispiel für Charakteranimationen](http://go.microsoft.com/fwlink/p/?LinkID=242401).
 
-
-            **Hinweis**  Informationen zur Navigation für WindowsStore-Apps mit JavaScript und HTML finden Sie unter [Schnellstart: Verwenden der Einzelseitennavigation](https://msdn.microsoft.com/library/windows/apps/hh452768).
+**Hinweis**  Informationen zur Navigation für WindowsStore-Apps mit JavaScript und HTML finden Sie unter [Schnellstart: Verwenden der Einzelseitennavigation](https://msdn.microsoft.com/library/windows/apps/hh452768).
  
 ### Nächster Schritt
 
@@ -87,6 +87,6 @@ Weitere Informationen zur Navigation finden Sie unter [Navigation](https://msdn.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

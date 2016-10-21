@@ -1,22 +1,23 @@
 ---
 author: drewbatgit
 ms.assetid: 42A06423-670F-4CCC-88B7-3DCEEDDEBA57
-description: "Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten."
-title: Kameraprofile
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 755b2747b2250c4ad19970095aed220551389471
+description: "Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten. Dazu gehören Aufgaben, z.B. das Auswählen von Profilen, die bestimmte Auflösungen oder Bildfrequenzen unterstützen, von Profilen, die gleichzeitigen Zugriff auf mehrere Kameras unterstützen, sowie von Profilen, die HDR unterstützen."
+title: "Entdecken und Auswählen von Kamerafunktionen mit Kameraprofilen"
+translationtype: Human Translation
+ms.sourcegitcommit: 625cf715a88837cb920433fa34e47a1e1828a4c8
+ms.openlocfilehash: 09cb41f834de52d541addee4e44715c52f5e99dc
 
 ---
 
-# Kameraprofile
+# Entdecken und Auswählen von Kamerafunktionen mit Kameraprofilen
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
-Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten.
+Dieser Artikel beschreibt, wie Sie Kameraprofile verwenden, um die Funktionen verschiedener Videoaufzeichnungsgeräte zu ermitteln und zu verwalten. Dazu gehören Aufgaben, z.B. das Auswählen von Profilen, die bestimmte Auflösungen oder Bildfrequenzen unterstützen, von Profilen, die gleichzeitigen Zugriff auf mehrere Kameras unterstützen, sowie von Profilen, die HDR unterstützen.
 
-**Hinweis**  
-Dieser Artikel baut auf Konzepten und Code auf, die unter [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md) erläutert werden. Darin werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.
+> [!NOTE] 
+> Dieser Artikel baut auf Konzepten und Codebeispielen auf, die unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md) erläutert werden. Dort werden die Schritte für die Implementierung einer grundlegenden Foto- und Videoaufnahme beschrieben. Es wird empfohlen, dass Sie sich mit dem grundlegenden Muster für die Medienerfassung in diesem Artikel vertraut machen, bevor Sie in fortgeschrittene Aufnahmeszenarien einsteigen. Bei dem Code in diesem Artikel wird davon ausgegangen, dass Ihre App bereits eine Instanz von MediaCapture aufweist, die ordnungsgemäß initialisiert wurde.
 
  
 
@@ -26,11 +27,9 @@ Kameras auf verschiedenen Geräten unterstützen unterschiedliche Funktionen; da
 
 Vor dem Initialisieren des [MediaCapture](capture-photos-and-video-with-mediacapture.md)-Objekts können Sie die Aufnahmegeräte auf dem aktuellen Gerät abfragen, um festzustellen, welche Profile unterstützt werden. Wenn Sie ein unterstütztes Profil auswählen, wissen Sie, dass das Aufnahmegerät alle Funktionen in den Medienbeschreibungen des Profils unterstützt. Dadurch entfällt die Notwendigkeit eines Trial-and-Error-Ansatzes, um zu ermitteln, welche Kombinationen von Funktionen auf einem bestimmten Gerät unterstützt werden.
 
-Im Artikel zur grundlegenden Medienaufzeichnung ([Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md)) wird die für die Initialisierung der Medienaufnahme verwendete [**MediaCaptureInitializationSettings**](https://msdn.microsoft.com/library/windows/apps/br226573)-Klasse nur mit der ID-Zeichenfolge des Aufnahmegeräts erstellt, was der minimalen Menge von Daten entspricht, die für die Initialisierung erforderlich ist.
-
 [!code-cs[BasicInitExample](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetBasicInitExample)]
 
-In den Codebeispielen in diesem Artikel wird diese minimale Initialisierung durch die Ermittlung der Kameraprofile ersetzt. Diese unterstützten unterschiedliche Funktionen, mit denen das Medienaufnahmegerät initialisiert wird.
+In den Codebeispielen in diesem Artikel wird diese minimale Initialisierung durch die Ermittlung der Kameraprofile ersetzt. Diese unterstützen unterschiedliche Funktionen, mit denen das Medienaufnahmegerät initialisiert wird.
 
 ## Suchen eines Videogeräts, das Kameraprofile unterstützt
 
@@ -84,7 +83,7 @@ Verwenden Sie die oben definierte **GetVideoProfileSupportedDeviceIdAsync**-Hilf
 
 Die statische Methode [**MediaCapture.FindKnownVideoProfiles**](https://msdn.microsoft.com/library/windows/apps/dn926710) gibt die Kameraprofile zurück, die von dem angegebenen Gerät unterstützt werden, das wiederum von dem angegebenen [**KnownVideoProfile**](https://msdn.microsoft.com/library/windows/apps/dn948843)-Wert kategorisiert wird. In diesem Szenario wird der **VideoRecording**-Wert angegeben, um nur Kameraprofile zurückzugeben, die Videoaufnahmen unterstützen.
 
-Durchlaufen Sie die zurückgegebene Liste der Kameraprofile. Durchlaufen Sie für jedes Kameraprofil jede [**VideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695)-Klasse im Profil, und überprüfen Sie, ob die [**IsHdrVideoSupported**](https://msdn.microsoft.com/library/windows/apps/dn926698)-Eigenschaft „true“ ist. Sobald eine passende Medienbeschreibung gefunden wird, unterbrechen Sie die Schleife und weisen die Profil- und Beschreibungsobjekte dem **MediaCaptureInitializationSettings**-Objekt zu.
+Durchlaufen Sie die zurückgegebene Liste der Kameraprofile. Durchlaufen Sie für jedes Kameraprofil jede [**VideoProfileMediaDescription**](https://msdn.microsoft.com/library/windows/apps/dn926695)-Klasse im Profil, und überprüfen Sie, ob die [**IsHdrVideoSupported**](https://msdn.microsoft.com/library/windows/apps/dn926698)-Eigenschaft auf „true“ festgelegt ist. Sobald eine passende Medienbeschreibung gefunden wird, unterbrechen Sie die Schleife und weisen die Profil- und Beschreibungsobjekte dem **MediaCaptureInitializationSettings**-Objekt zu.
 
 [!code-cs[FindHDRProfile](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFindHDRProfile)]
 
@@ -98,7 +97,8 @@ Sie können diese Abfrage einschränken und nur nach Profilen suchen, die zusät
 
 ## Verwandte Themen
 
-* [Aufnehmen von Fotos und Videos mit MediaCapture](capture-photos-and-video-with-mediacapture.md)
+* [Kamera](camera.md)
+* [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
@@ -109,6 +109,6 @@ Sie können diese Abfrage einschränken und nur nach Profilen suchen, die zusät
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

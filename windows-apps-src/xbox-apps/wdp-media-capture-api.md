@@ -4,7 +4,7 @@ title: Referenz zur Medienerfassungs-API
 description: Erfahren Sie, wie Sie programmgesteuert auf die Medienerfassungs-API zugreifen.
 translationtype: Human Translation
 ms.sourcegitcommit: 4356bd2cfc7697905ed91d60b5829c06d850e109
-ms.openlocfilehash: 2e32c4d516a35b5f5bd8d57bce75ff8bdce6b461
+ms.openlocfilehash: 2f77c565acf272a1a8f147eb07ac6c7f08bf8ef0
 
 ---
 
@@ -56,6 +56,6 @@ Diese API hat die folgenden erwarteten Statuscodes:
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

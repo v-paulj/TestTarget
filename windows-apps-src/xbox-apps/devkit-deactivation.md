@@ -2,9 +2,9 @@
 author: Mtoepke
 title: Deaktivierung des Xbox One-Entwicklermodus
 description: In diesem Artikel wird das Deaktivieren des Entwicklermodus beschrieben.
-area: Xbox
-ms.sourcegitcommit: 6530fa257ea3735453a97eb5d916524e750e62fc
-ms.openlocfilehash: 0751598ba50d69e1667b20ddc03f30d65ce08002
+translationtype: Human Translation
+ms.sourcegitcommit: c80849904eccae1ef0e0740bb4e882f7f0f37cc8
+ms.openlocfilehash: 273cd14d5f51a693ba8385c13d128bb2888de2ea
 
 ---
 
@@ -44,9 +44,8 @@ Die bevorzugte Methode zum Deaktivieren des Entwicklermodus ist die Verwendung d
 
 Sie können den Entwicklermodus auch deaktivieren, indem Sie die Konsole zurücksetzen.  
 
-> 
-            **Hinweis**
-            &nbsp;&nbsp;Wenn Sie die Konsole zurücksetzen, gehen alle lokal gespeicherten Spieldaten verloren.
+> [!NOTE]
+> Wenn Sie die Konsole zurücksetzen, gehen alle lokal gespeicherten Spieldaten verloren.
 
 Führen Sie zum Zurücksetzen der Konsole die folgenden Schritte aus:
 
@@ -83,12 +82,12 @@ Wenn Sie die Xbox One-Konsole noch nicht in den Einzelhandelsmodus zurückgesetz
 
 ![Aktivierungsschritt 13](images/deactivation-leave-dev-mode.png)
 
-## Siehe auch
+## Weitere Informationen
 - [Aktivierung des Xbox One-Entwicklermodus](devkit-activation.md)
 - [UWP auf Xbox One](index.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
