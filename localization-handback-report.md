@@ -1,42 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/a86002c944841536d37735bb8c4b657905582144/windows-apps-src/get-started/application-development-for-windows-as-a-service.md) | InSyncHandedBackSuccess | [Details](#561f5ea0ab4ba5b456456cedf786479ef168e7c03559)
- [windows-apps-src\updates-and-versions\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/a86002c944841536d37735bb8c4b657905582144/windows-apps-src/updates-and-versions/application-development-for-windows-as-a-service.md) | InSyncHandedBackSuccess | [Details](#72ac67b17fc519d374798e5121b309f664ff6b1b8005)
 
 ## Item Details
-##### <a name='561f5ea0ab4ba5b456456cedf786479ef168e7c03559'></a> Source: [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/a86002c944841536d37735bb8c4b657905582144/windows-apps-src/get-started/application-development-for-windows-as-a-service.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps.de-de/blob/c3cc6ddc6f3b2e0e594b3a771a3787b6567d88e5/windows-apps-src/get-started/application-development-for-windows-as-a-service.md)
-* Handoff File: [application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/b5cf15aa5166738ff6b934169ff65cd7972538c8/ol-handoff/Microsoft/windows-apps.de-de/master/application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.de-de.xlf)
-* Handoff Datetime: 2016-08-30 20:07:49
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/af7251542093aa676fc710fa76cce8c29961cc27/ol-handback/Microsoft/windows-apps.de-de/master/application-development-for-windows-as-a-service.c15099eb2d254be26aa42260cb08f3c54a113b4e.de-de.xlf)
-* Handback Datetime: 2016-10-21 15:17:04
-* Current Target File: [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps.de-de/blob/ca0b3e8aea4c4a9a366553e95e23d46aae86b45f/windows-apps-src/get-started/application-development-for-windows-as-a-service.md)
-* Current Handback File: [application-development-for-windows-as-a-service.860abc133e8df8b088250b3f4c1e3f9dbc27f891.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b033ac2b0c68c91cd7b4da645969038884afc623/ol-handback/Microsoft/windows-apps.de-de/master/application-development-for-windows-as-a-service.860abc133e8df8b088250b3f4c1e3f9dbc27f891.de-de.xlf)
-* Current Handback Datetime: 2016-10-21 17:02:31
-* [Back to Top](#report-top)
-
-##### <a name='72ac67b17fc519d374798e5121b309f664ff6b1b8005'></a> Source: [windows-apps-src\updates-and-versions\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps/blob/a86002c944841536d37735bb8c4b657905582144/windows-apps-src/updates-and-versions/application-development-for-windows-as-a-service.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [windows-apps-src\get-started\application-development-for-windows-as-a-service.md](https://github.com/Microsoft/windows-apps.de-de/blob/ca0b3e8aea4c4a9a366553e95e23d46aae86b45f/windows-apps-src/get-started/application-development-for-windows-as-a-service.md)
-* Handoff File: [application-development-for-windows-as-a-service.860abc133e8df8b088250b3f4c1e3f9dbc27f891.de-de.xlf](https://github.com/Microsoft/WDG.handoff/blob/b5cf15aa5166738ff6b934169ff65cd7972538c8/ol-handoff/Microsoft/windows-apps.de-de/master/application-development-for-windows-as-a-service.860abc133e8df8b088250b3f4c1e3f9dbc27f891.de-de.xlf)
-* Handoff Datetime: 2016-08-30 20:07:49
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [application-development-for-windows-as-a-service.860abc133e8df8b088250b3f4c1e3f9dbc27f891.de-de.xlf](https://github.com/Microsoft/WDG.handback/blob/b033ac2b0c68c91cd7b4da645969038884afc623/ol-handback/Microsoft/windows-apps.de-de/master/application-development-for-windows-as-a-service.860abc133e8df8b088250b3f4c1e3f9dbc27f891.de-de.xlf)
-* Handback Datetime: 2016-10-21 17:02:31
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
